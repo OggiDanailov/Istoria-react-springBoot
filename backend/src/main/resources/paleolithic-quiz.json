@@ -1,0 +1,44 @@
+[
+  {
+    "question": "The Paleolithic period is also known as the:",
+    "options": ["New Stone Age", "Old Stone Age", "Bronze Age", "Iron Age"],
+    "correctAnswer": 1
+  },
+  {
+    "question": "When did the Paleolithic period approximately begin?",
+    "options": ["10,000 years ago", "50,000 years ago", "2.6 million years ago", "500,000 years ago"],
+    "correctAnswer": 2
+  },
+  {
+    "question": "What was the primary method of obtaining food during the Paleolithic?",
+    "options": ["Agriculture", "Hunting and gathering", "Trade", "Domesticated animals"],
+    "correctAnswer": 1
+  },
+  {
+    "question": "The first controlled use of fire by humans occurred during:",
+    "options": ["Neolithic period", "Paleolithic period", "Bronze Age", "Mesolithic period"],
+    "correctAnswer": 1
+  },
+  {
+    "question": "Which tool is most characteristic of the Lower Paleolithic period?",
+    "options": ["Bow and arrow", "Hand axe", "Pottery wheel", "Metal spear"],
+    "correctAnswer": 1
+  },
+  {
+    "question": "Neanderthals primarily lived during which part of the Paleolithic?",
+    "options": ["Upper Paleolithic", "Lower Paleolithic", "Middle Paleolithic", "Entire Paleolithic"],
+    "correctAnswer": 2
+  },
+  {
+    "question": "The great human migration out of Africa began approximately:",
+    "options": ["10,000 years ago", "50,000-70,000 years ago", "100,000 years ago", "200,000 years ago"],
+    "correctAnswer": 1
+  },
+  {
+    "question": "Which of these animals did NOT coexist with Paleolithic humans?",
+    "options": ["Mammoths", "Saber-toothed cats", "Dinosaurs", "Cave bears"],
+    "correctAnswer": 2
+  }
+
+
+]

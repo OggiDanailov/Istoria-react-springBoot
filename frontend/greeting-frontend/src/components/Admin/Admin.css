@@ -1,0 +1,100 @@
+.admin-btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  margin: 0.25rem;
+}
+
+.create-btn {
+  background: #4CAF50;
+  color: white;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  margin: 1rem 0 2rem 0;
+  display: block;
+}
+
+.create-btn:hover {
+  background: #45a049;
+}
+
+.admin-topic-list h2 {
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.admin-topic-card {
+  background: #f9f9f9;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.admin-topic-info {
+  flex: 1;
+}
+
+.admin-topic-info h3 {
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.admin-topic-info p {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.admin-topic-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.edit-btn {
+  background: #2196F3;
+  color: white;
+}
+
+.edit-btn:hover {
+  background: #0b7dda;
+}
+
+.questions-btn {
+  background: #ff9800;
+  color: white;
+}
+
+.questions-btn:hover {
+  background: #e68900;
+}
+
+.delete-btn {
+  background: #f44336;
+  color: white;
+}
+
+.delete-btn:hover {
+  background: #da190b;
+}
+
+@media (max-width: 600px) {
+  .admin-topic-card {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .admin-topic-actions {
+    flex-direction: column;
+  }
+
+  .admin-btn {
+    width: 100%;
+  }
+}
