@@ -26,6 +26,8 @@ public class Question {
 
     private int correctAnswer;
 
+    private int difficulty;
+
     // Default constructor
     public Question() {}
 
@@ -34,6 +36,16 @@ public class Question {
         this.question = question;
         this.options = options;
         this.correctAnswer = correctAnswer;
+        this.difficulty = 1; // Default to Easy
+    }
+
+    // Add getter and setter
+    public int getDifficulty() {
+        return difficulty;
+    }
+
+    public void setDifficulty(int difficulty) {
+        this.difficulty = difficulty;
     }
 
     // Getters

@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import Results from '../Results/Results'
+import './Quiz.css'
 
 function Quiz({ topicId, onBack }) {
   const [questions, setQuestions] = useState([])
@@ -113,6 +114,12 @@ function Quiz({ topicId, onBack }) {
 
       <div className="question-card">
         <h2>{currentQuestion.question}</h2>
+
+        <p className="difficulty-badge">
+          {currentQuestion.difficulty === 1 && '⭐ Easy (10 points)'}
+          {currentQuestion.difficulty === 2 && '⭐⭐ Medium (20 points)'}
+          {currentQuestion.difficulty === 3 && '⭐⭐⭐ Hard (30 points)'}
+        </p>
 
         <div className="options">
           {currentQuestion.options.map((option, index) => (
