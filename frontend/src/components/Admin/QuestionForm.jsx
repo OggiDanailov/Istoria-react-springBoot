@@ -8,7 +8,8 @@ function QuestionForm({ topic, onClose }) {
   const [formData, setFormData] = useState({
     question: '',
     options: ['', '', '', ''],
-    correctAnswer: 0
+    correctAnswer: 0,
+    difficulty: 1
   })
   const [loading, setLoading] = useState(false)
 
@@ -17,14 +18,14 @@ function QuestionForm({ topic, onClose }) {
   }, [topic.id])
 
   const fetchQuestions = async () => {
-  try {
-    const response = await fetch(`http://localhost:8081/api/topics/${topic.id}/questions`)
-    const data = await response.json()
-    setQuestions(data)
-  } catch (err) {
-    console.error('Failed to fetch questions:', err)
+    try {
+      const response = await fetch(`http://localhost:8081/api/topics/${topic.id}/questions`)
+      const data = await response.json()
+      setQuestions(data)
+    } catch (err) {
+      console.error('Failed to fetch questions:', err)
+    }
   }
-}
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -53,7 +54,8 @@ function QuestionForm({ topic, onClose }) {
       setFormData({
         question: '',
         options: ['', '', '', ''],
-        correctAnswer: 0
+        correctAnswer: 0,
+        difficulty: 1
       })
       setShowAddForm(false)
       setEditingQuestion(null)
@@ -70,7 +72,8 @@ function QuestionForm({ topic, onClose }) {
     setFormData({
       question: question.question,
       options: question.options,
-      correctAnswer: question.correctAnswer
+      correctAnswer: question.correctAnswer,
+      difficulty: question.difficulty || 1
     })
     setShowAddForm(true)
   }
@@ -100,7 +103,8 @@ function QuestionForm({ topic, onClose }) {
     setFormData({
       question: '',
       options: ['', '', '', ''],
-      correctAnswer: 0
+      correctAnswer: 0,
+      difficulty: 1
     })
   }
 
@@ -134,6 +138,20 @@ function QuestionForm({ topic, onClose }) {
               placeholder="Enter your question"
               required
             />
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="difficulty">Difficulty Level:</label>
+            <select
+              id="difficulty"
+              value={formData.difficulty}
+              onChange={(e) => setFormData({ ...formData, difficulty: parseInt(e.target.value) })}
+              required
+            >
+              <option value="1">⭐ Easy (10 points)</option>
+              <option value="2">⭐⭐ Medium (20 points)</option>
+              <option value="3">⭐⭐⭐ Hard (30 points)</option>
+            </select>
           </div>
 
           <div className="form-group">
@@ -179,6 +197,11 @@ function QuestionForm({ topic, onClose }) {
             <div key={q.id} className="question-item">
               <div className="question-content">
                 <h4>Q{index + 1}: {q.question}</h4>
+                <p className="difficulty-badge">
+                  {q.difficulty === 1 && '⭐ Easy'}
+                  {q.difficulty === 2 && '⭐⭐ Medium'}
+                  {q.difficulty === 3 && '⭐⭐⭐ Hard'}
+                </p>
                 <ul>
                   {q.options.map((opt, i) => (
                     <li key={i} className={i === q.correctAnswer ? 'correct-option' : ''}>
