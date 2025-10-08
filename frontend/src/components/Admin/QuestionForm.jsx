@@ -17,14 +17,14 @@ function QuestionForm({ topic, onClose }) {
   }, [topic.id])
 
   const fetchQuestions = async () => {
-    try {
-      const response = await fetch(`http://localhost:8081/api/topics/${topic.id}/questions`)
-      const data = await response.json()
-      setQuestions(data)
-    } catch (err) {
-      console.error('Failed to fetch questions:', err)
-    }
+  try {
+    const response = await fetch(`http://localhost:8081/api/topics/${topic.id}/questions`)
+    const data = await response.json()
+    setQuestions(data)
+  } catch (err) {
+    console.error('Failed to fetch questions:', err)
   }
+}
 
   const handleSubmit = async (e) => {
     e.preventDefault()

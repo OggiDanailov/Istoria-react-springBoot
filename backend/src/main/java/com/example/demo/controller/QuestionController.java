@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.HttpStatus;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @CrossOrigin(origins = "http://localhost:5173")
 @RestController
@@ -81,10 +82,11 @@ public class QuestionController {
 
 
     // Get all questions for a specific topic (across all chapters)
-    @GetMapping("/topics/{topicId}/questions")
-    public List<Question> getQuestionsByTopic(@PathVariable Long topicId) {
-        return questionRepository.findByChapterTopicId(topicId);
-    }
+    // In QuestionController.java
+@GetMapping("/topics/{topicId}/questions")
+public List<Question> getQuestionsByTopic(@PathVariable Long topicId) {
+    return questionRepository.findByChapterTopicId(topicId);
+}
 
     // Create a new question for a topic
     @PostMapping("/topics/{topicId}/questions")
