@@ -1,6 +1,6 @@
 import './Results.css'
 
-function Results({ questions, userAnswers, onRestart, onBack }) {
+function Results({ questions, userAnswers, onRestart, onBack, topicId }) {
   const calculateScore = () => {
     let correct = 0
     let totalPoints = 0
@@ -64,6 +64,21 @@ function Results({ questions, userAnswers, onRestart, onBack }) {
                     </span>
                   )}
                 </p>
+
+                {!isCorrect && question.textReference && (
+                  <button
+                    onClick={() => {
+                      onBack()
+                      setTimeout(() => {
+                        const element = document.querySelector(question.textReference)
+                        element?.scrollIntoView({ behavior: 'smooth' })
+                      }, 100)
+                    }}
+                    className="read-more-btn"
+                  >
+                    📖 Read about this topic
+                  </button>
+                )}
               </div>
             )
           })}

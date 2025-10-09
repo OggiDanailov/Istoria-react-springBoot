@@ -35,6 +35,10 @@ function App() {
     setCurrentView('topics')
   }
 
+  const handleGoToReadingFromResults = () => {
+    setCurrentView('reading')
+  }
+
   return (
     <>
       {currentView === 'topics' && (
@@ -63,6 +67,7 @@ function App() {
         <Quiz
           topicId={selectedTopic.id}
           onBack={handleBackToReading}
+          onBackToTopics={handleBackToTopics}
         />
       )}
 

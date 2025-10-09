@@ -481,7 +481,7 @@ public class QuestionTranslation {
 
 ### Phase 1: Core Foundation & Improvements (Weeks 1-3) 🔨
 
-**Status:** In Progress
+**Status:** 75% Complete
 
 **Goals:**
 - Solidify existing functionality
@@ -490,32 +490,40 @@ public class QuestionTranslation {
 - Build randomization features
 - Polish UI/UX
 
-**Tasks:**
+**Completed Tasks:**
 1. ✅ Fix backend/frontend structure
 2. ✅ Set up Git monorepo
-3. ⬜ Debug empty questions issue
-4. ⬜ **Add `difficulty` field to Question model**
-   ```java
-   private int difficulty; // 1, 2, or 3
-   ```
-5. ⬜ **Add `textReference` field to Question model**
-   ```java
-   private String textReference; // e.g., "#roman-kingdom-foundation"
-   ```
-6. ⬜ **Update QuestionForm.jsx** - Add difficulty selector and text reference input
-7. ⬜ **Implement question randomization** (backend query)
-8. ⬜ **Implement answer shuffling** (frontend logic)
-9. ⬜ **Build Results component with text references**
-10. ⬜ **Create continuous reading material** with proper H2/H3 structure
-11. ⬜ **Add anchor navigation** to reading material
-12. ⬜ **Implement scoring system** based on difficulty
-13. ⬜ **Test full user flow**: Read → Quiz → Review → Re-read
+3. ✅ Fixed empty questions issue
+4. ✅ **Added `difficulty` field to Question model**
+   - Backend: Added difficulty field (1, 2, or 3)
+   - Frontend admin: Added difficulty selector dropdown
+   - Database: Updated existing questions to have proper difficulty values
+5. ✅ **Added `textReference` field to Question model**
+   - Backend: Added textReference field for anchor links
+   - Frontend admin: Added text reference input field
+6. ✅ **Updated QuestionForm.jsx** - Difficulty selector and text reference input working
+7. ✅ **Updated ReadingMaterial.jsx** - Now fetches and displays chapters with HTML content
+8. ✅ **Built Results component with text references**
+   - Shows "📖 Read about this" button for wrong answers
+   - Navigates to reading material at specific section
+9. ✅ **Implemented scoring system** based on difficulty (10/20/30 points)
+10. ✅ **Display difficulty badges** in quiz and results
+11. ✅ **Fixed database persistence** - Switched from H2 in-memory to file-based storage
+12. ✅ **Tested text reference flow**: Quiz → Wrong answer → Click button → Jump to reading section
+
+**Remaining Tasks:**
+1. ⬜ **Create Chapter CRUD in Admin Panel** - Add/edit/delete chapters with WYSIWYG or HTML editor
+2. ⬜ **Implement question randomization** (backend query with ORDER BY RANDOM())
+3. ⬜ **Implement answer shuffling** (frontend Fisher-Yates shuffle)
+4. ⬜ **Add more sample content** - Create chapters with proper HTML anchors (H2/H3 structure)
+5. ⬜ **Polish UI/UX** - Improve styling, add loading states, error handling
 
 **Deliverables:**
-- Fully functional quiz system with difficulty levels
-- Text reference navigation working
-- Randomized quizzes
-- Polished reading experience
+- ✅ Fully functional quiz system with difficulty levels
+- ✅ Text reference navigation working
+- ⬜ Randomized quizzes (next priority)
+- ⬜ Chapter management interface (high priority)
+- 🔄 Polished reading experience (ongoing)
 
 ---
 
@@ -939,10 +947,12 @@ CREATE TABLE question_translations (
 ## 🐛 Known Issues & Technical Debt
 
 ### Current Issues
-1. ⬜ Empty questions array when fetching by topic
-2. ⬜ Need to add difficulty levels to existing questions
-3. ⬜ No text references on existing questions
-4. ⬜ Reading material needs proper HTML structure
+1. ✅ Empty questions array when fetching by topic - FIXED
+2. ✅ Added difficulty levels to questions - COMPLETE
+3. ✅ Added text references to questions - COMPLETE
+4. ⬜ Need Chapter CRUD interface in admin panel - HIGH PRIORITY
+5. ⬜ Database persistence issues resolved (switched to file-based H2)
+6. ⬜ Reading material needs more content with proper HTML anchors
 
 ### Technical Debt
 - No automated tests yet
@@ -951,6 +961,13 @@ CREATE TABLE question_translations (
 - No caching layer (Redis future)
 - No API rate limiting
 - No logging/monitoring system
+- Need Chapter management UI in admin panel
+
+### Immediate Next Steps (Priority Order)
+1. **Chapter CRUD Interface** - Build admin interface to add/edit/delete chapters (similar to QuestionForm)
+2. **Question Randomization** - Add ORDER BY RANDOM() to backend query
+3. **Answer Shuffling** - Implement Fisher-Yates shuffle in Quiz.jsx
+4. **Content Creation** - Add more historical content with proper HTML structure and anchors
 
 ### Future Improvements
 - Add automated testing (JUnit, Jest, React Testing Library)
@@ -1150,10 +1167,21 @@ CREATE TABLE question_translations (
 - Rationale: Low barrier to entry encourages conversions, competitive with similar educational platforms, sustainable revenue at scale.
 - Impact: Accessible pricing, predictable revenue stream
 
-**Decision 7: Start with English Only**
+**Decision 8: File-Based H2 Database**
 - Date: October 2025
-- Rationale: Focus on core functionality first, add translations when revenue supports translation costs.
-- Impact: Faster MVP, can validate product-market fit before investing in translations
+- Rationale: In-memory database was losing data on server restart. Switched to file-based storage to persist data across restarts.
+- Configuration: `spring.datasource.url=jdbc:h2:file:./data/quizdb` with `ddl-auto=none`
+- Impact: Data persistence, easier development, no data loss on restart
+
+**Decision 9: Text References Implementation**
+- Date: October 2025
+- Rationale: Implemented complete text reference flow - questions link to reading sections, Results component shows "Read about this" button, navigation works via state management in App.jsx
+- Impact: Better learning outcomes, seamless integration between quiz and reading material, tested and working
+
+**Decision 10: Next Priority - Chapter CRUD**
+- Date: October 2025
+- Rationale: Need admin interface to easily manage chapter content (add/edit/delete) instead of manual SQL updates
+- Impact: Faster content creation, better admin UX, enables non-technical content creators
 
 ---
 
@@ -1194,3 +1222,248 @@ INSERT INTO topics (title, description, period_id) VALUES
 
 -- Insert a chapter with HTML content
 INSERT INTO chapters (title, content, topic_id) VALUES
+('Roman Kingdom', '<h2 id="foundation">Foundation of Rome</h2><p>Rome was founded...</p>', 1);
+
+-- Insert questions
+INSERT INTO questions (question, correct_answer, difficulty, text_reference, chapter_id)
+VALUES ('When was Rome founded?', 0, 1, '#foundation', 1);
+
+INSERT INTO question_options (question_id, option, option_order) VALUES
+(1, '753 BC', 0),
+(1, '500 BC', 1),
+(1, '100 BC', 2),
+(1, '1 AD', 3);
+```
+
+**4. Test the Flow**
+1. Open http://localhost:5173
+2. Click "Ancient Rome" topic
+3. Read the content
+4. Click "Start Quiz"
+5. Answer questions
+6. See results
+
+### For Content Creators
+
+**Adding New Content:**
+1. Access admin panel (⚙️ button on homepage)
+2. Click "Add New Topic"
+3. Write chapter content with HTML structure:
+   ```html
+   <h2 id="section-name">Section Title</h2>
+   <p>Content here...</p>
+   <h3 id="subsection">Subsection</h3>
+   <p>More content...</p>
+   ```
+4. Add questions:
+   - Write clear, unambiguous questions
+   - Provide 4 options (only 1 correct)
+   - Assign difficulty (1=Easy, 2=Medium, 3=Hard)
+   - Link to text section (use ID from h2/h3 tag)
+
+**Content Guidelines:**
+- Keep chapters between 1,500-3,000 words
+- Use clear headings and subheadings
+- Break up long paragraphs
+- Include dates, names, and specific facts
+- Write in engaging, narrative style
+- Cite sources at the end
+
+**Question Writing Best Practices:**
+- Test specific knowledge from the reading
+- Avoid trick questions
+- Make wrong answers plausible but clearly incorrect
+- Level 1: Basic recall (dates, names, events)
+- Level 2: Understanding (causes, effects, significance)
+- Level 3: Analysis (comparing, evaluating, synthesizing)
+
+---
+
+## 🔮 Future Vision (2-3 Years)
+
+### Advanced Features
+- **AI-Powered Question Generation**: Automatically create questions from reading material
+- **Adaptive Learning**: Adjust difficulty based on user performance
+- **Study Plans**: Personalized learning paths based on goals
+- **Social Features**: Study groups, challenges with friends
+- **Video Content**: Expert historians explaining complex topics
+- **Interactive Timelines**: Visual exploration of historical periods
+- **AR/VR Experiences**: Virtual tours of historical sites
+- **Podcast Integration**: Audio versions of reading materials
+
+### Market Expansion
+- **Corporate Training**: History courses for businesses
+- **Academic Partnerships**: Integration with schools and universities
+- **Certification Programs**: Official history knowledge certificates
+- **Teacher Tools**: Assign quizzes, track student progress
+- **Homeschool Curriculum**: Complete history education package
+
+### Platform Growth
+- **100+ Topics**: Comprehensive world history coverage
+- **10,000+ Questions**: Deep question banks per topic
+- **50+ Languages**: Global accessibility
+- **1M+ Users**: Scale to million-user platform
+- **Mobile Apps**: iOS and Android with offline capabilities
+- **API Platform**: Allow third parties to build on top
+
+### Community Building
+- **User-Generated Content**: Community contributions with moderation
+- **Expert Network**: Verified historians answer questions
+- **Discussion Forums**: Debate historical topics
+- **Annual Conference**: History quiz championship
+- **Scholarship Program**: Sponsor history students
+
+---
+
+## 📖 Glossary
+
+**Period**: Broad historical era (e.g., Antiquity, Medieval Europe)
+
+**Topic**: Specific civilization or region within a period (e.g., Ancient Rome, Ancient Greece)
+
+**Chapter**: Specific time period or theme within a topic (e.g., Roman Kingdom, Roman Republic)
+
+**Text Reference**: Anchor link connecting a question to specific section in reading material
+
+**Difficulty Level**: Question complexity rating (1=Easy, 2=Medium, 3=Hard)
+
+**Free Tier**: Users who can access content but don't have progress tracking
+
+**Premium Tier**: Paid subscribers ($3/month) with full feature access
+
+**Competitive Mode**: Timed quiz format with leaderboards and prizes
+
+**Quiz Attempt**: Single instance of a user taking a quiz
+
+**User Progress**: Cumulative statistics tracking user performance over time
+
+**Monorepo**: Single Git repository containing both frontend and backend code
+
+**i18n**: Internationalization - making software adaptable to different languages and regions
+
+---
+
+## 🤝 Contributing Guidelines
+
+### Code Standards
+
+**Backend (Java/Spring Boot):**
+- Follow Java naming conventions (camelCase methods, PascalCase classes)
+- Use meaningful variable and method names
+- Add JavaDoc comments for public methods
+- Keep methods under 50 lines
+- Write unit tests for business logic
+
+**Frontend (React):**
+- Use functional components with hooks
+- Keep components under 300 lines (split if larger)
+- Use descriptive component and prop names
+- Extract reusable logic into custom hooks
+- Add PropTypes or TypeScript for type safety
+
+**Git Workflow:**
+- Create feature branches: `feature/add-difficulty-levels`
+- Write clear commit messages: "Add difficulty field to Question model"
+- Keep commits focused (one feature per commit)
+- Pull latest changes before pushing
+- Resolve conflicts before merging
+
+### Pull Request Process
+1. Create a new branch for your feature
+2. Make your changes with clear commits
+3. Test thoroughly (manual and automated)
+4. Update documentation if needed
+5. Submit PR with description of changes
+6. Address code review feedback
+7. Merge after approval
+
+---
+
+## 📧 Contact & Support
+
+### Project Maintainer
+- GitHub: [your-username]
+- Email: [your-email]
+
+### Reporting Issues
+- Use GitHub Issues for bug reports
+- Provide steps to reproduce
+- Include screenshots if applicable
+- Mention your environment (OS, browser, etc.)
+
+### Feature Requests
+- Open GitHub Discussion
+- Describe the feature and use case
+- Explain why it would be valuable
+- Be open to feedback and alternatives
+
+---
+
+## 📄 License
+
+[Choose appropriate license - MIT, Apache 2.0, etc.]
+
+---
+
+## ✅ Quick Reference Checklist
+
+### Phase 1 Implementation Checklist
+- [ ] Add `difficulty` field to Question entity
+- [ ] Add `textReference` field to Question entity
+- [ ] Update QuestionRepository with new methods
+- [ ] Update QuestionController endpoints
+- [ ] Modify QuestionForm.jsx to include new fields
+- [ ] Implement question randomization (backend)
+- [ ] Implement answer shuffling (frontend)
+- [ ] Create Results component with text references
+- [ ] Update ReadingMaterial with anchor links
+- [ ] Implement scoring system based on difficulty
+- [ ] Add navigation from results to reading material
+- [ ] Test complete user flow
+- [ ] Deploy to production
+
+### Pre-Launch Checklist
+- [ ] All core features working
+- [ ] 50+ high-quality questions
+- [ ] Mobile-responsive design
+- [ ] Performance optimized
+- [ ] Security audit completed
+- [ ] Privacy policy and terms of service
+- [ ] Analytics integrated
+- [ ] Error monitoring set up
+- [ ] Backup system tested
+- [ ] Marketing materials ready
+- [ ] Social media accounts created
+- [ ] Beta testers recruited
+
+### Launch Day Checklist
+- [ ] Final testing on production
+- [ ] Database backed up
+- [ ] Monitoring dashboards active
+- [ ] Support email set up
+- [ ] Announcement posted
+- [ ] Social media promotion
+- [ ] Monitor for issues
+- [ ] Respond to user feedback
+- [ ] Celebrate! 🎉
+
+---
+
+**Document Version**: 1.0
+**Last Updated**: October 2025
+**Next Review**: After Phase 1 completion
+
+---
+
+## 💡 Remember
+
+This is a living document. Update it as you:
+- Make new decisions
+- Encounter problems and solutions
+- Add features
+- Learn lessons
+- Pivot strategy
+
+The goal is to have a single source of truth that anyone (including future you) can reference to understand the complete vision and current state of the project.
+
+Good luck building your historical quiz application! 🚀📚
