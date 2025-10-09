@@ -1,18 +1,18 @@
 import { useState, useEffect } from 'react'
 
-function TopicList({ onTopicSelect }) {
+function TopicList({ period, onTopicSelect, onBack }) {
   const [topics, setTopics] = useState([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState("")
 
   useEffect(() => {
     fetchTopics()
-  }, [])
+  }, [period.id])
 
   const fetchTopics = async () => {
     setLoading(true)
     try {
-      const response = await fetch('http://localhost:8081/api/topics')
+      const response = await fetch(`http://localhost:8081/api/periods/${period.id}/topics`)
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`)
       }
@@ -33,25 +33,30 @@ function TopicList({ onTopicSelect }) {
     return <div className="error">Error: {error}</div>
   }
 
-  if (topics.length === 0) {
-    return <div className="error">No topics available</div>
-  }
-
   return (
     <div className="quiz-container">
-      <h1>📚 Choose a Topic</h1>
-      <div className="topic-list">
-        {topics.map((topic) => (
-          <div
-            key={topic.id}
-            className="topic-card"
-            onClick={() => onTopicSelect(topic)}
-          >
-            <h3>{topic.title}</h3>
-            <p>{topic.description.substring(0, 20)}</p>
-          </div>
-        ))}
-      </div>
+      <button onClick={onBack} className="back-btn">
+        ← Back to Periods
+      </button>
+
+      <h1>📚 {period.title} - Choose a Topic</h1>
+
+      {topics.length === 0 ? (
+        <div className="error">No topics available for this period</div>
+      ) : (
+        <div className="topic-list">
+          {topics.map((topic) => (
+            <div
+              key={topic.id}
+              className="topic-card"
+              onClick={() => onTopicSelect(topic)}
+            >
+              <h3>{topic.title}</h3>
+              <p>{topic.description.substring(0, 100)}...</p>
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   )
 }

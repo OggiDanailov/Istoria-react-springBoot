@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import PeriodList from './components/PeriodList/PeriodList'
 import TopicList from './components/TopicList/TopicList'
 import ReadingMaterial from './components/ReadingMaterial/ReadingMaterial'
 import Quiz from './components/Quiz/Quiz'
@@ -6,8 +7,14 @@ import Admin from './components/Admin/Admin'
 import './assets/styles-global.css'
 
 function App() {
-  const [currentView, setCurrentView] = useState('topics') // 'topics', 'reading', 'quiz', 'admin'
+  const [currentView, setCurrentView] = useState('periods') // Changed from 'topics' to 'periods'
+  const [selectedPeriod, setSelectedPeriod] = useState(null)
   const [selectedTopic, setSelectedTopic] = useState(null)
+
+  const handlePeriodSelect = (period) => {
+    setSelectedPeriod(period)
+    setCurrentView('topics')
+  }
 
   const handleTopicSelect = (topic) => {
     setSelectedTopic(topic)
@@ -16,6 +23,12 @@ function App() {
 
   const handleStartQuiz = () => {
     setCurrentView('quiz')
+  }
+
+  const handleBackToPeriods = () => {
+    setCurrentView('periods')
+    setSelectedPeriod(null)
+    setSelectedTopic(null)
   }
 
   const handleBackToTopics = () => {
@@ -32,16 +45,12 @@ function App() {
   }
 
   const handleBackFromAdmin = () => {
-    setCurrentView('topics')
-  }
-
-  const handleGoToReadingFromResults = () => {
-    setCurrentView('reading')
+    setCurrentView('periods')
   }
 
   return (
     <>
-      {currentView === 'topics' && (
+      {currentView === 'periods' && (
         <>
           <div className="quiz-container">
             <button
@@ -51,8 +60,16 @@ function App() {
               ⚙️ Admin Panel
             </button>
           </div>
-          <TopicList onTopicSelect={handleTopicSelect} />
+          <PeriodList onPeriodSelect={handlePeriodSelect} />
         </>
+      )}
+
+      {currentView === 'topics' && selectedPeriod && (
+        <TopicList
+          period={selectedPeriod}
+          onTopicSelect={handleTopicSelect}
+          onBack={handleBackToPeriods}
+        />
       )}
 
       {currentView === 'reading' && selectedTopic && (
