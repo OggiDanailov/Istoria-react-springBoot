@@ -1,0 +1,44 @@
+.period-form {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.period-form h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.period-form .form-group {
+  margin-bottom: 20px;
+}
+
+.period-form .form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #555;
+}
+
+.period-form .form-group input,
+.period-form .form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+.period-form .form-group textarea {
+  resize: vertical;
+}
+
+.period-form .form-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}

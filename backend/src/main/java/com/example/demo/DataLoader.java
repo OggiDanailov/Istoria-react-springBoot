@@ -12,7 +12,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 import java.util.Arrays;
 
-@Component
+// @Component
 public class DataLoader implements CommandLineRunner {
 
     private final PeriodRepository periodRepository;
