@@ -98,3 +98,55 @@
     width: 100%;
   }
 }
+
+/* Chapter Management Button */
+.btn-manage-chapters {
+  padding: 8px 16px;
+  background-color: #17a2b8;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.btn-manage-chapters:hover {
+  background-color: #138496;
+}
+
+/* Chapters List */
+.chapters-list {
+  margin-top: 30px;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.chapters-list h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.chapter-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  margin-bottom: 10px;
+  background: #f8f9fa;
+  border-radius: 4px;
+  border-left: 4px solid #17a2b8;
+}
+
+.chapter-item h4 {
+  margin: 0;
+  color: #333;
+}
+
+.chapter-actions {
+  display: flex;
+  gap: 10px;
+}

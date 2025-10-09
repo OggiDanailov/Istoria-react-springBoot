@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import TopicForm from './TopicForm'
 import QuestionForm from './QuestionForm'
+import ChapterForm from './ChapterForm';
 import './Admin.css'
 
 function Admin({ onBack }) {
@@ -10,6 +11,11 @@ function Admin({ onBack }) {
   const [showQuestionForm, setShowQuestionForm] = useState(false)
   const [editingTopic, setEditingTopic] = useState(null)
   const [loading, setLoading] = useState(true)
+
+  const [showChapterForm, setShowChapterForm] = useState(false);
+  const [selectedTopicForChapter, setSelectedTopicForChapter] = useState(null);
+  const [chapterToEdit, setChapterToEdit] = useState(null);
+  const [chapters, setChapters] = useState([]);
 
   useEffect(() => {
     fetchTopics()
@@ -63,6 +69,51 @@ function Admin({ onBack }) {
     setSelectedTopic(null)
   }
 
+  // CRUD FOR CHAPTER functions
+
+  const fetchChapters = async (topicId) => {
+    try {
+      const response = await fetch(`http://localhost:8081/api/topics/${topicId}/chapters`);
+      const data = await response.json();
+      setChapters(data);
+    } catch (error) {
+      console.error('Error fetching chapters:', error);
+    }
+  };
+
+  const handleAddChapter = (topicId) => {
+    setSelectedTopicForChapter(topicId);
+    setChapterToEdit(null);
+    setShowChapterForm(true);
+    fetchChapters(topicId);
+  };
+
+  const handleEditChapter = (chapter) => {
+    setChapterToEdit(chapter);
+    setShowChapterForm(true);
+  };
+
+  const handleDeleteChapter = async (chapterId) => {
+    if (window.confirm('Are you sure you want to delete this chapter?')) {
+      try {
+        await fetch(`http://localhost:8081/api/chapters/${chapterId}`, {
+          method: 'DELETE'
+        });
+        fetchChapters(selectedTopicForChapter);
+      } catch (error) {
+        console.error('Error deleting chapter:', error);
+      }
+    }
+  };
+
+  const handleChapterSaved = () => {
+    setShowChapterForm(false);
+    setChapterToEdit(null);
+    fetchChapters(selectedTopicForChapter);
+  };
+
+  // CRUD FOR CHAPTER functions  - END
+
   if (loading) {
     return <div className="loading">Loading admin panel...</div>
   }
@@ -73,6 +124,61 @@ function Admin({ onBack }) {
         topic={editingTopic}
         onClose={handleTopicFormClose}
       />
+    )
+  }
+
+  if (showChapterForm) {
+    return (
+      <div className="quiz-container">
+        <button
+          onClick={() => {
+            setShowChapterForm(false);
+            setChapterToEdit(null);
+          }}
+          className="back-btn"
+        >
+          ← Back to Admin
+        </button>
+
+        <h1>📚 Manage Chapters</h1>
+
+        <ChapterForm
+          topicId={selectedTopicForChapter}
+          chapterToEdit={chapterToEdit}
+          onSave={handleChapterSaved}
+          onCancel={() => {
+            setShowChapterForm(false);
+            setChapterToEdit(null);
+          }}
+        />
+
+        <div className="chapters-list">
+          <h3>Existing Chapters</h3>
+          {chapters.length === 0 ? (
+            <p>No chapters yet. Create one above!</p>
+          ) : (
+            chapters.map(chapter => (
+              <div key={chapter.id} className="chapter-item">
+                <h4>{chapter.title}</h4>
+                <div className="chapter-actions">
+                  <button
+                    onClick={() => handleEditChapter(chapter)}
+                    className="admin-btn edit-btn"
+                  >
+                    ✏️ Edit
+                  </button>
+                  <button
+                    onClick={() => handleDeleteChapter(chapter.id)}
+                    className="admin-btn delete-btn"
+                  >
+                    🗑️ Delete
+                  </button>
+                </div>
+              </div>
+            ))
+          )}
+        </div>
+      </div>
     )
   }
 
@@ -129,6 +235,13 @@ function Admin({ onBack }) {
                   className="admin-btn delete-btn"
                 >
                   🗑️ Delete
+                </button>
+
+                <button
+                  onClick={() => handleAddChapter(topic.id)}
+                  className="btn-manage-chapters"
+                >
+                  📚 Manage Chapters
                 </button>
               </div>
             </div>
