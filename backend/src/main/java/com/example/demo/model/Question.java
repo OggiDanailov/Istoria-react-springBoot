@@ -28,6 +28,8 @@ public class Question {
 
     private int difficulty;
 
+    private String textReference;
+
     // Default constructor
     public Question() {}
 
@@ -37,6 +39,14 @@ public class Question {
         this.options = options;
         this.correctAnswer = correctAnswer;
         this.difficulty = 1; // Default to Easy
+    }
+
+    public String getTextReference() {
+        return textReference;
+    }
+
+    public void setTextReference(String textReference) {
+        this.textReference = textReference;
     }
 
     // Add getter and setter

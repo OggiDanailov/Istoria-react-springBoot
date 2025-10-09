@@ -9,7 +9,8 @@ function QuestionForm({ topic, onClose }) {
     question: '',
     options: ['', '', '', ''],
     correctAnswer: 0,
-    difficulty: 1
+    difficulty: 1,
+    textReference: ''
   })
   const [loading, setLoading] = useState(false)
 
@@ -55,7 +56,8 @@ function QuestionForm({ topic, onClose }) {
         question: '',
         options: ['', '', '', ''],
         correctAnswer: 0,
-        difficulty: 1
+        difficulty: 1,
+        textReference: ''
       })
       setShowAddForm(false)
       setEditingQuestion(null)
@@ -73,7 +75,8 @@ function QuestionForm({ topic, onClose }) {
       question: question.question,
       options: question.options,
       correctAnswer: question.correctAnswer,
-      difficulty: question.difficulty || 1
+      difficulty: question.difficulty || 1,
+      textReference: question.textReference || ''
     })
     setShowAddForm(true)
   }
@@ -104,7 +107,8 @@ function QuestionForm({ topic, onClose }) {
       question: '',
       options: ['', '', '', ''],
       correctAnswer: 0,
-      difficulty: 1
+      difficulty: 1,
+      textReference: ''
     })
   }
 
@@ -152,6 +156,20 @@ function QuestionForm({ topic, onClose }) {
               <option value="2">⭐⭐ Medium (20 points)</option>
               <option value="3">⭐⭐⭐ Hard (30 points)</option>
             </select>
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="textReference">Text Reference (optional):</label>
+            <input
+              type="text"
+              id="textReference"
+              value={formData.textReference}
+              onChange={(e) => setFormData({ ...formData, textReference: e.target.value })}
+              placeholder="e.g., #roman-kingdom-foundation"
+            />
+            <small style={{ color: '#666', fontSize: '12px', display: 'block', marginTop: '5px' }}>
+              Link to a section in the reading material (use # followed by section ID)
+            </small>
           </div>
 
           <div className="form-group">

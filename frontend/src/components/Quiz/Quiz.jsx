@@ -88,7 +88,9 @@ function Quiz({ topicId, onBack }) {
         questions={questions}
         userAnswers={userAnswers}
         onRestart={restartQuiz}
+        topicId={topicId}
         onBack={onBack}
+        onGoToReading={onBack}
       />
     )
   }
