@@ -52,7 +52,7 @@ function TopicList({ period, onTopicSelect, onBack }) {
               onClick={() => onTopicSelect(topic)}
             >
               <h3>{topic.title}</h3>
-              <p>{topic.description.substring(0, 100)}...</p>
+              <p>{topic.description}...</p>
             </div>
           ))}
         </div>

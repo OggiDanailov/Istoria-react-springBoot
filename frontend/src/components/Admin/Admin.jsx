@@ -329,7 +329,7 @@ function Admin({ onBack }) {
             <div key={topic.id} className="admin-topic-card">
               <div className="admin-topic-info">
                 <h3>{topic.title}</h3>
-                <p>{topic.description.substring(0, 100)}...</p>
+                <p>{topic.description || 'No description available'}...</p>
               </div>
               <div className="admin-topic-actions">
                 <button

@@ -512,7 +512,7 @@ public class QuestionTranslation {
 12. ✅ **Tested text reference flow**: Quiz → Wrong answer → Click button → Jump to reading section
 
 **Remaining Tasks:**
-1. ⬜ **Create Chapter CRUD in Admin Panel** - Add/edit/delete chapters with WYSIWYG or HTML editor
+1.  ✅ **Create Chapter CRUD in Admin Panel** - Add/edit/delete chapters with WYSIWYG or HTML editor
 2. ⬜ **Implement question randomization** (backend query with ORDER BY RANDOM())
 3. ⬜ **Implement answer shuffling** (frontend Fisher-Yates shuffle)
 4. ⬜ **Add more sample content** - Create chapters with proper HTML anchors (H2/H3 structure)
