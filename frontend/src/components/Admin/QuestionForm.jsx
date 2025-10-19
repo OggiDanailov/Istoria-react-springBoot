@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import './QuestionForm.css'
+import { scrollToFormInput } from '../../utils/formUtils'
 
 function QuestionForm({ topic, onClose }) {
   const [questions, setQuestions] = useState([])
@@ -79,6 +80,8 @@ function QuestionForm({ topic, onClose }) {
       textReference: question.textReference || ''
     })
     setShowAddForm(true)
+    scrollToFormInput('#question')
+
   }
 
   const handleDelete = async (questionId) => {
