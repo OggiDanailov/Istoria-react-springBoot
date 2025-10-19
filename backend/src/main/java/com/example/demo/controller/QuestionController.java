@@ -68,6 +68,8 @@ public class QuestionController {
         question.setQuestion(questionDetails.getQuestion());
         question.setOptions(questionDetails.getOptions());
         question.setCorrectAnswer(questionDetails.getCorrectAnswer());
+        question.setDifficulty(questionDetails.getDifficulty());
+        question.setTextReference(questionDetails.getTextReference());
 
         Question updatedQuestion = questionRepository.save(question);
         return ResponseEntity.ok(updatedQuestion);

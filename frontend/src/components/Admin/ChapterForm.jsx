@@ -48,6 +48,7 @@ function ChapterForm({ topicId, chapterToEdit, onSave, onCancel }) {
           <label>Chapter Title:</label>
           <input
             type="text"
+            id="chapter"
             value={formData.title}
             onChange={(e) => setFormData({ ...formData, title: e.target.value })}
             required

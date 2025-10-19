@@ -3,6 +3,7 @@ import TopicForm from './TopicForm'
 import QuestionForm from './QuestionForm'
 import ChapterForm from './ChapterForm';
 import PeriodForm from './PeriodForm';
+import { scrollToFormInput } from '../../utils/formUtils'
 import './Admin.css'
 
 function Admin({ onBack }) {
@@ -100,6 +101,7 @@ function Admin({ onBack }) {
   const handleEditChapter = (chapter) => {
     setChapterToEdit(chapter);
     setShowChapterForm(true);
+    scrollToFormInput("#chapter")
   };
 
   const handleDeleteChapter = async (chapterId) => {
