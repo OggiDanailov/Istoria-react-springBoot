@@ -4,11 +4,13 @@ import com.example.demo.model.Question;
 import com.example.demo.model.Chapter;
 import com.example.demo.repository.QuestionRepository;
 import com.example.demo.repository.ChapterRepository;
+import com.example.demo.dto.QuizAttemptRequest;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.HttpStatus;
 import java.util.List;
 import java.util.stream.Collectors;
+import jakarta.servlet.http.HttpServletRequest;
 
 @CrossOrigin(origins = "http://localhost:5173")
 @RestController
@@ -104,5 +106,22 @@ public List<Question> getQuestionsByTopic(@PathVariable Long topicId) {
         question.setChapter(chapter);
         Question savedQuestion = questionRepository.save(question);
         return ResponseEntity.status(HttpStatus.CREATED).body(savedQuestion);
+    }
+
+
+    // Save quiz attempt (requires authentication)
+    @PostMapping("/quiz-attempts")
+        public ResponseEntity<?> saveQuizAttempt(HttpServletRequest request, @RequestBody QuizAttemptRequest attemptRequest) {        // Get user info from request attributes (set by JWT filter)
+        String userId = (String) request.getAttribute("userId");
+        String email = (String) request.getAttribute("email");
+
+        // If userId is null, the filter would have blocked this request
+        // But this is a safety check
+        if (userId == null) {
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("User not authenticated");
+        }
+
+        // For now, just return success
+        return ResponseEntity.ok("Quiz attempt saved for user: " + email);
     }
 }
