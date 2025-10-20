@@ -1,32 +1,194 @@
-# Historical Quiz Application - Product Roadmap & Technical Specifications
+# Historical Quiz Application - Product Roadmap
 
-## 📖 Project Vision
+## Project Vision
 
-A comprehensive historical education platform where users can read curated historical content and test their knowledge through quizzes. The app will feature multiple historical periods, gamification elements, competitive modes, and multi-language support.
+A comprehensive historical education platform combining reading materials with assessment quizzes. Users learn at their own pace (free tier) or track progress and compete (premium tier).
+
+## Data Model
+
+```
+Period → Topic → Chapter → Question (4 options, multiple choice)
+```
+
+**Key Features:**
+- Questions link to reading sections via anchor tags (#section-id)
+- Difficulty levels: 1-Easy (1pts), 2-Medium (2pts), 3-Hard (3pts)
+- HTML content with H2/H3 headings for organization
 
 ---
 
-## 🎯 Core Concept
+## Phase 1: Core Foundation (90% Complete)
 
-### Application Purpose
-An interactive learning platform focused on world history, combining reading materials with assessment quizzes. Users can learn at their own pace (free tier) or track progress and compete for prizes (premium tier).
+**Completed:**
+- ✅ Difficulty levels for questions
+- ✅ Text references (anchor links to reading material)
+- ✅ Scroll-to-edit UX with reusable `scrollToFormInput()` utility
+- ✅ Full admin CRUD for periods, topics, chapters, questions
+- ✅ Results screen with "Read about this" navigation
+- ✅ Scoring system based on difficulty
+- ✅ Text reference backfilling (manual + SQL)
+- ✅ File-based H2 database persistence
 
-### Target Audience
-- History enthusiasts
-- Students preparing for exams
-- Competitive learners
-- International audience (multi-language support)
+**Bug Fixes (Latest):**
+- ✅ Fixed QuestionController.updateQuestion() not persisting difficulty/textReference
+- ✅ Created formUtils.js with reusable scroll utility
+- ✅ All existing questions now have textReferences
+
+**Remaining (Priority Order):**
+1. ⬜ **Question randomization** (backend: ORDER BY RANDOM())
+2. ⬜ **Answer shuffling** (frontend: Fisher-Yates shuffle)
+3. ⬜ **Quiz batching** - 10 questions per batch, 80% mastery threshold, retake system (DEFER to Phase 2)
+4. ⬜ **Polish** - Loading states, error handling, responsive design
+
+**Why defer batching to Phase 2:** Batching without persistent user data feels incomplete. Once authentication exists, you can track mastery status, persist progress, and make batching meaningful.
 
 ---
 
-## 📊 Data Model Hierarchy
+## Phase 2: User Authentication & Progress (NEXT)
 
+**Timeline:** ~2 weeks
+
+**Why do this first:** Authentication is foundational. Randomization and batching become much more valuable when users can persist progress and track mastery. Building auth now prevents refactoring later.
+
+**Backend Tasks:**
+1. Create User entity (username, email, passwordHash, accountType, premiumExpiryDate)
+2. Create QuizAttempt entity (track individual quiz attempts)
+3. Create UserProgress entity (track mastery per topic)
+4. Implement JWT authentication with Spring Security
+5. Create registration/login endpoints
+6. Add @Secured annotations to quiz endpoints
+
+**Frontend Tasks:**
+1. Build Sign Up / Sign In pages
+2. Create user dashboard (progress, history, stats)
+3. Implement protected routes
+4. Add logout functionality
+5. Display user context throughout app
+
+**Database Changes:**
+- New users table
+- New quiz_attempts table
+- New user_progress table
+- Foreign key constraints
+
+**Testing:**
+- Registration flow
+- Login/logout
+- Token persistence
+- Protected route access
+- Quiz attempt tracking
+
+**Deliverables:**
+- Working authentication system
+- User dashboard with progress tracking
+- Persistent quiz history
+
+---
+
+## Phase 3: Quiz Features with Persistence (After Phase 2)
+
+Now that users exist, add these in order:
+
+1. **Randomization** (1 hour) - Random question order per attempt
+2. **Answer shuffling** (1 hour) - Randomize answer positions
+3. **Quiz batching** (3 hours) - 10 questions per batch, 80% mastery threshold, retake logic
+4. **Quiz history** - Show past attempts, track improvement over time
+
+**Key: All attempts now saved to database and associated with user**
+
+---
+
+## Phase 4: Premium Tier & Payments (After Phase 3)
+
+- User account types (FREE, PREMIUM)
+- Stripe integration ($3/month subscription)
+- Premium-only features (competitive mode, analytics, leaderboard)
+
+---
+
+## Phase 5: Competitive Mode (After Phase 4)
+
+- Timed quizzes (20 seconds per question)
+- Real-time leaderboards
+- Anti-cheat measures
+- Prize distribution
+
+---
+
+## Phase 6: Mobile App (After Phase 5)
+
+React Native + Expo for iOS/Android with feature parity to web.
+
+---
+
+## Phase 7: Internationalization (Long-term)
+
+UI translation in 5 languages + content translation.
+
+---
+
+## Database Schema (Current)
+
+```sql
+-- Core entities
+CREATE TABLE periods (id, title, description);
+CREATE TABLE topics (id, title, description, period_id);
+CREATE TABLE chapters (id, title, content, topic_id);
+CREATE TABLE questions (id, question, correct_answer, difficulty, text_reference, chapter_id);
+CREATE TABLE question_options (question_id, option);
+
+-- Phase 2
+CREATE TABLE users (id, username, email, password_hash, account_type, stripe_customer_id, premium_expiry_date);
+CREATE TABLE quiz_attempts (id, user_id, chapter_id, score, total_questions, total_points, attempt_date);
+CREATE TABLE user_progress (id, user_id, topic_id, total_points, questions_answered, questions_correct, last_studied);
 ```
-Period (Prehistory, Antiquity, Medieval Europe, etc.)
-  └── Topic (Neolithic, Ancient Greece, Ancient Rome, etc.)
-      └── Chapter (Roman Kingdom, Roman Republic, etc.)
-          └── Question (Multiple choice with 4 options)
-```
+
+---
+
+## Key Decisions
+
+**Decision 11:** Reusable form utilities (formUtils.js) - DRY principle, consistent UX
+
+**Decision 12:** Defer quiz batching to Phase 2 - Better UX with persistent user data; prevents refactoring
+
+**Decision 13:** Auth first, then features - Build foundation correctly rather than retrofitting later
+
+---
+
+## Known Issues & Technical Debt
+
+**Resolved:**
+- ✅ TextReference not saving - Fixed QuestionController
+- ✅ Scroll-to-edit UX - Implemented with utility function
+- ✅ Missing chapter UI - Already exists in admin panel
+
+**Remaining:**
+- No automated tests
+- No CI/CD pipeline
+- Database not indexed
+- No logging/monitoring
+
+---
+
+## Success Criteria
+
+**Phase 1:** Randomization + answer shuffling working ✅ (almost there)
+
+**Phase 2:** Users can register, login, and see progress dashboard
+
+**Phase 3:** Quiz batching working with mastery tracking (80% threshold)
+
+**Phase 4:** Premium subscriptions processing via Stripe
+
+**Phase 5:** Competitive mode live with leaderboards
+
+---
+
+## Notes
+
+This is a living document. Update it as you complete phases and learn new things. The goal is a single source of truth for the project's progress and vision.
+
+Current focus: **Finish Phase 1 (randomization), then move to Phase 2 (auth).**
 
 ### Important Design Decisions
 
@@ -117,15 +279,6 @@ public class Chapter {
     <p>Content about the kings...</p>
 </div>
 ```
-
----
-
-### 2. Quiz System with Difficulty Levels
-
-**Question Difficulty:**
-- **Level 1 (Easy)**: 10 points - Basic facts, dates, names
-- **Level 2 (Medium)**: 20 points - Understanding concepts, connections
-- **Level 3 (Hard)**: 30 points - Analysis, complex scenarios
 
 **Database Schema Update:**
 ```java
