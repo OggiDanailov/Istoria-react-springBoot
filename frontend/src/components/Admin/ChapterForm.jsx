@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { API_BASE_URL } from '../../config/api'
 import './ChapterForm.css';
 
 function ChapterForm({ topicId, chapterToEdit, onSave, onCancel }) {
@@ -20,8 +21,8 @@ function ChapterForm({ topicId, chapterToEdit, onSave, onCancel }) {
     e.preventDefault();
 
     const url = chapterToEdit
-      ? `http://localhost:8081/api/chapters/${chapterToEdit.id}`
-      : `http://localhost:8081/api/topics/${topicId}/chapters`;
+      ? `${API_BASE_URL}/api/chapters/${chapterToEdit.id}`
+      : `${API_BASE_URL}/api/topics/${topicId}/chapters`;
 
     const method = chapterToEdit ? 'PUT' : 'POST';
 

@@ -1,0 +1,57 @@
+
+/* About page */
+.about-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background: white;
+  min-height: 100vh;
+}
+
+.back-btn {
+  background: #667eea;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 30px;
+  font-size: 16px;
+}
+
+.back-btn:hover {
+  background: #764ba2;
+}
+
+.about-content h1 {
+  color: #333;
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.about-content h2 {
+  color: #667eea;
+  font-size: 20px;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.about-content section {
+  margin-bottom: 25px;
+}
+
+.about-content p {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.about-content ul, .about-content ol {
+  color: #666;
+  line-height: 1.8;
+  margin-left: 20px;
+}
+
+.about-content li {
+  margin-bottom: 8px;
+}

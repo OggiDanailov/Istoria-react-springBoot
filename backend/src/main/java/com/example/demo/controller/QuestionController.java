@@ -10,6 +10,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.http.HttpStatus;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.Collections;
 import jakarta.servlet.http.HttpServletRequest;
 
 @CrossOrigin(origins = "http://localhost:5173")
@@ -87,10 +88,10 @@ public class QuestionController {
 
     // Get all questions for a specific topic (across all chapters)
     // In QuestionController.java
-@GetMapping("/topics/{topicId}/questions")
-public List<Question> getQuestionsByTopic(@PathVariable Long topicId) {
-    return questionRepository.findByChapterTopicId(topicId);
-}
+    @GetMapping("/topics/{topicId}/questions")
+    public List<Question> getQuestionsByTopic(@PathVariable Long topicId) {
+        return questionRepository.findByChapterTopicId(topicId);
+    }
 
     // Create a new question for a topic
     @PostMapping("/topics/{topicId}/questions")
@@ -123,5 +124,21 @@ public List<Question> getQuestionsByTopic(@PathVariable Long topicId) {
 
         // For now, just return success
         return ResponseEntity.ok("Quiz attempt saved for user: " + email);
+    }
+
+
+    @GetMapping("/topics/{topicId}/questions/random")
+    public List<Question> getRandomQuestionsByTopic(@PathVariable Long topicId) {
+        List<Question> allQuestions = questionRepository.findByChapterTopicId(topicId);
+        // Shuffle and limit to 10
+        Collections.shuffle(allQuestions);
+        return allQuestions.stream().limit(10).collect(Collectors.toList());
+    }
+
+    @GetMapping("/chapters/{chapterId}/questions/random")
+    public List<Question> getRandomQuestionsByChapter(@PathVariable Long chapterId) {
+        List<Question> allQuestions = questionRepository.findByChapterId(chapterId);
+        Collections.shuffle(allQuestions);
+        return allQuestions.stream().limit(10).collect(Collectors.toList());
     }
 }

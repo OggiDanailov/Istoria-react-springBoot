@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { API_BASE_URL } from '../../config/api'
 import './TopicForm.css'
 
 function TopicForm({ topic, onClose }) {
@@ -24,8 +25,8 @@ function TopicForm({ topic, onClose }) {
 
     try {
       const url = topic
-        ? `http://localhost:8081/api/topics/${topic.id}` // Update existing
-        : 'http://localhost:8081/api/topics' // Create new
+        ? `${API_BASE_URL}/api/topics/${topic.id}` // Update existing
+        : `${API_BASE_URL}/api/topics` // Create new
 
       const method = topic ? 'PUT' : 'POST'
 

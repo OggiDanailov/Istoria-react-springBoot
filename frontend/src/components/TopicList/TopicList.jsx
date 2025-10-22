@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { API_BASE_URL } from '../../config/api'
 
 function TopicList({ period, onTopicSelect, onBack }) {
   const [topics, setTopics] = useState([])
@@ -12,7 +13,7 @@ function TopicList({ period, onTopicSelect, onBack }) {
   const fetchTopics = async () => {
     setLoading(true)
     try {
-      const response = await fetch(`http://localhost:8081/api/periods/${period.id}/topics`)
+      const response = await fetch(`${API_BASE_URL}/api/periods/${period.id}/topics`)
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`)
       }
