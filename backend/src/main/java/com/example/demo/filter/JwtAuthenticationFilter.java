@@ -43,7 +43,9 @@ public class JwtAuthenticationFilter implements Filter {
 
         // Allow public access to these endpoints
         if (requestPath.contains("/api/auth/register") ||
+            requestPath.contains("h2-console") ||
             requestPath.contains("/api/auth/login") ||
+            requestPath.contains("/api/periods") ||
             requestPath.contains("/api/chapters") ||
             requestPath.contains("/api/topics") ||
             requestPath.contains("/api/questions")) {

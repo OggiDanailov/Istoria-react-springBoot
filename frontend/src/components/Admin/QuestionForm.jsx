@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import './QuestionForm.css'
 import { scrollToFormInput } from '../../utils/formUtils'
+import { API_BASE_URL } from '../../config/api'
 
 function QuestionForm({ topic, onClose }) {
   const [questions, setQuestions] = useState([])
@@ -21,7 +22,7 @@ function QuestionForm({ topic, onClose }) {
 
   const fetchQuestions = async () => {
     try {
-      const response = await fetch(`http://localhost:8081/api/topics/${topic.id}/questions`)
+      const response = await fetch(`${API_BASE_URL}/api/topics/${topic.id}/questions`)
       const data = await response.json()
       setQuestions(data)
     } catch (err) {
@@ -35,8 +36,8 @@ function QuestionForm({ topic, onClose }) {
 
     try {
       const url = editingQuestion
-        ? `http://localhost:8081/api/questions/${editingQuestion.id}`
-        : `http://localhost:8081/api/topics/${topic.id}/questions`
+        ? `${API_BASE_URL}/api/questions/${editingQuestion.id}`
+        : `${API_BASE_URL}/api/topics/${topic.id}/questions`
 
       const method = editingQuestion ? 'PUT' : 'POST'
 
@@ -88,7 +89,7 @@ function QuestionForm({ topic, onClose }) {
     if (!confirm('Are you sure you want to delete this question?')) return
 
     try {
-      await fetch(`http://localhost:8081/api/questions/${questionId}`, {
+      await fetch(`${API_BASE_URL}/api/questions/${questionId}`, {
         method: 'DELETE'
       })
       fetchQuestions()

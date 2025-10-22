@@ -4,6 +4,7 @@ import QuestionForm from './QuestionForm'
 import ChapterForm from './ChapterForm';
 import PeriodForm from './PeriodForm';
 import { scrollToFormInput } from '../../utils/formUtils'
+import { API_BASE_URL } from '../../config/api'
 import './Admin.css'
 
 function Admin({ onBack }) {
@@ -34,7 +35,7 @@ function Admin({ onBack }) {
   const fetchTopics = async () => {
     setLoading(true)
     try {
-      const response = await fetch('http://localhost:8081/api/topics')
+      const response = await fetch(`${API_BASE_URL}/api/topics`)
       const data = await response.json()
       setTopics(data)
     } catch (err) {
@@ -48,7 +49,7 @@ function Admin({ onBack }) {
     if (!confirm('Are you sure you want to delete this topic?')) return
 
     try {
-      await fetch(`http://localhost:8081/api/topics/${topicId}`, {
+      await fetch(`${API_BASE_URL}/api/topics/${topicId}`, {
         method: 'DELETE'
       })
       fetchTopics() // Refresh the list
@@ -83,7 +84,7 @@ function Admin({ onBack }) {
 
   const fetchChapters = async (topicId) => {
     try {
-      const response = await fetch(`http://localhost:8081/api/topics/${topicId}/chapters`);
+      const response = await fetch(`${API_BASE_URL}/api/topics/${topicId}/chapters`);
       const data = await response.json();
       setChapters(data);
     } catch (error) {
@@ -107,7 +108,7 @@ function Admin({ onBack }) {
   const handleDeleteChapter = async (chapterId) => {
     if (window.confirm('Are you sure you want to delete this chapter?')) {
       try {
-        await fetch(`http://localhost:8081/api/chapters/${chapterId}`, {
+        await fetch(`${API_BASE_URL}/api/chapters/${chapterId}`, {
           method: 'DELETE'
         });
         fetchChapters(selectedTopicForChapter);
@@ -127,7 +128,7 @@ function Admin({ onBack }) {
 
   const fetchPeriods = async () => {
     try {
-      const response = await fetch('http://localhost:8081/api/periods');
+      const response = await fetch(`${API_BASE_URL}/api/periods`);
       const data = await response.json();
       setPeriods(data);
     } catch (error) {
@@ -149,7 +150,7 @@ function Admin({ onBack }) {
   const handleDeletePeriod = async (periodId) => {
     if (window.confirm('Are you sure you want to delete this period? This will delete all topics and chapters within it!')) {
       try {
-        await fetch(`http://localhost:8081/api/periods/${periodId}`, {
+        await fetch(`${API_BASE_URL}/api/periods/${periodId}`, {
           method: 'DELETE'
         });
         fetchPeriods();

@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { API_BASE_URL } from '../../config/api'
 import './PeriodList.css'
 
 function PeriodList({ onPeriodSelect }) {
@@ -13,7 +14,7 @@ function PeriodList({ onPeriodSelect }) {
   const fetchPeriods = async () => {
     setLoading(true)
     try {
-      const response = await fetch('http://localhost:8081/api/periods')
+      const response = await fetch(`${API_BASE_URL}/api/periods`)
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`)
       }

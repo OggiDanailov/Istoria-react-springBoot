@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { API_BASE_URL } from '../../config/api'
 import './ReadingMaterial.css'
 
 function ReadingMaterial({ topic, onStartQuiz, onBack }) {
@@ -11,7 +12,7 @@ function ReadingMaterial({ topic, onStartQuiz, onBack }) {
 
   const fetchChapters = async () => {
     try {
-      const response = await fetch(`http://localhost:8081/api/topics/${topic.id}/chapters`)
+      const response = await fetch(`${API_BASE_URL}/api/topics/${topic.id}/chapters`)
       const data = await response.json()
       setChapters(data)
     } catch (err) {

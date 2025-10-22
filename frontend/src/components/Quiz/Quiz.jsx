@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react'
 import Results from '../Results/Results'
+import { shuffleQuestionOptions, shuffleQuestions } from '../../utils/formUtils';
+import { API_BASE_URL } from '../../config/api'
 import './Quiz.css'
 
 function Quiz({ topicId, onBack }) {
@@ -17,12 +19,13 @@ function Quiz({ topicId, onBack }) {
   const fetchQuestions = async () => {
     setLoading(true)
     try {
-      const response = await fetch(`http://localhost:8081/api/topics/${topicId}/questions`)
+      const response = await fetch(`${API_BASE_URL}/api/topics/${topicId}/questions/random`);
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`)
       }
       const data = await response.json()
-      setQuestions(data)
+      const shuffledQuestions = data.map(q => shuffleQuestionOptions(q));
+      setQuestions(shuffledQuestions);
     } catch (err) {
       setError(`Failed to fetch questions: ${err.message}`)
     } finally {

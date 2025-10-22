@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { API_BASE_URL } from '../../config/api'
 import './PeriodForm.css';
 
 function PeriodForm({ periodToEdit, onSave, onCancel }) {
@@ -20,8 +21,8 @@ function PeriodForm({ periodToEdit, onSave, onCancel }) {
     e.preventDefault();
 
     const url = periodToEdit
-      ? `http://localhost:8081/api/periods/${periodToEdit.id}`
-      : `http://localhost:8081/api/periods`;
+      ? `${API_BASE_URL}/api/periods/${periodToEdit.id}`
+      : `${API_BASE_URL}/api/periods`;
 
     const method = periodToEdit ? 'PUT' : 'POST';
 
