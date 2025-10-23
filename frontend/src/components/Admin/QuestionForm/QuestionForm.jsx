@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react'
 import './QuestionForm.css'
-import { scrollToFormInput } from '../../utils/formUtils'
-import { API_BASE_URL } from '../../config/api'
+import { scrollToFormInput } from '../../../utils/formUtils'
+import { API_BASE_URL } from '../../../config/api'
 
-function QuestionForm({ topic, onClose }) {
+function QuestionForm({ topic, onClose, question }) {
   const [questions, setQuestions] = useState([])
   const [showAddForm, setShowAddForm] = useState(false)
   const [editingQuestion, setEditingQuestion] = useState(null)
@@ -19,6 +19,20 @@ function QuestionForm({ topic, onClose }) {
   useEffect(() => {
     fetchQuestions()
   }, [topic.id])
+
+  useEffect(() => {
+    if (question) {
+      setEditingQuestion(question)
+      setFormData({
+        question: question.question,
+        options: question.options,
+        correctAnswer: question.correctAnswer,
+        difficulty: question.difficulty || 1,
+        textReference: question.textReference || ''
+      })
+      setShowAddForm(true)
+    }
+  }, [question])
 
   const fetchQuestions = async () => {
     try {
