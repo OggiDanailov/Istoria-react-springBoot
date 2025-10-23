@@ -4,15 +4,35 @@ import './TopicForm.css'
 
 function TopicForm({ topic, onClose }) {
   const [title, setTitle] = useState('')
-  const [content, setContent] = useState('')
+  const [description, setDescription] = useState('')
+  const [periodId, setPeriodId] = useState('')
+  const [periods, setPeriods] = useState([])
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
 
+  // Fetch periods on mount
+  useEffect(() => {
+    const fetchPeriods = async () => {
+      try {
+        const response = await fetch(`${API_BASE_URL}/api/periods`)
+        if (!response.ok) throw new Error('Failed to fetch periods')
+        const data = await response.json()
+        setPeriods(data)
+      } catch (err) {
+        setError(`Failed to load periods: ${err.message}`)
+      }
+    }
+    fetchPeriods()
+  }, [])
+
+  // Load existing topic data if editing
   useEffect(() => {
     if (topic) {
-      // Editing existing topic
       setTitle(topic.title)
-      setContent(topic.content)
+      setDescription(topic.description)
+      if (topic.period && topic.period.id) {
+        setPeriodId(topic.period.id)
+      }
     }
   }, [topic])
 
@@ -21,14 +41,30 @@ function TopicForm({ topic, onClose }) {
     setLoading(true)
     setError('')
 
-    const topicData = { title, content }
+    if (!periodId) {
+      setError('Please select a period')
+      setLoading(false)
+      return
+    }
+
+    const topicData = {
+      title,
+      description,
+      period: { id: periodId }
+    }
 
     try {
-      const url = topic
-        ? `${API_BASE_URL}/api/topics/${topic.id}` // Update existing
-        : `${API_BASE_URL}/api/topics` // Create new
+      let url, method
 
-      const method = topic ? 'PUT' : 'POST'
+      if (topic) {
+        // Update existing topic
+        url = `${API_BASE_URL}/api/topics/${topic.id}`
+        method = 'PUT'
+      } else {
+        // Create new topic - use the period-based endpoint
+        url = `${API_BASE_URL}/api/periods/${periodId}/topics`
+        method = 'POST'
+      }
 
       const response = await fetch(url, {
         method: method,
@@ -42,7 +78,7 @@ function TopicForm({ topic, onClose }) {
         throw new Error('Failed to save topic')
       }
 
-      onClose() // Close form and refresh parent
+      onClose()
     } catch (err) {
       setError(err.message)
     } finally {
@@ -55,12 +91,29 @@ function TopicForm({ topic, onClose }) {
       <button onClick={onClose} className="back-btn">
         ← Cancel
       </button>
-
       <h1>{topic ? '✏️ Edit Topic' : '➕ Create New Topic'}</h1>
-
       {error && <div className="error">{error}</div>}
 
       <form onSubmit={handleSubmit} className="topic-form">
+        {/* Period Selector */}
+        <div className="form-group">
+          <label htmlFor="period">Historical Period:</label>
+          <select
+            id="period"
+            value={periodId}
+            onChange={(e) => setPeriodId(e.target.value)}
+            required
+          >
+            <option value="">-- Select a Period --</option>
+            {periods.map((period) => (
+              <option key={period.id} value={period.id}>
+                {period.title} {period.description ? `(${period.description})` : ''}
+              </option>
+            ))}
+          </select>
+        </div>
+
+        {/* Title */}
         <div className="form-group">
           <label htmlFor="title">Topic Title:</label>
           <input
@@ -73,15 +126,15 @@ function TopicForm({ topic, onClose }) {
           />
         </div>
 
+        {/* Description */}
         <div className="form-group">
-          <label htmlFor="content">Reading Material:</label>
+          <label htmlFor="description">Topic Description:</label>
           <textarea
-            id="content"
-            value={content}
-            onChange={(e) => setContent(e.target.value)}
-            placeholder="Enter the educational content for this topic..."
-            rows="15"
-            required
+            id="description"
+            value={description}
+            onChange={(e) => setDescription(e.target.value)}
+            placeholder="Brief description of the topic..."
+            rows="5"
           />
         </div>
 

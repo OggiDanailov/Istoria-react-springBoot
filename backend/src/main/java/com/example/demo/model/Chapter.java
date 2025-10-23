@@ -14,7 +14,7 @@ public class Chapter {
 
     private String title; // "Kingdom Period", "Early Empire"
 
-    @Column(length = 10000)
+    @Column(length = 50000)
     private String content; // The reading material
 
     @ManyToOne

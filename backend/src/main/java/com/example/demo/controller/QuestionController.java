@@ -4,14 +4,14 @@ import com.example.demo.model.Question;
 import com.example.demo.model.Chapter;
 import com.example.demo.repository.QuestionRepository;
 import com.example.demo.repository.ChapterRepository;
-import com.example.demo.dto.QuizAttemptRequest;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.HttpStatus;
 import java.util.List;
-import java.util.stream.Collectors;
 import java.util.Collections;
-import jakarta.servlet.http.HttpServletRequest;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 @CrossOrigin(origins = "http://localhost:5173")
 @RestController
@@ -71,8 +71,6 @@ public class QuestionController {
         question.setQuestion(questionDetails.getQuestion());
         question.setOptions(questionDetails.getOptions());
         question.setCorrectAnswer(questionDetails.getCorrectAnswer());
-        question.setDifficulty(questionDetails.getDifficulty());
-        question.setTextReference(questionDetails.getTextReference());
 
         Question updatedQuestion = questionRepository.save(question);
         return ResponseEntity.ok(updatedQuestion);
@@ -109,36 +107,68 @@ public class QuestionController {
         return ResponseEntity.status(HttpStatus.CREATED).body(savedQuestion);
     }
 
-
-    // Save quiz attempt (requires authentication)
-    @PostMapping("/quiz-attempts")
-        public ResponseEntity<?> saveQuizAttempt(HttpServletRequest request, @RequestBody QuizAttemptRequest attemptRequest) {        // Get user info from request attributes (set by JWT filter)
-        String userId = (String) request.getAttribute("userId");
-        String email = (String) request.getAttribute("email");
-
-        // If userId is null, the filter would have blocked this request
-        // But this is a safety check
-        if (userId == null) {
-            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("User not authenticated");
-        }
-
-        // For now, just return success
-        return ResponseEntity.ok("Quiz attempt saved for user: " + email);
-    }
-
-
+    // Get random questions for a topic (for quiz batching)
     @GetMapping("/topics/{topicId}/questions/random")
     public List<Question> getRandomQuestionsByTopic(@PathVariable Long topicId) {
         List<Question> allQuestions = questionRepository.findByChapterTopicId(topicId);
-        // Shuffle and limit to 10
         Collections.shuffle(allQuestions);
         return allQuestions.stream().limit(10).collect(Collectors.toList());
     }
 
+    // Get random questions for a chapter (for quiz batching)
     @GetMapping("/chapters/{chapterId}/questions/random")
     public List<Question> getRandomQuestionsByChapter(@PathVariable Long chapterId) {
         List<Question> allQuestions = questionRepository.findByChapterId(chapterId);
         Collections.shuffle(allQuestions);
         return allQuestions.stream().limit(10).collect(Collectors.toList());
+    }
+
+    // Bulk import questions from JSON
+    @PostMapping("/questions/bulk-import")
+    public ResponseEntity<?> bulkImportQuestions(@RequestBody com.example.demo.dto.BulkQuestionImportRequest importRequest) {
+        try {
+            Long chapterId = importRequest.getChapterId();
+            Long topicId = importRequest.getTopicId();
+
+            // If only topicId provided, use first chapter of topic
+            if (chapterId == null && topicId != null) {
+                Chapter chapter = chapterRepository.findByTopicId(topicId).stream()
+                    .findFirst()
+                    .orElseThrow(() -> new RuntimeException("No chapters found for topic"));
+                chapterId = chapter.getId();
+            }
+
+            if (chapterId == null) {
+                return ResponseEntity.badRequest().body("Either chapterId or topicId must be provided");
+            }
+
+            Chapter chapter = chapterRepository.findById(chapterId)
+                .orElseThrow(() -> new RuntimeException("Chapter not found"));
+
+            int importedCount = 0;
+            for (com.example.demo.dto.BulkQuestionImportRequest.QuestionImportData qData : importRequest.getQuestions()) {
+                Question question = new Question();
+                question.setQuestion(qData.getQuestion());
+                question.setOptions(qData.getOptions());
+                question.setCorrectAnswer(qData.getCorrectAnswer());
+                question.setDifficulty(qData.getDifficulty());
+                question.setTextReference(qData.getTextReference());
+                question.setChapter(chapter);
+
+                questionRepository.save(question);
+                importedCount++;
+            }
+
+            Map<String, Object> response = new HashMap<>();
+            response.put("message", "Successfully imported " + importedCount + " questions");
+            response.put("count", importedCount);
+
+            return ResponseEntity.ok().body(response);
+
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().body(new java.util.HashMap<String, Object>() {{
+                put("error", e.getMessage());
+            }});
+        }
     }
 }

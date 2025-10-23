@@ -32,6 +32,16 @@ public class JwtAuthenticationFilter implements Filter {
         HttpServletRequest httpRequest = (HttpServletRequest) request;
         HttpServletResponse httpResponse = (HttpServletResponse) response;
 
+        // Handle CORS preflight requests (OPTIONS method)
+        if ("OPTIONS".equalsIgnoreCase(httpRequest.getMethod())) {
+            httpResponse.setHeader("Access-Control-Allow-Origin", "http://localhost:5173");
+            httpResponse.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+            httpResponse.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
+            httpResponse.setHeader("Access-Control-Max-Age", "3600");
+            httpResponse.setStatus(HttpServletResponse.SC_OK);
+            return;
+        }
+
         // Skip filter for public endpoints (register, login)
         String requestPath = httpRequest.getRequestURI();
 
@@ -43,12 +53,12 @@ public class JwtAuthenticationFilter implements Filter {
 
         // Allow public access to these endpoints
         if (requestPath.contains("/api/auth/register") ||
-            requestPath.contains("h2-console") ||
             requestPath.contains("/api/auth/login") ||
-            requestPath.contains("/api/periods") ||
+             requestPath.contains("/api/periods") ||
             requestPath.contains("/api/chapters") ||
             requestPath.contains("/api/topics") ||
-            requestPath.contains("/api/questions")) {
+            requestPath.contains("/api/questions") ||
+            requestPath.contains("/h2-console")) {
             chain.doFilter(request, response);
             return;
         }
