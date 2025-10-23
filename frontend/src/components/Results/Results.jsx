@@ -7,7 +7,7 @@ function Results({ questions, userAnswers, onRestart, onBack, topicId }) {
     let earnedPoints = 0
 
     questions.forEach((question, index) => {
-      const points = question.difficulty === 1 ? 10 : question.difficulty === 2 ? 20 : 30
+      const points = question.difficulty === 1 ? 1 : question.difficulty === 2 ? 2 : 3
       totalPoints += points
 
       if (userAnswers[index] === question.correctAnswer) {
@@ -42,16 +42,16 @@ function Results({ questions, userAnswers, onRestart, onBack, topicId }) {
           <h3>Review Your Answers:</h3>
           {questions.map((question, index) => {
             const isCorrect = userAnswers[index] === question.correctAnswer
-            const points = question.difficulty === 1 ? 10 : question.difficulty === 2 ? 20 : 30
+            const points = question.difficulty === 1 ? 1 : question.difficulty === 2 ? 2 : 3
 
             return (
               <div key={index} className="question-review">
                 <div className="question-header">
                   <strong>Q{index + 1}:</strong> {question.question}
                   <span className="difficulty-badge">
-                    {question.difficulty === 1 && '⭐ Easy (10 pts)'}
-                    {question.difficulty === 2 && '⭐⭐ Medium (20 pts)'}
-                    {question.difficulty === 3 && '⭐⭐⭐ Hard (30 pts)'}
+                    {question.difficulty === 1 && '⭐ Easy (1 pts)'}
+                    {question.difficulty === 2 && '⭐⭐ Medium (2 pts)'}
+                    {question.difficulty === 3 && '⭐⭐⭐ Hard (3 pts)'}
                   </span>
                 </div>
 

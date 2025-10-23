@@ -1,0 +1,36 @@
+.chapter-selector {
+  margin: 20px 0;
+  padding: 15px;
+  background: #f5f5f5;
+  border-radius: 8px;
+}
+
+.chapter-selector h3 {
+  margin-top: 0;
+}
+
+.chapter-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.chapter-btn {
+  padding: 10px 15px;
+  background: white;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.chapter-btn:hover {
+  border-color: #4caf50;
+}
+
+.chapter-btn.active {
+  background: #4caf50;
+  color: white;
+  border-color: #4caf50;
+}

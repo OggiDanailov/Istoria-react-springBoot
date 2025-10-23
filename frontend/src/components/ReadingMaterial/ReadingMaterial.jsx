@@ -3,8 +3,9 @@ import { API_BASE_URL } from '../../config/api'
 import ReactMarkdown from 'react-markdown'
 import './ReadingMaterial.css'
 
-function ReadingMaterial({ topic, onStartQuiz, onBack }) {
+function ReadingMaterial({ topic, onChapterSelect, onBack }) {
   const [chapters, setChapters] = useState([])
+  const [selectedChapter, setSelectedChapter] = useState(null)
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
@@ -16,10 +17,24 @@ function ReadingMaterial({ topic, onStartQuiz, onBack }) {
       const response = await fetch(`${API_BASE_URL}/api/topics/${topic.id}/chapters`)
       const data = await response.json()
       setChapters(data)
+      // Auto-select first chapter if available
+      if (data.length > 0) {
+        setSelectedChapter(data[0])
+      }
     } catch (err) {
       console.error('Failed to fetch chapters:', err)
     } finally {
       setLoading(false)
+    }
+  }
+
+  const handleChapterSelect = (chapter) => {
+    setSelectedChapter(chapter)
+  }
+
+  const handleStartQuiz = () => {
+    if (selectedChapter) {
+      onChapterSelect(selectedChapter)
     }
   }
 
@@ -32,25 +47,42 @@ function ReadingMaterial({ topic, onStartQuiz, onBack }) {
       <button onClick={onBack} className="back-btn">
         ← Back to Topics
       </button>
-
       <h1>📖 {topic.title}</h1>
 
-      <div className="reading-material">
-        {chapters.length === 0 ? (
-          <p>No reading material available yet.</p>
-        ) : (
-          chapters.map(chapter => (
-            <div key={chapter.id}>
-              <h2>{chapter.title}</h2>
-              <ReactMarkdown>{chapter.content}</ReactMarkdown>
+      {chapters.length === 0 ? (
+        <p>No reading material available yet.</p>
+      ) : (
+        <>
+          {/* Chapter selector */}
+          <div className="chapter-selector">
+            <h3>Select a Chapter:</h3>
+            <div className="chapter-buttons">
+              {chapters.map(chapter => (
+                <button
+                  key={chapter.id}
+                  onClick={() => handleChapterSelect(chapter)}
+                  className={`chapter-btn ${selectedChapter?.id === chapter.id ? 'active' : ''}`}
+                >
+                  {chapter.title}
+                </button>
+              ))}
             </div>
-          ))
-        )}
-      </div>
+          </div>
 
-      <button onClick={onStartQuiz} className="start-quiz-btn">
-        Start Quiz 🎯
-      </button>
+          {/* Reading material */}
+          {selectedChapter && (
+            <div className="reading-material">
+              <h2>{selectedChapter.title}</h2>
+              <ReactMarkdown>{selectedChapter.content}</ReactMarkdown>
+            </div>
+          )}
+
+          {/* Start quiz button */}
+          <button onClick={handleStartQuiz} className="start-quiz-btn">
+            Start Quiz on {selectedChapter?.title} 🎯
+          </button>
+        </>
+      )}
     </div>
   )
 }
