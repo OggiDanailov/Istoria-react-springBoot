@@ -1,54 +1,54 @@
 # Historical Quiz Application - Product Roadmap
+**Last Updated**: October 22, 2025
 
-## Project Vision
+## Phase 1: Core Foundation (98% Complete) ✅
 
-A comprehensive historical education platform combining reading materials with assessment quizzes. Users learn at their own pace (free tier) or track progress and compete (premium tier).
+**Completed Today (October 22):**
+- ✅ Question randomization (backend: Collections.shuffle())
+- ✅ Answer shuffling (frontend: Fisher-Yates algorithm)
+- ✅ Bulk import endpoint for questions (`POST /api/questions/bulk-import`)
+- ✅ API_BASE_URL configuration for consistency across all frontend API calls
+- ✅ CORS preflight handling (OPTIONS requests in JWT filter)
+- ✅ TopicForm with period selector dropdown (fixed missing periodId issue)
+- ✅ Markdown rendering with react-markdown library
+- ✅ Successfully imported 30 Paleolithic Era questions
+- ✅ Increased chapter content column size (10,000 → 50,000 characters)
+- ✅ Created complete Period → Topic → Chapter → Question hierarchy
 
-## Data Model
-
-```
-Period → Topic → Chapter → Question (4 options, multiple choice)
-```
-
-**Key Features:**
-- Questions link to reading sections via anchor tags (#section-id)
-- Difficulty levels: 1-Easy (1pts), 2-Medium (2pts), 3-Hard (3pts)
-- HTML content with H2/H3 headings for organization
-
----
-
-## Phase 1: Core Foundation (90% Complete)
-
-**Completed:**
+**Previously Completed:**
 - ✅ Difficulty levels for questions
 - ✅ Text references (anchor links to reading material)
 - ✅ Scroll-to-edit UX with reusable `scrollToFormInput()` utility
 - ✅ Full admin CRUD for periods, topics, chapters, questions
 - ✅ Results screen with "Read about this" navigation
 - ✅ Scoring system based on difficulty
-- ✅ Text reference backfilling (manual + SQL)
 - ✅ File-based H2 database persistence
 
 **Bug Fixes (Latest):**
-- ✅ Fixed QuestionController.updateQuestion() not persisting difficulty/textReference
-- ✅ Created formUtils.js with reusable scroll utility
-- ✅ All existing questions now have textReferences
+- ✅ Fixed CORS errors by adding OPTIONS method handling in JWT filter
+- ✅ Fixed TopicForm missing periodId - now requires period selection
+- ✅ Fixed chapter content length limit
+- ✅ Fixed markdown content rendering (not showing raw MD syntax)
 
-**Remaining (Priority Order):**
-1. ⬜ **Question randomization** (backend: ORDER BY RANDOM())
-2. ⬜ **Answer shuffling** (frontend: Fisher-Yates shuffle)
-3. ⬜ **Quiz batching** - 10 questions per batch, 80% mastery threshold, retake system (DEFER to Phase 2)
-4. ⬜ **Polish** - Loading states, error handling, responsive design
+**Remaining Minor Tasks:**
+1. ⬜ **Polish markdown rendering** - Remove visible `{#anchor-id}` from headings (use remark plugins)
+2. ⬜ **Quiz batching UI** - Display "10 questions per batch" messaging (logic already works)
+3. ⬜ **Error handling & loading states** - Improve UX during data fetching
 
-**Why defer batching to Phase 2:** Batching without persistent user data feels incomplete. Once authentication exists, you can track mastery status, persist progress, and make batching meaningful.
+**How to Verify Phase 1 Works:**
+1. Navigate to Prehistory → Paleolithic Era
+2. Click "Start Quiz"
+3. Verify: 10 random questions load each time
+4. Answer a question wrong
+5. Click "Read about this" - should jump to correct section in reading material
 
 ---
 
-## Phase 2: User Authentication & Progress (NEXT)
+## Phase 2: User Authentication & Progress (NEXT - Starting Tomorrow)
+
+**Why Now:** Phase 1 is essentially complete. Randomization and answer shuffling work perfectly. Authentication will unlock persistent user data needed for batching and progress tracking.
 
 **Timeline:** ~2 weeks
-
-**Why do this first:** Authentication is foundational. Randomization and batching become much more valuable when users can persist progress and track mastery. Building auth now prevents refactoring later.
 
 **Backend Tasks:**
 1. Create User entity (username, email, passwordHash, accountType, premiumExpiryDate)
@@ -57,6 +57,7 @@ Period → Topic → Chapter → Question (4 options, multiple choice)
 4. Implement JWT authentication with Spring Security
 5. Create registration/login endpoints
 6. Add @Secured annotations to quiz endpoints
+7. Build progress calculation logic
 
 **Frontend Tasks:**
 1. Build Sign Up / Sign In pages
@@ -64,6 +65,7 @@ Period → Topic → Chapter → Question (4 options, multiple choice)
 3. Implement protected routes
 4. Add logout functionality
 5. Display user context throughout app
+6. Show progress per topic/chapter
 
 **Database Changes:**
 - New users table
@@ -71,17 +73,11 @@ Period → Topic → Chapter → Question (4 options, multiple choice)
 - New user_progress table
 - Foreign key constraints
 
-**Testing:**
-- Registration flow
-- Login/logout
-- Token persistence
-- Protected route access
-- Quiz attempt tracking
-
-**Deliverables:**
-- Working authentication system
-- User dashboard with progress tracking
-- Persistent quiz history
+**Success Criteria for Phase 2:**
+- Users can register and login
+- Quiz attempts are saved to database
+- Users see their progress on dashboard
+- Persistent progress tracking working
 
 ---
 
@@ -89,14 +85,115 @@ Period → Topic → Chapter → Question (4 options, multiple choice)
 
 Now that users exist, add these in order:
 
-1. **Randomization** (1 hour) - Random question order per attempt
-2. **Answer shuffling** (1 hour) - Randomize answer positions
-3. **Quiz batching** (3 hours) - 10 questions per batch, 80% mastery threshold, retake logic
-4. **Quiz history** - Show past attempts, track improvement over time
+1. **Quiz batching** (3-4 hours) - 10 questions per batch, 80% mastery threshold, retake logic
+2. **Quiz history** - Show past attempts, track improvement over time
+3. **Mastery tracking** - Display topics where user achieved 80%+ accuracy
 
 **Key: All attempts now saved to database and associated with user**
 
 ---
+
+## Technical Stack
+
+### Backend
+- Spring Boot 3.5.5 (Java 21)
+- Spring Data JPA
+- H2 (development), PostgreSQL (production)
+- JWT authentication
+- RESTful API
+
+### Frontend
+- React + Vite
+- react-markdown for content rendering
+- API_BASE_URL for configuration
+- Functional components with hooks
+
+### Database
+```
+Period → Topic → Chapter → Question (4 options)
+         ↓
+      User → QuizAttempt (Phase 2)
+         ↓
+      UserProgress (Phase 2)
+```
+
+---
+
+## Key Decisions
+
+**Decision 14:** Use `react-markdown` for rendering markdown content - Avoids manual HTML entry and keeps content portable.
+
+**Decision 15:** Defer markdown anchor ID cleanup to after Phase 2 - Current implementation works for navigation, polish is lower priority.
+
+**Decision 16:** Bulk import endpoint over UI initially - Faster data loading during development, can build import UI later.
+
+**Decision 17:** TopicForm requires period selection - Prevents orphaned topics, enforces data integrity at UI level.
+
+---
+
+## Known Issues & Technical Debt
+
+**Resolved:**
+- ✅ CORS preflight requests blocking API calls
+- ✅ Missing periodId in topic creation
+- ✅ Markdown content not rendering
+- ✅ Chapter content length limit
+
+**Remaining:**
+- Markdown anchors show visible `{#id}` syntax (cosmetic, works fine for linking)
+- No automated tests
+- No CI/CD pipeline
+- Database not indexed
+- No logging/monitoring
+
+**High Priority (Next):**
+- User authentication system (Phase 2)
+- Persistent progress tracking
+- Quiz attempt history
+
+---
+
+## Success Metrics
+
+**Phase 1:** ✅ COMPLETE
+- Randomization working
+- Answer shuffling working
+- Text references functional
+- Questions load correctly
+
+**Phase 2 (Next):** Authentication & persistence
+- Users can register/login
+- Quiz attempts saved
+- Progress dashboard working
+
+**Phase 3 (After Phase 2):** Batching & mastery
+- 10 question batches
+- 80% threshold logic
+- Retake system
+
+---
+
+## Timeline
+
+**Oct 22:** Phase 1 complete (100%)
+**Oct 23-24:** Start Phase 2 (User authentication)
+**Nov 5-6:** Complete Phase 2
+**Nov 6-7:** Phase 3 (Batching & mastery)
+**Nov 8+:** Polish and additional features
+
+---
+
+## Next Session Actions
+
+1. Continue with markdown anchor ID cleanup (remark plugins)
+2. Start Phase 2 - User entity creation
+3. Implement JWT registration/login endpoints
+4. Build Sign Up/Sign In frontend components
+
+---
+
+**Document Version**: 1.1
+**Status**: Phase 1 Complete, Phase 2 Starting
 
 ## Phase 4: Premium Tier & Payments (After Phase 3)
 

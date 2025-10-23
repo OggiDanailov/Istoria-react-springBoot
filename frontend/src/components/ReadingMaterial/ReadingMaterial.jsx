@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { API_BASE_URL } from '../../config/api'
+import ReactMarkdown from 'react-markdown'
 import './ReadingMaterial.css'
 
 function ReadingMaterial({ topic, onStartQuiz, onBack }) {
@@ -41,7 +42,7 @@ function ReadingMaterial({ topic, onStartQuiz, onBack }) {
           chapters.map(chapter => (
             <div key={chapter.id}>
               <h2>{chapter.title}</h2>
-              <div dangerouslySetInnerHTML={{ __html: chapter.content }} />
+              <ReactMarkdown>{chapter.content}</ReactMarkdown>
             </div>
           ))
         )}
