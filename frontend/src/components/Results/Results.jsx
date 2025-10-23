@@ -1,6 +1,17 @@
+import { useState, useEffect } from 'react'
+import { API_BASE_URL } from '../../config/api'
 import './Results.css'
 
-function Results({ questions, userAnswers, onRestart, onBack, topicId }) {
+function Results({ questions, userAnswers, onRestart, onBack, chapterId, isLoggedIn }) {
+  const [saveStatus, setSaveStatus] = useState('') // 'saving', 'saved', 'error'
+
+  useEffect(() => {
+    // Save attempt if user is logged in
+    if (isLoggedIn) {
+      saveQuizAttempt()
+    }
+  }, [])
+
   const calculateScore = () => {
     let correct = 0
     let totalPoints = 0
@@ -19,16 +30,58 @@ function Results({ questions, userAnswers, onRestart, onBack, topicId }) {
     return { correct, earnedPoints, totalPoints }
   }
 
+  const saveQuizAttempt = async () => {
+    setSaveStatus('saving')
+    const { correct, earnedPoints, totalPoints } = calculateScore()
+
+    try {
+      const token = localStorage.getItem('token')
+      if (!token) {
+        setSaveStatus('')
+        return
+      }
+
+      const response = await fetch(`${API_BASE_URL}/api/quiz-attempts`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}`
+        },
+        body: JSON.stringify({
+          chapterId: chapterId,
+          score: earnedPoints,
+          totalQuestions: questions.length,
+          totalPoints: totalPoints
+        })
+      })
+
+      if (response.ok) {
+        setSaveStatus('saved')
+        console.log('Quiz attempt saved successfully')
+      } else {
+        setSaveStatus('error')
+        console.error('Failed to save quiz attempt')
+      }
+    } catch (err) {
+      setSaveStatus('error')
+      console.error('Error saving quiz attempt:', err)
+    }
+  }
+
   const { correct, earnedPoints, totalPoints } = calculateScore()
   const percentage = Math.round((correct / questions.length) * 100)
 
   return (
     <div className="quiz-container">
       <button onClick={onBack} className="back-btn">
-        ← Back to Topics
+        ← Back to Reading
       </button>
 
       <h1>🏺 Quiz Results</h1>
+
+      {saveStatus === 'saving' && <p className="saving-status">Saving your progress...</p>}
+      {saveStatus === 'saved' && <p className="saved-status">Progress saved!</p>}
+      {saveStatus === 'error' && <p className="error-status">Could not save progress</p>}
 
       <div className="results">
         <h2>Your Score: {correct}/{questions.length} ({percentage}%)</h2>
@@ -49,23 +102,21 @@ function Results({ questions, userAnswers, onRestart, onBack, topicId }) {
                 <div className="question-header">
                   <strong>Q{index + 1}:</strong> {question.question}
                   <span className="difficulty-badge">
-                    {question.difficulty === 1 && '⭐ Easy (1 pts)'}
+                    {question.difficulty === 1 && '⭐ Easy (1 pt)'}
                     {question.difficulty === 2 && '⭐⭐ Medium (2 pts)'}
                     {question.difficulty === 3 && '⭐⭐⭐ Hard (3 pts)'}
                   </span>
                 </div>
-
                 <p className={isCorrect ? "correct" : "incorrect"}>
                   Your answer: {question.options[userAnswers[index]] || "Not answered"}
-                  {isCorrect && ` ✓ (+${points} points)`}
+                  {isCorrect && ` ✓ (+${points} point${points > 1 ? 's' : ''})`}
                   {!isCorrect && (
                     <span className="correct-answer">
                       <br />Correct answer: {question.options[question.correctAnswer]}
                     </span>
                   )}
                 </p>
-
-                {!isCorrect && question.textReference && (
+                {/* {!isCorrect && question.textReference && (
                   <button
                     onClick={() => {
                       onBack()
@@ -78,7 +129,34 @@ function Results({ questions, userAnswers, onRestart, onBack, topicId }) {
                   >
                     📖 Read about this topic
                   </button>
-                )}
+                )} */}
+
+                {!isCorrect && question.textReference && (
+  <button
+    onClick={() => {
+      onBack()
+      // Wait longer for the page to fully render
+      setTimeout(() => {
+        // Log to verify the selector
+        console.log('Looking for:', question.textReference)
+        const element = document.querySelector(question.textReference)
+        console.log('Found element:', element)
+
+        if (element) {
+          // Scroll with more delay to ensure rendering
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+        } else {
+          console.warn('Element not found for:', question.textReference)
+          // Fallback: scroll to top
+          window.scrollTo({ top: 0, behavior: 'smooth' })
+        }
+      }, 500) // Increased from 100 to 500ms
+    }}
+    className="read-more-btn"
+  >
+    📖 Read about this topic
+  </button>
+)}
               </div>
             )
           })}

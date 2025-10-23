@@ -1,47 +1,47 @@
 {
-  "topicId": 1,
+  "chapterId": 7,
   "questions": [
     {
       "question": "When did the Paleolithic Era begin?",
       "options": ["2.6 million years ago", "10,000 BCE", "1 million years ago", "500,000 years ago"],
       "correctAnswer": 0,
       "difficulty": 1,
-      "textReference": "#introduction"
+      "textReference": "#introduction-to-the-old-stone-age"
     },
     {
       "question": "What does the term 'Paleolithic' mean?",
       "options": ["New Stone Age", "Old Stone Age", "Bronze Age", "Iron Age"],
       "correctAnswer": 1,
       "difficulty": 1,
-      "textReference": "#introduction"
+      "textReference": "#introduction-to-the-old-stone-age"
     },
     {
       "question": "Which species was known as 'handy man'?",
       "options": ["Homo erectus", "Homo sapiens", "Homo habilis", "Australopithecus"],
       "correctAnswer": 2,
       "difficulty": 1,
-      "textReference": "#homo-habilis"
+      "textReference": "#homo-habilis-the-handy-man"
     },
     {
       "question": "When did Homo erectus first control fire?",
       "options": ["1 million years ago", "400,000 years ago", "100,000 years ago", "50,000 years ago"],
       "correctAnswer": 1,
       "difficulty": 1,
-      "textReference": "#homo-erectus"
+      "textReference": "#homo-erectus-the-upright-man"
     },
     {
       "question": "What was the first stone tool culture called?",
       "options": ["Acheulean", "Mousterian", "Oldowan", "Levallois"],
       "correctAnswer": 2,
       "difficulty": 1,
-      "textReference": "#oldowan-tools"
+      "textReference": "#oldowan-tool-culture-26-17-million-years-ago"
     },
     {
       "question": "How many individuals typically made up a Paleolithic hunter-gatherer group?",
       "options": ["5-10", "25-50", "100-200", "500-1000"],
       "correctAnswer": 1,
       "difficulty": 1,
-      "textReference": "#hunting-gathering"
+      "textReference": "#hunting-and-gathering"
     },
     {
       "question": "Where were the famous Lascaux cave paintings found?",
@@ -55,7 +55,7 @@
       "options": ["50,000 BCE", "25,000 BCE", "10,000 BCE", "5,000 BCE"],
       "correctAnswer": 2,
       "difficulty": 1,
-      "textReference": "#end-paleolithic"
+      "textReference": "#the-end-of-the-paleolithic"
     },
     {
       "question": "What crucial adaptation did Australopithecus exhibit that set the stage for human evolution?",
@@ -69,77 +69,77 @@
       "options": ["Oldowan technique", "Levallois technique", "Blade technique", "Pressure flaking"],
       "correctAnswer": 1,
       "difficulty": 2,
-      "textReference": "#mousterian-tools"
+      "textReference": "#mousterian-tool-culture-300000-30000-years-ago"
     },
     {
       "question": "What was the primary characteristic of the Acheulean tool culture?",
       "options": ["Simple choppers", "Bifacially worked hand axes", "Blade tools", "Composite tools"],
       "correctAnswer": 1,
       "difficulty": 2,
-      "textReference": "#acheulean-tools"
+      "textReference": "#acheulean-tool-culture-17-million-200000-years-ago"
     },
     {
       "question": "Which species was the first to migrate out of Africa?",
       "options": ["Homo sapiens", "Homo habilis", "Homo erectus", "Australopithecus"],
       "correctAnswer": 2,
       "difficulty": 2,
-      "textReference": "#homo-erectus"
+      "textReference": "#homo-erectus-the-upright-man"
     },
     {
       "question": "What innovation around 40,000 years ago revolutionized clothing production?",
       "options": ["The loom", "The needle", "Tanning techniques", "Weaving"],
       "correctAnswer": 1,
       "difficulty": 2,
-      "textReference": "#shelter-clothing"
+      "textReference": "#shelter-and-clothing"
     },
     {
       "question": "What are the small sculptures of women with exaggerated sexual characteristics called?",
       "options": ["Cave paintings", "Venus figurines", "Totems", "Fertility stones"],
       "correctAnswer": 1,
       "difficulty": 2,
-      "textReference": "#portable-art"
+      "textReference": "#portable-art-and-ornaments"
     },
     {
       "question": "When did anatomically modern Homo sapiens first emerge in Africa?",
       "options": ["500,000 years ago", "300,000 years ago", "100,000 years ago", "70,000 years ago"],
       "correctAnswer": 1,
       "difficulty": 2,
-      "textReference": "#homo-sapiens"
+      "textReference": "#homo-sapiens-modern-humans"
     },
     {
       "question": "What tool increased hunting efficiency in the Upper Paleolithic?",
       "options": ["Hand axe", "Chopper", "Atlatl (spear-thrower)", "Stone knife"],
       "correctAnswer": 2,
       "difficulty": 2,
-      "textReference": "#upper-paleolithic-tools"
+      "textReference": "#upper-paleolithic-tool-revolution-50000-10000-bce"
     },
     {
       "question": "What type of social structure characterized Paleolithic societies?",
       "options": ["Hierarchical with kings", "Egalitarian", "Caste-based", "Matriarchal"],
       "correctAnswer": 1,
       "difficulty": 2,
-      "textReference": "#social-structure"
+      "textReference": "#social-organization-and-culture"
     },
     {
       "question": "When did personal ornaments like beaded necklaces first appear?",
       "options": ["200,000 years ago", "100,000 years ago", "50,000 years ago", "20,000 years ago"],
       "correctAnswer": 1,
       "difficulty": 2,
-      "textReference": "#portable-art"
+      "textReference": "#portable-art-and-ornaments"
     },
     {
       "question": "What period represents the transition between the Paleolithic and Neolithic?",
       "options": ["Mesolithic", "Chalcolithic", "Bronze Age", "Iron Age"],
       "correctAnswer": 0,
       "difficulty": 2,
-      "textReference": "#transition-neolithic"
+      "textReference": "#transition-to-the-neolithic"
     },
     {
       "question": "How old are the oldest known bone flutes?",
       "options": ["100,000 years", "70,000 years", "40,000 years", "20,000 years"],
       "correctAnswer": 2,
       "difficulty": 2,
-      "textReference": "#music-ritual"
+      "textReference": "#music-and-ritual"
     },
     {
       "question": "Why was the control of fire particularly transformative for human development?",
@@ -151,7 +151,7 @@
       ],
       "correctAnswer": 2,
       "difficulty": 3,
-      "textReference": "#use-of-fire"
+      "textReference": "#the-control-of-fire"
     },
     {
       "question": "What evidence suggests Paleolithic humans had complex social relationships and possibly status markers?",
@@ -163,7 +163,7 @@
       ],
       "correctAnswer": 2,
       "difficulty": 3,
-      "textReference": "#portable-art"
+      "textReference": "#portable-art-and-ornaments"
     },
     {
       "question": "What does the symmetry and standardization of Acheulean tools suggest about early human cognitive abilities?",
@@ -175,7 +175,7 @@
       ],
       "correctAnswer": 2,
       "difficulty": 3,
-      "textReference": "#acheulean-tools"
+      "textReference": "#acheulean-tool-culture-17-million-200000-years-ago"
     },
     {
       "question": "What factors likely contributed to the megafauna extinctions at the end of the Paleolithic?",
@@ -187,7 +187,7 @@
       ],
       "correctAnswer": 2,
       "difficulty": 3,
-      "textReference": "#megafauna"
+      "textReference": "#megafauna-and-extinction"
     },
     {
       "question": "How did the location of cave art (in deep, difficult-to-reach chambers) inform our understanding of its purpose?",
@@ -206,7 +206,7 @@
       "options": ["50%", "75%", "90%", "99%"],
       "correctAnswer": 3,
       "difficulty": 3,
-      "textReference": "#legacy"
+      "textReference": "#legacy-of-the-paleolithic-era"
     },
     {
       "question": "How did the development of composite tools in the Upper Paleolithic demonstrate technological advancement?",
@@ -218,7 +218,7 @@
       ],
       "correctAnswer": 1,
       "difficulty": 3,
-      "textReference": "#upper-paleolithic-tools"
+      "textReference": "#upper-paleolithic-tool-revolution-50000-10000-bce"
     },
     {
       "question": "What does the presence of grave goods in Upper Paleolithic burials suggest?",
@@ -230,7 +230,7 @@
       ],
       "correctAnswer": 2,
       "difficulty": 3,
-      "textReference": "#music-ritual"
+      "textReference": "#music-and-ritual"
     },
     {
       "question": "How did glacial periods facilitate human migration?",
@@ -242,7 +242,7 @@
       ],
       "correctAnswer": 1,
       "difficulty": 3,
-      "textReference": "#ice-ages"
+      "textReference": "#the-ice-ages"
     },
     {
       "question": "What evidence from the Middle and Upper Paleolithic indicates humans were adapting to colder climates?",
@@ -254,7 +254,7 @@
       ],
       "correctAnswer": 1,
       "difficulty": 3,
-      "textReference": "#shelter-clothing"
+      "textReference": "#shelter-and-clothing"
     }
   ]
 }

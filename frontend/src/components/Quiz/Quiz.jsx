@@ -4,7 +4,7 @@ import { shuffleQuestionOptions, shuffleQuestions } from '../../utils/formUtils'
 import { API_BASE_URL } from '../../config/api'
 import './Quiz.css'
 
-function Quiz({ chapterId, onBack }) {
+function Quiz({ chapterId, onBack, isLoggedIn }) {
   const [questions, setQuestions] = useState([])
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
   const [userAnswers, setUserAnswers] = useState([])
@@ -86,12 +86,26 @@ function Quiz({ chapterId, onBack }) {
   }
 
   if (showResults) {
+    // Calculate score
+    let totalScore = 0
+    let correctCount = 0
+
+    questions.forEach((question, index) => {
+      if (userAnswers[index] === question.correctAnswer) {
+        correctCount++
+        totalScore += question.difficulty
+      }
+    })
+
     return (
       <Results
         questions={questions}
         userAnswers={userAnswers}
         onRestart={restartQuiz}
         chapterId={chapterId}
+        score={totalScore}
+        correctCount={correctCount}
+        totalQuestions={questions.length}
         onBack={onBack}
         onGoToReading={onBack}
       />

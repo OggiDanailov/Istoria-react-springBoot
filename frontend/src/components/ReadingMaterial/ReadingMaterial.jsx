@@ -1,6 +1,9 @@
 import { useState, useEffect } from 'react'
 import { API_BASE_URL } from '../../config/api'
 import ReactMarkdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
+import rehypeSlug from 'rehype-slug'
+import remarkAnchorPlugin from '../../utils/remarkAnchorPlugin'
 import './ReadingMaterial.css'
 
 function ReadingMaterial({ topic, onChapterSelect, onBack }) {
@@ -17,7 +20,6 @@ function ReadingMaterial({ topic, onChapterSelect, onBack }) {
       const response = await fetch(`${API_BASE_URL}/api/topics/${topic.id}/chapters`)
       const data = await response.json()
       setChapters(data)
-      // Auto-select first chapter if available
       if (data.length > 0) {
         setSelectedChapter(data[0])
       }
@@ -38,6 +40,11 @@ function ReadingMaterial({ topic, onChapterSelect, onBack }) {
     }
   }
 
+  // Strip out {#anchor} syntax from markdown before rendering
+  // const cleanMarkdown = (content) => {
+  //   return content.replace(/\s*\{#[^}]+\}/g, '')
+  // }
+
   if (loading) {
     return <div className="loading">Loading reading material...</div>
   }
@@ -53,7 +60,6 @@ function ReadingMaterial({ topic, onChapterSelect, onBack }) {
         <p>No reading material available yet.</p>
       ) : (
         <>
-          {/* Chapter selector */}
           <div className="chapter-selector">
             <h3>Select a Chapter:</h3>
             <div className="chapter-buttons">
@@ -69,15 +75,17 @@ function ReadingMaterial({ topic, onChapterSelect, onBack }) {
             </div>
           </div>
 
-          {/* Reading material */}
           {selectedChapter && (
             <div className="reading-material">
-              <h2>{selectedChapter.title}</h2>
-              <ReactMarkdown>{selectedChapter.content}</ReactMarkdown>
+              <ReactMarkdown
+                remarkPlugins={[remarkGfm, remarkAnchorPlugin]}
+                rehypePlugins={[rehypeSlug]}
+              >
+                {selectedChapter.content}
+              </ReactMarkdown>
             </div>
           )}
 
-          {/* Start quiz button */}
           <button onClick={handleStartQuiz} className="start-quiz-btn">
             Start Quiz on {selectedChapter?.title} 🎯
           </button>
