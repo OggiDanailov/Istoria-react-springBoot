@@ -4,7 +4,7 @@ import { shuffleQuestionOptions, shuffleQuestions } from '../../utils/formUtils'
 import { API_BASE_URL } from '../../config/api'
 import './Quiz.css'
 
-function Quiz({ topicId, onBack }) {
+function Quiz({ chapterId, onBack }) {
   const [questions, setQuestions] = useState([])
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
   const [userAnswers, setUserAnswers] = useState([])
@@ -14,12 +14,12 @@ function Quiz({ topicId, onBack }) {
 
   useEffect(() => {
     fetchQuestions()
-  }, [topicId])
+  }, [chapterId])
 
   const fetchQuestions = async () => {
     setLoading(true)
     try {
-      const response = await fetch(`${API_BASE_URL}/api/topics/${topicId}/questions/random`);
+      const response = await fetch(`${API_BASE_URL}/api/chapters/${chapterId}/questions`);
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`)
       }
@@ -91,7 +91,7 @@ function Quiz({ topicId, onBack }) {
         questions={questions}
         userAnswers={userAnswers}
         onRestart={restartQuiz}
-        topicId={topicId}
+        chapterId={chapterId}
         onBack={onBack}
         onGoToReading={onBack}
       />
@@ -121,9 +121,9 @@ function Quiz({ topicId, onBack }) {
         <h2>{currentQuestion.question}</h2>
 
         <p className="difficulty-badge">
-          {currentQuestion.difficulty === 1 && '⭐ Easy (10 points)'}
-          {currentQuestion.difficulty === 2 && '⭐⭐ Medium (20 points)'}
-          {currentQuestion.difficulty === 3 && '⭐⭐⭐ Hard (30 points)'}
+          {currentQuestion.difficulty === 1 && '⭐ Easy (1 point)'}
+          {currentQuestion.difficulty === 2 && '⭐⭐ Medium (2 points)'}
+          {currentQuestion.difficulty === 3 && '⭐⭐⭐ Hard (3 points)'}
         </p>
 
         <div className="options">

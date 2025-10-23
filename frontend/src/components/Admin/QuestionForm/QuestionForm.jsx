@@ -170,9 +170,9 @@ function QuestionForm({ topic, onClose, question }) {
               onChange={(e) => setFormData({ ...formData, difficulty: parseInt(e.target.value) })}
               required
             >
-              <option value="1">⭐ Easy (10 points)</option>
-              <option value="2">⭐⭐ Medium (20 points)</option>
-              <option value="3">⭐⭐⭐ Hard (30 points)</option>
+              <option value="1">⭐ Easy (1 points)</option>
+              <option value="2">⭐⭐ Medium (2 points)</option>
+              <option value="3">⭐⭐⭐ Hard (3 points)</option>
             </select>
           </div>
 
