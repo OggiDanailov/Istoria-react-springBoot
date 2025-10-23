@@ -17,6 +17,8 @@ function App() {
   const [user, setUser] = useState(null)
   const [showAuthModal, setShowAuthModal] = useState(false)
   const [authView, setAuthView] = useState('signin') // 'signin' or 'signup'
+  const [selectedChapter, setSelectedChapter] = useState(null)
+
 
   // Check if user is already logged in on mount
   useEffect(() => {
@@ -69,6 +71,11 @@ function App() {
     setCurrentView('reading')
   }
 
+  const handleChapterSelect = (chapter) => {
+    setSelectedChapter(chapter)
+    setCurrentView('quiz')
+  }
+
   const handleStartQuiz = () => {
     setCurrentView('quiz')
   }
@@ -86,6 +93,7 @@ function App() {
 
   const handleBackToReading = () => {
     setCurrentView('reading')
+    setSelectedChapter(null)
   }
 
   const handleGoToAdmin = () => {
@@ -188,14 +196,14 @@ function App() {
       {currentView === 'reading' && selectedTopic && (
         <ReadingMaterial
           topic={selectedTopic}
-          onStartQuiz={handleStartQuiz}
+          onChapterSelect={handleChapterSelect}
           onBack={handleBackToTopics}
         />
       )}
 
-      {currentView === 'quiz' && selectedTopic && (
+      {currentView === 'quiz' && selectedChapter && (
         <Quiz
-          topicId={selectedTopic.id}
+          chapterId={selectedChapter.id}
           onBack={handleBackToReading}
           onBackToTopics={handleBackToTopics}
           isLoggedIn={isLoggedIn}
