@@ -211,13 +211,57 @@ users (id, email, password_hash, account_type, created_at)
 - [x] Chapter-based architecture
 - [x] 31 questions distributed across 6 chapters
 
-### Phase 2 (Current) 🔄 IN PROGRESS
-- [x] User registration/login
-- [x] JWT token management
-- [x] Quiz attempt saving
-- [ ] User dashboard display
-- [ ] Progress tracking UI
-- [ ] Mastered topics display
+## Phase 2: User Authentication & Progress Tracking (🔄 70% Complete)
+
+**Completed:**
+- ✅ User registration/login with JWT
+- ✅ User entity with password hashing
+- ✅ QuizAttempt entity and repository
+- ✅ UserProgress entity (structure ready)
+- ✅ QuizAttemptController endpoints
+- ✅ Quiz attempt saving to database
+- ✅ UserDashboard component UI
+- ✅ Dashboard navigation (header button)
+- ✅ Quiz history display (recent 10 attempts)
+- ✅ Statistics cards (quizzes taken, total points)
+- ✅ Fixed navigation flow: Period → Topic → Reading → Quiz
+- ✅ Fixed Results.jsx to pass isLoggedIn prop
+
+**Working Now:**
+- Quiz attempts save correctly (201 status)
+- Dashboard displays quiz history with scores
+- Recent attempts show accurate data
+- User can see all their quiz attempts
+
+**Remaining for Phase 2 Completion:**
+1. Create UserProgressController
+   - Calculate accuracy per topic
+   - Track total points per topic
+   - Track questions answered/correct per topic
+
+2. Implement progress calculation logic
+   - After quiz saved, calculate/update user_progress
+   - Aggregate stats by topic
+
+3. Update dashboard to display progress
+   - Show progress bar per topic
+   - Display mastery status (80%+)
+   - Show accuracy percentage per topic
+
+4. Test end-to-end flow
+   - Take quiz → Attempt saves → Progress calculates → Dashboard updates
+
+**Timeline:**
+- Started: Oct 23, 2025
+- Dashboard UI: Oct 23 ✅
+- Progress calculation: Oct 24 (next session)
+- Expected Phase 2 completion: Oct 24-25
+
+**Key Files:**
+- `UserDashboard.jsx` - UI component complete
+- `QuizAttemptController.java` - Saving attempts working
+- `Results.jsx` - Fixed to pass isLoggedIn
+- `App.jsx` - Fixed navigation flow
 
 ### Phase 3 (Future)
 - [ ] Quiz batching (10 questions)
