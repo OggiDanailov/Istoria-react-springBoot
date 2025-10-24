@@ -1,300 +1,322 @@
 # Historical Quiz Application - Product Roadmap
 
-**Last Updated**: October 23, 2025
-**Current Phase**: Phase 2 - User Authentication & Progress Tracking (In Progress)
+**Last Updated**: October 24, 2025
+**Current Phase**: Phase 2 Complete ✅ → Phase 3 - Gamification (Starting)
 
 ---
 
 ## Phase 1: Core Foundation (✅ 100% Complete)
 
-**Completed Milestones:**
+**Status**: Production Ready
+
 - ✅ Chapter-based quiz architecture (Period → Topic → Chapter → Question)
-- ✅ 6 chapters for Paleolithic Era with 31 questions distributed
+- ✅ 6 chapters for Paleolithic Era with 31 questions
 - ✅ Question randomization per attempt
 - ✅ Answer option shuffling (Fisher-Yates algorithm)
-- ✅ Difficulty levels (1/2/3 points instead of 10/20/30)
-- ✅ Text references linking questions to reading sections
-- ✅ Bulk import endpoint for questions (`POST /api/chapters/{chapterId}/questions`)
-- ✅ Admin panel refactoring (clean component structure)
-- ✅ Form components organized in folders (TopicForm/, QuestionForm/, etc.)
+- ✅ Difficulty levels (1/2/3 points)
 - ✅ Markdown rendering with react-markdown
 - ✅ Reading material with chapter selection
 - ✅ Results screen with score calculation
-- ✅ Quiz attempt saving (database integration)
-
-**How to Verify Phase 1:**
-1. Go to Prehistory → Paleolithic Era
-2. Select a chapter (e.g., "Introduction to the Old Stone Age")
-3. Click "Start Quiz"
-4. Verify: Questions load in random order
-5. Answer questions and see results
-6. Take the same quiz again - questions should be in different order
 
 ---
 
-## Phase 2: User Authentication & Progress Tracking (🔄 In Progress)
+## Phase 2: User Authentication & Progress Tracking (✅ 100% Complete)
 
-**Current Status**: Core authentication working, now building dashboard
+**Status**: Production Ready
 
-**Completed in Phase 2:**
-- ✅ User entity with password hashing (BCrypt)
-- ✅ JWT token generation and validation
-- ✅ SignUp and SignIn components
-- ✅ JwtAuthenticationFilter for request validation
-- ✅ QuizAttempt entity (tracks individual quiz attempts)
-- ✅ UserProgress entity (tracks progress per topic)
-- ✅ QuizAttemptController endpoints
-- ✅ UserProgressController endpoints
-- ✅ Quiz attempt saving to database (only logged-in users)
+**Completed:**
+- ✅ User registration/login with JWT + BCrypt
+- ✅ User entity with password hashing
+- ✅ QuizAttempt entity and saving to database
+- ✅ UserProgress entity with accuracy calculation
+- ✅ QuizAttemptController with duplicate prevention
+- ✅ UserProgressController for progress tracking
+- ✅ UserDashboard component with full stats display
+- ✅ Dashboard navigation (header button)
+- ✅ Quiz history display (recent attempts)
+- ✅ Progress aggregation by topic
+- ✅ Mastery badge display (80%+)
+- ✅ Fixed Results.jsx useEffect (no duplicate saves)
 - ✅ Token persistence in localStorage
-- ✅ User context display in header
 
-**Currently Working On:**
-- 🔄 User dashboard component (display progress, history, stats)
-- 🔄 Protected routes implementation
-- 🔄 Progress display per chapter/topic
+**Key Features Working:**
+- Users can sign up and login
+- Quiz attempts save to database only once
+- Progress calculated in real-time
+- Dashboard shows:
+  - Total points earned
+  - Quizzes taken
+  - Topics studied
+  - Topics mastered (80%+ accuracy)
+  - Progress per topic with accuracy %
+  - Recent quiz attempts (last 10)
 
-**Next Steps:**
-1. Create user dashboard component
-2. Add navigation to dashboard from main menu
-3. Display user's quiz history
-4. Show progress per topic (accuracy %, total points)
-5. Display mastered topics (80%+ accuracy)
-6. Test end-to-end user flow
-
-**Backend Changes Made:**
-- New `users` table (id, username, email, password_hash, account_type, premium_expiry_date)
-- New `quiz_attempts` table (id, user_id, chapter_id, score, total_questions, total_points, attempt_date)
-- New `user_progress` table (id, user_id, topic_id, total_points, questions_answered, questions_correct, last_studied)
-
-**Frontend Changes Made:**
-- SignUp/SignIn components with form validation
-- Token storage and retrieval
-- User email display in header
-- Logout functionality
-- Results component saves attempts to database
-
-**Timeline:**
-- Started: October 23, 2025
-- Expected Completion: October 29-30, 2025
-- Dashboard Build: Oct 25-27
-- Testing & Polish: Oct 28-29
+**Bug Fixes (Oct 24):**
+- ✅ Fixed duplicate quiz saves (React Strict Mode issue)
+- ✅ Fixed Results.jsx useRef to prevent double POST requests
+- ✅ Progress calculation working correctly
+- ✅ Removed DEBUG console logs
 
 ---
 
-## Phase 3: Quiz Features & Mastery Tracking (Future)
+## Phase 3: Gamification & Advanced Point System (🚀 Starting)
 
-**Planned Features:**
+**Status**: Design Complete, Implementation Starting
+
+### Phase 3a: New Point Scoring System (1-2 hours)
+
+**Goal**: Incentivize learning, not clicking. Penalize careless attempts.
+
+**New Rules:**
+1. **Pass (70%+ accuracy)**: Award full points (1/2/3 based on difficulty)
+2. **Fail (50-69% accuracy)**: Award 0 points (no penalty)
+3. **Fail (<50% accuracy)**: Deduct points (penalty for carelessness)
+4. **Retakes**: No additional points if already passed, but can improve score
+5. **Leaderboard**: Users won't farm points by repeating easy quizzes
+
+**Implementation:**
+- Modify QuizAttemptController to apply new scoring logic
+- Store "has_passed" flag in UserProgress for each chapter
+- Calculate points based on score bands before saving
+- Block point awards on retakes of already-passed quizzes
+
+**Database Change:**
+- Add `hasPassed` boolean to UserProgress (or create separate table)
+
+**Testing:**
+- Take quiz: 75% → Get full points ✓
+- Take quiz: 60% → Get 0 points ✓
+- Take quiz: 40% → Lose points ✓
+- Retake passed quiz: No new points ✓
+
+**Timeline**: Oct 24 afternoon
+
+---
+
+### Phase 3b: Quiz Batching & Mastery System (2-3 hours)
+
+**Goal**: Organize quizzes into 10-question batches with mastery thresholds.
+
+**Features:**
 1. Quiz batching (10 questions per batch)
-2. 80% mastery threshold
-3. Retake system for failed batches
-4. Quiz history with attempt details
-5. Performance analytics by topic
+2. 80% mastery threshold for batch completion
+3. Can't move to next batch until current batch mastered
+4. Retake system for failed batches
+5. Progress tracking per batch
 
-**Timeline**: After Phase 2 completion (~early November)
+**Implementation:**
+- Add `QuizBatch` entity (groups 10 questions)
+- Add `BatchProgress` entity (tracks completion/mastery)
+- Create BatchController endpoints
+- Update Quiz.jsx to load batch questions
+- Add UI for batch progress display
+
+**Timeline**: Oct 24-25
+
+---
+
+### Phase 3c: Polish & Bug Fixes (1-2 hours)
+
+**Outstanding Issues:**
+- "Read about this topic" button navigation bug
+  - Fix: Restructure navigation or remove feature
+  - Deferred to Phase 4
+
+- localStorage validation on app startup
+  - Add check: if token exists but user not in DB, clear localStorage
+  - Impact: Minor - only affects testing
+
+**Timeline**: Oct 25
+
+---
+
+## Phase 4: Additional Features (Future)
+
+- Fix "Read about this topic" anchor links
+- localStorage validation
+- Premium tier & Stripe payments
+- Competitive mode with leaderboards
+- Mobile app (React Native)
+- Internationalization (5 languages)
 
 ---
 
 ## Technical Architecture
 
 ### Backend Stack
-- **Framework**: Spring Boot 3.5.5 (Java 21)
-- **ORM**: Spring Data JPA / Hibernate
-- **Database**: H2 (dev), PostgreSQL (prod)
-- **Authentication**: JWT + BCrypt
-- **API**: RESTful
+- Spring Boot 3.5.5 (Java 21)
+- Spring Data JPA / Hibernate
+- H2 (dev), PostgreSQL (prod)
+- JWT + BCrypt authentication
 
 ### Frontend Stack
-- **Framework**: React + Vite
-- **Rendering**: react-markdown for markdown content
-- **State Management**: React hooks (useState, useEffect)
-- **Styling**: CSS3
+- React + Vite
+- react-markdown for content
+- React hooks for state management
 
 ### Database Schema (Current)
 ```
-periods (id, title, description)
-    └── topics (id, title, description, period_id)
-        └── chapters (id, title, content, topic_id)
-            └── questions (id, question, difficulty, text_reference, chapter_id)
-                └── question_options (question_id, option)
+periods → topics → chapters → questions → question_options
+users → quiz_attempts (links to chapters)
+users → user_progress (links to topics)
 
-users (id, email, password_hash, account_type, created_at)
-    ├── quiz_attempts (id, user_id, chapter_id, score, total_questions, total_points, attempt_date)
-    └── user_progress (id, user_id, topic_id, total_points, questions_answered, questions_correct, last_studied)
+// Phase 3 additions:
+quiz_batches (groups 10 questions per chapter)
+batch_progress (tracks user's mastery per batch)
 ```
 
 ---
 
-## Known Issues & Deferred Tasks
+## Session Notes
 
-**Known Issues:**
-- Markdown anchor links partially working (will fix with remark plugin later)
-  - Questions reference sections that may not be in their chapter
-  - Need to reorganize content and questions for proper anchor alignment
-  - Deferred to future content expansion phase
+**Oct 24 - Phase 2 Completion:**
+- Quiz attempts now save only once (fixed useRef issue)
+- Progress calculation working correctly
+- Dashboard displaying all stats accurately
+- All DEBUG logs removed
+- Ready for Phase 3
+
+**Oct 24 - Phase 3 Planning:**
+- New point system: 70% threshold, negative points for <50%
+- No retake bonuses (prevents farming)
+- Quiz batching: 10 questions per batch
+- Mastery: 80% accuracy required
+
+**Outstanding Bugs:**
+- "Read about this topic" shows "No reading material available yet"
+  - Cause: Navigation state confusion during route changes
+  - Workaround: Leave button but disable for now
+  - Fix: Defer to Phase 4 (polish)
+
+---
+
+## Next Actions (Phase 3a - Today)
+
+1. **Update QuizAttemptController**
+   - Add logic to apply new point rules
+   - Calculate points based on score bands
+   - Check if chapter already passed
+
+2. **Create ChapterProgress entity** (optional)
+   - Track which chapters user has passed
+   - Store best score per chapter
+
+3. **Update Results.jsx**
+   - Display new points earned
+   - Show if user passed/failed
+   - Show option to retake if failed
+
+4. **Test thoroughly**
+   - 75% score → Full points
+   - 60% score → 0 points
+   - 40% score → Negative points
+   - Retake already-passed quiz → No points
+
+5. **Commit Phase 3a**
+
+---
+
+## Success Metrics
+
+**Phase 1**: ✅ Complete - Questions randomize, answers shuffle, quizzes work
+
+**Phase 2**: ✅ Complete - Users register/login, attempts save, progress tracks, dashboard works
+
+**Phase 3a (Today)**:
+- [ ] New point system implemented
+- [ ] Scoring logic correct (70% threshold)
+- [ ] Retakes don't award points
+- [ ] Negative points for <50% accuracy
+
+**Phase 3b (Tomorrow)**:
+- [ ] Quiz batching implemented
+- [ ] 80% mastery threshold working
+- [ ] Batch progress tracking
+- [ ] Retake system for failed batches
+
+---
+
+## File Structure
+
+```
+backend/
+├── model/
+│   ├── User.java
+│   ├── QuizAttempt.java
+│   ├── UserProgress.java
+│   └── ... (others)
+├── controller/
+│   ├── QuizAttemptController.java (UPDATED)
+│   ├── UserProgressController.java
+│   └── ... (others)
+└── repository/
+    ├── QuizAttemptRepository.java
+    ├── UserProgressRepository.java
+    └── ... (others)
+
+frontend/
+├── components/
+│   ├── UserDashboard/
+│   │   ├── UserDashboard.jsx
+│   │   └── UserDashboard.css
+│   ├── Results/
+│   │   └── Results.jsx (FIXED)
+│   └── ... (others)
+└── config/
+    └── api.js
+```
+
+---
+
+## Key Decisions (Oct 24)
+
+**Decision 22: useRef for duplicate prevention**
+- Use useRef instead of sessionStorage/localStorage
+- Prevents React Strict Mode double-call
+- More reliable than timestamp checking
+- Impact: Single quiz save guaranteed
+
+**Decision 23: 70% mastery threshold**
+- Not too harsh (80% was too hard)
+- Encourages learning without frustration
+- Can adjust based on user feedback
+
+**Decision 24: Phase 3 order**
+- Point system first (simpler)
+- Then batching (builds on point system)
+- Then polish
+- Allows testing/adjustment before batching
+
+---
+
+## Known Issues & Technical Debt
+
+**Current Issues:**
+- "Read about this topic" button navigation bug
+  - Deferred to Phase 4
+
+- localStorage validation on app startup missing
+  - Minor issue, affects testing only
+  - Todo: Add check for invalid tokens on mount
 
 **Technical Debt:**
-- No automated tests (unit/integration)
+- No automated tests
 - No CI/CD pipeline
 - Database not indexed for production
-- No logging/monitoring system
-- Bulk import doesn't read `chapterId` from JSON (always uses selected chapter)
-
-**Deferred Features (Not Critical for MVP):**
-- Multiple correct answers per question
-- More than 4 answer options
-- Question randomization backend endpoint (using Collections.shuffle())
-- Markdown anchor ID cleanup with remark plugins
+- No logging/monitoring
 
 ---
 
-## Recent Decisions
+## Document Version History
 
-**Decision 18: Chapter-Based Quizzes**
-- Each chapter has its own set of questions
-- Users select chapter → see content → take quiz for that chapter
-- Better UX than topic-wide quizzes, more granular progress tracking
-
-**Decision 19: 1/2/3 Point System**
-- Changed from 10/20/30 to keep scoring simple
-- Easy (1pt), Medium (2pts), Hard (3pts)
-- More intuitive for users
-
-**Decision 20: Defer Anchor Links**
-- Markdown anchor links work but need content reorganization
-- Current system functional for navigation
-- Proper fix requires remark plugin + content refactoring
-- Low priority, can fix later
-
-**Decision 21: User Dashboard After Authentication**
-- Building dashboard before moving to Phase 3
-- Users need to see their progress to understand system value
-- Foundation for all future progress tracking features
+- **v1.0** (Oct 22): Initial comprehensive roadmap
+- **v1.1** (Oct 23): Phase 1 completion, Phase 2 in progress
+- **v1.2** (Oct 24 AM): Phase 2 in progress with dashboard
+- **v1.3** (Oct 24 PM): **Phase 2 COMPLETE**, Phase 3 planning
 
 ---
 
-## Bulk Import Format (Updated)
-
-**Current JSON Format for Bulk Import:**
-
-```json
-{
-  "chapterId": 7,
-  "questions": [
-    {
-      "question": "When did the Paleolithic Era begin?",
-      "options": ["2.6 million years ago", "10,000 BCE", "1 million years ago", "500,000 years ago"],
-      "correctAnswer": 0,
-      "difficulty": 1,
-      "textReference": "#introduction-to-the-old-stone-age"
-    }
-  ]
-}
-```
-
-**Steps to Import:**
-1. Go to Admin → Bulk Import Questions
-2. Select the target chapter
-3. Paste JSON (use correct `chapterId`)
-4. Click "Import"
-
-**Note**: Each import goes to one chapter. To distribute across multiple chapters, import 6 separate JSON files.
-
----
-
-## Success Criteria
-
-### Phase 1 ✅ COMPLETE
-- [x] Randomization working
-- [x] Answer shuffling working
-- [x] Text references functional
-- [x] Chapter-based architecture
-- [x] 31 questions distributed across 6 chapters
-
-## Phase 2: User Authentication & Progress Tracking (🔄 70% Complete)
-
-**Completed:**
-- ✅ User registration/login with JWT
-- ✅ User entity with password hashing
-- ✅ QuizAttempt entity and repository
-- ✅ UserProgress entity (structure ready)
-- ✅ QuizAttemptController endpoints
-- ✅ Quiz attempt saving to database
-- ✅ UserDashboard component UI
-- ✅ Dashboard navigation (header button)
-- ✅ Quiz history display (recent 10 attempts)
-- ✅ Statistics cards (quizzes taken, total points)
-- ✅ Fixed navigation flow: Period → Topic → Reading → Quiz
-- ✅ Fixed Results.jsx to pass isLoggedIn prop
-
-**Working Now:**
-- Quiz attempts save correctly (201 status)
-- Dashboard displays quiz history with scores
-- Recent attempts show accurate data
-- User can see all their quiz attempts
-
-**Remaining for Phase 2 Completion:**
-1. Create UserProgressController
-   - Calculate accuracy per topic
-   - Track total points per topic
-   - Track questions answered/correct per topic
-
-2. Implement progress calculation logic
-   - After quiz saved, calculate/update user_progress
-   - Aggregate stats by topic
-
-3. Update dashboard to display progress
-   - Show progress bar per topic
-   - Display mastery status (80%+)
-   - Show accuracy percentage per topic
-
-4. Test end-to-end flow
-   - Take quiz → Attempt saves → Progress calculates → Dashboard updates
-
-**Timeline:**
-- Started: Oct 23, 2025
-- Dashboard UI: Oct 23 ✅
-- Progress calculation: Oct 24 (next session)
-- Expected Phase 2 completion: Oct 24-25
-
-**Key Files:**
-- `UserDashboard.jsx` - UI component complete
-- `QuizAttemptController.java` - Saving attempts working
-- `Results.jsx` - Fixed to pass isLoggedIn
-- `App.jsx` - Fixed navigation flow
-
-### Phase 3 (Future)
-- [ ] Quiz batching (10 questions)
-- [ ] 80% mastery threshold
-- [ ] Retake system
-- [ ] Performance analytics
-
----
-
-## Next Session Priorities
-
-1. **Create User Dashboard Component**
-   - Display user email/account info
-   - Show total points earned
-   - List quiz attempts with scores
-   - Show progress per topic (accuracy %)
-   - Highlight mastered topics (80%+)
-
-2. **Add Dashboard Navigation**
-   - Add "Dashboard" button in header (for logged-in users)
-   - Create dashboard route in App.jsx
-
-3. **Test End-to-End Flow**
-   - Sign up new user
-   - Take a quiz
-   - Verify attempt saves
-   - Check dashboard shows progress
-
-4. **Polish & Bug Fixes**
-   - Add loading states
-   - Error handling
-   - Responsive design
-
+**Ready to start Phase 3a!** 🚀
 ---
 
 ## File Structure (Admin Panel - Organized)

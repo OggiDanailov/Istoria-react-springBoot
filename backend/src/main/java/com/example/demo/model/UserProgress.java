@@ -25,6 +25,7 @@ public class UserProgress {
     private int questionsAnswered; // Total questions answered
     private int questionsCorrect; // Total questions answered correctly
     private LocalDateTime lastStudied;
+    private boolean hasPassedChapter; // Track if user passed this chapter
 
     // Constructors
     public UserProgress() {}
@@ -104,5 +105,13 @@ public class UserProgress {
     // Check if user has mastered this topic (80%+ accuracy)
     public boolean isMastered() {
         return getAccuracyPercentage() >= 80;
+    }
+
+    public boolean isHasPassedChapter() {
+        return hasPassedChapter;
+    }
+
+    public void setHasPassedChapter(boolean hasPassedChapter) {
+        this.hasPassedChapter = hasPassedChapter;
     }
 }

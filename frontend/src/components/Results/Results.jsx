@@ -74,6 +74,15 @@ function Results({ questions, userAnswers, onRestart, onBack, chapterId, isLogge
   const { correct, earnedPoints, totalPoints } = calculateScore()
   const percentage = Math.round((correct / questions.length) * 100)
 
+  const getPassStatus = () => {
+    const percentage = Math.round((correct / questions.length) * 100)
+    if (percentage >= 70) return { status: 'PASS', color: 'excellent', message: '🎉 You passed! Points awarded!' }
+    if (percentage >= 50) return { status: 'FAIL', color: 'needs-work', message: '❌ You failed. No points awarded. Try again!' }
+    return { status: 'FAIL BADLY', color: 'error', message: '⚠️ You failed badly. Points deducted!' }
+  }
+
+  const passStatus = getPassStatus()
+
   return (
     <div className="quiz-container">
       <button onClick={onBack} className="back-btn">
@@ -94,6 +103,9 @@ function Results({ questions, userAnswers, onRestart, onBack, chapterId, isLogge
         {percentage >= 60 && percentage < 80 && <p className="good">👏 Good job! You have a solid understanding!</p>}
         {percentage < 60 && <p className="needs-work">📚 Keep studying - there's more to learn!</p>}
 
+        <div className={`pass-status ${passStatus.color}`}>
+          {passStatus.message}
+        </div>
         <div className="answer-review">
           <h3>Review Your Answers:</h3>
           {questions.map((question, index) => {

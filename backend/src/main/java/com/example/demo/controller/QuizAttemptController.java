@@ -39,12 +39,11 @@ public class QuizAttemptController {
         this.topicRepository = topicRepository;
     }
 
-    // Save a quiz attempt
+
     @PostMapping
     public ResponseEntity<?> saveQuizAttempt(@RequestBody QuizAttemptRequest request, HttpServletRequest httpRequest) {
         try {
             String userIdStr = (String) httpRequest.getAttribute("userId");
-
             if (userIdStr == null) {
                 return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("User not authenticated");
             }
@@ -56,24 +55,61 @@ public class QuizAttemptController {
             Chapter chapter = chapterRepository.findById(request.getChapterId())
                 .orElseThrow(() -> new RuntimeException("Chapter not found"));
 
+            // Calculate points based on new gamification rules
+            int pointsToAward = calculatePointsToAward(user, chapter, request);
+            System.out.println("DEBUG: Points to award: " + pointsToAward);
+
+            // Save quiz attempt with calculated points
             QuizAttempt attempt = new QuizAttempt(
                 user,
                 chapter,
-                request.getScore(),
+                pointsToAward,  // Use calculated points, not raw score
                 request.getTotalQuestions(),
                 request.getTotalPoints()
             );
 
             QuizAttempt saved = quizAttemptRepository.save(attempt);
+            System.out.println("DEBUG: Quiz attempt saved! ID = " + saved.getId());
 
             // Update user progress
-            updateUserProgress(user, chapter, request);
+            updateUserProgress(user, chapter, request, pointsToAward);
 
             return ResponseEntity.status(HttpStatus.CREATED).body(saved);
 
         } catch (Exception e) {
             e.printStackTrace();
             return ResponseEntity.badRequest().body("Failed to save quiz attempt: " + e.getMessage());
+        }
+    }
+
+    // New method to calculate points based on rules
+    private int calculatePointsToAward(User user, Chapter chapter, QuizAttemptRequest request) {
+        double accuracy = (double) request.getScore() / request.getTotalPoints() * 100;
+        System.out.println("DEBUG: Accuracy: " + accuracy + "%");
+
+        // Check if user already has a passing attempt on THIS CHAPTER
+        List<QuizAttempt> chapAttempts = quizAttemptRepository.findByUserIdAndChapterId(user.getId(), chapter.getId());
+
+        boolean hasPassedThisChapter = chapAttempts.stream()
+            .anyMatch(attempt -> {
+                double attemptAccuracy = (double) attempt.getScore() / attempt.getTotalPoints() * 100;
+                return attemptAccuracy >= 70;
+            });
+
+        if (hasPassedThisChapter && accuracy >= 70) {
+            System.out.println("DEBUG: Already passed this chapter - no bonus points on retake");
+            return 0;
+        }
+
+        if (accuracy >= 70) {
+            System.out.println("DEBUG: PASS - Award full points");
+            return request.getScore();
+        } else if (accuracy >= 50) {
+            System.out.println("DEBUG: FAIL (50-69%) - No points");
+            return 0;
+        } else {
+            System.out.println("DEBUG: FAIL (<50%) - Deduct points");
+            return -(request.getScore() / 2);
         }
     }
 
@@ -137,9 +173,11 @@ public class QuizAttemptController {
     }
 
     // Helper method to update user progress
-    private void updateUserProgress(User user, Chapter chapter, QuizAttemptRequest request) {
+    private void updateUserProgress(User user, Chapter chapter, QuizAttemptRequest request, int pointsToAward) {
         try {
             Long topicId = chapter.getTopic().getId();
+            System.out.println("DEBUG: Updating progress for topic " + topicId);
+            System.out.println("DEBUG: Points to add: " + pointsToAward);
 
             UserProgress progress = userProgressRepository.findByUserIdAndTopicId(user.getId(), topicId)
                 .orElse(new UserProgress(user, chapter.getTopic()));
@@ -147,14 +185,20 @@ public class QuizAttemptController {
             double avgPointsPerQuestion = (double) request.getTotalPoints() / request.getTotalQuestions();
             int questionsCorrect = (int) Math.round(request.getScore() / avgPointsPerQuestion);
 
-            progress.setTotalPoints(progress.getTotalPoints() + request.getScore());
+            // Calculate accuracy to determine if passed
+            double accuracy = (double) request.getScore() / request.getTotalPoints() * 100;
+
+            // Update progress with calculated points
+            progress.setTotalPoints(progress.getTotalPoints() + pointsToAward);
             progress.setQuestionsAnswered(progress.getQuestionsAnswered() + request.getTotalQuestions());
             progress.setQuestionsCorrect(progress.getQuestionsCorrect() + questionsCorrect);
             progress.setLastStudied(LocalDateTime.now());
 
             userProgressRepository.save(progress);
+            System.out.println("DEBUG: User progress updated! Total points now: " + progress.getTotalPoints());
 
         } catch (Exception e) {
+            System.out.println("DEBUG: Failed to update user progress: " + e.getMessage());
             e.printStackTrace();
         }
     }
