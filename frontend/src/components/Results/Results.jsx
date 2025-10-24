@@ -10,7 +10,7 @@ function Results({ questions, userAnswers, onRestart, onBack, chapterId, isLogge
     if (isLoggedIn) {
       saveQuizAttempt()
     }
-  }, [])
+  }, [isLoggedIn, chapterId, questions])
 
   const calculateScore = () => {
     let correct = 0
@@ -116,47 +116,33 @@ function Results({ questions, userAnswers, onRestart, onBack, chapterId, isLogge
                     </span>
                   )}
                 </p>
-                {/* {!isCorrect && question.textReference && (
+
+                {!isCorrect && question.textReference && (
                   <button
                     onClick={() => {
                       onBack()
+                      // Wait longer for the page to fully render
                       setTimeout(() => {
+                        // Log to verify the selector
+                        console.log('Looking for:', question.textReference)
                         const element = document.querySelector(question.textReference)
-                        element?.scrollIntoView({ behavior: 'smooth' })
-                      }, 100)
+                        console.log('Found element:', element)
+
+                        if (element) {
+                          // Scroll with more delay to ensure rendering
+                          element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+                        } else {
+                          console.warn('Element not found for:', question.textReference)
+                          // Fallback: scroll to top
+                          window.scrollTo({ top: 0, behavior: 'smooth' })
+                        }
+                      }, 500) // Increased from 100 to 500ms
                     }}
                     className="read-more-btn"
                   >
                     📖 Read about this topic
                   </button>
-                )} */}
-
-                {!isCorrect && question.textReference && (
-  <button
-    onClick={() => {
-      onBack()
-      // Wait longer for the page to fully render
-      setTimeout(() => {
-        // Log to verify the selector
-        console.log('Looking for:', question.textReference)
-        const element = document.querySelector(question.textReference)
-        console.log('Found element:', element)
-
-        if (element) {
-          // Scroll with more delay to ensure rendering
-          element.scrollIntoView({ behavior: 'smooth', block: 'start' })
-        } else {
-          console.warn('Element not found for:', question.textReference)
-          // Fallback: scroll to top
-          window.scrollTo({ top: 0, behavior: 'smooth' })
-        }
-      }, 500) // Increased from 100 to 500ms
-    }}
-    className="read-more-btn"
-  >
-    📖 Read about this topic
-  </button>
-)}
+                )}
               </div>
             )
           })}

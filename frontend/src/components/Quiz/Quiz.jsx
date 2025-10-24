@@ -108,6 +108,7 @@ function Quiz({ chapterId, onBack, isLoggedIn }) {
         totalQuestions={questions.length}
         onBack={onBack}
         onGoToReading={onBack}
+        isLoggedIn={isLoggedIn}
       />
     )
   }

@@ -33,9 +33,14 @@ public class QuizAttemptController {
     @PostMapping
     public ResponseEntity<?> saveQuizAttempt(@RequestBody QuizAttemptRequest request, HttpServletRequest httpRequest) {
         try {
-            // Get user ID from JWT token (stored in request attributes by filter)
+            // DEBUG: Log what we're receiving
             String userIdStr = (String) httpRequest.getAttribute("userId");
+            System.out.println("DEBUG: userIdStr = " + userIdStr);
+            System.out.println("DEBUG: request.getChapterId() = " + request.getChapterId());
+            System.out.println("DEBUG: request.getScore() = " + request.getScore());
+
             if (userIdStr == null) {
+                System.out.println("DEBUG: User not authenticated!");
                 return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("User not authenticated");
             }
 
@@ -55,9 +60,12 @@ public class QuizAttemptController {
             );
 
             QuizAttempt saved = quizAttemptRepository.save(attempt);
+            System.out.println("DEBUG: Quiz attempt saved! ID = " + saved.getId());
             return ResponseEntity.status(HttpStatus.CREATED).body(saved);
 
         } catch (Exception e) {
+            System.out.println("DEBUG: Exception caught: " + e.getMessage());
+            e.printStackTrace();
             return ResponseEntity.badRequest().body("Failed to save quiz attempt: " + e.getMessage());
         }
     }

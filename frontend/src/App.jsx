@@ -7,6 +7,7 @@ import Admin from './components/Admin/Admin'
 import SignUp from './components/SignUp/SignUp'
 import SignIn from './components/SignIn/SignIn'
 import About from './components/About/About'
+import UserDashboard from './components/UserDashboard/UserDashboard'
 import './assets/styles-global.css'
 
 function App() {
@@ -17,8 +18,6 @@ function App() {
   const [user, setUser] = useState(null)
   const [showAuthModal, setShowAuthModal] = useState(false)
   const [authView, setAuthView] = useState('signin') // 'signin' or 'signup'
-  const [selectedChapter, setSelectedChapter] = useState(null)
-
 
   // Check if user is already logged in on mount
   useEffect(() => {
@@ -59,6 +58,7 @@ function App() {
     setIsLoggedIn(false)
     setUser(null)
     setShowAuthModal(false)
+    setCurrentView('periods')
   }
 
   const handlePeriodSelect = (period) => {
@@ -71,12 +71,8 @@ function App() {
     setCurrentView('reading')
   }
 
-  const handleChapterSelect = (chapter) => {
-    setSelectedChapter(chapter)
-    setCurrentView('quiz')
-  }
-
-  const handleStartQuiz = () => {
+  const handleStartQuiz = (chapter) => {
+    setSelectedTopic(chapter)
     setCurrentView('quiz')
   }
 
@@ -93,7 +89,6 @@ function App() {
 
   const handleBackToReading = () => {
     setCurrentView('reading')
-    setSelectedChapter(null)
   }
 
   const handleGoToAdmin = () => {
@@ -109,6 +104,14 @@ function App() {
   }
 
   const handleBackFromAbout = () => {
+    setCurrentView('periods')
+  }
+
+  const handleGoToDashboard = () => {
+    setCurrentView('dashboard')
+  }
+
+  const handleBackFromDashboard = () => {
     setCurrentView('periods')
   }
 
@@ -130,6 +133,9 @@ function App() {
           </button>
           {isLoggedIn ? (
             <>
+              <button onClick={handleGoToDashboard} className="dashboard-btn">
+                📊 Dashboard
+              </button>
               <span className="user-email">{user?.email}</span>
               <button onClick={handleLogout} className="logout-btn">
                 Logout
@@ -174,12 +180,14 @@ function App() {
       {currentView === 'periods' && (
         <>
           <div className="quiz-container">
-            <button
-              onClick={handleGoToAdmin}
-              className="admin-access-btn"
-            >
-              ⚙️ Admin Panel
-            </button>
+            {isLoggedIn && (
+              <button
+                onClick={handleGoToAdmin}
+                className="admin-access-btn"
+              >
+                ⚙️ Admin Panel
+              </button>
+            )}
           </div>
           <PeriodList onPeriodSelect={handlePeriodSelect} />
         </>
@@ -196,14 +204,14 @@ function App() {
       {currentView === 'reading' && selectedTopic && (
         <ReadingMaterial
           topic={selectedTopic}
-          onChapterSelect={handleChapterSelect}
+          onChapterSelect={handleStartQuiz}
           onBack={handleBackToTopics}
         />
       )}
 
-      {currentView === 'quiz' && selectedChapter && (
+      {currentView === 'quiz' && selectedTopic && (
         <Quiz
-          chapterId={selectedChapter.id}
+          chapterId={selectedTopic.id}
           onBack={handleBackToReading}
           onBackToTopics={handleBackToTopics}
           isLoggedIn={isLoggedIn}
@@ -211,12 +219,19 @@ function App() {
         />
       )}
 
-      {currentView === 'admin' && (
+      {currentView === 'admin' && isLoggedIn && (
         <Admin onBack={handleBackFromAdmin} />
       )}
 
       {currentView === 'about' && (
         <About onBack={handleBackFromAbout} />
+      )}
+
+      {currentView === 'dashboard' && isLoggedIn && (
+        <UserDashboard
+          user={user}
+          onBack={handleBackFromDashboard}
+        />
       )}
     </>
   )
