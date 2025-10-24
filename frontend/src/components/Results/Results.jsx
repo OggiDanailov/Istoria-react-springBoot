@@ -1,16 +1,19 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { API_BASE_URL } from '../../config/api'
 import './Results.css'
 
 function Results({ questions, userAnswers, onRestart, onBack, chapterId, isLoggedIn }) {
   const [saveStatus, setSaveStatus] = useState('') // 'saving', 'saved', 'error'
+  const hasAttemptedSave = useRef(false)
 
   useEffect(() => {
-    // Save attempt if user is logged in
-    if (isLoggedIn) {
+    // Save attempt if user is logged in (only once per mount)
+    if (isLoggedIn && !hasAttemptedSave.current) {
+      hasAttemptedSave.current = true // Mark as attempted
       saveQuizAttempt()
     }
-  }, [isLoggedIn, chapterId, questions])
+  }, [])
+
 
   const calculateScore = () => {
     let correct = 0

@@ -1,5 +1,8 @@
 package com.example.demo.controller;
 
+import com.example.demo.model.UserProgress;
+import com.example.demo.repository.UserProgressRepository;
+import com.example.demo.repository.TopicRepository;
 import com.example.demo.model.QuizAttempt;
 import com.example.demo.model.User;
 import com.example.demo.model.Chapter;
@@ -11,6 +14,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.http.HttpStatus;
 import jakarta.servlet.http.HttpServletRequest;
 import java.util.List;
+import java.time.LocalDateTime;
 
 @CrossOrigin(origins = "http://localhost:5173")
 @RestController
@@ -20,27 +24,28 @@ public class QuizAttemptController {
     private final QuizAttemptRepository quizAttemptRepository;
     private final UserRepository userRepository;
     private final ChapterRepository chapterRepository;
+    private final UserProgressRepository userProgressRepository;
+    private final TopicRepository topicRepository;
 
     public QuizAttemptController(QuizAttemptRepository quizAttemptRepository,
                                 UserRepository userRepository,
-                                ChapterRepository chapterRepository) {
+                                ChapterRepository chapterRepository,
+                                UserProgressRepository userProgressRepository,
+                                TopicRepository topicRepository) {
         this.quizAttemptRepository = quizAttemptRepository;
         this.userRepository = userRepository;
         this.chapterRepository = chapterRepository;
+        this.userProgressRepository = userProgressRepository;
+        this.topicRepository = topicRepository;
     }
 
     // Save a quiz attempt
     @PostMapping
     public ResponseEntity<?> saveQuizAttempt(@RequestBody QuizAttemptRequest request, HttpServletRequest httpRequest) {
         try {
-            // DEBUG: Log what we're receiving
             String userIdStr = (String) httpRequest.getAttribute("userId");
-            System.out.println("DEBUG: userIdStr = " + userIdStr);
-            System.out.println("DEBUG: request.getChapterId() = " + request.getChapterId());
-            System.out.println("DEBUG: request.getScore() = " + request.getScore());
 
             if (userIdStr == null) {
-                System.out.println("DEBUG: User not authenticated!");
                 return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("User not authenticated");
             }
 
@@ -60,11 +65,13 @@ public class QuizAttemptController {
             );
 
             QuizAttempt saved = quizAttemptRepository.save(attempt);
-            System.out.println("DEBUG: Quiz attempt saved! ID = " + saved.getId());
+
+            // Update user progress
+            updateUserProgress(user, chapter, request);
+
             return ResponseEntity.status(HttpStatus.CREATED).body(saved);
 
         } catch (Exception e) {
-            System.out.println("DEBUG: Exception caught: " + e.getMessage());
             e.printStackTrace();
             return ResponseEntity.badRequest().body("Failed to save quiz attempt: " + e.getMessage());
         }
@@ -118,7 +125,6 @@ public class QuizAttemptController {
             QuizAttempt attempt = quizAttemptRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Quiz attempt not found"));
 
-            // Verify user owns this attempt
             if (!attempt.getUser().getId().equals(Long.parseLong(userIdStr))) {
                 return ResponseEntity.status(HttpStatus.FORBIDDEN).build();
             }
@@ -127,6 +133,29 @@ public class QuizAttemptController {
 
         } catch (Exception e) {
             return ResponseEntity.badRequest().build();
+        }
+    }
+
+    // Helper method to update user progress
+    private void updateUserProgress(User user, Chapter chapter, QuizAttemptRequest request) {
+        try {
+            Long topicId = chapter.getTopic().getId();
+
+            UserProgress progress = userProgressRepository.findByUserIdAndTopicId(user.getId(), topicId)
+                .orElse(new UserProgress(user, chapter.getTopic()));
+
+            double avgPointsPerQuestion = (double) request.getTotalPoints() / request.getTotalQuestions();
+            int questionsCorrect = (int) Math.round(request.getScore() / avgPointsPerQuestion);
+
+            progress.setTotalPoints(progress.getTotalPoints() + request.getScore());
+            progress.setQuestionsAnswered(progress.getQuestionsAnswered() + request.getTotalQuestions());
+            progress.setQuestionsCorrect(progress.getQuestionsCorrect() + questionsCorrect);
+            progress.setLastStudied(LocalDateTime.now());
+
+            userProgressRepository.save(progress);
+
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 }

@@ -339,6 +339,24 @@ components/Admin/
 
 ---
 
+## Known Issues & Technical Debt
+
+**Current Issues (Phase 2):**
+- localStorage persists after database reset - users stay "logged in" with invalid tokens
+  - Fix: Add token validation on app startup, clear localStorage if user not found
+  - Impact: Minor - only affects dev/testing when DB is reset
+
+- "Read about this topic" button shows "No reading material available yet"
+  - Issue: Navigation state gets confused when routing back from results
+  - Deferred to Phase 3 (polish features)
+
+**Technical Debt:**
+- No automated tests
+- No CI/CD pipeline
+- Database not indexed
+- No logging/monitoring
+- Bulk import doesn't validate JSON structure
+
 ## API Endpoints Reference
 
 ### Content (Public)
