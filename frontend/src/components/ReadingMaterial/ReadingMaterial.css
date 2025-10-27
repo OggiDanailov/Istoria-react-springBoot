@@ -34,3 +34,8 @@
   color: white;
   border-color: #4caf50;
 }
+
+.start-quiz-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

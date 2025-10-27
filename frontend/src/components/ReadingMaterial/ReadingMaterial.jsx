@@ -6,14 +6,23 @@ import rehypeSlug from 'rehype-slug'
 import remarkAnchorPlugin from '../../utils/remarkAnchorPlugin'
 import './ReadingMaterial.css'
 
-function ReadingMaterial({ topic, onChapterSelect, onBack }) {
+function ReadingMaterial({ topic, onChapterSelect, onBack, isLoggedIn }) {
   const [chapters, setChapters] = useState([])
   const [selectedChapter, setSelectedChapter] = useState(null)
   const [loading, setLoading] = useState(true)
+  const [chapterPassed, setChapterPassed] = useState(false)
+  const [checkingPass, setCheckingPass] = useState(false)
 
   useEffect(() => {
     fetchChapters()
   }, [topic.id])
+
+  // Check if user passed this chapter when it's selected
+  useEffect(() => {
+    if (selectedChapter && isLoggedIn) {
+      checkIfPassed(selectedChapter.id)
+    }
+  }, [selectedChapter, isLoggedIn])
 
   const fetchChapters = async () => {
     try {
@@ -30,20 +39,38 @@ function ReadingMaterial({ topic, onChapterSelect, onBack }) {
     }
   }
 
+  // Check if user has already passed this chapter
+  const checkIfPassed = async (chapterId) => {
+    setCheckingPass(true)
+    try {
+      const token = localStorage.getItem('token')
+      const response = await fetch(
+        `${API_BASE_URL}/api/user-progress/chapter/${chapterId}/passed`,
+        {
+          headers: {
+            'Authorization': `Bearer ${token}`
+          }
+        }
+      )
+      const passed = await response.json()
+      setChapterPassed(passed)
+    } catch (err) {
+      console.error('Failed to check if chapter passed:', err)
+      setChapterPassed(false)
+    } finally {
+      setCheckingPass(false)
+    }
+  }
+
   const handleChapterSelect = (chapter) => {
     setSelectedChapter(chapter)
   }
 
   const handleStartQuiz = () => {
-    if (selectedChapter) {
+    if (selectedChapter && !chapterPassed) {
       onChapterSelect(selectedChapter)
     }
   }
-
-  // Strip out {#anchor} syntax from markdown before rendering
-  // const cleanMarkdown = (content) => {
-  //   return content.replace(/\s*\{#[^}]+\}/g, '')
-  // }
 
   if (loading) {
     return <div className="loading">Loading reading material...</div>
@@ -55,7 +82,6 @@ function ReadingMaterial({ topic, onChapterSelect, onBack }) {
         ← Back to Topics
       </button>
       <h1>📖 {topic.title}</h1>
-
       {chapters.length === 0 ? (
         <p>No reading material available yet.</p>
       ) : (
@@ -86,9 +112,21 @@ function ReadingMaterial({ topic, onChapterSelect, onBack }) {
             </div>
           )}
 
-          <button onClick={handleStartQuiz} className="start-quiz-btn">
-            Start Quiz on {selectedChapter?.title} 🎯
-          </button>
+          {/* Quiz Button or Mastered Message */}
+          {isLoggedIn && chapterPassed ? (
+            <div className="mastered-message">
+              <p>✅ You've already mastered this chapter!</p>
+              <p>Great job! You've completed this chapter with 70%+ accuracy.</p>
+            </div>
+          ) : (
+            <button
+              onClick={handleStartQuiz}
+              className={`start-quiz-btn ${chapterPassed ? 'disabled' : ''}`}
+              disabled={chapterPassed || checkingPass}
+            >
+              {chapterPassed ? '✅ Mastered!' : `Start Quiz on ${selectedChapter?.title} 🎯`}
+            </button>
+          )}
         </>
       )}
     </div>

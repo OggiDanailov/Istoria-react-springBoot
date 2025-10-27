@@ -25,7 +25,7 @@ public class UserProgress {
     private int questionsAnswered; // Total questions answered
     private int questionsCorrect; // Total questions answered correctly
     private LocalDateTime lastStudied;
-    private boolean hasPassedChapter; // Track if user passed this chapter
+    private boolean hasPassedChapter = false; // Track if user passed this chapter
 
     // Constructors
     public UserProgress() {}

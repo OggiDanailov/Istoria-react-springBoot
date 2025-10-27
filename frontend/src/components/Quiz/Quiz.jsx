@@ -11,10 +11,36 @@ function Quiz({ chapterId, onBack, isLoggedIn }) {
   const [showResults, setShowResults] = useState(false)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState("")
+  const [chapterPassed, setChapterPassed] = useState(false)
 
   useEffect(() => {
     fetchQuestions()
   }, [chapterId])
+
+  useEffect(() => {
+    if (isLoggedIn && chapterId) {
+      checkIfPassed()
+    }
+  }, [chapterId, isLoggedIn])
+
+  const checkIfPassed = async () => {
+    try {
+      const token = localStorage.getItem('token')
+      const response = await fetch(
+        `${API_BASE_URL}/api/user-progress/chapter/${chapterId}/passed`,
+        {
+          headers: {
+            'Authorization': `Bearer ${token}`
+          }
+        }
+      )
+      const passed = await response.json()
+      setChapterPassed(passed)
+    } catch (err) {
+      console.error('Failed to check if chapter passed:', err)
+      setChapterPassed(false)
+    }
+  }
 
   const fetchQuestions = async () => {
     setLoading(true)
@@ -57,6 +83,10 @@ function Quiz({ chapterId, onBack, isLoggedIn }) {
     setCurrentQuestionIndex(0)
     setUserAnswers([])
     setShowResults(false)
+  }
+
+  const handleQuizPassed = () => {
+    setChapterPassed(true)
   }
 
   if (loading) {
@@ -109,6 +139,8 @@ function Quiz({ chapterId, onBack, isLoggedIn }) {
         onBack={onBack}
         onGoToReading={onBack}
         isLoggedIn={isLoggedIn}
+        chapterPassed={chapterPassed}
+        onQuizPassed={handleQuizPassed}
       />
     )
   }

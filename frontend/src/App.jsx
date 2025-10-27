@@ -206,6 +206,7 @@ function App() {
           topic={selectedTopic}
           onChapterSelect={handleStartQuiz}
           onBack={handleBackToTopics}
+          isLoggedIn={isLoggedIn}
         />
       )}
 

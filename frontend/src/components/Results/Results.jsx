@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react'
 import { API_BASE_URL } from '../../config/api'
 import './Results.css'
 
-function Results({ questions, userAnswers, onRestart, onBack, chapterId, isLoggedIn }) {
+function Results({ questions, userAnswers, onRestart, onBack, chapterId, isLoggedIn, chapterPassed }) {
   const [saveStatus, setSaveStatus] = useState('') // 'saving', 'saved', 'error'
   const hasAttemptedSave = useRef(false)
 
@@ -12,6 +12,7 @@ function Results({ questions, userAnswers, onRestart, onBack, chapterId, isLogge
       hasAttemptedSave.current = true // Mark as attempted
       saveQuizAttempt()
     }
+    console.log('Results - chapterPassed:', chapterPassed)
   }, [])
 
 
@@ -60,6 +61,10 @@ function Results({ questions, userAnswers, onRestart, onBack, chapterId, isLogge
 
       if (response.ok) {
         setSaveStatus('saved')
+        const percentage = Math.round((correct / questions.length) * 100)
+        if (percentage >= 70 && onQuizPassed) {
+          onQuizPassed()  // Update parent state
+        }
         console.log('Quiz attempt saved successfully')
       } else {
         setSaveStatus('error')
@@ -163,9 +168,23 @@ function Results({ questions, userAnswers, onRestart, onBack, chapterId, isLogge
           })}
         </div>
 
-        <button onClick={onRestart} className="restart-btn">
-          Take Quiz Again
-        </button>
+        {/* {chapterPassed ? (
+          <div className="mastered-message">
+            <p>✅ You've mastered this chapter!</p>
+            <p>Move on to the next chapter to continue learning.</p>
+          </div>
+        ) : (
+          <button onClick={onRestart} className="restart-btn">
+            Take Quiz Again
+          </button>
+        )} */}
+
+        {percentage >= 70 && (
+          <div className="mastered-message">
+            <p>✅ You've mastered this chapter!</p>
+          </div>
+        )}
+
       </div>
     </div>
   )

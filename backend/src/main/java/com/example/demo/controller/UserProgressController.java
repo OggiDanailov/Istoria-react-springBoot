@@ -3,9 +3,13 @@ package com.example.demo.controller;
 import com.example.demo.model.UserProgress;
 import com.example.demo.model.User;
 import com.example.demo.model.Topic;
+import com.example.demo.model.Chapter;
+import com.example.demo.model.QuizAttempt;
+import com.example.demo.repository.QuizAttemptRepository;
 import com.example.demo.repository.UserProgressRepository;
 import com.example.demo.repository.UserRepository;
 import com.example.demo.repository.TopicRepository;
+import com.example.demo.repository.ChapterRepository;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.HttpStatus;
@@ -21,13 +25,19 @@ public class UserProgressController {
     private final UserProgressRepository userProgressRepository;
     private final UserRepository userRepository;
     private final TopicRepository topicRepository;
+    private final ChapterRepository chapterRepository;
+    private final QuizAttemptRepository quizAttemptRepository;
 
     public UserProgressController(UserProgressRepository userProgressRepository,
                                  UserRepository userRepository,
-                                 TopicRepository topicRepository) {
+                                 TopicRepository topicRepository,
+                                 ChapterRepository chapterRepository,
+                                 QuizAttemptRepository quizAttemptRepository) {
         this.userProgressRepository = userProgressRepository;
         this.userRepository = userRepository;
         this.topicRepository = topicRepository;
+        this.chapterRepository = chapterRepository;
+        this.quizAttemptRepository = quizAttemptRepository;
     }
 
     // Get all progress for a user
@@ -60,7 +70,6 @@ public class UserProgressController {
             Long userId = Long.parseLong(userIdStr);
             UserProgress progress = userProgressRepository.findByUserIdAndTopicId(userId, topicId)
                 .orElseGet(() -> {
-                    // Create new progress entry if it doesn't exist
                     User user = userRepository.findById(userId).orElse(null);
                     Topic topic = topicRepository.findById(topicId).orElse(null);
                     if (user == null || topic == null) {
@@ -96,7 +105,6 @@ public class UserProgressController {
             UserProgress progress = userProgressRepository.findByUserIdAndTopicId(userId, topicId)
                 .orElse(new UserProgress(user, topic));
 
-            // Update progress
             progress.setTotalPoints(progress.getTotalPoints() + request.getPointsEarned());
             progress.setQuestionsAnswered(progress.getQuestionsAnswered() + request.getQuestionsAnswered());
             progress.setQuestionsCorrect(progress.getQuestionsCorrect() + request.getQuestionsCorrect());
@@ -126,6 +134,37 @@ public class UserProgressController {
                 .toList();
 
             return ResponseEntity.ok(mastered);
+
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().build();
+        }
+    }
+
+    // Check if user has passed a specific chapter
+    @GetMapping("/chapter/{chapterId}/passed")
+    public ResponseEntity<Boolean> hasPassedChapter(@PathVariable Long chapterId, HttpServletRequest httpRequest) {
+        try {
+            String userIdStr = (String) httpRequest.getAttribute("userId");
+            if (userIdStr == null) {
+                return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
+            }
+
+            Long userId = Long.parseLong(userIdStr);
+
+            // Get the chapter to find its topic
+            Chapter chapter = chapterRepository.findById(chapterId)
+                .orElseThrow(() -> new RuntimeException("Chapter not found"));
+
+            // Check if user has any passing attempt on this chapter
+            List<QuizAttempt> attempts = quizAttemptRepository.findByUserIdAndChapterId(userId, chapterId);
+
+            boolean hasPassed = attempts.stream()
+                .anyMatch(attempt -> {
+                    double accuracy = (double) attempt.getScore() / attempt.getTotalPoints() * 100;
+                    return accuracy >= 70;
+                });
+
+            return ResponseEntity.ok(hasPassed);
 
         } catch (Exception e) {
             return ResponseEntity.badRequest().build();
