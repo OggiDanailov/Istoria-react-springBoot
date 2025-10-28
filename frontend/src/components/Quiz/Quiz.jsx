@@ -4,17 +4,43 @@ import { shuffleQuestionOptions, shuffleQuestions } from '../../utils/formUtils'
 import { API_BASE_URL } from '../../config/api'
 import './Quiz.css'
 
-function Quiz({ chapterId, onBack }) {
+function Quiz({ chapterId, onBack, isLoggedIn }) {
   const [questions, setQuestions] = useState([])
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
   const [userAnswers, setUserAnswers] = useState([])
   const [showResults, setShowResults] = useState(false)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState("")
+  const [chapterPassed, setChapterPassed] = useState(false)
 
   useEffect(() => {
     fetchQuestions()
   }, [chapterId])
+
+  useEffect(() => {
+    if (isLoggedIn && chapterId) {
+      checkIfPassed()
+    }
+  }, [chapterId, isLoggedIn])
+
+  const checkIfPassed = async () => {
+    try {
+      const token = localStorage.getItem('token')
+      const response = await fetch(
+        `${API_BASE_URL}/api/user-progress/chapter/${chapterId}/passed`,
+        {
+          headers: {
+            'Authorization': `Bearer ${token}`
+          }
+        }
+      )
+      const passed = await response.json()
+      setChapterPassed(passed)
+    } catch (err) {
+      console.error('Failed to check if chapter passed:', err)
+      setChapterPassed(false)
+    }
+  }
 
   const fetchQuestions = async () => {
     setLoading(true)
@@ -59,6 +85,10 @@ function Quiz({ chapterId, onBack }) {
     setShowResults(false)
   }
 
+  const handleQuizPassed = () => {
+    setChapterPassed(true)
+  }
+
   if (loading) {
     return <div className="loading">Loading quiz questions...</div>
   }
@@ -86,14 +116,31 @@ function Quiz({ chapterId, onBack }) {
   }
 
   if (showResults) {
+    // Calculate score
+    let totalScore = 0
+    let correctCount = 0
+
+    questions.forEach((question, index) => {
+      if (userAnswers[index] === question.correctAnswer) {
+        correctCount++
+        totalScore += question.difficulty
+      }
+    })
+
     return (
       <Results
         questions={questions}
         userAnswers={userAnswers}
         onRestart={restartQuiz}
         chapterId={chapterId}
+        score={totalScore}
+        correctCount={correctCount}
+        totalQuestions={questions.length}
         onBack={onBack}
         onGoToReading={onBack}
+        isLoggedIn={isLoggedIn}
+        chapterPassed={chapterPassed}
+        onQuizPassed={handleQuizPassed}
       />
     )
   }
