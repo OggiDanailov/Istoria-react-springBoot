@@ -87,7 +87,6 @@ public class QuizAttemptController {
         double accuracy = (double) request.getScore() / request.getTotalPoints() * 100;
         System.out.println("DEBUG: Accuracy: " + accuracy + "%");
 
-        // Check if user already has a passing attempt on THIS CHAPTER
         List<QuizAttempt> chapAttempts = quizAttemptRepository.findByUserIdAndChapterId(user.getId(), chapter.getId());
 
         boolean hasPassedThisChapter = chapAttempts.stream()
@@ -102,14 +101,14 @@ public class QuizAttemptController {
         }
 
         if (accuracy >= 70) {
-            System.out.println("DEBUG: PASS - Award full points");
+            System.out.println("DEBUG: PASS (70%+) - Award full points");
             return request.getScore();
         } else if (accuracy >= 50) {
             System.out.println("DEBUG: FAIL (50-69%) - No points");
             return 0;
         } else {
             System.out.println("DEBUG: FAIL (<50%) - Deduct points");
-            return -(request.getScore() / 2);
+            return -(request.getTotalPoints() / 2);  // ✅ FIX: Use totalPoints, not score
         }
     }
 
@@ -184,9 +183,6 @@ public class QuizAttemptController {
 
             double avgPointsPerQuestion = (double) request.getTotalPoints() / request.getTotalQuestions();
             int questionsCorrect = (int) Math.round(request.getScore() / avgPointsPerQuestion);
-
-            // Calculate accuracy to determine if passed
-            double accuracy = (double) request.getScore() / request.getTotalPoints() * 100;
 
             // Update progress with calculated points
             progress.setTotalPoints(progress.getTotalPoints() + pointsToAward);
