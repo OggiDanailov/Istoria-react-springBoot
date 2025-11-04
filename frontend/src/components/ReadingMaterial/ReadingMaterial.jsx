@@ -6,9 +6,9 @@ import rehypeSlug from 'rehype-slug'
 import remarkAnchorPlugin from '../../utils/remarkAnchorPlugin'
 import './ReadingMaterial.css'
 
-function ReadingMaterial({ topic, onChapterSelect, onBack, isLoggedIn }) {
+function ReadingMaterial({ topic, selectedChapter, onChapterSelect, onStartQuiz, onBack, isLoggedIn }) {
   const [chapters, setChapters] = useState([])
-  const [selectedChapter, setSelectedChapter] = useState(null)
+  const [currentChapter, setCurrentChapter] = useState(null)
   const [loading, setLoading] = useState(true)
   const [chapterPassed, setChapterPassed] = useState(false)
   const [checkingPass, setCheckingPass] = useState(false)
@@ -16,6 +16,12 @@ function ReadingMaterial({ topic, onChapterSelect, onBack, isLoggedIn }) {
   useEffect(() => {
     fetchChapters()
   }, [topic.id])
+
+  useEffect(() => {
+    if (selectedChapter) {
+      setCurrentChapter(selectedChapter)
+    }
+  }, [selectedChapter])
 
   // Check if user passed this chapter when it's selected
   useEffect(() => {
@@ -29,8 +35,10 @@ function ReadingMaterial({ topic, onChapterSelect, onBack, isLoggedIn }) {
       const response = await fetch(`${API_BASE_URL}/api/topics/${topic.id}/chapters`)
       const data = await response.json()
       setChapters(data)
-      if (data.length > 0) {
-        setSelectedChapter(data[0])
+
+      // Only set to first chapter if nothing selected
+      if (!currentChapter && data.length > 0) {
+        setCurrentChapter(data[0])  // ✅ Use setCurrentChapter, not setSelectedChapter
       }
     } catch (err) {
       console.error('Failed to fetch chapters:', err)
@@ -63,12 +71,13 @@ function ReadingMaterial({ topic, onChapterSelect, onBack, isLoggedIn }) {
   }
 
   const handleChapterSelect = (chapter) => {
-    setSelectedChapter(chapter)
+    // setCurrentChapter(chapter)
+    onChapterSelect(chapter)  // ✅ This one is fine
   }
 
   const handleStartQuiz = () => {
-    if (selectedChapter && !chapterPassed) {
-      onChapterSelect(selectedChapter)
+    if (currentChapter && !chapterPassed) {
+      onStartQuiz(currentChapter)  // ✅ Change this to onStartQuiz
     }
   }
 
@@ -93,7 +102,7 @@ function ReadingMaterial({ topic, onChapterSelect, onBack, isLoggedIn }) {
                 <button
                   key={chapter.id}
                   onClick={() => handleChapterSelect(chapter)}
-                  className={`chapter-btn ${selectedChapter?.id === chapter.id ? 'active' : ''}`}
+                  className={`chapter-btn ${currentChapter?.id === chapter.id ? 'active' : ''}`}
                 >
                   {chapter.title}
                 </button>
@@ -101,13 +110,24 @@ function ReadingMaterial({ topic, onChapterSelect, onBack, isLoggedIn }) {
             </div>
           </div>
 
-          {selectedChapter && (
+          {/* {selectedChapter && (
             <div className="reading-material">
               <ReactMarkdown
                 remarkPlugins={[remarkGfm, remarkAnchorPlugin]}
                 rehypePlugins={[rehypeSlug]}
               >
                 {selectedChapter.content}
+              </ReactMarkdown>
+            </div>
+          )} */}
+
+          {currentChapter && (
+            <div className="reading-material">
+              <ReactMarkdown
+                remarkPlugins={[remarkGfm, remarkAnchorPlugin]}
+                rehypePlugins={[rehypeSlug]}
+              >
+                {currentChapter.content}
               </ReactMarkdown>
             </div>
           )}
@@ -120,11 +140,11 @@ function ReadingMaterial({ topic, onChapterSelect, onBack, isLoggedIn }) {
             </div>
           ) : (
             <button
-              onClick={handleStartQuiz}
+              onClick={() => handleStartQuiz(currentChapter)}
               className={`start-quiz-btn ${chapterPassed ? 'disabled' : ''}`}
               disabled={chapterPassed || checkingPass}
             >
-              {chapterPassed ? '✅ Mastered!' : `Start Quiz on ${selectedChapter?.title} 🎯`}
+              {chapterPassed ? '✅ Mastered!' : `Start Quiz on ${currentChapter?.title} 🎯`}
             </button>
           )}
         </>

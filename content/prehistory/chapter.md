@@ -108,7 +108,7 @@ The Paleolithic Era ended around 10,000 BCE with the onset of the Holocene epoch
 
 Several factors contributed to this transition, including climate warming after the last Ice Age, population pressure, and accumulated knowledge about plants and animals. The shift from hunting and gathering to farming led to permanent settlements, population growth, and eventually, the rise of civilization.
 
-## Legacy of the Paleolithic Era {#legacy}
+## Legacy of the Paleolithic Era {#legacy-of-the-paleolithic-era}
 
 The Paleolithic Era laid the foundation for all subsequent human development. During this period, humans evolved their modern anatomy and cognitive abilities, developed language and culture, created art and technology, and spread across the globe. The hunter-gatherer lifestyle that characterized the Paleolithic shaped human biology and psychology in ways that still influence us today.
 

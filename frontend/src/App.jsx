@@ -14,6 +14,7 @@ function App() {
   const [currentView, setCurrentView] = useState('periods')
   const [selectedPeriod, setSelectedPeriod] = useState(null)
   const [selectedTopic, setSelectedTopic] = useState(null)
+  const [selectedChapter, setSelectedChapter] = useState(null)
   const [isLoggedIn, setIsLoggedIn] = useState(false)
   const [user, setUser] = useState(null)
   const [showAuthModal, setShowAuthModal] = useState(false)
@@ -71,20 +72,26 @@ function App() {
     setCurrentView('reading')
   }
 
-  const handleStartQuiz = (chapter) => {
-    setSelectedTopic(chapter)
-    setCurrentView('quiz')
-  }
+  // const handleStartQuiz = (chapter) => {
+  //   console.log('handleStartQuiz called with chapter:', chapter)
+  //   console.log('Before setState - selectedTopic:', selectedTopic)
+  //   // setSelectedTopic(chapter)
+  //   setSelectedChapter(chapter)
+  //   setCurrentView('quiz')
+  //   console.log('After setState calls')
+  // }
 
   const handleBackToPeriods = () => {
     setCurrentView('periods')
     setSelectedPeriod(null)
     setSelectedTopic(null)
+    setSelectedChapter(null)
   }
 
   const handleBackToTopics = () => {
     setCurrentView('topics')
-    setSelectedTopic(null)
+    // setSelectedTopic(null)
+    setSelectedChapter(null)
   }
 
   const handleBackToReading = () => {
@@ -119,6 +126,11 @@ function App() {
   const handleCloseAuthModal = () => {
     setShowAuthModal(false)
   }
+
+  const handleStartQuiz = (chapter) => {
+      setSelectedChapter(chapter)
+      setCurrentView('quiz')
+    }
 
   // Main app header
   const renderHeader = () => (
@@ -204,15 +216,17 @@ function App() {
       {currentView === 'reading' && selectedTopic && (
         <ReadingMaterial
           topic={selectedTopic}
-          onChapterSelect={handleStartQuiz}
+          selectedChapter={selectedChapter}
+          onChapterSelect={(chapter) => setSelectedChapter(chapter)}  // ← Just select
+          onStartQuiz={handleStartQuiz}                              // ← Start quiz
           onBack={handleBackToTopics}
           isLoggedIn={isLoggedIn}
         />
       )}
 
-      {currentView === 'quiz' && selectedTopic && (
+      {currentView === 'quiz' && selectedTopic && selectedChapter &&  (
         <Quiz
-          chapterId={selectedTopic.id}
+          chapterId={selectedChapter.id}
           onBack={handleBackToReading}
           onBackToTopics={handleBackToTopics}
           isLoggedIn={isLoggedIn}

@@ -12,7 +12,6 @@ function Results({ questions, userAnswers, onRestart, onBack, chapterId, isLogge
       hasAttemptedSave.current = true // Mark as attempted
       saveQuizAttempt()
     }
-    console.log('Results - chapterPassed:', chapterPassed)
   }, [])
 
 
@@ -65,7 +64,6 @@ function Results({ questions, userAnswers, onRestart, onBack, chapterId, isLogge
         if (percentage >= 70 && onQuizPassed) {
           onQuizPassed()  // Update parent state
         }
-        console.log('Quiz attempt saved successfully')
       } else {
         setSaveStatus('error')
         console.error('Failed to save quiz attempt')
@@ -144,9 +142,7 @@ function Results({ questions, userAnswers, onRestart, onBack, chapterId, isLogge
                       // Wait longer for the page to fully render
                       setTimeout(() => {
                         // Log to verify the selector
-                        console.log('Looking for:', question.textReference)
                         const element = document.querySelector(question.textReference)
-                        console.log('Found element:', element)
 
                         if (element) {
                           // Scroll with more delay to ensure rendering
