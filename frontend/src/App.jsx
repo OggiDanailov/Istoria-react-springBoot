@@ -72,15 +72,6 @@ function App() {
     setCurrentView('reading')
   }
 
-  // const handleStartQuiz = (chapter) => {
-  //   console.log('handleStartQuiz called with chapter:', chapter)
-  //   console.log('Before setState - selectedTopic:', selectedTopic)
-  //   // setSelectedTopic(chapter)
-  //   setSelectedChapter(chapter)
-  //   setCurrentView('quiz')
-  //   console.log('After setState calls')
-  // }
-
   const handleBackToPeriods = () => {
     setCurrentView('periods')
     setSelectedPeriod(null)

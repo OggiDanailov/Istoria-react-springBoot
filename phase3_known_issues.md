@@ -1,15 +1,15 @@
 # Phase 3 - Known Issues & Technical Debt
 
 **Last Updated**: October 27, 2025
-**Status**: Phase 3a ✅ COMPLETE → Phase 3b Starting
+**Status**: Phase 3a âœ… COMPLETE â†’ Phase 3b Starting
 
 ---
 
-## ✅ FIXED ISSUES (Phase 3a Complete)
+## âœ… FIXED ISSUES (Phase 3a Complete)
 
-### 1. ✅ Retake Prevention Not Working - FIXED
+### 1. âœ… Retake Prevention Not Working - FIXED
 **Severity**: HIGH
-**Status**: ✅ COMPLETE (Oct 27)
+**Status**: âœ… COMPLETE (Oct 27)
 **Description**: Users could retake quizzes after passing and get points multiple times
 
 **Root Cause**:
@@ -21,12 +21,12 @@
 - Now correctly deducts half of total possible points for <50% accuracy
 
 **Testing Verified** (Oct 27):
-- ✅ Quiz 1: 0% accuracy → **-6 points** (half of 12 possible)
-- ✅ Quiz 2: 100% accuracy → **+12 points** (full reward, no previous pass)
-- ✅ Quiz button correctly disabled after first pass
-- ✅ Point calculation accurate: -6 + 12 = **6 total points**
-- ✅ Retake prevention logic working on subsequent attempts
-- ✅ Users cannot click quiz button after passing
+- âœ… Quiz 1: 0% accuracy â†’ **-6 points** (half of 12 possible)
+- âœ… Quiz 2: 100% accuracy â†’ **+12 points** (full reward, no previous pass)
+- âœ… Quiz button correctly disabled after first pass
+- âœ… Point calculation accurate: -6 + 12 = **6 total points**
+- âœ… Retake prevention logic working on subsequent attempts
+- âœ… Users cannot click quiz button after passing
 
 **Code Change**:
 - File: `QuizAttemptController.java`
@@ -35,36 +35,57 @@
 - Change: `return -(request.getTotalPoints() / 2);` (was using `request.getScore()`)
 
 **Impact**:
-- ✅ Gamification working as intended
-- ✅ Point farming prevention functional
-- ✅ Users rewarded correctly for learning
-- ✅ Penalties applied for careless attempts
+- âœ… Gamification working as intended
+- âœ… Point farming prevention functional
+- âœ… Users rewarded correctly for learning
+- âœ… Penalties applied for careless attempts
+
+### 2. ✅ "Read About This Topic" Anchor Links - FIXED
+**Severity**: MEDIUM
+**Status**: ✅ COMPLETE (Today)
+**Description**: Clicking "Read about this topic" button wasn't scrolling to the correct section in reading material
+
+**Root Cause**:
+- When returning from Quiz → Results → ReadingMaterial, `selectedChapter` state was being lost
+- ReadingMaterial would reset to Chapter 1 instead of preserving the chapter being studied
+- Anchor element couldn't be found because wrong chapter content was displayed
+
+**Solution Applied**:
+- Updated `fetchChapters()` to preserve `selectedChapter` when it's already set
+- Added check to prevent overriding chapter selection during data fetch
+- Ensured `selectedChapter` prop takes precedence over default chapter selection
+
+**Code Changes**:
+- File: `ReadingMaterial.jsx`
+- Function: `fetchChapters()`
+- Added: `if (selectedChapter) return` before defaulting to first chapter
+- Also fixed: `handleChapterSelect()` to call parent callback `onChapterSelect(chapter)`
+
+**Architecture Fix**:
+- App.jsx now passes `selectedChapter` as prop to ReadingMaterial
+- ReadingMaterial uses prop to restore correct chapter after navigation
+- Clean separation: App manages state, ReadingMaterial respects it
+
+**Testing Verified**:
+- ✅ Select Chapter 6 ("Climate, Environment, and Legacy")
+- ✅ Take quiz, get question wrong
+- ✅ Click "Read about this topic"
+- ✅ Stays on Chapter 6, scrolls to correct anchor (`#legacy-of-the-paleolithic-era`)
+- ✅ Anchor links working for all chapters
+- ✅ Multiple chapters can be scrolled to without issue
+- ✅ State persists correctly through quiz flow
+
+**Impact**:
+- ✅ Users can now learn from their mistakes by referencing correct material
+- ✅ Better learning experience with immediate reference access
+- ✅ Text references fully functional
+- ✅ Navigation flow now reliable and predictable
 
 ---
 
 ## Critical Issues (Block Release)
 
 Currently: None blocking release. Phase 3a complete with all critical features working.
-
-### Previous: "Read About This Topic" Navigation Bug
-**Severity**: MEDIUM
-**Status**: Deferred
-**Description**:
-- Clicking "Read about this topic" from Results shows "No reading material available yet"
-- Should scroll to the relevant section in reading material
-
-**Root Cause**:
-- Navigation state gets confused during route change
-- selectedTopic state is reset before ReadingMaterial component renders
-
-**Possible Solutions**:
-1. Restructure navigation to keep ReadingMaterial state
-2. Remove the button entirely (simpler)
-3. Use modal overlay instead of navigation
-
-**Recommended**: Remove button for now, implement in Phase 4
-
-**Priority**: Low - UX polish
 
 ---
 
@@ -123,9 +144,9 @@ Currently: None blocking release. Phase 3a complete with all critical features w
 - Show modal: "You already passed this chapter. Continue anyway? (No points)"
 
 **Actual Implementation**:
-- ✅ Quiz button disabled in ReadingMaterial component
-- ✅ No UI clutter from warnings
-- ✅ Prevents accidental retakes
+- âœ… Quiz button disabled in ReadingMaterial component
+- âœ… No UI clutter from warnings
+- âœ… Prevents accidental retakes
 
 **Status**: Resolved by button disable (better UX than modal)
 
@@ -211,7 +232,7 @@ Currently: None blocking release. Phase 3a complete with all critical features w
   - Test fail (50-69%)
   - Test fail (<50%)
   - Test retake after pass
-- Integration test: Full quiz flow (create → attempt → save → progress)
+- Integration test: Full quiz flow (create â†’ attempt â†’ save â†’ progress)
 
 **Estimated Time**: 4-6 hours
 
@@ -282,7 +303,7 @@ Currently: None blocking release. Phase 3a complete with all critical features w
 
 **Related**: ROADMAP Phase 3b
 
-**Priority**: Next after Phase 3a ✅
+**Priority**: Next after Phase 3a âœ…
 
 **Estimated Start**: Oct 28
 
@@ -298,10 +319,10 @@ Currently: None blocking release. Phase 3a complete with all critical features w
 **Example**:
 ```
 Paleolithic Era: 70% overall
-  ├── Introduction to Old Stone Age: 100% ✓
-  ├── Human Evolution: 50%
-  ├── Stone Tool Technology: 80% ✓
-  └── Subsistence & Lifestyle: 25%
+  â”œâ”€â”€ Introduction to Old Stone Age: 100% âœ“
+  â”œâ”€â”€ Human Evolution: 50%
+  â”œâ”€â”€ Stone Tool Technology: 80% âœ“
+  â””â”€â”€ Subsistence & Lifestyle: 25%
 ```
 
 **Estimated Time**: 2-3 hours
@@ -313,22 +334,30 @@ Paleolithic Era: 70% overall
 ## Session Summary
 
 **Oct 24 - Phase 3a Progress (Day 1):**
-- ✅ New point system implemented (70% threshold)
-- ✅ Negative points for <50% accuracy
-- ❌ Retake prevention not working correctly
-- ❌ Chapter name display in quizzes missing
-- ⚠️ UX needs improvement for edge cases
+- âœ… New point system implemented (70% threshold)
+- âœ… Negative points for <50% accuracy
+- âŒ Retake prevention not working correctly
+- âŒ Chapter name display in quizzes missing
+- âš ï¸ UX needs improvement for edge cases
 
 **Oct 27 - Phase 3a Completion (Day 2):**
-- ✅ **FIXED** Retake prevention bug (used wrong variable)
-- ✅ Negative points now correctly applied
-- ✅ Point calculation verified and accurate
-- ✅ Quiz button disable working as intended
-- ✅ All gamification rules functional
-- ✅ Ready for Phase 3b
+- âœ… **FIXED** Retake prevention bug (used wrong variable)
+- âœ… Negative points now correctly applied
+- âœ… Point calculation verified and accurate
+- âœ… Quiz button disable working as intended
+- âœ… All gamification rules functional
+- âœ… Ready for Phase 3b
+
+**Today - Anchor Links & Navigation Fix (Day 3):**
+- âœ… **FIXED** "Read about this topic" anchor links not working
+- âœ… Fixed chapter state persistence through quiz flow
+- âœ… Proper architecture: App manages state, components respect it
+- âœ… CORS filter issue resolved (OPTIONS requests now allowed)
+- âœ… Anchor navigation now scrolls to correct section
+- âœ… Tested: Chapter 6 → Quiz → Results → Back → Scroll to anchor âœ…
 
 **Next Session Priorities**:
-1. Start Phase 3b (Quiz Batching) ⏳
+1. Start Phase 3b (Quiz Batching) â³
 2. Create QuizBatch and BatchProgress entities
 3. Implement batch enforcement logic
 4. Update Quiz component for batch mode
@@ -338,10 +367,12 @@ Paleolithic Era: 70% overall
 
 ## Quick Reference: Bugs by Priority
 
-### ✅ Fixed (This Week)
+### âœ… Fixed (This Week)
 - [x] Retake prevention working correctly
 - [x] Negative points being applied
 - [x] Point calculation accurate
+- [x] "Read about this topic" anchor links working
+- [x] Chapter selection state persists through quiz flow
 
 ### Must Fix (Before Phase 3b Launch)
 - [ ] Remove DEBUG logs from QuizAttemptController
@@ -354,7 +385,6 @@ Paleolithic Era: 70% overall
 - [ ] Retake counter display
 
 ### Nice to Have (Phase 4+)
-- [ ] Fix "Read about this topic" button
 - [ ] Chapter-level progress display
 - [ ] Automated tests
 - [ ] Database indexing
@@ -371,28 +401,35 @@ Paleolithic Era: 70% overall
 **Decision 25: Defer retake UX to after fix**
 - First fix the detection logic
 - Then decide on UX (modal, button disable, or complete disable)
-- ✅ RESOLVED: Used button disable (cleanest UX)
+- âœ… RESOLVED: Used button disable (cleanest UX)
 
 **Decision 26: Keep negative points internally**
 - Display needs improvement, but calculation is correct
 - Can improve display in Phase 4
-- ✅ CONFIRMED: Negative points working as intended
+- âœ… CONFIRMED: Negative points working as intended
 
 **Decision 27: Deduction calculation** (Oct 27)
 - Use `request.getTotalPoints()` not `request.getScore()`
 - Deduct half of total possible points
 - Example: 0% on 12-point quiz = -6 (half of 12)
 - Rationale: Penalizes carelessness proportionally to quiz difficulty
-- ✅ IMPLEMENTED: Working correctly
+- âœ… IMPLEMENTED: Working correctly
 
 **Decision 28: Next Phase** (Oct 27)
 - Proceed with Phase 3b (Quiz Batching)
 - Foundation is solid, ready to build on it
-- ✅ CONFIRMED: Phase 3a complete, Phase 3b starting
+- âœ… CONFIRMED: Phase 3a complete, Phase 3b starting
+
+**Decision 29: State Management for Navigation** (Today)
+- Anchor links require correct chapter to be displayed
+- Solution: Lift `selectedChapter` to App.jsx state
+- ReadingMaterial preserves chapter through quiz flow
+- Clean separation of concerns: App manages, components render
+- âœ… IMPLEMENTED: Navigation now reliable
 
 ---
 
-**Document Version**: 1.1
-**Maintainer**: Updated after Phase 3a completion
+**Document Version**: 1.2
+**Maintainer**: Updated after anchor links fix
 **Review Frequency**: After each development session
-**Last Reviewed**: Oct 27, 2025
+**Last Reviewed**: Today
