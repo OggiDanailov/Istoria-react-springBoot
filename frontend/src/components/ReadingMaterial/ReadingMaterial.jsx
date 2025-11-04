@@ -36,6 +36,12 @@ function ReadingMaterial({ topic, selectedChapter, onChapterSelect, onStartQuiz,
       const data = await response.json()
       setChapters(data)
 
+       // If we have a selectedChapter prop, don't override it
+      if (selectedChapter) {
+        // selectedChapter prop will be handled by the other useEffect
+        return
+      }
+
       // Only set to first chapter if nothing selected
       if (!currentChapter && data.length > 0) {
         setCurrentChapter(data[0])  // ✅ Use setCurrentChapter, not setSelectedChapter

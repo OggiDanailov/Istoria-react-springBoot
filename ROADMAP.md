@@ -138,24 +138,8 @@
 
 ---
 
-### Phase 3c: Polish & Bug Fixes (⏳ NEXT)
-
-**Outstanding Issues:**
-- "Read about this topic" button navigation bug
-  - Fix: Restructure navigation or remove feature
-  - Deferred to Phase 4
-
-- localStorage validation on app startup
-  - Add check: if token exists but user not in DB, clear localStorage
-  - Impact: Minor - only affects testing
-
-**Timeline**: Oct 29 (After Phase 3b)
-
----
-
 ## Phase 4: Additional Features (Future)
 
-- Fix "Read about this topic" anchor links
 - localStorage validation
 - Premium tier & Stripe payments
 - Competitive mode with leaderboards
@@ -215,13 +199,10 @@ batch_progress (tracks user's mastery per batch)
 - ✅ Database correctly tracking attempts
 - ✅ Ready to start Phase 3b (Quiz Batching)
 
-**Outstanding Issues (Deferred):**
-- "Read about this topic" shows "No reading material available yet"
-  - Cause: Navigation state confusion during route changes
-  - Deferred to Phase 4 (polish)
-- DEBUG logs still in QuizAttemptController (can be removed in next cleanup pass)
-
----
+**Today - Anchor Links & Navigation Fix:**
+- ✅ FIXED "Read about this topic" anchor links
+- ✅ Fixed chapter state persistence through quiz flow
+- ✅ CORS filter properly configured for protected endpoints
 
 ## Next Actions (Phase 3b - Starting)
 
@@ -352,9 +333,11 @@ frontend/
   - Root cause: Used wrong variable in deduction
   - Solution: Changed to `request.getTotalPoints()`
 
+- ✅ "Read about this topic" anchor links → FIXED (Today)
+  - Root cause: Chapter state was being reset on navigation
+  - Solution: Preserve selectedChapter in App state
+
 **Current Issues (Minor):**
-- "Read about this topic" button navigation bug
-  - Deferred to Phase 4
 - DEBUG logs still in QuizAttemptController
   - Can be cleaned up in next pass
 - localStorage validation on app startup missing
@@ -538,8 +521,8 @@ npm run dev  # Starts on http://localhost:5173
 
 ---
 
-**Document Version**: 1.4
-**Last Updated**: October 27, 2025
+**Document Version**: 1.5
+**Last Updated**: november 4, 2025
 **Next Review**: After Phase 3b completion
 
 ---
