@@ -19,6 +19,7 @@ function App() {
   const [user, setUser] = useState(null)
   const [showAuthModal, setShowAuthModal] = useState(false)
   const [authView, setAuthView] = useState('signin') // 'signin' or 'signup'
+  const [selectedBatch, setSelectedBatch] = useState(null)
 
   // Check if user is already logged in on mount
   useEffect(() => {
@@ -87,6 +88,7 @@ function App() {
 
   const handleBackToReading = () => {
     setCurrentView('reading')
+    setSelectedBatch(null)
   }
 
   const handleGoToAdmin = () => {
@@ -119,7 +121,7 @@ function App() {
   }
 
   const handleStartQuiz = (chapter) => {
-      setSelectedChapter(chapter)
+      setSelectedBatch(batch)  // Store the batch
       setCurrentView('quiz')
     }
 
@@ -215,13 +217,12 @@ function App() {
         />
       )}
 
-      {currentView === 'quiz' && selectedTopic && selectedChapter &&  (
+      {currentView === 'quiz' && selectedTopic && selectedChapter && selectedBatch &&  (
         <Quiz
           chapterId={selectedChapter.id}
+          batchId={selectedBatch.id}
           onBack={handleBackToReading}
-          onBackToTopics={handleBackToTopics}
           isLoggedIn={isLoggedIn}
-          user={user}
         />
       )}
 
