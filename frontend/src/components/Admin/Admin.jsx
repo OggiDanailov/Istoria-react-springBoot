@@ -4,6 +4,7 @@ import AdminTopics from './AdminTopics'
 import AdminChapters from './AdminChapters'
 import AdminQuestions from './AdminQuestions'
 import BulkImportForm from './BulkImportForm/BulkImportForm'
+import AdminBatches from './AdminBatches/AdminBatches'
 import './Admin.css'
 
 function Admin({ onBack }) {
@@ -36,6 +37,11 @@ function Admin({ onBack }) {
   // Navigate to bulk import
   const handleBulkImport = () => {
     setCurrentView('bulk-import')
+  }
+
+  // Navigate to batches management
+  const handleManageBatches = () => {
+    setCurrentView('batches')
   }
 
   // Handle bulk import success
@@ -90,6 +96,10 @@ function Admin({ onBack }) {
     )
   }
 
+  if (currentView === 'batches') {
+    return <AdminBatches onBack={handleBackToMain} />
+  }
+
   // Main admin panel view
   return (
     <div className="quiz-container">
@@ -120,6 +130,14 @@ function Admin({ onBack }) {
         >
           📥 Bulk Import Questions
         </button>
+
+        <button
+          onClick={handleManageBatches}
+          className="admin-btn create-btn"
+          >
+          📦 Manage Quiz Batches
+        </button>
+
       </div>
 
       <div className="admin-info">

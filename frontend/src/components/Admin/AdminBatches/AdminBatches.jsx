@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { API_BASE_URL } from '../../config/api'
+import { API_BASE_URL } from '../../../config/api'
 import './AdminBatches.css'
 
 function AdminBatches() {
@@ -14,10 +14,21 @@ function AdminBatches() {
   const [batchOrder, setBatchOrder] = useState(1)
   const [description, setDescription] = useState('')
   const [selectedQuestions, setSelectedQuestions] = useState([])
+  const [selectedBatchId, setSelectedBatchId] = useState(null)
 
   useEffect(() => {
     fetchChapters()
   }, [])
+
+  // Update batch order when difficulty changes
+  useEffect(() => {
+    if (batches.length > 0) {
+      const batchesForDifficulty = batches.filter(b => b.difficulty === difficulty)
+      setBatchOrder(batchesForDifficulty.length + 1)
+    } else {
+      setBatchOrder(1)
+    }
+  }, [difficulty, batches])
 
   const fetchChapters = async () => {
     try {
@@ -103,6 +114,43 @@ function AdminBatches() {
     } catch (err) {
       console.error('Error creating batch:', err)
       alert('Failed to create batch: ' + err.message)
+    } finally {
+      setLoading(false)
+    }
+  }
+
+  const handleAddQuestionsToBatch = async () => {
+    if (!selectedBatchId || selectedQuestions.length === 0) {
+      alert('Please select a batch and at least one question')
+      return
+    }
+
+    setLoading(true)
+
+    try {
+      const response = await fetch(`${API_BASE_URL}/api/batches/${selectedBatchId}/questions`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          questionIds: selectedQuestions
+        })
+      })
+
+      if (!response.ok) {
+        throw new Error('Failed to add questions to batch')
+      }
+
+      alert(`Added ${selectedQuestions.length} question(s) to batch!`)
+      setSelectedQuestions([])
+      setSelectedBatchId(null)
+
+      // Refresh batches to show updated count
+      handleChapterSelect(selectedChapterId)
+    } catch (err) {
+      console.error('Error adding questions:', err)
+      alert('Failed to add questions: ' + err.message)
     } finally {
       setLoading(false)
     }
@@ -223,6 +271,23 @@ function AdminBatches() {
             <p className="info-text">
               {filterQuestionsByDifficulty().length} questions available at this difficulty level
             </p>
+            <div className="form-group">
+              <label>Select Batch to Add Questions</label>
+              <select
+                value={selectedBatchId || ''}
+                onChange={(e) => setSelectedBatchId(e.target.value ? Number(e.target.value) : null)}
+                className="form-input"
+              >
+                <option value="">-- Choose a Batch --</option>
+                {batches
+                  .filter(b => b.difficulty === difficulty)
+                  .map(batch => (
+                    <option key={batch.id} value={batch.id}>
+                      {getDifficultyLabel(batch.difficulty)} - Batch {batch.batchOrder}
+                    </option>
+                  ))}
+              </select>
+            </div>
             <div className="questions-list">
               {filterQuestionsByDifficulty().map(question => (
                 <div key={question.id} className="question-item">
@@ -237,6 +302,15 @@ function AdminBatches() {
                 </div>
               ))}
             </div>
+            {selectedQuestions.length > 0 && selectedBatchId && (
+              <button
+                onClick={handleAddQuestionsToBatch}
+                className="submit-btn"
+                disabled={loading}
+              >
+                {loading ? 'Adding...' : `Add ${selectedQuestions.length} Question(s) to Batch`}
+              </button>
+            )}
             {filterQuestionsByDifficulty().length === 0 && (
               <p className="warning">No questions at this difficulty level. Create questions first!</p>
             )}

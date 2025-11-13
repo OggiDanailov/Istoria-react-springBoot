@@ -4,7 +4,9 @@ import com.example.demo.model.BatchProgress;
 import com.example.demo.model.Chapter;
 import com.example.demo.model.QuizBatch;
 import com.example.demo.model.User;
+import com.example.demo.model.Question;
 import com.example.demo.repository.BatchProgressRepository;
+import com.example.demo.repository.QuestionRepository;
 import com.example.demo.repository.QuizBatchRepository;
 import com.example.demo.repository.UserRepository;
 import org.springframework.web.bind.annotation.*;
@@ -21,13 +23,16 @@ public class BatchController {
     private final QuizBatchRepository quizBatchRepository;
     private final BatchProgressRepository batchProgressRepository;
     private final UserRepository userRepository;
+    private final QuestionRepository questionRepository;
 
     public BatchController(QuizBatchRepository quizBatchRepository,
                          BatchProgressRepository batchProgressRepository,
-                         UserRepository userRepository) {
+                         UserRepository userRepository,
+                         QuestionRepository questionRepository) {
         this.quizBatchRepository = quizBatchRepository;
         this.batchProgressRepository = batchProgressRepository;
         this.userRepository = userRepository;
+        this.questionRepository = questionRepository;
     }
 
     // ==================== POST METHODS ====================
@@ -65,10 +70,17 @@ public class BatchController {
             QuizBatch batch = quizBatchRepository.findById(batchId)
                     .orElseThrow(() -> new RuntimeException("Batch not found"));
 
-            // In a real app, you'd fetch questions from DB and add them
-            // For now, this prepares the relationship
-            quizBatchRepository.save(batch);
-            return ResponseEntity.ok(batch);
+            // Fetch questions from DB and add them to batch
+            List<Question> questions = new java.util.ArrayList<>();
+            for (Long questionId : request.getQuestionIds()) {
+                Question question = questionRepository.findById(questionId)
+                        .orElseThrow(() -> new RuntimeException("Question not found: " + questionId));
+                questions.add(question);
+            }
+
+            batch.setQuestions(questions);
+            QuizBatch savedBatch = quizBatchRepository.save(batch);
+            return ResponseEntity.ok(savedBatch);
 
         } catch (Exception e) {
             e.printStackTrace();
