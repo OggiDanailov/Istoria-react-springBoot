@@ -177,6 +177,15 @@ function AdminBatches() {
     }
   }
 
+  const isQuestionAlreadyInBatch = (questionId) => {
+    for (let batch of batches) {
+      if (batch.questions && batch.questions.some(q => q.id === questionId)) {
+        return true
+      }
+    }
+    return false
+  }
+
   const filterQuestionsByDifficulty = () => {
     return questions.filter(q => q.difficulty === difficulty)
   }
@@ -296,6 +305,7 @@ function AdminBatches() {
                       type="checkbox"
                       checked={selectedQuestions.includes(question.id)}
                       onChange={() => toggleQuestion(question.id)}
+                      disabled={isQuestionAlreadyInBatch(question.id)}
                     />
                     {question.question}
                   </label>
