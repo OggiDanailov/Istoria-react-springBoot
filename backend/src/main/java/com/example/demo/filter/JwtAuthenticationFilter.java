@@ -65,6 +65,7 @@ public class JwtAuthenticationFilter implements Filter {
             requestPath.contains("/api/chapters") ||
             requestPath.contains("/api/topics") ||
             requestPath.contains("/api/questions") ||
+            requestPath.contains("/api/batches") ||
             requestPath.contains("/h2-console")) {
             chain.doFilter(request, response);
             return;

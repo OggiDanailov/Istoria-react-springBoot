@@ -2,40 +2,30 @@ import { useState, useEffect, useRef } from 'react'
 import { API_BASE_URL } from '../../config/api'
 import './Results.css'
 
-function Results({ questions, userAnswers, onRestart, onBack, chapterId, isLoggedIn, chapterPassed }) {
-  const [saveStatus, setSaveStatus] = useState('') // 'saving', 'saved', 'error'
+function Results({ questions, userAnswers, onRestart, onBack, chapterId, batchId, score, correctCount, totalQuestions, totalPoints, isLoggedIn, batchDifficulty }) {
+  const [saveStatus, setSaveStatus] = useState('')
+  const [batchMastered, setBatchMastered] = useState(false)
+  const [accuracy, setAccuracy] = useState(0)
   const hasAttemptedSave = useRef(false)
 
   useEffect(() => {
-    // Save attempt if user is logged in (only once per mount)
     if (isLoggedIn && !hasAttemptedSave.current) {
-      hasAttemptedSave.current = true // Mark as attempted
+      hasAttemptedSave.current = true
       saveQuizAttempt()
     }
   }, [])
 
+  const calculateAccuracy = () => {
+    return Math.round((score / totalPoints) * 100)
+  }
 
-  const calculateScore = () => {
-    let correct = 0
-    let totalPoints = 0
-    let earnedPoints = 0
-
-    questions.forEach((question, index) => {
-      const points = question.difficulty === 1 ? 1 : question.difficulty === 2 ? 2 : 3
-      totalPoints += points
-
-      if (userAnswers[index] === question.correctAnswer) {
-        correct++
-        earnedPoints += points
-      }
-    })
-
-    return { correct, earnedPoints, totalPoints }
+  const isBatchMastered = () => {
+    const acc = calculateAccuracy()
+    return acc >= 80
   }
 
   const saveQuizAttempt = async () => {
     setSaveStatus('saving')
-    const { correct, earnedPoints, totalPoints } = calculateScore()
 
     try {
       const token = localStorage.getItem('token')
@@ -44,26 +34,28 @@ function Results({ questions, userAnswers, onRestart, onBack, chapterId, isLogge
         return
       }
 
+      const requestBody = {
+        chapterId: chapterId,
+        batchId: batchId,
+        score: score,
+        totalQuestions: totalQuestions,
+        totalPoints: totalPoints
+      }
+
       const response = await fetch(`${API_BASE_URL}/api/quiz-attempts`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
           'Authorization': `Bearer ${token}`
         },
-        body: JSON.stringify({
-          chapterId: chapterId,
-          score: earnedPoints,
-          totalQuestions: questions.length,
-          totalPoints: totalPoints
-        })
+        body: JSON.stringify(requestBody)
       })
 
       if (response.ok) {
+        const acc = calculateAccuracy()
+        setAccuracy(acc)
+        setBatchMastered(acc >= 80)
         setSaveStatus('saved')
-        const percentage = Math.round((correct / questions.length) * 100)
-        if (percentage >= 70 && onQuizPassed) {
-          onQuizPassed()  // Update parent state
-        }
       } else {
         setSaveStatus('error')
         console.error('Failed to save quiz attempt')
@@ -74,14 +66,25 @@ function Results({ questions, userAnswers, onRestart, onBack, chapterId, isLogge
     }
   }
 
-  const { correct, earnedPoints, totalPoints } = calculateScore()
-  const percentage = Math.round((correct / questions.length) * 100)
+  const getDifficultyLabel = () => {
+    switch (batchDifficulty) {
+      case 1:
+        return 'Easy'
+      case 2:
+        return 'Medium'
+      case 3:
+        return 'Hard'
+      default:
+        return 'Quiz'
+    }
+  }
 
   const getPassStatus = () => {
-    const percentage = Math.round((correct / questions.length) * 100)
-    if (percentage >= 70) return { status: 'PASS', color: 'excellent', message: '🎉 You passed! Points awarded!' }
-    if (percentage >= 50) return { status: 'FAIL', color: 'needs-work', message: '❌ You failed. No points awarded. Try again!' }
-    return { status: 'FAIL BADLY', color: 'error', message: '⚠️ You failed badly. Points deducted!' }
+    const acc = accuracy
+    if (acc >= 80) return { status: 'MASTERED', color: 'mastered', message: '🎉 Batch Mastered!' }
+    if (acc >= 70) return { status: 'PASSED', color: 'excellent', message: '✅ Passed! (80% needed for mastery)' }
+    if (acc >= 50) return { status: 'FAIL', color: 'needs-work', message: '❌ Not mastered yet. Retake to improve!' }
+    return { status: 'FAIL BADLY', color: 'error', message: '⚠️ Keep trying! You can do better.' }
   }
 
   const passStatus = getPassStatus()
@@ -92,28 +95,46 @@ function Results({ questions, userAnswers, onRestart, onBack, chapterId, isLogge
         ← Back to Reading
       </button>
 
-      <h1>🏺 Quiz Results</h1>
+      <h1>🏺 {getDifficultyLabel()} Batch Results</h1>
 
       {saveStatus === 'saving' && <p className="saving-status">Saving your progress...</p>}
       {saveStatus === 'saved' && <p className="saved-status">Progress saved!</p>}
       {saveStatus === 'error' && <p className="error-status">Could not save progress</p>}
 
       <div className="results">
-        <h2>Your Score: {correct}/{questions.length} ({percentage}%)</h2>
-        <h3>Points: {earnedPoints}/{totalPoints}</h3>
-
-        {percentage >= 80 && <p className="excellent">🎉 Excellent! You're an expert on this topic!</p>}
-        {percentage >= 60 && percentage < 80 && <p className="good">👏 Good job! You have a solid understanding!</p>}
-        {percentage < 60 && <p className="needs-work">📚 Keep studying - there's more to learn!</p>}
+        <h2>Your Score: {score}/{totalPoints} points</h2>
+        <h3>Accuracy: {correctCount}/{totalQuestions} correct ({accuracy}%)</h3>
 
         <div className={`pass-status ${passStatus.color}`}>
           {passStatus.message}
         </div>
+
+        {accuracy >= 80 && (
+          <div className="batch-mastered-message">
+            <p>🌟 Congratulations! You've mastered the {getDifficultyLabel()} batch!</p>
+            <p>You're ready to move to the next challenge.</p>
+          </div>
+        )}
+
+        {accuracy >= 70 && accuracy < 80 && (
+          <div className="batch-almost-message">
+            <p>Good effort! You scored {accuracy}% but need 80% to master this batch.</p>
+            <p>Retake to improve your score and unlock the next batch.</p>
+          </div>
+        )}
+
+        {accuracy < 70 && (
+          <div className="batch-retry-message">
+            <p>You scored {accuracy}%. Try retaking this batch to improve!</p>
+            <p>Focus on the areas where you struggled.</p>
+          </div>
+        )}
+
         <div className="answer-review">
           <h3>Review Your Answers:</h3>
           {questions.map((question, index) => {
             const isCorrect = userAnswers[index] === question.correctAnswer
-            const points = question.difficulty === 1 ? 1 : question.difficulty === 2 ? 2 : 3
+            const points = question.difficulty
 
             return (
               <div key={index} className="question-review">
@@ -139,20 +160,16 @@ function Results({ questions, userAnswers, onRestart, onBack, chapterId, isLogge
                   <button
                     onClick={() => {
                       onBack()
-                      // Wait longer for the page to fully render
                       setTimeout(() => {
-                        // Log to verify the selector
                         const element = document.querySelector(question.textReference)
 
                         if (element) {
-                          // Scroll with more delay to ensure rendering
                           element.scrollIntoView({ behavior: 'smooth', block: 'start' })
                         } else {
                           console.warn('Element not found for:', question.textReference)
-                          // Fallback: scroll to top
                           window.scrollTo({ top: 0, behavior: 'smooth' })
                         }
-                      }, 500) // Increased from 100 to 500ms
+                      }, 100)
                     }}
                     className="read-more-btn"
                   >
@@ -164,23 +181,17 @@ function Results({ questions, userAnswers, onRestart, onBack, chapterId, isLogge
           })}
         </div>
 
-        {/* {chapterPassed ? (
-          <div className="mastered-message">
-            <p>✅ You've mastered this chapter!</p>
-            <p>Move on to the next chapter to continue learning.</p>
-          </div>
-        ) : (
+        {accuracy < 80 && (
           <button onClick={onRestart} className="restart-btn">
-            Take Quiz Again
+            🔄 Retake {getDifficultyLabel()} Batch
           </button>
-        )} */}
-
-        {percentage >= 70 && (
-          <div className="mastered-message">
-            <p>✅ You've mastered this chapter!</p>
-          </div>
         )}
 
+        {accuracy >= 80 && (
+          <button onClick={onBack} className="next-batch-btn">
+            ✓ Back to Reading
+          </button>
+        )}
       </div>
     </div>
   )

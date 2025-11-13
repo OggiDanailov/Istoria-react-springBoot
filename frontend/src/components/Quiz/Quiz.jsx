@@ -1,59 +1,45 @@
 import { useState, useEffect } from 'react'
 import Results from '../Results/Results'
-import { shuffleQuestionOptions, shuffleQuestions } from '../../utils/formUtils';
+import { shuffleQuestionOptions } from '../../utils/formUtils'
 import { API_BASE_URL } from '../../config/api'
 import './Quiz.css'
 
-function Quiz({ chapterId, onBack, isLoggedIn }) {
+function Quiz({ chapterId, batchId, onBack, isLoggedIn }) {
+  const [batch, setBatch] = useState(null)
   const [questions, setQuestions] = useState([])
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
   const [userAnswers, setUserAnswers] = useState([])
   const [showResults, setShowResults] = useState(false)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState("")
-  const [chapterPassed, setChapterPassed] = useState(false)
 
   useEffect(() => {
-    fetchQuestions()
-  }, [chapterId])
-
-  useEffect(() => {
-    if (isLoggedIn && chapterId) {
-      checkIfPassed()
+    if (batchId) {
+      fetchBatchAndQuestions()
     }
-  }, [chapterId, isLoggedIn])
+  }, [batchId])
 
-  const checkIfPassed = async () => {
-    try {
-      const token = localStorage.getItem('token')
-      const response = await fetch(
-        `${API_BASE_URL}/api/user-progress/chapter/${chapterId}/passed`,
-        {
-          headers: {
-            'Authorization': `Bearer ${token}`
-          }
-        }
-      )
-      const passed = await response.json()
-      setChapterPassed(passed)
-    } catch (err) {
-      console.error('Failed to check if chapter passed:', err)
-      setChapterPassed(false)
-    }
-  }
-
-  const fetchQuestions = async () => {
+  const fetchBatchAndQuestions = async () => {
     setLoading(true)
     try {
-      const response = await fetch(`${API_BASE_URL}/api/chapters/${chapterId}/questions`);
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`)
+      // Fetch batch info
+      const batchResponse = await fetch(`${API_BASE_URL}/api/batches/${batchId}`)
+      if (!batchResponse.ok) {
+        throw new Error(`Failed to fetch batch: ${batchResponse.status}`)
       }
-      const data = await response.json()
-      const shuffledQuestions = data.map(q => shuffleQuestionOptions(q));
-      setQuestions(shuffledQuestions);
+      const batchData = await batchResponse.json()
+      setBatch(batchData)
+
+      // Questions are included in batch data
+      if (batchData.questions && batchData.questions.length > 0) {
+        // Shuffle options for each question
+        const shuffledQuestions = batchData.questions.map(q => shuffleQuestionOptions(q))
+        setQuestions(shuffledQuestions)
+      } else {
+        setError('No questions available in this batch')
+      }
     } catch (err) {
-      setError(`Failed to fetch questions: ${err.message}`)
+      setError(`Failed to fetch batch: ${err.message}`)
     } finally {
       setLoading(false)
     }
@@ -85,12 +71,23 @@ function Quiz({ chapterId, onBack, isLoggedIn }) {
     setShowResults(false)
   }
 
-  const handleQuizPassed = () => {
-    setChapterPassed(true)
+  // Get difficulty label
+  const getDifficultyLabel = () => {
+    if (!batch) return ''
+    switch (batch.difficulty) {
+      case 1:
+        return '⭐ Easy'
+      case 2:
+        return '⭐⭐ Medium'
+      case 3:
+        return '⭐⭐⭐ Hard'
+      default:
+        return 'Quiz'
+    }
   }
 
   if (loading) {
-    return <div className="loading">Loading quiz questions...</div>
+    return <div className="loading">Loading batch questions...</div>
   }
 
   if (error) {
@@ -110,7 +107,7 @@ function Quiz({ chapterId, onBack, isLoggedIn }) {
         <button onClick={onBack} className="back-btn">
           ← Back to Reading
         </button>
-        <div className="error">No questions available for this topic</div>
+        <div className="error">No questions available for this batch</div>
       </div>
     )
   }
@@ -127,20 +124,26 @@ function Quiz({ chapterId, onBack, isLoggedIn }) {
       }
     })
 
+    // Calculate total possible points
+    let totalPoints = 0
+    questions.forEach(question => {
+      totalPoints += question.difficulty
+    })
+
     return (
       <Results
         questions={questions}
         userAnswers={userAnswers}
         onRestart={restartQuiz}
         chapterId={chapterId}
+        batchId={batchId}
         score={totalScore}
         correctCount={correctCount}
         totalQuestions={questions.length}
+        totalPoints={totalPoints}
         onBack={onBack}
-        onGoToReading={onBack}
         isLoggedIn={isLoggedIn}
-        chapterPassed={chapterPassed}
-        onQuizPassed={handleQuizPassed}
+        batchDifficulty={batch?.difficulty}
       />
     )
   }
@@ -154,7 +157,11 @@ function Quiz({ chapterId, onBack, isLoggedIn }) {
         ← Back to Reading
       </button>
 
-      <h1>🏺 Quiz Time!</h1>
+      <h1>🏺 Quiz Time! {getDifficultyLabel()} Batch</h1>
+
+      <div className="batch-info">
+        <p>Batch {batch?.batchOrder} of 3</p>
+      </div>
 
       <div className="progress-bar">
         <div className="progress-fill" style={{ width: `${progress}%` }}></div>

@@ -1,6 +1,7 @@
 package com.example.demo.model;
 
 import jakarta.persistence.*;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.time.LocalDateTime;
 
 @Entity
@@ -12,17 +13,29 @@ public class QuizAttempt {
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name = "user_id", nullable = false)
+    @JoinColumn(name = "user_id")
+    @JsonIgnore
     private User user;
 
     @ManyToOne
-    @JoinColumn(name = "chapter_id", nullable = false)
+    @JoinColumn(name = "chapter_id")
+    @JsonIgnore
     private Chapter chapter;
 
-    private int score; // Total points earned
-    private int totalQuestions; // Number of questions answered
-    private int totalPoints; // Maximum possible points
+    @ManyToOne
+    @JoinColumn(name = "batch_id")
+    @JsonIgnore
+    private QuizBatch batch; // NEW: Link to the batch
+
+    private int score; // Points earned
+
+    private int totalQuestions; // Total questions attempted
+
+    private int totalPoints; // Total points possible
+
     private LocalDateTime attemptDate;
+
+    private int pointsAwarded; // Points added/subtracted based on gamification rules
 
     // Constructors
     public QuizAttempt() {}
@@ -30,6 +43,16 @@ public class QuizAttempt {
     public QuizAttempt(User user, Chapter chapter, int score, int totalQuestions, int totalPoints) {
         this.user = user;
         this.chapter = chapter;
+        this.score = score;
+        this.totalQuestions = totalQuestions;
+        this.totalPoints = totalPoints;
+        this.attemptDate = LocalDateTime.now();
+    }
+
+    public QuizAttempt(User user, Chapter chapter, QuizBatch batch, int score, int totalQuestions, int totalPoints) {
+        this.user = user;
+        this.chapter = chapter;
+        this.batch = batch;
         this.score = score;
         this.totalQuestions = totalQuestions;
         this.totalPoints = totalPoints;
@@ -59,6 +82,14 @@ public class QuizAttempt {
 
     public void setChapter(Chapter chapter) {
         this.chapter = chapter;
+    }
+
+    public QuizBatch getBatch() {
+        return batch;
+    }
+
+    public void setBatch(QuizBatch batch) {
+        this.batch = batch;
     }
 
     public int getScore() {
@@ -93,9 +124,11 @@ public class QuizAttempt {
         this.attemptDate = attemptDate;
     }
 
-    // Calculate percentage score
-    public double getPercentageScore() {
-        if (totalPoints == 0) return 0;
-        return (double) score / totalPoints * 100;
+    public int getPointsAwarded() {
+        return pointsAwarded;
+    }
+
+    public void setPointsAwarded(int pointsAwarded) {
+        this.pointsAwarded = pointsAwarded;
     }
 }

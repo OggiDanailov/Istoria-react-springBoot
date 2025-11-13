@@ -433,3 +433,8 @@ Paleolithic Era: 70% overall
 **Maintainer**: Updated after anchor links fix
 **Review Frequency**: After each development session
 **Last Reviewed**: Today
+
+
+**Issues to be addressed in the future**
+# November 13
+- Sign in and Signup links don't seem to work when I click on the links;

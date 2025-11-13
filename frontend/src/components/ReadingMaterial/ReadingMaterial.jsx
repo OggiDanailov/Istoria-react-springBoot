@@ -10,8 +10,10 @@ function ReadingMaterial({ topic, selectedChapter, onChapterSelect, onStartQuiz,
   const [chapters, setChapters] = useState([])
   const [currentChapter, setCurrentChapter] = useState(null)
   const [loading, setLoading] = useState(true)
-  const [chapterPassed, setChapterPassed] = useState(false)
-  const [checkingPass, setCheckingPass] = useState(false)
+  const [batches, setBatches] = useState([])
+  const [batchProgress, setBatchProgress] = useState({})
+  const [selectedBatchId, setSelectedBatchId] = useState(null)
+  const [loadingBatches, setLoadingBatches] = useState(false)
 
   useEffect(() => {
     fetchChapters()
@@ -23,12 +25,11 @@ function ReadingMaterial({ topic, selectedChapter, onChapterSelect, onStartQuiz,
     }
   }, [selectedChapter])
 
-  // Check if user passed this chapter when it's selected
   useEffect(() => {
-    if (selectedChapter && isLoggedIn) {
-      checkIfPassed(selectedChapter.id)
+    if (currentChapter) {
+      fetchBatchesForChapter(currentChapter.id)
     }
-  }, [selectedChapter, isLoggedIn])
+  }, [currentChapter])
 
   const fetchChapters = async () => {
     try {
@@ -36,15 +37,11 @@ function ReadingMaterial({ topic, selectedChapter, onChapterSelect, onStartQuiz,
       const data = await response.json()
       setChapters(data)
 
-       // If we have a selectedChapter prop, don't override it
-      if (selectedChapter) {
-        // selectedChapter prop will be handled by the other useEffect
-        return
-      }
-
-      // Only set to first chapter if nothing selected
-      if (!currentChapter && data.length > 0) {
-        setCurrentChapter(data[0])  // ✅ Use setCurrentChapter, not setSelectedChapter
+      // If we have a selectedChapter prop, use it; otherwise default to first
+      if (selectedChapter && data.find(c => c.id === selectedChapter.id)) {
+        setCurrentChapter(selectedChapter)
+      } else if (data.length > 0) {
+        setCurrentChapter(data[0])
       }
     } catch (err) {
       console.error('Failed to fetch chapters:', err)
@@ -53,37 +50,121 @@ function ReadingMaterial({ topic, selectedChapter, onChapterSelect, onStartQuiz,
     }
   }
 
-  // Check if user has already passed this chapter
-  const checkIfPassed = async (chapterId) => {
-    setCheckingPass(true)
+  const fetchBatchesForChapter = async (chapterId) => {
+    console.log('*** fetchBatchesForChapter called, chapterId:', chapterId)
+    setLoadingBatches(true)
+    try {
+      // Fetch all batches for this chapter
+      const batchResponse = await fetch(`${API_BASE_URL}/api/batches/chapter/${chapterId}`)
+      if (!batchResponse.ok) {
+        console.error('Failed to fetch batches')
+        setBatches([])
+        setLoadingBatches(false)
+        return
+      }
+      const batchData = await batchResponse.json()
+      setBatches(batchData)
+
+      // If logged in, fetch user's progress on each batch
+      if (isLoggedIn) {
+        fetchBatchProgress(chapterId)
+      }
+    } catch (err) {
+      console.error('Failed to fetch batches:', err)
+      setBatches([])
+    } finally {
+      setLoadingBatches(false)
+    }
+  }
+
+  const fetchBatchProgress = async (chapterId) => {
+    console.log("this is the fetchBatchProgress")
     try {
       const token = localStorage.getItem('token')
+       console.log('isLoggedIn:', isLoggedIn)
+    console.log('Token exists:', !!token)
+    console.log('Token:', token?.substring(0, 20) + '...')
+
+      // Only fetch if user is logged in AND has token
+      if (!isLoggedIn || !token) {
+        console.log('User not logged in, skipping batch progress fetch')
+        return
+      }
+
       const response = await fetch(
-        `${API_BASE_URL}/api/user-progress/chapter/${chapterId}/passed`,
+        `${API_BASE_URL}/api/batches/chapter/${chapterId}/progress`,
         {
           headers: {
             'Authorization': `Bearer ${token}`
           }
         }
       )
-      const passed = await response.json()
-      setChapterPassed(passed)
+
+      if (response.ok) {
+        const data = await response.json()
+        const progressMap = {}
+        data.forEach(progress => {
+          progressMap[progress.batch.id] = progress
+        })
+        setBatchProgress(progressMap)
+      } else if (response.status === 401) {
+        console.warn('Unauthorized - token may be invalid')
+        // Clear localStorage and log out
+        localStorage.removeItem('token')
+      }
     } catch (err) {
-      console.error('Failed to check if chapter passed:', err)
-      setChapterPassed(false)
-    } finally {
-      setCheckingPass(false)
+      console.error('Failed to fetch batch progress:', err)
+      // Don't show batch progress if error
     }
   }
 
   const handleChapterSelect = (chapter) => {
-    // setCurrentChapter(chapter)
-    onChapterSelect(chapter)  // ✅ This one is fine
+    setCurrentChapter(chapter)
+    onChapterSelect(chapter)
   }
 
-  const handleStartQuiz = () => {
-    if (currentChapter && !chapterPassed) {
-      onStartQuiz(currentChapter)  // ✅ Change this to onStartQuiz
+  const handleStartBatch = (batch) => {
+    setSelectedBatchId(batch.id)
+    onStartQuiz(batch)
+  }
+
+  const isBatchUnlocked = (batchIndex) => {
+    // First batch is always unlocked
+    if (batchIndex === 0) return true
+    // Subsequent batches are unlocked if previous batch is mastered
+    const previousBatch = batches[batchIndex - 1]
+    const previousProgress = batchProgress[previousBatch.id]
+    return previousProgress && previousProgress.mastered
+  }
+
+  const getBatchStatus = (batch, index) => {
+    const progress = batchProgress[batch.id]
+
+    if (!progress) {
+      return { icon: '🔓', label: 'Not Started', status: 'unlocked' }
+    }
+
+    if (progress.mastered) {
+      return { icon: '✅', label: `Mastered (${Math.round(progress.accuracy)}%)`, status: 'mastered' }
+    }
+
+    if (progress.accuracy >= 70) {
+      return { icon: '⚡', label: `Passed (${Math.round(progress.accuracy)}%)`, status: 'passed' }
+    }
+
+    return { icon: '📝', label: `In Progress (${Math.round(progress.accuracy)}%)`, status: 'in-progress' }
+  }
+
+  const getDifficultyLabel = (difficulty) => {
+    switch (difficulty) {
+      case 1:
+        return '⭐ Easy'
+      case 2:
+        return '⭐⭐ Medium'
+      case 3:
+        return '⭐⭐⭐ Hard'
+      default:
+        return 'Quiz'
     }
   }
 
@@ -116,17 +197,6 @@ function ReadingMaterial({ topic, selectedChapter, onChapterSelect, onStartQuiz,
             </div>
           </div>
 
-          {/* {selectedChapter && (
-            <div className="reading-material">
-              <ReactMarkdown
-                remarkPlugins={[remarkGfm, remarkAnchorPlugin]}
-                rehypePlugins={[rehypeSlug]}
-              >
-                {selectedChapter.content}
-              </ReactMarkdown>
-            </div>
-          )} */}
-
           {currentChapter && (
             <div className="reading-material">
               <ReactMarkdown
@@ -138,20 +208,82 @@ function ReadingMaterial({ topic, selectedChapter, onChapterSelect, onStartQuiz,
             </div>
           )}
 
-          {/* Quiz Button or Mastered Message */}
-          {isLoggedIn && chapterPassed ? (
-            <div className="mastered-message">
-              <p>✅ You've already mastered this chapter!</p>
-              <p>Great job! You've completed this chapter with 70%+ accuracy.</p>
-            </div>
+          {/* Batch Progress Display */}
+          {loadingBatches ? (
+            <p>Loading batches...</p>
           ) : (
-            <button
-              onClick={() => handleStartQuiz(currentChapter)}
-              className={`start-quiz-btn ${chapterPassed ? 'disabled' : ''}`}
-              disabled={chapterPassed || checkingPass}
-            >
-              {chapterPassed ? '✅ Mastered!' : `Start Quiz on ${currentChapter?.title} 🎯`}
-            </button>
+            <div className="batches-container">
+              <h3>📚 Learning Path</h3>
+              {batches.length === 0 ? (
+                <p>No batches available for this chapter yet.</p>
+              ) : (
+                <div className="batches-list">
+                  {batches.map((batch, index) => {
+                    const isUnlocked = isBatchUnlocked(index)
+                    const status = getBatchStatus(batch, index)
+                    const progress = batchProgress[batch.id]
+
+                    return (
+                      <div
+                        key={batch.id}
+                        className={`batch-card ${status.status} ${!isUnlocked ? 'locked' : ''}`}
+                      >
+                        <div className="batch-header">
+                          <span className="batch-icon">{status.icon}</span>
+                          <div className="batch-info">
+                            <h4>{getDifficultyLabel(batch.difficulty)} Batch</h4>
+                            <p className="batch-questions">
+                              {batch.questions?.length || 0} questions
+                            </p>
+                          </div>
+                          <span className="batch-status">{status.label}</span>
+                        </div>
+
+                        {progress && (
+                          <div className="batch-progress-bar">
+                            <div
+                              className="progress-fill"
+                              style={{ width: `${progress.accuracy}%` }}
+                            ></div>
+                          </div>
+                        )}
+
+                        {!isUnlocked && (
+                          <p className="batch-locked-message">
+                            🔒 Complete {getDifficultyLabel(batches[index - 1].difficulty)} batch to unlock
+                          </p>
+                        )}
+
+                        {isUnlocked && status.status !== 'mastered' && (
+                          <button
+                            onClick={() => handleStartBatch(batch)}
+                            className="start-batch-btn"
+                            disabled={selectedBatchId === batch.id}
+                          >
+                            {progress ? '🔄 Retake' : '▶️ Start'} {getDifficultyLabel(batch.difficulty)} Batch
+                          </button>
+                        )}
+
+                        {status.status === 'mastered' && (
+                          <button
+                            onClick={() => handleStartBatch(batch)}
+                            className="retake-batch-btn"
+                          >
+                            🔄 Retake {getDifficultyLabel(batch.difficulty)} Batch
+                          </button>
+                        )}
+
+                        {progress && (
+                          <p className="batch-attempts">
+                            Attempts: {progress.attemptCount}
+                          </p>
+                        )}
+                      </div>
+                    )
+                  })}
+                </div>
+              )}
+            </div>
           )}
         </>
       )}
