@@ -1,0 +1,14 @@
+.question-item {
+  padding: 8px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.question-item input:disabled {
+  cursor: not-allowed;
+}
+
+.question-item:has(input:disabled) {
+  background-color: #f5f5f5;
+  opacity: 0.6;
+}
