@@ -14,12 +14,12 @@ function App() {
   const [currentView, setCurrentView] = useState('periods')
   const [selectedPeriod, setSelectedPeriod] = useState(null)
   const [selectedTopic, setSelectedTopic] = useState(null)
+  const [selectedBatch, setSelectedBatch] = useState(null)
   const [selectedChapter, setSelectedChapter] = useState(null)
   const [isLoggedIn, setIsLoggedIn] = useState(false)
   const [user, setUser] = useState(null)
   const [showAuthModal, setShowAuthModal] = useState(false)
   const [authView, setAuthView] = useState('signin') // 'signin' or 'signup'
-  const [selectedBatch, setSelectedBatch] = useState(null)
 
   // Check if user is already logged in on mount
   useEffect(() => {
@@ -120,10 +120,12 @@ function App() {
     setShowAuthModal(false)
   }
 
-  const handleStartQuiz = (chapter) => {
-      setSelectedBatch(batch)  // Store the batch
-      setCurrentView('quiz')
-    }
+  const handleStartQuiz = (batch, chapter) => {
+    console.log("handleStartQuiz called with batch:", batch)
+    setSelectedChapter(chapter)
+    setSelectedBatch(batch)  // Store the batch
+    setCurrentView('quiz')
+  }
 
   // Main app header
   const renderHeader = () => (
@@ -217,14 +219,27 @@ function App() {
         />
       )}
 
-      {currentView === 'quiz' && selectedTopic && selectedChapter && selectedBatch &&  (
-        <Quiz
-          chapterId={selectedChapter.id}
-          batchId={selectedBatch.id}
-          onBack={handleBackToReading}
-          isLoggedIn={isLoggedIn}
-        />
-      )}
+      {currentView === 'quiz' && (
+  <>
+    {console.log("Quiz conditions:", {
+      currentView,
+      selectedTopic: !!selectedTopic,
+      selectedChapter: !!selectedChapter,
+      selectedBatch: !!selectedBatch
+    })}
+    {selectedTopic && selectedChapter && selectedBatch ? (
+      <Quiz
+        batch={selectedBatch}
+        chapterId={selectedChapter.id}
+        batchId={selectedBatch.id}
+        onBack={handleBackToReading}
+        isLoggedIn={isLoggedIn}
+      />
+    ) : (
+      <div>Missing data: topic={!!selectedTopic} chapter={!!selectedChapter} batch={!!selectedBatch}</div>
+    )}
+  </>
+)}
 
       {currentView === 'admin' && isLoggedIn && (
         <Admin onBack={handleBackFromAdmin} />

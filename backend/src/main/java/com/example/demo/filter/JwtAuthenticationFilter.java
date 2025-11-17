@@ -32,36 +32,58 @@ public class JwtAuthenticationFilter implements Filter {
         HttpServletRequest httpRequest = (HttpServletRequest) request;
         HttpServletResponse httpResponse = (HttpServletResponse) response;
 
-        // Handle CORS preflight requests (OPTIONS method)
-        // if ("OPTIONS".equalsIgnoreCase(httpRequest.getMethod())) {
-        //     httpResponse.setHeader("Access-Control-Allow-Origin", "http://localhost:5173");
-        //     httpResponse.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
-        //     httpResponse.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
-        //     httpResponse.setHeader("Access-Control-Max-Age", "3600");
-        //     httpResponse.setStatus(HttpServletResponse.SC_OK);
-        //     return;
-        // }
-
         // Allow CORS preflight requests
-        if ("OPTIONS".equalsIgnoreCase(httpRequest.getMethod()))  {
+       if ("OPTIONS".equalsIgnoreCase(httpRequest.getMethod())) {
+            httpResponse.setHeader("Access-Control-Allow-Origin", "http://localhost:5173");
+            httpResponse.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+            httpResponse.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
+            httpResponse.setHeader("Access-Control-Max-Age", "3600");
             httpResponse.setStatus(HttpServletResponse.SC_OK);
-            chain.doFilter(request, response);
             return;
         }
 
-        // Skip filter for public endpoints (register, login)
-        String requestPath = httpRequest.getRequestURI();
+        httpResponse.setHeader("Access-Control-Allow-Origin", "http://localhost:5173");
+        httpResponse.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+        httpResponse.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
+        httpResponse.setHeader("Access-Control-Allow-Credentials", "true");
 
-        // Get the Authorization header
+        String requestPath = httpRequest.getRequestURI();
         String authHeader = httpRequest.getHeader("Authorization");
+
         System.out.println("Auth Header: " + authHeader);
         System.out.println("Request Path: " + requestPath);
 
+        // If Authorization header exists, validate it (even for public endpoints)
+        if (authHeader != null && authHeader.startsWith("Bearer ")) {
+            try {
+                String token = authHeader.substring(7);
+                var claims = Jwts.parser()
+                    .verifyWith(JWT_SECRET)
+                    .build()
+                    .parseSignedClaims(token)
+                    .getPayload();
 
-        // Allow public access to these endpoints
+                String userId = claims.getSubject();
+                String email = (String) claims.get("email");
+                String accountType = (String) claims.get("accountType");
+
+                httpRequest.setAttribute("userId", userId);
+                httpRequest.setAttribute("email", email);
+                httpRequest.setAttribute("accountType", accountType);
+
+                System.out.println("Token validated - userId: " + userId);
+            } catch (Exception e) {
+                System.out.println("Invalid token: " + e.getMessage());
+                httpResponse.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
+                httpResponse.getWriter().write("Invalid or expired token");
+                return;
+            }
+        }
+
+        // Allow public endpoints (with or without auth)
         if (requestPath.contains("/api/auth/register") ||
             requestPath.contains("/api/auth/login") ||
-             requestPath.contains("/api/periods") ||
+            requestPath.contains("/api/periods") ||
             requestPath.contains("/api/chapters") ||
             requestPath.contains("/api/topics") ||
             requestPath.contains("/api/questions") ||
@@ -71,42 +93,13 @@ public class JwtAuthenticationFilter implements Filter {
             return;
         }
 
-        // Check if Authorization header exists and starts with "Bearer "
+        // Non-public endpoints REQUIRE auth
         if (authHeader == null || !authHeader.startsWith("Bearer ")) {
             httpResponse.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
             httpResponse.getWriter().write("Missing or invalid Authorization header");
             return;
         }
 
-        try {
-            // Extract token (remove "Bearer " prefix)
-            String token = authHeader.substring(7);
-
-            // Verify and parse token
-            var claims = Jwts.parser()
-                .verifyWith(JWT_SECRET)
-                .build()
-                .parseSignedClaims(token)
-                .getPayload();
-
-            // Extract user info from token
-            String userId = claims.getSubject();
-            String email = (String) claims.get("email");
-            String accountType = (String) claims.get("accountType");
-
-            // Store user info in request attributes so controllers can access it
-            httpRequest.setAttribute("userId", userId);
-            httpRequest.setAttribute("email", email);
-            httpRequest.setAttribute("accountType", accountType);
-
-            // Continue to next filter/controller
-            chain.doFilter(request, response);
-
-        } catch (Exception e) {
-            // Token is invalid or expired
-            e.printStackTrace();
-            httpResponse.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
-            httpResponse.getWriter().write("Invalid or expired token: " + e.getMessage());
-        }
+        chain.doFilter(request, response);
     }
 }

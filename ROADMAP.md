@@ -103,40 +103,32 @@
 
 ---
 
-### Phase 3b: Quiz Batching & Mastery System (⏳ NEXT)
+### Phase 3b: Quiz Batching & Mastery System (⏳ IN PROGRESS)
 
-**Status**: Not Started
+**Status**: Admin Interface Complete, Quiz Integration Next
 
-**Goal**: Organize quizzes into 10-question batches with mastery thresholds.
-
-**Features to Implement:**
-1. Quiz batching (10 questions per batch)
-2. 80% mastery threshold for batch completion
-3. Can't move to next batch until current batch mastered
-4. Retake system for failed batches
-5. Progress tracking per batch
-6. Visual batch progress display
-
-**Implementation Plan:**
-- Add `QuizBatch` entity (groups 10 questions)
-- Add `BatchProgress` entity (tracks completion/mastery)
-- Create `BatchController` endpoints
-- Update `Quiz.jsx` to load batch questions
-- Add UI for batch progress display
-- Modify quiz flow to enforce mastery before advancement
-
-**Estimated Time**: 2-3 hours
-
-**Acceptance Criteria:**
-- [ ] Questions grouped into 10-question batches
-- [ ] Users cannot proceed to next batch without 80% accuracy
-- [ ] Progress tracking per batch works
-- [ ] Can retake failed batches
-- [ ] UI shows current batch and progress
-
-**Timeline**: Oct 28-29 (Planned)
+**Completed:**
+- ✅ AdminBatches component created and integrated into Admin panel
+- ✅ Batch creation by difficulty (Easy/Medium/Hard) and order (1, 2, 3)
+- ✅ Question assignment UI with checkboxes
+- ✅ Duplicate prevention - disabled questions already in batches
+- ✅ Visual indicators (gray background) for used questions
+- ✅ BatchController endpoints (create, get, update batch progress)
+- ✅ QuizBatch and BatchProgress entities with mastery calculations
+- ✅ Integrate batches into Quiz.jsx (load batch questions)
+- ✅ **80% mastery threshold enforcement** - working perfectly
+- ✅ **Batch progression logic** - can't advance without 80% accuracy
+- ✅ BatchProgress UI showing mastery status and attempt tracking
+- ✅ Retake system for all batches (no duplicate points)
+- ✅ Visual batch progress indicator in ReadingMaterial (🔒/🔓 locks)
+- ✅ Sequential unlocking - must master previous batch first
+- ✅ Comprehensive test data (30 questions, 3 difficulty levels)
 
 ---
+
+**Timeline**: Oct 28 - Nov 17, 2025 (Completed)
+
+**Next Phase**: Phase 3c - Polish & Bug Fixes
 
 ## Phase 4: Additional Features (Future)
 

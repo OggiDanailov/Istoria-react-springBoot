@@ -110,7 +110,7 @@ function ReadingMaterial({ topic, selectedChapter, onChapterSelect, onStartQuiz,
       } else if (response.status === 401) {
         console.warn('Unauthorized - token may be invalid')
         // Clear localStorage and log out
-        localStorage.removeItem('token')
+        // localStorage.removeItem('token')
       }
     } catch (err) {
       console.error('Failed to fetch batch progress:', err)
@@ -125,7 +125,7 @@ function ReadingMaterial({ topic, selectedChapter, onChapterSelect, onStartQuiz,
 
   const handleStartBatch = (batch) => {
     setSelectedBatchId(batch.id)
-    onStartQuiz(batch)
+    onStartQuiz(batch, currentChapter )
   }
 
   const isBatchUnlocked = (batchIndex) => {
