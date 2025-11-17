@@ -112,9 +112,9 @@ function Results({ questions, userAnswers, onRestart, onBack, chapterId, batchId
   const getPassStatus = () => {
     const acc = accuracy
     if (acc >= 80) return { status: 'MASTERED', color: 'mastered', message: '🎉 Batch Mastered!' }
-    if (acc >= 70) return { status: 'PASSED', color: 'excellent', message: '✅ Passed! (80% needed for mastery)' }
-    if (acc >= 50) return { status: 'FAIL', color: 'needs-work', message: '❌ Not mastered yet. Retake to improve!' }
-    return { status: 'FAIL BADLY', color: 'error', message: '⚠️ Keep trying! You can do better.' }
+    if (acc >= 70) return { status: 'CLOSE', color: 'warning', message: '⚠️ Close! You got ' + Math.round(acc) + '% but need 80% to master' }
+    if (acc >= 50) return { status: 'NOT_MASTERED', color: 'needs-work', message: '❌ Not quite. You got ' + Math.round(acc) + '% — try again!' }
+    return { status: 'NEEDS_WORK', color: 'error', message: '⚠️ Keep practicing! You got ' + Math.round(acc) + '%.' }
   }
 
   const passStatus = getPassStatus()
