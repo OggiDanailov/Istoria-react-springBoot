@@ -4,24 +4,52 @@ import './Results.css'
 
 function Results({ questions, userAnswers, onRestart, onBack, chapterId, batchId, score, correctCount, totalQuestions, totalPoints, isLoggedIn, batchDifficulty }) {
   const [saveStatus, setSaveStatus] = useState('')
-  const [batchMastered, setBatchMastered] = useState(false)
-  const [accuracy, setAccuracy] = useState(0)
   const hasAttemptedSave = useRef(false)
+
+  // Calculate accuracy directly from props
+  const accuracy = Math.round((score / totalPoints) * 100)
+  const batchMastered = accuracy >= 80
 
   useEffect(() => {
     if (isLoggedIn && !hasAttemptedSave.current) {
       hasAttemptedSave.current = true
       saveQuizAttempt()
     }
-  }, [])
-
-  const calculateAccuracy = () => {
-    return Math.round((score / totalPoints) * 100)
-  }
+  }, [score, totalPoints])  // Add dependencies so it updates on retake
 
   const isBatchMastered = () => {
     const acc = calculateAccuracy()
     return acc >= 80
+  }
+
+  const saveBatchProgress = async (accuracy) => {
+    console.log("saveBatchProgress called - batchId:", batchId, "score:", score, "totalPoints:", totalPoints)
+    try {
+      const token = localStorage.getItem('token')
+      console.log("Token exists:", !!token)
+      if (!token || !batchId) {
+         console.log("Missing token or batchId, returning")
+         return
+      }
+
+      const response = await fetch(`${API_BASE_URL}/api/batches/${batchId}/progress`, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}`
+        },
+        body: JSON.stringify({
+          score: score,
+          totalPoints: totalPoints
+        })
+      })
+
+      if (response.ok) {
+        console.log('Batch progress saved!')
+      }
+    } catch (err) {
+      console.error('Error saving batch progress:', err)
+    }
   }
 
   const saveQuizAttempt = async () => {
@@ -56,6 +84,8 @@ function Results({ questions, userAnswers, onRestart, onBack, chapterId, batchId
         setAccuracy(acc)
         setBatchMastered(acc >= 80)
         setSaveStatus('saved')
+        console.log("About to save batch progress, batchId:", batchId)
+        await saveBatchProgress(acc)
       } else {
         setSaveStatus('error')
         console.error('Failed to save quiz attempt')

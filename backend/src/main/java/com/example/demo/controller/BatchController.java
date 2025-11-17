@@ -121,6 +121,18 @@ public class BatchController {
         }
     }
 
+    // Get a single batch by ID with its questions
+    @GetMapping("/{batchId}")
+    public ResponseEntity<QuizBatch> getBatchById(@PathVariable Long batchId) {
+        try {
+            QuizBatch batch = quizBatchRepository.findById(batchId)
+                .orElseThrow(() -> new RuntimeException("Batch not found"));
+            return ResponseEntity.ok(batch);
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().build();
+        }
+    }
+
     // Get user's progress on a specific batch
     @GetMapping("/{batchId}/progress")
     public ResponseEntity<BatchProgress> getUserBatchProgress(
