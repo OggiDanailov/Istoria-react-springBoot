@@ -1,7 +1,7 @@
 # Historical Quiz Application - Product Roadmap
 
-**Last Updated**: October 27, 2025
-**Current Phase**: Phase 3a ✅ COMPLETE → Phase 3b - Quiz Batching (Starting)
+**Last Updated**: November 19, 2025
+**Current Phase**: Phase 3b ✅ COMPLETE → Phase 3c (Polish & Bug Fixes - COMPLETE)
 
 ---
 
@@ -105,7 +105,7 @@
 
 ### Phase 3b: Quiz Batching & Mastery System (⏳ IN PROGRESS)
 
-**Status**: Admin Interface Complete, Quiz Integration Next
+**Status**: Completed
 
 **Completed:**
 - ✅ AdminBatches component created and integrated into Admin panel
@@ -126,7 +126,24 @@
 
 ---
 
-**Timeline**: Oct 28 - Nov 17, 2025 (Completed)
+**Timeline**: Oct 28 - Nov 19, 2025 (Completed)
+
+**Next Phase**: Phase 4 - Additional Features
+
+**Status**: ✅ Completed (Nov 19)
+
+**Fixes Applied:**
+- ✅ Dashboard points calculation fixed
+  - Issue: Was summing `p.totalPoints` from progress instead of `attempt.pointsAwarded` from attempts
+  - Solution: Changed `calculateTotalPoints()` to use attempts array
+  - Result: Dashboard now correctly shows 74 total points ✅
+
+- ✅ SignIn/SignUp navigation fixed
+  - Issue: Anchor links `<a href="#signup">` didn't switch views
+  - Solution: Added button handlers `onSwitchToSignUp` and `onSwitchToSignIn`
+  - Result: Auth modal navigation now works smoothly ✅
+
+**Timeline**: Nov 19, 2025 (COMPLETE)
 
 **Next Phase**: Phase 3c - Polish & Bug Fixes
 
@@ -196,37 +213,6 @@ batch_progress (tracks user's mastery per batch)
 - ✅ Fixed chapter state persistence through quiz flow
 - ✅ CORS filter properly configured for protected endpoints
 
-## Next Actions (Phase 3b - Starting)
-
-1. **Create QuizBatch Entity**
-   - Store batch ID, chapter reference, questions list
-   - Track batch order/sequence
-
-2. **Create BatchProgress Entity**
-   - Track user's progress per batch
-   - Store best score, mastery status, completion date
-
-3. **Implement BatchController**
-   - GET batches for chapter
-   - GET user's batch progress
-   - POST batch completion
-
-4. **Modify Quiz.jsx**
-   - Load questions from batch instead of full chapter
-   - Enforce batch order
-   - Show batch progress indicator
-
-5. **Update ReadingMaterial**
-   - Show which batch user is on
-   - Show 80% mastery requirement
-
-6. **Test thoroughly**
-   - Complete batch 1 with 80% → unlock batch 2
-   - Complete batch 1 with 70% → cannot unlock batch 2
-   - Can retake failed batch
-
----
-
 ## Success Metrics
 
 **Phase 1**: ✅ Complete - Questions randomize, answers shuffle, quizzes work
@@ -241,13 +227,12 @@ batch_progress (tracks user's mastery per batch)
 - ✅ Quiz button disabled after pass
 - ✅ All calculations verified
 
-**Phase 3b** (In Progress):
-- [ ] Quiz batching implemented
-- [ ] 80% mastery threshold working
-- [ ] Batch progress tracking
-- [ ] Retake system for failed batches
-- [ ] Visual progress indicators
-
+**Phase 3b**: ✅ Complete (Nov 19)
+- ✅ Quiz batching implemented
+- ✅ 80% mastery threshold working
+- ✅ Batch progress tracking
+- ✅ Retake system for failed batches
+- ✅ Visual progress indicators
 ---
 
 ## File Structure
@@ -513,9 +498,8 @@ npm run dev  # Starts on http://localhost:5173
 
 ---
 
-**Document Version**: 1.5
-**Last Updated**: november 4, 2025
-**Next Review**: After Phase 3b completion
+**Document Version**: 1.6
+**Last Updated**: november 19, 2025
 
 ---
 
