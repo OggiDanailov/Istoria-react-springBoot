@@ -50,8 +50,6 @@ public class JwtAuthenticationFilter implements Filter {
         String requestPath = httpRequest.getRequestURI();
         String authHeader = httpRequest.getHeader("Authorization");
 
-        System.out.("Auth Header: " + authHeader);
-        System.out.("Request Path: " + requestPath);
 
         // If Authorization header exists, validate it (even for public endpoints)
         if (authHeader != null && authHeader.startsWith("Bearer ")) {
@@ -71,9 +69,7 @@ public class JwtAuthenticationFilter implements Filter {
                 httpRequest.setAttribute("email", email);
                 httpRequest.setAttribute("accountType", accountType);
 
-                System.out.("Token validated - userId: " + userId);
             } catch (Exception e) {
-                System.out.("Invalid token: " + e.getMessage());
                 httpResponse.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
                 httpResponse.getWriter().write("Invalid or expired token");
                 return;
