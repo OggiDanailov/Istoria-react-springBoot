@@ -169,9 +169,9 @@ function App() {
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
         <button className="modal-close" onClick={handleCloseAuthModal}>✕</button>
         {authView === 'signup' ? (
-          <SignUp onSignUpSuccess={handleSignUpSuccess} />
+          <SignUp onSignUpSuccess={handleSignUpSuccess} onSwitchToSignIn={() => setAuthView('signin')} />
         ) : (
-          <SignIn onSignInSuccess={handleSignInSuccess} />
+          <SignIn onSignInSuccess={handleSignInSuccess} onSwitchToSignUp={() => setAuthView('signup')} />
         )}
       </div>
     </div>

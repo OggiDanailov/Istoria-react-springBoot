@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { API_BASE_URL } from '../../config/api'
 import './SignIn.css'
 
-function SignIn({ onSignInSuccess }) {
+function SignIn({ onSignInSuccess, onSwitchToSignUp }) {
   const [formData, setFormData] = useState({
     email: '',
     password: ''
@@ -103,7 +103,7 @@ function SignIn({ onSignInSuccess }) {
         </form>
 
         <p className="auth-link">
-          Don't have an account? <a href="#signup">Sign Up</a>
+          Don't have an account? <button type="button" onClick={onSwitchToSignUp} className="link-btn">Sign Up</button>
         </p>
       </div>
     </div>

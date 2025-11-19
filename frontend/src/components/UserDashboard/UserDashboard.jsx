@@ -47,7 +47,7 @@ function UserDashboard({ user, onBack }) {
   }
 
   const calculateTotalPoints = () => {
-    return progress.reduce((sum, p) => sum + p.totalPoints, 0)
+    return attempts.reduce((sum, attempt) => sum + attempt.pointsAwarded, 0)
   }
 
   const calculateMasteredTopics = () => {
