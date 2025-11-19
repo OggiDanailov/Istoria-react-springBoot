@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { API_BASE_URL } from './config/api'
 import PeriodList from './components/PeriodList/PeriodList'
 import TopicList from './components/TopicList/TopicList'
 import ReadingMaterial from './components/ReadingMaterial/ReadingMaterial'
@@ -20,16 +21,36 @@ function App() {
   const [user, setUser] = useState(null)
   const [showAuthModal, setShowAuthModal] = useState(false)
   const [authView, setAuthView] = useState('signin') // 'signin' or 'signup'
+  const [loading, setLoading] = useState(true)
 
   // Check if user is already logged in on mount
   useEffect(() => {
-    const token = localStorage.getItem('token')
-    const savedUser = localStorage.getItem('user')
+    const validateStoredAuth = async () => {
+      const token = localStorage.getItem('token')
+      const savedUser = localStorage.getItem('user')
 
-    if (token && savedUser) {
-      setIsLoggedIn(true)
-      setUser(JSON.parse(savedUser))
+      if (token && savedUser) {
+        try {
+          const response = await fetch(`${API_BASE_URL}/api/user-progress`, {
+            headers: { 'Authorization': `Bearer ${token}` }
+          })
+
+          if (response.status === 200) {
+            setIsLoggedIn(true)
+            setUser(JSON.parse(savedUser))
+          } else {
+            localStorage.removeItem('token')
+            localStorage.removeItem('user')
+          }
+        } catch (err) {
+          localStorage.removeItem('token')
+          localStorage.removeItem('user')
+        }
+      }
+      setLoading(false)  // Validation complete
     }
+
+    validateStoredAuth()
   }, [])
 
   const handleSignUpClick = () => {
@@ -178,6 +199,7 @@ function App() {
   )
 
   // Main render
+  if (loading) return <div className="loading">Loading...</div>
   return (
     <>
       {renderHeader()}
