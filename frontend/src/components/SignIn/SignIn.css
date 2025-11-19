@@ -97,3 +97,17 @@
 .auth-link a:hover {
   text-decoration: underline;
 }
+
+.auth-link .link-btn {
+  background: none;
+  border: none;
+  color: #0066cc;
+  cursor: pointer;
+  font-size: 1em;
+  padding: 0;
+  text-decoration: underline;
+}
+
+.auth-link .link-btn:hover {
+  color: #0052a3;
+}

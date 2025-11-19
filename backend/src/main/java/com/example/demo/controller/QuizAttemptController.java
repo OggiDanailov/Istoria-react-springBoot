@@ -46,40 +46,26 @@ public class QuizAttemptController {
             @RequestBody QuizAttemptRequest request,
             HttpServletRequest httpRequest) {
         try {
-            System.out.println("=== QUIZ ATTEMPT REQUEST ===");
-            System.out.println("Chapter ID: " + request.getChapterId());
-            System.out.println("Batch ID: " + request.getBatchId());
-            System.out.println("Score: " + request.getScore());
-            System.out.println("Total Questions: " + request.getTotalQuestions());
-            System.out.println("Total Points: " + request.getTotalPoints());
-            System.out.println("===========================");
-
             String userIdStr = (String) httpRequest.getAttribute("userId");
-            System.out.println("User ID from request: " + userIdStr);
 
             if (userIdStr == null) {
                 return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
             }
 
             Long userId = Long.parseLong(userIdStr);
-            System.out.println("Parsed user ID: " + userId);
 
             User user = userRepository.findById(userId)
                     .orElseThrow(() -> new RuntimeException("User not found"));
-            System.out.println("Found user: " + user.getId());
 
             Chapter chapter = chapterRepository.findById(request.getChapterId())
                     .orElseThrow(() -> new RuntimeException("Chapter not found"));
-            System.out.println("Found chapter: " + chapter.getId());
 
             QuizBatch batch = null;
             if (request.getBatchId() != null) {
                 batch = quizBatchRepository.findById(request.getBatchId())
                         .orElse(null);
-                System.out.println("Found batch: " + (batch != null ? batch.getId() : "null"));
             }
 
-            System.out.println("About to create quiz attempt...");
 
             // Create quiz attempt
             QuizAttempt attempt = new QuizAttempt(user, chapter, batch,
@@ -89,23 +75,19 @@ public class QuizAttemptController {
             int pointsToAward = calculatePointsToAward(request);
             attempt.setPointsAwarded(pointsToAward);
 
-            System.out.println("About to save quiz attempt...");
 
             // Save the attempt
             QuizAttempt savedAttempt = quizAttemptRepository.save(attempt);
 
-            System.out.println("Quiz attempt saved with ID: " + savedAttempt.getId());
 
             // If this is a batch attempt, update batch progress
             if (batch != null) {
-                System.out.println("Updating batch progress...");
                 updateBatchProgress(userId, batch.getId(), request);
             }
 
             return ResponseEntity.status(HttpStatus.CREATED).body(savedAttempt);
 
         } catch (Exception e) {
-            System.out.println("ERROR in saveQuizAttempt: " + e.getMessage());
             e.printStackTrace();
             return ResponseEntity.badRequest().build();
         }
@@ -134,7 +116,6 @@ public class QuizAttemptController {
             QuizBatch batch = quizBatchRepository.findById(batchId).orElse(null);
 
             if (user == null || batch == null) {
-                System.out.println("User or batch not found, skipping batch progress update");
                 return;
             }
 
@@ -155,10 +136,8 @@ public class QuizAttemptController {
 
             // Save updated progress
             batchProgressRepository.save(progress);
-            System.out.println("Batch progress updated - mastered: " + progress.isMastered());
 
         } catch (Exception e) {
-            System.out.println("ERROR updating batch progress: " + e.getMessage());
             e.printStackTrace();
         }
     }
