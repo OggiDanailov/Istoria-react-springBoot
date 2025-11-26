@@ -72,7 +72,7 @@ public class QuizAttemptController {
                     request.getScore(), request.getTotalQuestions(), request.getTotalPoints());
 
             // Calculate points to award based on gamification rules
-            int pointsToAward = calculatePointsToAward(request);
+            int pointsToAward = calculatePointsToAward(request, userId, request.getBatchId());
             attempt.setPointsAwarded(pointsToAward);
 
 
@@ -94,17 +94,23 @@ public class QuizAttemptController {
     }
 
     // Calculate points to award based on accuracy and gamification rules
-    private int calculatePointsToAward(QuizAttemptRequest request) {
-        double accuracy = (double) request.getScore() / request.getTotalPoints() * 100;
+    private int calculatePointsToAward(QuizAttemptRequest request, Long userId, Long batchId) {
+    // NEW: Check if batch already mastered (80%+)
+        if (batchId != null) {
+            var existingProgress = batchProgressRepository.findByUserIdAndBatchId(userId, batchId);
+            if (existingProgress.isPresent() && existingProgress.get().isMastered()) {
+                System.out.println("DEBUG: Batch already mastered, awarding 0 points");
+                return 0;  // Already mastered, no more points
+            }
+        }
 
-        if (accuracy >= 70) {
-            // Pass: award full points
+        // Original calculation
+        double accuracy = (double) request.getScore() / request.getTotalPoints() * 100;
+        if (accuracy >= 80) {
             return request.getScore();
         } else if (accuracy >= 50) {
-            // Fail (50-69%): award 0 points
             return 0;
         } else {
-            // Fail badly (<50%): deduct half of total points
             return -(request.getTotalPoints() / 2);
         }
     }
