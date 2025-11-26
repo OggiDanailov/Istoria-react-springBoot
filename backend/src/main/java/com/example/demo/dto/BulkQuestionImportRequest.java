@@ -37,7 +37,7 @@ public class BulkQuestionImportRequest {
     public static class QuestionImportData {
         private String question;
         private List<String> options;
-        private int correctAnswer;
+        private List<Integer> correctAnswers;
         private int difficulty;
         private String textReference;
 
@@ -59,12 +59,12 @@ public class BulkQuestionImportRequest {
             this.options = options;
         }
 
-        public int getCorrectAnswer() {
-            return correctAnswer;
+        public List<Integer> getCorrectAnswers() {
+            return correctAnswers;
         }
 
-        public void setCorrectAnswer(int correctAnswer) {
-            this.correctAnswer = correctAnswer;
+        public void setCorrectAnswers(List<Integer> correctAnswers) {
+            this.correctAnswers = correctAnswers;
         }
 
         public int getDifficulty() {

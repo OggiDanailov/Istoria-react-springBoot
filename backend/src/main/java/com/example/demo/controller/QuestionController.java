@@ -70,7 +70,7 @@ public class QuestionController {
 
         question.setQuestion(questionDetails.getQuestion());
         question.setOptions(questionDetails.getOptions());
-        question.setCorrectAnswer(questionDetails.getCorrectAnswer());
+        question.setCorrectAnswers(questionDetails.getCorrectAnswers());
 
         Question updatedQuestion = questionRepository.save(question);
         return ResponseEntity.ok(updatedQuestion);
@@ -150,7 +150,7 @@ public class QuestionController {
                 Question question = new Question();
                 question.setQuestion(qData.getQuestion());
                 question.setOptions(qData.getOptions());
-                question.setCorrectAnswer(qData.getCorrectAnswer());
+                question.setCorrectAnswers(qData.getCorrectAnswers());
                 question.setDifficulty(qData.getDifficulty());
                 question.setTextReference(qData.getTextReference());
                 question.setChapter(chapter);
