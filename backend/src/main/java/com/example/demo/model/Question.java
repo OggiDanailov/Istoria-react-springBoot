@@ -1,9 +1,8 @@
 package com.example.demo.model;
-import jakarta.persistence.ElementCollection;
-import jakarta.persistence.CollectionTable;
 import jakarta.persistence.*;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.util.List;
+import jakarta.persistence.FetchType;
 
 @Entity
 @Table(name = "questions")
@@ -25,7 +24,7 @@ public class Question {
     @Column(name = "option")
     private List<String> options;
 
-    @ElementCollection
+    @ElementCollection(fetch = FetchType.EAGER)
     @CollectionTable(
         name = "question_correct_answers",
         joinColumns = @JoinColumn(name = "question_id")

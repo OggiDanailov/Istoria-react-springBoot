@@ -19,17 +19,26 @@ export const shuffleArray = (array) => {
 };
 
 // Shuffle options while tracking correct answer
+// Shuffle options while remapping correct answer indices
 export const shuffleQuestionOptions = (question) => {
-    const correctOption = question.options[question.correctAnswer];
-    const shuffledOptions = shuffleArray(question.options);
-    const newCorrectAnswerIndex = shuffledOptions.indexOf(correctOption);
+  // Create a mapping of old indices to new indices
+  const shuffledOptions = shuffleArray(question.options);
 
-    return {
-        ...question,
-        options: shuffledOptions,
-        correctAnswer: newCorrectAnswerIndex,
-        originalCorrectAnswer: question.correctAnswer // keep for reference
-    };
+  // Create a mapping: oldIndex -> newIndex
+  const indexMap = {};
+  question.options.forEach((option, oldIndex) => {
+    const newIndex = shuffledOptions.indexOf(option);
+    indexMap[oldIndex] = newIndex;
+  });
+
+  // Remap correctAnswers indices to their new positions
+  const newCorrectAnswers = question.correctAnswers.map(oldIndex => indexMap[oldIndex]);
+
+  return {
+    ...question,
+    options: shuffledOptions,
+    correctAnswers: newCorrectAnswers,  // ← Updated with remapped indices
+  };
 };
 
 // Shuffle array of questions
