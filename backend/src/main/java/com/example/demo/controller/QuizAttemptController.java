@@ -40,7 +40,7 @@ public class QuizAttemptController {
         this.batchProgressRepository = batchProgressRepository;
     }
 
-    // Save a quiz attempt
+    // Save a quiz attempt with SERVER-SIDE answer verification
     @PostMapping
     public ResponseEntity<QuizAttempt> saveQuizAttempt(
             @RequestBody QuizAttemptRequest request,
@@ -66,23 +66,25 @@ public class QuizAttemptController {
                         .orElse(null);
             }
 
+            // ===== VERIFY ANSWERS SERVER-SIDE =====
+            int verifiedScore = verifyAnswersAndCalculateScore(batch, request.getUserAnswers());
+            int totalPoints = calculateTotalPoints(batch);
+            // ========================================
 
-            // Create quiz attempt
+            // Create quiz attempt with VERIFIED score (not frontend's claimed score)
             QuizAttempt attempt = new QuizAttempt(user, chapter, batch,
-                    request.getScore(), request.getTotalQuestions(), request.getTotalPoints());
+                    verifiedScore, request.getUserAnswers().size(), totalPoints);
 
             // Calculate points to award based on gamification rules
-            int pointsToAward = calculatePointsToAward(request, userId, request.getBatchId());
+            int pointsToAward = calculatePointsToAward(verifiedScore, totalPoints, userId, request.getBatchId());
             attempt.setPointsAwarded(pointsToAward);
-
 
             // Save the attempt
             QuizAttempt savedAttempt = quizAttemptRepository.save(attempt);
 
-
             // If this is a batch attempt, update batch progress
             if (batch != null) {
-                updateBatchProgress(userId, batch.getId(), request);
+                updateBatchProgressWithVerifiedScore(userId, batch.getId(), verifiedScore, totalPoints);
             }
 
             return ResponseEntity.status(HttpStatus.CREATED).body(savedAttempt);
@@ -94,29 +96,29 @@ public class QuizAttemptController {
     }
 
     // Calculate points to award based on accuracy and gamification rules
-    private int calculatePointsToAward(QuizAttemptRequest request, Long userId, Long batchId) {
-    // NEW: Check if batch already mastered (80%+)
+    private int calculatePointsToAward(int verifiedScore, int totalPoints, Long userId, Long batchId) {
+        // Check if batch already mastered (80%+)
         if (batchId != null) {
             var existingProgress = batchProgressRepository.findByUserIdAndBatchId(userId, batchId);
             if (existingProgress.isPresent() && existingProgress.get().isMastered()) {
-                System.out.println("DEBUG: Batch already mastered, awarding 0 points");
                 return 0;  // Already mastered, no more points
             }
         }
 
-        // Original calculation
-        double accuracy = (double) request.getScore() / request.getTotalPoints() * 100;
+        // Calculate accuracy from verified score
+        double accuracy = totalPoints > 0 ? (double) verifiedScore / totalPoints * 100 : 0;
+
         if (accuracy >= 80) {
-            return request.getScore();
+            return verifiedScore;  // Full points
         } else if (accuracy >= 50) {
-            return 0;
+            return 0;  // No points
         } else {
-            return -(request.getTotalPoints() / 2);
+            return -(totalPoints / 2);  // Deduct half
         }
     }
 
-    // Update batch progress after an attempt
-    private void updateBatchProgress(Long userId, Long batchId, QuizAttemptRequest request) {
+    // Update batch progress with verified score
+    private void updateBatchProgressWithVerifiedScore(Long userId, Long batchId, int verifiedScore, int totalPoints) {
         try {
             User user = userRepository.findById(userId).orElse(null);
             QuizBatch batch = quizBatchRepository.findById(batchId).orElse(null);
@@ -125,22 +127,18 @@ public class QuizAttemptController {
                 return;
             }
 
-            // Get or create batch progress
             BatchProgress progress = batchProgressRepository.findByUserIdAndBatchId(userId, batchId)
                     .orElse(new BatchProgress(user, batch));
 
-            // Update with new attempt (keep best score)
-            if (request.getScore() > progress.getBestScore()) {
-                progress.setBestScore(request.getScore());
+            // Update with verified score
+            if (verifiedScore > progress.getBestScore()) {
+                progress.setBestScore(verifiedScore);
             }
-            progress.setTotalPoints(request.getTotalPoints());
+            progress.setTotalPoints(totalPoints);
             progress.setAttemptCount(progress.getAttemptCount() + 1);
             progress.setLastAttemptDate(java.time.LocalDateTime.now());
 
-            // Recalculate mastery (80%+)
             progress.updateMastery();
-
-            // Save updated progress
             batchProgressRepository.save(progress);
 
         } catch (Exception e) {
@@ -218,4 +216,55 @@ public class QuizAttemptController {
             return ResponseEntity.notFound().build();
         }
     }
+
+    // ===== HELPER METHODS FOR ANSWER VERIFICATION =====
+
+    // Verify answers against correct answers from database
+    private int verifyAnswersAndCalculateScore(QuizBatch batch, List<Integer> userAnswers) {
+    System.out.println("=== ANSWER VERIFICATION START ===");
+    System.out.println("Batch: " + (batch == null ? "NULL!" : "ID=" + batch.getId()));
+
+    if (batch == null || batch.getQuestions() == null || userAnswers == null) {
+        System.out.println("ERROR: batch or questions or userAnswers is null!");
+        return 0;
+    }
+
+    int score = 0;
+    List<com.example.demo.model.Question> questions = batch.getQuestions();
+    System.out.println("Questions loaded: " + questions.size());
+    System.out.println("User answers: " + userAnswers);
+
+    for (int i = 0; i < userAnswers.size() && i < questions.size(); i++) {
+        Integer userAnswer = userAnswers.get(i);
+        com.example.demo.model.Question question = questions.get(i);
+
+        System.out.println("\nQ" + (i+1) + ": " + question.getQuestion());
+        System.out.println("  User selected: " + userAnswer);
+        System.out.println("  Correct answers from DB: " + question.getCorrectAnswers());
+
+        if (userAnswer != null &&
+            question.getCorrectAnswers() != null &&
+            question.getCorrectAnswers().contains(userAnswer)) {
+            score += question.getDifficulty();
+            System.out.println("  ✓ CORRECT! +"+question.getDifficulty()+" points");
+        } else {
+            System.out.println("  ✗ WRONG");
+        }
+    }
+
+    System.out.println("\n=== FINAL SCORE: " + score + " ===\n");
+    return score;
+}
+
+    // Calculate total possible points for a batch
+    private int calculateTotalPoints(QuizBatch batch) {
+        if (batch == null || batch.getQuestions() == null) {
+            return 0;
+        }
+
+        return batch.getQuestions().stream()
+                .mapToInt(com.example.demo.model.Question::getDifficulty)
+                .sum();
+    }
+    // ===================================================
 }

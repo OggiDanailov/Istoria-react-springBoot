@@ -1,27 +1,36 @@
 package com.example.demo.dto;
 
+import java.util.List;
+
 public class QuizAttemptRequest {
     private Long chapterId;
     private Long batchId;
-    private int score;
-    private int totalQuestions;
-    private int totalPoints;
+    private List<Integer> userAnswers;  // ← Array of selected answer indices [0, 2, 1, 3, ...]
 
     public QuizAttemptRequest() {}
 
     // Getters and Setters
-    public Long getChapterId() { return chapterId; }
-    public void setChapterId(Long chapterId) { this.chapterId = chapterId; }
+    public Long getChapterId() {
+        return chapterId;
+    }
 
-    public Long getBatchId() { return batchId; }
-    public void setBatchId(Long batchId) { this.batchId = batchId; }
+    public void setChapterId(Long chapterId) {
+        this.chapterId = chapterId;
+    }
 
-    public int getScore() { return score; }
-    public void setScore(int score) { this.score = score; }
+    public Long getBatchId() {
+        return batchId;
+    }
 
-    public int getTotalQuestions() { return totalQuestions; }
-    public void setTotalQuestions(int totalQuestions) { this.totalQuestions = totalQuestions; }
+    public void setBatchId(Long batchId) {
+        this.batchId = batchId;
+    }
 
-    public int getTotalPoints() { return totalPoints; }
-    public void setTotalPoints(int totalPoints) { this.totalPoints = totalPoints; }
+    public List<Integer> getUserAnswers() {
+        return userAnswers;
+    }
+
+    public void setUserAnswers(List<Integer> userAnswers) {
+        this.userAnswers = userAnswers;
+    }
 }

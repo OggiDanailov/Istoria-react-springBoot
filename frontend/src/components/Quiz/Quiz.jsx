@@ -20,8 +20,8 @@ function Quiz({ batch, chapterId, batchId, onBack, isLoggedIn }) {
      console.log("useEffect running - batch:", batch)  // ← ADD THIS
     if (batch && batch.questions) {
       console.log("Processing batch questions:", batch.questions)  // ← ADD THIS
-      const shuffledQuestions = batch.questions.map(q => shuffleQuestionOptions(q))
-      setQuestions(shuffledQuestions)
+      // const shuffledQuestions = batch.questions.map(q => shuffleQuestionOptions(q))
+      setQuestions(batch.questions)
     }
   }, [batch])
 
@@ -124,7 +124,9 @@ function Quiz({ batch, chapterId, batchId, onBack, isLoggedIn }) {
     let correctCount = 0
 
     questions.forEach((question, index) => {
-      if (userAnswers[index] === question.correctAnswer) {
+      if (userAnswers[index] !== undefined &&
+          question.correctAnswers &&
+          question.correctAnswers.includes(userAnswers[index])) {
         correctCount++
         totalScore += question.difficulty
       }

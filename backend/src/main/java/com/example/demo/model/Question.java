@@ -1,8 +1,8 @@
 package com.example.demo.model;
-
 import jakarta.persistence.*;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.util.List;
+import jakarta.persistence.FetchType;
 
 @Entity
 @Table(name = "questions")
@@ -24,7 +24,13 @@ public class Question {
     @Column(name = "option")
     private List<String> options;
 
-    private int correctAnswer;
+    @ElementCollection(fetch = FetchType.EAGER)
+    @CollectionTable(
+        name = "question_correct_answers",
+        joinColumns = @JoinColumn(name = "question_id")
+    )
+    @Column(name = "answer_index")
+    private List<Integer> correctAnswers;
 
     private int difficulty;
 
@@ -34,10 +40,10 @@ public class Question {
     public Question() {}
 
     // Constructor
-    public Question(String question, List<String> options, int correctAnswer) {
+    public Question(String question, List<String> options, List<Integer> correctAnswers) {
         this.question = question;
         this.options = options;
-        this.correctAnswer = correctAnswer;
+        this.correctAnswers = correctAnswers;
         this.difficulty = 1; // Default to Easy
     }
 
@@ -63,12 +69,12 @@ public class Question {
     public Chapter getChapter() { return chapter; } // Changed
     public String getQuestion() { return question; }
     public List<String> getOptions() { return options; }
-    public int getCorrectAnswer() { return correctAnswer; }
+    public List<Integer> getCorrectAnswers() { return correctAnswers; }
 
     // Setters
     public void setId(Long id) { this.id = id; }
     public void setChapter(Chapter chapter) { this.chapter = chapter; } // Changed
     public void setQuestion(String question) { this.question = question; }
     public void setOptions(List<String> options) { this.options = options; }
-    public void setCorrectAnswer(int correctAnswer) { this.correctAnswer = correctAnswer; }
+    public void setCorrectAnswers(List<Integer> correctAnswers) { this.correctAnswers = correctAnswers; }
 }

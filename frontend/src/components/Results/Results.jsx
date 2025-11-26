@@ -52,9 +52,8 @@ function Results({ questions, userAnswers, onRestart, onBack, chapterId, batchId
       const requestBody = {
         chapterId: chapterId,
         batchId: batchId,
-        score: score,
-        totalQuestions: totalQuestions,
-        totalPoints: totalPoints
+        userAnswers: userAnswers,    // ← Array of user's selected answer indices
+        batchId: batchId              // ← Backend will fetch questions from batch
       }
 
       const response = await fetch(`${API_BASE_URL}/api/quiz-attempts`, {
@@ -145,7 +144,9 @@ function Results({ questions, userAnswers, onRestart, onBack, chapterId, batchId
         <div className="answer-review">
           <h3>Review Your Answers:</h3>
           {questions.map((question, index) => {
-            const isCorrect = userAnswers[index] === question.correctAnswer
+            const isCorrect = userAnswers[index] !== undefined &&
+                 question.correctAnswers &&
+                 question.correctAnswers.includes(userAnswers[index])
             const points = question.difficulty
 
             return (
@@ -163,7 +164,7 @@ function Results({ questions, userAnswers, onRestart, onBack, chapterId, batchId
                   {isCorrect && ` ✓ (+${points} point${points > 1 ? 's' : ''})`}
                   {!isCorrect && (
                     <span className="correct-answer">
-                      <br />Correct answer: {question.options[question.correctAnswer]}
+                      <br />Correct answer{question.correctAnswers.length > 1 ? 's' : ''}: {question.correctAnswers.map(idx => question.options[idx]).join(', ')}
                     </span>
                   )}
                 </p>

@@ -1,5 +1,5 @@
 package com.example.demo.model;
-
+import jakarta.persistence.FetchType;
 import jakarta.persistence.*;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.util.List;
@@ -23,7 +23,7 @@ public class QuizBatch {
 
     private String description; // Optional: "Easy Questions", "Medium Questions", etc.
 
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(
         name = "batch_questions",
         joinColumns = @JoinColumn(name = "batch_id"),
