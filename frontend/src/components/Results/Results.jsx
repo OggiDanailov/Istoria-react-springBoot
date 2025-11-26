@@ -8,31 +8,22 @@ function Results({ questions, userAnswers, onRestart, onBack, chapterId, batchId
 
   // Calculate accuracy directly from props
   const accuracy = Math.round((score / totalPoints) * 100)
-  const batchMastered = accuracy >= 80
 
   useEffect(() => {
     if (isLoggedIn && !hasAttemptedSave.current) {
       hasAttemptedSave.current = true
       saveQuizAttempt()
     }
-  }, [score, totalPoints])  // Add dependencies so it updates on retake
-
-  const isBatchMastered = () => {
-    const acc = calculateAccuracy()
-    return acc >= 80
-  }
+  }, [isLoggedIn])
 
   const saveBatchProgress = async (accuracy) => {
-    console.log("saveBatchProgress called - batchId:", batchId, "score:", score, "totalPoints:", totalPoints)
     try {
       const token = localStorage.getItem('token')
-      console.log("Token exists:", !!token)
       if (!token || !batchId) {
-         console.log("Missing token or batchId, returning")
-         return
+        return
       }
 
-      const response = await fetch(`${API_BASE_URL}/api/batches/${batchId}/progress`, {
+      await fetch(`${API_BASE_URL}/api/batches/${batchId}/progress`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -43,10 +34,6 @@ function Results({ questions, userAnswers, onRestart, onBack, chapterId, batchId
           totalPoints: totalPoints
         })
       })
-
-      if (response.ok) {
-        console.log('Batch progress saved!')
-      }
     } catch (err) {
       console.error('Error saving batch progress:', err)
     }
@@ -80,12 +67,8 @@ function Results({ questions, userAnswers, onRestart, onBack, chapterId, batchId
       })
 
       if (response.ok) {
-        const acc = calculateAccuracy()
-        setAccuracy(acc)
-        setBatchMastered(acc >= 80)
         setSaveStatus('saved')
-        console.log("About to save batch progress, batchId:", batchId)
-        await saveBatchProgress(acc)
+        await saveBatchProgress(accuracy)
       } else {
         setSaveStatus('error')
         console.error('Failed to save quiz attempt')
@@ -110,11 +93,10 @@ function Results({ questions, userAnswers, onRestart, onBack, chapterId, batchId
   }
 
   const getPassStatus = () => {
-    const acc = accuracy
-    if (acc >= 80) return { status: 'MASTERED', color: 'mastered', message: '🎉 Batch Mastered!' }
-    if (acc >= 70) return { status: 'CLOSE', color: 'warning', message: '⚠️ Close! You got ' + Math.round(acc) + '% but need 80% to master' }
-    if (acc >= 50) return { status: 'NOT_MASTERED', color: 'needs-work', message: '❌ Not quite. You got ' + Math.round(acc) + '% — try again!' }
-    return { status: 'NEEDS_WORK', color: 'error', message: '⚠️ Keep practicing! You got ' + Math.round(acc) + '%.' }
+    if (accuracy >= 80) return { status: 'MASTERED', color: 'mastered', message: '🎉 Batch Mastered!' }
+    if (accuracy >= 70) return { status: 'CLOSE', color: 'warning', message: '⚠️ Close! You got ' + accuracy + '% but need 80% to master' }
+    if (accuracy >= 50) return { status: 'NOT_MASTERED', color: 'needs-work', message: '❌ Not quite. You got ' + accuracy + '% — try again!' }
+    return { status: 'NEEDS_WORK', color: 'error', message: '⚠️ Keep practicing! You got ' + accuracy + '%.' }
   }
 
   const passStatus = getPassStatus()
@@ -192,11 +174,9 @@ function Results({ questions, userAnswers, onRestart, onBack, chapterId, batchId
                       onBack()
                       setTimeout(() => {
                         const element = document.querySelector(question.textReference)
-
                         if (element) {
                           element.scrollIntoView({ behavior: 'smooth', block: 'start' })
                         } else {
-                          console.warn('Element not found for:', question.textReference)
                           window.scrollTo({ top: 0, behavior: 'smooth' })
                         }
                       }, 100)
