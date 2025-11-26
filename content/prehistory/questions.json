@@ -1,260 +1,208 @@
 {
-  "chapterId": 7,
+  "chapterId": 1,
   "questions": [
     {
-      "question": "When did the Paleolithic Era begin?",
-      "options": ["2.6 million years ago", "10,000 BCE", "1 million years ago", "500,000 years ago"],
-      "correctAnswer": 0,
-      "difficulty": 1,
-      "textReference": "#introduction-to-the-old-stone-age"
-    },
-    {
-      "question": "What does the term 'Paleolithic' mean?",
-      "options": ["New Stone Age", "Old Stone Age", "Bronze Age", "Iron Age"],
+      "question": "What is the traditional founding date of Rome?",
+      "options": ["509 BCE", "753 BCE", "616 BCE", "1000 BCE"],
       "correctAnswer": 1,
       "difficulty": 1,
-      "textReference": "#introduction-to-the-old-stone-age"
+      "textReference": "#introduction-to-the-regal-period"
     },
     {
-      "question": "Which species was known as 'handy man'?",
-      "options": ["Homo erectus", "Homo sapiens", "Homo habilis", "Australopithecus"],
-      "correctAnswer": 2,
-      "difficulty": 1,
-      "textReference": "#homo-habilis-the-handy-man"
-    },
-    {
-      "question": "When did Homo erectus first control fire?",
-      "options": ["1 million years ago", "400,000 years ago", "100,000 years ago", "50,000 years ago"],
+      "question": "According to legend, who were the twin founders of Rome?",
+      "options": ["Aeneas and Lavinia", "Romulus and Remus", "Tarquinius and Numa", "Jupiter and Mars"],
       "correctAnswer": 1,
       "difficulty": 1,
-      "textReference": "#homo-erectus-the-upright-man"
+      "textReference": "#the-foundation-myth-romulus-and-remus"
     },
     {
-      "question": "What was the first stone tool culture called?",
-      "options": ["Acheulean", "Mousterian", "Oldowan", "Levallois"],
-      "correctAnswer": 2,
-      "difficulty": 1,
-      "textReference": "#oldowan-tool-culture-26-17-million-years-ago"
-    },
-    {
-      "question": "How many individuals typically made up a Paleolithic hunter-gatherer group?",
-      "options": ["5-10", "25-50", "100-200", "500-1000"],
+      "question": "Which animal is said to have nursed Romulus and Remus in the legend?",
+      "options": ["An eagle", "A she-wolf", "A lion", "A bear"],
       "correctAnswer": 1,
       "difficulty": 1,
-      "textReference": "#hunting-and-gathering"
+      "textReference": "#the-legend"
     },
     {
-      "question": "Where were the famous Lascaux cave paintings found?",
-      "options": ["Spain", "Italy", "France", "Germany"],
+      "question": "How many kings ruled Rome during the Regal Period?",
+      "options": ["Five", "Seven", "Ten", "Three"],
+      "correctAnswer": 1,
+      "difficulty": 1,
+      "textReference": "#the-seven-kings-of-rome"
+    },
+    {
+      "question": "Which king is credited with establishing Rome's religious practices and the Vestal Virgins?",
+      "options": ["Romulus", "Numa Pompilius", "Servius Tullius", "Tarquinius Priscus"],
+      "correctAnswer": 1,
+      "difficulty": 1,
+      "textReference": "#2-numa-pompilius-715-673-bce"
+    },
+    {
+      "question": "What was the primary economic basis of Early Rome?",
+      "options": ["Maritime trade", "Manufacturing", "Agriculture and land ownership", "Mining"],
       "correctAnswer": 2,
       "difficulty": 1,
-      "textReference": "#cave-art"
+      "textReference": "#economic-basis"
     },
     {
-      "question": "When did the Paleolithic Era end?",
-      "options": ["50,000 BCE", "25,000 BCE", "10,000 BCE", "5,000 BCE"],
-      "correctAnswer": 2,
+      "question": "Which class of citizens held the greatest political power during the Kingdom?",
+      "options": ["Plebeians", "Patricians", "Slaves", "Freedmen"],
+      "correctAnswer": 1,
       "difficulty": 1,
-      "textReference": "#the-end-of-the-paleolithic"
+      "textReference": "#patricians-patres-familias"
     },
     {
-      "question": "What crucial adaptation did Australopithecus exhibit that set the stage for human evolution?",
-      "options": ["Large brain size", "Tool use", "Bipedalism", "Control of fire"],
-      "correctAnswer": 2,
-      "difficulty": 2,
-      "textReference": "#early-hominins"
-    },
-    {
-      "question": "Which tool-making technique involved preparing a stone core to produce flakes of predetermined size?",
-      "options": ["Oldowan technique", "Levallois technique", "Blade technique", "Pressure flaking"],
-      "correctAnswer": 1,
-      "difficulty": 2,
-      "textReference": "#mousterian-tool-culture-300000-30000-years-ago"
-    },
-    {
-      "question": "What was the primary characteristic of the Acheulean tool culture?",
-      "options": ["Simple choppers", "Bifacially worked hand axes", "Blade tools", "Composite tools"],
-      "correctAnswer": 1,
-      "difficulty": 2,
-      "textReference": "#acheulean-tool-culture-17-million-200000-years-ago"
-    },
-    {
-      "question": "Which species was the first to migrate out of Africa?",
-      "options": ["Homo sapiens", "Homo habilis", "Homo erectus", "Australopithecus"],
-      "correctAnswer": 2,
-      "difficulty": 2,
-      "textReference": "#homo-erectus-the-upright-man"
-    },
-    {
-      "question": "What innovation around 40,000 years ago revolutionized clothing production?",
-      "options": ["The loom", "The needle", "Tanning techniques", "Weaving"],
-      "correctAnswer": 1,
-      "difficulty": 2,
-      "textReference": "#shelter-and-clothing"
-    },
-    {
-      "question": "What are the small sculptures of women with exaggerated sexual characteristics called?",
-      "options": ["Cave paintings", "Venus figurines", "Totems", "Fertility stones"],
-      "correctAnswer": 1,
-      "difficulty": 2,
-      "textReference": "#portable-art-and-ornaments"
-    },
-    {
-      "question": "When did anatomically modern Homo sapiens first emerge in Africa?",
-      "options": ["500,000 years ago", "300,000 years ago", "100,000 years ago", "70,000 years ago"],
-      "correctAnswer": 1,
-      "difficulty": 2,
-      "textReference": "#homo-sapiens-modern-humans"
-    },
-    {
-      "question": "What tool increased hunting efficiency in the Upper Paleolithic?",
-      "options": ["Hand axe", "Chopper", "Atlatl (spear-thrower)", "Stone knife"],
-      "correctAnswer": 2,
-      "difficulty": 2,
-      "textReference": "#upper-paleolithic-tool-revolution-50000-10000-bce"
-    },
-    {
-      "question": "What type of social structure characterized Paleolithic societies?",
-      "options": ["Hierarchical with kings", "Egalitarian", "Caste-based", "Matriarchal"],
-      "correctAnswer": 1,
-      "difficulty": 2,
-      "textReference": "#social-organization-and-culture"
-    },
-    {
-      "question": "When did personal ornaments like beaded necklaces first appear?",
-      "options": ["200,000 years ago", "100,000 years ago", "50,000 years ago", "20,000 years ago"],
-      "correctAnswer": 1,
-      "difficulty": 2,
-      "textReference": "#portable-art-and-ornaments"
-    },
-    {
-      "question": "What period represents the transition between the Paleolithic and Neolithic?",
-      "options": ["Mesolithic", "Chalcolithic", "Bronze Age", "Iron Age"],
-      "correctAnswer": 0,
-      "difficulty": 2,
-      "textReference": "#transition-to-the-neolithic"
-    },
-    {
-      "question": "How old are the oldest known bone flutes?",
-      "options": ["100,000 years", "70,000 years", "40,000 years", "20,000 years"],
-      "correctAnswer": 2,
-      "difficulty": 2,
-      "textReference": "#music-and-ritual"
-    },
-    {
-      "question": "Why was the control of fire particularly transformative for human development?",
-      "options": [
-        "It only provided warmth",
-        "It scared away predators",
-        "It enabled cooking, which improved nutrition and reduced disease",
-        "It was primarily used for tool-making"
-      ],
-      "correctAnswer": 2,
-      "difficulty": 3,
-      "textReference": "#the-control-of-fire"
-    },
-    {
-      "question": "What evidence suggests Paleolithic humans had complex social relationships and possibly status markers?",
-      "options": [
-        "Cave paintings",
-        "Stone tools",
-        "Personal ornaments serving as identity markers",
-        "Hunting weapons"
-      ],
-      "correctAnswer": 2,
-      "difficulty": 3,
-      "textReference": "#portable-art-and-ornaments"
-    },
-    {
-      "question": "What does the symmetry and standardization of Acheulean tools suggest about early human cognitive abilities?",
-      "options": [
-        "They had poor planning skills",
-        "They could only copy what they saw",
-        "They were capable of mental templates and could teach complex techniques",
-        "They worked purely by instinct"
-      ],
-      "correctAnswer": 2,
-      "difficulty": 3,
-      "textReference": "#acheulean-tool-culture-17-million-200000-years-ago"
-    },
-    {
-      "question": "What factors likely contributed to the megafauna extinctions at the end of the Paleolithic?",
-      "options": [
-        "Only meteor impacts",
-        "Only disease",
-        "Climate change and/or human overhunting",
-        "Only volcanic activity"
-      ],
-      "correctAnswer": 2,
-      "difficulty": 3,
-      "textReference": "#megafauna-and-extinction"
-    },
-    {
-      "question": "How did the location of cave art (in deep, difficult-to-reach chambers) inform our understanding of its purpose?",
-      "options": [
-        "It was merely decorative",
-        "It suggests the art held special significance, possibly spiritual or ritual",
-        "It was used for everyday activities",
-        "It was meant to be seen by many people"
-      ],
-      "correctAnswer": 1,
-      "difficulty": 3,
-      "textReference": "#cave-art"
-    },
-    {
-      "question": "What percentage of human prehistory does the Paleolithic Era represent?",
-      "options": ["50%", "75%", "90%", "99%"],
+      "question": "What was the name of the Senate during the Regal Period?",
+      "options": ["Comitia Centuriata", "Comitia Curiata", "Senate of 300", "Assembly of Fathers"],
       "correctAnswer": 3,
-      "difficulty": 3,
-      "textReference": "#legacy-of-the-paleolithic-era"
+      "difficulty": 1,
+      "textReference": "#the-senate"
     },
     {
-      "question": "How did the development of composite tools in the Upper Paleolithic demonstrate technological advancement?",
-      "options": [
-        "They were simpler to make",
-        "They combined materials like stone points hafted to wooden shafts",
-        "They were made only from stone",
-        "They were less effective than earlier tools"
-      ],
-      "correctAnswer": 1,
-      "difficulty": 3,
-      "textReference": "#upper-paleolithic-tool-revolution-50000-10000-bce"
-    },
-    {
-      "question": "What does the presence of grave goods in Upper Paleolithic burials suggest?",
-      "options": [
-        "Accidental placement",
-        "Storage practices",
-        "Symbolic thinking about death and possibly afterlife beliefs",
-        "Waste disposal"
-      ],
+      "question": "Which king is credited with organizing the military into centuries based on wealth?",
+      "options": ["Numa Pompilius", "Tullus Hostilius", "Servius Tullius", "Tarquinius Superbus"],
       "correctAnswer": 2,
-      "difficulty": 3,
-      "textReference": "#music-and-ritual"
+      "difficulty": 1,
+      "textReference": "#6-servius-tullius-579-534-bce"
     },
     {
-      "question": "How did glacial periods facilitate human migration?",
-      "options": [
-        "By warming the climate",
-        "By creating land bridges through lowered sea levels",
-        "By melting all ice",
-        "By raising sea levels"
-      ],
+      "question": "In what year did the Roman Kingdom end and the Republic begin?",
+      "options": ["510 BCE", "509 BCE", "508 BCE", "511 BCE"],
       "correctAnswer": 1,
-      "difficulty": 3,
-      "textReference": "#the-ice-ages"
+      "difficulty": 1,
+      "textReference": "#the-end-of-the-kingdom-and-transition-to-the-republic"
     },
     {
-      "question": "What evidence from the Middle and Upper Paleolithic indicates humans were adapting to colder climates?",
-      "options": [
-        "Only cave occupation",
-        "Development of hide-working tools, sewing needles, and tailored clothing",
-        "Migration to warmer areas only",
-        "No adaptation occurred"
-      ],
+      "question": "How does the legend of Romulus and Remus differ from archaeological evidence about Rome's founding?",
+      "options": ["The legend is completely accurate", "Archaeological evidence shows gradual settlement growth rather than a single founding event", "There is no archaeological evidence for Rome", "The legend correctly identifies Romulus as the sole founder"],
+      "correctAnswer": 1,
+      "difficulty": 2,
+      "textReference": "#historical-reality-vs-legend"
+    },
+    {
+      "question": "Which king is associated with the destruction of Alba Longa and the combat of the Horatii and Curiatii?",
+      "options": ["Romulus", "Numa Pompilius", "Tullus Hostilius", "Ancus Marcius"],
+      "correctAnswer": 2,
+      "difficulty": 2,
+      "textReference": "#3-tullus-hostilius-673-642-bce"
+    },
+    {
+      "question": "What was the primary function of the Comitia Centuriata in the Servian system?",
+      "options": ["Religious ceremonies only", "Military organization and voting weighted by property", "Religious festivals and celebrations", "Trade and commerce regulation"],
+      "correctAnswer": 1,
+      "difficulty": 2,
+      "textReference": "#servius-tullius-and-the-servian-reforms"
+    },
+    {
+      "question": "What was the patron-client relationship (clientela) in Early Rome?",
+      "options": ["A master-slave relationship", "A merchant trading partnership", "An economic and political dependence where clients served patrons in exchange for land and protection", "A religious hierarchical structure"],
+      "correctAnswer": 2,
+      "difficulty": 2,
+      "textReference": "#plebeians"
+    },
+    {
+      "question": "Why was Tarquinius Priscus significant in Rome's development?",
+      "options": ["He was a peaceful reformer", "He introduced Etruscan cultural influence and began major building projects like the Temple of Jupiter", "He established the first laws", "He ended patrician dominance"],
+      "correctAnswer": 1,
+      "difficulty": 2,
+      "textReference": "#5-tarquinius-priscus-616-579-bce"
+    },
+    {
+      "question": "What does the name 'Servius Tullius' suggest about his origins?",
+      "options": ["He was of Latin descent", "He was possibly of Etruscan origin", "He was a slave who became king", "He was from Alba Longa"],
+      "correctAnswer": 1,
+      "difficulty": 2,
+      "textReference": "#6-servius-tullius-579-534-bce"
+    },
+    {
+      "question": "According to the traditional narrative, what event led to the fall of Tarquinius Superbus?",
+      "options": ["Military defeat in war", "The rape of Lucretia, which sparked a revolt led by Lucius Junius Brutus", "Economic collapse", "Religious displeasure with the gods"],
+      "correctAnswer": 1,
+      "difficulty": 2,
+      "textReference": "#7-tarquinius-superbus-534-509-bce"
+    },
+    {
+      "question": "What was the primary purpose of the Vestal Virgins in Roman religion?",
+      "options": ["To judge legal cases", "To lead military campaigns", "To maintain the sacred fire of Vesta and preserve the goddess's purity", "To collect taxes"],
+      "correctAnswer": 2,
+      "difficulty": 2,
+      "textReference": "#religious-practice"
+    },
+    {
+      "question": "Which Greek and Etruscan influence was most evident in Rome's 6th century BCE development?",
+      "options": ["Democratic government", "Architectural styles, urban organization, and cultural practices", "Monotheistic religion", "Naval dominance"],
+      "correctAnswer": 1,
+      "difficulty": 2,
+      "textReference": "#culture-and-religion"
+    },
+    {
+      "question": "What sources did historians like Livy rely upon when writing about Early Rome centuries later?",
+      "options": ["Only archaeological evidence", "Contemporary written records and royal archives", "Earlier historians, annalistic tradition, and legend", "Direct interviews with surviving witnesses"],
+      "correctAnswer": 2,
+      "difficulty": 2,
+      "textReference": "#literary-sources"
+    },
+    {
+      "question": "How does the archaeological evidence from the Palatine Hill challenge the traditional founding narrative?",
+      "options": ["It proves Romulus was a real historical figure", "It shows hut settlements dating to c. 1000 BCE, predating the traditional 753 BCE founding date and suggesting gradual settlement rather than a single founding", "It confirms every detail in Livy's account", "It reveals Rome was founded on the Aventine Hill, not the Palatine"],
       "correctAnswer": 1,
       "difficulty": 3,
-      "textReference": "#shelter-and-clothing"
+      "textReference": "#archaeological-evidence"
+    },
+    {
+      "question": "What does the evolution from the Comitia Curiata to the Comitia Centuriata reveal about Roman social change?",
+      "options": ["Rome became more democratic", "Power shifted from kinship-based organization to wealth-based military organization, giving greater political weight to landowners", "Slaves gained political rights", "Plebeians were excluded from participation"],
+      "correctAnswer": 1,
+      "difficulty": 3,
+      "textReference": "#assemblies-of-the-people"
+    },
+    {
+      "question": "How can we reconcile the mythological elements in the Romulus and Remus story with the historical developments of Early Rome?",
+      "options": ["The myth is completely false and should be ignored", "The myth served ideological purposes while obscuring genuine historical developments of gradual urbanization and cultural synthesis", "The myth is entirely historically accurate", "Archaeological evidence is unreliable and contradicts the literary sources"],
+      "correctAnswer": 1,
+      "difficulty": 3,
+      "textReference": "#historical-reality-vs-legend"
+    },
+    {
+      "question": "What does the Servian Constitution reveal about Roman society during the 6th century BCE?",
+      "options": ["Rome had eliminated all class distinctions", "Roman society was becoming more hierarchical and formally stratified, with political rights tied to property ownership and military obligation", "All citizens had equal political power", "Patricians had no advantage over plebeians"],
+      "correctAnswer": 1,
+      "difficulty": 3,
+      "textReference": "#6-servius-tullius-579-534-bce"
+    },
+    {
+      "question": "Why might the Rape of Lucretia narrative be considered symbolic rather than historical fact?",
+      "options": ["The story was invented by later historians", "While the dramatic narrative is likely legendary, it symbolizes broader tensions between monarchical power and aristocratic values that culminated in the republic's establishment", "Lucretia was a fictional character", "There is no connection between the story and the end of the monarchy"],
+      "correctAnswer": 1,
+      "difficulty": 3,
+      "textReference": "#7-tarquinius-superbus-534-509-bce"
+    },
+    {
+      "question": "How did the religious authority of the Roman king differ from and reinforce his political power?",
+      "options": ["Religious and political authority were completely separate", "The king's role as chief priest and interpreter of divine will (through augury and auspices) legitimized his political decisions and made them appear divinely sanctioned", "Religious authority was subordinate to political power", "Only plebeians had religious authority"],
+      "correctAnswer": 1,
+      "difficulty": 3,
+      "textReference": "#religious-authority"
+    },
+    {
+      "question": "What can we infer about the relationship between Etruscan and Roman culture based on the later kings' origins and accomplishments?",
+      "options": ["Rome rejected all Etruscan influence", "Rome incorporated Etruscan cultural, architectural, and administrative practices, suggesting either conquest, cultural diffusion, or a mixture of both", "Romans were ethnically identical to Etruscans", "The Etruscans had no influence on Roman development"],
+      "correctAnswer": 1,
+      "difficulty": 3,
+      "textReference": "#5-tarquinius-priscus-616-579-bce"
+    },
+    {
+      "question": "How did the structure of Early Roman society (patricians, plebeians, slaves) reflect broader Mediterranean social patterns of the period?",
+      "options": ["Rome uniquely created a classless society", "Like other Mediterranean societies, Rome developed a hierarchical system with hereditary elites, free commoners with limited rights, and enslaved populations, though Rome's specific institutions were distinctive", "Slaves had full rights", "All classes had equal political power"],
+      "correctAnswer": 1,
+      "difficulty": 3,
+      "textReference": "#socio-economic-structure"
+    },
+    {
+      "question": "Why is the transition from monarchy to republic in 509 BCE considered significant in the context of Mediterranean history?",
+      "options": ["It was an isolated event with no broader impact", "It marked Rome's shift from monarchical to oligarchic republican governance, establishing institutions (Senate, magistrates, assemblies) that would shape Rome's expansion and influence throughout the Mediterranean for centuries", "It ended all Roman influence", "It marked Rome's acceptance of foreign rule"],
+      "correctAnswer": 1,
+      "difficulty": 3,
+      "textReference": "#the-end-of-the-kingdom-and-transition-to-the-republic"
     }
   ]
 }
