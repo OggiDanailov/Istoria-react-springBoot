@@ -10,6 +10,7 @@ import com.example.demo.repository.UserRepository;
 import com.example.demo.repository.ChapterRepository;
 import com.example.demo.repository.QuizBatchRepository;
 import com.example.demo.repository.BatchProgressRepository;
+import com.example.demo.repository.UserProgressRepository;
 import com.example.demo.dto.QuizAttemptRequest;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.http.ResponseEntity;
@@ -27,17 +28,20 @@ public class QuizAttemptController {
     private final ChapterRepository chapterRepository;
     private final QuizBatchRepository quizBatchRepository;
     private final BatchProgressRepository batchProgressRepository;
+    private final UserProgressRepository userProgressRepository;
 
     public QuizAttemptController(QuizAttemptRepository quizAttemptRepository,
                                UserRepository userRepository,
                                ChapterRepository chapterRepository,
                                QuizBatchRepository quizBatchRepository,
-                               BatchProgressRepository batchProgressRepository) {
+                               BatchProgressRepository batchProgressRepository,
+                               UserProgressRepository userProgressRepository) {
         this.quizAttemptRepository = quizAttemptRepository;
         this.userRepository = userRepository;
         this.chapterRepository = chapterRepository;
         this.quizBatchRepository = quizBatchRepository;
         this.batchProgressRepository = batchProgressRepository;
+        this.userProgressRepository = userProgressRepository;
     }
 
     // Save a quiz attempt with SERVER-SIDE answer verification
@@ -86,6 +90,10 @@ public class QuizAttemptController {
             if (batch != null) {
                 updateBatchProgressWithVerifiedScore(userId, batch.getId(), verifiedScore, totalPoints);
             }
+
+            // Update user progress for the topic
+            updateUserProgressForTopic(userId, request.getChapterId(),
+                                    request.getUserAnswers().size(), verifiedScore);
 
             return ResponseEntity.status(HttpStatus.CREATED).body(savedAttempt);
 
@@ -267,4 +275,65 @@ public class QuizAttemptController {
                 .sum();
     }
     // ===================================================
+
+    // Update user progress for the topic when a quiz is attempted
+        private void updateUserProgressForTopic(Long userId, Long chapterId, int questionCount, int correctCount) {
+        try {
+            System.out.println("DEBUG: updateUserProgressForTopic called - userId=" + userId + ", chapterId=" + chapterId);
+
+            Chapter chapter = chapterRepository.findById(chapterId).orElse(null);
+            System.out.println("DEBUG: Chapter found: " + (chapter != null ? chapter.getTitle() : "NULL"));
+
+            if (chapter == null || chapter.getTopic() == null) {
+                System.out.println("DEBUG: Chapter or topic is null, returning early");
+                return;
+            }
+
+            User user = userRepository.findById(userId).orElse(null);
+            if (user == null) {
+                System.out.println("DEBUG: User not found, returning early");
+                return;
+            }
+
+            Long topicId = chapter.getTopic().getId();
+            System.out.println("DEBUG: Topic ID = " + topicId);
+
+            // Get or create user progress for this topic
+            com.example.demo.model.UserProgress progress = userProgressRepository
+                    .findByUserIdAndTopicId(userId, topicId)
+                    .orElse(new com.example.demo.model.UserProgress(user, chapter.getTopic()));
+
+            System.out.println("DEBUG: Progress object created/retrieved");
+
+            // Recalculate progress based on ALL attempts for this topic
+            List<QuizAttempt> topicAttempts = quizAttemptRepository.findByUserIdAndChapterIdOrderByAttemptDateDesc(userId, chapterId);
+            System.out.println("DEBUG: Found " + topicAttempts.size() + " attempts for chapter " + chapterId);
+
+            int totalQuestionsAnswered = 0;
+            int totalQuestionsCorrect = 0;
+            int totalPointsAwarded = 0;
+
+            for (QuizAttempt attempt : topicAttempts) {
+                totalQuestionsAnswered += attempt.getTotalQuestions();
+                totalQuestionsCorrect += attempt.getScore();
+                totalPointsAwarded += attempt.getPointsAwarded();
+            }
+
+            System.out.println("DEBUG: Totals - answered=" + totalQuestionsAnswered +
+                            ", correct=" + totalQuestionsCorrect + ", points=" + totalPointsAwarded);
+
+            // Update progress
+            progress.setQuestionsAnswered(totalQuestionsAnswered);
+            progress.setQuestionsCorrect(totalQuestionsCorrect);
+            progress.setTotalPoints(totalPointsAwarded);
+            progress.setLastStudied(java.time.LocalDateTime.now());
+
+            userProgressRepository.save(progress);
+            System.out.println("DEBUG: UserProgress saved successfully!");
+
+        } catch (Exception e) {
+            System.out.println("DEBUG: Exception in updateUserProgressForTopic: " + e.getMessage());
+            e.printStackTrace();
+        }
+    }
 }
