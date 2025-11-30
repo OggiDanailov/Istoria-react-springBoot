@@ -24,12 +24,19 @@
   min-width: 25px;
 }
 
+
 .option-input-group input[type="text"] {
   flex: 1;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
 }
 
-.option-input-group input[type="radio"] {
+.option-input-group input[type="checkbox"] {
   width: auto;
+  cursor: pointer;
+  margin: 0 0.5rem;
 }
 
 .option-input-group label {

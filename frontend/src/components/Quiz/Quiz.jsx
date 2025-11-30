@@ -53,7 +53,23 @@ function Quiz({ batch, chapterId, batchId, onBack, isLoggedIn }) {
 
   const handleAnswerSelect = (selectedIndex) => {
     const newAnswers = [...userAnswers]
-    newAnswers[currentQuestionIndex] = selectedIndex
+
+    // If this question doesn't have answers yet, create an array
+    if (!Array.isArray(newAnswers[currentQuestionIndex])) {
+      newAnswers[currentQuestionIndex] = []
+    }
+
+    const currentAnswers = newAnswers[currentQuestionIndex]
+
+    // Toggle the selected answer
+    if (currentAnswers.includes(selectedIndex)) {
+      // Remove if already selected
+      newAnswers[currentQuestionIndex] = currentAnswers.filter(i => i !== selectedIndex)
+    } else {
+      // Add if not selected
+      newAnswers[currentQuestionIndex] = [...currentAnswers, selectedIndex]
+    }
+
     setUserAnswers(newAnswers)
   }
 
@@ -124,9 +140,13 @@ function Quiz({ batch, chapterId, batchId, onBack, isLoggedIn }) {
     let correctCount = 0
 
     questions.forEach((question, index) => {
-      if (userAnswers[index] !== undefined &&
+      const userAnswerArray = userAnswers[index]
+      // Check if user selected all correct answers and ONLY correct answers
+      if (Array.isArray(userAnswerArray) &&
+          userAnswerArray.length > 0 &&
           question.correctAnswers &&
-          question.correctAnswers.includes(userAnswers[index])) {
+          userAnswerArray.length === question.correctAnswers.length &&
+          userAnswerArray.every(answer => question.correctAnswers.includes(answer))) {
         correctCount++
         totalScore += question.difficulty
       }
@@ -192,7 +212,7 @@ function Quiz({ batch, chapterId, batchId, onBack, isLoggedIn }) {
           {currentQuestion.options.map((option, index) => (
             <button
               key={index}
-              className={`option-btn ${userAnswers[currentQuestionIndex] === index ? 'selected' : ''}`}
+              className={`option-btn ${Array.isArray(userAnswers[currentQuestionIndex]) && userAnswers[currentQuestionIndex].includes(index) ? 'selected' : ''}`}
               onClick={() => handleAnswerSelect(index)}
             >
               {String.fromCharCode(65 + index)}. {option}
@@ -211,7 +231,7 @@ function Quiz({ batch, chapterId, batchId, onBack, isLoggedIn }) {
 
           <button
             onClick={goToNextQuestion}
-            disabled={userAnswers[currentQuestionIndex] === undefined}
+            disabled={!Array.isArray(userAnswers[currentQuestionIndex]) || userAnswers[currentQuestionIndex].length === 0}
             className="nav-btn next-btn"
           >
             {currentQuestionIndex === questions.length - 1 ? 'Finish Quiz' : 'Next →'}

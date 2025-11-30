@@ -5,7 +5,7 @@ import java.util.List;
 public class QuizAttemptRequest {
     private Long chapterId;
     private Long batchId;
-    private List<Integer> userAnswers;  // ← Array of selected answer indices [0, 2, 1, 3, ...]
+    private List<List<Integer>> userAnswers;  // ← Correct! Array of arrays
 
     public QuizAttemptRequest() {}
 
@@ -26,11 +26,11 @@ public class QuizAttemptRequest {
         this.batchId = batchId;
     }
 
-    public List<Integer> getUserAnswers() {
-        return userAnswers;
+    public List<List<Integer>> getUserAnswers() {
+    return userAnswers;
     }
 
-    public void setUserAnswers(List<Integer> userAnswers) {
+    public void setUserAnswers(List<List<Integer>> userAnswers) {
         this.userAnswers = userAnswers;
     }
 }
