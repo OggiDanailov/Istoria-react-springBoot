@@ -144,9 +144,10 @@ function Results({ questions, userAnswers, onRestart, onBack, chapterId, batchId
         <div className="answer-review">
           <h3>Review Your Answers:</h3>
           {questions.map((question, index) => {
-            const isCorrect = userAnswers[index] !== undefined &&
-                 question.correctAnswers &&
-                 question.correctAnswers.includes(userAnswers[index])
+            const isCorrect = Array.isArray(userAnswers[index]) &&
+                        Array.isArray(question.correctAnswers) &&
+                        userAnswers[index].length === question.correctAnswers.length &&
+                        userAnswers[index].every(answer => question.correctAnswers.includes(answer))
             const points = question.difficulty
 
             return (

@@ -10,8 +10,9 @@ function QuestionForm({ topic, onClose, question }) {
   const [formData, setFormData] = useState({
     question: '',
     options: ['', '', '', ''],
-    correctAnswer: 0,
+    correctAnswers: [0],
     difficulty: 1,
+    numOptions: 4,
     textReference: ''
   })
   const [loading, setLoading] = useState(false)
@@ -23,11 +24,16 @@ function QuestionForm({ topic, onClose, question }) {
   useEffect(() => {
     if (question) {
       setEditingQuestion(question)
+      const correctAnswers = Array.isArray(question.correctAnswers)
+        ? question.correctAnswers
+        : [question.correctAnswer || 0]
+
       setFormData({
         question: question.question,
         options: question.options,
-        correctAnswer: question.correctAnswer,
+        correctAnswers: correctAnswers,
         difficulty: question.difficulty || 1,
+        numOptions: question.options.length,
         textReference: question.textReference || ''
       })
       setShowAddForm(true)
@@ -46,6 +52,17 @@ function QuestionForm({ topic, onClose, question }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
+    if (formData.correctAnswers.length === 0) {
+      alert('Please select at least one correct answer')
+      setLoading(false)
+      return
+    }
+
+    if (formData.options.slice(0, formData.numOptions).some(opt => opt.trim() === '')) {
+      alert('Please fill in all answer options')
+      setLoading(false)
+      return
+    }
     setLoading(true)
 
     try {
@@ -71,7 +88,8 @@ function QuestionForm({ topic, onClose, question }) {
       setFormData({
         question: '',
         options: ['', '', '', ''],
-        correctAnswer: 0,
+        correctAnswers: [0],
+        numOptions: 4,
         difficulty: 1,
         textReference: ''
       })
@@ -87,16 +105,20 @@ function QuestionForm({ topic, onClose, question }) {
 
   const handleEdit = (question) => {
     setEditingQuestion(question)
+    const correctAnswers = Array.isArray(question.correctAnswers)
+      ? question.correctAnswers
+      : [question.correctAnswer || 0]
+
     setFormData({
       question: question.question,
       options: question.options,
-      correctAnswer: question.correctAnswer,
+      correctAnswers: correctAnswers,
       difficulty: question.difficulty || 1,
+      numOptions: question.options.length,
       textReference: question.textReference || ''
     })
     setShowAddForm(true)
     scrollToFormInput('#question')
-
   }
 
   const handleDelete = async (questionId) => {
@@ -118,13 +140,53 @@ function QuestionForm({ topic, onClose, question }) {
     setFormData({ ...formData, options: newOptions })
   }
 
+  const handleOptionsChange = (newNum) => {
+    let newOptions = [...formData.options]
+
+    if (newNum > newOptions.length) {
+      while (newOptions.length < newNum) {
+        newOptions.push('')
+      }
+    } else if (newNum < newOptions.length) {
+      newOptions = newOptions.slice(0, newNum)
+      const newCorrectAnswers = formData.correctAnswers.filter(i => i < newNum)
+      setFormData({
+        ...formData,
+        numOptions: newNum,
+        options: newOptions,
+        correctAnswers: newCorrectAnswers.length > 0 ? newCorrectAnswers : [0]
+      })
+      return
+    }
+
+    setFormData({ ...formData, numOptions: newNum, options: newOptions })
+  }
+
+
+  const handleCorrectAnswerToggle = (index) => {
+    let newCorrectAnswers = [...formData.correctAnswers]
+
+    if (newCorrectAnswers.includes(index)) {
+      newCorrectAnswers = newCorrectAnswers.filter(i => i !== index)
+    } else {
+      newCorrectAnswers.push(index)
+    }
+
+    if (newCorrectAnswers.length === 0) {
+      newCorrectAnswers = [index]
+    }
+
+    setFormData({ ...formData, correctAnswers: newCorrectAnswers })
+  }
+
   const handleCancel = () => {
     setShowAddForm(false)
     setEditingQuestion(null)
     setFormData({
       question: '',
       options: ['', '', '', ''],
-      correctAnswer: 0,
+      correctAnswers: [0],
+      numOptions: 4,
       difficulty: 1,
       textReference: ''
     })
@@ -162,17 +224,39 @@ function QuestionForm({ topic, onClose, question }) {
             />
           </div>
 
-          <div className="form-group">
+         <div className="form-group">
             <label htmlFor="difficulty">Difficulty Level:</label>
             <select
               id="difficulty"
               value={formData.difficulty}
-              onChange={(e) => setFormData({ ...formData, difficulty: parseInt(e.target.value) })}
+              onChange={(e) => {
+                const newDifficulty = parseInt(e.target.value)
+                const suggestedOptions = newDifficulty === 1 ? 4 : newDifficulty === 2 ? 5 : 6
+                setFormData({ ...formData, difficulty: newDifficulty, numOptions: suggestedOptions })
+              }}
               required
             >
               <option value="1">⭐ Easy (1 points)</option>
               <option value="2">⭐⭐ Medium (2 points)</option>
               <option value="3">⭐⭐⭐ Hard (3 points)</option>
+            </select>
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="numOptions">Number of Answer Options:</label>
+            <select
+              id="numOptions"
+              value={formData.numOptions}
+              onChange={(e) => handleOptionsChange(parseInt(e.target.value))}
+              required
+            >
+              <option value="2">2 Options</option>
+              <option value="3">3 Options</option>
+              <option value="4">4 Options</option>
+              <option value="5">5 Options</option>
+              <option value="6">6 Options</option>
+              <option value="7">7 Options</option>
+              <option value="8">8 Options</option>
             </select>
           </div>
 
@@ -192,7 +276,7 @@ function QuestionForm({ topic, onClose, question }) {
 
           <div className="form-group">
             <label>Answer Options:</label>
-            {formData.options.map((option, index) => (
+            {formData.options.slice(0, formData.numOptions).map((option, index) => (
               <div key={index} className="option-input-group">
                 <span className="option-label">{String.fromCharCode(65 + index)}.</span>
                 <input
@@ -203,12 +287,12 @@ function QuestionForm({ topic, onClose, question }) {
                   required
                 />
                 <input
-                  type="radio"
-                  name="correctAnswer"
-                  checked={formData.correctAnswer === index}
-                  onChange={() => setFormData({ ...formData, correctAnswer: index })}
+                  type="checkbox"
+                  id={`correct-${index}`}
+                  checked={formData.correctAnswers.includes(index)}
+                  onChange={() => handleCorrectAnswerToggle(index)}
                 />
-                <label>Correct</label>
+                <label htmlFor={`correct-${index}`}>Correct</label>
               </div>
             ))}
           </div>
@@ -239,12 +323,27 @@ function QuestionForm({ topic, onClose, question }) {
                   {q.difficulty === 3 && '⭐⭐⭐ Hard'}
                 </p>
                 <ul>
-                  {q.options.map((opt, i) => (
-                    <li key={i} className={i === q.correctAnswer ? 'correct-option' : ''}>
-                      {String.fromCharCode(65 + i)}. {opt}
-                      {i === q.correctAnswer && ' ✓'}
-                    </li>
-                  ))}
+                  {(() => {
+                    const correctAnswers = Array.isArray(q.correctAnswers)
+                      ? q.correctAnswers
+                      : [q.correctAnswer || 0]
+
+                    return (
+                      <>
+                        {correctAnswers.length > 1 && (
+                          <p style={{ color: '#0066cc', fontSize: '12px', marginBottom: '5px' }}>
+                            Multiple correct answers: {correctAnswers.length}
+                          </p>
+                        )}
+                        {q.options.map((opt, i) => (
+                          <li key={i} className={correctAnswers.includes(i) ? 'correct-option' : ''}>
+                            {String.fromCharCode(65 + i)}. {opt}
+                            {correctAnswers.includes(i) && ' ✓'}
+                          </li>
+                        ))}
+                      </>
+                    )
+                  })()}
                 </ul>
               </div>
               <div className="question-actions">

@@ -228,41 +228,29 @@ public class QuizAttemptController {
     // ===== HELPER METHODS FOR ANSWER VERIFICATION =====
 
     // Verify answers against correct answers from database
-    private int verifyAnswersAndCalculateScore(QuizBatch batch, List<Integer> userAnswers) {
-    System.out.println("=== ANSWER VERIFICATION START ===");
-    System.out.println("Batch: " + (batch == null ? "NULL!" : "ID=" + batch.getId()));
-
-    if (batch == null || batch.getQuestions() == null || userAnswers == null) {
-        System.out.println("ERROR: batch or questions or userAnswers is null!");
-        return 0;
-    }
-
-    int score = 0;
-    List<com.example.demo.model.Question> questions = batch.getQuestions();
-    System.out.println("Questions loaded: " + questions.size());
-    System.out.println("User answers: " + userAnswers);
-
-    for (int i = 0; i < userAnswers.size() && i < questions.size(); i++) {
-        Integer userAnswer = userAnswers.get(i);
-        com.example.demo.model.Question question = questions.get(i);
-
-        System.out.println("\nQ" + (i+1) + ": " + question.getQuestion());
-        System.out.println("  User selected: " + userAnswer);
-        System.out.println("  Correct answers from DB: " + question.getCorrectAnswers());
-
-        if (userAnswer != null &&
-            question.getCorrectAnswers() != null &&
-            question.getCorrectAnswers().contains(userAnswer)) {
-            score += question.getDifficulty();
-            System.out.println("  ✓ CORRECT! +"+question.getDifficulty()+" points");
-        } else {
-            System.out.println("  ✗ WRONG");
+    private int verifyAnswersAndCalculateScore(QuizBatch batch, List<List<Integer>> userAnswers) {
+        if (batch == null || batch.getQuestions() == null || userAnswers == null) {
+            return 0;
         }
-    }
 
-    System.out.println("\n=== FINAL SCORE: " + score + " ===\n");
-    return score;
-}
+        int score = 0;
+        List<com.example.demo.model.Question> questions = batch.getQuestions();
+
+        for (int i = 0; i < userAnswers.size() && i < questions.size(); i++) {
+            List<Integer> userAnswerArray = userAnswers.get(i);
+            com.example.demo.model.Question question = questions.get(i);
+
+            // Check if user selected ALL correct answers and ONLY correct answers
+            if (userAnswerArray != null &&
+                question.getCorrectAnswers() != null &&
+                userAnswerArray.size() == question.getCorrectAnswers().size() &&
+                userAnswerArray.stream().allMatch(answer -> question.getCorrectAnswers().contains(answer))) {
+                score += question.getDifficulty();
+            }
+        }
+
+        return score;
+    }
 
     // Calculate total possible points for a batch
     private int calculateTotalPoints(QuizBatch batch) {

@@ -1,8 +1,10 @@
 package com.example.demo.controller;
 
 import com.example.demo.model.Question;
+import com.example.demo.model.QuizBatch;
 import com.example.demo.model.Chapter;
 import com.example.demo.repository.QuestionRepository;
+import com.example.demo.repository.QuizBatchRepository;
 import com.example.demo.repository.ChapterRepository;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.http.ResponseEntity;
@@ -20,10 +22,12 @@ public class QuestionController {
 
     private final QuestionRepository questionRepository;
     private final ChapterRepository chapterRepository;
+    private final QuizBatchRepository quizBatchRepository;
 
-    public QuestionController(QuestionRepository questionRepository, ChapterRepository chapterRepository) {
+    public QuestionController(QuestionRepository questionRepository, ChapterRepository chapterRepository, QuizBatchRepository quizBatchRepository) {
         this.questionRepository = questionRepository;
         this.chapterRepository = chapterRepository;
+        this.quizBatchRepository = quizBatchRepository;
     }
 
     // Get all questions for a specific chapter
@@ -56,9 +60,19 @@ public class QuestionController {
 
         question.setChapter(chapter);
         Question savedQuestion = questionRepository.save(question);
+
+        // Add question to the appropriate batch based on difficulty
+        List<QuizBatch> batches = quizBatchRepository.findByChapterIdOrderByBatchOrderAsc(chapterId);
+        for (QuizBatch batch : batches) {
+            if (batch.getDifficulty() == savedQuestion.getDifficulty()) {
+                batch.getQuestions().add(savedQuestion);
+                quizBatchRepository.save(batch);
+                break;
+            }
+        }
+
         return ResponseEntity.status(HttpStatus.CREATED).body(savedQuestion);
     }
-
     // Update a question
     @PutMapping("/questions/{id}")
     public ResponseEntity<Question> updateQuestion(
@@ -104,9 +118,19 @@ public class QuestionController {
 
         question.setChapter(chapter);
         Question savedQuestion = questionRepository.save(question);
+
+        // Add question to the appropriate batch based on difficulty
+        List<QuizBatch> batches = quizBatchRepository.findByChapterIdOrderByBatchOrderAsc(chapter.getId());
+        for (QuizBatch batch : batches) {
+            if (batch.getDifficulty() == savedQuestion.getDifficulty()) {
+                batch.getQuestions().add(savedQuestion);
+                quizBatchRepository.save(batch);
+                break;
+            }
+        }
+
         return ResponseEntity.status(HttpStatus.CREATED).body(savedQuestion);
     }
-
     // Get random questions for a topic (for quiz batching)
     @GetMapping("/topics/{topicId}/questions/random")
     public List<Question> getRandomQuestionsByTopic(@PathVariable Long topicId) {
