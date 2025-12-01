@@ -22,6 +22,9 @@ public class User {
     @Column(nullable = false)
     private String accountType; // "FREE" or "PREMIUM"
 
+    @Enumerated(EnumType.STRING)
+    private UserRole role; // PLAYER, TEACHER, ADMIN
+
     private String stripeCustomerId; // For future payment integration
 
     private java.time.LocalDateTime premiumExpiryDate;
@@ -78,6 +81,14 @@ public class User {
 
     public void setAccountType(String accountType) {
         this.accountType = accountType;
+    }
+
+    public UserRole getRole() {
+        return role;
+    }
+
+    public void setRole(UserRole role) {
+        this.role = role;
     }
 
     public String getStripeCustomerId() {
