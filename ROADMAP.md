@@ -151,6 +151,14 @@
    - ✅ Hard batch (10 questions): 60% accuracy → 0 points → Not Mastered ✓
    - ✅ Dashboard shows correct stats and progress
 
+**Session 4: Dec 1 - User Roles Implementation (today!)
+
+   ✅ UserRole enum (PLAYER, TEACHER, ADMIN)
+   ✅ V3 Flyway migration with role column
+   ✅ Authentication updates (role in JWT)
+   ✅ Frontend role-based access (Admin button hidden from non-admins)
+   ✅ Architecture ready for Teacher features (Phase 5)
+
 ---
 
 #### 🔴 CRITICAL (Before Launch)

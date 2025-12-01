@@ -1,6 +1,7 @@
 package com.example.demo.controller;
 
 import com.example.demo.model.User;
+import com.example.demo.model.UserRole;
 import com.example.demo.repository.UserRepository;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.*;
@@ -55,6 +56,7 @@ public class UserController {
         newUser.setEmail(request.getEmail());
         newUser.setPasswordHash(hashedPassword);
         newUser.setAccountType("FREE");
+        newUser.setRole(UserRole.PLAYER);
         newUser.setCreatedAt(java.time.LocalDateTime.now());
 
         // Save to database
@@ -96,6 +98,7 @@ public class UserController {
             .setSubject(foundUser.getId().toString())
             .claim("email", foundUser.getEmail())
             .claim("accountType", foundUser.getAccountType())
+            .claim("role", foundUser.getRole().toString())
             .setIssuedAt(new Date())
             .setExpiration(new Date(System.currentTimeMillis() + JWT_EXPIRATION))
             .signWith(JWT_SECRET)
@@ -105,7 +108,8 @@ public class UserController {
             token,
             foundUser.getId(),
             foundUser.getEmail(),
-            foundUser.getAccountType()
+            foundUser.getAccountType(),
+            foundUser.getRole().toString()
         ));
     }
 }
@@ -183,12 +187,14 @@ class LoginResponse {
     private Long id;
     private String email;
     private String accountType;
+    private String role;
 
-    public LoginResponse(String token, Long id, String email, String accountType) {
+    public LoginResponse(String token, Long id, String email, String accountType, String role) {
         this.token = token;
         this.id = id;
         this.email = email;
         this.accountType = accountType;
+        this.role = role;
     }
 
     public String getToken() {
@@ -205,5 +211,9 @@ class LoginResponse {
 
     public String getAccountType() {
         return accountType;
+    }
+
+     public String getRole() {
+        return role;
     }
 }
