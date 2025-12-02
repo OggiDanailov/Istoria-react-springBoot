@@ -1,5 +1,9 @@
 package com.example.demo.controller;
 
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
+import jakarta.validation.Valid;
 import com.example.demo.model.User;
 import com.example.demo.model.UserRole;
 import com.example.demo.repository.UserRepository;
@@ -34,14 +38,7 @@ public class UserController {
 
     // Register a new user
     @PostMapping("/register")
-    public ResponseEntity<?> register(@RequestBody RegisterRequest request) {
-        // Validate input
-        if (request.getEmail() == null || request.getEmail().isEmpty()) {
-            return ResponseEntity.badRequest().body("Email is required");
-        }
-        if (request.getPassword() == null || request.getPassword().isEmpty()) {
-            return ResponseEntity.badRequest().body("Password is required");
-        }
+    public ResponseEntity<?> register(@Valid @RequestBody RegisterRequest request) {
 
         // Check if email already exists
         if (userRepository.findByEmail(request.getEmail()).isPresent()) {
@@ -71,14 +68,7 @@ public class UserController {
 
     // Login endpoint
     @PostMapping("/login")
-    public ResponseEntity<?> login(@RequestBody LoginRequest request) {
-        // Validate input
-        if (request.getEmail() == null || request.getEmail().isEmpty()) {
-            return ResponseEntity.badRequest().body("Email is required");
-        }
-        if (request.getPassword() == null || request.getPassword().isEmpty()) {
-            return ResponseEntity.badRequest().body("Password is required");
-        }
+    public ResponseEntity<?> login(@Valid @RequestBody LoginRequest request) {
 
         // Find user by email
         var user = userRepository.findByEmail(request.getEmail());
@@ -116,7 +106,12 @@ public class UserController {
 
 // Request DTOs
 class RegisterRequest {
+    @Email(message = "Email should be valid")
+    @NotBlank(message = "Email is required")
     private String email;
+
+    @NotBlank(message = "Password is required")
+    @Size(min = 8, message = "Password must be at least 8 characters long")
     private String password;
 
     public String getEmail() {
@@ -137,7 +132,10 @@ class RegisterRequest {
 }
 
 class LoginRequest {
+    @Email(message = "Email should be valid")
+    @NotBlank(message = "Email is required")
     private String email;
+    @NotBlank(message = "Password is required")
     private String password;
 
     public String getEmail() {

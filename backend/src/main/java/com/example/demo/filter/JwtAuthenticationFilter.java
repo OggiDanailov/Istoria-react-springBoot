@@ -2,7 +2,7 @@ package com.example.demo.filter;
 
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.security.Keys;
-import io.jsonwebtoken.SignatureAlgorithm;
+import jakarta.annotation.PostConstruct;
 import jakarta.servlet.Filter;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
@@ -10,25 +10,34 @@ import jakarta.servlet.ServletRequest;
 import jakarta.servlet.ServletResponse;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
+import io.jsonwebtoken.ExpiredJwtException;
+import java.util.Date;
 
 import javax.crypto.SecretKey;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 
 @Component
 public class JwtAuthenticationFilter implements Filter {
 
-    private final SecretKey JWT_SECRET;
+    @Value("${jwt.secret}")
+    private String jwtSecretString;
 
-    public JwtAuthenticationFilter() {
-        String secret = "aVeryLongSecretKeyThatIsAtLeast64BytesLongForHS512AlgorithmSecurityPurposesOnlyForDevelopment1234567890";
-        this.JWT_SECRET = Keys.hmacShaKeyFor(secret.getBytes());
+    @Value("${jwt.expiration}")
+    private long tokenExpiration;
+
+    private SecretKey JWT_SECRET;
+
+    @PostConstruct
+    public void init() {
+        this.JWT_SECRET = Keys.hmacShaKeyFor(jwtSecretString.getBytes(StandardCharsets.UTF_8));
     }
 
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
             throws IOException, ServletException {
-
         HttpServletRequest httpRequest = (HttpServletRequest) request;
         HttpServletResponse httpResponse = (HttpServletResponse) response;
 
@@ -50,7 +59,6 @@ public class JwtAuthenticationFilter implements Filter {
         String requestPath = httpRequest.getRequestURI();
         String authHeader = httpRequest.getHeader("Authorization");
 
-
         // If Authorization header exists, validate it (even for public endpoints)
         if (authHeader != null && authHeader.startsWith("Bearer ")) {
             try {
@@ -60,6 +68,13 @@ public class JwtAuthenticationFilter implements Filter {
                     .build()
                     .parseSignedClaims(token)
                     .getPayload();
+
+                Date expiration = claims.getExpiration();
+                if (expiration != null && expiration.before(new Date())) {
+                    httpResponse.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
+                    httpResponse.getWriter().write("Token has expired");
+                    return;
+                }
 
                 String userId = claims.getSubject();
                 String email = (String) claims.get("email");

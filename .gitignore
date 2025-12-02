@@ -16,6 +16,11 @@ frontend/.env
 frontend/.env.local
 frontend/.env.*.local
 
+# Backend (Spring Boot/Java)
+backend/.env
+backend/.env.local
+backend/.env.*.local
+
 # IDE
 .vscode/
 .idea/
