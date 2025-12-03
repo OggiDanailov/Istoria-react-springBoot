@@ -55,7 +55,7 @@
 - ✅ Removed manual validation checks (Spring handles it)
 - ✅ Tested: Invalid email → 400 rejected, Valid data → 201 accepted
 
-**Session 6 (Dec 3)**: Password Security & Error Handling ✅
+**Session 6 (Dec 3)**: Password Security, Error Handling & Rate Limiting ✅
 - ✅ Added `@Pattern` annotation for special character requirement
   - Passwords now require: 8+ chars + 1 special character
   - Tested: "ValidPassword" fails, "ValidPass@123" passes ✓
@@ -70,9 +70,15 @@
 - ✅ Frontend error formatting
   - Added ❌ emoji to error messages
   - Clean, user-friendly display
+- ✅ **Rate limiting service implementation**
+  - Created RateLimitService to track login attempts per email
+  - Limited to 5 attempts per 15 minutes
+  - Returns 429 Too Many Requests when exceeded
+  - Resets counter on successful login
+  - Frontend displays error message gracefully
 - ✅ End-to-end testing - all features working!
 
-**Key Achievement**: Authentication fully hardened with validation, special chars, and clean error handling!
+**Key Achievement**: Authentication fully hardened with validation, special chars, error handling, and rate limiting!
 
 ---
 
@@ -86,19 +92,16 @@
 **Status**: DONE
 **What**: Special character requirement, eye icon toggle, clean error messages
 
-### 3. 🔄 RATE LIMITING (NEXT)
-**Status**: TODO
-**Estimated Time**: 1 hour
-**What to do**:
-- Limit login attempts to 5 per 15 minutes
-- Return 429 Too Many Requests if exceeded
-- Prevent brute force password guessing
+### 3. ✅ RATE LIMITING (COMPLETED Dec 3!)
+**Status**: DONE
+**What**:
+- Created RateLimitService to track login attempts per email
+- Limited to 5 attempts per 15 minutes
+- Returns 429 Too Many Requests when exceeded
+- Resets counter on successful login
+- Frontend displays error gracefully with emoji
 
-**Priority**: Critical - protects against attacks
-
----
-
-### 4. ❌ REFRESH TOKENS
+### 4. 🔄 REFRESH TOKENS (NEXT - Optional)
 **Status**: TODO
 **Estimated Time**: 1.5 hours
 **What to do**:
@@ -106,7 +109,7 @@
 - Long-lived refresh tokens (7 days)
 - Endpoint to refresh without re-entering password
 
-**Why**: Better security + better UX
+**Priority**: Medium - improves UX but not critical
 
 **Why**: Better security + better UX (don't kick users out)
 
@@ -182,6 +185,7 @@
 ✅ Server-side answer verification (prevents cheating)
 ✅ Quiz batching (sequential unlocking with 80% mastery)
 ✅ Input validation (email format, password length, special chars)
+✅ Rate limiting (5 attempts per 15 minutes on login)
 ✅ Error handling (clean messages, no stack traces)
 ✅ Password visibility toggle (eye icon in forms)
 ✅ Database persistence (Flyway migrations)
@@ -219,7 +223,7 @@
 
 ---
 
-## 🚀 Today's Session Summary (Dec 3)
+## 🚀 Today's Session Summary (Dec 3 - Continued)
 
 ### ✅ COMPLETED TODAY:
 1. Special character requirement for passwords (@Pattern)
@@ -227,15 +231,16 @@
 3. GlobalExceptionHandler for clean error messages (no stack traces!)
 4. Frontend error formatting with emoji
 5. Eye icon positioned inside input field with CSS
+6. **Rate limiting service** - 5 attempts per 15 minutes on login
+7. Rate limit error handling on frontend
 
 ### 🔄 NEXT PRIORITIES:
-1. Rate limiting (prevent brute force) - 1 hour
-2. Refresh tokens (optional) - 1.5 hours
-3. Admin panel CRUD - 1.5 hours
-4. Testing & final prep for launch
+1. Refresh tokens (optional) - 1.5 hours
+2. Admin panel CRUD - 1.5 hours
+3. Final testing & launch prep
 
 ---
 
-**Document Version**: 2.5
-**Status**: Excellent progress! 85% of Phase 4a security hardening complete.
+**Document Version**: 2.6
+**Status**: Excellent progress! 90% of Phase 4a security hardening complete.
 **Confidence Level**: 🟢 On track for Dec 5-10 launch!
