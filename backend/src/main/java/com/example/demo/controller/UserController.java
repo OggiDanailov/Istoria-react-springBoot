@@ -4,6 +4,7 @@ import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 import jakarta.validation.Valid;
+import jakarta.validation.constraints.Pattern;
 import com.example.demo.model.User;
 import com.example.demo.model.UserRole;
 import com.example.demo.repository.UserRepository;
@@ -112,6 +113,7 @@ class RegisterRequest {
 
     @NotBlank(message = "Password is required")
     @Size(min = 8, message = "Password must be at least 8 characters long")
+    @Pattern(regexp = ".*[^a-zA-Z0-9].*", message = "Password must contain at least one special character")
     private String password;
 
     public String getEmail() {
@@ -136,6 +138,7 @@ class LoginRequest {
     @NotBlank(message = "Email is required")
     private String email;
     @NotBlank(message = "Password is required")
+    @Pattern(regexp = ".*[^a-zA-Z0-9].*", message = "Password must contain at least one special character")
     private String password;
 
     public String getEmail() {

@@ -55,38 +55,38 @@
 - ✅ Removed manual validation checks (Spring handles it)
 - ✅ Tested: Invalid email → 400 rejected, Valid data → 201 accepted
 
-**Key Achievement**: Spring now validates all input automatically before code runs!
+**Session 6 (Dec 3)**: Password Security & Error Handling ✅
+- ✅ Added `@Pattern` annotation for special character requirement
+  - Passwords now require: 8+ chars + 1 special character
+  - Tested: "ValidPassword" fails, "ValidPass@123" passes ✓
+- ✅ Created `GlobalExceptionHandler` for clean error messages
+  - Removes stack traces from responses (security!)
+  - Returns user-friendly validation messages
+  - Example: "password: Password must contain at least one special character"
+- ✅ Password visibility toggle (eye icon) in SignUp form
+  - Click eye to show/hide password
+  - Same for confirm password field
+  - Positioned INSIDE input field (right side) with CSS
+- ✅ Frontend error formatting
+  - Added ❌ emoji to error messages
+  - Clean, user-friendly display
+- ✅ End-to-end testing - all features working!
+
+**Key Achievement**: Authentication fully hardened with validation, special chars, and clean error handling!
 
 ---
 
 ## 🎯 CRITICAL REMAINING TASKS (Before Launch)
 
-### 1. ✅ INPUT VALIDATION (COMPLETED TODAY!)
+### 1. ✅ INPUT VALIDATION (COMPLETED Dec 2!)
 **Status**: DONE
-**What**: Validates email format and password length
-**Next**: Already merged into UserController
+**What**: Email format validation + password minimum length (8 chars)
 
----
+### 2. ✅ PASSWORD REQUIREMENTS (COMPLETED Dec 3!)
+**Status**: DONE
+**What**: Special character requirement, eye icon toggle, clean error messages
 
-### 2. 🔄 PASSWORD REQUIREMENTS (NEXT - Tomorrow)
-**Status**: TODO
-**Estimated Time**: 30 min
-**What to do**:
-- Add special character requirement to password validation
-- Update `@Size` annotation to include pattern check
-- Test: "ValidPass" should fail (no special char)
-- Test: "ValidPass@123" should pass (has special char)
-
-**Why**: Stronger passwords prevent brute force attacks
-
-**How**:
-1. Import `@Pattern` annotation
-2. Add to password field: `@Pattern(regexp = ".*[!@#$%^&*()_+\\-=\\[\\]{};':\"\\\\|,.<>\\/?].*")`
-3. Test with invalid/valid passwords
-
----
-
-### 3. 🔄 RATE LIMITING (After Password Requirements)
+### 3. 🔄 RATE LIMITING (NEXT)
 **Status**: TODO
 **Estimated Time**: 1 hour
 **What to do**:
@@ -94,10 +94,7 @@
 - Return 429 Too Many Requests if exceeded
 - Prevent brute force password guessing
 
-**How**:
-1. Add `spring-boot-starter-data-redis` (for rate limit tracking)
-2. Create `RateLimitInterceptor` class
-3. Apply to `/api/auth/login` endpoint
+**Priority**: Critical - protects against attacks
 
 ---
 
@@ -108,6 +105,8 @@
 - Short-lived access tokens (15 min)
 - Long-lived refresh tokens (7 days)
 - Endpoint to refresh without re-entering password
+
+**Why**: Better security + better UX
 
 **Why**: Better security + better UX (don't kick users out)
 
@@ -182,7 +181,9 @@
 ✅ Gamification (point system with mastery thresholds)
 ✅ Server-side answer verification (prevents cheating)
 ✅ Quiz batching (sequential unlocking with 80% mastery)
-✅ Input validation (email format, password length)
+✅ Input validation (email format, password length, special chars)
+✅ Error handling (clean messages, no stack traces)
+✅ Password visibility toggle (eye icon in forms)
 ✅ Database persistence (Flyway migrations)
 ✅ Dashboard (real-time progress tracking)
 ✅ Admin panel (content creation with multiple answers)
@@ -199,25 +200,42 @@
 
 ---
 
-## 🚀 Next Session Quick Start
+## 📋 Phase 5: Future Enhancements (Post-Launch)
 
-### FIRST THING TOMORROW:
-```
-Goal: Add special character requirement to passwords
+### Nice-to-Have Features
+- [ ] **Email verification** (confirm user owns email address)
+  - Send verification email on registration
+  - Require email confirmation before account activation
+  - Prevents fake/typo emails
+  - **Estimated**: 2-3 hours (needs email service like SendGrid)
+  - **Priority**: Medium - data quality improvement
 
-Files to modify:
-1. UserController.java → RegisterRequest class
-2. Add @Pattern annotation to password field
-
-Test with:
-- "ValidPass" → Should FAIL (no special char)
-- "ValidPass@123" → Should PASS (has special char)
-```
-
-That's it! Small, focused task.
+- [ ] Refresh token implementation
+- [ ] Rate limiting on login endpoints
+- [ ] Admin panel CRUD for batches
+- [ ] Re-enable option shuffling
+- [ ] Unit & integration tests
+- [ ] Database indexing
 
 ---
 
-**Document Version**: 2.3
-**Status**: Excellent progress! 67% of Phase 4a security hardening complete.
+## 🚀 Today's Session Summary (Dec 3)
+
+### ✅ COMPLETED TODAY:
+1. Special character requirement for passwords (@Pattern)
+2. Password visibility toggle (eye icon in SignUp form)
+3. GlobalExceptionHandler for clean error messages (no stack traces!)
+4. Frontend error formatting with emoji
+5. Eye icon positioned inside input field with CSS
+
+### 🔄 NEXT PRIORITIES:
+1. Rate limiting (prevent brute force) - 1 hour
+2. Refresh tokens (optional) - 1.5 hours
+3. Admin panel CRUD - 1.5 hours
+4. Testing & final prep for launch
+
+---
+
+**Document Version**: 2.5
+**Status**: Excellent progress! 85% of Phase 4a security hardening complete.
 **Confidence Level**: 🟢 On track for Dec 5-10 launch!
