@@ -8,6 +8,8 @@ import jakarta.validation.constraints.Pattern;
 import com.example.demo.model.User;
 import com.example.demo.model.UserRole;
 import com.example.demo.repository.UserRepository;
+import com.example.demo.service.RateLimitService;
+
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.http.ResponseEntity;
@@ -29,9 +31,11 @@ public class UserController {
     private final BCryptPasswordEncoder passwordEncoder;
     private final SecretKey JWT_SECRET;
     private final long JWT_EXPIRATION = 86400000; // 24 hours
+    private final RateLimitService rateLimitService;
 
-    public UserController(UserRepository userRepository) {
+    public UserController(UserRepository userRepository,  RateLimitService rateLimitService) {
         this.userRepository = userRepository;
+        this.rateLimitService = rateLimitService;
         this.passwordEncoder = new BCryptPasswordEncoder();
         String secret = "aVeryLongSecretKeyThatIsAtLeast64BytesLongForHS512AlgorithmSecurityPurposesOnlyForDevelopment1234567890";
         this.JWT_SECRET = Keys.hmacShaKeyFor(secret.getBytes());
@@ -70,6 +74,9 @@ public class UserController {
     // Login endpoint
     @PostMapping("/login")
     public ResponseEntity<?> login(@Valid @RequestBody LoginRequest request) {
+        if (rateLimitService.isRateLimited(request.getEmail())) {
+            return ResponseEntity.status(429).body("Too many login attempts. Try again in 15 minutes.");
+        }
 
         // Find user by email
         var user = userRepository.findByEmail(request.getEmail());
@@ -95,6 +102,9 @@ public class UserController {
             .signWith(JWT_SECRET)
             .compact();
 
+        // Reset rate limit on successful login
+        rateLimitService.resetAttempts(request.getEmail());
+
         return ResponseEntity.ok(new LoginResponse(
             token,
             foundUser.getId(),
@@ -102,6 +112,7 @@ public class UserController {
             foundUser.getAccountType(),
             foundUser.getRole().toString()
         ));
+
     }
 }
 
