@@ -1,8 +1,9 @@
 # Historical Quiz Application - Product Roadmap
 
-**Last Updated**: December 2, 2025
+**Last Updated**: December 3, 2025
 **Current Phase**: Phase 4a (Production Readiness - IN PROGRESS)
-**Timeline to Launch**: ~Dec 5-10 (1 week)
+**Launch Strategy**: Path B - Polished Launch (Dec 15-20)
+**Estimated Hours**: ~53 hours focused development
 
 ---
 
@@ -84,6 +85,70 @@
 
 ## 🎯 CRITICAL REMAINING TASKS (Before Launch)
 
+### LAUNCH STRATEGY: Path B - Polished Launch
+
+**Why Path B?**
+- First impression matters for user retention
+- Design polish is hard to add retroactively
+- Content depth is core value (history game = needs quality content)
+- Realistic with focused development
+
+**Realistic Timeline (Dec 3-20):**
+- **Dec 3-5**: Security hardening + Admin CRUD + cleanup (8 hours) ✅ In Progress
+- **Dec 6-10**: Design overhaul - paper aesthetic (20 hours)
+- **Dec 10-12**: Content expansion - detailed Roman history (15 hours)
+- **Dec 12-15**: Testing + bug fixes (10 hours)
+- **Dec 15**: Launch! 🚀
+
+---
+
+### TASK PRIORITY (Next 2.5 weeks)
+
+**Week 1 (Dec 3-5): Finish Phase 4a**
+1. ✅ Security hardening (90% complete)
+2. [ ] Admin CRUD frontend - Edit/Delete batches (1 hour)
+3. [ ] Console.logs cleanup - Remove all debug logs (30 min)
+4. [ ] Rate limiting MERGE
+
+**Week 2 (Dec 6-10): Design Overhaul**
+5. [ ] **Design system** - Paper-like aesthetic with wrinkled textures (8 hours)
+   - Background: aged paper color
+   - Cards: subtle wrinkled texture effect
+   - Typography: serif fonts for historical feel
+   - Color palette: warm, earthy tones
+6. [ ] **Component redesign** - Apply new theme to all pages (12 hours)
+   - Header/Nav refresh
+   - Quiz cards styling
+   - Dashboard layout
+   - Admin panel theme
+   - Forms styling
+
+**Week 3 (Dec 10-12): Content Expansion**
+7. [ ] **Roman history expansion** - Add detailed content (15 hours)
+   - Expand current 30 questions
+   - Add 20-30 new questions with research
+   - Deepen chapter content with historical detail
+   - Verify sources and accuracy
+   - This is substantial work requiring historical knowledge
+
+**Week 4 (Dec 12-15): Testing & Polish**
+8. [ ] **Backend unit tests** - Test core logic (4 hours)
+   - Answer verification
+   - Point calculations
+   - Mastery thresholds
+   - Rate limiting
+9. [ ] **Frontend tests** - Component testing (2 hours)
+   - Quiz flow
+   - Authentication
+   - Dashboard rendering
+10. [ ] **E2E testing** - Full user journeys (2 hours)
+    - Registration → Quiz → Results → Progress
+    - Admin operations
+    - Error scenarios
+11. [ ] **Bug fixes & polish** - Final tweaks (2 hours)
+
+---
+
 ### 1. ✅ INPUT VALIDATION (COMPLETED Dec 2!)
 **Status**: DONE
 **What**: Email format validation + password minimum length (8 chars)
@@ -101,15 +166,70 @@
 - Resets counter on successful login
 - Frontend displays error gracefully with emoji
 
-### 4. 🔄 REFRESH TOKENS (NEXT - Optional)
+### 4. 🔄 ADMIN CRUD FRONTEND (NEXT - Dec 3)
 **Status**: TODO
-**Estimated Time**: 1.5 hours
+**Estimated Time**: 1 hour
 **What to do**:
-- Short-lived access tokens (15 min)
-- Long-lived refresh tokens (7 days)
-- Endpoint to refresh without re-entering password
+- Add Edit button to batch items
+- Add Delete button with confirmation modal
+- Add edit form for batch details
+- Wire up to backend endpoints (already implemented)
 
-**Priority**: Medium - improves UX but not critical
+### 5. 🔄 CONSOLE.LOGS CLEANUP (NEXT - Dec 3)
+**Status**: TODO
+**Estimated Time**: 30 min
+**What to do**:
+- Remove all `console.log()` from React components
+- Remove all `console.error()` that aren't critical
+- Leave only error logging for debugging
+
+### 6. 🔄 DESIGN OVERHAUL (NEXT - Dec 6)
+**Status**: TODO
+**Estimated Time**: 20 hours
+**What to do**:
+- Create paper-like aesthetic
+- Add wrinkled texture effects
+- Implement warm, earthy color palette
+- Apply to all components
+- **This requires significant CSS/design work**
+
+### 7. 🔄 CONTENT EXPANSION (NEXT - Dec 10)
+**Status**: TODO
+**Estimated Time**: 15 hours
+**What to do**:
+- Expand Roman history content
+- Add 20-30 new detailed questions
+- Research historical accuracy
+- Add depth to chapter reading material
+- **This is content/research work, not code**
+
+### 8. 🔄 UNIT TESTS - BACKEND (NEXT - Dec 12)
+**Status**: TODO
+**Estimated Time**: 4 hours
+**What to do**:
+- Test answer verification logic
+- Test point calculations (all scenarios)
+- Test mastery thresholds
+- Test rate limiting
+- Test user authentication flow
+
+### 9. 🔄 UNIT TESTS - FRONTEND (NEXT - Dec 12)
+**Status**: TODO
+**Estimated Time**: 2 hours
+**What to do**:
+- Test Quiz component flow
+- Test SignIn/SignUp validation
+- Test Dashboard data display
+- Mock API calls for testing
+
+### 10. 🔄 E2E TESTING (NEXT - Dec 12)
+**Status**: TODO
+**Estimated Time**: 2 hours
+**What to do**:
+- Full user registration flow
+- Quiz attempt → Results → Progress tracking
+- Admin batch management
+- Error scenarios
 
 **Why**: Better security + better UX (don't kick users out)
 
@@ -223,24 +343,34 @@
 
 ---
 
-## 🚀 Today's Session Summary (Dec 3 - Continued)
+## 🚀 Today's Session Summary (Dec 3 - Final)
 
 ### ✅ COMPLETED TODAY:
 1. Special character requirement for passwords (@Pattern)
 2. Password visibility toggle (eye icon in SignUp form)
-3. GlobalExceptionHandler for clean error messages (no stack traces!)
+3. GlobalExceptionHandler for clean error messages
 4. Frontend error formatting with emoji
 5. Eye icon positioned inside input field with CSS
-6. **Rate limiting service** - 5 attempts per 15 minutes on login
+6. Rate limiting service - 5 attempts per 15 minutes on login
 7. Rate limit error handling on frontend
+8. **Backend Admin CRUD** - UPDATE and DELETE endpoints for batches
+9. UpdateBatchRequest DTO
+10. Decided on Path B: Polished Launch (Dec 15-20)
 
-### 🔄 NEXT PRIORITIES:
-1. Refresh tokens (optional) - 1.5 hours
-2. Admin panel CRUD - 1.5 hours
-3. Final testing & launch prep
+### 🔄 NEXT SESSION PRIORITIES (Dec 3-5):
+1. Merge rate limiting changes
+2. Admin CRUD frontend - Edit/Delete UI
+3. Console.logs cleanup
+4. Begin design system planning
+
+### 📊 PROJECT STATUS:
+- **Phase 4a Progress**: 92% complete (security hardening done)
+- **Phase 4b**: Design & Content (Dec 6-12)
+- **Phase 4c**: Testing & Launch Prep (Dec 12-15)
 
 ---
 
-**Document Version**: 2.6
-**Status**: Excellent progress! 90% of Phase 4a security hardening complete.
-**Confidence Level**: 🟢 On track for Dec 5-10 launch!
+**Document Version**: 2.7
+**Status**: Major decision made! Path B chosen for polished launch.
+**Confidence Level**: 🟢 On track for Dec 15-20 launch with quality!
+**Next Milestone**: Admin CRUD frontend + cleanup (Dec 3-5)
