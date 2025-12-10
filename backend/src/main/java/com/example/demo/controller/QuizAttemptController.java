@@ -267,35 +267,28 @@ public class QuizAttemptController {
     // Update user progress for the topic when a quiz is attempted
         private void updateUserProgressForTopic(Long userId, Long chapterId, int questionCount, int correctCount) {
         try {
-            System.out.println("DEBUG: updateUserProgressForTopic called - userId=" + userId + ", chapterId=" + chapterId);
 
             Chapter chapter = chapterRepository.findById(chapterId).orElse(null);
-            System.out.println("DEBUG: Chapter found: " + (chapter != null ? chapter.getTitle() : "NULL"));
 
             if (chapter == null || chapter.getTopic() == null) {
-                System.out.println("DEBUG: Chapter or topic is null, returning early");
                 return;
             }
 
             User user = userRepository.findById(userId).orElse(null);
             if (user == null) {
-                System.out.println("DEBUG: User not found, returning early");
                 return;
             }
 
             Long topicId = chapter.getTopic().getId();
-            System.out.println("DEBUG: Topic ID = " + topicId);
 
             // Get or create user progress for this topic
             com.example.demo.model.UserProgress progress = userProgressRepository
                     .findByUserIdAndTopicId(userId, topicId)
                     .orElse(new com.example.demo.model.UserProgress(user, chapter.getTopic()));
 
-            System.out.println("DEBUG: Progress object created/retrieved");
 
             // Recalculate progress based on ALL attempts for this topic
             List<QuizAttempt> topicAttempts = quizAttemptRepository.findByUserIdAndChapterIdOrderByAttemptDateDesc(userId, chapterId);
-            System.out.println("DEBUG: Found " + topicAttempts.size() + " attempts for chapter " + chapterId);
 
             int totalQuestionsAnswered = 0;
             int totalQuestionsCorrect = 0;
@@ -307,8 +300,6 @@ public class QuizAttemptController {
                 totalPointsAwarded += attempt.getPointsAwarded();
             }
 
-            System.out.println("DEBUG: Totals - answered=" + totalQuestionsAnswered +
-                            ", correct=" + totalQuestionsCorrect + ", points=" + totalPointsAwarded);
 
             // Update progress
             progress.setQuestionsAnswered(totalQuestionsAnswered);
@@ -317,10 +308,8 @@ public class QuizAttemptController {
             progress.setLastStudied(java.time.LocalDateTime.now());
 
             userProgressRepository.save(progress);
-            System.out.println("DEBUG: UserProgress saved successfully!");
 
         } catch (Exception e) {
-            System.out.println("DEBUG: Exception in updateUserProgressForTopic: " + e.getMessage());
             e.printStackTrace();
         }
     }

@@ -142,7 +142,6 @@ function App() {
   }
 
   const handleStartQuiz = (batch, chapter) => {
-    console.log("handleStartQuiz called with batch:", batch)
     setSelectedChapter(chapter)
     setSelectedBatch(batch)  // Store the batch
     setCurrentView('quiz')
@@ -243,12 +242,6 @@ function App() {
 
       {currentView === 'quiz' && (
   <>
-    {console.log("Quiz conditions:", {
-      currentView,
-      selectedTopic: !!selectedTopic,
-      selectedChapter: !!selectedChapter,
-      selectedBatch: !!selectedBatch
-    })}
     {selectedTopic && selectedChapter && selectedBatch ? (
       <Quiz
         batch={selectedBatch}

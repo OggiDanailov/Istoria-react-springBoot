@@ -78,16 +78,11 @@ function ReadingMaterial({ topic, selectedChapter, onChapterSelect, onStartQuiz,
   }
 
   const fetchBatchProgress = async (chapterId) => {
-    console.log("this is the fetchBatchProgress")
     try {
       const token = localStorage.getItem('token')
-       console.log('isLoggedIn:', isLoggedIn)
-    console.log('Token exists:', !!token)
-    console.log('Token:', token?.substring(0, 20) + '...')
 
       // Only fetch if user is logged in AND has token
       if (!isLoggedIn || !token) {
-        console.log('User not logged in, skipping batch progress fetch')
         return
       }
 

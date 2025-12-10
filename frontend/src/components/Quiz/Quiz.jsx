@@ -13,43 +13,12 @@ function Quiz({ batch, chapterId, batchId, onBack, isLoggedIn }) {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState("")
 
-  console.log("Quiz rendered - batch prop:", batch)  // ← ADD THIS
-  console.log("Quiz rendered - questions state:", questions)  // ← ADD THIS
-
   useEffect(() => {
-     console.log("useEffect running - batch:", batch)  // ← ADD THIS
     if (batch && batch.questions) {
-      console.log("Processing batch questions:", batch.questions)  // ← ADD THIS
       // const shuffledQuestions = batch.questions.map(q => shuffleQuestionOptions(q))
       setQuestions(batch.questions)
     }
   }, [batch])
-
-  // const fetchBatchAndQuestions = async () => {
-  //   setLoading(true)
-  //   try {
-  //     // Fetch batch info
-  //     const batchResponse = await fetch(`${API_BASE_URL}/api/batches/${batchId}`)
-  //     if (!batchResponse.ok) {
-  //       throw new Error(`Failed to fetch batch: ${batchResponse.status}`)
-  //     }
-  //     const batchData = await batchResponse.json()
-  //     setBatch(batchData)
-
-  //     // Questions are included in batch data
-  //     if (batchData.questions && batchData.questions.length > 0) {
-  //       // Shuffle options for each question
-  //       const shuffledQuestions = batchData.questions.map(q => shuffleQuestionOptions(q))
-  //       setQuestions(shuffledQuestions)
-  //     } else {
-  //       setError('No questions available in this batch')
-  //     }
-  //   } catch (err) {
-  //     setError(`Failed to fetch batch: ${err.message}`)
-  //   } finally {
-  //     setLoading(false)
-  //   }
-  // }
 
   const handleAnswerSelect = (selectedIndex) => {
     const newAnswers = [...userAnswers]
