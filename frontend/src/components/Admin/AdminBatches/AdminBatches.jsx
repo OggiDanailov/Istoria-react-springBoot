@@ -16,6 +16,12 @@ function AdminBatches() {
   const [selectedQuestions, setSelectedQuestions] = useState([])
   const [selectedBatchId, setSelectedBatchId] = useState(null)
 
+  // Edit & Delete state
+  const [editingBatchId, setEditingBatchId] = useState(null)
+  const [editForm, setEditForm] = useState({ description: '', difficulty: 1, batchOrder: 1 })
+  const [showDeleteModal, setShowDeleteModal] = useState(false)
+  const [batchToDelete, setBatchToDelete] = useState(null)
+
   useEffect(() => {
     fetchChapters()
   }, [])
@@ -58,7 +64,7 @@ function AdminBatches() {
       if (response.ok) {
         const data = await response.json()
         setBatches(data)
-        setBatchOrder(data.length + 1) // Next batch order
+        setBatchOrder(data.length + 1)
       }
     } catch (err) {
       console.error('Failed to fetch batches:', err)
@@ -83,7 +89,6 @@ function AdminBatches() {
     try {
       const token = localStorage.getItem('token')
 
-      // Create batch
       const batchResponse = await fetch(`${API_BASE_URL}/api/batches`, {
         method: 'POST',
         headers: {
@@ -114,6 +119,79 @@ function AdminBatches() {
     } catch (err) {
       console.error('Error creating batch:', err)
       alert('Failed to create batch: ' + err.message)
+    } finally {
+      setLoading(false)
+    }
+  }
+
+  const handleEditBatch = async (e) => {
+    e.preventDefault()
+    if (!editingBatchId) return
+
+    setLoading(true)
+
+    try {
+      const token = localStorage.getItem('token')
+
+      const response = await fetch(`${API_BASE_URL}/api/batches/${editingBatchId}`, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}`
+        },
+        body: JSON.stringify({
+          description: editForm.description,
+          difficulty: editForm.difficulty,
+          batchOrder: editForm.batchOrder
+        })
+      })
+
+      if (!response.ok) {
+        throw new Error('Failed to update batch')
+      }
+
+      alert('Batch updated successfully!')
+      setEditingBatchId(null)
+      setEditForm({ description: '', difficulty: 1, batchOrder: 1 })
+
+      // Refresh batches
+      handleChapterSelect(selectedChapterId)
+    } catch (err) {
+      console.error('Error updating batch:', err)
+      alert('Failed to update batch: ' + err.message)
+    } finally {
+      setLoading(false)
+    }
+  }
+
+  const handleDeleteBatch = async () => {
+    if (!batchToDelete) return
+
+    setLoading(true)
+
+    try {
+      const token = localStorage.getItem('token')
+
+      const response = await fetch(`${API_BASE_URL}/api/batches/${batchToDelete.id}`, {
+        method: 'DELETE',
+        headers: {
+          'Authorization': `Bearer ${token}`
+        }
+      })
+
+      if (!response.ok) {
+        throw new Error('Failed to delete batch')
+      }
+
+      alert('Batch deleted successfully!')
+      setShowDeleteModal(false)
+      setBatchToDelete(null)
+
+      // Refresh batches
+      handleChapterSelect(selectedChapterId)
+    } catch (err) {
+      console.error('Error deleting batch:', err)
+      alert('Failed to delete batch: ' + err.message)
     } finally {
       setLoading(false)
     }
@@ -220,12 +298,96 @@ function AdminBatches() {
               <div className="batches-list">
                 {batches.map(batch => (
                   <div key={batch.id} className="batch-item">
-                    <strong>{getDifficultyLabel(batch.difficulty)} - Batch {batch.batchOrder}</strong>
-                    <p>{batch.description}</p>
-                    <p>{batch.questions?.length || 0} questions</p>
+                    <div className="batch-header">
+                      <div>
+                        <strong>{getDifficultyLabel(batch.difficulty)} - Batch {batch.batchOrder}</strong>
+                        <p>{batch.description}</p>
+                        <p>{batch.questions?.length || 0} questions</p>
+                      </div>
+                      <div className="batch-actions">
+                        <button
+                          onClick={() => {
+                            setEditingBatchId(batch.id)
+                            setEditForm({
+                              description: batch.description,
+                              difficulty: batch.difficulty,
+                              batchOrder: batch.batchOrder
+                            })
+                          }}
+                          className="edit-btn"
+                        >
+                          ✏️ Edit
+                        </button>
+                        <button
+                          onClick={() => {
+                            setShowDeleteModal(true)
+                            setBatchToDelete(batch)
+                          }}
+                          className="delete-btn"
+                        >
+                          🗑️ Delete
+                        </button>
+                      </div>
+                    </div>
                   </div>
                 ))}
               </div>
+
+              {/* Edit Batch Form */}
+              {editingBatchId && (
+                <div className="form-section edit-section">
+                  <h3>Edit Batch</h3>
+                  <form onSubmit={handleEditBatch} className="batch-form">
+                    <div className="form-group">
+                      <label>Difficulty Level</label>
+                      <select
+                        value={editForm.difficulty}
+                        onChange={(e) => setEditForm({ ...editForm, difficulty: Number(e.target.value) })}
+                        className="form-input"
+                      >
+                        <option value={1}>⭐ Easy (1 point)</option>
+                        <option value={2}>⭐⭐ Medium (2 points)</option>
+                        <option value={3}>⭐⭐⭐ Hard (3 points)</option>
+                      </select>
+                    </div>
+
+                    <div className="form-group">
+                      <label>Batch Order</label>
+                      <input
+                        type="number"
+                        min="1"
+                        value={editForm.batchOrder}
+                        onChange={(e) => setEditForm({ ...editForm, batchOrder: Number(e.target.value) })}
+                        className="form-input"
+                      />
+                    </div>
+
+                    <div className="form-group">
+                      <label>Description (Optional)</label>
+                      <input
+                        type="text"
+                        value={editForm.description}
+                        onChange={(e) => setEditForm({ ...editForm, description: e.target.value })}
+                        placeholder="e.g., Foundation concepts"
+                        className="form-input"
+                      />
+                    </div>
+
+                    <div className="form-actions">
+                      <button type="submit" disabled={loading} className="submit-btn">
+                        {loading ? 'Saving...' : 'Save Changes'}
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => setEditingBatchId(null)}
+                        className="cancel-btn"
+                      >
+                        Cancel
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              )}
             </div>
           )}
 
@@ -325,6 +487,38 @@ function AdminBatches() {
               <p className="warning">No questions at this difficulty level. Create questions first!</p>
             )}
           </div>
+
+          {/* Delete Modal */}
+          {showDeleteModal && batchToDelete && (
+            <div className="modal-overlay">
+              <div className="modal-content delete-modal">
+                <h3>Delete Batch?</h3>
+                <p>
+                  Are you sure you want to delete <strong>{getDifficultyLabel(batchToDelete.difficulty)} - Batch {batchToDelete.batchOrder}</strong>?
+                </p>
+                <p className="warning-text">This action cannot be undone.</p>
+
+                <div className="modal-actions">
+                  <button
+                    onClick={handleDeleteBatch}
+                    disabled={loading}
+                    className="delete-btn"
+                  >
+                    {loading ? 'Deleting...' : '🗑️ Delete Permanently'}
+                  </button>
+                  <button
+                    onClick={() => {
+                      setShowDeleteModal(false)
+                      setBatchToDelete(null)
+                    }}
+                    className="cancel-btn"
+                  >
+                    Cancel
+                  </button>
+                </div>
+              </div>
+            </div>
+          )}
         </>
       )}
     </div>
