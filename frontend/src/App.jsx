@@ -209,7 +209,7 @@ function App() {
       {currentView === 'periods' && (
         <>
           <div className="quiz-container">
-            {isLoggedIn && user?.role === 'ADMIN' && (
+            {isLoggedIn && user?.accountType === 'ADMIN' && (
               <button
                 onClick={handleGoToAdmin}
                 className="admin-access-btn"

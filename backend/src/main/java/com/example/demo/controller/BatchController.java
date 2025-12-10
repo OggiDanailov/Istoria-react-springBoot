@@ -278,6 +278,49 @@ public class BatchController {
         }
     }
 
+    // Update batch details (description, difficulty, batchOrder)
+    @PutMapping("/{batchId}")
+    public ResponseEntity<QuizBatch> updateBatch(
+            @PathVariable Long batchId,
+            @RequestBody UpdateBatchRequest request) {
+        try {
+            QuizBatch batch = quizBatchRepository.findById(batchId)
+                    .orElseThrow(() -> new RuntimeException("Batch not found"));
+
+            // Update fields
+            if (request.getDescription() != null) {
+                batch.setDescription(request.getDescription());
+            }
+            if (request.getDifficulty() > 0) {
+                batch.setDifficulty(request.getDifficulty());
+            }
+            if (request.getBatchOrder() > 0) {
+                batch.setBatchOrder(request.getBatchOrder());
+            }
+
+            QuizBatch updated = quizBatchRepository.save(batch);
+            return ResponseEntity.ok(updated);
+
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().build();
+        }
+    }
+
+    // Delete a batch
+    @DeleteMapping("/{batchId}")
+    public ResponseEntity<Void> deleteBatch(@PathVariable Long batchId) {
+        try {
+            QuizBatch batch = quizBatchRepository.findById(batchId)
+                    .orElseThrow(() -> new RuntimeException("Batch not found"));
+
+            quizBatchRepository.deleteById(batchId);
+            return ResponseEntity.noContent().build();
+
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().build();
+        }
+    }
+
 }
 
 // ==================== DTOs ====================
@@ -381,5 +424,36 @@ class BatchWithProgressDTO {
 
     public void setProgress(BatchProgress progress) {
         this.progress = progress;
+    }
+}
+
+ // DTO for updating a batch
+class UpdateBatchRequest {
+    private String description;
+    private int difficulty;
+    private int batchOrder;
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public int getDifficulty() {
+        return difficulty;
+    }
+
+    public void setDifficulty(int difficulty) {
+        this.difficulty = difficulty;
+    }
+
+    public int getBatchOrder() {
+        return batchOrder;
+    }
+
+    public void setBatchOrder(int batchOrder) {
+        this.batchOrder = batchOrder;
     }
 }
