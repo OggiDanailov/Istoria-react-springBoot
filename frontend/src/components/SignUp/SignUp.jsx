@@ -65,7 +65,6 @@ function SignUp({ onSignUpSuccess, onSwitchToSignIn }) {
       }
 
       const user = await response.json()
-      console.log('User registered:', user)
 
       // Call callback to navigate to login or auto-login
       onSignUpSuccess(user)

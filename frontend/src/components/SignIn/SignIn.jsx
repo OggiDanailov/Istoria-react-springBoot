@@ -44,7 +44,6 @@ function SignIn({ onSignInSuccess, onSwitchToSignUp }) {
       }
 
       const loginData = await response.json()
-      console.log('Login successful:', loginData)
 
       // Store token in localStorage
       localStorage.setItem('token', loginData.token)
