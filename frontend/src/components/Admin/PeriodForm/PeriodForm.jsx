@@ -42,7 +42,7 @@ function PeriodForm({ periodToEdit, onSave, onCancel }) {
   };
 
   return (
-    <div className="period-form">
+    <div className="period-form wrinkled-paper">
       <h3>{periodToEdit ? 'Edit Period' : 'Create New Period'}</h3>
       <form onSubmit={handleSubmit}>
         <div className="form-group">

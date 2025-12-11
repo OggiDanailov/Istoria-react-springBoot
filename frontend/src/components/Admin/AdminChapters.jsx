@@ -65,7 +65,7 @@ function AdminChapters({ topicId, onBack }) {
   }
 
   return (
-    <div className="quiz-container">
+    <div className="quiz-container wrinkled-paper">
       <button onClick={onBack} className="back-btn">
         ← Back to Admin
       </button>
@@ -97,7 +97,7 @@ function AdminChapters({ topicId, onBack }) {
           <p>No chapters yet. Create one above!</p>
         ) : (
           chapters.map(chapter => (
-            <div key={chapter.id} className="chapter-item">
+            <div key={chapter.id} className="chapter-item wrinkled-paper">
               <h4>{chapter.title}</h4>
               <div className="chapter-actions">
                 <button

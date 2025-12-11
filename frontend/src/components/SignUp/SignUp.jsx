@@ -76,7 +76,7 @@ function SignUp({ onSignUpSuccess, onSwitchToSignIn }) {
   }
 
   return (
-    <div className="auth-container">
+    <div className="auth-container wrinkled-paper">
       <div className="auth-card">
         <h2>Create Account</h2>
 

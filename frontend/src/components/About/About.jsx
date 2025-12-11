@@ -2,7 +2,7 @@ import './About.css'
 
 function About({ onBack }) {
   return (
-    <div className="about-container">
+    <div className="about-container wrinkled-paper">
       <button onClick={onBack} className="back-btn">
         ← Back
       </button>

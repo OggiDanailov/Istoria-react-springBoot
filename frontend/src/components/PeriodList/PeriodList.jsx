@@ -40,7 +40,7 @@ function PeriodList({ onPeriodSelect }) {
   }
 
   return (
-    <div className="quiz-container">
+    <div className="quiz-container wrinkled-paper">
       <h1>🌍 Choose a Historical Period</h1>
       <div className="period-list">
         {periods.map((period) => (

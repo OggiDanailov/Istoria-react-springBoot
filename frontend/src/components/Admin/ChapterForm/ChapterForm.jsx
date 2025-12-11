@@ -42,7 +42,7 @@ function ChapterForm({ topicId, chapterToEdit, onSave, onCancel }) {
   };
 
   return (
-    <div className="chapter-form">
+    <div className="chapter-form wrinkled-paper">
       <h3>{chapterToEdit ? 'Edit Chapter' : 'Create New Chapter'}</h3>
       <form onSubmit={handleSubmit}>
         <div className="form-group">

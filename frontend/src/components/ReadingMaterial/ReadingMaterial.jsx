@@ -168,7 +168,7 @@ function ReadingMaterial({ topic, selectedChapter, onChapterSelect, onStartQuiz,
   }
 
   return (
-    <div className="quiz-container">
+    <div className="quiz-container wrinkled-paper">
       <button onClick={onBack} className="back-btn">
         ← Back to Topics
       </button>

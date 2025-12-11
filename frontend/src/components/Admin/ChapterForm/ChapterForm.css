@@ -1,5 +1,5 @@
 .chapter-form {
-  background: white;
+  background: var(--color-bg-secondary);
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -9,7 +9,7 @@
 .chapter-form h3 {
   margin-top: 0;
   margin-bottom: 20px;
-  color: #333;
+  color: var(--color-text-primary);
 }
 
 .form-group {
@@ -20,21 +20,22 @@
   display: block;
   margin-bottom: 8px;
   font-weight: 600;
-  color: #555;
+  color: var(--color-text-primary);
 }
 
 .form-group input,
 .form-group textarea {
   width: 100%;
   padding: 10px;
-  border: 1px solid #ddd;
+  border: 1px solid var(--color-border-light);
   border-radius: 4px;
   font-size: 14px;
   font-family: inherit;
 }
 
 .form-group textarea {
-  font-family: 'Courier New', monospace;
+  font-family: var(--font-mono);
+  border: 1px solid var(--color-border-light);
   resize: vertical;
 }
 

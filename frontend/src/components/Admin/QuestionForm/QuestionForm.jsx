@@ -193,7 +193,7 @@ function QuestionForm({ topic, onClose, question }) {
   }
 
   return (
-    <div className="quiz-container">
+    <div className="quiz-container wrinkled-paper">
       <button onClick={onClose} className="back-btn">
         ← Back to Admin
       </button>

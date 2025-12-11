@@ -51,7 +51,7 @@ function AdminPeriods({ onBack }) {
   }
 
   return (
-    <div className="quiz-container">
+    <div className="quiz-container wrinkled-paper">
       <button onClick={onBack} className="back-btn">
         ← Back to Admin
       </button>
@@ -82,7 +82,7 @@ function AdminPeriods({ onBack }) {
           <p>No periods yet. Create one above!</p>
         ) : (
           periods.map(period => (
-            <div key={period.id} className="period-item">
+            <div key={period.id} className="period-item wrinkled-paper">
               <div>
                 <h4>{period.title}</h4>
                 <p>{period.description}</p>

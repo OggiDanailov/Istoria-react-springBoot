@@ -60,7 +60,7 @@ function AdminTopics({ onBack, onManageChapters, onAddQuestions }) {
   }
 
   return (
-    <div className="quiz-container">
+    <div className="quiz-container wrinkled-paper">
       <button onClick={onBack} className="back-btn">
         ← Back to Admin
       </button>
@@ -87,7 +87,7 @@ function AdminTopics({ onBack, onManageChapters, onAddQuestions }) {
           <p>No topics yet. Create your first topic!</p>
         ) : (
           topics.map(topic => (
-            <div key={topic.id} className="admin-topic-card">
+            <div key={topic.id} className="admin-topic-card wrinkled-paper">
               <div className="admin-topic-info">
                 <h3>{topic.title}</h3>
                 <p>{topic.description || 'No description available'}</p>
