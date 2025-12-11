@@ -1,0 +1,1 @@
+ALTER TABLE quiz_attempts ADD COLUMN user_answers VARCHAR(10000);

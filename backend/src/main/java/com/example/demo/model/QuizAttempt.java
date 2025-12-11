@@ -37,6 +37,9 @@ public class QuizAttempt {
 
     private int pointsAwarded; // Points added/subtracted based on gamification rules
 
+    @Column(length = 10000)
+    private String userAnswers; // JSON array of user's selected answer indices
+
     // Constructors
     public QuizAttempt() {}
 
@@ -130,5 +133,13 @@ public class QuizAttempt {
 
     public void setPointsAwarded(int pointsAwarded) {
         this.pointsAwarded = pointsAwarded;
+    }
+
+    public String getUserAnswers() {
+        return userAnswers;
+    }
+
+    public void setUserAnswers(String userAnswers) {
+        this.userAnswers = userAnswers;
     }
 }

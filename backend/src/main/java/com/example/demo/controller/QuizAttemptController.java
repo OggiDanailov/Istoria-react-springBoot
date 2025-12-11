@@ -1,5 +1,5 @@
 package com.example.demo.controller;
-
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.example.demo.model.QuizAttempt;
 import com.example.demo.model.User;
 import com.example.demo.model.Chapter;
@@ -18,6 +18,7 @@ import org.springframework.http.HttpStatus;
 import jakarta.servlet.http.HttpServletRequest;
 import java.util.List;
 
+
 @CrossOrigin(origins = "http://localhost:5173")
 @RestController
 @RequestMapping("/api/quiz-attempts")
@@ -29,19 +30,22 @@ public class QuizAttemptController {
     private final QuizBatchRepository quizBatchRepository;
     private final BatchProgressRepository batchProgressRepository;
     private final UserProgressRepository userProgressRepository;
+    private final ObjectMapper objectMapper;
 
     public QuizAttemptController(QuizAttemptRepository quizAttemptRepository,
                                UserRepository userRepository,
                                ChapterRepository chapterRepository,
                                QuizBatchRepository quizBatchRepository,
                                BatchProgressRepository batchProgressRepository,
-                               UserProgressRepository userProgressRepository) {
+                               UserProgressRepository userProgressRepository,
+                               ObjectMapper objectMapper) {
         this.quizAttemptRepository = quizAttemptRepository;
         this.userRepository = userRepository;
         this.chapterRepository = chapterRepository;
         this.quizBatchRepository = quizBatchRepository;
         this.batchProgressRepository = batchProgressRepository;
         this.userProgressRepository = userProgressRepository;
+        this.objectMapper = objectMapper;
     }
 
     // Save a quiz attempt with SERVER-SIDE answer verification
@@ -78,6 +82,9 @@ public class QuizAttemptController {
             // Create quiz attempt with VERIFIED score (not frontend's claimed score)
             QuizAttempt attempt = new QuizAttempt(user, chapter, batch,
                     verifiedScore, request.getUserAnswers().size(), totalPoints);
+
+            String userAnswersJson = objectMapper.writeValueAsString(request.getUserAnswers());
+                attempt.setUserAnswers(userAnswersJson);
 
             // Calculate points to award based on gamification rules
             int pointsToAward = calculatePointsToAward(verifiedScore, totalPoints, userId, request.getBatchId());

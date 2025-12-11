@@ -161,7 +161,11 @@ function Results({ questions, userAnswers, onRestart, onBack, chapterId, batchId
                   </span>
                 </div>
                 <p className={isCorrect ? "correct" : "incorrect"}>
-                  Your answer: {question.options[userAnswers[index]] || "Not answered"}
+                  Your answer: {
+                    Array.isArray(userAnswers[index]) && userAnswers[index].length > 0
+                      ? userAnswers[index].map(idx => question.options[idx]).join(', ')
+                      : "Not answered"
+                  }
                   {isCorrect && ` ✓ (+${points} point${points > 1 ? 's' : ''})`}
                   {!isCorrect && (
                     <span className="correct-answer">
