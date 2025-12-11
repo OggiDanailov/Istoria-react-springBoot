@@ -1,5 +1,5 @@
 .topic-form {
-  background: #f9f9f9;
+  background: var(--color-bg-secondary);
   border-radius: 10px;
   padding: 2rem;
   margin-top: 1rem;
@@ -11,7 +11,7 @@
 
 .form-group label {
   display: block;
-  color: #333;
+  color: var(--color-text-primary);
   font-weight: 500;
   margin-bottom: 0.5rem;
 }
@@ -20,7 +20,7 @@
 .form-group textarea {
   width: 100%;
   padding: 0.75rem;
-  border: 2px solid #ddd;
+  border: 2px solid var(--color-border-light);
   border-radius: 6px;
   font-size: 1rem;
   font-family: inherit;

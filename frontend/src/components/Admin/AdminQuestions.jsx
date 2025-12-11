@@ -70,7 +70,7 @@ function AdminQuestions({ topic, onBack }) {
   }
 
   return (
-    <div className="quiz-container">
+    <div className="quiz-container wrinkled-paper">
       <button onClick={onBack} className="back-btn">
         ← Back to Admin
       </button>
@@ -90,7 +90,7 @@ function AdminQuestions({ topic, onBack }) {
           <p>No questions yet. Create one above or use bulk import.</p>
         ) : (
           questions.map(question => (
-            <div key={question.id} className="question-item">
+            <div key={question.id} className="question-item wrinkled-paper">
               <div className="question-content">
                 <p className="question-text"><strong>Q:</strong> {question.question}</p>
                 <p className="difficulty">Difficulty: {question.difficulty}</p>

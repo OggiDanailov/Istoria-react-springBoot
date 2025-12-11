@@ -35,7 +35,7 @@ function TopicList({ period, onTopicSelect, onBack }) {
   }
 
   return (
-    <div className="quiz-container">
+    <div className="quiz-container wrinkled-paper">
       <button onClick={onBack} className="back-btn">
         ← Back to Periods
       </button>

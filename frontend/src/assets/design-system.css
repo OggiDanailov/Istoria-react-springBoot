@@ -1,0 +1,120 @@
+/* Design System - Global CSS Variables */
+/* Change values here to update the entire app's look & feel */
+
+/* ===== GOOGLE FONTS IMPORT ===== */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=EB+Garamond:wght@400;500;600;700&display=swap');
+
+:root {
+  /* ===== COLORS ===== */
+
+  /* Primary Background - Page/Body */
+  --color-bg-primary: #F5F1E8;
+
+  /* Secondary Background - Cards, containers */
+  --color-bg-secondary: #FFFAF5;
+
+  /* Tertiary Background - Hover states, subtle backgrounds */
+  --color-bg-tertiary: #FAF7F0;
+
+  /* Text Colors */
+  --color-text-primary: #3E3E3E;
+  --color-text-secondary: #6B6B6B;
+  --color-text-light: #999999;
+  --color-text-inverse: #FFFFFF;
+
+  /* Button Colors */
+  --color-button-primary: #8B7355;
+  --color-button-primary-hover: #6F5A45;
+  --color-button-secondary: #D4A574;
+  --color-button-secondary-hover: #C19462;
+  --color-button-neutral: #6c757d;
+  --color-button-neutral-hover: #545b62;
+
+  /* Card Colors */
+  --color-card-bg: #E8DCC8;
+  --color-card-bg-light: #D9CDB8;
+  --color-card-border: #C9B9A3;
+
+  /* Action Colors */
+  --color-success: #7A9B6F;
+  --color-success-light: #E8F5E9;
+  --color-error: #C17D7D;
+  --color-error-light: #FFEBEE;
+  --color-warning: #ff9800;
+  --color-info: #2196F3;
+
+  /* Border & Divider Colors */
+  --color-border-light: #E8E8E8;
+  --color-border-medium: #DDDDDD;
+  --color-border-dark: #CCCCCC;
+
+  /* Special Colors */
+  --color-overlay: rgba(0, 0, 0, 0.5);
+  --color-shadow: rgba(0, 0, 0, 0.1);
+
+  /* ===== FONTS ===== */
+  /* Playfair Display: Elegant, neoclassical (Roman-inspired) serif for headings */
+  /* EB Garamond: Historically accurate, Renaissance-era serif for body text */
+  --font-body: 'EB Garamond', serif;
+  --font-heading: 'Playfair Display', serif;
+  --font-sans: 'Arial', sans-serif;
+  --font-mono: 'Courier New', monospace;  /* ← ADD THIS */
+
+  /* ===== SPACING ===== */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-2xl: 48px;
+
+  /* ===== SIZING ===== */
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 10px;
+  --border-radius-xl: 15px;
+
+  --border-width-thin: 1px;
+  --border-width-medium: 2px;
+
+  /* ===== SHADOWS ===== */
+  --shadow-sm: 0 2px 5px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 60px rgba(0, 0, 0, 0.3);
+
+  /* ===== TRANSITIONS ===== */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+
+  /* ===== Z-INDEX ===== */
+  --z-dropdown: 100;
+  --z-sticky: 100;
+  --z-modal: 1000;
+  --z-tooltip: 1100;
+}
+
+/* Apply base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--color-text-primary);
+}

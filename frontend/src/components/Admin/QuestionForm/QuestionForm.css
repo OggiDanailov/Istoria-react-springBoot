@@ -1,5 +1,5 @@
 .question-form {
-  background: #f9f9f9;
+  background: var(--color-bg-secondary);
   border-radius: 10px;
   padding: 2rem;
   margin: 1rem 0 2rem 0;
@@ -7,7 +7,7 @@
 }
 
 .question-form h3 {
-  color: #333;
+  color: var(--color-text-primary);
   margin-bottom: 1.5rem;
 }
 
@@ -73,7 +73,7 @@
 }
 
 .questions-list h3 {
-  color: #333;
+  color: var(--color-text-primary);
   margin-bottom: 1rem;
 }
 

@@ -101,7 +101,7 @@ function Results({ questions, userAnswers, onRestart, onBack, chapterId, batchId
   const passStatus = getPassStatus()
 
   return (
-    <div className="quiz-container">
+    <div className="quiz-container wrinkled-paper">
       <button onClick={onBack} className="back-btn">
         ← Back to Reading
       </button>
