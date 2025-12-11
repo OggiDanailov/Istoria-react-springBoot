@@ -1,9 +1,63 @@
+/* ===== RESULTS BUTTONS ===== */
 .read-more-btn {
-  margin-top: '10px';
-  padding: '8px 15px';
-  background-color: '#4CAF50';
-  color: 'white';
-  border: 'none';
-  border-radius: '5px';
-  cursor: 'pointer'
+  background-color: var(--color-button-primary);
+  color: var(--color-text-inverse);
+  border: none;
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-sm) var(--spacing-md);
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  font-family: var(--font-body);
+  margin-top: var(--spacing-sm);
+  display: block;
+}
+
+.read-more-btn:hover {
+  background-color: var(--color-button-primary-hover);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.restart-btn {
+  background-color: var(--color-button-secondary);
+  color: var(--color-text-inverse);
+  border: none;
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-md) var(--spacing-lg);
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  font-family: var(--font-body);
+  width: 100%;
+  margin-top: var(--spacing-lg);
+}
+
+.restart-btn:hover {
+  background-color: var(--color-button-secondary-hover);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.next-batch-btn {
+  background-color: var(--color-success);
+  color: var(--color-text-inverse);
+  border: none;
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-md) var(--spacing-lg);
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  font-family: var(--font-body);
+  width: 100%;
+  margin-top: var(--spacing-lg);
+}
+
+.next-batch-btn:hover {
+  background-color: #6a8a63;
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
 }

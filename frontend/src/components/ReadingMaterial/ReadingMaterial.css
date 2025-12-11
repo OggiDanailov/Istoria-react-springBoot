@@ -1,41 +1,347 @@
+/* ReadingMaterial.css - Complete styling with design system variables */
+
+/* ===== CHAPTER SELECTOR ===== */
 .chapter-selector {
-  margin: 20px 0;
-  padding: 15px;
-  background: #f5f5f5;
-  border-radius: 8px;
+  margin: var(--spacing-lg) 0;
+  padding: var(--spacing-md);
+  background: var(--color-bg-tertiary);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--border-radius-lg);
 }
 
 .chapter-selector h3 {
   margin-top: 0;
+  color: var(--color-text-primary);
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
 }
 
 .chapter-buttons {
   display: flex;
-  gap: 10px;
+  gap: var(--spacing-md);
   flex-wrap: wrap;
 }
 
 .chapter-btn {
-  padding: 10px 15px;
-  background: white;
-  border: 2px solid #ddd;
-  border-radius: 4px;
+  padding: var(--spacing-sm) var(--spacing-md);
+  background: var(--color-bg-secondary);
+  border: 2px solid var(--color-border-medium);
+  border-radius: var(--border-radius-md);
   cursor: pointer;
-  font-size: 14px;
-  transition: all 0.3s ease;
+  font-size: 0.95rem;
+  transition: all var(--transition-normal);
+  font-family: var(--font-body);
+  color: var(--color-text-primary);
+  font-weight: 500;
 }
 
 .chapter-btn:hover {
-  border-color: #4caf50;
+  border-color: var(--color-button-primary);
+  background: var(--color-bg-primary);
+  box-shadow: var(--shadow-sm);
 }
 
 .chapter-btn.active {
-  background: #4caf50;
-  color: white;
-  border-color: #4caf50;
+  background: var(--color-button-primary);
+  color: var(--color-text-inverse);
+  border-color: var(--color-button-primary);
+  font-weight: 600;
 }
 
-.start-quiz-btn:disabled {
-  opacity: 0.5;
+/* ===== READING MATERIAL ===== */
+.reading-material {
+  background: var(--color-bg-secondary);
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-lg);
+  margin: var(--spacing-lg) 0;
+  line-height: 1.8;
+  box-shadow: var(--shadow-sm);
+}
+
+.reading-material h2 {
+  color: var(--color-text-primary);
+  font-family: var(--font-heading);
+  margin-top: var(--spacing-lg);
+  margin-bottom: var(--spacing-md);
+  font-size: 1.4rem;
+}
+
+.reading-material h2:first-child {
+  margin-top: 0;
+}
+
+.reading-material p {
+  color: var(--color-text-secondary);
+  margin-bottom: var(--spacing-md);
+  font-family: var(--font-body);
+}
+
+.reading-material ul,
+.reading-material ol {
+  margin-left: var(--spacing-lg);
+  margin-bottom: var(--spacing-md);
+  color: var(--color-text-secondary);
+}
+
+.reading-material li {
+  margin-bottom: var(--spacing-sm);
+}
+
+.reading-material strong {
+  color: var(--color-text-primary);
+  font-weight: 600;
+}
+
+/* ===== BATCHES CONTAINER (NEW - DISTINCT SECTION) ===== */
+.batches-container {
+  background: var(--color-bg-secondary);
+  border: 2px solid var(--color-border-medium);
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-lg);
+  margin: var(--spacing-xl) 0 var(--spacing-lg) 0;
+  box-shadow: var(--shadow-md);
+}
+
+.batches-container h3 {
+  margin-top: 0;
+  margin-bottom: var(--spacing-lg);
+  color: var(--color-text-primary);
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  padding-bottom: var(--spacing-md);
+  border-bottom: 2px solid var(--color-button-secondary);
+}
+
+/* ===== BATCHES LIST ===== */
+.batches-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+/* ===== INDIVIDUAL BATCH CARD ===== */
+.batch-card {
+  background: var(--color-bg-tertiary);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-md);
+  transition: all var(--transition-normal);
+}
+
+.batch-card:hover {
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-button-primary);
+}
+
+.batch-card.locked {
+  opacity: 0.6;
+  background: #f9f9f9;
+}
+
+/* ===== BATCH HEADER (RESTRUCTURED) ===== */
+.batch-header {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: var(--spacing-md);
+  align-items: center;
+  margin-bottom: var(--spacing-md);
+}
+
+.batch-icon {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.batch-info {
+  margin: 0;
+}
+
+.batch-info h4 {
+  margin: 0 0 var(--spacing-xs) 0;
+  color: var(--color-text-primary);
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+}
+
+.batch-questions {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: 0.9rem;
+  font-family: var(--font-body);
+}
+
+.batch-status {
+  background: var(--color-button-secondary);
+  color: var(--color-text-inverse);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
+  font-family: var(--font-body);
+}
+
+/* ===== BATCH STATUS COLORS ===== */
+.batch-card.mastered .batch-status {
+  background: var(--color-success);
+}
+
+.batch-card.passed .batch-status {
+  background: var(--color-warning);
+  color: #333;
+}
+
+.batch-card.in-progress .batch-status {
+  background: var(--color-button-neutral);
+}
+
+.batch-card.unlocked .batch-status {
+  background: var(--color-button-primary);
+}
+
+/* ===== PROGRESS BAR ===== */
+.batch-progress-bar {
+  background: var(--color-border-light);
+  height: 8px;
+  border-radius: var(--border-radius-sm);
+  overflow: hidden;
+  margin-bottom: var(--spacing-md);
+}
+
+.progress-fill {
+  background: linear-gradient(90deg, var(--color-button-primary), var(--color-button-secondary));
+  height: 100%;
+  transition: width var(--transition-normal);
+}
+
+/* ===== BATCH BUTTONS ===== */
+.start-batch-btn,
+.retake-batch-btn {
+  background-color: var(--color-button-primary);
+  color: var(--color-text-inverse);
+  border: none;
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-sm) var(--spacing-md);
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  font-family: var(--font-body);
+  width: 100%;
+  margin-bottom: var(--spacing-sm);
+}
+
+.start-batch-btn:hover:not(:disabled) {
+  background-color: var(--color-button-primary-hover);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.start-batch-btn:disabled {
+  opacity: 0.6;
   cursor: not-allowed;
+}
+
+.retake-batch-btn {
+  background-color: var(--color-button-secondary);
+}
+
+.retake-batch-btn:hover {
+  background-color: var(--color-button-secondary-hover);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+/* ===== BATCH MESSAGES ===== */
+.batch-locked-message {
+  background: #fff3cd;
+  border: 1px solid #ffc107;
+  color: #856404;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--border-radius-sm);
+  font-size: 0.9rem;
+  margin: 0;
+  font-family: var(--font-body);
+}
+
+.batch-attempts {
+  margin: var(--spacing-sm) 0 0 0;
+  color: var(--color-text-secondary);
+  font-size: 0.85rem;
+  font-family: var(--font-body);
+}
+
+/* ===== LOADING STATE ===== */
+.loading {
+  text-align: center;
+  padding: var(--spacing-xl);
+  color: var(--color-text-secondary);
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+}
+
+/* ===== BACK BUTTON ===== */
+.back-btn {
+  background-color: var(--color-button-neutral);
+  color: var(--color-text-inverse);
+  border: none;
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-sm) var(--spacing-md);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  margin-bottom: var(--spacing-lg);
+  font-family: var(--font-body);
+}
+
+.back-btn:hover {
+  background-color: var(--color-button-neutral-hover);
+  box-shadow: var(--shadow-md);
+}
+
+/* ===== MAIN HEADING ===== */
+.quiz-container h1 {
+  color: var(--color-text-primary);
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
+  margin-bottom: var(--spacing-lg);
+  text-align: center;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+  .chapter-buttons {
+    gap: var(--spacing-sm);
+  }
+
+  .chapter-btn {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    font-size: 0.85rem;
+  }
+
+  .batch-header {
+    grid-template-columns: auto 1fr;
+    gap: var(--spacing-sm);
+  }
+
+  .batch-status {
+    grid-column: 1 / -1;
+    justify-self: flex-start;
+    margin-top: var(--spacing-sm);
+  }
+
+  .batches-container {
+    padding: var(--spacing-md);
+    margin: var(--spacing-lg) 0 var(--spacing-md) 0;
+  }
+
+  .batches-container h3 {
+    font-size: 1.1rem;
+  }
+
+  .start-batch-btn,
+  .retake-batch-btn {
+    padding: var(--spacing-sm) var(--spacing-md);
+    font-size: 0.9rem;
+  }
 }

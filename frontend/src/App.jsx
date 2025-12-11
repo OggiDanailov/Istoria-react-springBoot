@@ -22,6 +22,7 @@ function App() {
   const [showAuthModal, setShowAuthModal] = useState(false)
   const [authView, setAuthView] = useState('signin') // 'signin' or 'signup'
   const [loading, setLoading] = useState(true)
+  const [totalPoints, setTotalPoints] = useState(0)
 
   // Check if user is already logged in on mount
   useEffect(() => {
@@ -38,6 +39,7 @@ function App() {
           if (response.status === 200) {
             setIsLoggedIn(true)
             setUser(JSON.parse(savedUser))
+            fetchUserPoints(token)
           } else {
             localStorage.removeItem('token')
             localStorage.removeItem('user')
@@ -52,6 +54,22 @@ function App() {
 
     validateStoredAuth()
   }, [])
+
+  // pulls current points of User in the navbar
+  const fetchUserPoints = async (token) => {
+    try {
+      const response = await fetch(`${API_BASE_URL}/api/quiz-attempts/user`, {
+        headers: { 'Authorization': `Bearer ${token}` }
+      })
+      if (response.ok) {
+        const attempts = await response.json()
+        const points = attempts.reduce((sum, attempt) => sum + attempt.pointsAwarded, 0)
+        setTotalPoints(points)
+      }
+    } catch (err) {
+      console.error('Failed to fetch user points:', err)
+    }
+  }
 
   const handleSignUpClick = () => {
     setAuthView('signup')
@@ -160,10 +178,11 @@ function App() {
           </button>
           {isLoggedIn ? (
             <>
+              <span className="user-email">{user?.email}</span>
               <button onClick={handleGoToDashboard} className="dashboard-btn">
                 📊 Dashboard
               </button>
-              <span className="user-email">{user?.email}</span>
+              <span className="points-badge">{totalPoints} ⭐</span>
               <button onClick={handleLogout} className="logout-btn">
                 Logout
               </button>
