@@ -239,15 +239,17 @@
 
 .score-badge.excellent {
   background: var(--color-success);
+  color: var(--color-text-inverse);
 }
 
 .score-badge.good {
   background: var(--color-warning);
-  color: #333;
+  color: var(--color-text-inverse);
 }
 
 .score-badge.needs-work {
   background: var(--color-error);
+  color: var(--color-text-inverse);
 }
 
 .attempt-details {

@@ -169,9 +169,10 @@ function App() {
   const renderHeader = () => (
     <div className="app-header">
       <div className="header-content">
-        <h1 onClick={() => setCurrentView('periods')} style={{ cursor: 'pointer' }}>
-          📚 Historical Quiz
-        </h1>
+        <div onClick={() => setCurrentView('periods')} style={{ cursor: 'pointer' }} className="app-logo">
+          <h1>🛡️ AVE CAESAR </h1>
+          <p>⚔️ morituri te salutant ⚔️</p>
+        </div>
         <div className="header-right">
           <button onClick={handleGoToAbout} className="nav-btn">
             ℹ️ About

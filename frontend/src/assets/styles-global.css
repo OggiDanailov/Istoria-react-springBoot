@@ -178,6 +178,27 @@ body {
   border-radius: var(--border-radius-lg);
 }
 
+/* ====== LOGO ========== */
+.app-logo {
+  text-align: center;
+  cursor: pointer;
+}
+
+.app-logo h1 {
+  font-size: 2rem;
+  font-family: var(--font-heading);
+  margin: 0;
+  color: var(--color-text-primary);
+}
+
+.app-logo p {
+  font-size: 1rem;
+  font-style: italic;
+  margin: 0;
+  color: var(--color-text-primary);
+  letter-spacing: 1px;
+}
+
 /* ===== MAIN CONTAINER ===== */
 .quiz-container {
   background: var(--color-bg-secondary);
