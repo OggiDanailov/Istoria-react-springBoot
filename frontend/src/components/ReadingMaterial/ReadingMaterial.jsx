@@ -51,7 +51,6 @@ function ReadingMaterial({ topic, selectedChapter, onChapterSelect, onStartQuiz,
   }
 
   const fetchBatchesForChapter = async (chapterId) => {
-    console.log('*** fetchBatchesForChapter called, chapterId:', chapterId)
     setLoadingBatches(true)
     try {
       // Fetch all batches for this chapter
@@ -63,7 +62,8 @@ function ReadingMaterial({ topic, selectedChapter, onChapterSelect, onStartQuiz,
         return
       }
       const batchData = await batchResponse.json()
-      setBatches(batchData)
+      const sortedBatches = batchData.sort((a, b) => a.batchOrder - b.batchOrder)
+      setBatches(sortedBatches)
 
       // If logged in, fetch user's progress on each batch
       if (isLoggedIn) {
