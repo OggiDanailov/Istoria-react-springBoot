@@ -269,6 +269,10 @@ function App() {
         batchId={selectedBatch.id}
         onBack={handleBackToReading}
         isLoggedIn={isLoggedIn}
+        onQuizComplete={() => {
+          const token = localStorage.getItem('token')
+          if (token) fetchUserPoints(token)
+        }}
       />
     ) : (
       <div>Missing data: topic={!!selectedTopic} chapter={!!selectedChapter} batch={!!selectedBatch}</div>

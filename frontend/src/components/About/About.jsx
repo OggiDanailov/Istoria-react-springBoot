@@ -72,7 +72,7 @@ return (
 <p>No points awarded, no penalty. Encourages mastery before moving on.</p>
 <p><strong>Example:</strong> Hard Batch with 3/5 correct (60%) = <strong>0 points</strong></p>
 
-<h3>❌ Failing (<50% Accuracy)</h3>
+<h3>❌ Failing (&lt;50% Accuracy)</h3>
 <p>Points are deducted to discourage careless attempts. Deduction = half of total possible points.</p>
 <p><strong>Example:</strong> Medium Batch with 1/5 correct (20%) = <strong>-5 points</strong> (half of 10 total)</p>
 

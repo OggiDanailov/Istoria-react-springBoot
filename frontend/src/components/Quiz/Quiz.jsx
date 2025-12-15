@@ -4,7 +4,7 @@ import { shuffleQuestionOptions } from '../../utils/formUtils'
 import { API_BASE_URL } from '../../config/api'
 import './Quiz.css'
 
-function Quiz({ batch, chapterId, batchId, onBack, isLoggedIn }) {
+function Quiz({ batch, chapterId, batchId, onBack, isLoggedIn, onQuizComplete }) {
   // const [batch, setBatch] = useState(null)
   const [questions, setQuestions] = useState([])
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
@@ -140,6 +140,7 @@ function Quiz({ batch, chapterId, batchId, onBack, isLoggedIn }) {
         totalPoints={totalPoints}
         onBack={onBack}
         isLoggedIn={isLoggedIn}
+        onQuizComplete={onQuizComplete}
         batchDifficulty={batch?.difficulty}
       />
     )

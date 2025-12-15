@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react'
 import { API_BASE_URL } from '../../config/api'
 import './Results.css'
 
-function Results({ questions, userAnswers, onRestart, onBack, chapterId, batchId, score, correctCount, totalQuestions, totalPoints, isLoggedIn, batchDifficulty }) {
+function Results({ questions, userAnswers, onRestart, onBack, chapterId, batchId, score, correctCount, totalQuestions, totalPoints, isLoggedIn, batchDifficulty, onQuizComplete }) {
   const [saveStatus, setSaveStatus] = useState('')
   const hasAttemptedSave = useRef(false)
 
@@ -68,6 +68,7 @@ function Results({ questions, userAnswers, onRestart, onBack, chapterId, batchId
       if (response.ok) {
         setSaveStatus('saved')
         await saveBatchProgress(accuracy)
+         onQuizComplete?.()
       } else {
         setSaveStatus('error')
         console.error('Failed to save quiz attempt')
