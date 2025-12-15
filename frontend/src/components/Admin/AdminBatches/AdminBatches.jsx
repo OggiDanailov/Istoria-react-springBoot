@@ -110,7 +110,7 @@ function AdminBatches() {
       const newBatch = await batchResponse.json()
 
       setBatches([...batches, newBatch])
-      setDifficulty(1)
+      setDifficulty(newBatch.difficulty)
       setBatchOrder(batchOrder + 1)
       setDescription('')
       setSelectedQuestions([])
@@ -272,9 +272,10 @@ function AdminBatches() {
     <div className="admin-batches">
       <h2>Manage Quiz Batches</h2>
 
-      {/* Chapter Selector */}
+      {/* Step 1: Chapter Selector */}
       <div className="form-section">
         <h3>Step 1: Select a Chapter</h3>
+        <p className="step-description">Choose which chapter you want to manage batches for</p>
         <select
           value={selectedChapterId || ''}
           onChange={(e) => handleChapterSelect(Number(e.target.value))}
@@ -291,10 +292,12 @@ function AdminBatches() {
 
       {selectedChapterId && (
         <>
-          {/* Existing Batches */}
+          {/* EXISTING BATCHES - MOVED TO TOP */}
           {batches.length > 0 && (
-            <div className="form-section">
-              <h3>Existing Batches</h3>
+            <div className="form-section existing-batches-section">
+              <h3>📋 Manage Existing Batches</h3>
+              <p className="section-description">View, update, and delete batches below</p>
+
               <div className="batches-list">
                 {batches.map(batch => (
                   <div key={batch.id} className="batch-item">
@@ -391,9 +394,11 @@ function AdminBatches() {
             </div>
           )}
 
-          {/* Create Batch Form */}
+          {/* Step 2: Create Batch Form */}
           <div className="form-section">
             <h3>Step 2: Create New Batch</h3>
+            <p className="step-description">Choose difficulty level and batch order for new batch</p>
+
             <form onSubmit={handleCreateBatch} className="batch-form">
               <div className="form-group">
                 <label>Difficulty Level</label>
@@ -436,12 +441,15 @@ function AdminBatches() {
             </form>
           </div>
 
-          {/* Questions for this Difficulty */}
+          {/* Step 3: Add Questions to Batch */}
           <div className="form-section">
-            <h3>Step 3: Questions for {getDifficultyLabel(difficulty)} Level</h3>
+            <h3>Step 3: Add Questions to Batch</h3>
+            <p className="step-description">Associate {getDifficultyLabel(difficulty).toLowerCase()} questions to your batch (only matching difficulty levels shown)</p>
+
             <p className="info-text">
-              {filterQuestionsByDifficulty().length} questions available at this difficulty level
+              {filterQuestionsByDifficulty().length} {getDifficultyLabel(difficulty).toLowerCase()} questions available
             </p>
+
             <div className="form-group">
               <label>Select Batch to Add Questions</label>
               <select
@@ -459,6 +467,7 @@ function AdminBatches() {
                   ))}
               </select>
             </div>
+
             <div className="questions-list">
               {filterQuestionsByDifficulty().map(question => (
                 <div key={question.id} className="question-item">
@@ -474,6 +483,7 @@ function AdminBatches() {
                 </div>
               ))}
             </div>
+
             {selectedQuestions.length > 0 && selectedBatchId && (
               <button
                 onClick={handleAddQuestionsToBatch}
@@ -483,6 +493,7 @@ function AdminBatches() {
                 {loading ? 'Adding...' : `Add ${selectedQuestions.length} Question(s) to Batch`}
               </button>
             )}
+
             {filterQuestionsByDifficulty().length === 0 && (
               <p className="warning">No questions at this difficulty level. Create questions first!</p>
             )}
