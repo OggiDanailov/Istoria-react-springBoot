@@ -16,29 +16,6 @@ function Results({ questions, userAnswers, onRestart, onBack, chapterId, batchId
     }
   }, [isLoggedIn])
 
-  const saveBatchProgress = async (accuracy) => {
-    try {
-      const token = localStorage.getItem('token')
-      if (!token || !batchId) {
-        return
-      }
-
-      await fetch(`${API_BASE_URL}/api/batches/${batchId}/progress`, {
-        method: 'PUT',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${token}`
-        },
-        body: JSON.stringify({
-          score: score,
-          totalPoints: totalPoints
-        })
-      })
-    } catch (err) {
-      console.error('Error saving batch progress:', err)
-    }
-  }
-
   const saveQuizAttempt = async () => {
     setSaveStatus('saving')
 
@@ -67,7 +44,6 @@ function Results({ questions, userAnswers, onRestart, onBack, chapterId, batchId
 
       if (response.ok) {
         setSaveStatus('saved')
-        await saveBatchProgress(accuracy)
          onQuizComplete?.()
       } else {
         setSaveStatus('error')
