@@ -474,3 +474,9 @@ Caused by: org.h2.jdbc.JdbcSQLNonTransientConnectionException: The connection wa
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:690)
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
 	... 16 more
+2025-12-15 22:32:27.831909-05:00 jdbc[131]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION CHARACTER VARYING(255)": "U&'Explore how Rome''s new Republic struggled between patrician aristocrats and ... (317)"; SQL statement:
+insert into topics (description,period_id,title,id) values (?,?,?,default) [22001-232]
+2025-12-15 22:32:56.947047-05:00 jdbc[132]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION CHARACTER VARYING(255)": "U&'Explore how Rome''s new Republic struggled between patrician aristocrats and ... (317)"; SQL statement:
+insert into topics (description,period_id,title,id) values (?,?,?,default) [22001-232]
