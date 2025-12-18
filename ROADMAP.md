@@ -1,351 +1,213 @@
-# ROADMAP UPDATE - December 15, 2025
+# ROADMAP UPDATE - December 18, 2025
 
-**Last Updated**: December 15, 2025 (All Critical Bugs Fixed!)
+**Last Updated**: December 18, 2025
 **Current Phase**: Phase 4b (Production Readiness + Design Overhaul) - COMPLETE
 **Launch Strategy**: Path B - Polished Launch (Dec 15-20) - READY
 **Analytics**: Google Analytics 4 (GA4) - Launching Dec 14
 
 ---
 
-## 📅 UPDATED LAUNCH SCHEDULE
+## 📚 CONTENT CREATION PROGRESS
 
-### ✅ Dec 10 - COMPLETE
-- ✅ Design system created (CSS variables)
-- ✅ Google Fonts integrated (Playfair Display + EB Garamond)
-- ✅ Color palette designed (warm, historical aesthetic)
-- ✅ Wrinkled paper technique implemented
-- ✅ AdminBatches.css completely rebuilt
-- ✅ User Dashboard redesigned
-- ✅ Points badge added to navbar
-- ✅ Fixed "Not answered" bug (multi-answer questions)
-- ✅ Button styling fixed on Results page
-- ✅ Database schema updated (user_answers column added)
-- ✅ Updated About page with "Ave Caesar" branding
+### ✅ Punic Wars Topic - COMPLETE (Dec 15-18)
 
----
+**Chapter 1: First Punic War (264-241 BCE)** ✅ COMPLETE
+- 13 sections with comprehensive content
+- Covers causes, campaigns, naval warfare, treaty
+- Status: Ready for app integration
 
-### ✅ Dec 11 - TESTING & VALIDATION COMPLETE
+**Chapter 2: Second Punic War (218-201 BCE)** ✅ COMPLETE
+- 13 sections, includes Hannibal, Cannae, Scipio Africanus
+- Covers financial burden, mercenary systems, Spanish conquest
+- Status: Ready for app integration
 
-**Completed Activities:**
-- ✅ Full end-to-end testing of quiz flow
-- ✅ Tested dashboard points tracking
-- ✅ Verified batch difficulty displays correctly
-- ✅ Tested batch progression enforcement
-- ✅ Verified batch sorting (batchOrder)
-- ✅ Tested points calculation with multiple scenarios
-- ✅ Verified retake prevention working
-- ✅ Identified critical bugs for polish
+**Chapter 3: Third Punic War (149-146 BCE)** ✅ COMPLETE
+- 11 sections, covers Rome's dominance, Cato, destruction of Carthage
+- Includes Macedonia wars, Seleucid Empire, Masinissa harassment
+- Status: Ready for app integration (Dec 18)
 
-**Test Results Summary:**
-✅ **Points System FULLY TESTED & WORKING**
-- Easy Batch: +5 points (5 questions × 1 point)
-- Medium Batch: +8 points for 80% (5 questions × 2 points) ✅
-- Hard Batch: -7.5 penalty for <50% (5 questions × 3 points) ✅
-- Batch progression: Working correctly ✅
-- Retake prevention: Working correctly ✅
+**Punic Wars Total**: 37+ sections, ~8,000+ words
 
 ---
 
-### ✅ Dec 15 - BUG FIXES & CODE REFACTORING COMPLETE
+### ⏳ NEXT: Middle Republic Topic - Social Transformation and Political Crisis (264-121 BCE)
 
-**Critical Bugs Fixed:**
+**Strategic Plan**: Split into 2 chapters
 
-#### 1. ✅ Navbar Points Badge Not Updating - FIXED
-**What was happening:**
-- Quiz completed, points saved correctly
-- Dashboard showed correct total
-- **Navbar showed OLD/stale value** ❌
+**Chapter 1: Economic and Social Transformation After the Punic Wars (264-180 BCE)**
 
-**What we did:**
-- Added `onQuizComplete` callback to Quiz component
-- Callback triggers `fetchUserPoints()` to refresh navbar data
-- User state updates in App.jsx after quiz submission
+Topics to cover:
+- Immediate aftermath of Punic Wars victory
+- Economic changes from conquest and wealth influx
+- Rise of latifundia (large estates)
+- Slave systems expansion
+- Urban growth and urbanization
+- Rise of equestrian class (merchants/wealthy non-nobles)
+- Military changes (professional armies vs. citizen soldiers)
+- Land redistribution problems
+- Social mobility and tensions
+- Early signs of political stress
+- Foundation of internal conflicts to come
 
-**Result:** Navbar updates INSTANTLY after quiz completion ✅
+**Chapter 2: Political Crisis and the Gracchi Brothers (133-121 BCE)**
 
-#### 2. ✅ AdminBatches Component Confusing UI - FIXED
-**What was wrong:**
-- UI flow unclear (steps mixed with management)
-- Hard to distinguish between managing existing vs creating new
-- No visual separation between workflows
+Topics to cover:
+- Political instability in Late Republic
+- Why the system was breaking down
+- Tiberius Gracchus and land reform attempt (133 BCE)
+- Reaction from Senate and wealthy class
+- Death of Tiberius (first political assassination)
+- Gaius Gracchus and expanded reforms (123-122 BCE)
+- Grain law, public works, extensions to Italian allies
+- Political violence escalating
+- Death of Gaius Gracchus (121 BCE)
+- Impact on Roman institutions
+- Foreshadowing of civil wars to come
+- Connection to Late Republic instability
 
-**What we did:**
-- Reorganized AdminBatches.jsx:
-  - **Step 1:** Select Chapter
-  - **Existing Batches** (moved to top, green background)
-  - **Step 2:** Create Batch
-  - **Step 3:** Add Questions
-- Added `step-description` text under each section
-- Applied green background to make management section distinct
-- Added section descriptions for clarity
-
-**Result:** Clean, intuitive workflow with clear separation ✅
-
-#### 3. ✅ Accuracy Showing 112% - FIXED
-**What was wrong:**
-- Dashboard showed "Accuracy: 112%" (IMPOSSIBLE!)
-- Was calculating: questionsCorrect(28) / questionsAnswered(25) * 100 = 112%
-
-**Root cause:**
-- UserProgressController was adding POINTS instead of QUESTION COUNT
-- `totalQuestionsCorrect += attempt.getScore()` (WRONG - score is in points!)
-
-**What we did:**
-- Created `countCorrectAnswersFromAttempt()` method
-- Parses stored answers JSON
-- Counts actual questions correct (not points)
-- Backend now updates user_progress correctly after each quiz
-
-**Result:** Accuracy now shows correct percentage (e.g., 69%) ✅
-
-#### 4. ✅ Attempt Counter Showing Double Values - FIXED
-**What was wrong:**
-- User took 2 attempts on Medium batch
-- Attempt counter showed: **Attempts: 4** (doubling!)
-
-**Root cause:**
-- `saveBatchProgress()` in Results.jsx was calling backend AGAIN
-- QuizAttemptController already called `updateBatchProgress()`
-- Each quiz was counted TWICE
-
-**What we did:**
-- Removed `saveBatchProgress()` function from Results.jsx
-- Removed the call to `await saveBatchProgress(accuracy)`
-- Backend handles ALL batch progress updates now (single source of truth)
-
-**Result:** Attempt counter now accurate (1 attempt = Attempts: 1) ✅
+**Status**: Planning phase - ready to begin Dec 19
 
 ---
 
-**Code Quality Improvements:**
+### 📖 Early Republic - The Conflict of the Orders (ACTIVE)
 
-#### ✅ Created QuizService.java (NEW)
-- Extracted all business logic from QuizAttemptController
-- Methods moved to service:
-  - `verifyAnswersAndCalculateScore()`
-  - `calculateTotalPoints()`
-  - `calculatePointsToAward()` ← Points logic
-  - `updateBatchProgress()`
-  - `updateUserProgressForTopic()`
-  - `countCorrectAnswersFromAttempt()`
-
-#### ✅ Refactored QuizAttemptController
-- Now only handles HTTP request/response
-- Delegates all business logic to QuizService
-- Much cleaner, easier to test
-- Follows Spring Boot service layer pattern
-
-#### ✅ Added Documentation
-- JavaDoc comments on all service methods
-- Clear explanation of what each method does
-- Makes code maintainable for future developers
-
----
-
-**Fresh Testing After All Fixes:**
-```
-Test: Take Easy batch quiz (5 questions × 1 point = 5 total)
-Result: 20% accuracy (1/5 correct)
-
-Expected: -2 points (half of 5) ✅
-Actual: -2 points ✅ CORRECT!
-
-Expected: Attempt counter = 1
-Actual: Attempt counter = 1 ✅ CORRECT!
-
-Expected: Dashboard accuracy = 20%
-Actual: Dashboard accuracy = 20% ✅ CORRECT!
-
-Expected: Navbar shows points
-Actual: Navbar shows points & updates instantly ✅ CORRECT!
-```
-
----
-
-## 🐛 BUGS FIXED - SUMMARY
-
-| Bug | Severity | Status | Fixed Date |
-|-----|----------|--------|-----------|
-| Navbar Points Badge (stale) | HIGH | ✅ FIXED | Dec 15 |
-| AdminBatches UI (confusing) | HIGH | ✅ FIXED | Dec 15 |
-| Accuracy 112% (wrong calc) | HIGH | ✅ FIXED | Dec 15 |
-| Attempt Counter (doubling) | MEDIUM | ✅ FIXED | Dec 15 |
-| Batch Progression (not enforced) | HIGH | ✅ FIXED | Dec 11 |
-| Mixed Difficulty Questions | MEDIUM | ✅ FIXED | Dec 11 |
-| Duplicate Batches | LOW | ✅ FIXED | Dec 11 |
-
----
-
-## 📊 PROGRESS SUMMARY
-
-| Phase | Status | Completion |
-|-------|--------|-----------|
-| Phase 4a: Hardening | ✅ COMPLETE | 100% |
-| Phase 4b: Design | ✅ COMPLETE | 100% |
-| Testing (Dec 11) | ✅ COMPLETE | 100% |
-| **Bug Fixes (Dec 15)** | **✅ COMPLETE** | **100%** |
-| **Code Refactoring** | **✅ COMPLETE** | **100%** |
-| Logo Update | ✅ COMPLETE | 100% |
-| Points Documentation | ✅ COMPLETE | 100% |
-| Content Expansion (Dec 12) | ⏳ READY | 0% |
-| GA4 Integration (Dec 14) | ⏳ READY | 0% |
-| Final Polish (Dec 13-15) | ✅ COMPLETE | 100% |
-| **LAUNCH READY** | **🚀 GO** | **READY!** |
-
----
-
-## 🚀 CRITICAL SUCCESS FACTORS - ALL MET ✅
-
-**Before Launch (Dec 15):**
-
-### ✅ Completed:
-1. ✅ Fix navbar points badge - DONE (Dec 15)
-2. ✅ Fix AdminBatches component - DONE (Dec 15)
-3. ✅ Verify attempt counter accurate - DONE (Dec 15)
-4. ✅ Batch progression enforced - DONE (Dec 11)
-5. ✅ Points system fully tested & working - DONE (Dec 11)
-6. ✅ Design system complete & beautiful - DONE (Dec 10)
-7. ✅ About page updated with Ave Caesar branding - DONE (Dec 10)
-8. ✅ Logo implemented (🛡️ Ave Caesar 🛡️) - DONE (Dec 10)
-9. ✅ Retake prevention working - DONE (Dec 11)
-10. ✅ Dashboard displaying correctly - DONE (Dec 15)
-11. ✅ Code refactoring (Service layer) - DONE (Dec 15)
-
-### Still To Do:
-12. Content expansion (Dec 12) - OPTIONAL (one chapter ready)
-13. GA4 integration (Dec 14) - READY
-
----
-
-## 📅 REMAINING TIMELINE
-
-**Dec 12 (Tomorrow) - Content Expansion (OPTIONAL)**
-- Add 20-30 new questions to Early Rome chapter
-- Ensure proper difficulty distribution (Easy/Medium/Hard)
-- Testing of new content
-- *Can defer to post-launch if running behind*
-
-**Dec 13-15 (Wed-Fri) - Final Checks**
-- ✅ All bugs fixed
-- ✅ Code refactored
-- Mobile testing & responsiveness
-- Final confidence check
-- Prepare for deployment
-
-**Dec 14 (Thursday) - GA4 Integration**
-- Set up Google Analytics account
-- Install tracking package
-- Configure event tracking
-- Verify data flowing
-
-**Dec 15-20 - Launch Window**
-- Deploy to production
-- Monitor GA4 analytics
-- Collect real user data
-- Fix any critical production bugs
-
----
-
-## 💡 Known Issues Not Blocking Launch
-
-### Low Priority Items (Phase 5):
-- "Read About This Topic" button navigation (deferred)
-- Database indexing for performance
-- Logging/monitoring setup
-- Additional content expansion
-
----
-
-## 📝 Test Data (Fresh - Dec 15)
-
-**Chapter**: Early Rome and the Kingdom (ID: 1)
-
-**Batches**:
-- Easy Batch (ID: 5, batchOrder: 1)
-  - Tested with fresh quiz ✅
-
-- Medium Batch (ID: 7, batchOrder: 2)
-  - Tested with previous sessions ✅
-
-- Hard Batch (ID: 8, batchOrder: 3)
-  - Ready for user testing ✅
-
-**User Data**: Clean after all testing
-- Ready for real users on launch
-
----
-
-## 🎯 What's Working PERFECTLY
-
-✅ Points calculation (all scenarios tested)
-✅ Batch progression enforcement
-✅ Retake prevention
-✅ Dashboard display
-✅ Design system & styling
-✅ Logo & branding (Ave Caesar)
-✅ Reading material display
-✅ Question randomization
-✅ Answer shuffling
-✅ User authentication
-✅ Score calculation
-✅ Navbar updates instantly
-✅ AdminBatches workflow
-✅ User progress tracking
-✅ Attempt counter accuracy
-✅ Backend business logic (Service layer)
-
----
-
-## 📊 Testing Confidence: VERY HIGH 🟢🟢🟢🟢🟢
-
-**Functionality**: 100% (All bugs fixed)
-**Data Integrity**: 100% (Math is perfect)
-**Code Quality**: 100% (Proper Spring Boot patterns)
-**User Experience**: 100% (Instant updates, clear UI)
-**Ready for Launch**: YES ✅ FULLY READY
-
----
-
-## 🎉 Summary
-
-**WE HAVE A PRODUCTION-READY APPLICATION!**
-
-All critical bugs have been squashed. The points system is bulletproof. AdminBatches is intuitive. The design is beautiful. The code follows Spring Boot best practices.
-
-We're ready to launch Ave Caesar! 🛡️
-
----
-
-**Document Version**: 2.0 (Dec 15 Complete)
-**Created**: December 15, 2025
-**Status**: Phase 4b COMPLETE - Ready for Launch
-**Next**: Deploy to production Dec 15-20 🚀
-
-## 🚀 CRITICAL SUCCESS FACTORS - ALL MET ✅
-[existing content]
-
-## 📚 CONTENT CREATION PROGRESS (NEW SECTION)
-
-**Early Republic - The Conflict of the Orders:**
-
-**Chapter 1: Origins (509-450 BCE)** ✅ COMPLETE (Dec 15)
+**Chapter 1: Origins of the Republic (509-450 BCE)** ✅ COMPLETE (Dec 15)
 - Section 1: Introduction to the Republic ✅
 - Section 2: Primary Sources ✅
 - Section 3: The Founding and Early Challenges ✅
 - Section 4: The Conflict of the Orders - Origins ✅
 - Section 5: The Twelve Tables ✅
-- Status: Ready to add to app (~450 lines)
+- Status: Ready for app integration
 
-**Chapter 2: Toward Resolution (450-367 BCE)** ⏳ IN PROGRESS (Dec 16)
-- [To be started]
+**Chapter 2: Toward Resolution (450-367 BCE)** ⏳ IN PROGRESS (Dec 19 PLANNED)
+- Sections planned: 5-6
+- Topics: Continuing patrician-plebeian conflict, further reforms, resolution
+- Status: Starting tomorrow
 
-**Chapter 3: Samnite Wars (367-290 BCE)** ⏳ PLANNED
-- [To be started]
+**Chapter 3: Samnite Wars (367-290 BCE)** ⏳ PLANNED (Dec 20)
+- Sections planned: 5-6
+- Topics: Rome's expansion beyond Italy, military victories
+- Status: After Chapter 2 complete
 
-**Chapter 4: Final Conquest of Italy (290-264 BCE)** ⏳ PLANNED
-- [To be started]
+**Chapter 4: Final Conquest of Italy (290-264 BCE)** ⏳ PLANNED (Dec 21)
+- Sections planned: 5-6
+- Topics: Remaining resistance, Pyrrhic War, Roman dominance
+- Status: After Chapter 3 complete
 
 ---
 
-## 📅 REVISED LAUNCH STRATEGY
-[existing content]
+## 📅 REVISED CONTENT TIMELINE
+
+### ✅ Completed
+- ✅ First Punic War chapter (13 sections)
+- ✅ Second Punic War chapter (13 sections)
+- ✅ Third Punic War chapter (11 sections)
+- ✅ Early Republic Ch. 1: Origins (5 sections)
+
+### ⏳ PLANNED - This Week
+
+**Dec 18 (Today)**
+- ⏳ Finalize Middle Republic topic structure
+- ⏳ Plan 2-chapter approach
+- ⏳ Outline key content for each chapter
+
+**Dec 19 (Tomorrow)**
+- ⏳ START: Early Republic Ch. 2 - Toward Resolution (450-367 BCE)
+- ⏳ START: Middle Republic Ch. 1 - Economic Transformation (if time permits)
+
+**Dec 20 (Friday)**
+- ⏳ Early Republic Ch. 3 - Samnite Wars (367-290 BCE)
+- ⏳ Continue Middle Republic content
+
+**Dec 21 (Saturday)**
+- ⏳ Early Republic Ch. 4 - Final Conquest of Italy (290-264 BCE)
+- ⏳ Middle Republic Ch. 1 or 2 (depending on progress)
+
+---
+
+## 🎯 CONTENT PRIORITIES
+
+### Current Focus
+1. **Early Republic Topic** - 4 chapters planned
+   - Ch. 1: Origins ✅ DONE
+   - Ch. 2-4: In progress
+
+2. **Middle Republic Topic** - 2 chapters planned
+   - Ch. 1: Economic/Social transformation
+   - Ch. 2: Gracchi crisis
+
+### Rationale
+- Early Republic completes the chronological story (509-264 BCE)
+- Bridges from Republic's founding to Punic Wars
+- Logical progression: Republic → Internal conflicts → External conquest → Internal crisis
+- Middle Republic shows consequences of empire
+
+---
+
+## 📊 CURRENT COVERAGE
+
+| Period | Topic | Status | Chapters | Sections |
+|--------|-------|--------|----------|----------|
+| 264-146 BCE | Punic Wars | ✅ COMPLETE | 3 | 37+ |
+| 509-264 BCE | Early Republic | ⏳ IN PROGRESS | 4 (1 done) | 5+ (expanding) |
+| 264-121 BCE | Middle Republic | ⏳ PLANNED | 2 | 0 (starting) |
+| 121-30 BCE | Late Republic | ⏳ FUTURE | ? | 0 |
+
+**Total Content So Far**: 46+ sections, ~8,000+ words
+
+---
+
+## 🚀 APPLICATION STATUS
+
+### ✅ All Critical Systems Working
+- Points calculation: PERFECT ✅
+- Batch progression: ENFORCED ✅
+- Design system: BEAUTIFUL ✅
+- User dashboard: ACCURATE ✅
+- Authentication: SECURE ✅
+- Content display: CLEAN ✅
+
+### Ready for Launch
+- Application: 100% production-ready ✅
+- Content: Growing steadily ✅
+- User experience: Polished ✅
+
+---
+
+## 💡 Tomorrow's Plan (Dec 19)
+
+**Primary Goal**: Begin Early Republic Chapter 2
+- Topic: Toward Resolution (450-367 BCE)
+- Approach: Continue narrative from Ch. 1
+- Sections: 5-6 planned
+- Focus: Further patrician-plebeian reforms, institutional development
+
+**Secondary Goal** (if time permits):
+- Begin outline for Middle Republic Chapter 1
+- Research key economic changes after Punic Wars
+- Plan structure for Gracchi crisis chapter
+
+---
+
+## 📝 Notes for Content Development
+
+### Middle Republic Chapter 1 - Economic/Social Focus
+- Emphasize wealth accumulation in Rome
+- Show how conquest changes society
+- Explain latifundia problem
+- Connect to political instability later
+- Make it accessible to general audience
+
+### Middle Republic Chapter 2 - Political Focus
+- Tell story of Gracchi as heroes/reformers
+- Explain their ideas (land distribution, grain law)
+- Show resistance from Senate
+- Demonstrate escalating violence
+- Link to eventual civil wars and empire
+
+---
+
+**Document Version**: 2.1 (Updated Dec 18)
+**Created**: December 18, 2025
+**Status**: Content pipeline established - moving forward ✅
+**Next Check-in**: December 19 evening
