@@ -73,12 +73,28 @@ function BulkImportForm({ onClose, onImportSuccess }) {
     try {
       // Validate question structure
       for (const q of questions) {
-        if (!q.question || !q.options || !Array.isArray(q.options) || q.options.length !== 4) {
-          throw new Error('Each question must have "question" text and exactly 4 "options"')
+        if (!q.question || !q.options || !Array.isArray(q.options) || q.options.length < 4 || q.options.length > 6) {
+          throw new Error('Each question must have "question" text and 4-6 "options"')
         }
-        if (typeof q.correctAnswer !== 'number' || q.correctAnswer < 0 || q.correctAnswer > 3) {
-          throw new Error('"correctAnswer" must be a number between 0-3')
+
+        // Handle both old format (correctAnswer) and new format (correctAnswers)
+        let correctAnswers = null
+        if (q.correctAnswers && Array.isArray(q.correctAnswers)) {
+          // New format: correctAnswers as array
+          correctAnswers = q.correctAnswers
+          if (!correctAnswers.every(a => typeof a === 'number' && a >= 0 && a < q.options.length)) {
+            throw new Error(`"correctAnswers" must be an array of numbers between 0-${q.options.length - 1}`)
+          }
+        } else if (typeof q.correctAnswer === 'number') {
+          // Old format: correctAnswer as single number
+          if (q.correctAnswer < 0 || q.correctAnswer > 3) {
+            throw new Error('"correctAnswer" must be a number between 0-3')
+          }
+          correctAnswers = [q.correctAnswer]  // Convert to array
+        } else {
+          throw new Error('"correctAnswers" (array) or "correctAnswer" (number) is required')
         }
+
         if (!q.difficulty || q.difficulty < 1 || q.difficulty > 3) {
           throw new Error('"difficulty" must be 1, 2, or 3')
         }
@@ -141,7 +157,7 @@ function BulkImportForm({ onClose, onImportSuccess }) {
           <li>Click "Import" to add all questions at once</li>
         </ol>
 
-        <h4>JSON Format (Array):</h4>
+        <h4>JSON Format (Array - Single Answer):</h4>
         <pre>{`[
   {
     "question": "When did X happen?",
@@ -152,7 +168,7 @@ function BulkImportForm({ onClose, onImportSuccess }) {
   }
 ]`}</pre>
 
-        <h4>JSON Format (Wrapped):</h4>
+        <h4>JSON Format (Wrapped - Single Answer):</h4>
         <pre>{`{
   "topicId": 1,
   "questions": [
@@ -160,6 +176,20 @@ function BulkImportForm({ onClose, onImportSuccess }) {
       "question": "When did X happen?",
       "options": ["Option A", "Option B", "Option C", "Option D"],
       "correctAnswer": 0,
+      "difficulty": 1,
+      "textReference": "#section-id"
+    }
+  ]
+}`}</pre>
+
+        <h4>JSON Format (With Multiple Answers - Array):</h4>
+        <pre>{`{
+  "chapterId": 1,
+  "questions": [
+    {
+      "question": "When did X happen?",
+      "options": ["Option A", "Option B", "Option C", "Option D"],
+      "correctAnswers": [0],
       "difficulty": 1,
       "textReference": "#section-id"
     }

@@ -2,6 +2,7 @@ package com.example.demo.repository;
 
 import com.example.demo.model.BatchProgress;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
@@ -31,4 +32,8 @@ public interface BatchProgressRepository extends JpaRepository<BatchProgress, Lo
     // Find the first non-mastered batch for a chapter (what user should work on next)
     @Query("SELECT bp FROM BatchProgress bp WHERE bp.user.id = :userId AND bp.batch.chapter.id = :chapterId AND bp.mastered = false ORDER BY bp.batch.batchOrder ASC LIMIT 1")
     Optional<BatchProgress> findFirstNonMasteredBatchForChapter(@Param("userId") Long userId, @Param("chapterId") Long chapterId);
+
+    @Modifying
+    @Query("DELETE FROM BatchProgress bp WHERE bp.batch.id = :batchId")
+    void deleteByBatchId(@Param("batchId") Long batchId);
 }

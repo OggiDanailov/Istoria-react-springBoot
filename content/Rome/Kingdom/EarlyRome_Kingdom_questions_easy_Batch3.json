@@ -1,0 +1,129 @@
+{
+  "batchName": "Early Kingdom of Rome - Easy Batch 3",
+  "chapterName": "Early Rome & the Kingdom: The Foundation of an Empire (753-509 BCE)",
+  "difficulty": 1,
+  "batchOrder": 3,
+  "description": "The individual kings, religious practices, and infrastructure",
+  "questions": [
+    {
+      "question": "Which king is credited with establishing religious practices and the calendar?",
+      "options": [
+        "Romulus",
+        "Numa Pompilius",
+        "Servius Tullius",
+        "Tarquinius Priscus"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "textReference": "#2-numa-pompilius-715-673-bce"
+    },
+    {
+      "question": "Which king is associated with the combat of the Horatii and Curiatii?",
+      "options": [
+        "Romulus",
+        "Tullus Hostilius",
+        "Numa Pompilius",
+        "Ancus Marcius"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "textReference": "#3-tullus-hostilius-673-642-bce"
+    },
+    {
+      "question": "What did King Tarquinius Priscus introduce from Etruscan culture?",
+      "options": [
+        "Democratic government",
+        "Naval dominance",
+        "Architectural and urban styles",
+        "Agricultural reforms"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 1,
+      "textReference": "#5-tarquinius-priscus-616-579-bce"
+    },
+    {
+      "question": "Which structures did Tarquinius Priscus begin to construct?",
+      "options": [
+        "The Colosseum",
+        "The Temple of Jupiter",
+        "The Pantheon",
+        "The Roman Forum"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "textReference": "#5-tarquinius-priscus-616-579-bce"
+    },
+    {
+      "question": "Which king reorganized Rome's military based on wealth and property?",
+      "options": [
+        "Numa Pompilius",
+        "Tarquinius Superbus",
+        "Servius Tullius",
+        "Tullus Hostilius"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 1,
+      "textReference": "#6-servius-tullius-579-534-bce"
+    },
+    {
+      "question": "What was used to observe the divine will in Roman religion?",
+      "options": [
+        "Dreams and visions",
+        "Bird observations (augury)",
+        "Animal sacrifice patterns",
+        "Water divination"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "textReference": "#religious-practice"
+    },
+    {
+      "question": "What was the primary purpose of the Cloaca Maxima?",
+      "options": [
+        "Military barracks",
+        "Great sewer system",
+        "Temple dedication",
+        "Public market area"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "textReference": "#infrastructure-and-urban-development"
+    },
+    {
+      "question": "What was divination through examining animal organs called?",
+      "options": [
+        "Haruspicy",
+        "Augury",
+        "Sacrificial ritual",
+        "Priestly prophecy"
+      ],
+      "correctAnswers": [0],
+      "difficulty": 1,
+      "textReference": "#religious-practice"
+    },
+    {
+      "question": "Which king is legendary for the rape of Lucretia incident?",
+      "options": [
+        "Servius Tullius",
+        "Tarquinius Priscus",
+        "Tarquinius Superbus",
+        "Tullus Hostilius"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 1,
+      "textReference": "#7-tarquinius-superbus-534-509-bce"
+    },
+    {
+      "question": "Which king established the Servian system of centuries?",
+      "options": [
+        "Romulus",
+        "Numa Pompilius",
+        "Tullus Hostilius",
+        "Servius Tullius"
+      ],
+      "correctAnswers": [3],
+      "difficulty": 1,
+      "textReference": "#6-servius-tullius-579-534-bce"
+    }
+  ]
+}

@@ -1,0 +1,129 @@
+{
+  "batchName": "Early Kingdom of Rome - Easy Batch 2",
+  "chapterName": "Early Rome & the Kingdom: The Foundation of an Empire (753-509 BCE)",
+  "difficulty": 1,
+  "batchOrder": 2,
+  "description": "Political structures, social hierarchy, and early institutions",
+  "questions": [
+    {
+      "question": "Which social class held the most political power in Early Rome?",
+      "options": [
+        "Plebeians",
+        "Patricians",
+        "Slaves",
+        "Freedmen"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "textReference": "#patricians-patres-familias"
+    },
+    {
+      "question": "What was the primary role of the Roman Senate?",
+      "options": [
+        "To command armies",
+        "To advise the king",
+        "To judge criminals",
+        "To collect taxes"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "textReference": "#the-senate"
+    },
+    {
+      "question": "Which assembly was organized by family groups called curiae?",
+      "options": [
+        "The Comitia Centuriata",
+        "The Comitia Curiata",
+        "The Comitia Tributa",
+        "The Comitia Plebis"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "textReference": "#assemblies-of-the-people"
+    },
+    {
+      "question": "What was the role of the paterfamilias in Early Rome?",
+      "options": [
+        "Military commander of armies",
+        "High priest of state",
+        "Head of household",
+        "Collector of taxes"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 1,
+      "textReference": "#patricians-patres-familias"
+    },
+    {
+      "question": "What was the primary economic basis of Early Rome?",
+      "options": [
+        "Maritime trade",
+        "Mining precious metals",
+        "Agriculture and land",
+        "Manufacturing goods"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 1,
+      "textReference": "#economic-basis"
+    },
+    {
+      "question": "What was the main purpose of the patron-client relationship?",
+      "options": [
+        "To regulate trade",
+        "To manage ceremonies",
+        "To organize military training",
+        "To provide protection and support"
+      ],
+      "correctAnswers": [3],
+      "difficulty": 1,
+      "textReference": "#plebeians"
+    },
+    {
+      "question": "Which Vestal Virgin's primary duty was especially important?",
+      "options": [
+        "Leading military campaigns",
+        "Maintaining the sacred fire",
+        "Collecting tribute",
+        "Writing records"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "textReference": "#religious-practice"
+    },
+    {
+      "question": "What was the primary role of the Pontifex Maximus?",
+      "options": [
+        "To lead the army",
+        "To manage trade",
+        "To judge legal cases",
+        "To provide protection and support"
+      ],
+      "correctAnswers": [3],
+      "difficulty": 1,
+      "textReference": "#religious-authority"
+    },
+    {
+      "question": "Which of these was NOT a major Roman god during the Kingdom?",
+      "options": [
+        "Jupiter",
+        "Mars",
+        "Vesta",
+        "Neptune"
+      ],
+      "correctAnswers": [3],
+      "difficulty": 1,
+      "textReference": "#the-roman-pantheon"
+    },
+    {
+      "question": "What was the Comitia Centuriata primarily used for?",
+      "options": [
+        "Religious ceremonies",
+        "Military organization and voting",
+        "Trade regulations",
+        "Criminal trials"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "textReference": "#assemblies-of-the-people"
+    }
+  ]
+}

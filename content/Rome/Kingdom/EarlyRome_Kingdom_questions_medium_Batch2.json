@@ -1,0 +1,139 @@
+{
+  "batchName": "Early Kingdom of Rome - Medium Batch 2",
+  "chapterName": "Early Rome & the Kingdom: The Foundation of an Empire (753-509 BCE)",
+  "difficulty": 2,
+  "batchOrder": 2,
+  "description": "Historical sources, evidence interpretation, and legend vs. history",
+  "questions": [
+    {
+      "question": "How do scholars reconcile the Romulus and Remus myth with archaeology?",
+      "options": [
+        "Accept all details as historical",
+        "Reject the story entirely",
+        "View myth as ideology, archaeology shows gradual settlement",
+        "Written and archaeological sources perfectly align",
+        "The she-wolf story is archaeologically proven"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 2,
+      "textReference": "#historical-reality-vs-legend"
+    },
+    {
+      "question": "What challenge faces historians writing about Early Rome centuries later?",
+      "options": [
+        "They had eyewitness accounts",
+        "Earlier sources may be unreliable",
+        "Contemporary written records survived",
+        "They avoided using any sources",
+        "They had no potential bias"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 2,
+      "textReference": "#literary-sources"
+    },
+    {
+      "question": "What does Palatine Hill archaeology reveal about Rome's founding?",
+      "options": [
+        "Confirms 753 BCE exactly",
+        "Shows settlements from 1000 BCE",
+        "Proves nothing existed before 500 BCE",
+        "Contradicts all written sources",
+        "Shows only Etruscan presence"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 2,
+      "textReference": "#archaeological-evidence"
+    },
+    {
+      "question": "Which approach best helps understand Early Rome despite source problems?",
+      "options": [
+        "Use only mythological accounts",
+        "Rely on excavation exclusivley since texts are biased",
+        "Combine texts and archaeology critically",
+        "Accept legends with some critical question",
+        "Read only religious texts"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 2,
+      "textReference": "#literary-sources"
+    },
+    {
+      "question": "What does the patrician-plebeian divide tell us about Rome?",
+      "options": [
+        "Society was completely equal",
+        "Social hierarchy was fundamental",
+        "Plebeians held significant power",
+        "Class didn't matter at all",
+        "Only slaves existed there"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 2,
+      "textReference": "#patricians-patres-familias"
+    },
+    {
+      "question": "How do scholars distinguish legend from probable history in Rome?",
+      "options": [
+        "All legends are definitely historical",
+        "All legends are definitely false",
+        "Compare sources with archaeology",
+        "Accept sources without question",
+        "Legends have no historical value"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 2,
+      "textReference": "#historical-reality-vs-legend"
+    },
+    {
+      "question": "What does Rome's frequent religious practice suggest about society?",
+      "options": [
+        "Religion was unimportant",
+        "Religion was only personal",
+        "Religion legitimized political power",
+        "Only priests participated",
+        "Religion was imported from Greece"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 2,
+      "textReference": "#religious-authority"
+    },
+    {
+      "question": "What evidence suggests Rome adopted Etruscan practices through cultural contact rather than military conquest?",
+      "options": [
+        "Military conquest would completely eliminate all local practices",
+        "Etruscans left no archaeological evidence",
+        "Written records explicitly forbid invasion",
+        "Etruscans were geographically too distant",
+        "Voluntary adoption of cultural practices suggests peaceful exchange"
+      ],
+      "correctAnswers": [4],
+      "difficulty": 2,
+      "textReference": "#etruscan-influence"
+    },
+    {
+      "question": "What does Rome's complex institutions suggest about development?",
+      "options": [
+        "Rome was becoming less organized",
+        "External forces controlled Rome",
+        "Institutions had no real impact",
+        "Rome rejected all organization",
+        "Society was becoming more stratified"
+      ],
+      "correctAnswers": [4],
+      "difficulty": 2,
+      "textReference": "#assemblies-of-the-people"
+    },
+    {
+      "question": "How should scholars evaluate whether the Lucretia story reflects actual historical events?",
+      "options": [
+        "Accept the account as completely factual",
+        "Compare the narrative with other sources and evidence",
+        "Reject all stories passed down by ancient authors",
+        "Accept myths without any critical analysis",
+        "Ignore literary sources entirely"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 2,
+      "textReference": "#7-tarquinius-superbus-534-509-bce"
+    }
+  ]
+}
