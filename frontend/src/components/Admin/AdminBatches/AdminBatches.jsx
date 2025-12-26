@@ -28,13 +28,15 @@ function AdminBatches() {
 
   // Update batch order when difficulty changes
   useEffect(() => {
-    if (batches.length > 0) {
-      const batchesForDifficulty = batches.filter(b => b.difficulty === difficulty)
-      setBatchOrder(batchesForDifficulty.length + 1)
+    if (selectedChapterId && batches.length > 0) {
+      // Get ALL batches for this chapter, sorted by batchOrder
+      const allBatchesForChapter = batches.sort((a, b) => a.batchOrder - b.batchOrder)
+      const nextGlobalOrder = allBatchesForChapter.length + 1
+      setBatchOrder(nextGlobalOrder)
     } else {
       setBatchOrder(1)
     }
-  }, [difficulty, batches])
+  }, [difficulty, batches, selectedChapterId])
 
   const fetchChapters = async () => {
     try {

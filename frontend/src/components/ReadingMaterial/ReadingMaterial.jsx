@@ -143,10 +143,6 @@ function ReadingMaterial({ topic, selectedChapter, onChapterSelect, onStartQuiz,
       return { icon: '✅', label: `Mastered (${Math.round(progress.accuracy)}%)`, status: 'mastered' }
     }
 
-    if (progress.accuracy >= 70) {
-      return { icon: '⚡', label: `Passed (${Math.round(progress.accuracy)}%)`, status: 'passed' }
-    }
-
     return { icon: '📝', label: `In Progress (${Math.round(progress.accuracy)}%)`, status: 'in-progress' }
   }
 
