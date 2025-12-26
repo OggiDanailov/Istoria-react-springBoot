@@ -1,0 +1,149 @@
+{
+  "batchName": "Early Kingdom of Rome - Hard Batch 1",
+  "chapterName": "Early Rome & the Kingdom: The Foundation of an Empire (753-509 BCE)",
+  "difficulty": 3,
+  "batchOrder": 1,
+  "description": "Complex synthesis, multiple perspectives, and analytical evaluation",
+  "questions": [
+    {
+      "question": "What does the Lucretia narrative suggest about Rome's political transition?",
+      "options": [
+        "The change was entirely peaceful",
+        "Tension between royal and aristocratic power emerged",
+        "Military invasion caused the collapse",
+        "The transition happened with no warning",
+        "Economic factors were irrelevant",
+        "Religious authority completely disappeared"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 3,
+      "textReference": "#7-tarquinius-superbus-534-509-bce"
+    },
+    {
+      "question": "Which of the following did Servius Tullius introduce through his constitutional reforms? (Multiple answers)",
+      "options": [
+        "Organization of citizens into military centuries based on wealth",
+        "The Comitia Centuriata voting assembly",
+        "Power transferred from birth to property ownership",
+        "Complete elimination of the patrician class",
+        "Division of citizens into five property classes",
+        "Direct democracy for all citizens"
+      ],
+      "correctAnswers": [0, 1, 2, 4],
+      "difficulty": 3,
+      "textReference": "#6-servius-tullius-579-534-bce"
+    },
+    {
+      "question": "How does the Servian Constitution represent a pivotal social moment?",
+      "options": [
+        "Eliminated all class distinctions",
+        "Gave complete power to plebeians",
+        "Maintained the exact same system",
+        "Created a pure democracy",
+        "Abolished the Senate entirely",
+        "Connected property to political power"
+      ],
+      "correctAnswers": [5],
+      "difficulty": 3,
+      "textReference": "#6-servius-tullius-579-534-bce"
+    },
+    {
+      "question": "Which factors contributed to Rome's cultural synthesis? (Multiple answers)",
+      "options": [
+        "Rome's central Italian location",
+        "Contact with Etruscans",
+        "Trade with Greece",
+        "Complete cultural isolation",
+        "Military conquest of regions",
+        "Integration of varied traditions"
+      ],
+      "correctAnswers": [0, 1, 2],
+      "difficulty": 3,
+      "textReference": "#culture-and-religion"
+    },
+    {
+      "question": "How did patron-client systems both reinforce and aid society?",
+      "options": [
+        "Created perfect equality",
+        "Provided mutual benefits and hierarchy",
+        "Eliminated government need",
+        "Only benefited patricians",
+        "Had no connection to hierarchy",
+        "Destabilized the entire system"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 3,
+      "textReference": "#plebeians"
+    },
+    {
+      "question": "What major shifts do the Comitia changes reveal? (Multiple answers)",
+      "options": [
+        "Military century ranking determined political power",
+        "Wealth became influential in governance",
+        "Plebeians gradually gained power over patricians",
+        "Democratic type of government gradually replaced oligarchy",
+        "Kinship lost political weight",
+        "Property tied to participation"
+      ],
+      "correctAnswers": [0, 1, 4, 5],
+      "difficulty": 3,
+      "textReference": "#servius-tullius-and-the-servian-reforms"
+    },
+    {
+      "question": "What interconnected changes marked Rome's transition to kingdom?",
+      "options": [
+        "Religion became less important",
+        "Religious authority legitimized power",
+        "Politics became independent from religion",
+        "Society became less organized",
+        "Military replaced all authority",
+        "External religions ruled Rome"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 3,
+      "textReference": "#religious-authority"
+    },
+    {
+      "question": "How were Tarquinius Priscus's building projects strategic for Rome? (Multiple answers)",
+      "options": [
+        "Served only religious purposes",
+        "Showed Rome's growing power",
+        "Required large-scale coordination",
+        "Established Rome as a major city",
+        "Had purely ceremonial significance",
+        "Absorbed Etruscan architectural knowledge"
+      ],
+      "correctAnswers": [1, 2, 3],
+      "difficulty": 3,
+      "textReference": "#5-tarquinius-priscus-616-579-bce"
+    },
+    {
+      "question": "What does extensive legendary material suggest about sources?",
+      "options": [
+        "All material is historically accurate",
+        "Legends have no historical value",
+        "Later authors blended fact and ideology",
+        "Contemporary sources are objective",
+        "Archaeology contradicts all texts",
+        "Accept sources without critical thinking"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 3,
+      "textReference": "#literary-sources"
+    },
+    {
+      "question": "Which institutional changes established Republican foundations? (Multiple answers)",
+      "options": [
+        "Senate was completely dissolved",
+        "The Centuriata assembly continued to vote",
+        "Magistrates replaced the king's role",
+        "All plebeians gained immediate equality",
+        "Religious authority was maintained",
+        "Patron-client relationships were abolished"
+      ],
+      "correctAnswers": [1, 2, 4],
+      "difficulty": 3,
+      "textReference": "#the-end-of-the-kingdom-and-transition-to-the-republic"
+    }
+  ]
+}

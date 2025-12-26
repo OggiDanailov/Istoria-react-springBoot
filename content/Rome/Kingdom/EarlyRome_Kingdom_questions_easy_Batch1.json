@@ -1,0 +1,129 @@
+{
+  "batchName": "Early Kingdom of Rome - Easy Batch 1",
+  "chapterName": "Early Rome & the Kingdom: The Foundation of an Empire (753-509 BCE)",
+  "difficulty": 1,
+  "batchOrder": 1,
+  "description": "Foundation myth and the Seven Kings",
+  "questions": [
+    {
+      "question": "According to Roman legend, in what year was Rome founded?",
+      "options": [
+        "509 BCE",
+        "753 BCE",
+        "616 BCE",
+        "264 BCE"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "textReference": "#introduction-to-the-regal-period"
+    },
+    {
+      "question": "Who were the legendary twin founders of Rome?",
+      "options": [
+        "Aeneas and Lavinia",
+        "Tarquinius and Numa",
+        "Romulus and Remus",
+        "Jupiter and Mars"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 1,
+      "textReference": "#the-foundation-myth-romulus-and-remus"
+    },
+    {
+      "question": "According to the legend, who was the mother of Romulus and Remus?",
+      "options": [
+        "Rhea Silvia",
+        "Lavinia",
+        "Lucretia",
+        "Egeria"
+      ],
+      "correctAnswers": [0],
+      "difficulty": 1,
+      "textReference": "#the-foundation-myth-romulus-and-remus"
+    },
+    {
+      "question": "In the legend, what animal nursed the infant twins Romulus and Remus?",
+      "options": [
+        "A golden eagle",
+        "A she-wolf",
+        "A lion",
+        "A bear"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "textReference": "#the-foundation-myth-romulus-and-remus"
+    },
+    {
+      "question": "How many kings ruled Rome during the Regal Period?",
+      "options": [
+        "Five kings",
+        "Seven kings",
+        "Ten kings",
+        "Three kings"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "textReference": "#the-seven-kings-of-rome"
+    },
+    {
+      "question": "In what year did the Roman Kingdom end and the Republic begin?",
+      "options": [
+        "510 BCE",
+        "509 BCE",
+        "508 BCE",
+        "511 BCE"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "textReference": "#the-end-of-the-kingdom-and-transition-to-the-republic"
+    },
+    {
+      "question": "According to tradition, what event led to the expulsion of Tarquinius Superbus?",
+      "options": [
+        "A military defeat in war",
+        "The rape of Lucretia",
+        "Economic collapse",
+        "Religious displeasure"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "textReference": "#7-tarquinius-superbus-534-509-bce"
+    },
+    {
+      "question": "Which legendary figure led the revolt against Tarquinius Superbus?",
+      "options": [
+        "Romulus",
+        "Lucius Junius Brutus",
+        "Numa Pompilius",
+        "Servius Tullius"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "textReference": "#the-end-of-the-kingdom-and-transition-to-the-republic"
+    },
+    {
+      "question": "Which civilization significantly influenced Rome during the Kingdom period?",
+      "options": [
+        "The Greeks",
+        "The Phoenicians",
+        "The Etruscans",
+        "The Egyptians"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 1,
+      "textReference": "#etruscan-influence"
+    },
+    {
+      "question": "From which region of Italy did the Etruscans come?",
+      "options": [
+        "Sicily",
+        "Tuscany",
+        "Campania",
+        "The Latium region"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "textReference": "#etruscan-influence"
+    }
+  ]
+}

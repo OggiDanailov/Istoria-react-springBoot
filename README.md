@@ -305,5 +305,21 @@ If you encounter issues not covered here:
 
 ---
 
+## Useful commands for H2 Console;
+
+1. Clearing all existing batches and questions:
+DELETE FROM quiz_attempts;
+DELETE FROM batch_questions;
+DELETE FROM batch_progress;
+DELETE FROM quiz_batches;
+DELETE FROM question_correct_answers;
+DELETE FROM question_options;
+DELETE FROM questions;
+
+double check with this commands:
+
+SELECT COUNT(*) FROM questions;      -- Should be 0
+SELECT COUNT(*) FROM quiz_batches;   -- Should be 0
+
 **Last Updated:** October 2025
 **Version:** 1.0.0

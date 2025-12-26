@@ -1,0 +1,139 @@
+{
+  "batchName": "Early Kingdom of Rome - Medium Batch 1",
+  "chapterName": "Early Rome & the Kingdom: The Foundation of an Empire (753-509 BCE)",
+  "difficulty": 2,
+  "batchOrder": 1,
+  "description": "Comparative analysis of kings and institutional evolution",
+  "questions": [
+    {
+      "question": "How did Servius Tullius's reforms differ most significantly from earlier kings?",
+      "options": [
+        "Abolished the Senate",
+        "Tied power to wealth, not birth",
+        "Removed patrician privileges",
+        "Established military rule",
+        "Created direct democracy"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 2,
+      "textReference": "#6-servius-tullius-579-534-bce"
+    },
+    {
+      "question": "What can we infer about Etruscan influence on Rome from the later kings' practices?",
+      "options": [
+        "Rome rejected it entirely",
+        "Rome adopted and adapted it",
+        "Rome conquered Etruria",
+        "It had no real impact",
+        "Rome remained isolated"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 2,
+      "textReference": "#etruscan-influence"
+    },
+    {
+      "question": "Why was Servius Tullius's wealth-based military system revolutionary?",
+      "options": [
+        "It eliminated social classes",
+        "It linked property to power",
+        "It freed enslaved people through military service",
+        "It removed military training",
+        "It abolished the patricians"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 2,
+      "textReference": "#6-servius-tullius-579-534-bce"
+    },
+    {
+      "question": "What does the shift from Comitia Curiata to Comitia Centuriata represent?",
+      "options": [
+        "Loss of political voice",
+        "Strengthened patrician control",
+        "Power moved to wealth",
+        "Religion gained authority",
+        "Democracy was created"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 2,
+      "textReference": "#assemblies-of-the-people"
+    },
+    {
+      "question": "What does the Lucretia legend reveal about late Kingdom tensions?",
+      "options": [
+        "Society was completely unified",
+        "Resentment of royal power",
+        "Only religious concerns mattered",
+        "Rome had military weakness",
+        "Politics were irrelevant"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 2,
+      "textReference": "#7-tarquinius-superbus-534-509-bce"
+    },
+    {
+      "question": "Why would Tarquinius Priscus build the Temple of Jupiter?",
+      "options": [
+        "Religious duty only",
+        "Display power and wealth",
+        "Attract Etruscan settlers",
+        "Reduce military costs",
+        "Create trade routes"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 2,
+      "textReference": "#5-tarquinius-priscus-616-579-bce"
+    },
+    {
+      "question": "How did patron-client relationships provide social stability in Rome?",
+      "options": [
+        "Eliminated all hierarchy",
+        "Built bonds across classes",
+        "Gave power to plebeians",
+        "Replaced government",
+        "Created total equality"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 2,
+      "textReference": "#plebeians"
+    },
+    {
+      "question": "What practical benefit did the Cloaca Maxima provide Rome?",
+      "options": [
+        "Improved military defense",
+        "Supplied fresh water",
+        "Enabled urban expansion",
+        "Offered religious shelter",
+        "Replaced agriculture"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 2,
+      "textReference": "#infrastructure-and-urban-development"
+    },
+    {
+      "question": "Why were religious and political authority linked in Rome?",
+      "options": [
+        "Priests controlled armies",
+        "Divine approval legitimized rulers",
+        "Plebeians held religious power",
+        "Religion was unimportant",
+        "Women controlled both"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 2,
+      "textReference": "#religious-authority"
+    },
+    {
+      "question": "What does the progression from Numa's religious emphasis to Tarquinius Priscus's building projects suggest about Roman priorities?",
+      "options": [
+        "Rome rejected all religious practice",
+        "Military concerns replaced spiritual focus",
+        "Etruscans eliminated Roman worship",
+        "Plebeians seized political power",
+        "Rome maintained faith while expanding materially"
+      ],
+      "correctAnswers": [4],
+      "difficulty": 2,
+      "textReference": "#religious-practice"
+    }
+  ]
+}

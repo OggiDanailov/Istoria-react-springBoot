@@ -7,13 +7,16 @@ import com.example.demo.model.User;
 import com.example.demo.model.Question;
 import com.example.demo.repository.BatchProgressRepository;
 import com.example.demo.repository.QuestionRepository;
+import com.example.demo.repository.QuizAttemptRepository;
 import com.example.demo.repository.QuizBatchRepository;
 import com.example.demo.repository.UserRepository;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.HttpStatus;
+import org.springframework.transaction.annotation.Transactional;
 import jakarta.servlet.http.HttpServletRequest;
 import java.util.List;
+
 
 @CrossOrigin(origins = "http://localhost:5173")
 @RestController
@@ -24,15 +27,18 @@ public class BatchController {
     private final BatchProgressRepository batchProgressRepository;
     private final UserRepository userRepository;
     private final QuestionRepository questionRepository;
+    private final QuizAttemptRepository quizAttemptRepository;
 
     public BatchController(QuizBatchRepository quizBatchRepository,
                          BatchProgressRepository batchProgressRepository,
                          UserRepository userRepository,
-                         QuestionRepository questionRepository) {
+                         QuestionRepository questionRepository,
+                         QuizAttemptRepository quizAttemptRepository) {
         this.quizBatchRepository = quizBatchRepository;
         this.batchProgressRepository = batchProgressRepository;
         this.userRepository = userRepository;
         this.questionRepository = questionRepository;
+        this.quizAttemptRepository = quizAttemptRepository;
     }
 
     // ==================== POST METHODS ====================
@@ -307,16 +313,26 @@ public class BatchController {
     }
 
     // Delete a batch
+    @Transactional
     @DeleteMapping("/{batchId}")
     public ResponseEntity<Void> deleteBatch(@PathVariable Long batchId) {
         try {
             QuizBatch batch = quizBatchRepository.findById(batchId)
                     .orElseThrow(() -> new RuntimeException("Batch not found"));
 
+            // Delete in correct order to avoid foreign key violations
+            // 1. Delete quiz attempts for this batch
+            quizAttemptRepository.deleteByBatchId(batchId);
+
+            // 2. Delete batch progress
+            batchProgressRepository.deleteByBatchId(batchId);
+
+            // 3. Delete the batch
             quizBatchRepository.deleteById(batchId);
             return ResponseEntity.noContent().build();
 
         } catch (Exception e) {
+            e.printStackTrace();
             return ResponseEntity.badRequest().build();
         }
     }
