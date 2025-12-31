@@ -1,0 +1,139 @@
+{
+  "chapter_id": "early-republic-conflict-orders",
+  "batch_number": 6,
+  "difficulty": 3,
+  "batch_order": 6,
+  "description": "Hard - Analysis and Historical Interpretation",
+  "questions": [
+    {
+      "question": "Which factors made early Republic sources more reliable than Kingdom period sources? (SELECT ALL THAT APPLY)",
+      "options": [
+        "Early Republic sources contain less mythological material and are closer in historical time",
+        "The Twelve Tables provide contemporary written evidence to verify literary claims",
+        "All early Republic sources were written by eyewitnesses to the actual events",
+        "Early Republic sources contain no legendary or invented material",
+        "Archaeological evidence for the early Republic is more abundant than for Kingdom"
+      ],
+      "correctAnswers": [0, 1, 4],
+      "difficulty": 3,
+      "text_reference": "Section 2: Literary Sources"
+    },
+    {
+      "question": "What does the absence of explicit patrician definitions in ancient sources suggest? (SELECT ALL THAT APPLY)",
+      "options": [
+        "Patrician status was clearly defined in written law from the Republic's beginning",
+        "The patrician-plebeian distinction may have been less rigid initially than later sources suggest",
+        "Patricians deliberately hid their status from historical documentation",
+        "The distinction emerged gradually over time and became clearer as centuries passed",
+        "Ancient authors were intentionally lying about patrician existence"
+      ],
+      "correctAnswers": [1, 3],
+      "difficulty": 3,
+      "text_reference": "Section 2: Modern Historical Approach"
+    },
+    {
+      "question": "Which statement best captures the key difference between Kingdom and Republic power structures?",
+      "options": [
+        "Both systems concentrated power in a single individual but paid different salaries",
+        "Kingdom had one ruler answerable to none; Republic distributed power among multiple officials",
+        "Republic had a king while Kingdom government was controlled by tribunes",
+        "Kingdom allowed popular assemblies while Republic gave power only to patricians",
+        "Both systems were essentially identical in their fundamental governmental structure"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 3,
+      "text_reference": "Section 1: Comparison with the Kingdom"
+    },
+    {
+      "question": "What paradox existed in the Comitia Centuriata as an instrument of 'popular participation'?",
+      "options": [
+        "Wealthy citizens and poor citizens had exactly equal voting power in every instance",
+        "It gave formal voting rights to all citizens while concentrating power among the wealthy",
+        "It gave all voting power to plebeians and none to patrician citizens",
+        "Poor citizens had significantly more voting power than wealthy patrician citizens",
+        "It was specifically designed to prevent all patricians from holding office"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 3,
+      "text_reference": "Section 1: Assemblies - Popular Participation, Aristocratic Advantage"
+    },
+    {
+      "question": "Which interpretation is MOST supported by historical evidence for the Conflict of the Orders?",
+      "options": [
+        "All reforms definitely happened at the exact dates ancient sources provide",
+        "No reforms ever happened because the entire Conflict is invented and fictional",
+        "Broad plebeian rights expansion is confirmed, but specific dates and incidents may be misremembered",
+        "Plebeians gained all political rights immediately when the Republic began",
+        "Only written sources matter; archaeology tells us nothing about the early Republic"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 3,
+      "text_reference": "Section 2: Modern Historical Approach and The Conflict of the Orders"
+    },
+    {
+      "question": "Which aspects represented genuine innovation rather than traditional custom? (SELECT ALL THAT APPLY)",
+      "options": [
+        "Distribution of executive power between two equal magistrates with mutual veto",
+        "Systematic limitation of magistrate terms to one year maximum",
+        "Post-term accountability for magistrates through legal prosecution",
+        "Creating a magistracy specifically to protect plebeians against the elite",
+        "Preservation of unwritten ancestral custom (*mos maiorum*) as fundamental law"
+      ],
+      "correctAnswers": [0, 1, 2, 3],
+      "difficulty": 3,
+      "text_reference": "Section 1 throughout"
+    },
+    {
+      "question": "Why was written law NECESSARY but INSUFFICIENT to resolve the patrician-plebeian conflict?",
+      "options": [
+        "Written law immediately ended all patrician-plebeian political conflict completely",
+        "The Twelve Tables abolished the Senate as the ruling governing body",
+        "Written law prevented arbitrary interpretation but not plebeian exclusion from magistracies",
+        "Plebeians rejected written law and demanded to return to oral tradition",
+        "The Twelve Tables gave all political power to plebeians immediately"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 3,
+      "text_reference": "Section 5: The Limitations and The Bridge"
+    },
+    {
+      "question": "Which reasons explain why mutual veto was preferable to character-based reliance? (SELECT ALL THAT APPLY)",
+      "options": [
+        "Structural safeguards are more reliable than trusting in individual personal virtue",
+        "Even a virtuous consul could be constrained by his colleague to prevent abuse",
+        "Power concentrated in any single office was considered inherently and fundamentally dangerous",
+        "Mutual veto eliminated any need for a Senate to advise magistrates",
+        "Plebeians could serve as consuls immediately with mutual veto in place"
+      ],
+      "correctAnswers": [0, 1, 2],
+      "difficulty": 3,
+      "text_reference": "Section 1: Why Two Consuls and The Immediate Challenge"
+    },
+    {
+      "question": "What does the challenge of evaluating early Republic sources reveal about historical methodology?",
+      "options": [
+        "Ancient sources are always completely accurate in every detail provided",
+        "Historians should ignore ancient sources entirely and rely only on archaeology",
+        "Historians must use multiple evidence types critically, recognizing bias and legendary material",
+        "Modern historians know more than ancient authors so we dismiss accounts entirely",
+        "All historical claims about the past are equally valid regardless of available evidence"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 3,
+      "text_reference": "Section 2 throughout"
+    },
+    {
+      "question": "Why did patrician incremental concessions ultimately fail to prevent plebeian success? (SELECT ALL THAT APPLY)",
+      "options": [
+        "Concessions created precedent encouraging plebeians to demand additional reforms",
+        "Plebeians rejected all offers and demanded violent revolutionary change instead",
+        "The strategy delayed but could not prevent eventual loss of patrician monopoly",
+        "The tribunes immediately took over the entire government after first concession",
+        "Plebeians gradually gained enough political power to challenge patrician dominance"
+      ],
+      "correctAnswers": [0, 2, 4],
+      "difficulty": 3,
+      "text_reference": "Section 4: The Patrician Response and Section 5: The Bridge"
+    }
+  ]
+}
