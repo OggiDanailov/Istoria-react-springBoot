@@ -1,0 +1,145 @@
+{
+  "chapter_id": "early-republic-conflict-orders",
+  "batch_number": 5,
+  "difficulty": 2,
+  "batch_order": 5,
+  "description": "Medium - The Conflict Deepens: Economic Grievances and Political Tactics",
+  "questions": [
+    {
+      "question": "How did the problem of debt slavery particularly affect plebeian farmers?",
+      "options": [
+        "Patricians deliberately destroyed their crops to force them into servitude",
+        "The state taxed plebeian farmers more heavily than patrician landowners",
+        "Poor harvests or inability to repay loans could result in enslavement to creditors",
+        "Farmers were strictly forbidden from borrowing money under any circumstances",
+        "Debt slavery only affected wealthy plebeians, not poor farmers"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 2,
+      "text_reference": "Section 4: Debt Slavery"
+    },
+    {
+      "question": "Why was patrician monopoly over conquered land a source of plebeian grievance? (SELECT ALL THAT APPLY)",
+      "options": [
+        "Plebeians preferred to remain landless and pursue other occupations",
+        "Plebeians fought in the wars but received little land while patricians got most",
+        "The public land was too far from the city to be useful for farming",
+        "Plebeians lacked the knowledge and skills required to farm the land properly",
+        "Patricians controlled the wealth that came from land ownership and power",
+        "Land distribution was controlled by the Senate without plebeian input"
+      ],
+      "correctAnswers": [1, 4, 5],
+      "difficulty": 2,
+      "text_reference": "Section 4: Land Distribution"
+    },
+    {
+      "question": "Why did patrician magistrates lack incentive to protect plebeians from creditors?",
+      "options": [
+        "The Senate explicitly forbade them from helping plebeian debtors",
+        "Plebeians never asked for protection against their creditors",
+        "The tribunes always blocked attempts to protect plebeians from debt",
+        "Patricians viewed debt slavery as necessary for maintaining social order",
+        "Laws explicitly protected creditors' rights over debtors' freedom",
+        "Patrician magistrates were often creditors themselves who profited from debt slavery"
+      ],
+      "correctAnswers": [5],
+      "difficulty": 2,
+      "text_reference": "Section 4: Political Powerlessness"
+    },
+    {
+      "question": "What was the strategic advantage of plebeian military secession as a tactic? (SELECT ALL THAT APPLY)",
+      "options": [
+        "It involved violent rebellion that forced patricians to surrender immediately",
+        "It threatened the plebeian soldiers Rome needed to defend itself and paralyzed government",
+        "It allowed plebeians to take temporary control of the government and armed forces",
+        "It gave plebeians leverage without requiring direct military confrontation",
+        "It demonstrated plebeian indispensability to Rome's security and survival",
+        "It forced patricians to negotiate when they could not replace the plebeian army"
+      ],
+      "correctAnswers": [1, 3, 4, 5],
+      "difficulty": 2,
+      "text_reference": "Section 4: The Threat That Worked"
+    },
+    {
+      "question": "Why did the creation of the tribune office initially satisfy some plebeian demands? (SELECT ALL THAT APPLY)",
+      "options": [
+        "Tribunes eventually became as corrupt as other magistrates in their own ways",
+        "It gave plebeians institutional protection and a permanent voice in government",
+        "Plebeians immediately rejected the tribune office and demanded something different",
+        "Patricians abolished the tribune office within a decade of its creation",
+        "It provided plebeians with power to block magistrates from abusing them"
+      ],
+      "correctAnswers": [1, 4],
+      "difficulty": 2,
+      "text_reference": "Section 4: The Patrician Response - Containment and Concession"
+    },
+    {
+      "question": "How did the Twelve Tables satisfy AND disappoint plebeian demands simultaneously?",
+      "options": [
+        "They established written law preventing arbitrary interpretation but codified debt slavery",
+        "They eliminated all patrician privileges and made all citizens completely equal",
+        "They gave magistracies to plebeians while leaving patricians with no political power",
+        "They abolished the Senate entirely and gave all power to the assemblies",
+        "They created equal voting rights but did not end patrician legal monopoly"
+      ],
+      "correctAnswers": [0],
+      "difficulty": 2,
+      "text_reference": "Section 5: The Limitations - What the Twelve Tables Did NOT Solve"
+    },
+    {
+      "question": "Why did the patrician strategy of making limited concessions ultimately fail? (SELECT ALL THAT APPLY)",
+      "options": [
+        "Plebeians immediately rejected all concessions and demanded violent revolution instead",
+        "Each concession established precedent and proved change was possible within the system",
+        "Concessions created expectations for additional reforms rather than satisfying plebeians",
+        "Patricians refused to make any further concessions after the tribunal office",
+        "The strategy delayed but could not prevent eventual loss of patrician monopoly",
+        "Plebeians used each concession as stepping stone to demand more power"
+      ],
+      "correctAnswers": [1, 2, 4, 5],
+      "difficulty": 2,
+      "text_reference": "Section 4: The Patrician Response - Containment and Concession"
+    },
+    {
+      "question": "What is the significance of the phrase 'the Conflict of the Orders'? (SELECT ALL THAT APPLY)",
+      "options": [
+        "It refers to minor disputes between different military units and commanders",
+        "It names the fundamental political struggle between patricians and plebeians",
+        "It describes religious conflicts between different temples and priesthoods",
+        "It refers to disagreements among different regions of the Italian peninsula",
+        "It emphasizes that this conflict lasted centuries and shaped all Republican development"
+      ],
+      "correctAnswers": [1, 4],
+      "difficulty": 2,
+      "text_reference": "Section 3: The Central Conflict"
+    },
+    {
+      "question": "How did Rome's constant external warfare shape the plebeian rights movement? (SELECT ALL THAT APPLY)",
+      "options": [
+        "Plebeians' essential military role gave them leverage to demand concessions",
+        "It made plebeians less interested in achieving political rights and power",
+        "Wars were fought entirely by patrician soldiers without plebeian involvement",
+        "External enemies directly supported and encouraged the plebeian cause against patricians",
+        "Military success allowed patricians to distribute plunder and temporarily ease tensions",
+        "Plebeians could threaten secession knowing Rome desperately needed their soldiers"
+      ],
+      "correctAnswers": [0, 4, 5],
+      "difficulty": 2,
+      "text_reference": "Section 3: External Threat and Military Success"
+    },
+    {
+      "question": "What does it reveal that the Twelve Tables actually CODIFIED debt slavery as legal? (SELECT ALL THAT APPLY)",
+      "options": [
+        "It shows plebeians never really cared about debt slavery at all",
+        "It demonstrates written law alone was insufficient without political power to change laws",
+        "It proves the Twelve Tables were a complete failure for plebeians",
+        "It shows the tribunes successfully opposed and prevented the Twelve Tables",
+        "It reveals patricians controlled the legal code and used it to legitimize exploitation",
+        "It explains why plebeians continued to demand further reforms after the Twelve Tables"
+      ],
+      "correctAnswers": [1, 4, 5],
+      "difficulty": 2,
+      "text_reference": "Section 5: The Limitations and The Bridge"
+    }
+  ]
+}

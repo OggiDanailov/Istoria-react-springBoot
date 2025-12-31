@@ -1,0 +1,129 @@
+{
+  "chapter_id": "early-republic-conflict-orders",
+  "batch_number": 2,
+  "difficulty": 1,
+  "batch_order": 2,
+  "description": "Easy - Understanding the Patrician-Plebeian Divide",
+  "questions": [
+    {
+      "question": "Who were the patricians in the early Roman Republic?",
+      "options": [
+        "Wealthy merchants from Greece",
+        "Rome's aristocratic families who held power since the Kingdom period",
+        "Soldiers who served in the army",
+        "Religious priests and priestesses"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "text_reference": "Section 3: Who Were the Patricians and Plebeians"
+    },
+    {
+      "question": "Which group made up the majority of Rome's population in the early Republic?",
+      "options": [
+        "Patricians",
+        "Slaves",
+        "Plebeians",
+        "Etruscan settlers"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 1,
+      "text_reference": "Section 3: Who Were the Patricians and Plebeians"
+    },
+    {
+      "question": "What was the primary political grievance of plebeians in the early Republic?",
+      "options": [
+        "They were forced to pay excessive taxes to support the patrician elite",
+        "They were required to serve in the military far more frequently than patricians",
+        "They were legally prohibited from owning land and could only lease property",
+        "They were excluded from holding major political offices and had limited influence in government"
+      ],
+      "correctAnswers": [3],
+      "difficulty": 1,
+      "text_reference": "Section 3: What Did Plebeians Demand"
+    },
+    {
+      "question": "In what year did plebeians stage their first major secession (refusal to serve in the army)?",
+      "options": [
+        "509 BCE",
+        "494 BCE",
+        "450 BCE",
+        "445 BCE"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "text_reference": "Section 4: The First Secession of the Plebs"
+    },
+    {
+      "question": "What new office was created in 494 BCE to protect plebeian interests?",
+      "options": [
+        "Praetor",
+        "Aedile",
+        "Tribune",
+        "Censor"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 1,
+      "text_reference": "Section 4: The Creation of the Tribune of the Plebs"
+    },
+    {
+      "question": "What special power did tribunes possess that no other magistrate had?",
+      "options": [
+        "They could unilaterally declare war against neighboring nations without Senate approval",
+        "They could veto any action by other magistrates to protect plebeian interests",
+        "They could execute criminals and impose capital punishment without legal trial",
+        "They could directly control all Senate meetings and prevent magistrate assemblies"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "text_reference": "Section 4: The Creation of the Tribune of the Plebs"
+    },
+    {
+      "question": "What does the term 'sacrosanctus' mean when applied to tribunes?",
+      "options": [
+        "They were required to perform daily religious sacrifices on behalf of Rome",
+        "They were given special armed guards and protection by a dedicated security force",
+        "They were sacred and inviolable—anyone who physically harmed them could be killed with impunity",
+        "They held the authority to approve and regulate all religious ceremonies throughout Rome"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 1,
+      "text_reference": "Section 4: The Creation of the Tribune of the Plebs"
+    },
+    {
+      "question": "Why was the ability to refuse military service such a powerful plebeian tactic?",
+      "options": [
+         "Rome was constantly at war and depended heavily on plebeian soldiers for survival",
+        "Rome had no professional standing army available to replace the plebeian soldiers",
+        "Patrician aristocrats themselves fought in all battles and could not lead without plebeians",
+        "The Senate could not hold meetings or make any decisions without military support"
+      ],
+      "correctAnswers": [0],
+      "difficulty": 1,
+      "text_reference": "Section 4: The Threat That Worked"
+    },
+    {
+      "question": "Which of the following was NOT one of the early plebeian demands?",
+      "options": [
+        "Access to magistracies and high political offices like the consulship",
+        "Access to priesthoods and positions of religious authority in Rome",
+        "Complete elimination of the Senate as a governing body",
+        "Protection and legal safeguards against creditors enslaving debtors"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 1,
+      "text_reference": "Section 3: What Did Plebeians Demand"
+    },
+    {
+      "question": "What economic problem particularly threatened plebeian freedom in the early Republic?",
+      "options": [
+        "Inability to trade goods with foreign merchants and neighboring city-states",
+        "Excessive military conscription requiring plebeians to serve too often in armies",
+        "Strict restrictions on farming and agriculture practiced by plebeian families",
+        "Debt slavery where creditors could enslave debtors who could not repay loans"
+      ],
+      "correctAnswers": [3],
+      "difficulty": 1,
+      "text_reference": "Section 4: The Crisis - Debt Slavery and Land Disputes"
+    }
+  ]
+}

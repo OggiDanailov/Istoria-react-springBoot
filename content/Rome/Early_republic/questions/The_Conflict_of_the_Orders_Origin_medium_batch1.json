@@ -1,0 +1,147 @@
+{
+  "chapter_id": "early-republic-conflict-orders",
+  "batch_number": 4,
+  "difficulty": 2,
+  "batch_order": 4,
+  "description": "Medium - Institutional Checks and Balances",
+  "questions": [
+    {
+      "question": "How did the Roman system of two consuls with mutual veto power prevent tyranny?",
+      "options": [
+        "Consuls reported directly to the Senate who supervised their decisions always",
+        "The Senate and tribunes had to approve all major consular decisions",
+        "Consuls rotated military command every month to share authority equally",
+        "Consuls were required to consult the assembly before taking any action",
+        "Either consul could block the other's decisions, preventing one from accumulating power"
+      ],
+      "correctAnswers": [4],
+      "difficulty": 2,
+      "text_reference": "Section 1: The Consulate - Shared Executive Power"
+    },
+    {
+      "question": "What was the relationship between tribunes and traditional magistrates? (SELECT ALL THAT APPLY)",
+      "options": [
+        "Tribunes were subordinate to magistrates and had to obey their orders",
+        "Tribunes and magistrates shared equal authority in all governmental matters",
+        "Magistrates could not veto tribunes, but tribunes could veto magistrates",
+        "Tribunes answered directly to the plebeians, not to magistrates",
+        "Tribunes shared command of armies equally with consuls",
+        "The relationship was asymmetrical—designed to protect plebeian interests from magistratic abuse"
+      ],
+      "correctAnswers": [2, 3, 5],
+      "difficulty": 2,
+      "text_reference": "Section 4: The Tribune vs. Traditional Magistracies"
+    },
+    {
+      "question": "Why was the one-year term limit on the consulship a crucial check on power?",
+      "options": [
+        "It prevented consuls from becoming too wealthy and accumulating personal fortune",
+        "It allowed younger men to hold office more quickly in their careers",
+        "Consuls could be held accountable for their actions after leaving office through prosecution",
+        "It guaranteed that different patrician families took turns holding the office",
+        "It prevented consuls from building loyalty among the soldiers under their command",
+        "It forced consuls to work together rather than compete for long-term power"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 2,
+      "text_reference": "Section 1: The One-Year Term and Accountability"
+    },
+    {
+      "question": "How did the organization of the Comitia Centuriata serve as a check on pure democracy? (SELECT ALL THAT APPLY)",
+      "options": [
+        "Only patricians were allowed to participate in voting on major decisions",
+        "Citizens voted twice—once in assemblies and once in the Senate",
+        "Organized by wealth with wealthy centuries voting first and deciding early",
+        "Each tribe had exactly one vote regardless of population or property",
+        "The assembly was structured to advantage wealthy property owners",
+        "Voting was secret to prevent wealthy citizens from intimidating poorer voters"
+      ],
+      "correctAnswers": [2, 4],
+      "difficulty": 2,
+      "text_reference": "Section 1: Assemblies - Popular Participation, Aristocratic Advantage"
+    },
+    {
+      "question": "What does 'mixed constitution' mean in the context of the early Roman Republic?",
+      "options": [
+        "Citizens from different tribes and regions governed together as a unified body",
+        "Magistrates provided executive energy; Senate provided stability; assemblies represented citizens—each checked others",
+        "Both patricians and plebeians were given exactly equal voting rights and power",
+        "The king shared governmental power with elected magistrates and the Senate",
+        "The constitution combined written law with unwritten custom and precedent",
+        "Multiple types of government institutions worked together with built-in power limitations"
+      ],
+      "correctAnswers": [1, 4, 5],
+      "difficulty": 2,
+      "text_reference": "Section 1: Magistracies and Checks"
+    },
+    {
+      "question": "How did the requirement that magistrates operate within written law serve as a check?",
+      "options": [
+        "It prevented them from going to war against neighboring nations entirely",
+        "It reduced their salaries and made the positions less attractive",
+        "Magistrates had to follow legal procedures and could be prosecuted for violations",
+        "It gave the Senate complete control over all their governmental decisions",
+        "It made magistrates subservient to the assemblies and popular opinion"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 2,
+      "text_reference": "Section 5: The Significance for Plebeians"
+    },
+    {
+      "question": "Why could the threat of plebeian military secession force actual political change?",
+      "options": [
+        "Plebeians outnumbered patricians in the Senate and could vote to change laws",
+        "Rome depended on plebeian soldiers for defense; without them government was paralyzed",
+        "Plebeians controlled the priesthoods and could deny religious authority to patricians",
+        "The assembly voted to support plebeian demands whenever they requested it",
+        "Patricians feared violent rebellion if they refused plebeian demands",
+        "Foreign enemies would invade if Rome had no army to defend it"
+      ],
+      "correctAnswers": [1, 5],
+      "difficulty": 2,
+      "text_reference": "Section 4: The Threat That Worked"
+    },
+    {
+      "question": "What was unusual about the tribune office compared to traditional magistracies?",
+      "options": [
+        "Tribunes had more total power than consuls and controlled the government",
+        "Tribunes were chosen by the Senate instead of being elected by people",
+        "Created specifically for plebeians, stood outside traditional hierarchy, answered to plebeians directly",
+        "Tribunes could only serve one year while other magistrates served multiple years",
+        "Tribunes were the only magistrates with veto power over other officials",
+        "Tribunes were inviolable and could not be prosecuted for their actions"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 2,
+      "text_reference": "Section 4: The Tribune vs. Traditional Magistracies"
+    },
+    {
+      "question": "How did the hierarchy of magistracies serve as a check on concentrated power? (SELECT ALL THAT APPLY)",
+      "options": [
+        "Higher magistrates could veto all decisions made by lower magistrates",
+        "Each office had specific responsibilities; rotation prevented long-term power accumulation",
+        "Lower magistrates were appointed by higher magistrates rather than elected",
+        "Only patricians could hold higher offices while plebeians held lower offices",
+        "The cursus honorum required officials to hold multiple offices over time",
+        "Power was distributed among different officials rather than concentrated in one"
+      ],
+      "correctAnswers": [1, 5],
+      "difficulty": 2,
+      "text_reference": "Section 1: Magistracies and Checks"
+    },
+    {
+      "question": "Why did Roman leaders accept the risk of deadlock between two consuls?",
+      "options": [
+        "Deadlocks between consuls never actually happened in the Republican system",
+        "The Senate could always break any deadlock between the consuls immediately",
+        "Consuls were required to agree on all major decisions before implementation",
+        "The people could vote to override consular deadlock if necessary",
+        "One consul always deferred to the other's judgment in practice",
+        "They believed risk of deadlock was preferable to unchecked power enabling tyranny"
+      ],
+      "correctAnswers": [5],
+      "difficulty": 2,
+      "text_reference": "Section 1: Veto Power and Intercessio"
+    }
+  ]
+}

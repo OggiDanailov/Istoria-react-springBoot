@@ -1,0 +1,129 @@
+{
+  "chapter_id": "early-republic-conflict-orders",
+  "batch_number": 1,
+  "difficulty": 1,
+  "batch_order": 1,
+  "description": "Easy - Republic Fundamentals",
+  "questions": [
+    {
+      "question": "In what year was the Roman monarchy abolished and the Republic established?",
+      "options": [
+        "509 BCE",
+        "494 BCE",
+        "450 BCE",
+        "367 BCE"
+      ],
+      "correctAnswers": [0],
+      "difficulty": 1,
+      "text_reference": "Section 1: Introduction"
+    },
+    {
+      "question": "How many consuls governed the Roman Republic at any given time?",
+      "options": [
+        "One",
+        "Two",
+        "Three",
+        "Five"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "text_reference": "Section 1: The Consulate"
+    },
+    {
+      "question": "What was the primary reason for creating two consuls instead of one?",
+      "options": [
+        "To increase military strength",
+        "To prevent the concentration of power",
+        "To reduce the cost of government",
+        "To facilitate trade with neighboring cities"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "text_reference": "Section 1: Why Two Consuls"
+    },
+    {
+      "question": "What is the term for a consul's right to block the decisions of his colleague?",
+      "options": [
+        "Imperium",
+        "Potestas",
+        "Auctoritas",
+        "Intercessio"
+      ],
+      "correctAnswers": [3],
+      "difficulty": 1,
+      "text_reference": "Section 1: Veto Power and Intercessio"
+    },
+    {
+      "question": "After their one-year term as consul, what could happen to a consul who abused his power?",
+      "options": [
+        "He could immediately run for another term",
+        "He was protected from any legal action",
+        "He could be prosecuted for his actions in office",
+        "He automatically became a senator for life"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 1,
+      "text_reference": "Section 1: The One-Year Term and Accountability"
+    },
+    {
+      "question": "Which assembly was responsible for electing consuls in the early Republic?",
+      "options": [
+        "The Senate",
+        "The Comitia Tributa",
+        "The Comitia Centuriata",
+        "The plebeian assembly"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 1,
+      "text_reference": "Section 1: Election - The Comitia Centuriata"
+    },
+    {
+      "question": "What was the primary role of the Roman Senate under the Republic?",
+      "options": [
+        "To command Rome's armies during military campaigns and approve all military expeditions",
+        "To directly vote on and pass all major laws proposed by magistrates",
+        "To control state finances and direct foreign policy decisions",
+        "To investigate crimes, prosecute offenders, and administer justice to all citizens"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 1,
+      "text_reference": "Section 1: The Senate"
+    },
+    {
+      "question": "Which of the following was NOT a magistracy below the consulship in the early Republic?",
+      "options": [
+        "Quaestor",
+        "Aedile",
+        "Praetor",
+        "Dictator"
+      ],
+      "correctAnswers": [3],
+      "difficulty": 1,
+      "text_reference": "Section 1: Magistracies and Checks"
+    },
+    {
+      "question": "What Latin term describes the unwritten customs and precedents that held the force of law in Rome?",
+      "options": [
+        "Mos maiorum",
+        "Lex",
+        "Imperium",
+        "Auspicia"
+      ],
+      "correctAnswers": [0],
+      "difficulty": 1,
+      "text_reference": "Section 1: The Power of Tradition"
+    },
+    {
+      "question": "What fundamental principle did the Republic establish that was NOT true under the kings?",
+      "options": [
+        "No one, not even the highest magistrate, stood above the law",
+        "One single ruler held all governmental power and made decisions alone",
+        "The ruler was answerable only to the gods and no earthly authority",
+        "The ruler could serve for life and pass the throne to successors"
+      ],
+      "correctAnswers": [0],
+      "difficulty": 1,
+      "text_reference": "Section 1: The Rule of Law"
+    }
+  ]
+}

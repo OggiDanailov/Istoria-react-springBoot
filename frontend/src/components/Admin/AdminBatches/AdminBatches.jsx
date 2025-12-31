@@ -456,17 +456,25 @@ function AdminBatches() {
               <label>Select Batch to Add Questions</label>
               <select
                 value={selectedBatchId || ''}
-                onChange={(e) => setSelectedBatchId(e.target.value ? Number(e.target.value) : null)}
+                onChange={(e) => {
+                  const batchId = e.target.value ? Number(e.target.value) : null
+                  setSelectedBatchId(batchId)
+                  // When a batch is selected, automatically set difficulty to match that batch
+                  if (batchId) {
+                    const selectedBatch = batches.find(b => b.id === batchId)
+                    if (selectedBatch) {
+                      setDifficulty(selectedBatch.difficulty)  // ← This line fixes it
+                    }
+                  }
+                }}
                 className="form-input"
               >
                 <option value="">-- Choose a Batch --</option>
-                {batches
-                  .filter(b => b.difficulty === difficulty)
-                  .map(batch => (
-                    <option key={batch.id} value={batch.id}>
-                      {getDifficultyLabel(batch.difficulty)} - Batch {batch.batchOrder}
-                    </option>
-                  ))}
+                {batches.map(batch => (
+                  <option key={batch.id} value={batch.id}>
+                    {getDifficultyLabel(batch.difficulty)} - Batch {batch.batchOrder}
+                  </option>
+                ))}
               </select>
             </div>
 

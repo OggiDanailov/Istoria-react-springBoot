@@ -1,0 +1,129 @@
+{
+  "chapter_id": "early-republic-conflict-orders",
+  "batch_number": 3,
+  "difficulty": 1,
+  "batch_order": 3,
+  "description": "Easy - The Twelve Tables and Written Law",
+  "questions": [
+    {
+      "question": "What was the fundamental problem with Roman law before the Twelve Tables were created?",
+      "options": [
+        "There were far too many written laws for average citizens to remember them",
+        "Laws existed only as unwritten customs that patrician magistrates could arbitrarily reinterpret",
+        "Laws were written in Greek instead of Latin, making them incomprehensible to citizens",
+        "Laws were changed by magistrates every single time a new consul took office"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "text_reference": "Section 5: The Push for Written Law"
+    },
+    {
+      "question": "In what year were the Twelve Tables inscribed and displayed in the Forum?",
+      "options": [
+        "509 BCE when the Republic was first established",
+        "494 BCE when the first tribunes were created",
+        "450 BCE when the decemvirs completed their written legal code",
+        "400 BCE during the later stages of the early Republic"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 1,
+      "text_reference": "Section 5: The Decemvirs and the Creation"
+    },
+    {
+      "question": "What does 'Lex Duodecim Tabularum' literally mean in Latin?",
+      "options": [
+        "The law of twelve magistrates who governed together",
+        "The law of twelve tribes voting on major decisions",
+        "The law of the twelve bronze tablets inscribed with legal code",
+        "The law of twelve gods who protected the Roman state"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 1,
+      "text_reference": "Section 5: The Decemvirs and the Creation"
+    },
+    {
+      "question": "Who were the decemvirs appointed to create Rome's written laws?",
+      "options": [
+        "A group of ten senators chosen by the Senate for this task",
+        "A special commission of ten men given authority to draft legal code",
+        "Ten military generals who had won victories against Rome's enemies",
+        "Ten representatives elected directly by the plebeian assembly"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "text_reference": "Section 5: The Decemvirs and the Creation"
+    },
+    {
+      "question": "Which legal code did the decemvirs reportedly study before drafting the Twelve Tables?",
+      "options": [
+        "The laws of Egypt which had been written down centuries earlier",
+        "The Etruscan legal system used in the northern cities",
+        "The Carthaginian laws used by trading cities in North Africa",
+        "Greek law, particularly the legal code established in Athens"
+      ],
+      "correctAnswers": [3],
+      "difficulty": 1,
+      "text_reference": "Section 5: The Decemvirs and the Creation"
+    },
+    {
+      "question": "Why was the creation of written law a significant plebeian victory?",
+      "options": [
+        "Laws were now public and could not be arbitrarily reinterpreted by patricians",
+        "It immediately eliminated the Senate and all patrician political power",
+        "It allowed plebeians to become consuls and hold the highest offices",
+        "It abolished debt slavery and freed all debtors enslaved to creditors"
+      ],
+      "correctAnswers": [0],
+      "difficulty": 1,
+      "text_reference": "Section 5: The Significance for Plebeians"
+    },
+    {
+      "question": "Which of the following was NOT directly addressed by the Twelve Tables?",
+      "options": [
+        "Rules governing property law, inheritance, and property disputes",
+        "Laws establishing family structure, marriage, and parental authority",
+        "Procedures for bringing lawsuits and conducting court trials",
+        "Formal requirements for plebeians to become senators and consuls"
+      ],
+      "correctAnswers": [3],
+      "difficulty": 1,
+      "text_reference": "Section 5: The Limitations - What the Twelve Tables Did NOT Solve"
+    },
+    {
+      "question": "Which aspect of the Twelve Tables actually reinforced existing patrician power?",
+      "options": [
+        "Rules about property inheritance that gave equal shares to all heirs",
+        "Regulations regarding debt slavery and creditor power over debtors",
+        "Procedures restricting military commanders from leading armies alone",
+        "Requirements that all magistrates had to consult with tribunes"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "text_reference": "Section 5: What the Twelve Tables Contained"
+    },
+    {
+      "question": "How do modern historians know what content the Twelve Tables actually contained?",
+      "options": [
+        "Ancient authors quoted and summarized the laws in their historical writings",
+        "The original bronze tablets survive intact in Roman museums today",
+        "Archaeological excavations uncovered clay tablets with complete word-for-word text",
+        "Livy provided a detailed word-for-word transcription in his historical work"
+      ],
+      "correctAnswers": [0],
+      "difficulty": 1,
+      "text_reference": "Section 2: Contemporary Written Sources"
+    },
+    {
+      "question": "What was the most important long-term impact of making law written and public?",
+      "options": [
+        "It eliminated all patrician privileges and made all citizens completely equal",
+        "It gave all plebeians immediate access to every magistracy and priesthood",
+        "It abolished slavery throughout the Roman state and freed all enslaved people",
+        "It established that law was objective and applied equally to all citizens"
+      ],
+      "correctAnswers": [3],
+      "difficulty": 1,
+      "text_reference": "Section 5: The Significance for Plebeians"
+    }
+  ]
+}
