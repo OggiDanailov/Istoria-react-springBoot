@@ -1,0 +1,139 @@
+{
+  "chapter_id": "early-republic-final-conquest-italy",
+  "batch_number": 4,
+  "difficulty": 2,
+  "batch_order": 4,
+  "description": "Medium-Hard - Battle of Asculum, Roman Adaptation & Strategic Stalemate",
+  "questions": [
+    {
+      "question": "How did Roman military commanders respond tactically after their initial defeat at Heraclea?",
+      "options": [
+        "They adopted Pyrrhus's Greek tactics entirely and abandoned traditional Roman military formations completely",
+        "They requested additional military forces from allies and increased their overall troop numbers substantially",
+        "They retreated from southern Italy and concentrated Roman forces in central and northern territories",
+        "They constructed massive fortifications designed to prevent elephant cavalry from charging effectively",
+        "They analyzed Pyrrhus's tactics and adapted their own strategies to counter his military methods"
+      ],
+      "correctAnswers": [4],
+      "difficulty": 2,
+      "text_reference": "Section 5: Roman Adaptation"
+    },
+    {
+      "question": "Where and when did the second major battle between Pyrrhus and Rome occur during his invasion?",
+      "options": [
+        "At Heraclea again in 279 BCE after both sides regrouped for a decisive rematch battle",
+        "At Tarentum in 278 BCE when Pyrrhus attempted to capture the Greek city he was defending",
+        "At Asculum in central Italy in 279 BCE, the year after the Battle of Heraclea engagement",
+        "At Rome itself in 275 BCE as Pyrrhus made his final assault on the city directly",
+        "At Brundisium in southeastern Italy in 276 BCE near the strategic port city and harbor"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 2,
+      "text_reference": "Section 5: The Battle of Asculum (279 BCE)"
+    },
+    {
+      "question": "What characterized the nature and duration of the Battle of Asculum compared to earlier engagements?",
+      "options": [
+        "It was a quick decisive battle lasting only a few hours with clear winner and loser",
+        "It was primarily a naval battle involving the use of ships and maritime military tactics",
+        "It was a siege warfare engagement focused on capturing fortified city positions and strongholds",
+        "It was a closely fought battle that raged for hours with uncertain outcome and heavy casualties",
+        "It was a skirmish between small forces with minimal significance to the overall military campaign"
+      ],
+      "correctAnswers": [3],
+      "difficulty": 2,
+      "text_reference": "Section 5: The Battle of Asculum (279 BCE)"
+    },
+    {
+      "question": "What pattern emerged from Pyrrhus's military results at both Heraclea and Asculum battles? (SELECT ALL THAT APPLY)",
+      "options": [
+        "Pyrrhus achieved tactical victories in both battles despite improved Roman tactical adaptation efforts",
+        "Roman forces retreated in good order rather than breaking and fleeing in complete panic and disarray",
+        "Pyrrhus suffered heavy casualties including soldiers and elephants in both battles against Roman resistance",
+        "Pyrrhus completely destroyed Roman armies and conquered all of southern Italy militarily without difficulty",
+        "Both battles resulted in decisive strategic outcomes that forced Rome to sue for peace immediately"
+      ],
+      "correctAnswers": [0, 1, 2, 4],
+      "difficulty": 2,
+      "text_reference": "Section 5: The Battle of Asculum (279 BCE)"
+    },
+    {
+      "question": "What deepening strategic dilemma confronted Pyrrhus after his victory at Asculum in 279 BCE? (SELECT ALL THAT APPLY)",
+      "options": [
+        "He had achieved complete military dominance and only needed to accept formal Roman surrender terms",
+        "He had won battles but had not defeated Roman institutional capacity or determination to continue fighting",
+        "He faced casualty replacement difficulties with finite army size and no reinforcement mechanisms available",
+        "Rome had abandoned southern Italy and concentrated forces in northern territories leaving him unchallenged",
+        "All major Italian cities had rallied to his cause and provided military forces and financial support"
+      ],
+      "correctAnswers": [1, 2],
+      "difficulty": 2,
+      "text_reference": "Section 5: Pyrrhus's Strategic Dilemma"
+    },
+    {
+      "question": "Why did Tarentum and other Italian cities fail to provide Pyrrhus with the military support he needed?",
+      "options": [
+        "They were completely defeated by Roman forces and possessed no remaining military capability whatsoever",
+        "They secretly supported Rome and actively worked to undermine Pyrrhus's military campaign operations",
+        "They had negotiated peace agreements with Rome and refused to assist Pyrrhus further militarily",
+        "They viewed Pyrrhus as a liberator but lacked significant military and financial resources to contribute substantially",
+        "They were too distant geographically to provide meaningful military support to Pyrrhus's army"
+      ],
+      "correctAnswers": [3],
+      "difficulty": 2,
+      "text_reference": "Section 5: Pyrrhus's Strategic Dilemma"
+    },
+    {
+      "question": "How did Rome's institutional capacity affect the course of the war with Pyrrhus? (SELECT ALL THAT APPLY)",
+      "options": [
+        "Rome could raise new armies and send reinforcements to replace losses suffered in battles",
+        "Rome could sustain prolonged warfare through Senate appropriations and institutional coordination mechanisms",
+        "Rome's political leadership remained committed to the war despite military defeats and casualties",
+        "Rome lacked ability to wage prolonged conflict and needed to negotiate peace terms quickly",
+        "Rome maintained alliances with Italian peoples who did not massively defect to Pyrrhus's cause"
+      ],
+      "correctAnswers": [0, 1, 2, 4],
+      "difficulty": 2,
+      "text_reference": "Section 5: Roman Resilience and Adaptation"
+    },
+    {
+      "question": "What external threats to his kingdom forced Pyrrhus to reconsider his Italian military campaign?",
+      "options": [
+        "His Macedonian allies requested his return to defend the Greek world against various threats",
+        "He received news that Rome had declared war on Epirus and was preparing invasion forces against him",
+        "Other Hellenistic monarchs were rapidly expanding their power and threatening his regional dominance",
+        "His Italian allies demanded increased military resources and financial support from his limited treasury",
+        "The Egyptian Ptolemaic kingdom threatened to invade his territories while he was focused on Italy"
+      ],
+      "correctAnswers": [0],
+      "difficulty": 2,
+      "text_reference": "Section 5: The Shift in Pyrrhus's Fortune"
+    },
+    {
+      "question": "What military and political factors combined to force Pyrrhus's decision to withdraw from Italy? (SELECT ALL THAT APPLY)",
+      "options": [
+        "Rome suddenly agreed to extremely favorable peace terms that Pyrrhus could not refuse diplomatically",
+        "His army was depleted from casualties and lacked capacity for major offensive operations against Rome",
+        "Roman forces defeated Pyrrhus decisively in battle and forced his withdrawal through military conquest",
+        "His kingdom of Epirus faced threats requiring his immediate return to defend his homeland territories",
+        "All Greek city-states allied with Rome and cut off his supply lines from Mediterranean trading networks"
+      ],
+      "correctAnswers": [1, 3],
+      "difficulty": 2,
+      "text_reference": "Section 5: The Shift in Pyrrhus's Fortune"
+    },
+    {
+      "question": "When did Pyrrhus finally abandon his Italian military campaign and withdraw his army back to Greece?",
+      "options": [
+        "In 280 BCE immediately after his initial victory at Heraclea when he achieved his objectives",
+        "In 279 BCE after the Battle of Asculum when he realized military stalemate had developed",
+        "In 275 BCE after years of fighting with a depleted army and mounting strategic pressures",
+        "In 270 BCE when Rome finally agreed to peace negotiations on favorable terms for Epirus",
+        "In 264 BCE when the First Punic War broke out and diverted Roman military attention entirely"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 2,
+      "text_reference": "Section 5: The Withdrawal"
+    }
+  ]
+}

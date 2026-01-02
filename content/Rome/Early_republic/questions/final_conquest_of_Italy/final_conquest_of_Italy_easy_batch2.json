@@ -1,0 +1,132 @@
+{
+  "chapter_id": "early-republic-final-conquest-italy",
+  "batch_number": 2,
+  "difficulty": 1,
+  "batch_order": 2,
+  "description": "Easy-Medium - Early Campaigns & Pyrrhus's Arrival in Italy",
+  "questions": [
+    {
+      "question": "What was Manius Curius Dentatus's role in the final conquest of southern Italy?",
+      "options": [
+        "He was a diplomatic negotiator who secured peaceful incorporation of southern Italian peoples",
+        "He served as governor of Sicily and managed Roman colonial expansion in the Mediterranean",
+        "He returned from the Samnite Wars and immediately retired from military service entirely",
+        "He negotiated peace treaties with Greek cities and established trading relationships with Tarentum",
+        "He led military campaigns in southern Italy and commanded the conquest of Lucanian territories"
+      ],
+      "correctAnswers": [4],
+      "difficulty": 1,
+      "text_reference": "Section 3: The Campaign in Southern Italy"
+    },
+    {
+      "question": "How did Roman military campaigns differ when fighting Lucanians and Bruttians compared to the Samnites?",
+      "options": [
+        "Romans faced equally organized resistance and fought similar large-scale pitched battles",
+        "Romans focused on capturing strategic cities through siege warfare rather than large battles",
+        "Romans avoided military engagement and relied exclusively on diplomatic negotiations",
+        "Lucanians and Bruttians possessed superior tactical advantages in mountain terrain"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "text_reference": "Section 3: Strategic Cities and Strongholds"
+    },
+    {
+      "question": "Why did Lucanian and Bruttian peoples offer limited resistance to Roman military expansion? (SELECT ALL THAT APPLY)",
+      "options": [
+        "They were already weakened from previous losses in the Samnite coalition wars",
+        "They lacked the military organization and unified leadership to mount effective coordinated resistance",
+        "They possessed superior military technology and weapons compared to Roman armies",
+        "They were individually conquered piecemeal rather than facing unified Roman opposition",
+        "They immediately negotiated peaceful surrender without attempting any military defense"
+      ],
+      "correctAnswers": [0, 1, 3],
+      "difficulty": 1,
+      "text_reference": "Section 3: Limited Resistance"
+    },
+    {
+      "question": "What qualities characterized Pyrrhus's invasion army from Epirus?",
+      "options": [
+        "It consisted of elite mercenary soldiers recruited from throughout the Mediterranean region and beyond",
+        "It was a professional army trained in Hellenistic tactics with advanced Greek-style weaponry and equipment",
+        "It emphasized naval operations and featured specially designed ships for amphibious warfare tactics",
+        "It relied on local Italian recruits to supplement the core Epirote soldiers and strengthen overall forces"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "text_reference": "Section 4: The Army's Composition"
+    },
+    {
+      "question": "What made war elephants so psychologically and militarily devastating to Roman soldiers at Heraclea?",
+      "options": [
+        "Romans had studied Hellenistic elephant tactics extensively but lacked the cavalry units needed to counter them effectively",
+        "Elephants were completely unknown to Italian armies and caused panic that broke infantry formations, giving tactical advantage",
+        "Romans possessed weapons capable of harming elephants but soldiers refused to use them due to psychological fear",
+        "Elephants were slower than Roman forces but their heavy armor prevented cavalry from maneuvering around their flanks"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "text_reference": "Section 4: Pyrrhus's Invasion Force"
+    },
+    {
+      "question": "What was Pyrrhus's strategic situation and vision when he first arrived in Italy in 280 BCE?",
+      "options": [
+        "He planned a brief campaign lasting only a few months before returning to Epirus immediately",
+        "He sought only to protect Tarentum from Roman expansion without pursuing broader territorial goals",
+        "He expected Italian peoples to rally massively to his cause and join his military forces",
+        "He aimed to establish trading relationships rather than pursuing military conquest or political dominance",
+        "He envisioned establishing himself as dominant power, defeating Rome, and creating lasting kingdom"
+      ],
+      "correctAnswers": [4],
+      "difficulty": 1,
+      "text_reference": "Section 4: Pyrrhus's Strategic Vision"
+    },
+    {
+      "question": "How did Pyrrhus underestimate Rome's capacity and determination in his initial strategic planning?",
+      "options": [
+        "He believed military victory in battles would automatically translate into political dominance over Rome",
+        "He expected Roman negotiation and surrender after his first major military victory",
+        "He did not appreciate Rome's deep institutional capacity for waging prolonged warfare indefinitely",
+        "All of the above underestimations affected Pyrrhus's strategic planning and expectations"
+      ],
+      "correctAnswers": [3],
+      "difficulty": 1,
+      "text_reference": "Section 4: Pyrrhus's Strategic Vision"
+    },
+    {
+      "question": "In what year did Pyrrhus sail across the Adriatic Sea to Italy with his invasion force?",
+      "options": [
+        "290 BCE, immediately after the conclusion of Rome's Samnite Wars and conflicts",
+        "280 BCE, when Tarentum requested military assistance against Roman expansion southward",
+        "275 BCE, after Pyrrhus had consolidated power throughout Greece and the Balkans",
+        "265 BCE, during the early stages of the upcoming conflict between Rome and Carthage"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "text_reference": "Section 4: Pyrrhus's Invasion Force"
+    },
+    {
+      "question": "What circumstances allowed Pyrrhus to arrive in Italy at precisely the moment Tarentum needed military support?",
+      "options": [
+        "Tarentum and Pyrrhus had previously negotiated an alliance and planned the invasion together",
+        "Pyrrhus was already conducting military campaigns nearby and could quickly redirect forces southward",
+        "Pyrrhus was seeking opportunities for conquest and glory, making the appeal ideally timed for him",
+        "Roman forces had specifically requested Pyrrhus's intervention to resolve their southern conflicts"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 1,
+      "text_reference": "Section 4: The Appeal from Tarentum"
+    },
+    {
+      "question": "What advantages did Pyrrhus possess when he began his Italian campaign against Rome?",
+      "options": [
+        "He had superior naval power and control of Mediterranean trade routes and commercial networks",
+        "He brought advanced Hellenistic military technology including trained war elephants Romans had never encountered",
+        "He had the support of all Italian peoples who viewed him as a liberator from Roman dominance",
+        "He possessed greater numbers of soldiers and unlimited resources to replace casualties indefinitely"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "text_reference": "Section 4: Pyrrhus's Invasion Force"
+    }
+  ]
+}

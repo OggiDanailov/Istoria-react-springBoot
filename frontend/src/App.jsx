@@ -86,11 +86,50 @@ function App() {
     setAuthView('signin')
   }
 
-  const handleSignInSuccess = (loginData) => {
-    // User is now logged in
-    setUser(loginData)
-    setIsLoggedIn(true)
-    setShowAuthModal(false)
+  const handleSignInSuccess = async (loginData) => {
+    try {
+      const token = localStorage.getItem('token')
+
+      // Fetch fresh user stats from server
+      const statsResponse = await fetch(`${API_BASE_URL}/api/user-progress`, {
+        headers: {
+          'Authorization': `Bearer ${token}`
+        }
+      })
+
+      if (statsResponse.ok) {
+        const stats = await statsResponse.json()
+
+        // Merge stats into user data
+        const enrichedUser = {
+          ...loginData,
+          totalPoints: stats.totalPoints || 0,
+          quizzesTaken: stats.quizzesTaken || 0,
+          topicsStudied: stats.topicsStudied || 0,
+          topicsMastered: stats.topicsMastered || 0
+        }
+
+        // Store enriched user data in localStorage
+        localStorage.setItem('user', JSON.stringify(enrichedUser))
+
+        // Update state
+        setUser(enrichedUser)
+      } else {
+        // If stats fetch fails, still log user in with basic data
+        setUser(loginData)
+        localStorage.setItem('user', JSON.stringify(loginData))
+      }
+
+      setIsLoggedIn(true)
+      setShowAuthModal(false)
+    } catch (err) {
+      console.error('Error fetching user stats:', err)
+      // Still log user in even if stats fetch fails
+      setUser(loginData)
+      localStorage.setItem('user', JSON.stringify(loginData))
+      setIsLoggedIn(true)
+      setShowAuthModal(false)
+    }
   }
 
   const handleLogout = () => {
