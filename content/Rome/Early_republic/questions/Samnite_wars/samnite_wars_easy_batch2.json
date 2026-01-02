@@ -1,0 +1,129 @@
+{
+  "chapter_id": "early-republic-samnite-wars",
+  "batch_number": 2,
+  "difficulty": 1,
+  "batch_order": 2,
+  "description": "Easy - The First Samnite War (343-341 BCE)",
+  "questions": [
+    {
+      "question": "Who were the two Roman consuls appointed to lead armies against Samnium in 343 BCE?",
+      "options": [
+        "Camillus and Fabius Maximus",
+        "Titus Manlius Torquatus and Publius Decius Mus",
+        "Manius Curius Dentatus and Lucius Volumnius",
+        "Veturius Calvinus and Postumius Albinus"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "text_reference": "Section 3: The Outbreak of Conflict"
+    },
+    {
+      "question": "What was Rome's military strategy in the First Samnite War?",
+      "options": [
+        "To avoid direct battles and use guerrilla tactics against Samnites",
+        "To attack Samnite territory using only naval forces",
+        "To negotiate immediate peace without any military engagement",
+        "To field armies in open terrain where Roman tactical advantages would be greatest"
+      ],
+      "correctAnswers": [3],
+      "difficulty": 1,
+      "text_reference": "Section 3: The First Campaigns"
+    },
+    {
+      "question": "What key organizational difference gave Roman armies advantage in open-field battles?",
+      "options": [
+        "Romans fought with larger numbers of cavalry than Samnites",
+        "Romans used looser, more flexible formations like the Samnites",
+        "Roman armies fought in tight, coordinated formations maintaining discipline under pressure",
+        "Romans relied entirely on individual warrior skill rather than unit coordination"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 1,
+      "text_reference": "Section 3: The First Campaigns"
+    },
+    {
+      "question": "How long did the First Samnite War last before a peace agreement was reached?",
+      "options": [
+        "About two years of campaigning",
+        "Less than one year of intermittent fighting",
+        "Nearly a decade of continuous conflict",
+        "Over twenty years of warfare"
+      ],
+      "correctAnswers": [0],
+      "difficulty": 1,
+      "text_reference": "Section 3: The Conclusion and Uncertain Terms"
+    },
+    {
+      "question": "What remained unclear about the peace terms ending the First Samnite War?",
+      "options": [
+        "Whether either side had actually won or lost",
+        "Whether Samnites had agreed to become Roman subjects",
+        "How many soldiers had been killed in the fighting",
+        "The exact terms of peace and whether a true lasting settlement had been reached"
+      ],
+      "correctAnswers": [3],
+      "difficulty": 1,
+      "text_reference": "Section 3: The Conclusion and Uncertain Terms"
+    },
+    {
+      "question": "Which of the following was NOT demonstrated by Rome's initial success in the First Samnite War?",
+      "options": [
+        "Rome could project military power far from home into southern Italy",
+        "Roman armies could defeat Samnite forces in open field battles",
+        "Rome had become the undisputed master of all of Italy and the Mediterranean",
+        "Samnium was a formidable opponent that could not be easily defeated"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 1,
+      "text_reference": "Section 3: What the First War Established"
+    },
+    {
+      "question": "Why did Roman commanders believe the First Samnite War demonstrated that Rome could easily conquer Samnium?",
+      "options": [
+        "Because Roman forces achieved initial victory in pitched battles against Samnite armies",
+        "Because Samnites immediately surrendered after the first engagement",
+        "Because Rome's ally Campania had already defeated the Samnites",
+        "Because Roman armies had avoided all direct combat with Samnites"
+      ],
+      "correctAnswers": [0],
+      "difficulty": 1,
+      "text_reference": "Section 3: The First Campaigns"
+    },
+    {
+      "question": "What institutional advantage did Rome have over Samnium in sustaining military campaigns?",
+      "options": [
+        "Rome possessed a larger population but Samnium maintained superior military tactics and strategic flexibility",
+        "Rome could organize supplies through the Senate, fund armies through the treasury, and coordinate strategy through magistrates",
+        "Samnium maintained superior institutional organization and governmental coordination compared to Rome's fragmented system",
+        "Both Rome and Samnium possessed entirely identical institutional capabilities and organizational structures for sustained warfare"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "text_reference": "Section 3: Roman Advantages in the First War"
+    },
+    {
+      "question": "Which statement best reflects the conclusion of the First Samnite War?",
+      "options": [
+        "Rome achieved a decisive, permanent victory that ended the conflict forever",
+        "Samnium completely conquered Rome and forced Roman withdrawal from southern Italy",
+        "Both sides agreed to temporary peace but recognized their fundamental incompatibility",
+        "The war had no winner and Rome abandoned interest in Samnite territory"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 1,
+      "text_reference": "Section 3: What the First War Established"
+    },
+    {
+      "question": "What did the First Samnite War reveal about the future relationship between Rome and Samnium?",
+      "options": [
+        "Rome and Samnium would remain peaceful allies and cooperate indefinitely into the future",
+        "One power would eventually dominate; they could not coexist as political and military equals",
+        "Samnium would gradually become more powerful and eventually dominate Rome in military conflicts",
+        "Neither side possessed any interest in continuing conflicts or future military confrontation"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "text_reference": "Section 3: What the First War Established"
+    }
+  ]
+}

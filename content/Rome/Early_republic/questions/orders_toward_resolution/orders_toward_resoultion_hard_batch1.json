@@ -1,0 +1,139 @@
+{
+  "chapter_id": "early-republic-toward-resolution",
+  "batch_number": 6,
+  "difficulty": 3,
+  "batch_order": 6,
+  "description": "Hard - Analysis and Significance of the Licinian Laws",
+  "questions": [
+    {
+      "question": "What did the Licinian Laws fundamentally change about Roman political structure? (SELECT ALL THAT APPLY)",
+      "options": [
+        "Political power was distributed between patricians and plebeians rather than monopolized by patricians",
+        "Plebeians could now aspire to the consulship and other high offices previously closed to them",
+        "The precedent was established that change was possible within the system",
+        "Complete equality was immediately achieved between all Roman citizens regardless of wealth",
+        "Both patricians and plebeians could now participate directly in magistracies and governance"
+      ],
+      "correctAnswers": [0, 1, 2, 4],
+      "difficulty": 3,
+      "text_reference": "Section 6: What Changed"
+    },
+    {
+      "question": "Which aspects of Roman society were NOT fundamentally changed by the Licinian Laws? (SELECT ALL THAT APPLY)",
+      "options": [
+        "Aristocratic dominance continued—wealthy families of both classes still controlled power",
+        "Ordinary plebeians and the common masses still remained excluded from holding office",
+        "Economic inequality between rich and poor was not reduced by the reforms",
+        "Some priesthoods remained closed to plebeians even after the laws were passed",
+        "All patrician privileges were immediately abolished and patricians became powerless"
+      ],
+      "correctAnswers": [0, 1, 2, 3],
+      "difficulty": 3,
+      "text_reference": "Section 6: What Did NOT Change"
+    },
+    {
+      "question": "Why is it misleading to characterize the Licinian Laws as the 'end' of the Conflict of the Orders? (SELECT ALL THAT APPLY)",
+      "options": [
+        "The conflict immediately resumed in even more violent form after the laws were passed",
+        "The laws transformed the conflict rather than ending it; competition became among families rather than classes",
+        "Patricians soon found ways to reverse the laws and reassert complete dominance",
+        "Politics increasingly became competition between individual aristocratic families for power",
+        "The transformation meant the conflict was no longer about class access but about factional dominance"
+      ],
+      "correctAnswers": [1, 3, 4],
+      "difficulty": 3,
+      "text_reference": "Section 6: A New Phase Rather Than an End"
+    },
+    {
+      "question": "What does the achievement of plebeian access to the consulship reveal about patrician arguments for exclusion? (SELECT ALL THAT APPLY)",
+      "options": [
+        "The arguments were proven correct because plebeian consuls turned out to be incompetent rulers",
+        "The arguments were revealed as motivated by class interest rather than actual fitness for governance",
+        "Plebeians demonstrated they were perfectly capable of governing at the highest levels",
+        "The fact that plebeians could hold the office showed that patrician exclusivity was based on power dynamics, not inherent superiority",
+        "The arguments were validated because patrician consuls remained the majority for centuries"
+      ],
+      "correctAnswers": [1, 2, 3],
+      "difficulty": 3,
+      "text_reference": "Section 6: What Changed and Significance"
+    },
+    {
+      "question": "How do modern historians evaluate the reliability of sources describing the Gallic invasion and Camillus? (SELECT ALL THAT APPLY)",
+      "options": [
+        "The sources are considered completely accurate historical records with no legendary elements",
+        "The historical reliability of sources about Camillus is disputed by modern scholars",
+        "Some details may be legendary or misremembered rather than strictly factual",
+        "The invasion itself is confirmed, but specific narratives about recovery are uncertain",
+        "Archaeological evidence provides clear confirmation of every detail in literary sources"
+      ],
+      "correctAnswers": [1, 2, 3],
+      "difficulty": 3,
+      "text_reference": "Section 2: The Specific Invasion - Brennus"
+    },
+    {
+      "question": "What does the fact that poor plebeians gained little from plebeian access to the consulship reveal about the Licinian Laws? (SELECT ALL THAT APPLY)",
+      "options": [
+        "The laws were a complete failure because they didn't solve all plebeian grievances",
+        "The laws addressed class exclusion from power, not economic inequality or social hierarchy",
+        "Only wealthy and prominent plebeians could benefit from access to high office",
+        "Political participation does not necessarily equal economic equality or improved conditions for the masses",
+        "The conflict between rich and poor would eventually become as important as patrician-plebeian conflict"
+      ],
+      "correctAnswers": [1, 2, 3, 4],
+      "difficulty": 3,
+      "text_reference": "Section 6: What Did NOT Change"
+    },
+    {
+      "question": "How did the resolution of the Conflict of the Orders affect Rome's capacity for external expansion? (SELECT ALL THAT APPLY)",
+      "options": [
+        "Rome became weaker because plebeian and patrician cooperation deteriorated after the laws",
+        "With internal political structure stabilized, Rome could focus on conquering Italy and the Mediterranean",
+        "Rome's military strength actually decreased because plebeians could now refuse dangerous missions",
+        "The shared political power made foreign conquest more likely because all factions agreed on expansion",
+        "Political stability allowed Rome to pursue long-term military strategy rather than managing internal conflict"
+      ],
+      "correctAnswers": [1, 4],
+      "difficulty": 3,
+      "text_reference": "Section 7: Conclusion"
+    },
+    {
+      "question": "What is the historical significance of transforming class conflict into factional competition? (SELECT ALL THAT APPLY)",
+      "options": [
+        "It meant that Rome's fundamental inequality between patricians and plebeians was permanently solved",
+        "It showed that the Republic could adapt and integrate different groups while maintaining stability",
+        "Factional competition was often more violent and destabilizing than class conflict had been",
+        "It established that political access mattered more than economic equality in Roman society",
+        "The transformation allowed the Republic to function with broader participation while maintaining elite dominance"
+      ],
+      "correctAnswers": [1, 2, 3, 4],
+      "difficulty": 3,
+      "text_reference": "Section 6: A New Phase Rather Than an End"
+    },
+    {
+      "question": "How did the plebeian victory on the consulship differ fundamentally from earlier concessions like the Twelve Tables? (SELECT ALL THAT APPLY)",
+      "options": [
+        "The consulship was merely symbolic and carried no real power or authority",
+        "Access to the consulship meant plebeians could govern and exercise real power regularly, not just participate indirectly",
+        "The Twelve Tables had completely solved plebeian grievances and the consulship was redundant",
+        "The consulship represented actual power and prestige, unlike earlier protections which were defensive in nature",
+        "Earlier victories had been forced on patricians, but the consulship was given voluntarily out of respect"
+      ],
+      "correctAnswers": [1, 3],
+      "difficulty": 3,
+      "text_reference": "Section 5: What the Licinian Laws Established"
+    },
+    {
+      "question": "What historical methodology problem exists in evaluating why patricians finally accepted the Licinian Laws in 367 BCE? (SELECT ALL THAT APPLY)",
+      "options": [
+        "The sources provide perfectly clear explanations that modern historians debate unnecessarily",
+        "Ancient sources don't clearly explain the specific circumstances of patrician capitulation",
+        "We must infer causes from circumstantial evidence (military threats, political exhaustion, etc.) without certainty",
+        "Archaeological evidence contradicts literary accounts and leaves the causes unexplainable",
+        "Modern historians have perfect access to patrician deliberations that ancient sources preserved completely"
+      ],
+      "correctAnswers": [1, 2],
+      "difficulty": 3,
+      "text_reference": "Section 5: The Breakthrough - The Licinian Laws"
+    }
+  ]
+}

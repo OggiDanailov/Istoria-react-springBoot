@@ -1,0 +1,129 @@
+{
+  "chapter_id": "early-republic-toward-resolution",
+  "batch_number": 1,
+  "difficulty": 1,
+  "batch_order": 1,
+  "description": "Easy - The Gallic Invasion and Recovery",
+  "questions": [
+    {
+      "question": "Who were the Gauls, and where did they originally come from?",
+      "options": [
+        "Germanic peoples from lands east of the Rhine River",
+        "Indo-European Celtic peoples from Central Europe and the Danube region",
+        "Greek colonists who had expanded northward into Mediterranean regions",
+        "Etruscan warriors who migrated from what is now Tuscany"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "text_reference": "Section 2: The Gauls - Who Were They"
+    },
+    {
+      "question": "In what year did the Gallic army under Brennus invade Rome?",
+      "options": [
+        "410 BCE",
+        "400 BCE",
+        "390 BCE",
+        "370 BCE"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 1,
+      "text_reference": "Section 2: The Specific Invasion - Brennus and His Army"
+    },
+    {
+      "question": "What was the name of the river where Roman forces were defeated by the Gauls?",
+      "options": [
+        "The Tiber River near Rome's city center",
+        "The Arno River in northern Italy where Rome's allies lived",
+        "The Po River in Cisalpine Gaul where Gauls originally settled",
+        "The Allia River, a tributary of the Tiber about 11 miles north of Rome"
+      ],
+      "correctAnswers": [3],
+      "difficulty": 1,
+      "text_reference": "Section 2: The Invasion and Battle of the Allia"
+    },
+    {
+      "question": "How did Gallic warriors fight, and why were they so dangerous to Romans?",
+      "options": [
+        "They used crossbows from long distances and avoided hand-to-hand combat",
+        "They were large, strong fighters who relied on abandon and ferocity with long swords",
+        "They wore heavy armor and fought in tight formations like Roman soldiers",
+        "They used poisoned weapons and fought primarily at night to surprise enemies"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "text_reference": "Section 2: The Northern Threat"
+    },
+    {
+      "question": "Who was the patrician general credited with expelling the Gauls and rebuilding Rome?",
+      "options": [
+        "Camillus",
+        "Brennus",
+        "Licinius",
+        "Sextius"
+      ],
+      "correctAnswers": [0],
+      "difficulty": 1,
+      "text_reference": "Section 2: Recovery and Expulsion"
+    },
+    {
+      "question": "What was the most direct consequence of the Gallic invasion on Roman military organization?",
+      "options": [
+        "Rome decided never to fight foreign wars again and focused only on internal peace",
+        "Rome hired Gallic mercenaries to replace soldiers who had died in battle",
+        "Rome eliminated the consular system and created a permanent military dictatorship",
+        "Rome had to rebuild its army and improve military organization after catastrophic defeat"
+      ],
+      "correctAnswers": [3],
+      "difficulty": 1,
+      "text_reference": "Section 2: The Impact on Roman Society"
+    },
+    {
+      "question": "How did the Gallic invasion affect the Conflict of the Orders between patricians and plebeians?",
+      "options": [
+        "It completely ended the conflict and made patricians and plebeians permanent equals",
+        "Patricians and plebeians had to work together temporarily to defend Rome and expel the Gauls",
+        "It caused plebeians to abandon their demands for political power and accept patrician rule",
+        "It gave patricians enough power to permanently crush plebeian political aspirations"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "text_reference": "Section 2: The Impact on Roman Society"
+    },
+    {
+      "question": "What specific advantage did Gallic peoples possess that made conquest possible for them?",
+      "options": [
+        "They had superior numbers compared to all Mediterranean peoples",
+        "They possessed superior iron-working technology and better weapons than many peoples",
+        "They had developed naval power that no one else in the Mediterranean could match",
+        "They used magic and supernatural powers that made them invincible in battle"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "text_reference": "Section 2: Why the Gauls? Celtic Advantages"
+    },
+    {
+      "question": "What was Cisalpine Gaul?",
+      "options": [
+        "A Gallic kingdom in southern Italy that traded with Rome",
+        "Gaul on the far side of the Alps where Celtic peoples originated",
+        "Gaul on this side of the Alps where Celtic tribes settled in the Po River valley",
+        "A Roman colony established north of the Tiber River by patrician generals"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 1,
+      "text_reference": "Section 2: Celtic Arrival in Italy"
+    },
+    {
+      "question": "According to the sources, how long did the Gallic occupation of Rome last?",
+      "options": [
+        "Several months before the Gauls withdrew or were expelled",
+        "A few weeks before they were immediately expelled",
+        "Several years of continuous occupation and Roman subjugation",
+        "The Gauls permanently settled Rome and became the new ruling class"
+      ],
+      "correctAnswers": [0],
+      "difficulty": 1,
+      "text_reference": "Section 2: Recovery and Expulsion"
+    }
+  ]
+}

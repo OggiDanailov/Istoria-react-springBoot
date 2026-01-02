@@ -1,0 +1,129 @@
+{
+  "chapter_id": "early-republic-toward-resolution",
+  "batch_number": 3,
+  "difficulty": 1,
+  "batch_order": 3,
+  "description": "Easy - Plebeian Pressure and Patrician Resistance",
+  "questions": [
+    {
+      "question": "After the Gallic invasion was repelled, what did plebeians do immediately?",
+      "options": [
+        "They accepted patrician rule permanently and stopped demanding political rights",
+        "They resumed their demands for political access with renewed intensity",
+        "They moved out of Rome and established a separate plebeian city",
+        "They allied with the Gauls and threatened to invite them back"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "text_reference": "Section 3: The Resumption of Political Demands"
+    },
+    {
+      "question": "What major plebeian demand involved access to religious authority in Rome?",
+      "options": [
+        "The right to establish their own plebeian temples and priesthoods completely separate from patricians",
+        "Access to priesthoods like augurs and pontifices that had been exclusively patrician",
+        "The right to veto all patrician religious ceremonies through tribune power",
+        "The ability to replace the patrician-controlled religious calendar with a new one"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "text_reference": "Section 3: Demands for Access to Priesthoods"
+    },
+    {
+      "question": "Which office symbolically represented plebeian equality more than any other?",
+      "options": [
+        "The Tribune of the Plebs because it was plebeian in origin",
+        "The Censor because it controlled census and property records",
+        "The Praetor because it involved military command in the field",
+        "The Consulship because it was the highest office and symbol of political authority"
+      ],
+      "correctAnswers": [3],
+      "difficulty": 1,
+      "text_reference": "Section 3: Demands for Access to Magistracies"
+    },
+    {
+      "question": "What specific magistracies did plebeians demand access to?",
+      "options": [
+        "Only the consulship and no other offices",
+        "Quaestorships, praetorships, aedileships, and the consulship",
+        "Only military positions and not civilian magistracies",
+        "All offices except the dictator, which remained patrician only"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "text_reference": "Section 3: Demands for Access to Magistracies"
+    },
+    {
+      "question": "What did patricians claim about their natural right to hold high office?",
+      "options": [
+        "They earned offices through military victories and nothing else",
+        "They claimed noble lineage, special religious knowledge, and ancestral tradition justified exclusive rule",
+        "They argued that plebeians were too poor to pay for the costs of holding office",
+        "They said the gods had revealed that only patricians could govern Rome"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "text_reference": "Section 3: Patrician Resistance Continues"
+    },
+    {
+      "question": "What Latin phrase did patricians invoke to defend their exclusive privileges?",
+      "options": [
+        "Imperium supremum (supreme power)",
+        "Auctoritas maxima (greatest authority)",
+        "Mos maiorum (the way of the ancestors)",
+        "Potestas populi (power of the people)"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 1,
+      "text_reference": "Section 3: Patrician Resistance Continues"
+    },
+    {
+      "question": "What was the political situation in Rome for decades after the Gallic invasion?",
+      "options": [
+        "Patricians had completely surrendered to plebeian demands and shared all power",
+        "Plebeians had captured power and ruled Rome exclusively without patrician input",
+        "A stalemate where neither side could force the other to capitulate",
+        "The two groups had completely separated and governed different parts of Rome"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 1,
+      "text_reference": "Section 3: The Impasse"
+    },
+    {
+      "question": "Why were patricians willing to make small concessions to plebeian demands rather than accept large reforms?",
+      "options": [
+        "They wanted to maintain their power while appeasing discontent through limited change",
+        "They were creating new offices like the praetorship that plebeians could eventually access",
+        "They feared a full plebeian revolt would destroy the Republic entirely",
+        "They believed plebeians lacked the intelligence to hold higher offices"
+      ],
+      "correctAnswers": [0],
+      "difficulty": 1,
+      "text_reference": "Section 3: Patrician Resistance Continues"
+    },
+    {
+      "question": "What was the plebeian response to patrician claims about ancestry and religious knowledge?",
+      "options": [
+        "They agreed completely and stopped asking for political office",
+        "They asked how patricians could claim to be fit rulers if they had led Rome to catastrophic military defeat",
+        "They said genealogy did not matter as much as military victories in battle",
+        "They proposed eliminating all magistracies and creating a democracy"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "text_reference": "Section 3: Resumed Political Demands"
+    },
+    {
+      "question": "What power did plebeians threaten repeatedly during this period of negotiation?",
+      "options": [
+        "The threat to become mercenaries for foreign powers and abandon Rome",
+        "The threat of military secession—refusing to serve in Rome's armies",
+        "The threat to invade the Forum and forcibly seize political power",
+        "The threat to migrate to a neighboring Italian city-state and start a rival Rome"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "text_reference": "Section 3: The Impasse"
+    }
+  ]
+}

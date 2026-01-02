@@ -1,0 +1,129 @@
+{
+  "chapter_id": "early-republic-samnite-wars",
+  "batch_number": 3,
+  "difficulty": 2,
+  "batch_order": 3,
+  "description": "Medium - The Second Samnite War (326-304 BCE): Early Campaigns & Caudine Forks",
+  "questions": [
+    {
+      "question": "Approximately how long did the Second Samnite War last, and how did it differ from the first war?",
+      "options": [
+        "It lasted three years and was a quick Roman victory like the first war",
+        "It lasted fifty years with no victor ever determined",
+        "It lasted less than one year before both sides completely withdrew",
+        "It lasted over two decades and became a grinding, multi-generational struggle"
+      ],
+      "correctAnswers": [3],
+      "difficulty": 2,
+      "text_reference": "Section 4: The Resumption of Conflict"
+    },
+    {
+      "question": "What was the primary source of historical documentation for the Second Samnite War?",
+      "options": [
+        "Archaeological excavations and surviving Samnite written records discovered during modern scholarly research",
+        "Only brief and scattered mentions found within Greek sources that discuss Italian historical affairs",
+        "Livy's History of Rome and Dionysius of Halicarnassus's Roman Antiquities historical accounts",
+        "Inscriptions discovered on Samnite temples and monuments throughout the mountainous Italian peninsula regions"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 2,
+      "text_reference": "Section 4: The Resumption of Conflict"
+    },
+    {
+      "question": "What critical error did the Roman consuls Titus Veturius Calvinus and Spurius Postumius Albinus make in 321 BCE?",
+      "options": [
+        "They retreated from battle without engaging the Samnite forces in any direct military confrontation whatsoever",
+        "They conducted adequate reconnaissance of the terrain but still lost their army in a pitched battle",
+        "They marched their army into a valley at the Caudine Forks without proper reconnaissance or terrain understanding",
+        "They refused to engage Samnite forces and surrendered immediately without mounting any organized military resistance effort"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 2,
+      "text_reference": "Section 4: The Caudine Forks Disaster"
+    },
+    {
+      "question": "Who was the Samnite commander who set the trap at the Caudine Forks, and what was his strategic insight?",
+      "options": [
+        "Pontius Maximus, who firmly believed that open-field battles heavily favored Samnite military forces and tactics",
+        "Gaius Pontius, who recognized that confining Romans to narrow terrain would negate their tactical advantages",
+        "Brennus the Gaul, who was visiting from northern Italy to help the Samnite military forces",
+        "An unknown Samnite commander who set the trap entirely by accident rather than strategic design"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 2,
+      "text_reference": "Section 4: The Caudine Forks Disaster"
+    },
+    {
+      "question": "What ritual humiliation did the Samnites impose on Roman forces at the Caudine Forks?",
+      "options": [
+         "They forced Roman soldiers to pass under a yoke in ritual submission, stripping them of weapons and armor",
+        "They destroyed all Roman weapons and completely scattered the army throughout the surrounding Samnite territories",
+        "They enslaved all Roman soldiers permanently as direct punishment for their invasion of Samnite lands",
+        "They paraded all captured Roman soldiers through major Samnite cities as public slaves for display purposes"
+      ],
+      "correctAnswers": [0],
+      "difficulty": 2,
+      "text_reference": "Section 4: The Caudine Forks Disaster"
+    },
+    {
+      "question": "Why was the ritual humiliation of the Caudine Forks particularly damaging to Rome beyond the military defeat?",
+      "options": [
+        "It prevented Rome from successfully recruiting new soldiers and military personnel for many future generations ahead",
+        "It caused Rome to abandon military ambitions completely and pursue peaceful negotiations with all Italian rivals immediately",
+        "It had absolutely no psychological or cultural impact on Roman society beyond the actual military loss itself",
+        "It violated Roman military pride and honor codes, leaving a psychological wound that demanded revenge and retaliation"
+      ],
+      "correctAnswers": [3],
+      "difficulty": 2,
+      "text_reference": "Section 4: The Humiliation and Roman Pride"
+    },
+    {
+      "question": "How did Rome respond to the humiliating peace terms imposed at the Caudine Forks?",
+      "options": [
+        "Rome accepted the terms and withdrew from southern Italy permanently",
+        "Rome declared the surrender agreement null and void and renewed the war",
+        "Rome's Senate voted to execute the two consuls for their failure",
+        "Rome negotiated a new peace that was even more favorable to Samnium"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 2,
+      "text_reference": "Section 4: The Roman Response and Renewal of War"
+    },
+    {
+      "question": "What legal argument did Rome use to justify repudiating the peace agreement after the Caudine Forks?",
+      "options": [
+        "The agreement was made in winter when no legal contracts were valid in Roman law",
+        "Samnite commanders had no legal authority to make binding agreements or treaties with the Roman state",
+        "The consuls had no authority to surrender the Roman people on such humiliating terms whatsoever",
+        "The agreement violated the ancient religious laws and sacred traditions of the Roman people entirely"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 2,
+      "text_reference": "Section 4: The Roman Response and Renewal of War"
+    },
+    {
+      "question": "What characteristic of Roman culture did the decision to continue fighting after the Caudine Forks defeat demonstrate?",
+      "options": [
+        "Romans were completely incapable of learning practical lessons from military defeats and serious setbacks",
+        "Romans refused to accept permanent defeat and would continue fighting to achieve victory against enemies",
+        "Romans had absolutely no sense of honor or shame regarding military losses and battlefield defeats",
+        "Romans valued peaceful diplomatic negotiations over continued military victory and conquest efforts in wars"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 2,
+      "text_reference": "Section 4: The Roman Response and Renewal of War"
+    },
+    {
+      "question": "What was the immediate military consequence of Rome's decision to repudiate the peace agreement?",
+      "options": [
+        "Both sides agreed to pursue further negotiations and seek a peaceful diplomatic resolution to the conflict",
+        "Both sides were now committed to warfare until one achieved decisive victory and compromise peace became impossible",
+        "Samnium immediately surrendered unconditionally to Rome and accepted complete Roman military and political dominance entirely",
+        "Rome withdrew all its armies and abandoned southern Italy completely to Samnite control and military occupation"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 2,
+      "text_reference": "Section 4: The Roman Response and Renewal of War"
+    }
+  ]
+}
