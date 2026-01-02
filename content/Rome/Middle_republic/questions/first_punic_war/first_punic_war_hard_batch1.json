@@ -1,0 +1,152 @@
+{
+  "chapter_id": "middle-republic-first-punic-war",
+  "batch_number": 4,
+  "difficulty": 3,
+  "batch_order": 4,
+  "description": "Hard - War Campaigns, Battles, and Outcome",
+  "questions": [
+    {
+      "question": "What fundamental challenge did Rome face when beginning military operations in Sicily militarily?",
+      "options": [
+        "Rome's infantry was inferior to Carthaginian forces and lacked appropriate tactical formations",
+        "Rome had no significant naval tradition and faced an enemy with absolute naval dominance globally",
+        "Rome lacked sufficient resources to sustain a military campaign outside the Italian peninsula",
+        "Sicilian cities refused to allow Roman armies to operate within their territorial boundaries",
+        "Rome's supply lines were vulnerable to Carthaginian naval attacks throughout the entire region"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 3,
+      "text_reference": "Section 4: Initial Campaigns and Roman Preparation"
+    },
+    {
+      "question": "How did Rome respond to Carthaginian naval superiority in its approach to fighting the war? (SELECT ALL THAT APPLY)",
+      "options": [
+        "Rome studied captured Carthaginian ships and built war galleys to challenge Carthaginian naval dominance",
+        "Rome trained sailors and marines to crew the newly constructed Mediterranean naval fleet vessels",
+        "Rome relied exclusively on land warfare and avoided any naval engagements with Carthage completely",
+        "Rome committed extraordinary resources to construct a substantial navy while fighting a land war simultaneously",
+        "Rome hired Greek mercenary naval commanders who possessed Mediterranean naval warfare experience extensively"
+      ],
+      "correctAnswers": [0, 1, 3],
+      "difficulty": 3,
+      "text_reference": "Section 4: Roman Naval Innovation"
+    },
+    {
+      "question": "What was the historical significance of the Roman naval victory at Mylae (260 BCE)?",
+      "options": [
+        "It demonstrated Rome could build effective naval forces and compete militarily with Carthage at sea",
+        "It proved that superior naval tactics were less important than the quality of individual sailors",
+        "It allowed Rome to establish complete and permanent naval dominance throughout the Mediterranean entirely",
+        "It resulted in Rome's complete destruction of the Carthaginian fleet and ending the naval conflict",
+        "It proved Carthage's naval superiority was permanent and Rome could never challenge it effectively"
+      ],
+      "correctAnswers": [0],
+      "difficulty": 3,
+      "text_reference": "Section 4: The Battle of Mylae (260 BCE)"
+    },
+    {
+      "question": "What characteristics defined the nature of Rome's campaign for control of Sicily militarily? (SELECT ALL THAT APPLY)",
+      "options": [
+        "Multiple Roman generals rotated command while gradually conquering Carthaginian-controlled cities systematically",
+        "Roman forces focused on besieging and capturing individual Sicilian cities rather than pitched battles",
+        "Carthaginian forces under Hamilcar Barca conducted skillful defensive operations but lacked overall numerical advantage",
+        "Roman armies achieved rapid victories and quickly expelled Carthaginian forces from the entire island completely",
+        "The campaign lasted over a decade of protracted operations involving sustained military effort continuously"
+      ],
+      "correctAnswers": [0, 1, 2, 4],
+      "difficulty": 3,
+      "text_reference": "Section 5: The Grueling Land War in Sicily"
+    },
+    {
+      "question": "What made the Battle of Ecnomus (256 BCE) one of the largest naval battles of antiquity? (SELECT ALL THAT APPLY)",
+      "options": [
+        "Roman and Carthaginian fleets engaged in massive naval combat off southern Sicily coastline",
+        "The Roman fleet defeated a Carthaginian naval force and achieved decisive naval victory strategically",
+        "It marked the only naval engagement of the entire war and determined maritime dominance completely",
+        "Both sides committed enormous fleet resources in a confrontation of unprecedented naval scale and scope",
+        "The battle resulted in Carthage's complete naval destruction and ended naval warfare operations permanently"
+      ],
+      "correctAnswers": [0, 1, 3],
+      "difficulty": 3,
+      "text_reference": "Section 5: The Battle of Ecnomus (256 BCE)"
+    },
+    {
+      "question": "Why was Rome's decision to invade Carthage's homeland in North Africa in 256 BCE strategically bold? (SELECT ALL THAT APPLY)",
+      "options": [
+        "It transported a Roman army across the Mediterranean into Carthage's homeland directly for first time",
+        "It could have potentially threatened Carthage itself and forced a decisive end to the war quickly",
+        "It represented an unprecedented overseas military campaign involving complex logistical and naval operations",
+        "It guaranteed complete Roman victory and the immediate surrender of Carthage without further combat",
+        "It demonstrated Rome's confidence in its military capabilities and naval transportation systems thoroughly"
+      ],
+      "correctAnswers": [0, 1, 2, 4],
+      "difficulty": 3,
+      "text_reference": "Section 5: The Invasion of Africa (255-254 BCE)"
+    },
+    {
+      "question": "What happened to Marcus Regulus's North African invasion and why did it ultimately fail militarily?",
+      "options": [
+        "Regulus defeated Carthaginian forces initially but Numidian cavalry under Masinissa overwhelmed the Roman army eventually",
+        "Rome successfully invaded Carthage and forced its immediate surrender through military pressure directly",
+        "Regulus was captured after his army was destroyed in a decisive battle near Tunis completely",
+        "Rome won the campaign but withdrew forces when the African invasion proved too costly and risky logistically",
+        "Carthage evacuated all forces and submitted to Rome without resistance when Regulus approached the city"
+      ],
+      "correctAnswers": [0, 2, 3],
+      "difficulty": 3,
+      "text_reference": "Section 5: The Campaign in Africa"
+    },
+    {
+      "question": "What role did Numidian King Masinissa play in defeating Rome's African military campaign directly?",
+      "options": [
+        "He controlled vital supply routes and prevented Rome from receiving reinforcements and supplies",
+        "He recruited local African peoples to fight alongside Carthaginian forces against Roman soldiers",
+        "He negotiated Rome's withdrawal from Africa through diplomatic negotiations and peace proposals",
+        "He allowed Rome to establish bases in Numidia for future military operations against Carthage",
+        "He provided naval support to Carthage that disrupted Roman sea lines of communication effectively"
+      ],
+      "correctAnswers": [4],
+      "difficulty": 3,
+      "text_reference": "Section 5: The Campaign in Africa"
+    },
+    {
+      "question": "What military and economic factors contributed to Carthage's exhaustion by 241 BCE? (SELECT ALL THAT APPLY)",
+      "options": [
+        "Over 20 years of continuous warfare depleted Carthaginian financial and material resources significantly",
+        "The mercenary system became increasingly difficult to maintain when Carthage lacked sufficient funds",
+        "Rome's citizen-soldier system provided Rome with renewable manpower despite the war's length",
+        "Carthage possessed unlimited resources and could have continued fighting indefinitely without difficulty",
+        "Rome's institutional capacity allowed continued military operations while Carthage's system was breaking down"
+      ],
+      "correctAnswers": [0, 1, 2, 4],
+      "difficulty": 3,
+      "text_reference": "Section 6: The Final Carthaginian Collapse"
+    },
+    {
+      "question": "What were the major terms of the Treaty of Lutatius (241 BCE) that ended the First Punic War?",
+      "options": [
+        "Carthage ceded Sicily to Rome, which became Rome's first overseas province administratively",
+        "Carthage agreed to pay Rome a massive war indemnity as compensation for war costs",
+        "Carthage was required to destroy its navy and eliminate all naval forces completely and permanently",
+        "Carthage withdrew from all Mediterranean territories and maintained control only of North African regions",
+        "Rome agreed to share governance of Sicily with Carthage in a joint administrative arrangement"
+      ],
+      "correctAnswers": [0, 1],
+      "difficulty": 3,
+      "text_reference": "Section 6: The Treaty of Lutatius"
+    },
+    {
+      "question": "How did the First Punic War transform Rome's status and role in the Mediterranean world fundamentally? (SELECT ALL THAT APPLY)",
+      "options": [
+        "Rome transformed from an Italian power into a Mediterranean superpower capable of naval operations",
+        "Rome demonstrated institutional capacity to wage prolonged warfare and sustain military operations successfully",
+        "Rome acquired its first overseas province and established a precedent for future territorial expansion",
+        "Rome developed a navy from scratch and proved it could compete with experienced naval powers",
+        "Rome established permanent dominance over all Mediterranean powers and eliminated all potential rivals completely"
+      ],
+      "correctAnswers": [0, 1, 2, 3],
+      "difficulty": 3,
+      "text_reference": "Section 7: The Significance of the First Punic War"
+    }
+  ]
+}

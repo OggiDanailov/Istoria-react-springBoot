@@ -1,0 +1,129 @@
+{
+  "chapter_id": "middle-republic-first-punic-war",
+  "batch_number": 1,
+  "difficulty": 1,
+  "batch_order": 1,
+  "description": "Easy - Phoenician Heritage and Carthage's Foundation",
+  "questions": [
+    {
+      "question": "What Mediterranean people were renowned as merchants, traders, and seafarers throughout the ancient world?",
+      "options": [
+        "The Greeks, who established land-based empires through military conquest and colonization",
+        "The Phoenicians, who built commercial empires through trade networks and merchant activity",
+        "The Romans, who focused on military expansion and territorial dominion in Italy",
+        "The Carthaginians, who controlled all Mediterranean trade routes exclusively"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "text_reference": "Section 2: The Phoenician Heritage"
+    },
+    {
+      "question": "What major achievement did the Phoenicians contribute to writing systems and alphabets?",
+      "options": [
+        "They developed hieroglyphic writing systems similar to Egyptian hieroglyphs",
+        "They created complex cuneiform symbols used throughout the ancient Mediterranean world",
+        "They developed one of the first alphabetic writing systems using simple sound symbols",
+        "They invented the first numerical system for calculating trade transactions"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 1,
+      "text_reference": "Section 2: Alphabet Development"
+    },
+    {
+      "question": "How did Phoenician cities establish their influence throughout the Mediterranean region?",
+      "options": [
+        "Through military conquest of territories and establishment of administrative provinces",
+        "By establishing trading posts and colonies for commercial purposes rather than conquest",
+        "By creating a unified Mediterranean empire under a single ruler's authority",
+        "Through forced assimilation of local populations and cultural suppression"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "text_reference": "Section 2: Colonial Expansion"
+    },
+    {
+      "question": "According to ancient sources, when was Carthage traditionally founded?",
+      "options": [
+        "Around 1000 BCE by Greek colonists fleeing the Peloponnesian War",
+        "Around 500 BCE by Roman merchants establishing trading posts in North Africa",
+        "Around 300 BCE by Alexander the Great's successors after his death",
+        "Around 814 BCE by Phoenician settlers from the city of Tyre"
+      ],
+      "correctAnswers": [3],
+      "difficulty": 1,
+      "text_reference": "Section 2: The Foundation (Traditional Date: 814 BCE)"
+    },
+    {
+      "question": "What famous story describes how Carthage's founder negotiated land from local Berber peoples?",
+      "options": [
+        "The story describes the founder cutting an ox-hide into strips to cover more land than expected",
+        "The story claims the founder married a local Berber princess and received land as a dowry",
+        "The story details how the founder defeated local armies in battle to claim territorial lands",
+        "The story recounts the founder's payment of gold and silver for coastal territorial possession"
+      ],
+      "correctAnswers": [0],
+      "difficulty": 1,
+      "text_reference": "Section 2: The Foundation (Traditional Date: 814 BCE)"
+    },
+    {
+      "question": "Which Phoenician city was the traditional source of settlers who founded Carthage?",
+      "options": [
+        "Sidon, the greatest Phoenician city and center of Mediterranean trade networks",
+        "Byblos, which had previously controlled much of the Levantine coastal territories",
+        "Tyre, the most powerful Phoenician city from which colonists departed",
+        "Aradus, which maintained control of distant Phoenician colonial outposts"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 1,
+      "text_reference": "Section 2: The Foundation (Traditional Date: 814 BCE)"
+    },
+    {
+      "question": "What advantages did Carthage's geographic location provide to the growing settlement?",
+      "options": [
+        "A harbor positioned to control Mediterranean trade routes and maritime commerce effectively",
+        "Proximity to Egyptian grain supplies and Mediterranean shipbuilding resources centrally",
+        "Strategic location for defending against Roman military expansion from Italian territories",
+        "Access to tin trade routes from western Europe and Atlantic coastal regions"
+      ],
+      "correctAnswers": [0],
+      "difficulty": 1,
+      "text_reference": "Section 2: Early Development"
+    },
+    {
+      "question": "Why did western Phoenician colonies like Carthage become increasingly important during the 6th-5th centuries BCE?",
+      "options": [
+        "Greek city-states began expanding westward and forced Phoenicians to migrate further west",
+        "The Phoenician homeland was conquered by Persian and later other eastern powers",
+        "Roman armies from Italy began attacking Phoenician colonies in North Africa",
+        "Egypt's naval dominance forced Phoenician merchants to establish alternative trade routes"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "text_reference": "Section 2: Early Development"
+    },
+    {
+      "question": "What territories did Carthage control or colonize by the 3rd century BCE?",
+      "options": [
+        "Only the North African coast and nearby Mediterranean islands without broader expansion",
+        "Spain (Iberia), Sicily, Sardinia, Corsica, parts of Morocco, and coastal North African regions",
+        "The entire Mediterranean including Egypt, Greece, and coastal Roman territories completely",
+        "Only isolated trading posts without direct territorial control or colonial administration"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "text_reference": "Section 2: Colonial Expansion"
+    },
+    {
+      "question": "Why were Phoenician ships considered among the most advanced vessels in the ancient world?",
+      "options": [
+        "They were equipped with multiple rows of oars and sails combined for maximum speed",
+        "They were sturdy, seaworthy vessels capable of long-distance Mediterranean and ocean voyages",
+        "They featured iron reinforcement and advanced navigation instruments for precise route finding",
+        "They were designed specifically for military warfare rather than commercial trading purposes"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "text_reference": "Section 2: Naval Technology"
+    }
+  ]
+}

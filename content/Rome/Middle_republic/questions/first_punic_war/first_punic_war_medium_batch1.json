@@ -1,0 +1,139 @@
+{
+  "chapter_id": "middle-republic-first-punic-war",
+  "batch_number": 3,
+  "difficulty": 2,
+  "batch_order": 3,
+  "description": "Medium - Causes of War and Rome's Decision to Intervene",
+  "questions": [
+    {
+      "question": "What was Sicily's political status and importance in the Mediterranean by 264 BCE?",
+      "options": [
+        "Sicily was unified under a single Greek ruler and posed no strategic significance to Rome",
+        "Sicily was fragmented politically but wealthy agriculturally, making it a valuable prize for any power",
+        "Sicily was completely controlled by Carthage with no independent cities or rival powers present",
+        "Sicily was a Roman province already and posed no conflict between Rome and Carthage",
+        "Sicily was inhabited only by local Berber peoples with no Greek cities or organized societies"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 2,
+      "text_reference": "Section 3: The Sicilian Situation"
+    },
+    {
+      "question": "How was Sicily's political situation affected by King Pyrrhus's departure from the island in 275 BCE?",
+      "options": [
+        "His departure strengthened Carthage's control completely and ended all internal Sicilian conflicts",
+        "His departure left a power vacuum and created uncertainty about the island's political future",
+        "His departure resulted in immediate Roman conquest of Sicily without any significant competition",
+        "His departure made Syracuse the undisputed ruler of all Sicily and all other territories",
+        "His departure had no effect on Sicilian politics since he never exercised any real authority"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 2,
+      "text_reference": "Section 3: The Sicilian Situation"
+    },
+    {
+      "question": "Why was Sicily's agricultural wealth and resource production crucial to Carthage's power and prosperity? (SELECT ALL THAT APPLY)",
+      "options": [
+        "Sicily was the only source of grain and olive oil available anywhere in the Mediterranean region",
+        "Sicilian resources funded Carthaginian commerce, military operations, and governmental administration broadly",
+        "Sicily provided the only tin supplies Carthage could access for bronze and weapon manufacturing",
+        "Sicilian territories allowed Carthage to project naval power and maintain military bases strategically",
+        "Sicily's population provided unlimited mercenary soldiers for Carthaginian military operations regularly"
+      ],
+      "correctAnswers": [1, 3],
+      "difficulty": 2,
+      "text_reference": "Section 3: Carthage's Position in Sicily"
+    },
+    {
+      "question": "What internal problems weakened Syracuse's ability to challenge Carthagian dominance in Sicily?",
+      "options": [
+        "Syracuse lacked any significant military or naval forces to resist external military threats",
+        "Political factions competed for power within Syracuse creating governmental instability and division",
+        "The city was devastated by plague and disease that reduced the population significantly",
+        "Syracuse's wealth had been depleted by previous wars with Carthage and other powers",
+        "Local populations within Syracuse refused to provide military service or taxation support"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 2,
+      "text_reference": "Section 3: Syracuse and Internal Sicilian Politics"
+    },
+    {
+      "question": "Who were the Mamertines and what was their status in Sicily during the 260s BCE? (SELECT ALL THAT APPLY)",
+      "options": [
+        "Former mercenary soldiers primarily from southern Italy who had taken control of Messana",
+        "A Sicilian Greek community descended from ancient Greek colonists in northeastern Sicily",
+        "A military garrison that controlled Messana's resources, commerce, and port facilities directly",
+        "Professional soldiers who supported themselves through piracy and raiding against neighboring territories",
+        "A united confederation of Sicilian city-states allied against both Carthage and Rome collectively"
+      ],
+      "correctAnswers": [0, 2, 3],
+      "difficulty": 2,
+      "text_reference": "Section 3: The Mamertines"
+    },
+    {
+      "question": "What motivated Hiero II of Syracuse to threaten the Mamertine-controlled city of Messana?",
+      "options": [
+        "He wanted to expand Syracuse's territory into northern Sicily and control all the island",
+        "He viewed the foreign mercenaries as a threat and embarrassment within Sicilian territories",
+        "He sought to eliminate them before they could align with Carthage against Syracuse militarily",
+        "He needed their resources and population to strengthen Syracuse's military and economic position",
+        "He was directly ordered by Carthage to eliminate the independent Mamertine garrison there"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 2,
+      "text_reference": "Section 3: The Mamertines: Mercenary Soldiers Stranded in Sicily"
+    },
+    {
+      "question": "Why did the Mamertines appeal to Rome for military assistance against Syracuse and Carthage?",
+      "options": [
+        "Rome had previously promised military protection to all independent Mediterranean cities formally",
+        "They faced destruction from both Syracuse and Carthage and saw Rome as a potential ally",
+        "They expected Rome would easily defeat both Carthage and Syracuse militarily and quickly",
+        "Rome had established trading relationships with Messana and owed military support contractually",
+        "They believed Rome needed control of Sicily to expand its Mediterranean commercial networks"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 2,
+      "text_reference": "Section 3: The Mamertines: Mercenary Soldiers Stranded in Sicily"
+    },
+    {
+      "question": "What strategic arguments supported Rome's decision to intervene in Sicily militarily in 264 BCE? (SELECT ALL THAT APPLY)",
+      "options": [
+        "Allowing Carthage unchallenged dominance of Sicily posed a potential long-term threat to Rome",
+        "Rome's credibility with allies depended on providing military support to threatened allied communities",
+        "Rome possessed sufficient resources and institutional capacity for the first time to wage overseas war",
+        "The Mamertines promised Rome unlimited financial payments in exchange for military protection permanently",
+        "Intervening offered an opportunity to challenge Carthage under favorable strategic circumstances"
+      ],
+      "correctAnswers": [0, 1, 2, 4],
+      "difficulty": 2,
+      "text_reference": "Section 3: The Case for Intervention"
+    },
+    {
+      "question": "What significant obstacles made military intervention in Sicily risky and costly for Rome? (SELECT ALL THAT APPLY)",
+      "options": [
+        "Rome's citizen-soldiers were reluctant to serve overseas and preferred defending Italian territories only",
+        "Carthage's naval dominance was absolute and Rome lacked significant naval experience or power",
+        "The Mamertines were unreliable allies who might switch sides during the military conflict",
+        "Rome would have to sustain operations far from home with unprecedented logistical requirements needed",
+        "Syracuse possessed a powerful military force that could easily destroy any Roman invasion army"
+      ],
+      "correctAnswers": [1, 3],
+      "difficulty": 2,
+      "text_reference": "Section 3: The Case Against Intervention"
+    },
+    {
+      "question": "How did Carthage respond when Rome intervened militarily in Sicily on behalf of the Mamertines? (SELECT ALL THAT APPLY)",
+      "options": [
+        "Carthage negotiated a peaceful settlement and withdrew from Sicily to avoid conflict with Rome",
+        "Carthage viewed Roman intervention as a direct challenge to Carthaginian dominance in the Mediterranean",
+        "Carthage recognized that Sicily was no longer valuable and abandoned all territorial claims completely",
+        "Carthage mobilized its navy and forces to contest Roman control and defend Sicilian territories",
+        "Carthage sought alliances with Rome to jointly control Sicily and exclude Syracuse from power"
+      ],
+      "correctAnswers": [1, 3],
+      "difficulty": 2,
+      "text_reference": "Section 3: Carthaginian Response"
+    }
+  ]
+}
