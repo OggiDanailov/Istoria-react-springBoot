@@ -1,0 +1,134 @@
+{
+  "chapter_id": "middle-republic-first-punic-war",
+  "batch_number": 2,
+  "difficulty": 1,
+  "batch_order": 2,
+  "description": "Easy-Medium - Carthaginian Civilization and Power",
+  "questions": [
+    {
+      "question": "What were the two chief magistrates called in Carthage's government system?",
+      "options": [
+        "Consuls, who were elected annually and rotated among different wealthy families equally",
+        "Suffets, who held executive authority but often came from same merchant families repeatedly",
+        "Praetors, who served under the primary magistrates and commanded military forces",
+        "Tribunes, who represented the interests of common people against aristocratic merchant families",
+        "Strategoi, who commanded both military and civilian administrative functions together"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "text_reference": "Section 2: The Suffets"
+    },
+    {
+      "question": "How did Carthaginian political power differ from Roman political power in the 3rd century BCE?",
+      "options": [
+        "Carthage had more democratic institutions while Rome remained under monarchical rule exclusively",
+        "Carthage had strong provincial governors throughout its empire while Rome lacked administrators",
+        "Rome relied on mercenary armies while Carthage used citizen-soldiers exclusively throughout territories",
+        "Rome distributed power broadly while Carthage concentrated power in wealthy merchant families"
+      ],
+      "correctAnswers": [3],
+      "difficulty": 1,
+      "text_reference": "Section 2: Government and Political Structure"
+    },
+    {
+      "question": "What role did the popular assembly play in Carthaginian government and political decision-making?",
+      "options": [
+        "It had limited power compared to the Senate and the governing suffets' authority",
+        "It held supreme authority and made all military and civilian policy decisions directly",
+        "It served only ceremonial functions and had no real influence on government policies",
+        "It commanded all military forces and could override decisions made by elected officials",
+        "It controlled the state treasury and allocated all resources to various governmental departments"
+      ],
+      "correctAnswers": [0],
+      "difficulty": 1,
+      "text_reference": "Section 2: Assembly"
+    },
+    {
+      "question": "Which gods held primary religious significance in Carthaginian religion and society? (SELECT ALL THAT APPLY)",
+      "options": [
+        "Baal Hammon, the sky god and chief deity in Carthaginian religious practice throughout territories",
+        "Tanit, the chief goddess worshipped alongside Baal Hammon as a primary religious figure",
+        "Astarte, the Phoenician love goddess whose worship was central to Carthaginian religious observance",
+        "Melqart, the Phoenician god of the city associated with Tyre but not widely worshipped in Carthage",
+        "Reshef, the Phoenician war god whose temples were constructed throughout Carthaginian territories"
+      ],
+      "correctAnswers": [0, 1],
+      "difficulty": 1,
+      "text_reference": "Section 2: Phoenician Religion"
+    },
+    {
+      "question": "What made Carthage's control of the tin trade particularly valuable economically?",
+      "options": [
+        "Tin was essential for making bronze, a critical metal in the ancient world widely",
+        "Tin could be sold at extremely high prices throughout Mediterranean trading networks continuously",
+        "Tin came exclusively from Carthaginian territories and could not be obtained elsewhere ever",
+        "Tin was used to manufacture advanced weapons that made Carthage militarily superior always",
+        "Tin was required for all Carthaginian religious sacrifices and temple construction projects"
+      ],
+      "correctAnswers": [0],
+      "difficulty": 1,
+      "text_reference": "Section 2: Tin Trade"
+    },
+    {
+      "question": "How did Carthage develop sophisticated financial instruments and banking practices early?",
+      "options": [
+        "Carthage borrowed banking systems directly from Egyptian cities and adopted practices unchanged",
+        "Carthaginian financial practices were based on Roman accounting methods and administrative procedures",
+        "Carthage had no banking system and relied exclusively on direct barter trade exchanges only",
+        "Carthaginian merchants used contracts, letters of credit, and financial instruments for long-distance trade"
+      ],
+      "correctAnswers": [3],
+      "difficulty": 1,
+      "text_reference": "Section 2: Banking and Finance"
+    },
+    {
+      "question": "What types of soldiers did Carthage recruit for its mercenary armies? (SELECT ALL THAT APPLY)",
+      "options": [
+        "Libyan infantry from North African territories under Carthaginian control and influence",
+        "Spanish warriors renowned for skill and ferocity using the curved falcata sword effectively",
+        "Numidian cavalry specialists considered among the best mounted warriors in the ancient world",
+        "Roman citizen-soldiers borrowed from Rome through formal military alliance agreements and treaties",
+        "Libyan cavalry providing additional mounted forces from North African regional territories"
+      ],
+      "correctAnswers": [0, 1, 2, 4],
+      "difficulty": 1,
+      "text_reference": "Section 2: Mercenary Armies"
+    },
+    {
+      "question": "What significant advantage did Carthage's mercenary system provide to its military operations?",
+      "options": [
+        "Access to diverse military traditions and specialized troops from throughout the empire",
+        "Citizen-soldiers who were completely loyal to Carthage and could never be defeated militarily",
+        "Control of Mediterranean naval routes that prevented enemy fleet movements completely always",
+        "Unlimited military manpower that could be mobilized quickly without any logistical constraints whatsoever"
+      ],
+      "correctAnswers": [0],
+      "difficulty": 1,
+      "text_reference": "Section 2: Advantages and Disadvantages"
+    },
+    {
+      "question": "What major disadvantage accompanied Carthage's reliance on mercenary armies for military operations?",
+      "options": [
+        "Mercenary soldiers refused to fight at sea and only participated in land warfare campaigns",
+        "Mercenary soldiers were less skilled than citizen-soldiers in traditional Mediterranean warfare tactics",
+        "Soldiers' loyalty depended on payment and armies couldn't be mobilized as quickly as citizen armies",
+        "Mercenary armies frequently rebelled against Carthaginian authority and established independent kingdoms"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 1,
+      "text_reference": "Section 2: Advantages and Disadvantages"
+    },
+    {
+      "question": "How did Greek cultural influence affect Carthaginian civilization during the 4th-3rd centuries BCE?",
+      "options": [
+        "Carthage completely rejected Greek culture and maintained purely Phoenician traditions exclusively",
+        "Greek merchants, architecture, and artistic styles influenced Carthaginian culture while maintaining identity",
+        "Carthage became politically dominated by Greek city-states and lost independence entirely permanently",
+        "Carthaginian elites adopted only Greek military tactics while rejecting all other cultural practices"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "text_reference": "Section 2: Greek Influence"
+    }
+  ]
+}
