@@ -1,0 +1,141 @@
+{
+  "chapter_id": "early-republic-toward-resolution",
+  "batch_number": 4,
+  "difficulty": 2,
+  "batch_order": 4,
+  "description": "Medium - Celtic Migration and Invasion Impact",
+  "questions": [
+    {
+      "question": "What were the primary driving factors behind Celtic westward expansion across Europe? (SELECT ALL THAT APPLY)",
+      "options": [
+        "Population pressure and overcrowding in their core Central European territories",
+        "A warrior culture that valued martial glory and conquest as paths to prestige",
+        "Superior iron-working technology that gave military advantage over neighboring peoples",
+        "Organized imperial conquest directed by a unified Celtic government",
+        "The desire to escape persecution from Eastern European peoples",
+        "Economic opportunities to trade with Mediterranean civilizations"
+      ],
+      "correctAnswers": [0, 1, 2],
+      "difficulty": 2,
+      "text_reference": "Section 2: The Great Celtic Migration"
+    },
+    {
+      "question": "Why did Celtic tribes and Gallic peoples find wealthy Mediterranean societies attractive targets?",
+      "options": [
+        "Mediterranean peoples had invited Celtic settlement to strengthen their defenses",
+        "Mediterranean societies had developed wealth and power that provided opportunities for plunder and conquest",
+        "Mediterranean peoples had promised to share their territories with Celtic peoples peacefully",
+        "Mediterranean regions had ideal climate where Celtic cultures could flourish naturally",
+        "Mediterranean peoples were weakened by plague and unable to resist invasion"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 2,
+      "text_reference": "Section 2: The Great Celtic Migration"
+    },
+    {
+      "question": "The Gallic invasion had which effects on Roman military and social structures? (SELECT ALL THAT APPLY)",
+      "options": [
+        "Rome had to rebuild its army and improve military organization after catastrophic defeat",
+        "Patrician military authority was weakened by the disaster and patrician confidence undermined",
+        "Patricians and plebeians temporarily worked together to defend Rome during the crisis",
+        "Rome immediately conquered all remaining Gallic tribes and eliminated the threat forever",
+        "Military necessity created precedent for plebeian military importance and leverage"
+      ],
+      "correctAnswers": [0, 1, 2, 4],
+      "difficulty": 2,
+      "text_reference": "Section 2: The Impact on Roman Society"
+    },
+    {
+      "question": "Why might some historians argue the Gallic invasion actually delayed plebeian progress?",
+      "options": [
+        "The invasion destroyed all plebeian records and historical memory of their demands",
+        "Plebeians were killed in such large numbers they could no longer threaten secession",
+        "The military crisis gave patricians an excuse to postpone internal reforms",
+        "The Gauls recruited plebeians to join them and fight against patricians",
+        "The invasion permanently convinced plebeians that military service was futile"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 2,
+      "text_reference": "Section 2: The Delayed Resolution"
+    },
+    {
+      "question": "What institutional quality does Rome's recovery from the Gallic invasion best demonstrate?",
+      "options": [
+        "Rome's ability to rapidly rebuild military forces",
+        "Rome's dependence on patrician military leadership",
+        "Rome's tendency to only unite during foreign threats",
+        "Rome's institutional flexibility and resilience under crisis",
+        "Rome's superior engineering and construction capabilities"
+      ],
+      "correctAnswers": [3],
+      "difficulty": 2,
+      "text_reference": "Section 2: Recovery and Expulsion"
+    },
+    {
+      "question": "Which of the following could explain why Brennus and his Gallic army invaded Rome in 390 BCE? (SELECT ALL THAT APPLY)",
+      "options": [
+        "Brennus was definitely seeking to permanently conquer and settle Rome as Gallic territory",
+        "Brennus may have been seeking plunder from the wealthy city",
+        "Brennus may have been responding to Roman aggression against Gallic settlements",
+        "Brennus was leading a migration of his entire people seeking new territory",
+        "Rome had previously invaded Gaul and Brennus was seeking revenge",
+        "The exact motivations remain unclear from our historical sources"
+      ],
+      "correctAnswers": [1, 2, 3, 5],
+      "difficulty": 2,
+      "text_reference": "Section 2: The Specific Invasion - Brennus and His Army"
+    },
+    {
+      "question": "How did the collapse at the Battle of the Allia compare to previous Roman military experiences? (SELECT ALL THAT APPLY)",
+      "options": [
+        "Rome had never experienced military defeat before the Gallic invasion",
+        "Rome had fought neighboring peoples like Aequi and Volsci but not such a massive, sophisticated force",
+        "Rome's armies had regularly lost battles and the Allia was just another routine defeat",
+        "Rome had defeated Gallic armies numerous times before but this one was different",
+        "The scale and destructiveness of the Gallic military advantage were unprecedented for Rome"
+      ],
+      "correctAnswers": [1, 4],
+      "difficulty": 2,
+      "text_reference": "Section 2: The Northern Threat and Battle of the Allia"
+    },
+    {
+      "question": "What does the Gallic invasion of Rome reveal about Mediterranean power dynamics in the 4th century BCE? (SELECT ALL THAT APPLY)",
+      "options": [
+        "Mediterranean civilizations were clearly superior and could never be threatened by outsiders",
+        "Mediterranean societies faced external threats from more warlike peoples moving into the region",
+        "No threats to Mediterranean cities existed because military technology was highly developed",
+        "Central European peoples were becoming more organized and powerful militarily",
+        "The balance of power in the Mediterranean region was more fluid and uncertain than it appeared"
+      ],
+      "correctAnswers": [1, 3, 4],
+      "difficulty": 2,
+      "text_reference": "Section 2: The Gauls and Celtic Expansion"
+    },
+    {
+      "question": "How did the patrician response to military disaster affect their political authority among plebeians?",
+      "options": [
+        "Plebeians viewed the patrician military failure as proof they should have full political power",
+        "The defeat undermined claims of patrician military superiority and natural fitness to rule",
+        "Plebeians demanded immediate equality as payment for helping defend Rome",
+        "Patricians used the disaster to claim they needed even more concentrated power to recover",
+        "The military loss gave plebeians leverage to demand reforms they had not previously requested"
+      ],
+      "correctAnswers": [1, 4],
+      "difficulty": 2,
+      "text_reference": "Section 3: The Resumption of Political Demands"
+    },
+    {
+      "question": "What historical uncertainty surrounds the recovery phase of the Gallic invasion? (SELECT ALL THAT APPLY)",
+      "options": [
+        "Sources don't clearly explain whether Camillus's role was historically accurate or legendary",
+        "It's unclear whether the Gauls withdrew due to Roman military action or internal problems",
+        "The duration and extent of Gallic occupation remains uncertain from our sources",
+        "We don't know the final death toll or number of Romans who were enslaved",
+        "All of the above uncertainties affect our understanding of the invasion's aftermath"
+      ],
+      "correctAnswers": [0, 1],
+      "difficulty": 2,
+      "text_reference": "Section 2: Recovery and Expulsion"
+    }
+  ]
+}

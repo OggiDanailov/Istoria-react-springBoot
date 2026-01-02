@@ -1,0 +1,129 @@
+{
+  "chapter_id": "early-republic-toward-resolution",
+  "batch_number": 2,
+  "difficulty": 1,
+  "batch_order": 2,
+  "description": "Easy - The Licinian Laws and Reforms",
+  "questions": [
+    {
+      "question": "Who were the two plebeian tribunes credited with proposing comprehensive reforms?",
+      "options": [
+        "Camillus and Brennus",
+        "Marcus Valerius and Appius Claudius",
+        "Titus Quinctius and Fabius Maximus",
+        "Gaius Licinius and Lucius Sextius"
+      ],
+      "correctAnswers": [3],
+      "difficulty": 1,
+      "text_reference": "Section 4: The Licinian Rogations - First Proposals"
+    },
+    {
+      "question": "What was a 'rogatio' in Roman political terminology?",
+      "options": [
+        "A temporary law that lasted only one year before expiring automatically",
+        "A veto issued by tribunes to block magistrates from taking action",
+        "A formal proposal submitted to assemblies for discussion and voting",
+        "An emergency decree issued by the dictator during military crisis"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 1,
+      "text_reference": "Section 4: The Licinian Rogations - First Proposals"
+    },
+    {
+      "question": "What was the cornerstone of the Licinian reform proposals?",
+      "options": [
+        "That all citizens would have equal voting rights in all assemblies without property requirements",
+        "That at least one of the two consuls must be plebeian every year",
+        "That the Senate would be abolished and replaced with a purely plebeian assembly",
+        "That all magistrates would serve for five-year terms instead of one year"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "text_reference": "Section 4: The Licinian Rogations - Main Proposals"
+    },
+    {
+      "question": "In what year were the Licinian Laws finally passed and accepted by the patricians?",
+      "options": [
+        "380 BCE",
+        "370 BCE",
+        "367 BCE",
+        "360 BCE"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 1,
+      "text_reference": "Section 5: The Breakthrough - The Licinian Laws"
+    },
+    {
+      "question": "Who was the first plebeian to be elected as consul after the Licinian Laws were passed?",
+      "options": [
+        "Gaius Licinius",
+        "Lucius Sextius",
+        "Camillus",
+        "Brennus"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "text_reference": "Section 5: What the Licinian Laws Established"
+    },
+    {
+      "question": "What did the Licinian Laws attempt to address regarding debt slavery?",
+      "options": [
+        "They abolished all debt slavery immediately and freed enslaved debtors permanently",
+        "They required consuls to approve all debt slavery before it could be enforced",
+        "They established limits on creditor power and protections against arbitrary enslavement",
+        "They created a new government office specifically to manage enslaved debtors"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 1,
+      "text_reference": "Section 5: What the Licinian Laws Established"
+    },
+    {
+      "question": "How did the Licinian Laws address the issue of public land distribution?",
+      "options": [
+        "Land was distributed equally to all citizens regardless of wealth or status",
+        "All public land was declared sacred and could not be given to anyone",
+        "The laws addressed land distribution, though exact terms remain unclear in sources",
+        "Public land was confiscated and redistributed only to patrician military officers"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 1,
+      "text_reference": "Section 5: What the Licinian Laws Established"
+    },
+    {
+      "question": "What did the Licinian Laws require regarding holding the same magistracy?",
+      "options": [
+        "A person could hold any office repeatedly as often as they were elected",
+        "No one could hold the same magistracy twice within ten years or multiple offices simultaneously",
+        "Citizens could hold only one elected office in their entire lifetime",
+        "Magistracies could only be held by people who had served in the military for twenty years"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "text_reference": "Section 5: What the Licinian Laws Established"
+    },
+    {
+      "question": "The Licinian proposals included access to which emergency office previously held only by patricians?",
+      "options": [
+        "The Tribune of the Plebs",
+        "The Censor",
+        "The Dictator",
+        "The Praetor"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 1,
+      "text_reference": "Section 4: The Licinian Rogations - Main Proposals"
+    },
+    {
+      "question": "How many decades did plebeians wait for the Licinian Laws to finally be passed?",
+      "options": [
+        "About one decade of repeated failed proposals",
+        "About two decades of repeated blocked proposals",
+        "Over a decade or more of political deadlock and blocked reform",
+        "Over four decades of continuous negotiation and compromise"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 1,
+      "text_reference": "Section 4: The Licinian Rogations - First Proposals"
+    }
+  ]
+}

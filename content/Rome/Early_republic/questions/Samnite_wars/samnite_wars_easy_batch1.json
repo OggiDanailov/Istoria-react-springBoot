@@ -1,0 +1,129 @@
+{
+  "chapter_id": "early-republic-samnite-wars",
+  "batch_number": 1,
+  "difficulty": 1,
+  "batch_order": 1,
+  "description": "Easy - Context and Background: Who Were the Samnites?",
+  "questions": [
+    {
+      "question": "What major internal Roman conflict was finally resolved by the Licinian Laws of 367 BCE, allowing Rome to focus outward?",
+      "options": [
+        "The conflict between the military and civilian government",
+        "The Conflict of the Orders between patricians and plebeians",
+        "The dispute between rich and poor citizens over land distribution",
+        "The power struggle between the Senate and the consuls"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "text_reference": "Section 1: Introduction"
+    },
+    {
+      "question": "How long did the Samnite Wars span, and how many major conflicts occurred during this period?",
+      "options": [
+        "About 30 years with two major wars",
+        "Over 50 years with three major conflicts",
+        "About 20 years with multiple small skirmishes",
+        "Nearly 100 years with continuous warfare"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "text_reference": "Section 1: Introduction"
+    },
+    {
+      "question": "Why did Rome find the Samnites a more difficult challenge than the Etruscans, whom Rome had previously defeated?",
+      "options": [
+        "Etruscans were militarily superior but lacked Roman discipline",
+        "Rome had defeated Etruscans when they were in decline, but encountered Samnites at the height of their power",
+        "Samnites had superior tactical flexibility and better ability to adapt to terrain",
+        "Rome was much weaker by the time it fought Samnites"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "text_reference": "Section 2: Who Were the Samnites?"
+    },
+    {
+      "question": "Where were the Samnites primarily located in Italy?",
+      "options": [
+        "In the northern territories beyond the Alps with the Gauls",
+        "In the coastal regions of western Italy near modern Rome",
+        "In the mountainous regions of central and southern Italy",
+        "On the islands of Sicily and Sardinia"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 1,
+      "text_reference": "Section 2: The Samnite People"
+    },
+    {
+      "question": "Why was Samnite mountainous territory a military advantage against Rome?",
+      "options": [
+        "Mountains provided natural fortifications that favored Samnite tactics",
+        "Mountains prevented the use of any weapons or military formations",
+        "The terrain allowed Samnites to use the same tactics as Romans",
+        "Mountains made all military advantages irrelevant"
+      ],
+      "correctAnswers": [0],
+      "difficulty": 1,
+      "text_reference": "Section 2: Territorial Advantages"
+    },
+    {
+      "question": "What was the primary difference between Etruscan and Samnite military strength in the 4th century BCE?",
+      "options": [
+        "Etruscans were stronger militarily but Samnites had better navy",
+        "Samnites had no military tradition while Etruscans were professional soldiers",
+        "Both were equally strong but fought on different continents",
+        "Etruscans were in decline while Samnites were at the height of their power"
+      ],
+      "correctAnswers": [3],
+      "difficulty": 1,
+      "text_reference": "Section 2: Why the Samnites Were More Dangerous"
+    },
+    {
+      "question": "What was one key aspect of Samnite military culture?",
+      "options": [
+        "Young men avoided military training in favor of merchant careers",
+        "Samnite warriors were trained to fight only in naval battles",
+        "Young Samnite men underwent military training and competed for honor through martial prowess",
+        "The Samnites relied entirely on foreign mercenaries for their army"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 1,
+      "text_reference": "Section 2: The Samnite People"
+    },
+    {
+      "question": "What wealthy region lay between Samnite territory and Rome, making it a source of conflict?",
+      "options": [
+        "Etruria",
+        "Campania",
+        "Sicily",
+        "The Latin plains"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "text_reference": "Section 2: Why Rome and Samnium Collided"
+    },
+    {
+      "question": "How were Samnite city-states organized compared to Etruscan city-states?",
+      "options": [
+        "Samnite city-states were unified under one monarch while Etruscans were independent",
+        "Both were identical in organization and had no differences",
+        "Samnite city-states had stronger cohesion and could unite for common defense, unlike fragmented Etruscan cities",
+        "Samnite city-states had no military organization whatsoever"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 1,
+      "text_reference": "Section 2: Military Organization and Capability"
+    },
+    {
+      "question": "What immediately triggered Rome's decision to go to war with Samnium in 343 BCE?",
+      "options": [
+        "Roman ambition to achieve immediate dominance over all Italian territories and peoples",
+        "Samnite military raids and attacks targeting Greek colonies throughout the Mediterranean region",
+        "Appeals from Rome's Campanian allies requesting protection against Samnite territorial aggression",
+        "A series of disputes between Rome and Samnium over Mediterranean trade route control"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 1,
+      "text_reference": "Section 2: Why Rome and Samnium Collided"
+    }
+  ]
+}

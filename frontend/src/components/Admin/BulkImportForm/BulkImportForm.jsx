@@ -4,26 +4,26 @@ import './BulkImportForm.css'
 
 function BulkImportForm({ onClose, onImportSuccess }) {
   const [jsonInput, setJsonInput] = useState('')
-  const [topics, setTopics] = useState([])
-  const [selectedTopicId, setSelectedTopicId] = useState('')
+  const [chapters, setChapters] = useState([])
+  const [selectedChapterId, setSelectedChapterId] = useState('')
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
   const [success, setSuccess] = useState('')
   const [importProgress, setImportProgress] = useState({ total: 0, imported: 0 })
 
-  // Fetch topics on mount
+  // Fetch chapters on mount
   useEffect(() => {
-    const fetchTopics = async () => {
+    const fetchChapters = async () => {
       try {
-        const response = await fetch(`${API_BASE_URL}/api/topics`)
-        if (!response.ok) throw new Error('Failed to fetch topics')
+        const response = await fetch(`${API_BASE_URL}/api/chapters`)
+        if (!response.ok) throw new Error('Failed to fetch chapters')
         const data = await response.json()
-        setTopics(data)
+        setChapters(data)
       } catch (err) {
-        setError(`Failed to load topics: ${err.message}`)
+        setError(`Failed to load chapters: ${err.message}`)
       }
     }
-    fetchTopics()
+    fetchChapters()
   }, [])
 
   const validateJSON = (jsonString) => {
@@ -55,8 +55,8 @@ function BulkImportForm({ onClose, onImportSuccess }) {
       return
     }
 
-    if (!selectedTopicId) {
-      setError('Please select a topic')
+    if (!selectedChapterId) {
+      setError('Please select a chapter')
       return
     }
 
@@ -102,9 +102,9 @@ function BulkImportForm({ onClose, onImportSuccess }) {
 
       setImportProgress({ total: questions.length, imported: 0 })
 
-      // Send to backend
+      // Send to backend - NOW using chapterId instead of topicId
       const importData = {
-        topicId: parseInt(selectedTopicId),
+        chapterId: parseInt(selectedChapterId),
         questions: questions
       }
 
@@ -128,7 +128,7 @@ function BulkImportForm({ onClose, onImportSuccess }) {
 
       // Clear form
       setJsonInput('')
-      setSelectedTopicId('')
+      setSelectedChapterId('')
 
       // Call callback to refresh parent
       if (onImportSuccess) {
@@ -153,7 +153,7 @@ function BulkImportForm({ onClose, onImportSuccess }) {
         <h3>Instructions:</h3>
         <ol>
           <li>Paste your JSON data in the textarea below</li>
-          <li>Select the topic to import questions into</li>
+          <li>Select the chapter to import questions into</li>
           <li>Click "Import" to add all questions at once</li>
         </ol>
 
@@ -170,7 +170,7 @@ function BulkImportForm({ onClose, onImportSuccess }) {
 
         <h4>JSON Format (Wrapped - Single Answer):</h4>
         <pre>{`{
-  "topicId": 1,
+  "chapterId": 1,
   "questions": [
     {
       "question": "When did X happen?",
@@ -202,17 +202,17 @@ function BulkImportForm({ onClose, onImportSuccess }) {
 
       <form onSubmit={handleImport} className="import-form">
         <div className="form-group">
-          <label htmlFor="topic">Select Topic:</label>
+          <label htmlFor="chapter">Select Chapter:</label>
           <select
-            id="topic"
-            value={selectedTopicId}
-            onChange={(e) => setSelectedTopicId(e.target.value)}
+            id="chapter"
+            value={selectedChapterId}
+            onChange={(e) => setSelectedChapterId(e.target.value)}
             required
           >
-            <option value="">-- Choose a topic --</option>
-            {topics.map((topic) => (
-              <option key={topic.id} value={topic.id}>
-                {topic.title}
+            <option value="">-- Choose a chapter --</option>
+            {chapters.map((chapter) => (
+              <option key={chapter.id} value={chapter.id}>
+                {chapter.title}
               </option>
             ))}
           </select>

@@ -1,0 +1,138 @@
+{
+  "chapter_id": "early-republic-samnite-wars",
+  "batch_number": 5,
+  "difficulty": 3,
+  "batch_order": 5,
+  "description": "Hard - Battle of Sentinum, Military Innovation & Rome's Rise to Superpower",
+  "questions": [
+    {
+      "question": "By what year did both Rome and the coalition recognize that a decisive battle was absolutely necessary to resolve the prolonged conflict?",
+      "options": [
+        "310 BCE, when both sides were still gaining military strength and advantages",
+        "295 BCE, when both sides concluded that continued warfare was unsustainable and costly",
+        "290 BCE, when Rome had already achieved military dominance over all other Italian peoples",
+        "280 BCE, when the coalition had grown strong enough to threaten Roman military superiority directly"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 3,
+      "text_reference": "Section 5: The Mobilization for Sentinum"
+    },
+    {
+      "question": "Who were the Roman consuls appointed to lead Rome's forces at the decisive Battle of Sentinum in 295 BCE?",
+      "options": [
+        "Titus Manlius Torquatus and Publius Decius Mus, who had led earlier military campaigns successfully",
+        "Lucius Volumnius Flamma Violens and Manius Curius Dentatus, who led Rome to victory at Sentinum",
+        "Titus Veturius Calvinus and Spurius Postumius Albinus, who fought at the Caudine Forks disaster",
+        "Quintus Publilius Philo and Gaius Licinius, who led campaigns during the earlier Samnite Wars",
+        "Camillus and Fabius Maximus, legendary commanders from earlier periods of Roman military history"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 3,
+      "text_reference": "Section 5: The Mobilization for Sentinum"
+    },
+    {
+      "question": "What made the Battle of Sentinum strategically significant despite the considerable uncertainty of historical sources about battle details?",
+      "options": [
+        "It was fought between Rome and a single small and relatively insignificant Italian tribe only",
+        "It was the first naval battle in all of Roman history against Mediterranean naval powers",
+        "It destroyed the coalition's army as an effective force and directly caused coalition dissolution",
+        "It resulted in Rome's complete defeat and military occupation by the coalition armies",
+        "It demonstrated that Roman military tactics were inferior to combined coalition military methods entirely"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 3,
+      "text_reference": "Section 5: The Battle of Sentinum"
+    },
+    {
+      "question": "According to Roman historical sources, what were the approximate force sizes of both sides at Sentinum? (SELECT ALL THAT APPLY)",
+      "options": [
+        "Coalition forces numbered approximately eighty to one hundred thousand warriors total from all peoples",
+        "Roman forces numbered only ten to fifteen thousand soldiers compared to massive coalition armies",
+        "Roman forces numbered approximately sixty to eighty thousand soldiers from all allied Italian territories",
+        "Coalition had exact numerical superiority exceeding Rome's forces by a margin of three to one",
+        "Exact numbers cannot be determined with certainty from any surviving Roman or external sources"
+      ],
+      "correctAnswers": [0, 2],
+      "difficulty": 3,
+      "text_reference": "Section 5: The Battle of Sentinum"
+    },
+    {
+      "question": "How did Roman tactical organization and command structure prove decisive during the Battle of Sentinum, according to historical sources?",
+      "options": [
+        "Roman forces utilized superior Gallic cavalry tactics that proved more effective than all competing military methods",
+        "Romans deployed a single unbreakable massive phalanx formation that no coalition force could successfully penetrate",
+        "The entire battle outcome was determined exclusively by individual warrior skill and personal martial prowess",
+        "Roman tactical superiority lay in their use of advanced siege weapons and engineering capabilities entirely",
+        "Roman forces maintained better discipline, coordination, and flexibility under unified command structures"
+      ],
+      "correctAnswers": [4],
+      "difficulty": 3,
+      "text_reference": "Section 5: The Battle of Sentinum"
+    },
+    {
+      "question": "What happened to the coalition after their military defeat at Sentinum, and why was this outcome strategically important? (SELECT ALL THAT APPLY)",
+      "options": [
+        "The coalition dissolved because it lacked unified command structures for coordinating military operations effectively",
+        "Individual coalition peoples retreated to defend their own territories rather than maintaining unified resistance strategy",
+        "The coalition immediately regrouped and prepared a second massive army to attack Rome again",
+        "Coalition members recognized they could not defeat Rome without unified political and military organization",
+        "The coalition conquered Rome and maintained rule over the Italian peninsula for approximately ten years"
+      ],
+      "correctAnswers": [0, 1, 3],
+      "difficulty": 3,
+      "text_reference": "Section 5: The Final Campaigns and Mop-Up Operations"
+    },
+    {
+      "question": "Who emerged as Rome's greatest military hero during the final campaigns of the Third Samnite War, and what characterized his reputation?",
+      "options": [
+        "Camillus, who was renowned primarily for his exceptional diplomatic skills rather than military prowess and battlefield victories",
+        "Gaius Pontius, the Samnite commander who defected from Samnium and began serving Rome militarily directly",
+        "Manius Curius Dentatus, who became renowned for military skill, personal incorruptibility, and exceptional bravery in battle",
+        "A series of anonymous commanders whose individual names and accomplishments were never recorded by Roman historians",
+        "Marcus Furius Camillus, who led the initial campaign against Samnium"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 3,
+      "text_reference": "Section 5: The Final Campaigns and Mop-Up Operations"
+    },
+    {
+      "question": "What important military innovations and organizational improvements did Romans develop during the Samnite Wars? (SELECT ALL THAT APPLY)",
+      "options": [
+        "The manipular legion, organized into smaller flexible units rather than massive unwieldy single formations",
+        "The phalanx formation, borrowed directly from Greek military tactics without any Roman modifications whatsoever",
+        "Naval galleys specifically designed for Mediterranean naval warfare against potential Carthaginian naval power and dominance",
+        "Improved supply lines and logistics networks that allowed armies to sustain operations far from Rome",
+        "Catapults and advanced siege weapons that entirely replaced traditional infantry fighting in Roman warfare"
+      ],
+      "correctAnswers": [0, 3],
+      "difficulty": 3,
+      "text_reference": "Section 6: Roman Military Innovation"
+    },
+    {
+      "question": "How did the Samnite Wars conclusively demonstrate the fundamental limits of coalition warfare against a centrally organized opponent like Rome?",
+      "options": [
+        "Coalitions are invariably superior to single opponents regardless of their organizational structures and capabilities",
+        "Even multiple peoples united militarily could not challenge Rome because its unified command, interior geographic lines, and institutional resources permitted effective force concentration",
+        "The coalition succeeded completely and ultimately conquered Rome and the entire Italian peninsula militarily",
+        "Coalition military organization had absolutely no measurable effect and Rome would have won regardless",
+        "The coalition's failure proved that large combined armies were inherently inferior to smaller disciplined Roman forces"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 3,
+      "text_reference": "Section 5: The Coalition's Failure"
+    },
+    {
+      "question": "What dramatic transformation in Roman power and strategic position resulted from the successful military conclusion of the Samnite Wars by 290 BCE?",
+      "options": [
+        "Rome remained a small regional power with military influence limited exclusively to central Italy only",
+        "Rome became the undisputed master of Italy and transformed into a Mediterranean superpower capable of projecting power broadly",
+        "Rome was significantly weakened and became highly vulnerable to military attacks from Carthage and other Mediterranean powers",
+        "Rome agreed to share political power equally with all defeated Italian peoples and former coalition members",
+        "Rome faced immediate internal civil conflicts that prevented further military expansion or external military activities"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 3,
+      "text_reference": "Section 7: Rome Becomes the Master of Italy"
+    }
+  ]
+}

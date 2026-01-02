@@ -1,0 +1,139 @@
+{
+  "chapter_id": "early-republic-toward-resolution",
+  "batch_number": 5,
+  "difficulty": 2,
+  "batch_order": 5,
+  "description": "Medium - The Licinian Proposals and Reform",
+  "questions": [
+    {
+      "question": "Why were the Licinian proposals considered 'radical' and comprehensive rather than minor adjustments? (SELECT ALL THAT APPLY)",
+      "options": [
+        "They fundamentally restructured political, religious, economic, and social access in Rome",
+        "They addressed political access, religious authority, economic opportunity, and land ownership",
+        "They required patricians to surrender privileges that had defined their class for centuries",
+        "They would create complete equality between all Roman citizens regardless of wealth",
+        "They attacked the core basis of patrician dominance rather than making procedural changes"
+      ],
+      "correctAnswers": [0, 1, 2, 4],
+      "difficulty": 2,
+      "text_reference": "Section 4: The Radical Nature of These Proposals"
+    },
+    {
+      "question": "What specific benefits would plebeian access to priesthoods provide beyond religious authority?",
+      "options": [
+        "Priests received portions of sacrificial animals and religious fees that generated wealth",
+        "Priesthoods provided supernatural powers that plebeians wanted to acquire",
+        "Priests had exclusive authority to veto all military decisions made by generals",
+        "Religious positions allowed plebeians to control the Senate directly",
+        "Priesthoods exempted holders from military service and taxation"
+      ],
+      "correctAnswers": [0],
+      "difficulty": 2,
+      "text_reference": "Section 3: Demands for Access to Priesthoods"
+    },
+    {
+      "question": "How would the proposal for one plebeian consul change the power structure in Rome? (SELECT ALL THAT APPLY)",
+      "options": [
+        "It would force patrician and plebeian cooperation in the highest office through mutual veto",
+        "It would demonstrate to all of Rome and the Mediterranean world that plebeians were capable of governing",
+        "It would end patrician monopoly on the consulship and its associated power",
+        "It would give plebeians temporary power but patricians would retain ultimate authority",
+        "It would prevent either class from dominating executive power through shared authority"
+      ],
+      "correctAnswers": [0, 1, 2, 4],
+      "difficulty": 2,
+      "text_reference": "Section 4: The Licinian Rogations - Main Proposals"
+    },
+    {
+      "question": "Why was access to the dictatorship important in the Licinian proposals? (SELECT ALL THAT APPLY)",
+      "options": [
+        "The dictator had no real power and was just a ceremonial position with no authority",
+        "The dictator outranked consuls and held unprecedented power during military or internal emergency",
+        "Dictators controlled the Senate and could make laws without consulting the assemblies",
+        "Keeping it exclusively patrician meant patricians could seize emergency power in crises",
+        "Plebeian dictators would have more power than plebeian consuls could ever have"
+      ],
+      "correctAnswers": [1, 3],
+      "difficulty": 2,
+      "text_reference": "Section 4: The Licinian Rogations - Main Proposals"
+    },
+    {
+      "question": "What specific economic grievance did the debt relief proposal address?",
+      "options": [
+        "It attempted to address the original source of plebeian grievance: debt slavery and creditor power",
+        "It prohibited all trading and commercial activity to prevent future economic problems",
+        "It distributed all private wealth equally among patricians and plebeians",
+        "It created a system where only plebeians could lend money to other plebeians",
+        "It abolished all forms of currency and replaced them with barter systems"
+      ],
+      "correctAnswers": [0],
+      "difficulty": 2,
+      "text_reference": "Section 4: The Licinian Rogations - Main Proposals"
+    },
+    {
+      "question": "Why did patricians resist the Licinian proposals with such fierce determination? (SELECT ALL THAT APPLY)",
+      "options": [
+        "The proposals directly attacked the privileges that had defined patrician class identity",
+        "Patricians would have to surrender economic advantages through debt relief and land redistribution",
+        "Sharing power would reduce patrician political dominance in the state",
+        "Patricians feared that plebeians would prove to be incompetent and destroy Rome's government",
+        "The proposals struck at the very heart of patrician dominance rather than being minor adjustments"
+      ],
+      "correctAnswers": [0, 1, 2, 4],
+      "difficulty": 2,
+      "text_reference": "Section 4: The Radical Nature of These Proposals"
+    },
+    {
+      "question": "What strategy did patrician tribunes use to prevent the Licinian reforms from passing?",
+      "options": [
+        "They assassinated the reform leaders to prevent them from proposing further measures",
+        "They used their veto power to block reform proposals year after year in deadlock",
+        "They convinced the Gauls to invade Rome again to distract from internal politics",
+        "They persuaded the people to reject the reforms through mass propaganda campaigns",
+        "They agreed to small concessions while defending their core privileges fiercely"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 2,
+      "text_reference": "Section 4: Patrician Opposition and Obstruction"
+    },
+    {
+      "question": "What does the decade-long deadlock over the Licinian proposals reveal about power distribution in Rome?",
+      "options": [
+        "Patricians had absolute power and easily suppressed all plebeian attempts at reform",
+        "Plebeians had somehow seized all power and patricians had become powerless",
+        "Power was evenly balanced—neither side could force through their agenda completely",
+        "The Senate retained supreme authority and both patricians and plebeians were subordinate",
+        "Military strength determined everything and political institutions were essentially meaningless"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 2,
+      "text_reference": "Section 4: The Impasse and Growing Pressure"
+    },
+    {
+      "question": "What possible explanations exist for why patricians finally capitulated in 367 BCE? (SELECT ALL THAT APPLY)",
+      "options": [
+        "Rome faced external military threats from neighboring peoples like Volsci and Aequi",
+        "Military necessity made plebeian military secession threat truly unbearable for patricians",
+        "Some patrician faction decided partial concession was preferable to total conflict",
+        "Plebeians promised to eventually eliminate all patrician families from Rome",
+        "Constitutional exhaustion after years of blocked proposals made compromise inevitable"
+      ],
+      "correctAnswers": [0, 1, 2, 4],
+      "difficulty": 2,
+      "text_reference": "Section 5: The Breakthrough - The Licinian Laws"
+    },
+    {
+      "question": "How did the land distribution proposal address a centuries-old plebeian grievance? (SELECT ALL THAT APPLY)",
+      "options": [
+        "It promised that plebeians who had fought in Rome's wars would share in territorial benefits",
+        "It redistributed all land equally to make every plebeian wealthy and independent",
+        "It gave plebeians exclusive control over military conquest and land acquisition",
+        "It allowed plebeians to keep all plunder from military victories for personal wealth",
+        "It established that military service entitled plebeians to land ownership opportunities"
+      ],
+      "correctAnswers": [0, 4],
+      "difficulty": 2,
+      "text_reference": "Section 4: The Licinian Rogations - Main Proposals"
+    }
+  ]
+}

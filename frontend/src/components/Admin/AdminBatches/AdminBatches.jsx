@@ -472,7 +472,7 @@ function AdminBatches() {
                 <option value="">-- Choose a Batch --</option>
                 {batches.map(batch => (
                   <option key={batch.id} value={batch.id}>
-                    {getDifficultyLabel(batch.difficulty)} - Batch {batch.batchOrder}
+                    {getDifficultyLabel(batch.difficulty)} - Batch {batch.batchOrder}: {batch.description}
                   </option>
                 ))}
               </select>
