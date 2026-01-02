@@ -1,0 +1,129 @@
+{
+  "chapter_id": "early-republic-final-conquest-italy",
+  "batch_number": 1,
+  "difficulty": 1,
+  "batch_order": 1,
+  "description": "Easy - Context and Background: Remaining Peoples and Pyrrhus",
+  "questions": [
+    {
+      "question": "What was Rome's military and political situation immediately after the Samnite Wars ended in 290 BCE?",
+      "options": [
+        "Rome controlled only the central Italian peninsula with no remaining independent rivals",
+        "Rome had conquered the entire Italian peninsula and stood completely unchallenged",
+        "Rome was weakened and vulnerable to invasion from external Mediterranean powers",
+        "Rome dominated much of Italy but still faced independent peoples and Greek city-states"
+      ],
+      "correctAnswers": [3],
+      "difficulty": 1,
+      "text_reference": "Section 2: Rome's Strategic Situation"
+    },
+    {
+      "question": "Which Greek city in southern Italy was the largest and most powerful, controlling major naval and commercial power?",
+      "options": [
+        "Naples, which dominated southern Italian coastal trade and commerce",
+        "Syracuse, which was located in Sicily and controlled Mediterranean trade routes",
+        "Tarentum, which was built on an excellent harbor and was a major naval power",
+        "Rhegium, which controlled the southern approach to mainland Italian territories"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 1,
+      "text_reference": "Section 3: Tarentum and the Greek Threat"
+    },
+    {
+      "question": "What regions of Italy remained partially independent or outside direct Roman control after the Samnite Wars?",
+      "options": [
+        "Only Etruria in the north remained independent while all southern regions submitted",
+        "Southern Italy, Greek cities, Lucania, Bruttium, and parts of Etruria remained outside Roman control",
+        "Only the island of Sicily remained independent while all mainland Italy was conquered",
+        "The entire Italian peninsula was completely unified under direct Roman administrative control"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "text_reference": "Section 2: The Fragmented South"
+    },
+    {
+      "question": "Who was King Pyrrhus and from which kingdom did he rule?",
+      "options": [
+        "A Macedonian king who controlled all of Greece and the Balkan peninsula regions",
+        "King of Epirus, a Hellenistic kingdom in northwestern Greece related to Alexander the Great",
+        "A Syrian king from the Seleucid empire who ruled Asian Mediterranean territories",
+        "The king of Egypt who controlled North African and Mediterranean commercial power"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "text_reference": "Section 4: Who Was Pyrrhus?"
+    },
+    {
+      "question": "What military experience and background did Pyrrhus have before his invasion of Italy?",
+      "options": [
+        "He had only ruled his small kingdom and had no previous military experience",
+        "He served various rulers in the Near East and learned Hellenistic military tactics",
+        "He conquered most of Greece and Egypt before attempting to invade Italy",
+        "He had studied under Alexander the Great and served as his personal military commander"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "text_reference": "Section 4: Background and Rise to Power"
+    },
+    {
+      "question": "Why did Tarentum appeal to King Pyrrhus for military assistance against Rome?",
+      "options": [
+        "Tarentum wanted to expand its empire throughout the entire Mediterranean region",
+        "Tarentum recognized Roman expansion southward as a threat to its independence and interests",
+        "Tarentum was threatened by other Italian peoples and needed any available military aid",
+        "Tarentum wanted to hire Pyrrhus as a military advisor for tactical training purposes"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "text_reference": "Section 3: Tarentum and the Greek Threat"
+    },
+    {
+      "question": "What motivated Pyrrhus to accept Tarentum's invitation to invade Italy?",
+      "options": [
+        "He could gain wealth, military glory, and possibly establish a Mediterranean dominion",
+        "He wanted to help Greek cities and had no personal ambitions for power or wealth",
+        "He was fleeing threats to his kingdom and needed a temporary refuge in Italy",
+        "He wanted to unite all Greek peoples under his rule throughout the Mediterranean"
+      ],
+      "correctAnswers": [0],
+      "difficulty": 1,
+      "text_reference": "Section 4: The Appeal from Tarentum"
+    },
+    {
+      "question": "What military forces did Pyrrhus bring with him when he invaded Italy in 280 BCE?",
+      "options": [
+        "Approximately ten thousand infantry soldiers with no cavalry or specialized weaponry",
+        "A hundred thousand soldiers from various allied Hellenistic kingdoms and regions",
+        "Only mercenary forces from Greece with no professional military organization",
+        "A well-equipped army including infantry, cavalry, and war elephants"
+      ],
+      "correctAnswers": [3],
+      "difficulty": 1,
+      "text_reference": "Section 4: Pyrrhus's Invasion Force"
+    },
+    {
+      "question": "Why were war elephants considered the most advanced military technology of Pyrrhus's era?",
+      "options": [
+        "They were used exclusively by Greek armies and no other power possessed them",
+        "They could carry large numbers of soldiers and operated as mobile fortresses",
+        "They were large, armored, trained for warfare, and completely unknown to Italian armies",
+        "They were primarily used for transportation rather than direct combat purposes"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 1,
+      "text_reference": "Section 4: Pyrrhus's Invasion Force"
+    },
+    {
+      "question": "What was Pyrrhus's strategic vision for Italy when he arrived to support Tarentum?",
+      "options": [
+        "To provide limited military aid and then return immediately to his homeland",
+        "To establish himself as a dominant power, defeat Rome militarily, and create a lasting kingdom",
+        "To liberate all Italian peoples from Roman control and create a democratic federation",
+        "To conquer Sicily and use it as a base for Mediterranean commercial expansion"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "text_reference": "Section 4: Pyrrhus's Strategic Vision"
+    }
+  ]
+}

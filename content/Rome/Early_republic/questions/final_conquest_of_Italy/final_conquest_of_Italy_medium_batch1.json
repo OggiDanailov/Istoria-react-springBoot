@@ -1,0 +1,139 @@
+{
+  "chapter_id": "early-republic-final-conquest-italy",
+  "batch_number": 3,
+  "difficulty": 2,
+  "batch_order": 3,
+  "description": "Medium - Battle of Heraclea & Pyrrhus's Reality Check",
+  "questions": [
+    {
+      "question": "Where and when did the first major engagement between Pyrrhus and Roman forces occur during the invasion?",
+      "options": [
+        "At Asculum in central Italy in 279 BCE after both sides prepared their armies carefully",
+        "At Heraclea in southern Italy in 280 BCE immediately after Pyrrhus arrived from Epirus",
+        "At Rome itself in 275 BCE after Pyrrhus had conquered most of southern Italy",
+        "At Tarentum in 280 BCE where Pyrrhus's army first landed in Italian territory",
+        "At Syracuse in Sicily in 278 BCE during an attempt to conquer the wealthy island"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 2,
+      "text_reference": "Section 5: The Battle of Heraclea (280 BCE)"
+    },
+    {
+      "question": "How did Roman soldiers initially perform against Pyrrhus's army at Heraclea despite their inexperience?",
+      "options": [
+        "They immediately panicked and fled from the battlefield without mounting organized resistance",
+        "They used superior tactical formations that Pyrrhus's Greek soldiers could not counter effectively",
+        "They employed their own war elephants which proved superior to Pyrrhus's animal forces",
+        "They refused to fight and negotiated terms of surrender with Pyrrhus's army immediately",
+        "They fought bravely and inflicted significant casualties on Pyrrhus's forces before being defeated"
+      ],
+      "correctAnswers": [4],
+      "difficulty": 2,
+      "text_reference": "Section 5: The Battle of Heraclea (280 BCE)"
+    },
+    {
+      "question": "What specific factor ultimately proved decisive in determining the outcome of the Battle of Heraclea?",
+      "options": [
+        "Roman numerical superiority allowed them to surround and overwhelm Pyrrhus's smaller army",
+        "Pyrrhus's superior naval power allowed him to flank Roman forces and attack from unexpected directions",
+        "War elephants caused panic among Roman soldiers unfamiliar with such beasts and broke formations",
+        "Tarentine allies attacked Roman forces from behind while Pyrrhus engaged them from the front",
+        "Roman officers defected to Pyrrhus's cause and sabotaged Roman defensive military positions"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 2,
+      "text_reference": "Section 5: The Battle of Heraclea (280 BCE)"
+    },
+    {
+      "question": "What did Pyrrhus reportedly say after his victory at Heraclea, and what did this phrase reveal? (SELECT ALL THAT APPLY)",
+      "options": [
+        "He said 'Another victory like this and I am lost' indicating his army suffered heavy casualties",
+        "He expressed pride and confidence that Rome would soon completely surrender to his superior forces",
+        "He realized that military victories were proving costly to replace and difficult to sustain indefinitely",
+        "He understood that Rome possessed the institutional capacity to wage prolonged warfare despite defeats",
+        "He immediately decided to abandon the Italian campaign and return to Epirus with his remaining forces"
+      ],
+      "correctAnswers": [0, 2],
+      "difficulty": 2,
+      "text_reference": "Section 5: The Cost of Victory"
+    },
+    {
+      "question": "How did the concept of a 'Pyrrhic victory' originate from these military campaigns in Italy?",
+      "options": [
+        "Roman historians invented the term to describe Pyrrhus's military failures and strategic blunders",
+        "It referred to victories that cost the victor too much to be strategically worthwhile overall",
+        "It described Pyrrhus's complete military dominance throughout his entire Italian military campaign",
+        "It meant that Pyrrhus won all battles but lost the war due to political disagreements at home",
+        "It represented a Roman military tactic designed to exhaust enemy forces through prolonged conflict"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 2,
+      "text_reference": "Section 5: The Cost of Victory"
+    },
+    {
+      "question": "What was Rome's response when Pyrrhus attempted to negotiate peace terms after his victory at Heraclea?",
+      "options": [
+        "Rome immediately accepted Pyrrhus's favorable peace terms and withdrew from southern Italy entirely",
+        "Rome refused to negotiate, determined to continue fighting despite the military defeat they had suffered",
+        "Rome agreed to limit Roman expansion southward but maintained control of central Italian territories",
+        "Rome offered tribute payments to Pyrrhus in exchange for his withdrawal from southern territories",
+        "Rome requested additional military support from Tarentum and other Greek cities in southern regions"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 2,
+      "text_reference": "Section 5: Pyrrhus's Attempt at Negotiation"
+    },
+    {
+      "question": "Why was Rome's refusal to negotiate after Heraclea particularly surprising to King Pyrrhus?",
+      "options": [
+        "He expected Romans to immediately flee Italy and abandon all territorial claims to southern regions",
+        "He thought the Greeks of Tarentum would have already converted Romans to supporting his cause",
+        "He assumed Roman soldiers would mutiny and force political leaders to accept peace negotiations",
+        "He anticipated that other Mediterranean powers would intervene and force Rome into submission",
+        "He believed that a defeated Rome would be willing to accept any terms to end hostilities quickly"
+      ],
+      "correctAnswers": [4],
+      "difficulty": 2,
+      "text_reference": "Section 5: Pyrrhus's Attempt at Negotiation"
+    },
+    {
+      "question": "What fundamental strategic problem did the Battle of Heraclea reveal for Pyrrhus's invasion campaign?",
+      "options": [
+        "Roman soldiers were individually superior warriors compared to Pyrrhus's professional Greek soldiers",
+        "Tarentum and other Italian allies provided insufficient military support for sustained campaign operations",
+        "Roman naval power was stronger than Pyrrhus's fleet and prevented supply lines to his army",
+        "Pyrrhus could win individual battles but could not easily defeat Rome's entire military and institutional system",
+        "The Italian climate was unsuitable for Pyrrhus's forces and caused widespread disease and casualties"
+      ],
+      "correctAnswers": [3],
+      "difficulty": 2,
+      "text_reference": "Section 5: The Strategic Problem"
+    },
+    {
+      "question": "How did Pyrrhus's casualty situation after Heraclea compare to his ability to replace lost troops? (SELECT ALL THAT APPLY)",
+      "options": [
+        "He lost several thousand soldiers in the battle, suffering significant casualties among his limited forces",
+        "He could easily replace losses through recruitment of additional soldiers from allied Italian city-states",
+        "He had unlimited resources from Tarentum and other allies to continually replenish his military forces",
+        "His losses, though costly, were manageable through the natural population growth of Epirus",
+        "Replacing lost troops proved difficult due to the limited manpower resources available in Epirus"
+      ],
+      "correctAnswers": [0, 4],
+      "difficulty": 2,
+      "text_reference": "Section 5: The Cost of Victory"
+    },
+    {
+      "question": "What did Heraclea demonstrate about Rome's military characteristics despite its tactical defeat?",
+      "options": [
+        "Rome possessed institutional resilience and refused to accept military defeat as permanent or final",
+        "Rome was fundamentally weak and would quickly fall to any outside military intervention or invasion",
+        "Rome was militarily superior to all Mediterranean powers and would eventually dominate completely",
+        "Roman soldiers lacked discipline and quickly retreated from battles against superior military forces",
+        "Rome's political leadership was willing to surrender and accept foreign domination over Italy"
+      ],
+      "correctAnswers": [0],
+      "difficulty": 2,
+      "text_reference": "Section 5: Roman Determination and Adaptation"
+    }
+  ]
+}
