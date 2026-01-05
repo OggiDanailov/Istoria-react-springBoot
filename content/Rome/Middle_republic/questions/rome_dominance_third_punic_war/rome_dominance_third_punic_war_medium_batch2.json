@@ -1,0 +1,149 @@
+{
+  "chapter_id": "middle-republic-punic-wars",
+  "batch_number": 5,
+  "difficulty": 2,
+  "batch_order": 5,
+  "description": "Medium - Detailed Analysis and Systemic Understanding",
+  "questions": [
+    {
+      "question": "What advantages did the Macedonian phalanx have compared to Roman legions? (SELECT ALL THAT APPLY)",
+      "options": [
+        "Devastating in open field battles with long spears and tight formation",
+        "Superior training and discipline",
+        "Better adaptability to terrain and unexpected situations",
+        "More effective cavalry coordination",
+        "Rigid formation meant less flexibility on broken ground",
+        "Capable of fighting effectively in any environment"
+      ],
+      "correctAnswers": [0, 3],
+      "difficulty": 2,
+      "text_reference": "Section 3 - The Tactical Contest"
+    },
+    {
+      "question": "Which of the following accurately describe the Hellenistic world that Rome was entering in the 3rd century BCE? (SELECT ALL THAT APPLY)",
+      "options": [
+        "It was dominated by three major kingdoms: Ptolemaic Egypt, Seleucid Empire, and Macedonia",
+        "It was characterized by balance of power with no single dominant force",
+        "It contained numerous smaller kingdoms and city-states competing for influence",
+        "Rome was already the dominant power when the period began",
+        "The three major kingdoms were all economically equal and militarily matched",
+        "Hellenistic culture blended Greek, Persian, Egyptian and other influences"
+      ],
+      "correctAnswers": [0, 1, 2, 5],
+      "difficulty": 2,
+      "text_reference": "Section 1 - Macedonia Under Philip V: An Eastern Superpower"
+    },
+    {
+      "question": "What were the main military restrictions placed on Carthage by the Treaty of 201 BCE? (SELECT ALL THAT APPLY)",
+      "options": [
+        "Carthage had to provide all military forces to Rome on demand",
+        "Carthage could maintain only a small navy",
+        "Carthage could maintain only a limited standing army",
+        "Carthage was forbidden from wars of conquest",
+        "Carthage could only wage defensive wars with Roman approval",
+        "Carthage was allowed to rebuild its military after 20 years"
+      ],
+      "correctAnswers": [1, 2, 3, 4],
+      "difficulty": 2,
+      "text_reference": "Section 2 - The Treaty's Burden"
+    },
+    {
+      "question": "What challenges did Carthage's economic recovery create for Rome's strategic planning?",
+      "options": [
+        "Roman leadership feared Carthage would eventually become a threat again",
+        "Rome was unconcerned about Carthage's economic status",
+        "Carthage's recovery proved the treaty terms were insufficient",
+        "Carthage's prosperity might fund military rebuilding",
+        "A peaceful, prosperous Carthage was more dangerous than a desperate one",
+        "Carthaginian merchants were competing in trade throughout the Mediterranean"
+      ],
+      "correctAnswers": [0, 3, 5],
+      "difficulty": 2,
+      "text_reference": "Section 2 - The Political Problem"
+    },
+    {
+      "question": "Which of the following were consequences of Rome's military victories over the major Hellenistic powers? (SELECT ALL THAT APPLY)",
+      "options": [
+        "Rome became the unchallenged military superpower of the Mediterranean",
+        "Rome had to develop new systems of empire administration",
+        "Wealth from conquered territories began reshaping Roman society",
+        "Roman military superiority was proven against all rivals",
+        "The Hellenistic kingdoms immediately united against Rome",
+        "Rome's internal politics became destabilized by competition for provincial control"
+      ],
+      "correctAnswers": [0, 1, 2, 3, 5],
+      "difficulty": 2,
+      "text_reference": "Section 10 - The Overall Picture: Rome Unchallenged"
+    },
+    {
+      "question": "What was the strategic significance of Rome's ability to conduct simultaneous warfare during the First Macedonian War? (SELECT ALL THAT APPLY)",
+      "options": [
+        "It proved Rome could defeat any opponent militarily",
+        "It demonstrated Rome's exceptional institutional capacity and resource organization",
+        "It revealed that most ancient powers could not manage multiple theaters of war",
+        "It showed Rome was weaker than previously thought, needing to divide forces",
+        "It allowed Rome to easily conquer Macedonia while fighting Hannibal",
+        "It set the pattern for Rome's future Mediterranean dominance"
+      ],
+      "correctAnswers": [0, 1, 2, 5],
+      "difficulty": 2,
+      "text_reference": "Section 1 - Rome's Unprecedented Military Capacity"
+    },
+    {
+      "question": "Which statements accurately describe the Battle of Cynoscephalae? (SELECT ALL THAT APPLY)",
+      "options": [
+        "It was fought between Roman legions and Macedonian phalanx forces",
+        "Roman forces exploited terrain to outmaneuver the rigid phalanx formation",
+        "The battle proved the Roman legionary system was superior to the phalanx",
+        "Macedonian casualties were massive",
+        "The Macedonian phalanx proved undefeated in the battle",
+        "Rome subsequently showed it could defeat the greatest powers of the Hellenistic world"
+      ],
+      "correctAnswers": [0, 1, 2, 3, 5],
+      "difficulty": 2,
+      "text_reference": "Section 3 - The Battle of Cynoscephalae"
+    },
+    {
+      "question": "What role did historical memory and trauma play in Rome's decision to destroy Carthage? (SELECT ALL THAT APPLY)",
+      "options": [
+        "Rome had completely forgotten Hannibal by the Third Punic War",
+        "Hannibal's invasion and the destruction of Roman legions left psychological scars",
+        "Cato and others invoked the Second Punic War as justification for total destruction",
+        "Roman fear of Carthage was rational given the current military balance",
+        "The fear persisted even though Carthage had been weakened by treaty",
+        "Psychological trauma from war influenced strategic decision-making"
+      ],
+      "correctAnswers": [1, 2, 4, 5],
+      "difficulty": 2,
+      "text_reference": "Section 8 - Why Total Destruction?"
+    },
+    {
+      "question": "Which of the following represent ways Rome used diplomacy and alliance alongside military force during this period?",
+      "options": [
+        "Rome conquered all territories by military force alone",
+        "Egypt was increasingly drawn into dependence on Rome for security",
+        "Rome immediately destroyed all potential rivals without negotiation",
+        "Rome maintained alliance with Masinissa to weaken Carthage",
+        "Flamininus declared Greek city-states 'free and independent' while maintaining Roman dominance",
+        "Rome used envoys to pressure Carthage into treaty violations that justified war"
+      ],
+      "correctAnswers": [1, 3, 4, 5],
+      "difficulty": 2,
+      "text_reference": "Multiple sections - Rome's diplomatic strategy"
+    },
+     {
+      "question": "What contradictions existed between Rome's declared policies and actual practices toward the Mediterranean during this era?",
+      "options": [
+        "Rome was completely transparent about its imperial ambitions throughout this period",
+        "Greece was declared 'free and independent' while being under Roman dominance",
+        "Rome maintained alliance with Masinissa while claiming to be neutral about Carthage",
+        "Rome claimed to support the balance of power while systematically eliminating rivals",
+        "Egypt was nominally independent while actually dependent on Rome for decisions",
+        "Rome's public rationales for war sometimes differed from strategic motivations"
+      ],
+      "correctAnswers": [1, 2, 3, 4, 5],
+      "difficulty": 2,
+      "text_reference": "Multiple sections - contradictions between theory and practice"
+    }
+  ]
+}

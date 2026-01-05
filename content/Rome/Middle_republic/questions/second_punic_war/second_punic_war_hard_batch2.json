@@ -1,0 +1,141 @@
+{
+  "chapter_id": "middle-republic-second-punic-war",
+  "batch_number": 5,
+  "difficulty": 3,
+  "batch_order": 5,
+  "description": "Hard - Scipio Africanus and Rome's Victory",
+  "questions": [
+    {
+      "question": "Who was Scipio and what made his appointment to command in Spain unusual militarily? (SELECT ALL THAT APPLY)",
+      "options": [
+        "He was an elderly experienced general with decades of military command experience ",
+        "He was in his late 20s and the son of a general defeated by Hannibal at Trebia",
+        "He was a Greek mercenary commander hired specifically to defeat Carthaginian forces",
+        "He came from a merchant family and had no prior military experience or training",
+        "He was appointed despite his youth because Rome needed military talent and capability"
+      ],
+      "correctAnswers": [1, 4],
+      "difficulty": 3,
+      "text_reference": "Section 10: The Young Commander"
+    },
+    {
+      "question": "What were Scipio's major achievements during his Spanish military campaigns? (SELECT ALL THAT APPLY)",
+      "options": [
+        "He outmaneuvered Carthaginian forces and conducted a brilliant campaign throughout Spain",
+        "He captured the major Carthaginian stronghold of Carthago Nova militarily",
+        "He defeated Carthaginian armies and eliminated Carthaginian power in Spanish territories completely",
+        "He negotiated peace treaties with Carthage and ended the war prematurely",
+        "He created circumstances preventing Hannibal from receiving reinforcements from Spain"
+      ],
+      "correctAnswers": [0, 1, 2, 4],
+      "difficulty": 3,
+      "text_reference": "Section 10: Scipio's Spanish Victories"
+    },
+    {
+      "question": "What strategic significance did Scipio's victory of Hasdrubal in Spain have for the overall war? (SELECT ALL THAT APPLY)",
+      "options": [
+        "It eliminated Hannibal's primary source of reinforcements and support from Spanish territories",
+        "It demonstrated Rome could defeat Carthage and gave Romans confidence in eventual victory",
+        "It forced Carthage to negotiate immediate peace terms favorable to Rome completely",
+        "It proved that Rome's citizen armies were superior to Carthaginian mercenary forces entirely",
+        "It meant Hannibal would have to sustain his Italian campaign without Spanish military support"
+      ],
+      "correctAnswers": [0, 1, 4],
+      "difficulty": 3,
+      "text_reference": "Section 10: Scipio's Spanish Victories"
+    },
+    {
+      "question": "What was Scipio's strategic response to Hannibal's superior tactical brilliance in Italy? (SELECT ALL THAT APPLY)",
+      "options": [
+        "He attempted to match Hannibal's tactics through conventional pitched battles and formations",
+        "He pursued an indirect strategy to strike at Carthage's power in other geographic theaters",
+        "He recognized Rome could not defeat Hannibal through traditional Mediterranean warfare",
+        "He focused exclusively on defending Italian territories from Carthaginian invasion and conquest",
+        "He decided to invade Carthage's homeland to threaten Carthage directly and force decisions"
+      ],
+      "correctAnswers": [1, 2, 4],
+      "difficulty": 3,
+      "text_reference": "Section 10: Scipio's Strategic Thinking"
+    },
+    {
+      "question": "What did Scipio's invasion of North Africa in 204 BCE force Carthage to do militarily? (SELECT ALL THAT APPLY)",
+      "options": [
+        "Carthage could maintain Hannibal in Italy without diverting forces to Africa defensively",
+        "Carthage had to decide whether to continue supporting Hannibal or defend the homeland",
+        "Carthage eventually recalled Hannibal from Italy to defend North Africa against Scipio",
+        "Carthage evacuated Hannibal entirely and established a new military base in Egypt",
+        "Carthage surrendered immediately upon learning of Scipio's invasion without military resistance"
+      ],
+      "correctAnswers": [1, 2],
+      "difficulty": 3,
+      "text_reference": "Section 11: The Strategy to End the War"
+    },
+    {
+      "question": "What was the significance of Hannibal's recall from Italy after more than a decade of campaigning? (SELECT ALL THAT APPLY)",
+      "options": [
+        "Hannibal left Italy in triumph having defeated all Roman military opposition successfully",
+        "Hannibal's departure from Italy ended the direct military threat to Rome's homeland",
+        "Roman forces were relieved of the pressure from Hannibal's tactical superiority militarily",
+        "It demonstrated Carthage prioritized defending the homeland over supporting Hannibal in Italy",
+        "The recall allowed Rome to consolidate control of Italy and prevent further Carthaginian expansion",
+        "Hannibal was recalled due to political factions within Carthage opposing his command"
+      ],
+      "correctAnswers": [1, 2, 3, 4],
+      "difficulty": 3,
+      "text_reference": "Section 11: Hannibal's Recall"
+    },
+    {
+      "question": "What characterized the Battle of Zama (202 BCE) compared to earlier Carthaginian victories? (SELECT ALL THAT APPLY)",
+      "options": [
+        "Scipio commanded Roman forces against Hannibal in a final major engagement decisively",
+        "It was a bitterly contested battle unlike Cannae's overwhelming Carthaginian tactical dominance",
+        "Scipio's strategic thinking and Rome's improved tactics gave Rome the military advantage",
+        "Hannibal achieved complete tactical dominance and destroyed the Roman military force entirely",
+        "The battle demonstrated that Hannibal could be defeated by an equally skilled commander"
+      ],
+      "correctAnswers": [0, 1, 2, 4],
+      "difficulty": 3,
+      "text_reference": "Section 11: The Battle of Zama (202 BCE)"
+    },
+    {
+      "question": "What were the major terms imposed on Carthage by the Treaty of Zama (201 BCE)? (SELECT ALL THAT APPLY)",
+      "options": [
+        "Carthage ceded Iberian territories to Rome and lost control of Spanish colonial possessions",
+        "Carthage had to pay Rome an enormous war indemnity over an extended time period",
+        "Carthage's military power was severely restricted through naval and army size limitations",
+        "The Numidian kingdom was recognized as independent reducing Carthaginian African control",
+        "Carthage was required to cede all Mediterranean island territories to Rome immediately"
+      ],
+      "correctAnswers": [0, 1, 2, 3],
+      "difficulty": 3,
+      "text_reference": "Section 11: The Peace of 201 BCE"
+    },
+    {
+      "question": "How did the Second Punic War transform Rome's position in the Mediterranean world? (SELECT ALL THAT APPLY)",
+      "options": [
+        "Rome emerged as the undisputed dominant Mediterranean power after defeating Carthage",
+        "Rome had proven it could match any military challenge through institutional and tactical capacity",
+        "Rome demonstrated resilience by surviving catastrophic defeats and adapting strategically",
+        "Rome's victory ensured Carthage would never challenge Roman dominance again permanently",
+        "Rome had proven citizen-based military systems superior to mercenary-based Carthaginian forces"
+      ],
+      "correctAnswers": [0, 1, 2, 4],
+      "difficulty": 3,
+      "text_reference": "Section 12: The Significance of the Second Punic War"
+    },
+    {
+      "question": "What was Carthage's fate following the Second Punic War and what did this demonstrate? (SELECT ALL THAT APPLY)",
+      "options": [
+        "Carthage survived as an independent state but was fundamentally weakened and diminished",
+        "Treaty restrictions and territorial loss ensured Carthaginian continued decline as a power",
+        "Carthage completely disappeared as a civilization and was destroyed after the Second War",
+        "Within 50 years Rome and Carthage went to war a third time in which Rome destroyed Carthage",
+        "Carthage's fate demonstrated Rome's determination to eliminate future threats to its dominance",
+        "Carthaginian economic recovery allowed them to rebuild military capacity within two decades"
+      ],
+      "correctAnswers": [0, 1, 3, 4],
+      "difficulty": 3,
+      "text_reference": "Section 12: The End of Carthage as a Power"
+    }
+  ]
+}

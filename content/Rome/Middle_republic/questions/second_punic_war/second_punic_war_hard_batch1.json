@@ -1,0 +1,137 @@
+{
+  "chapter_id": "middle-republic-second-punic-war",
+  "batch_number": 4,
+  "difficulty": 3,
+  "batch_order": 4,
+  "description": "Hard - The Crisis of Cannae",
+  "questions": [
+    {
+      "question": "What was the Fabian strategy employed by Fabius Maximus and why was it controversial in Rome? (SELECT ALL THAT APPLY)",
+      "options": [
+        "Pursue pitched battles against Hannibal to achieve quick decisive military victory",
+        "Shadow Hannibal's army and harass it through attrition rather than large engagements",
+        "Many Romans viewed the strategy as frustrating and cowardly compared to direct confrontation",
+        "The strategy eliminated Hannibal's army entirely within a single military campaign season",
+        "Fabius received universal support from Roman political and military leadership completely"
+      ],
+      "correctAnswers": [1, 2],
+      "difficulty": 3,
+      "text_reference": "Section 6: Mounting Defeats"
+    },
+    {
+      "question": "How did Roman political leaders respond to the Fabian strategy militarily and politically? (SELECT ALL THAT APPLY)",
+      "options": [
+        "They enthusiastically supported Fabius's approach and extended his military command indefinitely",
+        "They demanded a decisive engagement with Hannibal despite the risks of pitched battle",
+        "They recognized the strategy's value and implemented it throughout the remainder of the war",
+        "They removed Fabius from command and replaced him with commanders favoring direct conflict",
+        "They negotiated peace with Hannibal to end the frustration and costs of protracted warfare"
+      ],
+      "correctAnswers": [1, 3],
+      "difficulty": 3,
+      "text_reference": "Section 6: The Demands for Decisive Battle"
+    },
+    {
+      "question": "What was the approximate size of the Roman army mobilized to confront Hannibal at Cannae in 216 BCE?",
+      "options": [
+        "Approximately 50,000 soldiers representing Rome's standard military force size",
+        "Approximately 120,000 soldiers exceeding any previous Roman military mobilization effort",
+        "Approximately 30,000 soldiers insufficient to confront Hannibal's main military forces",
+        "Approximately 100,000 soldiers representing nearly all available Roman military manpower",
+        "Approximately 75,000 soldiers typical for Roman military campaigns in Italy"
+      ],
+      "correctAnswers": [4],
+      "difficulty": 3,
+      "text_reference": "Section 6: The Demands for Decisive Battle"
+    },
+    {
+      "question": "What tactical maneuver did Hannibal employ at Cannae to achieve overwhelming victory? (SELECT ALL THAT APPLY)",
+      "options": [
+        "A double envelopment where weaker infantry in the center allowed Roman advance before flanking",
+        "Stronger forces positioned on the flanks that moved to encircle and trap the Roman army",
+        "A frontal assault with overwhelming cavalry forces that broke through Roman defensive lines",
+        "A retreat that lured Roman forces into a prepared ambush in surrounding terrain",
+        "The entire Roman army found itself surrounded and unable to retreat or reinforce positions"
+      ],
+      "correctAnswers": [0, 1, 4],
+      "difficulty": 3,
+      "text_reference": "Section 7: Hannibal's Tactical Brilliance"
+    },
+    {
+      "question": "What was the scale of Roman casualties and the outcome of the Battle of Cannae in 216 BCE? (SELECT ALL THAT APPLY)",
+      "options": [
+        "Approximately 10,000 Roman soldiers were killed in a minor tactical setback for Rome",
+        "Approximately 80,000 Roman soldiers were killed, wounded, or captured in a catastrophic defeat",
+        "Rome achieved complete victory over Hannibal's forces and ended the war decisively",
+        "Both armies suffered equal casualties and withdrew to regroup and resupply forces",
+        "One of the worst military defeats in Roman history with devastating psychological impact"
+      ],
+      "correctAnswers": [1, 4],
+      "difficulty": 3,
+      "text_reference": "Section 7: The Battle"
+    },
+    {
+      "question": "How did the psychological impact of Cannae affect Rome's political and military situation? (SELECT ALL THAT APPLY)",
+      "options": [
+        "Rome's sense of invincibility was broken by Hannibal's tactical brilliance and victory",
+        "Roman leadership considered surrender rather than continue protracted warfare indefinitely",
+        "Fears emerged that Hannibal might march directly on Rome and attack the city itself",
+        "Rome immediately negotiated peace terms favorable to Carthage to end the conflict",
+        "The outcome demonstrated that Rome's military dominance could be challenged effectively"
+      ],
+      "correctAnswers": [0, 2, 4],
+      "difficulty": 3,
+      "text_reference": "Section 7: The Aftermath and Impact"
+    },
+    {
+      "question": "What was Hannibal's strategic goal following his victories and what was the result? (SELECT ALL THAT APPLY)",
+      "options": [
+        "Military victories would lead to defection of Rome's Italian allies from the Roman alliance",
+        "Southern Italian cities like Capua switched sides and joined Carthage after Cannae",
+        "Rome's alliance system remained largely intact despite some defections among Italian cities",
+        "Hannibal successfully forced Rome into immediate surrender and peace negotiations",
+        "Rome's leadership refused to accept defeat and mobilized resources for continued warfare"
+      ],
+      "correctAnswers": [0, 1, 2, 4],
+      "difficulty": 3,
+      "text_reference": "Section 8: The Defection of Italy's Allies"
+    },
+    {
+      "question": "What fundamental problem did Hannibal face despite his military victories in Italy militarily? (SELECT ALL THAT APPLY)",
+      "options": [
+        "He lacked sufficient military forces to match Rome's total military manpower reserves",
+        "He could not deliver a final knockout blow to Rome despite winning impressive victories",
+        "Most Italian cities refused to support Carthage militarily despite Hannibal's success",
+        "He lacked sufficient forces to besiege Rome directly and force its military surrender"
+      ],
+      "correctAnswers": [1, 3],
+      "difficulty": 3,
+      "text_reference": "Section 8: Hannibal's Dilemma"
+    },
+    {
+      "question": "How did Rome respond strategically to the Cannae disaster and continued Hannibal's presence? (SELECT ALL THAT APPLY)",
+      "options": [
+        "Rome pursued conventional pitched battles to defeat Hannibal militarily and immediately",
+        "Rome shifted to a strategy of containment and gradual recovery under Fabius Maximus",
+        "Rome evacuated major cities and concentrated forces for direct confrontation with Hannibal",
+        "Rome maintained military operations while refusing to accept defeat or negotiate peace"
+      ],
+      "correctAnswers": [1, 3],
+      "difficulty": 3,
+      "text_reference": "Section 8: Rome's Recovery and Strategic Adjustment"
+    },
+    {
+      "question": "What institutional capacity did Rome demonstrate in surviving the catastrophe at Cannae? (SELECT ALL THAT APPLY)",
+      "options": [
+        "Rome's citizen-soldier system could not sustain prolonged warfare after major military defeats",
+        "Rome could recover from devastating military defeats through institutional resilience and determination",
+        "Rome's political leadership committed to continuing the war despite massive military losses",
+        "Rome's alliance system collapsed completely following the defeat at Cannae militarily",
+        "Rome eventually produced commanders capable of competing effectively with Hannibal militarily"
+      ],
+      "correctAnswers": [1, 2, 4],
+      "difficulty": 3,
+      "text_reference": "Section 8: Rome's Recovery and Strategic Adjustment"
+    }
+  ]
+}

@@ -1,0 +1,129 @@
+{
+  "chapter_id": "middle-republic-second-punic-war",
+  "batch_number": 1,
+  "difficulty": 1,
+  "batch_order": 1,
+  "description": "Easy - Carthage's Recovery and Mercenary Crisis",
+  "questions": [
+    {
+      "question": "What was Carthage's most significant problem immediately after losing the First Punic War in 241 BCE?",
+      "options": [
+        "Rome invaded North Africa and occupied Carthaginian territory militarily",
+        "Carthage had to pay a massive war indemnity while its treasury was depleted",
+        "Sicily's loss eliminated Carthaginian naval dominance completely and permanently",
+        "Carthaginian citizens refused to participate in military campaigns any longer"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "text_reference": "Section 2: The Financial Burden and Internal Crisis"
+    },
+    {
+      "question": "Why did Rome rely on citizen soldiers while Carthage relied on mercenary armies militarily?",
+      "options": [
+        "Carthage lacked enough population to field adequate citizen-soldier forces",
+        "Rome had no wealthy merchant families while Carthage had many such families",
+        "Carthage's aristocrats had no tradition of military service as civic obligation",
+        "Rome's island location prevented recruitment of foreign mercenary soldiers"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 1,
+      "text_reference": "Section 2: Roman vs. Carthaginian Military Systems"
+    },
+    {
+      "question": "What was the critical weakness of Carthage's mercenary military system?",
+      "options": [
+        "Mercenary soldiers were less skilled than citizen-soldiers in combat operations",
+        "Mercenaries refused to fight at sea and only participated in land warfare",
+        "Mercenaries could not be disciplined effectively by Carthaginian military officers",
+        "Mercenaries required payment and had no political loyalty beyond receiving wages"
+      ],
+      "correctAnswers": [3],
+      "difficulty": 1,
+      "text_reference": "Section 2: Roman vs. Carthaginian Military Systems"
+    },
+    {
+      "question": "What diverse groups of soldiers composed Carthage's mercenary armies after the First Punic War?",
+      "options": [
+        "Only North African soldiers who were trained exclusively in defensive operations",
+        "Libyan infantry, Spanish warriors, Greek soldiers, and Numidian cavalry forces",
+        "Exclusively Roman defectors who had switched allegiance to Carthage militarily",
+        "Local Egyptian and Levantine troops who had served under Alexander the Great previously"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "text_reference": "Section 2: The Mercenary Army Composition"
+    },
+    {
+      "question": "Who led the mercenary rebellion against Carthage starting in 240 BCE?",
+      "options": [
+        "A Carthaginian aristocrat who sought to overthrow the government politically",
+        "Matho, a military commander of possibly Libyan or Numidian origin",
+        "A Roman general who infiltrated Carthaginian forces and incited rebellion",
+        "Hamilcar Barca, who opposed the Carthaginian government's policies militarily"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "text_reference": "Section 2: Matho and the Rebellion"
+    },
+    {
+      "question": "What was the Mercenary War also called due to its geographic location?",
+      "options": [
+        "The Spanish War, because it occurred in Carthaginian territories in Iberia",
+        "The Mediterranean War, because it involved naval operations throughout the sea",
+        "The Libyan War, because it was fought primarily in Libya and North Africa",
+        "The Sicilian War, because it threatened Carthaginian control of the island"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 1,
+      "text_reference": "Section 2: The Mercenary War Unfolds"
+    },
+    {
+      "question": "What broader social forces supported the mercenary rebellion against Carthage militarily?",
+      "options": [
+        "Subjugated Libyan peoples who resented Carthaginian rule and sought independence",
+        "Greek cities that opposed Carthaginian expansion into Mediterranean territories",
+        "Roman allies who wanted to weaken Carthage before the next war eventually",
+        "Egyptian forces that sought control of North African territories and resources"
+      ],
+      "correctAnswers": [0],
+      "difficulty": 1,
+      "text_reference": "Section 2: The Mercenary War Unfolds"
+    },
+    {
+      "question": "What happened to Matho after Carthage suppressed the mercenary rebellion around 238 BCE?",
+      "options": [
+        "He was exiled from Carthaginian territories and settled in a distant location",
+        "He negotiated peace and was accepted back into Carthaginian military service",
+        "He was executed in a particularly horrific manner as a warning to others",
+        "He escaped to Rome and sought alliance with Roman military leadership"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 1,
+      "text_reference": "Section 2: Suppression of the Rebellion"
+    },
+    {
+      "question": "What fundamental weakness did the Mercenary War expose about Carthaginian military power?",
+      "options": [
+        "Carthaginian soldiers lacked courage and commitment to military service generally",
+        "Carthage's mercenary system lacked the stability of Rome's citizen-based armies",
+        "Carthaginian officers were incompetent and unable to lead military forces effectively",
+        "Carthage lacked sufficient resources to pay soldiers for extended military campaigns"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "text_reference": "Section 2: The Aftermath and Lessons"
+    },
+    {
+      "question": "What strategic decision did Carthage make to recover its power after the Mercenary War?",
+      "options": [
+        "Carthage attempted to reconquer Sicily from Rome militarily and recover lost territory",
+        "Carthage built a larger navy to challenge Rome's naval dominance at sea",
+        "Carthage formed alliances with Egypt and Hellenistic kingdoms against Rome",
+        "Carthage focused on developing and conquering Spain for mineral wealth and manpower"
+      ],
+      "correctAnswers": [3],
+      "difficulty": 1,
+      "text_reference": "Section 2: The Spanish Expansion"
+    }
+  ]
+}

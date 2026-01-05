@@ -1,0 +1,139 @@
+{
+  "chapter_id": "middle-republic-second-punic-war",
+  "batch_number": 3,
+  "difficulty": 2,
+  "batch_order": 3,
+  "description": "Medium - Saguntum and the Invasion Begins",
+  "questions": [
+    {
+      "question": "What was Saguntum's political status and strategic significance in the region around 220 BCE?",
+      "options": [
+        "A Spanish city that developed commercial ties with Rome and sought Roman military protection",
+        "A Carthaginian stronghold that had been under Carthaginian control since initial Spanish conquest",
+        "A neutral trading city that maintained equal relations with both Rome and Carthage equally",
+        "A Roman province that was directly administered by Roman governors and magistrates",
+        "An independent Greek colony that refused to align with either Rome or Carthage politically"
+      ],
+      "correctAnswers": [0],
+      "difficulty": 2,
+      "text_reference": "Section 4: The Crisis at Saguntum"
+    },
+    {
+      "question": "Why did Hannibal begin military operations against Saguntum starting in 220 BCE?",
+      "options": [
+        "He wanted to demonstrate Carthaginian military superiority to Rome diplomatically",
+        "Saguntum possessed valuable silver mines that Carthage needed for economic recovery",
+        "He saw Saguntum as an obstacle to complete Carthaginian dominance of Spanish territories",
+        "Rome had attacked Saguntum first and Hannibal responded defensively to Roman aggression",
+        "Saguntum was harboring Carthaginian rebels who had fled Spain and needed elimination"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 2,
+      "text_reference": "Section 4: The Crisis at Saguntum"
+    },
+    {
+      "question": "How did Rome respond when Hannibal began the siege of Saguntum militarily?",
+      "options": [
+        "Rome immediately invaded Spain with a massive army force to relieve the besieged city",
+        "Rome ignored the situation and focused on defending other Mediterranean territories instead",
+        "Rome sent envoys to demand that Hannibal cease operations and withdraw completely",
+        "Rome and Carthage negotiated a diplomatic agreement protecting Saguntum from conquest",
+        "Rome supplied Saguntum with military forces and supplies to strengthen its defensive position"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 2,
+      "text_reference": "Section 4: Rome's Dilemma and Decision"
+    },
+    {
+      "question": "What was the outcome of Saguntum's siege and what did it signify politically?",
+      "options": [
+        "The city surrendered peacefully and was incorporated into Carthaginian Spanish territories",
+        "Rome successfully relieved the city and maintained it as a Roman ally militarily intact",
+        "The city fell after months of resistance and was destroyed, challenging Rome's authority",
+        "The siege was abandoned when Rome threatened to declare war on Carthage immediately",
+        "The city was evacuated by Rome and its population relocated to Italian territories safely"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 2,
+      "text_reference": "Section 4: The Fall of Saguntum and the Path to War"
+    },
+    {
+      "question": "What was the approximate size of Hannibal's invasion army in 218 BCE? (SELECT ALL THAT APPLY)",
+      "options": [
+        "The army consisted of approximately 90,000 men total from various sources and territories",
+        "The force included infantry, cavalry, and war elephants transported from North Africa",
+        "The invasion army was relatively small at around 30,000 soldiers due to limited resources",
+        "The force was composed entirely of Spanish soldiers without Carthaginian military units",
+        "The army represented an enormous force for the era requiring complex logistics and supply"
+      ],
+      "correctAnswers": [0, 1, 4],
+      "difficulty": 2,
+      "text_reference": "Section 5: The Army and the March"
+    },
+    {
+      "question": "What route did Hannibal choose for his invasion of Italy and what were its characteristics?",
+      "options": [
+        "He sailed directly across the Mediterranean with his army using Carthaginian naval dominance",
+        "He marched northward through Spain and Gaul and crossed the Alps into the Italian peninsula",
+        "He conquered Mediterranean islands as stepping stones to eventually reach Italian territories",
+        "He avoided the Alps entirely and sailed around the Mediterranean coast to southern Italy",
+        "He followed coastal roads through Sicily and invaded Italy from the island to the north"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 2,
+      "text_reference": "Section 5: The Army and the March"
+    },
+    {
+      "question": "What challenges did Hannibal's army face militarily and logistically?  (SELECT ALL THAT APPLY)",
+      "options": [
+        "The Alpine passes were treacherous and winter weather caused enormous casualties and losses",
+        "Local Alpine peoples actively attacked the army and prevented safe passage through the mountains",
+        "The passage was surprisingly easy and Hannibal's army emerged nearly intact into Italy",
+        "Thousands of soldiers and many elephants were lost during the difficult mountain crossing operation",
+        "Supply lines were completely cut off forcing the army to forage for food continuously"
+      ],
+      "correctAnswers": [0, 3],
+      "difficulty": 2,
+      "text_reference": "Section 5: The Army and the March"
+    },
+    {
+      "question": "What was the strategic outcome of the Battle of the Trebia River (218 BCE)?",
+      "options": [
+        "Roman forces defeated Hannibal's army and halted the Carthaginian invasion completely",
+        "Hannibal's army defeated Roman forces under consul Scipio and pushed Romans back northward",
+        "Both armies withdrew from the region having achieved limited strategic objectives militarily",
+        "The battle resulted in mutual agreement to end hostilities and negotiate peace immediately",
+        "Roman reinforcements arrived and established clear military dominance in northern Italy"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 2,
+      "text_reference": "Section 5: Early Italian Victories"
+    },
+    {
+      "question": "How did Hannibal plan to achieve ultimate victory against Rome after initial victories? (SELECT ALL THAT APPLY)",
+      "options": [
+        "He would win pitched battles to demonstrate Roman military vulnerability and weakness",
+        "He would demoralize Rome's Italian allies to encourage them to switch sides eventually",
+        "He would immediately attack Rome itself and force the city to surrender militarily",
+        "He would accumulate Italian support to provide his army additional forces and resources",
+        "He would force Rome to negotiate peace terms favorable to Carthage through military pressure"
+      ],
+      "correctAnswers": [0, 1, 3, 4],
+      "difficulty": 2,
+      "text_reference": "Section 5: Hannibal's Strategy for Victory"
+    },
+    {
+      "question": "What was Hannibal's assumption about how Italian allies would respond to Carthaginian military victories?",
+      "options": [
+        "Italian cities would remain completely loyal to Rome regardless of military outcomes",
+        "Italian cities would form independent alliances to protect themselves from both Rome and Carthage",
+        "Italian populations would actively rebel against Rome before Hannibal requested assistance",
+        "Italian cities would request military protection from Egypt and other Mediterranean powers",
+        "Italian allies would defect to Carthage and provide military support against Rome"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 2,
+      "text_reference": "Section 5: Hannibal's Strategy for Victory"
+    }
+  ]
+}
