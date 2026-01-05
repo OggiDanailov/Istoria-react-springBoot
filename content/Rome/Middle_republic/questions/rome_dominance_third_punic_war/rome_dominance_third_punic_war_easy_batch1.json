@@ -1,0 +1,129 @@
+{
+  "chapter_id": "middle-republic-punic-wars",
+  "batch_number": 1,
+  "difficulty": 1,
+  "batch_order": 1,
+  "description": "Easy - Macedonia and Early Rome",
+  "questions": [
+    {
+      "question": "During the Second Punic War, which Macedonian king allied with Hannibal against Rome?",
+      "options": [
+        "Alexander the Great",
+        "Perseus",
+        "Antigonus",
+        "Philip V"
+      ],
+      "correctAnswers": [3],
+      "difficulty": 1,
+      "text_reference": "Section 1 - Philip V and the Hellenistic Balance of Power"
+    },
+    {
+      "question": "What was the primary weapon of the Macedonian phalanx formation?",
+      "options": [
+        "Short swords called gladii",
+        "Javelins and shields",
+        "Long spears called sarissas",
+        "Crossbows"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 1,
+      "text_reference": "Section 1 - Macedonia Under Philip V: The Macedonian Phalanx"
+    },
+    {
+      "question": "Which general commanded the Roman forces that defeated Philip V at Cynoscephalae?",
+      "options": [
+        "Titus Quinctius Flamininus",
+        "Scipio Africanus",
+        "Lucius Scipio",
+        "Fabius Maximus"
+      ],
+      "correctAnswers": [0],
+      "difficulty": 1,
+      "text_reference": "Section 3 - The Second Macedonian War: Roman Leadership"
+    },
+    {
+      "question": "In what year did the Battle of Cynoscephalae occur?",
+      "options": [
+        "200 BCE",
+        "196 BCE",
+        "197 BCE",
+        "188 BCE"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 1,
+      "text_reference": "Section 3 - The Battle of Cynoscephalae"
+    },
+    {
+      "question": "What did the Roman legionary system have that gave it advantages over the Macedonian phalanx?",
+      "options": [
+        "Longer weapons and better armor",
+        "More soldiers and better cavalry",
+        "Greater flexibility and adaptability to terrain",
+        "Better training and discipline"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 1,
+      "text_reference": "Section 3 - The Tactical Contest"
+    },
+    {
+      "question": "What did the Treaty of 196 BCE declare about Greek city-states?",
+      "options": [
+        "They became Roman provinces",
+        "They were to be freed and independent",
+        "They remained under Macedonian rule",
+        "They could choose between Rome and Macedonia"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "text_reference": "Section 3 - The Treaty of 196 BCE"
+    },
+    {
+      "question": "Which of the following powers was Rome NOT in direct military conflict with during this period (201-149 BCE)?",
+      "options": [
+        "Macedonia",
+        "The Seleucid Empire",
+        "Numidia",
+        "All were directly opposed to Rome"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 1,
+      "text_reference": "Section 5 - The Problem of Masinissa"
+    },
+    {
+      "question": "Who was the Numidian king that harassed Carthage with Rome's support?",
+      "options": [
+        "Jugurtha",
+        "Syphax",
+        "Bocchus",
+        "Masinissa"
+      ],
+      "correctAnswers": [3],
+      "difficulty": 1,
+      "text_reference": "Section 5 - The Problem of Masinissa"
+    },
+    {
+      "question": "What economic problem did Carthage face after the Second Punic War ended?",
+      "options": [
+        "Inability to pay war indemnity and loss of Spanish territories",
+        "Severe shortage of skilled merchants and complete destruction of all trading networks throughout Mediterranean",
+        "Total destruction of all harbor facilities and port infrastructure making maritime commerce completely impossible",
+        "Complete loss of access to Mediterranean ports and inability to engage in any sea-based economic activity"
+      ],
+      "correctAnswers": [0],
+      "difficulty": 1,
+      "text_reference": "Section 2 - The Treaty's Burden"
+    },
+    {
+      "question": "Which of these statements about Carthage's recovery is true? (SELECT ALL THAT APPLY)",
+      "options": [
+        "Carthaginian merchants rebuilt trade networks and commerce",
+        "Carthage quickly rebuilt its military forces to previous strength",
+        "Within 20-30 years, Carthage had recovered economically",
+        "Rome supported Carthage's recovery"
+      ],
+      "correctAnswers": [0, 2],
+      "difficulty": 1,
+      "text_reference": "Section 2 - Economic Recovery"
+    }
+  ]
+}

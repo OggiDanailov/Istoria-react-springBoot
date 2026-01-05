@@ -1,0 +1,148 @@
+{
+  "chapter_id": "middle-republic-punic-wars",
+  "batch_number": 6,
+  "difficulty": 3,
+  "batch_order": 6,
+  "description": "Hard - Complex Analysis and Critical Evaluation",
+  "questions": [
+    {
+      "question": "Analyze the strategic paradox Rome faced after completely dominating the Mediterranean (SELECT ALL THAT APPLY)",
+      "options": [
+        "With no external rivals to fight, internal Roman politics became more competitive and contentious",
+        "Wealth flowing from empire enriched successful commanders, increasing their political power",
+        "Competition for control of lucrative provinces created factional conflicts within the Republic",
+        "Rome's military superiority ensured permanent peace throughout the empire",
+        "The expansion that secured Rome externally created instability internally",
+        "Complete dominance removed the external threats that had unified Roman political factions"
+      ],
+      "correctAnswers": [0, 1, 2, 4, 5],
+      "difficulty": 3,
+      "text_reference": "Section 10 - The Beginning of Rome's New Era"
+    },
+    {
+      "question": "How did Rome's treatment of different rivals reflect changing strategic thinking over time? (SELECT ALL THAT APPLY)",
+      "options": [
+        "Rome treated all rivals identically throughout the period",
+        "Macedonia was reduced and restricted but allowed to exist initially under the 196 BCE treaty",
+        "After 30 years, Rome destroyed Macedonia completely when challenged again",
+        "Carthage moved from being a contained rival to being viewed as an existential threat requiring elimination",
+        "Early treaties with firm restrictions later proved insufficient as Roman attitudes hardened"
+      ],
+      "correctAnswers": [1, 2, 3, 4],
+      "difficulty": 3,
+      "text_reference": "Sections 3 and 8 - Comparison of Roman policies"
+    },
+    {
+      "question": "What role did information control and historical narrative play in Rome's actions toward Carthage? (SELECT ALL THAT APPLY)",
+      "options": [
+      "We know about Carthage primarily through hostile Greek and Roman sources",
+      "Cato and others used selective invocation of the Second War to shape political opinion",
+      "Carthaginian destruction eliminated Carthaginian historical records and perspectives permanently",
+      "Archaeological evidence has recovered extensive Carthaginian written records and literary works",
+      "This loss means our understanding of Carthage is inherently biased",
+      "Carthaginian historians documented their civilization extensively before Rome's destruction"
+    ],
+    "correctAnswers": [0, 1, 2, 4],
+      "difficulty": 3,
+      "text_reference": "Section 9 - Carthaginian Legacy and Loss"
+    },
+    {
+      "question": "Evaluate the relationship between Masinissa's harassment of Carthage and Rome's eventual conquest. Which interpretations are supported by the text? (SELECT ALL THAT APPLY)",
+        "options": [
+          "Rome actively opposed Masinissa's territorial expansion and demanded he cease attacks immediately",
+          "Masinissa was seeking to establish sole control over all of North Africa independent of Rome's influence",
+          "The harassment kept Carthage distracted and weakened over decades",
+          "Rome deliberately tolerated or encouraged Masinissa's aggression as strategic policy",
+          "Masinissa acted completely independently of Roman strategic calculations",
+          "Masinissa was effectively a tool of Roman policy toward Carthage"
+        ],
+        "correctAnswers": [2, 3, 5],
+      "difficulty": 3,
+      "text_reference": "Section 5 - Rome's Deliberate Strategy"
+    },
+    {
+      "question": "How did the economic character of Carthage versus Rome shape their conflict? (SELECT ALL THAT APPLY)",
+      "options": [
+        "Carthage was fundamentally merchant and trade-based in its wealth",
+        "Rome and Carthage both relied equally on maritime commerce as their primary economic foundation",
+        "Carthage's recovered commerce was viewed as threatening by Roman interests",
+        "Rome actively encouraged Carthaginian trade as a way to create economic interdependence and prevent war",
+        "Economic cooperation and commercial treaties were the primary factors preventing earlier conflict",
+        "Economic difference may have contributed to Rome viewing Carthage as culturally alien and fundamentally incompatible"
+      ],
+      "correctAnswers": [0, 2, 5],
+      "difficulty": 3,
+      "text_reference": "Sections 2 and 6 - Economic differences"
+    },
+    {
+      "question": "Analyze Flamininus's diplomatic approach to Greece versus Rome's eventual destruction of Carthage. What do these contrasts suggest about Roman strategic thinking? (SELECT ALL THAT APPLY)",
+      "options": [
+        "Rome could be flexible and respectful toward some peoples while ruthless toward others",
+        "Flamininus was ordered by the Senate to completely destroy Greece as he had been instructed",
+        "Rome's actions were driven by more than simple military dominance—political and cultural factors mattered",
+        "Rome viewed Carthage as fundamentally alien in ways it didn't view Greece",
+        "Rome treated all conquered peoples and rivals identically regardless of circumstances",
+        "Rome's choice of policies reflected judgments about long-term stability and control"
+      ],
+      "correctAnswers": [0, 2, 3, 5],
+      "difficulty": 3,
+      "text_reference": "Sections 3 and 8 - Contrasting approaches"
+    },
+    {
+      "question": "What did Rome's simultaneous warfare against multiple powers reveal about its institutional capacity compared to other ancient empires? (SELECT ALL THAT APPLY)",
+      "options": [
+        "Rome's military organization was inherited from Alexander the Great",
+        "Rome possessed superior organizational systems for coordinating multiple military theaters",
+        "Rome could sustain warfare across vast distances with logistical support",
+        "Most ancient powers would have been overwhelmed by Rome's challenges",
+        "This institutional capacity explained Rome's rise more than superior tactics alone",
+        "All ancient powers possessed comparable institutional capacity but Rome had better generals"
+      ],
+      "correctAnswers": [1, 2, 3, 4],
+      "difficulty": 3,
+      "text_reference": "Section 1 - Rome's Unprecedented Military Capacity"
+    },
+    {
+      "question": "How did Rome's political decision-making process regarding Carthage's destruction reflect both rational strategic calculation and irrational fear? (SELECT ALL THAT APPLY)",
+      "options": [
+        "Rational: Carthage was economically recovering and could eventually become dangerous",
+        "Psychological trauma from Hannibal's invasion created irrational fear that exceeded objective threat assessment",
+        "Rome's military dominance made Carthage pose no realistic threat regardless of economic recovery",
+        "Cato deliberately manipulated Senate emotions by invoking the Second Punic War to override rational objections",
+        "The decision was made through purely logical cost-benefit analysis with no emotional influences",
+        "Rome's fear of Carthage was entirely justified given Carthage's demonstrated military capabilities"
+      ],
+      "correctAnswers": [0, 1, 3],
+      "difficulty": 3,
+      "text_reference": "Section 8 - Why Total Destruction?"
+    },
+    {
+      "question": "Evaluate the argument that Rome's Mediterranean dominance in 149 BCE contained the seeds of future Roman civil conflict. Which elements support this interpretation? (SELECT ALL THAT APPLY)",
+      "options": [
+        "Successful military commanders controlling distant armies accumulated unprecedented power and influence that could challenge Senate authority and constitutional governance",
+        "The elimination of external threats that had previously unified Roman political factions created space for internal competition over the distribution of imperial wealth and provincial control",
+        "Rome's expanding territorial holdings provided sufficient resources and economic stability to prevent any serious internal political disputes or factional conflicts indefinitely",
+        "Rome's military dominance necessarily prevented any possibility of civil conflict by establishing absolute control over rival power centers",
+        "Wealth from conquered territories was distributed equally among all Roman citizens, eliminating economic motivations for factional competition",
+        "Provincial administration and military command of distant legions became sources of power and wealth that ambitious individuals and factions could leverage against political rivals"
+      ],
+      "correctAnswers": [0, 1, 5],
+      "difficulty": 3,
+      "text_reference": "Section 10 - The New Challenges"
+    },
+    {
+      "question": "How did the concept of 'Pax Romana' emerge from Rome's military dominance, and what tensions did it create? (SELECT ALL THAT APPLY)",
+      "options": [
+        "Peace under Roman hegemony came at the cost of eliminating all rivals and potential challengers",
+        "Rome achieved genuine universal peace throughout the empire without requiring military force to maintain control",
+        "Conquered peoples voluntarily embraced Roman rule and accepted dominance out of admiration and cultural preference",
+        "The peace enabled internal Roman political conflicts to emerge because external enemies no longer unified political factions",
+        "Pax Romana meant complete absence of any conflict or military operations anywhere in the Mediterranean world",
+        "Rome's hegemonic peace eliminated the need for any military presence or garrison forces once dominance was established"
+      ],
+      "correctAnswers": [0, 3],
+      "difficulty": 3,
+      "text_reference": "Section 10 - The Beginning of Rome's New Era"
+    }
+  ]
+}

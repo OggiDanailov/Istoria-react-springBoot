@@ -1,0 +1,130 @@
+{
+  "chapter_id": "middle-republic-punic-wars",
+  "batch_number": 3,
+  "difficulty": 1,
+  "batch_order": 3,
+  "description": "Easy - Rome's Consolidation and Final Outcomes",
+  "questions": [
+    {
+      "question": "What was the primary reason Rome defeated Macedonia so decisively at Cynoscephalae?",
+      "options": [
+        "Roman soldiers possessed superior physical attributes including greater height and strength throughout their ranks",
+        "The Roman legionary system was more flexible and adaptable to terrain",
+        "Romans maintained overwhelming superiority in total troop numbers and possessed significantly better quality weapons overall",
+        "Macedonian soldiers demonstrated a complete lack of courage and refused to engage in direct combat"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "text_reference": "Section 3 - The Battle of Cynoscephalae: The Tactical Contest"
+    },
+    {
+      "question": "How long was the siege of Carthage during the Third Punic War?",
+      "options": [
+        "One year",
+        "Less than two years",
+        "Approximately three years",
+        "More than five years"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 1,
+      "text_reference": "Section 8 - The Siege of Carthage"
+    },
+    {
+      "question": "What did Rome do to Carthage after conquering it?",
+      "options": [
+        "Incorporated it as a new province and rebuilt the city",
+        "Allowed local leaders to continue governing under Roman supervision",
+        "Systematically destroyed it and enslaved the population",
+        "Left it abandoned but intact for future settlement"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 1,
+      "text_reference": "Section 8 - The Fall and Destruction of Carthage"
+    },
+    {
+      "question": "What new Roman province was created from Carthage's territory?",
+      "options": [
+        "Africa",
+        "Libya",
+        "Numidia",
+        "Mauretania"
+      ],
+      "correctAnswers": [0],
+      "difficulty": 1,
+      "text_reference": "Section 10 - The Mediterranean Provinces"
+    },
+    {
+      "question": "Which empire remained nominally independent but increasingly dependent on Rome by 150 BCE?",
+      "options": [
+        "Macedonia",
+        "The Seleucid Empire",
+        "Egypt",
+        "Greece"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 1,
+      "text_reference": "Section 4 - Egypt's Growing Dependence"
+    },
+    {
+      "question": "What advantage did the First Macedonian War give to Rome?",
+      "options": [
+        "Complete defeat of Macedonia",
+        "Control of Greece immediately",
+        "Demonstrated Rome's capacity for simultaneous warfare",
+        "Established Rome as the dominant Mediterranean power"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 1,
+      "text_reference": "Section 1 - The Strategic Implication"
+    },
+    {
+      "question": "Which of these statements about Egypt is correct?",
+      "options": [
+        "Egypt defeated Rome in military conflict",
+        "Egypt successfully maintained complete independence from Rome",
+        "Egypt became increasingly dependent on Rome for security",
+        "Egypt allied with Carthage against Rome"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 1,
+      "text_reference": "Section 4 - Egypt's Growing Dependence"
+    },
+    {
+      "question": "Why might Rome have encouraged Masinissa's harassment of Carthage?",
+      "options": [
+        "To weaken Carthage and justify later military action",
+        "To help Carthage recover from the Second War",
+        "To test Carthage's military strength",
+        "To prevent Carthage from attacking Rome directly"
+      ],
+      "correctAnswers": [0],
+      "difficulty": 1,
+      "text_reference": "Section 5 - Rome's Deliberate Strategy"
+    },
+    {
+      "question": "What was the significance of the Battle of Pydna (168 BCE)?",
+      "options": [
+        "Rome defeated the Seleucids",
+        "Rome definitively broke Macedonian power",
+        "Carthage made its final stand against Rome",
+        "Greeks defeated Roman forces"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "text_reference": "Section 3 - The Third Macedonian War"
+    },
+    {
+      "question": "Which of these consequences followed Rome's defeat of all major rivals by 149 BCE? (SELECT ALL THAT APPLY)",
+      "options": [
+        "Rome became a dominant Mediterranean power but only in the Western part of it",
+        "Rome immediately collapsed due to overexpansion",
+        "Rome became the unchallenged Mediterranean superpower",
+        "Wealth from conquered territories reshaped Roman society",
+        "Competition for control of provinces created internal conflicts"
+      ],
+      "correctAnswers": [2, 3, 4],
+      "difficulty": 1,
+      "text_reference": "Section 10 - The Overall Picture: Rome Unchallenged"
+    }
+  ]
+}

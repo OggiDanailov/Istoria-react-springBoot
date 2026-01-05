@@ -1,0 +1,142 @@
+{
+  "chapter_id": "middle-republic-punic-wars",
+  "batch_number": 4,
+  "difficulty": 2,
+  "batch_order": 4,
+  "description": "Medium - Strategic Analysis and Causation",
+  "questions": [
+    {
+      "question": "What was Philip V's primary strategic calculation when he allied with Hannibal?",
+      "options": [
+        "He wanted to defeat Rome militarily for Alexander's legacy",
+        "If Rome was distracted fighting Hannibal, Rome would be vulnerable to Macedonian expansion in the east",
+        "He believed Carthage and Macedonia could jointly conquer the Mediterranean",
+        "He wanted to protect Greek city-states from Roman conquest",
+        "He was pressured into the alliance by other Hellenistic powers"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 2,
+      "text_reference": "Section 1 - Philip's Alliance with Hannibal"
+    },
+    {
+      "question": "How did Carthage's economic recovery after the Second War create strategic problems for Rome?",
+      "options": [
+        "Carthage's prosperity threatened Rome's commercial dominance directly",
+        "Rome feared a recovered Carthage might eventually rebuild military strength and threaten Rome again",
+        "Carthage's wealth allowed it to pay off Masinissa and end harassment",
+        "Carthaginian merchants began trading with Rome's enemies",
+        "Economic recovery somehow violated the treaty terms"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 2,
+      "text_reference": "Section 2 - The Political Problem"
+    },
+    {
+      "question": "Which of the following were true about Flamininus as a Roman commander? (SELECT ALL THAT APPLY)",
+      "options": [
+        "He ordered the complete destruction of Macedonian cities",
+        "He was relatively young for such an important military command",
+        "He studied Greek language and culture",
+        "He was known for both military skill and diplomatic ability",
+        "He was celebrated in Greece as a hero after Cynoscephalae",
+        "He refused to engage with Greek city-states politically"
+      ],
+      "correctAnswers": [1, 2, 3, 4],
+      "difficulty": 2,
+      "text_reference": "Section 3 - Roman Leadership: Titus Quinctius Flamininus"
+    },
+    {
+      "question": "How did the Treaty of 196 BCE regarding Greece differ from typical Roman territorial conquest?",
+      "options": [
+        "Greece was completely incorporated as a Roman province with governors",
+        "Greek city-states were declared 'free and independent' but were effectively under Roman dominance",
+        "Rome granted complete autonomy to all Greek territories",
+        "Greece remained under Macedonian rule with Roman supervision",
+        "Rome limited its involvement to strategic coastal cities only"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 2,
+      "text_reference": "Section 3 - The Treaty of 196 BCE"
+    },
+    {
+      "question": "What was the relationship between Carthage's attempts to defend itself against Masinissa and Rome's declaration of war? (SELECT ALL THAT APPLY)",
+      "options": [
+        "When Carthage militarily responded to Masinissa, it violated the treaty prohibition against war without Roman approval",
+        "Carthage had the right to defend itself regardless of treaty restrictions",
+        "Rome forced Carthage to make the military response to trap them",
+        "Masinissa was actually an independent actor with no connection to Rome's war decision",
+        "Rome saw an opportunity to use treaty violations as a pretext for war"
+      ],
+      "correctAnswers": [0, 4],
+      "difficulty": 2,
+      "text_reference": "Section 7 - Carthage's Violation of the Treaty"
+    },
+    {
+      "question": "How did Cato the Elder shift Roman public opinion regarding Carthage?",
+       "options": [
+        "He provided rational and compelling economic arguments that successfully convinced Roman merchants and business interests",
+        "He invoked Hannibal's trauma, argued about strategic threat, commercial competition, and repeatedly used 'Carthago delenda est'",
+        "He demonstrated through detailed evidence that Carthage was actively and aggressively rebuilding its military forces and naval power",
+        "He personally led military campaigns against Carthaginian territories that proved Carthage remained a significant military threat",
+        "He was supported unanimously by the entire Roman Senate from the very beginning of his political campaign"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 2,
+      "text_reference": "Section 6 - Cato's Campaign Against Carthage"
+    },
+    {
+      "question": "Which of the following factors contributed to Rome's decision to completely destroy rather than merely conquer Carthage? (SELECT ALL THAT APPLY)",
+      "options": [
+        "Political consensus built by Cato and the anti-Carthage faction",
+        "Religious beliefs that Carthage was cursed by the gods",
+        "Psychological fear stemming from Hannibal's invasion during the Second War",
+        "Direct orders from Alexander's descendant",
+        "Strategic calculation that an independent Carthage was more dangerous than elimination",
+        "Economic interests in eliminating a commercial competitor"
+      ],
+      "correctAnswers": [0, 2, 4, 5],
+      "difficulty": 2,
+      "text_reference": "Section 8 - Why Total Destruction?"
+    },
+    {
+      "question": "What did the Third Macedonian War (171-168 BCE) demonstrate about Roman power?",
+      "options": [
+        "Macedonia had secretly regained military strength equal to Rome's",
+        "Rome was no longer militarily superior to Hellenistic powers",
+        "Rome's military dominance was complete and lasting—Macedonia could not challenge Rome even after 30 years",
+        "Macedonian phalanx tactics had improved dramatically since Cynoscephalae",
+        "Rome was becoming weaker and needed to consolidate power"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 2,
+      "text_reference": "Section 3 - The Third Macedonian War"
+    },
+    {
+      "question": "How did Rome's expansion into the Mediterranean create new administrative and political challenges? (SELECT ALL THAT APPLY)",
+      "options": [
+        "Rome had to develop systems for administering vast diverse territories",
+        "Commanders of distant armies gained power and ambition",
+        "Rome's military became too large to control",
+        "Conquered peoples welcomed Roman rule universally",
+        "Competition for control of lucrative provinces created internal tensions",
+        "Rome's Senate lost all political power to military commanders"
+      ],
+      "correctAnswers": [0, 1, 4],
+      "difficulty": 2,
+      "text_reference": "Section 10 - The New Challenges"
+    },
+    {
+      "question": "What was ironic about Rome's strategy of using Masinissa to weaken Carthage?",
+      "options": [
+        "Masinissa eventually became stronger than Rome and posed his own threat",
+        "It worked too well—Carthage was already weakened when Rome finally attacked",
+        "Carthage was driven to desperate military action that violated the treaty, providing Rome's war justification",
+        "It prevented Rome from directly controlling Numidian territories",
+        "Masinissa refused to attack Carthage if Rome didn't order him directly"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 2,
+      "text_reference": "Section 7 - Carthage's Growing Desperation"
+    }
+  ]
+}

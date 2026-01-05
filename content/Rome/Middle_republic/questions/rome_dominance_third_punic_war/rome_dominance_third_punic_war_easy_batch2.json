@@ -1,0 +1,129 @@
+{
+  "chapter_id": "middle-republic-punic-wars",
+  "batch_number": 2,
+  "difficulty": 1,
+  "batch_order": 2,
+  "description": "Easy - Antiochus III and Treaty Terms",
+  "questions": [
+    {
+      "question": "Who was 'Antiochus the Great'?",
+      "options": [
+        "A famous Greek general who fought Rome",
+        "Ruler of the Seleucid Empire",
+        "The most successful Macedonian king after Alexander",
+        "An Egyptian pharaoh who allied with Rome"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "text_reference": "Section 4 - The War Against Antiochus III"
+    },
+    {
+      "question": "At what battle did Rome decisively defeat Antiochus III?",
+      "options": [
+        "Battle of Pydna",
+        "Battle of Cynoscephalae",
+        "Battle of Gaugamela",
+        "Battle of Magnesia"
+      ],
+      "correctAnswers": [3],
+      "difficulty": 1,
+      "text_reference": "Section 4 - The Syrian War (192-188 BCE)"
+    },
+    {
+      "question": "What was the largest war indemnity imposed by Rome in this period?",
+      "options": [
+        "10,000 talents from Carthage",
+        "1,000 talents from Macedonia",
+        "15,000 talents from the Seleucid Empire",
+        "3,200 talents from Egypt"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 1,
+      "text_reference": "Section 4 - The Treaty of Apamea"
+    },
+    {
+      "question": "Which Spanish peoples most fiercely resisted Roman rule?",
+      "options": [
+        "Lusitanians and Celtiberians",
+        "Numidians and Gauls",
+        "Carthaginians and Libyans",
+        "Hispanics and Lusitans"
+      ],
+      "correctAnswers": [0],
+      "difficulty": 1,
+      "text_reference": "Section 4 - Spain's Ongoing Pacification"
+    },
+    {
+      "question": "What famous Lusitanian resistance leader became a symbol of Spanish resistance?",
+      "options": [
+        "Sertorius",
+        "Viriathus",
+        "Hannibal",
+        "Cingetorix"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "text_reference": "Section 4 - Spain's Ongoing Pacification"
+    },
+    {
+      "question": "What famous phrase did Cato the Elder repeatedly use to advocate for war?",
+      "options": [
+        "Roma debet expandere",
+        "Carthago delenda est",
+        "Hannibal ad portas",
+        "Salus populi suprema lex"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "text_reference": "Section 6 - Cato's Campaign Against Carthage"
+    },
+    {
+      "question": "How did Carthage's economic recovery affect Rome's attitude toward Carthage?",
+      "options": [
+        "Rome welcomed Carthage's recovery as a sign of peace",
+        "Rome viewed it with alarm and as evidence of a future threat",
+        "Rome encouraged further economic expansion",
+        "Rome ignored Carthage's economic situation entirely"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "text_reference": "Section 2 - The Political Problem"
+    },
+    {
+      "question": "In what year did Rome declare war on Carthage in the Third Punic War?",
+      "options": [
+        "146 BCE",
+        "150 BCE",
+        "149 BCE",
+        "152 BCE"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 1,
+      "text_reference": "Section 7 - The Road to War: The Final Crisis"
+    },
+    {
+      "question": "Who commanded the Roman forces during the Third Punic War?",
+      "options": [
+        "Scipio Africanus",
+        "Flamininus",
+        "Scipio Aemilianus",
+        "Titus Livius"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 1,
+      "text_reference": "Section 8 - The Third Punic War: A War Without Suspense"
+    },
+    {
+      "question": "Which of these were consequences of Carthage's destruction in 146 BCE? (SELECT ALL THAT APPLY)",
+      "options": [
+        "Rome became unchallenged master of the Mediterranean",
+        "Carthaginian civilization and cultural records were obliterated",
+        "Greece immediately revolted against Roman rule",
+        "Rome established its first province in North Africa"
+      ],
+      "correctAnswers": [0, 1, 3],
+      "difficulty": 1,
+      "text_reference": "Section 9 - The Significance of Carthage's Destruction"
+    }
+  ]
+}

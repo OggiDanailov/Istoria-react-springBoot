@@ -1,0 +1,130 @@
+{
+  "chapter_id": "middle-republic-second-punic-war",
+  "batch_number": 2,
+  "difficulty": 1,
+  "batch_order": 2,
+  "description": "Easy-Medium - Barcid Rise and Hannibal's Background",
+  "questions": [
+    {
+      "question": "What did the nickname 'Barca' mean in the Carthaginian language and what did it reflect?",
+      "options": [
+        "It meant 'merchant' and reflected Hamilcar's commercial success in trade operations",
+        "It meant 'lightning' and reflected his military reputation for swift, aggressive action",
+        "It meant 'protector' and reflected his role defending Carthaginian territories militarily",
+        "It meant 'conqueror' and reflected his success in Spanish territorial conquest campaigns"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "text_reference": "Section 3: Hamilcar's Name and Reputation"
+    },
+    {
+      "question": "What was Hamilcar Barca's primary accomplishment during the First Punic War era?",
+      "options": [
+        "He defeated Rome's navy in multiple sea battles and prevented Roman expansion",
+        "He successfully negotiated peace terms that favored Carthage militarily and politically",
+        "He trained the mercenary forces that later rebelled against Carthaginian authority",
+        "He served as a notable general and built a military reputation throughout the conflict"
+      ],
+      "correctAnswers": [3],
+      "difficulty": 1,
+      "text_reference": "Section 2: Who Was Hamilcar Barca?"
+    },
+    {
+      "question": "How many sons did Hamilcar Barca have and which became the most famous historically?",
+      "options": [
+        "Two sons: Hannibal and Hasdrubal, with Hasdrubal becoming the greater commander",
+        "Three sons: Hannibal, Hasdrubal, and Mago, with Hannibal becoming most famous",
+        "One son: Hannibal, who became the most celebrated Carthaginian military commander",
+        "Four sons: including Hannibal, Hasdrubal, Mago, and one unnamed military leader"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "text_reference": "Section 2: Hamilcar's Sons and the Barcid Dynasty"
+    },
+    {
+      "question": "What exceptional authority was Hamilcar Barca granted for his Spanish operations?",
+      "options": [
+        "He received virtually unprecedented autonomy to operate in Spain as a military commander",
+        "He was given control of Carthaginian naval forces throughout the Mediterranean region",
+        "He was made Governor of North Africa with complete administrative and military authority",
+        "He was authorized to negotiate directly with Rome regarding territorial boundaries"
+      ],
+      "correctAnswers": [0],
+      "difficulty": 1,
+      "text_reference": "Section 2: Exceptional Authority"
+    },
+    {
+      "question": "What multiple purposes did Carthage's Spanish conquest serve strategically? (SELECT ALL THAT APPLY)",
+      "options": [
+        "Spanish silver mines provided wealth to rebuild Carthage's depleted treasury effectively",
+        "Spain's large population supplied recruitment pools for Carthaginian military forces",
+        "Control of Spain gave Carthage a strategic position directly across from Italy",
+        "Spanish territories guaranteed Carthage complete naval dominance throughout Mediterranean",
+        "Spain compensated Carthage for the loss of Sicily and provided alternative power base"
+      ],
+      "correctAnswers": [0, 1, 2, 4],
+      "difficulty": 1,
+      "text_reference": "Section 2: The Purpose of Spanish Conquest"
+    },
+    {
+      "question": "When was Hannibal born and what was his early military experience?",
+      "options": [
+        "Around 247 BCE, raised amid Spanish campaigns and trained in warfare by his father",
+        "Around 240 BCE, educated in Carthage and sent to Spain as a military commander",
+        "Around 255 BCE, captured by Rome and later exchanged for Carthaginian prisoners",
+        "Around 250 BCE, served as a naval officer commanding Mediterranean fleet operations"
+      ],
+      "correctAnswers": [0],
+      "difficulty": 1,
+      "text_reference": "Section 3: Hannibal's Background and Character"
+    },
+    {
+      "question": "What characteristics defined Hannibal's reputation as a military commander?",
+      "options": [
+        "Caution and conservative tactics to minimize casualties among his military forces",
+        "Naval expertise and focus on maritime warfare rather than land-based military operations",
+        "Boldness, strategic brilliance, and an ability to inspire loyalty among troops effectively",
+        "Diplomatic skill and preference for negotiation over military confrontation with enemies"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 1,
+      "text_reference": "Section 3: Hannibal's Reputation"
+    },
+    {
+      "question": "Around what year did Hannibal assume command of Carthaginian forces in Spain militarily?",
+      "options": [
+        "210 BCE, after his father's death and retirement from military service completely",
+        "221 BCE, in his mid-20s following his brother-in-law Hasdrubal's death",
+        "230 BCE, while serving as his father's deputy commander in Spanish territories",
+        "225 BCE, after completing his military training in Carthage and North Africa"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "text_reference": "Section 3: Hannibal Takes Command (221 BCE)"
+    },
+    {
+      "question": "What did the Ebro Treaty (226 BCE) establish regarding Rome and Carthage's spheres?",
+      "options": [
+        "It divided the Mediterranean equally between Rome and Carthage for permanent peace",
+        "It granted Rome control of Sicily and Carthage control of Spain exclusively",
+        "It required both powers to end military operations and maintain peaceful relations forever",
+        "It established a boundary where Carthage would not expand Spanish territories north"
+      ],
+      "correctAnswers": [3],
+      "difficulty": 1,
+      "text_reference": "Section 2: Rome's Growing Concern"
+    },
+    {
+      "question": "What was Hannibal's strategic vision for defeating Rome militarily?",
+      "options": [
+        "Build a powerful navy and challenge Rome's Mediterranean naval supremacy completely",
+        "Consolidate Carthaginian power in Spain and gradually expand across northern territories",
+        "Invade Italy itself, win victories, demoralize Rome's allies, and force peace negotiations",
+        "Form alliances with Egyptian and Hellenistic kingdoms to isolate Rome diplomatically"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 1,
+      "text_reference": "Section 3: Hannibal's Strategic Vision"
+    }
+  ]
+}
