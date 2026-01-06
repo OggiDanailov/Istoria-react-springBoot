@@ -1,0 +1,129 @@
+{
+  "chapter_id": "late-republic-gracchi",
+  "batch_number": 2,
+  "difficulty": 1,
+  "batch_order": 2,
+  "description": "Easy - Urban Crisis, Patronage, and Food Supply",
+  "questions": [
+    {
+      "question": "What system did displaced urban poor rely on for survival in Rome?",
+      "options": [
+        "Government employment in construction and public works projects",
+        "Manufacturing jobs in textile and pottery production controlled by the state",
+        "The patronage system (clientela), where wealthy patrons provided necessities in exchange for political loyalty",
+        "Wages from agricultural work in gardens and orchards within the city"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 1,
+      "text_reference": "Section 5 - Dependency on Patrons and the Patronage System"
+    },
+    {
+      "question": "What was the clientela system?",
+      "options": [
+        "A military recruitment system that drafted young men into the Roman legions",
+        "A trade association that regulated prices and working conditions for merchants",
+        "A patronage arrangement where patrons gave assistance to clients in exchange for political support",
+        "A legal framework that protected enslaved workers and guaranteed their eventual freedom"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 1,
+      "text_reference": "Section 5 - Dependency on Patrons and the Patronage System"
+    },
+    {
+      "question": "How was Rome's situation different from Athens regarding urban populations?",
+      "options": [
+        "Rome's urban poor were all enslaved, while Athens's were free citizens",
+        "Athens never developed an urban dependent population despite being a city-state",
+        "Rome rejected patronage systems while Athens relied entirely on them for governance",
+        "Athens's founding mythology accommodated urban dependency, but Rome's ideal was the independent farmer"
+      ],
+      "correctAnswers": [3],
+      "difficulty": 1,
+      "text_reference": "Section 5 - Comparison to Greece: Why Rome's Crisis Was Different"
+    },
+    {
+      "question": "Why did Italy and Rome depend on imported grain despite having rich agricultural land?",
+      "options": [
+        "Roman farmers refused to grow grain and preferred other crops exclusively",
+        "Most agricultural production was concentrated in export-oriented latifundia controlled by wealthy owners",
+        "Italy's climate had changed making it unsuitable for grain production",
+        "Rome had conquered all grain-producing regions and redirected production away from Italy"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "text_reference": "Section 6 - Italy's Grain Dependency"
+    },
+    {
+      "question": "What was Rome's estimated urban population by the 2nd century BCE?",
+      "options": [
+        "Around 200,000 people",
+        "Approximately 350,000 people",
+        "Over 500,000 people",
+        "Nearly 1 million people"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 1,
+      "text_reference": "Section 5 - The Migration to Cities"
+    },
+    {
+      "question": "Who held the most influence over Tiberius and Gaius Gracchus's political thinking?",
+      "options": [
+        "Their father, Tiberius Gracchus the Elder, through military command experience",
+        "Prominent Senate members who mentored them in traditional aristocratic politics",
+        "Their mother Cornelia, who provided advanced education and political engagement",
+        "Greek philosophers who visited Rome and taught them reformist ideas"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 1,
+      "text_reference": "Section 8 - Who Were the Gracchi?"
+    },
+    {
+      "question": "What was ager publicus?",
+      "options": [
+        "Privately owned land that was taxed by the government as public revenue",
+        "Land conquered by Rome that technically belonged to the Roman state and could be distributed to citizens",
+        "Agricultural land reserved exclusively for military training and exercises",
+        "Territory controlled by Italian allies rather than direct Roman administration"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "text_reference": "Section 8 - The Legal Basis: Ager Publicus"
+    },
+    {
+      "question": "What office did Tiberius Gracchus hold when he proposed land reform?",
+      "options": [
+        "Senator representing his aristocratic family in the Senate",
+        "Praetor with authority over the justice system and enforcement",
+        "Tribune of the people (tribunus plebis) elected to represent citizens' interests",
+        "Consul with executive authority over the entire Republic"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 1,
+      "text_reference": "Section 8 - Tiberius Becomes Tribune"
+    },
+    {
+      "question": "What unprecedented action did Tiberius take to overcome Senate obstruction?",
+      "options": [
+        "He led an armed revolt and seized control of the Senate building forcefully",
+        "He proposed that the plebs vote to remove the tribune Octavius who was blocking his reforms",
+        "He convinced the military to march on Rome and enforce his legislative agenda",
+        "He formed an alliance with wealthy merchants to overthrow the Senate's authority"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "text_reference": "Section 8 - Removing Octavius"
+    },
+    {
+      "question": "How did Tiberius Gracchus die?",
+      "options": [
+        "He was executed by legal order after a trial for treason against the state",
+        "He was assassinated along with supporters by senators who viewed him as a threat to their power",
+        "He died of illness while in exile after being forced to leave Rome",
+        "He was killed in battle while attempting to defend his reforms militarily"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "text_reference": "Section 8 - Tiberius's Attempts to Consolidate Power and His Death"
+    }
+  ]
+}

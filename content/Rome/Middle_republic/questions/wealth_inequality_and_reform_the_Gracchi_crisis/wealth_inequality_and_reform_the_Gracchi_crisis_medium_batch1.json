@@ -1,0 +1,139 @@
+{
+  "chapter_id": "late-republic-gracchi",
+  "batch_number": 3,
+  "difficulty": 2,
+  "batch_order": 3,
+  "description": "Medium - Land Reform and Structural Problems",
+  "questions": [
+    {
+      "question": "Why did the Senate strongly oppose Tiberius Gracchus's land redistribution proposal?",
+      "options": [
+        "They believed the proposal violated sacred religious laws governing agricultural land",
+        "They were concerned it would cause inflation in Rome's economy",
+        "They worried it would provoke a rebellion among enslaved agricultural workers",
+        "They feared it would reduce their own wealth and power by limiting their control of public land",
+        "They believed farmland should be left wild to preserve its natural state"
+      ],
+      "correctAnswers": [3],
+      "difficulty": 2,
+      "text_reference": "Section 8 - The Senate's Response: Obstruction and Crisis"
+    },
+    {
+      "question": "What interconnected problems did Rome face by the early 2nd century BCE?",
+      "options": [
+        "Military weakness and inability to defend Mediterranean territories from rivals",
+        "Excessive grain production and falling agricultural prices destroying farmers' livelihoods",
+        "Dependence on mercenary soldiers and loss of traditional military structures",
+        "Isolation from Mediterranean trade and declining commerce",
+        "The land problem, food supply problem, wealth inequality, military recruitment issues, and Senate dominance"
+      ],
+      "correctAnswers": [4],
+      "difficulty": 2,
+      "text_reference": "Section 7 - The Structural Problems Rome Couldn't Solve"
+    },
+    {
+      "question": "How did the explosion of slavery after the Punic Wars transform Roman agriculture?",
+      "options": [
+        "Enslaved workers replaced free laborers and eliminated wage costs for large estate owners",
+        "Small farmers purchased enslaved workers to increase their productivity and profits",
+        "The government forced all agricultural land to be worked exclusively by enslaved people",
+        "Enslaved workers staged massive revolts that destroyed agricultural production entirely",
+        "Trade restrictions prevented enslaved workers from being used in agriculture"
+      ],
+      "correctAnswers": [0],
+      "difficulty": 2,
+      "text_reference": "Section 3 - The Growth of Slavery and the Collapse of Small Farming"
+    },
+    {
+      "question": "Why Rome's founding mythology was incompatible with its 2nd century BCE reality? (SELECT ALL THAT APPLY)",
+      "options": [
+        "Rome was founded on the ideal of the independent farmer-citizen defending his property and the Republic",
+        "Rome had actually been founded as an urban city-state dependent on merchant commerce",
+        "By the 2nd century, Rome was becoming dependent on urban populations and patron support like Athens",
+        "Rome's traditional virtue of virtus was embodied in the farmer-soldier figure that was disappearing",
+        "Rome had always been a mercenary-based military power with no tradition of citizen-soldiers"
+      ],
+      "correctAnswers": [0, 2, 3],
+      "difficulty": 2,
+      "text_reference": "Section 5 - Comparison to Greece: Why Rome's Crisis Was Different"
+    },
+    {
+      "question": "What was the primary objective of Tiberius Gracchus's land reform?",
+      "options": [
+        "Establish large imperial estates controlled directly by the government",
+        "Redistribute ager publicus (public land) to create a class of independent farmer-citizens",
+        "Eliminate latifundia entirely and prohibit any large landholdings",
+        "Convert all agricultural land to communal ownership with no private property rights",
+        "Provide enslaved workers with small plots of land and their freedom"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 2,
+      "text_reference": "Section 8 - Tiberius's Vision"
+    },
+    {
+      "question": "What powers did Tiberius hold as tribune that allowed him to challenge Senate obstruction?",
+      "options": [
+        "He could arrest senators and put them on trial without Senate approval",
+        "He had command of military forces loyal to him personally",
+        "He could execute laws directly without requiring Senate or popular approval",
+        "He could redistribute public funds without accounting to the government",
+        "He could propose legislation and veto Senate decisions he believed harmed the people"
+      ],
+      "correctAnswers": [4],
+      "difficulty": 2,
+      "text_reference": "Section 8 - Tiberius Becomes Tribune"
+    },
+    {
+      "question": "Why was the murder of Tiberius Gracchus shocking to Roman society beyond the violence itself?",
+      "options": [
+        "It was the first time any politician had been killed in Roman history",
+        "Tribunes were considered inviolable and sacred by law, and the Senate murdered one with impunity",
+        "It violated religious laws regarding violence during voting assemblies",
+        "It demonstrated that Rome's military forces were too weak to maintain order",
+        "It proved that the plebs were no longer loyal to the Republic"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 2,
+      "text_reference": "Section 8 - The Violation of Sacred Law"
+    },
+    {
+      "question": "What did Gaius Gracchus's grain law (lex frumentaria) accomplish?",
+      "options": [
+        "Prohibited the export of grain from Italy to ensure local food security",
+        "Eliminated grain trade with foreign powers and made Rome self-sufficient in agriculture",
+        "Gave priority access to grain supplies for military personnel and their families",
+        "Provided subsidized grain at fixed, affordable prices for Rome's urban population",
+        "Transferred control of grain production from wealthy owners to the government"
+      ],
+      "correctAnswers": [3],
+      "difficulty": 2,
+      "text_reference": "Section 8 - Gaius Gracchus: The Continuation of Reform"
+    },
+    {
+      "question": "What made Gaius's proposal to expand citizenship to Italian allies revolutionary? (SELECT ALL THAT APPLY)",
+      "options": [
+        "Shifting political power away from Rome itself toward Italy as a whole",
+        "Threatening the Senate's ability to maintain Rome's exclusive control over its allies",
+        "Granting Italian allies the same legal protections as Roman citizens",
+        "Fundamentally challenging Rome's imperial hierarchy that kept allies subordinate to Rome",
+        "Creating a unified political community across Rome and Italy with equal voting rights"
+      ],
+      "correctAnswers": [0, 1, 4],
+      "difficulty": 2,
+      "text_reference": "Section 8 - Gaius Gracchus: The Continuation of Reform"
+    },
+    {
+      "question": "What was the long-term impact of the Gracchi reforms despite their violent suppression?",
+      "options": [
+        "Rome immediately collapsed into civil war and ceased to function as a state",
+        "Some reforms persisted (grain law, land redistribution, citizenship grants) and demonstrated the system's fragility",
+        "The Senate consolidated power completely and prevented any further reform for centuries",
+        "Rome returned to the exact conditions that existed before the Gracchi challenged the system",
+        "The Republic achieved complete social equality and eliminated all class distinctions"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 2,
+      "text_reference": "Section 8 - The Aftermath: The System Breaks, But Survives for Now"
+    }
+  ]
+}

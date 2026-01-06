@@ -1,0 +1,139 @@
+{
+  "chapter_id": "late-republic-gracchi",
+  "batch_number": 4,
+  "difficulty": 2,
+  "batch_order": 4,
+  "description": "Medium - Systemic Crisis and Political Consequences",
+  "questions": [
+    {
+      "question": "How did the patronage system (clientela) reinforce social inequality in Rome?",
+      "options": [
+        "Wealthy patrons were legally required to provide aid regardless of client behavior or loyalty",
+         "The system guaranteed equal wealth distribution among all Romans over time",
+        "Poor clients remained dependent on patron support, giving wealthy elites control over voting blocs",
+        "Clients could accumulate wealth through patronage and eventually become independent farmers",
+        "Patronage created obligations that prevented wealthy patrons from accumulating more power"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 2,
+      "text_reference": "Section 5 - Dependency on Patrons and the Patronage System"
+    },
+    {
+      "question": "What did latifundia owners have in common with the wealthy families dominating the Senate?",
+      "options": [
+        "They all owned latifundia and benefited from consolidated landholding and slave labor",
+        "They were all former military commanders seeking political power",
+        "They had all migrated from other Mediterranean regions to Rome",
+        "They were hostile to grain exports and wanted to keep prices high for consumers",
+        "They opposed the use of enslaved workers and preferred free labor"
+      ],
+      "correctAnswers": [0],
+      "difficulty": 2,
+      "text_reference": "Section 4 - Why Latifundia Made Economic Sense"
+    },
+    {
+      "question": "Why was Rome's dependence on imported grain a source of political vulnerability? (SELECT ALL THAT APPLY)",
+      "options": [
+        "Grain producers could manipulate prices and hold Rome hostage to their economic interests",
+        "Whoever controlled the grain trade controlled Rome's survival and had enormous political power",
+        "Grain imports enriched Rome's enemies and funded military forces against Rome",
+        "Foreign powers could disrupt supplies causing starvation and forcing Rome into unfavorable agreements",
+        "All of the above represent aspects of Rome's grain dependency vulnerability"
+      ],
+      "correctAnswers": [0, 1, 3],
+      "difficulty": 2,
+      "text_reference": "Section 6 - The Political Implications"
+    },
+    {
+      "question": "What was the relationship between land concentration and military recruitment in Rome? (SELECT ALL THAT APPLY)",
+      "options": [
+        "Rome's armies traditionally depended on independent farmer-citizens with personal stakes in defending the state",
+        "As small farms disappeared, the military increasingly recruited poor men with no land or property",
+        "Landless soldiers had less incentive to defend a system that had dispossessed them",
+        "Military recruitment became easier as enslaved workers filled the ranks automatically",
+        "The shift undermined the traditional basis of Rome's military power"
+      ],
+      "correctAnswers": [0, 1, 2, 4],
+      "difficulty": 2,
+      "text_reference": "Section 7 - The Structural Problems Rome Couldn't Solve"
+    },
+    {
+      "question": "How did Cornelia influence her sons' political philosophy?",
+      "options": [
+        "She taught them to defend Senate interests and oppose popular reform movements",
+        "She provided education in philosophy and rhetoric and convinced them the system was broken and reform was necessary",
+        "She encouraged them to accumulate personal wealth without concern for social problems",
+        "She insisted they follow traditional paths of aristocratic politics without challenging the system",
+        "She had no interest in politics and left their education entirely to male tutors"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 2,
+      "text_reference": "Section 8 - Who Were the Gracchi?"
+    },
+    {
+      "question": "What was the fundamental contradiction in Tiberius's proposal to stand for re-election as tribune?",
+      "options": [
+        "The Senate supported re-election but the plebs opposed it",
+        "Tribune positions were traditionally one-year terms with no re-election to prevent concentration of power",
+        "Re-election would have violated religious laws governing the office",
+        "Tiberius lacked the political support necessary to win re-election",
+        "The proposal would have eliminated the need for a tribune entirely"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 2,
+      "text_reference": "Section 8 - Tiberius's Attempts to Consolidate Power and His Death"
+    },
+    {
+      "question": "What did the Senate's refusal to prosecute Scipio Nasica for murdering Tiberius reveal?",
+      "options": [
+        "Roman justice system granted tribal leaders immunity from prosecution",
+        "The Senate prioritized power over law",
+        "Murder was not considered a serious crime in Roman society",
+        "Tribunes had no actual legal protections despite their sacred status",
+        "Scipio acted in legitimate self-defense against Tiberius's attack"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 2,
+      "text_reference": "Section 8 - The Violation of Sacred Law"
+    },
+    {
+      "question": "What economic and social reforms did Gaius Gracchus propose beyond land redistribution? (SELECT ALL THAT APPLY)",
+      "options": [
+        "Abolition of the patronage system and direct government support for all citizens",
+        "Tax reforms that would redistribute wealth from wealthy to poor Romans",
+        "Grain law providing subsidized grain at controlled prices for the urban poor",
+        "Citizenship expansion to grant Italian allies voting rights and political participation",
+        "Judiciary reform reducing Senate control of courts and empowering equestrians"
+      ],
+      "correctAnswers": [2, 3, 4],
+      "difficulty": 2,
+      "text_reference": "Section 8 - Gaius Gracchus: The Continuation of Reform"
+    },
+    {
+      "question": "Who were the equestrians (equites) and why did Gaius threaten Senate interests by empowering them?",
+      "options": [
+        "They were cavalry soldiers who dominated military affairs and wanted political power",
+        "They were wealthy non-senatorial businessmen excluded from political power despite comparable wealth and education",
+        "They were former slaves who had earned freedom and sought political representation",
+        "They were merchant traders from Greek cities seeking to control Roman commerce",
+        "They were Italian allies seeking integration into Roman political structures"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 2,
+      "text_reference": "Section 8 - Gaius Gracchus: The Continuation of Reform"
+    },
+    {
+      "question": "What was the paradox of the Gracchi's ultimate failure?",
+      "options": [
+        "They failed to implement any reforms and everything returned to pre-reform conditions",
+        "They succeeded in their goals but the Senate ignored their reforms anyway",
+        "They proved the system was working well by failing to gain popular support",
+        "Their reforms made Rome stronger and prevented future civil conflicts",
+        "They won individual reforms but lost their lives, yet exposed the Republic's fundamental fragility"
+      ],
+      "correctAnswers": [4],
+      "difficulty": 2,
+      "text_reference": "Section 8 - The Aftermath: The System Breaks, But Survives for Now"
+    }
+  ]
+}
