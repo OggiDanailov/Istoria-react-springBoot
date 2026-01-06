@@ -1,0 +1,149 @@
+{
+  "chapter_id": "late-republic-gracchi",
+  "batch_number": 5,
+  "difficulty": 3,
+  "batch_order": 5,
+  "description": "Hard - Complex Analysis and Long-term Consequences",
+  "questions": [
+    {
+      "question": "Analyze how the transformation from small farming to latifundia fundamentally altered Rome's social structure and stability (SELECT ALL THAT APPLY)",
+      "options": [
+        "Small farmers voluntarily consolidated their farms to improve agricultural efficiency and profitability",
+        "Small farms created independent farmer-citizens with personal stakes in defending Rome militarily",
+        "Latifundia concentration eliminated the middle class and created urban dependency on patronage",
+        "Government redistribution programs ensured that latifundia wealth was evenly shared across Roman society",
+        "The shift from citizen-soldiers to landless recruits weakened Rome's military reliability and morale",
+        "Wealthy landowners used their political dominance in the Senate to protect and expand their landed interests"
+      ],
+      "correctAnswers": [1, 2, 4, 5],
+      "difficulty": 3,
+      "text_reference": "Sections 2, 3, 4 - The Systematic Transformation"
+    },
+    {
+      "question": "What does Rome's grain dependency reveal about the relationship between economics and political power? (SELECT ALL THAT APPLY)",
+      "options": [
+        "Agricultural self-sufficiency had no impact on political independence or stability",
+        "Nations that produce their own food have more political autonomy than those dependent on imports",
+        "Rome's dependence on imported grain gave control to those producing and trading grain—primarily wealthy landowners",
+        "The Senate deliberately created grain dependency to maintain control over the urban population",
+        "Grain dependency forced Rome into foreign alliances that protected its territories from invasion",
+        "Economic vulnerability created structural instability that eventually required fundamental political reform"
+      ],
+      "correctAnswers": [1, 2, 3, 5],
+      "difficulty": 3,
+      "text_reference": "Sections 6, 7 - Food Supply Crisis and Structural Problems"
+    },
+    {
+      "question": "How did the Gracchi brothers' positions within the aristocracy shape their reform agenda? (SELECT ALL THAT APPLY)",
+      "options": [
+        "Their aristocratic status gave them education, political access, and credibility that made reform possible",
+        "Their elite background meant they had no understanding of the struggles of displaced farmers",
+        "They had personal motivation to challenge a system that enriched their own class but undermined the Republic",
+        "Their prominence made them targets for the aristocracy in ways that ordinary reformers would not have been",
+        "They could only succeed if they maintained complete loyalty to Senate interests and traditions",
+        "Their family's wealth came partly from latifundia, creating tension between personal interest and reform ideals"
+      ],
+      "correctAnswers": [0, 2, 3],
+      "difficulty": 3,
+      "text_reference": "Section 8 - Who Were the Gracchi?"
+    },
+    {
+      "question": "What structural flaw in Rome's system did Tiberius's conflict with the Senate reveal? (SELECT ALL THAT APPLY)",
+      "options": [
+        "Tribunes had excessive power that made them dangerous to Republican stability and Senate authority",
+        "The Senate had become an instrument of wealthy elite interests rather than representing the broader citizen body",
+        "Popular assemblies were too powerful and could override Senate decisions recklessly",
+        "The veto power allowed political obstruction that prevented any reforms from being implemented",
+        "Rome needed a stronger executive power to prevent constitutional conflicts between tribunes and Senate",
+        "The legal system was vulnerable when aristocratic interests were directly threatened by reform"
+      ],
+      "correctAnswers": [1, 5],
+      "difficulty": 3,
+      "text_reference": "Section 8 - The Senate's Response and Constitutional Crisis"
+    },
+    {
+      "question": "Why was the removal of tribune Octavius by Tiberius unprecedented and constitutionally dangerous? (SELECT ALL THAT APPLY)",
+      "options": [
+        "It guaranteed that future tribunes would automatically support popular reform measures without obstruction",
+         "It violated the lifetime tenure of elected officials and established that positions could be conditional",
+        "It treated the tribunal office as subject to recall rather than providing absolute protection from removal",
+        "It demonstrated that the plebs' voting power could override Senate preferences in fundamental ways",
+        "It established a dangerous precedent that any official could be removed for blocking reform initiatives",
+        "It was the first time any official had ever been removed from office in Roman history"
+      ],
+        "correctAnswers": [ 1, 2, 3, 4],
+      "difficulty": 3,
+      "text_reference": "Section 8 - The Crisis Escalates: Removing Octavius"
+    },
+    {
+      "question": "How did the Senate's response to the Gracchi reveal the underlying incompatibility between Republic ideals and aristocratic interests? (SELECT ALL THAT APPLY)",
+      "options": [
+      "The Senate violated sacred laws protecting tribunes to maintain its own power and wealth",
+      "The Republic claimed to represent all citizens but actually served the interests of a wealthy elite",
+      "Aristocrats demonstrated their commitment to constitutional law by accepting legal reforms they disagreed with",
+      "The contradiction between democratic principles and aristocratic dominance had become irreconcilable",
+      "The Senate consistently upheld legal traditions and prevented force from determining Rome's political future",
+      "Rome's political system could indefinitely accommodate both aristocratic dominance and democratic reform"
+      ],
+      "correctAnswers": [0, 1, 3],
+      "difficulty": 3,
+      "text_reference": "Section 8 - The Violation of Sacred Law and Aftermath"
+    },
+    {
+      "question": "What contrast exists between Gaius's comprehensive reform package and his failure to achieve most of it? (SELECT ALL THAT APPLY)",
+      "options": [
+      "Gaius proposed solutions to multiple interconnected problems (land, grain, citizenship, judiciary) simultaneously",
+      "The grain law passed easily because Senate members supported affordable grain for urban populations",
+      "The Senate had no effective mechanism to oppose reforms that threatened its power base",
+      "His comprehensive approach meant attacking multiple power bases at once, making opposition easier to organize",
+      "Gaius achieved more reforms than Tiberius because his package was more ambitious and popular",
+      "Individual reforms would have succeeded if pursued separately rather than as a comprehensive package"
+      ],
+      "correctAnswers": [0, 3],
+      "difficulty": 3,
+      "text_reference": "Section 8 - Gaius Gracchus: The Continuation of Reform"
+    },
+    {
+      "question": "How did the Gracchi crisis fundamentally change Rome's political culture and long-term trajectory?",
+      "options": [
+        "Rome returned to its traditional Republican system unchanged by the conflict",
+        "The assumption that law and constitutional tradition could restrain aristocratic power was permanently shattered",
+        "The violence demonstrated that future conflicts might be resolved through military force rather than law",
+        "Rome's aristocracy proved it could suppress reform indefinitely without threatening the Republic's survival",
+        "The contradiction between democratic principles and elite dominance became institutionalized rather than resolved",
+        "Future political leaders would increasingly rely on military support and personal armies to overcome Senate obstruction"
+      ],
+      "correctAnswers": [1, 2, 4, 5],
+      "difficulty": 3,
+      "text_reference": "Section 8 - The Aftermath: The System Breaks, But Survives for Now"
+    },
+    {
+      "question": "What explains why the Gracchi reforms partially survived even though both brothers were killed?",
+      "options": [
+        "The grain law addressed a structural necessity (feeding Rome's urban population) that couldn't be undone",
+        "Land redistribution created new property-owners who benefited from the reforms and resisted reversal",
+        "Citizenship grants gave Italian allies political power they could defend and maintain",
+        "The Senate completely reversed all reforms and restored conditions to the pre-Gracchi period entirely",
+        "The reforms persisted because they addressed genuine structural problems rather than creating new dependencies",
+        "Rome's expansion into new territories made the reforms obsolete and unnecessary after a few years"
+      ],
+      "correctAnswers": [0, 1, 2, 4],
+      "difficulty": 3,
+      "text_reference": "Section 8 - The Aftermath: The System Breaks, But Survives for Now"
+    },
+    {
+      "question": "How did the foundational contradiction between Rome's mythology and its actual development in the 2nd century BCE shape the eventual crisis?",
+      "options": [
+      "Rome mythologically centered on the independent farmer-citizen defending his own property and the Republic",
+      "Rome maintained economic self-sufficiency through domestic agricultural production and avoided urban dependency",
+      "Both Athens and Rome shared identical founding mythologies centered on independent citizen-farmers and agricultural independence",
+      "The gap between myth and reality became impossible to ignore and demanded either reform or collapse",
+      "Rome's ruling class deliberately abandoned traditional mythology in favor of an openly elitist ideology",
+      "Rome's actual transformation into a city of dependent urban poor contradicted its foundational ideals about farmer-citizens"
+      ],
+      "correctAnswers": [0, 3],
+      "difficulty": 3,
+      "text_reference": "Section 5 - Comparison to Greece"
+    }
+  ]
+}

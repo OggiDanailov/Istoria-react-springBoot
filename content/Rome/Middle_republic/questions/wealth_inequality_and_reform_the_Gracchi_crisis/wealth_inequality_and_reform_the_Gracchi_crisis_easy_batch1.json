@@ -1,0 +1,129 @@
+{
+  "chapter_id": "late-republic-gracchi",
+  "batch_number": 1,
+  "difficulty": 1,
+  "batch_order": 1,
+  "description": "Easy - The Paradox of Victory and Traditional Economy",
+  "questions": [
+    {
+      "question": "What fundamental problem did Rome's victory in the Punic Wars create?",
+      "options": [
+        "Rome's military forces were exhausted from decades of warfare",
+        "Wealth from conquest concentrated in elite hands rather than distributing evenly across society",
+        "Rome lost control of Mediterranean territories to rival powers",
+        "Rome's agricultural production increased beyond what the population could consume"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "text_reference": "Section 1 - The Paradox of Victory"
+    },
+    {
+      "question": "What was a fundus in traditional Roman agriculture?",
+      "options": [
+        "A large commercial grain farm operated by enslaved workers",
+        "A government warehouse storing grain for the military",
+        "A marketplace where farmers sold their produce to urban traders",
+        "A small family-owned farm of 5-10 acres worked primarily by family labor"
+      ],
+      "correctAnswers": [3],
+      "difficulty": 1,
+      "text_reference": "Section 2 - The Traditional Roman Economy: The Smallholding Farmer"
+    },
+    {
+      "question": "Who was the paterfamilias in Roman agricultural society?",
+      "options": [
+        "The head of a household who owned and worked his own fundus independently",
+        "A hired manager overseeing enslaved workers on large estates",
+        "A government official responsible for distributing public land",
+        "A wealthy merchant who purchased grain from multiple farmers"
+      ],
+      "correctAnswers": [0],
+      "difficulty": 1,
+      "text_reference": "Section 2 - The Traditional Roman Economy"
+    },
+    {
+      "question": "Why was the combination of independent farmer and citizen-soldier important to Rome?",
+      "options": [
+        "It provided Rome with a small professional military force that could be deployed anywhere",
+        "It created a farming class dependent on government subsidies and support",
+        "It gave farmers personal motivation to defend Rome while providing reliable military forces",
+        "It allowed Rome to avoid using enslaved workers in agriculture entirely"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 1,
+      "text_reference": "Section 2 - Why This System Mattered Politically"
+    },
+    {
+      "question": "How long did the First Punic War last?",
+      "options": [
+        "12 years",
+        "23 years",
+        "40 years",
+        "17 years"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "text_reference": "Section 3 - The Punic Wars and the Displacement of Farmers"
+    },
+    {
+      "question": "What was one major consequence of extended military service during the Punic Wars?",
+      "options": [
+        "Farmers became wealthy from military pay and could expand their estates",
+        "The government compensated farmers for lost agricultural production",
+        "Enslaved workers were freed and given farmland to replace displaced farmers",
+        "Unattended farms deteriorated and returning veterans faced financial ruin and debt"
+      ],
+      "correctAnswers": [3],
+      "difficulty": 1,
+      "text_reference": "Section 3 - The Problem of Military Service"
+    },
+    {
+      "question": "What economic advantage did latifundia have over small family farms?",
+      "options": [
+        "They produced higher quality crops with better flavor and nutrition",
+        "They required fewer workers but generated higher profits through slave labor and scale",
+        "They could produce diverse crops unlike small farms focused on single products",
+        "They received special tax exemptions and government support not available to small farmers"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "text_reference": "Section 3 - The Growth of Slavery and the Collapse of Small Farming"
+    },
+    {
+      "question": "What does the Latin word latifundium literally mean?",
+      "options": [
+        "Slave-worked estate",
+        "Aristocratic property",
+        "Export-oriented farm",
+        "Wide lands"
+      ],
+      "correctAnswers": [3],
+      "difficulty": 1,
+      "text_reference": "Section 4 - What Were Latifundia?"
+    },
+    {
+      "question": "Who typically managed a latifundium on behalf of its wealthy owner?",
+      "options": [
+        "The owner's eldest son who lived on the property",
+        "A hired overseer called a vilicus who managed day-to-day operations",
+        "An elected government official supervising agricultural production",
+        "A group of enslaved workers who made collective decisions"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "text_reference": "Section 4 - What Were Latifundia?"
+    },
+    {
+      "question": "What was the primary reason Rome's cities grew dramatically in the 2nd century BCE?",
+      "options": [
+        "Rome's population increased through higher birth rates among existing city dwellers",
+        "Rome conquered new territories and forced their populations to relocate to Rome",
+        "Rural farmers migrated to cities after losing their land to latifundia expansion",
+        "Enslaved workers were freed and concentrated in urban centers"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 1,
+      "text_reference": "Section 5 - The Migration to Cities"
+    }
+  ]
+}
