@@ -43,7 +43,7 @@ public class JwtAuthenticationFilter implements Filter {
 
         // Allow CORS preflight requests
        if ("OPTIONS".equalsIgnoreCase(httpRequest.getMethod())) {
-            httpResponse.setHeader("Access-Control-Allow-Origin", "http://localhost:5173");
+            httpResponse.setHeader("Access-Control-Allow-Origin", "http://localhost");
             httpResponse.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
             httpResponse.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
             httpResponse.setHeader("Access-Control-Max-Age", "3600");
@@ -51,7 +51,7 @@ public class JwtAuthenticationFilter implements Filter {
             return;
         }
 
-        httpResponse.setHeader("Access-Control-Allow-Origin", "http://localhost:5173");
+        httpResponse.setHeader("Access-Control-Allow-Origin", "http://localhost");
         httpResponse.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
         httpResponse.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
         httpResponse.setHeader("Access-Control-Allow-Credentials", "true");
