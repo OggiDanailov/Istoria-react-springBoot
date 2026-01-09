@@ -32,8 +32,8 @@ services:
       SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/ave_caesar
       SPRING_DATASOURCE_USERNAME: avecaesar
       SPRING_DATASOURCE_PASSWORD: Zelda214!
-      # SPRING_JPA_HIBERNATE_DDL_AUTO: validate
-      SPRING_JPA_HIBERNATE_DDL_AUTO: create
+      SPRING_JPA_HIBERNATE_DDL_AUTO: validate
+      # SPRING_JPA_HIBERNATE_DDL_AUTO: create
     depends_on:
       - postgres
     networks:

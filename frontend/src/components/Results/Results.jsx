@@ -28,7 +28,6 @@ function Results({ questions, userAnswers, onRestart, onBack, chapterId, batchId
 
       const requestBody = {
         chapterId: chapterId,
-        batchId: batchId,
         userAnswers: userAnswers,    // ← Array of user's selected answer indices
         batchId: batchId              // ← Backend will fetch questions from batch
       }
