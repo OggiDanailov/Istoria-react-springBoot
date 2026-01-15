@@ -17,7 +17,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import java.util.List;
 import java.time.LocalDateTime;
 
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = {"http://localhost", "http://localhost:5173", "http://localhost:80"})
 @RestController
 @RequestMapping("/api/user-progress")
 public class UserProgressController {

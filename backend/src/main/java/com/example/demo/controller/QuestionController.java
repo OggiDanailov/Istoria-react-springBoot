@@ -15,7 +15,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = {"http://localhost", "http://localhost:5173", "http://localhost:80"})
 @RestController
 @RequestMapping("/api")
 public class QuestionController {

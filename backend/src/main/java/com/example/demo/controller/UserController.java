@@ -18,28 +18,40 @@ import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.security.Keys;
 
+import org.springframework.beans.factory.annotation.Value;
+import jakarta.annotation.PostConstruct;
+import java.nio.charset.StandardCharsets;
+
 import java.util.Date;
 
 import javax.crypto.SecretKey;
 
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = {"http://localhost", "http://localhost:5173", "http://localhost:80"})
 @RestController
 @RequestMapping("/api/auth")
 public class UserController {
 
     private final UserRepository userRepository;
     private final BCryptPasswordEncoder passwordEncoder;
-    private final SecretKey JWT_SECRET;
     private final long JWT_EXPIRATION = 86400000; // 24 hours
     private final RateLimitService rateLimitService;
 
-    public UserController(UserRepository userRepository,  RateLimitService rateLimitService) {
+    @Value("${jwt.secret}")
+    private String jwtSecretString;
+
+    private SecretKey JWT_SECRET;
+
+    @PostConstruct
+    public void init() {
+        this.JWT_SECRET = Keys.hmacShaKeyFor(jwtSecretString.getBytes(StandardCharsets.UTF_8));
+    }
+
+    public UserController(UserRepository userRepository, RateLimitService rateLimitService) {
         this.userRepository = userRepository;
         this.rateLimitService = rateLimitService;
         this.passwordEncoder = new BCryptPasswordEncoder();
-        String secret = "aVeryLongSecretKeyThatIsAtLeast64BytesLongForHS512AlgorithmSecurityPurposesOnlyForDevelopment1234567890";
-        this.JWT_SECRET = Keys.hmacShaKeyFor(secret.getBytes());
     }
+
 
     // Register a new user
     @PostMapping("/register")

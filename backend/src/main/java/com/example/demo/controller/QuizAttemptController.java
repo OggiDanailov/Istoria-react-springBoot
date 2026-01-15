@@ -18,7 +18,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import java.util.List;
 
 
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = {"http://localhost", "http://localhost:5173", "http://localhost:80"})
 @RestController
 @RequestMapping("/api/quiz-attempts")
 public class QuizAttemptController {
