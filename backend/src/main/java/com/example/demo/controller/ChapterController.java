@@ -9,7 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.http.HttpStatus;
 import java.util.List;
 
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = {"http://localhost", "http://localhost:5173", "http://localhost:80"})
 @RestController
 @RequestMapping("/api")
 public class ChapterController {

@@ -1,0 +1,57 @@
+version: '3.8'
+services:
+  postgres:
+    image: postgres:15-alpine
+    container_name: avecaesar-db
+    environment:
+      POSTGRES_USER: avecaesar
+      POSTGRES_PASSWORD: Zelda214!
+      POSTGRES_DB: ave_caesar
+    ports:
+      - "5555:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - avecaesar-network
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: avecaesar-backend
+    ports:
+      - "8081:8081"
+    environment:
+      SERVER_PORT: 8081
+      CORS_ORIGINS: http://localhost,http://localhost:80
+      JWT_SECRET: "thisisthewhateversecretkeythatiamcreatingrightnow"
+      JWT_EXPIRATION: 86400000
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/ave_caesar
+      SPRING_DATASOURCE_USERNAME: avecaesar
+      SPRING_DATASOURCE_PASSWORD: Zelda214!
+      SPRING_JPA_HIBERNATE_DDL_AUTO: validate
+      SPRING_FLYWAY_ENABLED: "true"
+      SPRING_FLYWAY_LOCATIONS: classpath:db/migration
+    depends_on:
+      - postgres
+    networks:
+      - avecaesar-network
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: avecaesar-frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    networks:
+      - avecaesar-network
+
+volumes:
+  postgres_data:
+
+networks:
+  avecaesar-network:
+    driver: bridge

@@ -12,8 +12,10 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
-import io.jsonwebtoken.ExpiredJwtException;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.context.SecurityContextHolder;
 import java.util.Date;
+import java.util.ArrayList;
 
 import javax.crypto.SecretKey;
 import java.io.IOException;
@@ -33,6 +35,8 @@ public class JwtAuthenticationFilter implements Filter {
     @PostConstruct
     public void init() {
         this.JWT_SECRET = Keys.hmacShaKeyFor(jwtSecretString.getBytes(StandardCharsets.UTF_8));
+        System.out.println("JWT_SECRET initialized with length: " + jwtSecretString.length());
+        System.out.println("JWT_SECRET value: " + jwtSecretString);
     }
 
     @Override
@@ -41,25 +45,23 @@ public class JwtAuthenticationFilter implements Filter {
         HttpServletRequest httpRequest = (HttpServletRequest) request;
         HttpServletResponse httpResponse = (HttpServletResponse) response;
 
+        // Add CORS headers - allows frontend to communicate with backend
+        httpResponse.setHeader("Access-Control-Allow-Origin", "http://localhost");
+        httpResponse.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+        httpResponse.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
+        httpResponse.setHeader("Access-Control-Allow-Credentials", "true");
+        httpResponse.setHeader("Access-Control-Max-Age", "3600");
+
         // Allow CORS preflight requests
-       if ("OPTIONS".equalsIgnoreCase(httpRequest.getMethod())) {
-            httpResponse.setHeader("Access-Control-Allow-Origin", "http://localhost:5173");
-            httpResponse.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
-            httpResponse.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
-            httpResponse.setHeader("Access-Control-Max-Age", "3600");
+        if ("OPTIONS".equalsIgnoreCase(httpRequest.getMethod())) {
             httpResponse.setStatus(HttpServletResponse.SC_OK);
             return;
         }
 
-        httpResponse.setHeader("Access-Control-Allow-Origin", "http://localhost:5173");
-        httpResponse.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
-        httpResponse.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
-        httpResponse.setHeader("Access-Control-Allow-Credentials", "true");
-
         String requestPath = httpRequest.getRequestURI();
         String authHeader = httpRequest.getHeader("Authorization");
 
-        // If Authorization header exists, validate it (even for public endpoints)
+        // If Authorization header exists, validate it
         if (authHeader != null && authHeader.startsWith("Bearer ")) {
             try {
                 String token = authHeader.substring(7);
@@ -84,6 +86,11 @@ public class JwtAuthenticationFilter implements Filter {
                 httpRequest.setAttribute("email", email);
                 httpRequest.setAttribute("accountType", accountType);
 
+                // Set Spring Security authentication
+                UsernamePasswordAuthenticationToken auth =
+                    new UsernamePasswordAuthenticationToken(email, null, new ArrayList<>());
+                SecurityContextHolder.getContext().setAuthentication(auth);
+
             } catch (Exception e) {
                 httpResponse.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
                 httpResponse.getWriter().write("Invalid or expired token");
@@ -91,7 +98,7 @@ public class JwtAuthenticationFilter implements Filter {
             }
         }
 
-        // Allow public endpoints (with or without auth)
+        // Allow public endpoints (no auth required)
         if (requestPath.contains("/api/auth/register") ||
             requestPath.contains("/api/auth/login") ||
             requestPath.contains("/api/periods") ||
@@ -99,6 +106,7 @@ public class JwtAuthenticationFilter implements Filter {
             requestPath.contains("/api/topics") ||
             requestPath.contains("/api/questions") ||
             requestPath.contains("/api/batches") ||
+            requestPath.contains("/api/quiz-attempts") ||
             requestPath.contains("/h2-console")) {
             chain.doFilter(request, response);
             return;
@@ -111,6 +119,7 @@ public class JwtAuthenticationFilter implements Filter {
             return;
         }
 
+        // Token is valid (already validated above), allow through
         chain.doFilter(request, response);
     }
 }
