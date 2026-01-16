@@ -46,11 +46,11 @@ public class JwtAuthenticationFilter implements Filter {
         HttpServletResponse httpResponse = (HttpServletResponse) response;
 
         // Add CORS headers - allows frontend to communicate with backend
-        httpResponse.setHeader("Access-Control-Allow-Origin", "http://localhost");
-        httpResponse.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
-        httpResponse.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
-        httpResponse.setHeader("Access-Control-Allow-Credentials", "true");
-        httpResponse.setHeader("Access-Control-Max-Age", "3600");
+        // httpResponse.setHeader("Access-Control-Allow-Origin", "http://localhost");
+        // httpResponse.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+        // httpResponse.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
+        // httpResponse.setHeader("Access-Control-Allow-Credentials", "true");
+        // httpResponse.setHeader("Access-Control-Max-Age", "3600");
 
         // Allow CORS preflight requests
         if ("OPTIONS".equalsIgnoreCase(httpRequest.getMethod())) {
