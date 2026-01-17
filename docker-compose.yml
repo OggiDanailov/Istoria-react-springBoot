@@ -38,16 +38,19 @@ services:
       - avecaesar-network
 
   frontend:
-    build:
-      context: ./frontend
-      dockerfile: Dockerfile
-    container_name: avecaesar-frontend
-    ports:
-      - "80:80"
-    depends_on:
-      - backend
-    networks:
-      - avecaesar-network
+  build:
+    context: ./frontend
+    dockerfile: Dockerfile
+  container_name: avecaesar-frontend
+  ports:
+    - "80:80"
+    - "443:443"
+  volumes:
+    - /etc/letsencrypt:/etc/letsencrypt:ro
+  depends_on:
+    - backend
+  networks:
+    - avecaesar-network
 
 volumes:
   postgres_data:
