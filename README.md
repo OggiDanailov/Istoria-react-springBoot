@@ -1,14 +1,10 @@
-# Quiz Application - Complete Documentation
+# Ave Caesar - Roman History Quiz Application
 
 ## 📋 Project Overview
 
 A full-stack educational quiz application with reading materials organized by historical periods and topics. Users can read content and test their knowledge through multiple-choice quizzes. Administrators can manage topics, chapters, and questions.
 
-# Quiz Application - Backend (Spring Boot)
-
-> **Note:** This is the backend API. The frontend is a separate React project.
-> Frontend runs on: `http://localhost:5173`
-> Backend runs on: `http://localhost:8081`
+**Live Site:** http://avecaesar.org
 
 ## 🏗️ Architecture
 
@@ -18,80 +14,454 @@ A full-stack educational quiz application with reading materials organized by hi
 Period (e.g., "Antiquity", "Medieval")
   └── Topic (e.g., "Roman History", "Greek History")
       └── Chapter (e.g., "Kingdom Period", "Early Empire")
-          └── Question (multiple choice with 4 options)
+          └── Question (multiple choice with multiple correct answers)
 ```
 
 ### Technology Stack
 
 **Backend:**
-- Java 17+
-- Spring Boot
+- Java 21
+- Spring Boot 3.5.5
 - Spring Data JPA
-- H2/PostgreSQL Database
+- PostgreSQL Database
+- Flyway Migrations
 - Gradle
+- JWT Authentication
 
 **Frontend:**
 - React
 - Vite
 - CSS3
 
+**Deployment:**
+- Docker & Docker Compose
+- Digital Ocean Droplet
+- Nginx (reverse proxy)
+
 ## 📁 Project Structure
 
-### Backend Models
-
-#### Period
-```java
-- id: Long
-- title: String
-- description: String
-- topics: List<Topic>
+```
+Istoria-react-springBoot/
+├── backend/
+│   ├── src/main/java/com/example/demo/
+│   │   ├── config/
+│   │   │   ├── CorsConfig.java
+│   │   │   └── SecurityConfig.java
+│   │   ├── controller/
+│   │   ├── filter/
+│   │   │   └── JwtAuthenticationFilter.java
+│   │   ├── model/
+│   │   ├── repository/
+│   │   └── DemoApplication.java
+│   ├── src/main/resources/
+│   │   ├── application.properties
+│   │   └── db/migration/
+│   ├── Dockerfile
+│   └── build.gradle
+├── frontend/
+│   ├── src/
+│   ├── Dockerfile
+│   ├── nginx.conf
+│   └── package.json
+├── docker-compose.yml
+└── README.md
 ```
 
-#### Topic
-```java
-- id: Long
-- title: String
-- description: String
-- period: Period
-- chapters: List<Chapter>
+## 🚀 Local Development Setup
+
+### Prerequisites
+- Java 21
+- Node.js 18+
+- Docker & Docker Compose
+- Yarn or npm
+
+### Option 1: Docker (Recommended)
+
+Run the entire stack with Docker:
+
+```bash
+docker-compose up --build
 ```
 
-#### Chapter
-```java
-- id: Long
-- title: String
-- content: String (reading material, max 10000 chars)
-- topic: Topic
-- questions: List<Question>
+This starts:
+- PostgreSQL on port 5555
+- Spring Boot backend on port 8081
+- React frontend (via Nginx) on port 80
+
+Access the app at: http://localhost
+
+### Option 2: Manual Setup
+
+**1. Start PostgreSQL container:**
+
+```bash
+docker run -d \
+  --name avecaesar-db \
+  -e POSTGRES_USER=avecaesar \
+  -e POSTGRES_PASSWORD=Zelda214! \
+  -e POSTGRES_DB=ave_caesar \
+  -p 5555:5432 \
+  postgres:15-alpine
 ```
 
-#### Question
-```java
-- id: Long
-- question: String
-- options: List<String> (4 options)
-- correctAnswer: int (index 0-3)
-- chapter: Chapter
+**2. Import database (if you have a backup):**
+
+```bash
+docker exec -i avecaesar-db psql -U avecaesar -d ave_caesar < ave_caesar_complete.sql
 ```
 
-### Frontend Components
+**3. Run the backend:**
 
-**Main App Flow:**
-- `App.jsx` - Main router/state manager
-- `TopicList.jsx` - Browse available topics
-- `ReadingMaterial.jsx` - Display chapter content
-- `Quiz.jsx` - Take the quiz
-- `Results.jsx` - View quiz results
+```bash
+cd backend
+./gradlew bootRun
+```
 
-**Admin Section:**
-- `Admin.jsx` - Admin dashboard
-- `TopicForm.jsx` - Create/edit topics
-- `QuestionForm.jsx` - Create/edit questions
+Backend runs on: http://localhost:8081
+
+**4. Run the frontend:**
+
+```bash
+cd frontend
+yarn install
+yarn dev
+```
+
+Frontend runs on: http://localhost:5173
+
+## 🐳 Docker Configuration
+
+### docker-compose.yml
+
+```yaml
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15-alpine
+    container_name: avecaesar-db
+    environment:
+      POSTGRES_USER: avecaesar
+      POSTGRES_PASSWORD: Zelda214!
+      POSTGRES_DB: ave_caesar
+    ports:
+      - "5555:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - avecaesar-network
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: avecaesar-backend
+    ports:
+      - "8081:8081"
+    environment:
+      SERVER_PORT: 8081
+      SERVER_ADDRESS: 0.0.0.0
+      CORS_ORIGINS: http://localhost,http://localhost:80
+      JWT_SECRET: "your-jwt-secret-here"
+      JWT_EXPIRATION: 86400000
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/ave_caesar
+      SPRING_DATASOURCE_USERNAME: avecaesar
+      SPRING_DATASOURCE_PASSWORD: Zelda214!
+      SPRING_JPA_HIBERNATE_DDL_AUTO: validate
+      SPRING_FLYWAY_ENABLED: "true"
+      SPRING_FLYWAY_LOCATIONS: classpath:db/migration
+    depends_on:
+      - postgres
+    networks:
+      - avecaesar-network
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: avecaesar-frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    networks:
+      - avecaesar-network
+
+volumes:
+  postgres_data:
+
+networks:
+  avecaesar-network:
+    driver: bridge
+```
+
+### Backend Dockerfile
+
+```dockerfile
+# Stage 1: Build
+FROM eclipse-temurin:21-jdk AS builder
+WORKDIR /app
+COPY gradlew .
+COPY gradle gradle
+COPY build.gradle .
+COPY settings.gradle .
+COPY src src
+RUN chmod +x ./gradlew
+RUN ./gradlew clean build -x test
+
+# Stage 2: Runtime
+FROM eclipse-temurin:21-jre
+WORKDIR /app
+COPY --from=builder /app/build/libs/demo-0.0.1-SNAPSHOT.jar app.jar
+EXPOSE 8081
+ENTRYPOINT ["java", "-jar", "app.jar"]
+```
+
+### Frontend Dockerfile
+
+```dockerfile
+# Stage 1: Build
+FROM node:20-alpine AS builder
+WORKDIR /app
+COPY package.json yarn.lock .
+RUN yarn install
+RUN npm rebuild esbuild
+COPY . .
+ENV VITE_API_BASE_URL=
+RUN yarn build
+
+# Stage 2: Serve
+FROM nginx:alpine
+COPY --from=builder /app/dist /usr/share/nginx/html
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
+```
+
+### Frontend nginx.conf
+
+```nginx
+server {
+    listen 80;
+    server_name localhost;
+
+    location / {
+        root /usr/share/nginx/html;
+        try_files $uri $uri/ /index.html;
+        expires 1h;
+    }
+
+    location /api {
+        proxy_pass http://backend:8081;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+}
+```
+
+## 🌐 Production Deployment (Digital Ocean)
+
+### Prerequisites
+- Digital Ocean account
+- Domain name (optional)
+- SSH key configured
+
+### Step 1: Create a Droplet
+
+1. Go to Digital Ocean → Create → Droplets
+2. Choose Ubuntu 24.04
+3. Select Basic plan ($6/mo - 1GB RAM is sufficient)
+4. Choose a datacenter region
+5. Add your SSH key
+6. Create Droplet
+
+### Step 2: SSH into the Droplet
+
+```bash
+ssh root@YOUR_DROPLET_IP
+```
+
+### Step 3: Install Docker
+
+```bash
+curl -fsSL https://get.docker.com -o get-docker.sh
+sh get-docker.sh
+```
+
+### Step 4: Clone and Deploy
+
+```bash
+git clone https://github.com/OggiDanailov/Istoria-react-springBoot.git
+cd Istoria-react-springBoot
+docker compose up --build -d
+```
+
+### Step 5: Import Database (if needed)
+
+```bash
+# Copy your SQL backup to the server first, then:
+docker exec -i avecaesar-db psql -U avecaesar -d ave_caesar < ave_caesar_complete.sql
+```
+
+### Step 6: Configure Domain (Optional)
+
+**At your domain registrar (e.g., Namecheap):**
+
+Add these DNS records:
+
+| Type | Host | Value |
+|------|------|-------|
+| A | @ | YOUR_DROPLET_IP |
+| A | www | YOUR_DROPLET_IP |
+
+**Update CorsConfig.java:**
+
+```java
+.allowedOrigins(
+    "http://localhost",
+    "http://localhost:80",
+    "http://localhost:5173",
+    "http://YOUR_DROPLET_IP",
+    "http://yourdomain.org",
+    "http://www.yourdomain.org"
+)
+```
+
+Then redeploy:
+
+```bash
+git add .
+git commit -m "Add domain to CORS"
+git push origin master
+```
+
+On the Droplet:
+
+```bash
+cd /root/Istoria-react-springBoot
+git pull
+docker compose down
+docker compose up --build -d
+```
+
+## ⚙️ Configuration
+
+### CORS Configuration (CorsConfig.java)
+
+```java
+@Configuration
+public class CorsConfig implements WebMvcConfigurer {
+    @Override
+    public void addCorsMappings(CorsRegistry registry) {
+        registry.addMapping("/api/**")
+                .allowedOrigins(
+                    "http://localhost",
+                    "http://localhost:80",
+                    "http://localhost:5173",
+                    "http://45.55.34.96",
+                    "http://avecaesar.org",
+                    "http://www.avecaesar.org"
+                )
+                .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
+                .allowedHeaders("*")
+                .allowCredentials(true)
+                .maxAge(3600);
+    }
+}
+```
+
+### Application Properties
+
+```properties
+spring.application.name=demo
+server.port=8081
+
+# PostgreSQL Configuration
+spring.datasource.url=jdbc:postgresql://localhost:5555/ave_caesar
+spring.datasource.username=avecaesar
+spring.datasource.password=Zelda214!
+spring.datasource.driver-class-name=org.postgresql.Driver
+spring.jpa.database-platform=org.hibernate.dialect.PostgreSQLDialect
+
+# Hibernate Settings
+spring.jpa.hibernate.ddl-auto=validate
+spring.jpa.show-sql=true
+
+# Flyway
+spring.flyway.enabled=true
+spring.flyway.locations=classpath:db/migration
+
+# JWT Configuration
+jwt.secret=${JWT_SECRET}
+jwt.expiration=${JWT_EXPIRATION}
+```
+
+## 🐛 Common Issues & Solutions
+
+### Issue 1: CORS Error in Browser
+
+**Error:** `Access-Control-Allow-Origin header missing`
+
+**Solution:**
+1. Check `CorsConfig.java` includes your origin
+2. Check `JwtAuthenticationFilter.java` does NOT have hardcoded CORS headers (remove any `httpResponse.setHeader("Access-Control-Allow-Origin", ...)`)
+3. Rebuild and restart
+
+### Issue 2: Docker Container Can't Reach Backend (502 Bad Gateway)
+
+**Error:** Nginx returns 502, `wget` from frontend container shows "Connection refused"
+
+**Cause:** `server.address=127.0.0.1` in application.properties makes Spring Boot only listen on localhost inside the container.
+
+**Solution:** Add `SERVER_ADDRESS: 0.0.0.0` to docker-compose.yml environment, or remove `server.address` from application.properties.
+
+### Issue 3: Database Connection Refused
+
+**Error:** `Connection to localhost:5555 refused`
+
+**Solution:**
+- For Docker: Make sure PostgreSQL container is running
+- For local dev: Start the PostgreSQL container first:
+  ```bash
+  docker start avecaesar-db
+  ```
+
+### Issue 4: esbuild Version Mismatch (Frontend Build)
+
+**Error:** `Host version "0.25.9" does not match binary version "0.27.2"`
+
+**Solution:** Add `RUN npm rebuild esbuild` in frontend Dockerfile after `yarn install`
+
+### Issue 5: Frontend Shows "Failed to fetch periods"
+
+**Possible causes:**
+1. Backend not running
+2. CORS blocking request
+3. Wrong API URL in frontend config
+
+**Debug steps:**
+```bash
+# Test backend directly
+curl http://localhost:8081/api/periods
+
+# Check browser console for specific error
+# Check if CORS origin is allowed
+```
+
+### Issue 6: Changes Not Reflected After Deploy
+
+**Solution:** Rebuild containers with no cache:
+```bash
+docker compose down
+docker compose build --no-cache
+docker compose up -d
+```
 
 ## 🔌 API Endpoints
 
 ### Periods
-
 ```
 GET    /api/periods              - Get all periods
 GET    /api/periods/{id}         - Get specific period
@@ -101,7 +471,6 @@ DELETE /api/periods/{id}         - Delete period
 ```
 
 ### Topics
-
 ```
 GET    /api/topics                      - Get all topics
 GET    /api/topics/{id}                 - Get specific topic
@@ -112,7 +481,6 @@ DELETE /api/topics/{id}                 - Delete topic
 ```
 
 ### Chapters
-
 ```
 GET    /api/chapters                    - Get all chapters
 GET    /api/chapters/{id}               - Get specific chapter
@@ -123,203 +491,101 @@ DELETE /api/chapters/{id}               - Delete chapter
 ```
 
 ### Questions
-
 ```
 GET    /api/questions                        - Get all questions
 GET    /api/questions/{id}                   - Get specific question
 GET    /api/chapters/{chapterId}/questions   - Get questions by chapter
-GET    /api/topics/{topicId}/questions       - Get questions by topic
 POST   /api/chapters/{chapterId}/questions   - Create question for chapter
-POST   /api/topics/{topicId}/questions       - Create question for topic
 PUT    /api/questions/{id}                   - Update question
 DELETE /api/questions/{id}                   - Delete question
 ```
 
-## 🚀 Setup Instructions
-
-### Backend Setup
-
-1. **Prerequisites:**
-   - Java 17 or higher
-   - Gradle
-
-2. **Run the application:**
-   ```bash
-   cd backend
-   ./gradlew bootRun
-   ```
-
-3. **Server will start on:** `http://localhost:8081`
-
-### Frontend Setup
-
-1. **Prerequisites:**
-   - Node.js 16+
-   - npm or yarn
-
-2. **Install dependencies:**
-   ```bash
-   cd frontend
-   npm install
-   ```
-
-3. **Run development server:**
-   ```bash
-   npm run dev
-   ```
-
-4. **App will run on:** `http://localhost:5173`
-
-## ⚙️ Configuration
-
-### CORS Configuration
-
-All controllers have CORS enabled for `http://localhost:5173`:
-
-```java
-@CrossOrigin(origins = "http://localhost:5173")
+### Authentication
+```
+POST   /api/auth/register    - Register new user
+POST   /api/auth/login       - Login and get JWT token
 ```
 
-For production, update this to your deployed frontend URL.
+## 🗄️ Database Management
 
-### Database Configuration
-
-Default uses H2 in-memory database. Check `application.properties` to configure:
-
-```properties
-spring.datasource.url=jdbc:h2:mem:quizdb
-spring.jpa.hibernate.ddl-auto=update
+### Export Database
+```bash
+docker exec avecaesar-db pg_dump -U avecaesar ave_caesar > ave_caesar_backup.sql
 ```
 
-## 🐛 Common Issues & Solutions
+### Import Database
+```bash
+docker exec -i avecaesar-db psql -U avecaesar -d ave_caesar < ave_caesar_backup.sql
+```
 
-### Issue 1: CORS Error
-**Error:** `Access to fetch at 'http://localhost:8081/api/...' has been blocked by CORS policy`
+### Connect to Database
+```bash
+docker exec -it avecaesar-db psql -U avecaesar -d ave_caesar
+```
 
-**Solution:**
-- Ensure `@CrossOrigin(origins = "http://localhost:5173")` is on all controllers
-- Restart Spring Boot application after adding
+### Useful SQL Commands
+```sql
+-- Check table counts
+SELECT COUNT(*) FROM periods;
+SELECT COUNT(*) FROM topics;
+SELECT COUNT(*) FROM chapters;
+SELECT COUNT(*) FROM questions;
 
-### Issue 2: "Cannot read properties of undefined"
-**Error:** `Cannot read properties of undefined (reading 'substring')`
+-- List all tables
+\dt
 
-**Solution:**
-- Field name mismatch between frontend and backend
-- Example: Frontend uses `topic.content` but backend has `topic.description`
-- Always use optional chaining: `topic.description?.substring(0, 150)`
+-- Describe a table
+\d periods
+```
 
-### Issue 3: Endpoint Not Found (404)
-**Error:** Fetch request returns 404
+## 🔧 Useful Docker Commands
 
-**Solution:**
-- Check if the endpoint exists in the controller
-- Verify the URL path matches exactly (e.g., `/api/topics/{id}/questions`)
-- Check if required repository methods exist
+```bash
+# View running containers
+docker compose ps
 
-### Issue 4: Empty Results from API
-**Problem:** API returns `[]` even though data exists
+# View logs
+docker compose logs backend
+docker compose logs frontend
+docker compose logs postgres
 
-**Solution:**
-- Verify relationships are properly set in the database
-- Check foreign keys (`chapter_id`, `topic_id`, `period_id`)
-- Ensure data was saved with proper associations
-- Add logging to controller methods to debug
+# Stop all containers
+docker compose down
 
-## 📊 Repository Query Methods
+# Rebuild and start
+docker compose up --build -d
 
-### QuestionRepository
-- `findByChapterId(Long chapterId)` - Questions for a specific chapter
-- `findByChapterTopicId(Long topicId)` - Questions for all chapters in a topic
+# Rebuild specific service
+docker compose build --no-cache frontend
 
-### TopicRepository
-- `findByPeriodId(Long periodId)` - Topics for a specific period
+# Enter a container
+docker exec -it avecaesar-backend /bin/sh
+docker exec -it avecaesar-frontend /bin/sh
 
-### ChapterRepository
-- `findByTopicId(Long topicId)` - Chapters for a specific topic
-
-## 🎯 User Flow
-
-1. **User views topic list** → Selects a topic
-2. **Reading Material screen** → User reads chapter content
-3. **User clicks "Start Quiz"** → Takes multiple-choice quiz
-4. **Results screen** → Shows score and correct answers
-5. **Admin can access admin panel** → Manage topics and questions
-
-## 🔐 Admin Features
-
-- Create, edit, and delete topics
-- Create, edit, and delete questions for each topic
-- Preview existing questions with correct answers highlighted
-
-## 🚧 Future Enhancements
-
-- [ ] User authentication and progress tracking
-- [ ] Multiple chapters per topic with navigation
-- [ ] Question difficulty levels
-- [ ] Timed quizzes
-- [ ] Leaderboards
-- [ ] Image support in questions
-- [ ] Export/import questions (CSV/JSON)
-- [ ] Analytics dashboard for admins
+# Test internal networking
+docker exec avecaesar-frontend wget -qO- http://backend:8081/api/periods
+```
 
 ## 📝 Development Notes
 
-### Key Design Decisions
+### Key Configuration Points
 
-1. **Questions belong to Chapters, not Topics directly**
-   - Allows better content organization
-   - Enables multiple reading materials per topic
-   - Questions can be associated with specific chapter content
+1. **CORS must be configured in CorsConfig.java only** - Do not add CORS headers manually in filters
+2. **Docker networking uses service names** - `backend` not `localhost`
+3. **SERVER_ADDRESS must be 0.0.0.0 for Docker** - Otherwise containers can't communicate
+4. **Frontend API URL is empty in Docker** - Nginx proxies `/api` requests to backend
 
-2. **`@JsonIgnore` on parent relationships**
-   - Prevents circular JSON serialization
-   - Used on: `Period` in Topic, `Topic` in Chapter, `Chapter` in Question
+### Environment Variables (Docker)
 
-3. **Frontend uses simple state management**
-   - Single `App.jsx` manages routing via state
-   - No React Router needed for this simple flow
-   - Easy to understand and maintain
-
-### Code Conventions
-
-- **Backend:** Follow Java naming conventions (camelCase for methods, PascalCase for classes)
-- **Frontend:** React functional components with hooks
-- **API:** RESTful conventions with proper HTTP methods
-- **Database:** Snake_case for table and column names
-
-## 🤝 Contributing
-
-When adding new features:
-1. Update the data model section if adding new entities
-2. Document new API endpoints
-3. Update this README with any new setup requirements
-4. Add common issues you encounter and their solutions
-
-## 📞 Support
-
-If you encounter issues not covered here:
-1. Check Spring Boot console logs for backend errors
-2. Check browser console for frontend errors
-3. Verify API endpoint exists and data relationships are correct
-4. Add the issue and solution to this README for future reference
+| Variable | Description |
+|----------|-------------|
+| SERVER_PORT | Backend port (8081) |
+| SERVER_ADDRESS | Bind address (0.0.0.0 for Docker) |
+| SPRING_DATASOURCE_URL | PostgreSQL connection URL |
+| JWT_SECRET | Secret key for JWT tokens |
+| JWT_EXPIRATION | Token expiration in ms |
 
 ---
 
-## Useful commands for H2 Console;
-
-1. Clearing all existing batches and questions:
-DELETE FROM quiz_attempts;
-DELETE FROM batch_questions;
-DELETE FROM batch_progress;
-DELETE FROM quiz_batches;
-DELETE FROM question_correct_answers;
-DELETE FROM question_options;
-DELETE FROM questions;
-
-double check with this commands:
-
-SELECT COUNT(*) FROM questions;      -- Should be 0
-SELECT COUNT(*) FROM quiz_batches;   -- Should be 0
-
-**Last Updated:** October 2025
-**Version:** 1.0.0
+**Last Updated:** January 2026
+**Version:** 2.0.0
