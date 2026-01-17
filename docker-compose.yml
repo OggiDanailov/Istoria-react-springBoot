@@ -1,4 +1,5 @@
 version: '3.8'
+
 services:
   postgres:
     image: postgres:15-alpine
@@ -23,6 +24,7 @@ services:
       - "8081:8081"
     environment:
       SERVER_PORT: 8081
+      SERVER_ADDRESS: 0.0.0.0
       CORS_ORIGINS: http://localhost,http://localhost:80
       JWT_SECRET: "thisisthewhateversecretkeythatiamcreatingrightnow"
       JWT_EXPIRATION: 86400000
@@ -38,19 +40,19 @@ services:
       - avecaesar-network
 
   frontend:
-  build:
-    context: ./frontend
-    dockerfile: Dockerfile
-  container_name: avecaesar-frontend
-  ports:
-    - "80:80"
-    - "443:443"
-  volumes:
-    - /etc/letsencrypt:/etc/letsencrypt:ro
-  depends_on:
-    - backend
-  networks:
-    - avecaesar-network
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: avecaesar-frontend
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - /etc/letsencrypt:/etc/letsencrypt:ro
+    depends_on:
+      - backend
+    networks:
+      - avecaesar-network
 
 volumes:
   postgres_data:
