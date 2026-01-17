@@ -4,7 +4,219 @@
 
 A full-stack educational quiz application with reading materials organized by historical periods and topics. Users can read content and test their knowledge through multiple-choice quizzes. Administrators can manage topics, chapters, and questions.
 
-**Live Site:** http://avecaesar.org
+**Live Site:** https://avecaesar.org
+
+---
+
+## 🎓 Deployment Explained (For Full-Stack Developers)
+
+This section explains how the app goes from your local machine to being live on the internet. If you're primarily a full-stack developer and DevOps feels like a black box, this is for you.
+
+### The Big Picture
+
+```
+LOCAL DEVELOPMENT          PRODUCTION (Digital Ocean)
+─────────────────          ─────────────────────────
+
+Your Computer              Droplet (Virtual Server)
+┌─────────────┐            ┌─────────────────────────────┐
+│             │            │                             │
+│  Frontend   │            │  ┌─────────────────────┐   │
+│  (Vite)     │            │  │      Nginx          │   │
+│  Port 5173  │            │  │   (Port 80/443)     │   │
+│             │            │  │                     │   │
+│  Backend    │   ──────►  │  │  Routes requests:   │   │
+│  (Spring)   │   Deploy   │  │  /     → Frontend   │   │
+│  Port 8081  │            │  │  /api → Backend     │   │
+│             │            │  └─────────────────────┘   │
+│  Database   │            │           │                │
+│  (Postgres) │            │           ▼                │
+│  Port 5555  │            │  ┌─────────────────────┐   │
+│             │            │  │  Backend (8081)     │   │
+└─────────────┘            │  │  Frontend (static)  │   │
+                           │  │  Database (5432)    │   │
+                           │  └─────────────────────┘   │
+                           │                             │
+                           └─────────────────────────────┘
+                                        │
+                                        │ DNS
+                                        ▼
+                           ┌─────────────────────────────┐
+                           │  avecaesar.org              │
+                           │  (points to 45.55.34.96)    │
+                           └─────────────────────────────┘
+```
+
+### What Each Piece Does
+
+#### 1. **Docker & Docker Compose**
+Think of Docker as a "shipping container" for your app. Instead of saying "install Java 21, install Node 20, install PostgreSQL 15...", you define everything in files and Docker creates identical environments everywhere.
+
+- **Dockerfile** = Recipe for building one container (e.g., backend or frontend)
+- **docker-compose.yml** = Orchestrates multiple containers to work together
+
+**Why use it?**
+- "Works on my machine" → "Works everywhere"
+- One command (`docker compose up`) starts everything
+- Same setup locally and in production
+
+#### 2. **Nginx (The Traffic Cop)**
+Nginx is a web server that sits in front of your app and routes traffic. When someone visits `avecaesar.org`:
+
+```
+User Request                    Nginx Decision
+────────────                    ──────────────
+https://avecaesar.org/          → Serve React app (index.html)
+https://avecaesar.org/quiz      → Serve React app (React Router handles it)
+https://avecaesar.org/api/...   → Forward to Spring Boot backend
+```
+
+**Why not just expose the backend directly?**
+- Nginx handles SSL/HTTPS certificates
+- Nginx serves static files (React) much faster than Spring Boot
+- Nginx can handle thousands of connections efficiently
+- One entry point (port 80/443) instead of multiple ports
+
+#### 3. **The Domain Name System (DNS)**
+DNS translates human-readable names to IP addresses:
+
+```
+avecaesar.org  →  45.55.34.96  (Your Droplet's IP)
+```
+
+**Where this is configured:** Your domain registrar (Namecheap)
+
+| Record Type | Host | Value | What it means |
+|-------------|------|-------|---------------|
+| A | @ | 45.55.34.96 | "avecaesar.org points to this IP" |
+| A | www | 45.55.34.96 | "www.avecaesar.org points to this IP" |
+
+#### 4. **SSL/HTTPS (Let's Encrypt)**
+SSL encrypts traffic between users and your server. Without it:
+- Browsers show "Not Secure" warning
+- Passwords sent in plain text
+- Google ranks you lower
+
+**Let's Encrypt** gives free SSL certificates. **Certbot** is the tool that gets them.
+
+Certificates live at: `/etc/letsencrypt/live/avecaesar.org/` on the Droplet
+
+---
+
+### Files You Need to Understand
+
+#### **docker-compose.yml** - The Orchestra Conductor
+Defines all your containers and how they connect:
+
+```yaml
+services:
+  postgres:      # Database container
+  backend:       # Spring Boot container
+  frontend:      # Nginx + React container
+```
+
+**Key settings:**
+- `ports: "80:80"` = Expose container's port 80 to the outside world
+- `depends_on` = Start postgres before backend
+- `networks` = Containers on same network can talk to each other by name
+- `volumes` = Persist data (database) or share files (SSL certs)
+
+#### **frontend/nginx.conf** - The Traffic Rules
+```nginx
+server {
+    listen 80;                                    # Listen on port 80 (HTTP)
+    listen 443 ssl;                               # Listen on port 443 (HTTPS)
+    server_name localhost avecaesar.org;          # Respond to these domains
+
+    location / {                                  # For all requests...
+        root /usr/share/nginx/html;               # Serve files from here
+        try_files $uri $uri/ /index.html;         # SPA fallback for React Router
+    }
+
+    location /api {                               # For /api requests...
+        proxy_pass http://backend:8081;           # Forward to backend container
+    }
+}
+```
+
+#### **CorsConfig.java** - Who Can Talk to Your Backend
+Browsers block requests from different origins (domains/ports). CORS says "these origins are allowed":
+
+```java
+.allowedOrigins(
+    "http://localhost",           // Local Docker
+    "http://localhost:5173",      // Local Vite dev server
+    "https://avecaesar.org",      // Production
+    "https://www.avecaesar.org"   // Production with www
+)
+```
+
+**When to update:** Whenever you add a new domain or change how you access the app.
+
+---
+
+### The Deployment Flow
+
+#### Step 1: Local Development
+```
+You code → Test on localhost:5173 (frontend) + localhost:8081 (backend)
+```
+
+#### Step 2: Test with Docker Locally
+```bash
+docker compose up --build
+# Visit http://localhost - does it work like production will?
+```
+
+#### Step 3: Push to GitHub
+```bash
+git add .
+git commit -m "Your changes"
+git push origin master
+```
+
+#### Step 4: Deploy to Production
+```bash
+ssh root@45.55.34.96                    # Connect to Droplet
+cd /root/Istoria-react-springBoot       # Go to project
+git pull                                 # Get latest code
+docker compose down                      # Stop old containers
+docker compose up --build -d             # Build & start new ones
+```
+
+#### What Happens on `docker compose up --build`:
+1. Docker reads `docker-compose.yml`
+2. Builds backend image (compiles Java, creates JAR)
+3. Builds frontend image (runs `yarn build`, copies to Nginx)
+4. Starts PostgreSQL container
+5. Starts Backend container (waits for Postgres)
+6. Starts Frontend/Nginx container (waits for Backend)
+7. Nginx listens on ports 80 and 443
+
+---
+
+### Common "Why Isn't It Working?" Scenarios
+
+| Symptom | Likely Cause | Fix |
+|---------|--------------|-----|
+| CORS error in browser | Origin not in CorsConfig.java | Add the origin, rebuild, redeploy |
+| 502 Bad Gateway | Backend not reachable from Nginx | Check backend logs, check `SERVER_ADDRESS: 0.0.0.0` |
+| "Connection refused" | Database not running | `docker compose ps` to check, restart if needed |
+| Changes not showing | Old Docker cache | `docker compose build --no-cache` |
+| SSL certificate error | Wrong domain or expired cert | Check domain spelling, run `certbot renew` |
+
+---
+
+### Quick Reference: What to Update Where
+
+| Change | Files to Update |
+|--------|-----------------|
+| Add new domain | `CorsConfig.java`, `nginx.conf` (server_name), DNS records |
+| Change backend port | `docker-compose.yml`, `nginx.conf` (proxy_pass) |
+| Add HTTPS origins | `CorsConfig.java` (add https:// versions) |
+| Change database password | `docker-compose.yml` (both postgres and backend env vars) |
+
+---
 
 ## 🏗️ Architecture
 
@@ -37,35 +249,9 @@ Period (e.g., "Antiquity", "Medieval")
 - Docker & Docker Compose
 - Digital Ocean Droplet
 - Nginx (reverse proxy)
+- Let's Encrypt SSL
 
-## 📁 Project Structure
-
-```
-Istoria-react-springBoot/
-├── backend/
-│   ├── src/main/java/com/example/demo/
-│   │   ├── config/
-│   │   │   ├── CorsConfig.java
-│   │   │   └── SecurityConfig.java
-│   │   ├── controller/
-│   │   ├── filter/
-│   │   │   └── JwtAuthenticationFilter.java
-│   │   ├── model/
-│   │   ├── repository/
-│   │   └── DemoApplication.java
-│   ├── src/main/resources/
-│   │   ├── application.properties
-│   │   └── db/migration/
-│   ├── Dockerfile
-│   └── build.gradle
-├── frontend/
-│   ├── src/
-│   ├── Dockerfile
-│   ├── nginx.conf
-│   └── package.json
-├── docker-compose.yml
-└── README.md
-```
+---
 
 ## 🚀 Local Development Setup
 
@@ -80,7 +266,7 @@ Istoria-react-springBoot/
 Run the entire stack with Docker:
 
 ```bash
-docker-compose up --build
+docker compose up --build
 ```
 
 This starts:
@@ -90,7 +276,7 @@ This starts:
 
 Access the app at: http://localhost
 
-### Option 2: Manual Setup
+### Option 2: Manual Setup (Frontend Hot Reload)
 
 **1. Start PostgreSQL container:**
 
@@ -129,7 +315,77 @@ yarn dev
 
 Frontend runs on: http://localhost:5173
 
-## 🐳 Docker Configuration
+---
+
+## 🌐 Production Deployment (Digital Ocean)
+
+### Initial Setup (One Time)
+
+#### Step 1: Create a Droplet
+1. Go to Digital Ocean → Create → Droplets
+2. Choose Ubuntu 24.04
+3. Select Basic plan ($6/mo - 1GB RAM)
+4. Add your SSH key
+5. Create Droplet
+
+#### Step 2: Install Docker on Droplet
+```bash
+ssh root@YOUR_DROPLET_IP
+curl -fsSL https://get.docker.com -o get-docker.sh
+sh get-docker.sh
+```
+
+#### Step 3: Clone and Deploy
+```bash
+git clone https://github.com/OggiDanailov/Istoria-react-springBoot.git
+cd Istoria-react-springBoot
+docker compose up --build -d
+```
+
+#### Step 4: Configure Domain (at Namecheap)
+Add DNS records:
+
+| Type | Host | Value |
+|------|------|-------|
+| A | @ | YOUR_DROPLET_IP |
+| A | www | YOUR_DROPLET_IP |
+
+#### Step 5: Setup SSL
+```bash
+apt update && apt install certbot -y
+docker compose stop frontend
+certbot certonly --standalone -d avecaesar.org -d www.avecaesar.org
+docker compose up -d
+```
+
+#### Step 6: Auto-Renewal (Cron Job)
+```bash
+crontab -e
+# Add this line:
+0 3 1 * * cd /root/Istoria-react-springBoot && docker compose stop frontend && certbot renew && docker compose start frontend
+```
+
+### Ongoing Deployments
+
+After making changes locally:
+
+```bash
+# Local
+git add .
+git commit -m "Your changes"
+git push origin master
+
+# On Droplet
+ssh root@45.55.34.96
+cd /root/Istoria-react-springBoot
+git pull
+docker compose down
+docker compose up --build -d
+```
+
+---
+
+## 🐳 Docker Configuration Files
 
 ### docker-compose.yml
 
@@ -182,6 +438,9 @@ services:
     container_name: avecaesar-frontend
     ports:
       - "80:80"
+      - "443:443"
+    volumes:
+      - /etc/letsencrypt:/etc/letsencrypt:ro
     depends_on:
       - backend
     networks:
@@ -195,7 +454,7 @@ networks:
     driver: bridge
 ```
 
-### Backend Dockerfile
+### backend/Dockerfile
 
 ```dockerfile
 # Stage 1: Build
@@ -217,7 +476,7 @@ EXPOSE 8081
 ENTRYPOINT ["java", "-jar", "app.jar"]
 ```
 
-### Frontend Dockerfile
+### frontend/Dockerfile
 
 ```dockerfile
 # Stage 1: Build
@@ -234,16 +493,43 @@ RUN yarn build
 FROM nginx:alpine
 COPY --from=builder /app/dist /usr/share/nginx/html
 COPY nginx.conf /etc/nginx/conf.d/default.conf
-EXPOSE 80
+EXPOSE 80 443
 CMD ["nginx", "-g", "daemon off;"]
 ```
 
-### Frontend nginx.conf
+### frontend/nginx.conf
 
 ```nginx
 server {
     listen 80;
-    server_name localhost;
+    server_name localhost avecaesar.org www.avecaesar.org;
+
+    # Redirect HTTP to HTTPS (except localhost for local dev)
+    if ($host != localhost) {
+        return 301 https://$host$request_uri;
+    }
+
+    location / {
+        root /usr/share/nginx/html;
+        try_files $uri $uri/ /index.html;
+        expires 1h;
+    }
+
+    location /api {
+        proxy_pass http://backend:8081;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+}
+
+server {
+    listen 443 ssl;
+    server_name avecaesar.org www.avecaesar.org;
+
+    ssl_certificate /etc/letsencrypt/live/avecaesar.org/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/avecaesar.org/privkey.pem;
 
     location / {
         root /usr/share/nginx/html;
@@ -261,94 +547,11 @@ server {
 }
 ```
 
-## 🌐 Production Deployment (Digital Ocean)
-
-### Prerequisites
-- Digital Ocean account
-- Domain name (optional)
-- SSH key configured
-
-### Step 1: Create a Droplet
-
-1. Go to Digital Ocean → Create → Droplets
-2. Choose Ubuntu 24.04
-3. Select Basic plan ($6/mo - 1GB RAM is sufficient)
-4. Choose a datacenter region
-5. Add your SSH key
-6. Create Droplet
-
-### Step 2: SSH into the Droplet
-
-```bash
-ssh root@YOUR_DROPLET_IP
-```
-
-### Step 3: Install Docker
-
-```bash
-curl -fsSL https://get.docker.com -o get-docker.sh
-sh get-docker.sh
-```
-
-### Step 4: Clone and Deploy
-
-```bash
-git clone https://github.com/OggiDanailov/Istoria-react-springBoot.git
-cd Istoria-react-springBoot
-docker compose up --build -d
-```
-
-### Step 5: Import Database (if needed)
-
-```bash
-# Copy your SQL backup to the server first, then:
-docker exec -i avecaesar-db psql -U avecaesar -d ave_caesar < ave_caesar_complete.sql
-```
-
-### Step 6: Configure Domain (Optional)
-
-**At your domain registrar (e.g., Namecheap):**
-
-Add these DNS records:
-
-| Type | Host | Value |
-|------|------|-------|
-| A | @ | YOUR_DROPLET_IP |
-| A | www | YOUR_DROPLET_IP |
-
-**Update CorsConfig.java:**
-
-```java
-.allowedOrigins(
-    "http://localhost",
-    "http://localhost:80",
-    "http://localhost:5173",
-    "http://YOUR_DROPLET_IP",
-    "http://yourdomain.org",
-    "http://www.yourdomain.org"
-)
-```
-
-Then redeploy:
-
-```bash
-git add .
-git commit -m "Add domain to CORS"
-git push origin master
-```
-
-On the Droplet:
-
-```bash
-cd /root/Istoria-react-springBoot
-git pull
-docker compose down
-docker compose up --build -d
-```
+---
 
 ## ⚙️ Configuration
 
-### CORS Configuration (CorsConfig.java)
+### CorsConfig.java
 
 ```java
 @Configuration
@@ -362,7 +565,9 @@ public class CorsConfig implements WebMvcConfigurer {
                     "http://localhost:5173",
                     "http://45.55.34.96",
                     "http://avecaesar.org",
-                    "http://www.avecaesar.org"
+                    "http://www.avecaesar.org",
+                    "https://avecaesar.org",
+                    "https://www.avecaesar.org"
                 )
                 .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                 .allowedHeaders("*")
@@ -372,92 +577,52 @@ public class CorsConfig implements WebMvcConfigurer {
 }
 ```
 
-### Application Properties
-
-```properties
-spring.application.name=demo
-server.port=8081
-
-# PostgreSQL Configuration
-spring.datasource.url=jdbc:postgresql://localhost:5555/ave_caesar
-spring.datasource.username=avecaesar
-spring.datasource.password=Zelda214!
-spring.datasource.driver-class-name=org.postgresql.Driver
-spring.jpa.database-platform=org.hibernate.dialect.PostgreSQLDialect
-
-# Hibernate Settings
-spring.jpa.hibernate.ddl-auto=validate
-spring.jpa.show-sql=true
-
-# Flyway
-spring.flyway.enabled=true
-spring.flyway.locations=classpath:db/migration
-
-# JWT Configuration
-jwt.secret=${JWT_SECRET}
-jwt.expiration=${JWT_EXPIRATION}
-```
+---
 
 ## 🐛 Common Issues & Solutions
 
-### Issue 1: CORS Error in Browser
-
+### CORS Error in Browser
 **Error:** `Access-Control-Allow-Origin header missing`
 
 **Solution:**
-1. Check `CorsConfig.java` includes your origin
-2. Check `JwtAuthenticationFilter.java` does NOT have hardcoded CORS headers (remove any `httpResponse.setHeader("Access-Control-Allow-Origin", ...)`)
-3. Rebuild and restart
+1. Check `CorsConfig.java` includes your origin (http AND https)
+2. Make sure `JwtAuthenticationFilter.java` does NOT have hardcoded CORS headers
+3. Rebuild and redeploy
 
-### Issue 2: Docker Container Can't Reach Backend (502 Bad Gateway)
+### 502 Bad Gateway
+**Error:** Nginx returns 502
 
-**Error:** Nginx returns 502, `wget` from frontend container shows "Connection refused"
+**Cause:** Backend not reachable from Nginx container
 
-**Cause:** `server.address=127.0.0.1` in application.properties makes Spring Boot only listen on localhost inside the container.
+**Solution:**
+- Check `docker compose logs backend` for errors
+- Ensure `SERVER_ADDRESS: 0.0.0.0` is in docker-compose.yml
+- Test: `docker exec avecaesar-frontend wget -qO- http://backend:8081/api/periods`
 
-**Solution:** Add `SERVER_ADDRESS: 0.0.0.0` to docker-compose.yml environment, or remove `server.address` from application.properties.
-
-### Issue 3: Database Connection Refused
-
+### Database Connection Refused
 **Error:** `Connection to localhost:5555 refused`
 
 **Solution:**
-- For Docker: Make sure PostgreSQL container is running
-- For local dev: Start the PostgreSQL container first:
-  ```bash
-  docker start avecaesar-db
-  ```
+- For Docker: `docker compose ps` - is postgres running?
+- For local dev: `docker start avecaesar-db`
 
-### Issue 4: esbuild Version Mismatch (Frontend Build)
+### SSL Certificate Issues
+**Error:** `NET::ERR_CERT_AUTHORITY_INVALID`
 
-**Error:** `Host version "0.25.9" does not match binary version "0.27.2"`
+**Solution:**
+- Check you're using the right domain (.org not .com)
+- Certificates exist: `ls /etc/letsencrypt/live/avecaesar.org/`
+- Renew if expired: `certbot renew`
 
-**Solution:** Add `RUN npm rebuild esbuild` in frontend Dockerfile after `yarn install`
-
-### Issue 5: Frontend Shows "Failed to fetch periods"
-
-**Possible causes:**
-1. Backend not running
-2. CORS blocking request
-3. Wrong API URL in frontend config
-
-**Debug steps:**
-```bash
-# Test backend directly
-curl http://localhost:8081/api/periods
-
-# Check browser console for specific error
-# Check if CORS origin is allowed
-```
-
-### Issue 6: Changes Not Reflected After Deploy
-
-**Solution:** Rebuild containers with no cache:
+### Changes Not Showing After Deploy
+**Solution:**
 ```bash
 docker compose down
 docker compose build --no-cache
 docker compose up -d
 ```
+
+---
 
 ## 🔌 API Endpoints
 
@@ -506,6 +671,8 @@ POST   /api/auth/register    - Register new user
 POST   /api/auth/login       - Login and get JWT token
 ```
 
+---
+
 ## 🗄️ Database Management
 
 ### Export Database
@@ -523,20 +690,7 @@ docker exec -i avecaesar-db psql -U avecaesar -d ave_caesar < ave_caesar_backup.
 docker exec -it avecaesar-db psql -U avecaesar -d ave_caesar
 ```
 
-### Useful SQL Commands
-```sql
--- Check table counts
-SELECT COUNT(*) FROM periods;
-SELECT COUNT(*) FROM topics;
-SELECT COUNT(*) FROM chapters;
-SELECT COUNT(*) FROM questions;
-
--- List all tables
-\dt
-
--- Describe a table
-\d periods
-```
+---
 
 ## 🔧 Useful Docker Commands
 
@@ -547,7 +701,6 @@ docker compose ps
 # View logs
 docker compose logs backend
 docker compose logs frontend
-docker compose logs postgres
 
 # Stop all containers
 docker compose down
@@ -555,37 +708,45 @@ docker compose down
 # Rebuild and start
 docker compose up --build -d
 
-# Rebuild specific service
-docker compose build --no-cache frontend
+# Rebuild without cache
+docker compose build --no-cache
 
 # Enter a container
 docker exec -it avecaesar-backend /bin/sh
-docker exec -it avecaesar-frontend /bin/sh
 
 # Test internal networking
 docker exec avecaesar-frontend wget -qO- http://backend:8081/api/periods
 ```
 
-## 📝 Development Notes
+---
 
-### Key Configuration Points
+## 🔐 SSL Certificate Management
 
-1. **CORS must be configured in CorsConfig.java only** - Do not add CORS headers manually in filters
-2. **Docker networking uses service names** - `backend` not `localhost`
-3. **SERVER_ADDRESS must be 0.0.0.0 for Docker** - Otherwise containers can't communicate
-4. **Frontend API URL is empty in Docker** - Nginx proxies `/api` requests to backend
+### Certificate Location
+```
+/etc/letsencrypt/live/avecaesar.org/fullchain.pem  (certificate)
+/etc/letsencrypt/live/avecaesar.org/privkey.pem    (private key)
+```
 
-### Environment Variables (Docker)
+### Manual Renewal
+```bash
+docker compose stop frontend
+certbot renew
+docker compose start frontend
+```
 
-| Variable | Description |
-|----------|-------------|
-| SERVER_PORT | Backend port (8081) |
-| SERVER_ADDRESS | Bind address (0.0.0.0 for Docker) |
-| SPRING_DATASOURCE_URL | PostgreSQL connection URL |
-| JWT_SECRET | Secret key for JWT tokens |
-| JWT_EXPIRATION | Token expiration in ms |
+### Auto-Renewal (Cron)
+Already configured to run monthly at 3am:
+```
+0 3 1 * * cd /root/Istoria-react-springBoot && docker compose stop frontend && certbot renew && docker compose start frontend
+```
+
+### Check Expiration
+```bash
+certbot certificates
+```
 
 ---
 
 **Last Updated:** January 2026
-**Version:** 2.0.0
+**Version:** 2.1.0
