@@ -13,9 +13,11 @@
         "Rome was weakened and vulnerable to invasion from external Mediterranean powers",
         "Rome dominated much of Italy but still faced independent peoples and Greek city-states"
       ],
-      "correctAnswers": [3],
+      "correctAnswers": [
+        3
+      ],
       "difficulty": 1,
-      "text_reference": "Section 2: Rome's Strategic Situation"
+      "textReference": "#romes-strategic-situation"
     },
     {
       "question": "Which Greek city in southern Italy was the largest and most powerful, controlling major naval and commercial power?",
@@ -25,9 +27,11 @@
         "Tarentum, which was built on an excellent harbor and was a major naval power",
         "Rhegium, which controlled the southern approach to mainland Italian territories"
       ],
-      "correctAnswers": [2],
+      "correctAnswers": [
+        2
+      ],
       "difficulty": 1,
-      "text_reference": "Section 3: Tarentum and the Greek Threat"
+      "textReference": "#tarentum-and-the-greek-threat"
     },
     {
       "question": "What regions of Italy remained partially independent or outside direct Roman control after the Samnite Wars?",
@@ -37,9 +41,11 @@
         "Only the island of Sicily remained independent while all mainland Italy was conquered",
         "The entire Italian peninsula was completely unified under direct Roman administrative control"
       ],
-      "correctAnswers": [1],
+      "correctAnswers": [
+        1
+      ],
       "difficulty": 1,
-      "text_reference": "Section 2: The Fragmented South"
+      "textReference": "#the-fragmented-south"
     },
     {
       "question": "Who was King Pyrrhus and from which kingdom did he rule?",
@@ -49,9 +55,11 @@
         "A Syrian king from the Seleucid empire who ruled Asian Mediterranean territories",
         "The king of Egypt who controlled North African and Mediterranean commercial power"
       ],
-      "correctAnswers": [1],
+      "correctAnswers": [
+        1
+      ],
       "difficulty": 1,
-      "text_reference": "Section 4: Who Was Pyrrhus?"
+      "textReference": "#who-was-pyrrhus"
     },
     {
       "question": "What military experience and background did Pyrrhus have before his invasion of Italy?",
@@ -61,9 +69,11 @@
         "He conquered most of Greece and Egypt before attempting to invade Italy",
         "He had studied under Alexander the Great and served as his personal military commander"
       ],
-      "correctAnswers": [1],
+      "correctAnswers": [
+        1
+      ],
       "difficulty": 1,
-      "text_reference": "Section 4: Background and Rise to Power"
+      "textReference": "#background-and-rise-to-power"
     },
     {
       "question": "Why did Tarentum appeal to King Pyrrhus for military assistance against Rome?",
@@ -73,9 +83,11 @@
         "Tarentum was threatened by other Italian peoples and needed any available military aid",
         "Tarentum wanted to hire Pyrrhus as a military advisor for tactical training purposes"
       ],
-      "correctAnswers": [1],
+      "correctAnswers": [
+        1
+      ],
       "difficulty": 1,
-      "text_reference": "Section 3: Tarentum and the Greek Threat"
+      "textReference": "#tarentum-and-the-greek-threat"
     },
     {
       "question": "What motivated Pyrrhus to accept Tarentum's invitation to invade Italy?",
@@ -85,9 +97,11 @@
         "He was fleeing threats to his kingdom and needed a temporary refuge in Italy",
         "He wanted to unite all Greek peoples under his rule throughout the Mediterranean"
       ],
-      "correctAnswers": [0],
+      "correctAnswers": [
+        0
+      ],
       "difficulty": 1,
-      "text_reference": "Section 4: The Appeal from Tarentum"
+      "textReference": "#the-appeal-from-tarentum"
     },
     {
       "question": "What military forces did Pyrrhus bring with him when he invaded Italy in 280 BCE?",
@@ -97,9 +111,11 @@
         "Only mercenary forces from Greece with no professional military organization",
         "A well-equipped army including infantry, cavalry, and war elephants"
       ],
-      "correctAnswers": [3],
+      "correctAnswers": [
+        3
+      ],
       "difficulty": 1,
-      "text_reference": "Section 4: Pyrrhus's Invasion Force"
+      "textReference": "#pyrrhuss-invasion-force"
     },
     {
       "question": "Why were war elephants considered the most advanced military technology of Pyrrhus's era?",
@@ -109,9 +125,11 @@
         "They were large, armored, trained for warfare, and completely unknown to Italian armies",
         "They were primarily used for transportation rather than direct combat purposes"
       ],
-      "correctAnswers": [2],
+      "correctAnswers": [
+        2
+      ],
       "difficulty": 1,
-      "text_reference": "Section 4: Pyrrhus's Invasion Force"
+      "textReference": "#pyrrhuss-invasion-force"
     },
     {
       "question": "What was Pyrrhus's strategic vision for Italy when he arrived to support Tarentum?",
@@ -121,9 +139,11 @@
         "To liberate all Italian peoples from Roman control and create a democratic federation",
         "To conquer Sicily and use it as a base for Mediterranean commercial expansion"
       ],
-      "correctAnswers": [1],
+      "correctAnswers": [
+        1
+      ],
       "difficulty": 1,
-      "text_reference": "Section 4: Pyrrhus's Strategic Vision"
+      "textReference": "#pyrrhuss-strategic-vision"
     }
   ]
 }

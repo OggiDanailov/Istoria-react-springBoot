@@ -16,7 +16,7 @@
       ],
       "correctAnswers": [0, 1, 2, 4],
       "difficulty": 3,
-      "text_reference": "Section 6: What Changed"
+      "textReference": "#what-changed"
     },
     {
       "question": "Which aspects of Roman society were NOT fundamentally changed by the Licinian Laws? (SELECT ALL THAT APPLY)",
@@ -29,7 +29,7 @@
       ],
       "correctAnswers": [0, 1, 2, 3],
       "difficulty": 3,
-      "text_reference": "Section 6: What Did NOT Change"
+      "textReference": "#what-did-not-change"
     },
     {
       "question": "Why is it misleading to characterize the Licinian Laws as the 'end' of the Conflict of the Orders? (SELECT ALL THAT APPLY)",
@@ -42,7 +42,7 @@
       ],
       "correctAnswers": [1, 3, 4],
       "difficulty": 3,
-      "text_reference": "Section 6: A New Phase Rather Than an End"
+      "textReference": "#a-new-phase-rather-than-an-end"
     },
     {
       "question": "What does the achievement of plebeian access to the consulship reveal about patrician arguments for exclusion? (SELECT ALL THAT APPLY)",
@@ -55,7 +55,7 @@
       ],
       "correctAnswers": [1, 2, 3],
       "difficulty": 3,
-      "text_reference": "Section 6: What Changed and Significance"
+      "textReference": "#what-changed"
     },
     {
       "question": "How do modern historians evaluate the reliability of sources describing the Gallic invasion and Camillus? (SELECT ALL THAT APPLY)",
@@ -68,7 +68,7 @@
       ],
       "correctAnswers": [1, 2, 3],
       "difficulty": 3,
-      "text_reference": "Section 2: The Specific Invasion - Brennus"
+      "textReference": "#recovery-and-expulsion"
     },
     {
       "question": "What does the fact that poor plebeians gained little from plebeian access to the consulship reveal about the Licinian Laws? (SELECT ALL THAT APPLY)",
@@ -81,7 +81,7 @@
       ],
       "correctAnswers": [1, 2, 3, 4],
       "difficulty": 3,
-      "text_reference": "Section 6: What Did NOT Change"
+      "textReference": "#what-did-not-change"
     },
     {
       "question": "How did the resolution of the Conflict of the Orders affect Rome's capacity for external expansion? (SELECT ALL THAT APPLY)",
@@ -94,7 +94,7 @@
       ],
       "correctAnswers": [1, 4],
       "difficulty": 3,
-      "text_reference": "Section 7: Conclusion"
+      "textReference": "#conclusion--from-conflict-to-integration"
     },
     {
       "question": "What is the historical significance of transforming class conflict into factional competition? (SELECT ALL THAT APPLY)",
@@ -107,7 +107,7 @@
       ],
       "correctAnswers": [1, 2, 3, 4],
       "difficulty": 3,
-      "text_reference": "Section 6: A New Phase Rather Than an End"
+      "textReference": "#a-new-phase-rather-than-an-end"
     },
     {
       "question": "How did the plebeian victory on the consulship differ fundamentally from earlier concessions like the Twelve Tables? (SELECT ALL THAT APPLY)",
@@ -120,7 +120,7 @@
       ],
       "correctAnswers": [1, 3],
       "difficulty": 3,
-      "text_reference": "Section 5: What the Licinian Laws Established"
+      "textReference": "#what-the-licinian-laws-established"
     },
     {
       "question": "What historical methodology problem exists in evaluating why patricians finally accepted the Licinian Laws in 367 BCE? (SELECT ALL THAT APPLY)",
@@ -133,7 +133,7 @@
       ],
       "correctAnswers": [1, 2],
       "difficulty": 3,
-      "text_reference": "Section 5: The Breakthrough - The Licinian Laws"
+      "textReference": "#the-resolution"
     }
   ]
 }

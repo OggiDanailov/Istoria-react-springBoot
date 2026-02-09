@@ -13,9 +13,11 @@
         "The Romans, who focused on military expansion and territorial dominion in Italy",
         "The Carthaginians, who controlled all Mediterranean trade routes exclusively"
       ],
-      "correctAnswers": [1],
+      "correctAnswers": [
+        1
+      ],
       "difficulty": 1,
-      "text_reference": "Section 2: The Phoenician Heritage"
+      "textReference": "#the-phoenician-heritage"
     },
     {
       "question": "What major achievement did the Phoenicians contribute to writing systems and alphabets?",
@@ -25,9 +27,11 @@
         "They developed one of the first alphabetic writing systems using simple sound symbols",
         "They invented the first numerical system for calculating trade transactions"
       ],
-      "correctAnswers": [2],
+      "correctAnswers": [
+        2
+      ],
       "difficulty": 1,
-      "text_reference": "Section 2: Alphabet Development"
+      "textReference": "#alphabet-development"
     },
     {
       "question": "How did Phoenician cities establish their influence throughout the Mediterranean region?",
@@ -37,9 +41,11 @@
         "By creating a unified Mediterranean empire under a single ruler's authority",
         "Through forced assimilation of local populations and cultural suppression"
       ],
-      "correctAnswers": [1],
+      "correctAnswers": [
+        1
+      ],
       "difficulty": 1,
-      "text_reference": "Section 2: Colonial Expansion"
+      "textReference": "#colonial-expansion"
     },
     {
       "question": "According to ancient sources, when was Carthage traditionally founded?",
@@ -49,9 +55,11 @@
         "Around 300 BCE by Alexander the Great's successors after his death",
         "Around 814 BCE by Phoenician settlers from the city of Tyre"
       ],
-      "correctAnswers": [3],
+      "correctAnswers": [
+        3
+      ],
       "difficulty": 1,
-      "text_reference": "Section 2: The Foundation (Traditional Date: 814 BCE)"
+      "textReference": "#the-foundation-traditional-date-814-bce"
     },
     {
       "question": "What famous story describes how Carthage's founder negotiated land from local Berber peoples?",
@@ -61,9 +69,11 @@
         "The story details how the founder defeated local armies in battle to claim territorial lands",
         "The story recounts the founder's payment of gold and silver for coastal territorial possession"
       ],
-      "correctAnswers": [0],
+      "correctAnswers": [
+        0
+      ],
       "difficulty": 1,
-      "text_reference": "Section 2: The Foundation (Traditional Date: 814 BCE)"
+      "textReference": "#the-foundation-traditional-date-814-bce"
     },
     {
       "question": "Which Phoenician city was the traditional source of settlers who founded Carthage?",
@@ -73,9 +83,11 @@
         "Tyre, the most powerful Phoenician city from which colonists departed",
         "Aradus, which maintained control of distant Phoenician colonial outposts"
       ],
-      "correctAnswers": [2],
+      "correctAnswers": [
+        2
+      ],
       "difficulty": 1,
-      "text_reference": "Section 2: The Foundation (Traditional Date: 814 BCE)"
+      "textReference": "#the-foundation-traditional-date-814-bce"
     },
     {
       "question": "What advantages did Carthage's geographic location provide to the growing settlement?",
@@ -85,9 +97,11 @@
         "Strategic location for defending against Roman military expansion from Italian territories",
         "Access to tin trade routes from western Europe and Atlantic coastal regions"
       ],
-      "correctAnswers": [0],
+      "correctAnswers": [
+        0
+      ],
       "difficulty": 1,
-      "text_reference": "Section 2: Early Development"
+      "textReference": "#early-development"
     },
     {
       "question": "Why did western Phoenician colonies like Carthage become increasingly important during the 6th-5th centuries BCE?",
@@ -97,9 +111,11 @@
         "Roman armies from Italy began attacking Phoenician colonies in North Africa",
         "Egypt's naval dominance forced Phoenician merchants to establish alternative trade routes"
       ],
-      "correctAnswers": [1],
+      "correctAnswers": [
+        1
+      ],
       "difficulty": 1,
-      "text_reference": "Section 2: Early Development"
+      "textReference": "#early-development"
     },
     {
       "question": "What territories did Carthage control or colonize by the 3rd century BCE?",
@@ -109,9 +125,11 @@
         "The entire Mediterranean including Egypt, Greece, and coastal Roman territories completely",
         "Only isolated trading posts without direct territorial control or colonial administration"
       ],
-      "correctAnswers": [1],
+      "correctAnswers": [
+        1
+      ],
       "difficulty": 1,
-      "text_reference": "Section 2: Colonial Expansion"
+      "textReference": "#colonial-expansion"
     },
     {
       "question": "Why were Phoenician ships considered among the most advanced vessels in the ancient world?",
@@ -121,9 +139,11 @@
         "They featured iron reinforcement and advanced navigation instruments for precise route finding",
         "They were designed specifically for military warfare rather than commercial trading purposes"
       ],
-      "correctAnswers": [1],
+      "correctAnswers": [
+        1
+      ],
       "difficulty": 1,
-      "text_reference": "Section 2: Naval Technology"
+      "textReference": "#naval-technology"
     }
   ]
 }

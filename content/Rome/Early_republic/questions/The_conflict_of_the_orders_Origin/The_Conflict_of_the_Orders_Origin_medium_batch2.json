@@ -16,7 +16,7 @@
       ],
       "correctAnswers": [2],
       "difficulty": 2,
-      "text_reference": "Section 4: Debt Slavery"
+      "textReference": "#debt-slavery"
     },
     {
       "question": "Why was patrician monopoly over conquered land a source of plebeian grievance? (SELECT ALL THAT APPLY)",
@@ -30,7 +30,7 @@
       ],
       "correctAnswers": [1, 4, 5],
       "difficulty": 2,
-      "text_reference": "Section 4: Land Distribution"
+      "textReference": "#land-distribution"
     },
     {
       "question": "Why did patrician magistrates lack incentive to protect plebeians from creditors?",
@@ -44,7 +44,7 @@
       ],
       "correctAnswers": [5],
       "difficulty": 2,
-      "text_reference": "Section 4: Political Powerlessness"
+      "textReference": "#political-powerlessness"
     },
     {
       "question": "What was the strategic advantage of plebeian military secession as a tactic? (SELECT ALL THAT APPLY)",
@@ -58,7 +58,7 @@
       ],
       "correctAnswers": [1, 3, 4, 5],
       "difficulty": 2,
-      "text_reference": "Section 4: The Threat That Worked"
+      "textReference": "#the-threat-that-worked"
     },
     {
       "question": "Why did the creation of the tribune office initially satisfy some plebeian demands? (SELECT ALL THAT APPLY)",
@@ -71,7 +71,7 @@
       ],
       "correctAnswers": [1, 4],
       "difficulty": 2,
-      "text_reference": "Section 4: The Patrician Response - Containment and Concession"
+      "textReference": "#the-patrician-response-containment-and-concession"
     },
     {
       "question": "How did the Twelve Tables satisfy AND disappoint plebeian demands simultaneously?",
@@ -84,7 +84,7 @@
       ],
       "correctAnswers": [0],
       "difficulty": 2,
-      "text_reference": "Section 5: The Limitations - What the Twelve Tables Did NOT Solve"
+      "textReference": "#the-limitations-what-the-twelve-tables-did-not-solve"
     },
     {
       "question": "Why did the patrician strategy of making limited concessions ultimately fail? (SELECT ALL THAT APPLY)",
@@ -98,7 +98,7 @@
       ],
       "correctAnswers": [1, 2, 4, 5],
       "difficulty": 2,
-      "text_reference": "Section 4: The Patrician Response - Containment and Concession"
+      "textReference": "#the-patrician-response-containment-and-concession"
     },
     {
       "question": "What is the significance of the phrase 'the Conflict of the Orders'? (SELECT ALL THAT APPLY)",
@@ -111,7 +111,7 @@
       ],
       "correctAnswers": [1, 4],
       "difficulty": 2,
-      "text_reference": "Section 3: The Central Conflict"
+      "textReference": "#the-central-conflict-patricians-vs-plebeians"
     },
     {
       "question": "How did Rome's constant external warfare shape the plebeian rights movement? (SELECT ALL THAT APPLY)",
@@ -125,7 +125,7 @@
       ],
       "correctAnswers": [0, 4, 5],
       "difficulty": 2,
-      "text_reference": "Section 3: External Threat and Military Success"
+      "textReference": "#the-significance-of-military-necessity"
     },
     {
       "question": "What does it reveal that the Twelve Tables actually CODIFIED debt slavery as legal? (SELECT ALL THAT APPLY)",
@@ -139,7 +139,7 @@
       ],
       "correctAnswers": [1, 4, 5],
       "difficulty": 2,
-      "text_reference": "Section 5: The Limitations and The Bridge"
+      "textReference": "#the-bridge-why-the-struggle-continued"
     }
   ]
 }

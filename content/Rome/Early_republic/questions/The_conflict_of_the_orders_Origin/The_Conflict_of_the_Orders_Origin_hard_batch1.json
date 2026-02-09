@@ -16,7 +16,7 @@
       ],
       "correctAnswers": [0, 1, 4],
       "difficulty": 3,
-      "text_reference": "Section 2: Literary Sources"
+      "textReference": "#literary-sources-the-same-historians"
     },
     {
       "question": "What does the absence of explicit patrician definitions in ancient sources suggest? (SELECT ALL THAT APPLY)",
@@ -29,7 +29,7 @@
       ],
       "correctAnswers": [1, 3],
       "difficulty": 3,
-      "text_reference": "Section 2: Modern Historical Approach"
+      "textReference": "#the-conflict-of-the-orders-a-case-study-in-source-problems"
     },
     {
       "question": "Which statement best captures the key difference between Kingdom and Republic power structures?",
@@ -42,7 +42,7 @@
       ],
       "correctAnswers": [1],
       "difficulty": 3,
-      "text_reference": "Section 1: Comparison with the Kingdom"
+      "textReference": "#comparison-with-the-kingdom"
     },
     {
       "question": "What paradox existed in the Comitia Centuriata as an instrument of 'popular participation'?",
@@ -55,7 +55,7 @@
       ],
       "correctAnswers": [1],
       "difficulty": 3,
-      "text_reference": "Section 1: Assemblies - Popular Participation, Aristocratic Advantage"
+      "textReference": "#assemblies-popular-participation-aristocratic-advantage"
     },
     {
       "question": "Which interpretation is MOST supported by historical evidence for the Conflict of the Orders?",
@@ -68,7 +68,7 @@
       ],
       "correctAnswers": [2],
       "difficulty": 3,
-      "text_reference": "Section 2: Modern Historical Approach and The Conflict of the Orders"
+      "textReference": "#modern-historical-approach"
     },
     {
       "question": "Which aspects represented genuine innovation rather than traditional custom? (SELECT ALL THAT APPLY)",
@@ -81,7 +81,7 @@
       ],
       "correctAnswers": [0, 1, 2, 3],
       "difficulty": 3,
-      "text_reference": "Section 1 throughout"
+      "textReference": "#the-consulate-shared-executive-power-and-the-prevention-of-tyranny"
     },
     {
       "question": "Why was written law NECESSARY but INSUFFICIENT to resolve the patrician-plebeian conflict?",
@@ -94,7 +94,7 @@
       ],
       "correctAnswers": [2],
       "difficulty": 3,
-      "text_reference": "Section 5: The Limitations and The Bridge"
+      "textReference": "#the-bridge-why-the-struggle-continued"
     },
     {
       "question": "Which reasons explain why mutual veto was preferable to character-based reliance? (SELECT ALL THAT APPLY)",
@@ -107,7 +107,7 @@
       ],
       "correctAnswers": [0, 1, 2],
       "difficulty": 3,
-      "text_reference": "Section 1: Why Two Consuls and The Immediate Challenge"
+      "textReference": "#why-two-consuls-the-logic-of-checks"
     },
     {
       "question": "What does the challenge of evaluating early Republic sources reveal about historical methodology?",
@@ -120,7 +120,7 @@
       ],
       "correctAnswers": [2],
       "difficulty": 3,
-      "text_reference": "Section 2 throughout"
+      "textReference": "#limitations-of-the-sources"
     },
     {
       "question": "Why did patrician incremental concessions ultimately fail to prevent plebeian success? (SELECT ALL THAT APPLY)",
@@ -133,7 +133,7 @@
       ],
       "correctAnswers": [0, 2, 4],
       "difficulty": 3,
-      "text_reference": "Section 4: The Patrician Response and Section 5: The Bridge"
+      "textReference": "#the-patrician-response-containment-and-concession"
     }
   ]
 }

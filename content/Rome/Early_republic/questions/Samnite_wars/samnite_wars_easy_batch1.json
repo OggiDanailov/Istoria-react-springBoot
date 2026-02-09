@@ -15,7 +15,7 @@
       ],
       "correctAnswers": [1],
       "difficulty": 1,
-      "text_reference": "Section 1: Introduction"
+      "textReference": "#introduction--romes-rise-to-dominance-in-italy"
     },
     {
       "question": "How long did the Samnite Wars span, and how many major conflicts occurred during this period?",
@@ -27,7 +27,7 @@
       ],
       "correctAnswers": [1],
       "difficulty": 1,
-      "text_reference": "Section 1: Introduction"
+      "textReference": "#introduction--romes-rise-to-dominance-in-italy"
     },
     {
       "question": "Why did Rome find the Samnites a more difficult challenge than the Etruscans, whom Rome had previously defeated?",
@@ -39,7 +39,7 @@
       ],
       "correctAnswers": [1],
       "difficulty": 1,
-      "text_reference": "Section 2: Who Were the Samnites?"
+      "textReference": "#why-the-samnites-were-more-dangerous-than-the-etruscans"
     },
     {
       "question": "Where were the Samnites primarily located in Italy?",
@@ -51,7 +51,7 @@
       ],
       "correctAnswers": [2],
       "difficulty": 1,
-      "text_reference": "Section 2: The Samnite People"
+      "textReference": "#the-samnite-people-territory-society-and-military-strength"
     },
     {
       "question": "Why was Samnite mountainous territory a military advantage against Rome?",
@@ -63,7 +63,7 @@
       ],
       "correctAnswers": [0],
       "difficulty": 1,
-      "text_reference": "Section 2: Territorial Advantages"
+      "textReference": "#why-the-samnites-were-more-dangerous-than-the-etruscans"
     },
     {
       "question": "What was the primary difference between Etruscan and Samnite military strength in the 4th century BCE?",
@@ -75,7 +75,7 @@
       ],
       "correctAnswers": [3],
       "difficulty": 1,
-      "text_reference": "Section 2: Why the Samnites Were More Dangerous"
+      "textReference": "#why-the-samnites-were-more-dangerous-than-the-etruscans"
     },
     {
       "question": "What was one key aspect of Samnite military culture?",
@@ -87,7 +87,7 @@
       ],
       "correctAnswers": [2],
       "difficulty": 1,
-      "text_reference": "Section 2: The Samnite People"
+      "textReference": "#the-samnite-people-territory-society-and-military-strength"
     },
     {
       "question": "What wealthy region lay between Samnite territory and Rome, making it a source of conflict?",
@@ -99,7 +99,7 @@
       ],
       "correctAnswers": [1],
       "difficulty": 1,
-      "text_reference": "Section 2: Why Rome and Samnium Collided"
+      "textReference": "#why-rome-and-samnium-collided"
     },
     {
       "question": "How were Samnite city-states organized compared to Etruscan city-states?",
@@ -111,7 +111,7 @@
       ],
       "correctAnswers": [2],
       "difficulty": 1,
-      "text_reference": "Section 2: Military Organization and Capability"
+      "textReference": "#why-the-samnites-were-more-dangerous-than-the-etruscans"
     },
     {
       "question": "What immediately triggered Rome's decision to go to war with Samnium in 343 BCE?",
@@ -123,7 +123,7 @@
       ],
       "correctAnswers": [2],
       "difficulty": 1,
-      "text_reference": "Section 2: Why Rome and Samnium Collided"
+      "textReference": "#why-rome-and-samnium-collided"
     }
   ]
 }

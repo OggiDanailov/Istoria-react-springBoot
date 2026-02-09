@@ -1,0 +1,184 @@
+{
+  "chapter": "Chapter 1: The First March on Rome (88-87 BCE)",
+  "batchOrder": 3,
+  "difficulty": 3,
+  "description": "Hard Questions (Multiple Correct Answers)",
+  "questions": [
+    {
+      "question": "Why was the Mithridatic command so desirable to Roman generals? (SELECT ALL THAT APPLY)",
+      "options": [
+        "It offered opportunities for massive plunder from wealthy eastern provinces",
+        "The Senate had pledged to double the commander's land grants upon return",
+        "Roman religious law required blood vengeance for the massacre of citizens abroad",
+        "Success would bring unmatched military glory and political influence",
+        "Eastern campaigns historically lasted long enough to build deep personal loyalty among soldiers"
+      ],
+      "correctAnswers": [
+        0,
+        3
+      ],
+      "difficulty": 3,
+      "textReference": "#why-the-command-mattered"
+    },
+    {
+      "question": "What characterized Sulla's background before his rise to military prominence? (SELECT ALL THAT APPLY)",
+      "options": [
+        "He came from an ancient patrician family that had fallen into obscurity",
+        "He was known for consorting with actors and theatrical performers",
+        "He had served as tribune of the plebs and championed popular reform causes",
+        "He distinguished himself early through a brilliant independent campaign in Spain",
+        "He spent his youth in relative poverty, living in a cheap insula",
+        "He rose to prominence through generous patronage of the urban poor"
+      ],
+      "correctAnswers": [
+        0,
+        1,
+        4
+      ],
+      "difficulty": 3,
+      "textReference": "#lucius-cornelius-sulla"
+    },
+    {
+      "question": "What made Sulla's march on Rome possible according to the chapter? (SELECT ALL THAT APPLY)",
+      "options": [
+        "The Senate had secretly authorized the use of force against Marius",
+        "Common soldiers felt no loyalty to traditions they barely understood",
+        "Religious authorities had granted a special exemption from the pomerium",
+        "Marius had disbanded the city garrison, leaving Rome effectively defenseless",
+        "The military reforms had created professional soldiers loyal to their generals",
+        "His soldiers expected him to lead them to plunder in the East"
+      ],
+      "correctAnswers": [
+        3,
+        4,
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#sections-3-and-4"
+    },
+    {
+      "question": "What forms of resistance did defenders attempt against Sulla's march on Rome? (SELECT ALL THAT APPLY)",
+      "options": [
+        "Organizing gladiators and armed slaves to fight the advancing legions",
+        "Romans throwing tiles and debris from rooftops at soldiers in the streets",
+        "Summoning allied Italian armies stationed in the surrounding countryside",
+        "The tribunes invoking their sacred veto to halt the army's advance",
+        "Fortifying the city gates and preparing for a prolonged siege"
+      ],
+      "correctAnswers": [
+        0,
+        1
+      ],
+      "difficulty": 3,
+      "textReference": "#the-battle-for-rome"
+    },
+    {
+      "question": "What factors explain Sulla's relative restraint after his first capture of Rome? (SELECT ALL THAT APPLY)",
+      "options": [
+        "He saw himself as defending constitutional order, not overthrowing it",
+        "He needed to depart quickly for the war against Mithridates",
+        "The Senate threatened to declare him a public enemy if he continued",
+        "He limited executions to roughly a dozen opponents rather than conducting mass killings",
+        "He secretly negotiated a power-sharing agreement with Marius",
+        "His soldiers refused to carry out further violence against fellow citizens"
+      ],
+      "correctAnswers": [
+        0,
+        1,
+        3
+      ],
+      "difficulty": 3,
+      "textReference": "#sullas-restraint"
+    },
+    {
+      "question": "How did Cinna build his forces after being expelled from Rome? (SELECT ALL THAT APPLY)",
+      "options": [
+        "He recruited the army still besieging Social War rebels at Nola",
+        "He summoned Marius back from exile in Africa",
+        "New Italian citizens denied their promised voting rights flocked to his banner",
+        "He hired Germanic mercenaries with gold supplied by eastern allies",
+        "Slaves were promised freedom in exchange for military service",
+        "He negotiated an alliance with Mithridates who sent warships and troops"
+      ],
+      "correctAnswers": [
+        0,
+        1,
+        2,
+        4
+      ],
+      "difficulty": 3,
+      "textReference": "#section-5"
+    },
+    {
+      "question": "What characterized the Marian massacres of late 87 BCE? (SELECT ALL THAT APPLY)",
+      "options": [
+        "Marius's slave-soldiers, the Bardyiae, roamed streets killing identified opponents",
+        "A nod or refused handshake from Marius could serve as a death sentence",
+        "The consul Octavius was killed in his curule chair and his head publicly displayed",
+        "The killings were limited to senators who had openly supported Sulla's march",
+        "Cinna organized the massacres through formal judicial proceedings and public trials",
+        "The violence lasted approximately three weeks before order was restored"
+      ],
+      "correctAnswers": [
+        0,
+        1,
+        2
+      ],
+      "difficulty": 3,
+      "textReference": "#vengeance-unleashed-and-the-horror"
+    },
+    {
+      "question": "What precedents did the events of 88-87 BCE establish for Roman politics? (SELECT ALL THAT APPLY)",
+      "options": [
+        "Military force could be used to settle domestic political disputes",
+        "Political violence had escalated from individual murder to systematic massacre",
+        "Soldiers' loyalty to their generals proved stronger than loyalty to the Republic",
+        "Exile was no longer a permanent solution to political enemies",
+        "The Senate permanently lost all constitutional authority over military commands",
+        "The tribunate was formally abolished as a political office"
+      ],
+      "correctAnswers": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "difficulty": 3,
+      "textReference": "Conclusion: The Point of No Return"
+    },
+    {
+      "question": "What was the state of Rome during Cinna's dominance from 86-84 BCE? (SELECT ALL THAT APPLY)",
+      "options": [
+        "Cinna held the consulship continuously from 87 to 84 BCE in defiance of term limits",
+        "Rome functioned as a military dictatorship despite maintaining republican forms",
+        "The regime was sustained by force and the anticipation of Sulla's inevitable return",
+        "Cinna governed through genuine consensus and broad senatorial support",
+        "The Senate formally abolished the consulship and granted Cinna royal authority",
+        "Cinna negotiated a permanent peace treaty with Sulla recognizing divided spheres of rule"
+      ],
+      "correctAnswers": [
+        0,
+        1,
+        2
+      ],
+      "difficulty": 3,
+      "textReference": "#mariuss-seventh-consulship-and-death"
+    },
+    {
+      "question": "What transformation had occurred in Marius by the time he returned from exile? (SELECT ALL THAT APPLY)",
+      "options": [
+        "He was consumed by desire for vengeance after months of humiliation and flight",
+        "His exile had broken him psychologically, leading to murderous depression upon his return",
+        "He had developed a sophisticated strategy for political reconciliation with the Senate",
+        "He returned with a large professional army recruited from African kingdoms",
+        "He had forged a military alliance with Mithridates to coordinate attacks on Sulla"
+      ],
+      "correctAnswers": [
+        0,
+        1
+      ],
+      "difficulty": 3,
+      "textReference": "#the-return-of-marius"
+    }
+  ]
+}

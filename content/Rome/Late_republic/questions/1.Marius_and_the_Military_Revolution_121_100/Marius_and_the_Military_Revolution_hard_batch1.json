@@ -1,0 +1,139 @@
+{
+  "chapter_id": "late-republic-marius-military-revolution",
+  "batch_number": 4,
+  "difficulty": 3,
+  "batch_order": 4,
+  "description": "Hard - Analysis, Long-term Consequences & Historical Significance",
+  "questions": [
+    {
+      "question": "How did Marius's military reforms fundamentally alter the relationship between soldiers and the Roman state? (SELECT ALL THAT APPLY)",
+      "options": [
+        "The reforms strengthened soldiers' commitment to Republican institutions",
+        "Soldiers' loyalty transferred from the abstract Republic to individual commanders",
+        "The legion replaced the farm and community as the soldier's primary identity",
+        "A new type of soldier emerged—one willing to march against Rome itself if ordered",
+        "Soldiers had a direct interest in their general's political fortunes"
+      ],
+      "correctAnswers": [1, 2, 3, 4],
+      "difficulty": 3,
+      "textReference": "#section-7-the-political-implications"
+    },
+    {
+      "question": "What does the rivalry between Marius and Sulla over credit for capturing Jugurtha reveal about Roman political culture? (SELECT ALL THAT APPLY)",
+      "options": [
+        "Roman commanders prioritized state interests over personal glory",
+        "The incident planted seeds of conflict that would lead to civil war decades later",
+        "Military glory was the primary currency of Roman political advancement",
+        "The Senate successfully mediated disputes between ambitious generals",
+        "Military commanders rarely allowed personal disputes to affect their political careers"
+      ],
+      "correctAnswers": [1, 2],
+      "difficulty": 3,
+      "textReference": "#the-sulla-complication"
+    },
+    {
+      "question": "Why did Marius's solution to the recruitment crisis have unintended revolutionary consequences? (SELECT ALL THAT APPLY)",
+      "options": [
+        "Marius deliberately designed reforms to enable military dictatorship",
+        "He was solving a practical problem without considering long-term implications",
+        "The tools he created would be exploited by successors like Sulla and Caesar",
+        "Creating soldiers dependent on their general for land changed political dynamics",
+        "The Senate immediately recognized the danger and reversed the reforms"
+      ],
+      "correctAnswers": [1, 2, 3],
+      "difficulty": 3,
+      "textReference": "#conclusion-the-revolution-no-one-planned"
+    },
+    {
+      "question": "How did Marius's consulship in 107 BCE foreshadow later threats to the Republic? (SELECT ALL THAT APPLY)",
+      "options": [
+        "The popular assembly bypassed senatorial authority in military matters",
+        "The Senate maintained exclusive control over all military appointments",
+        "Military necessity was used to justify breaking constitutional norms",
+        "The crisis was resolved by strengthening senatorial oversight",
+        "Future leaders would use similar methods to gain commands against Senate opposition"
+      ],
+      "correctAnswers": [0, 2, 4],
+      "difficulty": 3,
+      "textReference": "#the-consulship-of-107-bce"
+    },
+    {
+      "question": "What structural contradictions made the Marian reforms both necessary and dangerous? (SELECT ALL THAT APPLY)",
+      "options": [
+        "The Republic had effective mechanisms to reintegrate professional soldiers",
+        "Rome's imperial commitments required professionals, but the constitution assumed citizen-farmers",
+        "Military success required long-term armies that threatened civilian control",
+        "Generals had no political influence over their soldiers' futures",
+        "The economic system that displaced farmers created the landless men who filled the legions"
+      ],
+      "correctAnswers": [1, 2, 4],
+      "difficulty": 3,
+      "textReference": "#the-system-under-strain"
+    },
+    {
+      "question": "How did Sallust's portrayal of the Jugurthine War critique the Roman aristocracy? (SELECT ALL THAT APPLY)",
+      "options": [
+        "Sallust praised the aristocracy for eventually solving the Jugurthine problem",
+        "The repeated failures of noble commanders contrasted with Marius's competence",
+        "Jugurtha's claim that Rome was 'a city for sale' indicted aristocratic corruption",
+        "The war revealed that personal profit trumped national interest among the elite",
+        "Sallust suggested noble birth no longer guaranteed virtue or ability"
+      ],
+      "correctAnswers": [1, 2, 3, 4],
+      "difficulty": 3,
+      "textReference": "#the-jugurthine-problem"
+    },
+    {
+      "question": "What does the Roman response to the Germanic threat reveal about crisis and constitutional norms? (SELECT ALL THAT APPLY)",
+      "options": [
+        "The crisis strengthened constitutional safeguards against excessive power",
+        "Existential threats led Romans to abandon traditional limits on power",
+        "Marius's consecutive consulships violated the principle of annual rotation",
+        "The Senate successfully maintained constitutional limits despite the crisis",
+        "Each exception to tradition made the next exception easier to justify"
+      ],
+      "correctAnswers": [1, 2, 4],
+      "difficulty": 3,
+      "textReference": "#marius-called-to-save-rome"
+    },
+    {
+      "question": "How did the Saturninus crisis demonstrate contradictions in Marius's position? (SELECT ALL THAT APPLY)",
+      "options": [
+        "Marius found a way to satisfy both populares and the Senate simultaneously",
+        "He needed radical allies to pass legislation benefiting his veterans",
+        "Those allies' methods threatened the order Marius claimed to defend",
+        "Marius emerged from the crisis with his reputation enhanced",
+        "Military power alone could not solve political problems"
+      ],
+      "correctAnswers": [1, 2, 4],
+      "difficulty": 3,
+      "textReference": "#the-sixth-consulship-100-bce"
+    },
+    {
+      "question": "Why was the shift to professional soldiers ultimately fatal to the Republic? (SELECT ALL THAT APPLY)",
+      "options": [
+        "Their oath bound them to their general, not to Rome",
+        "Professional armies proved less effective than citizen militias",
+        "Veterans' need for land gave them reason to support their general against his enemies",
+        "Within a generation, commanders would march their legions on Rome itself",
+        "Professional soldiers maintained strong loyalty to Republican institutions"
+      ],
+      "correctAnswers": [0, 2, 3],
+      "difficulty": 3,
+      "textReference": "#loyalty-transferred"
+    },
+    {
+      "question": "What does Marius's career reveal about the nature of political change in Rome? (SELECT ALL THAT APPLY)",
+      "options": [
+        "Roman leaders carefully planned the long-term consequences of their reforms",
+        "Revolutionary changes often came from practical necessities rather than ideology",
+        "Solutions to immediate crises could create larger long-term problems",
+        "The Senate effectively controlled all political change in the Republic",
+        "The Republic's destruction came through accumulated precedents, not a single decision"
+      ],
+      "correctAnswers": [1, 2, 4],
+      "difficulty": 3,
+      "textReference": "#conclusion-the-revolution-no-one-planned"
+    }
+  ]
+}

@@ -27,8 +27,9 @@ dependencies {
 
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 
-	implementation 'org.postgresql:postgresql'
-	// runtimeOnly 'com.h2database:h2'
+	// implementation 'org.postgresql:postgresql'
+	runtimeOnly 'com.h2database:h2'
+	runtimeOnly 'org.postgresql:postgresql'
 
 	implementation 'org.springframework.security:spring-security-crypto'
 
@@ -41,6 +42,8 @@ dependencies {
 
 	runtimeOnly 'io.jsonwebtoken:jjwt-impl:0.12.3'
 	runtimeOnly 'io.jsonwebtoken:jjwt-jackson:0.12.3'
+
+
 }
 
 tasks.named('test') {

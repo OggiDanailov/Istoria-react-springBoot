@@ -13,9 +13,11 @@
         "Romans usually prevailed in open-field battles but Samnites won in mountain terrain; neither side achieved knockout blow",
         "Neither side engaged in any direct combat whatsoever and conducted purely diplomatic negotiations throughout the war"
       ],
-      "correctAnswers": [2],
+      "correctAnswers": [
+        2
+      ],
       "difficulty": 2,
-      "text_reference": "Section 4: The Long Grind"
+      "textReference": "#the-long-grind"
     },
     {
       "question": "How did Roman military commanders adapt after the catastrophic lesson of the Caudine Forks disaster?",
@@ -26,9 +28,11 @@
         "Roman commanders abandoned all Roman military traditions and adopted Samnite tactics entirely for future campaigns",
         "Roman commanders negotiated peace agreements rather than continuing to engage in military operations at all"
       ],
-      "correctAnswers": [1],
+      "correctAnswers": [
+        1
+      ],
       "difficulty": 2,
-      "text_reference": "Section 4: Roman Military Adaptation"
+      "textReference": "#roman-military-adaptation"
     },
     {
       "question": "Which of the following contributed to Rome's eventual victory in the extended 20-year grinding conflict? (SELECT ALL THAT APPLY)",
@@ -39,9 +43,12 @@
         "Samnites refused to continue fighting and voluntarily surrendered after only ten years of warfare",
         "Rome had access to wealthy allies who provided unlimited resources and military personnel continuously"
       ],
-      "correctAnswers": [0, 2],
+      "correctAnswers": [
+        0,
+        2
+      ],
       "difficulty": 2,
-      "text_reference": "Section 4: Institutional Capacity"
+      "textReference": "#institutional-capacity"
     },
     {
       "question": "How did prolonged warfare affect both Rome and Samnium differently by the 310s BCE?",
@@ -51,9 +58,11 @@
         "Rome was devastated by the conflict while Samnium remained completely unaffected by any military damage",
         "Samnium was exhausted while Rome maintained unlimited resources and an endless supply of fresh soldiers"
       ],
-      "correctAnswers": [1],
+      "correctAnswers": [
+        1
+      ],
       "difficulty": 2,
-      "text_reference": "Section 4: The Exhaustion of War"
+      "textReference": "#the-exhaustion-of-war"
     },
     {
       "question": "What shift occurred in the balance of power by the early 300s BCE during the Second Samnite War?",
@@ -63,9 +72,11 @@
         "Neither side achieved any meaningful military advantage and the war remained perfectly balanced indefinitely",
         "External powers intervened and forced both Rome and Samnium to immediately end the warfare"
       ],
-      "correctAnswers": [1],
+      "correctAnswers": [
+        1
+      ],
       "difficulty": 2,
-      "text_reference": "Section 4: The Breakthrough"
+      "textReference": "#the-breakthrough"
     },
     {
       "question": "What strategic decision did Samnium make as it recognized the futility of fighting Rome alone?",
@@ -76,9 +87,11 @@
         "Samnium sought military assistance and aid from Carthage located in distant North Africa region",
         "Samnium split its territories and formed alliances with multiple powerful Mediterranean trading city-states"
       ],
-      "correctAnswers": [1],
+      "correctAnswers": [
+        1
+      ],
       "difficulty": 2,
-      "text_reference": "Section 5: Samnite Coalition Building"
+      "textReference": "#samnite-coalition-building"
     },
     {
       "question": "Which peoples and groups joined the coalition that Samnium organized to challenge Rome's dominance? (SELECT ALL THAT APPLY)",
@@ -89,9 +102,13 @@
         "Umbrians from central Italy who shared concerns about increasing Roman military and political power",
         "All Italian peoples without exception joined the coalition against Rome's military dominance and expansion"
       ],
-      "correctAnswers": [0, 2, 3],
+      "correctAnswers": [
+        0,
+        2,
+        3
+      ],
       "difficulty": 2,
-      "text_reference": "Section 5: Samnite Coalition Building"
+      "textReference": "#samnite-coalition-building"
     },
     {
       "question": "What strategic military advantage did the coalition hope to achieve by successfully combining their forces?",
@@ -102,9 +119,11 @@
         "The coalition expected Rome to voluntarily withdraw from Italy and abandon all territorial possessions entirely",
         "The coalition aimed to control central Italy and prevent Roman expansion southward toward southern territories"
       ],
-      "correctAnswers": [0],
+      "correctAnswers": [
+        0
+      ],
       "difficulty": 2,
-      "text_reference": "Section 5: The Strategic Implications"
+      "textReference": "#the-strategic-implications"
     },
     {
       "question": "What fundamental weaknesses undermined the coalition despite its considerable numerical strength and military resources?",
@@ -115,9 +134,11 @@
         "The coalition had absolutely no military experience or training among all the warrior populations involved",
         "The coalition members possessed incompatible weapons and completely different military tactical traditions and approaches"
       ],
-      "correctAnswers": [2],
+      "correctAnswers": [
+        2
+      ],
       "difficulty": 2,
-      "text_reference": "Section 5: The Coalition's Failure and Its Causes"
+      "textReference": "#the-coalitions-failure-and-its-causes"
     },
     {
       "question": "How did Rome use its central geographic position to counter the coalition's threatening multi-directional military assault?",
@@ -128,9 +149,11 @@
         "Rome negotiated surrenders with the coalition to end the warfare and military conflicts immediately",
         "Rome moved its capital to northern Italy to better defend against Gallic and Etruscan military forces"
       ],
-      "correctAnswers": [1],
+      "correctAnswers": [
+        1
+      ],
       "difficulty": 2,
-      "text_reference": "Section 5: The Early Campaigns"
+      "textReference": "#the-early-campaigns"
     }
   ]
 }

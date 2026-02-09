@@ -16,7 +16,7 @@
       ],
       "correctAnswers": [4],
       "difficulty": 2,
-      "text_reference": "Section 1: The Consulate - Shared Executive Power"
+      "textReference": "#the-consulate-shared-executive-power-and-the-prevention-of-tyranny"
     },
     {
       "question": "What was the relationship between tribunes and traditional magistrates? (SELECT ALL THAT APPLY)",
@@ -30,7 +30,7 @@
       ],
       "correctAnswers": [2, 3, 5],
       "difficulty": 2,
-      "text_reference": "Section 4: The Tribune vs. Traditional Magistracies"
+      "textReference": "#the-tribune-vs-traditional-magistracies"
     },
     {
       "question": "Why was the one-year term limit on the consulship a crucial check on power?",
@@ -44,7 +44,7 @@
       ],
       "correctAnswers": [2],
       "difficulty": 2,
-      "text_reference": "Section 1: The One-Year Term and Accountability"
+      "textReference": "#the-one-year-term-and-accountability"
     },
     {
       "question": "How did the organization of the Comitia Centuriata serve as a check on pure democracy? (SELECT ALL THAT APPLY)",
@@ -58,7 +58,7 @@
       ],
       "correctAnswers": [2, 4],
       "difficulty": 2,
-      "text_reference": "Section 1: Assemblies - Popular Participation, Aristocratic Advantage"
+      "textReference": "#assemblies-popular-participation-aristocratic-advantage"
     },
     {
       "question": "What does 'mixed constitution' mean in the context of the early Roman Republic?",
@@ -72,7 +72,7 @@
       ],
       "correctAnswers": [1, 4, 5],
       "difficulty": 2,
-      "text_reference": "Section 1: Magistracies and Checks"
+      "textReference": "#magistracies-and-checks"
     },
     {
       "question": "How did the requirement that magistrates operate within written law serve as a check?",
@@ -85,7 +85,7 @@
       ],
       "correctAnswers": [2],
       "difficulty": 2,
-      "text_reference": "Section 5: The Significance for Plebeians"
+      "textReference": "#the-significance-for-plebeians"
     },
     {
       "question": "Why could the threat of plebeian military secession force actual political change?",
@@ -99,7 +99,7 @@
       ],
       "correctAnswers": [1, 5],
       "difficulty": 2,
-      "text_reference": "Section 4: The Threat That Worked"
+      "textReference": "#the-threat-that-worked"
     },
     {
       "question": "What was unusual about the tribune office compared to traditional magistracies?",
@@ -113,7 +113,7 @@
       ],
       "correctAnswers": [2],
       "difficulty": 2,
-      "text_reference": "Section 4: The Tribune vs. Traditional Magistracies"
+      "textReference": "#the-tribune-vs-traditional-magistracies"
     },
     {
       "question": "How did the hierarchy of magistracies serve as a check on concentrated power? (SELECT ALL THAT APPLY)",
@@ -127,7 +127,7 @@
       ],
       "correctAnswers": [1, 5],
       "difficulty": 2,
-      "text_reference": "Section 1: Magistracies and Checks"
+      "textReference": "#magistracies-and-checks"
     },
     {
       "question": "Why did Roman leaders accept the risk of deadlock between two consuls?",
@@ -141,7 +141,7 @@
       ],
       "correctAnswers": [5],
       "difficulty": 2,
-      "text_reference": "Section 1: Veto Power and Intercessio"
+      "textReference": "#veto-power-and-intercessio"
     }
   ]
 }

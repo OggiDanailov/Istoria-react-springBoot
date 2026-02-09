@@ -15,7 +15,7 @@
       ],
       "correctAnswers": [1],
       "difficulty": 1,
-      "text_reference": "Section 3: The Resumption of Political Demands"
+      "textReference": "#the-resumption-of-political-demands"
     },
     {
       "question": "What major plebeian demand involved access to religious authority in Rome?",
@@ -27,7 +27,7 @@
       ],
       "correctAnswers": [1],
       "difficulty": 1,
-      "text_reference": "Section 3: Demands for Access to Priesthoods"
+      "textReference": "#demands-for-access-to-priesthoods"
     },
     {
       "question": "Which office symbolically represented plebeian equality more than any other?",
@@ -39,7 +39,7 @@
       ],
       "correctAnswers": [3],
       "difficulty": 1,
-      "text_reference": "Section 3: Demands for Access to Magistracies"
+      "textReference": "#demands-for-access-to-magistracies"
     },
     {
       "question": "What specific magistracies did plebeians demand access to?",
@@ -51,7 +51,7 @@
       ],
       "correctAnswers": [1],
       "difficulty": 1,
-      "text_reference": "Section 3: Demands for Access to Magistracies"
+      "textReference": "#demands-for-access-to-magistracies"
     },
     {
       "question": "What did patricians claim about their natural right to hold high office?",
@@ -63,7 +63,7 @@
       ],
       "correctAnswers": [1],
       "difficulty": 1,
-      "text_reference": "Section 3: Patrician Resistance Continues"
+      "textReference": "#patrician-resistance-continues"
     },
     {
       "question": "What Latin phrase did patricians invoke to defend their exclusive privileges?",
@@ -75,7 +75,7 @@
       ],
       "correctAnswers": [2],
       "difficulty": 1,
-      "text_reference": "Section 3: Patrician Resistance Continues"
+      "textReference": "#patrician-resistance-continues"
     },
     {
       "question": "What was the political situation in Rome for decades after the Gallic invasion?",
@@ -87,7 +87,7 @@
       ],
       "correctAnswers": [2],
       "difficulty": 1,
-      "text_reference": "Section 3: The Impasse"
+      "textReference": "#the-impasse"
     },
     {
       "question": "Why were patricians willing to make small concessions to plebeian demands rather than accept large reforms?",
@@ -99,7 +99,7 @@
       ],
       "correctAnswers": [0],
       "difficulty": 1,
-      "text_reference": "Section 3: Patrician Resistance Continues"
+      "textReference": "#patrician-resistance-continues"
     },
     {
       "question": "What was the plebeian response to patrician claims about ancestry and religious knowledge?",
@@ -111,7 +111,7 @@
       ],
       "correctAnswers": [1],
       "difficulty": 1,
-      "text_reference": "Section 3: Resumed Political Demands"
+      "textReference": "#the-resumption-of-political-demands"
     },
     {
       "question": "What power did plebeians threaten repeatedly during this period of negotiation?",
@@ -123,7 +123,7 @@
       ],
       "correctAnswers": [1],
       "difficulty": 1,
-      "text_reference": "Section 3: The Impasse"
+      "textReference": "#the-impasse"
     }
   ]
 }

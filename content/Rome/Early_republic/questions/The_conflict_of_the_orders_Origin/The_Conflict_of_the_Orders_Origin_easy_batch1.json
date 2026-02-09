@@ -15,7 +15,7 @@
       ],
       "correctAnswers": [0],
       "difficulty": 1,
-      "text_reference": "Section 1: Introduction"
+      "textReference": "#1-introduction-the-republic-begins--what-changed"
     },
     {
       "question": "How many consuls governed the Roman Republic at any given time?",
@@ -27,7 +27,7 @@
       ],
       "correctAnswers": [1],
       "difficulty": 1,
-      "text_reference": "Section 1: The Consulate"
+      "textReference": "#the-consulate-shared-executive-power-and-the-prevention-of-tyranny"
     },
     {
       "question": "What was the primary reason for creating two consuls instead of one?",
@@ -39,7 +39,7 @@
       ],
       "correctAnswers": [1],
       "difficulty": 1,
-      "text_reference": "Section 1: Why Two Consuls"
+      "textReference": "#why-two-consuls-the-logic-of-checks"
     },
     {
       "question": "What is the term for a consul's right to block the decisions of his colleague?",
@@ -51,7 +51,7 @@
       ],
       "correctAnswers": [3],
       "difficulty": 1,
-      "text_reference": "Section 1: Veto Power and Intercessio"
+      "textReference": "#veto-power-and-intercessio"
     },
     {
       "question": "After their one-year term as consul, what could happen to a consul who abused his power?",
@@ -63,7 +63,7 @@
       ],
       "correctAnswers": [2],
       "difficulty": 1,
-      "text_reference": "Section 1: The One-Year Term and Accountability"
+      "textReference": "#the-one-year-term-and-accountability"
     },
     {
       "question": "Which assembly was responsible for electing consuls in the early Republic?",
@@ -75,7 +75,7 @@
       ],
       "correctAnswers": [2],
       "difficulty": 1,
-      "text_reference": "Section 1: Election - The Comitia Centuriata"
+      "textReference": "#election-the-comitia-centuriata"
     },
     {
       "question": "What was the primary role of the Roman Senate under the Republic?",
@@ -87,7 +87,7 @@
       ],
       "correctAnswers": [2],
       "difficulty": 1,
-      "text_reference": "Section 1: The Senate"
+      "textReference": "#the-senate-from-advisory-to-governing-body"
     },
     {
       "question": "Which of the following was NOT a magistracy below the consulship in the early Republic?",
@@ -99,7 +99,7 @@
       ],
       "correctAnswers": [3],
       "difficulty": 1,
-      "text_reference": "Section 1: Magistracies and Checks"
+      "textReference": "#magistracies-and-checks"
     },
     {
       "question": "What Latin term describes the unwritten customs and precedents that held the force of law in Rome?",
@@ -111,7 +111,7 @@
       ],
       "correctAnswers": [0],
       "difficulty": 1,
-      "text_reference": "Section 1: The Power of Tradition"
+      "textReference": "#the-power-of-tradition"
     },
     {
       "question": "What fundamental principle did the Republic establish that was NOT true under the kings?",
@@ -123,7 +123,7 @@
       ],
       "correctAnswers": [0],
       "difficulty": 1,
-      "text_reference": "Section 1: The Rule of Law"
+      "textReference": "#the-rule-of-law"
     }
   ]
 }

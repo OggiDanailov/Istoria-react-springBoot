@@ -1,0 +1,129 @@
+{
+  "chapter_id": "late-republic-marius-military-revolution",
+  "batch_number": 2,
+  "difficulty": 1,
+  "batch_order": 2,
+  "description": "Easy - Marian Reforms, Equipment & Later Career",
+  "questions": [
+    {
+      "question": "What was the capite censi?",
+      "options": [
+        "The wealthiest class of Roman citizens who served as cavalry",
+        "Military officers who commanded cohorts",
+        "Citizens who owned no property, counted 'by head' rather than by wealth",
+        "Priests who performed religious rituals before battle"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 1,
+      "textReference": "#the-property-qualification"
+    },
+    {
+      "question": "According to Livy, what did Cincinnatus do after saving Rome as dictator?",
+      "options": [
+        "He declared himself king of Rome",
+        "He led an expedition to conquer Greece",
+        "He remained dictator until his death",
+        "He immediately resigned and returned to farming"
+      ],
+      "correctAnswers": [3],
+      "difficulty": 1,
+      "textReference": "#the-citizen-soldier-ideal"
+    },
+    {
+      "question": "What was the gladius?",
+      "options": [
+        "The silver eagle standard of a legion",
+        "A short sword used by Roman soldiers",
+        "A heavy javelin thrown before melee combat",
+        "A large curved shield"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "textReference": "#standardization-and-professionalization"
+    },
+    {
+      "question": "Why were Marius's soldiers nicknamed 'Marius's mules'?",
+      "options": [
+        "They rode mules instead of horses",
+        "They were known for their stubbornness in battle",
+        "They came from rural farming backgrounds",
+        "They carried their own equipment on the march"
+      ],
+      "correctAnswers": [3],
+      "difficulty": 1,
+      "textReference": "#standardization-and-professionalization"
+    },
+    {
+      "question": "How many men were in a Roman cohort after Marius's reforms?",
+      "options": [
+        "About 100 men",
+        "About 480 men",
+        "About 1,000 men",
+        "About 5,000 men"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "textReference": "#standardization-and-professionalization"
+    },
+    {
+      "question": "Who actually negotiated and received Jugurtha's surrender?",
+      "options": [
+        "Marius himself",
+        "Metellus, the previous commander",
+        "Sulla, Marius's quaestor",
+        "Bocchus, king of Mauretania"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 1,
+      "textReference": "#the-sulla-complication"
+    },
+    {
+      "question": "What happened to Jugurtha after his capture?",
+      "options": [
+        "He was allowed to return to Numidia as a client king",
+        "He escaped and fled to Carthage",
+        "He was forced to serve in the Roman army",
+        "He was executed in the Tullianum prison"
+      ],
+      "correctAnswers": [3],
+      "difficulty": 1,
+      "textReference": "#the-sulla-complication"
+    },
+    {
+      "question": "What was the sacramentum?",
+      "options": [
+        "The military oath sworn by soldiers to their general",
+        "The eagle standard of a Roman legion",
+        "The emergency decree of the Senate",
+        "The property requirement for military service"
+      ],
+      "correctAnswers": [0],
+      "difficulty": 1,
+      "textReference": "#loyalty-transferred"
+    },
+    {
+      "question": "What was the senatus consultum ultimum?",
+      "options": [
+        "A vote to award a triumph to a victorious general",
+        "The annual election of new consuls",
+        "A treaty between Rome and a foreign power",
+        "An emergency decree authorizing magistrates to use force"
+      ],
+      "correctAnswers": [3],
+      "difficulty": 1,
+      "textReference": "#the-sixth-consulship-100-bce"
+    },
+    {
+      "question": "Who did Saturninus and Glaucia's followers murder, leading to their downfall?",
+      "options": [
+        "Metellus, the former commander in Numidia",
+        "Gaius Memmius, a consular candidate",
+        "Sulla, Marius's rival",
+        "A tribune of the plebs"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "textReference": "#the-sixth-consulship-100-bce"
+    }
+  ]
+}

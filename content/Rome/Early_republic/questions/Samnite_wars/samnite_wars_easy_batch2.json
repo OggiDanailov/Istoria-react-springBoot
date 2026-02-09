@@ -15,7 +15,7 @@
       ],
       "correctAnswers": [1],
       "difficulty": 1,
-      "text_reference": "Section 3: The Outbreak of Conflict"
+      "textReference": "#the-outbreak-of-conflict"
     },
     {
       "question": "What was Rome's military strategy in the First Samnite War?",
@@ -27,7 +27,7 @@
       ],
       "correctAnswers": [3],
       "difficulty": 1,
-      "text_reference": "Section 3: The First Campaigns"
+      "textReference": "#the-first-campaigns"
     },
     {
       "question": "What key organizational difference gave Roman armies advantage in open-field battles?",
@@ -39,7 +39,7 @@
       ],
       "correctAnswers": [2],
       "difficulty": 1,
-      "text_reference": "Section 3: The First Campaigns"
+      "textReference": "#the-first-campaigns"
     },
     {
       "question": "How long did the First Samnite War last before a peace agreement was reached?",
@@ -51,7 +51,7 @@
       ],
       "correctAnswers": [0],
       "difficulty": 1,
-      "text_reference": "Section 3: The Conclusion and Uncertain Terms"
+      "textReference": "#the-conclusion-and-uncertain-terms"
     },
     {
       "question": "What remained unclear about the peace terms ending the First Samnite War?",
@@ -63,7 +63,7 @@
       ],
       "correctAnswers": [3],
       "difficulty": 1,
-      "text_reference": "Section 3: The Conclusion and Uncertain Terms"
+      "textReference": "#the-conclusion-and-uncertain-terms"
     },
     {
       "question": "Which of the following was NOT demonstrated by Rome's initial success in the First Samnite War?",
@@ -75,7 +75,7 @@
       ],
       "correctAnswers": [2],
       "difficulty": 1,
-      "text_reference": "Section 3: What the First War Established"
+      "textReference": "#what-the-first-war-established"
     },
     {
       "question": "Why did Roman commanders believe the First Samnite War demonstrated that Rome could easily conquer Samnium?",
@@ -87,7 +87,7 @@
       ],
       "correctAnswers": [0],
       "difficulty": 1,
-      "text_reference": "Section 3: The First Campaigns"
+      "textReference": "#the-first-campaigns"
     },
     {
       "question": "What institutional advantage did Rome have over Samnium in sustaining military campaigns?",
@@ -99,7 +99,7 @@
       ],
       "correctAnswers": [1],
       "difficulty": 1,
-      "text_reference": "Section 3: Roman Advantages in the First War"
+      "textReference": "#roman-advantages-in-the-first-war"
     },
     {
       "question": "Which statement best reflects the conclusion of the First Samnite War?",
@@ -111,7 +111,7 @@
       ],
       "correctAnswers": [2],
       "difficulty": 1,
-      "text_reference": "Section 3: What the First War Established"
+      "textReference": "#what-the-first-war-established"
     },
     {
       "question": "What did the First Samnite War reveal about the future relationship between Rome and Samnium?",
@@ -123,7 +123,7 @@
       ],
       "correctAnswers": [1],
       "difficulty": 1,
-      "text_reference": "Section 3: What the First War Established"
+      "textReference": "#what-the-first-war-established"
     }
   ]
 }

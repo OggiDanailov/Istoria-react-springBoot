@@ -8,6 +8,13 @@ A full-stack educational quiz application with reading materials organized by hi
 
 ---
 
+**Running the app locally or in prod**
+
+./gradlew bootRun
+local command
+SPRING_PROFILES_ACTIVE=prod ./gradlew
+prod command; needs docker running as well
+
 ## 🎓 Deployment Explained (For Full-Stack Developers)
 
 This section explains how the app goes from your local machine to being live on the internet. If you're primarily a full-stack developer and DevOps feels like a black box, this is for you.

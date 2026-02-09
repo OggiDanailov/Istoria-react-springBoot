@@ -1,0 +1,128 @@
+{
+  "chapter": "Chapter 2: The Social War and the Italian Question (91-88 BCE)",
+  "batchOrder": 1,
+  "difficulty": 1,
+  "description": "Easy Questions",
+  "questions": [
+    {
+      "question": "What does the term 'socii' mean in the context of Roman Italy?",
+      "options": [
+        "Slaves captured in war",
+        "Roman citizens living abroad",
+        "Allied Italian communities bound to Rome by treaty",
+        "Members of the Roman Senate"
+      ],
+      "correctAnswer": 2,
+      "difficulty": 1,
+      "textReference": "#the-italian-allies-and-their-world"
+    },
+    {
+      "question": "Why is the Social War sometimes called the 'Marsic War'?",
+      "options": [
+        "It was fought primarily in marshlands",
+        "The Marsi were among the leading rebel peoples",
+        "A general named Marsicus commanded the rebels",
+        "Mars, the god of war, was invoked by both sides"
+      ],
+      "correctAnswer": 1,
+      "difficulty": 1,
+      "textReference": "Introduction"
+    },
+    {
+      "question": "What was the primary military obligation that allied communities owed to Rome?",
+      "options": [
+        "Providing soldiers for Roman wars",
+        "Paying annual tribute in gold",
+        "Housing Roman garrisons in their cities",
+        "Sending slaves to Rome each year"
+      ],
+      "correctAnswer": 0,
+      "difficulty": 1,
+      "textReference": "#the-allied-system"
+    },
+    {
+      "question": "What happened to Marcus Livius Drusus after his citizenship legislation was invalidated?",
+      "options": [
+        "He fled to the Italian allies",
+        "He was exiled to Greece",
+        "He was assassinated",
+        "He became consul the following year"
+      ],
+      "correctAnswer": 2,
+      "difficulty": 1,
+      "textReference": "#the-death-of-drusus"
+    },
+    {
+      "question": "What event at Asculum triggered the outbreak of the Social War?",
+      "options": [
+        "A Roman army was ambushed and destroyed",
+        "Roman citizens in the town were massacred",
+        "The town's leaders declared independence",
+        "Allied soldiers mutinied against their commander"
+      ],
+      "correctAnswer": 1,
+      "difficulty": 1,
+      "textReference": "#the-massacre-at-asculum"
+    },
+    {
+      "question": "What did the rebel allies name their new confederation?",
+      "options": [
+        "Nova Roma",
+        "Res Publica Italica",
+        "Italia",
+        "Confederatio Sociorum"
+      ],
+      "correctAnswer": 2,
+      "difficulty": 1,
+      "textReference": "#italia-a-new-state"
+    },
+    {
+      "question": "Where did the rebel confederation establish its capital?",
+      "options": [
+        "Capua",
+        "Corfinium",
+        "Asculum",
+        "Pompeii"
+      ],
+      "correctAnswer": 1,
+      "difficulty": 1,
+      "textReference": "#italia-a-new-state"
+    },
+    {
+      "question": "What was the Lex Julia de Civitate?",
+      "options": [
+        "A law exiling the rebel leaders",
+        "A law granting citizenship to loyal allies",
+        "A law confiscating rebel property",
+        "A law reforming the Roman army"
+      ],
+      "correctAnswer": 1,
+      "difficulty": 1,
+      "textReference": "#the-turning-point"
+    },
+    {
+      "question": "Which Roman commander emerged from the Social War with a reputation as Rome's ablest general?",
+      "options": [
+        "Gaius Marius",
+        "Gnaeus Pompeius Strabo",
+        "Publius Rutilius Lupus",
+        "Lucius Cornelius Sulla"
+      ],
+      "correctAnswer": 3,
+      "difficulty": 1,
+      "textReference": "#military-victory"
+    },
+    {
+      "question": "Approximately how many adult male citizens did Rome have before the Social War?",
+      "options": [
+        "100,000",
+        "400,000",
+        "1,000,000",
+        "2,500,000"
+      ],
+      "correctAnswer": 1,
+      "difficulty": 1,
+      "textReference": "#the-scale-of-change"
+    }
+  ]
+}
