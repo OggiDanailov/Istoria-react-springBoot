@@ -1,0 +1,139 @@
+{
+  "chapter_id": "late-republic-marius-military-revolution",
+  "batch_number": 3,
+  "difficulty": 2,
+  "batch_order": 3,
+  "description": "Medium - Causes, Consequences & Political Implications",
+  "questions": [
+    {
+      "question": "Why was the traditional property requirement for military service considered philosophically important to Romans? (SELECT ALL THAT APPLY)",
+      "options": [
+        "It ensured only the educated classes could serve in the military",
+        "Men who owned land had something worth fighting for",
+        "The system created a natural check on military adventurism since soldiers wanted to return home",
+        "It prevented foreigners from infiltrating the legions",
+        "Soldiers who served alongside neighbors had natural unit cohesion"
+      ],
+      "correctAnswers": [1, 2, 4],
+      "difficulty": 2,
+      "textReference": "#the-property-qualification"
+    },
+    {
+      "question": "What pressures were causing the traditional Roman military system to collapse by the late second century BCE? (SELECT ALL THAT APPLY)",
+      "options": [
+        "Germanic invasions had destroyed most of Italy's farmland",
+        "Rome's empire required permanent garrisons that made farming impossible",
+        "The eligible soldier pool was shrinking while military obligations expanded",
+        "Economic transformation had displaced tens of thousands of small farmers",
+        "Men who had lost their property were legally prohibited from service"
+      ],
+      "correctAnswers": [1, 2, 3, 4],
+      "difficulty": 2,
+      "textReference": "#the-system-under-strain"
+    },
+    {
+      "question": "Why did the Jugurthine War become a political scandal in Rome? (SELECT ALL THAT APPLY)",
+      "options": [
+        "The war showcased aristocratic corruption and incompetence",
+        "Marius was accused of prolonging the war for personal profit",
+        "Roman commanders repeatedly accepted bribes from Jugurtha",
+        "The historian Sallust claimed Jugurtha called Rome 'a city for sale'",
+        "The Senate secretly supported Jugurtha against Roman interests"
+      ],
+      "correctAnswers": [0, 2, 3],
+      "difficulty": 2,
+      "textReference": "#the-jugurthine-problem"
+    },
+    {
+      "question": "How did Marius obtain command of the Numidian War? (SELECT ALL THAT APPLY)",
+      "options": [
+        "He was appointed by the Senate as a reward for his service under Metellus",
+        "The popular assembly used a tribune's legislation to assign him the command",
+        "He won the consulship on an anti-aristocratic platform",
+        "He bribed his way into the command using wealth from Spanish mines",
+        "This overrode the Senate's traditional prerogative to assign military commands"
+      ],
+      "correctAnswers": [1, 2, 4],
+      "difficulty": 2,
+      "textReference": "#the-consulship-of-107-bce"
+    },
+    {
+      "question": "How did the new professional soldiers differ from the old citizen-soldiers? (SELECT ALL THAT APPLY)",
+      "options": [
+        "They had a direct stake in the existing order through property ownership",
+        "They had no farms to return to after service",
+        "Their future depended entirely on their general's political success",
+        "They swore loyalty oaths directly to the Senate",
+        "The legion became their home, community, and family"
+      ],
+      "correctAnswers": [1, 2, 4],
+      "difficulty": 2,
+      "textReference": "#soldiers-without-a-state"
+    },
+    {
+      "question": "Why did the defeat at Arausio cause such panic in Rome? (SELECT ALL THAT APPLY)",
+      "options": [
+        "It proved that Marius's military reforms had failed",
+        "The disaster was comparable to Cannae in scale",
+        "It awakened ancient fears dating to the Gallic sack of 390 BCE",
+        "The road to Italy appeared to lay open to invasion",
+        "The entire Senate was captured by the Germanic tribes"
+      ],
+      "correctAnswers": [1, 2, 3],
+      "difficulty": 2,
+      "textReference": "#the-disaster-at-arausio"
+    },
+    {
+      "question": "What did Marius do during the years 104-102 BCE while waiting for the Germanic tribes? (SELECT ALL THAT APPLY)",
+      "options": [
+        "He immediately pursued the Germans into Spain",
+        "He trained his army relentlessly in southern Gaul",
+        "He kept soldiers busy with engineering projects",
+        "He was elected consul repeatedly as Rome clung to its savior",
+        "He negotiated a peace treaty with the Cimbri"
+      ],
+      "correctAnswers": [1, 2, 3],
+      "difficulty": 2,
+      "textReference": "#marius-called-to-save-rome"
+    },
+    {
+      "question": "What problems did the issue of veterans' welfare create after Marius's reforms? (SELECT ALL THAT APPLY)",
+      "options": [
+        "The Senate automatically provided generous pensions to all soldiers",
+        "Professional soldiers had nothing to return to after service",
+        "Generals needed to provide land for veterans or face mutiny",
+        "Land distribution required legislation through the Senate and assemblies",
+        "Veterans' welfare made generals into political actors"
+      ],
+      "correctAnswers": [1, 2, 3, 4],
+      "difficulty": 2,
+      "textReference": "#the-question-of-veterans"
+    },
+    {
+      "question": "What happened during the Saturninus crisis of 100 BCE? (SELECT ALL THAT APPLY)",
+      "options": [
+        "Saturninus and Glaucia's followers murdered a consular candidate",
+        "Marius refused to act and was exiled from Rome",
+        "The Senate passed the senatus consultum ultimum",
+        "Marius besieged his former allies on the Capitoline Hill",
+        "Saturninus successfully established himself as dictator"
+      ],
+      "correctAnswers": [0, 2, 3],
+      "difficulty": 2,
+      "textReference": "#the-sixth-consulship-100-bce"
+    },
+    {
+      "question": "Why did the Saturninus affair damage Marius's political position? (SELECT ALL THAT APPLY)",
+      "options": [
+        "He was hailed as a hero for restoring constitutional order",
+        "The populares felt he had betrayed his allies",
+        "The Senate distrusted him as a popular demagogue",
+        "He was formally expelled from the Senate",
+        "He left Rome and had no major command for years"
+      ],
+      "correctAnswers": [1, 2, 4],
+      "difficulty": 2,
+      "textReference": "#political-retirement"
+    }
+  ]
+}

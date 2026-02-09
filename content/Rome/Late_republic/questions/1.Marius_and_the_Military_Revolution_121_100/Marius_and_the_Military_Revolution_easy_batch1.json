@@ -1,0 +1,129 @@
+{
+  "chapter_id": "late-republic-marius-military-revolution",
+  "batch_number": 1,
+  "difficulty": 1,
+  "batch_order": 1,
+  "description": "Easy - Traditional Army, Marius's Background & Numidia",
+  "questions": [
+    {
+      "question": "What was required for Roman citizens to serve in the traditional Roman army before Marius's reforms?",
+      "options": [
+        "Completion of a formal military academy",
+        "Only patricians could serve in the legions",
+        "Ownership of property that met a minimum value threshold",
+        "All citizens were required to serve regardless of their economic status"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 1,
+      "textReference": "#the-property-qualification"
+    },
+    {
+      "question": "What does the term 'novus homo' (new man) mean in Roman politics?",
+      "options": [
+        "A young senator under the age of thirty",
+        "A politician with no senatorial ancestors",
+        "A foreigner who gained Roman citizenship",
+        "A military commander without political experience"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "textReference": "#the-rise-of-a-new-man"
+    },
+    {
+      "question": "Where was Gaius Marius born?",
+      "options": [
+        "Rome",
+        "Carthage",
+        "Numidia",
+        "Arpinum"
+      ],
+      "correctAnswers": [3],
+      "difficulty": 1,
+      "textReference": "#the-rise-of-a-new-man"
+    },
+     {
+      "question": "Who was Jugurtha?",
+      "options": [
+        "A Roman general who fought against the Germanic tribes",
+        "A Carthaginian commander during the Third Punic War",
+        "A tribune who proposed land reform in Rome",
+        "A Numidian prince who seized the kingdom by eliminating his rivals"
+      ],
+      "correctAnswers": [3],
+      "difficulty": 1,
+      "textReference": "#the-jugurthine-problem"
+    },
+    {
+      "question": "Where was the kingdom of Numidia located?",
+      "options": [
+        "On the Iberian Peninsula",
+        "In what is now Algeria and western Tunisia",
+        "In southern Gaul",
+        "Along the eastern Mediterranean coast"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "textReference": "#section-2-the-numidian-war-and-mariuss-rise"
+    },
+    {
+      "question": "Why did the Jugurthine War become a scandal in Rome?",
+      "options": [
+        "Marius refused to fight against Jugurtha",
+        "The Senate voted to ally with Jugurtha against Carthage",
+        "Roman commanders repeatedly accepted bribes from Jugurtha",
+        "Roman soldiers mutinied and joined Jugurtha's forces"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 1,
+      "textReference": "#the-jugurthine-problem"
+    },
+    {
+      "question": "What was the aquila?",
+      "options": [
+        "A type of heavy javelin used by Roman soldiers",
+        "The military oath sworn by soldiers",
+        "A Roman warship design",
+        "The silver eagle standard that Marius gave to each legion"
+      ],
+      "correctAnswers": [3],
+      "difficulty": 1,
+      "textReference": "#the-eagle-standard"
+    },
+    {
+      "question": "Who were the Cimbri and Teutones?",
+      "options": [
+        "Italian allies who revolted against Rome",
+        "Germanic tribes migrating from near the Baltic Sea",
+        "Carthaginian mercenaries",
+        "Greek kingdoms in the eastern Mediterranean"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "textReference": "#section-5-the-germanic-terror"
+    },
+    {
+      "question": "What happened at the Battle of Arausio in 105 BCE?",
+      "options": [
+        "Marius defeated Jugurtha and ended the Numidian War",
+        "The Teutones were destroyed by Roman forces",
+        "Two Roman armies were annihilated by the Cimbri",
+        "Sulla captured Jugurtha through negotiation"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 1,
+      "textReference": "#the-disaster-at-arausio"
+    },
+    {
+      "question": "What title was given to Marius after defeating the Germanic tribes?",
+      "options": [
+        "Dictator perpetuo",
+        "Princeps senatus",
+        "Third founder of Rome",
+        "Pater patriae"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 1,
+      "textReference": "#section-6-the-battles-that-made-a-legend"
+    }
+  ]
+}

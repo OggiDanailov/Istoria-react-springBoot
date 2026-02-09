@@ -1,0 +1,148 @@
+{
+  "chapter": "Chapter 1: The First March on Rome (88-87 BCE)",
+  "batchOrder": 1,
+  "difficulty": 1,
+  "description": "Easy Questions",
+  "questions": [
+    {
+      "question": "What was the Asian Vespers?",
+      "options": [
+        "A religious festival honoring eastern gods in Rome",
+        "A coordinated massacre of Roman civilians ordered by Mithridates",
+        "A peace treaty between Rome and Pontus",
+        "A military campaign led by Sulla in Asia Minor"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#the-explosion-of-88-bce"
+    },
+    {
+      "question": "What was the pomerium?",
+      "options": [
+        "The sacred boundary of Rome that armed soldiers could not cross",
+        "The military oath sworn by Roman legionaries to their general",
+        "The formal declaration of war issued by the Roman Senate",
+        "The ceremonial robe worn by consuls during triumphs"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#crossing-the-boundary"
+    },
+    {
+      "question": "Who was the first Roman general to march his army against Rome itself?",
+      "options": [
+        "Gaius Marius",
+        "Lucius Cornelius Cinna",
+        "Lucius Cornelius Sulla",
+        "Gnaeus Pompeius Strabo"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#the-march-on-rome"
+    },
+    {
+      "question": "What political faction did Marius represent?",
+      "options": [
+        "The optimates",
+        "The populares",
+        "The equestrians",
+        "The patricians"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#the-feud"
+    },
+    {
+      "question": "What military command were Marius and Sulla fighting over?",
+      "options": [
+        "The command against the Germanic tribes",
+        "The command against Jugurtha in Africa",
+        "The command against Mithridates in the East",
+        "The command against the Italian rebels"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#why-the-command-mattered"
+    },
+    {
+      "question": "Which tribune proposed legislation to transfer the eastern command from Sulla to Marius?",
+      "options": [
+        "Tiberius Gracchus",
+        "Gaius Gracchus",
+        "Publius Sulpicius Rufus",
+        "Livius Drusus"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#the-alliance-with-marius"
+    },
+    {
+      "question": "What happened to Marius after Sulla's first march on Rome?",
+      "options": [
+        "He was executed immediately",
+        "He was appointed governor of Africa",
+        "He negotiated a peaceful settlement",
+        "He fled and became a fugitive"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#the-battle-for-rome"
+    },
+    {
+      "question": "Who were the Bardyiae?",
+      "options": [
+        "Sulla's elite cavalry unit from the Social War",
+        "Marius's slave-soldiers who carried out massacres",
+        "Germanic mercenaries hired to defend Rome",
+        "Italian allies who supported Cinna's rebellion"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#the-horror"
+    },
+    {
+      "question": "How many consulships did Marius ultimately hold?",
+      "options": [
+        "Five",
+        "Six",
+        "Seven",
+        "Eight"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#mariuss-seventh-consulship-and-death"
+    },
+    {
+      "question": "What consul was killed sitting in his curule chair during the Marian massacres?",
+      "options": [
+        "Lucius Cornelius Cinna",
+        "Lucius Licinius Lucullus",
+        "Publius Sulpicius Rufus",
+        "Gnaeus Octavius"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#vengeance-unleashed"
+    }
+  ]
+}

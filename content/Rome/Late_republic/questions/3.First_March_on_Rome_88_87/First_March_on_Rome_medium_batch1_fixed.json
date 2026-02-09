@@ -1,0 +1,190 @@
+{
+  "chapter": "Chapter 1: The First March on Rome (88-87 BCE)",
+  "batchOrder": 2,
+  "difficulty": 2,
+  "description": "Medium Questions",
+  "questions": [
+    {
+      "question": "Why did the Asian Vespers massacre bind local populations to Mithridates?",
+      "options": [
+        "He rewarded them with Roman citizenship and land grants",
+        "Having participated in killing Romans, they could expect no mercy if Rome returned",
+        "He threatened to execute anyone who did not swear loyalty to him",
+        "Roman law required collective punishment for communities that aided rebels",
+        "The massacre was a religious ritual that created sacred bonds"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#the-explosion-of-88-bce"
+    },
+    {
+      "question": "What was the origin of the personal rivalry between Marius and Sulla?",
+      "options": [
+        "Sulla had prosecuted Marius for corruption during the Germanic wars",
+        "Marius had blocked Sulla's first attempt to become consul",
+        "Sulla had captured Jugurtha but Marius received credit for the victory",
+        "They had fought on opposite sides during the Social War",
+        "Sulla had married a woman Marius had previously courted"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#the-feud"
+    },
+    {
+      "question": "Why did Sulpicius originally ally with Marius?",
+      "options": [
+        "Marius promised to make him consul the following year",
+        "They were related by marriage through the Cornelii family",
+        "Marius offered him command of a legion in the eastern campaign",
+        "The Senate had threatened to exile Sulpicius from Rome",
+        "He needed support for his Italian voting rights legislation"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#the-alliance-with-marius"
+    },
+    {
+      "question": "How did Sulla's soldiers respond when he proposed marching on Rome?",
+      "options": [
+        "They refused unanimously and threatened to desert",
+        "They demanded higher pay before agreeing to follow him",
+        "They agreed enthusiastically to follow him against Rome",
+        "They insisted on consulting the Senate before deciding",
+        "Half supported him while the other half joined Marius"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#sullas-choice"
+    },
+    {
+      "question": "How did Sulla's senior officers react to his order to march on Rome?",
+      "options": [
+        "They unanimously supported the decision as legally justified",
+        "All but one refused to accompany him on the march",
+        "They demanded he seek approval from the Senate first",
+        "They arrested Sulla and attempted to restore Marius's command",
+        "They agreed only after Sulla promised them eastern provinces"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#crossing-the-boundary"
+    },
+    {
+      "question": "What happened to Sulpicius after Sulla captured Rome?",
+      "options": [
+        "He escaped to Africa and joined Marius in exile",
+        "He was pardoned after renouncing his legislation publicly",
+        "He was hunted down, killed, and his head displayed on the Rostra",
+        "He committed suicide rather than face trial for treason",
+        "He was imprisoned and later released by Cinna"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#the-battle-for-rome"
+    },
+    {
+      "question": "What did Cinna do after Sulla departed for the East?",
+      "options": [
+        "He maintained all of Sulla's constitutional arrangements faithfully",
+        "He immediately surrendered power to the Senate as promised",
+        "He declared himself dictator and abolished the consulship",
+        "He revived Sulpicius's program for distributing Italian voters across all tribes",
+        "He negotiated an alliance with Mithridates against Sulla"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#the-elections-of-87-bce"
+    },
+    {
+      "question": "According to tradition, how did Marius escape execution during his exile?",
+      "options": [
+        "He bribed his guards with gold he had hidden in his clothing",
+        "His veterans stormed the prison and freed him by force",
+        "The slave sent to kill him fled when Marius confronted him",
+        "Cinna secretly arranged his escape through underground tunnels",
+        "A sympathetic magistrate declared his death sentence invalid"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#the-return-of-marius"
+    },
+    {
+      "question": "How long did the Marian massacres last before Cinna ended them?",
+      "options": [
+        "A single day of targeted killings",
+        "Three days of street fighting",
+        "Two weeks of systematic purges",
+        "Five days of terror",
+        "An entire month of violence"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#the-horror"
+    },
+    {
+      "question": "Which descriptions accurately characterize Cinna's rule of Rome after Marius's death? (SELECT ALL THAT APPLY)",
+      "options": [
+        "He held the consulship continuously from 86 to 84 BCE in violation of constitutional norms",
+        "He voluntarily shared power equally with the Senate",
+        "He governed through military force and political intimidation",
+        "He formally abolished the Republic and declared himself king",
+        "He immediately began peace negotiations with Sulla in the East"
+      ],
+      "correctAnswers": [
+        0,
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#mariuss-seventh-consulship-and-death"
+    },
+    {
+      "question": "How long did Marius survive into his seventh consulship?",
+      "options": [
+        "He died before taking office officially",
+        "Seventeen days",
+        "Three months",
+        "Six months",
+        "He served the entire year"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#mariuss-seventh-consulship-and-death"
+    },
+    {
+      "question": "Which factors enabled Marius to return to Italy and march on Rome in 87 BCE? (SELECT ALL THAT APPLY)",
+      "options": [
+        "Sulla sent him a formal invitation to return from exile",
+        "Cinna, expelled from Rome, allied with him and provided troops",
+        "Italian communities denied their promised voting rights rallied to his cause",
+        "The Senate voted to recall him after Sulla's defeat in Greece",
+        "Mithridates provided him with warships and mercenary soldiers"
+      ],
+      "correctAnswers": [
+        1,
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#the-return-of-marius"
+    }
+  ]
+}

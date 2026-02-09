@@ -13,9 +13,11 @@
         "It lasted less than one year before both sides completely withdrew",
         "It lasted over two decades and became a grinding, multi-generational struggle"
       ],
-      "correctAnswers": [3],
+      "correctAnswers": [
+        3
+      ],
       "difficulty": 2,
-      "text_reference": "Section 4: The Resumption of Conflict"
+      "textReference": "#the-resumption-of-conflict"
     },
     {
       "question": "What was the primary source of historical documentation for the Second Samnite War?",
@@ -25,9 +27,11 @@
         "Livy's History of Rome and Dionysius of Halicarnassus's Roman Antiquities historical accounts",
         "Inscriptions discovered on Samnite temples and monuments throughout the mountainous Italian peninsula regions"
       ],
-      "correctAnswers": [2],
+      "correctAnswers": [
+        2
+      ],
       "difficulty": 2,
-      "text_reference": "Section 4: The Resumption of Conflict"
+      "textReference": "#the-resumption-of-conflict"
     },
     {
       "question": "What critical error did the Roman consuls Titus Veturius Calvinus and Spurius Postumius Albinus make in 321 BCE?",
@@ -37,9 +41,11 @@
         "They marched their army into a valley at the Caudine Forks without proper reconnaissance or terrain understanding",
         "They refused to engage Samnite forces and surrendered immediately without mounting any organized military resistance effort"
       ],
-      "correctAnswers": [2],
+      "correctAnswers": [
+        2
+      ],
       "difficulty": 2,
-      "text_reference": "Section 4: The Caudine Forks Disaster"
+      "textReference": "#the-caudine-forks-disaster"
     },
     {
       "question": "Who was the Samnite commander who set the trap at the Caudine Forks, and what was his strategic insight?",
@@ -49,21 +55,25 @@
         "Brennus the Gaul, who was visiting from northern Italy to help the Samnite military forces",
         "An unknown Samnite commander who set the trap entirely by accident rather than strategic design"
       ],
-      "correctAnswers": [1],
+      "correctAnswers": [
+        1
+      ],
       "difficulty": 2,
-      "text_reference": "Section 4: The Caudine Forks Disaster"
+      "textReference": "#the-caudine-forks-disaster"
     },
     {
       "question": "What ritual humiliation did the Samnites impose on Roman forces at the Caudine Forks?",
       "options": [
-         "They forced Roman soldiers to pass under a yoke in ritual submission, stripping them of weapons and armor",
+        "They forced Roman soldiers to pass under a yoke in ritual submission, stripping them of weapons and armor",
         "They destroyed all Roman weapons and completely scattered the army throughout the surrounding Samnite territories",
         "They enslaved all Roman soldiers permanently as direct punishment for their invasion of Samnite lands",
         "They paraded all captured Roman soldiers through major Samnite cities as public slaves for display purposes"
       ],
-      "correctAnswers": [0],
+      "correctAnswers": [
+        0
+      ],
       "difficulty": 2,
-      "text_reference": "Section 4: The Caudine Forks Disaster"
+      "textReference": "#the-caudine-forks-disaster"
     },
     {
       "question": "Why was the ritual humiliation of the Caudine Forks particularly damaging to Rome beyond the military defeat?",
@@ -73,9 +83,11 @@
         "It had absolutely no psychological or cultural impact on Roman society beyond the actual military loss itself",
         "It violated Roman military pride and honor codes, leaving a psychological wound that demanded revenge and retaliation"
       ],
-      "correctAnswers": [3],
+      "correctAnswers": [
+        3
+      ],
       "difficulty": 2,
-      "text_reference": "Section 4: The Humiliation and Roman Pride"
+      "textReference": "#the-humiliation-and-roman-pride"
     },
     {
       "question": "How did Rome respond to the humiliating peace terms imposed at the Caudine Forks?",
@@ -85,9 +97,11 @@
         "Rome's Senate voted to execute the two consuls for their failure",
         "Rome negotiated a new peace that was even more favorable to Samnium"
       ],
-      "correctAnswers": [1],
+      "correctAnswers": [
+        1
+      ],
       "difficulty": 2,
-      "text_reference": "Section 4: The Roman Response and Renewal of War"
+      "textReference": "#the-roman-response-and-renewal-of-war"
     },
     {
       "question": "What legal argument did Rome use to justify repudiating the peace agreement after the Caudine Forks?",
@@ -97,9 +111,11 @@
         "The consuls had no authority to surrender the Roman people on such humiliating terms whatsoever",
         "The agreement violated the ancient religious laws and sacred traditions of the Roman people entirely"
       ],
-      "correctAnswers": [2],
+      "correctAnswers": [
+        2
+      ],
       "difficulty": 2,
-      "text_reference": "Section 4: The Roman Response and Renewal of War"
+      "textReference": "#the-roman-response-and-renewal-of-war"
     },
     {
       "question": "What characteristic of Roman culture did the decision to continue fighting after the Caudine Forks defeat demonstrate?",
@@ -109,9 +125,11 @@
         "Romans had absolutely no sense of honor or shame regarding military losses and battlefield defeats",
         "Romans valued peaceful diplomatic negotiations over continued military victory and conquest efforts in wars"
       ],
-      "correctAnswers": [1],
+      "correctAnswers": [
+        1
+      ],
       "difficulty": 2,
-      "text_reference": "Section 4: The Roman Response and Renewal of War"
+      "textReference": "#the-roman-response-and-renewal-of-war"
     },
     {
       "question": "What was the immediate military consequence of Rome's decision to repudiate the peace agreement?",
@@ -121,9 +139,11 @@
         "Samnium immediately surrendered unconditionally to Rome and accepted complete Roman military and political dominance entirely",
         "Rome withdrew all its armies and abandoned southern Italy completely to Samnite control and military occupation"
       ],
-      "correctAnswers": [1],
+      "correctAnswers": [
+        1
+      ],
       "difficulty": 2,
-      "text_reference": "Section 4: The Roman Response and Renewal of War"
+      "textReference": "#the-roman-response-and-renewal-of-war"
     }
   ]
 }

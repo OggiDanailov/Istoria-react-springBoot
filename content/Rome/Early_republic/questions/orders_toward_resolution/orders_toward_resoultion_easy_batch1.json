@@ -15,7 +15,7 @@
       ],
       "correctAnswers": [1],
       "difficulty": 1,
-      "text_reference": "Section 2: The Gauls - Who Were They"
+      "textReference": "#the-gauls-who-were-they-and-where-did-they-come-from"
     },
     {
       "question": "In what year did the Gallic army under Brennus invade Rome?",
@@ -27,7 +27,7 @@
       ],
       "correctAnswers": [2],
       "difficulty": 1,
-      "text_reference": "Section 2: The Specific Invasion - Brennus and His Army"
+      "textReference": "#the-specific-invasion-brennus-and-his-army-390-bce"
     },
     {
       "question": "What was the name of the river where Roman forces were defeated by the Gauls?",
@@ -39,7 +39,7 @@
       ],
       "correctAnswers": [3],
       "difficulty": 1,
-      "text_reference": "Section 2: The Invasion and Battle of the Allia"
+      "textReference": "#the-invasion-and-battle-of-the-allia"
     },
     {
       "question": "How did Gallic warriors fight, and why were they so dangerous to Romans?",
@@ -51,7 +51,7 @@
       ],
       "correctAnswers": [1],
       "difficulty": 1,
-      "text_reference": "Section 2: The Northern Threat"
+      "textReference": "#the-northern-threat"
     },
     {
       "question": "Who was the patrician general credited with expelling the Gauls and rebuilding Rome?",
@@ -63,7 +63,7 @@
       ],
       "correctAnswers": [0],
       "difficulty": 1,
-      "text_reference": "Section 2: Recovery and Expulsion"
+      "textReference": "#recovery-and-expulsion"
     },
     {
       "question": "What was the most direct consequence of the Gallic invasion on Roman military organization?",
@@ -75,7 +75,7 @@
       ],
       "correctAnswers": [3],
       "difficulty": 1,
-      "text_reference": "Section 2: The Impact on Roman Society"
+      "textReference": "#the-impact-on-roman-society"
     },
     {
       "question": "How did the Gallic invasion affect the Conflict of the Orders between patricians and plebeians?",
@@ -87,7 +87,7 @@
       ],
       "correctAnswers": [1],
       "difficulty": 1,
-      "text_reference": "Section 2: The Impact on Roman Society"
+      "textReference": "#the-impact-on-roman-society"
     },
     {
       "question": "What specific advantage did Gallic peoples possess that made conquest possible for them?",
@@ -99,7 +99,7 @@
       ],
       "correctAnswers": [1],
       "difficulty": 1,
-      "text_reference": "Section 2: Why the Gauls? Celtic Advantages"
+      "textReference": "#the-great-celtic-migration-east-to-west"
     },
     {
       "question": "What was Cisalpine Gaul?",
@@ -111,7 +111,7 @@
       ],
       "correctAnswers": [2],
       "difficulty": 1,
-      "text_reference": "Section 2: Celtic Arrival in Italy"
+      "textReference": "#celtic-arrival-in-italy"
     },
     {
       "question": "According to the sources, how long did the Gallic occupation of Rome last?",
@@ -123,7 +123,7 @@
       ],
       "correctAnswers": [0],
       "difficulty": 1,
-      "text_reference": "Section 2: Recovery and Expulsion"
+      "textReference": "#recovery-and-expulsion"
     }
   ]
 }

@@ -15,7 +15,7 @@
       ],
       "correctAnswers": [3],
       "difficulty": 1,
-      "text_reference": "Section 4: The Licinian Rogations - First Proposals"
+      "textReference": "#the-first-proposals"
     },
     {
       "question": "What was a 'rogatio' in Roman political terminology?",
@@ -27,7 +27,7 @@
       ],
       "correctAnswers": [2],
       "difficulty": 1,
-      "text_reference": "Section 4: The Licinian Rogations - First Proposals"
+      "textReference": "#the-first-proposals"
     },
     {
       "question": "What was the cornerstone of the Licinian reform proposals?",
@@ -39,7 +39,7 @@
       ],
       "correctAnswers": [1],
       "difficulty": 1,
-      "text_reference": "Section 4: The Licinian Rogations - Main Proposals"
+      "textReference": "#the-main-proposals-reportedly-included"
     },
     {
       "question": "In what year were the Licinian Laws finally passed and accepted by the patricians?",
@@ -51,7 +51,7 @@
       ],
       "correctAnswers": [2],
       "difficulty": 1,
-      "text_reference": "Section 5: The Breakthrough - The Licinian Laws"
+      "textReference": "#the-breakthrough--the-licinian-laws-367-bce"
     },
     {
       "question": "Who was the first plebeian to be elected as consul after the Licinian Laws were passed?",
@@ -63,7 +63,7 @@
       ],
       "correctAnswers": [1],
       "difficulty": 1,
-      "text_reference": "Section 5: What the Licinian Laws Established"
+      "textReference": "#what-the-licinian-laws-established"
     },
     {
       "question": "What did the Licinian Laws attempt to address regarding debt slavery?",
@@ -75,7 +75,7 @@
       ],
       "correctAnswers": [2],
       "difficulty": 1,
-      "text_reference": "Section 5: What the Licinian Laws Established"
+      "textReference": "#what-the-licinian-laws-established"
     },
     {
       "question": "How did the Licinian Laws address the issue of public land distribution?",
@@ -87,7 +87,7 @@
       ],
       "correctAnswers": [2],
       "difficulty": 1,
-      "text_reference": "Section 5: What the Licinian Laws Established"
+      "textReference": "#what-the-licinian-laws-established"
     },
     {
       "question": "What did the Licinian Laws require regarding holding the same magistracy?",
@@ -99,7 +99,7 @@
       ],
       "correctAnswers": [1],
       "difficulty": 1,
-      "text_reference": "Section 5: What the Licinian Laws Established"
+      "textReference": "#what-the-licinian-laws-established"
     },
     {
       "question": "The Licinian proposals included access to which emergency office previously held only by patricians?",
@@ -111,7 +111,7 @@
       ],
       "correctAnswers": [2],
       "difficulty": 1,
-      "text_reference": "Section 4: The Licinian Rogations - Main Proposals"
+      "textReference": "#the-main-proposals-reportedly-included"
     },
     {
       "question": "How many decades did plebeians wait for the Licinian Laws to finally be passed?",
@@ -123,7 +123,7 @@
       ],
       "correctAnswers": [2],
       "difficulty": 1,
-      "text_reference": "Section 4: The Licinian Rogations - First Proposals"
+      "textReference": "#the-first-proposals"
     }
   ]
 }

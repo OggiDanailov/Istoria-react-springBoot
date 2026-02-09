@@ -1,0 +1,185 @@
+{
+  "chapter": "Chapter 2: The Social War and the Italian Question (91-88 BCE)",
+  "batchOrder": 3,
+  "difficulty": 3,
+  "description": "Hard Questions (Multiple Correct Answers)",
+  "questions": [
+    {
+      "question": "Which of the following were benefits of Roman citizenship that the allies lacked? (SELECT ALL THAT APPLY)",
+      "options": [
+        "The right to vote in Roman assemblies",
+        "The right to appeal against arbitrary punishment",
+        "The right to own property in their home communities",
+        "The right to marry other Roman citizens legally",
+        "The right to have disputes heard in Roman courts"
+      ],
+      "correctAnswers": [
+        0,
+        1,
+        3,
+        4
+      ],
+      "difficulty": 3,
+      "textReference": "#what-citizenship-meant"
+    },
+    {
+      "question": "Which factors contributed to Rome's refusal to extend citizenship to the allies? (SELECT ALL THAT APPLY)",
+      "options": [
+        "Belief that citizenship required physical participation in Rome",
+        "Fear of disrupting existing political alliances and voting blocs",
+        "Economic interests in maintaining preferential citizen access to land",
+        "Religious prohibition against sharing sacred rites with foreigners",
+        "Inertia from centuries of a successful allied system"
+      ],
+      "correctAnswers": [
+        0,
+        1,
+        2,
+        4
+      ],
+      "difficulty": 3,
+      "textReference": "#why-rome-refused-to-share"
+    },
+    {
+      "question": "Which groups opposed Livius Drusus's reform program? (SELECT ALL THAT APPLY)",
+      "options": [
+        "The equestrian order who controlled jury courts",
+        "Senators who distrusted his methods",
+        "Italian allies who wanted independence, not citizenship",
+        "Roman common people hostile to sharing their status",
+        "Military commanders who feared losing their veterans"
+      ],
+      "correctAnswers": [
+        0,
+        1,
+        3
+      ],
+      "difficulty": 3,
+      "textReference": "#the-coalition-collapses"
+    },
+    {
+      "question": "Which Italian peoples formed the core of the rebellion during the Social War? (SELECT ALL THAT APPLY)",
+      "options": [
+        "The Marsi",
+        "The Etruscans",
+        "The Samnites",
+        "The Umbrians",
+        "The Lucanians",
+        "The Greek cities of the south"
+      ],
+      "correctAnswers": [
+        0,
+        2,
+        4
+      ],
+      "difficulty": 3,
+      "textReference": "#italia-a-new-state"
+    },
+    {
+      "question": "Which laws extended citizenship or related rights during and after the Social War? (SELECT ALL THAT APPLY)",
+      "options": [
+        "Lex Julia de Civitate",
+        "Lex Plautia Papiria",
+        "Lex Pompeia",
+        "Lex Hortensia",
+        "Lex Sempronia"
+      ],
+      "correctAnswers": [
+        0,
+        1,
+        2
+      ],
+      "difficulty": 3,
+      "textReference": "#the-turning-point"
+    },
+    {
+      "question": "What institutions did the rebel confederation Italia create that mirrored Rome? (SELECT ALL THAT APPLY)",
+      "options": [
+        "A senate of 500 members",
+        "Annually elected consuls",
+        "Praetors and other magistrates",
+        "A permanent standing army",
+        "Its own coinage"
+      ],
+      "correctAnswers": [
+        0,
+        1,
+        2,
+        4
+      ],
+      "difficulty": 3,
+      "textReference": "#italia-a-new-state"
+    },
+    {
+      "question": "Which Roman commanders built their military reputations during the Social War? (SELECT ALL THAT APPLY)",
+      "options": [
+        "Lucius Cornelius Sulla",
+        "Gnaeus Pompeius Strabo",
+        "Gaius Julius Caesar (the dictator)",
+        "Gaius Marius",
+        "Marcus Licinius Crassus"
+      ],
+      "correctAnswers": [
+        0,
+        1,
+        3
+      ],
+      "difficulty": 3,
+      "textReference": "#sections-5-and-7"
+    },
+    {
+      "question": "What were consequences of the Social War's citizenship grants? (SELECT ALL THAT APPLY)",
+      "options": [
+        "The number of Roman citizens roughly doubled",
+        "New citizens were registered fairly across all voting tribes",
+        "Italian aristocrats began entering Roman political life",
+        "Traditional patronage networks were disrupted",
+        "The divide between citizens and allies eventually faded"
+      ],
+      "correctAnswers": [
+        0,
+        2,
+        3,
+        4
+      ],
+      "difficulty": 3,
+      "textReference": "#the-price-of-victory"
+    },
+    {
+      "question": "Why did the Social War make future civil wars more likely? (SELECT ALL THAT APPLY)",
+      "options": [
+        "It confirmed that professional soldiers followed their generals loyally",
+        "It created new citizens who felt cheated by their political marginalization",
+        "It elevated military strongmen with loyal veterans and political ambitions",
+        "It permanently ended the authority of the Roman Senate",
+        "It left the tribal registration question unresolved and contentious"
+      ],
+      "correctAnswers": [
+        0,
+        1,
+        2,
+        4
+      ],
+      "difficulty": 3,
+      "textReference": "#the-aftermath"
+    },
+    {
+      "question": "Which arguments did reformers use to advocate for extending citizenship to the allies? (SELECT ALL THAT APPLY)",
+      "options": [
+        "The allies had earned citizenship through military sacrifice",
+        "Extending citizenship would solve the veteran land distribution problem",
+        "Discontented allies posed a security risk to Rome",
+        "Foreign powers were offering citizenship to lure allies away",
+        "The manpower crisis would worsen if Italy remained divided"
+      ],
+      "correctAnswers": [
+        0,
+        1,
+        2,
+        4
+      ],
+      "difficulty": 3,
+      "textReference": "#the-reformers-case"
+    }
+  ]
+}

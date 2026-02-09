@@ -1,0 +1,158 @@
+{
+  "chapter": "Chapter 2: The Social War and the Italian Question (91-88 BCE)",
+  "batchOrder": 2,
+  "difficulty": 2,
+  "description": "Medium Questions",
+  "questions": [
+    {
+      "question": "How did the distribution of war spoils reflect the unequal relationship between Rome and its allies?",
+      "options": [
+        "Allies received spoils first as compensation for danger",
+        "Spoils were divided equally regardless of status",
+        "Roman citizens typically received larger shares than allies",
+        "Allies kept all spoils from battles they fought alone",
+        "The Senate alone decided and kept most spoils"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#the-reality-of-alliance"
+    },
+    {
+      "question": "Why did ordinary Roman citizens oppose extending citizenship to the Italian allies?",
+      "options": [
+        "They feared the allies would vote to abolish the Republic",
+        "They saw citizenship extension as diluting their status",
+        "They believed Italians were culturally inferior",
+        "They wanted to maintain military superiority over allies",
+        "They objected to sharing religious practices"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#why-rome-refused-to-share"
+    },
+    {
+      "question": "What made the Social War different from earlier Italian rebellions against Rome?",
+      "options": [
+        "It was the first rebellion to receive foreign support",
+        "It lasted longer than any previous Italian conflict",
+        "The rebels sought to destroy Rome rather than gain rights",
+        "Only the poorest communities participated in the revolt",
+        "The rebels were prosperous and militarily trained in Roman tactics"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#why-this-was-different"
+    },
+    {
+      "question": "What strategic purpose did Rome's citizenship grants serve during the Social War?",
+      "options": [
+        "They were meant to recruit allied soldiers into Roman legions",
+        "They aimed to divide the rebel coalition by satisfying moderates",
+        "They were designed to punish communities that stayed loyal",
+        "They sought to gain support from Greek cities in the south",
+        "They were intended to end the war before winter arrived"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#the-turning-point"
+    },
+    {
+      "question": "How did the Senate attempt to limit the political impact of the new Italian citizens?",
+      "options": [
+        "By requiring them to serve ten years in the army first",
+        "By excluding them from holding magistracies for a generation",
+        "By making their citizenship conditional on property ownership",
+        "By registering them in only eight of thirty-five voting tribes",
+        "By creating separate assemblies for Italian citizens"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#the-tribal-registration-crisis"
+    },
+    {
+      "question": "Which consul was killed fighting the Marsi in 90 BCE?",
+      "options": [
+        "Lucius Julius Caesar",
+        "Gnaeus Pompeius Strabo",
+        "Publius Rutilius Lupus",
+        "Lucius Cornelius Sulla",
+        "Quintus Servilius Caepio"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#roman-setbacks"
+    },
+    {
+      "question": "What role did Gaius Marius play in the Social War?",
+      "options": [
+        "He commanded the main Roman army throughout the war",
+        "He negotiated the citizenship grants with rebel leaders",
+        "He led the final assault that ended the rebellion",
+        "He came out of retirement and salvaged a difficult situation",
+        "He remained neutral and refused to participate"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#roman-setbacks"
+    },
+    {
+      "question": "Why did the veteran settlement problem worsen after the Social War?",
+      "options": [
+        "Most veterans had died in the fighting",
+        "The Senate refused to fund any land purchases",
+        "Veterans preferred cash payments to land grants",
+        "All public land had been sold to pay war debts",
+        "Italian land now belonged to new Roman citizens"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#the-veterans-problem-intensifies"
+    },
+    {
+      "question": "What imagery appeared on some coins minted by the rebel confederation?",
+      "options": [
+        "A Roman eagle being struck by lightning",
+        "The goddess Roma in chains",
+        "An Italian bull goring the Roman wolf",
+        "Broken fasces symbolizing rejected authority",
+        "Two hands clasped in alliance"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#italia-a-new-state"
+    },
+    {
+      "question": "How did the Social War contribute to the coming civil wars?",
+      "options": [
+        "It bankrupted the Roman treasury and forced massive emergency taxation",
+        "It proved that Italian soldiers would follow their generals loyally",
+        "It permanently divided Italy into regions that remained hostile to Rome",
+        "It eliminated the Senate's ability to function as a governing institution",
+        "It introduced foreign mercenaries who later destabilized the legions"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#the-emergence-of-the-warlords"
+    }
+  ]
+}

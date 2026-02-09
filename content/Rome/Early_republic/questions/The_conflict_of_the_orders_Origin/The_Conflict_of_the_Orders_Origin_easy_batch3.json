@@ -15,7 +15,7 @@
       ],
       "correctAnswers": [1],
       "difficulty": 1,
-      "text_reference": "Section 5: The Push for Written Law"
+      "textReference": "#the-push-for-written-law"
     },
     {
       "question": "In what year were the Twelve Tables inscribed and displayed in the Forum?",
@@ -27,7 +27,7 @@
       ],
       "correctAnswers": [2],
       "difficulty": 1,
-      "text_reference": "Section 5: The Decemvirs and the Creation"
+      "textReference": "#the-decemvirs-and-the-creation-of-the-twelve-tables-450-bce"
     },
     {
       "question": "What does 'Lex Duodecim Tabularum' literally mean in Latin?",
@@ -39,7 +39,7 @@
       ],
       "correctAnswers": [2],
       "difficulty": 1,
-      "text_reference": "Section 5: The Decemvirs and the Creation"
+      "textReference": "#the-decemvirs-and-the-creation-of-the-twelve-tables-450-bce"
     },
     {
       "question": "Who were the decemvirs appointed to create Rome's written laws?",
@@ -51,7 +51,7 @@
       ],
       "correctAnswers": [1],
       "difficulty": 1,
-      "text_reference": "Section 5: The Decemvirs and the Creation"
+      "textReference": "#the-decemvirs-and-the-creation-of-the-twelve-tables-450-bce"
     },
     {
       "question": "Which legal code did the decemvirs reportedly study before drafting the Twelve Tables?",
@@ -63,7 +63,7 @@
       ],
       "correctAnswers": [3],
       "difficulty": 1,
-      "text_reference": "Section 5: The Decemvirs and the Creation"
+      "textReference": "#the-decemvirs-and-the-creation-of-the-twelve-tables-450-bce"
     },
     {
       "question": "Why was the creation of written law a significant plebeian victory?",
@@ -75,7 +75,7 @@
       ],
       "correctAnswers": [0],
       "difficulty": 1,
-      "text_reference": "Section 5: The Significance for Plebeians"
+      "textReference": "#the-significance-for-plebeians"
     },
     {
       "question": "Which of the following was NOT directly addressed by the Twelve Tables?",
@@ -87,7 +87,7 @@
       ],
       "correctAnswers": [3],
       "difficulty": 1,
-      "text_reference": "Section 5: The Limitations - What the Twelve Tables Did NOT Solve"
+      "textReference": "#the-limitations-what-the-twelve-tables-did-not-solve"
     },
     {
       "question": "Which aspect of the Twelve Tables actually reinforced existing patrician power?",
@@ -99,7 +99,7 @@
       ],
       "correctAnswers": [1],
       "difficulty": 1,
-      "text_reference": "Section 5: What the Twelve Tables Contained"
+      "textReference": "#what-the-twelve-tables-contained"
     },
     {
       "question": "How do modern historians know what content the Twelve Tables actually contained?",
@@ -111,7 +111,7 @@
       ],
       "correctAnswers": [0],
       "difficulty": 1,
-      "text_reference": "Section 2: Contemporary Written Sources"
+      "textReference": "#contemporary-written-sources-the-twelve-tables"
     },
     {
       "question": "What was the most important long-term impact of making law written and public?",
@@ -123,7 +123,7 @@
       ],
       "correctAnswers": [3],
       "difficulty": 1,
-      "text_reference": "Section 5: The Significance for Plebeians"
+      "textReference": "#the-significance-for-plebeians"
     }
   ]
 }

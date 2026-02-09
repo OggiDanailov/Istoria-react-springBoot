@@ -1,12 +1,17 @@
 import { useState, useEffect, useRef } from 'react'
 import { API_BASE_URL } from '../../config/api'
+import TextReferenceModal from '../TextReferenceModal/TextReferenceModal'
 import './Results.css'
 
 function Results({ questions, userAnswers, onRestart, onBack, chapterId, batchId, score, correctCount, totalQuestions, totalPoints, isLoggedIn, batchDifficulty, onQuizComplete }) {
   const [saveStatus, setSaveStatus] = useState('')
   const hasAttemptedSave = useRef(false)
 
-  // Calculate accuracy directly from props
+  // Modal state
+  const [modalOpen, setModalOpen] = useState(false)
+  const [modalTextReference, setModalTextReference] = useState('')
+  const [modalQuestionText, setModalQuestionText] = useState('')
+
   const accuracy = Math.round((score / totalPoints) * 100)
 
   useEffect(() => {
@@ -28,8 +33,8 @@ function Results({ questions, userAnswers, onRestart, onBack, chapterId, batchId
 
       const requestBody = {
         chapterId: chapterId,
-        userAnswers: userAnswers,    // ← Array of user's selected answer indices
-        batchId: batchId              // ← Backend will fetch questions from batch
+        userAnswers: userAnswers,
+        batchId: batchId
       }
 
       const response = await fetch(`${API_BASE_URL}/api/quiz-attempts`, {
@@ -43,7 +48,7 @@ function Results({ questions, userAnswers, onRestart, onBack, chapterId, batchId
 
       if (response.ok) {
         setSaveStatus('saved')
-         onQuizComplete?.()
+        onQuizComplete?.()
       } else {
         setSaveStatus('error')
         console.error('Failed to save quiz attempt')
@@ -56,14 +61,10 @@ function Results({ questions, userAnswers, onRestart, onBack, chapterId, batchId
 
   const getDifficultyLabel = () => {
     switch (batchDifficulty) {
-      case 1:
-        return 'Easy'
-      case 2:
-        return 'Medium'
-      case 3:
-        return 'Hard'
-      default:
-        return 'Quiz'
+      case 1: return 'Easy'
+      case 2: return 'Medium'
+      case 3: return 'Hard'
+      default: return 'Quiz'
     }
   }
 
@@ -72,6 +73,20 @@ function Results({ questions, userAnswers, onRestart, onBack, chapterId, batchId
     if (accuracy >= 70) return { status: 'CLOSE', color: 'warning', message: '⚠️ Close! You got ' + accuracy + '% but need 80% to master' }
     if (accuracy >= 50) return { status: 'NOT_MASTERED', color: 'needs-work', message: '❌ Not quite. You got ' + accuracy + '% — try again!' }
     return { status: 'NEEDS_WORK', color: 'error', message: '⚠️ Keep practicing! You got ' + accuracy + '%.' }
+  }
+
+  // Open modal with specific text reference
+  const openTextReferenceModal = (textReference, questionText) => {
+    setModalTextReference(textReference)
+    setModalQuestionText(questionText)
+    setModalOpen(true)
+  }
+
+  // Close modal
+  const closeModal = () => {
+    setModalOpen(false)
+    setModalTextReference('')
+    setModalQuestionText('')
   }
 
   const passStatus = getPassStatus()
@@ -152,17 +167,7 @@ function Results({ questions, userAnswers, onRestart, onBack, chapterId, batchId
 
                 {!isCorrect && question.textReference && (
                   <button
-                    onClick={() => {
-                      onBack()
-                      setTimeout(() => {
-                        const element = document.querySelector(question.textReference)
-                        if (element) {
-                          element.scrollIntoView({ behavior: 'smooth', block: 'start' })
-                        } else {
-                          window.scrollTo({ top: 0, behavior: 'smooth' })
-                        }
-                      }, 100)
-                    }}
+                    onClick={() => openTextReferenceModal(question.textReference, question.question)}
                     className="read-more-btn"
                   >
                     📖 Read about this topic
@@ -185,6 +190,15 @@ function Results({ questions, userAnswers, onRestart, onBack, chapterId, batchId
           </button>
         )}
       </div>
+
+      {/* Text Reference Modal */}
+      <TextReferenceModal
+        isOpen={modalOpen}
+        onClose={closeModal}
+        chapterId={chapterId}
+        textReference={modalTextReference}
+        questionText={modalQuestionText}
+      />
     </div>
   )
 }

@@ -15,7 +15,7 @@
       ],
       "correctAnswers": [1],
       "difficulty": 1,
-      "text_reference": "Section 3: Who Were the Patricians and Plebeians"
+      "textReference": "#who-were-the-patricians-and-plebeians"
     },
     {
       "question": "Which group made up the majority of Rome's population in the early Republic?",
@@ -27,7 +27,7 @@
       ],
       "correctAnswers": [2],
       "difficulty": 1,
-      "text_reference": "Section 3: Who Were the Patricians and Plebeians"
+      "textReference": "#who-were-the-patricians-and-plebeians"
     },
     {
       "question": "What was the primary political grievance of plebeians in the early Republic?",
@@ -39,7 +39,7 @@
       ],
       "correctAnswers": [3],
       "difficulty": 1,
-      "text_reference": "Section 3: What Did Plebeians Demand"
+      "textReference": "#what-did-plebeians-demand"
     },
     {
       "question": "In what year did plebeians stage their first major secession (refusal to serve in the army)?",
@@ -51,7 +51,7 @@
       ],
       "correctAnswers": [1],
       "difficulty": 1,
-      "text_reference": "Section 4: The First Secession of the Plebs"
+      "textReference": "#the-first-secession-of-the-plebs-494-bce"
     },
     {
       "question": "What new office was created in 494 BCE to protect plebeian interests?",
@@ -63,7 +63,7 @@
       ],
       "correctAnswers": [2],
       "difficulty": 1,
-      "text_reference": "Section 4: The Creation of the Tribune of the Plebs"
+      "textReference": "#the-creation-of-the-tribune-of-the-plebs"
     },
     {
       "question": "What special power did tribunes possess that no other magistrate had?",
@@ -75,7 +75,7 @@
       ],
       "correctAnswers": [1],
       "difficulty": 1,
-      "text_reference": "Section 4: The Creation of the Tribune of the Plebs"
+      "textReference": "#the-creation-of-the-tribune-of-the-plebs"
     },
     {
       "question": "What does the term 'sacrosanctus' mean when applied to tribunes?",
@@ -87,19 +87,19 @@
       ],
       "correctAnswers": [2],
       "difficulty": 1,
-      "text_reference": "Section 4: The Creation of the Tribune of the Plebs"
+      "textReference": "#the-creation-of-the-tribune-of-the-plebs"
     },
     {
       "question": "Why was the ability to refuse military service such a powerful plebeian tactic?",
       "options": [
-         "Rome was constantly at war and depended heavily on plebeian soldiers for survival",
+        "Rome was constantly at war and depended heavily on plebeian soldiers for survival",
         "Rome had no professional standing army available to replace the plebeian soldiers",
         "Patrician aristocrats themselves fought in all battles and could not lead without plebeians",
         "The Senate could not hold meetings or make any decisions without military support"
       ],
       "correctAnswers": [0],
       "difficulty": 1,
-      "text_reference": "Section 4: The Threat That Worked"
+      "textReference": "#the-threat-that-worked"
     },
     {
       "question": "Which of the following was NOT one of the early plebeian demands?",
@@ -111,7 +111,7 @@
       ],
       "correctAnswers": [2],
       "difficulty": 1,
-      "text_reference": "Section 3: What Did Plebeians Demand"
+      "textReference": "#what-did-plebeians-demand"
     },
     {
       "question": "What economic problem particularly threatened plebeian freedom in the early Republic?",
@@ -123,7 +123,7 @@
       ],
       "correctAnswers": [3],
       "difficulty": 1,
-      "text_reference": "Section 4: The Crisis - Debt Slavery and Land Disputes"
+      "textReference": "#the-crisis-debt-slavery-and-land-disputes"
     }
   ]
 }
