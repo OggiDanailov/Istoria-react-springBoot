@@ -26,7 +26,7 @@ import java.util.Date;
 
 import javax.crypto.SecretKey;
 
-@CrossOrigin(origins = {"http://localhost", "http://localhost:5173", "http://localhost:80"})
+// @CrossOrigin(origins = {"http://localhost", "http://localhost:5173", "http://localhost:80"})
 @RestController
 @RequestMapping("/api/auth")
 public class UserController {

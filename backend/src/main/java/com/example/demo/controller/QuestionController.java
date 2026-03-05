@@ -15,7 +15,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-@CrossOrigin(origins = {"http://localhost", "http://localhost:5173", "http://localhost:80"})
+// @CrossOrigin(origins = {"http://localhost", "http://localhost:5173", "http://localhost:80"})
 @RestController
 @RequestMapping("/api")
 public class QuestionController {
@@ -85,6 +85,8 @@ public class QuestionController {
         question.setQuestion(questionDetails.getQuestion());
         question.setOptions(questionDetails.getOptions());
         question.setCorrectAnswers(questionDetails.getCorrectAnswers());
+        question.setDifficulty(questionDetails.getDifficulty());
+        question.setTextReference(questionDetails.getTextReference());
 
         Question updatedQuestion = questionRepository.save(question);
         return ResponseEntity.ok(updatedQuestion);

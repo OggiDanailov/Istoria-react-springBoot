@@ -52,9 +52,9 @@ public class JwtAuthenticationFilter implements Filter {
         // httpResponse.setHeader("Access-Control-Allow-Credentials", "true");
         // httpResponse.setHeader("Access-Control-Max-Age", "3600");
 
-        // Allow CORS preflight requests
+        // This is CORRECT - just passing OPTIONS through, NOT setting headers
         if ("OPTIONS".equalsIgnoreCase(httpRequest.getMethod())) {
-            httpResponse.setStatus(HttpServletResponse.SC_OK);
+            chain.doFilter(request, response);  // Let it pass to CorsConfig
             return;
         }
 
