@@ -1,6 +1,6 @@
 @import '../../assets/design-system.css';
 
-.period-list {
+.section-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 20px;
@@ -9,7 +9,7 @@
   margin: 0 auto;
 }
 
-.period-card {
+.section-card {
   background: linear-gradient(135deg, var(--color-card-bg) 0%, var(--color-card-bg-light) 100%);
   border: 1px solid var(--color-card-border);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
@@ -20,18 +20,18 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.period-card:hover {
+.section-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
-.period-card h2 {
+.section-card h2 {
   margin: 0 0 15px 0;
   font-size: 24px;
   font-weight: 600;
 }
 
-.period-card p {
+.section-card p {
   margin: 0;
   font-size: 14px;
   opacity: 0.9;

@@ -1,19 +1,21 @@
 import { useState, useEffect } from 'react'
 import { API_BASE_URL } from '../../config/api'
+import { DISCIPLINE_LABELS } from '../../config/discipline_labels'
 
-function TopicList({ period, onTopicSelect, onBack }) {
+function TopicList({ section, onTopicSelect, onBack, discipline }) {
   const [topics, setTopics] = useState([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState("")
+  const labels = DISCIPLINE_LABELS[discipline] || DISCIPLINE_LABELS.default
 
   useEffect(() => {
     fetchTopics()
-  }, [period.id])
+  }, [section.id])
 
   const fetchTopics = async () => {
     setLoading(true)
     try {
-      const response = await fetch(`${API_BASE_URL}/api/periods/${period.id}/topics`)
+      const response = await fetch(`${API_BASE_URL}/api/sections/${section.id}/topics`)
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`)
       }
@@ -36,14 +38,12 @@ function TopicList({ period, onTopicSelect, onBack }) {
 
   return (
     <div className="quiz-container wrinkled-paper">
-      <button onClick={onBack} className="back-btn">
-        ← Back to Periods
-      </button>
+      <button onClick={onBack} className="back-btn">{labels.back}</button>
 
-      <h1>📚 {period.title} - Choose a Topic</h1>
+      <h1>📚 {section.title} - Choose a Topic</h1>
 
       {topics.length === 0 ? (
-        <div className="error">No topics available for this period</div>
+        <div className="error">No topics available for this section</div>
       ) : (
         <div className="topic-list">
           {topics.map((topic) => (

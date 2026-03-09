@@ -4,8 +4,8 @@ import jakarta.persistence.*;
 import java.util.List;
 
 @Entity
-@Table(name = "periods")
-public class Period {
+@Table(name = "sections")
+public class Section {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -15,13 +15,19 @@ public class Period {
 
     private String description; // Optional brief description
 
-    @OneToMany(mappedBy = "period", cascade = CascadeType.ALL)
+    private String discipline;
+
+    // getter and setter:
+    public String getDiscipline() { return discipline; }
+    public void setDiscipline(String discipline) { this.discipline = discipline; }
+
+    @OneToMany(mappedBy = "section", cascade = CascadeType.ALL)
     private List<Topic> topics;
 
     // Constructors
-    public Period() {}
+    public Section() {}
 
-    public Period(String title, String description) {
+    public Section(String title, String description) {
         this.title = title;
         this.description = description;
     }

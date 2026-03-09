@@ -1,27 +1,29 @@
 import { useState, useEffect } from 'react'
 import { API_BASE_URL } from '../../config/api'
+import { DISCIPLINE_LABELS } from '../../config/discipline_labels'
 import './PeriodList.css'
 
-function PeriodList({ onPeriodSelect }) {
-  const [periods, setPeriods] = useState([])
+function PeriodList({ onSectionSelect, onBack, discipline }) {
+  const [sections, setSections] = useState([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState("")
+  const labels = DISCIPLINE_LABELS[discipline] || DISCIPLINE_LABELS.default
 
   useEffect(() => {
-    fetchPeriods()
+    fetchSections()
   }, [])
 
-  const fetchPeriods = async () => {
+  const fetchSections = async () => {
     setLoading(true)
     try {
-      const response = await fetch(`${API_BASE_URL}/api/periods`)
+      const response = await fetch(`${API_BASE_URL}/api/sections`)
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`)
       }
       const data = await response.json()
-      setPeriods(data)
+      setSections(data)
     } catch (err) {
-      setError(`Failed to fetch periods: ${err.message}`)
+      setError(`Failed to fetch sections: ${err.message}`)
     } finally {
       setLoading(false)
     }
@@ -35,22 +37,23 @@ function PeriodList({ onPeriodSelect }) {
     return <div className="error">Error: {error}</div>
   }
 
-  if (periods.length === 0) {
+  if (sections.length === 0) {
     return <div className="error">No periods available</div>
   }
 
   return (
     <div className="quiz-container wrinkled-paper">
-      <h1>🌍 Choose a Historical Period</h1>
+      <button onClick={onBack} className="back-btn">{labels.back}</button>
+      <h1>{labels.heading}</h1>
       <div className="period-list">
-        {periods.map((period) => (
+        {sections.map(( section) => (
           <div
-            key={period.id}
+            key={section.id}
             className="period-card"
-            onClick={() => onPeriodSelect(period)}
+            onClick={() => onSectionSelect(period)}
           >
-            <h2>{period.title}</h2>
-            <p>{period.description}</p>
+            <h2>{section.title}</h2>
+            <p>{section.description}</p>
           </div>
         ))}
       </div>
