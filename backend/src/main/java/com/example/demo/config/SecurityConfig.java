@@ -19,7 +19,7 @@ public class SecurityConfig {
             )
             .authorizeHttpRequests(authz -> authz
                 .requestMatchers("/api/auth/**").permitAll()
-                .requestMatchers("/api/periods/**").permitAll()
+                .requestMatchers("/api/sections/**").permitAll()
                 .requestMatchers("/api/chapters/**").permitAll()
                 .requestMatchers("/api/topics/**").permitAll()
                 .requestMatchers("/api/questions/**").permitAll()

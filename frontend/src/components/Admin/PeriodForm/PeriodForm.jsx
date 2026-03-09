@@ -2,29 +2,29 @@ import { useState, useEffect } from 'react';
 import { API_BASE_URL } from '../../../config/api'
 import './PeriodForm.css';
 
-function PeriodForm({ periodToEdit, onSave, onCancel }) {
+function PeriodForm({ sectionToEdit, onSave, onCancel }) {
   const [formData, setFormData] = useState({
     title: '',
     description: ''
   });
 
   useEffect(() => {
-    if (periodToEdit) {
+    if (sectionToEdit) {
       setFormData({
-        title: periodToEdit.title,
-        description: periodToEdit.description
+        title: sectionToEdit.title,
+        description: sectionToEdit.description
       });
     }
-  }, [periodToEdit]);
+  }, [sectionToEdit]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const url = periodToEdit
-      ? `${API_BASE_URL}/api/periods/${periodToEdit.id}`
-      : `${API_BASE_URL}/api/periods`;
+    const url = sectionToEdit
+      ? `${API_BASE_URL}/api/sections/${sectionToEdit.id}`
+      : `${API_BASE_URL}/api/sections`;
 
-    const method = periodToEdit ? 'PUT' : 'POST';
+    const method = sectionToEdit ? 'PUT' : 'POST';
 
     try {
       const response = await fetch(url, {
@@ -43,7 +43,7 @@ function PeriodForm({ periodToEdit, onSave, onCancel }) {
 
   return (
     <div className="period-form wrinkled-paper">
-      <h3>{periodToEdit ? 'Edit Period' : 'Create New Period'}</h3>
+      <h3>{sectionToEdit ? 'Edit Section' : 'Create New Section'}</h3>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
           <label>Period Title:</label>
@@ -69,7 +69,7 @@ function PeriodForm({ periodToEdit, onSave, onCancel }) {
 
         <div className="form-actions">
           <button type="submit" className="btn-primary">
-            {periodToEdit ? 'Update Period' : 'Create Period'}
+            {sectionToEdit ? 'Update Section' : 'Create Section'}
           </button>
           <button type="button" onClick={onCancel} className="btn-secondary">
             Cancel

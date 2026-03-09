@@ -7,5 +7,5 @@ import java.util.List;
 
 @Repository
 public interface TopicRepository extends JpaRepository<Topic, Long> {
-    List<Topic> findByPeriodId(Long periodId); // Find all topics for a period
+    List<Topic> findBySectionId(Long sectionId); // Find all topics for a section
 }

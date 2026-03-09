@@ -151,8 +151,8 @@
   gap: 10px;
 }
 
-/* Periods List */
-.periods-list {
+/* Sections List */
+.sections-list {
   margin-top: 30px;
   background: white;
   padding: 20px;
@@ -160,13 +160,13 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.periods-list h3 {
+.sections-list h3 {
   margin-top: 0;
   margin-bottom: 20px;
   color: #333;
 }
 
-.period-item {
+.section-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -177,18 +177,18 @@
   border-left: 4px solid #667eea;
 }
 
-.period-item h4 {
+.section-item h4 {
   margin: 0 0 5px 0;
   color: #333;
 }
 
-.period-item p {
+.section-item p {
   margin: 0;
   color: #666;
   font-size: 14px;
 }
 
-.period-actions {
+.section-actions {
   display: flex;
   gap: 10px;
 }

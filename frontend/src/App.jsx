@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { API_BASE_URL } from './config/api'
+import DisciplineList from './components/DisciplineList/DisciplineList'
 import PeriodList from './components/PeriodList/PeriodList'
 import TopicList from './components/TopicList/TopicList'
 import ReadingMaterial from './components/ReadingMaterial/ReadingMaterial'
@@ -12,8 +13,8 @@ import UserDashboard from './components/UserDashboard/UserDashboard'
 import './assets/styles-global.css'
 
 function App() {
-  const [currentView, setCurrentView] = useState('periods')
-  const [selectedPeriod, setSelectedPeriod] = useState(null)
+  const [currentView, setCurrentView] = useState('disciplines')   // ← was 'periods'
+  const [selectedSection, setSelectedSection] = useState(null)
   const [selectedTopic, setSelectedTopic] = useState(null)
   const [selectedBatch, setSelectedBatch] = useState(null)
   const [selectedChapter, setSelectedChapter] = useState(null)
@@ -23,6 +24,7 @@ function App() {
   const [authView, setAuthView] = useState('signin') // 'signin' or 'signup'
   const [loading, setLoading] = useState(true)
   const [totalPoints, setTotalPoints] = useState(0)
+  const [selectedDiscipline, setSelectedDiscipline] = useState(null) // ← NEW: discipline selection
 
   // Check if user is already logged in on mount
   useEffect(() => {
@@ -49,13 +51,12 @@ function App() {
           localStorage.removeItem('user')
         }
       }
-      setLoading(false)  // Validation complete
+      setLoading(false)
     }
 
     validateStoredAuth()
   }, [])
 
-  // pulls current points of User in the navbar
   const fetchUserPoints = async (token) => {
     try {
       const response = await fetch(`${API_BASE_URL}/api/quiz-attempts/user`, {
@@ -82,7 +83,6 @@ function App() {
   }
 
   const handleSignUpSuccess = () => {
-    // After signup, switch to signin
     setAuthView('signin')
   }
 
@@ -90,17 +90,12 @@ function App() {
     try {
       const token = localStorage.getItem('token')
 
-      // Fetch fresh user stats from server
       const statsResponse = await fetch(`${API_BASE_URL}/api/user-progress`, {
-        headers: {
-          'Authorization': `Bearer ${token}`
-        }
+        headers: { 'Authorization': `Bearer ${token}` }
       })
 
       if (statsResponse.ok) {
         const stats = await statsResponse.json()
-
-        // Merge stats into user data
         const enrichedUser = {
           ...loginData,
           totalPoints: stats.totalPoints || 0,
@@ -108,14 +103,9 @@ function App() {
           topicsStudied: stats.topicsStudied || 0,
           topicsMastered: stats.topicsMastered || 0
         }
-
-        // Store enriched user data in localStorage
         localStorage.setItem('user', JSON.stringify(enrichedUser))
-
-        // Update state
         setUser(enrichedUser)
       } else {
-        // If stats fetch fails, still log user in with basic data
         setUser(loginData)
         localStorage.setItem('user', JSON.stringify(loginData))
       }
@@ -124,7 +114,6 @@ function App() {
       setShowAuthModal(false)
     } catch (err) {
       console.error('Error fetching user stats:', err)
-      // Still log user in even if stats fetch fails
       setUser(loginData)
       localStorage.setItem('user', JSON.stringify(loginData))
       setIsLoggedIn(true)
@@ -138,11 +127,29 @@ function App() {
     setIsLoggedIn(false)
     setUser(null)
     setShowAuthModal(false)
-    setCurrentView('periods')
+    setCurrentView('disciplines')   // ← was 'periods'
   }
 
-  const handlePeriodSelect = (period) => {
-    setSelectedPeriod(period)
+  // ── NEW: discipline selection ──────────────────────────────────────────────
+  const handleDisciplineSelect = (disciplineId) => {
+    setSelectedDiscipline(disciplineId)
+    if (disciplineId === 'history'  || disciplineId === 'it') {
+      setCurrentView('sections')
+    }
+    // Other disciplines: no-op for now (cards are visually disabled)
+  }
+
+  const handleBackToDisciplines = () => {
+    setCurrentView('disciplines')
+    setSelectedDiscipline(null)
+    setSelectedSection(null)
+    setSelectedTopic(null)
+    setSelectedChapter(null)
+  }
+  // ──────────────────────────────────────────────────────────────────────────
+
+  const handleSectionSelect = ( section) => {
+    setSelectedSection(section)
     setCurrentView('topics')
   }
 
@@ -151,16 +158,15 @@ function App() {
     setCurrentView('reading')
   }
 
-  const handleBackToPeriods = () => {
-    setCurrentView('periods')
-    setSelectedPeriod(null)
+  const handleBackToSections = () => {
+    setCurrentView('sections')
+    setSelectedSection(null)
     setSelectedTopic(null)
     setSelectedChapter(null)
   }
 
   const handleBackToTopics = () => {
     setCurrentView('topics')
-    // setSelectedTopic(null)
     setSelectedChapter(null)
   }
 
@@ -174,7 +180,7 @@ function App() {
   }
 
   const handleBackFromAdmin = () => {
-    setCurrentView('periods')
+    setCurrentView('disciplines')   // ← was 'periods'
   }
 
   const handleGoToAbout = () => {
@@ -182,7 +188,7 @@ function App() {
   }
 
   const handleBackFromAbout = () => {
-    setCurrentView('periods')
+    setCurrentView('disciplines')   // ← was 'periods'
   }
 
   const handleGoToDashboard = () => {
@@ -190,17 +196,16 @@ function App() {
   }
 
   const handleBackFromDashboard = () => {
-    setCurrentView('periods')
+    setCurrentView('disciplines')   // ← was 'periods'
   }
 
-  // Close auth modal
   const handleCloseAuthModal = () => {
     setShowAuthModal(false)
   }
 
   const handleStartQuiz = (batch, chapter) => {
     setSelectedChapter(chapter)
-    setSelectedBatch(batch)  // Store the batch
+    setSelectedBatch(batch)
     setCurrentView('quiz')
   }
 
@@ -208,7 +213,8 @@ function App() {
   const renderHeader = () => (
     <div className="app-header">
       <div className="header-content">
-        <div onClick={() => setCurrentView('periods')} style={{ cursor: 'pointer' }} className="app-logo">
+        <div onClick={() => setCurrentView('disciplines')} style={{ cursor: 'pointer' }} className="app-logo">
+          {/* ↑ was setCurrentView('sections') */}
           <h1>🛡️ AVE CAESAR </h1>
           <p>⚔️ morituri te salutant ⚔️</p>
         </div>
@@ -264,27 +270,34 @@ function App() {
 
       {showAuthModal && renderAuthModal()}
 
-      {currentView === 'periods' && (
+      {/* ── NEW: discipline landing ── */}
+      {currentView === 'disciplines' && (
         <>
           <div className="quiz-container">
             {isLoggedIn && user?.role === 'ADMIN' && (
-              <button
-                onClick={handleGoToAdmin}
-                className="admin-access-btn"
-              >
+              <button onClick={handleGoToAdmin} className="admin-access-btn">
                 ⚙️ Admin Panel
               </button>
             )}
           </div>
-          <PeriodList onPeriodSelect={handlePeriodSelect} />
+          <DisciplineList onDisciplineSelect={handleDisciplineSelect} />
         </>
       )}
 
-      {currentView === 'topics' && selectedPeriod && (
+      {currentView === 'sections' && (
+        <PeriodList
+          onSectionSelect={handleSectionSelect}
+          onBack={handleBackToDisciplines}
+          discipline={selectedDiscipline}
+        />
+      )}
+
+      {currentView === 'topics' && selectedSection && (
         <TopicList
-          period={selectedPeriod}
+          section={selectedSection}
           onTopicSelect={handleTopicSelect}
-          onBack={handleBackToPeriods}
+          onBack={handleBackToSections}
+          discipline={selectedDiscipline}
         />
       )}
 
@@ -292,32 +305,32 @@ function App() {
         <ReadingMaterial
           topic={selectedTopic}
           selectedChapter={selectedChapter}
-          onChapterSelect={(chapter) => setSelectedChapter(chapter)}  // ← Just select
-          onStartQuiz={handleStartQuiz}                              // ← Start quiz
+          onChapterSelect={(chapter) => setSelectedChapter(chapter)}
+          onStartQuiz={handleStartQuiz}
           onBack={handleBackToTopics}
           isLoggedIn={isLoggedIn}
         />
       )}
 
       {currentView === 'quiz' && (
-  <>
-    {selectedTopic && selectedChapter && selectedBatch ? (
-      <Quiz
-        batch={selectedBatch}
-        chapterId={selectedChapter.id}
-        batchId={selectedBatch.id}
-        onBack={handleBackToReading}
-        isLoggedIn={isLoggedIn}
-        onQuizComplete={() => {
-          const token = localStorage.getItem('token')
-          if (token) fetchUserPoints(token)
-        }}
-      />
-    ) : (
-      <div>Missing data: topic={!!selectedTopic} chapter={!!selectedChapter} batch={!!selectedBatch}</div>
-    )}
-  </>
-)}
+        <>
+          {selectedTopic && selectedChapter && selectedBatch ? (
+            <Quiz
+              batch={selectedBatch}
+              chapterId={selectedChapter.id}
+              batchId={selectedBatch.id}
+              onBack={handleBackToReading}
+              isLoggedIn={isLoggedIn}
+              onQuizComplete={() => {
+                const token = localStorage.getItem('token')
+                if (token) fetchUserPoints(token)
+              }}
+            />
+          ) : (
+            <div>Missing data: topic={!!selectedTopic} chapter={!!selectedChapter} batch={!!selectedBatch}</div>
+          )}
+        </>
+      )}
 
       {currentView === 'admin' && isLoggedIn && (
         <Admin onBack={handleBackFromAdmin} />

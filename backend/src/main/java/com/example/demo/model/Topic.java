@@ -17,9 +17,9 @@ public class Topic {
     private String description; // Optional brief description
 
     @ManyToOne
-    @JoinColumn(name = "period_id")
+    @JoinColumn(name = "section_id")
     @JsonIgnore // Prevent circular reference
-    private Period period;
+    private Section section;
 
     @OneToMany(mappedBy = "topic", cascade = CascadeType.ALL)
     private List<Chapter> chapters;
@@ -57,12 +57,12 @@ public class Topic {
         this.description = description;
     }
 
-    public Period getPeriod() {
-        return period;
+    public Section getSection() {
+        return section;
     }
 
-    public void setPeriod(Period period) {
-        this.period = period;
+    public void setSection(Section section) {
+        this.section = section;
     }
 
     public List<Chapter> getChapters() {

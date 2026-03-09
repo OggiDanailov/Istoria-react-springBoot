@@ -1,0 +1,78 @@
+.discipline-subtitle {
+  text-align: center;
+  color: #6b4c2a;
+  font-family: 'EB Garamond', serif;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  font-style: italic;
+}
+
+.discipline-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.discipline-card {
+  background: rgba(255, 248, 220, 0.6);
+  border: 2px solid #c8a96e;
+  border-radius: 8px;
+  padding: 1.8rem 1.5rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  text-align: center;
+  position: relative;
+}
+
+.discipline-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(139, 90, 43, 0.25);
+  border-color: #8b5a2b;
+}
+
+.discipline-card--unavailable {
+  opacity: 0.55;
+  cursor: default;
+}
+
+.discipline-card--unavailable:hover {
+  transform: none;
+  box-shadow: none;
+  border-color: #c8a96e;
+}
+
+.discipline-icon {
+  font-size: 2.8rem;
+  margin-bottom: 0.75rem;
+  line-height: 1;
+}
+
+.discipline-card h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  color: #4a2c0a;
+  margin: 0 0 0.6rem 0;
+}
+
+.discipline-card p {
+  font-family: 'EB Garamond', serif;
+  font-size: 0.95rem;
+  color: #6b4c2a;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.discipline-badge {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.25rem 0.75rem;
+  background: #d4a847;
+  color: #4a2c0a;
+  font-family: 'EB Garamond', serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: 12px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}

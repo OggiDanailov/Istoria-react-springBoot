@@ -5,24 +5,24 @@ import './TopicForm.css'
 function TopicForm({ topic, onClose }) {
   const [title, setTitle] = useState('')
   const [description, setDescription] = useState('')
-  const [periodId, setPeriodId] = useState('')
-  const [periods, setPeriods] = useState([])
+  const [sectionId, setSectionId] = useState('')
+  const [sections, setSections] = useState([])
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
 
-  // Fetch periods on mount
+  // Fetch sections on mount
   useEffect(() => {
-    const fetchPeriods = async () => {
+    const fetchSections = async () => {
       try {
-        const response = await fetch(`${API_BASE_URL}/api/periods`)
-        if (!response.ok) throw new Error('Failed to fetch periods')
+        const response = await fetch(`${API_BASE_URL}/api/sections`)
+        if (!response.ok) throw new Error('Failed to fetch sections')
         const data = await response.json()
-        setPeriods(data)
+        setSections(data)
       } catch (err) {
-        setError(`Failed to load periods: ${err.message}`)
+        setError(`Failed to load sections: ${err.message}`)
       }
     }
-    fetchPeriods()
+    fetchSections()
   }, [])
 
   // Load existing topic data if editing
@@ -30,8 +30,8 @@ function TopicForm({ topic, onClose }) {
     if (topic) {
       setTitle(topic.title)
       setDescription(topic.description)
-      if (topic.period && topic.period.id) {
-        setPeriodId(topic.period.id)
+      if (topic.section && topic.section.id) {
+        setSectionId(topic.section.id)
       }
     }
   }, [topic])
@@ -41,8 +41,8 @@ function TopicForm({ topic, onClose }) {
     setLoading(true)
     setError('')
 
-    if (!periodId) {
-      setError('Please select a period')
+    if (!sectionId) {
+      setError('Please select a section')
       setLoading(false)
       return
     }
@@ -50,7 +50,7 @@ function TopicForm({ topic, onClose }) {
     const topicData = {
       title,
       description,
-      period: { id: periodId }
+      section: { id: sectionId }
     }
 
     try {
@@ -61,8 +61,8 @@ function TopicForm({ topic, onClose }) {
         url = `${API_BASE_URL}/api/topics/${topic.id}`
         method = 'PUT'
       } else {
-        // Create new topic - use the period-based endpoint
-        url = `${API_BASE_URL}/api/periods/${periodId}/topics`
+        // Create new topic - use the section-based endpoint
+        url = `${API_BASE_URL}/api/sections/${sectionId}/topics`
         method = 'POST'
       }
 
@@ -95,19 +95,19 @@ function TopicForm({ topic, onClose }) {
       {error && <div className="error">{error}</div>}
 
       <form onSubmit={handleSubmit} className="topic-form">
-        {/* Period Selector */}
+        {/* Section Selector */}
         <div className="form-group">
-          <label htmlFor="period">Historical Period:</label>
+          <label htmlFor="period">Section:</label>
           <select
             id="period"
-            value={periodId}
-            onChange={(e) => setPeriodId(e.target.value)}
+            value={sectionId}
+            onChange={(e) => setSectionId(e.target.value)}
             required
           >
-            <option value="">-- Select a Period --</option>
-            {periods.map((period) => (
-              <option key={period.id} value={period.id}>
-                {period.title} {period.description ? `(${period.description})` : ''}
+            <option value="">-- Select a Section --</option>
+            {sections.map(( section) => (
+              <option key={section.id} value={section.id}>
+                {section.title} {section.description ? `(${section.description})` : ''}
               </option>
             ))}
           </select>

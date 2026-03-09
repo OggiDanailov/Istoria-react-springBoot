@@ -101,7 +101,7 @@ public class JwtAuthenticationFilter implements Filter {
         // Allow public endpoints (no auth required)
         if (requestPath.contains("/api/auth/register") ||
             requestPath.contains("/api/auth/login") ||
-            requestPath.contains("/api/periods") ||
+            requestPath.contains("/api/sections") ||
             requestPath.contains("/api/chapters") ||
             requestPath.contains("/api/topics") ||
             requestPath.contains("/api/questions") ||
