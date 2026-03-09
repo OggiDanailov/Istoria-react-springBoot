@@ -1,0 +1,164 @@
+{
+  "chapter": "Pompey the Great — From Sulla's Lieutenant to Rome's Master (79-62 BCE)",
+  "batchOrder": 4,
+  "difficulty": 2,
+  "description": "Medium Questions — Consulship of 70 BCE, Pirate War, Eastern Commands, Return to Rome",
+  "questions": [
+    {
+      "question": "The Senate's opposition to the Lex Gabinia included Catulus's warning that the Romans had made themselves too dependent on one man. What was the deeper constitutional concern he was articulating?",
+      "options": [
+        "That concentrating military and financial authority in a single individual for three years effectively created a monarchy, regardless of what the official title of the command was called",
+        "That Pompey was personally untrustworthy and would use the command to enrich himself rather than defeat the pirates",
+        "That the treasury lacked sufficient funds to support the enormous operation Gabinius was proposing",
+        "That granting such powers required a formal constitutional amendment, which could only be passed with a two-thirds majority of the Senate rather than a simple popular vote",
+        "That the precedent of a maritime command would inevitably be followed by demands for similar commands over land territories, eventually dividing the entire Roman world among competing strongmen"
+      ],
+      "correctAnswers": [0],
+      "difficulty": 2,
+      "textReference": "#an-unprecedented-command"
+    },
+    {
+      "question": "Pompey divided the Mediterranean into thirteen sectors and assigned a subordinate commander to each. Why was this organizational approach so effective against the pirates?",
+      "options": [
+        "It allowed each sector commander to develop specialized knowledge of local conditions and pirate networks, producing more targeted intelligence than a unified command could have gathered",
+        "It created a coordinated simultaneous sweep that prevented pirates from escaping one sector by retreating to another, driving them steadily eastward toward Cilicia where they could be decisively engaged",
+        "It distributed the financial burden of the campaign across thirteen separate budget centers, avoiding the Senate's concern that a single commander would spend too freely",
+        "It was a deliberate imitation of the Macedonian military system, which had divided Alexander's conquests into administrative sectors governed by his generals",
+        "It prevented any individual sector commander from accumulating enough personal prestige to become a political rival to Pompey after the campaign ended"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 2,
+      "textReference": "#three-months"
+    },
+    {
+      "question": "The publicani's opposition to Lucullus illustrates a broader tension in Rome's imperial system. What was that tension?",
+      "options": [
+        "Between Rome's military commanders, who wanted to maximize conquest, and its merchants, who preferred stable trading relationships with foreign states",
+        "Between effective provincial governance that required protecting subject populations and the financial interests of Roman businessmen who profited from exploiting those same populations",
+        "Between the Senate's desire to limit provincial commands to one year and the military reality that major campaigns took several years to conclude",
+        "Between Rome's tradition of treating conquered peoples with respect and the practical need to extract revenue quickly to fund further expansion",
+        "Between the equestrian order's commercial interests in the East and the senatorial order's political interest in maintaining stable client kingdoms rather than direct provincial administration"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 2,
+      "textReference": "#lucullus-and-the-eastern-war"
+    },
+    {
+      "question": "Pompey's eastern settlement reorganized Syria, Pontus, Bithynia, and Judaea, creating new provinces and client kingdoms. What multiple strategic purposes did this network of client states serve?",
+      "options": [
+        "They generated tribute income, provided auxiliary troops for Roman armies, and created a buffer zone of nominally independent states that were in practice Roman dependencies along the eastern frontier",
+        "They freed Roman administrators from direct governance of difficult territories while ensuring those territories remained politically loyal through cultural Romanization programs",
+        "They were primarily a financial instrument, allowing Pompey to extract additional personal tribute beyond what would have been legally permitted from formally annexed provinces",
+        "They were intended to be gradually absorbed into the formal provincial system over the following generation as Roman culture spread through the local aristocracies",
+        "They served mainly as a way to reward local rulers who had cooperated with Pompey during the campaign, creating personal obligations rather than institutional Roman control"
+      ],
+      "correctAnswers": [0],
+      "difficulty": 2,
+      "textReference": "#reorganizing-the-east"
+    },
+    {
+      "question": "Pompey besieged Jerusalem in 63 BCE and entered the Temple — described as a cultural trauma for the Jewish population. Why did this act carry such particular significance in the context of Jewish religion and politics?",
+      "options": [
+        "The Temple Mount was not merely a religious site but the physical and symbolic center of Jewish sovereignty, and its violation by a foreign general represented the end of meaningful Hasmonean independence",
+        "Jewish religious law required that anyone who entered the inner Temple be a descendant of Aaron, and Pompey's entry constituted a permanent ritual defilement that made normal worship impossible for years afterward",
+        "The Temple contained the entire treasury of the Hasmonean kingdom, and Pompey's entry — even without looting — was understood as Rome claiming ownership of Judaea's financial resources",
+        "Pompey had been specifically warned by Jewish religious authorities that entering the Temple would trigger a general uprising, making the act a deliberate provocation intended to justify harsher Roman control",
+        "The Temple in Jerusalem was formally dedicated to Jupiter Capitolinus under an agreement Pompey had reached with the Hasmonean king, which is why he entered it as part of a Roman religious ceremony"
+      ],
+      "correctAnswers": [0],
+      "difficulty": 2,
+      "textReference": "#reorganizing-the-east"
+    },
+    {
+      "question": "Pompey's decision to disband his army upon returning to Italy in 62 BCE has been called a political miscalculation of the first order. Why?",
+      "options": [
+        "His veterans, feeling abandoned, immediately transferred their loyalty to Crassus, who offered them better land terms and deprived Pompey of his main source of political support",
+        "Without an army, he was a wealthy private citizen unable to threaten or coerce — and the Senate immediately exploited this vulnerability by blocking everything he needed, demonstrating that his prestige alone could not substitute for the military force he had voluntarily surrendered",
+        "The disbandment was legally irreversible under Roman law, meaning he could not reconstitute his army even when it became clear the Senate was going to obstruct him",
+        "His soldiers, once dispersed to their home communities, became vulnerable to recruitment by his political enemies and were eventually enlisted in the forces that would be used against him",
+        "The disbandment deprived him of the financial mechanism through which he had been paying his political allies, since army payrolls had been secretly funding his political network"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 2,
+      "textReference": "#the-man-who-wouldnt-march-on-rome"
+    },
+    {
+      "question": "Cato's strategy of demanding clause-by-clause examination of Pompey's eastern settlement rather than a single ratification bill was described as procedurally unanswerable. Why was this such an effective form of obstruction?",
+      "options": [
+        "Roman constitutional law required unanimous Senate approval for territorial reorganizations, giving Cato the power to veto indefinitely",
+        "A clause-by-clause review provided endless opportunities to raise individual objections, call for additional information, and delay — all within perfectly legitimate procedural rules — guaranteeing the process would take years without any overt act of bad faith",
+        "The clause-by-clause process required each provision to be submitted to a popular vote, and Cato knew the urban assembly would reject any terms that strengthened eastern client kings at the expense of direct Roman revenue",
+        "Roman tradition required any settlement affecting free peoples to be reviewed by the priestly colleges before ratification, and invoking this procedure gave Cato months of automatic delay",
+        "The procedural requirement meant that Lucullus — who opposed the settlement — had the legal right to attend every hearing and challenge every clause, turning the process into an indefinite interrogation of Pompey's decisions"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 2,
+      "textReference": "#the-senate-finds-its-spine"
+    },
+    {
+      "question": "The chapter states that Pompey 'managed to alienate virtually everyone' during the years 62-60 BCE. What does this reveal about the gap between his military and political abilities?",
+      "options": [
+        "That Pompey had never developed genuine political skills because his entire career had been built on military force and extraordinary commands that bypassed the normal political process of negotiation and compromise",
+        "That Pompey's political failures were the result of bad advice from his staff, who had excellent military training but no experience navigating the Senate's factional dynamics",
+        "That the Senate's collective opposition was so disciplined and well-organized that even the most skilled politician could not have found a path through it",
+        "That Pompey was deliberately sabotaging his own political position in order to create the conditions for justifying a second march on Rome",
+        "That Pompey's enormous wealth had made him contemptuous of the ordinary political deal-making that a less wealthy man would have used to build a coalition"
+      ],
+      "correctAnswers": [0],
+      "difficulty": 2,
+      "textReference": "#the-senate-finds-its-spine"
+    },
+    {
+      "question": "The chapter argues that the First Triumvirate demonstrated the Republic could be captured through 'coordinated manipulation of its own legitimate institutions.' What does this mean in practice?",
+      "options": [
+        "The three men planned to use bribery so extensively that every Roman election and legislative vote would effectively be for sale, making constitutional forms meaningless",
+        "By controlling elections, legislation, and the popular assemblies collectively — with Pompey's military prestige, Crassus's money, and Caesar's political skill — the three could achieve through legal forms what separately they had been unable to force through the Senate's obstruction",
+        "The Triumvirate intended to gradually replace all Roman magistracies with new offices whose holders would be personally loyal to the three men",
+        "They planned to use their control of the courts to prosecute every significant political opponent into exile or execution, eliminating organized resistance without any overtly unconstitutional act",
+        "The three men coordinated their clientela networks to ensure that no legislation could pass in any assembly without their collective approval, giving them an effective veto over all Roman governance"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 2,
+      "textReference": "#the-stage-is-set"
+    },
+    {
+      "question": "What did each of the three triumvirs bring to the alliance that the others lacked?",
+      "options": [
+        "Pompey contributed military prestige and veteran networks; Crassus contributed enormous personal wealth and connections to the equestrian business class; Caesar contributed political skill, popular following, and the ability to use the assemblies and tribunes effectively",
+        "Pompey contributed his eastern client kingdoms as a financial base; Crassus contributed his private army of slaves trained as soldiers; Caesar contributed the loyalty of the urban poor whom he had cultivated through his aedileship",
+        "Pompey contributed his consular authority; Crassus contributed his censorial powers; Caesar contributed his praetorship — between them covering every branch of Roman magistracy simultaneously",
+        "All three contributed roughly equivalent resources in different forms, and the alliance was primarily about preventing any one of them from being isolated and destroyed by their common enemies in the Senate",
+        "Pompey contributed legitimacy through his popular reputation; Crassus contributed legal expertise through his vast network of advocate-clients; Caesar contributed military experience from his campaigns in Spain"
+      ],
+      "correctAnswers": [0],
+      "difficulty": 2,
+      "textReference": "#the-stage-is-set"
+    },
+    {
+      "question": "Pompey's revenues increased Rome's treasury by approximately seventy percent according to Plutarch. What does this figure reveal about the relationship between Pompey's personal power and Roman state finances?",
+      "options": [
+        "That Rome had been running a significant budget deficit before Pompey's campaigns and was essentially dependent on his conquests to remain solvent",
+        "That the scale of wealth generated by his eastern settlements made him indispensable to Rome's financial functioning — and simultaneously made him the single most powerful patron and client-builder in the Roman world, creating a structural dependency that the Senate could not easily afford to antagonize",
+        "That Pompey had deliberately directed most of the eastern wealth into the public treasury rather than keeping it himself, demonstrating a Republican virtue that set him apart from commanders like Lucullus and Sulla",
+        "That the eastern provinces were fundamentally more valuable than Rome's western territories, suggesting that future Roman power would inevitably shift eastward regardless of what happened in the civil wars",
+        "That the seventy percent increase was primarily an accounting artifact created by Pompey's reorganization of tax collection, rather than a genuine increase in actual wealth flowing into Rome"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 2,
+      "textReference": "#reorganizing-the-east"
+    },
+    {
+      "question": "The chapter describes the Lex Gabinia passing after opponents were physically ejected from the speaker's platform. What does this episode reveal about the state of Roman political culture by 67 BCE?",
+      "options": [
+        "That the popular assemblies had been systematically infiltrated by Pompey's veterans, who used organized violence to control political outcomes",
+        "That political violence, which had been exceptional during the Gracchan crisis, had become an accepted tool for overriding constitutional opposition — the popular will expressed through force was now stronger than the Senate's procedural authority",
+        "That Gabinius had hired professional thugs to intimidate senators, a practice that became standard in late Republican politics",
+        "That the urban poor had become so politically organized that they could effectively veto any senatorial opposition to legislation they favored",
+        "That Rome lacked adequate policing mechanisms to maintain order at public meetings, a structural weakness that any determined demagogue could exploit"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 2,
+      "textReference": "#an-unprecedented-command"
+    }
+  ]
+}

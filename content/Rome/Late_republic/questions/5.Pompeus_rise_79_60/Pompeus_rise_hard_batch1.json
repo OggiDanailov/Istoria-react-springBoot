@@ -1,0 +1,138 @@
+{
+  "chapter": "Pompey the Great — From Sulla's Lieutenant to Rome's Master (79-62 BCE)",
+  "batchOrder": 5,
+  "difficulty": 3,
+  "description": "Hard Questions — Early Career through Consulship of 70 BCE",
+  "questions": [
+    {
+      "question": "Pompey's career from 83 to 70 BCE involved holding multiple military commands without any qualifying magistracy. Which of the following accurately describe how this pattern affected the Roman constitution? (SELECT ALL THAT APPLY)",
+      "options": [
+        "Each extraordinary command established a precedent making the next easier to justify — by 67 BCE, the Lex Gabinia was controversial but no longer genuinely shocking to most Romans",
+        "The repeated grant of unconstitutional commands demonstrated that the Senate's authority rested on consent rather than force, and that consent could be withheld whenever a sufficiently powerful commander appeared",
+        "Pompey's career proved that the cursus honorum had never been a meaningful constitutional constraint, since the Senate had always granted exceptions for sufficiently talented commanders",
+        "The pattern showed that the real qualification for Roman command was not legal standing but military force and the political relationships that military success created",
+        "Each of Pompey's commands weakened the argument that constitutional rules served any protective purpose, since he consistently delivered the outcomes the state needed while ignoring the procedures the state required"
+      ],
+      "correctAnswers": [0, 1, 3, 4],
+      "difficulty": 3,
+      "textReference": "#sullas-young-butcher-an-unconstitutional-beginning"
+    },
+    {
+      "question": "Sertorius represents an alternative path the late Republic did not take. Which of the following accurately characterize what made his Spanish state genuinely distinctive from a normal Roman military rebellion? (SELECT ALL THAT APPLY)",
+      "options": [
+        "He maintained constitutional forms — a Senate-in-exile, Roman institutions, proper magistracies — suggesting he sought restoration of Republican government rather than personal autocracy",
+        "He integrated the indigenous Spanish population as genuine participants rather than subjects, building a multi-ethnic state whose loyalty was earned rather than coerced",
+        "He articulated a positive political program — the legitimate Republic against Sulla's illegal regime — rather than merely fighting for personal survival or power",
+        "He consistently refused to accept military aid from Rome's foreign enemies, maintaining his claim to be a Roman patriot rather than a rebel allied with hostile powers",
+        "His school at Osca represented a long-term investment in building Roman cultural identity among Spanish elites, a strategy focused on decades rather than immediate military outcomes"
+      ],
+      "correctAnswers": [0, 1, 2, 4],
+      "difficulty": 3,
+      "textReference": "#an-alternative-rome-in-spain"
+    },
+    {
+      "question": "The slave revolt of Spartacus has been interpreted in vastly different ways by ancient and modern historians. Which of the following conclusions are actually supported by the evidence presented in the chapter? (SELECT ALL THAT APPLY)",
+      "options": [
+        "The revolt demonstrated that Roman Italy's agricultural economy was structurally dependent on slave labor at a scale that created permanent systemic vulnerability to mass uprising",
+        "Spartacus possessed genuine military talent, defeating multiple Roman armies including consular-level forces, suggesting the revolt's failure owed more to strategic incoherence than military weakness",
+        "The revolt's strategic incoherence — with different factions wanting escape, revenge, or continued raiding — prevented it from achieving the political outcome its military successes might otherwise have made possible",
+        "Crassus's decision to crucify six thousand slaves was primarily a response to senatorial pressure demanding a visible deterrent, rather than his own personal choice",
+        "The ease with which Pompey claimed credit for the war's conclusion by destroying the final fugitives illustrates how Roman political culture rewarded the appearance of military achievement over its substance"
+      ],
+      "correctAnswers": [1, 2, 4],
+      "difficulty": 3,
+      "textReference": "#spartacus-and-the-slave-war"
+    },
+    {
+      "question": "The consulship of 70 BCE dismantled Sulla's constitution almost entirely within a single year. Which of the following best explains why Pompey and Crassus — both products and beneficiaries of the Sullan system — chose to destroy it?",
+      "options": [
+        "They had genuine democratic convictions and believed the Sullan restrictions on the tribunate and courts were fundamentally unjust",
+        "The Sullan constitution was politically toxic — associated with proscriptions and dictatorship — and dismantling it was the most effective way to build popular legitimacy for careers that had no other constitutional foundation",
+        "They were responding to direct popular pressure in the form of riots and demonstrations that made it politically impossible to maintain Sulla's restrictions on the tribunate",
+        "Pompey calculated that a restored tribunate would be useful in his subsequent career for pushing through extraordinary commands, since tribunes could propose legislation to the assemblies without Senate approval",
+        "Crassus had secretly funded the pro-Gracchan movement for years and the consulship was the first opportunity he had to implement the constitutional program he had long supported"
+      ],
+      "correctAnswers": [1, 3],
+      "difficulty": 3,
+      "textReference": "#the-consulship-of-70-bce-dismantling-sullas-constitution"
+    },
+    {
+      "question": "The chapter argues that after the consulship of 70 BCE, the real power in Rome was 'measured in armies, veterans, and the client networks that stretched from the city to the provinces.' Which specific events from the 70s BCE most directly support this argument? (SELECT ALL THAT APPLY)",
+      "options": [
+        "The Senate's inability to refuse the consulship to Pompey and Crassus despite their manifest legal disqualifications, because the two men controlled most of Rome's available military force",
+        "Sertorius's decade-long resistance in Spain, which demonstrated that a Roman commander with a loyal army and a client network could maintain an independent state indefinitely against the Senate's wishes",
+        "The Senate's willingness to grant Pompey unconstitutional commands against Lepidus and Sertorius, demonstrating that institutional authority bent to military necessity whenever the Senate was sufficiently frightened",
+        "Cicero's election as consul in 63 BCE, which showed that oratorical skill and constitutional argument could still win the highest office without military backing",
+        "Crassus's ability to use his wealth to purchase political outcomes that military force alone could not achieve, suggesting that money was a more fundamental source of power than armies"
+      ],
+      "correctAnswers": [0, 1, 2],
+      "difficulty": 3,
+      "textReference": "#the-sullan-settlement-undone"
+    },
+    {
+      "question": "Pompey's military record in the 70s BCE included both genuine achievements and significant failures. Which of the following represents an accurate and nuanced assessment of his actual military ability during this period? (SELECT ALL THAT APPLY)",
+      "options": [
+        "His rapid organization and decisive execution of the African campaign against Domitius demonstrated genuine logistical and operational talent",
+        "His performance against Sertorius — suffering at Lauron, being wounded at Sucro, requiring rescue by Metellus — showed he was outclassed by a genuinely superior guerrilla commander in his own operational environment",
+        "The Sertorian War demonstrated that Pompey was most effective when facing opponents who would engage in conventional pitched battle, and struggled against enemies who denied him the decisive engagements he preferred",
+        "His interception of the Spartacus fugitives was a genuine military achievement that demonstrated his strategic foresight in positioning his army to intercept fleeing rebels",
+        "The overall pattern of the 70s suggests Pompey was a competent but not exceptional battlefield commander whose reputation rested partly on his extraordinary organizational ability and partly on taking credit for outcomes others had created"
+      ],
+      "correctAnswers": [0, 1, 2, 4],
+      "difficulty": 3,
+      "textReference": "#ended-by-murder-not-battle"
+    },
+    {
+      "question": "The chapter describes a pattern in which the Senate repeatedly granted Pompey unconstitutional commands, then found itself unable to control him. Which of the following conclusions about the Senate's institutional capacity does this pattern support? (SELECT ALL THAT APPLY)",
+      "options": [
+        "The Senate was capable of resisting individual demands from powerful commanders when those commanders lacked immediate military force within Italy — as Pompey discovered after disbanding his army in 62 BCE",
+        "The Senate's willingness to grant emergency powers to individuals during crises made it structurally incapable of preventing the accumulation of personal power that those emergency powers enabled",
+        "The Senate's authority was fundamentally performative — it worked as long as powerful individuals chose to respect it, but had no coercive mechanism to enforce compliance from those who did not",
+        "The Senate's collective membership was too large and factionally divided to pursue a coherent long-term strategy of restraining any single commander across multiple commands spanning decades",
+        "The Senate's greatest institutional failure was not in granting extraordinary commands but in failing to create a permanent professional military under its own direct control, which would have eliminated the problem of commanders with privately loyal armies"
+      ],
+      "correctAnswers": [0, 1, 2, 3],
+      "difficulty": 3,
+      "textReference": "#pompey-saves-the-sullan-settlement"
+    },
+    {
+      "question": "Sertorius's assassination by Perperna, and Pompey's subsequent burning of Perperna's papers, raises a question about what the Sertorian War revealed regarding Roman elite solidarity. What is the most historically defensible interpretation?",
+      "options": [
+        "That Roman elite solidarity was strong enough that even political opponents of the Senate preferred assassination to continued resistance — Perperna killed Sertorius because he feared Sertorius's ultimate victory would install him as permanent dictator",
+        "That the correspondence in Perperna's papers implicating prominent Romans in dealings with Sertorius demonstrated that the civil conflict's boundaries were blurry — the same senators who publicly supported Sulla's regime had privately maintained connections to his enemies",
+        "That Perperna acted solely from personal jealousy with no broader political significance, and Pompey burned the papers simply because they were irrelevant to the campaign's conclusion",
+        "That Roman aristocrats always prioritized factional survival over constitutional principle, and the papers merely documented a pattern of calculated hedging that both sides accepted as normal political behavior",
+        "That the papers would have revealed Sulla himself had secretly negotiated with Sertorius, which Pompey burned to protect his own political legitimacy as a Sullan commander"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 3,
+      "textReference": "#ended-by-murder-not-battle"
+    },
+    {
+      "question": "The chapter suggests that Lepidus's revolt, the Sertorian War, and the Slave War all shared a common underlying cause that the Sullan settlement did not address. Which of the following identifies that cause most accurately?",
+      "options": [
+        "The fundamental failure of Sulla's constitutional reforms, which created a technically sound system that lacked popular legitimacy and could be challenged by anyone with an army",
+        "The dispossession of Italian farmers — through Sullan land confiscations for veterans — created a pool of the economically ruined whose anger provided recruits for Lepidus, contributed to the slave war's scale in the Italian countryside, and fueled the resentment Sertorius exploited among Roman exiles",
+        "The unresolved question of who would inherit Sulla's personal political network after his death, since he had failed to designate a successor capable of enforcing the settlement he had imposed",
+        "The military reforms of Marius, which had created professional soldiers loyal to their commanders rather than the state, making every post-Sullan crisis potentially a civil war rather than a policing problem",
+        "The Senate's institutional incapacity, demonstrated repeatedly in the 80s BCE, which had destroyed the body's moral authority and made it unable to command genuine loyalty from anyone with the military force to resist"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 3,
+      "textReference": "#the-revolt-of-lepidus"
+    },
+    {
+      "question": "The chapter ends Section 5 by arguing that what replaced Sulla's constitution was 'not a healthy Republic but a power vacuum.' What specific evidence from the 70s BCE most directly supports this characterization? (SELECT ALL THAT APPLY)",
+      "options": [
+        "The Senate's inability to prevent the consulship of two legally unqualified men demonstrated that institutional authority without military backing had become effectively meaningless",
+        "The restoration of the tribunate created new opportunities for popular politicians to challenge the Senate, but those challenges were now backed by military force rather than constitutional argument",
+        "The expulsion of sixty-four senators by the censors of 70 BCE showed the Senate was too corrupt to govern itself effectively without periodic purges",
+        "The pattern of crises throughout the decade — each resolved by an extraordinary individual command rather than normal institutional processes — demonstrated that Roman governance had become dependent on exceptional individuals rather than functional institutions",
+        "Pompey and Crassus's immediate use of their consulship to dismantle the constitution they had nominally defended showed that no Roman strongman would accept institutional limits when those limits became inconvenient"
+      ],
+      "correctAnswers": [0, 3, 4],
+      "difficulty": 3,
+      "textReference": "#the-sullan-settlement-undone"
+    }
+  ]
+}

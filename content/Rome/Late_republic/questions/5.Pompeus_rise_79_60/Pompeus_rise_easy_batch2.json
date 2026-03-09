@@ -1,0 +1,152 @@
+{
+  "chapter": "Pompey the Great — From Sulla's Lieutenant to Rome's Master (79-62 BCE)",
+  "batchOrder": 2,
+  "difficulty": 1,
+  "description": "Easy Questions — Consulship of 70 BCE, Pirate War, Eastern Commands, Return to Rome",
+  "questions": [
+    {
+      "question": "What significant constitutional qualification was Pompey missing when he ran for the consulship in 70 BCE?",
+      "options": [
+        "He was too young by two years to hold the office under Sulla's minimum age rules",
+        "He had never held any magistracy below the consulship — not the quaestorship, aedileship, or praetorship — and was not technically even a senator",
+        "He had not completed the mandatory two-year interval required between his proconsular command in Spain and a new magistracy",
+        "He had been born outside Rome and the Sullan constitution restricted the consulship to those born within the city"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "textReference": "#two-outsiders-take-office"
+    },
+    {
+      "question": "Which of Sulla's constitutional reforms did Pompey and Crassus reverse during their consulship of 70 BCE?",
+      "options": [
+        "They restored the tribunate's full powers, which Sulla had stripped, allowing tribunes to propose legislation directly to the assemblies again",
+        "They restored the property qualification for the Senate that Sulla had abolished, reducing its size back to three hundred members",
+        "They returned the selection of priests to popular election, reversing Sulla's reinstatement of co-optation by priestly colleges",
+        "They abolished the minimum age requirements for magistracies that Sulla had codified in the cursus honorum"
+      ],
+      "correctAnswers": [0],
+      "difficulty": 1,
+      "textReference": "#the-sullan-settlement-undone"
+    },
+    {
+      "question": "What was the central problem driving the piracy crisis that prompted the Lex Gabinia in 67 BCE?",
+      "options": [
+        "Pirates had blockaded the port of Ostia, cutting off all seaborne trade with Rome",
+        "A pirate confederation had allied with Mithridates of Pontus and was supplying his armies with Roman weapons",
+        "Pirates were disrupting grain shipments from Sicily, Sardinia, and Africa, causing grain prices to rise sharply in Rome",
+        "Pirates had kidnapped several sitting Roman senators and were holding them for ransom in Cilicia"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 1,
+      "textReference": "#the-mediterranean-under-siege"
+    },
+    {
+      "question": "How long did it take Pompey to clear the Mediterranean of pirates after the Lex Gabinia was passed?",
+      "options": [
+        "Three years, the full term granted by the law",
+        "Approximately one year, half the allotted time",
+        "Three months",
+        "Forty days for the western sea, with eastern operations continuing for two more years"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 1,
+      "textReference": "#three-months"
+    },
+    {
+      "question": "Rather than executing the tens of thousands of pirates who surrendered, what did Pompey do with them?",
+      "options": [
+        "He sold them into slavery, using the proceeds to fund a new Roman fleet",
+        "He enrolled them as auxiliary soldiers in his eastern army, where their maritime skills proved useful",
+        "He resettled them inland, reasoning that men driven to piracy by poverty could become productive subjects if given land",
+        "He released them on condition they swear an oath never to return to the sea, backed by hostages from each community"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 1,
+      "textReference": "#three-months"
+    },
+    {
+      "question": "What caused Lucullus's soldiers to mutiny and refuse to advance further into Armenia?",
+      "options": [
+        "They had not been paid for over a year because Lucullus refused to allow looting of the territories he conquered",
+        "They had been in the field for years far from Italy, their legal term of service had long expired, and Lucullus's demanding personality made him respected but unloved",
+        "They were frightened of crossing the Euphrates River, which Roman religious tradition held to be the boundary of the civilized world",
+        "Lucullus had executed several popular officers for insubordination, turning the entire army against him"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "textReference": "#lucullus-and-the-eastern-war"
+    },
+    {
+      "question": "Which tribune proposed the Lex Manilia in 66 BCE, transferring the eastern command from Lucullus to Pompey?",
+      "options": [
+        "Aulus Gabinius",
+        "Publius Sulpicius",
+        "Gaius Manilius",
+        "Marcus Licinius"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 1,
+      "textReference": "#the-lex-manilia"
+    },
+    {
+      "question": "How did Mithridates eventually die in 63 BCE after his final defeat?",
+      "options": [
+        "He was captured by Pompey's forces and executed at a public ceremony in Rome",
+        "He drowned attempting to escape across the Black Sea when his ship was caught in a storm",
+        "He attempted suicide by poison but the attempt failed because of his habitual antidote-taking, and he was finally killed by a Gallic soldier",
+        "He was betrayed and handed over to Pompey by his son Pharnaces, who then had him strangled"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 1,
+      "textReference": "#mithridates-defeated"
+    },
+    {
+      "question": "What was the first permanent stone theater in Rome, built by Pompey using wealth from his eastern campaigns?",
+      "options": [
+        "The Theatre of Marcellus",
+        "The Theatre of Pompey",
+        "The Theatre of Balbus",
+        "The Theatre of Caesar"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "textReference": "#reorganizing-the-east"
+    },
+    {
+      "question": "What surprising decision did Pompey make upon returning to Italy in 62 BCE that stunned contemporaries?",
+      "options": [
+        "He refused to celebrate a triumph, saying the campaign had not been difficult enough to merit one",
+        "He disbanded his army rather than marching on Rome as Sulla had done",
+        "He immediately announced his retirement from politics and returned to his Campanian estates",
+        "He surrendered his eastern command to the Senate without waiting to be recalled"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "textReference": "#the-man-who-wouldnt-march-on-rome"
+    },
+    {
+      "question": "What two things did Pompey ask the Senate for after his return from the East, and what did the Senate do?",
+      "options": [
+        "He asked for a triumph and a land grant for himself; the Senate granted the triumph but refused the land grant",
+        "He asked for ratification of his eastern settlement and land grants for his veterans; the Senate blocked both",
+        "He asked for a second consulship and the title Magnus to be made official; the Senate granted the title but refused the consulship",
+        "He asked for command against the Parthians and funding for a new eastern campaign; the Senate refused both on grounds of cost"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "textReference": "#the-senate-finds-its-spine"
+    },
+    {
+      "question": "Who were the three men who formed the First Triumvirate in 60 BCE?",
+      "options": [
+        "Pompey, Cicero, and Crassus",
+        "Pompey, Caesar, and Lucullus",
+        "Pompey, Crassus, and Caesar",
+        "Pompey, Cato, and Caesar"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 1,
+      "textReference": "#the-stage-is-set"
+    }
+  ]
+}

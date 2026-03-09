@@ -1,0 +1,152 @@
+{
+  "chapter": "Sulla's Dictatorship, Proscriptions, and Constitutional Reforms (82-79 BCE)",
+  "batchOrder": 1,
+  "difficulty": 1,
+  "description": "Easy Questions",
+  "questions": [
+    {
+      "question": "Where did Sulla land when he returned to Italy from the East in 83 BCE?",
+      "options": [
+        "Ostia, near Rome",
+        "Brundisium, in southern Italy",
+        "Capua, in Campania",
+        "Ancona, on the Adriatic coast"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "textReference": "#sullas-landing-and-early-campaign"
+    },
+    {
+      "question": "What title did Sulla's soldiers give him during his eastern campaigns, meaning 'the Fortunate'?",
+      "options": [
+        "Imperator",
+        "Magnus",
+        "Felix",
+        "Maximus"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 1,
+      "textReference": "#sullas-eastern-campaign-and-the-road-home"
+    },
+    {
+      "question": "Which battle on 1 November 82 BCE decided the Roman civil war in Sulla's favor?",
+      "options": [
+        "Battle of Sacriportus",
+        "Battle of Orchomenus",
+        "Battle of the Colline Gate",
+        "Battle of Mount Tifata"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 1,
+      "textReference": "#the-battle-of-the-colline-gate"
+    },
+    {
+      "question": "What were the proscriptions?",
+      "options": [
+        "New tax laws imposed on the provinces after the civil war",
+        "Religious decrees issued by the Senate to purify Rome after civil conflict",
+        "Published lists of citizens declared enemies of the state, subject to death and property confiscation",
+        "Military recruitment notices posted across the Italian peninsula"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 1,
+      "textReference": "#innovation-in-political-murder"
+    },
+    {
+      "question": "What was the name of the law that formally granted Sulla his unlimited dictatorship in late 82 BCE?",
+      "options": [
+        "Lex Cornelia",
+        "Lex Valeria",
+        "Lex Sempronia",
+        "Lex Domitia"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "textReference": "#an-ancient-office-revived"
+    },
+    {
+      "question": "How old was Pompey when he raised three legions from his family's clients and joined Sulla's cause in 83 BCE?",
+      "options": [
+        "Seventeen",
+        "Twenty-eight",
+        "Thirty-one",
+        "Twenty-three"
+      ],
+      "correctAnswers": [3],
+      "difficulty": 1,
+      "textReference": "#sullas-landing-and-early-campaign"
+    },
+    {
+      "question": "In what year did Sulla resign the dictatorship and retire to private life?",
+      "options": [
+        "82 BCE",
+        "81 BCE",
+        "79 BCE",
+        "75 BCE"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 1,
+      "textReference": "#the-abdication"
+    },
+    {
+      "question": "What ended the First Mithridatic War in 85 BCE?",
+      "options": [
+        "The capture and execution of Mithridates VI in Athens",
+        "A Senate decree ordering Sulla to withdraw from the East",
+        "The destruction of the Pontic fleet near Rhodes",
+        "The Peace of Dardanus, in which Mithridates surrendered his conquests and paid an indemnity"
+      ],
+      "correctAnswers": [3],
+      "difficulty": 1,
+      "textReference": "#sullas-eastern-campaign-and-the-road-home"
+    },
+    {
+      "question": "How did Cinna, the leader of Rome's government during Sulla's absence, die in 84 BCE?",
+      "options": [
+        "He was executed on Sulla's orders after being captured at sea",
+        "He died of illness while preparing to cross the Adriatic",
+        "He was killed by his own mutinous soldiers at Ancona",
+        "He was assassinated by a Sullan agent in the Forum"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 1,
+      "textReference": "#the-cinnan-governments-collapse"
+    },
+    {
+      "question": "On which field outside Rome's walls was Sulla cremated with a grand state funeral after his death in 78 BCE?",
+      "options": [
+        "The Palatine Hill",
+        "The Aventine Hill",
+        "The Forum Romanum",
+        "The Campus Martius"
+      ],
+      "correctAnswers": [3],
+      "difficulty": 1,
+      "textReference": "#death-and-funeral"
+    },
+    {
+      "question": "What bounty did Sulla offer for each proscribed person killed, according to Plutarch?",
+      "options": [
+        "One talent of silver",
+        "Two talents",
+        "Ten thousand sestertii",
+        "A full year's military pay"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "textReference": "#innovation-in-political-murder"
+    },
+    {
+      "question": "Which two men restored the full powers of the tribunate that Sulla had stripped away, during their joint consulship of 70 BCE?",
+      "options": [
+        "Caesar and Crassus",
+        "Lepidus and Sertorius",
+        "Pompey and Crassus",
+        "Cicero and Cato"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 1,
+      "textReference": "#the-immediate-aftermath"
+    }
+  ]
+}

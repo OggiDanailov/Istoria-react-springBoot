@@ -1,0 +1,152 @@
+{
+  "chapter": "Pompey the Great — From Sulla's Lieutenant to Rome's Master (79-62 BCE)",
+  "batchOrder": 1,
+  "difficulty": 1,
+  "description": "Easy Questions — Early Career, Lepidus, Sertorius, Spartacus",
+  "questions": [
+    {
+      "question": "Where was Pompey's family from, and what resource did this give him when he raised an army for Sulla in 83 BCE?",
+      "options": [
+        "He was from Rome itself, where his family's senatorial connections allowed him to recruit from the legions stationed near the city",
+        "He was from Picenum in northeastern Italy, where his family's client networks and veterans gave him the manpower to raise three legions privately",
+        "He was from Capua in Campania, where his father's gladiatorial training school provided him with a ready-made fighting force",
+        "He was from Sicily, where his father had governed as praetor and left behind loyal communities that answered his call"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "textReference": "#the-man-from-picenum"
+    },
+    {
+      "question": "What nickname did Pompey's critics give him after his ruthless treatment of Marian survivors in Sicily?",
+      "options": [
+        "Imperator",
+        "Felix",
+        "Adulescentulus carnifex",
+        "Magnus"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 1,
+      "textReference": "#sicily-africa-and-the-first-triumph"
+    },
+    {
+      "question": "What did Pompey demand after his African campaign that was technically impossible under Roman law?",
+      "options": [
+        "A second consulship before reaching the minimum age",
+        "A triumph, despite being a private citizen with no magistracy or legal command authority",
+        "Enrollment in the Senate without having held the quaestorship",
+        "Command of all armies in the western Mediterranean for an unlimited term"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "textReference": "#sicily-africa-and-the-first-triumph"
+    },
+    {
+      "question": "What was Marcus Aemilius Lepidus's stated reason for marching his army toward Rome in 77 BCE?",
+      "options": [
+        "He claimed Sulla had promised him a second consulship and the Senate was illegally blocking it",
+        "He declared himself the champion of those dispossessed by Sullan land confiscations and demanded a second consulship",
+        "He argued that Sulla's constitutional reforms were invalid because they had been passed under duress",
+        "He was responding to a popular petition from Rome's urban poor demanding the restoration of grain distributions"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "textReference": "#an-unexpected-challenger"
+    },
+    {
+      "question": "What happened to Lepidus after his forces were defeated by Pompey and Catulus north of Rome?",
+      "options": [
+        "He was captured and executed on Pompey's orders",
+        "He surrendered to the Senate and was sent into permanent exile in Greece",
+        "He retreated to Sardinia and died there, reportedly of illness and grief at his failure",
+        "He fled to Spain and joined Sertorius's rebel government"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 1,
+      "textReference": "#pompey-saves-the-sullan-settlement"
+    },
+    {
+      "question": "What unusual institution did Sertorius establish in Spain to win the loyalty of the local population?",
+      "options": [
+        "A network of Latin colonies modeled on those Rome had built throughout Italy",
+        "A Senate-in-exile of Roman refugees and a school at Osca educating Spanish nobles in Latin and Roman customs",
+        "A system of temples dedicated to Roman gods to introduce the Spanish population to Roman religion",
+        "A standing army funded by Spanish silver mines that he opened to free volunteers regardless of origin"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "textReference": "#an-alternative-rome-in-spain"
+    },
+    {
+      "question": "What ultimately ended the Sertorian War in 72 BCE?",
+      "options": [
+        "Pompey defeated Sertorius in a decisive pitched battle near the Ebro River",
+        "Sertorius negotiated a surrender after Pompey cut off his supply lines from Mithridates",
+        "Sertorius was assassinated by his own lieutenant Marcus Perperna, who then lost to Pompey in open battle",
+        "Metellus Pius captured Sertorius's capital at Osca, forcing him to surrender"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 1,
+      "textReference": "#ended-by-murder-not-battle"
+    },
+    {
+      "question": "Where did the slave revolt led by Spartacus begin in 73 BCE?",
+      "options": [
+        "The silver mines of Sicily, where slaves had previously revolted twice before",
+        "A gladiatorial training facility at Capua in Campania",
+        "The grain estates of Apulia in southern Italy",
+        "The port of Brundisium, where slaves working the docks organized the breakout"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "textReference": "#the-uprising"
+    },
+    {
+      "question": "What ancient punishment did Crassus revive to restore discipline to his troops during the Slave War?",
+      "options": [
+        "Fustuarium — beating a soldier to death with clubs, carried out by his own comrades",
+        "Decimation — the random execution of one soldier in ten from units that had performed dishonorably",
+        "Confiscation of pay and property for entire cohorts that had fled in battle",
+        "Reduction to the rank of slave laborer for any soldier who abandoned his post"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "textReference": "#crassus-takes-command"
+    },
+    {
+      "question": "What did Crassus do to approximately six thousand captured slaves after the final defeat of Spartacus?",
+      "options": [
+        "He sold them at public auction, using the proceeds to fund land grants for his veterans",
+        "He freed them conditionally, requiring them to serve in auxiliary units along Rome's northern frontier",
+        "He crucified them along the Appian Way from Capua to Rome as a deliberate warning",
+        "He transported them to Sicily to work the grain estates, replacing slaves killed during the revolt"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 1,
+      "textReference": "#crassus-takes-command"
+    },
+    {
+      "question": "How did Pompey manage to claim credit for ending the Slave War despite Crassus doing most of the fighting?",
+      "options": [
+        "He forged a letter from Crassus acknowledging Pompey's strategic leadership throughout the campaign",
+        "He arrived from Spain with his army, intercepted and destroyed the slave fugitives fleeing northward, then sent a dispatch to the Senate claiming he had pulled out the roots of the rebellion",
+        "He convinced the Senate that Crassus had acted illegally by using the punishment of decimation without proper authorization",
+        "He bribed members of the Senate to downplay Crassus's contribution in the official records of the campaign"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "textReference": "#pompeys-irritating-intervention"
+    },
+    {
+      "question": "What lesser honor did the Senate award Crassus for defeating Spartacus, rather than a full triumph?",
+      "options": [
+        "A supplicatio — a public day of thanksgiving voted by the Senate",
+        "An ovatio — a lesser form of triumph traditionally reserved for victories over slaves or pirates",
+        "A golden crown presented in the Senate chamber without a public procession",
+        "The title imperator without the accompanying triumph or procession"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "textReference": "#pompeys-irritating-intervention"
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "chapter": "Sulla's Dictatorship, Proscriptions, and Constitutional Reforms (82-79 BCE)",
+  "batchOrder": 3,
+  "difficulty": 3,
+  "description": "Hard Questions",
+  "questions": [
+    {
+      "question": "Which of the following accurately describe the proscriptions as instruments of both political and economic power? (SELECT ALL THAT APPLY)",
+      "options": [
+        "They stripped the descendants of proscribed men from holding public office, removing future political threats",
+        "They were limited strictly to active Marian commanders and magistrates, avoiding any appearance of arbitrary cruelty",
+        "They generated revenue to pay and settle Sulla's veterans by confiscating and auctioning property at depressed prices",
+        "They included wealthy equestrians with no political involvement, functioning as an economic redistribution to Sulla's faction",
+        "They required Senate approval for each individual name, ensuring a degree of institutional oversight over the killings"
+      ],
+      "correctAnswers": [0, 2, 3],
+      "difficulty": 3,
+      "textReference": "#the-proscriptions"
+    },
+    {
+      "question": "Sallust argued that Sulla's dictatorship was the moment when the Republic's moral foundations collapsed irreparably. Which of the following are part of his argument? (SELECT ALL THAT APPLY)",
+      "options": [
+        "The proscriptions taught Romans that wealth and power acquired through violence could be enjoyed with impunity",
+        "The expansion of the Senate introduced too many men of low character into Rome's governing class",
+        "The lesson of the proscriptions corrupted public life at every level of Roman society",
+        "Sulla's voluntary resignation proved that constitutional norms still had moral force, which later strongmen destroyed",
+        "The confiscations demonstrated that military force, not law, was the true foundation of Roman property rights"
+      ],
+      "correctAnswers": [0, 2],
+      "difficulty": 3,
+      "textReference": "#the-deeper-legacy"
+    },
+    {
+      "question": "The episode of the young Julius Caesar's near-proscription illuminates several tensions within Sulla's program. Which of the following does the episode genuinely demonstrate? (SELECT ALL THAT APPLY)",
+      "options": [
+        "Influential personal networks could still protect individuals even within a systematic bureaucratic purge",
+        "Sulla was fundamentally merciful toward the young and showed consistent restraint toward the next generation",
+        "Sulla's reported warning that Caesar contained 'many a Marius' suggests the purge failed to identify its most significant future threat",
+        "The proscriptions were primarily aimed at the equestrian order rather than senatorial families, since Caesar's birth ultimately saved him",
+        "Personal connections and intercession could override the logic of the lists, revealing the limits of systematic political terror"
+      ],
+      "correctAnswers": [0, 2, 4],
+      "difficulty": 3,
+      "textReference": "#a-young-caesar"
+    },
+    {
+      "question": "Sulla's reform prohibiting governors from leaving their provinces, making war, or crossing boundaries without Senate authorization is historically ironic for which specific reason?",
+      "options": [
+        "Sulla had previously held a provincial command and sacked a foreign city without Senate approval during the Mithridatic War",
+        "The reform targeted Pompey, who had already violated these exact rules during his campaigns in Africa for Sulla",
+        "Marching his legally assigned army from its province to seize Rome in 88 BCE was precisely the act this law would have criminalized — meaning Sulla legislated against his own defining action",
+        "The Senate had originally granted Sulla his command on the explicit condition he remain in the East, a condition he had openly violated",
+        "Crassus had exploited the same absence of such rules to illegally move troops between provinces while building his fortune during the proscriptions"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 3,
+      "textReference": "#provincial-commands-limited"
+    },
+    {
+      "question": "The Second Triumvirate's proscriptions of 43 BCE were modeled directly on Sulla's. Which of the following conclusions does this sequence of events best support? (SELECT ALL THAT APPLY)",
+      "options": [
+        "Proscription as a consolidation tool, once proven effective, became a repeatable template that subsequent regimes could deploy",
+        "The Roman constitution had no mechanism for preventing military commanders from seizing power, making political violence structurally inevitable",
+        "Cicero's death on the Triumvirate's lists — after surviving Sulla's — illustrates that Sulla's incomplete purge allowed future threats to mature",
+        "The failure of Sulla's constitutional reforms proved that only permanent monarchy could provide the stability the Republic lacked",
+        "Sulla's voluntary resignation was the decisive cause of later instability, since it signaled to ambitious men that dictatorship could be safely achieved"
+      ],
+      "correctAnswers": [0, 2],
+      "difficulty": 3,
+      "textReference": "#the-deeper-legacy"
+    },
+    {
+      "question": "Which of the following best explains why Sulla's constitutional settlement began unraveling so quickly after his death in 78 BCE?",
+      "options": [
+        "Sulla had deliberately built in a sunset clause requiring the reforms to be ratified again within five years, which the Senate failed to do",
+        "The reforms lacked the moral authority that comes from genuine consent, having been imposed by military force and enacted by a purged, packed Senate — meaning no institution felt genuinely bound to uphold them",
+        "Pompey and Crassus had secretly promised to undo the reforms in exchange for Sulla's support of their careers, a deal they honored once he was dead",
+        "The colonization of veterans on confiscated Italian land created so much rural resentment that it made the entire Sullan settlement politically toxic",
+        "Sulla had failed to designate a political heir capable of enforcing the reforms against the inevitable populist backlash"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 3,
+      "textReference": "#the-contradictions"
+    },
+    {
+      "question": "Multiple ancient sources offer different interpretations of why Sulla resigned the dictatorship in 79 BCE. Which of the following explanations are supported by evidence presented in the text? (SELECT ALL THAT APPLY)",
+      "options": [
+        "He calculated that permanent dictatorship would eventually provoke fatal opposition, while voluntary retirement would lend his reforms greater legitimacy",
+        "He resigned under direct pressure from the Senate, which threatened to revoke his authority by force if he did not step down willingly",
+        "His health was in serious decline — Plutarch describes symptoms consistent with advanced organ disease — making private retirement preferable to dying in office",
+        "He had genuinely completed his stated goal of reconstituting the state and believed his reforms had resolved the Republic's structural problems",
+        "He was persuaded by Cicero's argument that continued autocracy would undermine the very constitutional order he had sought to restore"
+      ],
+      "correctAnswers": [0, 2, 3],
+      "difficulty": 3,
+      "textReference": "#the-abdication"
+    },
+    {
+      "question": "Pontius Telesinus's declaration at the Colline Gate that Rome was a 'forest sheltering wolves' reveals what about the true nature of the conflict in 82 BCE?",
+      "options": [
+        "That Sulla's opponents had abandoned Roman identity entirely and were fighting for the dissolution of the Roman state and its replacement with an Italian confederation",
+        "That Telesinus was primarily motivated by personal ambition and used anti-Roman rhetoric purely to recruit Samnite fighters to a cause he did not genuinely believe in",
+        "That the Samnite intervention was driven by unresolved hatreds from the Social War rather than loyalty to the Marian cause, making the conflict simultaneously a civil war and the continuation of an earlier struggle for Italian autonomy",
+        "That Rome's Italian allies universally rejected the citizenship they had received from the Marian regime and sought to renegotiate it through military pressure",
+        "That Telesinus recognized the Marian cause was already lost and sought a more radical outcome — the physical destruction of Rome — as the only way to permanently end Samnite subjugation"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 3,
+      "textReference": "#the-battle-of-the-colline-gate"
+    },
+    {
+      "question": "Which of the following accurately describe ways in which the proscriptions functioned as a system of terror, beyond simply eliminating political opponents? (SELECT ALL THAT APPLY)",
+      "options": [
+        "Bodies were denied proper burial, violating Roman religious practice and compounding the punishment beyond death",
+        "Anyone who sheltered a proscribed person was subject to execution themselves, making ordinary citizens into unwilling enforcers",
+        "The public posting of lists in the Forum forced citizens to scan daily for friends' and family members' names, spreading fear throughout the population",
+        "Sulla required all citizens to formally affirm their approval of each list, making the Roman population collectively complicit in the killings",
+        "The bounty system incentivized private citizens to inform on and kill their own neighbors, destroying the social trust that civic life depended upon"
+      ],
+      "correctAnswers": [0, 1, 2, 4],
+      "difficulty": 3,
+      "textReference": "#the-mechanics-of-terror"
+    },
+    {
+      "question": "The text argues that Sulla's most enduring legacy was not his constitution but 'the precedent he established.' Which of the following specific precedents does the text identify as his most consequential contributions to Rome's future? (SELECT ALL THAT APPLY)",
+      "options": [
+        "He demonstrated that the Roman Republic could be seized by military force and that a private army loyal to its general, not the state, was the true basis of political power",
+        "He proved that political opponents could be systematically eliminated through legal mechanisms — the proscriptions gave state sanction to mass political murder",
+        "He showed that a single individual could reshape the entire Roman state according to his personal vision, with all constitutional forms preserved as a facade",
+        "He established that voluntary resignation was the only legitimate way to end a dictatorship, creating a constitutional norm that Caesar would later deliberately violate",
+        "He demonstrated that the Roman constitution possessed no mechanism capable of stopping a determined military commander, since every institutional safeguard had failed against his legions"
+      ],
+      "correctAnswers": [0, 1, 2, 4],
+      "difficulty": 3,
+      "textReference": "#the-deeper-legacy"
+    }
+  ]
+}

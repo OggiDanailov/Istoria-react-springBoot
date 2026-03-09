@@ -1,0 +1,164 @@
+{
+  "chapter": "Sulla's Dictatorship, Proscriptions, and Constitutional Reforms (82-79 BCE)",
+  "batchOrder": 2,
+  "difficulty": 2,
+  "description": "Medium Questions",
+  "questions": [
+    {
+      "question": "Why did Sulla accept relatively lenient peace terms with Mithridates in 85 BCE, allowing a king who had ordered the massacre of tens of thousands of Romans to keep his throne?",
+      "options": [
+        "He admired Mithridates as a worthy adversary and hoped to forge a long-term alliance with Pontus against Parthia",
+        "The Senate in Rome had sent explicit orders requiring him to end the war on whatever terms were available",
+        "His army had suffered crippling losses at Chaeronea and Orchomenus and could not continue fighting",
+        "He needed to return to Italy urgently, and a prolonged eastern war would give his enemies in Rome more time to consolidate power",
+        "Mithridates had agreed to provide Sulla with warships and funds for the coming civil war"
+      ],
+      "correctAnswers": [3],
+      "difficulty": 2,
+      "textReference": "#sullas-eastern-campaign-and-the-road-home"
+    },
+    {
+      "question": "What was the cursus honorum, and how did Sulla reform it?",
+      "options": [
+        "The ceremony for appointing dictators; Sulla made appointments permanent rather than temporary",
+        "The system of jury courts; Sulla transferred control from the equestrian order back to the Senate",
+        "The sequential order of public offices forming a Roman political career; Sulla codified it with minimum ages and mandatory intervals between offices to prevent rapid accumulation of power",
+        "The method for selecting priests and augurs; Sulla returned it to co-optation by the priestly colleges",
+        "The annual rotation of provincial commands; Sulla required Senate authorization before governors could take military action"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 2,
+      "textReference": "#the-cursus-honorum-codified"
+    },
+    {
+      "question": "What distinguished Sulla's dictatorship from all previous Roman dictatorships?",
+      "options": [
+        "It was the first dictatorship granted during a civil war rather than a foreign invasion",
+        "It had no six-month time limit and no specific crisis it was meant to resolve, making it an indefinite, legally unlimited autocracy",
+        "It was held jointly with a co-dictator to prevent total concentration of power in one person",
+        "It was granted by the popular assemblies alone, bypassing the Senate entirely",
+        "It was the first dictatorship that included the power to confiscate private property"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 2,
+      "textReference": "#an-ancient-office-revived"
+    },
+    {
+      "question": "Who was the Samnite commander at the Battle of the Colline Gate, and what did his declaration reveal about his motivation for attacking Rome?",
+      "options": [
+        "The younger Marius, who vowed to defend Italian liberty by holding Rome against Sulla's veterans",
+        "Gnaeus Carbo, who claimed that only Sulla's personal death could end the cycle of civil war",
+        "Pontius Telesinus, whose statement that Rome was a forest sheltering wolves showed the attack was driven by unresolved Social War hatreds, not loyalty to the Marian cause",
+        "Quintus Sertorius, who promised equal rights to Italian allies if the city was captured",
+        "Marcus Lamponius, a Lucanian commander acting on direct orders from the Marian government in Praeneste"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 2,
+      "textReference": "#the-battle-of-the-colline-gate"
+    },
+    {
+      "question": "How did Sulla's reform of the tribunate effectively neutralize the office as a tool of popular politics?",
+      "options": [
+        "He reduced the number of tribunes from ten to two, limiting how many popular politicians could hold the office at once",
+        "He required all tribunes to be approved by the Senate before taking office, giving the aristocracy effective veto power over candidates",
+        "He transferred the tribunes' legislative powers to a new council of former consuls that he personally chaired",
+        "He prohibited tribunes from proposing legislation without prior senatorial approval, curtailed the veto, and permanently barred anyone who held the tribunate from seeking any further magistracy",
+        "He abolished the distinction between plebeian and patrician offices entirely, making the tribunate irrelevant to political careers"
+      ],
+      "correctAnswers": [3],
+      "difficulty": 2,
+      "textReference": "#the-tribunate-neutralized"
+    },
+    {
+      "question": "Marcus Licinius Crassus built a substantial fortune during the proscriptions. How, and what was Sulla's response?",
+      "options": [
+        "He collected the bounties on proscribed heads, eventually embarrassing Sulla, who stripped him of his share of the rewards",
+        "He purchased confiscated estates at artificially depressed prices, which eventually embarrassed even Sulla, who distanced himself from Crassus despite their alliance",
+        "He accepted bribes to remove names from the lists, which Sulla tolerated as long as Crassus shared a portion of the payments",
+        "He seized command of proscribed men's slaves and businesses, with Sulla's explicit written authorization as a reward for raising troops in 83 BCE",
+        "He cornered the market on grain from confiscated estates and sold it at a premium, a practice Sulla openly condemned but could not legally stop"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 2,
+      "textReference": "#the-mechanics-of-terror"
+    },
+    {
+      "question": "Sulla's reform of the standing criminal courts changed who served on juries. What was the change, and what Gracchan reform did it reverse?",
+      "options": [
+        "He replaced senatorial juries with panels of ordinary citizens, reversing a Sullan measure from his first consulship that had given senators sole control",
+        "He gave juries to a new mixed panel of senators and equestrians equally, reversing Tiberius Gracchus's earlier grant of jury powers to the Senate alone",
+        "He transferred jury service from the equestrian order back to the Senate, reversing the reform Gaius Gracchus had made decades earlier",
+        "He abolished permanent courts entirely and replaced them with ad hoc tribunals, reversing Gaius Gracchus's original establishment of standing courts",
+        "He granted equestrians additional jury seats alongside senators, reversing a rule that had excluded the business class from judicial service"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 2,
+      "textReference": "#the-courts-reorganized"
+    },
+    {
+      "question": "Why did the proscriptions include large numbers of equestrians who had no involvement in the Marian regime?",
+      "options": [
+        "Sulla blamed the equestrian order collectively for financing Cinna's government through their tax-farming contracts",
+        "Their proscription served the dual purpose of eliminating potential future financial support for opposition and generating revenue to pay and settle Sulla's veterans",
+        "Sulla's personal grievances against the equestrian order dated back to disputes over Asian tax contracts during his time as governor",
+        "His senatorial allies had long resented equestrian competition in commerce and pressured Sulla to weaken the order permanently",
+        "Roman law required that any class that had profited under an illegal government must make financial restitution to the state"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 2,
+      "textReference": "#the-scope-of-retribution"
+    },
+    {
+      "question": "By what sequence of constitutional steps did Sulla obtain his dictatorship while preserving the appearance of legality?",
+      "options": [
+        "The Senate passed an emergency decree, then the consuls appointed Sulla directly under their existing consular authority",
+        "Sulla convened the popular assemblies himself and proposed his own appointment, which passed by acclamation without a formal vote",
+        "The College of Pontiffs issued a religious ruling declaring Sulla the legitimate protector of Rome's sacred institutions, which the Senate converted into civil authority",
+        "With both consuls dead, an interrex named Lucius Valerius Flaccus was appointed, proposed the Lex Valeria granting indefinite dictatorship, and both Senate and assemblies ratified it",
+        "Sulla's officers in Rome convened a rump session of the Senate, which passed the appointment by emergency quorum with only his supporters present"
+      ],
+      "correctAnswers": [3],
+      "difficulty": 2,
+      "textReference": "#an-ancient-office-revived"
+    },
+    {
+      "question": "Sulla's constitutional reforms contained a fundamental contradiction that Cicero and other contemporaries identified. What was it?",
+      "options": [
+        "The reforms gave the Senate supreme authority while simultaneously creating magistracies powerful enough to override it",
+        "Sulla claimed to restore the Republic but had drafted a constitution modeled on Hellenistic monarchy, which his allies only discovered after his death",
+        "The reforms were intellectually coherent but were enacted through the very unconstitutional methods they sought to prevent, stripping them of the moral authority needed to survive",
+        "Sulla had expanded the Senate to 600 members to dilute opposition, but this made the body too large to govern effectively, undermining his stated goal of senatorial supremacy",
+        "The cursus honorum regulations applied to future magistrates but explicitly exempted Sulla's own allies, creating a two-tier system that opponents attacked as self-serving"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 2,
+      "textReference": "#the-contradictions"
+    },
+    {
+      "question": "Which combination of factors allowed defections from the Marian cause to begin almost immediately after Sulla landed at Brundisium in 83 BCE?",
+      "options": [
+        "Sulla offered enormous financial bonuses to any Marian commander who switched sides, which the Cinnan government could not match",
+        "The Marian government had collapsed internally when Carbo fled to Sicily, leaving no one with authority to hold commanders loyal",
+        "Sulla's public declaration that he bore no hostility toward Rome itself, combined with the arrival of battle-hardened veterans who made his victory appear likely",
+        "A plague had devastated Marian forces over the winter of 84 BCE, leaving them too weak to mount serious resistance",
+        "The Senate formally declared the Cinnan regime illegal just before Sulla's landing, releasing its supporters from any obligation of loyalty"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 2,
+      "textReference": "#sullas-landing-and-early-campaign"
+    },
+    {
+      "question": "How did Sulla expand the Senate, and what multiple purposes did this single reform serve?",
+      "options": [
+        "He doubled it to 600 by enrolling equestrians and his own supporters, simultaneously rewarding loyalty, diluting existing factional influence, and creating a larger pool of administrators for Rome's provinces",
+        "He tripled it to 900 by granting senatorial rank to all former military tribunes, primarily to create a loyal voting bloc that could outvote any future populist coalition",
+        "He enlarged it to 450 by admitting wealthy Italians, mainly to reconcile the peninsula after the Social War and bind the new citizens to his constitutional settlement",
+        "He expanded it to 600 exclusively by admitting his own veterans who had reached equestrian wealth, creating a military party within the Senate that would protect his reforms after his retirement",
+        "He increased it to 500 by restoring the families of men exiled by the Marian regime, framing the expansion as an act of restorative justice rather than political engineering"
+      ],
+      "correctAnswers": [0],
+      "difficulty": 2,
+      "textReference": "#the-senate-expanded"
+    }
+  ]
+}

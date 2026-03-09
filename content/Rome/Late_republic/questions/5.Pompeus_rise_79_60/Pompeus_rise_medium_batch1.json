@@ -1,0 +1,164 @@
+{
+  "chapter": "Pompey the Great — From Sulla's Lieutenant to Rome's Master (79-62 BCE)",
+  "batchOrder": 3,
+  "difficulty": 2,
+  "description": "Medium Questions — Early Career, Lepidus, Sertorius, Spartacus",
+  "questions": [
+    {
+      "question": "When Sulla greeted the twenty-three-year-old Pompey with the title imperator in 83 BCE, what did this gesture reveal about the nature of Pompey's entire subsequent career?",
+      "options": [
+        "It revealed that Sulla intended Pompey as his political heir and had arranged for him to receive the dictatorship after his own retirement",
+        "It showed that military force and loyalty to the right patron could substitute entirely for the constitutional prerequisites the cursus honorum required, establishing the pattern Pompey would follow for thirty years",
+        "It was a purely ceremonial gesture that carried no real political meaning, since Sulla used the title routinely to motivate useful allies",
+        "It demonstrated that the Roman aristocracy had already accepted that the cursus honorum was an outdated institution that needed to be reformed",
+        "It proved that Sulla viewed Pompey as more loyal than his own senior officers, who had refused to march on Rome in 88 BCE"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 2,
+      "textReference": "#the-man-from-picenum"
+    },
+    {
+      "question": "Pompey's argument for his first triumph — that more people worship the rising sun than the setting sun — revealed what about his relationship to Republican institutions?",
+      "options": [
+        "That he had a genuine philosophical belief in the superiority of popular will over senatorial authority, placing him in the popularis tradition",
+        "That he understood the prestige of military success as a form of power that could override constitutional rules, and was willing to say so openly to a dictator's face",
+        "That he was simply naive about Roman constitutional law and did not realize his request was legally impossible",
+        "That he was appealing to Sulla's personal vanity by reminding him that his own power had once been similarly unconventional",
+        "That he had already decided he would one day seize power by force and was testing Sulla's reaction to open defiance"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 2,
+      "textReference": "#sicily-africa-and-the-first-triumph"
+    },
+    {
+      "question": "Why was Lepidus's revolt particularly revealing about the limits of Sulla's constitutional settlement, despite being quickly suppressed?",
+      "options": [
+        "It demonstrated that the Senate was incapable of defending itself militarily without relying on the same unconstitutional commanders it had tried to constitutionally restrict",
+        "It showed that Sulla's veterans were already dissatisfied with their land grants and could be recruited to fight against the system that had rewarded them",
+        "It proved that the tribunate — even in its emasculated Sullan form — could still be used to mobilize popular opposition against the Senate",
+        "It revealed that the Italian communities had never truly accepted Roman citizenship and would side with any leader who promised to renegotiate their political status",
+        "It demonstrated that Crassus and Pompey had secretly coordinated the revolt to create a crisis requiring their intervention"
+      ],
+      "correctAnswers": [0],
+      "difficulty": 2,
+      "textReference": "#pompey-saves-the-sullan-settlement"
+    },
+    {
+      "question": "Sertorius maintained his position in Spain for nearly a decade against Rome's best commanders. What combination of factors made him so difficult to defeat?",
+      "options": [
+        "He received continuous military support from Mithridates of Pontus, including warships, gold, and trained soldiers that Rome could not match",
+        "He avoided pitched battles when disadvantageous, used guerrilla tactics in difficult terrain, cultivated Spanish loyalty through respectful treatment and education, and maintained a Senate-in-exile that gave his cause political legitimacy",
+        "He fortified a chain of impregnable mountain citadels that Roman armies could not capture, creating a defensive network Rome lacked the engineering skills to overcome",
+        "He exploited divisions between Pompey and Metellus, playing the two commanders against each other to prevent them from concentrating their forces against him",
+        "His army was composed entirely of veteran Spanish warriors who had never been defeated by Rome and whose knowledge of local terrain made them essentially invisible to Roman reconnaissance"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 2,
+      "textReference": "#an-alternative-rome-in-spain"
+    },
+    {
+      "question": "Pompey burned Perperna's papers after capturing him, without reading them. What does this reveal about Pompey's political instincts?",
+      "options": [
+        "That he was genuinely incurious about politics and simply wanted to conclude the campaign as quickly as possible",
+        "That he was protecting Sertorius's legacy by preventing the destruction of correspondence that might have exonerated the rebel's cause",
+        "That he calculated that the papers implicated numerous prominent Romans in dealings with Sertorius, and creating more powerful enemies was not worth whatever political advantage the information might provide",
+        "That he suspected the papers were forgeries planted by Sertorius before his death to sow discord among Rome's aristocracy",
+        "That he was following Sulla's example, who had similarly destroyed compromising documents after the proscriptions to prevent further instability"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 2,
+      "textReference": "#ended-by-murder-not-battle"
+    },
+    {
+      "question": "Why did Spartacus's revolt, despite its military success, ultimately lack a coherent strategic direction?",
+      "options": [
+        "Spartacus himself was an inspiring battlefield commander but had no political vision, making him unable to articulate war aims that went beyond defeating the next Roman army sent against him",
+        "Spartacus's allied commanders repeatedly frustrated his plan to lead his followers across the Alps to freedom, preferring to continue raiding Italy's wealthy estates — meaning the revolt was pulling in fundamentally different directions",
+        "The revolt drew slaves from too many different ethnic backgrounds — Thracians, Gauls, Germans, and Syrians — whose languages and cultures were mutually incomprehensible, preventing any unified command structure",
+        "Spartacus was unable to obtain any external support, and without foreign backing he could accumulate military victories but had no means of converting them into a political settlement Rome would accept",
+        "The Roman Senate's offer to free any slave who abandoned the revolt split the rebel forces almost immediately, leaving Spartacus with a dwindling core of committed fighters"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 2,
+      "textReference": "#the-uprising"
+    },
+    {
+      "question": "Crassus's construction of a wall and ditch across the entire toe of Italy to trap Spartacus was an extraordinary engineering undertaking. What does it reveal about his approach to the campaign?",
+      "options": [
+        "It reveals that Crassus was fundamentally a defensive commander who preferred containment to engagement, reflecting his lack of confidence in his army's ability to defeat Spartacus in open battle",
+        "It demonstrates that Crassus recognized Spartacus's tactical brilliance and chose to substitute engineering for battlefield risk — starving the rebel army rather than fighting it on terms it might win",
+        "It shows that Crassus was primarily concerned with keeping the campaign within his assigned territorial mandate, since marching further north would have brought him into Pompey's sphere of operations",
+        "It reveals the extent to which the Roman army had deteriorated under the influence of Marian reforms, which had neglected the engineering skills that had previously made Roman armies distinctive",
+        "It demonstrates that Crassus was more interested in a comprehensive solution to Italian slave unrest than in simple military victory, hoping the wall would force a negotiated settlement"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 2,
+      "textReference": "#crassus-takes-command"
+    },
+    {
+      "question": "The rivalry between Pompey and Crassus crystallized over the credit for ending the Slave War. How does Plutarch characterize the contrast between the two men?",
+      "options": [
+        "Pompey was the more capable military commander while Crassus was the superior political operator, and each envied the other's area of strength",
+        "Crassus was rich, methodical, jealous of credit, and deeply resentful of Pompey's talent for claiming glory he had not entirely earned; Pompey was glamorous, politically instinctive, and utterly without shame",
+        "Both men were essentially identical in character — ruthlessly ambitious, contemptuous of constitutional norms, and willing to use any means to advance their careers — which is precisely why they could never cooperate",
+        "Crassus was genuinely devoted to the Republic and resented Pompey's monarchical ambitions; their rivalry was thus a conflict between Republican and autocratic visions for Rome's future",
+        "Pompey was more popular with ordinary Romans while Crassus was more respected by the senatorial aristocracy, and this difference in their political bases explained their fundamentally different approaches to public life"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 2,
+      "textReference": "#pompeys-irritating-intervention"
+    },
+    {
+      "question": "The chapter states that Pompey reportedly asked a friend what the duties of the quaestorship were before his consulship of 70 BCE. What does this anecdote illustrate about the state of the Roman Republic at this moment?",
+      "options": [
+        "That the Roman educational system had declined to the point where even wealthy aristocrats received no instruction in constitutional procedure",
+        "That Pompey was deliberately performing ignorance as a political statement, mocking the Sullan system that had excluded him from normal offices",
+        "That one of the most powerful men in the world was about to hold the Republic's highest office having never served in any of the preparatory roles the constitution required — and the constitution could do nothing about it",
+        "That the quaestorship had become so irrelevant to actual governance that even experienced politicians had lost track of what it involved",
+        "That Sulla's educational reforms had failed to produce a generation of administrators who understood the traditional functions of Roman magistracies"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 2,
+      "textReference": "#two-outsiders-take-office"
+    },
+    {
+      "question": "Why did the equestrian order become active political enemies of Lucullus during the Third Mithridatic War, and how did this affect the command?",
+      "options": [
+        "Lucullus had seized equestrian tax contracts in Asia for himself and his allies, directly stealing wealth the publicani considered legally theirs",
+        "Lucullus had reorganized Asia's finances in ways that protected the local population but severely damaged the interests of the Roman publicani who collected revenues there, making them work actively to end his command",
+        "The equestrian order blamed Lucullus for the mutiny of his soldiers, believing his harsh discipline had destroyed the army's effectiveness and prolonged an expensive war",
+        "Lucullus had proposed a law in Rome granting provincial populations the right to appeal tax assessments, which the publicani successfully blocked but never forgave",
+        "The equestrians were allied with Mithridates through commercial connections in Asia Minor and used their political influence in Rome to undermine the general prosecuting the war against him"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 2,
+      "textReference": "#lucullus-and-the-eastern-war"
+    },
+    {
+      "question": "Cicero supported the Lex Manilia despite being a defender of senatorial authority. What contradiction does this reveal?",
+      "options": [
+        "That Cicero's constitutional principles were always secondary to his personal ambitions, and his support for Pompey was simply a calculated career move",
+        "That Cicero secretly believed the Republic had already failed and was positioning himself to serve whatever new regime emerged from the current power struggles",
+        "That in arguing one man should control the entire Roman East because no institutional alternative existed, Cicero was implicitly acknowledging that the Senate was incapable of governing effectively — damaging the institutions he professed to defend",
+        "That the Lex Manilia was so obviously in Rome's military interests that even principled defenders of the Senate could support it without contradiction",
+        "That Cicero distinguished between emergency powers — which he considered constitutionally legitimate — and permanent autocracy, and saw the Lex Manilia as falling within the acceptable category"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 2,
+      "textReference": "#the-lex-manilia"
+    },
+    {
+      "question": "What did Lucullus mean when he told Pompey at their transfer-of-command meeting that he was 'arriving like a bird of prey to take credit for another animal's kill'?",
+      "options": [
+        "That Pompey had bribed the tribunes to pass the Lex Manilia before Lucullus could complete the campaign on his own terms",
+        "That Lucullus had already won the war strategically — stripping Mithridates of his kingdom and his Armenian refuge — and Pompey was arriving only to harvest the fruits of years of difficult campaigning that he had not participated in",
+        "That Pompey had deliberately delayed his departure from Rome so that Lucullus would be forced to fight the most dangerous battles before Pompey arrived to take over",
+        "That Pompey's real target was not Mithridates but Lucullus's personal fortune, which he intended to confiscate by accusing him of mismanaging the war",
+        "That Pompey had secretly supported the mutiny of Lucullus's soldiers by sending agents into the army to encourage their refusal to advance"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 2,
+      "textReference": "#the-lex-manilia"
+    }
+  ]
+}
