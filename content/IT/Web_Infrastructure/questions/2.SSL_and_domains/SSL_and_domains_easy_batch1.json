@@ -1,0 +1,129 @@
+{
+  "chapterId": "SSL_and_domains",
+  "batch_number": 1,
+  "difficulty": 1,
+  "batch_order": 1,
+  "description": "Easy - Basic Concepts of SSL and Domains",
+  "questions": [
+    {
+      "question": "What does HTTPS stand for?",
+      "options": [
+        "HyperText Transfer Protocol Secured",
+        "High Transfer Protocol System",
+        "HyperText Transfer Protocol Secure",
+        "Hosted Transfer Protocol Standard"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 1,
+      "textReference": "#http-vs-https-what-the-s-means"
+    },
+    {
+      "question": "What is TLS?",
+      "options": [
+        "A type of DNS record used for email security",
+        "The encryption layer added on top of HTTP in HTTPS",
+        "A tool used to renew SSL certificates automatically",
+        "A protocol for transferring files between servers"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "textReference": "#http-vs-https-what-the-s-means"
+    },
+    {
+      "question": "What is a Certificate Authority (CA)?",
+      "options": [
+        "A server that hosts your website and manages traffic",
+        "A DNS provider that manages your domain records",
+        "A trusted organisation that verifies domain ownership and issues SSL certificates",
+        "A tool that automatically renews expired certificates"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 1,
+      "textReference": "#certificate-authorities"
+    },
+    {
+      "question": "What is Let's Encrypt?",
+      "options": [
+        "A paid certificate authority used by large enterprises",
+        "A free Certificate Authority that offers automated certificate issuance and renewal",
+        "A tool for generating self-signed certificates for production use",
+        "A DNS provider that also issues SSL certificates"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "textReference": "#lets-encrypt-free-certificates-for-everyone"
+    },
+    {
+      "question": "How long are Let's Encrypt certificates valid for?",
+      "options": [
+        "1 year",
+        "2 years",
+        "90 days",
+        "30 days"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 1,
+      "textReference": "#lets-encrypt-free-certificates-for-everyone"
+    },
+    {
+      "question": "What tool is commonly used to obtain and renew Let's Encrypt certificates?",
+      "options": [
+        "OpenSSL",
+        "Certbot",
+        "nslookup",
+        "Nginx"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "textReference": "#lets-encrypt-free-certificates-for-everyone"
+    },
+    {
+      "question": "What does a self-signed certificate mean?",
+      "options": [
+        "A certificate signed by a trusted Certificate Authority",
+        "A certificate that never expires",
+        "A certificate you generate yourself without a CA signing it",
+        "A certificate valid for all subdomains of a domain"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 1,
+      "textReference": "#self-signed-certificates"
+    },
+    {
+      "question": "What is a wildcard certificate?",
+      "options": [
+        "A certificate valid for any domain on the internet",
+        "A certificate that covers a domain and all its subdomains",
+        "A certificate issued without domain validation",
+        "A temporary certificate used during local development"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "textReference": "#certificate-types"
+    },
+    {
+      "question": "What port does HTTPS traffic use by default?",
+      "options": [
+        "80",
+        "8080",
+        "22",
+        "443"
+      ],
+      "correctAnswers": [3],
+      "difficulty": 1,
+      "textReference": "#https-in-your-development-workflow"
+    },
+    {
+      "question": "What does the padlock icon in a browser indicate?",
+      "options": [
+        "The site is government-owned and verified",
+        "The connection is encrypted and the server identity has been verified",
+        "The site has passed a security audit by the browser vendor",
+        "The site uses HTTP and is safe to use"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "textReference": "#what-is-an-ssltls-certificate"
+    }
+  ]
+}

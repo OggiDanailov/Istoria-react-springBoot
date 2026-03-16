@@ -1,0 +1,107 @@
+{
+  "chapterId": "DNS_and_domains",
+  "batch_number": 1,
+  "difficulty": 3,
+  "batch_order": 1,
+  "description": "Hard - Advanced DNS and Domains",
+  "questions": [
+    {
+      "question": "SELECT ALL THAT APPLY: Which of the following statements about CNAME records are correct?",
+      "options": [
+        "A CNAME cannot be used at the root domain (apex domain)",
+        "A CNAME maps a name to an IP address",
+        "www.myapp.com can have a CNAME pointing to myapp.com",
+        "A CNAME maps a name to another domain name",
+        "CNAMEs are the recommended record type for root domains",
+        "A subdomain can use a CNAME to point to a CDN domain"
+      ],
+      "correctAnswers": [0, 2, 3, 5],
+      "difficulty": 3,
+      "textReference": "#dns-records-explained"
+    },
+    {
+      "question": "SELECT ALL THAT APPLY: You are about to migrate your app to a new server with a different IP. Which steps represent best practice?",
+      "options": [
+        "Lower the TTL to 300 seconds before making the change",
+        "Update the A record immediately without changing TTL",
+        "Wait for the old high-TTL caches to expire after lowering TTL",
+        "Raise the TTL back after the migration is complete",
+        "Use dnschecker.org to verify propagation across regions",
+        "Delete and recreate the domain to force immediate propagation"
+      ],
+      "correctAnswers": [0, 2, 3, 4],
+      "difficulty": 3,
+      "textReference": "#ttl-why-dns-changes-take-time"
+    },
+    {
+      "question": "SELECT ALL THAT APPLY: Which of the following correctly describe DNS propagation?",
+      "options": [
+        "A DNS change is immediate at your DNS provider but takes time to spread globally",
+        "Propagation time depends partly on the TTL of the changed record",
+        "All resolvers worldwide update simultaneously when you save a DNS change",
+        "Google's 8.8.8.8 resolver may serve a stale cached result during propagation",
+        "Propagation can take anywhere from minutes to 48 hours",
+        "Lowering TTL after a change speeds up propagation"
+      ],
+      "correctAnswers": [0, 1, 3, 4],
+      "difficulty": 3,
+      "textReference": "#dns-propagation"
+    },
+    {
+      "question": "SELECT ALL THAT APPLY: A developer sets up the following infrastructure. Which statements are accurate?\n- Domain bought at Namecheap\n- Nameservers pointed to Cloudflare\n- Server hosted on DigitalOcean",
+      "options": [
+        "DNS records should be managed in Cloudflare, not Namecheap",
+        "The A record should point to the DigitalOcean server IP",
+        "DNS records should be managed at Namecheap since that is where the domain was bought",
+        "Namecheap remains the registrar but has no role in day-to-day DNS management",
+        "Cloudflare is acting as the DNS provider",
+        "DigitalOcean is the domain registrar in this setup"
+      ],
+      "correctAnswers": [0, 1, 3, 4],
+      "difficulty": 3,
+      "textReference": "#nameservers-where-your-dns-records-live"
+    },
+    {
+      "question": "SELECT ALL THAT APPLY: Which of the following are valid use cases for TXT records?",
+      "options": [
+        "Domain ownership verification by a third-party service",
+        "Mapping a domain name to an IP address",
+        "SPF configuration for email security",
+        "DKIM email authentication",
+        "Specifying which mail server handles incoming email",
+        "Proving domain control to a certificate authority"
+      ],
+      "correctAnswers": [0, 2, 3, 5],
+      "difficulty": 3,
+      "textReference": "#dns-records-explained"
+    },
+    {
+      "question": "SELECT ALL THAT APPLY: Which of the following correctly describe the anatomy of this URL?\nhttps://api.myapp.com/users?active=true",
+      "options": [
+        "https:// is the protocol",
+        "api is a subdomain of myapp.com",
+        "myapp.com is the root domain",
+        "/users?active=true is the full URI",
+        "active=true is part of the query string",
+        "api.myapp.com is the root domain"
+      ],
+      "correctAnswers": [0, 1, 2, 4],
+      "difficulty": 3,
+      "textReference": "#uris-and-urls-a-quick-distinction"
+    },
+    {
+      "question": "SELECT ALL THAT APPLY: Which nslookup commands would help debug a domain that appears to be resolving to the wrong IP?",
+      "options": [
+        "nslookup myapp.com",
+        "nslookup -type=A myapp.com",
+        "nslookup -type=MX myapp.com",
+        "nslookup myapp.com 8.8.8.8",
+        "nslookup -type=NS myapp.com",
+        "nslookup -type=AAAA myapp.com"
+      ],
+      "correctAnswers": [0, 1, 3],
+      "difficulty": 3,
+      "textReference": "#useful-troubleshooting-commands"
+    }
+  ]
+}

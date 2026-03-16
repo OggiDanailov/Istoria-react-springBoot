@@ -1,0 +1,107 @@
+{
+  "chapterId": "SSL_and_domains",
+  "batch_number": 1,
+  "difficulty": 3,
+  "batch_order": 1,
+  "description": "Hard - Advanced Concepts of SSL and Domains",
+  "questions": [
+    {
+      "question": "SELECT ALL THAT APPLY: Which of the following correctly describe the role of nginx in a typical DigitalOcean + Docker + nginx production deployment?",
+      "options": [
+        "nginx listens on port 443 and presents the SSL certificate to browsers",
+        "nginx handles TLS termination and proxies decrypted traffic to the backend",
+        "nginx directly handles all database queries to reduce backend load",
+        "nginx allows the Spring Boot backend to operate without handling TLS directly",
+        "nginx obtains and renews Let's Encrypt certificates via Certbot",
+        "nginx serves as the entry point where encrypted traffic becomes unencrypted"
+      ],
+      "correctAnswers": [0, 1, 3, 5],
+      "difficulty": 3,
+      "textReference": "#https-in-your-development-workflow"
+    },
+    {
+      "question": "SELECT ALL THAT APPLY: Which of the following statements about Let's Encrypt certificates are correct?",
+      "options": [
+        "They are free and issued automatically",
+        "They are valid for 90 days and should be renewed automatically",
+        "They provide the same padlock indicator to users as paid EV certificates",
+        "They require a paid subscription after the first issuance",
+        "They can issue wildcard certificates but require DNS challenge validation",
+        "The short 90-day validity period limits damage from a compromised certificate"
+      ],
+      "correctAnswers": [0, 1, 2, 4, 5],
+      "difficulty": 3,
+      "textReference": "#lets-encrypt-free-certificates-for-everyone"
+    },
+    {
+      "question": "SELECT ALL THAT APPLY: A developer receives the NET::ERR_CERT_DATE_INVALID error on their production site. Which of the following are likely causes or correct responses?",
+      "options": [
+        "The Let's Encrypt certificate has expired",
+        "Certbot's automatic renewal cron job has failed or is not running",
+        "The developer should manually run Certbot to renew the certificate",
+        "The error means the server's domain name does not match the certificate",
+        "The developer should check Certbot logs to diagnose the renewal failure",
+        "The error indicates a self-signed certificate is being used in production"
+      ],
+      "correctAnswers": [0, 1, 2, 4],
+      "difficulty": 3,
+      "textReference": "#common-certificate-errors-and-what-they-mean"
+    },
+    {
+      "question": "SELECT ALL THAT APPLY: Which of the following correctly describe the TLS handshake process?",
+      "options": [
+        "The browser sends the encryption methods it supports to the server",
+        "The server presents its SSL certificate during the handshake",
+        "The browser verifies the certificate's domain, expiry, and CA trust",
+        "The handshake transfers user data before the encrypted channel is established",
+        "Browser and server exchange encryption keys to establish the secure channel",
+        "The handshake typically adds around 50-100 milliseconds to the first connection"
+      ],
+      "correctAnswers": [0, 1, 2, 4, 5],
+      "difficulty": 3,
+      "textReference": "#the-tls-handshake-what-happens-at-connection-time"
+    },
+    {
+      "question": "SELECT ALL THAT APPLY: Which of the following are valid uses of self-signed certificates?",
+      "options": [
+        "Local development environments where traffic never leaves your machine",
+        "Internal tools accessed only within a trusted private network",
+        "Production sites serving real users requiring browser trust",
+        "Testing TLS configuration before obtaining a CA-signed certificate",
+        "Public-facing APIs that third-party clients will connect to",
+        "Staging environments accessible only to the development team internally"
+      ],
+      "correctAnswers": [0, 1, 3, 5],
+      "difficulty": 3,
+      "textReference": "#self-signed-certificates"
+    },
+    {
+      "question": "SELECT ALL THAT APPLY: Which statements correctly describe wildcard certificates?",
+      "options": [
+        "A wildcard certificate for *.myapp.com covers api.myapp.com and staging.myapp.com",
+        "A wildcard certificate covers the root domain myapp.com itself",
+        "Wildcard certificates from Let's Encrypt require DNS challenge validation",
+        "A single wildcard certificate can replace multiple individual subdomain certificates",
+        "Wildcard certificates are only available from paid Certificate Authorities",
+        "A wildcard certificate for *.myapp.com would also cover sub.api.myapp.com"
+      ],
+      "correctAnswers": [0, 2, 3],
+      "difficulty": 3,
+      "textReference": "#certificate-types"
+    },
+    {
+      "question": "SELECT ALL THAT APPLY: Which of the following correctly describe why HTTPS is mandatory for production applications?",
+      "options": [
+        "Without HTTPS, passwords and sensitive data travel as readable plain text",
+        "Modern browsers display 'Not Secure' warnings for HTTP sites",
+        "Some browsers block form submissions over HTTP entirely",
+        "HTTPS is only required for e-commerce sites handling payment data",
+        "HTTPS prevents man-in-the-middle attacks where traffic could be intercepted",
+        "HTTP sites are blocked by all major browsers regardless of content type"
+      ],
+      "correctAnswers": [0, 1, 2, 4],
+      "difficulty": 3,
+      "textReference": "#http-vs-https-what-the-s-means"
+    }
+  ]
+}

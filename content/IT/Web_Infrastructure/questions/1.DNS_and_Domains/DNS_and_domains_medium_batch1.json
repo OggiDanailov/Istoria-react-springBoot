@@ -1,0 +1,126 @@
+{
+  "chapterId": "DNS_and_domains",
+  "batch_number": 1,
+  "difficulty": 2,
+  "batch_order": 1,
+  "description": "Medium - DNS and Domains",
+  "questions": [
+    {
+      "question": "Which of the following are valid subdomains of myapp.com?",
+      "options": [
+        "api.myapp.com",
+        "staging.myapp.com",
+        "myapp.com.api",
+        "admin.myapp.com",
+        "myapp.api.com"
+      ],
+      "correctAnswers": [0, 1, 3],
+      "difficulty": 2,
+      "textReference": "#root-domains-and-subdomains"
+    },
+    {
+      "question": "What is the difference between a domain registrar and a DNS provider?",
+      "options": [
+        "They are the same thing — one company always handles both",
+        "The registrar is where you buy the domain; the DNS provider hosts your DNS records",
+        "The DNS provider is where you buy the domain; the registrar hosts DNS records",
+        "The registrar issues SSL certificates; the DNS provider routes email",
+        "There is no meaningful distinction between them"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 2,
+      "textReference": "#nameservers-where-your-dns-records-live"
+    },
+    {
+      "question": "A TTL of 3600 on an A record means:",
+      "options": [
+        "The record expires after 3600 requests",
+        "Other servers may cache the record for up to 1 hour",
+        "The record must be refreshed every 3600 days",
+        "The record is valid for 3600 milliseconds",
+        "DNS propagation will complete in exactly 3600 seconds"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 2,
+      "textReference": "#ttl-why-dns-changes-take-time"
+    },
+    {
+      "question": "Which of the following are true about CNAME records?",
+      "options": [
+        "They can be used for root domains",
+        "They map a name to another domain name rather than an IP address",
+        "They cannot be used for subdomains",
+        "www.myapp.com can use a CNAME pointing to myapp.com",
+        "They are used to specify mail servers"
+      ],
+      "correctAnswers": [1, 3],
+      "difficulty": 2,
+      "textReference": "#dns-records-explained"
+    },
+    {
+      "question": "What is the correct order of a DNS lookup when you visit a website for the first time?",
+      "options": [
+        "Browser cache → OS resolver → root nameserver → TLD nameserver → authoritative nameserver",
+        "Authoritative nameserver → TLD nameserver → root nameserver → OS resolver → browser",
+        "OS resolver → browser cache → authoritative nameserver → TLD nameserver",
+        "Root nameserver → browser cache → OS resolver → authoritative nameserver",
+        "Browser → authoritative nameserver directly"
+      ],
+      "correctAnswers": [0],
+      "difficulty": 2,
+      "textReference": "#what-happens-when-you-visit-a-website"
+    },
+    {
+      "question": "Which of the following are distinct roles in web infrastructure?",
+      "options": [
+        "Domain registrar",
+        "DNS provider",
+        "SSL certificate authority",
+        "Hosting provider",
+        "Browser vendor"
+      ],
+      "correctAnswers": [0, 1, 2, 3],
+      "difficulty": 2,
+      "textReference": "#nameservers-where-your-dns-records-live"
+    },
+    {
+      "question": "What is the difference between a URI and a URL?",
+      "options": [
+        "A URI includes the protocol and domain; a URL is just a path",
+        "They are identical terms with no distinction",
+        "A URL includes the protocol and domain; a URI is just a path identifier",
+        "A URI is used only in Spring Boot; a URL is used in browsers",
+        "A URL is always secure (HTTPS); a URI may be insecure"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 2,
+      "textReference": "#uris-and-urls-a-quick-distinction"
+    },
+    {
+      "question": "Which DNS record types map a name directly to an IP address?",
+      "options": [
+        "A Record",
+        "CNAME",
+        "AAAA Record",
+        "MX Record",
+        "TXT Record"
+      ],
+      "correctAnswers": [0, 2],
+      "difficulty": 2,
+      "textReference": "#dns-records-explained"
+    },
+    {
+      "question": "Why might a site not be accessible immediately after updating its A record?",
+      "options": [
+        "The new server needs time to boot up",
+        "DNS resolvers around the world may still be serving the cached old record based on the previous TTL",
+        "The domain registrar must manually approve all A record changes",
+        "ICANN must update its global database first",
+        "The browser must be restarted before DNS changes take effect"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 2,
+      "textReference": "#dns-propagation"
+    }
+  ]
+}

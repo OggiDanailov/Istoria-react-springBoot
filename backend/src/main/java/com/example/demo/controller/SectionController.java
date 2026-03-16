@@ -18,7 +18,10 @@ public class SectionController {
     }
 
     @GetMapping
-    public List<Section> getAllSections() {
+    public List<Section> getAllSections(@RequestParam(required = false) String discipline) {
+        if (discipline != null) {
+            return sectionRepository.findByDiscipline(discipline);
+        }
         return sectionRepository.findAll();
     }
 

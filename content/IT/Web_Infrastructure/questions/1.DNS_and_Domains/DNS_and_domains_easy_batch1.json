@@ -1,0 +1,129 @@
+{
+  "chapterId": "DNS_and_domains",
+  "batch_number": 1,
+  "difficulty": 1,
+  "batch_order": 1,
+  "description": "Easy - Basic Concepts of DNS and Domains",
+  "questions": [
+    {
+      "question": "What is a domain name?",
+      "options": [
+        "A numerical IP address used by computers",
+        "A human-readable name representing a location on the internet",
+        "A type of DNS record",
+        "A server that hosts websites"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "textReference": "#what-is-a-domain"
+    },
+    {
+      "question": "What does DNS stand for?",
+      "options": [
+        "Dynamic Network Service",
+        "Distributed Name Server",
+        "Domain Name System",
+        "Digital Naming Standard"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 1,
+      "textReference": "#the-problem-dns-solves"
+    },
+    {
+      "question": "What is a root domain?",
+      "options": [
+        "A subdomain used for admin access",
+        "The domain you purchase, without any prefix",
+        "The IP address of your server",
+        "A DNS record that points to another domain"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "textReference": "#root-domains-and-subdomains"
+    },
+    {
+      "question": "What does an A record do?",
+      "options": [
+        "Maps a domain name to another domain name",
+        "Specifies mail servers for a domain",
+        "Maps a domain name to an IPv4 address",
+        "Stores text for email security"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 1,
+      "textReference": "#dns-records-explained"
+    },
+    {
+      "question": "What does TTL stand for in DNS?",
+      "options": [
+        "Total Transfer Limit",
+        "Time To Live",
+        "Traffic Transfer Layer",
+        "Top Level Link"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "textReference": "#ttl-why-dns-changes-take-time"
+    },
+    {
+      "question": "Which organisation coordinates global internet naming?",
+      "options": [
+        "IANA",
+        "IEEE",
+        "ICANN",
+        "W3C"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 1,
+      "textReference": "#what-is-a-domain"
+    },
+    {
+      "question": "What is a nameserver?",
+      "options": [
+        "A server that hosts your website files",
+        "A server that issues SSL certificates",
+        "An authoritative server that hosts your DNS records",
+        "A server that routes email"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 1,
+      "textReference": "#nameservers-where-your-dns-records-live"
+    },
+    {
+      "question": "What is DNS commonly compared to?",
+      "options": [
+        "A post office",
+        "A phone book",
+        "A library catalogue",
+        "A routing table"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "textReference": "#the-problem-dns-solves"
+    },
+    {
+      "question": "What does a CNAME record do?",
+      "options": [
+        "Maps a name to an IPv4 address",
+        "Specifies which mail server handles email",
+        "Maps a name to another domain name",
+        "Stores verification text for a domain"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 1,
+      "textReference": "#dns-records-explained"
+    },
+    {
+      "question": "How long does a typical DNS lookup take?",
+      "options": [
+        "1–5 seconds",
+        "20–120 milliseconds",
+        "500–1000 milliseconds",
+        "5–10 seconds"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 1,
+      "textReference": "#what-happens-when-you-visit-a-website"
+    }
+  ]
+}

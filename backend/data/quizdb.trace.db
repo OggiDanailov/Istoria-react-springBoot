@@ -1668,3 +1668,12 @@ Caused by: org.h2.jdbc.JdbcSQLNonTransientConnectionException: The connection wa
 2026-03-09 17:32:09.989733-04:00 jdbc[13]: exception
 org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SECTIONS" not found; SQL statement:
 SELECT * FROM sections [42102-232]
+2026-03-16 15:02:08.705361-04:00 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION CHARACTER VARYING(255)": "U&'# Domains, DNS, and How the Internet Finds Your Site\\000a\\000aEvery time you ... (10178)"; SQL statement:
+insert into topics (description,section_id,title,id) values (?,?,?,default) [22001-232]
+2026-03-16 15:15:37.950052-04:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION CHARACTER VARYING(255)": "U&'# Domains, DNS, and How the Internet Finds Your Site\\000a\\000aEvery time you ... (10178)"; SQL statement:
+insert into topics (description,section_id,title,id) values (?,?,?,default) [22001-232]
+2026-03-16 15:18:30.871229-04:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION CHARACTER VARYING(255)": "U&'# Domains, DNS, and How the Internet Finds Your Site\\000a\\000aEvery time you ... (10178)"; SQL statement:
+insert into topics (description,section_id,title,id) values (?,?,?,default) [22001-232]

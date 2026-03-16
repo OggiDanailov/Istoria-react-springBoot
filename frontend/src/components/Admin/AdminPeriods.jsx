@@ -82,12 +82,12 @@ function AdminPeriods({ onBack }) {
           <p>No sections yet. Create one above!</p>
         ) : (
           sections.map(section => (
-            <div key={section.id} className="period-item wrinkled-paper">
+            <div key={section.id} className="section-item wrinkled-paper">
               <div>
                 <h4>{section.title}</h4>
                 <p>{section.description}</p>
               </div>
-              <div className="period-actions">
+              <div className="section-actions">
                 <button
                   onClick={() => handleEditSection(section)}
                   className="admin-btn edit-btn"
