@@ -16,7 +16,7 @@ function PeriodList({ onSectionSelect, onBack, discipline }) {
   const fetchSections = async () => {
     setLoading(true)
     try {
-      const response = await fetch(`${API_BASE_URL}/api/sections`)
+      const response = await fetch(`${API_BASE_URL}/api/sections?discipline=${discipline}`)
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`)
       }
@@ -45,12 +45,12 @@ function PeriodList({ onSectionSelect, onBack, discipline }) {
     <div className="quiz-container wrinkled-paper">
       <button onClick={onBack} className="back-btn">{labels.back}</button>
       <h1>{labels.heading}</h1>
-      <div className="period-list">
+      <div className="section-list">
         {sections.map(( section) => (
           <div
             key={section.id}
-            className="period-card"
-            onClick={() => onSectionSelect(period)}
+            className="section-card"
+            onClick={() => onSectionSelect(section)}
           >
             <h2>{section.title}</h2>
             <p>{section.description}</p>

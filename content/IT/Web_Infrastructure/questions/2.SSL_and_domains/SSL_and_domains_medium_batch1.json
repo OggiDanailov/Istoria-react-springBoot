@@ -1,0 +1,126 @@
+{
+  "chapterId": "SSL_and_domains",
+  "batch_number": 1,
+  "difficulty": 2,
+  "batch_order": 1,
+  "description": "Medium - Basic Concepts of SSL and Domains",
+  "questions": [
+    {
+      "question": "What three guarantees does HTTPS provide compared to HTTP?",
+      "options": [
+        "Encryption, identity verification, and data integrity",
+        "Speed, reliability, and encryption",
+        "Anonymity, encryption, and performance",
+        "Identity verification, speed, and data compression",
+        "Encryption, anonymity, and server authentication"
+      ],
+      "correctAnswers": [0],
+      "difficulty": 2,
+      "textReference": "#http-vs-https-what-the-s-means"
+    },
+    {
+      "question": "Which of the following correctly describe what a browser checks when verifying an SSL certificate?",
+      "options": [
+        "Whether the domain on the certificate matches the site being visited",
+        "Whether the certificate is within its validity period",
+        "Whether the certificate was issued by a trusted Certificate Authority",
+        "Whether the server is hosted on a recognised cloud provider",
+        "Whether the certificate covers all subdomains of the domain"
+      ],
+      "correctAnswers": [0, 1, 2],
+      "difficulty": 2,
+      "textReference": "#what-is-an-ssltls-certificate"
+    },
+    {
+      "question": "How does a Certificate Authority verify that you own a domain before issuing a certificate?",
+      "options": [
+        "The CA checks WHOIS records to confirm the registrant's name matches the applicant",
+        "The CA sends a verification email to the domain's administrative contact",
+        "The CA asks you to add a specific TXT record to your DNS, then confirms it is there",
+        "The CA connects to your server and checks for a valid SSL certificate already installed",
+        "The CA requires a government-issued ID proving ownership of the domain"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 2,
+      "textReference": "#certificate-authorities"
+    },
+    {
+      "question": "What is the purpose of a CAA DNS record?",
+      "options": [
+        "It maps your domain to an IP address for HTTPS traffic specifically",
+        "It specifies which Certificate Authorities are permitted to issue certificates for your domain",
+        "It redirects HTTP traffic to HTTPS automatically at the DNS level",
+        "It stores your SSL certificate so browsers can retrieve it directly",
+        "It verifies your domain ownership with Let's Encrypt during certificate issuance"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 2,
+      "textReference": "#the-caa-record-restricting-who-can-issue-certificates"
+    },
+    {
+      "question": "Which of the following are true about the TLS handshake?",
+      "options": [
+        "It occurs before any application data is exchanged",
+        "It establishes the encrypted channel between browser and server",
+        "It typically adds one additional round-trip to the connection",
+        "It permanently replaces the need for DNS lookups on subsequent visits",
+        "It transfers the SSL certificate from browser to server for verification"
+      ],
+      "correctAnswers": [0, 1, 2],
+      "difficulty": 2,
+      "textReference": "#the-tls-handshake-what-happens-at-connection-time"
+    },
+    {
+      "question": "What is TLS termination and where does it typically occur?",
+      "options": [
+        "The point where an SSL certificate expires and must be renewed",
+        "The process of revoking a compromised certificate at the CA level",
+        "The point where encrypted traffic becomes unencrypted, typically at a reverse proxy like nginx",
+        "The final step of the TLS handshake where encryption keys are destroyed",
+        "The process of converting HTTP traffic to HTTPS at the application level"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 2,
+      "textReference": "#https-in-your-development-workflow"
+    },
+    {
+      "question": "What is mixed content and why is it a problem?",
+      "options": [
+        "When a site uses both DV and EV certificates simultaneously",
+        "When an HTTPS page loads resources such as images or scripts over HTTP",
+        "When a wildcard certificate covers both root and subdomain traffic",
+        "When HTTP and HTTPS traffic arrive on the same server port",
+        "When a self-signed certificate is used alongside a CA-signed certificate"
+      ],
+      "correctAnswers": [1],
+      "difficulty": 2,
+      "textReference": "#when-you-will-actually-touch-all-of-this"
+    },
+    {
+      "question": "Which certificate types are correctly matched to their validation level?",
+      "options": [
+        "DV — proves domain ownership only",
+        "OV — proves domain ownership and that the organisation exists",
+        "EV — deep background check on the organisation",
+        "DV — requires a government ID and physical address verification",
+        "EV — issued automatically and instantly like Let's Encrypt certificates"
+      ],
+      "correctAnswers": [0, 1, 2],
+      "difficulty": 2,
+      "textReference": "#certificate-types"
+    },
+    {
+      "question": "What is the NET::ERR_CERT_AUTHORITY_INVALID browser error most commonly caused by?",
+      "options": [
+        "The certificate has passed its expiry date",
+        "The domain on the certificate does not match the site being visited",
+        "A self-signed certificate is being used on a production server",
+        "The server is running HTTP on port 443 instead of HTTPS",
+        "The CAA record is blocking the browser from trusting the certificate"
+      ],
+      "correctAnswers": [2],
+      "difficulty": 2,
+      "textReference": "#common-certificate-errors-and-what-they-mean"
+    }
+  ]
+}
