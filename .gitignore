@@ -39,3 +39,11 @@ yarn-debug.log*
 yarn-error.log*
 backend/data/quizdb.mv.db
 
+
+# Root env file used by docker compose (secrets)
+.env
+
+# Database dumps (contain user data)
+*.sql.dump
+ave_caesar_complete.sql
+backend/data/

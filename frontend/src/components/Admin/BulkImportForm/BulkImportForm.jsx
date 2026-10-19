@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { API_BASE_URL } from '../../../config/api'
+import { API_BASE_URL, authHeaders } from '../../../config/api'
 import './BulkImportForm.css'
 
 function BulkImportForm({ onClose, onImportSuccess }) {
@@ -110,9 +110,7 @@ function BulkImportForm({ onClose, onImportSuccess }) {
 
       const response = await fetch(`${API_BASE_URL}/api/questions/bulk-import`, {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
+        headers: authHeaders({ 'Content-Type': 'application/json' }),
         body: JSON.stringify(importData)
       })
 

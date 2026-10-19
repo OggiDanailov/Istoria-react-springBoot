@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import PeriodForm from './PeriodForm/PeriodForm'
-import { API_BASE_URL } from '../../config/api'
+import { API_BASE_URL, authHeaders } from '../../config/api'
 
 function AdminPeriods({ onBack }) {
   const [sections, setSections] = useState([])
@@ -35,7 +35,8 @@ function AdminPeriods({ onBack }) {
     if (window.confirm('Are you sure you want to delete this section? This will delete all topics and chapters within it!')) {
       try {
         await fetch(`${API_BASE_URL}/api/sections/${sectionId}`, {
-          method: 'DELETE'
+          method: 'DELETE',
+          headers: authHeaders()
         })
         fetchSections()
       } catch (error) {

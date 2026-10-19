@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import QuestionForm from './QuestionForm/QuestionForm'
-import { API_BASE_URL } from '../../config/api'
+import { API_BASE_URL, authHeaders } from '../../config/api'
 
 function AdminQuestions({ topic, onBack }) {
   const [showQuestionForm, setShowQuestionForm] = useState(false)
@@ -40,7 +40,8 @@ function AdminQuestions({ topic, onBack }) {
 
     try {
       await fetch(`${API_BASE_URL}/api/questions/${questionId}`, {
-        method: 'DELETE'
+        method: 'DELETE',
+        headers: authHeaders()
       })
       fetchQuestions()
     } catch (error) {

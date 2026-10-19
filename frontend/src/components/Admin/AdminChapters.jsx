@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import ChapterForm from './ChapterForm/ChapterForm'
 import { scrollToFormInput } from '../../utils/formUtils'
-import { API_BASE_URL } from '../../config/api'
+import { API_BASE_URL, authHeaders } from '../../config/api'
 
 function AdminChapters({ topicId, onBack }) {
   const [chapters, setChapters] = useState([])
@@ -49,7 +49,8 @@ function AdminChapters({ topicId, onBack }) {
     if (window.confirm('Are you sure you want to delete this chapter?')) {
       try {
         await fetch(`${API_BASE_URL}/api/chapters/${chapterId}`, {
-          method: 'DELETE'
+          method: 'DELETE',
+          headers: authHeaders()
         })
         fetchChapters()
       } catch (error) {

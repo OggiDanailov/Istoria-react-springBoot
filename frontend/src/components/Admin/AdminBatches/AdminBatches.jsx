@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { API_BASE_URL } from '../../../config/api'
+import { API_BASE_URL, authHeaders } from '../../../config/api'
 import './AdminBatches.css'
 
 function AdminBatches() {
@@ -210,9 +210,7 @@ function AdminBatches() {
     try {
       const response = await fetch(`${API_BASE_URL}/api/batches/${selectedBatchId}/questions`, {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
+        headers: authHeaders({ 'Content-Type': 'application/json' }),
         body: JSON.stringify({
           questionIds: selectedQuestions
         })
