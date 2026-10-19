@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { API_BASE_URL, authHeaders } from '../../../config/api'
 import './AdminBatches.css'
 
-function AdminBatches() {
+function AdminBatches({ onBack }) {
   const [chapters, setChapters] = useState([])
   const [selectedChapterId, setSelectedChapterId] = useState(null)
   const [batches, setBatches] = useState([])
@@ -270,6 +270,9 @@ function AdminBatches() {
 
   return (
     <div className="admin-batches">
+      <button onClick={onBack} className="back-btn">
+        ← Back to Admin
+      </button>
       <h2>Manage Quiz Batches</h2>
 
       {/* Step 1: Chapter Selector */}

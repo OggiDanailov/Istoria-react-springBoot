@@ -30,8 +30,8 @@ function TopicForm({ topic, onClose }) {
     if (topic) {
       setTitle(topic.title)
       setDescription(topic.description)
-      if (topic.section && topic.section.id) {
-        setSectionId(topic.section.id)
+      if (topic.sectionId) {
+        setSectionId(String(topic.sectionId))
       }
     }
   }, [topic])
@@ -50,7 +50,7 @@ function TopicForm({ topic, onClose }) {
     const topicData = {
       title,
       description,
-      section: { id: sectionId }
+      sectionId: Number(sectionId)
     }
 
     try {

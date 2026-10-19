@@ -28,7 +28,7 @@ public class TopicController {
 
     @GetMapping("/sections/{sectionId}/topics")
     public List<Topic> getTopicsBySection(@PathVariable Long sectionId) {
-        return topicRepository.findBySectionId(sectionId);
+        return topicRepository.findBySection_Id(sectionId);
     }
 
     @GetMapping("/topics/{id}")
@@ -52,6 +52,11 @@ public class TopicController {
             .orElseThrow(() -> new RuntimeException("Topic not found"));
         topic.setTitle(topicDetails.getTitle());
         topic.setDescription(topicDetails.getDescription());
+        if (topicDetails.getSectionId() != null) {
+            Section section = sectionRepository.findById(topicDetails.getSectionId())
+                .orElseThrow(() -> new RuntimeException("Section not found"));
+            topic.setSection(section);
+        }
         Topic updatedTopic = topicRepository.save(topic);
         return ResponseEntity.ok(updatedTopic);
     }
