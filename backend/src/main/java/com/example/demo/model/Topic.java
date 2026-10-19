@@ -21,6 +21,11 @@ public class Topic {
     @JsonIgnore // Prevent circular reference
     private Section section;
 
+    // Exposes the section in JSON without the circular reference;
+    // also lets clients send a new sectionId when updating a topic
+    @Transient
+    private Long requestedSectionId;
+
     @OneToMany(mappedBy = "topic", cascade = CascadeType.ALL)
     private List<Chapter> chapters;
 
@@ -63,6 +68,14 @@ public class Topic {
 
     public void setSection(Section section) {
         this.section = section;
+    }
+
+    public Long getSectionId() {
+        return section != null ? section.getId() : requestedSectionId;
+    }
+
+    public void setSectionId(Long sectionId) {
+        this.requestedSectionId = sectionId;
     }
 
     public List<Chapter> getChapters() {
