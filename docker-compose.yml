@@ -6,7 +6,7 @@ services:
     container_name: avecaesar-db
     environment:
       POSTGRES_USER: avecaesar
-      POSTGRES_PASSWORD: Zelda214!
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD in .env}
       POSTGRES_DB: ave_caesar
     ports:
       - "5555:5432"
@@ -27,11 +27,11 @@ services:
       SERVER_PORT: 8081
       SERVER_ADDRESS: 0.0.0.0
       CORS_ORIGINS: http://localhost,http://localhost:80
-      JWT_SECRET: "thisisthewhateversecretkeythatiamcreatingrightnow"
+      JWT_SECRET: ${JWT_SECRET:?set JWT_SECRET in .env}
       JWT_EXPIRATION: 86400000
       SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/ave_caesar
       SPRING_DATASOURCE_USERNAME: avecaesar
-      SPRING_DATASOURCE_PASSWORD: Zelda214!
+      SPRING_DATASOURCE_PASSWORD: ${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD in .env}
       SPRING_JPA_HIBERNATE_DDL_AUTO: validate
       SPRING_FLYWAY_ENABLED: "true"
       SPRING_FLYWAY_LOCATIONS: classpath:db/migration

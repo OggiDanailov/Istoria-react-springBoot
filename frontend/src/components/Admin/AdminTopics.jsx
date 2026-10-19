@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import TopicForm from './TopicForm/TopicForm'
-import { API_BASE_URL } from '../../config/api'
+import { API_BASE_URL, authHeaders } from '../../config/api'
 
 function AdminTopics({ onBack, onManageChapters, onAddQuestions }) {
   const [topics, setTopics] = useState([])
@@ -40,7 +40,8 @@ function AdminTopics({ onBack, onManageChapters, onAddQuestions }) {
 
     try {
       await fetch(`${API_BASE_URL}/api/topics/${topicId}`, {
-        method: 'DELETE'
+        method: 'DELETE',
+        headers: authHeaders()
       })
       fetchTopics()
     } catch (err) {

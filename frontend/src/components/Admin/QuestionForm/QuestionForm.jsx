@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import './QuestionForm.css'
 import { scrollToFormInput } from '../../../utils/formUtils'
-import { API_BASE_URL } from '../../../config/api'
+import { API_BASE_URL, authHeaders } from '../../../config/api'
 
 function QuestionForm({ topic, onClose, question }) {
   const [questions, setQuestions] = useState([])
@@ -74,9 +74,7 @@ function QuestionForm({ topic, onClose, question }) {
 
       const response = await fetch(url, {
         method: method,
-        headers: {
-          'Content-Type': 'application/json'
-        },
+        headers: authHeaders({ 'Content-Type': 'application/json' }),
         body: JSON.stringify(formData)
       })
 
@@ -126,7 +124,8 @@ function QuestionForm({ topic, onClose, question }) {
 
     try {
       await fetch(`${API_BASE_URL}/api/questions/${questionId}`, {
-        method: 'DELETE'
+        method: 'DELETE',
+        headers: authHeaders()
       })
       fetchQuestions()
     } catch (err) {

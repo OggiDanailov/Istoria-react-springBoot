@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { API_BASE_URL } from '../../../config/api'
+import { API_BASE_URL, authHeaders } from '../../../config/api'
 import './PeriodForm.css';
 
 const DISCIPLINES = [
@@ -37,7 +37,7 @@ function PeriodForm({ sectionToEdit, onSave, onCancel }) {
     try {
       const response = await fetch(url, {
         method: method,
-        headers: { 'Content-Type': 'application/json' },
+        headers: authHeaders({ 'Content-Type': 'application/json' }),
         body: JSON.stringify(formData)
       });
       if (response.ok) {

@@ -33,11 +33,13 @@ public class UserController {
 
     private final UserRepository userRepository;
     private final BCryptPasswordEncoder passwordEncoder;
-    private final long JWT_EXPIRATION = 86400000; // 24 hours
     private final RateLimitService rateLimitService;
 
     @Value("${jwt.secret}")
     private String jwtSecretString;
+
+    @Value("${jwt.expiration}")
+    private long JWT_EXPIRATION;
 
     private SecretKey JWT_SECRET;
 
