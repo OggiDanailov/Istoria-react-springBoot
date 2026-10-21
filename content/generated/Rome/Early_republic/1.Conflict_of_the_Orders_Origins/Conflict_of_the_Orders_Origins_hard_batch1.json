@@ -1,0 +1,203 @@
+{
+  "batchName": "Early Republic: The Conflict of the Orders - Origins (509-450 BCE) - Hard Batch 1",
+  "chapterName": "Early Republic: The Conflict of the Orders - Origins (509-450 BCE)",
+  "difficulty": 3,
+  "batchOrder": 6,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "On what point about the earliest tribunate do ancient writers disagree?",
+      "options": [
+        "Whether the first tribunes served in 471 BC",
+        "Whether tribunes could use the veto",
+        "Whether Sicinius was ever a colleague",
+        "Whether patricians could be tribunes",
+        "Whether there were originally two or five tribunes",
+        "Whether tribunes were sacrosanct"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 3,
+      "textReference": "#tribunes-of-the-plebs",
+      "explanation": "Ancient writers disagree on whether there were originally two or five tribunes. By 457 BC there were ten, helped by two plebeian aediles.",
+      "sourceQuote": "Ancient writers disagree on whether there were originally two or five.",
+      "reviewFlags": []
+    },
+    {
+      "question": "After the decemvirs fell in 449 BC, what did the consuls Valerius and Horatius make law regarding plebiscites?",
+      "options": [
+        "They bound all Romans, subject to Senate approval",
+        "They needed the pontifices' approval",
+        "They were abolished altogether",
+        "They bound plebeians only, as before",
+        "They bound all Romans with no conditions",
+        "They bound all Romans only in wartime"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#decemvirs-and-verginia",
+      "explanation": "Their laws made plebiscites binding on all Romans, subject to Senate approval. Before this, plebiscites had bound only plebeians.",
+      "sourceQuote": "As consuls, they then passed laws making plebiscites binding on all Romans, subject to Senate approval.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which assumption are Livy and Cicero sometimes thought to have made when writing about early Rome?",
+      "options": [
+        "That the kings had never really existed",
+        "That Roman institutions barely changed over nearly 500 years",
+        "That the Twelve Tables were Etruscan",
+        "That Polybius had invented the conflict",
+        "That the patricians were originally Greek settlers",
+        "That the plebeians outnumbered the army"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 3,
+      "textReference": "#historicity",
+      "explanation": "They are thought to have assumed Roman institutions barely changed over nearly five centuries, and to have reported fact and fable equally readily. No one recorded the conflict as it happened.",
+      "sourceQuote": "They are sometimes thought to have reported fact and fable equally readily, and to have assumed that Roman institutions barely changed over nearly 500 years.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What doubts do some modern scholars raise about the 454 BC embassy to study Greek laws? (select all that apply)",
+      "options": [
+        "Solon's laws had already been lost",
+        "Rome copied Carthaginian law instead",
+        "No envoys were ever sent",
+        "Rome never copied the Greeks at all",
+        "The envoys actually went to Sparta",
+        "The envoys visited only Greek cities in southern Italy"
+      ],
+      "correctAnswers": [
+        3,
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#terentilius-arsa",
+      "explanation": "Some scholars suggest the envoys went only to southern Italy's Greek cities, or that Rome never copied the Greeks. Livy claimed they went to Athens to study Solon's laws.",
+      "sourceQuote": "Some modern scholars doubt this, suggesting the envoys visited only Greek cities in southern Italy, or that Rome never copied the Greeks at all.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What price did the plebeians demand for returning from the first secession? (select all that apply)",
+      "options": [
+        "Some relief from their debts",
+        "Grants of conquered land",
+        "A written law code",
+        "The abolition of slavery",
+        "Officials of their own",
+        "The right to marry patricians"
+      ],
+      "correctAnswers": [
+        0,
+        4
+      ],
+      "difficulty": 3,
+      "textReference": "#first-secession",
+      "explanation": "The plebeians returned in exchange for debt relief and officials of their own. Those officials became the tribunes of the plebs.",
+      "sourceQuote": "The plebeians agreed to return, but at a price: some relief from their debts, and officials of their own.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Between which approximate dates is the Conflict of the Orders traditionally placed?",
+      "options": [
+        "About 500 BC to 287 BC",
+        "About 494 BC to 387 BC",
+        "About 500 BC to 367 BC",
+        "About 509 BC to 449 BC",
+        "About 450 BC to 133 BC",
+        "About 471 BC to 287 BC"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#patricians-and-plebeians",
+      "explanation": "The conflict is traditionally dated from about 500 BC to 287 BC. It was the plebeians' fight for political equality and shaped how the Republic was governed.",
+      "sourceQuote": "Traditionally dated from about 500 BC to 287 BC, it was the plebeians' fight for political equality, and it shaped how the Republic was governed.",
+      "reviewFlags": []
+    },
+    {
+      "question": "In Livy's tale of the indebted officer, what did crushing interest swallow first after he borrowed to pay a tax?",
+      "options": [
+        "His father's farm",
+        "His armour and weapons",
+        "His grandfather's farm",
+        "His own house in Rome",
+        "His livestock",
+        "His daughter's dowry"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 3,
+      "textReference": "#debt-crisis",
+      "explanation": "The interest took his grandfather's farm first, then his father's. Finally his creditors jailed him, whipped him and threatened him with death.",
+      "sourceQuote": "Back home he borrowed to pay a tax, and crushing interest swallowed his grandfather's farm, then his father's.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What may have happened to the original Twelve Tables?",
+      "options": [
+        "Perhaps melted down by Hannibal in 216 BC",
+        "Perhaps lost in a Tiber flood in 287 BC",
+        "Perhaps destroyed when Gauls burned Rome in 387 BC",
+        "Perhaps buried by the pontifices in 449 BC",
+        "Perhaps destroyed by the Sabines in 494 BC",
+        "Perhaps carried off to Athens in 454 BC"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 3,
+      "textReference": "#twelve-tables",
+      "explanation": "The original tablets are lost, possibly destroyed in the Gallic burning of Rome in 387 BC. Scholars still argue over how the surviving fragments fit together.",
+      "sourceQuote": "The original tablets are lost, perhaps destroyed when Gallic warriors burned Rome in 387 BC, and scholars still argue over how the surviving fragments fit together.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Under Table III of the Twelve Tables, how did debt enforcement work?",
+      "options": [
+        "60 days to pay, then a creditor could chain and hold him 30 days",
+        "10 days to pay, then a creditor could chain and hold him 30 days",
+        "7 days to pay, then a creditor could chain and hold him 30 days",
+        "30 days to pay, then a creditor could chain and hold him 60 days",
+        "30 days to pay, then a creditor could chain and hold him 90 days",
+        "A year to pay, then a creditor could chain and hold him 60 days"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 3,
+      "textReference": "#twelve-tables",
+      "explanation": "A debtor had thirty days to pay before being dragged to court, chained and held for sixty days. Debt had been a central plebeian grievance since the crisis of 495 BC.",
+      "sourceQuote": "Table III dealt with debt: a debtor had thirty days to pay before a creditor could drag him to court, chain him and hold him for sixty days.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which powers did any tribune have with respect to the Plebeian Council? (select all that apply)",
+      "options": [
+        "To put proposals before it",
+        "To preside over it",
+        "To appoint consuls through it",
+        "To make its plebiscites binding on patricians",
+        "To summon it",
+        "To admit patricians as voting members"
+      ],
+      "correctAnswers": [
+        0,
+        1,
+        4
+      ],
+      "difficulty": 3,
+      "textReference": "#plebeian-council",
+      "explanation": "Any tribune could summon, preside over and put proposals to the council. Its plebiscites at first bound only plebeians.",
+      "sourceQuote": "Any tribune could summon the council, preside over it and put proposals before it.",
+      "reviewFlags": []
+    }
+  ]
+}

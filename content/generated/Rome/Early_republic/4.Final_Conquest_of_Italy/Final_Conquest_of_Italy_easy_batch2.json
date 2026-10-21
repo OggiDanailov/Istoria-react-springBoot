@@ -1,0 +1,179 @@
+{
+  "batchName": "Early Republic: Final Conquest of Italy (290-264 BCE) - Easy Batch 2",
+  "chapterName": "Early Republic: Final Conquest of Italy (290-264 BCE)",
+  "difficulty": 1,
+  "batchOrder": 2,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "How did Rome control most of the Greek cities of Magna Graecia after Pyrrhus left?",
+      "options": [
+        "By destroying and resettling them",
+        "By handing them over to Carthage",
+        "By binding them through treaties",
+        "By sending Roman governors to rule them"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#how-rome-ruled-italy",
+      "explanation": "Rather than rule them directly, Rome bound most of the Greek cities through treaties, giving it indirect control. Apart from garrisons, its grip stayed loose for decades.",
+      "sourceQuote": "Instead of ruling the Greek cities of Magna Graecia directly, it bound most of them through treaties.",
+      "reviewFlags": []
+    },
+    {
+      "question": "By the time he went to Sicily, what had Pyrrhus's ambitions grown into?",
+      "options": [
+        "Conquering Egypt and the eastern kingdoms",
+        "Retaking his lost lands back in Greece",
+        "Dominating both southern Italy and Sicily",
+        "Capturing Rome and ruling all of Latium"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#pyrrhus-in-sicily",
+      "explanation": "His goals had grown far beyond rescuing Tarentum. In the end, though, his Sicilian adventure brought him nothing lasting.",
+      "sourceQuote": "He aimed to dominate both southern Italy and Sicily.",
+      "reviewFlags": []
+    },
+    {
+      "question": "The Appian Way, Rome's great road, ran south from Rome toward which city?",
+      "options": [
+        "Genua",
+        "Ariminum",
+        "Capua",
+        "Arretium"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#rome-after-the-samnite-wars",
+      "explanation": "The Appian Way ran south toward Capua, carrying Roman armies and influence deep into the south. Rome also founded colonies of loyal citizens on conquered land.",
+      "sourceQuote": "It also built the Appian Way, a great road running south from Rome toward Capua, which carried armies and influence deep into the south.",
+      "reviewFlags": []
+    },
+    {
+      "question": "According to the Roman tradition preserved by Livy, what caused the last plebeian secession?",
+      "options": [
+        "A tyrannical consul",
+        "Debt",
+        "Famine",
+        "Plague"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#why-the-plebs-seceded",
+      "explanation": "The traditional account blamed debt, with angry crowds revolting when called up to fight the Lucanians. Modern historians doubt this version.",
+      "sourceQuote": "The Roman tradition, preserved in yearly chronicles and by the historian Livy, blamed debt.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Where was Pyrrhus killed in 272 BC?",
+      "options": [
+        "Tarentum",
+        "Argos",
+        "Syracuse",
+        "Pella"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#beneventum-and-withdrawal",
+      "explanation": "Pyrrhus died fighting a different war at Argos in southern Greece. That same year, Tarentum fell to Rome.",
+      "sourceQuote": "That same year Pyrrhus himself was killed while fighting a different war at Argos, a city in southern Greece.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did Rome's system of colonies, citizenship and alliances turn Italy into?",
+      "options": [
+        "A grain supplier for the Greek world",
+        "A single province under one governor",
+        "A vast reservoir of fighting men",
+        "A loose league of free kingdoms"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#how-rome-ruled-italy",
+      "explanation": "Rome's system produced a reservoir of soldiers larger than that of any other state of the time. Allies stayed independent in name but had to supply troops.",
+      "sourceQuote": "This system turned Italy into a vast reservoir of fighting men, larger than that of any other state of the time.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Where did the Samnites, Rome's toughest rivals in central Italy, come from?",
+      "options": [
+        "The island of Sicily",
+        "The Apennine mountains",
+        "The coastal plains of Etruria",
+        "The Po Valley in the north"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#rome-after-the-samnite-wars",
+      "explanation": "The Samnites were a warlike coalition of tribes from the Apennine mountains. Rome fought them in three Samnite Wars between 343 and 290 BC.",
+      "sourceQuote": "Its toughest rivals had been the Samnites, a warlike coalition of tribes from the Apennine mountains.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What does the phrase \"Pyrrhic victory\" mean?",
+      "options": [
+        "A win gained by a surprise attack",
+        "A win so costly it is almost a defeat",
+        "A win won by hired foreign troops",
+        "A win achieved with no losses at all"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#heraclea-and-asculum",
+      "explanation": "The phrase comes from Pyrrhus, whose victories over Rome cost his army terribly. He reportedly said, \"Another such victory and we are lost!\"",
+      "sourceQuote": "A \"Pyrrhic victory\" is a win that costs the victor so much that it is almost a defeat.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Who was the next enemy to seriously challenge Rome's control of the Italian peninsula after Pyrrhus?",
+      "options": [
+        "Spartacus",
+        "Hannibal",
+        "Philip of Macedon",
+        "Mithridates"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#beneventum-and-withdrawal",
+      "explanation": "Rome's hold on Italy was not seriously challenged again until Hannibal invaded at the end of the century. Its victory over Pyrrhus had hugely boosted its standing.",
+      "sourceQuote": "Its control of the Italian peninsula would not be seriously challenged again until Hannibal invaded at the end of the century.",
+      "reviewFlags": []
+    },
+    {
+      "question": "The Conflict of the Orders was a long struggle between which two groups in Roman society?",
+      "options": [
+        "Patricians and plebeians",
+        "Romans and Samnites",
+        "The Senate and the consuls",
+        "Latins and Etruscans"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#lex-hortensia",
+      "explanation": "For two centuries the hereditary patrician elite and the mass of ordinary plebeian citizens struggled over political rights. The Hortensian Law of 287 BC brought this conflict to a close.",
+      "sourceQuote": "For two centuries, Roman society had been split between the patricians, a small hereditary elite, and the plebeians, the mass of ordinary citizens.",
+      "reviewFlags": []
+    }
+  ]
+}

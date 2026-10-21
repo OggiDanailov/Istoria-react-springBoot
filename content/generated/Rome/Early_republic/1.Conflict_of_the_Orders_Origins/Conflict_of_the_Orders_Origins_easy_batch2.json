@@ -1,0 +1,179 @@
+{
+  "batchName": "Early Republic: The Conflict of the Orders - Origins (509-450 BCE) - Easy Batch 2",
+  "chapterName": "Early Republic: The Conflict of the Orders - Origins (509-450 BCE)",
+  "difficulty": 1,
+  "batchOrder": 2,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Where did the plebs secede to in 449 BC?",
+      "options": [
+        "The Aventine Hill, then the Sacred Mount",
+        "The Capitoline, then the Janiculum",
+        "The Palatine, then the Quirinal",
+        "Ostia, then the Alban Hills"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#decemvirs-and-verginia",
+      "explanation": "In the second secession the plebs went to the Aventine Hill and then the Sacred Mount. The decemvirs were forced out as a result.",
+      "sourceQuote": "In 449 BC the plebs seceded again, to the Aventine Hill and then the Sacred Mount.",
+      "reviewFlags": []
+    },
+    {
+      "question": "According to tradition, what fable did Agrippa Menenius Lanatus tell the seceding plebeians?",
+      "options": [
+        "The geese that saved the Capitol",
+        "The wolf who nursed two abandoned twins",
+        "The ant who stored grain for winter",
+        "The limbs of a body that refused to feed the belly"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#first-secession",
+      "explanation": "He told of limbs that refused to feed the belly, only to starve themselves. A city, he argued, likewise needed patricians and plebeians working together.",
+      "sourceQuote": "He told a fable about the limbs of a body that refused to feed the belly, only to starve themselves.",
+      "reviewFlags": []
+    },
+    {
+      "question": "After the kings were gone, who served as Rome's chief magistrates?",
+      "options": [
+        "Ten tribunes elected every five years",
+        "A single dictator elected for life",
+        "Two consuls elected for one year at a time",
+        "Three kings sharing power for a decade"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#patricians-and-plebeians",
+      "explanation": "Two consuls, elected for one-year terms, ran the state together with the Senate, a council of leading men. Every one of these positions belonged to the patricians.",
+      "sourceQuote": "Instead of a monarch, two consuls, chief magistrates elected for one year at a time, ran the state alongside the Senate, a council of leading men.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What was the tribunes' strongest weapon?",
+      "options": [
+        "The right to declare war",
+        "Command of the army",
+        "Control of the treasury",
+        "The veto"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#tribunes-of-the-plebs",
+      "explanation": "The veto let tribunes block the actions of magistrates. This power rested on tribunes being sacrosanct.",
+      "sourceQuote": "The tribunes' strongest weapon was the veto, the power to block the actions of magistrates.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which tribune declared in 462 BC that rule by consuls had become more oppressive than the monarchy?",
+      "options": [
+        "Lucius Albinius Paterculus",
+        "Marcus Horatius Barbatus",
+        "Volero Publilius",
+        "Gaius Terentilius Arsa"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#terentilius-arsa",
+      "explanation": "Gaius Terentilius Arsa argued that the consuls' powers needed clear limits. His campaign eventually led to the writing down of Roman law.",
+      "sourceQuote": "In 462 BC the tribune Gaius Terentilius Arsa declared that rule by consuls had become even more oppressive than the monarchy it replaced.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which decemvir is at the centre of the famous story of Verginia?",
+      "options": [
+        "Lucius Valerius Potitus",
+        "Marcus Horatius Barbatus",
+        "Appius Claudius Crassus",
+        "Agrippa Menenius Lanatus"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#decemvirs-and-verginia",
+      "explanation": "Appius Claudius Crassus tried to seize Verginia, daughter of a respected centurion. The scandal sparked riots that spread to the army.",
+      "sourceQuote": "The most famous story concerns the decemvir Appius Claudius Crassus.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which tribune carried the Lex Publilia of 471 BC?",
+      "options": [
+        "Volero Publilius",
+        "Gaius Licinius",
+        "Lucius Sicinius Vellutus",
+        "Gaius Terentilius Arsa"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#plebeian-council",
+      "explanation": "The tribune Volero Publilius carried the reform in 471 BC. It made the plebs politically independent by breaking patrician influence over their votes.",
+      "sourceQuote": "In 471 BC a tribune named Volero Publilius carried a reform known as the Lex Publilia.",
+      "reviewFlags": []
+    },
+    {
+      "question": "In the early Republic, which group held every position of power?",
+      "options": [
+        "The patricians",
+        "The plebeians",
+        "The pontifices",
+        "The equestrians"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#patricians-and-plebeians",
+      "explanation": "The patricians were a small hereditary aristocracy who monopolised the consulship and the Senate. Everyone else was a plebeian, and plebeians made up the great majority of citizens.",
+      "sourceQuote": "Every one of these positions belonged to the patricians, a small hereditary aristocracy.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What does the Latin word 'decemviri' mean?",
+      "options": [
+        "Ten men",
+        "Ten laws",
+        "Ten tribes",
+        "Ten years"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#decemvirs-and-verginia",
+      "explanation": "The decemviri were a commission of 'ten men' appointed to govern for a year and write down Roman law. There was no appeal against their decisions.",
+      "sourceQuote": "In their place a commission called the decemviri, Latin for 'ten men', would govern for a year and write down Roman law, with no appeal against their decisions.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which modern scholar argues that there was no Conflict of the Orders at all?",
+      "options": [
+        "Richard E. Mitchell",
+        "Edward Gibbon",
+        "Mary Beard",
+        "Theodor Mommsen"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#historicity",
+      "explanation": "Richard E. Mitchell is among the scholars who argue there was no conflict at all. In this view, later Romans projected their own class struggles onto the distant past.",
+      "sourceQuote": "Some scholars, such as Richard E. Mitchell, argue there was no conflict at all.",
+      "reviewFlags": []
+    }
+  ]
+}

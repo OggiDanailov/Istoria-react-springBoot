@@ -1,0 +1,191 @@
+{
+  "batchName": "Early Republic: The Conflict of the Orders - Toward Resolution (450-367 BCE) - Medium Batch 1",
+  "chapterName": "Early Republic: The Conflict of the Orders - Toward Resolution (450-367 BCE)",
+  "difficulty": 2,
+  "batchOrder": 4,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Which former consul, roused by the geese, hurled the first Gallic attacker off the Capitoline?",
+      "options": [
+        "Gaius Licinius",
+        "Marcus Papirius",
+        "Marcus Manlius",
+        "Publius Manlius Capitolinus",
+        "Lucius Sextius"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#sack-of-rome",
+      "explanation": "The honking geese of Juno woke Marcus Manlius, who threw the first attacker down the slope, saving the citadel.",
+      "sourceQuote": "Their noise roused Marcus Manlius, a former consul, who hurled the first attacker down the slope.",
+      "reviewFlags": []
+    },
+    {
+      "question": "According to Livy, where was Camillus living in exile before being recalled as dictator to fight the Gauls?",
+      "options": [
+        "Veii",
+        "Clusium",
+        "Caere",
+        "Cumae",
+        "Ardea"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#sack-reliability",
+      "explanation": "Livy places Camillus in exile at Ardea, a town south of Rome. Yet the Greek historians Polybius and Diodorus Siculus never mention him.",
+      "sourceQuote": "According to Livy, Camillus was in exile at Ardea, a town south of Rome, and was recalled as dictator.",
+      "reviewFlags": []
+    },
+    {
+      "question": "When the Gauls demanded the Fabius brothers be handed over, what did Rome do?",
+      "options": [
+        "Elected them consular tribunes for the next year",
+        "Put them on trial for murder",
+        "Sent them to negotiate again",
+        "Exiled them to Ardea",
+        "Handed them over in chains"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#battle-of-the-allia",
+      "explanation": "Instead of surrendering the envoys who broke neutrality, Rome honoured them with election as consular tribunes. Enraged, the Gauls marched on Rome.",
+      "sourceQuote": "Instead, the Romans elected them consular tribunes for the next year.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Why did the dictator Publius Manlius Capitolinus anger the patricians?",
+      "options": [
+        "He refused to fight the Volscians",
+        "He handed the Sibylline Books to plebeians",
+        "He freed all debtors from prison",
+        "He picked a plebeian as his deputy",
+        "He resigned after threatening violence"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#licinius-and-sextius",
+      "explanation": "Manlius Capitolinus chose a plebeian deputy, upsetting the patricians. Licinius and Sextius then won a tenth term, and their whole package went through.",
+      "sourceQuote": "A second dictator, Publius Manlius Capitolinus, angered patricians by picking a plebeian deputy.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did the Licinian laws change the guardianship of the Sibylline Books?",
+      "options": [
+        "The books were moved to the temple of Juno at Veii",
+        "The priesthood was opened only to women",
+        "Ten priests replaced two, five of them plebeians",
+        "The Senate took over direct control",
+        "The books were handed to the tribunes"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#licinian-laws",
+      "explanation": "Two patrician priests were replaced by ten, five of them plebeians. For the first time, the patricians' monopoly on priesthoods was broken.",
+      "sourceQuote": "The new law replaced them with ten priests, five of them plebeians.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Between 444 and 401 BC, roughly how many of about a hundred consular tribunes were plebeians?",
+      "options": [
+        "Twenty",
+        "None at all",
+        "Fifty",
+        "Two",
+        "Seventy"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#conflict-of-the-orders",
+      "explanation": "Although Livy claimed the office was a concession open to plebeians, only two of about a hundred holders in this period were plebeians. Around 400 BC this changed.",
+      "sourceQuote": "Between 444 and 401 BC, only two of about a hundred consular tribunes were plebeians.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which elderly Roman struck a Gaul with his ivory staff, triggering the massacre in the city?",
+      "options": [
+        "Marcus Papirius",
+        "Marcus Furius Camillus",
+        "Lucius Albinus",
+        "Lucius Genucius",
+        "Marcus Manlius"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#sack-of-rome",
+      "explanation": "A Gaul stroked Marcus Papirius's long beard, and Papirius struck him with his staff. The massacre began, and houses were plundered and burned.",
+      "sourceQuote": "Then one Gaul stroked the long beard of Marcus Papirius, who struck him with his ivory staff.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How does Cornell's view of the sack differ from Livy's account of Rome being burned and hastily rebuilt?",
+      "options": [
+        "He thinks the Romans burned the city themselves",
+        "He thinks the Gauls left most buildings standing and went home once paid",
+        "He thinks the Gauls never actually entered Rome",
+        "He thinks the city was rebuilt on an orderly grid",
+        "He thinks the Gauls occupied Rome for several decades"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#rome-after-the-sack",
+      "explanation": "Cornell believes the Gauls mainly wanted loot and left once paid. He also notes that haphazard street plans were common in ancient cities anyway.",
+      "sourceQuote": "In his view they left most buildings standing and went home once they were paid.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What made Licinius and Sextius finally give way in 370 BC after blocking elections for years?",
+      "options": [
+        "A revolt by the Fabius family",
+        "A new Gallic invasion from the north",
+        "An attack on Roman territory by Velitrae",
+        "The death of Camillus",
+        "An outbreak of plague in Rome"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#licinius-and-sextius",
+      "explanation": "They relented when Velitrae, a town of the Volscians, attacked Roman territory. Even so, the pair were re-elected year after year.",
+      "sourceQuote": "They gave way only in 370 BC, when Velitrae, a town of the Volscians, a people south-east of Rome, attacked Roman territory.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which of these were roles or powers of the new office of praetor? (select all that apply)",
+      "options": [
+        "Presiding over criminal trials",
+        "Serving as Rome's chief judge",
+        "Vetoing business in the Plebeian Council",
+        "Guarding the Sibylline Books",
+        "Commanding an army"
+      ],
+      "correctAnswers": [
+        0,
+        1,
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#first-plebeian-consul",
+      "explanation": "The praetor was Rome's chief judge, presided over criminal trials and could command an army. The office was at first reserved for patricians.",
+      "sourceQuote": "The praetor served as Rome's chief judge, presiding over criminal trials.",
+      "reviewFlags": []
+    }
+  ]
+}

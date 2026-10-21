@@ -1,0 +1,189 @@
+{
+  "batchName": "Early Republic: The Samnite Wars (367-290 BCE) - Medium Batch 1",
+  "chapterName": "Early Republic: The Samnite Wars (367-290 BCE)",
+  "difficulty": 2,
+  "batchOrder": 3,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Which town, seen by Rome as its key to Etruria, did the Etruscans besiege in 311 BC?",
+      "options": [
+        "Cales",
+        "Fregellae",
+        "Cumae",
+        "Sutrium",
+        "Venusia"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#second-war-turning",
+      "explanation": "The Etruscan siege of Sutrium opened a second front for Rome during the Great Samnite War. Fabius Maximus Rullianus answered with his march through the Ciminian Forest.",
+      "sourceQuote": "In 311 BC the Etruscans, the wealthy city-states north of Rome, besieged Sutrium, which Rome saw as its key to Etruria.",
+      "reviewFlags": []
+    },
+    {
+      "question": "According to the story of the Caudine Forks, what did Pontius' elderly father Herennius advise?",
+      "options": [
+        "Free them all or kill them all, but nothing in between",
+        "Keep the army hostage until Rome surrendered Campania",
+        "Ransom the consuls and kill the soldiers",
+        "Sell the captives to Greek slave traders",
+        "Send the Romans home under the yoke"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#caudine-forks",
+      "explanation": "Herennius said freeing everyone would win Rome's friendship and killing everyone would cripple Rome, while a middle course would do neither. Pontius chose the middle course anyway.",
+      "sourceQuote": "Free them all and win Rome's friendship, the old man said, or kill them all and cripple Rome for years.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Why did the Samnites see Rome's colony at Fregellae, founded in 328 BC, as open aggression?",
+      "options": [
+        "It lay on the Liris in an area they had recently overrun",
+        "It was built inside the Samnite capital",
+        "It was founded during a sworn truce",
+        "It blocked the road from Capua to Naples",
+        "It was settled by Campanian rebels"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#second-war-outbreak",
+      "explanation": "Fregellae sat on the Liris in territory the Samnites had recently taken. It followed Rome's earlier settlement of 2,500 colonists at Cales.",
+      "sourceQuote": "Then in 328 BC Rome founded a colony at Fregellae, on the Liris, in an area the Samnites had recently overrun.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Why must historians rely on brief summaries for the events after Aquilonia?",
+      "options": [
+        "Polybius began his history only in 225 BC",
+        "Diodorus refused to write about Rome",
+        "The Samnites destroyed the Roman archives",
+        "Roman records burned in a Gallic sack",
+        "Livy's surviving books stop at that point"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#aquilonia-and-the-end",
+      "explanation": "Livy's surviving books end with Aquilonia, so later events come from short summaries. These report that a Samnite commander named Gaius Pontius was captured, paraded in a triumph and beheaded.",
+      "sourceQuote": "Livy's surviving books stop here; later events come from brief summaries.",
+      "reviewFlags": []
+    },
+    {
+      "question": "According to Livy, why did the Roman Senate at first refuse the Campanians' offer of alliance?",
+      "options": [
+        "Rome was already at war with the Etruscans",
+        "The consuls refused to lead an army south",
+        "Campania was too far from Rome to defend",
+        "The Campanians had attacked Roman colonists",
+        "It would betray Rome's treaty with the Samnites"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#first-war-outbreak",
+      "explanation": "The senators were tempted by Campanian wealth but would not break their treaty with the Samnites. Only after Campania surrendered itself to Rome did Roman honour become involved.",
+      "sourceQuote": "The senators, Livy says, were tempted but refused, since this would betray their treaty with the Samnites.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Scholars such as Salmon and Forsythe think the story of Capua's surrender in 343 BC was projected back from which later event?",
+      "options": [
+        "Capua's real surrender in 211 BC after siding with Carthage",
+        "The Caudine Forks disaster of 321 BC",
+        "The founding of Venusia in 291 BC",
+        "The battle of Telamon in 225 BC",
+        "The siege of Naples in 326 BC"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#doubting-livy",
+      "explanation": "They argue the earlier surrender was invented on the model of 211 BC, when Rome punished Capua for siding with Carthage. Such a tale would clear Rome of treaty-breaking and blame scheming Campanians.",
+      "sourceQuote": "Scholars such as Salmon and Forsythe think it was invented, projected back from Capua's real surrender in 211 BC, when Rome punished it for siding with Carthage, the North African trading power.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did the consul Papirius manage to intercept twenty elite Samnite companies at Aquilonia in 293 BC?",
+      "options": [
+        "He crossed a forest no Roman had entered",
+        "He was tipped off by a deserter",
+        "He disguised his men as shepherds",
+        "He bribed the Samnite commander",
+        "His colleague drew the Samnites into a trap"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#aquilonia-and-the-end",
+      "explanation": "A deserter tipped off Papirius, who intercepted the elite companies and took Aquilonia. At the same time nearby Cominium surrendered to his colleague Carvilius.",
+      "sourceQuote": "Tipped off by a deserter, Papirius intercepted twenty elite Samnite companies and took Aquilonia, while Cominium surrendered to Carvilius.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Where did the Samnites win a victory over Rome in 315 BC, during the Great Samnite War?",
+      "options": [
+        "Lake Vadimo",
+        "Aquilonia",
+        "Mount Gaurus",
+        "Sentinum",
+        "Lautulae"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#second-war-turning",
+      "explanation": "When fighting resumed after the truce, the Samnites won at Lautulae in 315 BC. The war saw reverses on both sides.",
+      "sourceQuote": "When fighting resumed, the Samnites won at Lautulae in 315 BC.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Under the peace of 341 BC that ended the First Samnite War, what did Rome do?",
+      "options": [
+        "Left the Sidicini to the Samnites but kept Capua",
+        "Gave up all claims north of the Liris",
+        "Founded a colony at Fregellae",
+        "Received Samnite hostages and tribute",
+        "Annexed the Sidicini and abandoned Capua"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#first-war-campaigns",
+      "explanation": "Rome let the Samnites have the Sidicini but held on to its alliance with Capua. The old treaty with the Samnites was renewed.",
+      "sourceQuote": "Rome left the Sidicini to the Samnites but kept its alliance with Capua, a far greater prize.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did the Greek historian Dionysius of Halicarnassus think really motivated Rome to protect the Lucanians in 298 BC?",
+      "options": [
+        "A desire to found a colony at Venusia",
+        "Hope of seizing Lucanian silver mines",
+        "Compassion for a weak neighbour",
+        "Fear of Samnite power",
+        "A sacred obligation under fetial law"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#third-war-sentinum",
+      "explanation": "Dionysius believed Rome acted from fear of Samnite power, not compassion. The Lucanians' appeal triggered the Third Samnite War.",
+      "sourceQuote": "The Greek historian Dionysius of Halicarnassus thought Rome acted from fear of Samnite power, not compassion.",
+      "reviewFlags": []
+    }
+  ]
+}

@@ -1,0 +1,1237 @@
+<title>Chronology Jam</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Nunito:wght@500;700;800&display=swap">
+<style>
+/* Layout: one-screen phone game. Pompeian fresco wall (red) framing black panels (the boards),
+   bright tesserae-coloured tiles. Seven mini-games share the look; every game screen is
+   header -> task line -> board -> hint card. Deliberately single-theme: the fresco look is the
+   identity, so every colour is set explicitly. */
+:root {
+  --wall: #8e2b22;          /* Pompeian red */
+  --wall-deep: #6d1f19;
+  --panel: #1b1715;         /* black fresco panel */
+  --panel-line: #3a312c;
+  --ink: #fbf3e4;
+  --ink-soft: #e2cdb0;
+  --ochre: #e0a63a;
+  --good: #7fb069;
+  --bad: #e2574c;
+  --tile-1: #e0a63a;        /* ochre */
+  --tile-2: #4f8fb8;        /* Egyptian blue */
+  --tile-3: #6aa37a;        /* malachite green */
+  --tile-4: #e9e1cf;        /* marble */
+  --tile-5: #c86a3c;        /* cinnabar */
+  --tile-ink: #1b1715;
+  --sea: #2f5f7d;
+  --land: #c9b48a;
+  --display: "Marcellus", "Trajan Pro", Georgia, serif;
+  --body: "Nunito", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+  --radius: 14px;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html, body { height: 100%; }
+body {
+  margin: 0; background: var(--wall);
+  background-image: linear-gradient(90deg, rgba(0,0,0,.08) 1px, transparent 1px), radial-gradient(120% 80% at 50% 0%, rgba(255,255,255,.06), transparent 60%);
+  background-size: 33.3% 100%, 100% 100%;
+  color: var(--ink); font: 500 16px/1.45 var(--body); -webkit-tap-highlight-color: transparent;
+}
+.app { max-width: 560px; min-height: 100%; margin: 0 auto; padding-inline: 16px; padding-block: 14px 24px; display: flex; flex-direction: column; gap: 14px; }
+h1, h2, h3 { font-family: var(--display); font-weight: 400; margin: 0; text-wrap: balance; letter-spacing: .02em; }
+button { font: inherit; color: inherit; cursor: pointer; }
+button:focus-visible { outline: 3px solid var(--ochre); outline-offset: 2px; }
+
+.top { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.brand { display: flex; flex-direction: column; min-width: 0; }
+.brand small { text-transform: uppercase; letter-spacing: .14em; font-size: 11px; color: var(--ink-soft); font-weight: 700; }
+.brand h1 { font-size: 26px; line-height: 1.1; }
+.ghost { background: transparent; border: 1.5px solid rgba(251,243,228,.45); border-radius: 999px; padding: 6px 14px; font-weight: 700; font-size: 14px; white-space: nowrap; }
+.primary { background: var(--ochre); color: var(--tile-ink); border: none; border-radius: 999px; padding: 11px 20px; font-weight: 800; box-shadow: inset 0 -3px 0 rgba(0,0,0,.18); }
+
+/* home */
+.eras { display: grid; gap: 12px; }
+.era-card { display: grid; gap: 4px; text-align: left; width: 100%; background: var(--panel); border: 1px solid var(--panel-line); border-radius: 18px; padding: 16px; }
+.era-card b { font-family: var(--display); font-weight: 400; font-size: 24px; line-height: 1.15; }
+.era-period { font: 800 11px/1 var(--body); letter-spacing: .14em; text-transform: uppercase; color: var(--ochre); }
+.era-blurb { color: var(--ink-soft); font-size: 14.5px; }
+.era-meta { font-size: 13px; font-weight: 800; color: var(--ink-soft); margin-top: 4px; font-variant-numeric: tabular-nums; }
+.era-card[disabled] { opacity: .5; cursor: default; }
+.mini-progress { height: 6px; border-radius: 999px; background: #3a312c; overflow: hidden; margin-top: 6px; }
+.mini-progress span { display: block; height: 100%; background: var(--ochre); }
+.chapters { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.chapter-card { display: grid; grid-template-columns: 40px 1fr auto; gap: 12px; align-items: center; width: 100%; text-align: left; background: var(--panel); border: 1px solid var(--panel-line); border-radius: var(--radius); padding: 12px 14px; }
+.chapter-num { width: 40px; height: 40px; border-radius: 11px; display: grid; place-items: center; background: var(--ochre); color: var(--tile-ink); font-family: var(--display); font-size: 19px; }
+.chapter-meta { min-width: 0; display: grid; gap: 2px; }
+.chapter-meta b { font-family: var(--display); font-weight: 400; font-size: 19px; }
+.chapter-meta > span { font-size: 13px; color: var(--ink-soft); }
+.run-card { background: var(--panel); border: 1px solid var(--panel-line); border-radius: 18px; padding: 16px; display: grid; gap: 12px; }
+.run-card h2 { font-size: 23px; }
+.run-steps { display: flex; flex-wrap: wrap; gap: 6px; list-style: none; margin: 0; padding: 0; }
+.run-steps li { font-size: 12.5px; font-weight: 800; color: var(--tile-ink); padding: 4px 10px; border-radius: 999px; }
+.run-card .actions { justify-self: start; }
+.section-label { margin: 6px 0 -4px; font: 800 11px/1.3 var(--body); letter-spacing: .16em; text-transform: uppercase; color: var(--ink-soft); }
+.levels { display: grid; gap: 8px; }
+.level-card { display: grid; grid-template-columns: 40px 1fr auto; align-items: center; gap: 12px; background: var(--panel); border: 1px solid var(--panel-line); border-radius: var(--radius); padding: 10px 14px; text-align: left; width: 100%; }
+.level-card .num { width: 40px; height: 40px; border-radius: 11px; display: grid; place-items: center; font-family: var(--display); font-size: 18px; color: var(--tile-ink); }
+.level-card .meta { min-width: 0; }
+.level-card .meta b { display: block; font-family: var(--display); font-weight: 400; font-size: 18px; }
+.level-card .meta span { font-size: 13px; color: var(--ink-soft); }
+.stars { font-size: 15px; letter-spacing: 2px; color: var(--ochre); white-space: nowrap; }
+.stars .off { color: #574a42; }
+.level-card[disabled] { opacity: .45; cursor: not-allowed; }
+.footnote { font-size: 12px; color: var(--ink-soft); margin: 4px 0 0; }
+
+/* shared play UI */
+.status { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
+.task { margin: 0; color: var(--ink-soft); font-size: 14px; }
+.score { font-size: 13px; color: var(--ink-soft); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.round-pill { align-self: flex-start; font: 800 11px/1 var(--body); letter-spacing: .12em; text-transform: uppercase; background: var(--wall-deep); color: var(--ink-soft); padding: 6px 10px; border-radius: 999px; }
+.hint { background: var(--ink); color: var(--tile-ink); border-radius: var(--radius); padding: 12px 14px; font-size: 14.5px; border-left: 6px solid var(--bad); }
+.hint.ok { border-left-color: var(--good); }
+.hint.neutral { border-left-color: var(--ochre); }
+.hint b { font-weight: 800; }
+.hint p { margin: 0; }
+.shake { animation: shake .42s ease; }
+@keyframes shake { 0%,100% { transform: translateX(0); } 20% { transform: translateX(-7px) rotate(-1.5deg); } 40% { transform: translateX(6px) rotate(1.5deg); } 60% { transform: translateX(-4px); } 80% { transform: translateX(3px); } }
+.board { background: var(--panel); border: 1px solid var(--panel-line); border-radius: 18px; padding: 14px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; position: relative; }
+.tile {
+  position: relative; border: none; border-radius: 12px; min-height: 74px; padding: 10px 12px 12px; color: var(--tile-ink); text-align: left;
+  font-weight: 800; font-size: 15px; line-height: 1.25; opacity: 1;
+  box-shadow: inset 0 -5px 0 rgba(0,0,0,.18), 0 2px 0 rgba(0,0,0,.35);
+  transition: transform .12s ease; display: flex; flex-direction: column; justify-content: space-between; gap: 6px;
+}
+.tile:active { transform: translateY(2px); }
+
+/* Chronology Jam */
+.road { position: relative; background: #2a2420; border-radius: var(--radius); padding: 12px 10px; overflow-x: auto; scrollbar-width: none; }
+.road::-webkit-scrollbar { display: none; }
+.road::before { content: ""; position: absolute; left: 10px; right: 10px; top: 50%; border-top: 2px dashed rgba(224,166,58,.35); }
+.road.drop-target { box-shadow: 0 0 0 3px var(--ochre); }
+.lanes { position: relative; display: flex; gap: 8px; min-height: 64px; align-items: center; }
+.slot { flex: 0 0 auto; width: 92px; min-height: 58px; border-radius: 10px; border: 1.5px dashed rgba(251,243,228,.22); background: #221d1a; display: grid; place-items: center; font-family: var(--display); color: rgba(251,243,228,.35); }
+.slot.filled { border: none; color: var(--tile-ink); padding: 6px 7px; text-align: center; font-family: var(--body); font-weight: 800; font-size: 11.5px; line-height: 1.2; }
+.slot.filled em { display: block; font-style: normal; font-weight: 700; font-size: 10.5px; opacity: .75; margin-top: 2px; }
+.board.gate::after { content: "PORTA"; position: absolute; left: 50%; top: -11px; transform: translateX(-50%); background: var(--wall-deep); color: var(--ink-soft); font: 700 10px/1 var(--body); letter-spacing: .25em; padding: 5px 10px 5px 12px; border-radius: 999px; }
+.tile .when { font-size: 11.5px; font-weight: 700; opacity: 0; transform: translateY(3px); transition: opacity .25s, transform .25s; }
+.tile.revealed .when { opacity: .78; transform: none; }
+.tile.gone { visibility: hidden; }
+.dragging { z-index: 20 !important; transition: none !important; opacity: 1 !important; box-shadow: 0 14px 24px rgba(0,0,0,.5) !important; cursor: grabbing; }
+.flyer { position: fixed; z-index: 30; pointer-events: none; margin: 0; opacity: 1; }
+
+/* Match Pairs */
+.pairs { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: 10px; }
+.pairs .col { display: grid; gap: 10px; align-content: start; }
+.pick { border: 2px solid transparent; border-radius: 12px; padding: 10px 11px; min-height: 64px; background: var(--tile-4); color: var(--tile-ink); text-align: left; font-weight: 800; font-size: 14.5px; line-height: 1.25; box-shadow: inset 0 -4px 0 rgba(0,0,0,.15), 0 2px 0 rgba(0,0,0,.35); transition: transform .15s ease, background .2s ease; }
+.pick.desc { font-weight: 700; font-size: 13.5px; }
+.pick.selected { border-color: var(--ochre); transform: translateY(-2px) scale(1.02); box-shadow: 0 0 0 3px rgba(224,166,58,.45); }
+.pick.matched { cursor: default; box-shadow: none; }
+.pick.matched::after { content: " ✓"; }
+
+/* True or False */
+.deck { position: relative; display: grid; min-height: 280px; }
+.deck > .card { grid-area: 1 / 1; }
+.card { width: 100%; min-height: 250px; border-radius: 20px; padding: 22px 20px; background: var(--tile-4); color: var(--tile-ink); box-shadow: 0 14px 28px rgba(0,0,0,.35); display: flex; flex-direction: column; justify-content: space-between; gap: 18px; touch-action: none; user-select: none; -webkit-user-select: none; cursor: grab; position: relative; z-index: 2; opacity: 1; }
+.card.behind { z-index: 1; transform: translateY(12px) scale(.95); background: #d8ccb2; box-shadow: none; pointer-events: none; }
+.card.behind > * { visibility: hidden; }
+.card .claim { font-family: var(--display); font-size: 25px; line-height: 1.25; text-wrap: balance; margin: 0; }
+.card .count { font: 800 11px/1 var(--body); letter-spacing: .14em; text-transform: uppercase; color: #6b5d50; }
+.card .stamp { position: absolute; top: 18px; padding: 6px 12px; border: 3px solid currentColor; border-radius: 8px; font: 800 18px/1 var(--body); letter-spacing: .1em; opacity: 0; background: var(--tile-4); }
+.card .stamp.t { right: 16px; color: #3f7c38; transform: rotate(10deg); }
+.card .stamp.f { left: 16px; color: #b8382e; transform: rotate(-10deg); }
+.swipe-hint { font-size: 13px; color: #6b5d50; margin: 0; }
+.answer-buttons { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.answer-buttons button { border: none; border-radius: 14px; padding: 14px; font-weight: 800; font-size: 17px; color: var(--tile-ink); box-shadow: inset 0 -4px 0 rgba(0,0,0,.18); }
+.btn-false { background: #e88b80; } .btn-true { background: #9ccc8a; }
+.verdict { display: grid; gap: 10px; }
+
+/* Odd One Out */
+.odd { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.odd .tile { min-height: 96px; justify-content: center; font-size: 16px; }
+.tile.dim { opacity: .35; }
+.tile.right-pick { outline: 4px solid var(--good); }
+
+/* Who Am I */
+.clues { background: var(--panel); border: 1px solid var(--panel-line); border-radius: 18px; padding: 16px; display: grid; gap: 10px; }
+.clue { display: grid; grid-template-columns: 26px 1fr; gap: 10px; align-items: start; font-size: 15.5px; }
+.clue .n { width: 26px; height: 26px; border-radius: 50%; background: var(--ochre); color: var(--tile-ink); display: grid; place-items: center; font: 800 13px/1 var(--body); }
+.clue.hidden-clue { color: #6f6159; }
+.clue.hidden-clue .n { background: #3a312c; color: #8a7b70; }
+.choices { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.choice { border: none; border-radius: 12px; padding: 12px; min-height: 54px; font-weight: 800; font-size: 15px; color: var(--tile-ink); background: var(--tile-4); box-shadow: inset 0 -4px 0 rgba(0,0,0,.15); text-align: left; }
+.choice.wrong { background: #e88b80; opacity: .6; }
+.choice.right { background: #9ccc8a; }
+.more { justify-self: start; }
+
+/* Map Drop */
+.map-wrap { background: var(--panel); border: 1px solid var(--panel-line); border-radius: 18px; padding: 10px; }
+.map { display: block; width: 100%; height: auto; border-radius: 12px; touch-action: none; }
+.map .sea { fill: var(--sea); }
+.map .land { fill: var(--land); }
+.map .river { fill: none; stroke: #4c86ab; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+.map .spot { fill: var(--panel); stroke: var(--ink); stroke-width: 2.5; cursor: pointer; }
+.map .spot.target { fill: var(--ochre); }
+.map .spot.done { fill: var(--good); stroke: var(--panel); }
+.map .rome { fill: var(--wall); stroke: var(--panel); stroke-width: 2; }
+.map text { font: 800 11px var(--body); fill: var(--tile-ink); paint-order: stroke; stroke: var(--land); stroke-width: 3px; }
+.map text.sea-label { fill: #c7dceb; stroke: none; font: 700 10px var(--body); letter-spacing: .2em; }
+.labels { display: flex; flex-wrap: wrap; gap: 8px; }
+.label-chip { border: 2px solid transparent; border-radius: 999px; padding: 8px 14px; font-weight: 800; font-size: 14px; color: var(--tile-ink); touch-action: none; user-select: none; -webkit-user-select: none; box-shadow: inset 0 -3px 0 rgba(0,0,0,.15); opacity: 1; }
+.label-chip.selected { border-color: var(--ink); transform: translateY(-2px); }
+
+/* Legion Quiz */
+.legion { background: var(--panel); border: 1px solid var(--panel-line); border-radius: 18px; padding: 12px 14px; display: grid; gap: 6px; }
+.legion-row { display: grid; grid-template-columns: 74px 1fr; align-items: center; gap: 8px; }
+.legion-row span { font: 800 10.5px/1.2 var(--body); letter-spacing: .08em; text-transform: uppercase; color: var(--ink-soft); }
+.soldiers { display: flex; flex-wrap: wrap; gap: 4px; min-height: 26px; align-items: center; }
+.soldiers svg { width: 20px; height: 26px; }
+.soldiers .empty { font-size: 12px; color: #6f6159; }
+.question { background: var(--tile-4); color: var(--tile-ink); border-radius: 18px; padding: 16px; display: grid; gap: 12px; }
+.question h3 { font-size: 21px; line-height: 1.25; }
+.question .lvl { font: 800 11px/1 var(--body); letter-spacing: .14em; text-transform: uppercase; color: #6b5d50; }
+.options { display: grid; gap: 8px; }
+.option { border: 2px solid #cfc4ad; border-radius: 12px; padding: 11px 12px; text-align: left; background: #f6f0e2; color: var(--tile-ink); font-weight: 700; font-size: 15px; }
+.option.right { background: #9ccc8a; border-color: #5d9a4c; }
+.option.wrong { background: #e88b80; border-color: #b8382e; }
+
+/* results */
+.result { background: var(--panel); border: 1px solid var(--panel-line); border-radius: 18px; padding: 18px 16px; display: flex; flex-direction: column; gap: 14px; }
+.result h2 { font-size: 28px; }
+.big-stars { font-size: 34px; letter-spacing: 6px; color: var(--ochre); line-height: 1; }
+.big-stars .off { color: #574a42; }
+.recap { list-style: none; margin: 0; padding: 0; display: grid; }
+.recap li { display: grid; grid-template-columns: 14px 1fr; gap: 12px; padding: 0 0 14px; position: relative; }
+.recap li::before { content: ""; width: 14px; height: 14px; border-radius: 50%; background: var(--ochre); margin-top: 4px; box-shadow: 0 0 0 3px var(--panel); position: relative; z-index: 1; }
+.recap li.miss::before { background: var(--bad); }
+.recap li:not(:last-child)::after { content: ""; position: absolute; left: 6px; top: 12px; bottom: 0; width: 2px; background: #4a3e37; }
+.recap .when { display: block; font-size: 12px; color: var(--ochre); font-weight: 800; letter-spacing: .04em; text-transform: uppercase; }
+.recap b { font-weight: 800; }
+.recap p { margin: 2px 0 0; color: var(--ink-soft); font-size: 14px; }
+.actions { display: flex; gap: 10px; flex-wrap: wrap; }
+.run-summary { display: grid; gap: 8px; list-style: none; margin: 0; padding: 0; }
+.run-summary li { display: flex; justify-content: space-between; gap: 10px; align-items: center; }
+
+/* Legion bar (always visible) */
+.hud {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 40;
+  background: var(--panel); border-bottom: 1px solid var(--panel-line);
+  box-shadow: 0 4px 14px rgba(0,0,0,.25);
+}
+.hud-inner { max-width: 560px; margin: 0 auto; padding: 8px 16px; display: flex; align-items: center; gap: 10px; }
+.hud-units { display: flex; gap: 8px; flex: 1; min-width: 0; overflow: hidden; }
+.hud-unit { display: flex; align-items: center; gap: 3px; font: 800 14px/1 var(--body); font-variant-numeric: tabular-nums; color: var(--ink); }
+.hud-unit svg { width: 15px; height: 20px; }
+.hud-unit.bump { animation: bump .45s ease; }
+@keyframes bump { 40% { transform: scale(1.35); } }
+.hud-men { background: transparent; border: 1.5px solid rgba(251,243,228,.35); border-radius: 999px; padding: 5px 10px; text-align: right; font: 800 12px/1.15 var(--body); white-space: nowrap; }
+.hud-men small { display: block; font-weight: 700; font-size: 10.5px; color: var(--ochre); }
+.flying-unit { position: fixed; z-index: 60; pointer-events: none; width: 20px; height: 26px; }
+/* Bottom sheet with the chapter text */
+.sheet { position: fixed; inset: 0; z-index: 50; background: rgba(20,12,10,.6); display: flex; align-items: flex-end; justify-content: center; }
+.sheet-panel { background: var(--ink); color: var(--tile-ink); width: 100%; max-width: 640px; max-height: 82%; border-radius: 20px 20px 0 0; display: flex; flex-direction: column; padding-bottom: env(safe-area-inset-bottom, 0px); }
+.sheet-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 14px 18px 10px; border-bottom: 1px solid #e2d6bf; }
+.sheet-head h2 { font-size: 22px; }
+.ghost.dark { border-color: rgba(27,23,21,.35); color: var(--tile-ink); }
+.sheet-body { position: relative; overflow-y: auto; padding: 6px 18px 24px; -webkit-overflow-scrolling: touch; }
+.sheet-body section { padding: 12px 10px; margin: 0 -10px; border-radius: 12px; transition: background .6s ease; }
+.sheet-body section.focus { background: #f3dfa9; }
+.sheet-body h3 { font-size: 19px; margin-bottom: 6px; }
+.sheet-body p { margin: 0 0 10px; max-width: 65ch; line-height: 1.55; }
+.sheet-body .unit-row { display: grid; grid-template-columns: 24px 1fr auto; gap: 10px; align-items: center; padding: 8px 0; border-bottom: 1px solid #e2d6bf; }
+.sheet-body .unit-row svg { width: 20px; height: 26px; }
+.sheet-body .unit-row b { font-variant-numeric: tabular-nums; }
+.progress { height: 10px; background: #e2d6bf; border-radius: 999px; overflow: hidden; margin: 6px 0 4px; }
+.progress span { display: block; height: 100%; background: var(--ochre); }
+.toast {
+  position: fixed; left: 50%; bottom: calc(18px + env(safe-area-inset-bottom, 0px)); transform: translate(-50%, 140%);
+  z-index: 70; background: var(--panel); color: var(--ink); border: 1px solid var(--ochre); border-radius: 14px;
+  padding: 10px 14px; max-width: min(92vw, 460px); font-size: 14px; box-shadow: 0 10px 30px rgba(0,0,0,.4);
+  transition: transform .3s ease, visibility 0s .3s; pointer-events: none; visibility: hidden;
+}
+.toast.show { transform: translate(-50%, 0); visibility: visible; transition: transform .3s ease; }
+.toast b { color: var(--ochre); }
+/* Read-more link inside hints */
+.read-more { margin-top: 8px; background: none; border: none; padding: 0; color: #8e2b22; font-weight: 800; font-size: 14px; text-decoration: underline; text-underline-offset: 3px; }
+/* Briefing */
+.briefing { background: var(--ink); color: var(--tile-ink); border-radius: 18px; padding: 20px 18px; display: grid; gap: 12px; }
+.briefing .eyebrow { font: 800 11px/1 var(--body); letter-spacing: .16em; text-transform: uppercase; color: #8e2b22; }
+.briefing h2 { font-size: 26px; }
+.briefing p { margin: 0; font-size: 16px; line-height: 1.55; max-width: 60ch; }
+/* Review after mistakes */
+.review { display: grid; gap: 8px; border-top: 1px solid var(--panel-line); padding-top: 14px; }
+.review h3 { font-size: 19px; }
+.review-links { display: flex; flex-wrap: wrap; gap: 8px; }
+.review-links button { background: var(--ink); color: var(--tile-ink); border: none; border-radius: 999px; padding: 7px 12px; font-weight: 800; font-size: 13.5px; }
+/* Feedback */
+.feedback { display: grid; gap: 10px; border-top: 1px solid var(--panel-line); padding-top: 14px; }
+.feedback h3 { font-size: 19px; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chips button { border: 1.5px solid rgba(251,243,228,.45); background: transparent; border-radius: 999px; padding: 6px 12px; font-weight: 800; font-size: 13.5px; }
+.chips button[aria-pressed="true"] { background: var(--ochre); color: var(--tile-ink); border-color: var(--ochre); }
+.feedback textarea { width: 100%; min-height: 70px; border-radius: 12px; border: 1.5px solid var(--panel-line); background: #2a2420; color: var(--ink); font: inherit; font-size: 15px; padding: 10px 12px; resize: vertical; }
+.feedback .sent { color: var(--good); font-weight: 800; margin: 0; }
+
+/* Tile colours: last, so they override the neutral backgrounds above */
+.c1 { background: var(--tile-1); } .c2 { background: var(--tile-2); } .c3 { background: var(--tile-3); }
+.c4 { background: var(--tile-4); } .c5 { background: var(--tile-5); }
+
+@media (prefers-reduced-motion: reduce) {
+  .shake { animation: none; outline: 3px solid var(--bad); }
+  .tile, .tile .when, .pick { transition: none; }
+}
+@media (min-width: 520px) { .board:not(.pairs) { grid-template-columns: repeat(3, minmax(0, 1fr)); } .board.odd { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+</style>
+
+<div class="hud" id="hud"></div>
+<div class="app" id="app"></div>
+<div class="sheet" id="sheet" hidden>
+  <div class="sheet-panel" role="dialog" aria-modal="true" aria-labelledby="sheet-title">
+    <div class="sheet-head"><h2 id="sheet-title">The Chronicle</h2><button class="ghost dark" id="sheet-close">Close</button></div>
+    <div class="sheet-body" id="sheet-body"></div>
+  </div>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+// Every chapter's content is generated by tools/content-gen (content/generated/<chapter>/games.json,
+// chapter.md and the quiz batches); build.mjs writes it in here. Flagged items are already left out.
+const ERAS = __ERAS__
+const CHAPTERS = __CHAPTERS__
+// Natural Earth outlines (public domain) of Italy and its neighbours: [{ c, pts: [[lon, lat], ...] }]
+const LAND = __LAND__
+const TIBER = [[43.1,12.38],[42.78,12.42],[42.46,12.39],[42.15,12.55],[41.95,12.5],[41.89,12.47],[41.8,12.38],[41.74,12.25]]
+const ROME = { lat: 41.893, lon: 12.483 }
+const SECTIONS = [
+  ['chrono', 'Chronology Jam · put events in order'],
+  ['match', 'Match Pairs · who did what'],
+  ['tf', 'True or False · swipe to answer'],
+  ['odd', 'Odd One Out · spot the intruder'],
+  ['who', 'Who Am I? · guess from clues'],
+  ['map', 'Map Drop · where things were'],
+  ['quiz', 'Legion Quiz · answer to recruit soldiers'],
+]
+// "Play the chapter": five rounds of different games, each on a different part of the story.
+// The plan changes every time it is played; steps whose set doesn't exist in a chapter are skipped.
+const RUN_PLANS = [
+  [{ type: 'tf', set: 0 }, { type: 'chrono', set: 1 }, { type: 'match', set: 1 }, { type: 'map', set: 0 }, { type: 'quiz', set: 0 }],
+  [{ type: 'odd', set: 0 }, { type: 'chrono', set: 2 }, { type: 'who', set: 1 }, { type: 'map', set: 0 }, { type: 'quiz', set: 1 }],
+  [{ type: 'tf', set: 1 }, { type: 'chrono', set: 0 }, { type: 'match', set: 0 }, { type: 'who', set: 0 }, { type: 'quiz', set: 0 }],
+]
+let CH, TIMELINES, MATCHES, DECKS, ODDS, WHOS, MAPS, QUIZZES, CHAPTER, GAMES, CHAPTER_RUNS, MAP_BOUNDS, MAP_H
+const CHAPTER_KEY = 'ave-caesar-chapter'
+let chapterIndex = 0
+try { chapterIndex = Math.min(CHAPTERS.length - 1, +localStorage.getItem(CHAPTER_KEY) || 0) } catch {}
+function loadChapter(i) {
+  chapterIndex = Math.max(0, Math.min(CHAPTERS.length - 1, i))
+  try { localStorage.setItem(CHAPTER_KEY, String(chapterIndex)) } catch {}
+  CH = CHAPTERS[chapterIndex]
+  ;({ timelines: TIMELINES, matches: MATCHES, decks: DECKS, odds: ODDS, whos: WHOS, maps: MAPS, quizzes: QUIZZES, sections: CHAPTER } = CH)
+  GAMES = {
+    tf: { title: 'True or False', sets: DECKS },
+    chrono: { title: 'Chronology Jam', sets: TIMELINES },
+    match: { title: 'Match Pairs', sets: MATCHES },
+    odd: { title: 'Odd One Out', sets: ODDS },
+    who: { title: 'Who Am I?', sets: WHOS },
+    map: { title: 'Map Drop', sets: MAPS },
+    quiz: { title: 'Legion Quiz', sets: QUIZZES },
+  }
+  CHAPTER_RUNS = RUN_PLANS.map(plan => plan.filter(r => GAMES[r.type].sets[r.set])).filter(plan => plan.length >= 3)
+  // Map area: the chapter's places plus Rome, padded, never too small or too thin
+  const pts = [ROME, ...(MAPS[0]?.places ?? [])]
+  let latMin = Math.min(...pts.map(p => p.lat)) - 0.35, latMax = Math.max(...pts.map(p => p.lat)) + 0.35
+  let lonMin = Math.min(...pts.map(p => p.lon)) - 0.5, lonMax = Math.max(...pts.map(p => p.lon)) + 0.5
+  const kx = Math.cos(((latMin + latMax) / 2) * Math.PI / 180)
+  const grow = (lo, hi, min) => { const extra = Math.max(0, min - (hi - lo)) / 2; return [lo - extra, hi + extra] }
+  ;[lonMin, lonMax] = grow(lonMin, lonMax, 2.4 / kx)
+  ;[latMin, latMax] = grow(latMin, latMax, 1.9)
+  ;[lonMin, lonMax] = grow(lonMin, lonMax, (latMax - latMin) / 1.35 / kx)
+  ;[latMin, latMax] = grow(latMin, latMax, (lonMax - lonMin) * kx * 0.8)
+  MAP_BOUNDS = { latMin, latMax, lonMin, lonMax, kx }
+  MAP_H = 300 * (latMax - latMin) / ((lonMax - lonMin) * kx)
+}
+loadChapter(chapterIndex)
+const NUMERALS = ['I', 'II', 'III', 'IV', 'V']
+const TYPE_COLOR = { chrono: 1, match: 3, tf: 5, odd: 2, who: 4, map: 3, quiz: 1 }
+
+// ---------- helpers ----------
+const STORE_KEY = 'ave-caesar-games-stars'
+const RUN_KEY = 'ave-caesar-run-index'
+let stars = {}
+try { stars = JSON.parse(localStorage.getItem(STORE_KEY) || '{}') } catch { stars = {} }
+const saveStars = () => { try { localStorage.setItem(STORE_KEY, JSON.stringify(stars)) } catch {} }
+let runIndex = 0
+try { runIndex = (+localStorage.getItem(RUN_KEY) || 0) % CHAPTER_RUNS.length } catch {}
+const starKey = (type, set) => `${CH.id}:${type}:${set}`
+
+const app = document.getElementById('app')
+const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]))
+const shuffle = arr => { const a = arr.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]] } return a }
+const starCount = mistakes => (mistakes === 0 ? 3 : mistakes <= 2 ? 2 : 1)
+const starRow = (n, cls = 'stars') => `<span class="${cls}" aria-label="${n} of 3 stars">${'★'.repeat(n)}<span class="off">${'★'.repeat(3 - n)}</span></span>`
+const plural = (n, w) => `${n} ${w}${n === 1 ? '' : 's'}`
+const buzz = () => { try { navigator.vibrate?.(60) } catch {} }
+const hintHtml = h => h ? `<div class="hint ${h.ok === true ? 'ok' : h.ok === 'neutral' ? 'neutral' : ''}" role="status"><p>${h.html}</p>${h.sec ? `<button class="read-more" data-read="${h.sec}">Read more in the chronicle</button>` : ''}</div>` : ''
+
+let state = { screen: 'rome' }
+let busy = false
+let run = null // { plan, step, results }
+
+function go(next) { state = next; render() }
+const RENDER = {}
+function render() {
+  busy = false
+  renderHud()
+  if (state.screen === 'rome') return renderRome()
+  if (state.screen === 'era') return renderEra(state.era)
+  if (state.screen === 'home') return renderHome()
+  if (state.screen === 'briefing') return renderBriefing()
+  if (state.screen === 'play') return RENDER[state.type]()
+  if (state.screen === 'result') return renderResult()
+  if (state.screen === 'runDone') return renderRunDone()
+}
+function header(kicker, title, back = true) {
+  return `<header class="top"><div class="brand"><small>${esc(kicker)}</small><h1>${esc(title)}</h1></div>
+    ${back ? '<button class="ghost" id="back">Menu</button>' : ''}</header>`
+}
+function playHeader() {
+  const g = GAMES[state.type]
+  return header(`${g.title}${g.sets.length > 1 ? ' ' + NUMERALS[state.set] : ''}`, g.sets[state.set].name) +
+    (run ? `<span class="round-pill">Round ${run.step + 1} of ${run.plan.length}</span>` : '')
+}
+const statusLine = (task, left) => `<div class="status"><p class="task">${task}</p><span class="score">${left} left · ${plural(state.mistakes, 'mistake')}</span></div>`
+function bindBack() { app.querySelector('#back')?.addEventListener('click', () => { run = null; go({ screen: 'home' }) }) }
+
+// Drag helper: follows the pointer after a small movement; small movements stay taps
+function draggable(el, { onMove, onDrop }) {
+  el.style.touchAction = 'none'
+  el.addEventListener('pointerdown', down => {
+    if (busy || down.button > 0) return
+    const sx = down.clientX, sy = down.clientY
+    let dragging = false
+    const move = e => {
+      const dx = e.clientX - sx, dy = e.clientY - sy
+      if (!dragging && Math.hypot(dx, dy) < 8) return
+      dragging = true
+      el.classList.add('dragging')
+      el.style.transform = `translate(${dx}px, ${dy}px) rotate(${Math.max(-6, Math.min(6, dx / 20))}deg)`
+      onMove?.(e, dx, dy)
+    }
+    const up = e => {
+      el.removeEventListener('pointermove', move); el.removeEventListener('pointerup', up); el.removeEventListener('pointercancel', up)
+      if (!dragging) return
+      el.dataset.dragged = '1'
+      setTimeout(() => delete el.dataset.dragged, 0)
+      const keep = onDrop?.(e, e.type === 'pointerup')
+      if (!keep) { el.classList.remove('dragging'); el.style.transform = '' }
+    }
+    el.setPointerCapture(down.pointerId)
+    el.addEventListener('pointermove', move); el.addEventListener('pointerup', up); el.addEventListener('pointercancel', up)
+  })
+}
+const onTap = (el, fn) => el.addEventListener('click', () => { if (!el.dataset.dragged) fn() })
+
+// ---------- the legion (saved in this browser) ----------
+// Rule: the game type decides the kind of unit, the difficulty decides its rank.
+// Each item rewards once; an item missed in an earlier round and answered later joins as a veteran.
+const UNITS = {
+  hastatus: { label: 'Hastati', one: 'hastatus', color: '#e0a63a', note: 'Young soldiers who fought in the front line.' },
+  princeps: { label: 'Principes', one: 'princeps', color: '#4f8fb8', note: 'Men in their prime, the second line.' },
+  triarius: { label: 'Triarii', one: 'triarius', color: '#e9e1cf', note: 'Veterans, the last line. “It has come to the triarii” meant things were desperate.' },
+  centurio: { label: 'Centurions', one: 'centurion', color: '#c86a3c', crest: true, note: 'Officers, each leading a century. You recruit them by knowing the people of the story.' },
+}
+const MILESTONES = [
+  { men: 8, name: 'contubernium', note: 'eight soldiers who shared a tent and a mule' },
+  { men: 80, name: 'century', note: 'eighty men led by a centurion' },
+  { men: 480, name: 'cohort', note: 'six centuries' },
+  { men: 4800, name: 'legion', note: 'ten cohorts, the backbone of Rome’s army' },
+]
+const LEGION_KEY = 'ave-caesar-legion'
+let legion = { units: { hastatus: 0, princeps: 0, triarius: 0, centurio: 0 }, veterans: 0, eagles: [], rewarded: {}, missed: {} }
+try { const saved = JSON.parse(localStorage.getItem(LEGION_KEY) || 'null'); if (saved?.units) legion = { ...legion, ...saved } } catch {}
+const saveLegion = () => { try { localStorage.setItem(LEGION_KEY, JSON.stringify(legion)) } catch {} }
+const menCount = () => Object.values(legion.units).reduce((a, b) => a + b, 0)
+const formation = men => [...MILESTONES].reverse().find(m => men >= m.men)
+const nextMilestone = men => MILESTONES.find(m => men < m.men)
+const unitIcon = (color, crest) => `<svg viewBox="0 0 20 26" aria-hidden="true"><line x1="16" y1="1" x2="16" y2="25" stroke="#e2cdb0" stroke-width="1.6"/>${crest ? '<path d="M1 4.5 Q8 -1 15 4.5" fill="none" stroke="#e2574c" stroke-width="2.6" stroke-linecap="round"/>' : ''}<path d="M3 5 h10 v11 c0 4 -5 7 -5 7 c0 0 -5 -3 -5 -7 z" fill="${color}" stroke="#1b1715" stroke-width="1.2"/><circle cx="8" cy="12" r="1.8" fill="#1b1715" opacity=".55"/></svg>`
+const eagleIcon = `<svg viewBox="0 0 20 26" aria-hidden="true"><line x1="10" y1="9" x2="10" y2="25" stroke="#e2cdb0" stroke-width="1.6"/><path d="M10 2 l3 4 l6 -2 l-4 5 h-10 l-4 -5 l6 2 z" fill="#e0a63a" stroke="#1b1715" stroke-width="1"/></svg>`
+
+function renderHud() {
+  const men = menCount(), f = formation(men), next = nextMilestone(men)
+  document.getElementById('hud').innerHTML = `<div class="hud-inner">
+    <div class="hud-units" aria-label="Your legion">
+      ${Object.entries(UNITS).map(([k, u]) => `<span class="hud-unit" data-unit="${k}" title="${u.label}">${unitIcon(u.color, u.crest)}${legion.units[k]}</span>`).join('')}
+      <span class="hud-unit" data-unit="eagle" title="Eagle standards">${eagleIcon}${legion.eagles.length}</span>
+    </div>
+    <button class="hud-men" id="hud-men">${men} ${men === 1 ? 'man' : 'men'}<small>${f ? 'a ' + f.name : next ? `${next.men - men} to a ${next.name}` : ''}</small></button>
+  </div>`
+  document.getElementById('hud-men').addEventListener('click', openLegion)
+}
+function bumpHud(key) {
+  const el = document.querySelector(`.hud-unit[data-unit="${key}"]`)
+  if (!el) return
+  el.classList.remove('bump'); void el.offsetWidth; el.classList.add('bump')
+}
+function flyToHud(fromEl, key, color, done) {
+  const target = document.querySelector(`.hud-unit[data-unit="${key}"]`)
+  if (reducedMotion || !fromEl || !target || !fromEl.isConnected) return done()
+  const a = fromEl.getBoundingClientRect(), b = target.getBoundingClientRect()
+  const icon = document.createElement('div')
+  icon.className = 'flying-unit'
+  icon.innerHTML = key === 'eagle' ? eagleIcon : unitIcon(color, key === 'centurio')
+  Object.assign(icon.style, { left: a.left + a.width / 2 - 10 + 'px', top: a.top + a.height / 2 - 13 + 'px' })
+  document.body.appendChild(icon)
+  const dx = b.left - (a.left + a.width / 2 - 10), dy = b.top - (a.top + a.height / 2 - 13)
+  icon.animate([
+    { transform: 'translate(0,0) scale(1.6)' },
+    { transform: `translate(${dx * 0.3}px, ${dy * 0.3 - 40}px) scale(1.9)`, offset: 0.35 },
+    { transform: `translate(${dx}px, ${dy}px) scale(1)` },
+  ], { duration: 650, easing: 'cubic-bezier(.4,.1,.3,1)' }).onfinish = () => { icon.remove(); done() }
+}
+let toastTimer = null
+function toast(html, ms = 3600) {
+  const t = document.getElementById('toast')
+  t.innerHTML = html
+  t.classList.add('show')
+  clearTimeout(toastTimer)
+  toastTimer = setTimeout(() => t.classList.remove('show'), ms)
+}
+// Give the unit for an item, once. Returns { fresh, vet, unit }.
+const legionKey = key => `${CH.id}:${key}`
+const isRewarded = key => !!legion.rewarded[legionKey(key)]
+function reward(key, unitKey, fromEl) {
+  key = legionKey(key)
+  if (legion.rewarded[key]) return { fresh: false, unit: UNITS[unitKey] }
+  const before = menCount()
+  const vet = !!legion.missed[key]
+  legion.rewarded[key] = 1
+  delete legion.missed[key]
+  legion.units[unitKey]++
+  if (vet) legion.veterans++
+  saveLegion()
+  flyToHud(fromEl, unitKey, UNITS[unitKey].color, () => { renderHud(); bumpHud(unitKey) })
+  if (vet) toast(`<b>A veteran joins!</b> You missed this one before and got it right now. Learning from mistakes makes the best soldiers.`)
+  const after = menCount(), m = MILESTONES.find(m => before < m.men && after >= m.men)
+  if (m) setTimeout(() => toast(`<b>Your legion is now a ${m.name}</b>: ${m.note}.`, 5000), vet ? 3800 : 700)
+  return { fresh: true, vet, unit: UNITS[unitKey] }
+}
+// Remember a mistake in this round (shown on the result screen; makes the item a future veteran)
+function noteMiss(key, sec) {
+  state.roundMisses ??= []
+  if (!state.roundMisses.some(m => m.key === key)) state.roundMisses.push({ key, sec })
+}
+const missedThisRound = key => (state.roundMisses ?? []).some(m => m.key === key)
+// Recruit only when the answer was known: not forced (only option left), not already missed this round
+function earn(key, unitKey, fromEl, { forced = false } = {}) {
+  if (forced) return ' <i>No soldier this time: it was the only option left.</i>'
+  if (missedThisRound(key)) return ' <i>No soldier this time: you got it wrong first. Get it right in a later round and it joins as a veteran.</i>'
+  const r = reward(key, unitKey, fromEl)
+  return r.fresh ? '' : ' <i>Already in your legion from an earlier round.</i>'
+}
+const recruitLine = r => r.fresh ? (r.vet ? `A veteran ${r.unit.one} joins your legion.` : `A ${r.unit.one} joins your legion.`) : 'Already in your legion from an earlier round.'
+
+// ---------- the chapter text ----------
+const inline = s => esc(s).replace(/\*\*(.+?)\*\*/g, '<b>$1</b>').replace(/\*(.+?)\*/g, '<em>$1</em>')
+function openSheet(title, html, focusId) {
+  const sheet = document.getElementById('sheet')
+  document.getElementById('sheet-title').textContent = title
+  const body = document.getElementById('sheet-body')
+  body.innerHTML = html
+  sheet.hidden = false
+  body.scrollTop = 0
+  document.getElementById('sheet-close').focus()
+  if (focusId) {
+    const sec = body.querySelector(`[data-sec="${focusId}"]`)
+    if (sec) { body.scrollTop = sec.offsetTop - 8; sec.classList.add('focus'); setTimeout(() => sec.classList.remove('focus'), 2500) }
+  }
+}
+function closeSheet() { document.getElementById('sheet').hidden = true }
+const chronicleHtml = () => CHAPTER.map(s => `<section data-sec="${s.id}"><h3>${esc(s.title)}</h3>${s.body.split(/\n\s*\n/).map(p => `<p>${inline(p.trim())}</p>`).join('')}</section>`).join('') +
+  `<p style="font-size:13px;color:#6b5d50;margin-top:14px">Written from the Wikipedia articles ${CH.sources.map(t => `“${esc(t)}”`).join(', ')} (CC BY-SA 4.0).</p>`
+const openChronicle = focusId => openSheet(CH.title, chronicleHtml(), focusId)
+function openLegion() {
+  const men = menCount(), f = formation(men), next = nextMilestone(men)
+  const prev = f?.men ?? 0
+  openSheet('Your legion', `
+    <p><b>${men} ${men === 1 ? 'man' : 'men'}</b>${f ? `, a ${f.name} (${f.note})` : ''}.</p>
+    ${next ? `<div class="progress" aria-hidden="true"><span style="width:${Math.round(100 * (men - prev) / (next.men - prev))}%"></span></div>
+      <p style="font-size:14px">${next.men - men} more to a <b>${next.name}</b>: ${next.note}.</p>` : ''}
+    ${Object.entries(UNITS).map(([k, u]) => `<div class="unit-row">${unitIcon(u.color, u.crest)}<span><b>${u.label}</b><br><span style="font-size:13.5px">${esc(u.note)}</span></span><b>${legion.units[k]}</b></div>`).join('')}
+    <div class="unit-row">${eagleIcon}<span><b>Eagle standards</b><br><span style="font-size:13.5px">The legion’s most prized symbol. Earned with a perfect round.</span></span><b>${legion.eagles.length}</b></div>
+    <p style="margin-top:12px;font-size:14px"><b>${legion.veterans}</b> ${legion.veterans === 1 ? 'veteran' : 'veterans'}: soldiers who joined after you learned from a mistake.</p>
+    <p style="font-size:14px">How to recruit: the Legion Quiz and True or False give infantry (harder questions give higher ranks), Who Am I? and Match Pairs give centurions, and the other games give principes or hastati. Each fact recruits once, and only when you knew it: no soldier for the last option left or for something you already got wrong in that round.</p>`)
+}
+document.getElementById('sheet-close').addEventListener('click', closeSheet)
+document.getElementById('sheet').addEventListener('click', e => { if (e.target.id === 'sheet') closeSheet() })
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeSheet() })
+document.getElementById('app').addEventListener('click', e => {
+  const b = e.target.closest('[data-read]')
+  if (b) openChronicle(b.dataset.read)
+})
+
+// ---------- feedback (saved for the page owner) ----------
+const fb = { db: null, uid: null }
+;(async () => {
+  try {
+    if (!window.claude?.use) return
+    const [db, user] = await Promise.all([window.claude.use('db'), window.claude.use('user')])
+    if (!db || !user?.id) return
+    fb.uid = await user.id()
+    fb.db = db
+    const btn = document.getElementById('fb-send')
+    if (btn) { btn.textContent = 'Send feedback'; document.getElementById('fb-help').hidden = true }
+  } catch {}
+})()
+
+// ---------- Ancient Rome and its eras ----------
+// Stars a player has in a chapter, out of 3 per game set
+function chapterStars(c) {
+  const earned = Object.entries(stars).filter(([k]) => k.startsWith(c.id + ':')).reduce((n, [, v]) => n + v, 0)
+  const sets = ['timelines', 'matches', 'decks', 'odds', 'whos', 'maps', 'quizzes'].reduce((n, k) => n + c[k].length, 0)
+  return { earned, max: sets * 3 }
+}
+const eraChapters = era => CHAPTERS.map((c, i) => ({ c, i })).filter(x => x.c.era === era.id)
+const progressBar = ({ earned, max }) => `<div class="mini-progress" aria-label="${earned} of ${max} stars"><span style="width:${max ? Math.round(100 * earned / max) : 0}%"></span></div>`
+function openEra(era) {
+  const chs = eraChapters(era)
+  if (chs.length === 1) { loadChapter(chs[0].i); return go({ screen: 'home' }) }
+  go({ screen: 'era', era: era.id })
+}
+function renderRome() {
+  app.innerHTML = `
+    ${header('Ave Caesar · History', 'Ancient Rome', false)}
+    <p class="task">From a village of shepherds to the master of Italy and the Mediterranean. Pick an era.</p>
+    <div class="eras">${ERAS.map(era => {
+      const chs = eraChapters(era)
+      const total = chs.reduce((t, { c }) => { const s = chapterStars(c); return { earned: t.earned + s.earned, max: t.max + s.max } }, { earned: 0, max: 0 })
+      return `<button class="era-card" data-era="${era.id}" ${chs.length ? '' : 'disabled'}>
+        <span class="era-period">${esc(era.period)}</span>
+        <b>${esc(era.name)}</b>
+        <span class="era-blurb">${esc(era.blurb)}</span>
+        <span class="era-meta">${chs.length ? `${plural(chs.length, 'chapter')} · ${total.earned} / ${total.max} ★` : 'Coming soon'}</span>
+        ${chs.length ? progressBar(total) : ''}
+      </button>` }).join('')}
+    </div>
+    <p class="footnote">Every chapter is generated from Wikipedia and fact-checked by AI. Early Roman dates are the traditional ones; historians doubt many of them.</p>`
+  app.querySelectorAll('[data-era]').forEach(b => b.addEventListener('click', () => openEra(ERAS.find(e => e.id === b.dataset.era))))
+}
+function renderEra(eraId) {
+  const era = ERAS.find(e => e.id === eraId)
+  app.innerHTML = `
+    <header class="top"><div class="brand"><small>Ancient Rome · ${esc(era.period)}</small><h1>${esc(era.name)}</h1></div>
+      <button class="ghost" id="up">All eras</button></header>
+    <p class="task">${esc(era.blurb)}.</p>
+    <ol class="chapters">${eraChapters(era).map(({ c, i }, n) => { const s = chapterStars(c); return `
+      <li><button class="chapter-card" data-chapter="${i}">
+        <span class="chapter-num">${n + 1}</span>
+        <span class="chapter-meta"><b>${esc(c.short)}</b><span>${esc(c.title)} · ${esc(c.period)}</span>${progressBar(s)}</span>
+        <span class="stars">${s.earned}★</span>
+      </button></li>` }).join('')}
+    </ol>`
+  app.querySelector('#up').addEventListener('click', () => go({ screen: 'rome' }))
+  app.querySelectorAll('[data-chapter]').forEach(b => b.addEventListener('click', () => { loadChapter(+b.dataset.chapter); run = null; window.scrollTo(0, 0); go({ screen: 'home' }) }))
+}
+function leaveChapter() {
+  const era = ERAS.find(e => e.id === CH.era)
+  run = null
+  go(eraChapters(era).length > 1 ? { screen: 'era', era: era.id } : { screen: 'rome' })
+}
+
+// ---------- home (one chapter) ----------
+function renderHome() {
+  const plan = CHAPTER_RUNS[runIndex % CHAPTER_RUNS.length]
+  const chronoUnlocked = i => i === 0 || (stars[starKey('chrono', i - 1)] ?? 0) > 0
+  const list = type => {
+    const g = GAMES[type]
+    const unlocked = type === 'chrono' ? chronoUnlocked : () => true
+    return `<div class="levels">${g.sets.map((s, i) => `
+      <button class="level-card" data-type="${type}" data-set="${i}" ${unlocked(i) ? '' : 'disabled'}>
+        <span class="num c${((TYPE_COLOR[type] + i - 1) % 5) + 1}">${NUMERALS[i]}</span>
+        <span class="meta"><b>${esc(s.name)}</b><span>${unlocked(i) ? esc(s.blurb) : 'Finish the previous level to unlock'}</span></span>
+        ${starRow(stars[starKey(type, i)] ?? 0)}
+      </button>`).join('')}</div>`
+  }
+  app.innerHTML = `
+    <header class="top"><div class="brand"><small>${esc(ERAS.find(e => e.id === CH.era).name)} · ${esc(CH.period)}</small><h1>${esc(CH.short)}</h1></div>
+      <button class="ghost" id="up">${eraChapters(ERAS.find(e => e.id === CH.era)).length > 1 ? 'Chapters' : 'All eras'}</button></header>
+    <section class="run-card">
+      <h2>Play the chapter</h2>
+      <p class="task">${esc(CH.title)}. Five short rounds, each about a different part of the story, about ten minutes. The rounds change every time you play.</p>
+      <ol class="run-steps">${plan.map((r, i) => `<li class="c${TYPE_COLOR[r.type]}">${i + 1}. ${GAMES[r.type].title}</li>`).join('')}</ol>
+      <div class="actions"><button class="primary" id="run">Start</button><button class="ghost" id="chronicle">Read the chronicle</button></div>
+    </section>
+    ${SECTIONS.map(([type, label]) => `<p class="section-label">${label}</p>${list(type)}`).join('')}
+    <p class="footnote">Generated from Wikipedia and fact-checked by AI. Early Roman dates are the traditional ones; historians doubt many of them.</p>`
+  app.querySelector('#up').addEventListener('click', leaveChapter)
+  app.querySelector('#run').addEventListener('click', () => {
+    run = { plan, step: 0, results: [] }
+    runIndex = (runIndex + 1) % CHAPTER_RUNS.length
+    try { localStorage.setItem(RUN_KEY, String(runIndex)) } catch {}
+    go({ screen: 'briefing' })
+  })
+  app.querySelector('#chronicle').addEventListener('click', () => openChronicle())
+  app.querySelectorAll('.level-card').forEach(b => b.addEventListener('click', () => { run = null; startGame(b.dataset.type, +b.dataset.set) }))
+}
+
+const START = {}
+function startGame(type, set) { window.scrollTo(0, 0); go({ screen: 'play', type, set, mistakes: 0, hint: null, roundMisses: [], ...START[type](set) }) }
+
+function finish(recapHtml, earned = starCount(state.mistakes), note) {
+  const key = starKey(state.type, state.set)
+  // Mistakes not fixed in this round make those items future veterans
+  state.roundMisses ??= []
+  for (const m of state.roundMisses) if (!isRewarded(m.key)) legion.missed[legionKey(m.key)] = 1
+  const eagle = earned === 3 && !legion.eagles.includes(key)
+  if (eagle) legion.eagles.push(key)
+  saveLegion()
+  if (eagle) setTimeout(() => { renderHud(); bumpHud('eagle'); toast('<b>An eagle standard!</b> Awarded for a perfect round. Each round can earn one.') }, 400)
+  const reviewSecs = [...new Set(state.roundMisses.map(m => m.sec).filter(Boolean))]
+  stars[key] = Math.max(stars[key] ?? 0, earned)
+  saveStars()
+  if (run) run.results.push({ type: state.type, set: state.set, stars: earned })
+  go({ screen: 'result', type: state.type, set: state.set, mistakes: state.mistakes, earned, recapHtml, note, reviewSecs, feedbackSent: false })
+}
+const recapList = items => `<ol class="recap">${items.map(i => `<li class="${i.miss ? 'miss' : ''}"><div>${i.when ? `<span class="when">${esc(i.when)}</span>` : ''}<b>${esc(i.title)}</b>${i.text ? `<p>${esc(i.text)}</p>` : ''}</div></li>`).join('')}</ol>`
+
+// ---------- Chronology Jam ----------
+START.chrono = set => {
+  const events = TIMELINES[set].events
+  const sortedIds = events.map((e, i) => ({ y: e.y, i })).sort((a, b) => a.y - b.y).map(e => e.i)
+  return { sortedIds, boardIds: shuffle(sortedIds), colors: Object.fromEntries(sortedIds.map(i => [i, 1 + Math.floor(Math.random() * 5)])), placed: [], revealed: [] }
+}
+RENDER.chrono = () => {
+  const g = state, ev = id => TIMELINES[g.set].events[id]
+  app.innerHTML = `
+    ${playHeader()}
+    ${statusLine('Tap or drag the <b>earliest</b> event onto the road.', g.sortedIds.length - g.placed.length)}
+    <div class="road" id="road" aria-label="Timeline, oldest first"><div class="lanes">
+      ${g.sortedIds.map((_, i) => {
+        const id = g.placed[i]
+        return id === undefined ? `<div class="slot" data-slot="${i}">${i + 1}</div>`
+          : `<div class="slot filled c${g.colors[id]}" data-slot="${i}">${esc(ev(id).label)}<em>${esc(ev(id).when)}</em></div>`
+      }).join('')}
+    </div></div>
+    <div class="board gate">
+      ${g.boardIds.map(id => `
+        <button class="tile c${g.colors[id]} ${g.placed.includes(id) ? 'gone' : ''} ${g.revealed.includes(id) ? 'revealed' : ''}" data-id="${id}" ${g.placed.includes(id) ? 'tabindex="-1" aria-hidden="true"' : ''}>
+          <span>${esc(ev(id).label)}</span><span class="when">${esc(ev(id).when)}</span>
+        </button>`).join('')}
+    </div>
+    <div id="hint-area">${hintHtml(g.hint)}</div>`
+  bindBack()
+  const road = app.querySelector('#road')
+  const overRoad = y => y < road.getBoundingClientRect().bottom + 10
+  app.querySelectorAll('.tile:not(.gone)').forEach(t => {
+    onTap(t, () => chronoTap(+t.dataset.id, t))
+    draggable(t, {
+      onMove: e => road.classList.toggle('drop-target', overRoad(e.clientY)),
+      onDrop: (e, ok) => { road.classList.remove('drop-target'); t.classList.remove('dragging'); t.style.transform = ''; if (ok && overRoad(e.clientY)) chronoTap(+t.dataset.id, t); return false },
+    })
+  })
+  const last = road.querySelector(`[data-slot="${Math.max(0, g.placed.length - 1)}"]`)
+  if (last) road.scrollLeft = Math.max(0, last.offsetLeft - road.clientWidth / 2 + 46)
+}
+const sinceWhen = s => /^(Under|Soon|After|Possibly)/.test(s) ? s[0].toLowerCase() + s.slice(1) : 'in ' + s
+function chronoTap(id, el) {
+  const g = state
+  if (busy || g.screen !== 'play' || g.placed.includes(id)) return
+  const e = TIMELINES[g.set].events[id]
+  if (id === g.sortedIds[g.placed.length]) {
+    const forced = g.placed.length === g.sortedIds.length - 1
+    const note = earn(`chrono:${g.set}:${id}`, ['hastatus', 'princeps', 'triarius'][Math.min(g.set, 2)], el, { forced })
+    g.hint = { ok: true, html: `<b>${esc(e.label)}</b> · ${esc(e.when)}. ${esc(e.fact)}${note}` }
+    const slot = app.querySelector(`[data-slot="${g.placed.length}"]`)
+    g.placed.push(id)
+    busy = true
+    flyTo(el, slot, () => {
+      busy = false
+      if (state !== g) return
+      if (g.placed.length < g.sortedIds.length) return RENDER.chrono()
+      finish(recapList(g.sortedIds.map(i => { const x = TIMELINES[g.set].events[i]; return { when: x.when, title: x.label, text: x.fact } })))
+    })
+  } else {
+    g.mistakes++
+    if (!g.revealed.includes(id)) g.revealed.push(id)
+    g.hint = { ok: false, sec: e.sec, html: `Not yet. <b>${esc(e.label)}</b> happened ${esc(sinceWhen(e.when))}. Something in the camp is older.` }
+    noteMiss(`chrono:${g.set}:${id}`, e.sec)
+    el.classList.add('revealed', 'shake')
+    el.addEventListener('animationend', () => el.classList.remove('shake'), { once: true })
+    app.querySelector('#hint-area').innerHTML = hintHtml(g.hint)
+    app.querySelector('.score').textContent = `${g.sortedIds.length - g.placed.length} left · ${plural(g.mistakes, 'mistake')}`
+    buzz()
+  }
+}
+function flyTo(tile, slot, done) {
+  if (reducedMotion || !slot) { done(); return }
+  const from = tile.getBoundingClientRect()
+  slot.scrollIntoView({ block: 'nearest', inline: 'center', behavior: 'instant' })
+  const to = slot.getBoundingClientRect()
+  const ghost = tile.cloneNode(true)
+  ghost.classList.remove('dragging', 'shake')
+  ghost.classList.add('flyer')
+  ghost.style.transform = ''
+  Object.assign(ghost.style, { left: from.left + 'px', top: from.top + 'px', width: from.width + 'px', height: from.height + 'px' })
+  document.body.appendChild(ghost)
+  tile.classList.add('gone')
+  const dx = to.left + to.width / 2 - (from.left + from.width / 2)
+  const dy = to.top + to.height / 2 - (from.top + from.height / 2)
+  const scale = Math.min(to.width / from.width, to.height / from.height)
+  ghost.animate([
+    { transform: 'translate(0,0) scale(1)' },
+    { transform: `translate(${dx * 0.15}px, ${dy * 0.15 - 18}px) scale(1.04)`, offset: 0.25 },
+    { transform: `translate(${dx}px, ${dy}px) scale(${scale})` },
+  ], { duration: 420, easing: 'cubic-bezier(.3,.7,.3,1)' }).onfinish = () => { ghost.remove(); done() }
+}
+
+// ---------- Match Pairs ----------
+START.match = set => {
+  const ids = [...MATCHES[set].pairs.keys()]
+  return { left: shuffle(ids), right: shuffle(ids), matched: [], selected: null, colors: Object.fromEntries(ids.map(i => [i, (i % 5) + 1])) }
+}
+RENDER.match = () => {
+  const g = state, set = MATCHES[g.set]
+  const col = (ids, side) => ids.map(i => {
+    const m = g.matched.includes(i)
+    return `<button class="pick ${side === 'R' ? 'desc' : ''} ${m ? `matched c${g.colors[i]}` : ''} ${g.selected?.side === side && g.selected.id === i ? 'selected' : ''}" data-side="${side}" data-id="${i}" ${m ? 'disabled' : ''}>${esc(set.pairs[i][side === 'L' ? 0 : 1])}</button>`
+  }).join('')
+  app.innerHTML = `
+    ${playHeader()}
+    ${statusLine('Tap a name, then what it matches.', set.pairs.length - g.matched.length)}
+    <div class="board pairs"><div class="col">${col(g.left, 'L')}</div><div class="col">${col(g.right, 'R')}</div></div>
+    <div id="hint-area">${hintHtml(g.hint)}</div>`
+  bindBack()
+  app.querySelectorAll('.pick:not([disabled])').forEach(b => b.addEventListener('click', () => matchTap(b.dataset.side, +b.dataset.id)))
+}
+function matchTap(side, id) {
+  const g = state, set = MATCHES[g.set]
+  if (busy || g.matched.includes(id)) return
+  if (!g.selected || g.selected.side === side) { g.selected = { side, id }; g.hint = null; return RENDER.match() }
+  const other = g.selected
+  g.selected = null
+  if (other.id === id) {
+    const forced = g.matched.length === set.pairs.length - 1
+    const fromEl = app.querySelector(`[data-side="L"][data-id="${id}"]`)
+    const note = earn(`match:${g.set}:${id}`, 'centurio', fromEl, { forced })
+    g.matched.push(id)
+    g.hint = { ok: true, html: `<b>${esc(set.pairs[id][0])}</b>: ${esc(set.pairs[id][1].replace(/^./, c => c.toLowerCase()))}.${note}` }
+    RENDER.match()
+    if (g.matched.length === set.pairs.length) {
+      busy = true
+      setTimeout(() => { busy = false; if (state === g) finish(recapList(set.pairs.map(([a, b]) => ({ title: a, text: b })))) }, 700)
+    }
+  } else {
+    g.mistakes++
+    const [l, r] = side === 'L' ? [id, other.id] : [other.id, id]
+    g.hint = { ok: false, sec: set.secs[l], html: `<b>${esc(set.pairs[l][0])}</b> doesn’t go with “${esc(set.pairs[r][1])}”. Try again.` }
+    noteMiss(`match:${g.set}:${l}`, set.secs[l])
+    RENDER.match()
+    app.querySelectorAll(`[data-side="L"][data-id="${l}"], [data-side="R"][data-id="${r}"]`).forEach(b => b.classList.add('shake'))
+    buzz()
+  }
+}
+
+// ---------- True or False ----------
+START.tf = set => ({ order: shuffle([...DECKS[set].cards.keys()]), index: 0, answered: null, misses: [] })
+RENDER.tf = () => {
+  const g = state, deck = DECKS[g.set]
+  const card = deck.cards[g.order[g.index]]
+  const hasNext = g.index + 1 < g.order.length
+  app.innerHTML = `
+    ${playHeader()}
+    ${statusLine('Swipe right if it’s true, left if it’s false.', g.order.length - g.index)}
+    ${g.answered ? '' : `<div class="deck">
+      ${hasNext ? '<div class="card behind" aria-hidden="true"><p class="claim">&nbsp;</p></div>' : ''}
+      <div class="card" id="card">
+        <span class="stamp t">TRUE</span><span class="stamp f">FALSE</span>
+        <span class="count">Statement ${g.index + 1} of ${g.order.length}</span>
+        <p class="claim">${esc(card.claim)}</p>
+        <p class="swipe-hint">← false · true →</p>
+      </div>
+    </div>`}
+    ${g.answered ? verdictHtml(card, g.answered) : `<div class="answer-buttons"><button class="btn-false" id="no">✗ False</button><button class="btn-true" id="yes">✓ True</button></div>`}`
+  bindBack()
+  if (g.answered) return app.querySelector('#continue').addEventListener('click', nextTF)
+  app.querySelector('#no').addEventListener('click', () => answerTF(false))
+  app.querySelector('#yes').addEventListener('click', () => answerTF(true))
+  const el = app.querySelector('#card'), tS = el.querySelector('.stamp.t'), fS = el.querySelector('.stamp.f')
+  draggable(el, {
+    onMove: (e, dx) => { el.style.transform = `translateX(${dx}px) rotate(${dx / 18}deg)`; tS.style.opacity = Math.max(0, Math.min(1, dx / 90)); fS.style.opacity = Math.max(0, Math.min(1, -dx / 90)) },
+    onDrop: (e, ok) => {
+      const dx = e.clientX - el.getBoundingClientRect().left - el.offsetWidth / 2 + (parseFloat(el.style.transform.split('(')[1]) || 0) * 0
+      const shift = parseFloat((el.style.transform.match(/translateX\(([-\d.]+)px/) || [])[1] || 0)
+      if (ok && Math.abs(shift) > 90) { answerTF(shift > 0, shift); return true }
+      tS.style.opacity = 0; fS.style.opacity = 0
+      return false
+    },
+  })
+}
+function verdictHtml(card, answered) {
+  const right = answered.value === card.answer
+  return `<div class="verdict">
+    ${hintHtml({ ok: right, sec: right ? null : card.sec, html: `<b>${right ? 'Correct!' : 'Not quite.'}</b> “${esc(card.claim)}” is <b>${card.answer ? 'true' : 'false'}</b>. ${esc(card.why)}${right && answered.recruit ? ' ' + recruitLine(answered.recruit) : ''}` })}
+    <button class="primary" id="continue">${state.index + 1 < state.order.length ? 'Next statement' : 'See results'}</button>
+  </div>`
+}
+function answerTF(value, fromX) {
+  const g = state
+  if (busy || g.answered) return
+  const card = DECKS[g.set].cards[g.order[g.index]]
+  const el = app.querySelector('#card')
+  const key = `tf:${g.set}:${g.order[g.index]}`
+  if (value !== card.answer) { g.mistakes++; g.misses.push(g.order[g.index]); noteMiss(key, card.sec); buzz(); g.answered = { value } }
+  else g.answered = { value, recruit: reward(key, 'hastatus', el) }
+  const done = () => { busy = false; if (state === g) RENDER.tf() }
+  if (reducedMotion || !el) return done()
+  busy = true
+  const x = fromX ?? (value ? 1 : -1) * 120
+  el.animate([{ transform: el.style.transform || 'none' }, { transform: `translate(${x * 4}px, 30px) rotate(${x > 0 ? 18 : -18}deg)` }],
+    { duration: 300, easing: 'ease-in', fill: 'forwards' }).onfinish = done
+}
+function nextTF() {
+  const g = state
+  g.answered = null
+  g.index++
+  if (g.index < g.order.length) return RENDER.tf()
+  const deck = DECKS[g.set]
+  finish(recapList(g.order.map(i => ({ when: deck.cards[i].answer ? 'True' : 'False', title: deck.cards[i].claim, text: deck.cards[i].why, miss: g.misses.includes(i) }))))
+}
+
+// ---------- Odd One Out ----------
+START.odd = set => ({ order: shuffle([...ODDS[set].rounds.keys()]), index: 0, layout: null, picked: null, misses: [] })
+RENDER.odd = () => {
+  const g = state, round = ODDS[g.set].rounds[g.order[g.index]]
+  g.layout ??= shuffle([...round.items.keys()])
+  const solved = g.picked === round.odd
+  app.innerHTML = `
+    ${playHeader()}
+    ${statusLine('Three of these belong together. Tap the one that doesn’t.', g.order.length - g.index)}
+    <div class="board odd">${g.layout.map((i, k) => `
+      <button class="tile c${(k % 5) + 1} ${solved && i !== round.odd ? 'dim' : ''} ${solved && i === round.odd ? 'right-pick' : ''}" data-i="${i}" ${solved ? 'disabled' : ''}>${esc(round.items[i])}</button>`).join('')}
+    </div>
+    <div id="hint-area">${hintHtml(g.hint)}</div>
+    ${solved ? `<button class="primary" id="continue" style="align-self:flex-start">${g.index + 1 < g.order.length ? 'Next round' : 'See results'}</button>` : ''}`
+  bindBack()
+  if (solved) return app.querySelector('#continue').addEventListener('click', () => {
+    g.index++; g.layout = null; g.picked = null; g.hint = null
+    if (g.index < g.order.length) return RENDER.odd()
+    const set = ODDS[g.set]
+    finish(recapList(g.order.map(i => ({ title: `${set.rounds[i].items[set.rounds[i].odd]} was the odd one out`, text: set.rounds[i].why, miss: g.misses.includes(i) }))))
+  })
+  app.querySelectorAll('.tile').forEach(t => t.addEventListener('click', () => {
+    const i = +t.dataset.i
+    if (i === round.odd) {
+      g.picked = i
+      const key = `odd:${g.set}:${g.order[g.index]}`
+      const wrong = g.roundWrong ?? 0
+      const note = wrong === 0 ? earn(key, 'princeps', t)
+        : wrong === 1 ? (isRewarded(key) ? ' <i>Already in your legion from an earlier round.</i>' : (reward(key, 'hastatus', t), ' <i>Second try: a hastatus instead of a princeps.</i>'))
+        : wrong >= round.items.length - 1 ? ' <i>No soldier this time: it was the only option left.</i>'
+        : ' <i>No soldier this time: too many tries. Get it right in a later round and it joins as a veteran.</i>'
+      g.roundWrong = 0
+      g.hint = { ok: true, html: `<b>${esc(round.items[i])}</b> is the odd one out. ${esc(round.why)}${note}` }
+      RENDER.odd()
+    } else {
+      g.mistakes++
+      g.roundWrong = (g.roundWrong ?? 0) + 1
+      if (!g.misses.includes(g.order[g.index])) g.misses.push(g.order[g.index])
+      g.hint = { ok: false, sec: round.sec, html: `<b>${esc(round.items[i])}</b> belongs with the others. Look again.` }
+      if ((g.roundWrong ?? 0) >= 2) noteMiss(`odd:${g.set}:${g.order[g.index]}`, round.sec)
+      app.querySelector('#hint-area').innerHTML = hintHtml(g.hint)
+      app.querySelector('.score').textContent = `${g.order.length - g.index} left · ${plural(g.mistakes, 'mistake')}`
+      t.classList.add('shake'); t.addEventListener('animationend', () => t.classList.remove('shake'), { once: true })
+      buzz()
+    }
+  }))
+}
+
+// ---------- Who Am I? ----------
+START.who = set => ({ order: shuffle([...WHOS[set].people.keys()]), index: 0, shown: 1, wrong: [], solved: false, extraClues: 0, results: [] })
+RENDER.who = () => {
+  const g = state, p = WHOS[g.set].people[g.order[g.index]]
+  app.innerHTML = `
+    ${playHeader()}
+    <div class="status"><p class="task">Guess early for a better score. Each extra clue costs a little.</p><span class="score">${g.order.length - g.index} left</span></div>
+    <div class="clues">${p.clues.map((c, i) => `
+      <div class="clue ${i < g.shown ? '' : 'hidden-clue'}"><span class="n">${i + 1}</span><span>${i < g.shown ? esc(c) : 'Hidden clue'}</span></div>`).join('')}
+    </div>
+    ${!g.solved && g.shown < p.clues.length ? '<button class="ghost more" id="more">Show another clue</button>' : ''}
+    <div class="choices">${p.options.map(o => `
+      <button class="choice ${g.wrong.includes(o) ? 'wrong' : ''} ${g.solved && o === p.name ? 'right' : ''}" data-name="${esc(o)}" ${g.solved || g.wrong.includes(o) ? 'disabled' : ''}>${esc(o)}</button>`).join('')}
+    </div>
+    <div id="hint-area">${hintHtml(g.hint)}</div>
+    ${g.solved ? `<button class="primary" id="continue" style="align-self:flex-start">${g.index + 1 < g.order.length ? 'Next person' : 'See results'}</button>` : ''}`
+  bindBack()
+  app.querySelector('#more')?.addEventListener('click', () => { g.shown++; g.extraClues++; g.hint = null; RENDER.who() })
+  if (g.solved) return app.querySelector('#continue').addEventListener('click', () => {
+    g.index++; g.shown = 1; g.wrong = []; g.solved = false; g.hint = null
+    if (g.index < g.order.length) return RENDER.who()
+    // Score: each extra clue or wrong guess is a penalty point
+    const penalty = g.extraClues + g.mistakes, n = g.order.length
+    const earned = penalty <= n ? 3 : penalty <= n * 2 ? 2 : 1
+    const set = WHOS[g.set]
+    finish(recapList(g.results.map(r => ({ when: `Guessed with ${plural(r.clues, 'clue')}${r.wrong ? `, ${plural(r.wrong, 'wrong guess')}`.replace('guesss', 'guesses') : ''}`, title: set.people[r.i].name, text: set.people[r.i].clues.join(' '), miss: r.wrong > 0 }))),
+      earned, `${plural(g.extraClues, 'extra clue')} and ${plural(g.mistakes, 'wrong guess').replace('guesss', 'guesses')}. Three stars need about one clue per person.`)
+  })
+  app.querySelectorAll('.choice:not([disabled])').forEach(b => b.addEventListener('click', () => {
+    const name = b.dataset.name
+    if (name === p.name) {
+      const key = `who:${g.set}:${g.order[g.index]}`
+      const wrong = g.wrong.length
+      const note = wrong === 0 ? earn(key, 'centurio', b)
+        : wrong === 1 ? (isRewarded(key) ? ' <i>Already in your legion from an earlier round.</i>' : (reward(key, 'hastatus', b), ' <i>Second try: a hastatus instead of a centurion.</i>'))
+        : wrong >= p.options.length - 1 ? ' <i>No soldier this time: it was the only option left.</i>'
+        : ' <i>No soldier this time: too many guesses. Get it right in a later round and it joins as a veteran.</i>'
+      g.solved = true
+      g.results.push({ i: g.order[g.index], clues: g.shown, wrong: g.wrong.length })
+      g.hint = { ok: true, sec: p.sec, html: `Yes, <b>${esc(p.name)}</b>! ${g.shown === 1 ? 'Guessed from the first clue.' : `Guessed with ${g.shown} clues.`}${note}` }
+      g.shown = p.clues.length
+    } else {
+      g.mistakes++
+      g.wrong.push(name)
+      if (g.shown < p.clues.length) g.shown++
+      g.hint = { ok: false, html: `Not <b>${esc(name)}</b>. Here’s another clue.` }
+      if (g.wrong.length >= 2) noteMiss(`who:${g.set}:${g.order[g.index]}`, p.sec)
+      buzz()
+    }
+    RENDER.who()
+  }))
+}
+
+// ---------- Map Drop ----------
+const project = (lat, lon) => {
+  const b = MAP_BOUNDS, w = (b.lonMax - b.lonMin) * b.kx
+  return [((lon - b.lonMin) * b.kx) / w * 300, (b.latMax - lat) / w * 300]
+}
+START.map = set => ({ order: shuffle([...MAPS[set].places.keys()]), placed: [], selected: null, misses: [] })
+RENDER.map = () => {
+  const g = state, places = MAPS[g.set].places
+  const path = pts => pts.map(([la, lo], i) => `${i ? 'L' : 'M'}${project(la, lo).map(v => v.toFixed(1)).join(',')}`).join(' ')
+  const land = LAND.map(l => path(l.pts.map(([lo, la]) => [la, lo])) + 'Z').join(' ')
+  const [rx, ry] = project(ROME.lat, ROME.lon)
+  app.innerHTML = `
+    ${playHeader()}
+    ${statusLine('Drag each name onto its dot, or tap a name and then a dot.', places.length - g.placed.length)}
+    <div class="map-wrap">
+      <svg class="map" id="map" viewBox="0 0 300 ${MAP_H.toFixed(0)}" role="img" aria-label="Map of central Italy">
+        <rect class="sea" x="0" y="0" width="300" height="${MAP_H.toFixed(0)}"/>
+        <path class="land" d="${land}"/>
+        <path class="river" d="${path(TIBER)}"/>
+        <circle class="rome" cx="${rx.toFixed(1)}" cy="${ry.toFixed(1)}" r="7"/><text x="${(rx + 9).toFixed(1)}" y="${(ry - 7).toFixed(1)}">ROME</text>
+        ${places.map((p, i) => { const [x, y] = project(p.lat, p.lon); const done = g.placed.includes(i); return `
+          <circle class="spot ${done ? 'done' : ''}" data-spot="${i}" cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${done ? 6 : 7.5}"/>
+          ${done ? `<text x="${(x + (x > 200 ? -9 : 9)).toFixed(1)}" y="${(y + 4).toFixed(1)}" text-anchor="${x > 200 ? 'end' : 'start'}">${esc(p.name)}</text>` : ''}` }).join('')}
+      </svg>
+    </div>
+    <div class="labels">${g.order.filter(i => !g.placed.includes(i)).map((i, k) => `
+      <button class="label-chip c${((k + 1) % 5) + 1} ${g.selected === i ? 'selected' : ''}" data-label="${i}">${esc(places[i].name)}</button>`).join('')}
+    </div>
+    <div id="hint-area">${hintHtml(g.hint ?? { ok: 'neutral', html: 'Rome is marked in red. The blue line is the Tiber.' })}</div>`
+  bindBack()
+  const svg = app.querySelector('#map')
+  const spotAt = (x, y) => [...svg.querySelectorAll('.spot:not(.done)')].find(s => { const r = s.getBoundingClientRect(); return Math.hypot(x - (r.left + r.width / 2), y - (r.top + r.height / 2)) < 26 })
+  app.querySelectorAll('.label-chip').forEach(c => {
+    const i = +c.dataset.label
+    onTap(c, () => { g.selected = g.selected === i ? null : i; RENDER.map() })
+    draggable(c, {
+      onMove: e => svg.querySelectorAll('.spot').forEach(s => s.classList.toggle('target', s === spotAt(e.clientX, e.clientY))),
+      onDrop: (e, ok) => { const s = ok && spotAt(e.clientX, e.clientY); c.classList.remove('dragging'); c.style.transform = ''; if (s) mapPlace(i, +s.dataset.spot); else RENDER.map(); return false },
+    })
+  })
+  svg.querySelectorAll('.spot:not(.done)').forEach(s => s.addEventListener('click', () => { if (g.selected !== null) mapPlace(g.selected, +s.dataset.spot) }))
+}
+function mapPlace(label, spot) {
+  const g = state, places = MAPS[g.set].places
+  g.selected = null
+  if (label === spot) {
+    const forced = g.placed.length === places.length - 1
+    const note = earn(`map:${g.set}:${label}`, 'princeps', app.querySelector(`.spot[data-spot="${spot}"]`), { forced })
+    g.placed.push(label)
+    g.hint = { ok: true, html: `<b>${esc(places[label].name)}</b>: ${esc(places[label].why)}${note}` }
+    if (g.placed.length === places.length) {
+      RENDER.map(); busy = true
+      return setTimeout(() => { busy = false; if (state === g) finish(recapList(places.map((p, i) => ({ title: p.name, text: p.why, miss: g.misses.includes(i) })))) }, 800)
+    }
+  } else {
+    g.mistakes++
+    if (!g.misses.includes(label)) g.misses.push(label)
+    g.hint = { ok: false, sec: places[label].sec, html: `Not there. Clue: <b>${esc(places[label].name)}</b>: ${esc(places[label].why)}` }
+    noteMiss(`map:${g.set}:${label}`, places[label].sec)
+    buzz()
+  }
+  RENDER.map()
+}
+
+// ---------- Legion Quiz ----------
+const RANKS = {
+  1: { name: 'Hastati', one: 'hastatus', color: '#e0a63a', note: 'young soldiers in the front line' },
+  2: { name: 'Principes', one: 'princeps', color: '#4f8fb8', note: 'men in their prime, the second line' },
+  3: { name: 'Triarii', one: 'triarius', color: '#e9e1cf', note: 'veterans, the last line' },
+}
+const soldierSvg = color => `<svg viewBox="0 0 20 26" aria-hidden="true"><line x1="16" y1="1" x2="16" y2="25" stroke="#e2cdb0" stroke-width="1.6"/><path d="M3 5 h10 v11 c0 4 -5 7 -5 7 c0 0 -5 -3 -5 -7 z" fill="${color}" stroke="#1b1715" stroke-width="1.2"/><circle cx="8" cy="12" r="1.8" fill="#1b1715" opacity=".55"/></svg>`
+START.quiz = set => ({ index: 0, answered: null, recruits: [], misses: [] })
+RENDER.quiz = () => {
+  const g = state, qs = QUIZZES[g.set].questions, q = qs[g.index]
+  const row = lvl => {
+    const n = g.recruits.filter(l => l === lvl).length
+    return `<div class="legion-row"><span>${RANKS[lvl].name}</span><div class="soldiers">${n ? Array(n).fill(soldierSvg(RANKS[lvl].color)).join('') : '<span class="empty">none yet</span>'}</div></div>`
+  }
+  app.innerHTML = `
+    ${playHeader()}
+    ${statusLine('Every right answer recruits a soldier. Harder questions recruit veterans.', qs.length - g.index)}
+    <div class="legion" aria-label="Your legion">${row(3)}${row(2)}${row(1)}</div>
+    <div class="question">
+      <span class="lvl">${['', 'Easy', 'Medium', 'Hard'][q.level]} · recruits a ${RANKS[q.level].one}</span>
+      <h3>${esc(q.q)}</h3>
+      <div class="options">${q.options.map((o, i) => `
+        <button class="option ${g.answered !== null && i === q.a ? 'right' : ''} ${g.answered === i && i !== q.a ? 'wrong' : ''}" data-i="${i}" ${g.answered !== null ? 'disabled' : ''}>${esc(o)}</button>`).join('')}
+      </div>
+    </div>
+    <div id="hint-area">${hintHtml(g.hint)}</div>
+    ${g.answered !== null ? `<button class="primary" id="continue" style="align-self:flex-start">${g.index + 1 < qs.length ? 'Next question' : 'Review your legion'}</button>` : ''}`
+  bindBack()
+  if (g.answered !== null) return app.querySelector('#continue').addEventListener('click', () => {
+    g.index++; g.answered = null; g.hint = null
+    if (g.index < qs.length) return RENDER.quiz()
+    const count = lvl => g.recruits.filter(l => l === lvl).length
+    finish(recapList([
+      ...[3, 2, 1].map(l => ({ when: RANKS[l].name, title: `${count(l)} recruited`, text: `In the Republic’s legion, the ${RANKS[l].name.toLowerCase()} were the ${RANKS[l].note}.` })),
+      ...g.misses.map(i => ({ title: qs[i].q, text: `Answer: ${qs[i].options[qs[i].a]}. ${qs[i].why}`, miss: true })),
+    ]), undefined, `Your legion: ${plural(g.recruits.length, 'soldier')} out of ${qs.length}.`)
+  })
+  app.querySelectorAll('.option').forEach(b => b.addEventListener('click', () => {
+    const i = +b.dataset.i
+    g.answered = i
+    const key = `quiz:${g.set}:${g.index}`
+    if (i === q.a) {
+      g.recruits.push(q.level)
+      const r = reward(key, ['', 'hastatus', 'princeps', 'triarius'][q.level], b)
+      g.hint = { ok: true, html: `<b>Right!</b> ${recruitLine(r)} ${esc(q.why)}` }
+    } else {
+      g.mistakes++; g.misses.push(g.index); noteMiss(key, q.sec)
+      g.hint = { ok: false, sec: q.sec, html: `<b>Not quite.</b> The answer is “${esc(q.options[q.a])}”. ${esc(q.why)}` }; buzz()
+    }
+    RENDER.quiz()
+  }))
+}
+
+// ---------- briefing ----------
+function renderBriefing() {
+  app.innerHTML = `
+    ${header(`Ave Caesar · ${CH.period}`, CH.short)}
+    <section class="briefing">
+      <span class="eyebrow">Your briefing</span>
+      <h2>${esc(CH.briefing.title)}</h2>
+      ${CH.briefing.paragraphs.map(p => `<p>${inline(p)}</p>`).join('')}
+      <div class="actions"><button class="primary" id="go">Start round 1</button><button class="ghost dark" id="read">Read the chronicle first</button></div>
+    </section>`
+  bindBack()
+  app.querySelector('#go').addEventListener('click', () => startGame(run.plan[0].type, run.plan[0].set))
+  app.querySelector('#read').addEventListener('click', () => openChronicle())
+}
+
+// ---------- results ----------
+function renderResult() {
+  const r = state, g = GAMES[r.type]
+  const inRun = !!run
+  const lastRound = inRun && run.step === run.plan.length - 1
+  const nextInType = !inRun && r.set < g.sets.length - 1
+  app.innerHTML = `
+    ${header(`${g.title}${g.sets.length > 1 ? ' ' + NUMERALS[r.set] : ''} complete`, g.sets[r.set].name)}
+    ${run ? `<span class="round-pill">Round ${run.step + 1} of ${run.plan.length}</span>` : ''}
+    <section class="result">
+      <div>
+        ${starRow(r.earned, 'big-stars')}
+        <h2 style="margin-top:10px">${r.earned === 3 ? 'Perfect!' : r.earned === 2 ? 'Well done!' : 'You made it to the end'}</h2>
+        <p class="task" style="margin-top:4px">${esc(r.note ?? (r.mistakes === 0 ? 'No mistakes.' : `${plural(r.mistakes, 'mistake')}. Three stars need a clean run.`))}</p>
+      </div>
+      ${r.reviewSecs?.length ? `<div class="review">
+        <h3>${r.earned === 1 ? 'Review these sections, then try again' : 'Learn from your mistakes'}</h3>
+        <p class="task">Get them right in a later round and those soldiers join as veterans.</p>
+        <div class="review-links">${r.reviewSecs.map(id => `<button data-read="${id}">${esc(CHAPTER.find(s => s.id === id)?.title ?? id)}</button>`).join('')}</div>
+      </div>` : ''}
+      ${r.recapHtml}
+      <div class="feedback" id="fb">
+        <h3>How was this round?</h3>
+        ${r.feedbackSent ? '<p class="sent">Thanks! Your feedback was saved.</p>' : `
+        <div class="chips" role="group" aria-label="Pick any that apply">
+          ${['Fun', 'Too easy', 'Too hard', 'Confusing', 'Boring', 'Learned something'].map(c => `<button type="button" aria-pressed="false" data-chip="${c}">${c}</button>`).join('')}
+        </div>
+        <textarea id="fb-text" placeholder="Anything else? (optional)" maxlength="1000"></textarea>
+        <div><button class="ghost" id="fb-send">${fb.db ? 'Send feedback' : 'Copy feedback'}</button></div>
+        <p class="task" id="fb-help" ${fb.db ? 'hidden' : ''}>This copies your answers so you can paste them in a message to whoever sent you this game.</p>`}
+      </div>
+      <div class="actions">
+        ${inRun ? `<button class="primary" id="next">${lastRound ? 'Finish the chapter' : 'Next round'}</button>`
+          : nextInType ? `<button class="primary" id="next">Next: ${esc(g.sets[r.set + 1].name)}</button>` : ''}
+        ${inRun ? '' : '<button class="ghost" id="again">Play again</button>'}
+      </div>
+    </section>`
+  bindBack()
+  app.querySelector('#again')?.addEventListener('click', () => startGame(r.type, r.set))
+  app.querySelectorAll('[data-chip]').forEach(c => c.addEventListener('click', () => c.setAttribute('aria-pressed', c.getAttribute('aria-pressed') === 'true' ? 'false' : 'true')))
+  app.querySelector('#fb-send')?.addEventListener('click', async e => {
+    const tags = [...app.querySelectorAll('[data-chip][aria-pressed="true"]')].map(c => c.dataset.chip)
+    const comment = app.querySelector('#fb-text').value.trim()
+    if (!tags.length && !comment) return toast('Pick a word or write a comment first.')
+    const entry = { game: GAMES[r.type].title, set: GAMES[r.type].sets[r.set].name, stars: r.earned, mistakes: r.mistakes, tags, comment, inChapterRun: !!run, at: new Date().toISOString() }
+    if (fb.db) {
+      e.target.disabled = true
+      try {
+        await fb.db.collection(`feedback/${fb.uid}/rounds`).add(entry)
+        r.feedbackSent = true
+        return renderResult()
+      } catch {
+        // This viewer can't save to the page (e.g. outside the owner's organization): fall back to copying
+        fb.db = null
+        e.target.disabled = false
+        e.target.textContent = 'Copy feedback'
+        app.querySelector('#fb-help').hidden = false
+      }
+    }
+    const text = `Ave Caesar feedback: ${entry.game} · ${entry.set}: ${entry.stars}/3 stars, ${plural(entry.mistakes, 'mistake')}.` +
+      (tags.length ? ` ${tags.join(', ')}.` : '') + (comment ? ` "${comment}"` : '')
+    try {
+      await navigator.clipboard.writeText(text)
+      toast('<b>Copied!</b> Paste it in a message to whoever sent you this game.')
+    } catch {
+      const ta = app.querySelector('#fb-text')
+      ta.value = text; ta.focus(); ta.select()
+      toast('Select-all is done: copy the text in the box and send it.')
+    }
+  })
+  app.querySelector('#next')?.addEventListener('click', () => {
+    if (!inRun) return startGame(r.type, r.set + 1)
+    if (lastRound) return go({ screen: 'runDone' })
+    run.step++
+    startGame(run.plan[run.step].type, run.plan[run.step].set)
+  })
+}
+function renderRunDone() {
+  const total = run.results.reduce((n, r) => n + r.stars, 0), max = run.plan.length * 3
+  app.innerHTML = `
+    ${header('Chapter complete', CH.short)}
+    <section class="result">
+      <div>
+        <p class="big-stars" style="margin:0">${total}<span class="off"> / ${max}</span> ★</p>
+        <h2 style="margin-top:10px">${total === max ? 'A flawless chapter!' : total >= max - 4 ? 'Rome would be proud.' : 'Chapter conquered.'}</h2>
+        <p class="task" style="margin-top:4px">Play the chapter again for a different set of rounds.</p>
+      </div>
+      <ul class="run-summary">${run.results.map(r => `<li><span>${esc(GAMES[r.type].title)} · ${esc(GAMES[r.type].sets[r.set].name)}</span>${starRow(r.stars)}</li>`).join('')}</ul>
+      <div class="actions"><button class="primary" id="menu">Back to menu</button></div>
+    </section>`
+  bindBack()
+  app.querySelector('#menu').addEventListener('click', () => { run = null; go({ screen: 'home' }) })
+}
+
+// Keep a game in progress across page updates
+window.claude?.hot?.snapshot?.(() => ({ state, run, chapterIndex }))
+const boot = data => {
+  if (Number.isInteger(data?.chapterIndex)) loadChapter(data.chapterIndex)
+  const saved = data?.state
+  if (saved?.screen && saved.screen !== 'home' && (!saved.type || GAMES[saved.type])) { state = saved; run = data.run ?? null }
+  try { render() } catch { state = { screen: 'home' }; run = null; render() }
+}
+window.claude?.hot?.ready ? window.claude.hot.ready(boot) : boot(window.claude?.hot?.data ?? {})
+</script>

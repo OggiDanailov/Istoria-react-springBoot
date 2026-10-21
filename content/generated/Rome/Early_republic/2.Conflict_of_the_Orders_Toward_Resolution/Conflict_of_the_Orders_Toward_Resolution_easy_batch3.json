@@ -1,0 +1,179 @@
+{
+  "batchName": "Early Republic: The Conflict of the Orders - Toward Resolution (450-367 BCE) - Easy Batch 3",
+  "chapterName": "Early Republic: The Conflict of the Orders - Toward Resolution (450-367 BCE)",
+  "difficulty": 1,
+  "batchOrder": 3,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "How did the Romans finally get inside Veii?",
+      "options": [
+        "By digging a tunnel through volcanic rock",
+        "By bribing a guard to open the gates",
+        "By diverting a river under the walls",
+        "By starving the city into surrender"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#siege-of-veii",
+      "explanation": "The Romans tunnelled through the soft volcanic rock on which Veii stood. Picked troops then climbed out inside the city while the defenders manned the walls.",
+      "sourceQuote": "They dug a tunnel through the soft volcanic rock on which Veii stood.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What rule did the Fabius brothers break when they joined the fighting at Clusium?",
+      "options": [
+        "Senators must not command troops",
+        "Consuls must not leave Rome",
+        "Envoys must stay neutral",
+        "Priests must not shed blood"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#battle-of-the-allia",
+      "explanation": "As ambassadors, the brothers were supposed to stay neutral, but one killed a Gallic chieftain. When the Gauls demanded them, Rome refused to hand them over.",
+      "sourceQuote": "This broke the rule that envoys must stay neutral.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What name is given to the roughly two-hundred-year rivalry between Rome's patricians and plebeians?",
+      "options": [
+        "The War of the Classes",
+        "The Conflict of the Orders",
+        "The Struggle of the Tribes",
+        "The Secession of the Commons"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#conflict-of-the-orders",
+      "explanation": "The rivalry is known as the Conflict of the Orders and shaped politics through the Republic's first two centuries. The patricians held power by monopolising the consulship and the Senate.",
+      "sourceQuote": "Their rivalry lasted some two hundred years and is known as the Conflict of the Orders.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What stone was used for Rome's huge new city wall after the Gallic sack?",
+      "options": [
+        "Dark basalt brought from Sicily",
+        "Yellow stone quarried in Veii's territory",
+        "White marble shipped from Greece",
+        "Crumbly local stone from Rome's hills"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#rome-after-the-sack",
+      "explanation": "The old wall used crumbly local stone, so the new 11 km wall was built of better yellow stone from Veii's territory.",
+      "sourceQuote": "The new one was built of a better yellow stone quarried in Veii's territory.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which date, the anniversary of the Allia, became an ill-omened day for Romans?",
+      "options": [
+        "1 January",
+        "18 July",
+        "21 April",
+        "15 March"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#battle-of-the-allia",
+      "explanation": "The anniversary of the defeat, 18 July, became an ill-omened day. Tradition dates the battle to 390 BC, though modern historians prefer around 387 BC.",
+      "sourceQuote": "Its anniversary, 18 July, became an ill-omened day.",
+      "reviewFlags": []
+    },
+    {
+      "question": "During the night attack on the Capitoline, what woke the defenders?",
+      "options": [
+        "The crash of a falling wall",
+        "The honking of Juno's sacred geese",
+        "The trumpet of a sentry",
+        "The barking of the guard dogs"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#sack-of-rome",
+      "explanation": "The guards and dogs slept, but the sacred geese of Juno honked. Their noise roused Marcus Manlius, who hurled the first attacker down the slope.",
+      "sourceQuote": "The guards and dogs slept, but the sacred geese of Juno honked.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Who was chosen as dictator around 396 BC to deal with the war against Veii?",
+      "options": [
+        "Marcus Manlius",
+        "Publius Manlius Capitolinus",
+        "Lucius Sextius Lateranus",
+        "Marcus Furius Camillus"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#siege-of-veii",
+      "explanation": "After a string of setbacks, the Romans turned to Marcus Furius Camillus. He took over a siege that was already under way.",
+      "sourceQuote": "Around 396 BC, after a string of Roman setbacks, the Romans chose Marcus Furius Camillus as dictator.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What were the Sibylline Books?",
+      "options": [
+        "A list of Roman consuls",
+        "A code of Roman laws",
+        "A collection of prophecies",
+        "A record of land ownership"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#licinian-laws",
+      "explanation": "The Sibylline Books were prophecies consulted in times of plague, famine or war. A fourth Licinian law changed who looked after them.",
+      "sourceQuote": "A fourth law concerned the Sibylline Books, a collection of prophecies.",
+      "reviewFlags": []
+    },
+    {
+      "question": "From 444 BC, what arrangement did Rome often use instead of its two consuls?",
+      "options": [
+        "A single dictator chosen for a year",
+        "Military tribunes with consular power",
+        "Two praetors elected by the plebs",
+        "A council of ten patrician judges"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#conflict-of-the-orders",
+      "explanation": "Rome was often run by 'military tribunes with consular power', usually called consular tribunes. There were between three and six of them in a given year.",
+      "sourceQuote": "From 444 BC, Rome often replaced its two consuls with a stranger arrangement.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Who became Rome's first plebeian consul in 366 BC?",
+      "options": [
+        "Gaius Licinius Stolo",
+        "Lucius Sextius Lateranus",
+        "Lucius Genucius",
+        "Marcus Manlius"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#first-plebeian-consul",
+      "explanation": "Sextius, one of the two tribunes who led the long campaign, became the first plebeian consul. The patricians refused to confirm his election, and riots broke out.",
+      "sourceQuote": "In 366 BC Lucius Sextius Lateranus, one of the two tribunes who had led the long campaign, became Rome's first plebeian consul.",
+      "reviewFlags": []
+    }
+  ]
+}

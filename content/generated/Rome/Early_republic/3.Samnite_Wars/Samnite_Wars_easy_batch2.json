@@ -1,0 +1,181 @@
+{
+  "batchName": "Early Republic: The Samnite Wars (367-290 BCE) - Easy Batch 2",
+  "chapterName": "Early Republic: The Samnite Wars (367-290 BCE)",
+  "difficulty": 1,
+  "batchOrder": 2,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "When the Samnites trapped a Roman consul's army in a mountain pass in 343 BC, how did Publius Decius Mus save it?",
+      "options": [
+        "He brought up reinforcements from Capua",
+        "He seized a hilltop and distracted the enemy",
+        "He bribed the Samnite commander to withdraw",
+        "He led the army out through a hidden tunnel"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#first-war-campaigns",
+      "explanation": "Decius, then a junior officer, seized a hilltop with a small band and drew off the enemy while the army escaped. The trapped consul was Aulus Cornelius Cossus.",
+      "sourceQuote": "A junior officer, Publius Decius Mus, seized a hilltop with a small band and distracted the enemy while the army escaped.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What lasting Roman innovation came out of the siege of Naples?",
+      "options": [
+        "The appointment of emergency dictators",
+        "The creation of a permanent fleet",
+        "Extending a command with the title of proconsul",
+        "The election of two consuls each year"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#second-war-outbreak",
+      "explanation": "Instead of handing over to the next year's consuls, the commanders kept their command until the campaign ended, as proconsuls. One of them was Quintus Publilius Philo.",
+      "sourceQuote": "Instead of handing over to the next year's consuls, the commanders, including Quintus Publilius Philo, had their military command extended until the campaign ended, with the title of proconsul.",
+      "reviewFlags": []
+    },
+    {
+      "question": "At Sentinum in 295 BC, what did the consul Publius Decius Mus do after Gallic chariots broke his wing?",
+      "options": [
+        "He negotiated a truce with the Gauls",
+        "He handed his command to his colleague Fabius",
+        "He devoted himself and charged to his death",
+        "He retreated behind the Roman camp walls"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#third-war-sentinum",
+      "explanation": "Decius prayed to the gods and charged into the enemy, sacrificing his life. His men rallied, and Fabius outflanked the Samnites to win the battle.",
+      "sourceQuote": "Decius then devoted himself: he prayed to the gods and charged into the enemy, sacrificing his life.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What were the Caudine Forks, where a Roman army was trapped in 321 BC?",
+      "options": [
+        "A marshy river crossing on the Liris",
+        "A dense forest just north of Rome",
+        "A narrow coastal pass near Cumae",
+        "Two wooded Apennine gorges joined by a ravine"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#caudine-forks",
+      "explanation": "The Caudine Forks were two narrow wooded gorges in the Apennines joined by a tight ravine. The Samnites blocked both ends with felled trees and boulders.",
+      "sourceQuote": "The two consuls took the quickest road, through the Caudine Forks, two narrow wooded gorges in the Apennines joined by a tight ravine.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did elite Samnite units swear before the battle at Aquilonia in 293 BC?",
+      "options": [
+        "To give no quarter to prisoners",
+        "To march on Rome itself",
+        "To sacrifice their spoils to the gods",
+        "Never to flee, on pain of death"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#aquilonia-and-the-end",
+      "explanation": "Elite units swore a sacred oath never to flee, on pain of death. Some 40,000 Samnites gathered at Aquilonia in north-western Samnium.",
+      "sourceQuote": "Elite units swore a sacred oath never to flee, on pain of death.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which river divided Latium, the Latin homeland around Rome, from Campania?",
+      "options": [
+        "The Liris",
+        "The Arno",
+        "The Tiber",
+        "The Volturnus"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#samnites-and-rome",
+      "explanation": "In the mid-fourth century BC, Rome's territory reached south as far as the River Liris, the boundary between Latium and Campania. Modern historians suspect the 354 BC treaty made it a dividing line between Rome and the Samnites.",
+      "sourceQuote": "This river divided Latium, the Latin homeland around Rome, from Campania, the fertile plain running down to the Bay of Naples.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Where did Marcus Valerius Corvus win the first Roman victory of the First Samnite War?",
+      "options": [
+        "Lautulae",
+        "Sentinum",
+        "Mount Gaurus",
+        "Suessula"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#first-war-campaigns",
+      "explanation": "Valerius won at Mount Gaurus, near Cumae, with a desperate charge as daylight faded. Livy credits Rome with three victories in 343 BC.",
+      "sourceQuote": "Marcus Valerius Corvus won the first at Mount Gaurus, near the coastal town of Cumae, with a desperate charge as daylight faded.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which dreaded forest, never before crossed by a Roman, did Quintus Fabius Maximus Rullianus march his army through?",
+      "options": [
+        "The Ciminian Forest",
+        "The Arsian Forest",
+        "The Sila Forest",
+        "The Hercynian Forest"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#second-war-turning",
+      "explanation": "Fabius first sent his Etruscan-speaking brother, disguised as a shepherd, through the Ciminian Forest, then marched his army through it. This opened the way into Etruria.",
+      "sourceQuote": "Quintus Fabius Maximus Rullianus, Rome's leading general of the era, sent his Etruscan-speaking brother, disguised as a shepherd, through the dreaded Ciminian Forest, which no Roman had ever crossed.",
+      "reviewFlags": [
+        "fact-check: The explanation claims the march 'opened the way into Etruria', which the chapter does not state."
+      ]
+    },
+    {
+      "question": "Why do most historians now accept that the First Samnite War really happened?",
+      "options": [
+        "Diodorus describes it in great detail",
+        "No Roman would invent a story so embarrassing",
+        "Archaeologists have found its battlefields",
+        "Greek inscriptions record its peace treaty"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#doubting-livy",
+      "explanation": "The war's embarrassing details make it unlikely to be a Roman invention. Some historians once rejected it entirely because Diodorus never mentions it.",
+      "sourceQuote": "Most now accept it: no Roman would invent a story so embarrassing to Rome.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which city provided the spark for the Second Samnite War?",
+      "options": [
+        "Naples",
+        "Cumae",
+        "Luceria",
+        "Capua"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#second-war-outbreak",
+      "explanation": "Naples, then a Greek city, was the spark: Livy says its old town, Paleopolis, attacked Romans living in Campania. Samnite troops helped defend the city against Rome.",
+      "sourceQuote": "The spark came from Naples, then a Greek city made up of an old town, Paleopolis, and a newer one, Neapolis.",
+      "reviewFlags": []
+    }
+  ]
+}

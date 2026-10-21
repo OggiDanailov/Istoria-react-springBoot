@@ -1,0 +1,670 @@
+{
+  "chapterName": "Early Republic: The Conflict of the Orders - Toward Resolution (450-367 BCE)",
+  "model": "claude-opus-5-5",
+  "briefing": {
+    "title": "Rome, around 390 BC",
+    "paragraphs": [
+      "Rome is a small but ambitious city on the river Tiber, just 16 km from its great Etruscan rival, Veii. At home, a small hereditary aristocracy, the patricians, controls the top offices and the Senate. The plebeian majority, many of them small farmers, are buried in debt and short of land.",
+      "Within a few decades Rome will conquer Veii and be humiliated by Gallic warriors who sack the city. Then comes a bitter ten-year political fight at home. At stake: who may rule Rome, and whether ordinary citizens will finally get relief."
+    ]
+  },
+  "timelines": [
+    {
+      "name": "The Big Turning Points",
+      "blurb": "Four milestones from Rome's struggles at home and abroad.",
+      "events": [
+        {
+          "label": "Consular tribunes replace the consuls",
+          "when": "444 BC",
+          "year": -444,
+          "fact": "From 444 BC Rome was often run by three to six 'military tribunes with consular power' instead of two consuls.",
+          "sectionId": "conflict-of-the-orders",
+          "reviewFlags": []
+        },
+        {
+          "label": "Camillus captures Veii",
+          "when": "Around 396 BC",
+          "year": -396,
+          "fact": "Roman troops climbed out of a tunnel inside Juno's temple while Veii's defenders rushed to the walls.",
+          "sectionId": "siege-of-veii",
+          "reviewFlags": []
+        },
+        {
+          "label": "Senate accepts the tribunes' reforms",
+          "when": "367 BC",
+          "year": -367,
+          "fact": "After ten years of strife, the Senate accepted the whole package of laws pushed by Licinius and Sextius.",
+          "sectionId": "licinius-and-sextius",
+          "reviewFlags": []
+        },
+        {
+          "label": "Rome crushes the Senones",
+          "when": "295 BC",
+          "year": -295,
+          "fact": "Even after Rome crushed this Gallic tribe, Roman fear of the Gauls persisted for centuries.",
+          "sectionId": "rome-after-the-sack",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "From Gauls to Plebeian Consuls",
+      "blurb": "Six steps from a military disaster to shared high office.",
+      "events": [
+        {
+          "label": "Plebeians dominate consular tribunes",
+          "when": "Around 400 BC",
+          "year": -400,
+          "fact": "After only two plebeians among about a hundred consular tribunes, plebeians made up the majority in some years from around 400 BC.",
+          "sectionId": "conflict-of-the-orders",
+          "reviewFlags": []
+        },
+        {
+          "label": "Romans routed at the Allia",
+          "when": "390 BC by tradition (c. 387 BC)",
+          "year": -390,
+          "fact": "Brennus attacked the Roman reserves on a hill, panic spread, and many Romans drowned in the Tiber.",
+          "sectionId": "battle-of-the-allia",
+          "reviewFlags": []
+        },
+        {
+          "label": "Two tribunes launch a ten-year campaign",
+          "when": "375 BC",
+          "year": -375,
+          "fact": "Gaius Licinius Stolo and Lucius Sextius Lateranus put bills on debt, land and the consulship to the Plebeian Council.",
+          "sectionId": "licinius-and-sextius",
+          "reviewFlags": []
+        },
+        {
+          "label": "Sextius becomes first plebeian consul",
+          "when": "366 BC",
+          "year": -366,
+          "fact": "Patricians refused to confirm Sextius's election, riots broke out, and the plebeians came close to a mass walkout.",
+          "sectionId": "first-plebeian-consul",
+          "reviewFlags": []
+        },
+        {
+          "label": "Law of Genucius shares the consulship",
+          "when": "342 BC",
+          "year": -342,
+          "fact": "The law of the tribune Lucius Genucius apparently required one consul to be a plebeian, and regular sharing began.",
+          "sectionId": "modern-verdict",
+          "reviewFlags": []
+        },
+        {
+          "label": "First plebeian praetor elected",
+          "when": "337 BC",
+          "year": -337,
+          "fact": "Plebeians had to wait thirty years after the 366 BC compromise before one of them became praetor, Rome's chief judge.",
+          "sectionId": "first-plebeian-consul",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "A Century of Fear and Reform",
+      "blurb": "Eight events, from Veii's fall to long-delayed equality.",
+      "events": [
+        {
+          "label": "Romans tunnel into Veii",
+          "when": "Around 396 BC",
+          "year": -396,
+          "fact": "The Romans dug through the soft volcanic rock beneath Veii after the defenders wrecked their siege equipment.",
+          "sectionId": "siege-of-veii",
+          "reviewFlags": []
+        },
+        {
+          "label": "Gauls sack Rome",
+          "when": "390 BC by tradition (c. 387 BC)",
+          "year": -390,
+          "fact": "According to Livy, the Gauls found the gates open, massacred the old ex-officials and plundered and burned houses.",
+          "sectionId": "sack-of-rome",
+          "reviewFlags": []
+        },
+        {
+          "label": "Tribunes yield after Velitrae attacks",
+          "when": "370 BC",
+          "year": -370,
+          "fact": "Licinius and Sextius ended their five-year block on elections when Velitrae, a Volscian town, attacked Roman land.",
+          "sectionId": "licinius-and-sextius",
+          "reviewFlags": []
+        },
+        {
+          "label": "Senate names Camillus dictator again",
+          "when": "368 BC",
+          "year": -368,
+          "fact": "Camillus threatened violence against the reformers, then resigned for unclear reasons.",
+          "sectionId": "licinius-and-sextius",
+          "reviewFlags": []
+        },
+        {
+          "label": "Run of all-patrician consuls begins",
+          "when": "355 BC",
+          "year": -355,
+          "fact": "From 355 to 343 BC both consuls were patricians, showing the 367 BC law did not guarantee sharing.",
+          "sectionId": "modern-verdict",
+          "reviewFlags": []
+        },
+        {
+          "label": "Gallic raiders strike near Rome",
+          "when": "350 BC",
+          "year": -350,
+          "fact": "Gallic raiders struck the region around Rome in 350 and again in 349 BC.",
+          "sectionId": "rome-after-the-sack",
+          "reviewFlags": []
+        },
+        {
+          "label": "Gauls and Greeks buried alive",
+          "when": "228 BC",
+          "year": -228,
+          "fact": "In 228, 216 and 114 BC Romans buried alive a pair of Gauls and a pair of Greeks, though human sacrifice was not a Roman custom.",
+          "sectionId": "rome-after-the-sack",
+          "reviewFlags": []
+        },
+        {
+          "label": "Two plebeians share the consulship",
+          "when": "173 BC",
+          "year": -173,
+          "fact": "Only in 173 BC did two plebeians hold the consulship together for the first time.",
+          "sectionId": "modern-verdict",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "matchSets": [
+    {
+      "name": "Heroes and Villains of the Sack",
+      "blurb": "Match each figure to their moment in the Gallic crisis.",
+      "pairs": [
+        {
+          "name": "Marcus Furius Camillus",
+          "match": "Dictator who took Veii by tunnel",
+          "sectionId": "siege-of-veii",
+          "reviewFlags": []
+        },
+        {
+          "name": "Brennus",
+          "match": "Gallic chief who threw his sword on the scales",
+          "sectionId": "sack-of-rome",
+          "reviewFlags": []
+        },
+        {
+          "name": "Marcus Manlius",
+          "match": "Ex-consul, woken by geese, who threw the first Gaul off the cliff",
+          "sectionId": "sack-of-rome",
+          "reviewFlags": []
+        },
+        {
+          "name": "Lucius Albinus",
+          "match": "Citizen who carried the Vestal Virgins to Caere by wagon",
+          "sectionId": "sack-of-rome",
+          "reviewFlags": []
+        },
+        {
+          "name": "Marcus Papirius",
+          "match": "Old ex-official who struck a Gaul for stroking his beard",
+          "sectionId": "sack-of-rome",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Offices and Terms",
+      "blurb": "Match each Roman term to what it meant.",
+      "pairs": [
+        {
+          "name": "Consular tribunes",
+          "match": "Three to six officials who often replaced the two consuls",
+          "sectionId": "conflict-of-the-orders",
+          "reviewFlags": []
+        },
+        {
+          "name": "Dictator",
+          "match": "Emergency commander with sweeping powers for six months",
+          "sectionId": "siege-of-veii",
+          "reviewFlags": []
+        },
+        {
+          "name": "Tribune of the plebs",
+          "match": "Plebeian-elected protector who could veto official business",
+          "sectionId": "licinius-and-sextius",
+          "reviewFlags": []
+        },
+        {
+          "name": "Praetor",
+          "match": "Chief judge, first reserved for patricians in 366 BC",
+          "sectionId": "first-plebeian-consul",
+          "reviewFlags": []
+        },
+        {
+          "name": "Sibylline Books",
+          "match": "Prophecies consulted in times of plague, famine or war",
+          "sectionId": "licinian-laws",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "trueFalseDecks": [
+    {
+      "name": "Veii and the Gauls",
+      "blurb": "Conquest, catastrophe and the stories told about them.",
+      "cards": [
+        {
+          "claim": "Veii, the Etruscan city Rome besieged, lay just 16 km from Rome.",
+          "answer": true,
+          "why": "Veii was a large Etruscan city only 16 km (10 miles) from Rome.",
+          "sectionId": "siege-of-veii",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Roman troops emerged from their tunnel inside the temple of Apollo at Veii.",
+          "answer": false,
+          "why": "They climbed out inside the temple of Juno, Veii's protecting goddess. Apollo was promised a tenth of the spoils.",
+          "sectionId": "siege-of-veii",
+          "reviewFlags": []
+        },
+        {
+          "claim": "The Senones, a Gallic tribe, settled on the Adriatic coast around modern Rimini.",
+          "answer": true,
+          "why": "The Senones were one of several Celtic peoples who had pushed into northern Italy, settling around Rimini.",
+          "sectionId": "battle-of-the-allia",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Rome handed the three Fabius brothers over to the Gauls to avoid war.",
+          "answer": false,
+          "why": "Instead of handing them over, the Romans elected the brothers consular tribunes for the next year, which enraged the Gauls.",
+          "sectionId": "battle-of-the-allia",
+          "reviewFlags": []
+        },
+        {
+          "claim": "The honking of Juno's sacred geese woke Marcus Manlius during a night attack.",
+          "answer": true,
+          "why": "While guards and dogs slept, the geese roused Manlius, who hurled the first attacker down the slope.",
+          "sectionId": "sack-of-rome",
+          "reviewFlags": []
+        },
+        {
+          "claim": "The Romans agreed to pay the Gauls a ransom of a hundred pounds of gold.",
+          "answer": false,
+          "why": "Famine and disease forced a deal of a thousand pounds of gold.",
+          "sectionId": "sack-of-rome",
+          "reviewFlags": []
+        },
+        {
+          "claim": "The Greek historians Polybius and Diodorus both describe Camillus rescuing Rome.",
+          "answer": false,
+          "why": "Neither Polybius nor Diodorus mentions Camillus, which is why many historians see his rescue as a later addition.",
+          "sectionId": "sack-reliability",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Rome's huge new wall was built of yellow stone quarried in Veii's territory.",
+          "answer": true,
+          "why": "The old wall used crumbly local stone; the new 11 km wall used better yellow stone from Veii's land.",
+          "sectionId": "rome-after-the-sack",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Plebeians Fight for Power",
+      "blurb": "Offices, laws and the long road to sharing power.",
+      "cards": [
+        {
+          "claim": "Livy said the consular tribunate was created as a concession because plebeians could hold it.",
+          "answer": true,
+          "why": "Livy, writing centuries later, presented the office as a concession open to plebeians.",
+          "sectionId": "conflict-of-the-orders",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Between 444 and 401 BC, about half of all consular tribunes were plebeians.",
+          "answer": false,
+          "why": "Only two of about a hundred consular tribunes in those years were plebeians.",
+          "sectionId": "conflict-of-the-orders",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Licinius and Sextius blocked the election of consular tribunes for five years.",
+          "answer": true,
+          "why": "They struck back at the patricians' vetoes this way, giving in only in 370 BC when Velitrae attacked.",
+          "sectionId": "licinius-and-sextius",
+          "reviewFlags": []
+        },
+        {
+          "claim": "The land law limited any individual to about 3,000 acres of public land.",
+          "answer": false,
+          "why": "The limit was about 300 acres, and no one could graze more than 100 cattle on public land.",
+          "sectionId": "licinian-laws",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Licinius himself was later fined for breaking his own land limit.",
+          "answer": true,
+          "why": "Such laws were easy to dodge, and Licinius was later fined for exceeding his own limit.",
+          "sectionId": "licinian-laws",
+          "reviewFlags": []
+        },
+        {
+          "claim": "The new law put ten priests, five of them plebeians, in charge of the Sibylline Books.",
+          "answer": true,
+          "why": "They replaced the two patrician guardians, breaking the patrician monopoly on priesthoods for the first time.",
+          "sectionId": "licinian-laws",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Under the compromise of 366 BC, the new praetor had to be a plebeian.",
+          "answer": false,
+          "why": "The nobles accepted a plebeian consul, and in return the plebeians agreed the praetor would be a patrician.",
+          "sectionId": "first-plebeian-consul",
+          "reviewFlags": []
+        },
+        {
+          "claim": "From 355 to 343 BC, one consul each year was always a plebeian.",
+          "answer": false,
+          "why": "In those years both consuls were patricians; regular sharing began only after Genucius's law of 342 BC.",
+          "sectionId": "modern-verdict",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "oddOneOut": [
+    {
+      "items": [
+        "Creating the praetorship",
+        "Easing debt",
+        "Limiting public land holdings",
+        "Restoring the consulship"
+      ],
+      "oddIndex": 0,
+      "why": "Three were bills Licinius and Sextius put to the Plebeian Council. The patrician praetorship came later, as Livy's compromise of 366 BC.",
+      "sectionId": "licinius-and-sextius",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Veii",
+        "Ardea",
+        "Clusium",
+        "Caere"
+      ],
+      "oddIndex": 1,
+      "why": "Veii, Clusium and Caere are described as Etruscan cities. Ardea is simply a town south of Rome, where Camillus lived in exile.",
+      "sectionId": "sack-reliability",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Vowed a tenth of spoils to Apollo",
+        "Invited Juno to move to Rome",
+        "Attacked walls from every side",
+        "Recalled from exile at Ardea"
+      ],
+      "oddIndex": 3,
+      "why": "The first three are what Camillus did to take Veii. His recall from exile at Ardea belongs to Livy's story of the Gallic sack.",
+      "sectionId": "siege-of-veii",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Fighting men",
+        "Able-bodied senators",
+        "Old former officeholders",
+        "Vestal Virgins"
+      ],
+      "oddIndex": 2,
+      "why": "Fighting men and senators withdrew to the Capitoline and the Vestals fled to Caere. The old ex-officials stayed outside their houses and were massacred.",
+      "sectionId": "sack-of-rome",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Chief judge",
+        "Presided over criminal trials",
+        "Guarded the Sibylline Books",
+        "Could command an army"
+      ],
+      "oddIndex": 2,
+      "why": "Three were roles of the praetor. The Sibylline Books were guarded by priests, first two patricians, later ten.",
+      "sectionId": "first-plebeian-consul",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Pitched no camp",
+        "Launched a night attack",
+        "Failed to consult the gods",
+        "Stretched the line too thin"
+      ],
+      "oddIndex": 1,
+      "why": "Livy blames the Allia defeat on three Roman errors. The night attack was the Gauls' later climb up the Capitoline.",
+      "sectionId": "battle-of-the-allia",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Plague",
+        "War",
+        "Famine",
+        "Elections"
+      ],
+      "oddIndex": 3,
+      "why": "The Sibylline Books were consulted in times of plague, famine or war. Elections are not mentioned as an occasion.",
+      "sectionId": "licinian-laws",
+      "reviewFlags": []
+    }
+  ],
+  "whoAmI": [
+    {
+      "name": "Faces of the Gallic Crisis",
+      "blurb": "Romans and Gauls caught up in the fall of Rome.",
+      "people": [
+        {
+          "name": "Marcus Furius Camillus",
+          "options": [
+            "Marcus Furius Camillus",
+            "Marcus Manlius",
+            "Publius Manlius Capitolinus",
+            "Lucius Albinus"
+          ],
+          "clues": [
+            "Many modern historians think my most famous rescue was added to the story later.",
+            "Livy says Rome recalled me from exile at Ardea to be dictator.",
+            "I vowed a tenth of the spoils to Apollo and invited Juno to move to Rome.",
+            "As dictator, I captured Veii by sending troops through a tunnel."
+          ],
+          "sectionId": "siege-of-veii",
+          "reviewFlags": []
+        },
+        {
+          "name": "Brennus",
+          "options": [
+            "Brennus",
+            "Aruns",
+            "Dionysius I",
+            "Marcus Papirius"
+          ],
+          "clues": [
+            "My warriors struck the Roman reserves on a hill, and panic spread.",
+            "I led the Gauls at the battle where many Romans drowned in the Tiber.",
+            "When the Romans complained about rigged weights, I threw my sword onto the scales.",
+            "I declared, 'Woe to the vanquished!'"
+          ],
+          "sectionId": "sack-of-rome",
+          "reviewFlags": []
+        },
+        {
+          "name": "Marcus Manlius",
+          "options": [
+            "Marcus Manlius",
+            "Marcus Papirius",
+            "Lucius Albinus",
+            "Marcus Furius Camillus"
+          ],
+          "clues": [
+            "I had once served as consul of Rome.",
+            "I was among the defenders on the Capitoline, Rome's citadel hill, during the siege.",
+            "One night I was roused while the guards and dogs slept.",
+            "Woken by Juno's honking geese, I hurled the first Gallic climber down the slope."
+          ],
+          "sectionId": "sack-of-rome",
+          "reviewFlags": []
+        },
+        {
+          "name": "Lucius Albinus",
+          "options": [
+            "Lucius Albinus",
+            "Marcus Papirius",
+            "Marcus Manlius",
+            "Aruns"
+          ],
+          "clues": [
+            "Aristotle's 'certain Lucius' who saved Rome might have been me.",
+            "I was no magistrate, just a citizen passing by as Rome emptied.",
+            "I carried sacred objects to Caere, an allied Etruscan city on the coast.",
+            "I gave the Vestal Virgins a lift on my wagon."
+          ],
+          "sectionId": "sack-of-rome",
+          "reviewFlags": [
+            "a clue contains the person’s name"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Who Told the Story?",
+      "blurb": "Ancient and modern writers who shaped how we see these events.",
+      "people": [
+        {
+          "name": "Livy",
+          "options": [
+            "Livy",
+            "Polybius",
+            "Diodorus Siculus",
+            "T. J. Cornell"
+          ],
+          "clues": [
+            "I claimed Rome's tangled streets came from hasty rebuilding after the Gauls burned it.",
+            "I called some tribunes 'slaves of the nobility'.",
+            "I wrote that the patricians and plebeians were 'at length brought into harmony'.",
+            "I am the Roman historian in whose story Camillus arrives just in time to cancel the ransom."
+          ],
+          "sectionId": "sack-of-rome",
+          "reviewFlags": []
+        },
+        {
+          "name": "Diodorus Siculus",
+          "options": [
+            "Diodorus Siculus",
+            "Livy",
+            "T. J. Cornell",
+            "Aristotle"
+          ],
+          "clues": [
+            "Like Polybius, I never mention Camillus in the story of the sack.",
+            "In my account, the Gauls had gone on to southern Italy before they were beaten.",
+            "I was a Greek historian writing about Rome's past.",
+            "I say an Etruscan army defeated the Gauls on their way back from southern Italy."
+          ],
+          "sectionId": "sack-reliability",
+          "reviewFlags": []
+        },
+        {
+          "name": "T. J. Cornell",
+          "options": [
+            "T. J. Cornell",
+            "Livy",
+            "Polybius",
+            "Diodorus Siculus"
+          ],
+          "clues": [
+            "I think the Gauls left most of Rome standing and went home once paid.",
+            "I doubt the tale of Aruns's revenge and suspect the Senones were mercenaries.",
+            "I argue the new plebeian leaders joined the patricians in a new aristocracy.",
+            "I am a modern historian who trusts very little of Livy's dramatic story."
+          ],
+          "sectionId": "modern-verdict",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "places": [
+    {
+      "name": "Veii",
+      "wikipediaTitle": "Veii",
+      "lat": 42.02333333,
+      "lon": 12.38972222,
+      "why": "Rome's great Etruscan rival, captured by Camillus through a tunnel around 396 BC.",
+      "sectionId": "siege-of-veii",
+      "coordinates": "Wikipedia: Veii",
+      "reviewFlags": []
+    },
+    {
+      "name": "Clusium",
+      "wikipediaTitle": "Chiusi",
+      "lat": 43.01666667,
+      "lon": 11.95,
+      "why": "The Etruscan town, now Chiusi, whose appeal to Rome against the Senones led to the Gallic war.",
+      "sectionId": "battle-of-the-allia",
+      "coordinates": "Wikipedia: Chiusi",
+      "reviewFlags": []
+    },
+    {
+      "name": "Caere",
+      "wikipediaTitle": "Caere",
+      "lat": 42.00166667,
+      "lon": 12.10833333,
+      "why": "Rome's coastal Etruscan ally, where the Vestal Virgins took the sacred objects during the sack.",
+      "sectionId": "sack-of-rome",
+      "coordinates": "Wikipedia: Caere",
+      "reviewFlags": []
+    },
+    {
+      "name": "Ardea",
+      "wikipediaTitle": "Ardea, Lazio",
+      "lat": 41.6122,
+      "lon": 12.5414,
+      "why": "The town south of Rome where, according to Livy, Camillus was living in exile when recalled as dictator.",
+      "sectionId": "sack-reliability",
+      "coordinates": "model estimate",
+      "reviewFlags": [
+        "no coordinates on Wikipedia \"Ardea, Lazio\"; position is the model's estimate"
+      ]
+    },
+    {
+      "name": "Velitrae",
+      "wikipediaTitle": "Velletri",
+      "lat": 41.68666667,
+      "lon": 12.7775,
+      "why": "The Volscian town whose attack in 370 BC made Licinius and Sextius end their block on elections.",
+      "sectionId": "licinius-and-sextius",
+      "coordinates": "Wikipedia: Velletri",
+      "reviewFlags": []
+    },
+    {
+      "name": "Cumae",
+      "wikipediaTitle": "Cumae",
+      "lat": 40.84861111,
+      "lon": 14.05361111,
+      "why": "The Greek city near Naples where, by tradition, King Tarquinius Superbus bought the Sibylline Books.",
+      "sectionId": "licinian-laws",
+      "coordinates": "Wikipedia: Cumae",
+      "reviewFlags": []
+    },
+    {
+      "name": "Rimini",
+      "wikipediaTitle": "Rimini",
+      "lat": 44.05944444,
+      "lon": 12.56833333,
+      "why": "The Adriatic coast around modern Rimini was where the Senones, the Gauls who sacked Rome, had settled.",
+      "sectionId": "battle-of-the-allia",
+      "coordinates": "Wikipedia: Rimini",
+      "reviewFlags": []
+    }
+  ]
+}

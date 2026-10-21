@@ -1,0 +1,191 @@
+{
+  "batchName": "Early Republic: The Samnite Wars (367-290 BCE) - Medium Batch 2",
+  "chapterName": "Early Republic: The Samnite Wars (367-290 BCE)",
+  "difficulty": 2,
+  "batchOrder": 4,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "According to Livy, which hard-fought Roman victory in 310 BC first broke Etruscan might?",
+      "options": [
+        "Sentinum",
+        "Cominium",
+        "Lake Vadimo",
+        "Sutrium",
+        "Suessula"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#second-war-turning",
+      "explanation": "Livy places the victory at Lake Vadimo in 310 BC. It followed Fabius' daring march through the Ciminian Forest.",
+      "sourceQuote": "In 310 BC, Livy says, a hard-fought victory at Lake Vadimo first broke Etruscan might.",
+      "reviewFlags": []
+    },
+    {
+      "question": "The speech Livy gives the Campanian ambassadors closely resembles a scene in which earlier historian?",
+      "options": [
+        "Polybius",
+        "Dionysius of Halicarnassus",
+        "Diodorus",
+        "Thucydides",
+        "Herodotus"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#doubting-livy",
+      "explanation": "The speech is modelled on Thucydides' scene in which envoys from Corcyra beg Athens for help. This is one reason modern historians treat Livy's account cautiously.",
+      "sourceQuote": "His Campanian ambassadors give a speech closely modelled on a scene in Thucydides, the Greek historian of the Peloponnesian War, where envoys from Corcyra beg Athens for help.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which rich city, just north of Naples, was the chief city of the Campanians?",
+      "options": [
+        "Capua",
+        "Cumae",
+        "Suessula",
+        "Cales",
+        "Luceria"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#samnites-and-rome",
+      "explanation": "Capua was the chief Campanian city. When Rome made peace in 341 BC it kept its alliance with Capua, a far greater prize than the Sidicini.",
+      "sourceQuote": "By now, though, they had their own identity and their own rich cities, chief among them Capua, just north of Naples.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which Samnite commander took an army north to rally the Etruscans during the Third Samnite War?",
+      "options": [
+        "Herennius Pontius",
+        "Spurius Carvilius",
+        "Lucius Papirius",
+        "Gellius Egnatius",
+        "Gaius Pontius"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#third-war-sentinum",
+      "explanation": "Knowing they could not win alone, the Samnites sent Gellius Egnatius north to build a coalition. By 295 BC Rome faced four peoples at once.",
+      "sourceQuote": "The Samnites knew they could not win alone, so their commander Gellius Egnatius took an army north to rally the Etruscans.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How was the mutiny of Roman garrison troops in Campania in 342 BC ended, according to the sources?",
+      "options": [
+        "Valerius, named dictator, talked them down peacefully",
+        "The Campanians handed the mutineers over to Rome",
+        "The ringleaders were executed by the consuls",
+        "The troops were disbanded and sent home",
+        "The Senate paid them to return to duty"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#first-war-campaigns",
+      "explanation": "Valerius was appointed dictator, an emergency ruler with sweeping powers, and ended the mutiny without bloodshed. The sources say the troops had been seduced by Campanian luxury.",
+      "sourceQuote": "Valerius, named dictator, an emergency ruler with sweeping powers, talked them down without bloodshed.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Where did Rome settle 2,500 colonists in the 330s BC, on key routes towards Capua and the Samnite mountains?",
+      "options": [
+        "Sutrium",
+        "Cales",
+        "Bovianum",
+        "Suessula",
+        "Luceria"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#second-war-outbreak",
+      "explanation": "Rome planted 2,500 colonists at Cales as it kept pushing into the region. Tensions grew further with the colony at Fregellae in 328 BC.",
+      "sourceQuote": "Through the 330s Rome kept pushing into the region, settling 2,500 colonists at Cales, a town on key routes towards Capua and the Samnite mountains.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did Rome's allies receive in return for supplying troops? (select all that apply)",
+      "options": [
+        "Rome paying their soldiers' costs",
+        "Roman backing for their ruling families",
+        "Exemption from sending soldiers",
+        "A share of the spoils",
+        "Roman protection"
+      ],
+      "correctAnswers": [
+        1,
+        3,
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#roman-alliance-system",
+      "explanation": "Allies shared the spoils, which could be considerable, enjoyed Roman protection, and could count on Rome backing their ruling families in times of trouble. They did, however, have to send and pay for their own soldiers.",
+      "sourceQuote": "In return they shared the spoils, which could be considerable, and enjoyed Roman protection.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did the Samnite commander Gaius Pontius lure the Roman army towards the Caudine Forks?",
+      "options": [
+        "By sending a deserter to betray the Samnite camp",
+        "By having fake shepherds claim Luceria was under attack",
+        "By forging a letter from the Roman Senate",
+        "By offering to surrender Bovianum",
+        "By attacking Capua and drawing the consuls south"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#caudine-forks",
+      "explanation": "Pontius sent soldiers disguised as shepherds to spread a false rumour about Luceria, a Roman ally in Apulia. The consuls took the quickest route, straight into the trap.",
+      "sourceQuote": "The Samnite commander Gaius Pontius sent soldiers disguised as shepherds to spread a false rumour that Luceria, a Roman ally in Apulia in south-eastern Italy, was under attack.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Who were Rome's fetials, who sought redress from the Samnites before war in 343 BC?",
+      "options": [
+        "Magistrates elected to lead armies",
+        "Priests handling formal demands and declarations of war",
+        "Senators who negotiated peace treaties",
+        "Envoys chosen from allied cities",
+        "Officers who commanded garrison troops"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#first-war-outbreak",
+      "explanation": "The fetials were priests in charge of formal demands and declarations of war. When the Samnites refused redress, war followed.",
+      "sourceQuote": "Rome's fetials, priests who handled formal demands and declarations of war, sought redress, were refused, and war followed.",
+      "reviewFlags": []
+    },
+    {
+      "question": "From whom were the Campanians who farmed the plain below the Apennines descended?",
+      "options": [
+        "Latin colonists",
+        "Greek colonists",
+        "Samnite migrants",
+        "Gallic invaders",
+        "Etruscan settlers"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#samnites-and-rome",
+      "explanation": "The Campanians descended from Samnite migrants, but by the mid-fourth century BC they had their own identity. They also had their own rich cities.",
+      "sourceQuote": "The Campanians who farmed the plain below were descended from Samnite migrants.",
+      "reviewFlags": []
+    }
+  ]
+}

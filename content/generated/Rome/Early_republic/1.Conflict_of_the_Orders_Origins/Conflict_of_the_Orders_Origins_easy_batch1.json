@@ -1,0 +1,181 @@
+{
+  "batchName": "Early Republic: The Conflict of the Orders - Origins (509-450 BCE) - Easy Batch 1",
+  "chapterName": "Early Republic: The Conflict of the Orders - Origins (509-450 BCE)",
+  "difficulty": 1,
+  "batchOrder": 1,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "What were the resolutions passed by the Plebeian Council called?",
+      "options": [
+        "Decrees of the curiae",
+        "Plebiscites",
+        "Senatus consulta",
+        "Edicts"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#plebeian-council",
+      "explanation": "The Plebeian Council passed plebiscites, which at first bound only plebeians. Any tribune could summon the council and put proposals before it.",
+      "sourceQuote": "It passed resolutions called plebiscites, which at first bound only plebeians.",
+      "reviewFlags": []
+    },
+    {
+      "question": "In what year were the Twelve Tables formally published?",
+      "options": [
+        "509 BC",
+        "471 BC",
+        "387 BC",
+        "449 BC"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#twelve-tables",
+      "explanation": "The Twelve Tables, the lasting legacy of the decemvirs, were formally published in 449 BC. Rights and duties once kept in priests' heads became visible to all.",
+      "sourceQuote": "The lasting legacy of the decemvirs, the commission appointed to write down Roman law, was the Twelve Tables, formally published in 449 BC.",
+      "reviewFlags": []
+    },
+    {
+      "question": "In what year, according to Roman tradition, did the Romans drive out their last king and found a republic?",
+      "options": [
+        "494 BC",
+        "449 BC",
+        "387 BC",
+        "509 BC"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#patricians-and-plebeians",
+      "explanation": "Roman tradition dates the expulsion of the last king, Tarquinius Superbus, to 509 BC. In place of a monarch, the Republic was run by elected magistrates alongside the Senate.",
+      "sourceQuote": "In 509 BC, according to Roman tradition, the Romans drove out their last king, Tarquinius Superbus, and founded a republic.",
+      "reviewFlags": []
+    },
+    {
+      "question": "A plebeian secession worked much like which modern form of protest?",
+      "options": [
+        "A sit-in at parliament",
+        "A tax boycott",
+        "A general strike",
+        "A hunger strike"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#first-secession",
+      "explanation": "A secession was a mass walkout that functioned like a general strike. With the plebs gone, the city lost its food and labour.",
+      "sourceQuote": "This mass walkout, called a secession, worked like a general strike.",
+      "reviewFlags": []
+    },
+    {
+      "question": "At worst, what could happen to a Roman plebeian who could not repay his debts?",
+      "options": [
+        "He could be enslaved",
+        "He could be exiled to Sicily",
+        "He could be forced into the priesthood",
+        "He could be stripped of his tribe"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#debt-crisis",
+      "explanation": "Money-lenders could beat and imprison debtors, and some debtors were even enslaved. With patricians holding every office, plebeians had no remedy inside the system.",
+      "sourceQuote": "Money-lenders could beat and imprison debtors, and some debtors were even enslaved.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What came of tribunes' 5th-century BC proposals to share out newly conquered land among the plebs?",
+      "options": [
+        "They succeeded after the first secession",
+        "They succeeded in 471 BC",
+        "They were passed but never enforced",
+        "None of them succeeded"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#plebeian-council",
+      "explanation": "Tribunes repeatedly used the Plebeian Council to campaign for land throughout the 5th century BC. Every one of these attempts failed.",
+      "sourceQuote": "Throughout the 5th century BC they proposed sharing out newly conquered territory among the plebs, but none of these attempts succeeded.",
+      "reviewFlags": [
+        "fact-check: The answer 'none of them succeeded' rests on the chapter's overstatement: the source mentions only 'a number of unsuccessful attempts', not that every attempt failed."
+      ]
+    },
+    {
+      "question": "Where did the plebeian soldiers withdraw to during the first secession of 494 BC?",
+      "options": [
+        "The Capitoline Hill",
+        "The Mons Sacer, or Sacred Mount",
+        "The port of Ostia",
+        "The Janiculum Hill"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#first-secession",
+      "explanation": "They withdrew to the Mons Sacer, a hill about three miles from the city, built simple defences and waited. Their departure shut shops and stopped trade in Rome.",
+      "sourceQuote": "Instead they withdrew to the Mons Sacer, or Sacred Mount, a hill about three miles from the city, built simple defences and waited.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What was the first office of the Roman state open to plebeians?",
+      "options": [
+        "Tribune of the plebs",
+        "Censor",
+        "Praetor",
+        "Consul"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#tribunes-of-the-plebs",
+      "explanation": "The tribune of the plebs was the great prize of the first secession of 494 BC. Only plebeians could hold it, and its purpose was to shield ordinary citizens from the patrician consuls.",
+      "sourceQuote": "The great prize of the first secession of 494 BC was the tribune of the plebs, the first office of the Roman state open to plebeians.",
+      "reviewFlags": []
+    },
+    {
+      "question": "According to Livy, on what were the Twelve Tables inscribed for public display?",
+      "options": [
+        "Marble",
+        "Wax tablets",
+        "Papyrus scrolls",
+        "Bronze"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#twelve-tables",
+      "explanation": "Livy says they were inscribed on bronze and displayed publicly so every Roman could read them. The original tablets are now lost.",
+      "sourceQuote": "According to Livy they were inscribed on bronze and displayed publicly so every Roman could read them.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Under the Twelve Tables, when did a court hearing have to end?",
+      "options": [
+        "When the Senate met",
+        "At sunset",
+        "At midday",
+        "After three days"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#twelve-tables",
+      "explanation": "Tables I and II set out trial procedure in detail, including the rule that hearings ended at sunset. The laws were practical and often harsh.",
+      "sourceQuote": "Tables I and II set out how trials worked, down to a rule that hearings ended at sunset.",
+      "reviewFlags": []
+    }
+  ]
+}

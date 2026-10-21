@@ -1,0 +1,191 @@
+{
+  "batchName": "Early Republic: The Conflict of the Orders - Origins (509-450 BCE) - Medium Batch 1",
+  "chapterName": "Early Republic: The Conflict of the Orders - Origins (509-450 BCE)",
+  "difficulty": 2,
+  "batchOrder": 4,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "What made the second board of decemvirs notorious?",
+      "options": [
+        "They refused to step down when their term ended",
+        "They declared war on Athens",
+        "They abolished the Senate",
+        "They burned the first ten tables",
+        "They made a plebeian king"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#decemvirs-and-verginia",
+      "explanation": "The second board, appointed to add two more tables, clung to power past its term. According to tradition, they even had a critic, a soldier and former tribune, killed.",
+      "sourceQuote": "Its members refused to step down when their term ended, and according to tradition they had a critic, a soldier and former tribune, killed.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Who advised the plebeian soldiers to refuse to march in 494 BC?",
+      "options": [
+        "Agrippa Menenius Lanatus",
+        "Gaius Licinius",
+        "Lucius Sicinius Vellutus",
+        "Volero Publilius",
+        "Lucius Verginius"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#first-secession",
+      "explanation": "The plebeian Lucius Sicinius Vellutus advised the walkout to the Sacred Mount. He was later chosen as one of the early tribunes' colleagues.",
+      "sourceQuote": "Advised by a plebeian named Lucius Sicinius Vellutus, the plebeian soldiers refused to march.",
+      "reviewFlags": []
+    },
+    {
+      "question": "When did the habit of calling plebeians simply the 'lower class' begin?",
+      "options": [
+        "In the late Republic, centuries afterwards",
+        "At the founding of the Republic",
+        "After the Twelve Tables were published",
+        "During the first secession",
+        "In the time of the kings"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#patricians-and-plebeians",
+      "explanation": "The label 'lower class' dates only from the late Republic. In fact many plebeians are known to have been wealthy landowners.",
+      "sourceQuote": "The habit of calling them simply the 'lower class' dates only from the late Republic, centuries afterwards.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Why, according to tradition, did the Senate choose Agrippa Menenius Lanatus to negotiate with the seceding plebs?",
+      "options": [
+        "He had written Rome's first laws",
+        "He was a former consul the plebs liked",
+        "He was the chief pontifex",
+        "He commanded the army against the Volsci",
+        "He was the plebeians' own tribune"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#first-secession",
+      "explanation": "Menenius was a former consul popular with the plebs, sent to talk them round. He used a fable about the body's limbs and belly to argue for cooperation.",
+      "sourceQuote": "According to tradition, the Senate sent Agrippa Menenius Lanatus, a former consul the plebs liked, to talk them round.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Why did meeting by curiae disadvantage the early Plebeian Council?",
+      "options": [
+        "Curiae met only once a year",
+        "Curiae could only meet outside the city",
+        "It required votes to be unanimous",
+        "Curiae excluded all soldiers",
+        "It kept plebeians dependent on their patrician patrons"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#plebeian-council",
+      "explanation": "The curiae dated from the time of the kings and tied humbler families to powerful patrician patrons. This also let patricians sway the election of tribunes.",
+      "sourceQuote": "That kept them dependent on their patrician patrons, powerful men to whom humbler families owed loyalty.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which roles did plebeians fill in the early Roman Republic? (select all that apply)",
+      "options": [
+        "Serving as pontifices",
+        "Holding the consulship",
+        "Farming the land",
+        "Running shops and workshops",
+        "Filling the ranks of the army"
+      ],
+      "correctAnswers": [
+        2,
+        3,
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#patricians-and-plebeians",
+      "explanation": "Plebeians, the great majority of citizens, farmed, ran shops and workshops, and made up the army. The consulship and other offices belonged to the patricians.",
+      "sourceQuote": "They farmed the land, ran the shops and workshops, and filled the ranks of the army.",
+      "reviewFlags": []
+    },
+    {
+      "question": "According to Livy, how did the consul Appius respond to the uproar over debt in 495 BC?",
+      "options": [
+        "He issued decrees backing creditors' right to imprison debtors",
+        "He cancelled all debts",
+        "He handed the case to the pontifices",
+        "He created the office of tribune",
+        "He gave the officer back his farm"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#debt-crisis",
+      "explanation": "Instead of offering relief, Appius sided with the creditors. With patricians holding every office, the plebeians could find no remedy inside the system.",
+      "sourceQuote": "Instead of relief, according to Livy, the consul Appius issued decrees backing creditors' right to imprison debtors.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did Table XI of the Twelve Tables ban?",
+      "options": [
+        "Selling land to foreigners",
+        "Lending money at interest",
+        "Plebeians holding office",
+        "Burials inside the city",
+        "Marriage between patricians and plebeians"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#twelve-tables",
+      "explanation": "Table XI, one of the two supplementary tables, banned patrician-plebeian intermarriage. Table XII covered damage done by slaves.",
+      "sourceQuote": "Of the two supplementary tables, XI banned marriage between patricians and plebeians, and XII covered damage done by slaves.",
+      "reviewFlags": []
+    },
+    {
+      "question": "In Livy's story of the indebted officer, which enemy burned his farm and stole his goods?",
+      "options": [
+        "The Etruscans",
+        "The Aequi",
+        "The Sabines",
+        "The Gauls",
+        "The Volsci"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#debt-crisis",
+      "explanation": "During a war against the Sabines, a hill people north-east of Rome, the enemy burned his farm. Back home he fell into crushing debt and was eventually jailed and whipped.",
+      "sourceQuote": "During a war against the Sabines, a hill people north-east of Rome, the enemy had burned his farm and stolen his goods.",
+      "reviewFlags": []
+    },
+    {
+      "question": "In the view of sceptics like Richard E. Mitchell, where did the story of the conflict come from?",
+      "options": [
+        "Etruscan propaganda against Rome",
+        "Patrician family records",
+        "Medieval monks copying Livy",
+        "Greek historians inventing Roman origins",
+        "Late Republic Romans reading their own class struggles back into the past"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#historicity",
+      "explanation": "Sceptics argue that Romans of the late Republic, living through violent class struggles, projected those battles onto their distant past. Mitchell argues there was no conflict at all.",
+      "sourceQuote": "In this view, Romans of the late Republic, living through violent class struggles of their own, read those battles back into their distant past.",
+      "reviewFlags": []
+    }
+  ]
+}

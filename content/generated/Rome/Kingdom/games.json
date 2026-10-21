@@ -1,0 +1,658 @@
+{
+  "chapterName": "Early Rome & the Kingdom: The Foundation of an Empire (753-509 BCE)",
+  "model": "claude-opus-5-5",
+  "briefing": {
+    "title": "Rome, 753–509 BC",
+    "paragraphs": [
+      "On a cluster of steep hills beside a ford over the Tiber River in central Italy, scattered villages are slowly merging into a city. Romans will later claim it was founded in 753 BC by Romulus, a twin raised by a she-wolf, though historians treat that as myth.",
+      "For about two centuries Rome is ruled by kings chosen for life: peacemakers, warriors, builders and Etruscan newcomers from the north. Who holds power, and how Romans finally drive out a tyrant, will shape the republic to come."
+    ]
+  },
+  "timelines": [
+    {
+      "name": "Kings to Republic",
+      "blurb": "Four big moments, from legendary founding to disaster.",
+      "events": [
+        {
+          "label": "Romulus founds Rome on the Palatine",
+          "when": "753 BC (legend)",
+          "year": -753,
+          "fact": "The scholar Varro worked out this official date, celebrated on 21 April, but most historians treat the founding story as myth.",
+          "sectionId": "romulus-and-remus",
+          "reviewFlags": []
+        },
+        {
+          "label": "Numa adds January and February",
+          "when": "Under Numa, 2nd king",
+          "year": -700,
+          "fact": "Legend credits the peaceful Sabine king Numa Pompilius with creating a twelve-month calendar.",
+          "sectionId": "numa-tullus-ancus",
+          "reviewFlags": []
+        },
+        {
+          "label": "Revolt drives out the last king",
+          "when": "509 BC",
+          "year": -509,
+          "fact": "Rebels shut the gates on Tarquin the Proud while he was besieging the town of Ardea.",
+          "sectionId": "birth-of-the-republic",
+          "reviewFlags": []
+        },
+        {
+          "label": "Gauls sack Rome",
+          "when": "390 BC",
+          "year": -390,
+          "fact": "Ancient writers blamed these northern invaders for destroying many records of the age of kings.",
+          "sectionId": "how-reliable",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "The Seven Kings",
+      "blurb": "Put the reigns of Rome's traditional kings in order.",
+      "events": [
+        {
+          "label": "Romans seize the Sabine women",
+          "when": "Under Romulus, 1st king",
+          "year": -740,
+          "fact": "The war that followed ended when the captured women threw themselves between the armies.",
+          "sectionId": "romulus-the-king",
+          "reviewFlags": []
+        },
+        {
+          "label": "Numa closes the doors of Janus",
+          "when": "Under Numa, 2nd king",
+          "year": -700,
+          "fact": "Closing the temple of Janus, a god of beginnings, showed that Rome was at peace.",
+          "sectionId": "numa-tullus-ancus",
+          "reviewFlags": []
+        },
+        {
+          "label": "Tullus destroys Alba Longa",
+          "when": "Under Tullus Hostilius, 3rd king",
+          "year": -660,
+          "fact": "The warlike king moved the people of this Latin town, Romulus's legendary birthplace, to Rome.",
+          "sectionId": "numa-tullus-ancus",
+          "reviewFlags": []
+        },
+        {
+          "label": "Ancus founds the port of Ostia",
+          "when": "Under Ancus Marcius, 4th king",
+          "year": -630,
+          "fact": "Numa's grandson founded Ostia at the mouth of the Tiber.",
+          "sectionId": "numa-tullus-ancus",
+          "reviewFlags": []
+        },
+        {
+          "label": "Work begins on the Great Sewer",
+          "when": "Under Tarquinius Priscus, 5th king",
+          "year": -600,
+          "fact": "The Cloaca Maxima drained marshy ground between the hills, making room for the Roman Forum.",
+          "sectionId": "tarquinius-priscus",
+          "reviewFlags": []
+        },
+        {
+          "label": "Rome holds its first census",
+          "when": "Under Servius Tullius, 6th king",
+          "year": -560,
+          "fact": "Servius sorted citizens into five classes by wealth, giving the rich the most voting influence.",
+          "sectionId": "servius-tullius",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Huts, Kings and Historians",
+      "blurb": "From the first traces on the hills to the people who wrote about them.",
+      "events": [
+        {
+          "label": "Bronze Age settlers on the Capitoline",
+          "when": "Possibly 1700 BC",
+          "year": -1700,
+          "fact": "Archaeologists have found traces of Bronze Age settlement on the Capitoline Hill.",
+          "sectionId": "origins",
+          "reviewFlags": []
+        },
+        {
+          "label": "The Forum valley is a cemetery",
+          "when": "By 1000 BC",
+          "year": -1000,
+          "fact": "The valley that became Rome's great public square was first used for burials.",
+          "sectionId": "origins",
+          "reviewFlags": []
+        },
+        {
+          "label": "A wall rises on the Palatine",
+          "when": "Around 730–720 BC",
+          "year": -725,
+          "fact": "About the same time, burials in the Forum stopped and parts of it were paved over.",
+          "sectionId": "origins",
+          "reviewFlags": []
+        },
+        {
+          "label": "Tarquin the Proud kills Servius",
+          "when": "End of the 6th king's 44-year reign",
+          "year": -534,
+          "fact": "Servius was murdered in a plot by his own daughter Tullia and her husband, the future last king.",
+          "sectionId": "servius-tullius",
+          "reviewFlags": []
+        },
+        {
+          "label": "Brutus and Collatinus become consuls",
+          "when": "509 BC",
+          "year": -509,
+          "fact": "Instead of a king, Rome now elected two consuls every year.",
+          "sectionId": "birth-of-the-republic",
+          "reviewFlags": []
+        },
+        {
+          "label": "Tarquin dies in exile at Cumae",
+          "when": "495 BC",
+          "year": -495,
+          "fact": "The last king died in Cumae, a Greek city near Naples, after failing to win back his throne.",
+          "sectionId": "birth-of-the-republic",
+          "reviewFlags": []
+        },
+        {
+          "label": "Fabius Pictor writes a history",
+          "when": "Around 200 BC",
+          "year": -200,
+          "fact": "This first history of Rome came about three centuries after the kings fell.",
+          "sectionId": "how-reliable",
+          "reviewFlags": []
+        },
+        {
+          "label": "Claudius links Servius with Mastarna",
+          "when": "1st century AD",
+          "year": 50,
+          "fact": "The emperor Claudius identified the sixth king with Mastarna, an Etruscan adventurer who became king of Rome.",
+          "sectionId": "servius-tullius",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "matchSets": [
+    {
+      "name": "Kings and Their Deeds",
+      "blurb": "Match each traditional king of Rome to what he is remembered for.",
+      "pairs": [
+        {
+          "name": "Romulus",
+          "match": "Chose 100 leading men, the fathers, as his advisers",
+          "sectionId": "romulus-the-king",
+          "reviewFlags": []
+        },
+        {
+          "name": "Numa Pompilius",
+          "match": "Founded the Vestal Virgins and the office of chief priest",
+          "sectionId": "numa-tullus-ancus",
+          "reviewFlags": []
+        },
+        {
+          "name": "Tullus Hostilius",
+          "match": "Warlike king who destroyed Alba Longa",
+          "sectionId": "numa-tullus-ancus",
+          "reviewFlags": []
+        },
+        {
+          "name": "Ancus Marcius",
+          "match": "Built Rome's first prison and founded a port at the Tiber's mouth",
+          "sectionId": "numa-tullus-ancus",
+          "reviewFlags": []
+        },
+        {
+          "name": "Servius Tullius",
+          "match": "Held the first census and sorted citizens into five wealth classes",
+          "sectionId": "servius-tullius",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Words of Royal Rome",
+      "blurb": "Match each term to its meaning.",
+      "pairs": [
+        {
+          "name": "Interrex",
+          "match": "Senator who served five days at a time to find a new king",
+          "sectionId": "how-kings-ruled",
+          "reviewFlags": []
+        },
+        {
+          "name": "Imperium",
+          "match": "Supreme power to command armies, govern and judge",
+          "sectionId": "how-kings-ruled",
+          "reviewFlags": []
+        },
+        {
+          "name": "Fasces",
+          "match": "Bundle of rods around an axe symbolising power to punish",
+          "sectionId": "how-kings-ruled",
+          "reviewFlags": []
+        },
+        {
+          "name": "Augur",
+          "match": "Priest who looked for signs that the gods approved",
+          "sectionId": "how-kings-ruled",
+          "reviewFlags": []
+        },
+        {
+          "name": "Cloaca Maxima",
+          "match": "The Great Sewer that drained marshy ground between the hills",
+          "sectionId": "tarquinius-priscus",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "trueFalseDecks": [
+    {
+      "name": "Legends and Early Kings",
+      "blurb": "Myth, founders and the first four kings.",
+      "cards": [
+        {
+          "claim": "Romulus and Remus were said to be fathered by Mars, the god of war.",
+          "answer": true,
+          "why": "Their mother Rhea Silvia was a Vestal Virgin, and legend made Mars the twins' father.",
+          "sectionId": "romulus-and-remus",
+          "reviewFlags": []
+        },
+        {
+          "claim": "In legend, the abandoned twins were suckled by a she-bear.",
+          "answer": false,
+          "why": "It was a she-wolf, in a cave called the Lupercal; a shepherd named Faustulus then raised them.",
+          "sectionId": "romulus-and-remus",
+          "reviewFlags": []
+        },
+        {
+          "claim": "The scholar Varro set Rome's founding date at 753 BC, celebrated on 21 April.",
+          "answer": true,
+          "why": "Varro worked out this official date, though most modern historians treat the founding story as myth.",
+          "sectionId": "romulus-and-remus",
+          "reviewFlags": []
+        },
+        {
+          "claim": "After the war over the Sabine women, Romulus shared the throne with the Sabine king Titus Tatius.",
+          "answer": true,
+          "why": "The two peoples united once the captured women threw themselves between the armies.",
+          "sectionId": "romulus-the-king",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Romulus chose 300 leading men as his advisers.",
+          "answer": false,
+          "why": "He chose 100 men, the fathers; their descendants became the patricians, Rome's hereditary aristocracy.",
+          "sectionId": "romulus-the-king",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Numa Pompilius was remembered as Rome's most warlike king.",
+          "answer": false,
+          "why": "Numa's 43-year reign was remembered for peace and religion; the warlike king was Tullus Hostilius.",
+          "sectionId": "numa-tullus-ancus",
+          "reviewFlags": []
+        },
+        {
+          "claim": "According to Livy, Jupiter burned Tullus Hostilius and his house with lightning.",
+          "answer": true,
+          "why": "The god struck when the dying king, long scornful of the gods, finally begged him for help.",
+          "sectionId": "numa-tullus-ancus",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Ancus Marcius founded the port of Naples.",
+          "answer": false,
+          "why": "Ancus founded Ostia, a port at the mouth of the Tiber.",
+          "sectionId": "numa-tullus-ancus",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Power, Builders and the Fall",
+      "blurb": "How kings ruled, what they built and how they fell.",
+      "cards": [
+        {
+          "claim": "After Romulus, Rome's kings inherited the throne from their fathers.",
+          "answer": false,
+          "why": "Tradition says they were chosen for life: an interrex found a candidate and the Curiate Assembly accepted or rejected him.",
+          "sectionId": "how-kings-ruled",
+          "reviewFlags": []
+        },
+        {
+          "claim": "A Roman king could not declare war without approval.",
+          "answer": true,
+          "why": "The Senate could rarely stop the king, but declaring war needed approval.",
+          "sectionId": "how-kings-ruled",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Tarquinius Priscus raised the Senate to 200 members.",
+          "answer": true,
+          "why": "He added 100 new members to the Senate.",
+          "sectionId": "tarquinius-priscus",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Servius Tullius sorted citizens into ten classes by wealth.",
+          "answer": false,
+          "why": "He sorted them into five classes, which became the basis of a new voting assembly.",
+          "sectionId": "servius-tullius",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Tarquin the Proud finished the great temple of Jupiter on the Capitoline Hill.",
+          "answer": true,
+          "why": "Work began under his father Tarquinius Priscus, who did not live to finish it.",
+          "sectionId": "tarquin-the-proud",
+          "reviewFlags": []
+        },
+        {
+          "claim": "The revolt of 509 BC broke out while the king was besieging Ardea.",
+          "answer": true,
+          "why": "With Tarquin away at Ardea, a town south of Rome, the rebels shut the gates and won over the army.",
+          "sectionId": "birth-of-the-republic",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Tarquin the Proud died in exile in Carthage.",
+          "answer": false,
+          "why": "He died in 495 BC at Cumae, a Greek city near Naples.",
+          "sectionId": "birth-of-the-republic",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Livy wrote the first history of Rome around 200 BC.",
+          "answer": false,
+          "why": "The first history of Rome was written by Fabius Pictor around 200 BC.",
+          "sectionId": "how-reliable",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "oddOneOut": [
+    {
+      "items": [
+        "Bronze Age traces on the Capitoline",
+        "Cemetery in the Forum valley",
+        "Huts on the Palatine",
+        "The she-wolf's cave, the Lupercal"
+      ],
+      "oddIndex": 3,
+      "why": "Three are found by archaeologists on Rome's site; the Lupercal, where a she-wolf suckled the twins, belongs to legend.",
+      "sectionId": "origins",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Rhea Silvia",
+        "Titus Tatius",
+        "Numitor",
+        "Amulius"
+      ],
+      "oddIndex": 1,
+      "why": "Rhea Silvia, Numitor and Amulius belong to the royal family of Alba Longa in the twins' legend; Titus Tatius was the Sabine king who shared Romulus's throne.",
+      "sectionId": "romulus-and-remus",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Interrex seeks a candidate",
+        "Census counts the citizens",
+        "Augur reads the gods' signs",
+        "Assembly grants imperium"
+      ],
+      "oddIndex": 1,
+      "why": "Three are steps in choosing a king; the census was a count of citizens introduced by Servius Tullius.",
+      "sectionId": "how-kings-ruled",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Tarquinius Priscus",
+        "Servius Tullius",
+        "Numa Pompilius",
+        "Lars Porsenna"
+      ],
+      "oddIndex": 2,
+      "why": "Tradition calls Tarquinius Priscus and Servius Etruscan-born, and Porsenna was an Etruscan king; Numa was a Sabine.",
+      "sectionId": "numa-tullus-ancus",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Cloaca Maxima",
+        "Temple of Diana",
+        "Circus Maximus",
+        "Roman Forum"
+      ],
+      "oddIndex": 1,
+      "why": "Tarquinius Priscus built the Great Sewer, laid out the Circus Maximus and began the Forum; Servius Tullius built the Temple of Diana.",
+      "sectionId": "tarquinius-priscus",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Sextus Tarquinius",
+        "Lucius Junius Brutus",
+        "Collatinus",
+        "Publius Valerius Poplicola"
+      ],
+      "oddIndex": 0,
+      "why": "Brutus, Collatinus and Poplicola led the revolt against the king; Sextus Tarquinius was the king's son whose crime against Lucretia sparked it.",
+      "sectionId": "birth-of-the-republic",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Tim Cornell",
+        "Arnaldo Momigliano",
+        "Mary Beard",
+        "Fabius Pictor"
+      ],
+      "oddIndex": 3,
+      "why": "Three are modern scholars who question the traditions; Fabius Pictor was the ancient Roman who wrote Rome's first history around 200 BC.",
+      "sectionId": "how-reliable",
+      "reviewFlags": []
+    }
+  ],
+  "whoAmI": [
+    {
+      "name": "Kings of Rome",
+      "blurb": "Which traditional king of Rome is speaking?",
+      "people": [
+        {
+          "name": "Numa Pompilius",
+          "options": [
+            "Numa Pompilius",
+            "Tullus Hostilius",
+            "Ancus Marcius",
+            "Romulus"
+          ],
+          "clues": [
+            "Rome waited a year after the previous king vanished before choosing me.",
+            "I was a Sabine, famed for my justice and piety.",
+            "I founded the Vestal Virgins and created the office of chief priest.",
+            "I closed the doors of the temple of Janus to show Rome was at peace."
+          ],
+          "sectionId": "numa-tullus-ancus",
+          "reviewFlags": []
+        },
+        {
+          "name": "Tullus Hostilius",
+          "options": [
+            "Tullus Hostilius",
+            "Ancus Marcius",
+            "Numa Pompilius",
+            "Tarquinius Priscus"
+          ],
+          "clues": [
+            "I reigned for 32 years.",
+            "I built a senate house that lasted for centuries.",
+            "Livy says Jupiter burned me and my house with lightning.",
+            "I destroyed Alba Longa and moved its people to Rome."
+          ],
+          "sectionId": "numa-tullus-ancus",
+          "reviewFlags": []
+        },
+        {
+          "name": "Tarquinius Priscus",
+          "options": [
+            "Tarquinius Priscus",
+            "Servius Tullius",
+            "Ancus Marcius",
+            "Tarquin the Proud"
+          ],
+          "clues": [
+            "I celebrated the first triumph, a victory parade for generals.",
+            "I added 100 members to the Senate, raising it to 200.",
+            "An earlier king adopted me as his son after I moved to Rome.",
+            "I built the Great Sewer and laid out the Circus Maximus."
+          ],
+          "sectionId": "tarquinius-priscus",
+          "reviewFlags": []
+        },
+        {
+          "name": "Servius Tullius",
+          "options": [
+            "Servius Tullius",
+            "Tarquinius Priscus",
+            "Tarquin the Proud",
+            "Ancus Marcius"
+          ],
+          "clues": [
+            "An emperor later claimed I was really an Etruscan adventurer called Mastarna.",
+            "I built the Temple of Diana on the Aventine Hill.",
+            "My own daughter Tullia helped plot my death.",
+            "I held Rome's first census and sorted citizens into five classes."
+          ],
+          "sectionId": "servius-tullius",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Downfall of the Kings",
+      "blurb": "Who is speaking about the end of Rome's monarchy?",
+      "people": [
+        {
+          "name": "Tarquin the Proud",
+          "options": [
+            "Tarquin the Proud",
+            "Tarquinius Priscus",
+            "Servius Tullius",
+            "Lars Porsenna"
+          ],
+          "clues": [
+            "I fought the Volsci and made Rome the leading power among the Latin cities.",
+            "I finished the great temple of Jupiter on the Capitoline Hill.",
+            "I died in exile at Cumae in 495 BC.",
+            "I seized the throne by murdering my father-in-law."
+          ],
+          "sectionId": "tarquin-the-proud",
+          "reviewFlags": []
+        },
+        {
+          "name": "Lucius Junius Brutus",
+          "options": [
+            "Lucius Junius Brutus",
+            "Collatinus",
+            "Publius Valerius Poplicola",
+            "Horatius"
+          ],
+          "clues": [
+            "I was the king's own nephew.",
+            "French revolutionaries named boys and towns after me.",
+            "I ordered the execution of my own sons for plotting to bring the king back.",
+            "I led the revolt of 509 BC and made the people swear never to accept a king."
+          ],
+          "sectionId": "birth-of-the-republic",
+          "reviewFlags": []
+        },
+        {
+          "name": "Lars Porsenna",
+          "options": [
+            "Lars Porsenna",
+            "Tarquin the Proud",
+            "Horatius",
+            "Lucius Junius Brutus"
+          ],
+          "clues": [
+            "The historian Tim Cornell suggests I may have ended the monarchy myself.",
+            "Tacitus and Pliny recorded that I actually captured Rome.",
+            "I was an Etruscan king from Clusium.",
+            "Legend says one hero held a bridge alone against my march on Rome."
+          ],
+          "sectionId": "how-reliable",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "places": [
+    {
+      "name": "Alba Longa",
+      "wikipediaTitle": "Alba Longa",
+      "lat": 41.74691,
+      "lon": 12.65026,
+      "why": "The Latin town where Romulus and Remus were born in legend, later destroyed by King Tullus Hostilius.",
+      "sectionId": "romulus-and-remus",
+      "coordinates": "Wikipedia: Alba Longa",
+      "reviewFlags": []
+    },
+    {
+      "name": "Ostia",
+      "wikipediaTitle": "Ostia Antica (archaeological site)",
+      "lat": 41.75583333,
+      "lon": 12.29166667,
+      "why": "The port at the mouth of the Tiber founded, by tradition, by King Ancus Marcius.",
+      "sectionId": "numa-tullus-ancus",
+      "coordinates": "Wikipedia: Ostia Antica",
+      "reviewFlags": []
+    },
+    {
+      "name": "Ardea",
+      "wikipediaTitle": "Ardea, Lazio",
+      "lat": 41.61,
+      "lon": 12.54,
+      "why": "Tarquin the Proud was besieging this town south of Rome when rebels shut the city gates against him.",
+      "sectionId": "birth-of-the-republic",
+      "coordinates": "model estimate",
+      "reviewFlags": [
+        "no coordinates on Wikipedia \"Ardea, Lazio\"; position is the model's estimate"
+      ]
+    },
+    {
+      "name": "Clusium",
+      "wikipediaTitle": "Chiusi",
+      "lat": 43.01666667,
+      "lon": 11.95,
+      "why": "Home city of the Etruscan king Lars Porsenna, who marched on Rome to restore Tarquin.",
+      "sectionId": "birth-of-the-republic",
+      "coordinates": "Wikipedia: Chiusi",
+      "reviewFlags": []
+    },
+    {
+      "name": "Cumae",
+      "wikipediaTitle": "Cumae",
+      "lat": 40.84861111,
+      "lon": 14.05361111,
+      "why": "The Greek city near Naples where Tarquin the Proud died in exile in 495 BC.",
+      "sectionId": "birth-of-the-republic",
+      "coordinates": "Wikipedia: Cumae",
+      "reviewFlags": []
+    },
+    {
+      "name": "Troy",
+      "wikipediaTitle": "Troy",
+      "lat": 39.9575,
+      "lon": 26.23888889,
+      "why": "Later Romans traced Romulus's family back to Aeneas, a hero who fled the fall of Troy, a legend rather than history.",
+      "sectionId": "romulus-and-remus",
+      "coordinates": "Wikipedia: Troy",
+      "reviewFlags": []
+    }
+  ]
+}

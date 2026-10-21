@@ -1,0 +1,193 @@
+{
+  "batchName": "Early Republic: Final Conquest of Italy (290-264 BCE) - Medium Batch 1",
+  "chapterName": "Early Republic: Final Conquest of Italy (290-264 BCE)",
+  "difficulty": 2,
+  "batchOrder": 3,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Who were most likely the organisers behind the well-crafted Hortensian Law?",
+      "options": [
+        "The patrician senators",
+        "The Latin allies",
+        "The plebeian tribunes",
+        "The two consuls",
+        "The priestly pontiffs"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#why-the-plebs-seceded",
+      "explanation": "Scholars argue such a carefully built law needed organisers, most likely the plebeian tribunes. The consuls' harsh measures also suggest real unrest in the city.",
+      "sourceQuote": "Such a well-crafted law probably also needed organisers, most likely the plebeian tribunes.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which peoples fought against Rome in the alliance defeated at Sentinum in 295 BC? (select all that apply)",
+      "options": [
+        "Gauls",
+        "Carthaginians",
+        "Samnites",
+        "Macedonians",
+        "Etruscans"
+      ],
+      "correctAnswers": [
+        0,
+        2,
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#rome-after-the-samnite-wars",
+      "explanation": "At Sentinum Rome beat a mixed alliance of Samnites, Gauls, Etruscans and Umbrians. The Gauls were Celtic warriors from the north.",
+      "sourceQuote": "There the Romans faced a mixed alliance of Samnites, Gauls, Etruscans and Umbrians.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What happened to Tarentum in 272 BC, about two years after Pyrrhus sailed home?",
+      "options": [
+        "It became Pyrrhus's royal capital",
+        "It joined a new Samnite alliance",
+        "It was razed and its people enslaved",
+        "It fell to Rome",
+        "It was captured by Carthage"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#beneventum-and-withdrawal",
+      "explanation": "Tarentum fell to Rome in 272 BC. The Epirote garrison left there was allowed to go home in peace.",
+      "sourceQuote": "In 272 BC, about two years after Pyrrhus left, Tarentum fell to Rome.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which tools did Rome use to absorb conquered peoples across Italy? (select all that apply)",
+      "options": [
+        "Alliances that required supplying soldiers",
+        "Installing Greek kings as governors",
+        "Planting colonies on confiscated land",
+        "Granting citizenship without the vote",
+        "Demanding heavy yearly grain tribute"
+      ],
+      "correctAnswers": [
+        0,
+        2,
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#how-rome-ruled-italy",
+      "explanation": "Rome confiscated land for colonies, granted full or partial citizenship, and made military alliances with nominally independent states. Together these gave Rome an unmatched supply of soldiers.",
+      "sourceQuote": "It also made military alliances with states that stayed independent in name but had to supply soldiers.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Rome's help to which Greek city, under attack by a Samnite-led alliance, alarmed Tarentum?",
+      "options": [
+        "Thurii",
+        "Rhegium",
+        "Syracuse",
+        "Naples",
+        "Locri"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#tarentum-calls-for-help",
+      "explanation": "Rome stepped in to defend Thurii on the Gulf of Taranto. Tarentum wanted no Roman meddling in its backyard.",
+      "sourceQuote": "When Thurii came under attack from a Samnite-led alliance, Rome stepped in to help.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which Carthaginian fortress on Sicily's western tip did Pyrrhus fail to capture?",
+      "options": [
+        "Lilybaeum",
+        "Agrigentum",
+        "Drepana",
+        "Messana",
+        "Panormus"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#pyrrhus-in-sicily",
+      "explanation": "Pyrrhus could not take Lilybaeum, Carthage's great fortress on Sicily's western tip. The war there ground to a stalemate.",
+      "sourceQuote": "But he could not capture Lilybaeum, Carthage's great fortress on Sicily's western tip.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What do modern scholars think was the likelier cause of the last plebeian secession?",
+      "options": [
+        "A quarrel over who could be consul",
+        "Demands for citizenship by Latin allies",
+        "Who would get newly won public land",
+        "Fear of an invasion by Pyrrhus",
+        "Grain shortages in the city"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#why-the-plebs-seceded",
+      "explanation": "The Third Samnite War had won Rome large tracts of public land, and rural plebeians wanted a say in its distribution. Scholars doubt the traditional story about debt.",
+      "sourceQuote": "The Third Samnite War had won Rome large tracts of public land, and rural plebeians wanted a say in how it was handed out.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Why did Rome turn its attention south and across the sea rather than north?",
+      "options": [
+        "Northern Italy had no valuable land",
+        "Carthage offered Rome land in Africa",
+        "The Senate feared revolts in Etruria",
+        "Pyrrhus still held lands in the north",
+        "The Alps blocked the way and the Gauls were too strong"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#italy-united-264-bc",
+      "explanation": "The Alps blocked the way north, and Rome was not yet ready to take on the Gauls living beneath them. So it looked south, toward Sicily and Carthage.",
+      "sourceQuote": "Rome's attention had turned south and across the sea partly because the Alps blocked the way north, and because Rome was not yet ready to take on the Gauls who lived beneath them.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Why did Pyrrhus march north into Latium after his victory at Heraclea?",
+      "options": [
+        "To meet a Carthaginian fleet",
+        "To seize Capua's grain stores",
+        "To link up with the Etruscans",
+        "To recruit Gallic warriors",
+        "To besiege the city of Rome"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#heraclea-and-asculum",
+      "explanation": "Pyrrhus hoped to join forces with the Etruscans, who were still fighting Rome. But Rome won its war in Etruria, and Pyrrhus pulled back south for the winter.",
+      "sourceQuote": "Pyrrhus then marched quickly north into Latium, Rome's home region, hoping to link up with the Etruscans, who were still fighting Rome.",
+      "reviewFlags": []
+    },
+    {
+      "question": "According to tradition, on which hill did the plebeians gather during their final secession around 287 BC?",
+      "options": [
+        "The Palatine",
+        "The Quirinal",
+        "The Capitoline",
+        "The Aventine",
+        "The Janiculum"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#lex-hortensia",
+      "explanation": "The plebeians traditionally gathered on the Janiculum, a hill across the River Tiber. Walking out left Rome without workers or soldiers.",
+      "sourceQuote": "According to tradition, around 287 BC they did this one more time, gathering on the Janiculum, a hill across the River Tiber.",
+      "reviewFlags": []
+    }
+  ]
+}

@@ -1,0 +1,179 @@
+{
+  "batchName": "Early Republic: Final Conquest of Italy (290-264 BCE) - Easy Batch 1",
+  "chapterName": "Early Republic: Final Conquest of Italy (290-264 BCE)",
+  "difficulty": 1,
+  "batchOrder": 1,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "What was new about the First Punic War for Rome's armies?",
+      "options": [
+        "It was their first war against a Greek king",
+        "It was the first war fought by plebeians",
+        "It took them outside Italy for the first time",
+        "It was their first fight against the Gauls"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#italy-united-264-bc",
+      "explanation": "The First Punic War took Roman armies beyond the Italian peninsula for the first time. It began with the fight for Sicily.",
+      "sourceQuote": "It took Roman armies outside the Italian peninsula for the first time, beginning with the fight for Sicily.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which foreign king did Tarentum call on as its champion against Rome?",
+      "options": [
+        "Pyrrhus of Epirus",
+        "Philip of Macedon",
+        "Hannibal of Carthage",
+        "Agathocles of Syracuse"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#tarentum-calls-for-help",
+      "explanation": "Knowing its army could not match Rome's, Tarentum turned to Pyrrhus, king of Epirus in north-western Greece and Albania. He landed at Tarentum in the winter of 281/280 BC.",
+      "sourceQuote": "So it looked abroad for a champion and found one in Pyrrhus, king of Epirus, a Greek kingdom in what is now north-western Greece and Albania.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Who was appointed dictator to end the crisis of the last plebeian secession?",
+      "options": [
+        "Manius Curius",
+        "Appius Claudius",
+        "Quintus Hortensius",
+        "Publius Decius Mus"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#lex-hortensia",
+      "explanation": "Quintus Hortensius was named dictator, a temporary emergency office in Rome. He was himself a plebeian.",
+      "sourceQuote": "To end the crisis, Rome appointed Quintus Hortensius as dictator.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Pyrrhus crossed to Sicily to help Syracuse in its struggle against which power?",
+      "options": [
+        "Egypt",
+        "Carthage",
+        "Macedon",
+        "Rome"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#pyrrhus-in-sicily",
+      "explanation": "Syracuse, the leading Greek city on Sicily, was fighting Carthage, which controlled much of western Sicily. Carthage was a wealthy trading city in North Africa.",
+      "sourceQuote": "He came to help Syracuse, the leading Greek city on the island, in its struggle against Carthage.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which battle of 295 BC was the turning point that showed nobody could stop Rome from dominating Italy?",
+      "options": [
+        "Asculum",
+        "Sentinum",
+        "Beneventum",
+        "Heraclea"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#rome-after-the-samnite-wars",
+      "explanation": "At Sentinum in Umbria, Rome defeated a combined army of Samnites, Gauls, Etruscans and Umbrians. After that, Rome's domination of Italy looked unstoppable.",
+      "sourceQuote": "The turning point came in 295 BC at Sentinum, a town in Umbria in north-central Italy.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Against which power did Rome go to war in 264 BC?",
+      "options": [
+        "Epirus",
+        "Macedon",
+        "Carthage",
+        "Syracuse"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#italy-united-264-bc",
+      "explanation": "In 264 BC Rome went to war with Carthage, beginning the First Punic War. Carthage had once been Rome's ally.",
+      "sourceQuote": "In 264 BC, the same year, Rome went to war with Carthage, the North African trading power that had once been its ally.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What does the name Magna Graecia, given to the Greek cities of southern Italy, mean?",
+      "options": [
+        "Western Greece",
+        "Great Greece",
+        "New Greece",
+        "Greater Italy"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#tarentum-calls-for-help",
+      "explanation": "Magna Graecia means Great Greece, a string of rich Greek cities founded by colonists centuries earlier. Tarentum was the most powerful of them.",
+      "sourceQuote": "Southern Italy was home to Magna Graecia, or Great Greece, a string of rich Greek cities founded by colonists centuries earlier.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did the lex Hortensia of 287 BC do?",
+      "options": [
+        "Cancelled all debts owed by plebeians",
+        "Abolished the office of dictator for good",
+        "Gave Roman citizenship to all Italian allies",
+        "Made Plebeian Council decisions binding on all"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#lex-hortensia",
+      "explanation": "The law made every decision of the Plebeian Council binding on all citizens, patricians included. In theory, patricians and plebeians now had equal political rights.",
+      "sourceQuote": "His law, the lex Hortensia, made every decision of the Plebeian Council binding on all citizens, patricians included.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Where did Pyrrhus first defeat the Romans in 280 BC?",
+      "options": [
+        "Asculum",
+        "Sentinum",
+        "Beneventum",
+        "Heraclea"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#heraclea-and-asculum",
+      "explanation": "Pyrrhus beat the Romans at Heraclea in Lucania in 280 BC. Some of Rome's allies promptly switched sides afterward.",
+      "sourceQuote": "In 280 BC he defeated the Romans at Heraclea in Lucania, a region of southern Italy.",
+      "reviewFlags": []
+    },
+    {
+      "question": "After deciding the war in Italy could not be won, where did Pyrrhus sail in the winter of 275/274 BC?",
+      "options": [
+        "Back to Sicily",
+        "To Carthage",
+        "To Macedon",
+        "Home to Epirus"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#beneventum-and-withdrawal",
+      "explanation": "Pyrrhus sailed home to Epirus. He left only a small garrison of his soldiers in Tarentum.",
+      "sourceQuote": "In the winter of 275/274 BC he sailed home to Epirus, leaving only a small garrison of his soldiers in Tarentum.",
+      "reviewFlags": []
+    }
+  ]
+}

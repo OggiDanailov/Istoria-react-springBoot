@@ -1,0 +1,653 @@
+{
+  "chapterName": "Early Republic: Final Conquest of Italy (290-264 BCE)",
+  "model": "claude-opus-5-5",
+  "briefing": {
+    "title": "Italy, 290 BC",
+    "paragraphs": [
+      "In 290 BC Rome has just won its third war against the Samnites, tough mountain tribes of the Apennines, and now dominates central Italy. At home, though, the city is still divided: ordinary citizens, the plebeians, are locked in a two-century struggle for equal rights with the patricians, a small hereditary elite.",
+      "To the south lie the rich Greek cities of Magna Graecia, led by proud Tarentum. When Rome pushes into their world, Tarentum calls in Pyrrhus, a famous Greek king. Can Rome beat him and become master of all Italy?"
+    ]
+  },
+  "timelines": [
+    {
+      "name": "The Big Moments",
+      "blurb": "Four turning points on Rome's road to ruling Italy.",
+      "events": [
+        {
+          "label": "Rome beats a grand alliance at Sentinum",
+          "when": "295 BC",
+          "year": -295,
+          "fact": "At Sentinum in Umbria, Rome defeated Samnites, Gauls, Etruscans and Umbrians together, showing no one could stop it dominating Italy.",
+          "sectionId": "rome-after-the-samnite-wars",
+          "reviewFlags": []
+        },
+        {
+          "label": "Lex Hortensia binds all citizens",
+          "when": "Around 287 BC",
+          "year": -287,
+          "fact": "The plebeian dictator Quintus Hortensius made Plebeian Council decisions binding on everyone, ending the Conflict of the Orders.",
+          "sectionId": "lex-hortensia",
+          "reviewFlags": []
+        },
+        {
+          "label": "Pyrrhus defeats Rome at Heraclea",
+          "when": "280 BC",
+          "year": -280,
+          "fact": "Pyrrhus, king of Epirus, won his first battle against Rome in Lucania, and some Roman allies switched sides.",
+          "sectionId": "heraclea-and-asculum",
+          "reviewFlags": []
+        },
+        {
+          "label": "First Punic War begins",
+          "when": "264 BC",
+          "year": -264,
+          "fact": "Rome's war with Carthage, the North African trading power, took Roman armies outside Italy for the first time.",
+          "sectionId": "italy-united-264-bc",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Wars of Conquest",
+      "blurb": "From the Samnite Wars to the war with Carthage.",
+      "events": [
+        {
+          "label": "First Samnite War begins",
+          "when": "343 BC",
+          "year": -343,
+          "fact": "The first of three Samnite Wars opened Rome's long struggle with the warlike tribes of the Apennines.",
+          "sectionId": "rome-after-the-samnite-wars",
+          "reviewFlags": []
+        },
+        {
+          "label": "Battle at Populonia",
+          "when": "282 BC",
+          "year": -282,
+          "fact": "This battle at an Etruscan coastal town ended the last traces of Etruscan power in the region.",
+          "sectionId": "rome-after-the-samnite-wars",
+          "reviewFlags": []
+        },
+        {
+          "label": "Pyrrhus wins again at Asculum",
+          "when": "279 BC",
+          "year": -279,
+          "fact": "Pyrrhus beat Rome a second time, but his losses were so heavy that a costly win is still called a 'Pyrrhic victory'.",
+          "sectionId": "heraclea-and-asculum",
+          "reviewFlags": []
+        },
+        {
+          "label": "Rome meets Pyrrhus at Beneventum",
+          "when": "275 BC",
+          "year": -275,
+          "fact": "Some accounts call this battle in Samnite hill country a Roman victory, others a draw, but it forced Pyrrhus onto the defensive.",
+          "sectionId": "beneventum-and-withdrawal",
+          "reviewFlags": []
+        },
+        {
+          "label": "Tarentum falls to Rome",
+          "when": "272 BC",
+          "year": -272,
+          "fact": "About two years after Pyrrhus left, Tarentum surrendered and his garrison was allowed to go home in peace.",
+          "sectionId": "beneventum-and-withdrawal",
+          "reviewFlags": []
+        },
+        {
+          "label": "First Punic War ends",
+          "when": "241 BC",
+          "year": -241,
+          "fact": "Rome's first war with Carthage, which began with the fight for Sicily, lasted from 264 to 241 BC.",
+          "sectionId": "italy-united-264-bc",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "The Full Story",
+      "blurb": "Laws, wars and a king's adventure, in order.",
+      "events": [
+        {
+          "label": "Law still needing the Senate's approval",
+          "when": "339 BC",
+          "year": -339,
+          "fact": "This earlier law strengthened plebeian decisions but still required approval by the Senate, Rome's council of elders.",
+          "sectionId": "lex-hortensia",
+          "reviewFlags": []
+        },
+        {
+          "label": "Second Samnite War begins",
+          "when": "326 BC",
+          "year": -326,
+          "fact": "The second of the three Samnite Wars lasted until 304 BC, with both sides trading victories and heavy losses.",
+          "sectionId": "rome-after-the-samnite-wars",
+          "reviewFlags": []
+        },
+        {
+          "label": "Third Samnite War ends",
+          "when": "290 BC",
+          "year": -290,
+          "fact": "By the end of this war Rome had fought its way to the top of central Italy and won large tracts of public land.",
+          "sectionId": "rome-after-the-samnite-wars",
+          "reviewFlags": []
+        },
+        {
+          "label": "Tarentum rejects Rome's ultimatum",
+          "when": "Early 281 BC",
+          "year": -281,
+          "fact": "After Tarentum attacked a Roman fleet and expelled Thurii's pro-Roman government, its refusal of Rome's demands meant war.",
+          "sectionId": "tarentum-calls-for-help",
+          "reviewFlags": []
+        },
+        {
+          "label": "Pyrrhus returns from Sicily",
+          "when": "Early 276 BC",
+          "year": -276,
+          "fact": "Answering a new plea from Tarentum, Pyrrhus crossed back to Italy, suffering losses on the way.",
+          "sectionId": "pyrrhus-in-sicily",
+          "reviewFlags": []
+        },
+        {
+          "label": "Pyrrhus sails home to Epirus",
+          "when": "Winter 275/274 BC",
+          "year": -274,
+          "fact": "Seeing the war in Italy could not be won, Pyrrhus went home, leaving only a small garrison in Tarentum.",
+          "sectionId": "beneventum-and-withdrawal",
+          "reviewFlags": []
+        },
+        {
+          "label": "Pyrrhus killed at Argos",
+          "when": "272 BC",
+          "year": -272,
+          "fact": "The king died fighting a different war at Argos, a city in southern Greece, the same year Tarentum fell.",
+          "sectionId": "beneventum-and-withdrawal",
+          "reviewFlags": []
+        },
+        {
+          "label": "Last Etruscan resistance crushed",
+          "when": "265 BC",
+          "year": -265,
+          "fact": "The final resistance in Etruria, the old Etruscan heartland north of Rome, was crushed in 265–264 BC.",
+          "sectionId": "italy-united-264-bc",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "matchSets": [
+    {
+      "name": "Who's Who",
+      "blurb": "Match the people and peoples to their role in the story.",
+      "pairs": [
+        {
+          "name": "Quintus Hortensius",
+          "match": "Plebeian dictator whose law bound all citizens to plebeian votes",
+          "sectionId": "lex-hortensia",
+          "reviewFlags": []
+        },
+        {
+          "name": "Pyrrhus",
+          "match": "King of Epirus who beat Rome at Heraclea and Asculum",
+          "sectionId": "heraclea-and-asculum",
+          "reviewFlags": []
+        },
+        {
+          "name": "Livy",
+          "match": "Roman historian whose account blamed the last secession on debt",
+          "sectionId": "why-the-plebs-seceded",
+          "reviewFlags": []
+        },
+        {
+          "name": "Hannibal",
+          "match": "Invader who next seriously challenged Rome's hold on Italy",
+          "sectionId": "beneventum-and-withdrawal",
+          "reviewFlags": []
+        },
+        {
+          "name": "Samnites",
+          "match": "Apennine tribal coalition Rome fought in three wars",
+          "sectionId": "rome-after-the-samnite-wars",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Words and Places",
+      "blurb": "Match each term or place to its meaning.",
+      "pairs": [
+        {
+          "name": "Secession",
+          "match": "Plebeian protest of walking out, leaving Rome without workers",
+          "sectionId": "lex-hortensia",
+          "reviewFlags": []
+        },
+        {
+          "name": "Pyrrhic victory",
+          "match": "A win so costly that it is almost a defeat",
+          "sectionId": "heraclea-and-asculum",
+          "reviewFlags": []
+        },
+        {
+          "name": "Colony",
+          "match": "Settlement of loyal citizens planted on conquered land",
+          "sectionId": "rome-after-the-samnite-wars",
+          "reviewFlags": []
+        },
+        {
+          "name": "Magna Graecia",
+          "match": "'Great Greece': the rich Greek cities of southern Italy",
+          "sectionId": "tarentum-calls-for-help",
+          "reviewFlags": []
+        },
+        {
+          "name": "Lilybaeum",
+          "match": "Carthage's fortress on Sicily's western tip that Pyrrhus never took",
+          "sectionId": "pyrrhus-in-sicily",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "trueFalseDecks": [
+    {
+      "name": "Rome at Home and at War",
+      "blurb": "Samnites, secessions and a landmark law.",
+      "cards": [
+        {
+          "claim": "At Sentinum, Rome defeated an alliance of Samnites, Gauls, Etruscans and Umbrians.",
+          "answer": true,
+          "why": "In 295 BC Rome beat this combined army in Umbria, making clear nobody could stop it dominating Italy.",
+          "sectionId": "rome-after-the-samnite-wars",
+          "reviewFlags": []
+        },
+        {
+          "claim": "The Appian Way ran north from Rome into Etruria.",
+          "answer": false,
+          "why": "The Appian Way ran south from Rome toward Capua, carrying armies and influence deep into the south.",
+          "sectionId": "rome-after-the-samnite-wars",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Quintus Hortensius, the dictator appointed to end the last secession, was a patrician.",
+          "answer": false,
+          "why": "Hortensius was himself a plebeian, holding the dictatorship as a temporary emergency office.",
+          "sectionId": "lex-hortensia",
+          "reviewFlags": []
+        },
+        {
+          "claim": "The lex Hortensia made Plebeian Council decisions binding without the Senate's approval.",
+          "answer": true,
+          "why": "Earlier laws of 449 and 339 BC still needed Senate approval; the Hortensian law removed that requirement entirely.",
+          "sectionId": "lex-hortensia",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Rural landowners controlled 29 of the tribal voting districts in the Plebeian Council.",
+          "answer": true,
+          "why": "Voting was organised by tribal districts, never more than 35, and rural landowners controlled 29 of them.",
+          "sectionId": "why-the-plebs-seceded",
+          "reviewFlags": []
+        },
+        {
+          "claim": "The Roman tradition preserved by Livy blamed the last secession on a dispute over land.",
+          "answer": false,
+          "why": "The tradition blamed debt. Land is the explanation favoured by modern scholars.",
+          "sectionId": "why-the-plebs-seceded",
+          "reviewFlags": []
+        },
+        {
+          "claim": "The Hortensian law banned votes on market days.",
+          "answer": true,
+          "why": "This oddity made it harder for country farmers to vote when they came to town.",
+          "sectionId": "why-the-plebs-seceded",
+          "reviewFlags": []
+        },
+        {
+          "claim": "The battle at Populonia in 282 BC ended the last traces of Samnite power.",
+          "answer": false,
+          "why": "Populonia was an Etruscan coastal town, and the battle ended the last traces of Etruscan power in the region.",
+          "sectionId": "rome-after-the-samnite-wars",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Pyrrhus and the Conquest of the South",
+      "blurb": "A Greek king, a costly war and a united Italy.",
+      "cards": [
+        {
+          "claim": "Tarentum attacked a Roman fleet in its waters, which an earlier treaty had forbidden.",
+          "answer": true,
+          "why": "Tarentum struck first against the fleet, then marched on Thurii and threw out its pro-Roman government.",
+          "sectionId": "tarentum-calls-for-help",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Pyrrhus, the king Tarentum called in, ruled Macedon.",
+          "answer": false,
+          "why": "Pyrrhus was king of Epirus, a Greek kingdom in what is now north-western Greece and Albania.",
+          "sectionId": "tarentum-calls-for-help",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Pyrrhus defeated the Romans at Heraclea in Lucania in 280 BC.",
+          "answer": true,
+          "why": "It was his first victory over Rome, and some of Rome's allies promptly switched sides.",
+          "sectionId": "heraclea-and-asculum",
+          "reviewFlags": []
+        },
+        {
+          "claim": "In Sicily, Pyrrhus fought on the side of Carthage against Syracuse.",
+          "answer": false,
+          "why": "He came to help Syracuse, the leading Greek city on the island, against Carthage.",
+          "sectionId": "pyrrhus-in-sicily",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Pyrrhus could not capture Lilybaeum because it could be supplied by sea.",
+          "answer": true,
+          "why": "Pyrrhus lacked the naval strength to cut off Carthage's fortress, and the war ground to a stalemate.",
+          "sectionId": "pyrrhus-in-sicily",
+          "reviewFlags": []
+        },
+        {
+          "claim": "When Tarentum fell in 272 BC, Pyrrhus's garrison there was massacred.",
+          "answer": false,
+          "why": "The Epirote garrison was allowed to go home in peace.",
+          "sectionId": "beneventum-and-withdrawal",
+          "reviewFlags": []
+        },
+        {
+          "claim": "In 264 BC the only recorded help from the southern Greek cities was transport ships from Naples, Tarentum and Locri.",
+          "answer": true,
+          "why": "Rome bound these cities by treaties, and the burden on them seems to have been light.",
+          "sectionId": "how-rome-ruled-italy",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Rome turned south in 264 BC partly because it had already conquered the Gauls beneath the Alps.",
+          "answer": false,
+          "why": "Rome was not yet ready to take on the Gauls, and the Alps blocked the way north.",
+          "sectionId": "italy-united-264-bc",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "oddOneOut": [
+    {
+      "items": [
+        "Samnites",
+        "Lucanians",
+        "Gauls",
+        "Umbrians"
+      ],
+      "oddIndex": 1,
+      "why": "Samnites, Gauls and Umbrians (with the Etruscans) fought Rome together at Sentinum in 295 BC; the Lucanians were not part of that alliance.",
+      "sectionId": "rome-after-the-samnite-wars",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Sentinum",
+        "Heraclea",
+        "Asculum",
+        "Beneventum"
+      ],
+      "oddIndex": 0,
+      "why": "Heraclea, Asculum and Beneventum were battles between Rome and Pyrrhus; Sentinum was Rome's 295 BC win over the Samnite alliance, before Pyrrhus arrived.",
+      "sectionId": "heraclea-and-asculum",
+      "reviewFlags": [
+        "fact-check: The sectionId heraclea-and-asculum does not cover Beneventum or Sentinum, which are explained in other sections."
+      ]
+    },
+    {
+      "items": [
+        "Planting colonies",
+        "Partial citizenship",
+        "Military alliances",
+        "Direct rule of Greek cities"
+      ],
+      "oddIndex": 3,
+      "why": "Colonies, citizenship with or without the vote, and alliances were Rome's tools for absorbing Italy; it bound the Greek cities by treaties instead of ruling them directly.",
+      "sectionId": "how-rome-ruled-italy",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Carthaginians",
+        "Samnites",
+        "Lucanians",
+        "Bruttians"
+      ],
+      "oddIndex": 0,
+      "why": "Pyrrhus's campaign revived the hopes of the Samnites, Lucanians and Bruttians against Rome; the Carthaginians were his enemies in Sicily.",
+      "sectionId": "beneventum-and-withdrawal",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Debt",
+        "Forum crowds",
+        "Dispute over public land",
+        "Lucanian call-up"
+      ],
+      "oddIndex": 2,
+      "why": "The Roman tradition explained the last secession with debt and Forum crowds revolting against a call-up to fight the Lucanians; land is the modern scholars' explanation.",
+      "sectionId": "why-the-plebs-seceded",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Binding on all citizens",
+        "Passed by a patrician dictator",
+        "No Senate approval needed",
+        "No votes on market days"
+      ],
+      "oddIndex": 1,
+      "why": "Three are features of the Hortensian law; the dictator Quintus Hortensius was a plebeian, not a patrician.",
+      "sectionId": "lex-hortensia",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Settled patrician-plebeian strife",
+        "Defeated the Samnites",
+        "Conquered the Alpine Gauls",
+        "Drove off Pyrrhus"
+      ],
+      "oddIndex": 2,
+      "why": "Three are Rome's achievements in this quarter century; Rome was not yet ready to take on the Gauls living beneath the Alps.",
+      "sectionId": "italy-united-264-bc",
+      "reviewFlags": []
+    }
+  ],
+  "whoAmI": [
+    {
+      "name": "Faces of the Age",
+      "blurb": "A king, a reformer and a historian.",
+      "people": [
+        {
+          "name": "Pyrrhus",
+          "options": [
+            "Pyrrhus",
+            "Antigonus II Gonatas",
+            "Seleucus I Nicator",
+            "Agathocles"
+          ],
+          "clues": [
+            "After my first victory, some of Rome's allies switched to my side.",
+            "I marched north into Latium hoping to join the Etruscans, but pulled back to winter in the south.",
+            "Tarentum invited me to fight Rome, and I landed there in the winter of 281/280 BC.",
+            "After my costly win at Asculum I said: 'Another such victory and we are lost!'"
+          ],
+          "sectionId": "heraclea-and-asculum",
+          "reviewFlags": []
+        },
+        {
+          "name": "Quintus Hortensius",
+          "options": [
+            "Quintus Hortensius",
+            "Appius Claudius Caecus",
+            "Manius Curius Dentatus",
+            "Gaius Fabricius Luscinus"
+          ],
+          "clues": [
+            "My law contained one oddity: it banned votes on market days.",
+            "Earlier laws of 449 and 339 BC still needed the Senate's approval; mine removed that requirement.",
+            "I was a plebeian appointed dictator, a temporary emergency office, to end a walkout.",
+            "My law made every decision of the Plebeian Council binding on all citizens, patricians included."
+          ],
+          "sectionId": "lex-hortensia",
+          "reviewFlags": []
+        },
+        {
+          "name": "Livy",
+          "options": [
+            "Livy",
+            "Polybius",
+            "Plutarch",
+            "Dionysius of Halicarnassus"
+          ],
+          "clues": [
+            "Modern historians doubt my picture of the last plebeian walkout.",
+            "In my version, the protesters had leverage because Rome needed soldiers.",
+            "I described angry city crowds in the Forum revolting when called up to fight the Lucanians.",
+            "I am the Roman historian who preserved the tradition that debt caused the last secession."
+          ],
+          "sectionId": "why-the-plebs-seceded",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Turning Points",
+      "blurb": "Men who changed the course of Rome's story.",
+      "people": [
+        {
+          "name": "Pyrrhus",
+          "options": [
+            "Pyrrhus",
+            "Antigonus II Gonatas",
+            "Ptolemy II Philadelphus",
+            "Seleucus I Nicator"
+          ],
+          "clues": [
+            "My Sicilian supporters grew tired of paying for my war.",
+            "I could not capture Lilybaeum, because I lacked the ships to cut it off.",
+            "After Beneventum I sailed home to Epirus, leaving a small garrison in Tarentum.",
+            "I was killed in 272 BC while fighting a war at Argos in southern Greece."
+          ],
+          "sectionId": "pyrrhus-in-sicily",
+          "reviewFlags": []
+        },
+        {
+          "name": "Quintus Hortensius",
+          "options": [
+            "Quintus Hortensius",
+            "Appius Claudius Caecus",
+            "Manius Curius Dentatus",
+            "Publius Valerius Laevinus"
+          ],
+          "clues": [
+            "My reform made the tribunes, the people's elected champions, major players in politics.",
+            "I was appointed when the plebeians gathered on the Janiculum, a hill across the Tiber.",
+            "After my law, patricians and plebeians in theory had equal political rights.",
+            "The law named after me, passed around 287 BC, ended the Conflict of the Orders."
+          ],
+          "sectionId": "lex-hortensia",
+          "reviewFlags": []
+        },
+        {
+          "name": "Hannibal",
+          "options": [
+            "Hannibal",
+            "Hanno the Great",
+            "Hamilcar Barca",
+            "Xanthippus"
+          ],
+          "clues": [
+            "After Pyrrhus left, decades passed before anyone seriously threatened Rome's grip on Italy again.",
+            "When I came, Rome's control of the peninsula faced its next serious challenge.",
+            "My arrival ended Rome's long spell of unchallenged rule over Italy.",
+            "I invaded Italy at the end of the 3rd century BC."
+          ],
+          "sectionId": "beneventum-and-withdrawal",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "places": [
+    {
+      "name": "Sentinum",
+      "wikipediaTitle": "Sentinum",
+      "lat": 43.41848889,
+      "lon": 12.85225,
+      "why": "In 295 BC Rome defeated the combined Samnites, Gauls, Etruscans and Umbrians at this Umbrian town, the turning point of the Samnite Wars.",
+      "sectionId": "rome-after-the-samnite-wars",
+      "coordinates": "Wikipedia: Sentinum",
+      "reviewFlags": []
+    },
+    {
+      "name": "Populonia",
+      "wikipediaTitle": "Populonia",
+      "lat": 42.98944444,
+      "lon": 10.49138889,
+      "why": "A battle at this Etruscan coastal town in 282 BC ended the last traces of Etruscan power in the region.",
+      "sectionId": "rome-after-the-samnite-wars",
+      "coordinates": "Wikipedia: Populonia",
+      "reviewFlags": []
+    },
+    {
+      "name": "Tarentum",
+      "wikipediaTitle": "Taranto",
+      "lat": 40.47111111,
+      "lon": 17.24305556,
+      "why": "The most powerful Greek city in the south called in Pyrrhus against Rome and finally fell to Rome in 272 BC.",
+      "sectionId": "tarentum-calls-for-help",
+      "coordinates": "Wikipedia: Taranto",
+      "reviewFlags": []
+    },
+    {
+      "name": "Heraclea",
+      "wikipediaTitle": "Heraclea Lucania",
+      "lat": 40.22,
+      "lon": 16.66972222,
+      "why": "Pyrrhus won his first victory over the Romans here in Lucania in 280 BC.",
+      "sectionId": "heraclea-and-asculum",
+      "coordinates": "Wikipedia: Heraclea (Lucania)",
+      "reviewFlags": []
+    },
+    {
+      "name": "Asculum",
+      "wikipediaTitle": "Ascoli Satriano",
+      "lat": 41.21555556,
+      "lon": 15.55777778,
+      "why": "Pyrrhus beat Rome again here in 279 BC at such a cost that it gave us the phrase 'Pyrrhic victory'.",
+      "sectionId": "heraclea-and-asculum",
+      "coordinates": "Wikipedia: Ascoli Satriano",
+      "reviewFlags": []
+    },
+    {
+      "name": "Beneventum",
+      "wikipediaTitle": "Benevento",
+      "lat": 41.13333333,
+      "lon": 14.78333333,
+      "why": "Pyrrhus's last battle against Rome, in 275 BC, forced him onto the defensive and led to his departure from Italy.",
+      "sectionId": "beneventum-and-withdrawal",
+      "coordinates": "Wikipedia: Benevento",
+      "reviewFlags": []
+    },
+    {
+      "name": "Lilybaeum",
+      "wikipediaTitle": "Marsala",
+      "lat": 37.8,
+      "lon": 12.44,
+      "why": "Carthage's great fortress on Sicily's western tip held out against Pyrrhus because it could be supplied by sea.",
+      "sectionId": "pyrrhus-in-sicily",
+      "coordinates": "model estimate",
+      "reviewFlags": [
+        "no coordinates on Wikipedia \"Marsala\"; position is the model's estimate"
+      ]
+    }
+  ]
+}

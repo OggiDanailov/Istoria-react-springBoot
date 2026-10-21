@@ -1,0 +1,203 @@
+{
+  "batchName": "Early Republic: The Conflict of the Orders - Toward Resolution (450-367 BCE) - Hard Batch 1",
+  "chapterName": "Early Republic: The Conflict of the Orders - Toward Resolution (450-367 BCE)",
+  "difficulty": 3,
+  "batchOrder": 6,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "In which year was a plebeian first elected praetor?",
+      "options": [
+        "367 BC",
+        "173 BC",
+        "366 BC",
+        "342 BC",
+        "337 BC",
+        "355 BC"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 3,
+      "textReference": "#first-plebeian-consul",
+      "explanation": "Plebeians had to wait thirty years after the compromise, until 337 BC, to win the praetorship. Patricians also kept some of the oldest priesthoods for themselves.",
+      "sourceQuote": "Plebeians had to wait thirty years, until 337 BC, before one of them was elected praetor.",
+      "reviewFlags": []
+    },
+    {
+      "question": "According to Livy, what did Camillus vow to the god Apollo during the siege of Veii?",
+      "options": [
+        "The walls of the conquered city",
+        "A golden statue on the Capitoline",
+        "A hundred oxen each year",
+        "A tenth of the spoils",
+        "Half of all captives taken",
+        "A new temple inside Veii"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 3,
+      "textReference": "#siege-of-veii",
+      "explanation": "Livy says Camillus vowed a tenth of the spoils to Apollo. He also invited Juno, Veii's protecting goddess, to move to Rome.",
+      "sourceQuote": "According to Livy, Camillus vowed a tenth of the spoils to the god Apollo.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Up to which year did consular tribunes govern Rome in many years?",
+      "options": [
+        "376 BC",
+        "390 BC",
+        "366 BC",
+        "401 BC",
+        "444 BC",
+        "367 BC"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#conflict-of-the-orders",
+      "explanation": "Consular tribunes ran Rome in many years up to 376 BC. Around 400 BC plebeians began to form the majority of them in some years.",
+      "sourceQuote": "Consular tribunes governed Rome in many years up to 376 BC.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which fact suggests that the 367 BC consulship law did not actually guarantee power-sharing?",
+      "options": [
+        "The praetorship was abolished in 343 BC",
+        "Consular tribunes returned from 360 to 350 BC",
+        "No consuls were elected from 355 to 343 BC",
+        "Both consuls were plebeians from 366 to 355 BC",
+        "Both consuls were patricians from 355 to 343 BC",
+        "The Senate annulled the law in 355 BC"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 3,
+      "textReference": "#modern-verdict",
+      "explanation": "From 355 to 343 BC, both consuls were patricians, so the law clearly did not guarantee sharing. Cornell suggests it may have been a mere administrative adjustment.",
+      "sourceQuote": "From 355 to 343 BC, both consuls were patricians.",
+      "reviewFlags": []
+    },
+    {
+      "question": "A passing citizen, Lucius Albinus, carried the Vestal Virgins and their sacred objects to safety in which city?",
+      "options": [
+        "Clusium",
+        "Caere",
+        "Cumae",
+        "Velitrae",
+        "Veii",
+        "Ardea"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 3,
+      "textReference": "#sack-of-rome",
+      "explanation": "Albinus gave the Vestals a lift on his wagon to Caere, an allied Etruscan coastal city. Aristotle's 'certain Lucius' who saved Rome might have been this same man.",
+      "sourceQuote": "A passing citizen, Lucius Albinus, gave them a lift on his wagon to Caere, an allied Etruscan city on the coast.",
+      "reviewFlags": []
+    },
+    {
+      "question": "According to Livy, which Roman mistakes contributed to the disaster at the Allia? (select all that apply)",
+      "options": [
+        "They attacked at night across the Tiber",
+        "They stretched their line dangerously thin",
+        "They split the army between two consuls",
+        "They pitched no camp",
+        "They failed to consult the gods",
+        "They left the reserves inside Rome"
+      ],
+      "correctAnswers": [
+        1,
+        3,
+        4
+      ],
+      "difficulty": 3,
+      "textReference": "#battle-of-the-allia",
+      "explanation": "Livy blames the Romans for pitching no camp, neglecting the gods and overextending their line. Brennus struck the reserves on a hill and panic spread.",
+      "sourceQuote": "Livy says the Romans pitched no camp and failed to consult the gods.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which ancient writers told stories crediting someone other than Camillus with defeating the Gauls or saving Rome? (select all that apply)",
+      "options": [
+        "Diodorus Siculus",
+        "Aristotle",
+        "Livy",
+        "Strabo",
+        "Polybius",
+        "T. J. Cornell"
+      ],
+      "correctAnswers": [
+        0,
+        1,
+        3
+      ],
+      "difficulty": 3,
+      "textReference": "#sack-reliability",
+      "explanation": "Diodorus credited an Etruscan army, Strabo credited Caere, and Aristotle reportedly named 'a certain Lucius'. Livy is the source of the Camillus rescue, and Cornell is a modern historian.",
+      "sourceQuote": "Other ancient writers told different stories.",
+      "reviewFlags": []
+    },
+    {
+      "question": "In which years did Romans bury alive a pair of Gauls and a pair of Greeks?",
+      "options": [
+        "228, 216 and 114 BC",
+        "444, 401 and 375 BC",
+        "350, 349 and 295 BC",
+        "390, 387 and 367 BC",
+        "342, 337 and 173 BC",
+        "396, 376 and 366 BC"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#rome-after-the-sack",
+      "explanation": "These burials happened in 228, 216 and 114 BC, even though human sacrifice was not a Roman custom. They show how long the fear of the Gauls lasted.",
+      "sourceQuote": "In 228, 216 and 114 BC, Romans buried alive a pair of Gauls and a pair of Greeks, although human sacrifice was not a Roman custom.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Besides capping holdings of public land, what else did the Licinian land law restrict, and why?",
+      "options": [
+        "Selling plots there, to stop speculation by Greeks",
+        "Grazing more than 100 cattle there, to protect common pasture",
+        "Building houses there, to keep it open for armies",
+        "Planting vines there, to keep land for grain",
+        "Hunting there, to preserve sacred groves",
+        "Settling foreigners there, to reserve it for citizens"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 3,
+      "textReference": "#licinian-laws",
+      "explanation": "The law banned grazing more than 100 cattle on public land to protect the pasture poor farmers relied on. Ordinary citizens' own plots were only about one and a quarter acres.",
+      "sourceQuote": "It also banned grazing more than 100 cattle there, to protect the common pasture poor farmers relied on.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What happened in the Plebeian Council in 368 BC, after Camillus resigned as dictator?",
+      "options": [
+        "It passed the land and debt bills but rejected the consulship bill",
+        "It elected consular tribunes for the first time in years",
+        "It passed the consulship bill but rejected the land and debt bills",
+        "It voted to abolish the tribunate",
+        "It passed all three bills, which the Senate vetoed",
+        "It rejected all three bills of Licinius and Sextius"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#licinius-and-sextius",
+      "explanation": "The plebeians approved the land and debt measures but turned down the consulship bill. The tribunes insisted on all or nothing, and the full package passed later.",
+      "sourceQuote": "The plebeians passed the land and debt bills but rejected the consulship bill.",
+      "reviewFlags": []
+    }
+  ]
+}

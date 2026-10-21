@@ -1,0 +1,203 @@
+{
+  "batchName": "Early Republic: The Samnite Wars (367-290 BCE) - Hard Batch 1",
+  "chapterName": "Early Republic: The Samnite Wars (367-290 BCE)",
+  "difficulty": 3,
+  "batchOrder": 5,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "What argument do scholars such as Cornell and Oakley make for accepting the story of Capua's surrender to Rome?",
+      "options": [
+        "The Samnites admitted it in their treaty",
+        "Capua's coins show Roman symbols from 343 BC",
+        "Livy copied it from Campanian archives",
+        "Diodorus confirms it independently",
+        "Voluntary submission was common diplomacy then",
+        "Thucydides records a similar event"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 3,
+      "textReference": "#doubting-livy",
+      "explanation": "Cornell and Oakley note that voluntary submission was a normal diplomatic move at the time. Salmon and Forsythe, by contrast, think the story was invented.",
+      "sourceQuote": "Others, such as Cornell and Oakley, accept it, noting that voluntary submission was common diplomacy then.",
+      "reviewFlags": []
+    },
+    {
+      "question": "In 305 BC the Romans captured Bovianum. What was it?",
+      "options": [
+        "A Greek city on the Bay of Naples",
+        "Rome's key to Etruria",
+        "The capital of the Pentri, the largest Samnite tribe",
+        "The site of the Samnites' sacred oath",
+        "A Roman ally in Apulia",
+        "The chief city of the Sidicini"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 3,
+      "textReference": "#second-war-turning",
+      "explanation": "Bovianum was the capital of the Pentri, the largest Samnite tribe. The year after its fall, the Samnites sued for peace and the old treaty was restored.",
+      "sourceQuote": "In Samnium the Romans took Bovianum, capital of the Pentri, the largest Samnite tribe, in 305 BC.",
+      "reviewFlags": []
+    },
+    {
+      "question": "At the battle of Telamon in 225 BC, how many Romans and allies did Polybius count?",
+      "options": [
+        "About 100,000 Romans and 110,000 allies",
+        "About 41,000 Romans and 21,000 allies",
+        "About 21,000 Romans and 41,000 allies",
+        "About 41,000 Romans and 210,000 allies",
+        "About 40,000 Romans and 40,000 allies",
+        "About 210,000 Romans and 41,000 allies"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 3,
+      "textReference": "#roman-alliance-system",
+      "explanation": "Polybius counted roughly 41,000 Romans alongside 210,000 allies, showing how far allied troops outnumbered Romans. This manpower carried Rome to victory over Pyrrhus and Carthage.",
+      "sourceQuote": "At the battle of Telamon against the Gauls in 225 BC, the Greek historian Polybius counted about 41,000 Romans alongside 210,000 allies.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Where did Valerius capture the Samnite camp and scatter their foragers in Rome's third victory of 343 BC?",
+      "options": [
+        "Cales",
+        "Mount Gaurus",
+        "Lautulae",
+        "Suessula",
+        "Capua",
+        "Cumae"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 3,
+      "textReference": "#first-war-campaigns",
+      "explanation": "Valerius rushed to Suessula, a town on Campania's eastern edge, for the third victory. Afterwards both consuls celebrated triumphs.",
+      "sourceQuote": "In the third, Valerius rushed to Suessula, a town on Campania's eastern edge, captured the Samnite camp and scattered their foragers.",
+      "reviewFlags": []
+    },
+    {
+      "question": "According to Livy, on what grounds did the Roman Senate refuse to honour the Caudine Forks agreement?",
+      "options": [
+        "The people had never approved it",
+        "Gaius Pontius had no right to make treaties",
+        "The fetials had not sworn the oath",
+        "The Samnites had broken the truce first",
+        "The consuls had been tricked by a false rumour",
+        "The agreement had been made outside Roman territory"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#caudine-forks",
+      "explanation": "The Senate argued that the Roman people had never approved the agreement, so the war resumed. Some historians think the truce of the following years actually came from the Caudine agreement.",
+      "sourceQuote": "Then, Livy says, the Senate refused to honour the agreement, arguing the people had never approved it, and the war resumed.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did the Romans finally get into Naples in 326 BC?",
+      "options": [
+        "Neapolis rose against Paleopolis and expelled it",
+        "They stormed Paleopolis after a long siege",
+        "A deserter showed them a hidden gate",
+        "Two leading Neapolitans, fed up with the Samnite garrison, let them in",
+        "The Campanians from Capua opened the walls",
+        "The Samnite garrison surrendered the city for gold"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 3,
+      "textReference": "#second-war-outbreak",
+      "explanation": "Two leading Neapolitans, tired of the unruly Samnite garrison, let the Romans in. The Second, or Great, Samnite War that began there lasted until 304 BC.",
+      "sourceQuote": "In 326 BC two leading Neapolitans, fed up with the unruly Samnite garrison, let the Romans in.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which peoples made up the coalition Rome faced by 295 BC? (select all that apply)",
+      "options": [
+        "Campanians",
+        "Etruscans",
+        "Samnites",
+        "Senone Gauls",
+        "Lucanians",
+        "Umbrians"
+      ],
+      "correctAnswers": [
+        1,
+        2,
+        3,
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#third-war-sentinum",
+      "explanation": "Rome faced Samnites, Etruscans, Umbrians and Senone Gauls together. A Roman raid drew the Etruscans home before the decisive battle at Sentinum.",
+      "sourceQuote": "By 295 BC Rome faced a coalition of four peoples: Samnites, Etruscans, Umbrians from the hills of central Italy, and Senone Gauls, Celtic warriors on the Adriatic coast.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Decius' hilltop rescue of 343 BC closely resembles a famous episode from which year, and may be borrowed from it?",
+      "options": [
+        "258 BC",
+        "225 BC",
+        "211 BC",
+        "295 BC",
+        "310 BC",
+        "321 BC"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#doubting-livy",
+      "explanation": "The rescue looks very like a famous episode of 258 BC, so it may be a later borrowing. The other battles of the First Samnite War are doubted too.",
+      "sourceQuote": "Decius' hilltop rescue closely resembles a famous episode of 258 BC and may be borrowed from it.",
+      "reviewFlags": []
+    },
+    {
+      "question": "In Livy's account, how did Samnite leaders respond when Roman envoys asked them to spare Campania?",
+      "options": [
+        "They sent envoys of their own to the Senate",
+        "They demanded Rome surrender the Sidicini",
+        "They appealed to the Etruscans for help",
+        "They executed the Roman envoys on the spot",
+        "They offered to share Campania with Rome",
+        "They ordered their armies into Campania within earshot"
+      ],
+      "correctAnswers": [
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#first-war-outbreak",
+      "explanation": "The Samnite leaders defiantly ordered their armies into Campania within earshot of the Roman envoys. Modern historians doubt that this defiant Samnite assembly rests on any genuine record.",
+      "sourceQuote": "When Roman envoys asked the Samnites to spare what had become Roman property, Samnite leaders ordered their armies into Campania within earshot.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which ancient historians report the treaty between Rome and the Samnites in 354 BC? (select all that apply)",
+      "options": [
+        "Thucydides",
+        "Dionysius of Halicarnassus",
+        "Livy",
+        "Diodorus",
+        "Polybius",
+        "Plutarch"
+      ],
+      "correctAnswers": [
+        2,
+        3
+      ],
+      "difficulty": 3,
+      "textReference": "#samnites-and-rome",
+      "explanation": "Livy and Diodorus both mention the treaty, but neither records its terms. Modern historians suspect it made the Liris a dividing line between the two powers.",
+      "sourceQuote": "In 354 BC, according to the ancient historians Livy and Diodorus, Rome and the Samnites signed a treaty, but neither records its terms.",
+      "reviewFlags": []
+    }
+  ]
+}

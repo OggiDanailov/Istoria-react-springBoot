@@ -1,0 +1,205 @@
+{
+  "batchName": "Early Republic: Final Conquest of Italy (290-264 BCE) - Hard Batch 1",
+  "chapterName": "Early Republic: Final Conquest of Italy (290-264 BCE)",
+  "difficulty": 3,
+  "batchOrder": 4,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "How did the Hortensian Law go further than the earlier laws of 449 and 339 BC?",
+      "options": [
+        "It gave the Senate a veto over tribunes",
+        "It removed the need for Senate approval",
+        "It created the office of tribune",
+        "It first let plebeians become consuls",
+        "It abolished patrician status entirely",
+        "It moved voting into military centuries"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 3,
+      "textReference": "#lex-hortensia",
+      "explanation": "The earlier laws still required the Senate to approve plebeian decisions; the lex Hortensia removed that requirement entirely. This made the people and their tribunes major players in Roman politics.",
+      "sourceQuote": "However, they still needed the Senate, Rome's council of elders and ex-officials, to approve plebeian decisions.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which factors helped turn Pyrrhus's Sicilian campaign into a failure? (select all that apply)",
+      "options": [
+        "A Roman army landed on the island",
+        "Sicilian backers tired of paying for war",
+        "Gauls invaded his kingdom of Epirus",
+        "Syracuse switched to Carthage's side",
+        "Pyrrhus lacked enough naval strength",
+        "Lilybaeum could be supplied by sea"
+      ],
+      "correctAnswers": [
+        1,
+        4,
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#pyrrhus-in-sicily",
+      "explanation": "Pyrrhus could not blockade sea-supplied Lilybaeum, and his Sicilian supporters grew tired of funding the war. He returned to Italy in early 276 BC with nothing lasting to show.",
+      "sourceQuote": "The city could be supplied by sea, and Pyrrhus lacked the naval strength to cut it off.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which actions by Tarentum led to war with Rome? (select all that apply)",
+      "options": [
+        "Signing an alliance with Carthage",
+        "Sending troops to fight at Sentinum",
+        "Rejecting a Roman ultimatum in 281 BC",
+        "Expelling Thurii's pro-Roman government",
+        "Besieging the Roman colony at Capua",
+        "Attacking a Roman fleet in its waters"
+      ],
+      "correctAnswers": [
+        2,
+        3,
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#tarentum-calls-for-help",
+      "explanation": "Tarentum attacked a Roman fleet in waters forbidden by treaty, threw out Thurii's pro-Roman government, and then rejected Rome's ultimatum in early 281 BC. War followed.",
+      "sourceQuote": "It then marched on Thurii and threw out the city's pro-Roman government.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did the battle at Populonia in 282 BC accomplish?",
+      "options": [
+        "It gave Rome its first win over Pyrrhus",
+        "It crushed the Gauls south of the Alps",
+        "It brought Tarentum under Roman rule",
+        "It ended the Third Samnite War",
+        "It secured Rome's first foothold in Sicily",
+        "It ended the last traces of Etruscan power"
+      ],
+      "correctAnswers": [
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#rome-after-the-samnite-wars",
+      "explanation": "The battle at the coastal Etruscan town of Populonia finished off the last traces of Etruscan power in the region. The Greek south of Italy, however, still lay beyond Rome's control.",
+      "sourceQuote": "In 282 BC, a battle at Populonia, an Etruscan town on the coast, ended the last traces of Etruscan power in the region.",
+      "reviewFlags": []
+    },
+    {
+      "question": "The Plebeian Council voted by tribal districts, never more than 35. How many of them did rural landowners control?",
+      "options": [
+        "35",
+        "29",
+        "17",
+        "21",
+        "31",
+        "4"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 3,
+      "textReference": "#why-the-plebs-seceded",
+      "explanation": "Rural landowners controlled 29 districts, so they, not city crowds, held most of the voting power. This is one reason historians doubt the story of urban debt riots.",
+      "sourceQuote": "Rural landowners controlled 29 of them, so they, not city crowds, held most of the power.",
+      "reviewFlags": []
+    },
+    {
+      "question": "At the start of the war in 264 BC, the only recorded help from the southern Greek cities was transport ships from which cities? (select all that apply)",
+      "options": [
+        "Locri",
+        "Rhegium",
+        "Tarentum",
+        "Thurii",
+        "Syracuse",
+        "Naples"
+      ],
+      "correctAnswers": [
+        0,
+        2,
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#how-rome-ruled-italy",
+      "explanation": "Rome borrowed transport ships from Naples, Tarentum and Locri. This suggests the burden on the Greek cities was light.",
+      "sourceQuote": "Even at the start of Rome's next great war in 264 BC, the only recorded help was a fleet of transport ships borrowed from Naples, Tarentum and Locri, a Greek city on Italy's toe.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Over which years was the First Punic War fought?",
+      "options": [
+        "275–241 BC",
+        "264–241 BC",
+        "241–218 BC",
+        "264–218 BC",
+        "264–146 BC",
+        "281–264 BC"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 3,
+      "textReference": "#italy-united-264-bc",
+      "explanation": "The First Punic War began in 264 BC and lasted until 241 BC. That same year, 264 BC, Rome crushed the last resistance in Etruria.",
+      "sourceQuote": "This conflict, the First Punic War, lasted until 241 BC.",
+      "reviewFlags": []
+    },
+    {
+      "question": "After which battle, according to ancient tradition, did Pyrrhus exclaim, \"Another such victory and we are lost!\"?",
+      "options": [
+        "Sentinum, 295 BC",
+        "Asculum, 279 BC",
+        "Lilybaeum, 277 BC",
+        "Heraclea, 280 BC",
+        "Populonia, 282 BC",
+        "Beneventum, 275 BC"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 3,
+      "textReference": "#heraclea-and-asculum",
+      "explanation": "Pyrrhus beat the Romans again at Asculum in 279 BC, but his army suffered terribly. Rather than press on against Rome, he then turned to Sicily.",
+      "sourceQuote": "According to ancient tradition, he exclaimed after the battle: \"Another such victory and we are lost!\"",
+      "reviewFlags": []
+    },
+    {
+      "question": "How do accounts describe the outcome of Pyrrhus's final battle with Rome at Beneventum in 275 BC?",
+      "options": [
+        "All agree on a crushing Roman win",
+        "As another costly win for Pyrrhus",
+        "As a Roman victory or as a draw",
+        "As a battle decided by Carthage",
+        "As the battle where Pyrrhus died",
+        "As a Roman defeat ending in a truce"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 3,
+      "textReference": "#beneventum-and-withdrawal",
+      "explanation": "Some accounts call Beneventum a Roman victory, others a draw. Either way, it forced Pyrrhus onto the defensive.",
+      "sourceQuote": "The outcome is described differently: some accounts call it a Roman victory, others a draw.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What oddity did the Hortensian Law contain?",
+      "options": [
+        "It let only city residents cast votes",
+        "It banned all voting in wartime",
+        "It limited tribunes to a single term",
+        "It banned votes on market days",
+        "It banned votes during religious festivals",
+        "It required Senate approval for war votes"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 3,
+      "textReference": "#why-the-plebs-seceded",
+      "explanation": "The ban on market-day votes made it harder for country farmers, who came to town on those days, to vote. This is odd given that rural plebeians likely drove the reform.",
+      "sourceQuote": "The law did contain one oddity: it banned votes on market days, which made it harder for country farmers to vote when they came to town.",
+      "reviewFlags": []
+    }
+  ]
+}

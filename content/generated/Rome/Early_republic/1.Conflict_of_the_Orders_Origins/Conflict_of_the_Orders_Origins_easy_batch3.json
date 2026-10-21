@@ -1,0 +1,179 @@
+{
+  "batchName": "Early Republic: The Conflict of the Orders - Origins (509-450 BCE) - Easy Batch 3",
+  "chapterName": "Early Republic: The Conflict of the Orders - Origins (509-450 BCE)",
+  "difficulty": 1,
+  "batchOrder": 3,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Why did many plebeian farms lie abandoned in the early Republic?",
+      "options": [
+        "Plague had wiped out the farmers",
+        "Patricians had seized them by law",
+        "The plebeians were away serving as soldiers",
+        "Floods from the Tiber ruined them"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#debt-crisis",
+      "explanation": "While plebeians served in the army, their farms lay abandoned and they lost income. Short of money, they borrowed from patricians, which left them open to abuse.",
+      "sourceQuote": "While they served as soldiers, the farms they lived on lay abandoned.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What name is given today to the long struggle between patricians and plebeians?",
+      "options": [
+        "The War of the Curiae",
+        "The Conflict of the Orders",
+        "The Social War",
+        "The Struggle of the Tribes"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#patricians-and-plebeians",
+      "explanation": "It is called the Conflict of the Orders, the 'orders' being the two classes of citizen. It was the plebeians' fight for political equality.",
+      "sourceQuote": "The long struggle that followed is known today as the Conflict of the Orders, the 'orders' being these two classes of citizen.",
+      "reviewFlags": []
+    },
+    {
+      "question": "In Livy's story from 495 BC, where did a ragged former army officer tell the crowd his tale of debt?",
+      "options": [
+        "The Senate house",
+        "The Forum",
+        "The Circus Maximus",
+        "The Capitoline temple"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#debt-crisis",
+      "explanation": "He stumbled into the Forum, Rome's main public square, and told his story to the crowd. The crowd erupted in anger at his treatment.",
+      "sourceQuote": "A ragged former army officer stumbled into the Forum, Rome's main public square, and told the crowd his tale.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Before Roman law was written down, who alone knew and interpreted it?",
+      "options": [
+        "The pontifices, upper-class priests",
+        "The plebeian aediles",
+        "The Vestal Virgins",
+        "The tribunes"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#terentilius-arsa",
+      "explanation": "Roman law had never been written down, so only the pontifices knew and interpreted it. That was the simple grievance underneath the plebeian demand for written law.",
+      "sourceQuote": "Only the pontifices, upper-class priests, knew and interpreted it.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which famous 1st-century BC statesman learned the Twelve Tables by heart as a boy?",
+      "options": [
+        "Cato the Elder",
+        "Cicero",
+        "Pompey",
+        "Julius Caesar"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#twelve-tables",
+      "explanation": "Cicero memorised the Twelve Tables as a boy, a sign of how central they remained. The Tables underpinned Roman law for a thousand years.",
+      "sourceQuote": "Cicero, the 1st-century BC statesman, learned them by heart as a boy.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Because tribunes were sacrosanct, what could happen to anyone who laid hands on one?",
+      "options": [
+        "He could be killed without penalty",
+        "He lost his citizenship",
+        "He paid a heavy fine",
+        "He was banished for a year"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#tribunes-of-the-plebs",
+      "explanation": "The plebeians swore to defend their tribunes, and attacking one carried the risk of being killed without penalty. This sacred protection underpinned the tribune's power to intervene.",
+      "sourceQuote": "The plebeians swore to defend them, and anyone who laid hands on a tribune could be killed without penalty.",
+      "reviewFlags": []
+    },
+    {
+      "question": "According to Livy, where did Rome's envoys go in 454 BC to study laws?",
+      "options": [
+        "Athens, to examine the laws of Solon",
+        "Sparta, to examine the laws of Lycurgus",
+        "Corinth, to examine its trade laws",
+        "Carthage, to examine its constitution"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#terentilius-arsa",
+      "explanation": "Livy says the three envoys went to Athens to study the laws of Solon, its famous lawgiver. Some modern scholars doubt this account.",
+      "sourceQuote": "The historian Livy says they went to Athens to examine the laws of Solon, its famous lawgiver.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which Greek historian of the 2nd century BC never mentions the patrician-plebeian conflict?",
+      "options": [
+        "Polybius",
+        "Plutarch",
+        "Herodotus",
+        "Thucydides"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#historicity",
+      "explanation": "Polybius might have met grandchildren of participants, yet he never mentions the conflict. That silence is one reason historians doubt the traditional story.",
+      "sourceQuote": "Polybius, a Greek historian of the 2nd century BC who might have met grandchildren of participants, never mentions it.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What could a Roman citizen threatened by an official shout to get help?",
+      "options": [
+        "'I call upon the gods!'",
+        "'I appeal to the Senate!'",
+        "'I call upon the tribunes!'",
+        "'I appeal to the consuls!'"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#tribunes-of-the-plebs",
+      "explanation": "A tribune would then step in to judge whether the official was acting lawfully. A tribune could literally put his body in the way.",
+      "sourceQuote": "A citizen threatened by an official could shout 'I call upon the tribunes!', and a tribune would step in to judge whether the official was acting lawfully.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which three peoples was Rome at war with in 494 BC, when the plebeian soldiers walked out?",
+      "options": [
+        "Gauls, Volsci and Latins",
+        "Samnites, Sabines and Etruscans",
+        "Etruscans, Latins and Gauls",
+        "Sabines, Aequi and Volsci"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#first-secession",
+      "explanation": "Rome was fighting the Sabines, the Aequi and the Volsci, which made it the worst possible moment for the army to stop working. That is exactly when the plebeians refused to march.",
+      "sourceQuote": "In 494 BC Rome was at war with three neighbouring peoples: the Sabines, and two peoples living east and south-east of the city, the Aequi and the Volsci.",
+      "reviewFlags": []
+    }
+  ]
+}

@@ -2,6 +2,8 @@
 //   1. chapter text (~1,500 words) split into sections with anchors
 //   2. quiz questions written from that text, each linked to the section that explains it
 //   3. one fact-check pass: sections against Wikipedia, questions against the chapter text
+//   4. data for the seven mini-games, written from the chapter and fact-checked against it
+//      (map coordinates come from Wikipedia, not the model)
 //
 //   node generate.mjs --dry-run            fetch/cache sources, show sizes, no API calls
 //   node generate.mjs                      generate every chapter that has no output yet
@@ -306,11 +308,179 @@ function shuffleOptions(q) {
   }
 }
 
+// ---------------------------------------------------------------- Game data
+// Data for the seven mini-games, written from the chapter text and linked to its sections.
+
+const str = { type: 'string' }
+const obj = (props, required = Object.keys(props)) => ({ type: 'object', additionalProperties: false, required, properties: props })
+const arr = items => ({ type: 'array', items })
+const gamesSchema = obj({
+  briefing: obj({ title: str, paragraphs: arr(str) }),
+  timelines: arr(obj({ name: str, blurb: str, events: arr(obj({ label: str, when: str, year: { type: 'integer', description: 'Year for sorting; negative = BC' }, fact: str, sectionId: str })) })),
+  matchSets: arr(obj({ name: str, blurb: str, pairs: arr(obj({ name: str, match: str, sectionId: str })) })),
+  trueFalseDecks: arr(obj({ name: str, blurb: str, cards: arr(obj({ claim: str, answer: { type: 'boolean' }, why: str, sectionId: str })) })),
+  oddOneOut: arr(obj({ items: arr(str), oddIndex: { type: 'integer' }, why: str, sectionId: str })),
+  whoAmI: arr(obj({ name: str, blurb: str, people: arr(obj({ name: str, options: arr(str), clues: arr(str), sectionId: str })) })),
+  places: arr(obj({ name: str, wikipediaTitle: str, lat: { type: 'number' }, lon: { type: 'number' }, why: str, sectionId: str })),
+})
+const Games = z.object({
+  briefing: z.object({ title: z.string(), paragraphs: z.array(z.string()) }),
+  timelines: z.array(z.object({ name: z.string(), blurb: z.string(), events: z.array(z.object({ label: z.string(), when: z.string(), year: z.number().int(), fact: z.string(), sectionId: z.string() })) })),
+  matchSets: z.array(z.object({ name: z.string(), blurb: z.string(), pairs: z.array(z.object({ name: z.string(), match: z.string(), sectionId: z.string() })) })),
+  trueFalseDecks: z.array(z.object({ name: z.string(), blurb: z.string(), cards: z.array(z.object({ claim: z.string(), answer: z.boolean(), why: z.string(), sectionId: z.string() })) })),
+  oddOneOut: z.array(z.object({ items: z.array(z.string()), oddIndex: z.number().int(), why: z.string(), sectionId: z.string() })),
+  whoAmI: z.array(z.object({ name: z.string(), blurb: z.string(), people: z.array(z.object({ name: z.string(), options: z.array(z.string()), clues: z.array(z.string()), sectionId: z.string() })) })),
+  places: z.array(z.object({ name: z.string(), wikipediaTitle: z.string(), lat: z.number(), lon: z.number(), why: z.string(), sectionId: z.string() })),
+})
+
+const GAMES_SYSTEM = `You write the content for the mini-games of Ave Caesar, a history learning game played on phones. People play for fun and should learn real history.
+
+You get a chapter split into sections. Everything you write must be supported by that chapter, which is the only ground truth; every item names the section (sectionId) that explains it, because that is where a player who gets it wrong is sent. Mark legend and disputed tradition as such. Spread items across all sections. Explain unfamiliar names in a few words where space allows (in facts, explanations and clues), never in short labels.
+
+Write:
+- briefing: a title like "Rome, 343 BC" and 2 short paragraphs (70-100 words in total) that set the scene for a newcomer: where, when, who, and what is at stake. Plain, vivid, no lists.
+- timelines: 3 levels of events to put in chronological order, with 4, 6 and 8 events (easiest first). label: at most 40 characters, no dates in it. when: how a player would say the date ("343 BC", "Soon after 509 BC", "Under Servius Tullius, 6th king"). year: an integer for sorting (negative for BC); every event in a level needs a different year, and include an event only if the chapter makes its place in the order clear. fact: one sentence shown after placing it.
+- matchSets: 2 sets of 5 pairs. name: a person, place or term (at most 30 characters). match: what they did or what it means (at most 70 characters). Each match must fit only its own name in the set.
+- trueFalseDecks: 2 decks of 8 statements, about half true. A false statement changes one clear detail so it is plainly false according to the chapter (not a trick of wording). why: one or two sentences giving the real fact.
+- oddOneOut: 7 rounds of 4 short items (at most 40 characters each) where three share a property the chapter clearly states and one does not, though it looks like it belongs. oddIndex is its position. why: names the shared property and why the odd one differs.
+- whoAmI: 2 sets of 3 or 4 people. clues: exactly 4, written in the first person, ordered from hardest to easiest, never containing the person's name, each true only of that person among the options. options: exactly 4 names including the right one; the other three are real people of the same kind from this period (preferably from the chapter).
+- places: 5 to 7 places from the chapter to put on a map of Italy and its surroundings (nothing outside Italy, Sicily, Sardinia and the neighbouring coasts): towns, cities, regions, rivers, lakes or battlefields, at least 15 km apart from each other and from Rome (so not hills, buildings or districts inside one city). name: as the chapter calls it. wikipediaTitle: the English Wikipedia article that has the place's coordinates (an ancient site or the modern town on the spot). lat/lon: your best estimate. why: one sentence on its role in the chapter.`
+
+const GAMES_VERIFIER_SYSTEM = `You fact-check the mini-game content of a history learning game against the chapter it was written from. The chapter is the only ground truth.
+
+Mark an item "problem" (one sentence why) if: it states something the chapter contradicts or does not support; it presents legend as fact; its sectionId does not explain it; a timeline level's order is not clearly supported by the chapter; a true/false card's answer is wrong or debatable; in odd-one-out the three do not clearly share a stated property or the odd one also has it; a Who Am I? clue is false, names the person, or fits another option equally; a match could fit another name in its set; or the item is ambiguous. Otherwise "ok" with an empty issue. Be strict but don't nitpick style.`
+
+const COORDS_DIR = path.join(HERE, '.cache', 'coords')
+async function wikiCoordinates(title) {
+  fs.mkdirSync(COORDS_DIR, { recursive: true })
+  const file = path.join(COORDS_DIR, title.replace(/[^\w-]+/g, '_') + '.json')
+  if (fs.existsSync(file)) return JSON.parse(fs.readFileSync(file, 'utf8'))
+  const params = new URLSearchParams({ action: 'query', format: 'json', prop: 'coordinates', redirects: '1', titles: title })
+  for (let attempt = 1; attempt <= 4; attempt++) {
+    const res = await fetch(`https://en.wikipedia.org/w/api.php?${params}`, { headers: { 'User-Agent': 'AveCaesarContentPilot/0.1 (https://avecaesar.org)' } })
+    if (res.status === 429) { await sleep(4000 * attempt); continue }
+    if (!res.ok) return null
+    const page = Object.values((await res.json()).query.pages)[0]
+    const c = page?.coordinates?.[0]
+    const result = c ? { lat: c.lat, lon: c.lon, title: page.title } : null
+    fs.writeFileSync(file, JSON.stringify(result))
+    await sleep(1000)
+    return result
+  }
+  return null
+}
+const km = (a, b) => {
+  const r = Math.PI / 180, dLat = (b.lat - a.lat) * r, dLon = (b.lon - a.lon) * r
+  const h = Math.sin(dLat / 2) ** 2 + Math.cos(a.lat * r) * Math.cos(b.lat * r) * Math.sin(dLon / 2) ** 2
+  return 6371 * 2 * Math.asin(Math.sqrt(h))
+}
+
+// Flatten every game item with a stable id, for checking and for the verifier
+function gameItems(g) {
+  const items = []
+  g.timelines.forEach((t, i) => t.events.forEach((e, j) => items.push({ id: `timeline-${i + 1}-${j + 1}`, group: `timeline-${i + 1}`, sectionId: e.sectionId, show: { level: t.name, label: e.label, when: e.when, year: e.year, fact: e.fact } })))
+  g.matchSets.forEach((m, i) => m.pairs.forEach((p, j) => items.push({ id: `match-${i + 1}-${j + 1}`, group: `match-${i + 1}`, sectionId: p.sectionId, show: { set: m.name, name: p.name, match: p.match } })))
+  g.trueFalseDecks.forEach((d, i) => d.cards.forEach((c, j) => items.push({ id: `tf-${i + 1}-${j + 1}`, sectionId: c.sectionId, show: { claim: c.claim, answer: c.answer, why: c.why } })))
+  g.oddOneOut.forEach((o, i) => items.push({ id: `odd-${i + 1}`, sectionId: o.sectionId, show: { items: o.items, odd: o.items[o.oddIndex], why: o.why } }))
+  g.whoAmI.forEach((w, i) => w.people.forEach((p, j) => items.push({ id: `who-${i + 1}-${j + 1}`, sectionId: p.sectionId, show: { name: p.name, options: p.options, clues: p.clues } })))
+  g.places.forEach((p, i) => items.push({ id: `place-${i + 1}`, sectionId: p.sectionId, show: { name: p.name, why: p.why } }))
+  return items
+}
+
+// Checks that need no model: shapes, counts, lengths, duplicates
+function gameProblems(g, sections) {
+  const ids = new Set(sections.map(s => s.id))
+  const out = new Map()
+  const add = (id, msg) => out.set(id, [...(out.get(id) ?? []), msg])
+  for (const it of gameItems(g)) if (!ids.has(it.sectionId)) add(it.id, `links to unknown section "${it.sectionId}"`)
+  g.timelines.forEach((t, i) => {
+    const years = t.events.map(e => e.year)
+    if (new Set(years).size !== years.length) add(`timeline-${i + 1}-1`, `level "${t.name}" has events with the same year`)
+    t.events.forEach((e, j) => { if (e.label.length > 42) add(`timeline-${i + 1}-${j + 1}`, `label longer than 40 characters`) })
+  })
+  g.matchSets.forEach((m, i) => {
+    if (m.pairs.length !== 5) add(`match-${i + 1}-1`, `set "${m.name}" has ${m.pairs.length} pairs, expected 5`)
+    if (new Set(m.pairs.map(p => normalize(p.name))).size !== m.pairs.length) add(`match-${i + 1}-1`, 'duplicate names in set')
+  })
+  g.oddOneOut.forEach((o, i) => {
+    if (o.items.length !== 4) add(`odd-${i + 1}`, `${o.items.length} items, expected 4`)
+    if (o.oddIndex < 0 || o.oddIndex >= o.items.length) add(`odd-${i + 1}`, 'oddIndex out of range')
+  })
+  g.whoAmI.forEach((w, i) => w.people.forEach((p, j) => {
+    const id = `who-${i + 1}-${j + 1}`
+    if (p.options.length !== 4 || !p.options.includes(p.name)) add(id, 'options must be 4 names including the answer')
+    if (new Set(p.options).size !== p.options.length) add(id, 'duplicate options')
+    if (p.clues.length !== 4) add(id, `${p.clues.length} clues, expected 4`)
+    const parts = p.name.split(/\s+/).filter(w => w.length > 3 && !/^(the|king)$/i.test(w))
+    if (p.clues.some(c => parts.some(w => normalize(c).includes(normalize(w))))) add(id, 'a clue contains the person’s name')
+  }))
+  return out
+}
+
+async function writeGames(client, chapter, sections, outDir) {
+  const ask = `Chapter: ${chapter.chapterName}\nValid sectionId values: ${sections.map(s => `"${s.id}"`).join(', ')}.`
+  const games = Games.parse(await timed('game data written', () => callClaude(client, {
+    system: GAMES_SYSTEM,
+    content: [chapterBlock(sections), { type: 'text', text: ask }],
+    schema: gamesSchema,
+    effort: 'high',
+  })))
+  const flags = gameProblems(games, sections)
+  const addFlag = (id, msg) => flags.set(id, [...(flags.get(id) ?? []), msg])
+
+  // Real coordinates from Wikipedia; the model's estimate only as a flagged fallback
+  for (const [i, p] of games.places.entries()) {
+    const wiki = await wikiCoordinates(p.wikipediaTitle)
+    if (wiki) {
+      const off = km(wiki, p)
+      if (off > 60) addFlag(`place-${i + 1}`, `model's position is ${Math.round(off)} km from Wikipedia's "${wiki.title}"; check the article is the right place`)
+      Object.assign(p, { lat: wiki.lat, lon: wiki.lon, coordinates: `Wikipedia: ${wiki.title}` })
+    } else {
+      p.coordinates = 'model estimate'
+      addFlag(`place-${i + 1}`, `no coordinates on Wikipedia "${p.wikipediaTitle}"; position is the model's estimate`)
+    }
+  }
+
+  // Places must be far enough apart to tell them apart on a map (and from Rome, which is always shown)
+  const ROME = { lat: 41.893, lon: 12.483 }
+  games.places.forEach((p, i) => {
+    if (km(p, ROME) < 12) addFlag(`place-${i + 1}`, 'less than 12 km from Rome: too close to show on the map')
+    if (p.lat < 36 || p.lat > 47.5 || p.lon < 6 || p.lon > 19.5) addFlag(`place-${i + 1}`, 'outside the map area (Italy and its neighbours)')
+    games.places.slice(0, i).forEach((q, j) => { if (km(p, q) < 12) addFlag(`place-${i + 1}`, `less than 12 km from ${q.name} (place ${j + 1}): too close to show on the map`) })
+  })
+
+  const items = gameItems(games)
+  const verdicts = Verification.parse(await timed('game data fact-checked', () => callClaude(client, {
+    system: GAMES_VERIFIER_SYSTEM,
+    content: [chapterBlock(sections), { type: 'text', text: `Return your verdicts in "questions" (one per id) and leave "sections" empty.\n${JSON.stringify(items.map(({ id, sectionId, show }) => ({ id, sectionId, ...show })), null, 1)}` }],
+    schema: verificationSchema,
+    effort: 'medium',
+  })))
+  const byId = new Map(verdicts.questions.map(v => [v.id, v]))
+  for (const it of items) {
+    const v = byId.get(it.id)
+    if (!v) addFlag(it.id, 'verifier returned no verdict')
+    else if (v.verdict === 'problem') addFlag(it.id, `fact-check: ${v.issue}`)
+  }
+
+  // Attach flags to the items so a build can leave flagged ones out
+  const flagged = id => flags.get(id) ?? []
+  games.timelines.forEach((t, i) => t.events.forEach((e, j) => { e.reviewFlags = flagged(`timeline-${i + 1}-${j + 1}`) }))
+  games.matchSets.forEach((m, i) => m.pairs.forEach((p, j) => { p.reviewFlags = flagged(`match-${i + 1}-${j + 1}`) }))
+  games.trueFalseDecks.forEach((d, i) => d.cards.forEach((c, j) => { c.reviewFlags = flagged(`tf-${i + 1}-${j + 1}`) }))
+  games.oddOneOut.forEach((o, i) => { o.reviewFlags = flagged(`odd-${i + 1}`) })
+  games.whoAmI.forEach((w, i) => w.people.forEach((p, j) => { p.reviewFlags = flagged(`who-${i + 1}-${j + 1}`) }))
+  games.places.forEach((p, i) => { p.reviewFlags = flagged(`place-${i + 1}`) })
+
+  fs.writeFileSync(path.join(outDir, 'games.json'), JSON.stringify({ chapterName: chapter.chapterName, model: MODEL, ...games }, null, 2) + '\n')
+  return { count: items.length, flagged: items.filter(it => flags.has(it.id)).map(it => ({ ...it, problems: flags.get(it.id) })) }
+}
+
 // ---------------------------------------------------------------- Main
 
 async function processChapter(client, chapter) {
   const outDir = path.join(OUT_ROOT, chapter.folder)
-  if (fs.existsSync(path.join(outDir, 'review.md')) && !FORCE) {
+  if (fs.existsSync(path.join(outDir, 'games.json')) && !FORCE) {
     console.log(`- ${chapter.id}: already generated (use --force to redo)`)
     return
   }
@@ -360,11 +530,14 @@ Valid sectionId values: ${sections.map(s => `"${s.id}"`).join(', ')}.`
     effort: 'medium',
   })))
   const sectionVerdicts = new Map(verification.sections.map(v => [v.id, v]))
-  const questionVerdicts = new Map(verification.questions.map(v => [v.id, v]))
 
-  // 4. Write files
+  // 4. Game data for the mini-games, checked against the chapter
   fs.rmSync(outDir, { recursive: true, force: true })
   fs.mkdirSync(outDir, { recursive: true })
+  const gameResult = await writeGames(client, chapter, sections, outDir)
+  const questionVerdicts = new Map(verification.questions.map(v => [v.id, v]))
+
+  // 5. Write files
   const slug = path.basename(chapter.folder).replace(/^\d+\./, '')
   const attribution = docs.map(d => `- [${d.title}](${d.url}) (revision ${d.revision}), CC BY-SA 4.0`).join('\n')
 
@@ -442,10 +615,12 @@ Valid sectionId values: ${sections.map(s => `"${s.id}"`).join(', ')}.`
       ...q.options.map((o, i) => `- ${q.correctAnswers.includes(i) ? '**✓**' : '  '} ${o}`),
       '', ...problems.map(p => `> ${p}`), '',
     ]),
+    `## Game data: ${gameResult.flagged.length} of ${gameResult.count} items flagged (games.json; flagged items are left out of game builds)`, '',
+    ...gameResult.flagged.flatMap(it => [`### ${it.id} (#${it.sectionId})`, '```', JSON.stringify(it.show), '```', ...it.problems.map(p => `> ${p}`), '']),
     '## Sources', attribution, '',
   ].join('\n'))
 
-  console.log(`    ${words} words / ${sections.length} sections, ${all.length} questions; flagged: ${flaggedSections.length} sections, ${flaggedQuestions.length} questions -> ${path.relative(process.cwd(), outDir)}`)
+  console.log(`    ${words} words / ${sections.length} sections, ${all.length} questions, ${gameResult.count} game items; flagged: ${flaggedSections.length} sections, ${flaggedQuestions.length} questions, ${gameResult.flagged.length} game items -> ${path.relative(process.cwd(), outDir)}`)
 }
 
 const chapters = CONFIG.chapters.filter(c => !ONLY || c.id === ONLY)

@@ -1,0 +1,181 @@
+{
+  "batchName": "Early Republic: The Samnite Wars (367-290 BCE) - Easy Batch 1",
+  "chapterName": "Early Republic: The Samnite Wars (367-290 BCE)",
+  "difficulty": 1,
+  "batchOrder": 1,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "What did every treaty with Rome require its allies to provide?",
+      "options": [
+        "Hostages from every leading family",
+        "Soldiers for Rome's wars at their own expense",
+        "Annual tribute paid in silver",
+        "Warships for the Roman fleet"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#roman-alliance-system",
+      "explanation": "Allies kept their own governments but had to send soldiers for Rome's wars and pay for them themselves. This gave Rome an enormous pool of manpower.",
+      "sourceQuote": "Allied peoples kept their own governments, but every treaty required them to send soldiers for Rome's wars at their own expense.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What humiliation did the trapped Roman army suffer at the Caudine Forks in 321 BC?",
+      "options": [
+        "They were forced to burn their own standards",
+        "They were sold into slavery in Samnium",
+        "They had to hand over their consuls for execution",
+        "They filed out unarmed under the yoke"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#caudine-forks",
+      "explanation": "The Romans passed unarmed under the yoke, a frame of spears symbolising subjugation, while the enemy jeered. Rome went into mourning afterwards.",
+      "sourceQuote": "The Romans filed out unarmed under the yoke, a frame of spears symbolising subjugation, while the enemy jeered.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How were the Samnites, Rome's great rivals in the Apennines, organised?",
+      "options": [
+        "As a confederation of hill tribes",
+        "As a federation of Celtic war bands",
+        "As a single kingdom ruled from Capua",
+        "As a league of Greek coastal cities"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#samnites-and-rome",
+      "explanation": "The Samnites were a confederation of hill tribes living in the Apennine Mountains, and the strongest people in the region. Their homeland rose beyond the fertile Campanian plain.",
+      "sourceQuote": "There lived the Samnites, a confederation of hill tribes and the strongest people in the region.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which people asked Rome for protection against a Samnite invasion, triggering the Third Samnite War in 298 BC?",
+      "options": [
+        "The Lucanians",
+        "The Sidicini",
+        "The Campanians",
+        "The Apulians"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#third-war-sentinum",
+      "explanation": "The Lucanians, who lived south of Samnium, appealed to Rome when the Samnites invaded. The war that followed lasted until 290 BC.",
+      "sourceQuote": "The Third Samnite War broke out in 298 BC when the Lucanians, a people south of Samnium, asked Rome for protection against a Samnite invasion.",
+      "reviewFlags": []
+    },
+    {
+      "question": "According to Livy, which small people did the Samnites attack, sparking the First Samnite War?",
+      "options": [
+        "The Sidicini",
+        "The Umbrians",
+        "The Lucanians",
+        "The Pentri"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#first-war-outbreak",
+      "explanation": "The Samnites attacked the Sidicini, whose stronghold north of Campania controlled a valuable crossroads. The Campanians came to their aid and were beaten twice.",
+      "sourceQuote": "The Samnites attacked the Sidicini, a small people north of Campania whose stronghold controlled a valuable crossroads.",
+      "reviewFlags": []
+    },
+    {
+      "question": "By 290 BC, Rome's territory stretched across the Apennines to which sea?",
+      "options": [
+        "The Ligurian",
+        "The Tyrrhenian",
+        "The Ionian",
+        "The Adriatic"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#roman-alliance-system",
+      "explanation": "Rome's territory now reached across the Apennines to the Adriatic. The Samnites were forced into an alliance with Rome on unequal terms.",
+      "sourceQuote": "Its territory now stretched across the Apennines to the Adriatic, and the Samnites were forced into an alliance with Rome on unequal terms.",
+      "reviewFlags": [
+        "fact-check: The question relies on the chapter's inaccurate dating: according to the source, Rome's territory reached the Adriatic only after conquests made once the war ended in 290 BC."
+      ]
+    },
+    {
+      "question": "After the Roman Senate turned down their alliance, what did the desperate Campanian envoys do, according to Livy?",
+      "options": [
+        "Invited a Roman colony to settle at Capua",
+        "Surrendered Capua and all Campania unconditionally",
+        "Promised Rome an annual tribute of grain",
+        "Offered hostages from Capua's leading families"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#first-war-outbreak",
+      "explanation": "The envoys played their last card by surrendering Capua and all Campania to Rome unconditionally. That made Campania Roman property and put Roman honour at stake.",
+      "sourceQuote": "So the envoys played their last card: they surrendered Capua and all Campania unconditionally to Rome.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Where did Rome found its largest colony ever, in 291 BC?",
+      "options": [
+        "Luceria",
+        "Venusia",
+        "Cales",
+        "Fregellae"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#aquilonia-and-the-end",
+      "explanation": "Rome took Venusia, which commanded routes into Lucania, Apulia and Samnium, and founded its largest colony ever there. The last Samnite resistance was crushed the following year.",
+      "sourceQuote": "In 291 BC Rome took Venusia, commanding routes into Lucania, Apulia and Samnium, and founded there its largest colony ever.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Who is our main ancient guide to the Samnite Wars?",
+      "options": [
+        "Diodorus",
+        "Thucydides",
+        "Polybius",
+        "Livy"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#first-war-outbreak",
+      "explanation": "Livy, a Roman historian, is the main source, though he wrote about three centuries after the events. Modern historians treat parts of his account cautiously.",
+      "sourceQuote": "Our main guide to these wars is Livy, a Roman historian writing about three centuries later.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What language did the Samnites speak?",
+      "options": [
+        "Latin",
+        "Greek",
+        "Etruscan",
+        "Oscan"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#samnites-and-rome",
+      "explanation": "The Samnites spoke Oscan, an Italian language they shared with several neighbours. The Campanians on the plain below were themselves descended from Samnite migrants.",
+      "sourceQuote": "The Samnites spoke Oscan, an Italian language shared with several neighbours.",
+      "reviewFlags": []
+    }
+  ]
+}

@@ -1,0 +1,191 @@
+{
+  "batchName": "Early Republic: The Conflict of the Orders - Toward Resolution (450-367 BCE) - Medium Batch 2",
+  "chapterName": "Early Republic: The Conflict of the Orders - Toward Resolution (450-367 BCE)",
+  "difficulty": 2,
+  "batchOrder": 5,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "What had happened to the Roman siege of Veii by the time Camillus took command?",
+      "options": [
+        "Veii had offered to surrender on terms",
+        "The Roman army had already abandoned the siege",
+        "The defenders had destroyed much of the siege equipment",
+        "The Gauls had arrived to help Veii",
+        "A plague had wiped out the defenders"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#siege-of-veii",
+      "explanation": "Rome was already besieging Veii, but the defenders had wrecked much of the Roman siege equipment. So the Romans went underground and dug a tunnel.",
+      "sourceQuote": "When Camillus took over, Rome was already besieging Veii, and the defenders had destroyed much of the Roman siege equipment.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did the debt law of Licinius and Sextius relieve borrowers?",
+      "options": [
+        "Creditors had to wait ten years before collecting",
+        "Debts were transferred to the state treasury",
+        "All debts were cancelled outright by decree",
+        "Interest already paid was subtracted, the rest due in three yearly instalments",
+        "Debtors received public land in place of payment"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#licinian-laws",
+      "explanation": "Interest already paid came off the sum owed, and the remainder could be paid in three equal yearly instalments. Debt weighed heaviest on small farmers.",
+      "sourceQuote": "Under the new debt law, interest already paid was subtracted from the sum owed.",
+      "reviewFlags": []
+    },
+    {
+      "question": "After which law did regular sharing of the consulship between patricians and plebeians begin?",
+      "options": [
+        "The law of Camillus in 368 BC",
+        "The law of Marcus Manlius in 376 BC",
+        "The law of Licinius and Sextius in 367 BC",
+        "The law of Lucius Genucius in 342 BC",
+        "The law of Publius Manlius in 337 BC"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#modern-verdict",
+      "explanation": "Regular sharing started only after the tribune Lucius Genucius's law in 342 BC, which apparently required one consul to be a plebeian.",
+      "sourceQuote": "Regular sharing began only after the law of Lucius Genucius, a tribune, in 342 BC.",
+      "reviewFlags": []
+    },
+    {
+      "question": "When did two plebeians first hold the consulship together?",
+      "options": [
+        "366 BC",
+        "295 BC",
+        "216 BC",
+        "173 BC",
+        "342 BC"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#modern-verdict",
+      "explanation": "It took until 173 BC for two plebeians to share the consulship. This long delay is one reason Cornell calls the 367 BC law puzzling.",
+      "sourceQuote": "Two plebeians did not hold the consulship together until 173 BC.",
+      "reviewFlags": [
+        "fact-check: The explanation claims the delay until 173 BC is a reason Cornell finds the law puzzling, but the chapter links his puzzlement to plebeians having already served as consular tribunes and to the 355–343 BC patrician pairs, not to 173 BC."
+      ]
+    },
+    {
+      "question": "In which year did Rome crush the Senones, though fear of the Gauls still persisted?",
+      "options": [
+        "350 BC",
+        "228 BC",
+        "114 BC",
+        "387 BC",
+        "295 BC"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#rome-after-the-sack",
+      "explanation": "Rome crushed the Senones in 295 BC, but the memory of the Gauls cast a long shadow. Gallic raiders had struck the region in 350 and 349 BC.",
+      "sourceQuote": "Even after Rome crushed the Senones in 295 BC, fear persisted.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which ruler hired Gauls for a war in southern Italy a few months after the sack of Rome?",
+      "options": [
+        "Dionysius I of Syracuse",
+        "Aruns of Clusium",
+        "Pyrrhus of Epirus",
+        "Tarquinius Superbus of Rome",
+        "Brennus of the Senones"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#sack-reliability",
+      "explanation": "Dionysius I of Syracuse hired Gauls shortly afterwards, which supports Cornell's view that the Senones were mercenaries.",
+      "sourceQuote": "A few months later, Dionysius I, the ruler of Syracuse in Sicily, hired Gauls for a war in southern Italy.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How many consular tribunes ran Rome in the years when they replaced the consuls?",
+      "options": [
+        "Just one",
+        "Between three and six",
+        "Exactly two",
+        "Exactly ten",
+        "Between eight and twelve"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#conflict-of-the-orders",
+      "explanation": "Rome was run by between three and six 'military tribunes with consular power' in those years. Consular tribunes governed in many years up to 376 BC.",
+      "sourceQuote": "In those years it was run by between three and six “military tribunes with consular power”, usually called consular tribunes.",
+      "reviewFlags": []
+    },
+    {
+      "question": "According to the geographer Strabo, who defeated the Gauls and recovered the ransom gold?",
+      "options": [
+        "Camillus, recalled from exile",
+        "The city of Clusium",
+        "The tyrant of Syracuse",
+        "Marcus Manlius's garrison",
+        "Caere, Rome's Etruscan ally"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#sack-reliability",
+      "explanation": "Strabo credits Caere with beating the Gauls and recovering the gold. Diodorus instead says an Etruscan army defeated them on their way back from southern Italy.",
+      "sourceQuote": "The geographer Strabo claims that Caere, Rome's Etruscan ally, beat them and recovered the ransom gold.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What ransom did famine and disease force the Romans to agree to pay the Gauls?",
+      "options": [
+        "A hundred talents of silver",
+        "The temple treasures of Juno",
+        "Ten thousand head of cattle",
+        "Half of all public land",
+        "A thousand pounds of gold"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#sack-of-rome",
+      "explanation": "Famine and disease led to a deal of a thousand pounds of gold. The Romans complained the Gauls were using rigged weights.",
+      "sourceQuote": "Famine and disease finally forced a deal: a ransom of a thousand pounds of gold.",
+      "reviewFlags": []
+    },
+    {
+      "question": "According to Livy, why did a man named Aruns bring the Senones to Clusium?",
+      "options": [
+        "To win back land stolen from his family",
+        "To take revenge on a nobleman whose son seduced his wife",
+        "To sell wine to the Gauls",
+        "To overthrow the Roman consuls",
+        "To avenge his father's murder by Romans"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#battle-of-the-allia",
+      "explanation": "Livy says Aruns sought revenge on a local nobleman whose son had seduced his wife. Historian T. J. Cornell doubts this romantic tale.",
+      "sourceQuote": "He wanted revenge on a local nobleman whose son had seduced his wife.",
+      "reviewFlags": []
+    }
+  ]
+}

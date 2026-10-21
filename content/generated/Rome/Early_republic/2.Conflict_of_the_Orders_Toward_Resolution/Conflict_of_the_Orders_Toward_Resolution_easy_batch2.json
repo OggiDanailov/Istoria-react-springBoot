@@ -1,0 +1,179 @@
+{
+  "batchName": "Early Republic: The Conflict of the Orders - Toward Resolution (450-367 BCE) - Easy Batch 2",
+  "chapterName": "Early Republic: The Conflict of the Orders - Toward Resolution (450-367 BCE)",
+  "difficulty": 1,
+  "batchOrder": 2,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Who were usually the creditors of the indebted small farmers of early Rome?",
+      "options": [
+        "The plebeian tribunes",
+        "Etruscan merchants",
+        "Wealthy patricians",
+        "Greek bankers from Cumae"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#licinian-laws",
+      "explanation": "Debt weighed heavily on small farmers, and their creditors were usually rich patricians. The new debt law subtracted interest already paid from the sum owed.",
+      "sourceQuote": "Debt weighed heavily on small farmers, whose creditors were usually wealthy patricians.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which two tribunes of the plebs launched a ten-year campaign for reform in 375 BC?",
+      "options": [
+        "Gaius Licinius Stolo and Lucius Sextius Lateranus",
+        "Publius Manlius and Marcus Furius Camillus",
+        "Lucius Genucius and Marcus Manlius",
+        "Marcus Papirius and Lucius Albinus"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#licinius-and-sextius",
+      "explanation": "Licinius and Sextius began a campaign that lasted a decade. They were re-elected year after year.",
+      "sourceQuote": "In 375 BC, two tribunes of the plebs, Gaius Licinius Stolo and Lucius Sextius Lateranus, launched a campaign that would last a decade.",
+      "reviewFlags": []
+    },
+    {
+      "question": "When the patricians refused to confirm Rome's first plebeian consul, what did the plebeians come close to doing?",
+      "options": [
+        "Burning the Senate house",
+        "Inviting the Gauls back into Rome",
+        "Seceding in a mass walkout from the city",
+        "Crowning a plebeian king"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#first-plebeian-consul",
+      "explanation": "The plebeians nearly seceded, staging a mass walkout as they had done before. According to Livy, the aged Camillus brokered a compromise.",
+      "sourceQuote": "The plebeians came close to seceding, that is, staging a mass walkout from the city, as they had done before.",
+      "reviewFlags": []
+    },
+    {
+      "question": "In the Roman Republic, what was a dictator?",
+      "options": [
+        "A judge who presided over criminal trials",
+        "A priest who consulted sacred prophecies",
+        "An emergency commander with powers for six months",
+        "A tyrant who seized power for life"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#siege-of-veii",
+      "explanation": "A Republican dictator was an emergency commander with sweeping powers for six months, not a tyrant. Camillus was given this role during the war with Veii.",
+      "sourceQuote": "In the Republic, a dictator was an emergency commander given sweeping powers for six months, not a tyrant.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did Brennus declare when he threw his sword onto the scales?",
+      "options": [
+        "\"Woe to the vanquished!\"",
+        "\"I came, I saw, I conquered!\"",
+        "\"Rome must be destroyed!\"",
+        "\"The die is cast!\""
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#sack-of-rome",
+      "explanation": "The Romans complained the Gauls were using rigged weights for the gold ransom, and Brennus answered by adding his sword. In Livy's version, Camillus then arrived and cancelled the deal.",
+      "sourceQuote": "When the Romans complained that the Gauls were using rigged weights, Brennus threw his sword onto the scales and declared, “Woe to the vanquished!”",
+      "reviewFlags": []
+    },
+    {
+      "question": "How much of Livy's dramatic story of the Licinian reforms does historian T. J. Cornell believe can be trusted?",
+      "options": [
+        "Very little, though the changes themselves are fairly certain",
+        "Only the parts involving Camillus",
+        "Nearly all of it, including the speeches",
+        "None of it, as the reforms never happened"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#modern-verdict",
+      "explanation": "Cornell doubts most of Livy's drama but considers the actual changes in government reasonably certain.",
+      "sourceQuote": "The historian T. J. Cornell believes very little of Livy's dramatic story can be trusted.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Where did Rome's fighting men withdraw when the Gauls reached the city?",
+      "options": [
+        "The Capitoline hill",
+        "The port of Ostia",
+        "The town of Ardea",
+        "The Palatine hill"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#sack-of-rome",
+      "explanation": "The fighting men and able-bodied senators held out on the Capitoline, Rome's fortified citadel hill. According to Livy, the Gauls found the city's gates open and walls unguarded.",
+      "sourceQuote": "The fighting men and able-bodied senators had withdrawn to the Capitoline, Rome's fortified citadel hill.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did the Gauls first react to the old Roman magistrates sitting in their robes on ivory chairs?",
+      "options": [
+        "They mocked them and dragged them away",
+        "They stared at them as if they were statues",
+        "They demanded the old men pay a ransom",
+        "They bowed to them as if they were gods"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#sack-of-rome",
+      "explanation": "The old men who had held high office stayed behind in ceremonial dress, and the Gauls gazed at them like statues. The spell broke when one Gaul stroked Marcus Papirius's beard.",
+      "sourceQuote": "The Gauls stared at them as if they were statues.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Who was the Gallic chief at the Battle of the Allia?",
+      "options": [
+        "Brennus",
+        "Aruns",
+        "Dionysius",
+        "Vercingetorix"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#battle-of-the-allia",
+      "explanation": "Brennus attacked the Roman reserves on a hill, and panic spread through the Roman army. Many Romans drowned in the Tiber.",
+      "sourceQuote": "Brennus, the Gallic chief, attacked the Roman reserves on a hill, and panic spread.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How far was the Etruscan city of Veii from Rome?",
+      "options": [
+        "About 160 km (100 miles)",
+        "About 60 km (37 miles)",
+        "About 5 km (3 miles)",
+        "About 16 km (10 miles)"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#siege-of-veii",
+      "explanation": "Veii lay just 16 km from Rome, which made it a dangerous neighbour. Rome and Veii fought a long, seesawing war with victories and defeats on both sides.",
+      "sourceQuote": "Veii was a large Etruscan city just 16 km (10 miles) from Rome.",
+      "reviewFlags": []
+    }
+  ]
+}

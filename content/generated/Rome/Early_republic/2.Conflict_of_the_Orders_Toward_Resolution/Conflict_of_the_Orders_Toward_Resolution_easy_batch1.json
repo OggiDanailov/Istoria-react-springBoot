@@ -1,0 +1,179 @@
+{
+  "batchName": "Early Republic: The Conflict of the Orders - Toward Resolution (450-367 BCE) - Easy Batch 1",
+  "chapterName": "Early Republic: The Conflict of the Orders - Toward Resolution (450-367 BCE)",
+  "difficulty": 1,
+  "batchOrder": 1,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Under the land law of Licinius and Sextius, how much public land could one individual hold?",
+      "options": [
+        "About 300 acres",
+        "About one and a quarter acres",
+        "About 30 acres",
+        "About 3,000 acres"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#licinian-laws",
+      "explanation": "The law capped holdings of public land at about 300 acres. Such laws were easy to dodge, and Licinius himself was later fined for breaking his own limit.",
+      "sourceQuote": "The law limited any individual to about 300 acres of it.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What power allowed tribunes of the plebs to block official business?",
+      "options": [
+        "The auspices",
+        "The censorship",
+        "The veto",
+        "The dictatorship"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#licinius-and-sextius",
+      "explanation": "Tribunes were elected by the plebeians to protect them and could block business with a veto. The patricians turned this weapon against Licinius and Sextius by persuading other tribunes to veto their bill.",
+      "sourceQuote": "Tribunes were officials elected by the plebeians to protect them, and they could block official business with a veto.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did Rome bind the people of newly conquered Veii more closely to itself after the sack?",
+      "options": [
+        "It allowed them their own consuls",
+        "It gave them citizenship without the vote",
+        "It made them full voting citizens",
+        "It exempted them from all taxes"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#rome-after-the-sack",
+      "explanation": "Veii's people received citizenship without the right to vote. Rome also strengthened its alliance with Caere.",
+      "sourceQuote": "It bound newly conquered Veii closer by giving its people citizenship without the right to vote.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Where had the Senones, the Gallic tribe that defeated Rome, settled?",
+      "options": [
+        "In Sicily near Syracuse",
+        "In the hills around modern Florence",
+        "On the Bay of Naples near Cumae",
+        "On the Adriatic coast around modern Rimini"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#battle-of-the-allia",
+      "explanation": "The Senones were one of several Celtic peoples who had recently pushed into northern Italy, settling around modern Rimini.",
+      "sourceQuote": "They settled on the Adriatic coast around modern Rimini.",
+      "reviewFlags": []
+    },
+    {
+      "question": "In Cornell's view, what did the plebeian leaders do once they entered top office?",
+      "options": [
+        "Abolished the Senate entirely",
+        "Barred patricians from the consulship",
+        "Formed a new aristocracy with the patricians",
+        "Redistributed all public land to the poor"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#modern-verdict",
+      "explanation": "Cornell argues the wealthy plebeian leaders joined the patricians in a new aristocracy and turned their backs on the poor. Livy even called some tribunes 'slaves of the nobility'.",
+      "sourceQuote": "Once inside, they formed a new aristocracy with the patricians and turned their backs on the poor.",
+      "reviewFlags": []
+    },
+    {
+      "question": "In the compromise over the first plebeian consul, which new office was reserved for patricians?",
+      "options": [
+        "The tribune",
+        "The praetor",
+        "The censor",
+        "The dictator"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#first-plebeian-consul",
+      "explanation": "The nobles accepted a plebeian consul, and in return the new praetorship would be held by a patrician. The praetor served as Rome's chief judge.",
+      "sourceQuote": "In return, the plebeians agreed that a new official, the praetor, would be a patrician.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What does historian T. J. Cornell think the Senones who attacked Rome really were?",
+      "options": [
+        "Pilgrims visiting a shrine",
+        "Migrants seeking farmland",
+        "Mercenaries",
+        "Refugees fleeing Etruscans"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#sack-reliability",
+      "explanation": "Since no account mentions Gallic wives or children, Cornell sees the Senones as a warrior band, probably mercenaries. Shortly afterwards, Dionysius I of Syracuse hired Gauls for a war in southern Italy.",
+      "sourceQuote": "He thinks they were mercenaries.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Who were the patricians of the early Roman Republic?",
+      "options": [
+        "A small hereditary aristocracy",
+        "Etruscan settlers living in Rome",
+        "The great majority of ordinary Romans",
+        "Elected protectors of the poor"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#conflict-of-the-orders",
+      "explanation": "The patricians were a small hereditary aristocracy who owned large estates, lent money and saw ruling as their birthright. The plebeians made up the great majority of ordinary Romans.",
+      "sourceQuote": "On one side stood the patricians, a small hereditary aristocracy who owned large estates, lent money and believed that ruling was their birthright.",
+      "reviewFlags": []
+    },
+    {
+      "question": "To which assembly did Licinius and Sextius put their three reform bills?",
+      "options": [
+        "The Senate",
+        "The College of Priests",
+        "The Plebeian Council",
+        "The Council of Elders"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#licinius-and-sextius",
+      "explanation": "They brought their bills to the Plebeian Council, the assembly of the plebeians. The bills dealt with debt, land and the consulship.",
+      "sourceQuote": "The pair put three bills to the Plebeian Council, the assembly of the plebeians.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Why is the reliability of the accounts of the Allia and the sack of Rome doubtful?",
+      "options": [
+        "They survive only on damaged inscriptions",
+        "They were composed by the defeated generals",
+        "They were written only by Gallic authors",
+        "They were written centuries after the events"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#sack-reliability",
+      "explanation": "All the accounts date from centuries later. The biggest suspect is Camillus's heroic rescue, which many modern historians see as a later addition.",
+      "sourceQuote": "All accounts of the Allia and the sack of Rome were written centuries after the events, so their reliability is doubtful.",
+      "reviewFlags": []
+    }
+  ]
+}
