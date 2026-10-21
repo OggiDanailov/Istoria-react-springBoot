@@ -18,7 +18,7 @@ A single-page prototype of seven mini-games built on the chapter
 Also in the prototype:
 - **Legion bar** (always visible): every right answer recruits a soldier that flies into the bar. The game type decides
   the unit (infantry from quizzes and true/false, centurions from Who Am I? and Match Pairs), the difficulty its rank
-  (hastati, principes, triarii). Each fact recruits once; a fact missed in an earlier round joins as a veteran.
+  (hastati, principes, triarii). Each fact recruits once, and only when the player knew it (no soldier for the last option left, a reduced one on a second try, none after that); a fact missed in an earlier round joins as a veteran.
   Perfect rounds earn an eagle standard; milestones follow real Roman units (contubernium 8, century 80, cohort 480, legion 4,800).
   Progress is kept in the player's browser.
 - **The chronicle**: the full chapter text in a slide-up panel. Wrong answers link to the exact section, and the result

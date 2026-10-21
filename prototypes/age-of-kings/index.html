@@ -564,7 +564,7 @@ const UNITS = {
   hastatus: { label: 'Hastati', one: 'hastatus', color: '#e0a63a', note: 'Young soldiers who fought in the front line.' },
   princeps: { label: 'Principes', one: 'princeps', color: '#4f8fb8', note: 'Men in their prime, the second line.' },
   triarius: { label: 'Triarii', one: 'triarius', color: '#e9e1cf', note: 'Veterans, the last line. “It has come to the triarii” meant things were desperate.' },
-  centurio: { label: 'Centurions', one: 'centurion', color: '#c86a3c', note: 'Officers, each leading a century. You recruit them by knowing the people of the story.' },
+  centurio: { label: 'Centurions', one: 'centurion', color: '#c86a3c', crest: true, note: 'Officers, each leading a century. You recruit them by knowing the people of the story.' },
 }
 const MILESTONES = [
   { men: 8, name: 'contubernium', note: 'eight soldiers who shared a tent and a mule' },
@@ -579,14 +579,14 @@ const saveLegion = () => { try { localStorage.setItem(LEGION_KEY, JSON.stringify
 const menCount = () => Object.values(legion.units).reduce((a, b) => a + b, 0)
 const formation = men => [...MILESTONES].reverse().find(m => men >= m.men)
 const nextMilestone = men => MILESTONES.find(m => men < m.men)
-const unitIcon = color => `<svg viewBox="0 0 20 26" aria-hidden="true"><line x1="16" y1="1" x2="16" y2="25" stroke="#e2cdb0" stroke-width="1.6"/><path d="M3 5 h10 v11 c0 4 -5 7 -5 7 c0 0 -5 -3 -5 -7 z" fill="${color}" stroke="#1b1715" stroke-width="1.2"/><circle cx="8" cy="12" r="1.8" fill="#1b1715" opacity=".55"/></svg>`
+const unitIcon = (color, crest) => `<svg viewBox="0 0 20 26" aria-hidden="true"><line x1="16" y1="1" x2="16" y2="25" stroke="#e2cdb0" stroke-width="1.6"/>${crest ? '<path d="M1 4.5 Q8 -1 15 4.5" fill="none" stroke="#e2574c" stroke-width="2.6" stroke-linecap="round"/>' : ''}<path d="M3 5 h10 v11 c0 4 -5 7 -5 7 c0 0 -5 -3 -5 -7 z" fill="${color}" stroke="#1b1715" stroke-width="1.2"/><circle cx="8" cy="12" r="1.8" fill="#1b1715" opacity=".55"/></svg>`
 const eagleIcon = `<svg viewBox="0 0 20 26" aria-hidden="true"><line x1="10" y1="9" x2="10" y2="25" stroke="#e2cdb0" stroke-width="1.6"/><path d="M10 2 l3 4 l6 -2 l-4 5 h-10 l-4 -5 l6 2 z" fill="#e0a63a" stroke="#1b1715" stroke-width="1"/></svg>`
 
 function renderHud() {
   const men = menCount(), f = formation(men), next = nextMilestone(men)
   document.getElementById('hud').innerHTML = `<div class="hud-inner">
     <div class="hud-units" aria-label="Your legion">
-      ${Object.entries(UNITS).map(([k, u]) => `<span class="hud-unit" data-unit="${k}" title="${u.label}">${unitIcon(u.color)}${legion.units[k]}</span>`).join('')}
+      ${Object.entries(UNITS).map(([k, u]) => `<span class="hud-unit" data-unit="${k}" title="${u.label}">${unitIcon(u.color, u.crest)}${legion.units[k]}</span>`).join('')}
       <span class="hud-unit" data-unit="eagle" title="Eagle standards">${eagleIcon}${legion.eagles.length}</span>
     </div>
     <button class="hud-men" id="hud-men">${men} ${men === 1 ? 'man' : 'men'}<small>${f ? 'a ' + f.name : next ? `${next.men - men} to a ${next.name}` : ''}</small></button>
@@ -604,7 +604,7 @@ function flyToHud(fromEl, key, color, done) {
   const a = fromEl.getBoundingClientRect(), b = target.getBoundingClientRect()
   const icon = document.createElement('div')
   icon.className = 'flying-unit'
-  icon.innerHTML = key === 'eagle' ? eagleIcon : unitIcon(color)
+  icon.innerHTML = key === 'eagle' ? eagleIcon : unitIcon(color, key === 'centurio')
   Object.assign(icon.style, { left: a.left + a.width / 2 - 10 + 'px', top: a.top + a.height / 2 - 13 + 'px' })
   document.body.appendChild(icon)
   const dx = b.left - (a.left + a.width / 2 - 10), dy = b.top - (a.top + a.height / 2 - 13)
@@ -643,6 +643,14 @@ function noteMiss(key, sec) {
   state.roundMisses ??= []
   if (!state.roundMisses.some(m => m.key === key)) state.roundMisses.push({ key, sec })
 }
+const missedThisRound = key => (state.roundMisses ?? []).some(m => m.key === key)
+// Recruit only when the answer was known: not forced (only option left), not already missed this round
+function earn(key, unitKey, fromEl, { forced = false } = {}) {
+  if (forced) return ' <i>No soldier this time: it was the only option left.</i>'
+  if (missedThisRound(key)) return ' <i>No soldier this time: you got it wrong first. Get it right in a later round and it joins as a veteran.</i>'
+  const r = reward(key, unitKey, fromEl)
+  return r.fresh ? '' : ' <i>Already in your legion from an earlier round.</i>'
+}
 const recruitLine = r => r.fresh ? (r.vet ? `A veteran ${r.unit.one} joins your legion.` : `A ${r.unit.one} joins your legion.`) : 'Already in your legion from an earlier round.'
 
 // ---------- the chapter text ----------
@@ -671,10 +679,10 @@ function openLegion() {
     <p><b>${men} ${men === 1 ? 'man' : 'men'}</b>${f ? `, a ${f.name} (${f.note})` : ''}.</p>
     ${next ? `<div class="progress" aria-hidden="true"><span style="width:${Math.round(100 * (men - prev) / (next.men - prev))}%"></span></div>
       <p style="font-size:14px">${next.men - men} more to a <b>${next.name}</b>: ${next.note}.</p>` : ''}
-    ${Object.entries(UNITS).map(([k, u]) => `<div class="unit-row">${unitIcon(u.color)}<span><b>${u.label}</b><br><span style="font-size:13.5px">${esc(u.note)}</span></span><b>${legion.units[k]}</b></div>`).join('')}
+    ${Object.entries(UNITS).map(([k, u]) => `<div class="unit-row">${unitIcon(u.color, u.crest)}<span><b>${u.label}</b><br><span style="font-size:13.5px">${esc(u.note)}</span></span><b>${legion.units[k]}</b></div>`).join('')}
     <div class="unit-row">${eagleIcon}<span><b>Eagle standards</b><br><span style="font-size:13.5px">The legion’s most prized symbol. Earned with a perfect round.</span></span><b>${legion.eagles.length}</b></div>
     <p style="margin-top:12px;font-size:14px"><b>${legion.veterans}</b> ${legion.veterans === 1 ? 'veteran' : 'veterans'}: soldiers who joined after you learned from a mistake.</p>
-    <p style="font-size:14px">How to recruit: the Legion Quiz and True or False give infantry (harder questions give higher ranks), Who Am I? and Match Pairs give centurions, and the other games give principes or hastati. Each fact recruits once.</p>`)
+    <p style="font-size:14px">How to recruit: the Legion Quiz and True or False give infantry (harder questions give higher ranks), Who Am I? and Match Pairs give centurions, and the other games give principes or hastati. Each fact recruits once, and only when you knew it: no soldier for the last option left or for something you already got wrong in that round.</p>`)
 }
 document.getElementById('sheet-close').addEventListener('click', closeSheet)
 document.getElementById('sheet').addEventListener('click', e => { if (e.target.id === 'sheet') closeSheet() })
@@ -796,10 +804,11 @@ function chronoTap(id, el) {
   if (busy || g.screen !== 'play' || g.placed.includes(id)) return
   const e = TIMELINES[g.set].events[id]
   if (id === g.sortedIds[g.placed.length]) {
-    g.hint = { ok: true, html: `<b>${esc(e.label)}</b> · ${esc(e.when)}. ${esc(e.fact)}` }
+    const forced = g.placed.length === g.sortedIds.length - 1
+    const note = earn(`chrono:${g.set}:${id}`, g.set >= 4 ? 'triarius' : g.set >= 2 ? 'princeps' : 'hastatus', el, { forced })
+    g.hint = { ok: true, html: `<b>${esc(e.label)}</b> · ${esc(e.when)}. ${esc(e.fact)}${note}` }
     const slot = app.querySelector(`[data-slot="${g.placed.length}"]`)
     g.placed.push(id)
-    reward(`chrono:${g.set}:${id}`, g.set >= 4 ? 'triarius' : g.set >= 2 ? 'princeps' : 'hastatus', el)
     busy = true
     flyTo(el, slot, () => {
       busy = false
@@ -867,10 +876,12 @@ function matchTap(side, id) {
   const other = g.selected
   g.selected = null
   if (other.id === id) {
+    const forced = g.matched.length === set.pairs.length - 1
+    const fromEl = app.querySelector(`[data-side="L"][data-id="${id}"]`)
+    const note = earn(`match:${g.set}:${id}`, 'centurio', fromEl, { forced })
     g.matched.push(id)
-    g.hint = { ok: true, html: `<b>${esc(set.pairs[id][0])}</b>: ${esc(set.pairs[id][1].replace(/^./, c => c.toLowerCase()))}.` }
+    g.hint = { ok: true, html: `<b>${esc(set.pairs[id][0])}</b>: ${esc(set.pairs[id][1].replace(/^./, c => c.toLowerCase()))}.${note}` }
     RENDER.match()
-    reward(`match:${g.set}:${id}`, 'centurio', app.querySelector(`[data-side="L"][data-id="${id}"]`))
     if (g.matched.length === set.pairs.length) {
       busy = true
       setTimeout(() => { busy = false; if (state === g) finish(recapList(set.pairs.map(([a, b]) => ({ title: a, text: b })))) }, 700)
@@ -977,14 +988,21 @@ RENDER.odd = () => {
     const i = +t.dataset.i
     if (i === round.odd) {
       g.picked = i
-      g.hint = { ok: true, html: `<b>${esc(round.items[i])}</b> is the odd one out. ${esc(round.why)}` }
-      reward(`odd:${g.set}:${g.order[g.index]}`, 'princeps', t)
+      const key = `odd:${g.set}:${g.order[g.index]}`
+      const wrong = g.roundWrong ?? 0
+      const note = wrong === 0 ? earn(key, 'princeps', t)
+        : wrong === 1 ? (legion.rewarded[key] ? ' <i>Already in your legion from an earlier round.</i>' : (reward(key, 'hastatus', t), ' <i>Second try: a hastatus instead of a princeps.</i>'))
+        : wrong >= round.items.length - 1 ? ' <i>No soldier this time: it was the only option left.</i>'
+        : ' <i>No soldier this time: too many tries. Get it right in a later round and it joins as a veteran.</i>'
+      g.roundWrong = 0
+      g.hint = { ok: true, html: `<b>${esc(round.items[i])}</b> is the odd one out. ${esc(round.why)}${note}` }
       RENDER.odd()
     } else {
       g.mistakes++
+      g.roundWrong = (g.roundWrong ?? 0) + 1
       if (!g.misses.includes(g.order[g.index])) g.misses.push(g.order[g.index])
       g.hint = { ok: false, sec: round.sec, html: `<b>${esc(round.items[i])}</b> belongs with the others. Look again.` }
-      noteMiss(`odd:${g.set}:${g.order[g.index]}`, round.sec)
+      if ((g.roundWrong ?? 0) >= 2) noteMiss(`odd:${g.set}:${g.order[g.index]}`, round.sec)
       app.querySelector('#hint-area').innerHTML = hintHtml(g.hint)
       app.querySelector('.score').textContent = `${g.order.length - g.index} left · ${plural(g.mistakes, 'mistake')}`
       t.classList.add('shake'); t.addEventListener('animationend', () => t.classList.remove('shake'), { once: true })
@@ -1024,17 +1042,22 @@ RENDER.who = () => {
   app.querySelectorAll('.choice:not([disabled])').forEach(b => b.addEventListener('click', () => {
     const name = b.dataset.name
     if (name === p.name) {
-      reward(`who:${g.set}:${g.order[g.index]}`, 'centurio', b)
+      const key = `who:${g.set}:${g.order[g.index]}`
+      const wrong = g.wrong.length
+      const note = wrong === 0 ? earn(key, 'centurio', b)
+        : wrong === 1 ? (legion.rewarded[key] ? ' <i>Already in your legion from an earlier round.</i>' : (reward(key, 'hastatus', b), ' <i>Second try: a hastatus instead of a centurion.</i>'))
+        : wrong >= p.options.length - 1 ? ' <i>No soldier this time: it was the only option left.</i>'
+        : ' <i>No soldier this time: too many guesses. Get it right in a later round and it joins as a veteran.</i>'
       g.solved = true
       g.results.push({ i: g.order[g.index], clues: g.shown, wrong: g.wrong.length })
-      g.hint = { ok: true, sec: p.sec, html: `Yes, <b>${esc(p.name)}</b>! ${g.shown === 1 ? 'Guessed from the first clue.' : `Guessed with ${g.shown} clues.`}` }
+      g.hint = { ok: true, sec: p.sec, html: `Yes, <b>${esc(p.name)}</b>! ${g.shown === 1 ? 'Guessed from the first clue.' : `Guessed with ${g.shown} clues.`}${note}` }
       g.shown = p.clues.length
     } else {
       g.mistakes++
       g.wrong.push(name)
       if (g.shown < p.clues.length) g.shown++
       g.hint = { ok: false, html: `Not <b>${esc(name)}</b>. Here’s another clue.` }
-      noteMiss(`who:${g.set}:${g.order[g.index]}`, p.sec)
+      if (g.wrong.length >= 2) noteMiss(`who:${g.set}:${g.order[g.index]}`, p.sec)
       buzz()
     }
     RENDER.who()
@@ -1093,9 +1116,10 @@ function mapPlace(label, spot) {
   const g = state, places = MAPS[g.set].places
   g.selected = null
   if (label === spot) {
+    const forced = g.placed.length === places.length - 1
+    const note = earn(`map:${g.set}:${label}`, 'princeps', app.querySelector(`.spot[data-spot="${spot}"]`), { forced })
     g.placed.push(label)
-    reward(`map:${g.set}:${label}`, 'princeps', app.querySelector(`.spot[data-spot="${spot}"]`))
-    g.hint = { ok: true, html: `<b>${esc(places[label].name)}</b>: ${esc(places[label].why)}` }
+    g.hint = { ok: true, html: `<b>${esc(places[label].name)}</b>: ${esc(places[label].why)}${note}` }
     if (g.placed.length === places.length) {
       RENDER.map(); busy = true
       return setTimeout(() => { busy = false; if (state === g) finish(recapList(places.map((p, i) => ({ title: p.name, text: p.why, miss: g.misses.includes(i) })))) }, 800)
