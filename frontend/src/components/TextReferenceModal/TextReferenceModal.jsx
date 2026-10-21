@@ -1,5 +1,8 @@
 import { useState, useEffect, useRef } from 'react'
 import ReactMarkdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
+import rehypeSlug from 'rehype-slug'
+import remarkAnchorPlugin from '../../utils/remarkAnchorPlugin'
 import { API_BASE_URL } from '../../config/api'
 import './TextReferenceModal.css'
 
@@ -141,7 +144,12 @@ function TextReferenceModal({ isOpen, onClose, chapterId, textReference, questio
 
           {!loading && !error && content && (
             <div className="chapter-content">
-              <ReactMarkdown>{content}</ReactMarkdown>
+              <ReactMarkdown
+                remarkPlugins={[remarkGfm, remarkAnchorPlugin]}
+                rehypePlugins={[rehypeSlug]}
+              >
+                {content}
+              </ReactMarkdown>
             </div>
           )}
 

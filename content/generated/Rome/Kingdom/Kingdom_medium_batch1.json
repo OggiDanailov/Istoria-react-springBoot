@@ -1,0 +1,191 @@
+{
+  "batchName": "Early Rome & the Kingdom: The Foundation of an Empire (753-509 BCE) - Medium Batch 1",
+  "chapterName": "Early Rome & the Kingdom: The Foundation of an Empire (753-509 BCE)",
+  "difficulty": 2,
+  "batchOrder": 4,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Why did the classicist Mary Beard call Romulus \"Mr Rome\"?",
+      "options": [
+        "He was the only king born inside the city",
+        "He personally designed every Roman temple",
+        "Roman coins always showed his portrait",
+        "He was Rome's first elected consul",
+        "His name was probably invented from the city's name"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#romulus-and-remus",
+      "explanation": "The name Romulus was probably made up from the name of Rome itself, hence \"Mr Rome\". Most modern historians treat the founding legend as myth.",
+      "sourceQuote": "Even the name Romulus was probably invented from the city's name, making him, as the classicist Mary Beard put it, \"Mr Rome\".",
+      "reviewFlags": []
+    },
+    {
+      "question": "What was the role of the augur in making a new king?",
+      "options": [
+        "He sought signs that the gods approved",
+        "He granted the king imperium",
+        "He crowned the king in the Forum",
+        "He presented the king to the Senate",
+        "He counted the assembly's votes"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#how-kings-ruled",
+      "explanation": "The augur, a priest, took the king-elect up to the citadel to look for signs of divine approval. Only after this did the assembly grant the king imperium.",
+      "sourceQuote": "A priest called an augur took the king-elect up to the citadel and looked for signs that the gods approved.",
+      "reviewFlags": []
+    },
+    {
+      "question": "After Romulus vanished in a storm, a respected nobleman claimed Romulus had appeared to him in a vision as which god?",
+      "options": [
+        "Janus",
+        "Saturn",
+        "Mars",
+        "Jupiter",
+        "Quirinus"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#romulus-the-king",
+      "explanation": "The nobleman said Romulus had appeared as the god Quirinus. Others whispered that the nobles had murdered the king and hidden the pieces of his body.",
+      "sourceQuote": "But one respected nobleman claimed Romulus had appeared to him in a vision as the god Quirinus.",
+      "reviewFlags": []
+    },
+    {
+      "question": "On which hill have archaeologists found traces of Bronze Age settlement, possibly from as early as 1700 BC?",
+      "options": [
+        "Palatine",
+        "Aventine",
+        "Capitoline",
+        "Quirinal",
+        "Esquiline"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#origins",
+      "explanation": "The earliest traces of settlement come from the Capitoline Hill, possibly as early as 1700 BC. Huts appeared on the Palatine much later, by the 9th or 8th century BC.",
+      "sourceQuote": "Archaeologists have found traces of Bronze Age settlement on the Capitoline Hill, possibly from as early as 1700 BC.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Why do historians find the traditional 243 years for Rome's seven kings hard to believe?",
+      "options": [
+        "Archaeology shows Rome had only three kings",
+        "It leaves no time for Romulus's founding",
+        "The dates contradict the Gallic sack",
+        "It means an average reign of almost 35 years",
+        "No king is mentioned by any Greek writer"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#how-reliable",
+      "explanation": "Seven kings across 243 years gives an average reign of almost 35 years, which seems far too long. This is one reason modern historians treat the traditional story cautiously.",
+      "sourceQuote": "Seven kings ruling for 243 years means an average reign of almost 35 years, which seems far too long.",
+      "reviewFlags": []
+    },
+    {
+      "question": "According to Livy, how did the warlike King Tullus Hostilius die?",
+      "options": [
+        "He fell in battle against Alba Longa",
+        "He vanished in a storm while reviewing troops",
+        "Jupiter burned him and his house with lightning",
+        "He drowned while crossing the Tiber",
+        "He was murdered by a son of Ancus"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#numa-tullus-ancus",
+      "explanation": "Tullus had scorned the gods. When he finally begged Jupiter for help as he lay dying, the god struck him with lightning after a 32-year reign.",
+      "sourceQuote": "According to Livy, when the dying king finally begged Jupiter for help, the god burned him and his house with lightning.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which king adopted the immigrant Tarquinius Priscus as a son?",
+      "options": [
+        "Tullus Hostilius",
+        "Romulus",
+        "Ancus Marcius",
+        "Numa Pompilius",
+        "Servius Tullius"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#tarquinius-priscus",
+      "explanation": "After settling in Rome, Tarquinius won the favour of King Ancus Marcius, who adopted him. He went on to become Rome's fifth king.",
+      "sourceQuote": "After settling in Rome he won the favour of King Ancus Marcius, who adopted him as a son.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which great building project did Tarquin the Proud complete?",
+      "options": [
+        "The Circus Maximus",
+        "The temple of Jupiter on the Capitoline",
+        "The Cloaca Maxima",
+        "Rome's first bridge over the Tiber",
+        "The Temple of Diana on the Aventine"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#tarquin-the-proud",
+      "explanation": "Tarquin the Proud finished the great temple of Jupiter on the Capitoline Hill. He was an energetic ruler who made Rome the leading power among the Latin cities.",
+      "sourceQuote": "He finished the great temple of Jupiter on the Capitoline Hill.",
+      "reviewFlags": []
+    },
+    {
+      "question": "The authors of the American Federalist Papers took their pen name from which early Roman?",
+      "options": [
+        "Poplicola",
+        "Brutus",
+        "Horatius",
+        "Collatinus",
+        "Servius Tullius"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#birth-of-the-republic",
+      "explanation": "The Federalist authors signed themselves \"Publius\" after Publius Valerius Poplicola, one of the leaders of the revolt. French revolutionaries likewise named boys and towns after Brutus.",
+      "sourceQuote": "French revolutionaries named boys and towns after Brutus, and the authors of the American Federalist Papers signed themselves \"Publius\" after Poplicola.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which natural advantages did the site of Rome offer early settlers? (select all that apply)",
+      "options": [
+        "A deep natural harbour on the sea",
+        "Steep, easily defended hills",
+        "A wide, fertile plain",
+        "Rich silver mines in the hills",
+        "A ford across the Tiber River"
+      ],
+      "correctAnswers": [
+        1,
+        2,
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#origins",
+      "explanation": "A ford let travellers cross the Tiber, and steep, defensible hills rose from a fertile plain. These advantages existed long before Rome had any king.",
+      "sourceQuote": "A ford let travellers cross the Tiber River in central Italy, and a cluster of steep, easily defended hills rose from a wide, fertile plain.",
+      "reviewFlags": []
+    }
+  ]
+}

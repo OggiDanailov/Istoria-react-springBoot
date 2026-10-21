@@ -1,0 +1,179 @@
+{
+  "batchName": "Early Rome & the Kingdom: The Foundation of an Empire (753-509 BCE) - Easy Batch 1",
+  "chapterName": "Early Rome & the Kingdom: The Foundation of an Empire (753-509 BCE)",
+  "difficulty": 1,
+  "batchOrder": 1,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "According to tradition, what was unusual about the background of King Servius Tullius?",
+      "options": [
+        "He was a Carthaginian merchant",
+        "He was raised by a she-wolf",
+        "He was a Greek refugee from Troy",
+        "He was the son of a slave"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#servius-tullius",
+      "explanation": "Tradition held that Servius was the son of a slave. He rose to marry the daughter of the previous king, Tarquinius Priscus.",
+      "sourceQuote": "According to tradition, Rome's sixth king, Servius Tullius, was the son of a slave who married the daughter of the previous king, Tarquinius Priscus.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What does archaeology suggest about Rome's kings?",
+      "options": [
+        "The kings were really Greek governors from Cumae",
+        "All seven kings are confirmed by royal inscriptions",
+        "Rome never had kings; they were invented by Livy",
+        "Rome did have kings, though the stories about them are doubtful"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#how-reliable",
+      "explanation": "Archaeology confirms that Rome had kings, but most scholars doubt the traditional stories about them. Modern historians are cautious because so few written sources survive.",
+      "sourceQuote": "Archaeology shows that Rome did have kings, but most scholars doubt the traditional stories about them.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which Latin town, said to be Romulus's birthplace, was destroyed by King Tullus Hostilius?",
+      "options": [
+        "Ardea",
+        "Veii",
+        "Alba Longa",
+        "Ostia"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#numa-tullus-ancus",
+      "explanation": "The warlike Tullus Hostilius destroyed Alba Longa and moved its people to Rome. He also built a senate house that lasted for centuries.",
+      "sourceQuote": "He fought Rome's neighbours and destroyed Alba Longa, the Latin town said to be Romulus's birthplace, moving its people to Rome.",
+      "reviewFlags": []
+    },
+    {
+      "question": "According to legend, which hero held a bridge alone against the army of Lars Porsenna?",
+      "options": [
+        "Brutus",
+        "Collatinus",
+        "Poplicola",
+        "Horatius"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#birth-of-the-republic",
+      "explanation": "Horatius held the bridge alone until it could be torn down. Porsenna, an Etruscan king from Clusium, had marched on Rome to help Tarquin return.",
+      "sourceQuote": "An Etruscan king, Lars Porsenna of Clusium, marched on Rome, but legend says the hero Horatius held a bridge alone until it could be torn down.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What were the fasces, carried ahead of Rome's kings by their attendants?",
+      "options": [
+        "A bundle of rods around an axe",
+        "A bronze shield and spear",
+        "A gilded eagle on a tall pole",
+        "A set of sacred temple keys"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#how-kings-ruled",
+      "explanation": "The fasces were a bundle of rods around an axe that symbolised the king's power to punish. Twelve attendants carried them ahead of him.",
+      "sourceQuote": "Twelve attendants walked ahead of him carrying the fasces, a bundle of rods around an axe that symbolised his power to punish.",
+      "reviewFlags": []
+    },
+    {
+      "question": "By about which date was Rome a true city, with a central forum, monumental buildings and public temples?",
+      "options": [
+        "600 BC",
+        "1000 BC",
+        "400 BC",
+        "800 BC"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#origins",
+      "explanation": "By 600 BC the villages had fully merged into one city. Rome now had a central forum, monumental buildings and public temples.",
+      "sourceQuote": "By 600 BC the process was complete.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Servius Tullius is credited with holding Rome's first what?",
+      "options": [
+        "Triumph, a victory parade",
+        "Consular election",
+        "Chariot race",
+        "Census, a count of citizens"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#servius-tullius",
+      "explanation": "Servius held Rome's first census and sorted citizens into five classes by wealth. His lasting fame rests on this reorganisation of Roman society.",
+      "sourceQuote": "He held Rome's first census, a count of citizens, and sorted people into five classes by wealth.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which year did the Romans officially give for the founding of their city?",
+      "options": [
+        "776 BC",
+        "509 BC",
+        "753 BC",
+        "814 BC"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#romulus-and-remus",
+      "explanation": "The scholar Varro worked out the official founding date of 753 BC. Romans celebrated it every year on 21 April.",
+      "sourceQuote": "The official founding date, worked out by the scholar Varro, was 753 BC, celebrated on 21 April.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Romulus chose 100 leading men as advisers, called the \"fathers\". What did their descendants become?",
+      "options": [
+        "The plebeians",
+        "The patricians",
+        "The equestrians",
+        "The lictors"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#romulus-the-king",
+      "explanation": "The descendants of Romulus's 100 \"fathers\" became the patricians, Rome's hereditary aristocracy. Romulus was also escorted by twelve attendants called lictors.",
+      "sourceQuote": "They were called the \"fathers\", and their descendants became the patricians, Rome's hereditary aristocracy.",
+      "reviewFlags": []
+    },
+    {
+      "question": "By around 1000 BC, what was the valley that later became the Roman Forum used for?",
+      "options": [
+        "A royal palace complex",
+        "A cattle market",
+        "A cemetery",
+        "A chariot-racing track"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#origins",
+      "explanation": "Long before it became Rome's great public square, the Forum valley was a cemetery. Huts already stood on the nearby Palatine Hill by the 9th or 8th century BC.",
+      "sourceQuote": "By 1000 BC the valley that later became the Roman Forum, the city's great public square, was a cemetery.",
+      "reviewFlags": []
+    }
+  ]
+}

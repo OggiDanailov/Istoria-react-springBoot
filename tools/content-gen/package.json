@@ -1,0 +1,14 @@
+{
+  "name": "content-gen",
+  "private": true,
+  "type": "module",
+  "description": "Generates quiz questions and reading cards from Wikipedia with Claude",
+  "scripts": {
+    "dry-run": "node generate.mjs --dry-run",
+    "generate": "node --env-file-if-exists=.env generate.mjs"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.135.0",
+    "zod": "^4.6.7"
+  }
+}

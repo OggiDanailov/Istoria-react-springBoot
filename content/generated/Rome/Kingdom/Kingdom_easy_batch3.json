@@ -1,0 +1,179 @@
+{
+  "batchName": "Early Rome & the Kingdom: The Foundation of an Empire (753-509 BCE) - Easy Batch 3",
+  "chapterName": "Early Rome & the Kingdom: The Foundation of an Empire (753-509 BCE)",
+  "difficulty": 1,
+  "batchOrder": 3,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Which port at the mouth of the Tiber was founded by King Ancus Marcius?",
+      "options": [
+        "Antium",
+        "Cumae",
+        "Ardea",
+        "Ostia"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#numa-tullus-ancus",
+      "explanation": "Ancus Marcius founded Ostia at the river's mouth. He also settled conquered Latins on the Aventine Hill, forming the origins of the plebeians.",
+      "sourceQuote": "He founded Ostia, a port at the river's mouth, and settled conquered Latins on the Aventine Hill, forming the origins of the plebeians, Rome's common people.",
+      "reviewFlags": []
+    },
+    {
+      "question": "According to the traditional story, whose crime against the noblewoman Lucretia set off the uprising against Rome's last king?",
+      "options": [
+        "The augur of the Capitoline",
+        "The Etruscan king Lars Porsenna",
+        "The king's son Sextus Tarquinius",
+        "The king's nephew Brutus"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#tarquin-the-proud",
+      "explanation": "The king's son Sextus Tarquinius raped Lucretia. She told her husband and father, then killed herself, and her death sparked the uprising.",
+      "sourceQuote": "According to the traditional story, the crisis came when the king's son Sextus Tarquinius raped Lucretia, a virtuous noblewoman.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Who wrote the first history of Rome, around 200 BC?",
+      "options": [
+        "Tacitus",
+        "Pliny",
+        "Fabius Pictor",
+        "Livy"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#how-reliable",
+      "explanation": "Fabius Pictor wrote the first history of Rome around 200 BC, about three centuries after the kings fell. Later writers such as Livy relied largely on oral tradition.",
+      "sourceQuote": "The first history of Rome was written by Fabius Pictor around 200 BC, about three centuries after the kings fell.",
+      "reviewFlags": []
+    },
+    {
+      "question": "According to the story, how did the war that followed the seizure of the Sabine women end?",
+      "options": [
+        "Romulus killed the Sabine king in single combat",
+        "The Etruscans forced both sides to make peace",
+        "A storm scattered the two armies",
+        "The women threw themselves between the armies"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#romulus-the-king",
+      "explanation": "The captured women stopped the fighting by throwing themselves between the armies. Afterwards the Romans and Sabines united into one people.",
+      "sourceQuote": "It ended only when the captured women threw themselves between the armies.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What replaced the king as Rome's leadership after the revolt?",
+      "options": [
+        "Two consuls elected each year",
+        "A council of twelve senators",
+        "An Etruscan governor",
+        "A single dictator chosen for life"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#birth-of-the-republic",
+      "explanation": "Rome began electing two consuls every year instead of a king. The first two were Brutus and Collatinus, Lucretia's husband.",
+      "sourceQuote": "In place of a king, Rome now elected two consuls each year, starting with Brutus and Collatinus.",
+      "reviewFlags": []
+    },
+    {
+      "question": "According to tradition, who led the revolt against Tarquin the Proud?",
+      "options": [
+        "Lucius Junius Brutus",
+        "Titus Tatius",
+        "Sextus Tarquinius",
+        "Lars Porsenna"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#birth-of-the-republic",
+      "explanation": "The revolt was led by Lucius Junius Brutus, the king's own nephew. Tradition dates it to 509 BC.",
+      "sourceQuote": "It was led by Lucius Junius Brutus, the king's nephew.",
+      "reviewFlags": []
+    },
+    {
+      "question": "According to legend, which god fathered Romulus and Remus?",
+      "options": [
+        "Apollo",
+        "Neptune",
+        "Mars",
+        "Jupiter"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#romulus-and-remus",
+      "explanation": "The twins were said to be sons of Mars, the god of war. Their mother, Rhea Silvia, had been forced to become a Vestal Virgin, a priestess sworn to chastity.",
+      "sourceQuote": "She nevertheless bore twins, Romulus and Remus, supposedly fathered by Mars, the god of war.",
+      "reviewFlags": []
+    },
+    {
+      "question": "According to tradition, Rome's fifth king, Tarquinius Priscus, was an immigrant born into which people?",
+      "options": [
+        "The Greeks",
+        "The Sabines",
+        "The Etruscans",
+        "The Volsci"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#tarquinius-priscus",
+      "explanation": "Tarquinius Priscus was traditionally born an Etruscan, one of the wealthy peoples living north of Rome in what is now Tuscany. He became Rome's first Etruscan king.",
+      "sourceQuote": "According to tradition he was born an Etruscan, one of the wealthy, powerful peoples living north of Rome in what is now Tuscany.",
+      "reviewFlags": []
+    },
+    {
+      "question": "In the legend, which animal suckled the abandoned twins Romulus and Remus?",
+      "options": [
+        "A goat",
+        "A sow",
+        "A bear",
+        "A she-wolf"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#romulus-and-remus",
+      "explanation": "A she-wolf suckled the twins in a cave called the Lupercal. A shepherd named Faustulus then raised them.",
+      "sourceQuote": "Instead a she-wolf suckled them in a cave called the Lupercal, and a shepherd named Faustulus raised them.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which writer's poem \"Lucrece\" was inspired by the story of Lucretia?",
+      "options": [
+        "Milton",
+        "Chaucer",
+        "Byron",
+        "Shakespeare"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#tarquin-the-proud",
+      "explanation": "Lucretia's story inspired Shakespeare's poem Lucrece. It also inspired many paintings in the 18th and 19th centuries.",
+      "sourceQuote": "The tale later inspired Shakespeare's poem Lucrece and many paintings in the 18th and 19th centuries.",
+      "reviewFlags": []
+    }
+  ]
+}

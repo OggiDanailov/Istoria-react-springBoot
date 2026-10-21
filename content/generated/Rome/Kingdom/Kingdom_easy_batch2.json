@@ -1,0 +1,179 @@
+{
+  "batchName": "Early Rome & the Kingdom: The Foundation of an Empire (753-509 BCE) - Easy Batch 2",
+  "chapterName": "Early Rome & the Kingdom: The Foundation of an Empire (753-509 BCE)",
+  "difficulty": 1,
+  "batchOrder": 2,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "According to the story, Romulus's men carried off the young women of which people during a festival?",
+      "options": [
+        "The Latins of Alba Longa",
+        "The Etruscans",
+        "The Volsci",
+        "The Sabines"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#romulus-the-king",
+      "explanation": "Rome had too few women, so Romulus invited the Sabines to a religious festival and his men seized their young women. The Sabines were a hill people living north-east of Rome.",
+      "sourceQuote": "So, the story goes, Romulus invited the Sabines, a hill people living north-east of Rome, to a religious festival, and his men carried off their young women.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Who plotted the killing of King Servius Tullius after his 44-year reign?",
+      "options": [
+        "A son of Ancus Marcius",
+        "The Sabine nobles",
+        "His daughter Tullia and her husband",
+        "Lucius Junius Brutus"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#servius-tullius",
+      "explanation": "Servius was killed in a plot by his own daughter, Tullia, and her husband. That husband went on to become Tarquin the Proud, Rome's last king.",
+      "sourceQuote": "After 44 years he was killed in a plot by his own daughter, Tullia, and her husband, the future king Tarquin the Proud.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What was the Cloaca Maxima, built under Tarquinius Priscus?",
+      "options": [
+        "A covered market beside the Tiber",
+        "A stone wall around the seven hills",
+        "A great sewer that drained marshy ground",
+        "A temple to Jupiter on the Capitoline"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#tarquinius-priscus",
+      "explanation": "The Cloaca Maxima, or \"Great Sewer\", drained the marshy ground between Rome's hills. On the reclaimed land, Tarquinius began the Roman Forum.",
+      "sourceQuote": "The Cloaca Maxima, or \"Great Sewer\", drained the marshy ground between Rome's hills, and on the reclaimed land he began the Roman Forum.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How do archaeologists think Rome actually came into being?",
+      "options": [
+        "Through the gradual merging of hilltop villages",
+        "Founded in a single day by one leader",
+        "As an Etruscan military fortress",
+        "Built by Greek colonists from Cumae"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#origins",
+      "explanation": "Rome grew slowly as several hilltop villages merged. The process was probably inspired by the idea of the city-state, which was then spreading from Greece.",
+      "sourceQuote": "It grew from the gradual merging of several hilltop villages, probably inspired by the idea of the city-state then spreading from Greece.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which invaders, who sacked Rome in 390 BC, were blamed for destroying many records of the early city?",
+      "options": [
+        "The Carthaginians",
+        "The Etruscans",
+        "The Gauls",
+        "The Samnites"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#how-reliable",
+      "explanation": "Ancient writers blamed the Gauls, invaders from the north, for destroying many records. As a result, almost nothing written survives from the age of the kings.",
+      "sourceQuote": "Ancient writers blamed the Gauls, invaders from the north who sacked Rome in 390 BC, for destroying many records.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did Romans remember Tarquin the Proud?",
+      "options": [
+        "As a weak king controlled by the Senate",
+        "As a reformer who favoured the poor",
+        "As a pious king who loved peace",
+        "As a tyrant ruling through violence and fear"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#tarquin-the-proud",
+      "explanation": "Romans remembered Tarquin as a tyrant who ignored custom and the Senate. He even judged death-penalty cases without advisers.",
+      "sourceQuote": "But Romans remembered him as a tyrant who ruled through violence and fear, ignored custom and the Senate, and even judged death-penalty cases without advisers.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What was the Circus Maximus, laid out by Tarquinius Priscus, built to host?",
+      "options": [
+        "Chariot races",
+        "Gladiator fights",
+        "Military training",
+        "Public assemblies"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#tarquinius-priscus",
+      "explanation": "The Circus Maximus was a giant stadium for chariot races. Tarquinius also founded the Roman games.",
+      "sourceQuote": "He also laid out the Circus Maximus, a giant stadium for chariot races, and founded the Roman games.",
+      "reviewFlags": []
+    },
+    {
+      "question": "According to tradition, how long did a Roman king hold the throne once chosen, after the reign of Romulus?",
+      "options": [
+        "For life",
+        "For five years",
+        "Until his eldest son came of age",
+        "For a single year"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#how-kings-ruled",
+      "explanation": "Rome's later kings were not born to the throne but chosen for life. When a king died, the Senate took charge until a new one was found.",
+      "sourceQuote": "According to tradition, they were chosen for life.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What was imperium, the power the assembly granted to a new king?",
+      "options": [
+        "The right to name his own successor",
+        "Sole control over the Vestal Virgins",
+        "The supreme power to command armies, govern and judge",
+        "The right to tax conquered towns"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#how-kings-ruled",
+      "explanation": "Imperium was the supreme power to command armies, govern and judge. The king was also Rome's chief priest and controlled the calendar.",
+      "sourceQuote": "Then the assembly granted him imperium, the supreme power to command armies, govern and judge.",
+      "reviewFlags": []
+    },
+    {
+      "question": "King Numa Pompilius closed the doors of which god's temple as a sign that Rome was at peace?",
+      "options": [
+        "Jupiter",
+        "Janus",
+        "Mars",
+        "Vesta"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#numa-tullus-ancus",
+      "explanation": "Numa closed the doors of the temple of Janus, a god of beginnings, to show Rome was at peace. His 43-year reign was remembered for peace and religion.",
+      "sourceQuote": "He closed the doors of the temple of Janus, a god of beginnings, as a sign that Rome was at peace.",
+      "reviewFlags": []
+    }
+  ]
+}

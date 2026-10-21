@@ -1,0 +1,953 @@
+<title>Chronology Jam</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Nunito:wght@500;700;800&display=swap">
+<style>
+/* Layout: one-screen phone game. Pompeian fresco wall (red) framing black panels (the boards),
+   bright tesserae-coloured tiles. Seven mini-games share the look; every game screen is
+   header -> task line -> board -> hint card. Deliberately single-theme: the fresco look is the
+   identity, so every colour is set explicitly. */
+:root {
+  --wall: #8e2b22;          /* Pompeian red */
+  --wall-deep: #6d1f19;
+  --panel: #1b1715;         /* black fresco panel */
+  --panel-line: #3a312c;
+  --ink: #fbf3e4;
+  --ink-soft: #e2cdb0;
+  --ochre: #e0a63a;
+  --good: #7fb069;
+  --bad: #e2574c;
+  --tile-1: #e0a63a;        /* ochre */
+  --tile-2: #4f8fb8;        /* Egyptian blue */
+  --tile-3: #6aa37a;        /* malachite green */
+  --tile-4: #e9e1cf;        /* marble */
+  --tile-5: #c86a3c;        /* cinnabar */
+  --tile-ink: #1b1715;
+  --sea: #2f5f7d;
+  --land: #c9b48a;
+  --display: "Marcellus", "Trajan Pro", Georgia, serif;
+  --body: "Nunito", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+  --radius: 14px;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0; background: var(--wall);
+  background-image: linear-gradient(90deg, rgba(0,0,0,.08) 1px, transparent 1px), radial-gradient(120% 80% at 50% 0%, rgba(255,255,255,.06), transparent 60%);
+  background-size: 33.3% 100%, 100% 100%;
+  color: var(--ink); font: 500 16px/1.45 var(--body); -webkit-tap-highlight-color: transparent;
+}
+.app { max-width: 560px; min-height: 100%; margin: 0 auto; padding-inline: 16px; padding-block: 14px 24px; display: flex; flex-direction: column; gap: 14px; }
+h1, h2, h3 { font-family: var(--display); font-weight: 400; margin: 0; text-wrap: balance; letter-spacing: .02em; }
+button { font: inherit; color: inherit; cursor: pointer; }
+button:focus-visible { outline: 3px solid var(--ochre); outline-offset: 2px; }
+
+.top { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.brand { display: flex; flex-direction: column; min-width: 0; }
+.brand small { text-transform: uppercase; letter-spacing: .14em; font-size: 11px; color: var(--ink-soft); font-weight: 700; }
+.brand h1 { font-size: 26px; line-height: 1.1; }
+.ghost { background: transparent; border: 1.5px solid rgba(251,243,228,.45); border-radius: 999px; padding: 6px 14px; font-weight: 700; font-size: 14px; white-space: nowrap; }
+.primary { background: var(--ochre); color: var(--tile-ink); border: none; border-radius: 999px; padding: 11px 20px; font-weight: 800; box-shadow: inset 0 -3px 0 rgba(0,0,0,.18); }
+
+/* home */
+.run-card { background: var(--panel); border: 1px solid var(--panel-line); border-radius: 18px; padding: 16px; display: grid; gap: 12px; }
+.run-card h2 { font-size: 23px; }
+.run-steps { display: flex; flex-wrap: wrap; gap: 6px; list-style: none; margin: 0; padding: 0; }
+.run-steps li { font-size: 12.5px; font-weight: 800; color: var(--tile-ink); padding: 4px 10px; border-radius: 999px; }
+.run-card .primary { justify-self: start; }
+.section-label { margin: 6px 0 -4px; font: 800 11px/1.3 var(--body); letter-spacing: .16em; text-transform: uppercase; color: var(--ink-soft); }
+.levels { display: grid; gap: 8px; }
+.level-card { display: grid; grid-template-columns: 40px 1fr auto; align-items: center; gap: 12px; background: var(--panel); border: 1px solid var(--panel-line); border-radius: var(--radius); padding: 10px 14px; text-align: left; width: 100%; }
+.level-card .num { width: 40px; height: 40px; border-radius: 11px; display: grid; place-items: center; font-family: var(--display); font-size: 18px; color: var(--tile-ink); }
+.level-card .meta { min-width: 0; }
+.level-card .meta b { display: block; font-family: var(--display); font-weight: 400; font-size: 18px; }
+.level-card .meta span { font-size: 13px; color: var(--ink-soft); }
+.stars { font-size: 15px; letter-spacing: 2px; color: var(--ochre); white-space: nowrap; }
+.stars .off { color: #574a42; }
+.level-card[disabled] { opacity: .45; cursor: not-allowed; }
+.footnote { font-size: 12px; color: var(--ink-soft); margin: 4px 0 0; }
+
+/* shared play UI */
+.status { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
+.task { margin: 0; color: var(--ink-soft); font-size: 14px; }
+.score { font-size: 13px; color: var(--ink-soft); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.round-pill { align-self: flex-start; font: 800 11px/1 var(--body); letter-spacing: .12em; text-transform: uppercase; background: var(--wall-deep); color: var(--ink-soft); padding: 6px 10px; border-radius: 999px; }
+.hint { background: var(--ink); color: var(--tile-ink); border-radius: var(--radius); padding: 12px 14px; font-size: 14.5px; border-left: 6px solid var(--bad); }
+.hint.ok { border-left-color: var(--good); }
+.hint.neutral { border-left-color: var(--ochre); }
+.hint b { font-weight: 800; }
+.hint p { margin: 0; }
+.shake { animation: shake .42s ease; }
+@keyframes shake { 0%,100% { transform: translateX(0); } 20% { transform: translateX(-7px) rotate(-1.5deg); } 40% { transform: translateX(6px) rotate(1.5deg); } 60% { transform: translateX(-4px); } 80% { transform: translateX(3px); } }
+.board { background: var(--panel); border: 1px solid var(--panel-line); border-radius: 18px; padding: 14px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; position: relative; }
+.tile {
+  position: relative; border: none; border-radius: 12px; min-height: 74px; padding: 10px 12px 12px; color: var(--tile-ink); text-align: left;
+  font-weight: 800; font-size: 15px; line-height: 1.25; opacity: 1;
+  box-shadow: inset 0 -5px 0 rgba(0,0,0,.18), 0 2px 0 rgba(0,0,0,.35);
+  transition: transform .12s ease; display: flex; flex-direction: column; justify-content: space-between; gap: 6px;
+}
+.tile:active { transform: translateY(2px); }
+
+/* Chronology Jam */
+.road { position: relative; background: #2a2420; border-radius: var(--radius); padding: 12px 10px; overflow-x: auto; scrollbar-width: none; }
+.road::-webkit-scrollbar { display: none; }
+.road::before { content: ""; position: absolute; left: 10px; right: 10px; top: 50%; border-top: 2px dashed rgba(224,166,58,.35); }
+.road.drop-target { box-shadow: 0 0 0 3px var(--ochre); }
+.lanes { position: relative; display: flex; gap: 8px; min-height: 64px; align-items: center; }
+.slot { flex: 0 0 auto; width: 92px; min-height: 58px; border-radius: 10px; border: 1.5px dashed rgba(251,243,228,.22); background: #221d1a; display: grid; place-items: center; font-family: var(--display); color: rgba(251,243,228,.35); }
+.slot.filled { border: none; color: var(--tile-ink); padding: 6px 7px; text-align: center; font-family: var(--body); font-weight: 800; font-size: 11.5px; line-height: 1.2; }
+.slot.filled em { display: block; font-style: normal; font-weight: 700; font-size: 10.5px; opacity: .75; margin-top: 2px; }
+.board.gate::after { content: "PORTA"; position: absolute; left: 50%; top: -11px; transform: translateX(-50%); background: var(--wall-deep); color: var(--ink-soft); font: 700 10px/1 var(--body); letter-spacing: .25em; padding: 5px 10px 5px 12px; border-radius: 999px; }
+.tile .when { font-size: 11.5px; font-weight: 700; opacity: 0; transform: translateY(3px); transition: opacity .25s, transform .25s; }
+.tile.revealed .when { opacity: .78; transform: none; }
+.tile.gone { visibility: hidden; }
+.dragging { z-index: 20 !important; transition: none !important; opacity: 1 !important; box-shadow: 0 14px 24px rgba(0,0,0,.5) !important; cursor: grabbing; }
+.flyer { position: fixed; z-index: 30; pointer-events: none; margin: 0; opacity: 1; }
+
+/* Match Pairs */
+.pairs { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: 10px; }
+.pairs .col { display: grid; gap: 10px; align-content: start; }
+.pick { border: 2px solid transparent; border-radius: 12px; padding: 10px 11px; min-height: 64px; background: var(--tile-4); color: var(--tile-ink); text-align: left; font-weight: 800; font-size: 14.5px; line-height: 1.25; box-shadow: inset 0 -4px 0 rgba(0,0,0,.15), 0 2px 0 rgba(0,0,0,.35); transition: transform .15s ease, background .2s ease; }
+.pick.desc { font-weight: 700; font-size: 13.5px; }
+.pick.selected { border-color: var(--ochre); transform: translateY(-2px) scale(1.02); box-shadow: 0 0 0 3px rgba(224,166,58,.45); }
+.pick.matched { cursor: default; box-shadow: none; }
+.pick.matched::after { content: " ✓"; }
+
+/* True or False */
+.deck { position: relative; display: grid; min-height: 280px; }
+.deck > .card { grid-area: 1 / 1; }
+.card { width: 100%; min-height: 250px; border-radius: 20px; padding: 22px 20px; background: var(--tile-4); color: var(--tile-ink); box-shadow: 0 10px 0 #b9ae98, 0 18px 30px rgba(0,0,0,.35); display: flex; flex-direction: column; justify-content: space-between; gap: 18px; touch-action: none; user-select: none; -webkit-user-select: none; cursor: grab; position: relative; z-index: 2; opacity: 1; }
+.card.behind { z-index: 1; transform: translateY(16px) scale(.94); background: #b3a68d; box-shadow: 0 10px 0 #8f8470; pointer-events: none; }
+.card.behind > * { visibility: hidden; }
+.card .claim { font-family: var(--display); font-size: 25px; line-height: 1.25; text-wrap: balance; margin: 0; }
+.card .count { font: 800 11px/1 var(--body); letter-spacing: .14em; text-transform: uppercase; color: #6b5d50; }
+.card .stamp { position: absolute; top: 18px; padding: 6px 12px; border: 3px solid currentColor; border-radius: 8px; font: 800 18px/1 var(--body); letter-spacing: .1em; opacity: 0; background: var(--tile-4); }
+.card .stamp.t { right: 16px; color: #3f7c38; transform: rotate(10deg); }
+.card .stamp.f { left: 16px; color: #b8382e; transform: rotate(-10deg); }
+.swipe-hint { font-size: 13px; color: #6b5d50; margin: 0; }
+.answer-buttons { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.answer-buttons button { border: none; border-radius: 14px; padding: 14px; font-weight: 800; font-size: 17px; color: var(--tile-ink); box-shadow: inset 0 -4px 0 rgba(0,0,0,.18); }
+.btn-false { background: #e88b80; } .btn-true { background: #9ccc8a; }
+.verdict { display: grid; gap: 10px; }
+
+/* Odd One Out */
+.odd { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.odd .tile { min-height: 96px; justify-content: center; font-size: 16px; }
+.tile.dim { opacity: .35; }
+.tile.right-pick { outline: 4px solid var(--good); }
+
+/* Who Am I */
+.clues { background: var(--panel); border: 1px solid var(--panel-line); border-radius: 18px; padding: 16px; display: grid; gap: 10px; }
+.clue { display: grid; grid-template-columns: 26px 1fr; gap: 10px; align-items: start; font-size: 15.5px; }
+.clue .n { width: 26px; height: 26px; border-radius: 50%; background: var(--ochre); color: var(--tile-ink); display: grid; place-items: center; font: 800 13px/1 var(--body); }
+.clue.hidden-clue { color: #6f6159; }
+.clue.hidden-clue .n { background: #3a312c; color: #8a7b70; }
+.choices { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.choice { border: none; border-radius: 12px; padding: 12px; min-height: 54px; font-weight: 800; font-size: 15px; color: var(--tile-ink); background: var(--tile-4); box-shadow: inset 0 -4px 0 rgba(0,0,0,.15); text-align: left; }
+.choice.wrong { background: #e88b80; opacity: .6; }
+.choice.right { background: #9ccc8a; }
+.more { justify-self: start; }
+
+/* Map Drop */
+.map-wrap { background: var(--panel); border: 1px solid var(--panel-line); border-radius: 18px; padding: 10px; }
+.map { display: block; width: 100%; height: auto; border-radius: 12px; touch-action: none; }
+.map .sea { fill: var(--sea); }
+.map .land { fill: var(--land); }
+.map .river { fill: none; stroke: #4c86ab; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+.map .spot { fill: var(--panel); stroke: var(--ink); stroke-width: 2.5; cursor: pointer; }
+.map .spot.target { fill: var(--ochre); }
+.map .spot.done { fill: var(--good); stroke: var(--panel); }
+.map .rome { fill: var(--wall); stroke: var(--panel); stroke-width: 2; }
+.map text { font: 800 11px var(--body); fill: var(--tile-ink); paint-order: stroke; stroke: var(--land); stroke-width: 3px; }
+.map text.sea-label { fill: #c7dceb; stroke: none; font: 700 10px var(--body); letter-spacing: .2em; }
+.labels { display: flex; flex-wrap: wrap; gap: 8px; }
+.label-chip { border: 2px solid transparent; border-radius: 999px; padding: 8px 14px; font-weight: 800; font-size: 14px; color: var(--tile-ink); touch-action: none; user-select: none; -webkit-user-select: none; box-shadow: inset 0 -3px 0 rgba(0,0,0,.15); opacity: 1; }
+.label-chip.selected { border-color: var(--ink); transform: translateY(-2px); }
+
+/* Legion Quiz */
+.legion { background: var(--panel); border: 1px solid var(--panel-line); border-radius: 18px; padding: 12px 14px; display: grid; gap: 6px; }
+.legion-row { display: grid; grid-template-columns: 74px 1fr; align-items: center; gap: 8px; }
+.legion-row span { font: 800 10.5px/1.2 var(--body); letter-spacing: .08em; text-transform: uppercase; color: var(--ink-soft); }
+.soldiers { display: flex; flex-wrap: wrap; gap: 4px; min-height: 26px; align-items: center; }
+.soldiers svg { width: 20px; height: 26px; }
+.soldiers .empty { font-size: 12px; color: #6f6159; }
+.question { background: var(--tile-4); color: var(--tile-ink); border-radius: 18px; padding: 16px; display: grid; gap: 12px; }
+.question h3 { font-size: 21px; line-height: 1.25; }
+.question .lvl { font: 800 11px/1 var(--body); letter-spacing: .14em; text-transform: uppercase; color: #6b5d50; }
+.options { display: grid; gap: 8px; }
+.option { border: 2px solid #cfc4ad; border-radius: 12px; padding: 11px 12px; text-align: left; background: #f6f0e2; color: var(--tile-ink); font-weight: 700; font-size: 15px; }
+.option.right { background: #9ccc8a; border-color: #5d9a4c; }
+.option.wrong { background: #e88b80; border-color: #b8382e; }
+
+/* results */
+.result { background: var(--panel); border: 1px solid var(--panel-line); border-radius: 18px; padding: 18px 16px; display: flex; flex-direction: column; gap: 14px; }
+.result h2 { font-size: 28px; }
+.big-stars { font-size: 34px; letter-spacing: 6px; color: var(--ochre); line-height: 1; }
+.big-stars .off { color: #574a42; }
+.recap { list-style: none; margin: 0; padding: 0; display: grid; }
+.recap li { display: grid; grid-template-columns: 14px 1fr; gap: 12px; padding: 0 0 14px; position: relative; }
+.recap li::before { content: ""; width: 14px; height: 14px; border-radius: 50%; background: var(--ochre); margin-top: 4px; box-shadow: 0 0 0 3px var(--panel); position: relative; z-index: 1; }
+.recap li.miss::before { background: var(--bad); }
+.recap li:not(:last-child)::after { content: ""; position: absolute; left: 6px; top: 12px; bottom: 0; width: 2px; background: #4a3e37; }
+.recap .when { display: block; font-size: 12px; color: var(--ochre); font-weight: 800; letter-spacing: .04em; text-transform: uppercase; }
+.recap b { font-weight: 800; }
+.recap p { margin: 2px 0 0; color: var(--ink-soft); font-size: 14px; }
+.actions { display: flex; gap: 10px; flex-wrap: wrap; }
+.run-summary { display: grid; gap: 8px; list-style: none; margin: 0; padding: 0; }
+.run-summary li { display: flex; justify-content: space-between; gap: 10px; align-items: center; }
+
+/* Tile colours: last, so they override the neutral backgrounds above */
+.c1 { background: var(--tile-1); } .c2 { background: var(--tile-2); } .c3 { background: var(--tile-3); }
+.c4 { background: var(--tile-4); } .c5 { background: var(--tile-5); }
+
+@media (prefers-reduced-motion: reduce) {
+  .shake { animation: none; outline: 3px solid var(--bad); }
+  .tile, .tile .when, .pick { transition: none; }
+}
+@media (min-width: 520px) { .board:not(.pairs) { grid-template-columns: repeat(3, minmax(0, 1fr)); } .board.odd { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+</style>
+
+<div class="app" id="app"></div>
+
+<script>
+// All content comes from the Ave Caesar chapter "Early Rome & the Kingdom" (written from Wikipedia),
+// except the map positions (real geography) and the note on the Republic's three battle lines.
+// Reign dates are the traditional ones from the Roman historians; "y" is only used for sorting.
+
+const TIMELINES = [
+  { name: 'The Legend Begins', blurb: 'Four stories from Rome’s first kings', events: [
+    { label: 'Rome is founded', when: '753 BC (traditional)', y: -753, fact: 'The official founding date, worked out by the scholar Varro, was celebrated every year on 21 April.' },
+    { label: 'Sabine women carried off', when: 'Under Romulus, 1st king', y: -750, fact: 'Romulus invited the Sabines, a hill people north-east of Rome, to a festival, and his men carried off their young women.' },
+    { label: 'Calendar gets 12 months', when: 'Under Numa, 2nd king', y: -700, fact: 'Legend credits Numa Pompilius, famed for his justice and piety, with adding January and February.' },
+    { label: 'Alba Longa destroyed', when: 'Under Tullus Hostilius, 3rd king', y: -660, fact: 'The warlike Tullus destroyed the Latin town said to be Romulus’s birthplace and moved its people to Rome.' },
+  ] },
+  { name: 'Seven Kings', blurb: 'Every king, in order of reign', events: [
+    { label: 'Romulus', when: '753–716 BC (traditional)', y: -753, fact: 'The legendary founder and first king, said to be a son of Mars.' },
+    { label: 'Numa Pompilius', when: '715–673 BC (traditional)', y: -715, fact: 'A Sabine famed for his justice and piety, remembered for religion and the calendar.' },
+    { label: 'Tullus Hostilius', when: '673–642 BC (traditional)', y: -673, fact: 'A warlike king who destroyed Alba Longa.' },
+    { label: 'Ancus Marcius', when: '642–617 BC (traditional)', y: -642, fact: 'Founded Ostia, a port at the mouth of the Tiber.' },
+    { label: 'Tarquinius Priscus', when: '616–579 BC (traditional)', y: -616, fact: 'The first Etruscan king, builder of the Great Sewer and the Circus Maximus.' },
+    { label: 'Servius Tullius', when: '578–535 BC (traditional)', y: -578, fact: 'Held Rome’s first census, sorting citizens into five classes by wealth.' },
+    { label: 'Tarquin the Proud', when: '535–509 BC (traditional)', y: -535, fact: 'The last king, driven out in 509 BC.' },
+  ] },
+  { name: 'Builders of Rome', blurb: 'What each king left behind', events: [
+    { label: 'A council of 100 leading men', when: 'Under Romulus, 1st king', y: -750, fact: 'Romulus chose 100 leading men as his advisers, the beginning of the Senate.' },
+    { label: 'Ostia founded', when: 'Under Ancus Marcius, 4th king', y: -630, fact: 'A port at the river’s mouth gave Rome access to the sea.' },
+    { label: 'The Great Sewer drains the valley', when: 'Under Tarquinius Priscus, 5th king', y: -600, fact: 'The Cloaca Maxima drained the marshy ground between the hills, and the Forum was begun on the reclaimed land.' },
+    { label: 'Rome’s first census', when: 'Under Servius Tullius, 6th king', y: -560, fact: 'A count of citizens, who were sorted into five classes by wealth.' },
+    { label: 'Temple of Jupiter finished', when: 'Under Tarquin the Proud, 7th king', y: -520, fact: 'The great temple on the Capitoline Hill had been begun two kings earlier.' },
+  ] },
+  { name: 'Fall of the Kings', blurb: 'From Lucretia to the Gauls', events: [
+    { label: 'Revolt: the king is expelled', when: '509 BC (traditional)', y: -509, fact: 'After Lucretia’s death, a revolt led by Lucius Junius Brutus drove out the royal family.' },
+    { label: 'Lars Porsenna marches on Rome', when: 'Soon after 509 BC', y: -508, fact: 'Legend says the hero Horatius held a bridge alone until it could be torn down.' },
+    { label: 'Victory at Lake Regillus', when: 'After Porsenna’s war', y: -496, fact: 'Rome defeated an alliance of Latin towns.' },
+    { label: 'Tarquin dies in exile', when: '495 BC', y: -495, fact: 'The last king died at Cumae, a Greek city near Naples.' },
+    { label: 'The Gauls sack Rome', when: '390 BC', y: -390, fact: 'Ancient writers blamed these northern invaders for destroying many early records.' },
+  ] },
+  { name: 'The Grand Timeline', blurb: 'Legend, archaeology and history mixed', events: [
+    { label: 'First settlers on the Capitoline', when: 'Possibly c. 1700 BC', y: -1700, fact: 'Archaeologists found traces of Bronze Age settlement long before the legend’s founding date.' },
+    { label: 'Rome is founded', when: '753 BC (traditional)', y: -753, fact: 'Varro’s official date, celebrated on 21 April.' },
+    { label: 'Alba Longa destroyed', when: 'Under Tullus Hostilius, 3rd king', y: -660, fact: 'Its people were moved to Rome.' },
+    { label: 'Circus Maximus laid out', when: 'Under Tarquinius Priscus, 5th king', y: -600, fact: 'A giant stadium for chariot races, where he also founded the Roman games.' },
+    { label: 'Rome’s first census', when: 'Under Servius Tullius, 6th king', y: -560, fact: 'Citizens were counted and sorted into five classes.' },
+    { label: 'The king is expelled', when: '509 BC (traditional)', y: -509, fact: 'Two consuls, elected each year, took the king’s place.' },
+    { label: 'The Gauls sack Rome', when: '390 BC', y: -390, fact: 'Many records were said to be lost.' },
+    { label: 'First history of Rome written', when: 'c. 200 BC', y: -200, fact: 'Fabius Pictor wrote about three centuries after the kings fell, which is why historians doubt the details.' },
+  ] },
+]
+
+const MATCHES = [
+  { name: 'Kings and Deeds', blurb: 'Who did what', pairs: [
+    ['Romulus', 'Chose 100 leading men as his advisers'],
+    ['Numa Pompilius', 'Gave Rome a twelve-month calendar'],
+    ['Tullus Hostilius', 'Destroyed Alba Longa'],
+    ['Ancus Marcius', 'Founded the port of Ostia'],
+    ['Servius Tullius', 'Held Rome’s first census'],
+  ] },
+  { name: 'Words of Rome', blurb: 'Terms you meet in the chapter', pairs: [
+    ['Fasces', 'Bundle of rods around an axe, the sign of power to punish'],
+    ['Vestal Virgin', 'A priestess sworn to chastity'],
+    ['Cloaca Maxima', 'The “Great Sewer” that drained the valley'],
+    ['Circus Maximus', 'A giant stadium for chariot races'],
+    ['Census', 'A count of citizens, sorted by wealth'],
+  ] },
+  { name: 'People of the Story', blurb: 'Heroes, villains and victims', pairs: [
+    ['Rhea Silvia', 'Priestess and mother of the twins Romulus and Remus'],
+    ['Amulius', 'Uncle who seized the throne from Numitor'],
+    ['Lucretia', 'Noblewoman whose death sparked the revolt'],
+    ['Lucius Junius Brutus', 'The king’s nephew, who led the revolt'],
+    ['Horatius', 'Hero who held a bridge alone against Porsenna'],
+  ] },
+]
+
+const DECKS = [
+  { name: 'The Seven Kings', blurb: 'Swipe: true or false?', cards: [
+    { claim: 'Romulus and Remus were said to be fathered by Mars, the god of war.', answer: true, why: 'According to the legend, their mother was Rhea Silvia, a Vestal Virgin.' },
+    { claim: 'Numa Pompilius was Rome’s most warlike king.', answer: false, why: 'Numa was famed for his justice and piety. The warlike king was Tullus Hostilius.' },
+    { claim: 'Ancus Marcius founded Ostia, a port at the mouth of the Tiber.', answer: true, why: 'He also settled conquered Latins on the Aventine Hill.' },
+    { claim: 'Servius Tullius built the Circus Maximus.', answer: false, why: 'The Circus Maximus was laid out by Tarquinius Priscus. Servius held Rome’s first census.' },
+    { claim: 'The Cloaca Maxima was a great sewer that drained the land between Rome’s hills.', answer: true, why: 'The Roman Forum was begun on the reclaimed land.' },
+    { claim: 'Each king inherited the throne from his father.', answer: false, why: 'After a king died, a new one was chosen and presented to the Curiate Assembly, the gathering of citizens, which accepted or rejected him.' },
+    { claim: 'Tarquin the Proud was Rome’s last king.', answer: true, why: 'He was driven out in 509 BC, according to tradition.' },
+    { claim: 'Romulus invited the Sabines to a festival, and his men carried off their young women.', answer: true, why: 'The Sabines were a hill people living north-east of Rome.' },
+  ] },
+  { name: 'Legends and Endings', blurb: 'Swipe: true or false?', cards: [
+    { claim: 'Romulus and Remus were nursed by a she-wolf.', answer: true, why: 'Legend says she suckled them in a cave called the Lupercal.' },
+    { claim: 'Lucretia led the revolt that drove out the king.', answer: false, why: 'The revolt was led by Lucius Junius Brutus, the king’s nephew, after Lucretia’s death.' },
+    { claim: 'Horatius is said to have held a bridge alone against Lars Porsenna.', answer: true, why: 'He held it until the bridge could be torn down.' },
+    { claim: 'Tarquin the Proud died in Rome as an old man.', answer: false, why: 'He died in exile at Cumae, a Greek city near Naples, in 495 BC.' },
+    { claim: 'Alba Longa was a Greek city in southern Italy.', answer: false, why: 'Alba Longa was a Latin town in the hills south-east of Rome.' },
+    { claim: 'People lived on the Capitoline Hill long before 753 BC.', answer: true, why: 'Archaeologists found Bronze Age traces, possibly from as early as 1700 BC.' },
+    { claim: 'The Gauls sacked Rome while the kings still ruled.', answer: false, why: 'The Gauls sacked Rome in 390 BC, over a century after the last king fell.' },
+    { claim: 'The first history of Rome was written about three centuries after the kings fell.', answer: true, why: 'Fabius Pictor wrote it around 200 BC, which is why historians doubt many details.' },
+  ] },
+]
+
+const ODDS = [
+  { name: 'Who Doesn’t Belong?', blurb: 'Spot the odd one out', rounds: [
+    { items: ['Romulus', 'Numa Pompilius', 'Ancus Marcius', 'Lucius Junius Brutus'], odd: 3, why: 'Brutus never ruled as king. He led the revolt of 509 BC and became one of the first two consuls.' },
+    { items: ['The Great Sewer', 'The Circus Maximus', 'Rome’s first triumph', 'The port of Ostia'], odd: 3, why: 'Tarquinius Priscus was behind the first three. Ostia was founded earlier, by Ancus Marcius.' },
+    { items: ['Mars', 'Rhea Silvia', 'The she-wolf', 'Lucretia'], odd: 3, why: 'The first three belong to the legend of Romulus and Remus. Lucretia’s story comes at the end of the monarchy.' },
+    { items: ['Tarquinius Priscus', 'Servius Tullius', 'Tarquin the Proud', 'Numa Pompilius'], odd: 3, why: 'The other three were said to be of Etruscan birth or family. Numa was a Sabine.' },
+    { items: ['Alba Longa destroyed', 'A senate house built', 'Struck by Jupiter’s lightning', 'Rome’s first census'], odd: 3, why: 'The first three come from the reign of Tullus Hostilius. The census was held by Servius Tullius.' },
+    { items: ['Lucius Junius Brutus', 'Collatinus', 'Publius Valerius Poplicola', 'Sextus Tarquinius'], odd: 3, why: 'The first three led the revolt. Sextus Tarquinius was the king’s son whose crime against Lucretia sparked it.' },
+    { items: ['Lars Porsenna', 'Horatius at the bridge', 'The battle of Lake Regillus', 'The Sabine women'], odd: 3, why: 'The first three belong to Tarquin’s fight to return after 509 BC. The Sabine women come from Romulus’s reign.' },
+  ] },
+]
+
+const WHOS = [
+  { name: 'The Kings', blurb: 'Guess the king from clues', people: [
+    { name: 'Servius Tullius', options: ['Servius Tullius', 'Numa Pompilius', 'Ancus Marcius', 'Tarquin the Proud'],
+      clues: ['My own daughter, Tullia, plotted my death.', 'I built the Temple of Diana on the Aventine Hill.', 'Tradition says I was the son of a slave.', 'I held Rome’s first census and sorted citizens into five classes.'] },
+    { name: 'Numa Pompilius', options: ['Romulus', 'Numa Pompilius', 'Tullus Hostilius', 'Servius Tullius'],
+      clues: ['Rome waited a year after the first king vanished before choosing me.', 'I closed the doors of the temple of Janus as a sign of peace.', 'I founded the Vestal Virgins.', 'Legend says I gave Rome January and February.'] },
+    { name: 'Tarquinius Priscus', options: ['Ancus Marcius', 'Tarquin the Proud', 'Tarquinius Priscus', 'Servius Tullius'],
+      clues: ['A son of Ancus Marcius murdered me.', 'I celebrated Rome’s first triumph, a victory parade.', 'I was born an Etruscan and moved to Rome.', 'I built the Great Sewer and the Circus Maximus.'] },
+    { name: 'Tullus Hostilius', options: ['Ancus Marcius', 'Romulus', 'Tarquin the Proud', 'Tullus Hostilius'],
+      clues: ['Livy says Jupiter burned me and my house with lightning.', 'I built a senate house that lasted centuries.', 'I was warlike and scornful of the gods.', 'I destroyed Alba Longa.'] },
+  ] },
+  { name: 'Founders and Rebels', blurb: 'Guess the person from clues', people: [
+    { name: 'Romulus', options: ['Remus', 'Romulus', 'Numa Pompilius', 'Amulius'],
+      clues: ['Some whispered that the nobles murdered me and hid my body.', 'A nobleman claimed I appeared to him as the god Quirinus.', 'I welcomed exiles, criminals and runaway slaves to my city.', 'A she-wolf suckled me and my twin brother.'] },
+    { name: 'Lucius Junius Brutus', options: ['Collatinus', 'Horatius', 'Lucius Junius Brutus', 'Sextus Tarquinius'],
+      clues: ['I ordered the execution of my own sons when they plotted to bring the king back.', 'I made the people swear never again to accept a king.', 'I was the last king’s nephew.', 'I led the revolt of 509 BC and became one of the first two consuls.'] },
+    { name: 'Lucretia', options: ['Rhea Silvia', 'Tullia', 'Lucretia', 'Tanaquil'],
+      clues: ['Shakespeare wrote a poem about me.', 'My husband Collatinus became one of the first consuls.', 'I was a virtuous noblewoman wronged by the king’s son.', 'My death sparked the uprising against the last king.'] },
+  ] },
+]
+
+// Map: real coordinates (lat, lon), projected onto a 300x300 board of central Italy
+const MAPS = [
+  { name: 'Rome and Its Neighbours', blurb: 'Place the towns on the map', places: [
+    { name: 'Ostia', lat: 41.756, lon: 12.29, labelLeft: true, why: 'A port at the mouth of the Tiber, founded by Ancus Marcius.' },
+    { name: 'Alba Longa', lat: 41.75, lon: 12.65, why: 'A Latin town in the hills south-east of Rome.' },
+    { name: 'Ardea', lat: 41.61, lon: 12.54, why: 'A town south of Rome. Tarquin was besieging it when the revolt broke out.' },
+    { name: 'Sabine country', lat: 42.23, lon: 12.73, why: 'Home of the Sabines, a hill people living north-east of Rome.' },
+    { name: 'Clusium', lat: 43.02, lon: 11.95, why: 'The Etruscan city of Lars Porsenna, far to the north in today’s Tuscany.' },
+    { name: 'Cumae', lat: 40.85, lon: 14.06, why: 'A Greek city near Naples, where Tarquin the Proud died in exile.' },
+  ] },
+]
+const MAP_BOUNDS = { latMin: 40.7, latMax: 43.15, lonMin: 11.6, lonMax: 14.45 }
+const COAST = [[43.3,10.95],[42.73,10.98],[42.44,11.2],[42.36,11.5],[42.09,11.79],[41.95,12.07],[41.74,12.25],[41.58,12.48],[41.45,12.62],[41.36,12.85],[41.23,13.03],[41.29,13.25],[41.25,13.45],[41.21,13.57],[41.12,13.8],[41.02,13.93],[40.88,14.03],[40.8,14.08],[40.83,14.25],[40.72,14.45],[40.63,14.38],[40.55,14.3]]
+const TIBER = [[43.3,12.36],[43.1,12.38],[42.78,12.42],[42.46,12.39],[42.15,12.55],[41.95,12.5],[41.89,12.47],[41.8,12.38],[41.74,12.25]]
+const ROME = { lat: 41.893, lon: 12.483 }
+
+const QUIZZES = [[{"q": "Which invaders, who sacked Rome in 390 BC, were blamed for destroying many records of the early city?", "options": ["The Carthaginians", "The Etruscans", "The Gauls", "The Samnites"], "a": 2, "level": 1, "why": "Ancient writers blamed the Gauls, invaders from the north, for destroying many records. As a result, almost nothing written survives from the age of the kings."}, {"q": "According to tradition, Rome's fifth king, Tarquinius Priscus, was an immigrant born into which people?", "options": ["The Greeks", "The Sabines", "The Etruscans", "The Volsci"], "a": 2, "level": 1, "why": "Tarquinius Priscus was traditionally born an Etruscan, one of the wealthy peoples living north of Rome in what is now Tuscany. He became Rome's first Etruscan king."}, {"q": "According to tradition, how long did a Roman king hold the throne once chosen, after the reign of Romulus?", "options": ["For life", "For five years", "Until his eldest son came of age", "For a single year"], "a": 0, "level": 1, "why": "Rome's later kings were not born to the throne but chosen for life. When a king died, the Senate took charge until a new one was found."}, {"q": "Which writer's poem \"Lucrece\" was inspired by the story of Lucretia?", "options": ["Milton", "Chaucer", "Byron", "Shakespeare"], "a": 3, "level": 1, "why": "Lucretia's story inspired Shakespeare's poem Lucrece. It also inspired many paintings in the 18th and 19th centuries."}, {"q": "How was the new voting assembly based on Servius Tullius's wealth classes organised?", "options": ["So that plebeians outvoted the nobles", "So that every citizen had an equal vote", "So that each district voted equally", "So that the rich had the most influence", "So that only patricians could vote"], "a": 3, "level": 2, "why": "Servius's five wealth classes formed a voting assembly weighted towards the rich. Later, though, he was said to favour the poor at the nobles' expense."}, {"q": "Tarquinius Priscus added 100 new members to the Senate. How large did that make it?", "options": ["250", "100", "150", "300", "200"], "a": 4, "level": 2, "why": "The extra 100 members raised the Senate to 200. Tarquinius also reportedly doubled Rome's size through wars against the Sabines and Etruscans."}, {"q": "Which king adopted the immigrant Tarquinius Priscus as a son?", "options": ["Tullus Hostilius", "Romulus", "Ancus Marcius", "Numa Pompilius", "Servius Tullius"], "a": 2, "level": 2, "why": "After settling in Rome, Tarquinius won the favour of King Ancus Marcius, who adopted him. He went on to become Rome's fifth king."}, {"q": "Where and when did the exiled Tarquin the Proud die?", "options": ["At Veii in 490 BC", "At Ardea in 495 BC", "At Cumae in 495 BC", "At Lake Regillus in 496 BC", "At Cumae in 509 BC", "At Clusium in 495 BC"], "a": 2, "level": 3, "why": "Tarquin died in exile at Cumae, a Greek city near Naples, in 495 BC. His attempts to return had failed, ending with Rome's victory over a Latin alliance at Lake Regillus."}, {"q": "Which modern historian suggests that the Etruscan king Lars Porsenna may have ended Rome's monarchy himself?", "options": ["Tim Cornell", "Livy", "Varro", "Fabius Pictor", "Arnaldo Momigliano", "Mary Beard"], "a": 0, "level": 3, "why": "Tim Cornell put forward this idea. It builds on the Roman historians Tacitus and Pliny, who recorded that Porsenna actually captured Rome."}, {"q": "Legend credits King Numa with adding which two months to create a twelve-month calendar?", "options": ["November and December", "September and October", "January and February", "July and August", "March and April", "May and June"], "a": 2, "level": 3, "why": "Numa was said to have added January and February to make a twelve-month calendar. Rome waited a year after Romulus vanished before choosing him as king."}], [{"q": "According to tradition, what was unusual about the background of King Servius Tullius?", "options": ["He was a Carthaginian merchant", "He was raised by a she-wolf", "He was a Greek refugee from Troy", "He was the son of a slave"], "a": 3, "level": 1, "why": "Tradition held that Servius was the son of a slave. He rose to marry the daughter of the previous king, Tarquinius Priscus."}, {"q": "What does archaeology suggest about Rome's kings?", "options": ["The kings were really Greek governors from Cumae", "All seven kings are confirmed by royal inscriptions", "Rome never had kings; they were invented by Livy", "Rome did have kings, though the stories about them are doubtful"], "a": 3, "level": 1, "why": "Archaeology confirms that Rome had kings, but most scholars doubt the traditional stories about them. Modern historians are cautious because so few written sources survive."}, {"q": "Which Latin town, said to be Romulus's birthplace, was destroyed by King Tullus Hostilius?", "options": ["Ardea", "Veii", "Alba Longa", "Ostia"], "a": 2, "level": 1, "why": "The warlike Tullus Hostilius destroyed Alba Longa and moved its people to Rome. He also built a senate house that lasted for centuries."}, {"q": "According to legend, which hero held a bridge alone against the army of Lars Porsenna?", "options": ["Brutus", "Collatinus", "Poplicola", "Horatius"], "a": 3, "level": 1, "why": "Horatius held the bridge alone until it could be torn down. Porsenna, an Etruscan king from Clusium, had marched on Rome to help Tarquin return."}, {"q": "Why did the classicist Mary Beard call Romulus \"Mr Rome\"?", "options": ["He was the only king born inside the city", "He personally designed every Roman temple", "Roman coins always showed his portrait", "He was Rome's first elected consul", "His name was probably invented from the city's name"], "a": 4, "level": 2, "why": "The name Romulus was probably made up from the name of Rome itself, hence \"Mr Rome\". Most modern historians treat the founding legend as myth."}, {"q": "What was the role of the augur in making a new king?", "options": ["He sought signs that the gods approved", "He granted the king imperium", "He crowned the king in the Forum", "He presented the king to the Senate", "He counted the assembly's votes"], "a": 0, "level": 2, "why": "The augur, a priest, took the king-elect up to the citadel to look for signs of divine approval. Only after this did the assembly grant the king imperium."}, {"q": "After Romulus vanished in a storm, a respected nobleman claimed Romulus had appeared to him in a vision as which god?", "options": ["Janus", "Saturn", "Mars", "Jupiter", "Quirinus"], "a": 4, "level": 2, "why": "The nobleman said Romulus had appeared as the god Quirinus. Others whispered that the nobles had murdered the king and hidden the pieces of his body."}, {"q": "How did the reign of Tarquinius Priscus end after 38 years?", "options": ["He was struck by lightning from Jupiter", "He was murdered by a son of Ancus Marcius", "He died in exile at Cumae", "He fell in battle against the Sabines", "He vanished during a storm", "He was killed by his daughter and her husband"], "a": 1, "level": 3, "why": "Tarquinius Priscus was murdered by a son of Ancus Marcius, the king who had adopted him. He is remembered for introducing the symbols of office and celebrating the first triumph."}, {"q": "Around 730–720 BC, at about the time a wall was built on the Palatine, what happened to the Forum area?", "options": ["It was walled off as an Etruscan fortress", "Burials stopped and parts were paved as a shared space", "A palace for Romulus was built over it", "It was flooded and abandoned for a century", "It became a royal burial ground for the kings", "It was given over to chariot racing"], "a": 1, "level": 3, "why": "As the Palatine wall went up, burials in the Forum stopped and parts of it were paved over. It became a shared space for meeting and worship."}, {"q": "Which hill people living south-east of Rome did Tarquin the Proud fight?", "options": ["The Volsci", "The Samnites", "The Sabines", "The Hernici", "The Aequi", "The Gauls"], "a": 0, "level": 3, "why": "Tarquin fought the Volsci, a hill people to the south-east. His wars made Rome the leading power among the Latin cities."}]].map((questions, i) => ({ name: ['Raise a Legion', 'Reinforcements'][i], blurb: '10 questions, 10 soldiers', questions }))
+
+const GAMES = {
+  tf: { title: 'True or False', sets: DECKS },
+  chrono: { title: 'Chronology Jam', sets: TIMELINES },
+  match: { title: 'Match Pairs', sets: MATCHES },
+  odd: { title: 'Odd One Out', sets: ODDS },
+  who: { title: 'Who Am I?', sets: WHOS },
+  map: { title: 'Map Drop', sets: MAPS },
+  quiz: { title: 'Legion Quiz', sets: QUIZZES },
+}
+const SECTIONS = [
+  ['chrono', 'Chronology Jam · put events in order'],
+  ['match', 'Match Pairs · who did what'],
+  ['tf', 'True or False · swipe to answer'],
+  ['odd', 'Odd One Out · spot the intruder'],
+  ['who', 'Who Am I? · guess from clues'],
+  ['map', 'Map Drop · where things were'],
+  ['quiz', 'Legion Quiz · answer to recruit soldiers'],
+]
+// "Play the chapter": five rounds of different games, each about a different topic.
+// The run changes every time it is played.
+const CHAPTER_RUNS = [
+  [{ type: 'tf', set: 0 }, { type: 'chrono', set: 3 }, { type: 'match', set: 1 }, { type: 'map', set: 0 }, { type: 'quiz', set: 0 }],
+  [{ type: 'odd', set: 0 }, { type: 'chrono', set: 2 }, { type: 'who', set: 1 }, { type: 'map', set: 0 }, { type: 'quiz', set: 1 }],
+  [{ type: 'tf', set: 1 }, { type: 'chrono', set: 1 }, { type: 'match', set: 1 }, { type: 'who', set: 0 }, { type: 'quiz', set: 0 }],
+]
+const NUMERALS = ['I', 'II', 'III', 'IV', 'V']
+const TYPE_COLOR = { chrono: 1, match: 3, tf: 5, odd: 2, who: 4, map: 3, quiz: 1 }
+
+// ---------- helpers ----------
+const STORE_KEY = 'ave-caesar-games-stars'
+const RUN_KEY = 'ave-caesar-run-index'
+let stars = {}
+try { stars = JSON.parse(localStorage.getItem(STORE_KEY) || '{}') } catch { stars = {} }
+const saveStars = () => { try { localStorage.setItem(STORE_KEY, JSON.stringify(stars)) } catch {} }
+let runIndex = 0
+try { runIndex = (+localStorage.getItem(RUN_KEY) || 0) % CHAPTER_RUNS.length } catch {}
+const starKey = (type, set) => `${type}:${set}`
+
+const app = document.getElementById('app')
+const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]))
+const shuffle = arr => { const a = arr.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]] } return a }
+const starCount = mistakes => (mistakes === 0 ? 3 : mistakes <= 2 ? 2 : 1)
+const starRow = (n, cls = 'stars') => `<span class="${cls}" aria-label="${n} of 3 stars">${'★'.repeat(n)}<span class="off">${'★'.repeat(3 - n)}</span></span>`
+const plural = (n, w) => `${n} ${w}${n === 1 ? '' : 's'}`
+const buzz = () => { try { navigator.vibrate?.(60) } catch {} }
+const hintHtml = h => h ? `<div class="hint ${h.ok === true ? 'ok' : h.ok === 'neutral' ? 'neutral' : ''}" role="status"><p>${h.html}</p></div>` : ''
+
+let state = { screen: 'home' }
+let busy = false
+let run = null // { plan, step, results }
+
+function go(next) { state = next; render() }
+const RENDER = {}
+function render() {
+  busy = false
+  if (state.screen === 'home') return renderHome()
+  if (state.screen === 'play') return RENDER[state.type]()
+  if (state.screen === 'result') return renderResult()
+  if (state.screen === 'runDone') return renderRunDone()
+}
+function header(kicker, title, back = true) {
+  return `<header class="top"><div class="brand"><small>${esc(kicker)}</small><h1>${esc(title)}</h1></div>
+    ${back ? '<button class="ghost" id="back">Menu</button>' : ''}</header>`
+}
+function playHeader() {
+  const g = GAMES[state.type]
+  return header(`${g.title}${g.sets.length > 1 ? ' ' + NUMERALS[state.set] : ''}`, g.sets[state.set].name) +
+    (run ? `<span class="round-pill">Round ${run.step + 1} of ${run.plan.length}</span>` : '')
+}
+const statusLine = (task, left) => `<div class="status"><p class="task">${task}</p><span class="score">${left} left · ${plural(state.mistakes, 'mistake')}</span></div>`
+function bindBack() { app.querySelector('#back')?.addEventListener('click', () => { run = null; go({ screen: 'home' }) }) }
+
+// Drag helper: follows the pointer after a small movement; small movements stay taps
+function draggable(el, { onMove, onDrop }) {
+  el.style.touchAction = 'none'
+  el.addEventListener('pointerdown', down => {
+    if (busy || down.button > 0) return
+    const sx = down.clientX, sy = down.clientY
+    let dragging = false
+    const move = e => {
+      const dx = e.clientX - sx, dy = e.clientY - sy
+      if (!dragging && Math.hypot(dx, dy) < 8) return
+      dragging = true
+      el.classList.add('dragging')
+      el.style.transform = `translate(${dx}px, ${dy}px) rotate(${Math.max(-6, Math.min(6, dx / 20))}deg)`
+      onMove?.(e, dx, dy)
+    }
+    const up = e => {
+      el.removeEventListener('pointermove', move); el.removeEventListener('pointerup', up); el.removeEventListener('pointercancel', up)
+      if (!dragging) return
+      el.dataset.dragged = '1'
+      setTimeout(() => delete el.dataset.dragged, 0)
+      const keep = onDrop?.(e, e.type === 'pointerup')
+      if (!keep) { el.classList.remove('dragging'); el.style.transform = '' }
+    }
+    el.setPointerCapture(down.pointerId)
+    el.addEventListener('pointermove', move); el.addEventListener('pointerup', up); el.addEventListener('pointercancel', up)
+  })
+}
+const onTap = (el, fn) => el.addEventListener('click', () => { if (!el.dataset.dragged) fn() })
+
+// ---------- home ----------
+function renderHome() {
+  const plan = CHAPTER_RUNS[runIndex]
+  const chronoUnlocked = i => i === 0 || (stars[starKey('chrono', i - 1)] ?? 0) > 0
+  const list = type => {
+    const g = GAMES[type]
+    const unlocked = type === 'chrono' ? chronoUnlocked : () => true
+    return `<div class="levels">${g.sets.map((s, i) => `
+      <button class="level-card" data-type="${type}" data-set="${i}" ${unlocked(i) ? '' : 'disabled'}>
+        <span class="num c${((TYPE_COLOR[type] + i - 1) % 5) + 1}">${NUMERALS[i]}</span>
+        <span class="meta"><b>${esc(s.name)}</b><span>${unlocked(i) ? esc(s.blurb) : 'Finish the previous level to unlock'}</span></span>
+        ${starRow(stars[starKey(type, i)] ?? 0)}
+      </button>`).join('')}</div>`
+  }
+  app.innerHTML = `
+    ${header('Ave Caesar · Early Rome', 'The Age of Kings', false)}
+    <section class="run-card">
+      <h2>Play the chapter</h2>
+      <p class="task">Five short rounds, each about a different part of the story. About ten minutes. The rounds change every time you play.</p>
+      <ol class="run-steps">${plan.map((r, i) => `<li class="c${TYPE_COLOR[r.type]}">${i + 1}. ${GAMES[r.type].title}</li>`).join('')}</ol>
+      <button class="primary" id="run">Start</button>
+    </section>
+    ${SECTIONS.map(([type, label]) => `<p class="section-label">${label}</p>${list(type)}`).join('')}
+    <p class="footnote">Based on the chapter “Early Rome & the Kingdom” (sources: Wikipedia). Dates for the kings are the traditional ones; historians doubt many of them.</p>`
+  app.querySelector('#run').addEventListener('click', () => {
+    run = { plan, step: 0, results: [] }
+    runIndex = (runIndex + 1) % CHAPTER_RUNS.length
+    try { localStorage.setItem(RUN_KEY, String(runIndex)) } catch {}
+    startGame(plan[0].type, plan[0].set)
+  })
+  app.querySelectorAll('.level-card').forEach(b => b.addEventListener('click', () => { run = null; startGame(b.dataset.type, +b.dataset.set) }))
+}
+
+const START = {}
+function startGame(type, set) { go({ screen: 'play', type, set, mistakes: 0, hint: null, ...START[type](set) }) }
+
+function finish(recapHtml, earned = starCount(state.mistakes), note) {
+  const key = starKey(state.type, state.set)
+  stars[key] = Math.max(stars[key] ?? 0, earned)
+  saveStars()
+  if (run) run.results.push({ type: state.type, set: state.set, stars: earned })
+  go({ screen: 'result', type: state.type, set: state.set, mistakes: state.mistakes, earned, recapHtml, note })
+}
+const recapList = items => `<ol class="recap">${items.map(i => `<li class="${i.miss ? 'miss' : ''}"><div>${i.when ? `<span class="when">${esc(i.when)}</span>` : ''}<b>${esc(i.title)}</b>${i.text ? `<p>${esc(i.text)}</p>` : ''}</div></li>`).join('')}</ol>`
+
+// ---------- Chronology Jam ----------
+START.chrono = set => {
+  const events = TIMELINES[set].events
+  const sortedIds = events.map((e, i) => ({ y: e.y, i })).sort((a, b) => a.y - b.y).map(e => e.i)
+  return { sortedIds, boardIds: shuffle(sortedIds), colors: Object.fromEntries(sortedIds.map(i => [i, 1 + Math.floor(Math.random() * 5)])), placed: [], revealed: [] }
+}
+RENDER.chrono = () => {
+  const g = state, ev = id => TIMELINES[g.set].events[id]
+  app.innerHTML = `
+    ${playHeader()}
+    ${statusLine('Tap or drag the <b>earliest</b> event onto the road.', g.sortedIds.length - g.placed.length)}
+    <div class="road" id="road" aria-label="Timeline, oldest first"><div class="lanes">
+      ${g.sortedIds.map((_, i) => {
+        const id = g.placed[i]
+        return id === undefined ? `<div class="slot" data-slot="${i}">${i + 1}</div>`
+          : `<div class="slot filled c${g.colors[id]}" data-slot="${i}">${esc(ev(id).label)}<em>${esc(ev(id).when)}</em></div>`
+      }).join('')}
+    </div></div>
+    <div class="board gate">
+      ${g.boardIds.map(id => `
+        <button class="tile c${g.colors[id]} ${g.placed.includes(id) ? 'gone' : ''} ${g.revealed.includes(id) ? 'revealed' : ''}" data-id="${id}" ${g.placed.includes(id) ? 'tabindex="-1" aria-hidden="true"' : ''}>
+          <span>${esc(ev(id).label)}</span><span class="when">${esc(ev(id).when)}</span>
+        </button>`).join('')}
+    </div>
+    <div id="hint-area">${hintHtml(g.hint)}</div>`
+  bindBack()
+  const road = app.querySelector('#road')
+  const overRoad = y => y < road.getBoundingClientRect().bottom + 10
+  app.querySelectorAll('.tile:not(.gone)').forEach(t => {
+    onTap(t, () => chronoTap(+t.dataset.id, t))
+    draggable(t, {
+      onMove: e => road.classList.toggle('drop-target', overRoad(e.clientY)),
+      onDrop: (e, ok) => { road.classList.remove('drop-target'); t.classList.remove('dragging'); t.style.transform = ''; if (ok && overRoad(e.clientY)) chronoTap(+t.dataset.id, t); return false },
+    })
+  })
+  const last = road.querySelector(`[data-slot="${Math.max(0, g.placed.length - 1)}"]`)
+  if (last) road.scrollLeft = Math.max(0, last.offsetLeft - road.clientWidth / 2 + 46)
+}
+const sinceWhen = s => /^(Under|Soon|After|Possibly)/.test(s) ? s[0].toLowerCase() + s.slice(1) : 'in ' + s
+function chronoTap(id, el) {
+  const g = state
+  if (busy || g.screen !== 'play' || g.placed.includes(id)) return
+  const e = TIMELINES[g.set].events[id]
+  if (id === g.sortedIds[g.placed.length]) {
+    g.hint = { ok: true, html: `<b>${esc(e.label)}</b> · ${esc(e.when)}. ${esc(e.fact)}` }
+    const slot = app.querySelector(`[data-slot="${g.placed.length}"]`)
+    g.placed.push(id)
+    busy = true
+    flyTo(el, slot, () => {
+      busy = false
+      if (state !== g) return
+      if (g.placed.length < g.sortedIds.length) return RENDER.chrono()
+      finish(recapList(g.sortedIds.map(i => { const x = TIMELINES[g.set].events[i]; return { when: x.when, title: x.label, text: x.fact } })))
+    })
+  } else {
+    g.mistakes++
+    if (!g.revealed.includes(id)) g.revealed.push(id)
+    g.hint = { ok: false, html: `Not yet. <b>${esc(e.label)}</b> happened ${esc(sinceWhen(e.when))}. Something in the camp is older.` }
+    el.classList.add('revealed', 'shake')
+    el.addEventListener('animationend', () => el.classList.remove('shake'), { once: true })
+    app.querySelector('#hint-area').innerHTML = hintHtml(g.hint)
+    app.querySelector('.score').textContent = `${g.sortedIds.length - g.placed.length} left · ${plural(g.mistakes, 'mistake')}`
+    buzz()
+  }
+}
+function flyTo(tile, slot, done) {
+  if (reducedMotion || !slot) { done(); return }
+  const from = tile.getBoundingClientRect()
+  slot.scrollIntoView({ block: 'nearest', inline: 'center', behavior: 'instant' })
+  const to = slot.getBoundingClientRect()
+  const ghost = tile.cloneNode(true)
+  ghost.classList.remove('dragging', 'shake')
+  ghost.classList.add('flyer')
+  ghost.style.transform = ''
+  Object.assign(ghost.style, { left: from.left + 'px', top: from.top + 'px', width: from.width + 'px', height: from.height + 'px' })
+  document.body.appendChild(ghost)
+  tile.classList.add('gone')
+  const dx = to.left + to.width / 2 - (from.left + from.width / 2)
+  const dy = to.top + to.height / 2 - (from.top + from.height / 2)
+  const scale = Math.min(to.width / from.width, to.height / from.height)
+  ghost.animate([
+    { transform: 'translate(0,0) scale(1)' },
+    { transform: `translate(${dx * 0.15}px, ${dy * 0.15 - 18}px) scale(1.04)`, offset: 0.25 },
+    { transform: `translate(${dx}px, ${dy}px) scale(${scale})` },
+  ], { duration: 420, easing: 'cubic-bezier(.3,.7,.3,1)' }).onfinish = () => { ghost.remove(); done() }
+}
+
+// ---------- Match Pairs ----------
+START.match = set => {
+  const ids = [...MATCHES[set].pairs.keys()]
+  return { left: shuffle(ids), right: shuffle(ids), matched: [], selected: null, colors: Object.fromEntries(ids.map(i => [i, (i % 5) + 1])) }
+}
+RENDER.match = () => {
+  const g = state, set = MATCHES[g.set]
+  const col = (ids, side) => ids.map(i => {
+    const m = g.matched.includes(i)
+    return `<button class="pick ${side === 'R' ? 'desc' : ''} ${m ? `matched c${g.colors[i]}` : ''} ${g.selected?.side === side && g.selected.id === i ? 'selected' : ''}" data-side="${side}" data-id="${i}" ${m ? 'disabled' : ''}>${esc(set.pairs[i][side === 'L' ? 0 : 1])}</button>`
+  }).join('')
+  app.innerHTML = `
+    ${playHeader()}
+    ${statusLine('Tap a name, then what it matches.', set.pairs.length - g.matched.length)}
+    <div class="board pairs"><div class="col">${col(g.left, 'L')}</div><div class="col">${col(g.right, 'R')}</div></div>
+    <div id="hint-area">${hintHtml(g.hint)}</div>`
+  bindBack()
+  app.querySelectorAll('.pick:not([disabled])').forEach(b => b.addEventListener('click', () => matchTap(b.dataset.side, +b.dataset.id)))
+}
+function matchTap(side, id) {
+  const g = state, set = MATCHES[g.set]
+  if (busy || g.matched.includes(id)) return
+  if (!g.selected || g.selected.side === side) { g.selected = { side, id }; g.hint = null; return RENDER.match() }
+  const other = g.selected
+  g.selected = null
+  if (other.id === id) {
+    g.matched.push(id)
+    g.hint = { ok: true, html: `<b>${esc(set.pairs[id][0])}</b>: ${esc(set.pairs[id][1].replace(/^./, c => c.toLowerCase()))}.` }
+    RENDER.match()
+    if (g.matched.length === set.pairs.length) {
+      busy = true
+      setTimeout(() => { busy = false; if (state === g) finish(recapList(set.pairs.map(([a, b]) => ({ title: a, text: b })))) }, 700)
+    }
+  } else {
+    g.mistakes++
+    const [l, r] = side === 'L' ? [id, other.id] : [other.id, id]
+    g.hint = { ok: false, html: `<b>${esc(set.pairs[l][0])}</b> doesn’t go with “${esc(set.pairs[r][1])}”. Try again.` }
+    RENDER.match()
+    app.querySelectorAll(`[data-side="L"][data-id="${l}"], [data-side="R"][data-id="${r}"]`).forEach(b => b.classList.add('shake'))
+    buzz()
+  }
+}
+
+// ---------- True or False ----------
+START.tf = set => ({ order: shuffle([...DECKS[set].cards.keys()]), index: 0, answered: null, misses: [] })
+RENDER.tf = () => {
+  const g = state, deck = DECKS[g.set]
+  const card = deck.cards[g.order[g.index]]
+  const hasNext = g.index + 1 < g.order.length
+  app.innerHTML = `
+    ${playHeader()}
+    ${statusLine('Swipe right if it’s true, left if it’s false.', g.order.length - g.index)}
+    ${g.answered ? '' : `<div class="deck">
+      ${hasNext ? '<div class="card behind" aria-hidden="true"><p class="claim">&nbsp;</p></div>' : ''}
+      <div class="card" id="card">
+        <span class="stamp t">TRUE</span><span class="stamp f">FALSE</span>
+        <span class="count">Statement ${g.index + 1} of ${g.order.length}</span>
+        <p class="claim">${esc(card.claim)}</p>
+        <p class="swipe-hint">← false · true →</p>
+      </div>
+    </div>`}
+    ${g.answered ? verdictHtml(card, g.answered) : `<div class="answer-buttons"><button class="btn-false" id="no">✗ False</button><button class="btn-true" id="yes">✓ True</button></div>`}`
+  bindBack()
+  if (g.answered) return app.querySelector('#continue').addEventListener('click', nextTF)
+  app.querySelector('#no').addEventListener('click', () => answerTF(false))
+  app.querySelector('#yes').addEventListener('click', () => answerTF(true))
+  const el = app.querySelector('#card'), tS = el.querySelector('.stamp.t'), fS = el.querySelector('.stamp.f')
+  draggable(el, {
+    onMove: (e, dx) => { el.style.transform = `translateX(${dx}px) rotate(${dx / 18}deg)`; tS.style.opacity = Math.max(0, Math.min(1, dx / 90)); fS.style.opacity = Math.max(0, Math.min(1, -dx / 90)) },
+    onDrop: (e, ok) => {
+      const dx = e.clientX - el.getBoundingClientRect().left - el.offsetWidth / 2 + (parseFloat(el.style.transform.split('(')[1]) || 0) * 0
+      const shift = parseFloat((el.style.transform.match(/translateX\(([-\d.]+)px/) || [])[1] || 0)
+      if (ok && Math.abs(shift) > 90) { answerTF(shift > 0, shift); return true }
+      tS.style.opacity = 0; fS.style.opacity = 0
+      return false
+    },
+  })
+}
+function verdictHtml(card, answered) {
+  const right = answered.value === card.answer
+  return `<div class="verdict">
+    <div class="hint ${right ? 'ok' : ''}" role="status"><p><b>${right ? 'Correct!' : 'Not quite.'}</b> “${esc(card.claim)}” is <b>${card.answer ? 'true' : 'false'}</b>. ${esc(card.why)}</p></div>
+    <button class="primary" id="continue">${state.index + 1 < state.order.length ? 'Next statement' : 'See results'}</button>
+  </div>`
+}
+function answerTF(value, fromX) {
+  const g = state
+  if (busy || g.answered) return
+  const card = DECKS[g.set].cards[g.order[g.index]]
+  if (value !== card.answer) { g.mistakes++; g.misses.push(g.order[g.index]); buzz() }
+  g.answered = { value }
+  const el = app.querySelector('#card')
+  const done = () => { busy = false; if (state === g) RENDER.tf() }
+  if (reducedMotion || !el) return done()
+  busy = true
+  const x = fromX ?? (value ? 1 : -1) * 120
+  el.animate([{ transform: el.style.transform || 'none' }, { transform: `translate(${x * 4}px, 30px) rotate(${x > 0 ? 18 : -18}deg)` }],
+    { duration: 300, easing: 'ease-in', fill: 'forwards' }).onfinish = done
+}
+function nextTF() {
+  const g = state
+  g.answered = null
+  g.index++
+  if (g.index < g.order.length) return RENDER.tf()
+  const deck = DECKS[g.set]
+  finish(recapList(g.order.map(i => ({ when: deck.cards[i].answer ? 'True' : 'False', title: deck.cards[i].claim, text: deck.cards[i].why, miss: g.misses.includes(i) }))))
+}
+
+// ---------- Odd One Out ----------
+START.odd = set => ({ order: shuffle([...ODDS[set].rounds.keys()]), index: 0, layout: null, picked: null, misses: [] })
+RENDER.odd = () => {
+  const g = state, round = ODDS[g.set].rounds[g.order[g.index]]
+  g.layout ??= shuffle([...round.items.keys()])
+  const solved = g.picked === round.odd
+  app.innerHTML = `
+    ${playHeader()}
+    ${statusLine('Three of these belong together. Tap the one that doesn’t.', g.order.length - g.index)}
+    <div class="board odd">${g.layout.map((i, k) => `
+      <button class="tile c${(k % 5) + 1} ${solved && i !== round.odd ? 'dim' : ''} ${solved && i === round.odd ? 'right-pick' : ''}" data-i="${i}" ${solved ? 'disabled' : ''}>${esc(round.items[i])}</button>`).join('')}
+    </div>
+    <div id="hint-area">${hintHtml(g.hint)}</div>
+    ${solved ? `<button class="primary" id="continue" style="align-self:flex-start">${g.index + 1 < g.order.length ? 'Next round' : 'See results'}</button>` : ''}`
+  bindBack()
+  if (solved) return app.querySelector('#continue').addEventListener('click', () => {
+    g.index++; g.layout = null; g.picked = null; g.hint = null
+    if (g.index < g.order.length) return RENDER.odd()
+    const set = ODDS[g.set]
+    finish(recapList(g.order.map(i => ({ title: `${set.rounds[i].items[set.rounds[i].odd]} was the odd one out`, text: set.rounds[i].why, miss: g.misses.includes(i) }))))
+  })
+  app.querySelectorAll('.tile').forEach(t => t.addEventListener('click', () => {
+    const i = +t.dataset.i
+    if (i === round.odd) {
+      g.picked = i
+      g.hint = { ok: true, html: `<b>${esc(round.items[i])}</b> is the odd one out. ${esc(round.why)}` }
+      RENDER.odd()
+    } else {
+      g.mistakes++
+      if (!g.misses.includes(g.order[g.index])) g.misses.push(g.order[g.index])
+      g.hint = { ok: false, html: `<b>${esc(round.items[i])}</b> belongs with the others. Look again.` }
+      app.querySelector('#hint-area').innerHTML = hintHtml(g.hint)
+      app.querySelector('.score').textContent = `${g.order.length - g.index} left · ${plural(g.mistakes, 'mistake')}`
+      t.classList.add('shake'); t.addEventListener('animationend', () => t.classList.remove('shake'), { once: true })
+      buzz()
+    }
+  }))
+}
+
+// ---------- Who Am I? ----------
+START.who = set => ({ order: shuffle([...WHOS[set].people.keys()]), index: 0, shown: 1, wrong: [], solved: false, extraClues: 0, results: [] })
+RENDER.who = () => {
+  const g = state, p = WHOS[g.set].people[g.order[g.index]]
+  app.innerHTML = `
+    ${playHeader()}
+    <div class="status"><p class="task">Guess early for a better score. Each extra clue costs a little.</p><span class="score">${g.order.length - g.index} left</span></div>
+    <div class="clues">${p.clues.map((c, i) => `
+      <div class="clue ${i < g.shown ? '' : 'hidden-clue'}"><span class="n">${i + 1}</span><span>${i < g.shown ? esc(c) : 'Hidden clue'}</span></div>`).join('')}
+    </div>
+    ${!g.solved && g.shown < p.clues.length ? '<button class="ghost more" id="more">Show another clue</button>' : ''}
+    <div class="choices">${p.options.map(o => `
+      <button class="choice ${g.wrong.includes(o) ? 'wrong' : ''} ${g.solved && o === p.name ? 'right' : ''}" data-name="${esc(o)}" ${g.solved || g.wrong.includes(o) ? 'disabled' : ''}>${esc(o)}</button>`).join('')}
+    </div>
+    <div id="hint-area">${hintHtml(g.hint)}</div>
+    ${g.solved ? `<button class="primary" id="continue" style="align-self:flex-start">${g.index + 1 < g.order.length ? 'Next person' : 'See results'}</button>` : ''}`
+  bindBack()
+  app.querySelector('#more')?.addEventListener('click', () => { g.shown++; g.extraClues++; g.hint = null; RENDER.who() })
+  if (g.solved) return app.querySelector('#continue').addEventListener('click', () => {
+    g.index++; g.shown = 1; g.wrong = []; g.solved = false; g.hint = null
+    if (g.index < g.order.length) return RENDER.who()
+    // Score: each extra clue or wrong guess is a penalty point
+    const penalty = g.extraClues + g.mistakes, n = g.order.length
+    const earned = penalty <= n ? 3 : penalty <= n * 2 ? 2 : 1
+    const set = WHOS[g.set]
+    finish(recapList(g.results.map(r => ({ when: `Guessed with ${plural(r.clues, 'clue')}${r.wrong ? `, ${plural(r.wrong, 'wrong guess')}`.replace('guesss', 'guesses') : ''}`, title: set.people[r.i].name, text: set.people[r.i].clues.join(' '), miss: r.wrong > 0 }))),
+      earned, `${plural(g.extraClues, 'extra clue')} and ${plural(g.mistakes, 'wrong guess').replace('guesss', 'guesses')}. Three stars need about one clue per person.`)
+  })
+  app.querySelectorAll('.choice:not([disabled])').forEach(b => b.addEventListener('click', () => {
+    const name = b.dataset.name
+    if (name === p.name) {
+      g.solved = true
+      g.results.push({ i: g.order[g.index], clues: g.shown, wrong: g.wrong.length })
+      g.hint = { ok: true, html: `Yes, <b>${esc(p.name)}</b>! ${g.shown === 1 ? 'Guessed from the first clue.' : `Guessed with ${g.shown} clues.`}` }
+      g.shown = p.clues.length
+    } else {
+      g.mistakes++
+      g.wrong.push(name)
+      if (g.shown < p.clues.length) g.shown++
+      g.hint = { ok: false, html: `Not <b>${esc(name)}</b>. Here’s another clue.` }
+      buzz()
+    }
+    RENDER.who()
+  }))
+}
+
+// ---------- Map Drop ----------
+const project = (lat, lon) => {
+  const b = MAP_BOUNDS
+  const kx = Math.cos(42 * Math.PI / 180)
+  const w = (b.lonMax - b.lonMin) * kx, h = b.latMax - b.latMin
+  return [((lon - b.lonMin) * kx) / w * 300, (b.latMax - lat) / h * 300 * (h / w)]
+}
+const MAP_H = (() => { const b = MAP_BOUNDS, kx = Math.cos(42 * Math.PI / 180); return 300 * (b.latMax - b.latMin) / ((b.lonMax - b.lonMin) * kx) })()
+START.map = set => ({ order: shuffle([...MAPS[set].places.keys()]), placed: [], selected: null, misses: [] })
+RENDER.map = () => {
+  const g = state, places = MAPS[g.set].places
+  const path = pts => pts.map(([la, lo], i) => `${i ? 'L' : 'M'}${project(la, lo).map(v => v.toFixed(1)).join(',')}`).join(' ')
+  const sea = path(COAST) + ` L${project(40.4, MAP_BOUNDS.lonMin - 1).join(',')} Z`
+  const [rx, ry] = project(ROME.lat, ROME.lon)
+  const [nx, ny] = project(40.85, 14.27)
+  app.innerHTML = `
+    ${playHeader()}
+    ${statusLine('Drag each name onto its dot, or tap a name and then a dot.', places.length - g.placed.length)}
+    <div class="map-wrap">
+      <svg class="map" id="map" viewBox="0 0 300 ${MAP_H.toFixed(0)}" role="img" aria-label="Map of central Italy">
+        <rect class="land" x="0" y="0" width="300" height="${MAP_H.toFixed(0)}"/>
+        <path class="sea" d="${sea}"/>
+        <path class="river" d="${path(TIBER)}"/>
+        <text class="sea-label" x="16" y="${(MAP_H * 0.8).toFixed(0)}">TYRRHENIAN SEA</text>
+        <circle cx="${nx.toFixed(1)}" cy="${ny.toFixed(1)}" r="2.5" fill="#1b1715"/><text x="${(nx - 30).toFixed(1)}" y="${(ny + 16).toFixed(1)}">Naples</text>
+        <circle class="rome" cx="${rx.toFixed(1)}" cy="${ry.toFixed(1)}" r="7"/><text x="${(rx + 9).toFixed(1)}" y="${(ry - 7).toFixed(1)}">ROME</text>
+        ${places.map((p, i) => { const [x, y] = project(p.lat, p.lon); const done = g.placed.includes(i); return `
+          <circle class="spot ${done ? 'done' : ''}" data-spot="${i}" cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${done ? 6 : 7.5}"/>
+          ${done ? `<text x="${(x + (p.labelLeft ? -9 : 9)).toFixed(1)}" y="${(y + 4).toFixed(1)}" text-anchor="${p.labelLeft ? 'end' : 'start'}">${esc(p.name)}</text>` : ''}` }).join('')}
+      </svg>
+    </div>
+    <div class="labels">${g.order.filter(i => !g.placed.includes(i)).map((i, k) => `
+      <button class="label-chip c${((k + 1) % 5) + 1} ${g.selected === i ? 'selected' : ''}" data-label="${i}">${esc(places[i].name)}</button>`).join('')}
+    </div>
+    <div id="hint-area">${hintHtml(g.hint ?? { ok: 'neutral', html: 'Rome is marked in red. The blue line is the Tiber.' })}</div>`
+  bindBack()
+  const svg = app.querySelector('#map')
+  const spotAt = (x, y) => [...svg.querySelectorAll('.spot:not(.done)')].find(s => { const r = s.getBoundingClientRect(); return Math.hypot(x - (r.left + r.width / 2), y - (r.top + r.height / 2)) < 26 })
+  app.querySelectorAll('.label-chip').forEach(c => {
+    const i = +c.dataset.label
+    onTap(c, () => { g.selected = g.selected === i ? null : i; RENDER.map() })
+    draggable(c, {
+      onMove: e => svg.querySelectorAll('.spot').forEach(s => s.classList.toggle('target', s === spotAt(e.clientX, e.clientY))),
+      onDrop: (e, ok) => { const s = ok && spotAt(e.clientX, e.clientY); c.classList.remove('dragging'); c.style.transform = ''; if (s) mapPlace(i, +s.dataset.spot); else RENDER.map(); return false },
+    })
+  })
+  svg.querySelectorAll('.spot:not(.done)').forEach(s => s.addEventListener('click', () => { if (g.selected !== null) mapPlace(g.selected, +s.dataset.spot) }))
+}
+function mapPlace(label, spot) {
+  const g = state, places = MAPS[g.set].places
+  g.selected = null
+  if (label === spot) {
+    g.placed.push(label)
+    g.hint = { ok: true, html: `<b>${esc(places[label].name)}</b>: ${esc(places[label].why)}` }
+    if (g.placed.length === places.length) {
+      RENDER.map(); busy = true
+      return setTimeout(() => { busy = false; if (state === g) finish(recapList(places.map((p, i) => ({ title: p.name, text: p.why, miss: g.misses.includes(i) })))) }, 800)
+    }
+  } else {
+    g.mistakes++
+    if (!g.misses.includes(label)) g.misses.push(label)
+    g.hint = { ok: false, html: `Not there. Clue: <b>${esc(places[label].name)}</b>: ${esc(places[label].why)}` }
+    buzz()
+  }
+  RENDER.map()
+}
+
+// ---------- Legion Quiz ----------
+const RANKS = {
+  1: { name: 'Hastati', one: 'hastatus', color: '#e0a63a', note: 'young soldiers in the front line' },
+  2: { name: 'Principes', one: 'princeps', color: '#4f8fb8', note: 'men in their prime, the second line' },
+  3: { name: 'Triarii', one: 'triarius', color: '#e9e1cf', note: 'veterans, the last line' },
+}
+const soldierSvg = color => `<svg viewBox="0 0 20 26" aria-hidden="true"><line x1="16" y1="1" x2="16" y2="25" stroke="#e2cdb0" stroke-width="1.6"/><path d="M3 5 h10 v11 c0 4 -5 7 -5 7 c0 0 -5 -3 -5 -7 z" fill="${color}" stroke="#1b1715" stroke-width="1.2"/><circle cx="8" cy="12" r="1.8" fill="#1b1715" opacity=".55"/></svg>`
+START.quiz = set => ({ index: 0, answered: null, recruits: [], misses: [] })
+RENDER.quiz = () => {
+  const g = state, qs = QUIZZES[g.set].questions, q = qs[g.index]
+  const row = lvl => {
+    const n = g.recruits.filter(l => l === lvl).length
+    return `<div class="legion-row"><span>${RANKS[lvl].name}</span><div class="soldiers">${n ? Array(n).fill(soldierSvg(RANKS[lvl].color)).join('') : '<span class="empty">none yet</span>'}</div></div>`
+  }
+  app.innerHTML = `
+    ${playHeader()}
+    ${statusLine('Every right answer recruits a soldier. Harder questions recruit veterans.', qs.length - g.index)}
+    <div class="legion" aria-label="Your legion">${row(3)}${row(2)}${row(1)}</div>
+    <div class="question">
+      <span class="lvl">${['', 'Easy', 'Medium', 'Hard'][q.level]} · recruits a ${RANKS[q.level].one}</span>
+      <h3>${esc(q.q)}</h3>
+      <div class="options">${q.options.map((o, i) => `
+        <button class="option ${g.answered !== null && i === q.a ? 'right' : ''} ${g.answered === i && i !== q.a ? 'wrong' : ''}" data-i="${i}" ${g.answered !== null ? 'disabled' : ''}>${esc(o)}</button>`).join('')}
+      </div>
+    </div>
+    <div id="hint-area">${hintHtml(g.hint)}</div>
+    ${g.answered !== null ? `<button class="primary" id="continue" style="align-self:flex-start">${g.index + 1 < qs.length ? 'Next question' : 'Review your legion'}</button>` : ''}`
+  bindBack()
+  if (g.answered !== null) return app.querySelector('#continue').addEventListener('click', () => {
+    g.index++; g.answered = null; g.hint = null
+    if (g.index < qs.length) return RENDER.quiz()
+    const count = lvl => g.recruits.filter(l => l === lvl).length
+    finish(recapList([
+      ...[3, 2, 1].map(l => ({ when: RANKS[l].name, title: `${count(l)} recruited`, text: `In the Republic’s legion, the ${RANKS[l].name.toLowerCase()} were the ${RANKS[l].note}.` })),
+      ...g.misses.map(i => ({ title: qs[i].q, text: `Answer: ${qs[i].options[qs[i].a]}. ${qs[i].why}`, miss: true })),
+    ]), undefined, `Your legion: ${plural(g.recruits.length, 'soldier')} out of ${qs.length}.`)
+  })
+  app.querySelectorAll('.option').forEach(b => b.addEventListener('click', () => {
+    const i = +b.dataset.i
+    g.answered = i
+    if (i === q.a) { g.recruits.push(q.level); g.hint = { ok: true, html: `<b>Right!</b> A ${RANKS[q.level].one} joins your legion. ${esc(q.why)}` } }
+    else { g.mistakes++; g.misses.push(g.index); g.hint = { ok: false, html: `<b>Not quite.</b> The answer is “${esc(q.options[q.a])}”. ${esc(q.why)}` }; buzz() }
+    RENDER.quiz()
+  }))
+}
+
+// ---------- results ----------
+function renderResult() {
+  const r = state, g = GAMES[r.type]
+  const inRun = !!run
+  const lastRound = inRun && run.step === run.plan.length - 1
+  const nextInType = !inRun && r.set < g.sets.length - 1
+  app.innerHTML = `
+    ${header(`${g.title}${g.sets.length > 1 ? ' ' + NUMERALS[r.set] : ''} complete`, g.sets[r.set].name)}
+    ${run ? `<span class="round-pill">Round ${run.step + 1} of ${run.plan.length}</span>` : ''}
+    <section class="result">
+      <div>
+        ${starRow(r.earned, 'big-stars')}
+        <h2 style="margin-top:10px">${r.earned === 3 ? 'Perfect!' : r.earned === 2 ? 'Well done!' : 'You made it to the end'}</h2>
+        <p class="task" style="margin-top:4px">${esc(r.note ?? (r.mistakes === 0 ? 'No mistakes.' : `${plural(r.mistakes, 'mistake')}. Three stars need a clean run.`))}</p>
+      </div>
+      ${r.recapHtml}
+      <div class="actions">
+        ${inRun ? `<button class="primary" id="next">${lastRound ? 'Finish the chapter' : 'Next round'}</button>`
+          : nextInType ? `<button class="primary" id="next">Next: ${esc(g.sets[r.set + 1].name)}</button>` : ''}
+        ${inRun ? '' : '<button class="ghost" id="again">Play again</button>'}
+      </div>
+    </section>`
+  bindBack()
+  app.querySelector('#again')?.addEventListener('click', () => startGame(r.type, r.set))
+  app.querySelector('#next')?.addEventListener('click', () => {
+    if (!inRun) return startGame(r.type, r.set + 1)
+    if (lastRound) return go({ screen: 'runDone' })
+    run.step++
+    startGame(run.plan[run.step].type, run.plan[run.step].set)
+  })
+}
+function renderRunDone() {
+  const total = run.results.reduce((n, r) => n + r.stars, 0), max = run.plan.length * 3
+  app.innerHTML = `
+    ${header('Chapter complete', 'The Age of Kings')}
+    <section class="result">
+      <div>
+        <p class="big-stars" style="margin:0">${total}<span class="off"> / ${max}</span> ★</p>
+        <h2 style="margin-top:10px">${total === max ? 'A flawless chapter!' : total >= max - 4 ? 'Rome would be proud.' : 'Chapter conquered.'}</h2>
+        <p class="task" style="margin-top:4px">Play the chapter again for a different set of rounds.</p>
+      </div>
+      <ul class="run-summary">${run.results.map(r => `<li><span>${esc(GAMES[r.type].title)} · ${esc(GAMES[r.type].sets[r.set].name)}</span>${starRow(r.stars)}</li>`).join('')}</ul>
+      <div class="actions"><button class="primary" id="menu">Back to menu</button></div>
+    </section>`
+  bindBack()
+  app.querySelector('#menu').addEventListener('click', () => { run = null; go({ screen: 'home' }) })
+}
+
+// Keep a game in progress across page updates
+window.claude?.hot?.snapshot?.(() => ({ state, run }))
+const boot = data => {
+  if (data?.state?.screen && data.state.screen !== 'home' && (data.state.type ? GAMES[data.state.type] : true) && RENDER[data.state.type ?? 'chrono']) { state = data.state; run = data.run ?? null }
+  try { render() } catch { state = { screen: 'home' }; run = null; render() }
+}
+window.claude?.hot?.ready ? window.claude.hot.ready(boot) : boot(window.claude?.hot?.data ?? {})
+</script>

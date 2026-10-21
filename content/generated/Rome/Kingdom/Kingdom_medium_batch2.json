@@ -1,0 +1,190 @@
+{
+  "batchName": "Early Rome & the Kingdom: The Foundation of an Empire (753-509 BCE) - Medium Batch 2",
+  "chapterName": "Early Rome & the Kingdom: The Foundation of an Empire (753-509 BCE)",
+  "difficulty": 2,
+  "batchOrder": 5,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "What did Brutus do when his own sons were caught plotting to bring Tarquin back?",
+      "options": [
+        "Pardoned them before the assembly",
+        "Sent them into exile at Cumae",
+        "Resigned as consul in shame",
+        "Stripped them of citizenship",
+        "Ordered their execution"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#birth-of-the-republic",
+      "explanation": "Brutus ordered the execution of his own sons for plotting the king's return. He had made the people swear never again to accept a king.",
+      "sourceQuote": "When his own sons were caught plotting to bring Tarquin back, he ordered their execution.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which emperor identified Servius Tullius with Mastarna, an Etruscan adventurer who became king of Rome?",
+      "options": [
+        "Claudius",
+        "Hadrian",
+        "Tiberius",
+        "Augustus",
+        "Nero"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#servius-tullius",
+      "explanation": "The emperor Claudius made this identification in the first century AD. The historian Momigliano warned that Mastarna is so unlike the traditional Servius that the two are best kept apart.",
+      "sourceQuote": "The emperor Claudius, in the first century AD, identified Servius with Mastarna, an Etruscan adventurer who became king of Rome.",
+      "reviewFlags": []
+    },
+    {
+      "question": "After the Romans and Sabines united, which Sabine king shared the throne with Romulus?",
+      "options": [
+        "Numa Pompilius",
+        "Titus Tatius",
+        "Lars Porsenna",
+        "Amulius",
+        "Ancus Marcius"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#romulus-the-king",
+      "explanation": "Once the two peoples united, the Sabine king Titus Tatius ruled jointly with Romulus. The union followed the war over the seized Sabine women.",
+      "sourceQuote": "The two peoples then united, and the Sabine king Titus Tatius shared the throne with Romulus.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Later Romans traced the family of Romulus and Remus back to which hero, who fled the fall of Troy?",
+      "options": [
+        "Odysseus",
+        "Achilles",
+        "Aeneas",
+        "Hector",
+        "Priam"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#romulus-and-remus",
+      "explanation": "Later Romans linked the twins' family to Aeneas, a refugee from fallen Troy. Most modern historians treat this whole founding story as myth.",
+      "sourceQuote": "Later Romans also traced the twins' family back to Aeneas, a hero who fled the fall of Troy.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which religious institutions is Numa Pompilius credited with creating? (select all that apply)",
+      "options": [
+        "The Roman games",
+        "The office of chief priest",
+        "The first triumph",
+        "The Temple of Diana on the Aventine",
+        "The Vestal Virgins"
+      ],
+      "correctAnswers": [
+        1,
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#numa-tullus-ancus",
+      "explanation": "Numa founded the Vestal Virgins and created the office of chief priest. He was a Sabine chosen for his justice and piety.",
+      "sourceQuote": "He also founded the Vestal Virgins and created the office of chief priest.",
+      "reviewFlags": []
+    },
+    {
+      "question": "When a king died, what did the interrex, or \"between-king\", do?",
+      "options": [
+        "Commanded the army until a new war began",
+        "Organised the dead king's funeral games",
+        "Guarded the royal treasury for the heir",
+        "Ruled for a full year until the Senate voted",
+        "Served five days to find a candidate for the throne"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#how-kings-ruled",
+      "explanation": "A senator served as interrex for five days to find a candidate, then handed over to another senator if he failed. The chosen man was then presented to the Curiate Assembly.",
+      "sourceQuote": "One senator became the interrex, or \"between-king\", serving for five days to find a candidate, then handing over to another if he failed.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How was the new voting assembly based on Servius Tullius's wealth classes organised?",
+      "options": [
+        "So that plebeians outvoted the nobles",
+        "So that every citizen had an equal vote",
+        "So that each district voted equally",
+        "So that the rich had the most influence",
+        "So that only patricians could vote"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#servius-tullius",
+      "explanation": "Servius's five wealth classes formed a voting assembly weighted towards the rich. Later, though, he was said to favour the poor at the nobles' expense.",
+      "sourceQuote": "These classes became the basis of a new voting assembly, organised so that the rich had the most influence.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Lucretia's story closely resembles a Greek tale about which event?",
+      "options": [
+        "The Persian invasion of Greece",
+        "The reforms of Solon",
+        "The sack of Troy",
+        "The fall of the tyrants of Athens",
+        "The founding of Cumae"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#how-reliable",
+      "explanation": "Lucretia's story mirrors a Greek tale about the fall of Athens' tyrants around 510 BC, which makes Rome's version suspect. Some historians think Rome's kingship faded slowly rather than ending in one dramatic night.",
+      "sourceQuote": "Lucretia's story closely resembles a Greek tale about the fall of the tyrants of Athens, around 510 BC.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Tarquin the Proud was the son of which earlier king?",
+      "options": [
+        "Tullus Hostilius",
+        "Tarquinius Priscus",
+        "Servius Tullius",
+        "Numa Pompilius",
+        "Ancus Marcius"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#tarquin-the-proud",
+      "explanation": "Tarquin the Proud was the son of Tarquinius Priscus, while Servius Tullius was his father-in-law. According to tradition he ruled for 25 years.",
+      "sourceQuote": "He was the son of the earlier king Tarquinius Priscus, and according to tradition he ruled for 25 years.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Tarquinius Priscus added 100 new members to the Senate. How large did that make it?",
+      "options": [
+        "250",
+        "100",
+        "150",
+        "300",
+        "200"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#tarquinius-priscus",
+      "explanation": "The extra 100 members raised the Senate to 200. Tarquinius also reportedly doubled Rome's size through wars against the Sabines and Etruscans.",
+      "sourceQuote": "He added 100 new members to the Senate, raising it to 200.",
+      "reviewFlags": []
+    }
+  ]
+}
