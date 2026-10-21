@@ -19,7 +19,7 @@
 
 | # | Step | Effort |
 |---|------|--------|
-| 1 | **Test the prototype with 5-10 people** (ideally not history fans). Add a feedback box to each round. Decide which games to keep. | ~1 week, mostly waiting |
+| 1 | **Test the prototype with 5-10 people** (ideally not history fans), using the feedback box after each round. Decide which games to keep. | ~1 week, mostly waiting |
 | 2 | **Generator v2**: produce data for every game type per chapter (timeline, pairs, true/false, odd one out, clues, map places), fact-checked. Generate the 4 Early Republic chapters and compare with the hand-written ones. | 1-2 days, ~$10 API credit |
 | 3 | **Games in the app**: game data in the database, React versions of the chosen games, a chapter opens as a game run, legion/stars/progress saved per user. Show the explanation after each answer. **Leaderboard**: all-time "Hall of Legions" (total men, eagles as tie-breaker) plus a weekly board that resets every Monday; players shown by nickname, can opt out. Deploy. | 3-4 weeks part-time |
 | 4 | **Mobile**: installable web app (PWA) first, then App Store / Google Play via Capacitor. Needs a privacy policy and in-app account deletion. | 2-4 weeks |
