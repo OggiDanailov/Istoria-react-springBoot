@@ -118,8 +118,8 @@ button:focus-visible { outline: 3px solid var(--ochre); outline-offset: 2px; }
 /* True or False */
 .deck { position: relative; display: grid; min-height: 280px; }
 .deck > .card { grid-area: 1 / 1; }
-.card { width: 100%; min-height: 250px; border-radius: 20px; padding: 22px 20px; background: var(--tile-4); color: var(--tile-ink); box-shadow: 0 10px 0 #b9ae98, 0 18px 30px rgba(0,0,0,.35); display: flex; flex-direction: column; justify-content: space-between; gap: 18px; touch-action: none; user-select: none; -webkit-user-select: none; cursor: grab; position: relative; z-index: 2; opacity: 1; }
-.card.behind { z-index: 1; transform: translateY(16px) scale(.94); background: #b3a68d; box-shadow: 0 10px 0 #8f8470; pointer-events: none; }
+.card { width: 100%; min-height: 250px; border-radius: 20px; padding: 22px 20px; background: var(--tile-4); color: var(--tile-ink); box-shadow: 0 14px 28px rgba(0,0,0,.35); display: flex; flex-direction: column; justify-content: space-between; gap: 18px; touch-action: none; user-select: none; -webkit-user-select: none; cursor: grab; position: relative; z-index: 2; opacity: 1; }
+.card.behind { z-index: 1; transform: translateY(12px) scale(.95); background: #d8ccb2; box-shadow: none; pointer-events: none; }
 .card.behind > * { visibility: hidden; }
 .card .claim { font-family: var(--display); font-size: 25px; line-height: 1.25; text-wrap: balance; margin: 0; }
 .card .count { font: 800 11px/1 var(--body); letter-spacing: .14em; text-transform: uppercase; color: #6b5d50; }
