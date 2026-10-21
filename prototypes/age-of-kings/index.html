@@ -31,6 +31,7 @@
   color-scheme: dark;
 }
 * { box-sizing: border-box; }
+[hidden] { display: none !important; }
 html, body { height: 100%; }
 body {
   margin: 0; background: var(--wall);
@@ -55,7 +56,7 @@ button:focus-visible { outline: 3px solid var(--ochre); outline-offset: 2px; }
 .run-card h2 { font-size: 23px; }
 .run-steps { display: flex; flex-wrap: wrap; gap: 6px; list-style: none; margin: 0; padding: 0; }
 .run-steps li { font-size: 12.5px; font-weight: 800; color: var(--tile-ink); padding: 4px 10px; border-radius: 999px; }
-.run-card .primary { justify-self: start; }
+.run-card .actions { justify-self: start; }
 .section-label { margin: 6px 0 -4px; font: 800 11px/1.3 var(--body); letter-spacing: .16em; text-transform: uppercase; color: var(--ink-soft); }
 .levels { display: grid; gap: 8px; }
 .level-card { display: grid; grid-template-columns: 40px 1fr auto; align-items: center; gap: 12px; background: var(--panel); border: 1px solid var(--panel-line); border-radius: var(--radius); padding: 10px 14px; text-align: left; width: 100%; }
@@ -197,6 +198,66 @@ button:focus-visible { outline: 3px solid var(--ochre); outline-offset: 2px; }
 .run-summary { display: grid; gap: 8px; list-style: none; margin: 0; padding: 0; }
 .run-summary li { display: flex; justify-content: space-between; gap: 10px; align-items: center; }
 
+/* Legion bar (always visible) */
+.hud {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 40;
+  background: var(--panel); border-bottom: 1px solid var(--panel-line);
+  box-shadow: 0 4px 14px rgba(0,0,0,.25);
+}
+.hud-inner { max-width: 560px; margin: 0 auto; padding: 8px 16px; display: flex; align-items: center; gap: 10px; }
+.hud-units { display: flex; gap: 8px; flex: 1; min-width: 0; overflow: hidden; }
+.hud-unit { display: flex; align-items: center; gap: 3px; font: 800 14px/1 var(--body); font-variant-numeric: tabular-nums; color: var(--ink); }
+.hud-unit svg { width: 15px; height: 20px; }
+.hud-unit.bump { animation: bump .45s ease; }
+@keyframes bump { 40% { transform: scale(1.35); } }
+.hud-men { background: transparent; border: 1.5px solid rgba(251,243,228,.35); border-radius: 999px; padding: 5px 10px; text-align: right; font: 800 12px/1.15 var(--body); white-space: nowrap; }
+.hud-men small { display: block; font-weight: 700; font-size: 10.5px; color: var(--ochre); }
+.flying-unit { position: fixed; z-index: 60; pointer-events: none; width: 20px; height: 26px; }
+/* Bottom sheet with the chapter text */
+.sheet { position: fixed; inset: 0; z-index: 50; background: rgba(20,12,10,.6); display: flex; align-items: flex-end; justify-content: center; }
+.sheet-panel { background: var(--ink); color: var(--tile-ink); width: 100%; max-width: 640px; max-height: 82%; border-radius: 20px 20px 0 0; display: flex; flex-direction: column; padding-bottom: env(safe-area-inset-bottom, 0px); }
+.sheet-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 14px 18px 10px; border-bottom: 1px solid #e2d6bf; }
+.sheet-head h2 { font-size: 22px; }
+.ghost.dark { border-color: rgba(27,23,21,.35); color: var(--tile-ink); }
+.sheet-body { position: relative; overflow-y: auto; padding: 6px 18px 24px; -webkit-overflow-scrolling: touch; }
+.sheet-body section { padding: 12px 10px; margin: 0 -10px; border-radius: 12px; transition: background .6s ease; }
+.sheet-body section.focus { background: #f3dfa9; }
+.sheet-body h3 { font-size: 19px; margin-bottom: 6px; }
+.sheet-body p { margin: 0 0 10px; max-width: 65ch; line-height: 1.55; }
+.sheet-body .unit-row { display: grid; grid-template-columns: 24px 1fr auto; gap: 10px; align-items: center; padding: 8px 0; border-bottom: 1px solid #e2d6bf; }
+.sheet-body .unit-row svg { width: 20px; height: 26px; }
+.sheet-body .unit-row b { font-variant-numeric: tabular-nums; }
+.progress { height: 10px; background: #e2d6bf; border-radius: 999px; overflow: hidden; margin: 6px 0 4px; }
+.progress span { display: block; height: 100%; background: var(--ochre); }
+.toast {
+  position: fixed; left: 50%; bottom: calc(18px + env(safe-area-inset-bottom, 0px)); transform: translate(-50%, 140%);
+  z-index: 70; background: var(--panel); color: var(--ink); border: 1px solid var(--ochre); border-radius: 14px;
+  padding: 10px 14px; max-width: min(92vw, 460px); font-size: 14px; box-shadow: 0 10px 30px rgba(0,0,0,.4);
+  transition: transform .3s ease; pointer-events: none;
+}
+.toast.show { transform: translate(-50%, 0); }
+.toast b { color: var(--ochre); }
+/* Read-more link inside hints */
+.read-more { margin-top: 8px; background: none; border: none; padding: 0; color: #8e2b22; font-weight: 800; font-size: 14px; text-decoration: underline; text-underline-offset: 3px; }
+/* Briefing */
+.briefing { background: var(--ink); color: var(--tile-ink); border-radius: 18px; padding: 20px 18px; display: grid; gap: 12px; }
+.briefing .eyebrow { font: 800 11px/1 var(--body); letter-spacing: .16em; text-transform: uppercase; color: #8e2b22; }
+.briefing h2 { font-size: 26px; }
+.briefing p { margin: 0; font-size: 16px; line-height: 1.55; max-width: 60ch; }
+/* Review after mistakes */
+.review { display: grid; gap: 8px; border-top: 1px solid var(--panel-line); padding-top: 14px; }
+.review h3 { font-size: 19px; }
+.review-links { display: flex; flex-wrap: wrap; gap: 8px; }
+.review-links button { background: var(--ink); color: var(--tile-ink); border: none; border-radius: 999px; padding: 7px 12px; font-weight: 800; font-size: 13.5px; }
+/* Feedback */
+.feedback { display: grid; gap: 10px; border-top: 1px solid var(--panel-line); padding-top: 14px; }
+.feedback h3 { font-size: 19px; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chips button { border: 1.5px solid rgba(251,243,228,.45); background: transparent; border-radius: 999px; padding: 6px 12px; font-weight: 800; font-size: 13.5px; }
+.chips button[aria-pressed="true"] { background: var(--ochre); color: var(--tile-ink); border-color: var(--ochre); }
+.feedback textarea { width: 100%; min-height: 70px; border-radius: 12px; border: 1.5px solid var(--panel-line); background: #2a2420; color: var(--ink); font: inherit; font-size: 15px; padding: 10px 12px; resize: vertical; }
+.feedback .sent { color: var(--good); font-weight: 800; margin: 0; }
+
 /* Tile colours: last, so they override the neutral backgrounds above */
 .c1 { background: var(--tile-1); } .c2 { background: var(--tile-2); } .c3 { background: var(--tile-3); }
 .c4 { background: var(--tile-4); } .c5 { background: var(--tile-5); }
@@ -208,7 +269,15 @@ button:focus-visible { outline: 3px solid var(--ochre); outline-offset: 2px; }
 @media (min-width: 520px) { .board:not(.pairs) { grid-template-columns: repeat(3, minmax(0, 1fr)); } .board.odd { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 </style>
 
+<div class="hud" id="hud"></div>
 <div class="app" id="app"></div>
+<div class="sheet" id="sheet" hidden>
+  <div class="sheet-panel" role="dialog" aria-modal="true" aria-labelledby="sheet-title">
+    <div class="sheet-head"><h2 id="sheet-title">The Chronicle</h2><button class="ghost dark" id="sheet-close">Close</button></div>
+    <div class="sheet-body" id="sheet-body"></div>
+  </div>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
 
 <script>
 // All content comes from the Ave Caesar chapter "Early Rome & the Kingdom" (written from Wikipedia),
@@ -353,7 +422,36 @@ const COAST = [[43.3,10.95],[42.73,10.98],[42.44,11.2],[42.36,11.5],[42.09,11.79
 const TIBER = [[43.3,12.36],[43.1,12.38],[42.78,12.42],[42.46,12.39],[42.15,12.55],[41.95,12.5],[41.89,12.47],[41.8,12.38],[41.74,12.25]]
 const ROME = { lat: 41.893, lon: 12.483 }
 
-const QUIZZES = [[{"q": "Which invaders, who sacked Rome in 390 BC, were blamed for destroying many records of the early city?", "options": ["The Carthaginians", "The Etruscans", "The Gauls", "The Samnites"], "a": 2, "level": 1, "why": "Ancient writers blamed the Gauls, invaders from the north, for destroying many records. As a result, almost nothing written survives from the age of the kings."}, {"q": "According to tradition, Rome's fifth king, Tarquinius Priscus, was an immigrant born into which people?", "options": ["The Greeks", "The Sabines", "The Etruscans", "The Volsci"], "a": 2, "level": 1, "why": "Tarquinius Priscus was traditionally born an Etruscan, one of the wealthy peoples living north of Rome in what is now Tuscany. He became Rome's first Etruscan king."}, {"q": "According to tradition, how long did a Roman king hold the throne once chosen, after the reign of Romulus?", "options": ["For life", "For five years", "Until his eldest son came of age", "For a single year"], "a": 0, "level": 1, "why": "Rome's later kings were not born to the throne but chosen for life. When a king died, the Senate took charge until a new one was found."}, {"q": "Which writer's poem \"Lucrece\" was inspired by the story of Lucretia?", "options": ["Milton", "Chaucer", "Byron", "Shakespeare"], "a": 3, "level": 1, "why": "Lucretia's story inspired Shakespeare's poem Lucrece. It also inspired many paintings in the 18th and 19th centuries."}, {"q": "How was the new voting assembly based on Servius Tullius's wealth classes organised?", "options": ["So that plebeians outvoted the nobles", "So that every citizen had an equal vote", "So that each district voted equally", "So that the rich had the most influence", "So that only patricians could vote"], "a": 3, "level": 2, "why": "Servius's five wealth classes formed a voting assembly weighted towards the rich. Later, though, he was said to favour the poor at the nobles' expense."}, {"q": "Tarquinius Priscus added 100 new members to the Senate. How large did that make it?", "options": ["250", "100", "150", "300", "200"], "a": 4, "level": 2, "why": "The extra 100 members raised the Senate to 200. Tarquinius also reportedly doubled Rome's size through wars against the Sabines and Etruscans."}, {"q": "Which king adopted the immigrant Tarquinius Priscus as a son?", "options": ["Tullus Hostilius", "Romulus", "Ancus Marcius", "Numa Pompilius", "Servius Tullius"], "a": 2, "level": 2, "why": "After settling in Rome, Tarquinius won the favour of King Ancus Marcius, who adopted him. He went on to become Rome's fifth king."}, {"q": "Where and when did the exiled Tarquin the Proud die?", "options": ["At Veii in 490 BC", "At Ardea in 495 BC", "At Cumae in 495 BC", "At Lake Regillus in 496 BC", "At Cumae in 509 BC", "At Clusium in 495 BC"], "a": 2, "level": 3, "why": "Tarquin died in exile at Cumae, a Greek city near Naples, in 495 BC. His attempts to return had failed, ending with Rome's victory over a Latin alliance at Lake Regillus."}, {"q": "Which modern historian suggests that the Etruscan king Lars Porsenna may have ended Rome's monarchy himself?", "options": ["Tim Cornell", "Livy", "Varro", "Fabius Pictor", "Arnaldo Momigliano", "Mary Beard"], "a": 0, "level": 3, "why": "Tim Cornell put forward this idea. It builds on the Roman historians Tacitus and Pliny, who recorded that Porsenna actually captured Rome."}, {"q": "Legend credits King Numa with adding which two months to create a twelve-month calendar?", "options": ["November and December", "September and October", "January and February", "July and August", "March and April", "May and June"], "a": 2, "level": 3, "why": "Numa was said to have added January and February to make a twelve-month calendar. Rome waited a year after Romulus vanished before choosing him as king."}], [{"q": "According to tradition, what was unusual about the background of King Servius Tullius?", "options": ["He was a Carthaginian merchant", "He was raised by a she-wolf", "He was a Greek refugee from Troy", "He was the son of a slave"], "a": 3, "level": 1, "why": "Tradition held that Servius was the son of a slave. He rose to marry the daughter of the previous king, Tarquinius Priscus."}, {"q": "What does archaeology suggest about Rome's kings?", "options": ["The kings were really Greek governors from Cumae", "All seven kings are confirmed by royal inscriptions", "Rome never had kings; they were invented by Livy", "Rome did have kings, though the stories about them are doubtful"], "a": 3, "level": 1, "why": "Archaeology confirms that Rome had kings, but most scholars doubt the traditional stories about them. Modern historians are cautious because so few written sources survive."}, {"q": "Which Latin town, said to be Romulus's birthplace, was destroyed by King Tullus Hostilius?", "options": ["Ardea", "Veii", "Alba Longa", "Ostia"], "a": 2, "level": 1, "why": "The warlike Tullus Hostilius destroyed Alba Longa and moved its people to Rome. He also built a senate house that lasted for centuries."}, {"q": "According to legend, which hero held a bridge alone against the army of Lars Porsenna?", "options": ["Brutus", "Collatinus", "Poplicola", "Horatius"], "a": 3, "level": 1, "why": "Horatius held the bridge alone until it could be torn down. Porsenna, an Etruscan king from Clusium, had marched on Rome to help Tarquin return."}, {"q": "Why did the classicist Mary Beard call Romulus \"Mr Rome\"?", "options": ["He was the only king born inside the city", "He personally designed every Roman temple", "Roman coins always showed his portrait", "He was Rome's first elected consul", "His name was probably invented from the city's name"], "a": 4, "level": 2, "why": "The name Romulus was probably made up from the name of Rome itself, hence \"Mr Rome\". Most modern historians treat the founding legend as myth."}, {"q": "What was the role of the augur in making a new king?", "options": ["He sought signs that the gods approved", "He granted the king imperium", "He crowned the king in the Forum", "He presented the king to the Senate", "He counted the assembly's votes"], "a": 0, "level": 2, "why": "The augur, a priest, took the king-elect up to the citadel to look for signs of divine approval. Only after this did the assembly grant the king imperium."}, {"q": "After Romulus vanished in a storm, a respected nobleman claimed Romulus had appeared to him in a vision as which god?", "options": ["Janus", "Saturn", "Mars", "Jupiter", "Quirinus"], "a": 4, "level": 2, "why": "The nobleman said Romulus had appeared as the god Quirinus. Others whispered that the nobles had murdered the king and hidden the pieces of his body."}, {"q": "How did the reign of Tarquinius Priscus end after 38 years?", "options": ["He was struck by lightning from Jupiter", "He was murdered by a son of Ancus Marcius", "He died in exile at Cumae", "He fell in battle against the Sabines", "He vanished during a storm", "He was killed by his daughter and her husband"], "a": 1, "level": 3, "why": "Tarquinius Priscus was murdered by a son of Ancus Marcius, the king who had adopted him. He is remembered for introducing the symbols of office and celebrating the first triumph."}, {"q": "Around 730–720 BC, at about the time a wall was built on the Palatine, what happened to the Forum area?", "options": ["It was walled off as an Etruscan fortress", "Burials stopped and parts were paved as a shared space", "A palace for Romulus was built over it", "It was flooded and abandoned for a century", "It became a royal burial ground for the kings", "It was given over to chariot racing"], "a": 1, "level": 3, "why": "As the Palatine wall went up, burials in the Forum stopped and parts of it were paved over. It became a shared space for meeting and worship."}, {"q": "Which hill people living south-east of Rome did Tarquin the Proud fight?", "options": ["The Volsci", "The Samnites", "The Sabines", "The Hernici", "The Aequi", "The Gauls"], "a": 0, "level": 3, "why": "Tarquin fought the Volsci, a hill people to the south-east. His wars made Rome the leading power among the Latin cities."}]].map((questions, i) => ({ name: ['Raise a Legion', 'Reinforcements'][i], blurb: '10 questions, 10 soldiers', questions }))
+// The chapter text, split into the sections the "Read more" links open
+const CHAPTER = [{"id": "origins", "title": "A City Built From Villages", "body": "Long before any king, the site of Rome had real advantages. A ford let travellers cross the Tiber River in central Italy, and a cluster of steep, easily defended hills rose from a wide, fertile plain.\n\nArchaeologists have found traces of Bronze Age settlement on the Capitoline Hill, possibly from as early as 1700 BC. By 1000 BC the valley that later became the Roman Forum, the city's great public square, was a cemetery. Huts stood on the Palatine Hill by the 9th or 8th century BC, and around 730–720 BC someone built a wall there.\n\nAt about the same time, burials in the Forum stopped and parts of it were paved over, turning it into a shared meeting and worship space. Rome, in other words, did not spring up in a day. It grew from the gradual merging of several hilltop villages, probably inspired by the idea of the city-state then spreading from Greece. By 600 BC the process was complete. Rome had a central forum, monumental buildings and public temples."}, {"id": "romulus-and-remus", "title": "The Legend of Romulus and Remus", "body": "The Romans told a far more dramatic story of their beginnings. According to legend, Rhea Silvia was a princess of Alba Longa, a Latin town in the hills south-east of Rome. Her uncle Amulius had seized the throne from her father, Numitor, and forced her to become a Vestal Virgin, a priestess sworn to chastity. She nevertheless bore twins, Romulus and Remus, supposedly fathered by Mars, the god of war.\n\nAmulius ordered the babies left to die by the Tiber. Instead a she-wolf suckled them in a cave called the Lupercal, and a shepherd named Faustulus raised them. Grown up, the twins overthrew Amulius and restored their grandfather. They then set out to found a city of their own, but quarrelled, and Remus was killed. Romulus built his city on the Palatine Hill.\n\nThe official founding date, worked out by the scholar Varro, was 753 BC, celebrated on 21 April. Later Romans also traced the twins' family back to Aeneas, a hero who fled the fall of Troy. Most modern historians treat all this as myth. Even the name Romulus was probably invented from the city's name, making him, as the classicist Mary Beard put it, \"Mr Rome\"."}, {"id": "romulus-the-king", "title": "Romulus, the First King", "body": "In Roman tradition Romulus, the legendary founder of Rome, was also its first king, and he was credited with creating its basic institutions. He welcomed newcomers of every kind, including exiles, criminals and runaway slaves. He chose 100 leading men as his advisers. They were called the \"fathers\", and their descendants became the patricians, Rome's hereditary aristocracy. To show his authority, he was escorted by twelve attendants called lictors.\n\nHis new city had too few women. So, the story goes, Romulus invited the Sabines, a hill people living north-east of Rome, to a religious festival, and his men carried off their young women. War followed. It ended only when the captured women threw themselves between the armies. The two peoples then united, and the Sabine king Titus Tatius shared the throne with Romulus.\n\nAfter 37 years, Romulus vanished during a storm while reviewing his troops. Some whispered that the nobles had murdered him and hidden the pieces of his body. But one respected nobleman claimed Romulus had appeared to him in a vision as the god Quirinus. Romans maintained a hut said to be his in the heart of the city until the end of the empire."}, {"id": "how-kings-ruled", "title": "How the Kings Ruled", "body": "After Romulus, Rome's kings were not born to the throne. According to tradition, they were chosen for life. When a king died, the Senate, the council of leading men, took charge. One senator became the interrex, or \"between-king\", serving for five days to find a candidate, then handing over to another if he failed. The chosen man was presented to the Curiate Assembly, the gathering of citizens, which accepted or rejected him.\n\nTwo more steps followed. A priest called an augur took the king-elect up to the citadel and looked for signs that the gods approved. Then the assembly granted him imperium, the supreme power to command armies, govern and judge. The king was also Rome's chief priest and controlled the calendar. The Senate could advise him but rarely stop him, though he could not declare war without approval.\n\nTwelve attendants walked ahead of him carrying the fasces, a bundle of rods around an axe that symbolised his power to punish. He sat on a special chair and wore a purple robe embroidered with gold, with red shoes and a white band around his head.\n\nThe reality may have been rougher. The historian Arnaldo Momigliano suggested that many kings were really leaders of armed bands who won over the aristocracy by persuasion or force."}, {"id": "numa-tullus-ancus", "title": "Numa, Tullus and Ancus", "body": "Tradition names seven kings of Rome. After Romulus came three very different rulers.\n\nWhen Romulus vanished, Rome waited a year before choosing a Sabine named Numa Pompilius, famed for his justice and piety. His 43-year reign was remembered for peace and religion. He closed the doors of the temple of Janus, a god of beginnings, as a sign that Rome was at peace. He also founded the Vestal Virgins and created the office of chief priest. Legend credits him with adding January and February to make a twelve-month calendar.\n\nTullus Hostilius was the opposite: warlike and scornful of the gods. He fought Rome's neighbours and destroyed Alba Longa, the Latin town said to be Romulus's birthplace, moving its people to Rome. He built a senate house that lasted centuries. According to Livy, when the dying king finally begged Jupiter for help, the god burned him and his house with lightning. He had reigned 32 years.\n\nNuma's grandson Ancus Marcius ruled peacefully for 25 years. He built Rome's first prison and, tradition says, its first bridge over the Tiber. He founded Ostia, a port at the river's mouth, and settled conquered Latins on the Aventine Hill, forming the origins of the plebeians, Rome's common people."}, {"id": "tarquinius-priscus", "title": "Tarquinius Priscus, the First Etruscan King", "body": "Rome's fifth king, Lucius Tarquinius Priscus, was an immigrant. According to tradition he was born an Etruscan, one of the wealthy, powerful peoples living north of Rome in what is now Tuscany. After settling in Rome he won the favour of King Ancus Marcius, who adopted him as a son.\n\nAs king, Tarquinius fought the Sabines and Etruscans, reportedly doubling Rome's size and bringing home great treasure. He added 100 new members to the Senate, raising it to 200.\n\nHe spent his loot on ambitious building. The Cloaca Maxima, or \"Great Sewer\", drained the marshy ground between Rome's hills, and on the reclaimed land he began the Roman Forum. He also laid out the Circus Maximus, a giant stadium for chariot races, and founded the Roman games. Work began on a great temple to Jupiter on the Capitoline Hill, though he did not live to finish it.\n\nTarquinius is also remembered for introducing the symbols of Roman office and for celebrating the first triumph, the victory parade granted to successful generals. After 38 years on the throne, he was murdered by a son of Ancus Marcius."}, {"id": "servius-tullius", "title": "Servius Tullius and the Mystery of Mastarna", "body": "According to tradition, Rome's sixth king, Servius Tullius, was the son of a slave who married the daughter of the previous king, Tarquinius Priscus. Like his father-in-law, he was said to be of Etruscan birth, and he fought successful wars against the Etruscans.\n\nHis lasting fame rests on reorganising Roman society. He held Rome's first census, a count of citizens, and sorted people into five classes by wealth. These classes became the basis of a new voting assembly, organised so that the rich had the most influence. He also divided the city into four districts by where people lived, and he built the Temple of Diana on the Aventine Hill. Later, though, he was said to favour the poor at the nobles' expense.\n\nAfter 44 years he was killed in a plot by his own daughter, Tullia, and her husband, the future king Tarquin the Proud.\n\nA puzzle surrounds him. The emperor Claudius, in the first century AD, identified Servius with Mastarna, an Etruscan adventurer who became king of Rome. Mastarna also appears on a painted Etruscan tomb. The historian Momigliano warned, however, that Mastarna is so unlike the traditional Servius that the two are best kept apart."}, {"id": "tarquin-the-proud", "title": "Tarquin the Proud and Lucretia", "body": "Rome's seventh and last king, Lucius Tarquinius Superbus, \"Tarquin the Proud\", seized power by murdering his father-in-law, King Servius Tullius. He was the son of the earlier king Tarquinius Priscus, and according to tradition he ruled for 25 years.\n\nHe was an energetic ruler. He fought Rome's neighbours, including the Volsci, a hill people to the south-east, and made Rome the leading power among the Latin cities. He finished the great temple of Jupiter on the Capitoline Hill. But Romans remembered him as a tyrant who ruled through violence and fear, ignored custom and the Senate, and even judged death-penalty cases without advisers.\n\nAccording to the traditional story, the crisis came when the king's son Sextus Tarquinius raped Lucretia, a virtuous noblewoman. She told her husband and father what had happened and then killed herself rather than live with the dishonour. Her death sparked an uprising. The tale later inspired Shakespeare's poem Lucrece and many paintings in the 18th and 19th centuries."}, {"id": "birth-of-the-republic", "title": "The Fall of the Kings", "body": "According to tradition, the revolt against Tarquin the Proud, Rome's last king, came in 509 BC. It was led by Lucius Junius Brutus, the king's nephew. He was joined by Lucretia's husband Collatinus, her father, and a friend named Publius Valerius Poplicola. While the king was away besieging Ardea, a town south of Rome, they shut the city gates against him and won over the army.\n\nIn place of a king, Rome now elected two consuls each year, starting with Brutus and Collatinus. Brutus made the people swear never again to accept a king. When his own sons were caught plotting to bring Tarquin back, he ordered their execution.\n\nTarquin fought to return. An Etruscan king, Lars Porsenna of Clusium, marched on Rome, but legend says the hero Horatius held a bridge alone until it could be torn down. Rome then defeated an alliance of Latin towns at Lake Regillus. Tarquin died in exile at Cumae, a Greek city near Naples, in 495 BC.\n\nThe story echoed through later history. French revolutionaries named boys and towns after Brutus, and the authors of the American Federalist Papers signed themselves \"Publius\" after Poplicola."}, {"id": "how-reliable", "title": "What Historians Really Know", "body": "Almost nothing written survives from the age of Rome's kings. Ancient writers blamed the Gauls, invaders from the north who sacked Rome in 390 BC, for destroying many records. The first history of Rome was written by Fabius Pictor around 200 BC, about three centuries after the kings fell. Writers such as Livy relied largely on oral tradition, family stories and even plays.\n\nModern historians are therefore cautious. Seven kings ruling for 243 years means an average reign of almost 35 years, which seems far too long. Archaeology shows that Rome did have kings, but most scholars doubt the traditional stories about them.\n\nThe overthrow is especially suspect. Lucretia's story closely resembles a Greek tale about the fall of the tyrants of Athens, around 510 BC. And the Roman historians Tacitus and Pliny recorded that Lars Porsenna, the Etruscan king, actually captured Rome. The historian Tim Cornell suggests that Porsenna may have ended the monarchy himself.\n\nOthers think the kingship faded slowly rather than falling in one dramatic night. Republican Rome kept a priest called the \"king of sacred rites\", perhaps a last ceremonial echo of the old kings."}]
+const NAME_SEC = {
+  'Rome is founded': 'romulus-and-remus', 'Sabine women carried off': 'romulus-the-king', 'Calendar gets 12 months': 'numa-tullus-ancus',
+  'Alba Longa destroyed': 'numa-tullus-ancus', 'Romulus': 'romulus-the-king', 'Numa Pompilius': 'numa-tullus-ancus', 'Tullus Hostilius': 'numa-tullus-ancus',
+  'Ancus Marcius': 'numa-tullus-ancus', 'Tarquinius Priscus': 'tarquinius-priscus', 'Servius Tullius': 'servius-tullius', 'Tarquin the Proud': 'tarquin-the-proud',
+  'A council of 100 leading men': 'romulus-the-king', 'Ostia founded': 'numa-tullus-ancus', 'The Great Sewer drains the valley': 'tarquinius-priscus',
+  'Rome’s first census': 'servius-tullius', 'Temple of Jupiter finished': 'tarquin-the-proud', 'Revolt: the king is expelled': 'birth-of-the-republic',
+  'Lars Porsenna marches on Rome': 'birth-of-the-republic', 'Victory at Lake Regillus': 'birth-of-the-republic', 'Tarquin dies in exile': 'birth-of-the-republic',
+  'The Gauls sack Rome': 'how-reliable', 'First settlers on the Capitoline': 'origins', 'Circus Maximus laid out': 'tarquinius-priscus',
+  'The king is expelled': 'birth-of-the-republic', 'First history of Rome written': 'how-reliable',
+  'Fasces': 'how-kings-ruled', 'Vestal Virgin': 'romulus-and-remus', 'Cloaca Maxima': 'tarquinius-priscus', 'Circus Maximus': 'tarquinius-priscus',
+  'Census': 'servius-tullius', 'Rhea Silvia': 'romulus-and-remus', 'Amulius': 'romulus-and-remus', 'Lucretia': 'tarquin-the-proud',
+  'Lucius Junius Brutus': 'birth-of-the-republic', 'Horatius': 'birth-of-the-republic',
+  'Ostia': 'numa-tullus-ancus', 'Alba Longa': 'romulus-and-remus', 'Ardea': 'birth-of-the-republic', 'Sabine country': 'romulus-the-king',
+  'Clusium': 'birth-of-the-republic', 'Cumae': 'birth-of-the-republic',
+}
+const TF_SEC = [
+  ['romulus-and-remus', 'numa-tullus-ancus', 'numa-tullus-ancus', 'tarquinius-priscus', 'tarquinius-priscus', 'how-kings-ruled', 'birth-of-the-republic', 'romulus-the-king'],
+  ['romulus-and-remus', 'birth-of-the-republic', 'birth-of-the-republic', 'birth-of-the-republic', 'romulus-and-remus', 'origins', 'how-reliable', 'how-reliable'],
+]
+const ODD_SEC = ['birth-of-the-republic', 'tarquinius-priscus', 'romulus-and-remus', 'tarquinius-priscus', 'numa-tullus-ancus', 'birth-of-the-republic', 'birth-of-the-republic']
+TIMELINES.forEach(t => t.events.forEach(e => { e.sec = NAME_SEC[e.label] }))
+MATCHES.forEach(m => { m.secs = m.pairs.map(p => NAME_SEC[p[0]]) })
+DECKS.forEach((d, i) => d.cards.forEach((c, j) => { c.sec = TF_SEC[i][j] }))
+ODDS[0].rounds.forEach((r, i) => { r.sec = ODD_SEC[i] })
+WHOS.forEach(w => w.people.forEach(p => { p.sec = NAME_SEC[p.name] }))
+MAPS.forEach(m => m.places.forEach(p => { p.sec = NAME_SEC[p.name] }))
+
+const QUIZZES = [[{"q": "Which invaders, who sacked Rome in 390 BC, were blamed for destroying many records of the early city?", "options": ["The Carthaginians", "The Etruscans", "The Gauls", "The Samnites"], "a": 2, "level": 1, "why": "Ancient writers blamed the Gauls, invaders from the north, for destroying many records. As a result, almost nothing written survives from the age of the kings.", "sec": "how-reliable"}, {"q": "According to tradition, Rome's fifth king, Tarquinius Priscus, was an immigrant born into which people?", "options": ["The Greeks", "The Sabines", "The Etruscans", "The Volsci"], "a": 2, "level": 1, "why": "Tarquinius Priscus was traditionally born an Etruscan, one of the wealthy peoples living north of Rome in what is now Tuscany. He became Rome's first Etruscan king.", "sec": "tarquinius-priscus"}, {"q": "According to tradition, how long did a Roman king hold the throne once chosen, after the reign of Romulus?", "options": ["For life", "For five years", "Until his eldest son came of age", "For a single year"], "a": 0, "level": 1, "why": "Rome's later kings were not born to the throne but chosen for life. When a king died, the Senate took charge until a new one was found.", "sec": "how-kings-ruled"}, {"q": "Which writer's poem \"Lucrece\" was inspired by the story of Lucretia?", "options": ["Milton", "Chaucer", "Byron", "Shakespeare"], "a": 3, "level": 1, "why": "Lucretia's story inspired Shakespeare's poem Lucrece. It also inspired many paintings in the 18th and 19th centuries.", "sec": "tarquin-the-proud"}, {"q": "How was the new voting assembly based on Servius Tullius's wealth classes organised?", "options": ["So that plebeians outvoted the nobles", "So that every citizen had an equal vote", "So that each district voted equally", "So that the rich had the most influence", "So that only patricians could vote"], "a": 3, "level": 2, "why": "Servius's five wealth classes formed a voting assembly weighted towards the rich. Later, though, he was said to favour the poor at the nobles' expense.", "sec": "servius-tullius"}, {"q": "Tarquinius Priscus added 100 new members to the Senate. How large did that make it?", "options": ["250", "100", "150", "300", "200"], "a": 4, "level": 2, "why": "The extra 100 members raised the Senate to 200. Tarquinius also reportedly doubled Rome's size through wars against the Sabines and Etruscans.", "sec": "tarquinius-priscus"}, {"q": "Which king adopted the immigrant Tarquinius Priscus as a son?", "options": ["Tullus Hostilius", "Romulus", "Ancus Marcius", "Numa Pompilius", "Servius Tullius"], "a": 2, "level": 2, "why": "After settling in Rome, Tarquinius won the favour of King Ancus Marcius, who adopted him. He went on to become Rome's fifth king.", "sec": "tarquinius-priscus"}, {"q": "Where and when did the exiled Tarquin the Proud die?", "options": ["At Veii in 490 BC", "At Ardea in 495 BC", "At Cumae in 495 BC", "At Lake Regillus in 496 BC", "At Cumae in 509 BC", "At Clusium in 495 BC"], "a": 2, "level": 3, "why": "Tarquin died in exile at Cumae, a Greek city near Naples, in 495 BC. His attempts to return had failed, ending with Rome's victory over a Latin alliance at Lake Regillus.", "sec": "birth-of-the-republic"}, {"q": "Which modern historian suggests that the Etruscan king Lars Porsenna may have ended Rome's monarchy himself?", "options": ["Tim Cornell", "Livy", "Varro", "Fabius Pictor", "Arnaldo Momigliano", "Mary Beard"], "a": 0, "level": 3, "why": "Tim Cornell put forward this idea. It builds on the Roman historians Tacitus and Pliny, who recorded that Porsenna actually captured Rome.", "sec": "how-reliable"}, {"q": "Legend credits King Numa with adding which two months to create a twelve-month calendar?", "options": ["November and December", "September and October", "January and February", "July and August", "March and April", "May and June"], "a": 2, "level": 3, "why": "Numa was said to have added January and February to make a twelve-month calendar. Rome waited a year after Romulus vanished before choosing him as king.", "sec": "numa-tullus-ancus"}], [{"q": "According to tradition, what was unusual about the background of King Servius Tullius?", "options": ["He was a Carthaginian merchant", "He was raised by a she-wolf", "He was a Greek refugee from Troy", "He was the son of a slave"], "a": 3, "level": 1, "why": "Tradition held that Servius was the son of a slave. He rose to marry the daughter of the previous king, Tarquinius Priscus.", "sec": "servius-tullius"}, {"q": "What does archaeology suggest about Rome's kings?", "options": ["The kings were really Greek governors from Cumae", "All seven kings are confirmed by royal inscriptions", "Rome never had kings; they were invented by Livy", "Rome did have kings, though the stories about them are doubtful"], "a": 3, "level": 1, "why": "Archaeology confirms that Rome had kings, but most scholars doubt the traditional stories about them. Modern historians are cautious because so few written sources survive.", "sec": "how-reliable"}, {"q": "Which Latin town, said to be Romulus's birthplace, was destroyed by King Tullus Hostilius?", "options": ["Ardea", "Veii", "Alba Longa", "Ostia"], "a": 2, "level": 1, "why": "The warlike Tullus Hostilius destroyed Alba Longa and moved its people to Rome. He also built a senate house that lasted for centuries.", "sec": "numa-tullus-ancus"}, {"q": "According to legend, which hero held a bridge alone against the army of Lars Porsenna?", "options": ["Brutus", "Collatinus", "Poplicola", "Horatius"], "a": 3, "level": 1, "why": "Horatius held the bridge alone until it could be torn down. Porsenna, an Etruscan king from Clusium, had marched on Rome to help Tarquin return.", "sec": "birth-of-the-republic"}, {"q": "Why did the classicist Mary Beard call Romulus \"Mr Rome\"?", "options": ["He was the only king born inside the city", "He personally designed every Roman temple", "Roman coins always showed his portrait", "He was Rome's first elected consul", "His name was probably invented from the city's name"], "a": 4, "level": 2, "why": "The name Romulus was probably made up from the name of Rome itself, hence \"Mr Rome\". Most modern historians treat the founding legend as myth.", "sec": "romulus-and-remus"}, {"q": "What was the role of the augur in making a new king?", "options": ["He sought signs that the gods approved", "He granted the king imperium", "He crowned the king in the Forum", "He presented the king to the Senate", "He counted the assembly's votes"], "a": 0, "level": 2, "why": "The augur, a priest, took the king-elect up to the citadel to look for signs of divine approval. Only after this did the assembly grant the king imperium.", "sec": "how-kings-ruled"}, {"q": "After Romulus vanished in a storm, a respected nobleman claimed Romulus had appeared to him in a vision as which god?", "options": ["Janus", "Saturn", "Mars", "Jupiter", "Quirinus"], "a": 4, "level": 2, "why": "The nobleman said Romulus had appeared as the god Quirinus. Others whispered that the nobles had murdered the king and hidden the pieces of his body.", "sec": "romulus-the-king"}, {"q": "How did the reign of Tarquinius Priscus end after 38 years?", "options": ["He was struck by lightning from Jupiter", "He was murdered by a son of Ancus Marcius", "He died in exile at Cumae", "He fell in battle against the Sabines", "He vanished during a storm", "He was killed by his daughter and her husband"], "a": 1, "level": 3, "why": "Tarquinius Priscus was murdered by a son of Ancus Marcius, the king who had adopted him. He is remembered for introducing the symbols of office and celebrating the first triumph.", "sec": "tarquinius-priscus"}, {"q": "Around 730–720 BC, at about the time a wall was built on the Palatine, what happened to the Forum area?", "options": ["It was walled off as an Etruscan fortress", "Burials stopped and parts were paved as a shared space", "A palace for Romulus was built over it", "It was flooded and abandoned for a century", "It became a royal burial ground for the kings", "It was given over to chariot racing"], "a": 1, "level": 3, "why": "As the Palatine wall went up, burials in the Forum stopped and parts of it were paved over. It became a shared space for meeting and worship.", "sec": "origins"}, {"q": "Which hill people living south-east of Rome did Tarquin the Proud fight?", "options": ["The Volsci", "The Samnites", "The Sabines", "The Hernici", "The Aequi", "The Gauls"], "a": 0, "level": 3, "why": "Tarquin fought the Volsci, a hill people to the south-east. His wars made Rome the leading power among the Latin cities.", "sec": "tarquin-the-proud"}]].map((questions, i) => ({ name: ['Raise a Legion', 'Reinforcements'][i], blurb: '10 questions, 10 soldiers', questions }))
 
 const GAMES = {
   tf: { title: 'True or False', sets: DECKS },
@@ -401,7 +499,7 @@ const starCount = mistakes => (mistakes === 0 ? 3 : mistakes <= 2 ? 2 : 1)
 const starRow = (n, cls = 'stars') => `<span class="${cls}" aria-label="${n} of 3 stars">${'★'.repeat(n)}<span class="off">${'★'.repeat(3 - n)}</span></span>`
 const plural = (n, w) => `${n} ${w}${n === 1 ? '' : 's'}`
 const buzz = () => { try { navigator.vibrate?.(60) } catch {} }
-const hintHtml = h => h ? `<div class="hint ${h.ok === true ? 'ok' : h.ok === 'neutral' ? 'neutral' : ''}" role="status"><p>${h.html}</p></div>` : ''
+const hintHtml = h => h ? `<div class="hint ${h.ok === true ? 'ok' : h.ok === 'neutral' ? 'neutral' : ''}" role="status"><p>${h.html}</p>${h.sec ? `<button class="read-more" data-read="${h.sec}">Read more in the chronicle</button>` : ''}</div>` : ''
 
 let state = { screen: 'home' }
 let busy = false
@@ -411,7 +509,9 @@ function go(next) { state = next; render() }
 const RENDER = {}
 function render() {
   busy = false
+  renderHud()
   if (state.screen === 'home') return renderHome()
+  if (state.screen === 'briefing') return renderBriefing()
   if (state.screen === 'play') return RENDER[state.type]()
   if (state.screen === 'result') return renderResult()
   if (state.screen === 'runDone') return renderRunDone()
@@ -457,6 +557,147 @@ function draggable(el, { onMove, onDrop }) {
 }
 const onTap = (el, fn) => el.addEventListener('click', () => { if (!el.dataset.dragged) fn() })
 
+// ---------- the legion (saved in this browser) ----------
+// Rule: the game type decides the kind of unit, the difficulty decides its rank.
+// Each item rewards once; an item missed in an earlier round and answered later joins as a veteran.
+const UNITS = {
+  hastatus: { label: 'Hastati', one: 'hastatus', color: '#e0a63a', note: 'Young soldiers who fought in the front line.' },
+  princeps: { label: 'Principes', one: 'princeps', color: '#4f8fb8', note: 'Men in their prime, the second line.' },
+  triarius: { label: 'Triarii', one: 'triarius', color: '#e9e1cf', note: 'Veterans, the last line. “It has come to the triarii” meant things were desperate.' },
+  centurio: { label: 'Centurions', one: 'centurion', color: '#c86a3c', note: 'Officers, each leading a century. You recruit them by knowing the people of the story.' },
+}
+const MILESTONES = [
+  { men: 8, name: 'contubernium', note: 'eight soldiers who shared a tent and a mule' },
+  { men: 80, name: 'century', note: 'eighty men led by a centurion' },
+  { men: 480, name: 'cohort', note: 'six centuries' },
+  { men: 4800, name: 'legion', note: 'ten cohorts, the backbone of Rome’s army' },
+]
+const LEGION_KEY = 'ave-caesar-legion'
+let legion = { units: { hastatus: 0, princeps: 0, triarius: 0, centurio: 0 }, veterans: 0, eagles: [], rewarded: {}, missed: {} }
+try { const saved = JSON.parse(localStorage.getItem(LEGION_KEY) || 'null'); if (saved?.units) legion = { ...legion, ...saved } } catch {}
+const saveLegion = () => { try { localStorage.setItem(LEGION_KEY, JSON.stringify(legion)) } catch {} }
+const menCount = () => Object.values(legion.units).reduce((a, b) => a + b, 0)
+const formation = men => [...MILESTONES].reverse().find(m => men >= m.men)
+const nextMilestone = men => MILESTONES.find(m => men < m.men)
+const unitIcon = color => `<svg viewBox="0 0 20 26" aria-hidden="true"><line x1="16" y1="1" x2="16" y2="25" stroke="#e2cdb0" stroke-width="1.6"/><path d="M3 5 h10 v11 c0 4 -5 7 -5 7 c0 0 -5 -3 -5 -7 z" fill="${color}" stroke="#1b1715" stroke-width="1.2"/><circle cx="8" cy="12" r="1.8" fill="#1b1715" opacity=".55"/></svg>`
+const eagleIcon = `<svg viewBox="0 0 20 26" aria-hidden="true"><line x1="10" y1="9" x2="10" y2="25" stroke="#e2cdb0" stroke-width="1.6"/><path d="M10 2 l3 4 l6 -2 l-4 5 h-10 l-4 -5 l6 2 z" fill="#e0a63a" stroke="#1b1715" stroke-width="1"/></svg>`
+
+function renderHud() {
+  const men = menCount(), f = formation(men), next = nextMilestone(men)
+  document.getElementById('hud').innerHTML = `<div class="hud-inner">
+    <div class="hud-units" aria-label="Your legion">
+      ${Object.entries(UNITS).map(([k, u]) => `<span class="hud-unit" data-unit="${k}" title="${u.label}">${unitIcon(u.color)}${legion.units[k]}</span>`).join('')}
+      <span class="hud-unit" data-unit="eagle" title="Eagle standards">${eagleIcon}${legion.eagles.length}</span>
+    </div>
+    <button class="hud-men" id="hud-men">${men} ${men === 1 ? 'man' : 'men'}<small>${f ? 'a ' + f.name : next ? `${next.men - men} to a ${next.name}` : ''}</small></button>
+  </div>`
+  document.getElementById('hud-men').addEventListener('click', openLegion)
+}
+function bumpHud(key) {
+  const el = document.querySelector(`.hud-unit[data-unit="${key}"]`)
+  if (!el) return
+  el.classList.remove('bump'); void el.offsetWidth; el.classList.add('bump')
+}
+function flyToHud(fromEl, key, color, done) {
+  const target = document.querySelector(`.hud-unit[data-unit="${key}"]`)
+  if (reducedMotion || !fromEl || !target || !fromEl.isConnected) return done()
+  const a = fromEl.getBoundingClientRect(), b = target.getBoundingClientRect()
+  const icon = document.createElement('div')
+  icon.className = 'flying-unit'
+  icon.innerHTML = key === 'eagle' ? eagleIcon : unitIcon(color)
+  Object.assign(icon.style, { left: a.left + a.width / 2 - 10 + 'px', top: a.top + a.height / 2 - 13 + 'px' })
+  document.body.appendChild(icon)
+  const dx = b.left - (a.left + a.width / 2 - 10), dy = b.top - (a.top + a.height / 2 - 13)
+  icon.animate([
+    { transform: 'translate(0,0) scale(1.6)' },
+    { transform: `translate(${dx * 0.3}px, ${dy * 0.3 - 40}px) scale(1.9)`, offset: 0.35 },
+    { transform: `translate(${dx}px, ${dy}px) scale(1)` },
+  ], { duration: 650, easing: 'cubic-bezier(.4,.1,.3,1)' }).onfinish = () => { icon.remove(); done() }
+}
+let toastTimer = null
+function toast(html, ms = 3600) {
+  const t = document.getElementById('toast')
+  t.innerHTML = html
+  t.classList.add('show')
+  clearTimeout(toastTimer)
+  toastTimer = setTimeout(() => t.classList.remove('show'), ms)
+}
+// Give the unit for an item, once. Returns { fresh, vet, unit }.
+function reward(key, unitKey, fromEl) {
+  if (legion.rewarded[key]) return { fresh: false, unit: UNITS[unitKey] }
+  const before = menCount()
+  const vet = !!legion.missed[key]
+  legion.rewarded[key] = 1
+  delete legion.missed[key]
+  legion.units[unitKey]++
+  if (vet) legion.veterans++
+  saveLegion()
+  flyToHud(fromEl, unitKey, UNITS[unitKey].color, () => { renderHud(); bumpHud(unitKey) })
+  if (vet) toast(`<b>A veteran joins!</b> You missed this one before and got it right now. Learning from mistakes makes the best soldiers.`)
+  const after = menCount(), m = MILESTONES.find(m => before < m.men && after >= m.men)
+  if (m) setTimeout(() => toast(`<b>Your legion is now a ${m.name}</b>: ${m.note}.`, 5000), vet ? 3800 : 700)
+  return { fresh: true, vet, unit: UNITS[unitKey] }
+}
+// Remember a mistake in this round (shown on the result screen; makes the item a future veteran)
+function noteMiss(key, sec) {
+  state.roundMisses ??= []
+  if (!state.roundMisses.some(m => m.key === key)) state.roundMisses.push({ key, sec })
+}
+const recruitLine = r => r.fresh ? (r.vet ? `A veteran ${r.unit.one} joins your legion.` : `A ${r.unit.one} joins your legion.`) : 'Already in your legion from an earlier round.'
+
+// ---------- the chapter text ----------
+const inline = s => esc(s).replace(/\*\*(.+?)\*\*/g, '<b>$1</b>').replace(/\*(.+?)\*/g, '<em>$1</em>')
+function openSheet(title, html, focusId) {
+  const sheet = document.getElementById('sheet')
+  document.getElementById('sheet-title').textContent = title
+  const body = document.getElementById('sheet-body')
+  body.innerHTML = html
+  sheet.hidden = false
+  body.scrollTop = 0
+  document.getElementById('sheet-close').focus()
+  if (focusId) {
+    const sec = body.querySelector(`[data-sec="${focusId}"]`)
+    if (sec) { body.scrollTop = sec.offsetTop - 8; sec.classList.add('focus'); setTimeout(() => sec.classList.remove('focus'), 2500) }
+  }
+}
+function closeSheet() { document.getElementById('sheet').hidden = true }
+const chronicleHtml = () => CHAPTER.map(s => `<section data-sec="${s.id}"><h3>${esc(s.title)}</h3>${s.body.split(/\n\s*\n/).map(p => `<p>${inline(p.trim())}</p>`).join('')}</section>`).join('') +
+  '<p style="font-size:13px;color:#6b5d50;margin-top:14px">Written from the Wikipedia articles “Roman Kingdom”, “Founding of Rome” and “Overthrow of the Roman monarchy” (CC BY-SA 4.0).</p>'
+const openChronicle = focusId => openSheet('Early Rome & the Kingdom', chronicleHtml(), focusId)
+function openLegion() {
+  const men = menCount(), f = formation(men), next = nextMilestone(men)
+  const prev = f?.men ?? 0
+  openSheet('Your legion', `
+    <p><b>${men} ${men === 1 ? 'man' : 'men'}</b>${f ? `, a ${f.name} (${f.note})` : ''}.</p>
+    ${next ? `<div class="progress" aria-hidden="true"><span style="width:${Math.round(100 * (men - prev) / (next.men - prev))}%"></span></div>
+      <p style="font-size:14px">${next.men - men} more to a <b>${next.name}</b>: ${next.note}.</p>` : ''}
+    ${Object.entries(UNITS).map(([k, u]) => `<div class="unit-row">${unitIcon(u.color)}<span><b>${u.label}</b><br><span style="font-size:13.5px">${esc(u.note)}</span></span><b>${legion.units[k]}</b></div>`).join('')}
+    <div class="unit-row">${eagleIcon}<span><b>Eagle standards</b><br><span style="font-size:13.5px">The legion’s most prized symbol. Earned with a perfect round.</span></span><b>${legion.eagles.length}</b></div>
+    <p style="margin-top:12px;font-size:14px"><b>${legion.veterans}</b> ${legion.veterans === 1 ? 'veteran' : 'veterans'}: soldiers who joined after you learned from a mistake.</p>
+    <p style="font-size:14px">How to recruit: the Legion Quiz and True or False give infantry (harder questions give higher ranks), Who Am I? and Match Pairs give centurions, and the other games give principes or hastati. Each fact recruits once.</p>`)
+}
+document.getElementById('sheet-close').addEventListener('click', closeSheet)
+document.getElementById('sheet').addEventListener('click', e => { if (e.target.id === 'sheet') closeSheet() })
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeSheet() })
+document.getElementById('app').addEventListener('click', e => {
+  const b = e.target.closest('[data-read]')
+  if (b) openChronicle(b.dataset.read)
+})
+
+// ---------- feedback (saved for the page owner) ----------
+const fb = { db: null, uid: null }
+;(async () => {
+  try {
+    if (!window.claude?.use) return
+    const [db, user] = await Promise.all([window.claude.use('db'), window.claude.use('user')])
+    if (!db || !user?.id) return
+    fb.uid = await user.id()
+    fb.db = db
+    const btn = document.getElementById('fb-send')
+    if (btn) { btn.textContent = 'Send feedback'; document.getElementById('fb-help').hidden = true }
+  } catch {}
+})()
+
 // ---------- home ----------
 function renderHome() {
   const plan = CHAPTER_RUNS[runIndex]
@@ -477,7 +718,7 @@ function renderHome() {
       <h2>Play the chapter</h2>
       <p class="task">Five short rounds, each about a different part of the story. About ten minutes. The rounds change every time you play.</p>
       <ol class="run-steps">${plan.map((r, i) => `<li class="c${TYPE_COLOR[r.type]}">${i + 1}. ${GAMES[r.type].title}</li>`).join('')}</ol>
-      <button class="primary" id="run">Start</button>
+      <div class="actions"><button class="primary" id="run">Start</button><button class="ghost" id="chronicle">Read the chronicle</button></div>
     </section>
     ${SECTIONS.map(([type, label]) => `<p class="section-label">${label}</p>${list(type)}`).join('')}
     <p class="footnote">Based on the chapter “Early Rome & the Kingdom” (sources: Wikipedia). Dates for the kings are the traditional ones; historians doubt many of them.</p>`
@@ -485,20 +726,29 @@ function renderHome() {
     run = { plan, step: 0, results: [] }
     runIndex = (runIndex + 1) % CHAPTER_RUNS.length
     try { localStorage.setItem(RUN_KEY, String(runIndex)) } catch {}
-    startGame(plan[0].type, plan[0].set)
+    go({ screen: 'briefing' })
   })
+  app.querySelector('#chronicle').addEventListener('click', () => openChronicle())
   app.querySelectorAll('.level-card').forEach(b => b.addEventListener('click', () => { run = null; startGame(b.dataset.type, +b.dataset.set) }))
 }
 
 const START = {}
-function startGame(type, set) { go({ screen: 'play', type, set, mistakes: 0, hint: null, ...START[type](set) }) }
+function startGame(type, set) { window.scrollTo(0, 0); go({ screen: 'play', type, set, mistakes: 0, hint: null, roundMisses: [], ...START[type](set) }) }
 
 function finish(recapHtml, earned = starCount(state.mistakes), note) {
   const key = starKey(state.type, state.set)
+  // Mistakes not fixed in this round make those items future veterans
+  state.roundMisses ??= []
+  for (const m of state.roundMisses) if (!legion.rewarded[m.key]) legion.missed[m.key] = 1
+  const eagle = earned === 3 && !legion.eagles.includes(key)
+  if (eagle) legion.eagles.push(key)
+  saveLegion()
+  if (eagle) setTimeout(() => { renderHud(); bumpHud('eagle'); toast('<b>An eagle standard!</b> Awarded for a perfect round. Each round can earn one.') }, 400)
+  const reviewSecs = [...new Set(state.roundMisses.map(m => m.sec).filter(Boolean))]
   stars[key] = Math.max(stars[key] ?? 0, earned)
   saveStars()
   if (run) run.results.push({ type: state.type, set: state.set, stars: earned })
-  go({ screen: 'result', type: state.type, set: state.set, mistakes: state.mistakes, earned, recapHtml, note })
+  go({ screen: 'result', type: state.type, set: state.set, mistakes: state.mistakes, earned, recapHtml, note, reviewSecs, feedbackSent: false })
 }
 const recapList = items => `<ol class="recap">${items.map(i => `<li class="${i.miss ? 'miss' : ''}"><div>${i.when ? `<span class="when">${esc(i.when)}</span>` : ''}<b>${esc(i.title)}</b>${i.text ? `<p>${esc(i.text)}</p>` : ''}</div></li>`).join('')}</ol>`
 
@@ -549,6 +799,7 @@ function chronoTap(id, el) {
     g.hint = { ok: true, html: `<b>${esc(e.label)}</b> · ${esc(e.when)}. ${esc(e.fact)}` }
     const slot = app.querySelector(`[data-slot="${g.placed.length}"]`)
     g.placed.push(id)
+    reward(`chrono:${g.set}:${id}`, g.set >= 4 ? 'triarius' : g.set >= 2 ? 'princeps' : 'hastatus', el)
     busy = true
     flyTo(el, slot, () => {
       busy = false
@@ -559,7 +810,8 @@ function chronoTap(id, el) {
   } else {
     g.mistakes++
     if (!g.revealed.includes(id)) g.revealed.push(id)
-    g.hint = { ok: false, html: `Not yet. <b>${esc(e.label)}</b> happened ${esc(sinceWhen(e.when))}. Something in the camp is older.` }
+    g.hint = { ok: false, sec: e.sec, html: `Not yet. <b>${esc(e.label)}</b> happened ${esc(sinceWhen(e.when))}. Something in the camp is older.` }
+    noteMiss(`chrono:${g.set}:${id}`, e.sec)
     el.classList.add('revealed', 'shake')
     el.addEventListener('animationend', () => el.classList.remove('shake'), { once: true })
     app.querySelector('#hint-area').innerHTML = hintHtml(g.hint)
@@ -618,6 +870,7 @@ function matchTap(side, id) {
     g.matched.push(id)
     g.hint = { ok: true, html: `<b>${esc(set.pairs[id][0])}</b>: ${esc(set.pairs[id][1].replace(/^./, c => c.toLowerCase()))}.` }
     RENDER.match()
+    reward(`match:${g.set}:${id}`, 'centurio', app.querySelector(`[data-side="L"][data-id="${id}"]`))
     if (g.matched.length === set.pairs.length) {
       busy = true
       setTimeout(() => { busy = false; if (state === g) finish(recapList(set.pairs.map(([a, b]) => ({ title: a, text: b })))) }, 700)
@@ -625,7 +878,8 @@ function matchTap(side, id) {
   } else {
     g.mistakes++
     const [l, r] = side === 'L' ? [id, other.id] : [other.id, id]
-    g.hint = { ok: false, html: `<b>${esc(set.pairs[l][0])}</b> doesn’t go with “${esc(set.pairs[r][1])}”. Try again.` }
+    g.hint = { ok: false, sec: set.secs[l], html: `<b>${esc(set.pairs[l][0])}</b> doesn’t go with “${esc(set.pairs[r][1])}”. Try again.` }
+    noteMiss(`match:${g.set}:${l}`, set.secs[l])
     RENDER.match()
     app.querySelectorAll(`[data-side="L"][data-id="${l}"], [data-side="R"][data-id="${r}"]`).forEach(b => b.classList.add('shake'))
     buzz()
@@ -670,7 +924,7 @@ RENDER.tf = () => {
 function verdictHtml(card, answered) {
   const right = answered.value === card.answer
   return `<div class="verdict">
-    <div class="hint ${right ? 'ok' : ''}" role="status"><p><b>${right ? 'Correct!' : 'Not quite.'}</b> “${esc(card.claim)}” is <b>${card.answer ? 'true' : 'false'}</b>. ${esc(card.why)}</p></div>
+    ${hintHtml({ ok: right, sec: right ? null : card.sec, html: `<b>${right ? 'Correct!' : 'Not quite.'}</b> “${esc(card.claim)}” is <b>${card.answer ? 'true' : 'false'}</b>. ${esc(card.why)}${right && answered.recruit ? ' ' + recruitLine(answered.recruit) : ''}` })}
     <button class="primary" id="continue">${state.index + 1 < state.order.length ? 'Next statement' : 'See results'}</button>
   </div>`
 }
@@ -678,9 +932,10 @@ function answerTF(value, fromX) {
   const g = state
   if (busy || g.answered) return
   const card = DECKS[g.set].cards[g.order[g.index]]
-  if (value !== card.answer) { g.mistakes++; g.misses.push(g.order[g.index]); buzz() }
-  g.answered = { value }
   const el = app.querySelector('#card')
+  const key = `tf:${g.set}:${g.order[g.index]}`
+  if (value !== card.answer) { g.mistakes++; g.misses.push(g.order[g.index]); noteMiss(key, card.sec); buzz(); g.answered = { value } }
+  else g.answered = { value, recruit: reward(key, 'hastatus', el) }
   const done = () => { busy = false; if (state === g) RENDER.tf() }
   if (reducedMotion || !el) return done()
   busy = true
@@ -723,11 +978,13 @@ RENDER.odd = () => {
     if (i === round.odd) {
       g.picked = i
       g.hint = { ok: true, html: `<b>${esc(round.items[i])}</b> is the odd one out. ${esc(round.why)}` }
+      reward(`odd:${g.set}:${g.order[g.index]}`, 'princeps', t)
       RENDER.odd()
     } else {
       g.mistakes++
       if (!g.misses.includes(g.order[g.index])) g.misses.push(g.order[g.index])
-      g.hint = { ok: false, html: `<b>${esc(round.items[i])}</b> belongs with the others. Look again.` }
+      g.hint = { ok: false, sec: round.sec, html: `<b>${esc(round.items[i])}</b> belongs with the others. Look again.` }
+      noteMiss(`odd:${g.set}:${g.order[g.index]}`, round.sec)
       app.querySelector('#hint-area').innerHTML = hintHtml(g.hint)
       app.querySelector('.score').textContent = `${g.order.length - g.index} left · ${plural(g.mistakes, 'mistake')}`
       t.classList.add('shake'); t.addEventListener('animationend', () => t.classList.remove('shake'), { once: true })
@@ -767,15 +1024,17 @@ RENDER.who = () => {
   app.querySelectorAll('.choice:not([disabled])').forEach(b => b.addEventListener('click', () => {
     const name = b.dataset.name
     if (name === p.name) {
+      reward(`who:${g.set}:${g.order[g.index]}`, 'centurio', b)
       g.solved = true
       g.results.push({ i: g.order[g.index], clues: g.shown, wrong: g.wrong.length })
-      g.hint = { ok: true, html: `Yes, <b>${esc(p.name)}</b>! ${g.shown === 1 ? 'Guessed from the first clue.' : `Guessed with ${g.shown} clues.`}` }
+      g.hint = { ok: true, sec: p.sec, html: `Yes, <b>${esc(p.name)}</b>! ${g.shown === 1 ? 'Guessed from the first clue.' : `Guessed with ${g.shown} clues.`}` }
       g.shown = p.clues.length
     } else {
       g.mistakes++
       g.wrong.push(name)
       if (g.shown < p.clues.length) g.shown++
       g.hint = { ok: false, html: `Not <b>${esc(name)}</b>. Here’s another clue.` }
+      noteMiss(`who:${g.set}:${g.order[g.index]}`, p.sec)
       buzz()
     }
     RENDER.who()
@@ -835,6 +1094,7 @@ function mapPlace(label, spot) {
   g.selected = null
   if (label === spot) {
     g.placed.push(label)
+    reward(`map:${g.set}:${label}`, 'princeps', app.querySelector(`.spot[data-spot="${spot}"]`))
     g.hint = { ok: true, html: `<b>${esc(places[label].name)}</b>: ${esc(places[label].why)}` }
     if (g.placed.length === places.length) {
       RENDER.map(); busy = true
@@ -843,7 +1103,8 @@ function mapPlace(label, spot) {
   } else {
     g.mistakes++
     if (!g.misses.includes(label)) g.misses.push(label)
-    g.hint = { ok: false, html: `Not there. Clue: <b>${esc(places[label].name)}</b>: ${esc(places[label].why)}` }
+    g.hint = { ok: false, sec: places[label].sec, html: `Not there. Clue: <b>${esc(places[label].name)}</b>: ${esc(places[label].why)}` }
+    noteMiss(`map:${g.set}:${label}`, places[label].sec)
     buzz()
   }
   RENDER.map()
@@ -889,10 +1150,33 @@ RENDER.quiz = () => {
   app.querySelectorAll('.option').forEach(b => b.addEventListener('click', () => {
     const i = +b.dataset.i
     g.answered = i
-    if (i === q.a) { g.recruits.push(q.level); g.hint = { ok: true, html: `<b>Right!</b> A ${RANKS[q.level].one} joins your legion. ${esc(q.why)}` } }
-    else { g.mistakes++; g.misses.push(g.index); g.hint = { ok: false, html: `<b>Not quite.</b> The answer is “${esc(q.options[q.a])}”. ${esc(q.why)}` }; buzz() }
+    const key = `quiz:${g.set}:${g.index}`
+    if (i === q.a) {
+      g.recruits.push(q.level)
+      const r = reward(key, ['', 'hastatus', 'princeps', 'triarius'][q.level], b)
+      g.hint = { ok: true, html: `<b>Right!</b> ${recruitLine(r)} ${esc(q.why)}` }
+    } else {
+      g.mistakes++; g.misses.push(g.index); noteMiss(key, q.sec)
+      g.hint = { ok: false, sec: q.sec, html: `<b>Not quite.</b> The answer is “${esc(q.options[q.a])}”. ${esc(q.why)}` }; buzz()
+    }
     RENDER.quiz()
   }))
+}
+
+// ---------- briefing ----------
+function renderBriefing() {
+  app.innerHTML = `
+    ${header('Ave Caesar · Early Rome', 'The Age of Kings')}
+    <section class="briefing">
+      <span class="eyebrow">Your briefing</span>
+      <h2>Rome, 753 BC (by tradition)</h2>
+      <p>A cluster of steep hills rises beside a ford on the Tiber River in central Italy. Legend says the city was founded here by Romulus, a son of the war god Mars, and ruled by seven kings until a revolt drove the last one out in 509 BC.</p>
+      <p>Historians doubt many of the details: the first history of Rome was written three centuries later. Learn the story anyway, and raise a legion as you go.</p>
+      <div class="actions"><button class="primary" id="go">Start round 1</button><button class="ghost dark" id="read">Read the chronicle first</button></div>
+    </section>`
+  bindBack()
+  app.querySelector('#go').addEventListener('click', () => startGame(run.plan[0].type, run.plan[0].set))
+  app.querySelector('#read').addEventListener('click', () => openChronicle())
 }
 
 // ---------- results ----------
@@ -910,7 +1194,22 @@ function renderResult() {
         <h2 style="margin-top:10px">${r.earned === 3 ? 'Perfect!' : r.earned === 2 ? 'Well done!' : 'You made it to the end'}</h2>
         <p class="task" style="margin-top:4px">${esc(r.note ?? (r.mistakes === 0 ? 'No mistakes.' : `${plural(r.mistakes, 'mistake')}. Three stars need a clean run.`))}</p>
       </div>
+      ${r.reviewSecs?.length ? `<div class="review">
+        <h3>${r.earned === 1 ? 'Review these sections, then try again' : 'Learn from your mistakes'}</h3>
+        <p class="task">Get them right in a later round and those soldiers join as veterans.</p>
+        <div class="review-links">${r.reviewSecs.map(id => `<button data-read="${id}">${esc(CHAPTER.find(s => s.id === id)?.title ?? id)}</button>`).join('')}</div>
+      </div>` : ''}
       ${r.recapHtml}
+      <div class="feedback" id="fb">
+        <h3>How was this round?</h3>
+        ${r.feedbackSent ? '<p class="sent">Thanks! Your feedback was saved.</p>' : `
+        <div class="chips" role="group" aria-label="Pick any that apply">
+          ${['Fun', 'Too easy', 'Too hard', 'Confusing', 'Boring', 'Learned something'].map(c => `<button type="button" aria-pressed="false" data-chip="${c}">${c}</button>`).join('')}
+        </div>
+        <textarea id="fb-text" placeholder="Anything else? (optional)" maxlength="1000"></textarea>
+        <div><button class="ghost" id="fb-send">${fb.db ? 'Send feedback' : 'Copy feedback'}</button></div>
+        <p class="task" id="fb-help" ${fb.db ? 'hidden' : ''}>This copies your answers so you can paste them in a message to whoever sent you this game.</p>`}
+      </div>
       <div class="actions">
         ${inRun ? `<button class="primary" id="next">${lastRound ? 'Finish the chapter' : 'Next round'}</button>`
           : nextInType ? `<button class="primary" id="next">Next: ${esc(g.sets[r.set + 1].name)}</button>` : ''}
@@ -919,6 +1218,37 @@ function renderResult() {
     </section>`
   bindBack()
   app.querySelector('#again')?.addEventListener('click', () => startGame(r.type, r.set))
+  app.querySelectorAll('[data-chip]').forEach(c => c.addEventListener('click', () => c.setAttribute('aria-pressed', c.getAttribute('aria-pressed') === 'true' ? 'false' : 'true')))
+  app.querySelector('#fb-send')?.addEventListener('click', async e => {
+    const tags = [...app.querySelectorAll('[data-chip][aria-pressed="true"]')].map(c => c.dataset.chip)
+    const comment = app.querySelector('#fb-text').value.trim()
+    if (!tags.length && !comment) return toast('Pick a word or write a comment first.')
+    const entry = { game: GAMES[r.type].title, set: GAMES[r.type].sets[r.set].name, stars: r.earned, mistakes: r.mistakes, tags, comment, inChapterRun: !!run, at: new Date().toISOString() }
+    if (fb.db) {
+      e.target.disabled = true
+      try {
+        await fb.db.collection(`feedback/${fb.uid}/rounds`).add(entry)
+        r.feedbackSent = true
+        return renderResult()
+      } catch {
+        // This viewer can't save to the page (e.g. outside the owner's organization): fall back to copying
+        fb.db = null
+        e.target.disabled = false
+        e.target.textContent = 'Copy feedback'
+        app.querySelector('#fb-help').hidden = false
+      }
+    }
+    const text = `Ave Caesar feedback: ${entry.game} · ${entry.set}: ${entry.stars}/3 stars, ${plural(entry.mistakes, 'mistake')}.` +
+      (tags.length ? ` ${tags.join(', ')}.` : '') + (comment ? ` "${comment}"` : '')
+    try {
+      await navigator.clipboard.writeText(text)
+      toast('<b>Copied!</b> Paste it in a message to whoever sent you this game.')
+    } catch {
+      const ta = app.querySelector('#fb-text')
+      ta.value = text; ta.focus(); ta.select()
+      toast('Select-all is done: copy the text in the box and send it.')
+    }
+  })
   app.querySelector('#next')?.addEventListener('click', () => {
     if (!inRun) return startGame(r.type, r.set + 1)
     if (lastRound) return go({ screen: 'runDone' })
