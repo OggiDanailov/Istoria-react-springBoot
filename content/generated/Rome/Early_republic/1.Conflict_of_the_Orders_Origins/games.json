@@ -4,36 +4,36 @@
   "briefing": {
     "title": "Rome, 494 BC",
     "paragraphs": [
-      "Rome, 494 BC. Fifteen years ago, tradition says, the Romans drove out their last king. Now two consuls, elected yearly, rule alongside the Senate, and every office belongs to the patricians, a small hereditary aristocracy.",
-      "The plebeians, the great majority of citizens, farm, trade and fill the army. Yet many are sinking into debt, and creditors can jail or even enslave them. With enemies on three sides, the soldiers are about to down tools. Their long fight for protection, written law and equality is beginning."
+      "Rome, 494 BC. Fifteen years after driving out its last king, the young Republic is run by two consuls elected each year and a Senate of leading men. All of them come from a small circle of aristocratic families called patricians, who alone hold office and know the unwritten law.",
+      "Everyone else is a plebeian. Plebeians farm, trade and fill the army, but while they fight, their farms fail and their debts pile up. Now, with enemies on three sides, the soldiers are about to refuse to march."
     ]
   },
   "timelines": [
     {
-      "name": "Level 1: The Big Milestones",
-      "blurb": "Four turning points in the plebeians' early struggle.",
+      "name": "The Big Moments",
+      "blurb": "Four turning points in the early struggle between patricians and plebeians.",
       "events": [
         {
-          "label": "Romans expel their last king",
-          "when": "509 BC (by tradition)",
+          "label": "Last king driven out of Rome",
+          "when": "509 BC",
           "year": -509,
-          "fact": "By Roman tradition, Tarquinius Superbus was driven out and replaced by two consuls elected for one year and the Senate.",
+          "fact": "According to tradition, the Romans then founded a republic led by two yearly consuls and the Senate.",
           "sectionId": "patricians-and-plebeians",
           "reviewFlags": []
         },
         {
-          "label": "Plebs secede to the Sacred Mount",
+          "label": "Plebeians walk out to the Sacred Mount",
           "when": "494 BC",
           "year": -494,
-          "fact": "Plebeian soldiers refused to march and withdrew to a hill about three miles from Rome, shutting down the city like a general strike.",
+          "fact": "Plebeian soldiers refused to fight and camped on the Mons Sacer, a hill just over three miles from Rome.",
           "sectionId": "first-secession",
           "reviewFlags": []
         },
         {
-          "label": "Plebeians begin voting by tribe",
+          "label": "Lex Publilia: plebs vote by tribe",
           "when": "471 BC",
           "year": -471,
-          "fact": "The tribune Volero Publilius's law broke patrician influence over plebeian votes by organising the plebs by tribe, the districts where citizens were registered.",
+          "fact": "Voting by tribe instead of by curia freed plebeians from their patrician patrons' influence.",
           "sectionId": "plebeian-council",
           "reviewFlags": []
         },
@@ -41,29 +41,21 @@
           "label": "Twelve Tables formally published",
           "when": "449 BC",
           "year": -449,
-          "fact": "According to Livy the laws were inscribed on bronze and displayed so every Roman could read them.",
+          "fact": "According to Livy, the laws were engraved on bronze and displayed so every citizen could know them.",
           "sectionId": "twelve-tables",
           "reviewFlags": []
         }
       ]
     },
     {
-      "name": "Level 2: From Debt to Written Law",
-      "blurb": "Six steps from the fall of the kings to the burning of Rome.",
+      "name": "From Debt to Written Law",
+      "blurb": "Follow the plebeians from a debt crisis to the long end of their struggle.",
       "events": [
         {
-          "label": "Republic founded, by tradition",
-          "when": "509 BC",
-          "year": -509,
-          "fact": "Instead of a king, two consuls ran the state with the Senate, and all these positions belonged to the patricians.",
-          "sectionId": "patricians-and-plebeians",
-          "reviewFlags": []
-        },
-        {
-          "label": "Ragged ex-officer stirs up the Forum",
+          "label": "Ragged ex-soldier stirs the Forum",
           "when": "495 BC",
           "year": -495,
-          "fact": "Livy tells of a former officer ruined by war and crushing interest, then jailed and whipped by his creditors.",
+          "fact": "Livy tells of a veteran ruined by debt and whipped by creditors, whose story enraged the crowd.",
           "sectionId": "debt-crisis",
           "reviewFlags": []
         },
@@ -71,53 +63,61 @@
           "label": "First tribunes of the plebs take office",
           "when": "493 BC",
           "year": -493,
-          "fact": "Lucius Albinius Paterculus and Gaius Licinius were the first tribunes, the first office open to plebeians.",
+          "fact": "The tribunate was the first office in Rome open to commoners.",
           "sectionId": "tribunes-of-the-plebs",
           "reviewFlags": []
         },
         {
-          "label": "Terentilius attacks consuls' powers",
+          "label": "Tribune attacks consuls' power",
           "when": "462 BC",
           "year": -462,
-          "fact": "The tribune Gaius Terentilius Arsa proposed five commissioners to define and restrict the consuls' powers.",
-          "sectionId": "terentilius-arsa",
+          "fact": "A tribune claimed the consuls were worse than the kings and proposed a commission to limit them.",
+          "sectionId": "demand-for-written-law",
           "reviewFlags": []
         },
         {
-          "label": "Envoys sent to study Greek laws",
-          "when": "454 BC",
-          "year": -454,
-          "fact": "Livy says three envoys went to Athens to study Solon's laws, though some modern scholars doubt it.",
-          "sectionId": "terentilius-arsa",
+          "label": "Tribunes increased to ten",
+          "when": "457 BC",
+          "year": -457,
+          "fact": "The Senate hoped more tribunes would defuse the campaign for written law.",
+          "sectionId": "demand-for-written-law",
           "reviewFlags": []
         },
         {
-          "label": "Gallic warriors burn Rome",
-          "when": "387 BC",
-          "year": -387,
-          "fact": "The original tablets of the Twelve Tables may have been destroyed in this fire.",
-          "sectionId": "twelve-tables",
+          "label": "Decemvirs take power to write laws",
+          "when": "Around 450 BC",
+          "year": -450,
+          "fact": "All regular offices were suspended and a board of ten men got one year of unchallengeable power.",
+          "sectionId": "demand-for-written-law",
+          "reviewFlags": []
+        },
+        {
+          "label": "Conflict of the Orders ends",
+          "when": "287 BC",
+          "year": -287,
+          "fact": "The struggle between patricians and plebeians lasted from soon after 509 BC until 287 BC.",
+          "sectionId": "patricians-and-plebeians",
           "reviewFlags": []
         }
       ]
     },
     {
-      "name": "Level 3: The Whole Story",
-      "blurb": "Eight events across two centuries of struggle.",
+      "name": "The Full Struggle",
+      "blurb": "Eight steps from the fall of the kings to the fall of the decemvirs.",
       "events": [
         {
-          "label": "Tarquinius Superbus driven out",
-          "when": "509 BC (by tradition)",
+          "label": "Two consuls replace the kings",
+          "when": "509 BC",
           "year": -509,
-          "fact": "The fall of Rome's last king opened the way for a republic run by patrician consuls and the Senate.",
+          "fact": "Tradition says the Republic began when the Romans drove out their last king.",
           "sectionId": "patricians-and-plebeians",
           "reviewFlags": []
         },
         {
-          "label": "Consul Appius backs the creditors",
+          "label": "Consul backs creditors' right to jail",
           "when": "495 BC",
           "year": -495,
-          "fact": "According to Livy, instead of relief the consul Appius issued decrees backing creditors' right to imprison debtors.",
+          "fact": "Instead of easing the debt crisis, a hard-line consul reinforced creditors' power to imprison debtors.",
           "sectionId": "debt-crisis",
           "reviewFlags": []
         },
@@ -125,48 +125,48 @@
           "label": "Menenius tells the fable of the belly",
           "when": "494 BC",
           "year": -494,
-          "fact": "Agrippa Menenius Lanatus told the seceding plebs how limbs that refused to feed the belly starved themselves.",
-          "sectionId": "first-secession",
+          "fact": "According to tradition, his story persuaded the plebeians on the Sacred Mount to negotiate.",
+          "sectionId": "menenius-agrippa",
           "reviewFlags": []
         },
         {
-          "label": "Volero Publilius carries his law",
+          "label": "Sacrosanct tribunes first take office",
+          "when": "493 BC",
+          "year": -493,
+          "fact": "Anyone who laid hands on a tribune could be killed without penalty.",
+          "sectionId": "tribunes-of-the-plebs",
+          "reviewFlags": []
+        },
+        {
+          "label": "Plebs start voting by tribe",
           "when": "471 BC",
           "year": -471,
-          "fact": "The Lex Publilia made the plebs meet and vote by tribe, making them politically independent.",
+          "fact": "The Lex Publilia is seen by historians as the moment the plebeians became politically independent.",
           "sectionId": "plebeian-council",
           "reviewFlags": []
         },
         {
-          "label": "Tribunes raised to ten",
-          "when": "457 BC",
-          "year": -457,
-          "fact": "The Senate offered ten tribunes on condition that none of the old, repeatedly re-elected ones stood again.",
-          "sectionId": "terentilius-arsa",
+          "label": "Commission to limit consuls proposed",
+          "when": "462 BC",
+          "year": -462,
+          "fact": "The Senate stalled for five years, pointing to war and plague.",
+          "sectionId": "demand-for-written-law",
           "reviewFlags": []
         },
         {
-          "label": "Decemvirs replace the magistrates",
+          "label": "Laws handed to ten men",
           "when": "Around 450 BC",
           "year": -450,
-          "fact": "A board of ten men governed with no appeal against their decisions while writing down Roman law.",
-          "sectionId": "decemvirs-and-verginia",
+          "fact": "The decemvirs were given one year to write down Rome's laws.",
+          "sectionId": "demand-for-written-law",
           "reviewFlags": []
         },
         {
-          "label": "Second secession ousts the decemvirs",
+          "label": "Second secession forces decemvirs out",
           "when": "449 BC",
           "year": -449,
-          "fact": "After the Verginia scandal the plebs withdrew to the Aventine Hill and the Sacred Mount until the decemvirs fell.",
-          "sectionId": "decemvirs-and-verginia",
-          "reviewFlags": []
-        },
-        {
-          "label": "Traditional end of the conflict",
-          "when": "287 BC",
-          "year": -287,
-          "fact": "The Conflict of the Orders is traditionally dated from about 500 BC to 287 BC.",
-          "sectionId": "patricians-and-plebeians",
+          "fact": "Outrage over Verginia's death drove the people to the Aventine and then the Sacred Mount.",
+          "sectionId": "appius-claudius-and-verginia",
           "reviewFlags": []
         }
       ]
@@ -174,37 +174,37 @@
   ],
   "matchSets": [
     {
-      "name": "Who Did What?",
-      "blurb": "Match each man to his part in the struggle.",
+      "name": "Who's Who",
+      "blurb": "Match each person to their part in the story.",
       "pairs": [
         {
-          "name": "Lucius Sicinius Vellutus",
-          "match": "Advised the plebeian soldiers to refuse to march in 494 BC",
+          "name": "Sicinius",
+          "match": "Plebeian leader who masterminded the first walkout of 494 BC",
           "sectionId": "first-secession",
           "reviewFlags": []
         },
         {
-          "name": "Agrippa Menenius Lanatus",
-          "match": "Told the fable of the limbs that refused to feed the belly",
-          "sectionId": "first-secession",
+          "name": "Menenius Agrippa",
+          "match": "Popular ex-consul who told the plebs the fable of the belly",
+          "sectionId": "menenius-agrippa",
           "reviewFlags": []
         },
         {
-          "name": "Volero Publilius",
-          "match": "Tribune whose 471 BC law made plebeians vote by tribe",
-          "sectionId": "plebeian-council",
+          "name": "Appius Claudius",
+          "match": "Most notorious decemvir, whose crime sparked the second secession",
+          "sectionId": "appius-claudius-and-verginia",
           "reviewFlags": []
         },
         {
-          "name": "Gaius Terentilius Arsa",
-          "match": "Tribune who proposed five commissioners to limit the consuls",
-          "sectionId": "terentilius-arsa",
+          "name": "Verginia",
+          "match": "Plebeian girl killed by her own father to save her freedom",
+          "sectionId": "appius-claudius-and-verginia",
           "reviewFlags": []
         },
         {
-          "name": "Appius Claudius Crassus",
-          "match": "Decemvir whose attempt to seize Verginia sparked riots",
-          "sectionId": "decemvirs-and-verginia",
+          "name": "Livy",
+          "match": "Roman historian who wrote the fullest account, centuries later",
+          "sectionId": "debt-crisis",
           "reviewFlags": []
         }
       ]
@@ -214,159 +214,165 @@
       "blurb": "Match each Roman term to its meaning.",
       "pairs": [
         {
-          "name": "Secession",
-          "match": "A mass walkout by the plebs that worked like a general strike",
+          "name": "secessio",
+          "match": "A mass withdrawal of plebeians from Rome, like a general strike",
           "sectionId": "first-secession",
           "reviewFlags": []
         },
         {
-          "name": "Veto",
-          "match": "A tribune's power to block the actions of magistrates",
+          "name": "sacrosanct",
+          "match": "Untouchable: anyone who harmed a tribune could be killed unpunished",
           "sectionId": "tribunes-of-the-plebs",
-          "reviewFlags": []
+          "reviewFlags": [
+            "\"sacrosanct\" appears fewer than 2 times in the chapter"
+          ]
         },
         {
-          "name": "Plebiscite",
-          "match": "A resolution passed by the Plebeian Council",
+          "name": "plebiscites",
+          "match": "Resolutions passed by the Plebeian Council",
           "sectionId": "plebeian-council",
+          "reviewFlags": [
+            "\"plebiscites\" appears fewer than 2 times in the chapter"
+          ]
+        },
+        {
+          "name": "decemvirs",
+          "match": "Board of ten men given a year's absolute power to write the laws",
+          "sectionId": "demand-for-written-law",
           "reviewFlags": []
         },
         {
-          "name": "Pontifices",
-          "match": "Upper-class priests who alone knew and interpreted the law",
-          "sectionId": "terentilius-arsa",
-          "reviewFlags": []
-        },
-        {
-          "name": "Decemviri",
-          "match": "'Ten men' appointed to govern and write down Roman law",
-          "sectionId": "decemvirs-and-verginia",
-          "reviewFlags": []
+          "name": "Lex Publilia",
+          "match": "Law of 471 BC making plebeians vote by tribe, not by curia",
+          "sectionId": "plebeian-council",
+          "reviewFlags": [
+            "\"Lex Publilia\" appears fewer than 2 times in the chapter"
+          ]
         }
       ]
     }
   ],
   "trueFalseDecks": [
     {
-      "name": "Debt, Walkouts and Tribunes",
-      "blurb": "How the plebeians won their first protectors.",
+      "name": "Strike and Settlement",
+      "blurb": "From the debt crisis to the first tribunes.",
       "cards": [
         {
-          "claim": "In the early Republic, two consuls elected for one year ran the state alongside the Senate.",
+          "claim": "Rome's two consuls were elected for a single year.",
           "answer": true,
-          "why": "Instead of a king, two consuls, chief magistrates elected annually, governed with the Senate, a council of leading men.",
+          "why": "Power passed to two consuls, chief magistrates elected for one year, and to the Senate.",
           "sectionId": "patricians-and-plebeians",
           "reviewFlags": []
         },
         {
-          "claim": "Plebeians were a small minority of Roman citizens.",
+          "claim": "In the early Republic, plebeians could stand for consul.",
           "answer": false,
-          "why": "The patricians were the small hereditary aristocracy; plebeians were the great majority of citizens.",
+          "why": "Only patricians, a small circle of aristocratic families, could stand for office.",
           "sectionId": "patricians-and-plebeians",
           "reviewFlags": []
         },
         {
-          "claim": "In Livy's story, the ragged former officer's farm was burned during a war against the Sabines.",
+          "claim": "In Livy's story, the ragged soldier's farm was burned while he fought the Sabines.",
           "answer": true,
-          "why": "The Sabines, a hill people north-east of Rome, burned his farm and stole his goods, starting his slide into debt.",
+          "why": "Raiders burned his farm while he was away fighting the Sabines, a hill people north-east of Rome.",
           "sectionId": "debt-crisis",
           "reviewFlags": []
         },
         {
-          "claim": "After the former officer's speech, the consul Appius cancelled the plebeians' debts.",
+          "claim": "After the soldier's story spread, a consul cancelled all debts.",
           "answer": false,
-          "why": "According to Livy, Appius did the opposite, issuing decrees backing creditors' right to imprison debtors.",
+          "why": "A hard-line consul did the opposite, issuing decrees reinforcing creditors' right to imprison debtors.",
           "sectionId": "debt-crisis",
           "reviewFlags": []
         },
         {
-          "claim": "In 494 BC the plebeian soldiers withdrew to the Mons Sacer, a hill about three miles from Rome.",
+          "claim": "In the first secession of 494 BC, the plebeians camped on the Mons Sacer.",
           "answer": true,
-          "why": "They built simple defences on the Sacred Mount and waited while the city lost its food and labour.",
+          "why": "They camped on the Mons Sacer, the 'Sacred Mount', just over three miles from Rome.",
           "sectionId": "first-secession",
           "reviewFlags": []
         },
         {
-          "claim": "In Menenius's fable, the belly refused to feed the limbs.",
-          "answer": false,
-          "why": "In the fable the limbs refused to feed the belly, and so starved themselves.",
-          "sectionId": "first-secession",
-          "reviewFlags": []
-        },
-        {
-          "claim": "A tribune's authority reached only about a mile beyond the city.",
+          "claim": "Menenius Agrippa was a former consul well liked by ordinary Romans.",
           "answer": true,
-          "why": "Because his power rested on putting his sacrosanct body in the way, he had to be present, and his reach was about a mile beyond Rome.",
-          "sectionId": "tribunes-of-the-plebs",
+          "why": "The Senate chose him to negotiate because the strikers would trust him.",
+          "sectionId": "menenius-agrippa",
           "reviewFlags": []
         },
         {
-          "claim": "Patricians could also be elected tribunes of the plebs.",
+          "claim": "In Menenius's fable, the limbs grew stronger after they stopped feeding the belly.",
           "answer": false,
-          "why": "Only plebeians could hold the office, which was created to shield ordinary citizens from the patrician consuls.",
+          "why": "As the belly starved, so did the limbs, and the whole body wasted away.",
+          "sectionId": "menenius-agrippa",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Tribunes commanded their own troops to protect plebeians.",
+          "answer": false,
+          "why": "Tribunes commanded no troops; their power rested on an oath making them sacrosanct.",
           "sectionId": "tribunes-of-the-plebs",
           "reviewFlags": []
         }
       ]
     },
     {
-      "name": "Laws, Tables and Doubts",
-      "blurb": "From the plebeian assembly to the Twelve Tables.",
+      "name": "Laws and Lawbreakers",
+      "blurb": "From the Plebeian Council to the fall of the decemvirs.",
       "cards": [
         {
-          "claim": "The Lex Publilia of 471 BC made plebeians meet and vote by tribe.",
+          "claim": "The Lex Publilia of 471 BC made plebeians vote by tribe rather than by curia.",
           "answer": true,
-          "why": "Volero Publilius's law replaced voting by curiae, breaking patrician influence over plebeian votes.",
+          "why": "Historians see this as the moment the plebeians became politically independent.",
           "sectionId": "plebeian-council",
           "reviewFlags": []
         },
         {
-          "claim": "In the 5th century BC, tribunes succeeded in sharing out conquered land among the plebs.",
+          "claim": "At first, plebiscites were binding on all Romans.",
           "answer": false,
-          "why": "Tribunes proposed such land sharing throughout the 5th century BC, but none of these attempts succeeded.",
+          "why": "At first they bound only plebeians; laws of 449 BC made plebeian decisions binding on all.",
           "sectionId": "plebeian-council",
           "reviewFlags": []
         },
         {
-          "claim": "Gaius Terentilius Arsa claimed that rule by consuls had become more oppressive than the monarchy.",
-          "answer": true,
-          "why": "In 462 BC he made this claim and proposed five commissioners to restrict the consuls' powers.",
-          "sectionId": "terentilius-arsa",
-          "reviewFlags": []
-        },
-        {
-          "claim": "Livy says Rome's envoys went to Sparta to study its laws.",
+          "claim": "According to Livy, envoys went to study the laws of Carthage.",
           "answer": false,
-          "why": "Livy says they went to Athens to examine the laws of Solon, though some modern scholars doubt this.",
-          "sectionId": "terentilius-arsa",
+          "why": "Livy says they studied the laws of Athens and other Greek cities, though some scholars doubt it.",
+          "sectionId": "demand-for-written-law",
           "reviewFlags": []
         },
         {
-          "claim": "Verginia was killed by her own father to save her from the decemvir Appius Claudius Crassus.",
+          "claim": "Under the Twelve Tables, a debtor had thirty days to pay.",
           "answer": true,
-          "why": "Her father, the centurion Lucius Verginius, killed her to save her from rape, and riots followed.",
-          "sectionId": "decemvirs-and-verginia",
-          "reviewFlags": []
-        },
-        {
-          "claim": "Under the Twelve Tables, court hearings ended at sunset.",
-          "answer": true,
-          "why": "Tables I and II set out how trials worked, including the rule that hearings ended at sunset.",
+          "why": "After thirty days his creditor could chain him and feed him a pound of bread a day for sixty days.",
           "sectionId": "twelve-tables",
           "reviewFlags": []
         },
         {
-          "claim": "Table XI of the Twelve Tables allowed marriage between patricians and plebeians.",
+          "claim": "The Twelve Tables allowed patricians and plebeians to marry each other.",
           "answer": false,
-          "why": "Table XI, one of the two supplementary tables, banned marriage between patricians and plebeians.",
+          "why": "One law banned marriage between patricians and plebeians.",
           "sectionId": "twelve-tables",
           "reviewFlags": []
         },
         {
-          "claim": "The Greek historian Polybius described the Conflict of the Orders in detail.",
+          "claim": "Verginia was killed by Appius Claudius.",
           "answer": false,
-          "why": "Polybius never mentions the conflict, one reason some scholars doubt the traditional story.",
-          "sectionId": "historicity",
+          "why": "Tradition says her own father killed her to save her from Appius Claudius.",
+          "sectionId": "appius-claudius-and-verginia",
+          "reviewFlags": []
+        },
+        {
+          "claim": "The second secession of 449 BC forced the decemvirs to resign.",
+          "answer": true,
+          "why": "Two senators then negotiated and restored the tribunes and the right of appeal.",
+          "sectionId": "appius-claudius-and-verginia",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Official consul lists include men with plebeian family names in the fifth century BC.",
+          "answer": true,
+          "why": "This is a puzzle, since the post was supposedly closed to plebeians then.",
+          "sectionId": "how-reliable",
           "reviewFlags": []
         }
       ]
@@ -375,219 +381,204 @@
   "oddOneOut": [
     {
       "items": [
-        "Sabines",
-        "Gauls",
-        "Aequi",
-        "Volsci"
-      ],
-      "oddIndex": 1,
-      "why": "The Sabines, Aequi and Volsci were the three peoples Rome was fighting in 494 BC. The Gauls came much later, burning Rome in 387 BC.",
-      "sectionId": "first-secession",
-      "reviewFlags": []
-    },
-    {
-      "items": [
-        "Farm burned by Sabines",
-        "Lost his grandfather's farm",
-        "Sold into slavery",
-        "Jailed and whipped"
-      ],
-      "oddIndex": 2,
-      "why": "Livy's ragged ex-officer suffered the other three. His creditors threatened him with death but did not enslave him, though some other debtors were enslaved.",
-      "sectionId": "debt-crisis",
-      "reviewFlags": []
-    },
-    {
-      "items": [
-        "Authority across all Italy",
-        "Power of veto",
-        "Sacrosanct person",
-        "Had to be present to act"
+        "Twelve Tables",
+        "Tribunes of the plebs",
+        "Plebeian Council",
+        "Some debts cancelled"
       ],
       "oddIndex": 0,
-      "why": "Veto, sacrosanctity and the need to be physically present all describe the tribunes. Their authority reached only about a mile beyond the city.",
-      "sectionId": "tribunes-of-the-plebs",
-      "reviewFlags": []
-    },
-    {
-      "items": [
-        "Plebs vote by tribe",
-        "Tribunes elected by tribe",
-        "Patron influence broken",
-        "Plebiscites bind all Romans"
-      ],
-      "oddIndex": 3,
-      "why": "The Lex Publilia of 471 BC did the first three. Making plebiscites binding on all Romans came in 449 BC, under the consuls Valerius and Horatius.",
+      "why": "Tribunes, the Plebeian Council and freedom from some debts all came from the settlement of 494 BC. The Twelve Tables came much later, in 449 BC.",
       "sectionId": "plebeian-council",
       "reviewFlags": []
     },
     {
       "items": [
-        "Restored the tribunes",
-        "Wrote the first ten tables",
-        "Restored right of appeal",
-        "Made plebiscites binding"
+        "Sabines",
+        "Athens",
+        "Aequi",
+        "Volsci"
       ],
       "oddIndex": 1,
-      "why": "Valerius and Horatius restored the tribunes and appeal and made plebiscites binding in 449 BC. The first ten tables were drawn up by the first board of decemvirs.",
-      "sectionId": "decemvirs-and-verginia",
+      "why": "The Sabines, Aequi and Volsci were at war with Rome in 494 BC. Athens was the Greek city whose laws Roman envoys reportedly studied.",
+      "sectionId": "first-secession",
       "reviewFlags": []
     },
     {
       "items": [
-        "Hearings end at sunset",
-        "Thirty days to pay a debt",
-        "Ten tribunes a year",
-        "Son sold thrice goes free"
+        "Sacrosanct person",
+        "Veto over magistrates",
+        "Command of troops",
+        "Shielding citizens in person"
       ],
       "oddIndex": 2,
-      "why": "The other three are rules in the Twelve Tables. Ten tribunes came from the Senate's bargain of 457 BC.",
+      "why": "These were all features of a tribune's power, except troops: tribunes commanded none and relied on their sacred oath.",
+      "sectionId": "tribunes-of-the-plebs",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Trials end at sunset",
+        "Fallen fruit stays the owner's",
+        "No patrician-plebeian marriage",
+        "Voting by tribe, not curia"
+      ],
+      "oddIndex": 3,
+      "why": "Three are rules in the Twelve Tables. Voting by tribe came from the Lex Publilia of 471 BC.",
       "sectionId": "twelve-tables",
       "reviewFlags": []
     },
     {
       "items": [
-        "Original bronze tablets survive",
-        "Polybius never mentions it",
-        "Plebeian names in consul lists",
-        "Strangely little bloodshed"
+        "Tribunes raised to ten",
+        "Twelve Tables published",
+        "Second secession",
+        "Decemvirs forced to resign"
       ],
       "oddIndex": 0,
-      "why": "Three are reasons scholars doubt the traditional story. The original tablets of the Twelve Tables are lost, perhaps destroyed in 387 BC.",
-      "sectionId": "historicity",
+      "why": "Three happened in 449 BC. The number of tribunes was raised to ten earlier, in 457 BC.",
+      "sectionId": "demand-for-written-law",
+      "reviewFlags": [
+        "fact-check: The assigned section only covers the 457 BC increase; the three 449 BC events that define the shared property are explained in other sections."
+      ]
+    },
+    {
+      "items": [
+        "Consulship",
+        "Tribunate of the plebs",
+        "Seats in the Senate",
+        "Interpreting the law"
+      ],
+      "oddIndex": 1,
+      "why": "Patricians controlled the consulship, the Senate and the law. The tribunate was the first office open to commoners.",
+      "sectionId": "patricians-and-plebeians",
+      "reviewFlags": [
+        "fact-check: The assigned section never mentions the tribunate, so it cannot explain why the tribunate is the odd one out."
+      ]
+    },
+    {
+      "items": [
+        "No writers at the time",
+        "Plebeian names on consul lists",
+        "Basis of law for 1,000 years",
+        "Surprisingly little bloodshed"
+      ],
+      "oddIndex": 2,
+      "why": "Three are reasons scholars doubt the traditional story. Lasting a thousand years as the basis of Roman law is praise of the Twelve Tables, not a doubt.",
+      "sectionId": "how-reliable",
       "reviewFlags": []
     }
   ],
   "whoAmI": [
     {
-      "name": "Champions of the Plebs",
-      "blurb": "Plebeian leaders who pushed for protection and limits on power.",
+      "name": "Leaders and Tyrants",
+      "blurb": "Three men who shaped the early struggle.",
       "people": [
         {
-          "name": "Lucius Sicinius Vellutus",
+          "name": "Sicinius",
           "options": [
-            "Lucius Sicinius Vellutus",
-            "Lucius Albinius Paterculus",
-            "Volero Publilius",
-            "Gaius Terentilius Arsa"
+            "Sicinius",
+            "Menenius Agrippa",
+            "Appius Claudius",
+            "Coriolanus"
           ],
           "clues": [
-            "The first tribunes soon chose me as one of their colleagues.",
-            "Our protest came while Rome was fighting the Sabines, Aequi and Volsci.",
-            "Thanks to my advice, the soldiers built simple defences on a hill and waited.",
-            "In 494 BC I advised the plebeian soldiers to refuse to march."
+            "My followers built simple defences outside the city and waited.",
+            "I advised the soldiers to leave Rome together instead of fighting the Sabines, Aequi and Volsci.",
+            "The walkout I planned ended on the Mons Sacer, the Sacred Mount.",
+            "I was the plebeian leader who masterminded the first secession of 494 BC."
           ],
           "sectionId": "first-secession",
           "reviewFlags": []
         },
         {
-          "name": "Volero Publilius",
+          "name": "Menenius Agrippa",
           "options": [
-            "Volero Publilius",
-            "Gaius Licinius",
-            "Lucius Sicinius Vellutus",
-            "Gaius Terentilius Arsa"
+            "Menenius Agrippa",
+            "Sicinius",
+            "Appius Claudius",
+            "Cincinnatus"
           ],
           "clues": [
-            "Before my reform, the plebs met by curiae, groupings from the time of the kings.",
-            "I wanted to stop patrician patrons swaying the election of tribunes.",
-            "As tribune in 471 BC I carried a law that bears my name.",
-            "Because of me, plebeians met and voted by tribe."
+            "I had already served as consul before the plebeians walked out in 494 BC.",
+            "Ordinary Romans liked me, so the Senate sent me to negotiate.",
+            "I won over the strikers with a story rather than threats.",
+            "I told the fable of the limbs that refused to feed the belly."
           ],
-          "sectionId": "plebeian-council",
+          "sectionId": "menenius-agrippa",
           "reviewFlags": []
         },
         {
-          "name": "Gaius Terentilius Arsa",
+          "name": "Appius Claudius",
           "options": [
-            "Gaius Terentilius Arsa",
-            "Volero Publilius",
-            "Lucius Albinius Paterculus",
-            "Lucius Sicinius Vellutus"
+            "Appius Claudius",
+            "Menenius Agrippa",
+            "Sicinius",
+            "Cincinnatus"
           ],
           "clues": [
-            "The patricians stalled my plan, citing war and plague.",
-            "The plebs re-elected the same tribunes for five years to keep my cause alive.",
-            "I declared that rule by consuls had become worse than the monarchy.",
-            "In 462 BC I proposed five commissioners to define and limit the consuls' powers."
+            "I sat on the board meant to finish writing Rome's laws.",
+            "When our term ended, my colleagues and I refused to step down.",
+            "The second secession of 449 BC forced us to resign.",
+            "I was the most notorious decemvir, and tradition says I tried to rape Verginia."
           ],
-          "sectionId": "terentilius-arsa",
+          "sectionId": "appius-claudius-and-verginia",
           "reviewFlags": []
         }
       ]
     },
     {
-      "name": "Senators, Decemvirs and a Father",
-      "blurb": "Men on the other side of the plebs' great walkouts.",
+      "name": "Voices and Victims",
+      "blurb": "A heroine, a historian and a tribune.",
       "people": [
         {
-          "name": "Agrippa Menenius Lanatus",
+          "name": "Verginia",
           "options": [
-            "Agrippa Menenius Lanatus",
-            "Appius Claudius Crassus",
-            "Lucius Verginius",
-            "Lucius Valerius Potitus"
+            "Verginia",
+            "Lucretia",
+            "Cloelia",
+            "Veturia"
           ],
           "clues": [
-            "I had already served as consul, yet the plebs liked me.",
-            "The Senate sent me to talk the seceding plebs into coming home.",
-            "I told them a city needs patricians and plebeians working together.",
-            "My fable: the limbs refused to feed the belly and starved themselves."
+            "My father was a respected centurion, an army officer.",
+            "The crowd that saw my death rioted, and the anger spread to the army.",
+            "My death led to the second secession of 449 BC.",
+            "I was the plebeian girl a notorious decemvir tried to seize."
           ],
-          "sectionId": "first-secession",
+          "sectionId": "appius-claudius-and-verginia",
           "reviewFlags": []
         },
         {
-          "name": "Appius Claudius Crassus",
+          "name": "Livy",
           "options": [
-            "Appius Claudius Crassus",
-            "Agrippa Menenius Lanatus",
-            "Lucius Verginius",
-            "Lucius Valerius Potitus"
+            "Livy",
+            "Polybius",
+            "Tacitus",
+            "Suetonius"
           ],
           "clues": [
-            "I sat on the second board, appointed to add two more tables.",
-            "My board refused to step down when its term ended.",
-            "Tradition says my board had a critic, a soldier and former tribune, killed.",
-            "As a decemvir I tried to seize Verginia."
+            "Some think I mixed fact and fable and assumed Roman institutions barely changed.",
+            "I reported that envoys went to study the laws of Athens.",
+            "I told of a ragged former soldier who threw himself into the Forum.",
+            "I wrote the fullest account of these years, nearly five centuries later."
           ],
-          "sectionId": "decemvirs-and-verginia",
-          "reviewFlags": [
-            "fact-check: The chapter never says Appius Claudius Crassus sat on the second board, so the clues attributing that board's actions to him are unsupported."
-          ]
-        },
-        {
-          "name": "Lucius Verginius",
-          "options": [
-            "Lucius Verginius",
-            "Appius Claudius Crassus",
-            "Agrippa Menenius Lanatus",
-            "Lucius Valerius Potitus"
-          ],
-          "clues": [
-            "I was a respected centurion, an army officer.",
-            "A decemvir tried to seize a member of my family.",
-            "What I did set off riots in the city and the army camp.",
-            "I killed my own daughter to save her from rape."
-          ],
-          "sectionId": "decemvirs-and-verginia",
+          "sectionId": "how-reliable",
           "reviewFlags": []
         },
         {
-          "name": "Lucius Valerius Potitus",
+          "name": "Sicinius",
           "options": [
-            "Lucius Valerius Potitus",
-            "Agrippa Menenius Lanatus",
-            "Appius Claudius Crassus",
-            "Lucius Verginius"
+            "Sicinius",
+            "Coriolanus",
+            "Spurius Cassius",
+            "Cincinnatus"
           ],
           "clues": [
-            "I was a senator when the decemvirs were forced out in 449 BC.",
-            "I helped restore the tribunes and the right of appeal.",
-            "As consul I passed laws making plebiscites binding on all Romans.",
-            "My partner in all this was Marcus Horatius Barbatus."
+            "My power rested on a sworn oath, not on soldiers.",
+            "Anyone who laid hands on me could be killed without penalty.",
+            "Soon after the first tribunes took office in 493 BC, I was added to their number.",
+            "I led the walkout that won the plebs their own officials."
           ],
-          "sectionId": "decemvirs-and-verginia",
+          "sectionId": "tribunes-of-the-plebs",
           "reviewFlags": []
         }
       ]
@@ -595,50 +586,60 @@
   ],
   "places": [
     {
+      "name": "Mons Sacer",
+      "wikipediaTitle": "Mons Sacer",
+      "lat": 41.9408,
+      "lon": 12.5325,
+      "why": "The 'Sacred Mount' just outside Rome where the plebeians camped in the secessions of 494 and 449 BC.",
+      "sectionId": "first-secession",
+      "coordinates": "Wikipedia: Mons Sacer",
+      "reviewFlags": [
+        "less than 12 km from Rome: too close to show on the map"
+      ]
+    },
+    {
       "name": "Sabines",
-      "wikipediaTitle": "Sabina",
-      "lat": 42.3,
-      "lon": 12.75,
-      "why": "This hill people north-east of Rome burned the ruined officer's farm and was one of Rome's three enemies in 494 BC.",
+      "wikipediaTitle": "Sabines",
+      "lat": 42.25,
+      "lon": 12.8,
+      "why": "Hill people north-east of Rome; the ruined soldier of 495 BC had fought them, and Rome was at war with them in 494 BC.",
       "sectionId": "debt-crisis",
       "coordinates": "model estimate",
       "reviewFlags": [
-        "no coordinates on Wikipedia \"Sabina\"; position is the model's estimate"
+        "no coordinates on Wikipedia \"Sabines\"; position is the model's estimate"
       ]
     },
     {
       "name": "Aequi",
       "wikipediaTitle": "Aequi",
       "lat": 42.05,
-      "lon": 13.1,
-      "why": "The Aequi, living east of Rome, were at war with the city when the plebs seceded in 494 BC.",
+      "lon": 13.25,
+      "why": "A hill tribe east of Rome at war with the city when the plebeians refused to march in 494 BC.",
       "sectionId": "first-secession",
       "coordinates": "model estimate",
       "reviewFlags": [
-        "no coordinates on Wikipedia \"Aequi\"; position is the model's estimate",
-        "fact-check: The chapter says only that the Aequi and Volsci together lived east and south-east of Rome, without saying the Aequi were the eastern one."
+        "no coordinates on Wikipedia \"Aequi\"; position is the model's estimate"
       ]
     },
     {
       "name": "Volsci",
       "wikipediaTitle": "Volsci",
-      "lat": 41.6,
-      "lon": 13.35,
-      "why": "The Volsci, south-east of Rome, were the third enemy that made the 494 BC walkout so dangerous.",
+      "lat": 41.55,
+      "lon": 13.45,
+      "why": "A hill tribe south-east of Rome, one of the three enemies Rome faced during the first secession.",
       "sectionId": "first-secession",
       "coordinates": "model estimate",
       "reviewFlags": [
-        "no coordinates on Wikipedia \"Volsci\"; position is the model's estimate",
-        "fact-check: The chapter does not specify that the Volsci in particular lived south-east of Rome, only that the Aequi and Volsci lived east and south-east."
+        "no coordinates on Wikipedia \"Volsci\"; position is the model's estimate"
       ]
     },
     {
       "name": "Greek cities in southern Italy",
       "wikipediaTitle": "Magna Graecia",
-      "lat": 39.5,
+      "lat": 39.8,
       "lon": 16.5,
-      "why": "Some scholars think Rome's envoys of 454 BC studied Greek laws only here, not in Athens.",
-      "sectionId": "terentilius-arsa",
+      "why": "Some scholars think Roman envoys studying laws visited only these cities, not Athens.",
+      "sectionId": "demand-for-written-law",
       "coordinates": "model estimate",
       "reviewFlags": [
         "no coordinates on Wikipedia \"Magna Graecia\"; position is the model's estimate"

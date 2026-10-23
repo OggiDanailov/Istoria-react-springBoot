@@ -6,185 +6,185 @@
   "description": "AI-generated from Wikipedia (claude-opus-5-5)",
   "questions": [
     {
-      "question": "What made the second board of decemvirs notorious?",
+      "question": "In Livy's story, why did the ruined former soldier first borrow money?",
       "options": [
-        "They refused to step down when their term ended",
-        "They declared war on Athens",
-        "They abolished the Senate",
-        "They burned the first ten tables",
-        "They made a plebeian king"
-      ],
-      "correctAnswers": [
-        0
-      ],
-      "difficulty": 2,
-      "textReference": "#decemvirs-and-verginia",
-      "explanation": "The second board, appointed to add two more tables, clung to power past its term. According to tradition, they even had a critic, a soldier and former tribune, killed.",
-      "sourceQuote": "Its members refused to step down when their term ended, and according to tradition they had a critic, a soldier and former tribune, killed.",
-      "reviewFlags": []
-    },
-    {
-      "question": "Who advised the plebeian soldiers to refuse to march in 494 BC?",
-      "options": [
-        "Agrippa Menenius Lanatus",
-        "Gaius Licinius",
-        "Lucius Sicinius Vellutus",
-        "Volero Publilius",
-        "Lucius Verginius"
-      ],
-      "correctAnswers": [
-        2
-      ],
-      "difficulty": 2,
-      "textReference": "#first-secession",
-      "explanation": "The plebeian Lucius Sicinius Vellutus advised the walkout to the Sacred Mount. He was later chosen as one of the early tribunes' colleagues.",
-      "sourceQuote": "Advised by a plebeian named Lucius Sicinius Vellutus, the plebeian soldiers refused to march.",
-      "reviewFlags": []
-    },
-    {
-      "question": "When did the habit of calling plebeians simply the 'lower class' begin?",
-      "options": [
-        "In the late Republic, centuries afterwards",
-        "At the founding of the Republic",
-        "After the Twelve Tables were published",
-        "During the first secession",
-        "In the time of the kings"
-      ],
-      "correctAnswers": [
-        0
-      ],
-      "difficulty": 2,
-      "textReference": "#patricians-and-plebeians",
-      "explanation": "The label 'lower class' dates only from the late Republic. In fact many plebeians are known to have been wealthy landowners.",
-      "sourceQuote": "The habit of calling them simply the 'lower class' dates only from the late Republic, centuries afterwards.",
-      "reviewFlags": []
-    },
-    {
-      "question": "Why, according to tradition, did the Senate choose Agrippa Menenius Lanatus to negotiate with the seceding plebs?",
-      "options": [
-        "He had written Rome's first laws",
-        "He was a former consul the plebs liked",
-        "He was the chief pontifex",
-        "He commanded the army against the Volsci",
-        "He was the plebeians' own tribune"
-      ],
-      "correctAnswers": [
-        1
-      ],
-      "difficulty": 2,
-      "textReference": "#first-secession",
-      "explanation": "Menenius was a former consul popular with the plebs, sent to talk them round. He used a fable about the body's limbs and belly to argue for cooperation.",
-      "sourceQuote": "According to tradition, the Senate sent Agrippa Menenius Lanatus, a former consul the plebs liked, to talk them round.",
-      "reviewFlags": []
-    },
-    {
-      "question": "Why did meeting by curiae disadvantage the early Plebeian Council?",
-      "options": [
-        "Curiae met only once a year",
-        "Curiae could only meet outside the city",
-        "It required votes to be unanimous",
-        "Curiae excluded all soldiers",
-        "It kept plebeians dependent on their patrician patrons"
-      ],
-      "correctAnswers": [
-        4
-      ],
-      "difficulty": 2,
-      "textReference": "#plebeian-council",
-      "explanation": "The curiae dated from the time of the kings and tied humbler families to powerful patrician patrons. This also let patricians sway the election of tribunes.",
-      "sourceQuote": "That kept them dependent on their patrician patrons, powerful men to whom humbler families owed loyalty.",
-      "reviewFlags": []
-    },
-    {
-      "question": "Which roles did plebeians fill in the early Roman Republic? (select all that apply)",
-      "options": [
-        "Serving as pontifices",
-        "Holding the consulship",
-        "Farming the land",
-        "Running shops and workshops",
-        "Filling the ranks of the army"
-      ],
-      "correctAnswers": [
-        2,
-        3,
-        4
-      ],
-      "difficulty": 2,
-      "textReference": "#patricians-and-plebeians",
-      "explanation": "Plebeians, the great majority of citizens, farmed, ran shops and workshops, and made up the army. The consulship and other offices belonged to the patricians.",
-      "sourceQuote": "They farmed the land, ran the shops and workshops, and filled the ranks of the army.",
-      "reviewFlags": []
-    },
-    {
-      "question": "According to Livy, how did the consul Appius respond to the uproar over debt in 495 BC?",
-      "options": [
-        "He issued decrees backing creditors' right to imprison debtors",
-        "He cancelled all debts",
-        "He handed the case to the pontifices",
-        "He created the office of tribune",
-        "He gave the officer back his farm"
+        "To pay a tax",
+        "To pay his daughter's dowry",
+        "To buy new weapons",
+        "To buy seed for planting",
+        "To pay a ransom to raiders"
       ],
       "correctAnswers": [
         0
       ],
       "difficulty": 2,
       "textReference": "#debt-crisis",
-      "explanation": "Instead of offering relief, Appius sided with the creditors. With patricians holding every office, the plebeians could find no remedy inside the system.",
-      "sourceQuote": "Instead of relief, according to Livy, the consul Appius issued decrees backing creditors' right to imprison debtors.",
+      "explanation": "He borrowed to pay a tax, and crushing interest swallowed his grandfather's farm and then his father's. Finally his creditors imprisoned and whipped him.",
+      "sourceQuote": "Back home, he borrowed to pay a tax, and crushing interest swallowed his grandfather's farm, then his father's.",
       "reviewFlags": []
     },
     {
-      "question": "What did Table XI of the Twelve Tables ban?",
+      "question": "What was the plebeians' main price for returning to Rome after the first secession?",
       "options": [
-        "Selling land to foreigners",
-        "Lending money at interest",
-        "Plebeians holding office",
-        "Burials inside the city",
-        "Marriage between patricians and plebeians"
+        "A complete written code of Roman law",
+        "A share of the land conquered from the Sabines",
+        "Permanent seats for plebeians in the Senate",
+        "A new official chosen from the plebs to protect them",
+        "The right to elect one of the two consuls"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#menenius-agrippa",
+      "explanation": "The plebs demanded an official chosen from among themselves to shield them from the consuls. The Senate agreed, creating the tribune of the plebs.",
+      "sourceQuote": "Their price for returning was a new kind of official, chosen from among the plebs, to protect them from the power of the consuls.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which Twelve Tables rule worked against the plebeians?",
+      "options": [
+        "A ban on plebeians speaking in court",
+        "A ban on plebeians entering temples",
+        "A ban on plebeians serving in the army",
+        "A ban on plebeians owning farmland",
+        "A ban on marriage between patricians and plebeians"
       ],
       "correctAnswers": [
         4
       ],
       "difficulty": 2,
       "textReference": "#twelve-tables",
-      "explanation": "Table XI, one of the two supplementary tables, banned patrician-plebeian intermarriage. Table XII covered damage done by slaves.",
-      "sourceQuote": "Of the two supplementary tables, XI banned marriage between patricians and plebeians, and XII covered damage done by slaves.",
+      "explanation": "One law banned marriage between patricians and plebeians. The Tables' debt rules were also harsh, though at least clear.",
+      "sourceQuote": "Not everything helped the plebs: one law banned marriage between patricians and plebeians.",
       "reviewFlags": []
     },
     {
-      "question": "In Livy's story of the indebted officer, which enemy burned his farm and stole his goods?",
+      "question": "What puzzle in the official lists of consuls troubles historians?",
       "options": [
-        "The Etruscans",
-        "The Aequi",
-        "The Sabines",
-        "The Gauls",
-        "The Volsci"
+        "They show no consuls at all before 400 BC",
+        "They name several consuls known to be Greek",
+        "They include plebeian family names in the fifth century BC",
+        "They leave out every year of the decemvirs",
+        "Some years list three consuls instead of two"
       ],
       "correctAnswers": [
         2
       ],
       "difficulty": 2,
-      "textReference": "#debt-crisis",
-      "explanation": "During a war against the Sabines, a hill people north-east of Rome, the enemy burned his farm. Back home he fell into crushing debt and was eventually jailed and whipped.",
-      "sourceQuote": "During a war against the Sabines, a hill people north-east of Rome, the enemy had burned his farm and stolen his goods.",
+      "textReference": "#how-reliable",
+      "explanation": "Men with plebeian family names appear as consuls in the fifth century BC. Yet the post was supposedly closed to plebeians then.",
+      "sourceQuote": "Official lists of consuls include men with plebeian family names in the fifth century BC, when the post was supposedly closed to them.",
       "reviewFlags": []
     },
     {
-      "question": "In the view of sceptics like Richard E. Mitchell, where did the story of the conflict come from?",
+      "question": "Under the Twelve Tables, who owned fruit that fell from a tree onto a neighbour's land?",
       "options": [
-        "Etruscan propaganda against Rome",
-        "Patrician family records",
-        "Medieval monks copying Livy",
-        "Greek historians inventing Roman origins",
-        "Late Republic Romans reading their own class struggles back into the past"
+        "The Roman state",
+        "Whoever picked it up first",
+        "Both owners shared it equally",
+        "The neighbour",
+        "The owner of the tree"
       ],
       "correctAnswers": [
         4
       ],
       "difficulty": 2,
-      "textReference": "#historicity",
-      "explanation": "Sceptics argue that Romans of the late Republic, living through violent class struggles, projected those battles onto their distant past. Mitchell argues there was no conflict at all.",
-      "sourceQuote": "In this view, Romans of the late Republic, living through violent class struggles of their own, read those battles back into their distant past.",
+      "textReference": "#twelve-tables",
+      "explanation": "Fallen fruit still belonged to the tree's owner. Such specific everyday rules are typical of the Twelve Tables.",
+      "sourceQuote": "Fruit falling onto a neighbour's land still belonged to the tree's owner.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did the Lex Publilia of 471 BC change?",
+      "options": [
+        "Debt slavery would be abolished",
+        "Plebeians would vote by tribe rather than by curia",
+        "One consul each year had to be a plebeian",
+        "Plebiscites would now bind all Romans",
+        "Tribunes would become members of the Senate"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#plebeian-council",
+      "explanation": "Plebeians would now vote by tribe, districts of citizens, and elect tribunes this way. This freed them from the influence of patrician patrons.",
+      "sourceQuote": "Plebeians would now gather and vote by tribe, districts of citizens, rather than by curia, and tribunes would be elected this way.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which peoples was Rome at war with in 494 BC, when the plebeian soldiers refused to march? (select all that apply)",
+      "options": [
+        "The Samnites",
+        "The Aequi",
+        "The Sabines",
+        "The Volsci",
+        "The Etruscans"
+      ],
+      "correctAnswers": [
+        1,
+        2,
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#first-secession",
+      "explanation": "Rome faced the Sabines, Aequi and Volsci in 494 BC. The Aequi and Volsci were hill tribes to the east and south-east.",
+      "sourceQuote": "In 494 BC Rome was at war with three neighbouring peoples: the Sabines, and the Aequi and Volsci, hill tribes to the east and south-east.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How far did a tribune's protection extend?",
+      "options": [
+        "Within Rome and a mile beyond",
+        "Throughout the whole of Italy",
+        "Only inside the Forum itself",
+        "Wherever the Roman army marched",
+        "Within ten miles of the city"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#tribunes-of-the-plebs",
+      "explanation": "A tribune's protection held only within Rome and a mile beyond. He also had to be physically present to intervene.",
+      "sourceQuote": "A tribune had to be physically present to intervene, and his protection held only within Rome and a mile beyond.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Why did the Senate raise the number of tribunes to ten in 457 BC?",
+      "options": [
+        "To defuse the campaign for written law",
+        "To replace the consuls during a plague",
+        "To reward the plebs for a victory in war",
+        "To give one tribune to each new tribe",
+        "To welcome envoys returning from Greece"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#demand-for-written-law",
+      "explanation": "The Senate hoped extra tribunes would calm the push for written law. It had already stalled for five years, citing war and plague.",
+      "sourceQuote": "In 457 BC the Senate tried to defuse the campaign by raising the number of tribunes to ten.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did the second board of decemvirs do when their term ended?",
+      "options": [
+        "Refused to step down and ruled without tribunes",
+        "Asked the plebs to extend their term",
+        "Published the final laws and retired",
+        "Fled Rome to escape prosecution",
+        "Handed power to two newly elected consuls"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#appius-claudius-and-verginia",
+      "explanation": "The decemvirs clung to power, with no tribunes to check them and no right of appeal. They even had a former tribune who criticised them killed.",
+      "sourceQuote": "When their term ended they refused to step down, ruling with no tribunes to check them and no right of appeal.",
       "reviewFlags": []
     }
   ]

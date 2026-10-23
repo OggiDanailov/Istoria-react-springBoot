@@ -6,183 +6,183 @@
   "description": "AI-generated from Wikipedia (claude-opus-5-5)",
   "questions": [
     {
-      "question": "What practical limits did a tribune's power to intervene have?",
+      "question": "Why did organising the early Plebeian Council by curiae help the patricians?",
       "options": [
-        "It applied only to patrician citizens",
-        "It worked only during wartime",
-        "It expired after thirty days in office",
-        "It required the Senate's approval each time",
-        "He had to be present and it reached only about a mile beyond the city"
+        "Votes were counted by patrician priests",
+        "Only landowners were allowed to join a curia",
+        "Curiae could meet only when the consuls allowed",
+        "Patricians held half the seats in every curia",
+        "Many plebeians voted as their patrician patrons wished"
       ],
       "correctAnswers": [
         4
-      ],
-      "difficulty": 2,
-      "textReference": "#tribunes-of-the-plebs",
-      "explanation": "Because the tribune's power rested on putting his sacrosanct body in the way, he had to be physically present. His authority reached only about a mile beyond Rome.",
-      "sourceQuote": "That brought limits: he had to be physically present to intervene, and his authority reached only about a mile beyond the city.",
-      "reviewFlags": []
-    },
-    {
-      "question": "How many commissioners did Gaius Terentilius Arsa propose to define and restrict the consuls' powers?",
-      "options": [
-        "Five",
-        "Ten",
-        "Three",
-        "Two",
-        "Twelve"
-      ],
-      "correctAnswers": [
-        0
-      ],
-      "difficulty": 2,
-      "textReference": "#terentilius-arsa",
-      "explanation": "Terentilius proposed five commissioners in 462 BC. The patricians stalled for years, citing war and plague.",
-      "sourceQuote": "He proposed appointing five commissioners to define and restrict their powers.",
-      "reviewFlags": []
-    },
-    {
-      "question": "What detail in official lists of consuls casts doubt on the traditional story of the conflict?",
-      "options": [
-        "They show no consuls at all before 449 BC",
-        "They include men with plebeian family names in the 5th century BC",
-        "They include Greek names from Athens",
-        "They record consuls elected by the Plebeian Council",
-        "They list only one consul per year"
-      ],
-      "correctAnswers": [
-        1
-      ],
-      "difficulty": 2,
-      "textReference": "#historicity",
-      "explanation": "Men with plebeian family names appear as consuls when the office was supposedly closed to plebeians. Another oddity is how little bloodshed such bitter grievances produced.",
-      "sourceQuote": "Official lists of consuls include men with plebeian family names in the 5th century BC, when the office was supposedly closed to plebeians.",
-      "reviewFlags": []
-    },
-    {
-      "question": "Who killed Verginia to save her from Appius Claudius Crassus?",
-      "options": [
-        "Verginia herself",
-        "Her betrothed, a tribune",
-        "Her brother",
-        "A crowd in the Forum",
-        "Her father, Lucius Verginius"
-      ],
-      "correctAnswers": [
-        4
-      ],
-      "difficulty": 2,
-      "textReference": "#decemvirs-and-verginia",
-      "explanation": "Her father, the respected centurion Lucius Verginius, killed her to prevent her rape. Riots then spread from the city to the army camped outside.",
-      "sourceQuote": "To save her from that fate, her father killed her himself.",
-      "reviewFlags": []
-    },
-    {
-      "question": "Who were the first tribunes of the plebs, for 493 BC?",
-      "options": [
-        "Lucius Albinius Paterculus and Gaius Licinius",
-        "Appius Claudius Crassus and Lucius Verginius",
-        "Lucius Valerius Potitus and Marcus Horatius Barbatus",
-        "Agrippa Menenius Lanatus and Tarquinius Superbus",
-        "Gaius Terentilius Arsa and Volero Publilius"
-      ],
-      "correctAnswers": [
-        0
-      ],
-      "difficulty": 2,
-      "textReference": "#tribunes-of-the-plebs",
-      "explanation": "Lucius Albinius Paterculus and Gaius Licinius were the first tribunes. They soon chose Sicinius and two others as colleagues.",
-      "sourceQuote": "The first tribunes, for 493 BC, were Lucius Albinius Paterculus and Gaius Licinius, who soon chose Sicinius and two others as colleagues.",
-      "reviewFlags": []
-    },
-    {
-      "question": "By 457 BC, who assisted the ten tribunes of the plebs?",
-      "options": [
-        "The college of pontifices",
-        "Two plebeian aediles",
-        "Two patrician quaestors",
-        "Four Senate envoys",
-        "The two consuls"
-      ],
-      "correctAnswers": [
-        1
-      ],
-      "difficulty": 2,
-      "textReference": "#tribunes-of-the-plebs",
-      "explanation": "The ten tribunes were helped by two plebeian aediles, assistants who also had to be plebeians. Ancient writers disagree on whether there were originally two or five tribunes.",
-      "sourceQuote": "By 457 BC there were ten, helped by two plebeian aediles, assistants who also had to be plebeians.",
-      "reviewFlags": []
-    },
-    {
-      "question": "Under Table IV of the Twelve Tables, what happened to a son sold three times by his father?",
-      "options": [
-        "He went free",
-        "He was adopted by the buyer",
-        "He was sent to the army",
-        "He lost his citizenship",
-        "He became a slave for life"
-      ],
-      "correctAnswers": [
-        0
-      ],
-      "difficulty": 2,
-      "textReference": "#twelve-tables",
-      "explanation": "Table IV gave fathers vast power over their families, but a son sold three times went free. The laws as a whole were practical and often harsh.",
-      "sourceQuote": "Table IV gave fathers vast power over their families, though a son sold three times by his father went free.",
-      "reviewFlags": []
-    },
-    {
-      "question": "Under the Lex Publilia of 471 BC, how would plebeians now meet and vote?",
-      "options": [
-        "By centuries of the army",
-        "By curiae",
-        "By wealth classes",
-        "By tribe, the districts in which citizens were registered",
-        "By family clans"
-      ],
-      "correctAnswers": [
-        3
       ],
       "difficulty": 2,
       "textReference": "#plebeian-council",
-      "explanation": "The reform had plebeians meet and vote by tribe, and tribunes were elected the same way. This broke patrician influence and made the plebs politically independent.",
-      "sourceQuote": "Plebeians would now meet and vote by tribe, the districts in which citizens were registered, and tribunes would be elected the same way.",
+      "explanation": "In the curiae, many plebeians depended on patrician patrons and voted as instructed. This let aristocrats quietly steer who became tribune.",
+      "sourceQuote": "The assembly was first organised by curiae, ancient groupings of families in which many plebeians depended on patrician patrons and voted as those patrons wished.",
       "reviewFlags": []
     },
     {
-      "question": "Which two senators restored the tribunes and the right of appeal after the decemvirs fell?",
+      "question": "During the second secession, where did the people gather before withdrawing to the Sacred Mount?",
       "options": [
-        "Lucius Valerius Potitus and Marcus Horatius Barbatus",
-        "Lucius Sicinius Vellutus and Lucius Verginius",
-        "Gaius Terentilius Arsa and Volero Publilius",
-        "Lucius Albinius Paterculus and Gaius Licinius",
-        "Agrippa Menenius Lanatus and Appius Claudius"
+        "The Janiculum",
+        "The Palatine",
+        "The Capitoline",
+        "The Quirinal",
+        "The Aventine"
       ],
       "correctAnswers": [
-        0
+        4
       ],
       "difficulty": 2,
-      "textReference": "#decemvirs-and-verginia",
-      "explanation": "Valerius and Horatius restored the tribunes and the right of appeal in 449 BC. As consuls, they went on to pass further laws on plebiscites.",
-      "sourceQuote": "Two senators, Lucius Valerius Potitus and Marcus Horatius Barbatus, restored the tribunes and the right of appeal.",
+      "textReference": "#appius-claudius-and-verginia",
+      "explanation": "The people first gathered on the Aventine hill, then withdrew to the Sacred Mount. The anger had spread from the crowd to the army camped outside the city.",
+      "sourceQuote": "The people gathered on the Aventine, one of Rome's hills, then withdrew to the Sacred Mount.",
       "reviewFlags": []
     },
     {
-      "question": "What condition did the Senate attach to its offer in 457 BC to increase the number of tribunes?",
+      "question": "Why was a secession such a powerful weapon for the plebeians?",
       "options": [
-        "That the Plebeian Council be dissolved",
-        "That none of the old tribunes stand again",
-        "That patricians could also become tribunes",
-        "That the tribunes serve without pay",
-        "That the veto be abolished"
+        "They could call on foreign allies for help",
+        "They were most Romans and produced most food and goods",
+        "They controlled the city's temples and treasury",
+        "They held most of the seats in the Senate",
+        "They owned all of the city's grain warehouses"
       ],
       "correctAnswers": [
         1
       ],
       "difficulty": 2,
-      "textReference": "#terentilius-arsa",
-      "explanation": "The Senate offered to raise the tribunes to ten provided none of the old ones stood again. The plebs had been re-electing the same tribunes for five years to keep up pressure.",
-      "sourceQuote": "In 457 BC the Senate offered a trade: the number of tribunes would rise to ten, provided none of the old ones stood again.",
+      "textReference": "#first-secession",
+      "explanation": "The plebs were the vast majority and produced most of Rome's food and goods. When they left, trade stopped and the city faced its enemies with no army.",
+      "sourceQuote": "Plebeians were the vast majority of Romans and produced most of the city's food and goods.",
+      "reviewFlags": []
+    },
+    {
+      "question": "In 462 BC, what did a tribune claim about the consuls?",
+      "options": [
+        "They had stolen from the city's treasury",
+        "They were plotting to bring back the kings",
+        "They had betrayed Rome to the Volsci",
+        "They were too weak to defend the city",
+        "They had become more oppressive than the kings"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#demand-for-written-law",
+      "explanation": "The tribune said the consuls were worse than the kings they had replaced. He proposed a commission to define and limit their powers.",
+      "sourceQuote": "In 462 BC a tribune declared that the consuls had become more oppressive than the kings they replaced, and proposed a commission to define and limit their powers.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Tribunes commanded no troops. How could a tribune protect a citizen from a magistrate?",
+      "options": [
+        "By placing his own untouchable person in the way",
+        "By bribing the magistrate's guards",
+        "By calling out a plebeian militia",
+        "By appealing to the gods in a temple",
+        "By paying the citizen's fine himself"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#tribunes-of-the-plebs",
+      "explanation": "Because tribunes were sacrosanct, a tribune could physically stand between a citizen and a magistrate. From this grew the power of veto.",
+      "sourceQuote": "Shielded by this, a tribune could protect a citizen from a magistrate by placing his own untouchable person in the way.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did one hard-line consul respond to the public outcry over debt in 495 BC?",
+      "options": [
+        "He reinforced creditors' right to imprison debtors",
+        "He created the office of tribune of the plebs",
+        "He exiled the city's leading moneylenders",
+        "He cancelled all debts owed to patricians",
+        "He gave public land to ruined veterans"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#debt-crisis",
+      "explanation": "Instead of relief, the consul strengthened creditors' power to imprison debtors. The next year the plebeian soldiers refused to march.",
+      "sourceQuote": "Instead, one hard-line consul issued decrees reinforcing creditors' right to imprison debtors.",
+      "reviewFlags": []
+    },
+    {
+      "question": "In the early Republic, who alone could stand for office?",
+      "options": [
+        "Wealthy plebeian traders",
+        "Any citizen-soldier",
+        "Only the pontiffs",
+        "Former army officers",
+        "The patricians"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#patricians-and-plebeians",
+      "explanation": "Only the patricians, a small circle of aristocratic families, could stand for office. Both the consuls and the Senate came from their ranks.",
+      "sourceQuote": "Both belonged to the patricians, a small circle of aristocratic families who alone could stand for office.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Why do historians find the lack of bloodshed in the early conflict odd?",
+      "options": [
+        "Ancient sources describe constant street battles",
+        "The patricians had hired foreign mercenaries",
+        "The plebeians controlled all of the army's weapons",
+        "Roman law demanded death for any rebellion",
+        "Similar quarrels in the late Republic quickly turned violent"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#how-reliable",
+      "explanation": "Such bitter grievances produced surprisingly little violence, unlike the late Republic's quarrels. This is one of several puzzles that make the traditional story controversial.",
+      "sourceQuote": "It is odd that such bitter grievances led to so little bloodshed, when similar quarrels in the late Republic quickly turned violent.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Why did the Senate choose Menenius Agrippa as its negotiator in 494 BC?",
+      "options": [
+        "He commanded the army facing the Volsci",
+        "He had written down Rome's first laws",
+        "He was a former consul well liked by ordinary Romans",
+        "He was the chief priest of Rome",
+        "He had led the plebeian walkout himself"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#menenius-agrippa",
+      "explanation": "The Senate needed someone the strikers would trust, so it chose a popular former consul. Tradition says he persuaded them with the fable of the belly.",
+      "sourceQuote": "It chose Menenius Agrippa, a former consul who was well liked by ordinary Romans.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Why was military service a trap for plebeian soldiers in the early Republic?",
+      "options": [
+        "They had to pay for their own warships",
+        "They lost their vote while they were enlisted",
+        "Their farms lay abandoned while they were on campaign",
+        "They were sent abroad for decades at a time",
+        "They were paid only in conquered land"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#patricians-and-plebeians",
+      "explanation": "While soldiers were away, their farms went untended. Many had to borrow from patricians, and defaulting debtors could be beaten, imprisoned or even enslaved.",
+      "sourceQuote": "While a plebeian soldier was away on campaign, his farm lay abandoned.",
       "reviewFlags": []
     }
   ]

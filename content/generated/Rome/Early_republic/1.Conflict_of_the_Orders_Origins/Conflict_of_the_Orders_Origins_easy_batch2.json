@@ -6,173 +6,173 @@
   "description": "AI-generated from Wikipedia (claude-opus-5-5)",
   "questions": [
     {
-      "question": "Where did the plebs secede to in 449 BC?",
+      "question": "Which Roman historian wrote the fullest account of the early Republic's debt crisis?",
       "options": [
-        "The Aventine Hill, then the Sacred Mount",
-        "The Capitoline, then the Janiculum",
-        "The Palatine, then the Quirinal",
-        "Ostia, then the Alban Hills"
+        "Livy",
+        "Tacitus",
+        "Sallust",
+        "Suetonius"
       ],
       "correctAnswers": [
         0
       ],
       "difficulty": 1,
-      "textReference": "#decemvirs-and-verginia",
-      "explanation": "In the second secession the plebs went to the Aventine Hill and then the Sacred Mount. The decemvirs were forced out as a result.",
-      "sourceQuote": "In 449 BC the plebs seceded again, to the Aventine Hill and then the Sacred Mount.",
+      "textReference": "#debt-crisis",
+      "explanation": "Livy wrote the fullest account of these years. He tells the story of a ruined former soldier that captured the angry mood of 495 BC.",
+      "sourceQuote": "Livy, the Roman historian who wrote the fullest account of these years nearly five centuries later, tells a story that captures the mood.",
       "reviewFlags": []
     },
     {
-      "question": "According to tradition, what fable did Agrippa Menenius Lanatus tell the seceding plebeians?",
+      "question": "What is the core problem for historians studying the early Conflict of the Orders?",
       "options": [
-        "The geese that saved the Capitol",
-        "The wolf who nursed two abandoned twins",
-        "The ant who stored grain for winter",
-        "The limbs of a body that refused to feed the belly"
+        "The surviving laws cannot be read",
+        "No one wrote about the events at the time",
+        "All the records were burned by invaders",
+        "The only sources are written in Greek"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#how-reliable",
+      "explanation": "No one recorded these events at the time. The fullest accounts come from Livy and others writing more than four centuries later.",
+      "sourceQuote": "The core problem is that no one wrote about these events at the time.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Whom did the Senate send to negotiate with the plebeians on the Sacred Mount?",
+      "options": [
+        "Lucius Brutus",
+        "Menenius Agrippa",
+        "Appius Claudius",
+        "Sicinius"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#menenius-agrippa",
+      "explanation": "The Senate chose Menenius Agrippa, a former consul trusted by ordinary Romans. Tradition says he won the strikers over with a story rather than threats.",
+      "sourceQuote": "It chose Menenius Agrippa, a former consul who was well liked by ordinary Romans.",
+      "reviewFlags": []
+    },
+    {
+      "question": "According to tradition, who killed Verginia to save her from Appius Claudius?",
+      "options": [
+        "Her betrothed",
+        "Her brother",
+        "She killed herself",
+        "Her father"
       ],
       "correctAnswers": [
         3
       ],
       "difficulty": 1,
-      "textReference": "#first-secession",
-      "explanation": "He told of limbs that refused to feed the belly, only to starve themselves. A city, he argued, likewise needed patricians and plebeians working together.",
-      "sourceQuote": "He told a fable about the limbs of a body that refused to feed the belly, only to starve themselves.",
+      "textReference": "#appius-claudius-and-verginia",
+      "explanation": "Her father killed her to uphold her freedom and virtue. He was a respected centurion, and the killing set off riots.",
+      "sourceQuote": "To save her from Appius Claudius, her father killed her himself, to uphold her freedom and virtue.",
       "reviewFlags": []
     },
     {
-      "question": "After the kings were gone, who served as Rome's chief magistrates?",
+      "question": "In Menenius Agrippa's traditional fable, which part of the body did the limbs grow angry with?",
       "options": [
-        "Ten tribunes elected every five years",
-        "A single dictator elected for life",
-        "Two consuls elected for one year at a time",
-        "Three kings sharing power for a decade"
+        "The heart",
+        "The belly",
+        "The eyes",
+        "The head"
       ],
       "correctAnswers": [
-        2
+        1
       ],
       "difficulty": 1,
-      "textReference": "#patricians-and-plebeians",
-      "explanation": "Two consuls, elected for one-year terms, ran the state together with the Senate, a council of leading men. Every one of these positions belonged to the patricians.",
-      "sourceQuote": "Instead of a monarch, two consuls, chief magistrates elected for one year at a time, ran the state alongside the Senate, a council of leading men.",
+      "textReference": "#menenius-agrippa",
+      "explanation": "The limbs resented the belly for enjoying food while they did all the work. When they starved it, they wasted away too.",
+      "sourceQuote": "Once, he said, the limbs of the body grew angry with the belly.",
       "reviewFlags": []
     },
     {
-      "question": "What was the tribunes' strongest weapon?",
+      "question": "According to Livy, what were the Twelve Tables engraved on?",
       "options": [
-        "The right to declare war",
-        "Command of the army",
-        "Control of the treasury",
-        "The veto"
+        "Bronze",
+        "Clay",
+        "Wood",
+        "Marble"
       ],
       "correctAnswers": [
-        3
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#twelve-tables",
+      "explanation": "Livy says the Tables were engraved on bronze and displayed publicly. That way every citizen could know the law.",
+      "sourceQuote": "According to Livy they were engraved on bronze and displayed publicly so every citizen could know them.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did one modern scholar argue about the Conflict of the Orders?",
+      "options": [
+        "That patricians actually led it",
+        "That there was no conflict at all",
+        "That it began under the kings",
+        "That it lasted only a single year"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#how-reliable",
+      "explanation": "One scholar argued there was no conflict at all. On this view, later Romans projected their own class struggles onto a dimly remembered past.",
+      "sourceQuote": "One modern scholar has even argued there was no conflict at all, and that later Romans projected the class struggles of their own day onto a dimly remembered past.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What was the first office in Rome open to commoners?",
+      "options": [
+        "Censor",
+        "Tribune of the plebs",
+        "Consul",
+        "Praetor"
+      ],
+      "correctAnswers": [
+        1
       ],
       "difficulty": 1,
       "textReference": "#tribunes-of-the-plebs",
-      "explanation": "The veto let tribunes block the actions of magistrates. This power rested on tribunes being sacrosanct.",
-      "sourceQuote": "The tribunes' strongest weapon was the veto, the power to block the actions of magistrates.",
+      "explanation": "The tribune of the plebs was the great prize won by the first secession. Tradition says the first tribunes took office in 493 BC.",
+      "sourceQuote": "The great prize of the first secession of 494 BC was the tribune of the plebs, the first office in Rome open to commoners.",
       "reviewFlags": []
     },
     {
-      "question": "Which tribune declared in 462 BC that rule by consuls had become more oppressive than the monarchy?",
+      "question": "What was the moral of Menenius Agrippa's fable of the belly?",
       "options": [
-        "Lucius Albinius Paterculus",
-        "Marcus Horatius Barbatus",
-        "Volero Publilius",
-        "Gaius Terentilius Arsa"
+        "Rome's people must always obey the consuls",
+        "Rome must conquer new land to feed its people",
+        "The poor should work harder if they want to eat",
+        "Rome needs patricians and plebeians to work together"
       ],
       "correctAnswers": [
         3
       ],
       "difficulty": 1,
-      "textReference": "#terentilius-arsa",
-      "explanation": "Gaius Terentilius Arsa argued that the consuls' powers needed clear limits. His campaign eventually led to the writing down of Roman law.",
-      "sourceQuote": "In 462 BC the tribune Gaius Terentilius Arsa declared that rule by consuls had become even more oppressive than the monarchy it replaced.",
+      "textReference": "#menenius-agrippa",
+      "explanation": "Like a body, Rome could only survive if its parts cooperated. The plebeians agreed to negotiate, but wanted more than a fable.",
+      "sourceQuote": "Rome, like a body, could not survive unless patricians and plebeians worked together.",
       "reviewFlags": []
     },
     {
-      "question": "Which decemvir is at the centre of the famous story of Verginia?",
+      "question": "Where did the plebeians camp during the first secession of 494 BC?",
       "options": [
-        "Lucius Valerius Potitus",
-        "Marcus Horatius Barbatus",
-        "Appius Claudius Crassus",
-        "Agrippa Menenius Lanatus"
+        "The Janiculum",
+        "The Sacred Mount",
+        "The Capitoline Hill",
+        "The port of Ostia"
       ],
       "correctAnswers": [
-        2
+        1
       ],
       "difficulty": 1,
-      "textReference": "#decemvirs-and-verginia",
-      "explanation": "Appius Claudius Crassus tried to seize Verginia, daughter of a respected centurion. The scandal sparked riots that spread to the army.",
-      "sourceQuote": "The most famous story concerns the decemvir Appius Claudius Crassus.",
-      "reviewFlags": []
-    },
-    {
-      "question": "Which tribune carried the Lex Publilia of 471 BC?",
-      "options": [
-        "Volero Publilius",
-        "Gaius Licinius",
-        "Lucius Sicinius Vellutus",
-        "Gaius Terentilius Arsa"
-      ],
-      "correctAnswers": [
-        0
-      ],
-      "difficulty": 1,
-      "textReference": "#plebeian-council",
-      "explanation": "The tribune Volero Publilius carried the reform in 471 BC. It made the plebs politically independent by breaking patrician influence over their votes.",
-      "sourceQuote": "In 471 BC a tribune named Volero Publilius carried a reform known as the Lex Publilia.",
-      "reviewFlags": []
-    },
-    {
-      "question": "In the early Republic, which group held every position of power?",
-      "options": [
-        "The patricians",
-        "The plebeians",
-        "The pontifices",
-        "The equestrians"
-      ],
-      "correctAnswers": [
-        0
-      ],
-      "difficulty": 1,
-      "textReference": "#patricians-and-plebeians",
-      "explanation": "The patricians were a small hereditary aristocracy who monopolised the consulship and the Senate. Everyone else was a plebeian, and plebeians made up the great majority of citizens.",
-      "sourceQuote": "Every one of these positions belonged to the patricians, a small hereditary aristocracy.",
-      "reviewFlags": []
-    },
-    {
-      "question": "What does the Latin word 'decemviri' mean?",
-      "options": [
-        "Ten men",
-        "Ten laws",
-        "Ten tribes",
-        "Ten years"
-      ],
-      "correctAnswers": [
-        0
-      ],
-      "difficulty": 1,
-      "textReference": "#decemvirs-and-verginia",
-      "explanation": "The decemviri were a commission of 'ten men' appointed to govern for a year and write down Roman law. There was no appeal against their decisions.",
-      "sourceQuote": "In their place a commission called the decemviri, Latin for 'ten men', would govern for a year and write down Roman law, with no appeal against their decisions.",
-      "reviewFlags": []
-    },
-    {
-      "question": "Which modern scholar argues that there was no Conflict of the Orders at all?",
-      "options": [
-        "Richard E. Mitchell",
-        "Edward Gibbon",
-        "Mary Beard",
-        "Theodor Mommsen"
-      ],
-      "correctAnswers": [
-        0
-      ],
-      "difficulty": 1,
-      "textReference": "#historicity",
-      "explanation": "Richard E. Mitchell is among the scholars who argue there was no conflict at all. In this view, later Romans projected their own class struggles onto the distant past.",
-      "sourceQuote": "Some scholars, such as Richard E. Mitchell, argue there was no conflict at all.",
+      "textReference": "#first-secession",
+      "explanation": "They camped on the Mons Sacer, the 'Sacred Mount', a hill just over three miles from the city. There they built simple defences and waited.",
+      "sourceQuote": "Advised by Sicinius, the plebeian leader who masterminded the walkout, they left the city together and camped on the Mons Sacer, the \"Sacred Mount\", a hill just over three miles away.",
       "reviewFlags": []
     }
   ]

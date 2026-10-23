@@ -6,173 +6,173 @@
   "description": "AI-generated from Wikipedia (claude-opus-5-5)",
   "questions": [
     {
-      "question": "Why did many plebeian farms lie abandoned in the early Republic?",
+      "question": "In Livy's story, where did the ragged former soldier throw himself to tell his tale?",
       "options": [
-        "Plague had wiped out the farmers",
-        "Patricians had seized them by law",
-        "The plebeians were away serving as soldiers",
-        "Floods from the Tiber ruined them"
+        "The Forum",
+        "The Senate house",
+        "The Circus Maximus",
+        "The Capitol temple"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#debt-crisis",
+      "explanation": "The ragged soldier burst into the Forum, Rome's main public square. His story raced through the city.",
+      "sourceQuote": "A former soldier, ragged and dishevelled, threw himself into the Forum, Rome's main public square.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Under the Twelve Tables, when did trials have to end?",
+      "options": [
+        "At the first vote",
+        "At noon",
+        "At sunset",
+        "After three days"
       ],
       "correctAnswers": [
         2
       ],
       "difficulty": 1,
-      "textReference": "#debt-crisis",
-      "explanation": "While plebeians served in the army, their farms lay abandoned and they lost income. Short of money, they borrowed from patricians, which left them open to abuse.",
-      "sourceQuote": "While they served as soldiers, the farms they lived on lay abandoned.",
+      "textReference": "#twelve-tables",
+      "explanation": "Trials ended at sunset. The Tables were a list of specific rules like this rather than a grand legal code.",
+      "sourceQuote": "Trials ended at sunset.",
       "reviewFlags": []
     },
     {
-      "question": "What name is given today to the long struggle between patricians and plebeians?",
+      "question": "What was the plebeians' own assembly, created by the settlement of 494 BC, called?",
       "options": [
-        "The War of the Curiae",
-        "The Conflict of the Orders",
-        "The Social War",
-        "The Struggle of the Tribes"
+        "The College of Pontiffs",
+        "The Centuriate Assembly",
+        "The Plebeian Council",
+        "The Areopagus"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#plebeian-council",
+      "explanation": "The Plebeian Council let commoners meet in their own assembly. There they elected their tribunes.",
+      "sourceQuote": "The settlement of 494 BC also let plebeians meet in their own assembly, the Plebeian Council.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did the second secession of 449 BC force the decemvirs to do?",
+      "options": [
+        "Cancel all debts",
+        "Resign from power",
+        "Flee to Etruria",
+        "Rewrite the laws"
       ],
       "correctAnswers": [
         1
       ],
       "difficulty": 1,
-      "textReference": "#patricians-and-plebeians",
-      "explanation": "It is called the Conflict of the Orders, the 'orders' being the two classes of citizen. It was the plebeians' fight for political equality.",
-      "sourceQuote": "The long struggle that followed is known today as the Conflict of the Orders, the 'orders' being these two classes of citizen.",
+      "textReference": "#appius-claudius-and-verginia",
+      "explanation": "The second secession forced the tyrannical decemvirs to resign. Afterwards the tribunes and the right of appeal were restored.",
+      "sourceQuote": "This second secession of 449 BC forced the decemvirs to resign.",
       "reviewFlags": []
     },
     {
-      "question": "In Livy's story from 495 BC, where did a ragged former army officer tell the crowd his tale of debt?",
+      "question": "Which law of 471 BC changed how the Plebeian Council voted?",
       "options": [
-        "The Senate house",
-        "The Forum",
-        "The Circus Maximus",
-        "The Capitoline temple"
+        "Lex Canuleia",
+        "Lex Hortensia",
+        "Lex Licinia",
+        "Lex Publilia"
       ],
       "correctAnswers": [
-        1
+        3
       ],
       "difficulty": 1,
-      "textReference": "#debt-crisis",
-      "explanation": "He stumbled into the Forum, Rome's main public square, and told his story to the crowd. The crowd erupted in anger at his treatment.",
-      "sourceQuote": "A ragged former army officer stumbled into the Forum, Rome's main public square, and told the crowd his tale.",
+      "textReference": "#plebeian-council",
+      "explanation": "A tribune pushed through the Lex Publilia in 471 BC. Historians see it as the moment the plebeians became politically independent.",
+      "sourceQuote": "In 471 BC a tribune pushed through a law, the Lex Publilia, that changed the rules.",
       "reviewFlags": []
     },
     {
-      "question": "Before Roman law was written down, who alone knew and interpreted it?",
+      "question": "Who was the plebeian leader who masterminded the walkout of 494 BC?",
       "options": [
-        "The pontifices, upper-class priests",
-        "The plebeian aediles",
+        "Sicinius",
+        "Cincinnatus",
+        "Menenius Agrippa",
+        "Appius Claudius"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#first-secession",
+      "explanation": "Sicinius advised the plebeians to leave the city together. Tradition says he was soon added to the first tribunes of the plebs.",
+      "sourceQuote": "Advised by Sicinius, the plebeian leader who masterminded the walkout, they left the city together and camped on the Mons Sacer, the \"Sacred Mount\", a hill just over three miles away.",
+      "reviewFlags": []
+    },
+    {
+      "question": "In the early Republic, who interpreted Rome's unwritten law?",
+      "options": [
+        "The pontiffs",
         "The Vestal Virgins",
+        "The plebeian elders",
         "The tribunes"
       ],
       "correctAnswers": [
         0
       ],
       "difficulty": 1,
-      "textReference": "#terentilius-arsa",
-      "explanation": "Roman law had never been written down, so only the pontifices knew and interpreted it. That was the simple grievance underneath the plebeian demand for written law.",
-      "sourceQuote": "Only the pontifices, upper-class priests, knew and interpreted it.",
+      "textReference": "#demand-for-written-law",
+      "explanation": "Only the pontiffs, upper-class priests, interpreted the law. A plebeian in a dispute with a patrician was fighting by rules only the other side knew.",
+      "sourceQuote": "It was interpreted only by the pontiffs, upper-class priests.",
       "reviewFlags": []
     },
     {
-      "question": "Which famous 1st-century BC statesman learned the Twelve Tables by heart as a boy?",
+      "question": "In Livy's story, which enemy was the soldier fighting when raiders burned his farm?",
       "options": [
-        "Cato the Elder",
-        "Cicero",
-        "Pompey",
-        "Julius Caesar"
-      ],
-      "correctAnswers": [
-        1
-      ],
-      "difficulty": 1,
-      "textReference": "#twelve-tables",
-      "explanation": "Cicero memorised the Twelve Tables as a boy, a sign of how central they remained. The Tables underpinned Roman law for a thousand years.",
-      "sourceQuote": "Cicero, the 1st-century BC statesman, learned them by heart as a boy.",
-      "reviewFlags": []
-    },
-    {
-      "question": "Because tribunes were sacrosanct, what could happen to anyone who laid hands on one?",
-      "options": [
-        "He could be killed without penalty",
-        "He lost his citizenship",
-        "He paid a heavy fine",
-        "He was banished for a year"
+        "The Sabines",
+        "The Gauls",
+        "The Samnites",
+        "The Etruscans"
       ],
       "correctAnswers": [
         0
       ],
       "difficulty": 1,
-      "textReference": "#tribunes-of-the-plebs",
-      "explanation": "The plebeians swore to defend their tribunes, and attacking one carried the risk of being killed without penalty. This sacred protection underpinned the tribune's power to intervene.",
-      "sourceQuote": "The plebeians swore to defend them, and anyone who laid hands on a tribune could be killed without penalty.",
+      "textReference": "#debt-crisis",
+      "explanation": "He was away fighting the Sabines, a hill people north-east of Rome. While he was gone, raiders burned his farm and stole his property.",
+      "sourceQuote": "While he fought the Sabines, a hill people north-east of Rome, raiders had burned his farm and stolen his property.",
       "reviewFlags": []
     },
     {
-      "question": "According to Livy, where did Rome's envoys go in 454 BC to study laws?",
+      "question": "According to tradition, in what year did the Romans drive out their last king and found a republic?",
       "options": [
-        "Athens, to examine the laws of Solon",
-        "Sparta, to examine the laws of Lycurgus",
-        "Corinth, to examine its trade laws",
-        "Carthage, to examine its constitution"
-      ],
-      "correctAnswers": [
-        0
-      ],
-      "difficulty": 1,
-      "textReference": "#terentilius-arsa",
-      "explanation": "Livy says the three envoys went to Athens to study the laws of Solon, its famous lawgiver. Some modern scholars doubt this account.",
-      "sourceQuote": "The historian Livy says they went to Athens to examine the laws of Solon, its famous lawgiver.",
-      "reviewFlags": []
-    },
-    {
-      "question": "Which Greek historian of the 2nd century BC never mentions the patrician-plebeian conflict?",
-      "options": [
-        "Polybius",
-        "Plutarch",
-        "Herodotus",
-        "Thucydides"
-      ],
-      "correctAnswers": [
-        0
-      ],
-      "difficulty": 1,
-      "textReference": "#historicity",
-      "explanation": "Polybius might have met grandchildren of participants, yet he never mentions the conflict. That silence is one reason historians doubt the traditional story.",
-      "sourceQuote": "Polybius, a Greek historian of the 2nd century BC who might have met grandchildren of participants, never mentions it.",
-      "reviewFlags": []
-    },
-    {
-      "question": "What could a Roman citizen threatened by an official shout to get help?",
-      "options": [
-        "'I call upon the gods!'",
-        "'I appeal to the Senate!'",
-        "'I call upon the tribunes!'",
-        "'I appeal to the consuls!'"
-      ],
-      "correctAnswers": [
-        2
-      ],
-      "difficulty": 1,
-      "textReference": "#tribunes-of-the-plebs",
-      "explanation": "A tribune would then step in to judge whether the official was acting lawfully. A tribune could literally put his body in the way.",
-      "sourceQuote": "A citizen threatened by an official could shout 'I call upon the tribunes!', and a tribune would step in to judge whether the official was acting lawfully.",
-      "reviewFlags": []
-    },
-    {
-      "question": "Which three peoples was Rome at war with in 494 BC, when the plebeian soldiers walked out?",
-      "options": [
-        "Gauls, Volsci and Latins",
-        "Samnites, Sabines and Etruscans",
-        "Etruscans, Latins and Gauls",
-        "Sabines, Aequi and Volsci"
+        "451 BC",
+        "494 BC",
+        "753 BC",
+        "509 BC"
       ],
       "correctAnswers": [
         3
       ],
       "difficulty": 1,
-      "textReference": "#first-secession",
-      "explanation": "Rome was fighting the Sabines, the Aequi and the Volsci, which made it the worst possible moment for the army to stop working. That is exactly when the plebeians refused to march.",
-      "sourceQuote": "In 494 BC Rome was at war with three neighbouring peoples: the Sabines, and two peoples living east and south-east of the city, the Aequi and the Volsci.",
+      "textReference": "#patricians-and-plebeians",
+      "explanation": "Tradition dates the expulsion of Rome's last king and the founding of the Republic to 509 BC. Power then passed to two consuls and the Senate.",
+      "sourceQuote": "According to tradition, the Romans drove out their last king in 509 BC and founded a republic.",
+      "reviewFlags": []
+    },
+    {
+      "question": "For roughly how long did the Twelve Tables form the basis of Roman law?",
+      "options": [
+        "A thousand years",
+        "About a century",
+        "Two centuries",
+        "Five hundred years"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#twelve-tables",
+      "explanation": "The Twelve Tables underpinned Roman law for a thousand years. Later Romans revered them.",
+      "sourceQuote": "Later Romans revered the Tables, which formed the basis of Roman law for a thousand years.",
       "reviewFlags": []
     }
   ]

@@ -156,6 +156,8 @@ Structure:
 Style:
 - Write for the general public, in the style of good popular history (a well-written magazine feature or popular history book), not academic writing. Clear, vivid, concrete prose for curious adults with no background in the period. Short paragraphs. No bullet lists, no headings inside sections.
 - Use at most one or two unfamiliar terms per sentence, and never pack lists of technical items into one sentence.
+- Name at most 5 people in the whole chapter: only those a reader should remember. Describe everyone else by role ("a tribune", "a senator", "the consuls of that year"), never by name.
+- Use the short form of Roman names that a reader can hold on to ("Appius Claudius", "Menenius Agrippa", "Camillus"), not the full three-part name. Introduce each named person with what makes them memorable ("Menenius Agrippa, the senator who ended the strike with a fable"), and mention them again where they matter rather than only once.
 - Keep a specialist term (Latin titles, objects, offices, rituals) only if it is iconic or important to understanding the period, and then explain it. Otherwise describe in plain words what the thing was or did. E.g. instead of "insignia were twelve lictors carrying the fasces, a curule seat, red shoes, a white diadem and the toga picta", write that twelve attendants walked ahead of the king carrying the fasces, a bundle of rods around an axe that symbolised his power to punish, and that he sat on a special ivory chair and wore a purple robe embroidered with gold.
 - Explain every name a newcomer wouldn't know the first time it appears in the chapter: places, peoples and tribes, institutions, offices, Latin or Greek terms. Use 3-10 words woven into the sentence, not brackets or footnotes (e.g. "Alba Longa, a Latin town in the hills south-east of Rome"; "the Sabines, a hill people living north-east of Rome"). Such basic, uncontroversial identifications may go slightly beyond the sources, but must be accurate. Don't re-explain a term later in the chapter, and don't explain everyday words like "king" or "Rome".
 - When you mention a group with a known size (e.g. "seven kings"), cover every member of it in the chapter.
@@ -335,7 +337,7 @@ const Games = z.object({
 
 const GAMES_SYSTEM = `You write the content for the mini-games of Ave Caesar, a history learning game played on phones. People play for fun and should learn real history.
 
-You get a chapter split into sections. Everything you write must be supported by that chapter, which is the only ground truth; every item names the section (sectionId) that explains it, because that is where a player who gets it wrong is sent. Mark legend and disputed tradition as such. Spread items across all sections. Explain unfamiliar names in a few words where space allows (in facts, explanations and clues), never in short labels.
+You get a chapter split into sections. Players have just read the chapter once, so only use people, places and terms the chapter makes memorable: ones it names at least twice or that a whole section is about. Use names exactly as the chapter writes them. Everything you write must be supported by that chapter, which is the only ground truth; every item names the section (sectionId) that explains it, because that is where a player who gets it wrong is sent. Mark legend and disputed tradition as such. Spread items across all sections. Explain unfamiliar names in a few words where space allows (in facts, explanations and clues), never in short labels.
 
 Write:
 - briefing: a title like "Rome, 343 BC" and 2 short paragraphs (70-100 words in total) that set the scene for a newcomer: where, when, who, and what is at stake. Plain, vivid, no lists.
@@ -348,7 +350,7 @@ Write:
 
 const GAMES_VERIFIER_SYSTEM = `You fact-check the mini-game content of a history learning game against the chapter it was written from. The chapter is the only ground truth.
 
-Mark an item "problem" (one sentence why) if: it states something the chapter contradicts or does not support; it presents legend as fact; its sectionId does not explain it; a timeline level's order is not clearly supported by the chapter; a true/false card's answer is wrong or debatable; in odd-one-out the three do not clearly share a stated property or the odd one also has it; a Who Am I? clue is false, names the person, or fits another option equally; a match could fit another name in its set; or the item is ambiguous. Otherwise "ok" with an empty issue. Be strict but don't nitpick style.`
+Mark an item "problem" (one sentence why) if: it states something the chapter contradicts or does not support; it presents legend as fact; its sectionId does not explain it; a timeline level's order is not clearly supported by the chapter; a true/false card's answer is wrong or debatable; in odd-one-out the three do not clearly share a stated property or the odd one also has it; a Who Am I? clue is false, names the person, or fits another option equally; a match could fit another name in its set; the item relies on a person or term the chapter mentions only in passing; or the item is ambiguous. Otherwise "ok" with an empty issue. Be strict but don't nitpick style.`
 
 const COORDS_DIR = path.join(HERE, '.cache', 'coords')
 async function wikiCoordinates(title) {
@@ -417,6 +419,12 @@ function gameProblems(g, sections) {
   return out
 }
 
+// How often a name appears in the chapter (case-insensitive, whole phrase)
+const mentions = (name, sections) => {
+  const text = normalize(sections.map(s => `${s.title}\n${s.body}`).join('\n'))
+  return text.split(normalize(name)).length - 1
+}
+
 async function writeGames(client, chapter, sections, outDir) {
   const ask = `Chapter: ${chapter.chapterName}\nValid sectionId values: ${sections.map(s => `"${s.id}"`).join(', ')}.`
   const games = Games.parse(await timed('game data written', () => callClaude(client, {
@@ -427,6 +435,14 @@ async function writeGames(client, chapter, sections, outDir) {
   })))
   const flags = gameProblems(games, sections)
   const addFlag = (id, msg) => flags.set(id, [...(flags.get(id) ?? []), msg])
+
+  // People and terms must be memorable from one read: named at least twice in the chapter
+  games.matchSets.forEach((m, i) => m.pairs.forEach((p, j) => {
+    if (mentions(p.name, sections) < 2) addFlag(`match-${i + 1}-${j + 1}`, `"${p.name}" appears fewer than 2 times in the chapter`)
+  }))
+  games.whoAmI.forEach((w, i) => w.people.forEach((p, j) => {
+    if (mentions(p.name, sections) < 2) addFlag(`who-${i + 1}-${j + 1}`, `"${p.name}" appears fewer than 2 times in the chapter`)
+  }))
 
   // Real coordinates from Wikipedia; the model's estimate only as a flagged fallback
   for (const [i, p] of games.places.entries()) {

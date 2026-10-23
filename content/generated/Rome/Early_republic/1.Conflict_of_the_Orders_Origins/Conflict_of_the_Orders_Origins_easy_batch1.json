@@ -8,173 +8,171 @@
     {
       "question": "What were the resolutions passed by the Plebeian Council called?",
       "options": [
-        "Decrees of the curiae",
-        "Plebiscites",
         "Senatus consulta",
+        "Decrees",
+        "Plebiscites",
         "Edicts"
-      ],
-      "correctAnswers": [
-        1
-      ],
-      "difficulty": 1,
-      "textReference": "#plebeian-council",
-      "explanation": "The Plebeian Council passed plebiscites, which at first bound only plebeians. Any tribune could summon the council and put proposals before it.",
-      "sourceQuote": "It passed resolutions called plebiscites, which at first bound only plebeians.",
-      "reviewFlags": []
-    },
-    {
-      "question": "In what year were the Twelve Tables formally published?",
-      "options": [
-        "509 BC",
-        "471 BC",
-        "387 BC",
-        "449 BC"
-      ],
-      "correctAnswers": [
-        3
-      ],
-      "difficulty": 1,
-      "textReference": "#twelve-tables",
-      "explanation": "The Twelve Tables, the lasting legacy of the decemvirs, were formally published in 449 BC. Rights and duties once kept in priests' heads became visible to all.",
-      "sourceQuote": "The lasting legacy of the decemvirs, the commission appointed to write down Roman law, was the Twelve Tables, formally published in 449 BC.",
-      "reviewFlags": []
-    },
-    {
-      "question": "In what year, according to Roman tradition, did the Romans drive out their last king and found a republic?",
-      "options": [
-        "494 BC",
-        "449 BC",
-        "387 BC",
-        "509 BC"
-      ],
-      "correctAnswers": [
-        3
-      ],
-      "difficulty": 1,
-      "textReference": "#patricians-and-plebeians",
-      "explanation": "Roman tradition dates the expulsion of the last king, Tarquinius Superbus, to 509 BC. In place of a monarch, the Republic was run by elected magistrates alongside the Senate.",
-      "sourceQuote": "In 509 BC, according to Roman tradition, the Romans drove out their last king, Tarquinius Superbus, and founded a republic.",
-      "reviewFlags": []
-    },
-    {
-      "question": "A plebeian secession worked much like which modern form of protest?",
-      "options": [
-        "A sit-in at parliament",
-        "A tax boycott",
-        "A general strike",
-        "A hunger strike"
       ],
       "correctAnswers": [
         2
       ],
       "difficulty": 1,
-      "textReference": "#first-secession",
-      "explanation": "A secession was a mass walkout that functioned like a general strike. With the plebs gone, the city lost its food and labour.",
-      "sourceQuote": "This mass walkout, called a secession, worked like a general strike.",
+      "textReference": "#plebeian-council",
+      "explanation": "The council passed resolutions called plebiscites. At first these bound only plebeians.",
+      "sourceQuote": "Here they elected their tribunes, the officials who protected commoners, and passed resolutions called plebiscites.",
       "reviewFlags": []
     },
     {
-      "question": "At worst, what could happen to a Roman plebeian who could not repay his debts?",
+      "question": "What could a Roman threatened by a magistrate cry out for help?",
       "options": [
-        "He could be enslaved",
-        "He could be exiled to Sicily",
-        "He could be forced into the priesthood",
-        "He could be stripped of his tribe"
+        "\"I appeal to the gods!\"",
+        "\"I am a Roman citizen!\"",
+        "\"I call upon the tribunes!\"",
+        "\"I call upon the Senate!\""
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#tribunes-of-the-plebs",
+      "explanation": "A threatened Roman could call on the tribunes, who would step in to protect him. A tribune had to be physically present to intervene.",
+      "sourceQuote": "A Roman under threat could cry \"I call upon the tribunes!\"",
+      "reviewFlags": []
+    },
+    {
+      "question": "What was the board of ten men appointed to write down Rome's laws called?",
+      "options": [
+        "The decemvirs",
+        "The triumvirs",
+        "The lictors",
+        "The quaestors"
       ],
       "correctAnswers": [
         0
       ],
       "difficulty": 1,
-      "textReference": "#debt-crisis",
-      "explanation": "Money-lenders could beat and imprison debtors, and some debtors were even enslaved. With patricians holding every office, plebeians had no remedy inside the system.",
-      "sourceQuote": "Money-lenders could beat and imprison debtors, and some debtors were even enslaved.",
+      "textReference": "#demand-for-written-law",
+      "explanation": "The decemvirs, meaning 'ten men', were given one year of unchallengeable power to write down the laws. They were appointed around 450 BC.",
+      "sourceQuote": "A board of ten men, the decemvirs, was given one year of unchallengeable power to write down Rome's laws.",
       "reviewFlags": []
     },
     {
-      "question": "What came of tribunes' 5th-century BC proposals to share out newly conquered land among the plebs?",
+      "question": "Who was the most notorious member of the second board of decemvirs?",
       "options": [
-        "They succeeded after the first secession",
-        "They succeeded in 471 BC",
-        "They were passed but never enforced",
-        "None of them succeeded"
+        "Sicinius",
+        "Cincinnatus",
+        "Menenius Agrippa",
+        "Appius Claudius"
       ],
       "correctAnswers": [
         3
       ],
       "difficulty": 1,
-      "textReference": "#plebeian-council",
-      "explanation": "Tribunes repeatedly used the Plebeian Council to campaign for land throughout the 5th century BC. Every one of these attempts failed.",
-      "sourceQuote": "Throughout the 5th century BC they proposed sharing out newly conquered territory among the plebs, but none of these attempts succeeded.",
-      "reviewFlags": [
-        "fact-check: The answer 'none of them succeeded' rests on the chapter's overstatement: the source mentions only 'a number of unsuccessful attempts', not that every attempt failed."
-      ]
-    },
-    {
-      "question": "Where did the plebeian soldiers withdraw to during the first secession of 494 BC?",
-      "options": [
-        "The Capitoline Hill",
-        "The Mons Sacer, or Sacred Mount",
-        "The port of Ostia",
-        "The Janiculum Hill"
-      ],
-      "correctAnswers": [
-        1
-      ],
-      "difficulty": 1,
-      "textReference": "#first-secession",
-      "explanation": "They withdrew to the Mons Sacer, a hill about three miles from the city, built simple defences and waited. Their departure shut shops and stopped trade in Rome.",
-      "sourceQuote": "Instead they withdrew to the Mons Sacer, or Sacred Mount, a hill about three miles from the city, built simple defences and waited.",
+      "textReference": "#appius-claudius-and-verginia",
+      "explanation": "Appius Claudius was the most infamous of the decemvirs. Tradition blames him for the attack on Verginia that sparked the second secession.",
+      "sourceQuote": "Their most notorious member was Appius Claudius.",
       "reviewFlags": []
     },
     {
-      "question": "What was the first office of the Roman state open to plebeians?",
+      "question": "A Roman secessio is often compared to which modern tactic?",
       "options": [
-        "Tribune of the plebs",
-        "Censor",
-        "Praetor",
-        "Consul"
+        "A general strike",
+        "A military coup",
+        "A hunger strike",
+        "A trade embargo"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#first-secession",
+      "explanation": "A secession was a mass withdrawal, much like a modern general strike. When the plebs left, shops and workshops closed and trade stopped.",
+      "sourceQuote": "This tactic became known as a secessio, or secession: a mass withdrawal, much like a modern general strike.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What was the veto, the tribunes' most famous power?",
+      "options": [
+        "The power to block acts of magistrates and the Senate",
+        "The power to declare war on Rome's enemies",
+        "The power to appoint new members of the Senate",
+        "The power to command an army in wartime"
       ],
       "correctAnswers": [
         0
       ],
       "difficulty": 1,
       "textReference": "#tribunes-of-the-plebs",
-      "explanation": "The tribune of the plebs was the great prize of the first secession of 494 BC. Only plebeians could hold it, and its purpose was to shield ordinary citizens from the patrician consuls.",
-      "sourceQuote": "The great prize of the first secession of 494 BC was the tribune of the plebs, the first office of the Roman state open to plebeians.",
+      "explanation": "The veto let a tribune block the acts of consuls, other magistrates and even the Senate. It grew out of the tribune's untouchable status.",
+      "sourceQuote": "From this grew the veto, the power to block the acts of consuls, other magistrates and even the Senate.",
       "reviewFlags": []
     },
     {
-      "question": "According to Livy, on what were the Twelve Tables inscribed for public display?",
+      "question": "What did it mean that the tribunes of the plebs were 'sacrosanct'?",
       "options": [
-        "Marble",
-        "Wax tablets",
-        "Papyrus scrolls",
-        "Bronze"
-      ],
-      "correctAnswers": [
-        3
-      ],
-      "difficulty": 1,
-      "textReference": "#twelve-tables",
-      "explanation": "Livy says they were inscribed on bronze and displayed publicly so every Roman could read them. The original tablets are now lost.",
-      "sourceQuote": "According to Livy they were inscribed on bronze and displayed publicly so every Roman could read them.",
-      "reviewFlags": []
-    },
-    {
-      "question": "Under the Twelve Tables, when did a court hearing have to end?",
-      "options": [
-        "When the Senate met",
-        "At sunset",
-        "At midday",
-        "After three days"
+        "They were exempt from paying any taxes",
+        "Anyone who harmed one could be killed without penalty",
+        "They could never be voted out of office",
+        "They also served as priests of Jupiter"
       ],
       "correctAnswers": [
         1
       ],
       "difficulty": 1,
-      "textReference": "#twelve-tables",
-      "explanation": "Tables I and II set out trial procedure in detail, including the rule that hearings ended at sunset. The laws were practical and often harsh.",
-      "sourceQuote": "Tables I and II set out how trials worked, down to a rule that hearings ended at sunset.",
+      "textReference": "#tribunes-of-the-plebs",
+      "explanation": "The plebeians swore an oath that anyone who laid hands on a tribune could be killed without penalty. This oath, not troops, was the source of a tribune's power.",
+      "sourceQuote": "Their power rested on an oath: they were sacrosanct, meaning the plebeians swore that anyone who laid hands on one could be killed without penalty.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What happened to Rome's regular offices around 450 BC, when the lawmaking board was created?",
+      "options": [
+        "They were opened to plebeians",
+        "They were doubled in number",
+        "They were moved outside the city",
+        "They were all suspended"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#demand-for-written-law",
+      "explanation": "All regular offices were suspended so that the decemvirs could write down the laws. The board held unchallengeable power for a year.",
+      "sourceQuote": "Around 450 BC, all regular offices were suspended.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What name is given to the long struggle between Rome's patricians and plebeians?",
+      "options": [
+        "The Conflict of the Orders",
+        "The Gracchan Crisis",
+        "The Social War",
+        "The Servile War"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#patricians-and-plebeians",
+      "explanation": "The struggle is known as the Conflict of the Orders. It broke out less than twenty years after the Republic began.",
+      "sourceQuote": "The long struggle that followed, lasting until 287 BC, is known as the Conflict of the Orders.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How long did a consul, one of the Republic's chief magistrates, hold office?",
+      "options": [
+        "Six months",
+        "Five years",
+        "A single year",
+        "For life"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#patricians-and-plebeians",
+      "explanation": "The two consuls were elected for a single year. Like the Senate, they came from the patrician families.",
+      "sourceQuote": "Power passed to two consuls, chief magistrates elected for a single year, and to the Senate, a council of leading men.",
       "reviewFlags": []
     }
   ]

@@ -1,53 +1,69 @@
 # Review: Early Republic: The Conflict of the Orders - Origins (509-450 BCE)
 
-Generated 2026-10-21 with claude-opus-5-5.
-Chapter: 1658 words in 9 sections (patricians-and-plebeians 177w/7q, debt-crisis 170w/6q, first-secession 179w/7q, tribunes-of-the-plebs 198w/8q, plebeian-council 166w/6q, terentilius-arsa 178w/6q, decemvirs-and-verginia 204w/7q, twelve-tables 211w/8q, historicity 175w/5q).
+Generated 2026-10-23 with claude-opus-5-5.
+Chapter: 1603 words in 10 sections (patricians-and-plebeians 159w/6q, debt-crisis 151w/6q, first-secession 157w/6q, menenius-agrippa 159w/6q, tribunes-of-the-plebs 164w/7q, plebeian-council 160w/6q, demand-for-written-law 164w/6q, twelve-tables 161w/6q, appius-claudius-and-verginia 164w/6q, how-reliable 164w/5q).
 Questions: 30 easy, 20 medium, 10 hard (60 total).
-**1 sections and 1 questions flagged** for human review.
+**0 sections and 0 questions flagged** for human review.
 
-## Section plebeian-council: The Plebeian Council and the Law of 471 BC
+## Game data: 10 of 62 items flagged (games.json; flagged items are left out of game builds)
 
-> fact-check: The source only says there were 'a number of unsuccessful attempts' at land reform, some advocated by tribunes, so the claim that tribunes proposed them through the council throughout the century and that none succeeded goes beyond it.
-
-## easy-18 (#plebeian-council): What came of tribunes' 5th-century BC proposals to share out newly conquered land among the plebs?
--    They succeeded in 471 BC
--    They succeeded after the first secession
-- **✓** None of them succeeded
--    They were passed but never enforced
-
-> fact-check: The answer 'none of them succeeded' rests on the chapter's overstatement: the source mentions only 'a number of unsuccessful attempts', not that every attempt failed.
-
-## Game data: 5 of 62 items flagged (games.json; flagged items are left out of game builds)
-
-### who-2-2 (#decemvirs-and-verginia)
+### match-2-2 (#tribunes-of-the-plebs)
 ```
-{"name":"Appius Claudius Crassus","options":["Appius Claudius Crassus","Agrippa Menenius Lanatus","Lucius Verginius","Lucius Valerius Potitus"],"clues":["I sat on the second board, appointed to add two more tables.","My board refused to step down when its term ended.","Tradition says my board had a critic, a soldier and former tribune, killed.","As a decemvir I tried to seize Verginia."]}
+{"set":"Words of the Struggle","name":"sacrosanct","match":"Untouchable: anyone who harmed a tribune could be killed unpunished"}
 ```
-> fact-check: The chapter never says Appius Claudius Crassus sat on the second board, so the clues attributing that board's actions to him are unsupported.
+> "sacrosanct" appears fewer than 2 times in the chapter
 
-### place-1 (#debt-crisis)
+### match-2-3 (#plebeian-council)
 ```
-{"name":"Sabines","why":"This hill people north-east of Rome burned the ruined officer's farm and was one of Rome's three enemies in 494 BC."}
+{"set":"Words of the Struggle","name":"plebiscites","match":"Resolutions passed by the Plebeian Council"}
 ```
-> no coordinates on Wikipedia "Sabina"; position is the model's estimate
+> "plebiscites" appears fewer than 2 times in the chapter
 
-### place-2 (#first-secession)
+### match-2-5 (#plebeian-council)
 ```
-{"name":"Aequi","why":"The Aequi, living east of Rome, were at war with the city when the plebs seceded in 494 BC."}
+{"set":"Words of the Struggle","name":"Lex Publilia","match":"Law of 471 BC making plebeians vote by tribe, not by curia"}
 ```
-> no coordinates on Wikipedia "Aequi"; position is the model's estimate
-> fact-check: The chapter says only that the Aequi and Volsci together lived east and south-east of Rome, without saying the Aequi were the eastern one.
+> "Lex Publilia" appears fewer than 2 times in the chapter
+
+### odd-5 (#demand-for-written-law)
+```
+{"items":["Tribunes raised to ten","Twelve Tables published","Second secession","Decemvirs forced to resign"],"odd":"Tribunes raised to ten","why":"Three happened in 449 BC. The number of tribunes was raised to ten earlier, in 457 BC."}
+```
+> fact-check: The assigned section only covers the 457 BC increase; the three 449 BC events that define the shared property are explained in other sections.
+
+### odd-6 (#patricians-and-plebeians)
+```
+{"items":["Consulship","Tribunate of the plebs","Seats in the Senate","Interpreting the law"],"odd":"Tribunate of the plebs","why":"Patricians controlled the consulship, the Senate and the law. The tribunate was the first office open to commoners."}
+```
+> fact-check: The assigned section never mentions the tribunate, so it cannot explain why the tribunate is the odd one out.
+
+### place-1 (#first-secession)
+```
+{"name":"Mons Sacer","why":"The 'Sacred Mount' just outside Rome where the plebeians camped in the secessions of 494 and 449 BC."}
+```
+> less than 12 km from Rome: too close to show on the map
+
+### place-2 (#debt-crisis)
+```
+{"name":"Sabines","why":"Hill people north-east of Rome; the ruined soldier of 495 BC had fought them, and Rome was at war with them in 494 BC."}
+```
+> no coordinates on Wikipedia "Sabines"; position is the model's estimate
 
 ### place-3 (#first-secession)
 ```
-{"name":"Volsci","why":"The Volsci, south-east of Rome, were the third enemy that made the 494 BC walkout so dangerous."}
+{"name":"Aequi","why":"A hill tribe east of Rome at war with the city when the plebeians refused to march in 494 BC."}
+```
+> no coordinates on Wikipedia "Aequi"; position is the model's estimate
+
+### place-4 (#first-secession)
+```
+{"name":"Volsci","why":"A hill tribe south-east of Rome, one of the three enemies Rome faced during the first secession."}
 ```
 > no coordinates on Wikipedia "Volsci"; position is the model's estimate
-> fact-check: The chapter does not specify that the Volsci in particular lived south-east of Rome, only that the Aequi and Volsci lived east and south-east.
 
-### place-4 (#terentilius-arsa)
+### place-5 (#demand-for-written-law)
 ```
-{"name":"Greek cities in southern Italy","why":"Some scholars think Rome's envoys of 454 BC studied Greek laws only here, not in Athens."}
+{"name":"Greek cities in southern Italy","why":"Some scholars think Roman envoys studying laws visited only these cities, not Athens."}
 ```
 > no coordinates on Wikipedia "Magna Graecia"; position is the model's estimate
 

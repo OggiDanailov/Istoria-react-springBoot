@@ -2,91 +2,95 @@
 
 ## Patricians and Plebeians {#patricians-and-plebeians}
 
-In 509 BC, according to Roman tradition, the Romans drove out their last king, Tarquinius Superbus, and founded a republic. Instead of a monarch, two consuls, chief magistrates elected for one year at a time, ran the state alongside the Senate, a council of leading men.
+According to tradition, the Romans drove out their last king in 509 BC and founded a republic. Power passed to two consuls, chief magistrates elected for a single year, and to the Senate, a council of leading men. Both belonged to the patricians, a small circle of aristocratic families who alone could stand for office. They also controlled the law, which was unwritten and interpreted only by upper-class priests.
 
-Every one of these positions belonged to the patricians, a small hereditary aristocracy. Everyone else was a plebeian, one of the plebs or common people. Plebeians were the great majority of citizens. They farmed the land, ran the shops and workshops, and filled the ranks of the army.
+Everyone else was a plebeian. The plebs were the great mass of citizens who farmed, traded and, crucially, filled the ranks of the army. That duty was a trap. While a plebeian soldier was away on campaign, his farm lay abandoned. Many had to borrow from patricians, and a debtor who could not pay could be beaten, imprisoned or even enslaved.
 
-The long struggle that followed is known today as the Conflict of the Orders, the 'orders' being these two classes of citizen. Traditionally dated from about 500 BC to 287 BC, it was the plebeians' fight for political equality, and it shaped how the Republic was governed.
-
-Who the plebeians really were is less clear than it sounds. Many are known to have been wealthy landowners. The habit of calling them simply the 'lower class' dates only from the late Republic, centuries afterwards.
+Less than twenty years after the Republic began, this resentment boiled over. The long struggle that followed, lasting until 287 BC, is known as the Conflict of the Orders.
 
 ## The Debt Crisis of 495 BC {#debt-crisis}
 
-Less than twenty years after the kings fell, many plebeians were drowning in debt. While they served as soldiers, the farms they lived on lay abandoned. Short of income, they borrowed from patricians, which left them open to abuse. Money-lenders could beat and imprison debtors, and some debtors were even enslaved.
+By 495 BC, debt was the burning issue in Rome. Plebeians, the common citizens, openly asked why moneylenders should be allowed to beat and imprison those who owed them.
 
-The Roman historian Livy, writing centuries later, tells a vivid story from 495 BC. A ragged former army officer stumbled into the Forum, Rome's main public square, and told the crowd his tale. During a war against the Sabines, a hill people north-east of Rome, the enemy had burned his farm and stolen his goods. Back home he borrowed to pay a tax, and crushing interest swallowed his grandfather's farm, then his father's. Finally his creditors jailed him, whipped him and threatened him with death.
+Livy, the Roman historian who wrote the fullest account of these years nearly five centuries later, tells a story that captures the mood. A former soldier, ragged and dishevelled, threw himself into the Forum, Rome's main public square. While he fought the Sabines, a hill people north-east of Rome, raiders had burned his farm and stolen his property. Back home, he borrowed to pay a tax, and crushing interest swallowed his grandfather's farm, then his father's. Finally his creditors dragged him to prison, whipped him and threatened him with death.
 
-The crowd erupted. Instead of relief, according to Livy, the consul Appius issued decrees backing creditors' right to imprison debtors. With patricians holding every office, the plebeians could find no remedy inside the system.
+The crowd erupted, and the story raced through the city. Everyone waited for the consuls or the Senate to act. Instead, one hard-line consul issued decrees reinforcing creditors' right to imprison debtors.
 
 ## The First Secession, 494 BC {#first-secession}
 
-In 494 BC Rome was at war with three neighbouring peoples: the Sabines, and two peoples living east and south-east of the city, the Aequi and the Volsci. It was the worst possible moment for the army to stop working, and that is exactly what happened.
+In 494 BC Rome was at war with three neighbouring peoples: the Sabines, and the Aequi and Volsci, hill tribes to the east and south-east. The plebeian soldiers were called up as usual. This time they refused to march.
 
-Advised by a plebeian named Lucius Sicinius Vellutus, the plebeian soldiers refused to march. Instead they withdrew to the Mons Sacer, or Sacred Mount, a hill about three miles from the city, built simple defences and waited. This mass walkout, called a secession, worked like a general strike. With the plebs gone, shops shut, trade stopped and the city lost its food and labour.
+Advised by Sicinius, the plebeian leader who masterminded the walkout, they left the city together and camped on the Mons Sacer, the "Sacred Mount", a hill just over three miles away. There they built simple defences and waited.
 
-According to tradition, the Senate sent Agrippa Menenius Lanatus, a former consul the plebs liked, to talk them round. He told a fable about the limbs of a body that refused to feed the belly, only to starve themselves. A city, he said, likewise needed patricians and plebeians working together.
+This tactic became known as a secessio, or secession: a mass withdrawal, much like a modern general strike. Its power lay in numbers. Plebeians were the vast majority of Romans and produced most of the city's food and goods. When they left, shops and workshops closed, trade stopped, and the city faced its enemies with no army.
 
-The plebeians agreed to return, but at a price: some relief from their debts, and officials of their own.
+One modern count puts the total at five secessions between 494 and 287 BC. This first one set the pattern, and it worked.
+
+## Menenius Agrippa and the Fable of the Belly {#menenius-agrippa}
+
+With the plebeians camped on the Sacred Mount in 494 BC, the Senate needed a negotiator the strikers would trust. It chose Menenius Agrippa, a former consul who was well liked by ordinary Romans.
+
+According to tradition, Menenius won them over not with threats but with a story. Once, he said, the limbs of the body grew angry with the belly. They did all the work while the belly simply enjoyed the food. So they refused to feed it. But as the belly starved, so did they, and the whole body wasted away.
+
+The moral was plain. Rome, like a body, could not survive unless patricians and plebeians worked together.
+
+The plebeians agreed to negotiate, but they wanted more than a fable. Their price for returning was a new kind of official, chosen from among the plebs, to protect them from the power of the consuls. The Senate agreed, and some plebeians were freed from their debts as well.
 
 ## The Tribunes of the Plebs {#tribunes-of-the-plebs}
 
-The great prize of the first secession of 494 BC was the tribune of the plebs, the first office of the Roman state open to plebeians. Only plebeians could hold it, and its purpose was to shield ordinary citizens from the power of the patrician consuls.
+The great prize of the first secession of 494 BC was the tribune of the plebs, the first office in Rome open to commoners. Tradition says the first tribunes took office in 493 BC and soon added Sicinius, leader of the walkout, to their number.
 
-The tribunes' strongest weapon was the veto, the power to block the actions of magistrates. A citizen threatened by an official could shout 'I call upon the tribunes!', and a tribune would step in to judge whether the official was acting lawfully.
+Tribunes commanded no troops. Their power rested on an oath: they were sacrosanct, meaning the plebeians swore that anyone who laid hands on one could be killed without penalty. Shielded by this, a tribune could protect a citizen from a magistrate by placing his own untouchable person in the way. From this grew the veto, the power to block the acts of consuls, other magistrates and even the Senate. A Roman under threat could cry "I call upon the tribunes!"
 
-This power rested on the tribunes being sacrosanct. The plebeians swore to defend them, and anyone who laid hands on a tribune could be killed without penalty. A tribune could literally put his body in the way. That brought limits: he had to be physically present to intervene, and his authority reached only about a mile beyond the city.
+There were limits. A tribune had to be physically present to intervene, and his protection held only within Rome and a mile beyond. Ancient sources say there were first two or five tribunes, rising to ten in 457 BC.
 
-The first tribunes, for 493 BC, were Lucius Albinius Paterculus and Gaius Licinius, who soon chose Sicinius and two others as colleagues. Ancient writers disagree on whether there were originally two or five. By 457 BC there were ten, helped by two plebeian aediles, assistants who also had to be plebeians.
+## A Parliament of the Plebs {#plebeian-council}
 
-## The Plebeian Council and the Law of 471 BC {#plebeian-council}
+The settlement of 494 BC also let plebeians meet in their own assembly, the Plebeian Council. Here they elected their tribunes, the officials who protected commoners, and passed resolutions called plebiscites. At first these bound only plebeians.
 
-Alongside their tribunes, the plebeians won the right to their own assembly, the Plebeian Council. It passed resolutions called plebiscites, which at first bound only plebeians. Any tribune could summon the council, preside over it and put proposals before it.
+There was a catch. The assembly was first organised by curiae, ancient groupings of families in which many plebeians depended on patrician patrons and voted as those patrons wished. The aristocrats could quietly steer who became tribune.
 
-At first the plebs met by curiae, ancient groupings of citizens dating from the time of the kings. That kept them dependent on their patrician patrons, powerful men to whom humbler families owed loyalty. It also let patricians sway the election of tribunes.
+In 471 BC a tribune pushed through a law, the Lex Publilia, that changed the rules. Plebeians would now gather and vote by tribe, districts of citizens, rather than by curia, and tribunes would be elected this way. Historians see this as the moment the plebeians became politically independent.
 
-In 471 BC a tribune named Volero Publilius carried a reform known as the Lex Publilia. Plebeians would now meet and vote by tribe, the districts in which citizens were registered, and tribunes would be elected the same way. The change broke patrician influence over plebeian votes and made the plebs politically independent.
+Patricians kept looking for ways to tame the tribunes, such as persuading one tribune to block his colleagues. But the plebs now had a voice of their own, and they soon used it to demand written law.
 
-Tribunes also used the council to campaign for land. Throughout the 5th century BC they proposed sharing out newly conquered territory among the plebs, but none of these attempts succeeded.
+## The Demand for Written Law {#demand-for-written-law}
 
-## The Demand for Written Law {#terentilius-arsa}
+In the early Republic, Roman law was not written down. It was interpreted only by the pontiffs, upper-class priests. A plebeian in a dispute with a patrician was fighting by rules only the other side knew.
 
-By the 460s BC the plebs had protectors, but the consuls' powers still had no clear limits. In 462 BC the tribune Gaius Terentilius Arsa declared that rule by consuls had become even more oppressive than the monarchy it replaced. He proposed appointing five commissioners to define and restrict their powers.
+In 462 BC a tribune declared that the consuls had become more oppressive than the kings they replaced, and proposed a commission to define and limit their powers. The Senate stalled for five years, pointing to war and plague, while the plebs kept re-electing the same tribunes. In 457 BC the Senate tried to defuse the campaign by raising the number of tribunes to ten.
 
-The patricians stalled, citing war and plague, and for five bitter years the plebs re-elected the same tribunes to keep up the pressure. In 457 BC the Senate offered a trade: the number of tribunes would rise to ten, provided none of the old ones stood again.
+The pressure continued. According to Livy, envoys were sent to study the laws of Athens and other Greek cities. Some modern scholars doubt this, suggesting they visited only Greek cities in southern Italy, or borrowed nothing.
 
-The new tribunes pushed on regardless. In 454 BC the Senate sent three envoys to study Greek laws. The historian Livy says they went to Athens to examine the laws of Solon, its famous lawgiver. Some modern scholars doubt this, suggesting the envoys visited only Greek cities in southern Italy, or that Rome never copied the Greeks at all.
-
-Underneath lay a simple grievance. Roman law had never been written down. Only the pontifices, upper-class priests, knew and interpreted it.
-
-## The Decemvirs and Verginia {#decemvirs-and-verginia}
-
-After the envoys returned from studying Greek laws, patricians and tribunes agreed on a drastic experiment. Around 450 BC the usual magistrates, and even the tribunes, were suspended. In their place a commission called the decemviri, Latin for 'ten men', would govern for a year and write down Roman law, with no appeal against their decisions.
-
-The first board drew up ten tables of laws. A second board, appointed to add two more, became notorious. Its members refused to step down when their term ended, and according to tradition they had a critic, a soldier and former tribune, killed.
-
-The most famous story concerns the decemvir Appius Claudius Crassus. He tried to seize Verginia, daughter of a respected centurion, or army officer, named Lucius Verginius, intending to rape her. To save her from that fate, her father killed her himself. Riots spread from the city to the army camped outside.
-
-In 449 BC the plebs seceded again, to the Aventine Hill and then the Sacred Mount. The decemvirs were forced out. Two senators, Lucius Valerius Potitus and Marcus Horatius Barbatus, restored the tribunes and the right of appeal. As consuls, they then passed laws making plebiscites binding on all Romans, subject to Senate approval.
+Around 450 BC, all regular offices were suspended. A board of ten men, the decemvirs, was given one year of unchallengeable power to write down Rome's laws.
 
 ## The Twelve Tables {#twelve-tables}
 
-The lasting legacy of the decemvirs, the commission appointed to write down Roman law, was the Twelve Tables, formally published in 449 BC. According to Livy they were inscribed on bronze and displayed publicly so every Roman could read them. Rights and duties once kept in the heads of priests were now visible to all.
+The decemvirs, a board of ten men appointed around 450 BC to write down Rome's laws, produced ten tables, and a second board added two more. In 449 BC the complete Twelve Tables were formally published. According to Livy they were engraved on bronze and displayed publicly so every citizen could know them.
 
-The laws were practical and often harsh. Tables I and II set out how trials worked, down to a rule that hearings ended at sunset. Table III dealt with debt: a debtor had thirty days to pay before a creditor could drag him to court, chain him and hold him for sixty days. Table IV gave fathers vast power over their families, though a son sold three times by his father went free.
+They were a list of specific rules rather than a grand code. Trials ended at sunset. Fruit falling onto a neighbour's land still belonged to the tree's owner. A father who sold his son three times lost his power over him.
 
-Tables V to X covered inheritance, women's status, property, injuries and theft, public law and funerals. Of the two supplementary tables, XI banned marriage between patricians and plebeians, and XII covered damage done by slaves.
+Debt rules were harsh but clear. A debtor had thirty days to pay; then his creditor could bind him in chains of at least fifteen pounds and feed him a pound of bread a day for sixty days. Not everything helped the plebs: one law banned marriage between patricians and plebeians.
 
-The original tablets are lost, perhaps destroyed when Gallic warriors burned Rome in 387 BC, and scholars still argue over how the surviving fragments fit together. Yet the Tables underpinned Roman law for a thousand years. Cicero, the 1st-century BC statesman, learned them by heart as a boy.
+Later Romans revered the Tables, which formed the basis of Roman law for a thousand years.
 
-## How Much of the Story Is True? {#historicity}
+## Appius Claudius, Verginia and the Second Secession {#appius-claudius-and-verginia}
 
-For centuries the story of the plebeians' struggle against the patricians was accepted as fact. Today almost every part of it is debated.
+The second board of ten men, the decemvirs appointed to finish Rome's written law, became a tyranny. When their term ended they refused to step down, ruling with no tribunes to check them and no right of appeal. They even had a soldier killed, a former tribune who had criticised them.
 
-The core problem is that no one recorded the conflict as it happened. Polybius, a Greek historian of the 2nd century BC who might have met grandchildren of participants, never mentions it. The main accounts come from Livy and Cicero, Roman writers of centuries later. They are sometimes thought to have reported fact and fable equally readily, and to have assumed that Roman institutions barely changed over nearly 500 years.
+Their most notorious member was Appius Claudius. According to tradition, he tried to rape Verginia, a beautiful plebeian girl whose father was a respected centurion, an army officer. To save her from Appius Claudius, her father killed her himself, to uphold her freedom and virtue.
 
-Some details also jar. Official lists of consuls include men with plebeian family names in the 5th century BC, when the office was supposedly closed to plebeians. And such bitter grievances produced strangely little bloodshed: Livy's version is mostly debate, with the occasional walkout.
+The crowd that witnessed the killing rioted, and the anger spread to the army camped outside the city. The people gathered on the Aventine, one of Rome's hills, then withdrew to the Sacred Mount. This second secession of 449 BC forced the decemvirs to resign. Two senators negotiated, restored the tribunes and the right of appeal, and as consuls passed laws making plebeian decisions binding on all Romans.
 
-Some scholars, such as Richard E. Mitchell, argue there was no conflict at all. In this view, Romans of the late Republic, living through violent class struggles of their own, read those battles back into their distant past.
+## How Much of This Really Happened? {#how-reliable}
+
+For centuries, the story of plebeian strikes, brave tribunes and wicked decemvirs was accepted as straightforward history. Today almost every part of it is controversial.
+
+The core problem is that no one wrote about these events at the time. Our fullest accounts come from Livy and other writers living more than four centuries later, who are sometimes thought to mix fact and fable freely and to assume Roman institutions barely changed over time.
+
+There are puzzles, too. Official lists of consuls include men with plebeian family names in the fifth century BC, when the post was supposedly closed to them. It is odd that such bitter grievances led to so little bloodshed, when similar quarrels in the late Republic quickly turned violent. And it is unclear who the plebs really were: many were wealthy landowners.
+
+One modern scholar has even argued there was no conflict at all, and that later Romans projected the class struggles of their own day onto a dimly remembered past.
 
 ---
 Based on Wikipedia:
