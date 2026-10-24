@@ -337,7 +337,7 @@ const Games = z.object({
 
 const GAMES_SYSTEM = `You write the content for the mini-games of Ave Caesar, a history learning game played on phones. People play for fun and should learn real history.
 
-You get a chapter split into sections. Players have just read the chapter once, so only use people, places and terms the chapter makes memorable: ones it names at least twice or that a whole section is about. Use names exactly as the chapter writes them. Everything you write must be supported by that chapter, which is the only ground truth; every item names the section (sectionId) that explains it, because that is where a player who gets it wrong is sent. Mark legend and disputed tradition as such. Spread items across all sections. Explain unfamiliar names in a few words where space allows (in facts, explanations and clues), never in short labels.
+You get a chapter split into sections. Players have just read the chapter once, so only use people, places and terms the chapter makes memorable: ones it names at least twice or that a whole section is about. The games are about the history itself (the people of the period, events, places, institutions), not about the scholars who study it: never build an item around modern historians, and use ancient writers (Livy, Fabius Pictor…) in at most one item per game, only where the chapter is about how we know the story. Use names exactly as the chapter writes them. Everything you write must be supported by that chapter, which is the only ground truth; every item names the section (sectionId) that explains it, because that is where a player who gets it wrong is sent. Mark legend and disputed tradition as such. Spread items across all sections. Explain unfamiliar names in a few words where space allows (in facts, explanations and clues), never in short labels.
 
 Write:
 - briefing: a title like "Rome, 343 BC" and 2 short paragraphs (70-100 words in total) that set the scene for a newcomer: where, when, who, and what is at stake. Plain, vivid, no lists.
@@ -350,7 +350,7 @@ Write:
 
 const GAMES_VERIFIER_SYSTEM = `You fact-check the mini-game content of a history learning game against the chapter it was written from. The chapter is the only ground truth.
 
-Mark an item "problem" (one sentence why) if: it states something the chapter contradicts or does not support; it presents legend as fact; its sectionId does not explain it; a timeline level's order is not clearly supported by the chapter; a true/false card's answer is wrong or debatable; in odd-one-out the three do not clearly share a stated property or the odd one also has it; a Who Am I? clue is false, names the person, or fits another option equally; a match could fit another name in its set; the item relies on a person or term the chapter mentions only in passing; or the item is ambiguous. Otherwise "ok" with an empty issue. Be strict but don't nitpick style.`
+Mark an item "problem" (one sentence why) if: it states something the chapter contradicts or does not support; it presents legend as fact; its sectionId does not explain it; a timeline level's order is not clearly supported by the chapter; a true/false card's answer is wrong or debatable; in odd-one-out the three do not clearly share a stated property or the odd one also has it; a Who Am I? clue is false, names the person, or fits another option equally; a match could fit another name in its set; the item relies on a person or term the chapter mentions only in passing; the item is about modern historians rather than the history itself; or the item is ambiguous. Otherwise "ok" with an empty issue. Be strict but don't nitpick style.`
 
 const COORDS_DIR = path.join(HERE, '.cache', 'coords')
 async function wikiCoordinates(title) {
@@ -442,6 +442,11 @@ async function writeGames(client, chapter, sections, outDir) {
   }))
   games.whoAmI.forEach((w, i) => w.people.forEach((p, j) => {
     if (mentions(p.name, sections) < 2) addFlag(`who-${i + 1}-${j + 1}`, `"${p.name}" appears fewer than 2 times in the chapter`)
+  }))
+  // Odd One Out items that are just a name (2-3 capitalised words) must be named at least twice too
+  const isName = t => /^(?:[A-Z][\w'’-]+)(?: (?:the |of |de )?[A-Z][\w'’-]+){1,2}$/.test(t.trim())
+  games.oddOneOut.forEach((o, i) => o.items.forEach(item => {
+    if (isName(item) && mentions(item, sections) < 2) addFlag(`odd-${i + 1}`, `"${item}" appears fewer than 2 times in the chapter`)
   }))
 
   // Real coordinates from Wikipedia; the model's estimate only as a flagged fallback
