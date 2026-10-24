@@ -31,3 +31,12 @@ ADMIN_EMAIL=... ADMIN_PASSWORD=... node load.mjs --chapter kingdom --section "An
 ```
 
 `API_URL` defaults to `http://localhost:8081`.
+
+## Editing a generated chapter
+
+Generated chapters are plain files and can be edited freely (no API cost): `chapter.md` (text, one `## Title {#id}`
+heading per section), `games.json` (mini-game data) and the `*_batch*.json` quiz files. After editing the text, check
+that questions and game items still match it, then rebuild the prototype (`node prototypes/age-of-kings/build.mjs`).
+
+Add `"locked": true` to a chapter in `chapters.json` once it has been reviewed or edited by hand: the generator then
+skips it, even with `--force`, unless `--unlock` is given too.

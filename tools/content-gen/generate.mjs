@@ -8,7 +8,8 @@
 //   node generate.mjs --dry-run            fetch/cache sources, show sizes, no API calls
 //   node generate.mjs                      generate every chapter that has no output yet
 //   node generate.mjs --only kingdom       one chapter (id from chapters.json)
-//   node generate.mjs --force              regenerate even if output exists
+//   node generate.mjs --force              regenerate even if output exists (not chapters marked "locked")
+//   node generate.mjs --force --unlock     regenerate locked chapters too (overwrites hand edits)
 //
 // Needs ANTHROPIC_API_KEY (except for --dry-run): put ANTHROPIC_API_KEY=... in tools/content-gen/.env
 // (git-ignored) and run via `npm run generate -- [flags]`.
@@ -501,6 +502,12 @@ async function writeGames(client, chapter, sections, outDir) {
 
 async function processChapter(client, chapter) {
   const outDir = path.join(OUT_ROOT, chapter.folder)
+  // A chapter marked "locked" in chapters.json has been reviewed or edited by hand: never overwrite it
+  // unless --unlock is given as well.
+  if (chapter.locked && !args.includes('--unlock')) {
+    console.log(`- ${chapter.id}: locked (reviewed/edited by hand); use --force --unlock to regenerate and lose those edits`)
+    return
+  }
   if (fs.existsSync(path.join(outDir, 'games.json')) && !FORCE) {
     console.log(`- ${chapter.id}: already generated (use --force to redo)`)
     return
