@@ -19,8 +19,12 @@ const ok = item => !item.reviewFlags?.length
 
 function sectionsFrom(markdown) {
   const body = markdown.split('\n---\n')[0]
-  return [...body.matchAll(/^## (.*?) \{#([\w-]+)\}\n\n([\s\S]*?)(?=\n## |$)/gm)]
-    .map(([, title, id, text]) => ({ id, title, body: text.trim() }))
+  // Split on the section headings ("## Title {#id}"); everything up to the next heading is the section
+  return body.split(/^## /m).slice(1).map(part => {
+    const [heading, ...rest] = part.split('\n')
+    const [, title, id] = heading.match(/^(.*?) \{#([\w-]+)\}\s*$/)
+    return { id, title, body: rest.join('\n').trim() }
+  })
 }
 
 // Two quiz sets of 10 single-answer questions each (4 easy, 3 medium, 3 hard)
@@ -45,7 +49,13 @@ for (const c of CONFIG.chapters) {
   const dir = path.join(GENERATED, c.folder)
   if (!fs.existsSync(path.join(dir, 'games.json'))) { console.log(`- ${c.id}: no games.json yet, skipped`); continue }
   const g = JSON.parse(fs.readFileSync(path.join(dir, 'games.json'), 'utf8'))
-  const sections = sectionsFrom(fs.readFileSync(path.join(dir, 'chapter.md'), 'utf8'))
+  const markdown = fs.readFileSync(path.join(dir, 'chapter.md'), 'utf8')
+  const sections = sectionsFrom(markdown)
+  // The chronicle must show the whole chapter: compare word counts with the file
+  const words = t => t.split(/\s+/).filter(Boolean).length
+  const expected = words(markdown.split('\n---\n')[0].split(/^## .*$/m).slice(1).join(' '))
+  const got = sections.reduce((n, x) => n + words(x.body), 0)
+  if (got !== expected) throw new Error(`${c.id}: chronicle has ${got} words but chapter.md has ${expected}`)
   const ch = {
     id: c.id, era: c.era, short: c.short, title: c.chapterName.replace(/\s*\([^)]*\)\s*$/, '').replace(/^Early Republic:\s*/, '').replace(/ - /g, ': '), period: c.period.replace('BCE', 'BC'),
     sources: c.sources, briefing: g.briefing, sections,
