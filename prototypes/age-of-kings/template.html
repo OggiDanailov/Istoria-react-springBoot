@@ -273,6 +273,41 @@ button:focus-visible { outline: 3px solid var(--ochre); outline-offset: 2px; }
 .feedback textarea { width: 100%; min-height: 70px; border-radius: 12px; border: 1.5px solid var(--panel-line); background: #2a2420; color: var(--ink); font: inherit; font-size: 15px; padding: 10px 12px; resize: vertical; }
 .feedback .sent { color: var(--good); font-weight: 800; margin: 0; }
 
+/* Chapter battle */
+.battle-card { background: var(--panel); border: 2px solid var(--ochre); border-radius: 18px; padding: 16px; display: grid; gap: 10px; }
+.battle-card.won { border-color: var(--good); }
+.battle-card h2 { font-size: 24px; }
+.battle-card .eyebrow, .briefing .eyebrow { font: 800 11px/1 var(--body); letter-spacing: .16em; text-transform: uppercase; color: var(--ochre); }
+.vs { display: grid; gap: 8px; }
+.vs-row { display: grid; grid-template-columns: 110px 1fr 44px; align-items: center; gap: 8px; font-size: 13.5px; font-weight: 800; }
+.vs-row b { text-align: right; font-variant-numeric: tabular-nums; }
+.vs-bar { height: 12px; border-radius: 999px; background: #3a312c; overflow: hidden; }
+.vs-bar span { display: block; height: 100%; }
+.vs-bar .you { background: var(--ochre); }
+.vs-bar .them { background: var(--bad); }
+.briefing .vs-row { color: var(--tile-ink); }
+.briefing .vs-bar { background: #d8ccb2; }
+.chapter-num.won { background: var(--good); }
+.chapter-card[disabled] { opacity: .5; cursor: default; }
+.primary.big { padding: 16px 28px; font-size: 18px; justify-self: start; align-self: flex-start; }
+.meter { position: relative; height: 44px; border-radius: 12px; background: var(--panel); border: 1px solid var(--panel-line); overflow: hidden; }
+.meter .zone { position: absolute; left: 42%; width: 16%; top: 0; bottom: 0; background: rgba(224,166,58,.45); border-inline: 2px solid var(--ochre); }
+.meter .needle { position: absolute; top: 4px; bottom: 4px; width: 6px; margin-left: -3px; border-radius: 3px; background: var(--ink); box-shadow: 0 0 0 2px var(--panel); }
+.lanes3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+.lane { border: 2px solid var(--panel-line); background: var(--panel); border-radius: 14px; min-height: 120px; display: grid; align-content: space-between; padding: 12px 10px; font-weight: 800; }
+.lane.attack { border-color: var(--bad); background: #4a1d18; }
+.lane.held { border-color: var(--good); background: #24391f; }
+.lane.broken { border-color: var(--bad); background: #6d1f19; }
+.lane-timer { height: 6px; border-radius: 999px; background: #3a312c; overflow: hidden; }
+.lane-timer span { display: block; height: 100%; width: 0; background: var(--bad); }
+.pressure { position: relative; height: 28px; border-radius: 999px; background: var(--panel); border: 1px solid var(--panel-line); overflow: hidden; }
+.pressure #pressure-fill { display: block; height: 100%; width: 0; background: var(--ochre); }
+.pressure #pressure-fill.hot { background: var(--bad); }
+.pressure-mark { position: absolute; left: 85%; top: 0; bottom: 0; border-left: 2px dashed var(--ink); }
+.battle-sum { display: grid; grid-template-columns: 1fr auto; gap: 6px 12px; font-size: 15px; }
+.battle-sum b { text-align: right; font-variant-numeric: tabular-nums; }
+.battle-sum span:nth-last-child(2), .battle-sum b:last-child { color: var(--bad); }
+
 /* Tile colours: last, so they override the neutral backgrounds above */
 .c1 { background: var(--tile-1); } .c2 { background: var(--tile-2); } .c3 { background: var(--tile-3); }
 .c4 { background: var(--tile-4); } .c5 { background: var(--tile-5); }
@@ -391,6 +426,7 @@ function render() {
   if (state.screen === 'play') return RENDER[state.type]()
   if (state.screen === 'result') return renderResult()
   if (state.screen === 'runDone') return renderRunDone()
+  if (state.screen === 'battle') return renderBattle()
 }
 function header(kicker, title, back = true) {
   return `<header class="top"><div class="brand"><small>${esc(kicker)}</small><h1>${esc(title)}</h1></div>
@@ -449,10 +485,15 @@ const MILESTONES = [
   { men: 4800, name: 'legion', note: 'ten cohorts, the backbone of Rome’s army' },
 ]
 const LEGION_KEY = 'ave-caesar-legion'
-let legion = { units: { hastatus: 0, princeps: 0, triarius: 0, centurio: 0 }, veterans: 0, eagles: [], rewarded: {}, missed: {} }
+// units: everyone ever recruited; army: the soldiers still alive (battles cost casualties)
+let legion = { units: { hastatus: 0, princeps: 0, triarius: 0, centurio: 0 }, army: null, veterans: 0, eagles: [], rewarded: {}, missed: {}, conquered: [], battles: [] }
 try { const saved = JSON.parse(localStorage.getItem(LEGION_KEY) || 'null'); if (saved?.units) legion = { ...legion, ...saved } } catch {}
+legion.army ??= { ...legion.units }
+legion.conquered ??= []
+legion.battles ??= []
 const saveLegion = () => { try { localStorage.setItem(LEGION_KEY, JSON.stringify(legion)) } catch {} }
-const menCount = () => Object.values(legion.units).reduce((a, b) => a + b, 0)
+const menCount = () => Object.values(legion.army).reduce((a, b) => a + b, 0)
+const recruitedCount = () => Object.values(legion.units).reduce((a, b) => a + b, 0)
 const formation = men => [...MILESTONES].reverse().find(m => men >= m.men)
 const nextMilestone = men => MILESTONES.find(m => men < m.men)
 const unitIcon = (color, crest) => `<svg viewBox="0 0 20 26" aria-hidden="true"><line x1="16" y1="1" x2="16" y2="25" stroke="#e2cdb0" stroke-width="1.6"/>${crest ? '<path d="M1 4.5 Q8 -1 15 4.5" fill="none" stroke="#e2574c" stroke-width="2.6" stroke-linecap="round"/>' : ''}<path d="M3 5 h10 v11 c0 4 -5 7 -5 7 c0 0 -5 -3 -5 -7 z" fill="${color}" stroke="#1b1715" stroke-width="1.2"/><circle cx="8" cy="12" r="1.8" fill="#1b1715" opacity=".55"/></svg>`
@@ -462,7 +503,7 @@ function renderHud() {
   const men = menCount(), f = formation(men), next = nextMilestone(men)
   document.getElementById('hud').innerHTML = `<div class="hud-inner">
     <div class="hud-units" aria-label="Your legion">
-      ${Object.entries(UNITS).map(([k, u]) => `<span class="hud-unit" data-unit="${k}" title="${u.label}">${unitIcon(u.color, u.crest)}${legion.units[k]}</span>`).join('')}
+      ${Object.entries(UNITS).map(([k, u]) => `<span class="hud-unit" data-unit="${k}" title="${u.label}">${unitIcon(u.color, u.crest)}${legion.army[k]}</span>`).join('')}
       <span class="hud-unit" data-unit="eagle" title="Eagle standards">${eagleIcon}${legion.eagles.length}</span>
     </div>
     <button class="hud-men" id="hud-men">${men} ${men === 1 ? 'man' : 'men'}<small>${f ? 'a ' + f.name : next ? `${next.men - men} to a ${next.name}` : ''}</small></button>
@@ -506,9 +547,10 @@ function reward(key, unitKey, fromEl) {
   if (legion.rewarded[key]) return { fresh: false, unit: UNITS[unitKey] }
   const before = menCount()
   const vet = !!legion.missed[key]
-  legion.rewarded[key] = 1
+  legion.rewarded[key] = unitKey
   delete legion.missed[key]
   legion.units[unitKey]++
+  legion.army[unitKey]++
   if (vet) legion.veterans++
   saveLegion()
   flyToHud(fromEl, unitKey, UNITS[unitKey].color, () => { renderHud(); bumpHud(unitKey) })
@@ -531,6 +573,40 @@ function earn(key, unitKey, fromEl, { forced = false } = {}) {
   return r.fresh ? '' : ' <i>Already in your legion from an earlier round.</i>'
 }
 const recruitLine = r => r.fresh ? (r.vet ? `A veteran ${r.unit.one} joins your legion.` : `A ${r.unit.one} joins your legion.`) : 'Already in your legion from an earlier round.'
+
+// ---------- battle maths ----------
+// Each unit's strength, and how good soldiers are in each era (the army improved over time).
+// The enemy is 80% of everything a chapter can give, plus the survivors a typical player brings
+// from the previous chapter; your battle skill multiplies your army by 0.89-1.14. So a very good
+// fighter wins with about 70% of the soldiers, an average one with 80%, a weak one with 90%.
+const STRENGTH = { hastatus: 1, princeps: 2, triarius: 3, centurio: 4 }
+const ERA_QUALITY = { kingdom: 1, 'early-republic': 1.2, 'middle-republic': 1.4, 'late-republic': 1.7 }
+const ERA_ARMY = {
+  kingdom: 'citizen farmers fighting shoulder to shoulder',
+  'early-republic': 'the new, flexible legion of hastati, principes and triarii',
+  'middle-republic': 'veteran legions hardened against Carthage',
+  'late-republic': 'professional soldiers, paid and equipped by the state',
+}
+const SKILL = { min: 0.89, max: 1.14 }
+// The most strength a chapter can give (each fact once; forced last items give nothing)
+function chapterMax(c) {
+  const rank = [1, 2, 3]
+  return c.timelines.reduce((n, t, i) => n + Math.max(0, t.events.length - 1) * rank[Math.min(i, 2)], 0)
+    + c.matches.reduce((n, m) => n + Math.max(0, m.pairs.length - 1) * STRENGTH.centurio, 0)
+    + c.decks.reduce((n, d) => n + d.cards.length * STRENGTH.hastatus, 0)
+    + c.odds.reduce((n, o) => n + o.rounds.length * STRENGTH.princeps, 0)
+    + c.whos.reduce((n, w) => n + w.people.length * STRENGTH.centurio, 0)
+    + c.maps.reduce((n, m) => n + Math.max(0, m.places.length - 1) * STRENGTH.princeps, 0)
+    + c.quizzes.reduce((n, q) => n + q.questions.reduce((k, x) => k + rank[x.level - 1], 0), 0)
+}
+const eraQuality = c => ERA_QUALITY[c.era] ?? 1
+const armyStrength = c => Math.round(Object.entries(legion.army).reduce((n, [u, k]) => n + k * STRENGTH[u], 0) * eraQuality(c))
+function enemyStrength(c) {
+  const i = CHAPTERS.indexOf(c)
+  const carry = i > 0 ? 0.16 * chapterMax(CHAPTERS[i - 1]) : 0
+  return Math.round(eraQuality(c) * (0.8 * chapterMax(c) + carry))
+}
+const isUnlocked = i => i === 0 || legion.conquered.includes(CHAPTERS[i - 1].id)
 
 // ---------- the chapter text ----------
 const inline = s => esc(s).replace(/\*\*(.+?)\*\*/g, '<b>$1</b>').replace(/\*(.+?)\*/g, '<em>$1</em>')
@@ -558,10 +634,21 @@ function openLegion() {
     <p><b>${men} ${men === 1 ? 'man' : 'men'}</b>${f ? `, a ${f.name} (${f.note})` : ''}.</p>
     ${next ? `<div class="progress" aria-hidden="true"><span style="width:${Math.round(100 * (men - prev) / (next.men - prev))}%"></span></div>
       <p style="font-size:14px">${next.men - men} more to a <b>${next.name}</b>: ${next.note}.</p>` : ''}
-    ${Object.entries(UNITS).map(([k, u]) => `<div class="unit-row">${unitIcon(u.color, u.crest)}<span><b>${u.label}</b><br><span style="font-size:13.5px">${esc(u.note)}</span></span><b>${legion.units[k]}</b></div>`).join('')}
+    <p style="font-size:14px">Battle strength in ${esc(ERAS.find(e => e.id === CH.era).name)}: <b>${armyStrength(CH)}</b>. ${recruitedCount()} soldiers recruited in all; ${recruitedCount() - menCount()} fell in battle.</p>
+    ${Object.entries(UNITS).map(([k, u]) => `<div class="unit-row">${unitIcon(u.color, u.crest)}<span><b>${u.label}</b> · strength ${STRENGTH[k]} each<br><span style="font-size:13.5px">${esc(u.note)}</span></span><b>${legion.army[k]}</b></div>`).join('')}
     <div class="unit-row">${eagleIcon}<span><b>Eagle standards</b><br><span style="font-size:13.5px">The legion’s most prized symbol. Earned with a perfect round.</span></span><b>${legion.eagles.length}</b></div>
     <p style="margin-top:12px;font-size:14px"><b>${legion.veterans}</b> ${legion.veterans === 1 ? 'veteran' : 'veterans'}: soldiers who joined after you learned from a mistake.</p>
-    <p style="font-size:14px">How to recruit: the Legion Quiz and True or False give infantry (harder questions give higher ranks), Who Am I? and Match Pairs give centurions, and the other games give principes or hastati. Each fact recruits once, and only when you knew it: no soldier for the last option left or for something you already got wrong in that round.</p>`)
+    <p style="font-size:14px">Win each chapter’s battle to unlock the next. A battle costs 60–80% of your soldiers (fewer if you win big); the survivors march on and fight again. A defeat costs nothing: recruit more and attack again.</p>
+    <p style="font-size:14px">How to recruit: the Legion Quiz and True or False give infantry (harder questions give higher ranks), Who Am I? and Match Pairs give centurions, and the other games give principes or hastati. Each fact recruits once, and only when you knew it: no soldier for the last option left or for something you already got wrong in that round.</p>
+    <p style="margin-top:16px"><button class="ghost dark" id="reset-progress">Reset my progress</button></p>`)
+  document.getElementById('reset-progress').addEventListener('click', e => {
+    if (e.target.dataset.confirm !== '1') { e.target.dataset.confirm = '1'; e.target.textContent = 'Tap again to erase your legion, stars and battles'; return }
+    try { localStorage.removeItem(LEGION_KEY); localStorage.removeItem(STORE_KEY) } catch {}
+    legion = { units: { hastatus: 0, princeps: 0, triarius: 0, centurio: 0 }, army: { hastatus: 0, princeps: 0, triarius: 0, centurio: 0 }, veterans: 0, eagles: [], rewarded: {}, missed: {}, conquered: [], battles: [] }
+    stars = {}
+    closeSheet(); loadChapter(0); run = null; go({ screen: 'rome' })
+    toast('Progress reset. Start again with the Kingdom.')
+  })
 }
 document.getElementById('sheet-close').addEventListener('click', closeSheet)
 document.getElementById('sheet').addEventListener('click', e => { if (e.target.id === 'sheet') closeSheet() })
@@ -606,11 +693,12 @@ function renderRome() {
     <div class="eras">${ERAS.map(era => {
       const chs = eraChapters(era)
       const total = chs.reduce((t, { c }) => { const s = chapterStars(c); return { earned: t.earned + s.earned, max: t.max + s.max } }, { earned: 0, max: 0 })
-      return `<button class="era-card" data-era="${era.id}" ${chs.length ? '' : 'disabled'}>
+      const open = chs.length && isUnlocked(chs[0].i)
+      return `<button class="era-card" data-era="${era.id}" ${open ? '' : 'disabled'}>
         <span class="era-period">${esc(era.period)}</span>
         <b>${esc(era.name)}</b>
         <span class="era-blurb">${esc(era.blurb)}</span>
-        <span class="era-meta">${chs.length ? `${plural(chs.length, 'chapter')} · ${total.earned} / ${total.max} ★` : 'Coming soon'}</span>
+        <span class="era-meta">${!chs.length ? 'Coming soon' : !open ? `Locked: win the battle of ${esc(CHAPTERS[chs[0].i - 1].battle.name)} first` : `${plural(chs.length, 'chapter')} · ${chs.filter(x => legion.conquered.includes(x.c.id)).length} won · ${total.earned} / ${total.max} ★`}</span>
         ${chs.length ? progressBar(total) : ''}
       </button>` }).join('')}
     </div>
@@ -623,10 +711,10 @@ function renderEra(eraId) {
     <header class="top"><div class="brand"><small>Ancient Rome · ${esc(era.period)}</small><h1>${esc(era.name)}</h1></div>
       <button class="ghost" id="up">All eras</button></header>
     <p class="task">${esc(era.blurb)}.</p>
-    <ol class="chapters">${eraChapters(era).map(({ c, i }, n) => { const s = chapterStars(c); return `
-      <li><button class="chapter-card" data-chapter="${i}">
-        <span class="chapter-num">${n + 1}</span>
-        <span class="chapter-meta"><b>${esc(c.short)}</b><span>${esc(c.title)} · ${esc(c.period)}</span>${progressBar(s)}</span>
+    <ol class="chapters">${eraChapters(era).map(({ c, i }, n) => { const s = chapterStars(c), open = isUnlocked(i), won = legion.conquered.includes(c.id); return `
+      <li><button class="chapter-card" data-chapter="${i}" ${open ? '' : 'disabled'}>
+        <span class="chapter-num ${won ? 'won' : ''}">${won ? '✓' : n + 1}</span>
+        <span class="chapter-meta"><b>${esc(c.short)}</b><span>${open ? `${esc(c.title)} · ${esc(c.period)}` : `Locked: win the battle of ${esc(CHAPTERS[i - 1].battle.name)} first`}</span>${progressBar(s)}</span>
         <span class="stars">${s.earned}★</span>
       </button></li>` }).join('')}
     </ol>`
@@ -662,6 +750,7 @@ function renderHome() {
       <ol class="run-steps">${plan.map((r, i) => `<li class="c${TYPE_COLOR[r.type]}">${i + 1}. ${GAMES[r.type].title}</li>`).join('')}</ol>
       <div class="actions"><button class="primary" id="run">Start</button><button class="ghost" id="chronicle">Read the chronicle</button></div>
     </section>
+    ${battleCardHtml()}
     ${SECTIONS.map(([type, label]) => `<p class="section-label">${label}</p>${list(type)}`).join('')}
     <p class="footnote">Generated from Wikipedia and fact-checked by AI. Early Roman dates are the traditional ones; historians doubt many of them.</p>`
   app.querySelector('#up').addEventListener('click', leaveChapter)
@@ -672,6 +761,8 @@ function renderHome() {
     go({ screen: 'briefing' })
   })
   app.querySelector('#chronicle').addEventListener('click', () => openChronicle())
+  app.querySelector('#battle')?.addEventListener('click', () => { window.scrollTo(0, 0); go({ screen: 'battle', phase: 0, scores: [] }) })
+  app.querySelector('#next-chapter')?.addEventListener('click', () => { loadChapter(chapterIndex + 1); window.scrollTo(0, 0); go({ screen: 'home' }) })
   app.querySelectorAll('.level-card').forEach(b => b.addEventListener('click', () => { run = null; startGame(b.dataset.type, +b.dataset.set) }))
 }
 
@@ -1129,6 +1220,205 @@ function renderBriefing() {
   bindBack()
   app.querySelector('#go').addEventListener('click', () => startGame(run.plan[0].type, run.plan[0].set))
   app.querySelector('#read').addEventListener('click', () => openChronicle())
+}
+
+// ---------- the chapter battle ----------
+function strengthBars(you, enemy, enemyName) {
+  const max = Math.max(you, enemy, 1)
+  return `<div class="vs">
+    <div class="vs-row"><span>Your legion</span><div class="vs-bar"><span class="you" style="width:${Math.round(100 * you / max)}%"></span></div><b>${you}</b></div>
+    <div class="vs-row"><span>${esc(enemyName)}</span><div class="vs-bar"><span class="them" style="width:${Math.round(100 * enemy / max)}%"></span></div><b>${enemy}</b></div>
+  </div>`
+}
+function battleCardHtml() {
+  const b = CH.battle
+  if (!b) return ''
+  const won = legion.conquered.includes(CH.id)
+  const last = legion.battles.filter(x => x.chapter === CH.id).at(-1)
+  const you = armyStrength(CH), enemy = enemyStrength(CH)
+  const next = CHAPTERS[chapterIndex + 1]
+  let advice
+  if (won) advice = `Victory${last ? `: ${last.survivors} survivors marched on` : ''}.`
+  else if (you * SKILL.max < enemy) advice = 'Even a perfect fight can’t win yet. Recruit more soldiers in this chapter’s games first.'
+  else if (you * SKILL.min >= enemy) advice = 'Your legion is strong enough to win even with a poor fight.'
+  else advice = 'You can win this, but only if you fight well. More soldiers make it safer.'
+  return `<section class="battle-card ${won ? 'won' : ''}">
+    <span class="eyebrow">Chapter battle · ${esc(b.year)}</span>
+    <h2>${esc(b.name)}</h2>
+    ${strengthBars(you, enemy, b.enemy)}
+    <p class="task">${advice}</p>
+    <div class="actions">
+      ${won ? (next ? `<button class="primary" id="next-chapter">Next chapter: ${esc(next.short)}</button>` : '<span class="task"><b>You have conquered every chapter so far.</b></span>')
+        : `<button class="primary" id="battle">Prepare for battle</button>`}
+    </div>
+  </section>`
+}
+
+// Each phase scores 0..1; their average decides the skill multiplier.
+const BATTLE_PHASES = ['Javelin volley', 'Hold the line', 'Send in the triarii']
+let battleLoop = null
+const stopLoop = () => { if (battleLoop) cancelAnimationFrame(battleLoop); battleLoop = null }
+function renderBattle() {
+  stopLoop()
+  const g = state, b = CH.battle
+  const head = `<header class="top"><div class="brand"><small>Battle · ${esc(b.year)}</small><h1>${esc(b.name)}</h1></div>
+    ${g.phase === 0 || g.phase === 4 ? '<button class="ghost" id="leave">Back</button>' : ''}</header>
+    ${g.phase >= 1 && g.phase <= 3 ? `<span class="round-pill">Phase ${g.phase} of 3 · ${BATTLE_PHASES[g.phase - 1]}</span>` : ''}`
+  if (g.phase === 0) {
+    app.innerHTML = `${head}
+      <section class="briefing">
+        <span class="eyebrow">Against ${esc(b.enemy)}</span>
+        <p>${esc(b.intro)}</p>
+        <button class="read-more" data-read="${b.sec}">Read about it in the chronicle</button>
+        ${strengthBars(armyStrength(CH), enemyStrength(CH), b.enemy)}
+        <p style="font-size:14px">Your legion: ${menCount()} men, ${esc(ERA_ARMY[CH.era] ?? 'Roman soldiers')} (×${eraQuality(CH)} for the era). In battle, how well you fight multiplies your strength by ${SKILL.min} to ${SKILL.max}.</p>
+        <div class="actions"><button class="primary" id="go">To battle!</button></div>
+      </section>`
+    app.querySelector('#go').addEventListener('click', () => { g.phase = 1; renderBattle() })
+  } else if (g.phase === 1) battleJavelins(head)
+  else if (g.phase === 2) battleLine(head)
+  else if (g.phase === 3) battleReserve(head)
+  else battleResult(head)
+  app.querySelector('#leave')?.addEventListener('click', () => { stopLoop(); go({ screen: 'home' }) })
+}
+function nextPhase(score) {
+  state.scores.push(Math.max(0, Math.min(1, score)))
+  state.phase++
+  setTimeout(() => { if (state.screen === 'battle') renderBattle() }, 900)
+}
+
+// Phase 1: tap when the needle is in the middle of the meter, three times
+function battleJavelins(head) {
+  const g = state, throws = []
+  app.innerHTML = `${head}
+    <p class="task">Your hastati hurl their javelins. Tap <b>Throw</b> when the marker is in the gold zone. Three volleys.</p>
+    <div class="meter"><span class="zone"></span><span class="needle" id="needle"></span></div>
+    <p class="task" id="throws">Volley 1 of 3</p>
+    <button class="primary big" id="throw">Throw!</button>`
+  const needle = app.querySelector('#needle'), info = app.querySelector('#throws')
+  let x = 0, t0 = performance.now(), speed = 2.4
+  const tick = now => { x = 0.5 + 0.5 * Math.sin((now - t0) / 1000 * speed); needle.style.left = (x * 100) + '%'; battleLoop = requestAnimationFrame(tick) }
+  battleLoop = requestAnimationFrame(tick)
+  app.querySelector('#throw').addEventListener('click', () => {
+    if (throws.length >= 3) return
+    const score = Math.max(0, 1 - Math.abs(x - 0.5) / 0.5)
+    throws.push(score)
+    info.textContent = `${score > 0.84 ? 'A perfect volley!' : score > 0.6 ? 'A good volley.' : 'Wide of the mark.'} ${throws.length < 3 ? `Volley ${throws.length + 1} of 3` : ''}`
+    speed += 0.8
+    if (throws.length === 3) { stopLoop(); nextPhase(throws.reduce((a, b) => a + b, 0) / 3) }
+  })
+}
+
+// Phase 2: attacks come at the left, centre or right; tap that part of the line in time
+function battleLine(head) {
+  const g = state, lanes = ['Left', 'Centre', 'Right'], total = 6
+  let i = 0, hits = 0, target = -1, deadline = 0, window_ = 1500
+  app.innerHTML = `${head}
+    <p class="task">The enemy charges. Tap the part of the line where the attack falls, before it breaks through.</p>
+    <div class="lanes3">${lanes.map((l, k) => `<button class="lane" data-lane="${k}"><span class="lane-name">${l}</span><span class="lane-timer"><span></span></span></button>`).join('')}</div>
+    <p class="task" id="line-info">Get ready…</p>`
+  const info = app.querySelector('#line-info'), buttons = [...app.querySelectorAll('.lane')]
+  const show = () => {
+    if (state !== g) return
+    if (i >= total) { stopLoop(); return nextPhase(hits / total) }
+    target = Math.floor(Math.random() * 3)
+    deadline = performance.now() + window_
+    buttons.forEach((b, k) => b.classList.toggle('attack', k === target))
+    info.textContent = `Attack ${i + 1} of ${total}`
+  }
+  const resolve = ok => {
+    if (target < 0) return
+    if (ok) hits++
+    buttons[target].classList.remove('attack')
+    buttons[target].querySelector('.lane-timer span').style.width = '0'
+    buttons[target].classList.add(ok ? 'held' : 'broken')
+    const done = buttons[target]
+    setTimeout(() => done.classList.remove('held', 'broken'), 350)
+    target = -1; i++; window_ = Math.max(800, window_ - 120)
+    setTimeout(show, 450)
+  }
+  const tick = now => {
+    if (target >= 0) {
+      const left = Math.max(0, deadline - now) / window_
+      buttons[target].querySelector('.lane-timer span').style.width = (left * 100) + '%'
+      if (now >= deadline) resolve(false)
+    }
+    battleLoop = requestAnimationFrame(tick)
+  }
+  battleLoop = requestAnimationFrame(tick)
+  buttons.forEach((b, k) => b.addEventListener('click', () => { if (target >= 0) resolve(k === target) }))
+  setTimeout(show, 900)
+}
+
+// Phase 3: hold the triarii back until the pressure is near breaking point, then send them in
+function battleReserve(head) {
+  const g = state
+  const rise = 2600 + Math.random() * 1800, breakAt = rise + 900
+  app.innerHTML = `${head}
+    <p class="task">Your veterans wait behind the line. Send them in when the pressure is close to breaking point, not too early, not too late.</p>
+    <div class="pressure"><span id="pressure-fill"></span><span class="pressure-mark"></span></div>
+    <p class="task" id="pressure-info">The line holds…</p>
+    <button class="primary big" id="send">Send in the triarii!</button>`
+  const fill = app.querySelector('#pressure-fill'), info = app.querySelector('#pressure-info')
+  let p = 0, t0 = performance.now(), done = false
+  const finish = score => { if (done) return; done = true; stopLoop(); nextPhase(score) }
+  const tick = now => {
+    const t = now - t0
+    p = Math.min(100, 100 * Math.pow(Math.min(1, t / rise), 1.6))
+    fill.style.width = p + '%'
+    fill.classList.toggle('hot', p >= 85)
+    if (p >= 85 && t < breakAt) info.textContent = 'The line is bending!'
+    if (t >= breakAt) { info.textContent = 'The line broke before the triarii arrived.'; return finish(0) }
+    battleLoop = requestAnimationFrame(tick)
+  }
+  battleLoop = requestAnimationFrame(tick)
+  app.querySelector('#send').addEventListener('click', () => {
+    const score = p >= 85 ? 1 : p >= 60 ? 0.3 + 0.7 * (p - 60) / 25 : 0.3 * p / 60
+    info.textContent = score >= 1 ? 'Perfect timing: the triarii crash in as the line bends!' : score >= 0.5 ? 'A little early, but they help.' : 'Far too early: they tire before the enemy breaks.'
+    finish(score)
+  })
+}
+
+function battleResult(head) {
+  const g = state, b = CH.battle
+  if (!g.outcome) {
+    const skill = g.scores.reduce((a, x) => a + x, 0) / g.scores.length
+    const mult = +(SKILL.min + (SKILL.max - SKILL.min) * skill).toFixed(2)
+    const you = armyStrength(CH), enemy = enemyStrength(CH), total = Math.round(you * mult)
+    const won = total >= enemy
+    let survivors = menCount(), lossRate = 0
+    if (won) {
+      const margin = total / Math.max(1, enemy)
+      lossRate = Math.max(0.6, Math.min(0.8, 0.8 - (margin - 1) * (0.2 / 0.3)))
+      for (const u of Object.keys(legion.army)) legion.army[u] = Math.round(legion.army[u] * (1 - lossRate))
+      survivors = menCount()
+      if (!legion.conquered.includes(CH.id)) legion.conquered.push(CH.id)
+    }
+    legion.battles.push({ chapter: CH.id, won, you, mult, enemy, survivors, at: new Date().toISOString() })
+    saveLegion()
+    renderHud()
+    g.outcome = { skill, mult, you, enemy, total, won, survivors, lossRate }
+  }
+  const o = g.outcome, next = CHAPTERS[chapterIndex + 1]
+  app.innerHTML = `${head}
+    <section class="result">
+      <h2>${o.won ? (o.total >= o.enemy * 1.25 ? 'A crushing victory!' : 'Victory!') : 'Defeat. Your legion retreats.'}</h2>
+      <div class="battle-sum">
+        <span>Your legion</span><b>${o.you}</b>
+        <span>× how well you fought</span><b>×${o.mult}</b>
+        <span>Your strength on the day</span><b>${o.total}</b>
+        <span>${esc(b.enemy)}</span><b>${o.enemy}</b>
+      </div>
+      <p class="task">Phases: ${BATTLE_PHASES.map((n, k) => `${n} ${Math.round(100 * g.scores[k])}%`).join(' · ')}</p>
+      ${o.won ? `<p>The battle cost ${Math.round(o.lossRate * 100)}% of your soldiers. <b>${o.survivors} survivors</b> march on${next ? ` to <b>${esc(next.short)}</b>` : ''}, and every soldier you recruit there joins them.</p>`
+        : `<p>You were <b>${o.enemy - o.total}</b> strength short. A retreat costs no soldiers: recruit more in this chapter’s games (facts you missed join as veterans) and attack again.</p>`}
+      <div class="actions">
+        ${o.won && next ? `<button class="primary" id="go-next">On to ${esc(next.short)}</button>` : ''}
+        <button class="${o.won && next ? 'ghost' : 'primary'}" id="to-chapter">${o.won ? 'Back to the chapter' : 'Recruit more soldiers'}</button>
+      </div>
+    </section>`
+  app.querySelector('#go-next')?.addEventListener('click', () => { loadChapter(chapterIndex + 1); window.scrollTo(0, 0); go({ screen: 'home' }) })
+  app.querySelector('#to-chapter').addEventListener('click', () => go({ screen: 'home' }))
 }
 
 // ---------- results ----------

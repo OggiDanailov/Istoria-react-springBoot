@@ -58,7 +58,7 @@ for (const c of CONFIG.chapters) {
   if (got !== expected) throw new Error(`${c.id}: chronicle has ${got} words but chapter.md has ${expected}`)
   const ch = {
     id: c.id, era: c.era, short: c.short, title: c.chapterName.replace(/\s*\([^)]*\)\s*$/, '').replace(/^Early Republic:\s*/, '').replace(/ - /g, ': '), period: c.period.replace('BCE', 'BC'),
-    sources: c.sources, briefing: g.briefing, sections,
+    sources: c.sources, briefing: g.briefing, sections, battle: c.battle,
     timelines: g.timelines.map(t => ({ name: t.name, blurb: t.blurb, events: t.events.filter(ok).map(e => ({ label: e.label, when: e.when, y: e.year, fact: e.fact, sec: e.sectionId })) }))
       .filter(t => t.events.length >= 3),
     matches: g.matchSets.map(m => { const pairs = m.pairs.filter(ok); return { name: m.name, blurb: m.blurb, pairs: pairs.map(p => [p.name, p.match]), secs: pairs.map(p => p.sectionId) } })
@@ -78,6 +78,7 @@ for (const c of CONFIG.chapters) {
   const links = [...ch.timelines.flatMap(t => t.events.map(e => e.sec)), ...ch.matches.flatMap(m => m.secs), ...ch.decks.flatMap(d => d.cards.map(x => x.sec)),
     ...ch.odds.flatMap(o => o.rounds.map(r => r.sec)), ...ch.whos.flatMap(w => w.people.map(p => p.sec)), ...ch.maps.flatMap(m => m.places.map(p => p.sec)),
     ...ch.quizzes.flatMap(q => q.questions.map(x => x.sec))]
+  if (ch.battle && !ids.has(ch.battle.sec)) links.push(ch.battle.sec)
   const broken = links.filter(l => !ids.has(l))
   if (broken.length) throw new Error(`${c.id}: links to unknown sections: ${[...new Set(broken)].join(', ')}`)
   chapters.push(ch)

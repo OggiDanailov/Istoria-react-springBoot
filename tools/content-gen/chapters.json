@@ -43,7 +43,14 @@
         "hard": 10
       },
       "short": "The Kingdom",
-      "era": "kingdom"
+      "era": "kingdom",
+      "battle": {
+        "name": "Lake Regillus",
+        "year": "c. 496 BC (traditional)",
+        "enemy": "The Latin League",
+        "sec": "birth-of-the-republic",
+        "intro": "The exiled Tarquin has not given up. An alliance of Latin towns marches on Rome, and the armies meet at Lake Regillus. Win, and the young Republic survives."
+      }
     },
     {
       "id": "conflict-of-orders-origins",
@@ -62,7 +69,14 @@
         "hard": 10
       },
       "short": "Patricians vs Plebeians",
-      "era": "early-republic"
+      "era": "early-republic",
+      "battle": {
+        "name": "War with the Volsci",
+        "year": "494 BC",
+        "enemy": "Volsci, Aequi and Sabines",
+        "sec": "first-secession",
+        "intro": "Rome is at war with three neighbours: the Sabines, and the Aequi and Volsci, hill tribes to the east and south-east. The plebeians are back from the Sacred Mount, with tribunes of their own. Now Rome needs every soldier."
+      }
     },
     {
       "id": "conflict-of-orders-resolution",
@@ -80,7 +94,14 @@
         "hard": 10
       },
       "short": "Toward Equality",
-      "era": "early-republic"
+      "era": "early-republic",
+      "battle": {
+        "name": "The Fall of Veii",
+        "year": "c. 396 BC",
+        "enemy": "Veii",
+        "sec": "siege-of-veii",
+        "intro": "Veii, a great Etruscan city just 16 km from Rome, has held out for years. Camillus, named dictator, has a plan: a tunnel through the soft rock beneath the walls."
+      }
     },
     {
       "id": "samnite-wars",
@@ -97,7 +118,14 @@
         "hard": 10
       },
       "short": "The Samnite Wars",
-      "era": "early-republic"
+      "era": "early-republic",
+      "battle": {
+        "name": "Aquilonia",
+        "year": "293 BC",
+        "enemy": "The Samnites",
+        "sec": "aquilonia-and-the-end",
+        "intro": "Some 40,000 Samnites gather at Aquilonia. Their elite units have sworn a sacred oath never to flee. The consul Papirius Cursor attacks."
+      }
     },
     {
       "id": "final-conquest-of-italy",
@@ -115,7 +143,14 @@
         "hard": 10
       },
       "short": "Conquest of Italy",
-      "era": "early-republic"
+      "era": "early-republic",
+      "battle": {
+        "name": "Beneventum",
+        "year": "275 BC",
+        "enemy": "Pyrrhus of Epirus",
+        "sec": "beneventum-and-withdrawal",
+        "intro": "Pyrrhus, the Greek king who has beaten Rome twice at a terrible cost, faces the Romans one last time at Beneventum. Ancient accounts disagree on how it ended. Today, the outcome is up to you."
+      }
     }
   ]
 }
