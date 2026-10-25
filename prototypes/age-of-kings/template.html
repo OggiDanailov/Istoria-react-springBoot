@@ -1385,7 +1385,8 @@ function setupMarch() {
       })
       ctx.fillStyle = '#6b4a2b'; [road.left + 2, mid - 3, road.right - 6].forEach(px => ctx.fillRect(px, y - 34, 5, 58))
     }
-    for (const s of m.soldiers) drawSoldier(ctx, s.x, s.y, UNITS[s.t].color, s.t === 'centurio')
+    const marching = m.phase === 'march'
+    ;[...m.soldiers].sort((a, b) => a.y - b.y).forEach((s, i) => drawFigure(ctx, s.x, s.y + 5, s.t, { walk: marching ? performance.now() / 90 + i * 0.9 : null, scale: 0.85 }))
     for (const p of m.pops) { ctx.globalAlpha = Math.max(0, p.a); ctx.strokeStyle = p.color; ctx.lineWidth = 2; ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2); ctx.stroke() }
     ctx.globalAlpha = 1
     for (const f of m.floats) { ctx.globalAlpha = Math.max(0, f.a); ctx.fillStyle = f.color; ctx.font = '800 26px Nunito, system-ui, sans-serif'; ctx.textAlign = 'center'; ctx.fillText(f.text, m.cx, f.y) }
@@ -1413,6 +1414,89 @@ function wrapText(ctx, text, x, y, maxW, lineH) {
   shown.forEach((l, i) => ctx.fillText(l, x, y + (i - (shown.length - 1) / 2) * lineH))
 }
 function shuffleInPlace(a) { for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]] } return a }
+
+// ---------- little soldiers, drawn in code ----------
+// Upright figures (feet at x, y) in a slight 2.5D view. Romans: red tunic, big red shield, bronze helmet;
+// the plume colour shows the unit (as Polybius says, Roman soldiers wore feathers to look taller).
+const LOOKS = {
+  hastatus: { tunic: '#a8392f', plume: '#e0a63a', shield: 'scutum', shieldColor: '#8e2b22', trim: '#e0a63a', helmet: '#c9a24a', weapon: 'pilum' },
+  princeps: { tunic: '#a8392f', plume: '#4f8fb8', shield: 'scutum', shieldColor: '#8e2b22', trim: '#4f8fb8', helmet: '#c9a24a', weapon: 'sword' },
+  triarius: { tunic: '#a8392f', plume: '#e9e1cf', shield: 'scutum', shieldColor: '#8e2b22', trim: '#e9e1cf', helmet: '#c9a24a', weapon: 'spear' },
+  centurio: { tunic: '#a8392f', crest: true, shield: 'scutum', shieldColor: '#8e2b22', trim: '#e0a63a', helmet: '#d9d2c0', weapon: 'sword' },
+  phalanx: { tunic: '#4d5a6a', shield: 'round', shieldColor: '#b08a3e', trim: '#6b5326', helmet: '#b08a3e', plume: '#1b1715', weapon: 'longspear' },
+  warrior: { tunic: '#5b6b4a', shield: 'oval', shieldColor: '#6b4a2b', trim: '#3f2a16', hair: '#5a3a22', weapon: 'axe' },
+  archer: { tunic: '#6a7a5a', hair: '#3f2a16', weapon: 'bow' },
+  slinger: { tunic: '#7a6a5a', hair: '#3f2a16', weapon: 'sling' },
+  cavalry: { tunic: '#4d5a6a', helmet: '#b08a3e', horse: '#7a5636', weapon: 'spear' },
+  elephant: { elephant: true },
+}
+function drawFigure(ctx, x, y, kind, { dir = 1, walk = null, attack = null, scale = 1, fallen = false } = {}) {
+  const L = LOOKS[kind] ?? LOOKS.warrior
+  ctx.save()
+  ctx.translate(x, y)
+  if (fallen) { ctx.rotate(dir * Math.PI / 2); ctx.globalAlpha *= 0.55 }
+  ctx.scale(scale * dir, scale)
+  const ink = '#1b1715'
+  if (!fallen) { ctx.fillStyle = 'rgba(0,0,0,.22)'; ctx.beginPath(); ctx.ellipse(0, 0, L.elephant ? 11 : L.horse ? 7 : 4, L.elephant ? 3.5 : 1.7, 0, 0, Math.PI * 2); ctx.fill() }
+  if (L.elephant) {
+    const bob = walk != null ? Math.sin(walk) * 0.6 : 0
+    ctx.fillStyle = '#7b7f86'; ctx.strokeStyle = '#3b3f46'; ctx.lineWidth = 1
+    for (const lx of [-6, -2, 3, 7]) ctx.fillRect(lx - 1.3, -5 + bob, 2.6, 5)
+    ctx.beginPath(); ctx.ellipse(0, -9 + bob, 10, 6, 0, 0, Math.PI * 2); ctx.fill(); ctx.stroke()
+    ctx.beginPath(); ctx.arc(9, -11 + bob, 4, 0, Math.PI * 2); ctx.fill(); ctx.stroke()
+    ctx.strokeStyle = '#7b7f86'; ctx.lineWidth = 2; ctx.beginPath(); ctx.moveTo(12, -10 + bob); ctx.quadraticCurveTo(15, -4, 13 + (attack != null ? Math.sin(attack) * 2 : 0), 0); ctx.stroke()
+    ctx.strokeStyle = '#f2ead8'; ctx.lineWidth = 1.2; ctx.beginPath(); ctx.moveTo(11, -8 + bob); ctx.lineTo(14, -6 + bob); ctx.stroke()
+    ctx.fillStyle = '#8a6a3a'; ctx.fillRect(-5, -19 + bob, 9, 5); ctx.strokeStyle = ink; ctx.lineWidth = 0.8; ctx.strokeRect(-5, -19 + bob, 9, 5)
+    ctx.fillStyle = '#e3b98f'; ctx.beginPath(); ctx.arc(-1, -21 + bob, 1.6, 0, Math.PI * 2); ctx.fill()
+    ctx.restore(); return
+  }
+  const bob = walk != null ? Math.abs(Math.sin(walk)) * -0.8 : 0
+  let baseY = 0
+  if (L.horse) {
+    const s = walk != null ? Math.sin(walk) * 1.4 : 0
+    ctx.strokeStyle = '#4a3420'; ctx.lineWidth = 1.2
+    for (const [lx, k] of [[-4, 1], [-2, -1], [3, 1], [5, -1]]) { ctx.beginPath(); ctx.moveTo(lx, -4); ctx.lineTo(lx + s * k, 0); ctx.stroke() }
+    ctx.fillStyle = L.horse; ctx.beginPath(); ctx.ellipse(0, -5.5 + bob, 6, 2.8, 0, 0, Math.PI * 2); ctx.fill()
+    ctx.beginPath(); ctx.ellipse(6, -8 + bob, 2, 1.4, -0.6, 0, Math.PI * 2); ctx.fill()
+    baseY = -5
+  } else {
+    const s = walk != null ? Math.sin(walk) * 1.6 : 0
+    ctx.strokeStyle = '#3f2a16'; ctx.lineWidth = 1.2
+    ctx.beginPath(); ctx.moveTo(-1.1, -4); ctx.lineTo(-1.1 + s, 0); ctx.moveTo(1.1, -4); ctx.lineTo(1.1 - s, 0); ctx.stroke()
+  }
+  const by = baseY + bob
+  ctx.fillStyle = L.tunic; ctx.beginPath(); ctx.roundRect(-2.6, by - 8.5, 5.2, 5, 1.4); ctx.fill()
+  // weapon in the front hand; it swings or thrusts when attacking
+  const thrust = attack != null ? Math.max(0, Math.sin(attack)) : 0
+  ctx.lineCap = 'round'
+  if (L.weapon === 'pilum' || L.weapon === 'spear' || L.weapon === 'longspear') {
+    const len = L.weapon === 'longspear' ? 18 : L.weapon === 'spear' ? 14 : 12
+    const tilt = 0.25 + thrust * 0.9
+    ctx.strokeStyle = '#6b4a2b'; ctx.lineWidth = 1.1
+    ctx.beginPath(); ctx.moveTo(2.8, by - 4); ctx.lineTo(2.8 + Math.sin(tilt) * len, by - 4 - Math.cos(tilt) * len); ctx.stroke()
+    ctx.strokeStyle = '#cfd4d8'; ctx.lineWidth = 1.4; ctx.beginPath(); ctx.moveTo(2.8 + Math.sin(tilt) * (len - 2.5), by - 4 - Math.cos(tilt) * (len - 2.5)); ctx.lineTo(2.8 + Math.sin(tilt) * len, by - 4 - Math.cos(tilt) * len); ctx.stroke()
+  } else if (L.weapon === 'sword' || L.weapon === 'axe') {
+    const a = -0.6 + thrust * 1.6
+    ctx.strokeStyle = L.weapon === 'axe' ? '#6b4a2b' : '#cfd4d8'; ctx.lineWidth = 1.3
+    ctx.beginPath(); ctx.moveTo(2.6, by - 5); ctx.lineTo(2.6 + Math.sin(a) * 5, by - 5 - Math.cos(a) * 5); ctx.stroke()
+    if (L.weapon === 'axe') { ctx.fillStyle = '#9aa3aa'; ctx.beginPath(); ctx.arc(2.6 + Math.sin(a) * 5, by - 5 - Math.cos(a) * 5, 1.5, 0, Math.PI * 2); ctx.fill() }
+  } else if (L.weapon === 'bow') {
+    ctx.strokeStyle = '#6b4a2b'; ctx.lineWidth = 1.1; ctx.beginPath(); ctx.arc(1.5, by - 6, 4, -Math.PI / 2.2, Math.PI / 2.2); ctx.stroke()
+  } else if (L.weapon === 'sling') {
+    ctx.strokeStyle = '#6b4a2b'; ctx.lineWidth = 0.9; const a = (attack ?? 0) * 2; ctx.beginPath(); ctx.moveTo(2.4, by - 7); ctx.lineTo(2.4 + Math.cos(a) * 3.5, by - 9 + Math.sin(a) * 3.5); ctx.stroke()
+  }
+  // head, helmet, plume or crest, hair
+  ctx.fillStyle = '#e3b98f'; ctx.beginPath(); ctx.arc(0, by - 10.6, 2, 0, Math.PI * 2); ctx.fill()
+  if (L.helmet) { ctx.fillStyle = L.helmet; ctx.beginPath(); ctx.arc(0, by - 11, 2.3, Math.PI, 0); ctx.fill() }
+  if (L.hair) { ctx.fillStyle = L.hair; ctx.beginPath(); ctx.arc(-0.4, by - 11.1, 2.2, Math.PI * 0.95, Math.PI * 2.05); ctx.fill() }
+  if (L.crest) { ctx.strokeStyle = '#d4392d'; ctx.lineWidth = 2.2; ctx.beginPath(); ctx.moveTo(-3.4, by - 12.5); ctx.lineTo(3.4, by - 12.5); ctx.stroke() }
+  else if (L.plume) { ctx.strokeStyle = L.plume; ctx.lineWidth = 1.5; ctx.beginPath(); ctx.moveTo(-0.6, by - 13); ctx.lineTo(-1.4, by - 16); ctx.moveTo(0.6, by - 13); ctx.lineTo(1.2, by - 16); ctx.stroke() }
+  // shield on the front of the body
+  if (L.shield === 'scutum') { ctx.fillStyle = L.shieldColor; ctx.strokeStyle = L.trim; ctx.lineWidth = 0.9; ctx.beginPath(); ctx.roundRect(-3.6, by - 9.2, 3.8, 7, 1.2); ctx.fill(); ctx.stroke(); ctx.fillStyle = L.trim; ctx.beginPath(); ctx.arc(-1.7, by - 5.7, 0.8, 0, Math.PI * 2); ctx.fill() }
+  else if (L.shield === 'round') { ctx.fillStyle = L.shieldColor; ctx.strokeStyle = L.trim; ctx.lineWidth = 0.9; ctx.beginPath(); ctx.arc(-1.8, by - 6, 3.4, 0, Math.PI * 2); ctx.fill(); ctx.stroke() }
+  else if (L.shield === 'oval') { ctx.fillStyle = L.shieldColor; ctx.strokeStyle = L.trim; ctx.lineWidth = 0.9; ctx.beginPath(); ctx.ellipse(-1.8, by - 6, 2.4, 3.6, 0, 0, Math.PI * 2); ctx.fill(); ctx.stroke() }
+  ctx.restore()
+}
 
 // ---------- the battlefield ----------
 // Squads of tiny soldiers on a 2D field. Drag a squad to move it (onto an enemy to attack). Squads fight
@@ -1549,7 +1633,7 @@ function setupField() {
   const radiusOf = s => FOES[s.kind]?.big ? 11 : 9 + Math.sqrt(s.members.length) * 1.4
   const powerOf = side => squads.filter(s => s.side === side).reduce((n, s) => n + s.members.reduce((k, m) => k + m.hp * m.dps, 0), 0)
   const startPower = { you: powerOf('you'), foe: powerOf('foe') }
-  const f = anim = { fled: { hastatus: 0, princeps: 0, triarius: 0, centurio: 0 }, alive: true, phase: 'deploy', squads, projectiles: [], pops: [], last: performance.now(), selected: null, drag: null, t: 0, result: null }
+  const f = anim = { fallen: [], dust: [], sparks: [], shake: 0, fled: { hastatus: 0, princeps: 0, triarius: 0, centurio: 0 }, alive: true, phase: 'deploy', squads, projectiles: [], pops: [], last: performance.now(), selected: null, drag: null, t: 0, result: null }
 
   // --- controls: drag a squad of yours to give it a destination (onto an enemy squad = attack it)
   const at = (x, y, side) => squads.filter(s => alive(s) && (!side || s.side === side)).find(s => Math.hypot(s.x - x, s.y - y) < radiusOf(s) + 14)
@@ -1595,7 +1679,12 @@ function setupField() {
       const g = FIGHTER[m.t]?.guard ?? 1
       const take = Math.min(m.hp, dmg * g)
       m.hp -= take; dmg -= take / g
-      if (m.hp <= 0.01) { target.members.splice(i, 1); f.pops.push({ x: target.x + (Math.random() - 0.5) * radiusOf(target), y: target.y + (Math.random() - 0.5) * radiusOf(target), r: 2, a: 1, side: target.side }) }
+      if (m.hp <= 0.01) {
+        const [fx, fy] = formation(target)[i] ?? [target.x, target.y]
+        target.members.splice(i, 1)
+        if (f.fallen.length > 400) f.fallen.shift()
+        f.fallen.push({ x: fx, y: fy, kind: m.t, dir: Math.random() < 0.5 ? 1 : -1 })
+      }
     }
   }
   function step(dt) {
@@ -1612,7 +1701,10 @@ function setupField() {
         s.contactT += dt
         const charge = FOES[s.kind]?.charge && s.contactT < 1.2 ? FOES[s.kind].charge : 1
         const dps = s.members.reduce((n, m) => n + m.dps, 0)
+        if (s.contactT === dt) f.shake = Math.max(f.shake, 2.5)          // the lines crash together
+        if (Math.random() < dt * 9) f.sparks.push({ x: (s.x + target.x) / 2 + (Math.random() - 0.5) * 18, y: (s.y + target.y) / 2 + (Math.random() - 0.5) * 8 - 6, a: 1 })
         hurt(target, dps * dt * charge, s)
+        s.moving = false
         continue
       }
       s.contactT = 0
@@ -1644,9 +1736,12 @@ function setupField() {
         const friendFighting = squads.some(o => o !== s && alive(o) && o.side === s.side && o.contactT > 0 && Math.hypot(o.x - s.x, o.y - s.y) < 110)
         if (dist < 130 || friendFighting) { tx = near.x; ty = near.y } else hold = true
       }
+      s.moving = false
       if (!hold) {
         const d = Math.hypot(tx - s.x, ty - s.y)
         if (d > 2) {
+          s.moving = true
+          if (Math.random() < dt * 10) f.dust.push({ x: s.x + (Math.random() - 0.5) * radiusOf(s) * 1.6, y: s.y + 2, r: 2, a: 0.4 })
           const sp = speedBase * slowAt(s.x, s.y) * dt
           s.facing = Math.atan2(ty - s.y, tx - s.x)
           s.x += (tx - s.x) / d * Math.min(sp, d); s.y += (ty - s.y) / d * Math.min(sp, d)
@@ -1673,6 +1768,9 @@ function setupField() {
       return false
     })
     f.pops = f.pops.filter(p => (p.r += dt * 26, p.a -= dt * 2) > 0)
+    f.dust = f.dust.filter(d => (d.r += dt * 9, d.a -= dt * 0.8) > 0)
+    f.sparks = f.sparks.filter(k => (k.a -= dt * 4) > 0)
+    f.shake = Math.max(0, f.shake - dt * 10)
     // morale: a squad that has lost most of its men flees the field
     for (const s of squads) if (alive(s) && s.members.length <= 2 && s.startSize >= 6) {
       if (s.side === 'you') for (const m of s.members) f.fled[m.t]++   // they rejoin the legion after the battle
@@ -1715,20 +1813,33 @@ function setupField() {
   }
 
   // --- drawing
-  function drawTerrain() {
-    ctx.fillStyle = '#86964f'; ctx.fillRect(0, 0, W, H)
+  // the field is drawn once into an offscreen canvas: grass texture, hills, water, trees, walls
+  const bg = document.createElement('canvas')
+  const dpr = window.devicePixelRatio || 1
+  bg.width = W * dpr; bg.height = H * dpr
+  const bctx = bg.getContext('2d'); bctx.setTransform(dpr, 0, 0, dpr, 0, 0)
+  ;(function paintField(c) {
+    c.fillStyle = '#86964f'; c.fillRect(0, 0, W, H)
+    let seed = 7; const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647
+    for (let i = 0; i < 900; i++) { c.strokeStyle = rnd() < 0.5 ? 'rgba(60,80,30,.25)' : 'rgba(200,210,120,.18)'; c.lineWidth = 1; const x = rnd() * W, y = rnd() * H; c.beginPath(); c.moveTo(x, y); c.lineTo(x + (rnd() - 0.5) * 2, y - 3); c.stroke() }
     for (const t of terrain) {
-      if (t.k === 'hill') { const g = ctx.createRadialGradient(t.x, t.y, 0, t.x, t.y, t.r); g.addColorStop(0, '#b4b46a'); g.addColorStop(1, '#86964f'); ctx.fillStyle = g; ctx.beginPath(); ctx.arc(t.x, t.y, t.r, 0, Math.PI * 2); ctx.fill()
-        ctx.strokeStyle = 'rgba(60,60,20,.25)'; ctx.setLineDash([3, 4]); ctx.beginPath(); ctx.arc(t.x, t.y, t.r * 0.66, 0, Math.PI * 2); ctx.stroke(); ctx.setLineDash([]) }
-      if (t.k === 'lake') { ctx.fillStyle = '#4f86a8'; ctx.beginPath(); ctx.ellipse(t.x, t.y, t.rx, t.ry, 0, 0, Math.PI * 2); ctx.fill() }
-      if (t.k === 'marsh') { ctx.fillStyle = 'rgba(79,134,168,.35)'; ctx.beginPath(); ctx.ellipse(t.x, t.y, t.rx, t.ry, 0, 0, Math.PI * 2); ctx.fill() }
-      if (t.k === 'trees') for (let i = 0; i < 9; i++) { const a = i * 2.4, rr = t.r * Math.sqrt(i / 9); ctx.fillStyle = '#4f6a35'; ctx.beginPath(); ctx.arc(t.x + Math.cos(a) * rr, t.y + Math.sin(a) * rr, 7, 0, Math.PI * 2); ctx.fill() }
-      if (t.k === 'wall') { ctx.fillStyle = '#9a8a6a'; ctx.fillRect(0, t.y - 10, W, 12); ctx.fillStyle = '#6f6249'; for (let x = 0; x < W; x += 16) ctx.fillRect(x, t.y - 16, 9, 6) }
+      if (t.k === 'hill') { const g = c.createRadialGradient(t.x - t.r * 0.2, t.y - t.r * 0.25, 0, t.x, t.y, t.r); g.addColorStop(0, '#c4c27a'); g.addColorStop(0.7, '#a3a861'); g.addColorStop(1, 'rgba(134,150,79,0)'); c.fillStyle = g; c.beginPath(); c.arc(t.x, t.y, t.r, 0, Math.PI * 2); c.fill()
+        c.strokeStyle = 'rgba(60,60,20,.22)'; c.setLineDash([3, 4]); for (const k of [0.45, 0.75]) { c.beginPath(); c.arc(t.x, t.y, t.r * k, 0, Math.PI * 2); c.stroke() }; c.setLineDash([]) }
+      if (t.k === 'lake') { c.fillStyle = '#c9b48a'; c.beginPath(); c.ellipse(t.x, t.y, t.rx + 4, t.ry + 3, 0, 0, Math.PI * 2); c.fill()
+        const g = c.createRadialGradient(t.x, t.y, 0, t.x, t.y, Math.max(t.rx, t.ry)); g.addColorStop(0, '#3f7aa0'); g.addColorStop(1, '#5d93b5'); c.fillStyle = g; c.beginPath(); c.ellipse(t.x, t.y, t.rx, t.ry, 0, 0, Math.PI * 2); c.fill()
+        c.strokeStyle = 'rgba(255,255,255,.35)'; c.lineWidth = 1; for (let i = 0; i < 6; i++) { const x = t.x + (rnd() - 0.5) * t.rx, y = t.y + (rnd() - 0.5) * t.ry; c.beginPath(); c.moveTo(x - 5, y); c.quadraticCurveTo(x, y - 2, x + 5, y); c.stroke() } }
+      if (t.k === 'marsh') { c.fillStyle = 'rgba(79,134,168,.35)'; c.beginPath(); c.ellipse(t.x, t.y, t.rx, t.ry, 0, 0, Math.PI * 2); c.fill()
+        c.strokeStyle = '#4f6a35'; c.lineWidth = 1; for (let i = 0; i < 30; i++) { const x = t.x + (rnd() - 0.5) * t.rx * 1.8, y = t.y + (rnd() - 0.5) * t.ry * 1.8; if (((x - t.x) / t.rx) ** 2 + ((y - t.y) / t.ry) ** 2 > 1) continue; c.beginPath(); c.moveTo(x, y); c.lineTo(x - 1, y - 5); c.moveTo(x, y); c.lineTo(x + 1.5, y - 4); c.stroke() } }
+      if (t.k === 'trees') for (let i = 0; i < 11; i++) { const a = i * 2.4, rr = t.r * Math.sqrt(i / 11), x = t.x + Math.cos(a) * rr, y = t.y + Math.sin(a) * rr
+        c.fillStyle = 'rgba(0,0,0,.2)'; c.beginPath(); c.ellipse(x + 2, y + 3, 7, 3, 0, 0, Math.PI * 2); c.fill()
+        c.fillStyle = '#5a3a22'; c.fillRect(x - 1, y - 4, 2, 6)
+        c.fillStyle = '#3f5a2a'; c.beginPath(); c.arc(x, y - 7, 7, 0, Math.PI * 2); c.fill(); c.fillStyle = '#56763a'; c.beginPath(); c.arc(x - 2, y - 9, 4, 0, Math.PI * 2); c.fill() }
+      if (t.k === 'wall') { c.fillStyle = 'rgba(0,0,0,.2)'; c.fillRect(0, t.y + 2, W, 5); c.fillStyle = '#a8977a'; c.fillRect(0, t.y - 12, W, 14); c.fillStyle = '#7d6e55'; for (let x = 0; x < W; x += 16) c.fillRect(x, t.y - 19, 9, 7); c.strokeStyle = 'rgba(0,0,0,.15)'; for (let x = 8; x < W; x += 16) { c.beginPath(); c.moveTo(x, t.y - 12); c.lineTo(x, t.y + 2); c.stroke() } }
     }
-  }
+  })(bctx)
   function formation(s) {
-    // ranks of five facing the squad's direction
-    const n = s.members.length, cols = FOES[s.kind]?.big ? 1 : Math.min(5, n), gap = 6.2
+    // ranks of five, facing the squad's direction
+    const n = s.members.length, cols = FOES[s.kind]?.big ? 1 : Math.min(5, n), gap = 7
     const fx = Math.cos(s.facing), fy = Math.sin(s.facing), px = -fy, py = fx
     return s.members.map((m, i) => {
       const c = i % cols - (cols - 1) / 2, r = Math.floor(i / cols) - (Math.ceil(n / cols) - 1) / 2
@@ -1736,35 +1847,52 @@ function setupField() {
     })
   }
   function draw() {
-    drawTerrain()
+    ctx.save()
+    if (f.shake > 0) ctx.translate((Math.random() - 0.5) * f.shake * 2, (Math.random() - 0.5) * f.shake * 2)
+    ctx.drawImage(bg, 0, 0, W, H)
     if (f.phase === 'deploy') { ctx.fillStyle = 'rgba(224,166,58,.12)'; ctx.fillRect(0, H * 0.55, W, H * 0.45); ctx.strokeStyle = 'rgba(224,166,58,.6)'; ctx.setLineDash([6, 6]); ctx.beginPath(); ctx.moveTo(0, H * 0.55); ctx.lineTo(W, H * 0.55); ctx.stroke(); ctx.setLineDash([]) }
+    for (const d of f.fallen) drawFigure(ctx, d.x, d.y, d.kind, { dir: d.dir, fallen: true, scale: 0.9 })
+    for (const d of f.dust) { ctx.fillStyle = `rgba(190,170,120,${Math.max(0, d.a)})`; ctx.beginPath(); ctx.arc(d.x, d.y, d.r, 0, Math.PI * 2); ctx.fill() }
+    // selection ring on the ground
+    if (f.selected && alive(f.selected)) { const s = f.selected, r = radiusOf(s) + 7; ctx.strokeStyle = '#fbf3e4'; ctx.lineWidth = 2; ctx.beginPath(); ctx.ellipse(s.x, s.y + 2, r, r * 0.6, 0, 0, Math.PI * 2); ctx.stroke() }
+    // every soldier, back to front, so nearer figures overlap farther ones
+    const figs = []
     for (const s of squads) {
       if (!alive(s)) continue
-      const pts = formation(s)
-      if (s === f.selected) { ctx.strokeStyle = '#fbf3e4'; ctx.lineWidth = 2; ctx.beginPath(); ctx.arc(s.x, s.y, radiusOf(s) + 6, 0, Math.PI * 2); ctx.stroke() }
-      s.members.forEach((m, i) => {
-        const [x, y] = pts[i]
-        if (s.side === 'you') drawSoldier(ctx, x, y, UNITS[m.t].color, m.t === 'centurio', '#1b1715', 3.4)
-        else if (FOES[m.t].big) { ctx.fillStyle = '#7b7f86'; ctx.strokeStyle = '#2b3440'; ctx.lineWidth = 2; ctx.beginPath(); ctx.ellipse(x, y, 9, 12, s.facing + Math.PI / 2, 0, Math.PI * 2); ctx.fill(); ctx.stroke() }
-        else drawSoldier(ctx, x, y, s.kind === 'cavalry' ? '#c9a27a' : s.kind === 'archer' || s.kind === 'slinger' ? '#b7c0c8' : '#8f9aa6', false, '#2b3440', s.kind === 'cavalry' ? 4.2 : 3.4)
-      })
-      // a small label (men left), hidden while the squad is locked in combat
-      if (s.contactT > 0) continue
-      ctx.font = '800 10px Nunito, system-ui, sans-serif'; ctx.textAlign = 'center'; ctx.textBaseline = 'alphabetic'
-      ctx.fillStyle = s.side === 'you' ? '#fbf3e4' : '#ffd0c8'
-      ctx.fillText(s.side === 'you' ? s.members.length : `${FOES[s.kind].label} ${s.members.length}`, s.x, s.y - radiusOf(s) - 5)
+      const pts = formation(s), cols = FOES[s.kind]?.big ? 1 : Math.min(5, s.members.length)
+      const c = Math.cos(s.facing), dir = Math.abs(c) > 0.2 ? Math.sign(c) : (s.side === 'you' ? 1 : -1)
+      s.members.forEach((m, i) => figs.push({ x: pts[i][0], y: pts[i][1], kind: m.t, dir,
+        walk: s.moving ? f.t * 11 + i * 0.9 : null, attack: s.contactT > 0 && i < cols * 2 ? f.t * 9 + i * 1.7 : null }))
     }
+    figs.sort((a, b) => a.y - b.y)
+    for (const g of figs) drawFigure(ctx, g.x, g.y, g.kind, { dir: g.dir, walk: g.walk, attack: g.attack, scale: 0.95 })
+    // each squad's standard, with the number of men on the flag
+    for (const s of squads) {
+      if (!alive(s)) continue
+      const px = s.x + radiusOf(s) * 0.6, top = s.y - radiusOf(s) - 22
+      ctx.strokeStyle = '#3f2a16'; ctx.lineWidth = 1.4; ctx.beginPath(); ctx.moveTo(px, top); ctx.lineTo(px, s.y - 4); ctx.stroke()
+      ctx.fillStyle = s.side === 'you' ? '#8e2b22' : '#2b3440'; ctx.strokeStyle = s.side === 'you' ? '#e0a63a' : '#9aa6b2'; ctx.lineWidth = 1
+      ctx.beginPath(); ctx.rect(px, top, 16, 10); ctx.fill(); ctx.stroke()
+      ctx.fillStyle = '#fbf3e4'; ctx.font = '800 8.5px Nunito, system-ui, sans-serif'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle'
+      ctx.fillText(s.members.length, px + 8, top + 5.5)
+      if (s.side === 'you') { ctx.fillStyle = '#e0a63a'; ctx.beginPath(); ctx.arc(px, top - 1.5, 1.8, 0, Math.PI * 2); ctx.fill() }
+    }
+    // javelins and arrows, with a shadow on the ground
     for (const p of f.projectiles) {
-      const k = p.t / p.d, x = p.x + (p.tx - p.x) * k, y = p.y + (p.ty - p.y) * k - Math.sin(k * Math.PI) * 18
-      const a = Math.atan2(p.ty - p.y - Math.cos(k * Math.PI) * 18 * Math.PI / p.d * 0.05, p.tx - p.x)
-      ctx.strokeStyle = p.kind === 'pilum' ? '#3f2a16' : '#1b1715'; ctx.lineWidth = p.kind === 'pilum' ? 1.6 : 1
-      ctx.beginPath(); ctx.moveTo(x, y); ctx.lineTo(x - Math.cos(a) * 6, y - Math.sin(a) * 6); ctx.stroke()
+      const k = p.t / p.d, gx = p.x + (p.tx - p.x) * k, gy = p.y + (p.ty - p.y) * k, h = Math.sin(k * Math.PI) * 22
+      const a = Math.atan2(p.ty - p.y - Math.cos(k * Math.PI) * 22 * 3, p.tx - p.x)
+      ctx.fillStyle = 'rgba(0,0,0,.18)'; ctx.beginPath(); ctx.arc(gx, gy, 1, 0, Math.PI * 2); ctx.fill()
+      const len = p.kind === 'pilum' ? 9 : 6
+      ctx.strokeStyle = p.kind === 'pilum' ? '#5a3a22' : '#2b2420'; ctx.lineWidth = p.kind === 'pilum' ? 1.5 : 1
+      ctx.beginPath(); ctx.moveTo(gx, gy - h); ctx.lineTo(gx - Math.cos(a) * len, gy - h - Math.sin(a) * len); ctx.stroke()
     }
+    for (const k of f.sparks) { ctx.strokeStyle = `rgba(255,220,120,${Math.max(0, k.a)})`; ctx.lineWidth = 1.2; ctx.beginPath(); for (let j = 0; j < 4; j++) { const a = j * Math.PI / 2 + k.a; ctx.moveTo(k.x, k.y); ctx.lineTo(k.x + Math.cos(a) * 4 * (1.3 - k.a), k.y + Math.sin(a) * 4 * (1.3 - k.a)) } ctx.stroke() }
     for (const p of f.pops) { ctx.globalAlpha = Math.max(0, p.a); ctx.strokeStyle = p.side === 'you' ? '#e0a63a' : '#e2574c'; ctx.lineWidth = 1.5; ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2); ctx.stroke() }
     ctx.globalAlpha = 1
-    if (f.drag) { ctx.strokeStyle = '#fbf3e4'; ctx.lineWidth = 2; ctx.setLineDash([5, 5]); ctx.beginPath(); ctx.moveTo(f.drag.s.x, f.drag.s.y); ctx.lineTo(f.drag.x, f.drag.y); ctx.stroke(); ctx.setLineDash([]); ctx.beginPath(); ctx.arc(f.drag.x, f.drag.y, 10, 0, Math.PI * 2); ctx.stroke() }
+    if (f.drag) { ctx.strokeStyle = '#fbf3e4'; ctx.lineWidth = 2; ctx.setLineDash([5, 5]); ctx.beginPath(); ctx.moveTo(f.drag.s.x, f.drag.s.y); ctx.lineTo(f.drag.x, f.drag.y); ctx.stroke(); ctx.setLineDash([]); ctx.beginPath(); ctx.ellipse(f.drag.x, f.drag.y, 12, 7, 0, 0, Math.PI * 2); ctx.stroke() }
     for (const s of squads) if (s.side === 'you' && alive(s) && s.order && !s.order.attack && f.phase === 'fight') { ctx.strokeStyle = 'rgba(251,243,228,.35)'; ctx.setLineDash([3, 5]); ctx.beginPath(); ctx.moveTo(s.x, s.y); ctx.lineTo(s.tx, s.ty); ctx.stroke(); ctx.setLineDash([]) }
-    // strength meter
+    ctx.restore()
+    // strength meter (not shaken)
     const you = powerOf('you') / Math.max(1, startPower.you + startPower.foe), foe = powerOf('foe') / Math.max(1, startPower.you + startPower.foe)
     ctx.fillStyle = 'rgba(27,23,21,.75)'; ctx.fillRect(8, 8, W - 16, 10)
     ctx.fillStyle = '#e0a63a'; ctx.fillRect(8, 8, (W - 16) * you, 10)
