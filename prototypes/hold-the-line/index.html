@@ -136,13 +136,13 @@ const w = (t, foes, big) => ({ t, foes, big })
 const rep = (n, t) => Array(n).fill(t)
 const BASE = ['cart', 'slinger', 'hastatus', 'triarius', 'caltrops']
 const LEVELS = [
-  { id: 'regillus', name: 'Lake Regillus', year: '496 BC', enemy: 'the Latin League', theme: 'lake', units: BASE,
+  { id: 'regillus', name: 'Lake Regillus', year: '496 BC', enemy: 'the Latin League', theme: 'lake', start: 150, units: BASE,
     blurb: 'The Latin League marches on Rome to bring back Tarquin, the king the Romans drove out.',
     after: 'Legend says Castor and Pollux, the divine twins, fought for Rome that day. Rome built them a temple in the Forum, and its columns still stand.',
     waves: [w(30, ['warrior']), w(52, ['warrior']), w(70, ['warrior']), w(85, ['warrior', 'warrior']), w(100, ['shield']), w(114, ['warrior', 'warrior']), w(128, ['shield', 'warrior']),
       w(144, ['chief', 'warrior', 'warrior', 'shield', 'warrior', 'warrior'], 'A great wave approaches!'), w(168, ['warrior', 'shield']), w(180, ['cavalry']), w(192, ['warrior', 'cavalry', 'shield']),
       w(210, ['chief', 'warrior', 'warrior', 'shield', 'warrior', 'cavalry', 'shield', 'warrior', 'warrior', 'cavalry'], 'The final wave!')] },
-  { id: 'volsci', name: 'The Volscian Raids', year: '5th century BC', enemy: 'the Volsci', theme: 'hills', units: [...BASE, 'princeps'], newUnit: 'princeps',
+  { id: 'volsci', name: 'The Volscian Raids', year: '5th century BC', enemy: 'the Volsci', theme: 'hills', start: 125, units: [...BASE, 'princeps'], newUnit: 'princeps',
     blurb: 'From the hills south of Rome, the Volsci raid Roman farms year after year.',
     after: 'The wars with the Volsci and their allies the Aequi went on for generations. In one of them, the story goes, Cincinnatus left his plough to lead Rome, won, and went back to his farm.',
     waves: [w(28, ['raider']), w(46, ['warrior']), w(60, ['raider', 'raider']), w(76, ['warrior', 'warrior']), w(90, ['shield']), w(104, rep(3, 'raider')), w(120, ['warrior', 'shield']),
@@ -564,6 +564,7 @@ function paintField() {
 
 // ---------- the game ----------
 let G = null, levelIndex = 0
+const EASE = 0.85   // every enemy's health is scaled by this: the easy knob for the whole campaign
 const SAVE_KEY = 'hold-the-line-progress-v1'
 let progress = { stars: {} }
 try { const saved = JSON.parse(localStorage.getItem(SAVE_KEY)); if (saved?.stars) progress = saved } catch {}
@@ -594,7 +595,8 @@ function spawn(type) {
   const F = FOES[type]
   let lane; do lane = Math.floor(Math.random() * COLS); while (lane === G.lastLane && Math.random() < 0.7)
   G.lastLane = lane
-  G.foes.push({ id: ++G.ids, type, lane, y: -0.75, hp: F.hp, max: F.hp, shield: F.shield ?? 0, shieldMax: F.shield ?? 0,
+  const hp = Math.round(F.hp * EASE)
+  G.foes.push({ id: ++G.ids, type, lane, y: -0.75, hp, max: hp, shield: F.shield ?? 0, shieldMax: F.shield ?? 0,
     speed: F.speed * (0.92 + Math.random() * 0.16), jumped: false, jump: null, eating: null, flash: 0, cd: 1, anim: 0, shooting: false, fleeing: false, phase: Math.random() * TAU, dx: (Math.random() - 0.5) * 0.12 })
   G.spawned++
 }
@@ -608,6 +610,14 @@ function place(type, lane, row) {
   for (let i = 0; i < 6; i++) G.fx.push({ kind: 'dust', x: lx(lane) + (Math.random() - 0.5) * cell * 0.6, y: ry(row + 0.82), vx: (Math.random() - 0.5) * 30, vy: -Math.random() * 20, t: 0.5 })
   sfx.place(); updateCount(); tutorial('placed', type)
   return true
+}
+const MOVABLE = t => t !== 'caltrops' && t !== 'pigs'
+function moveUnit(u, lane, row) {
+  if (unitAt(lane, row) || (u.lane === lane && u.row === row)) return false
+  u.fromLane = u.lane; u.fromRow = u.row; u.lane = lane; u.row = row
+  u.travel = Math.max(0.4, Math.hypot(u.lane - u.fromLane, u.row - u.fromRow) / 2.2); u.travelT = 0   // about two squares a second
+  for (const f of G.foes) if (f.eating === u) f.eating = null
+  sfx.place(); return true
 }
 function removeUnit(u, lost = true) { G.units = G.units.filter(x => x !== u); if (lost) G.lost++; for (const f of G.foes) if (f.eating === u) f.eating = null }
 function hurtFoe(f, dmg, quiet = false) {
@@ -649,7 +659,7 @@ function update(dt) {
   renderBar()
   // grain falling from the sky
   G.nextSky -= dt
-  if (G.nextSky <= 0) { G.nextSky = 8 + Math.random() * 2; G.drops.push({ x: cell * (0.45 + Math.random() * (COLS - 0.9)), y: -12, ty: ry(0.6 + Math.random() * 5.2), v: 25, life: 10, falling: true }) }
+  if (G.nextSky <= 0) { G.nextSky = 7 + Math.random() * 1.5; G.drops.push({ x: cell * (0.45 + Math.random() * (COLS - 0.9)), y: -12, ty: ry(0.6 + Math.random() * 5.2), v: 25, life: 10, falling: true }) }
   for (const d of G.drops) { if (d.falling) { d.y += 70 * k * dt; if (d.y >= d.ty) { d.y = d.ty; d.falling = false } } else d.life -= dt }
   G.drops = G.drops.filter(d => !d.gone && (d.falling || d.life > 0))
   for (const t in G.cool) G.cool[t] = Math.max(0, G.cool[t] - dt)
@@ -657,6 +667,7 @@ function update(dt) {
   for (const u of [...G.units]) {
     const U = UNITS[u.type]
     u.cd -= dt; u.anim = Math.max(0, u.anim - dt); u.hurt = Math.max(0, u.hurt - dt)
+    if (u.travel) { u.travelT += dt; if (u.travelT >= u.travel) u.travel = 0; continue }
     if (u.type === 'cart' && u.cd <= 0) {
       u.cd = 20; u.anim = 0.7
       G.drops.push({ x: lx(u.lane) + (Math.random() - 0.5) * cell * 0.4, y: ry(u.row + 0.2), ty: ry(u.row + 0.55), v: 25, life: 10, falling: true })
@@ -692,7 +703,7 @@ function update(dt) {
   // enemy arrows hit the first soldier in their lane
   for (const s of G.foeShots) {
     s.y += 6 * dt
-    const u = G.units.find(x => x.lane === s.lane && s.y >= x.row + 0.15 && s.y <= x.row + 0.95)
+    const u = G.units.find(x => x.lane === s.lane && !x.travel && s.y >= x.row + 0.15 && s.y <= x.row + 0.95)
     if (u) { s.done = true; u.hp -= s.dmg * (UNITS[u.type].arrowMul ?? 1); u.hurt = 0.12; sfx.thunk(); if (u.hp <= 0) removeUnit(u) }
     if (s.y > ROWS + 0.5) s.done = true
   }
@@ -726,19 +737,20 @@ function update(dt) {
       if (f.jump.t >= 1) { f.jump = null; f.speed = FOES.cavalry.after }
       continue
     }
-    const u = G.units.find(u => u.lane === f.lane && f.y >= u.row + 0.3 && f.y < u.row + 1.0)
+    const u = G.units.find(u => u.lane === f.lane && !u.travel && f.y >= u.row + 0.3 && f.y < u.row + 1.0)
     const bow = FOES[f.type].bow
     if (u) {
       f.shooting = false
       if (u.type === 'caltrops' && u.armed) { explode(u); continue }
       if (FOES[f.type].jumps && !f.jumped) { f.jumped = true; f.jump = { from: f.y, to: u.row + 1.35, t: 0 }; f.eating = null; continue }
       f.eating = u; u.hp -= FOES[f.type].dps * dt; u.hurt = 0.12; sfx.chop()
+      if (u.hp < u.max * 0.5 && u.type !== 'triarius') tutorial('hurt')
       if (u.hp <= 0) removeUnit(u)
     } else {
       f.eating = null
       // archers stop within range of the first soldier ahead and shoot
       if (bow) {
-        const target = G.units.filter(x => x.lane === f.lane && x.row + 0.82 > f.y).sort((a, b) => a.row - b.row)[0]
+        const target = G.units.filter(x => x.lane === f.lane && !x.travel && x.row + 0.82 > f.y).sort((a, b) => a.row - b.row)[0]
         f.shooting = !!target && target.row + 0.82 - f.y <= bow.range && f.y > -0.4
         if (f.shooting) {
           f.cd -= dt
@@ -781,7 +793,8 @@ function draw() {
   ctx.drawImage(bg, 0, 0, W, H)
   const T = G.t
   // where the selected unit can go
-  const placing = G.selected || G.dismiss
+  const moving = moveDrag?.moved && G.units.includes(moveDrag.u) ? moveDrag.u : null
+  const placing = G.selected || G.dismiss || moving
   if (placing) {
     for (let r = 0; r < ROWS; r++) for (let c = 0; c < COLS; c++) {
       const taken = !!unitAt(c, r)
@@ -791,6 +804,10 @@ function draw() {
       const { lane, row } = G.hover, ok = G.dismiss ? !!unitAt(lane, row) : !unitAt(lane, row)
       ctx.strokeStyle = ok ? '#fbf3e4' : 'rgba(212, 57, 45, .9)'; ctx.lineWidth = 3; ctx.strokeRect(lane * cell + 3, ry(row) + 3, cell - 6, cell - 6)
       if (ok && G.selected) { ctx.save(); ctx.globalAlpha = 0.55; ctx.translate(lx(lane), ry(row + 0.82)); ctx.scale(k, k); DRAW_UNIT[G.selected](ctx, ghostUnit(G.selected), T); ctx.restore() }
+      if (ok && moving) {
+        ctx.strokeStyle = 'rgba(251, 243, 228, .8)'; ctx.lineWidth = 2; ctx.setLineDash([6, 5]); ctx.beginPath(); ctx.moveTo(lx(moving.lane), ry(moving.row + 0.6)); ctx.lineTo(lx(lane), ry(row + 0.6)); ctx.stroke(); ctx.setLineDash([])
+        ctx.save(); ctx.globalAlpha = 0.7; ctx.translate(lx(lane), ry(row + 0.82)); ctx.scale(k, k); DRAW_UNIT[moving.type](ctx, moving, T); ctx.restore()
+      }
     }
   }
   // everything on the ground, back to front
@@ -800,16 +817,23 @@ function draw() {
     ctx.translate(lx(c.lane) + c.dx * cell, ry(c.y) - 6 * k); ctx.scale(k, k); ctx.rotate(c.dir * Math.min(1, c.t * 4) * Math.PI / 2)
     drawFoe(ctx, { type: c.type, phase: 0, eating: null, shield: 0, shieldMax: c.shieldMax }, T); ctx.restore()
   }])
-  for (const u of G.units) items.push([ry(u.row + 0.82), () => {
-    ctx.save(); ctx.translate(lx(u.lane) + (u.hurt > 0 && !reduceMotion ? (Math.random() - 0.5) * 2.5 : 0), ry(u.row + 0.82)); ctx.scale(k, k)
-    DRAW_UNIT[u.type](ctx, u, T); ctx.restore()
-    if (u.hp < u.max && u.type !== 'caltrops') hpBar(lx(u.lane), ry(u.row + 0.82) + 5 * k, u.hp / u.max, '#7fb069')
-  }])
+  for (const u of G.units) {
+    // a soldier on the move walks from his old square to the new one
+    const p = u.travel ? u.travelT / u.travel : 1
+    const ux = u.travel ? lx(u.fromLane) + (lx(u.lane) - lx(u.fromLane)) * p : lx(u.lane)
+    const uy = u.travel ? ry(u.fromRow + 0.82) + (ry(u.row + 0.82) - ry(u.fromRow + 0.82)) * p - Math.abs(Math.sin(T * 14)) * 3 * k : ry(u.row + 0.82)
+    items.push([uy, () => {
+      ctx.save(); ctx.translate(ux + (u.hurt > 0 && !reduceMotion ? (Math.random() - 0.5) * 2.5 : 0), uy); ctx.scale(k, k)
+      if (moveDrag?.moved && moveDrag.u === u) ctx.globalAlpha = 0.45
+      DRAW_UNIT[u.type](ctx, u, T); ctx.restore()
+      if (u.hp < u.max && u.type !== 'caltrops' && u.type !== 'pigs') hpBar(ux, uy + 5 * k, u.hp / u.max)
+    }])
+  }
   for (const f of G.foes) items.push([ry(f.y), () => {
     ctx.save(); ctx.translate(lx(f.lane) + f.dx * cell, ry(f.y)); ctx.scale(k, k)
     if (f.flash > 0) ctx.filter = 'brightness(1.35)'
     drawFoe(ctx, f, T); ctx.restore()
-    if (f.hp < f.max || (f.shieldMax && f.shield < f.shieldMax)) hpBar(lx(f.lane) + f.dx * cell, ry(f.y) - (f.type === 'elephant' ? 140 : f.type === 'phalangite' ? 80 : 72) * k, (f.hp + f.shield) / (f.max + f.shieldMax), '#e2574c')
+    if (f.hp < f.max || (f.shieldMax && f.shield < f.shieldMax)) hpBar(lx(f.lane) + f.dx * cell, ry(f.y) - (f.type === 'elephant' ? 140 : f.type === 'phalangite' ? 80 : 74) * k, (f.hp + f.shield) / (f.max + f.shieldMax), f.shield > 0 ? '#b08a3e' : '#e2574c')
   }])
   for (const [lane, e] of G.equites.entries()) if (e.state !== 'used') items.push([ry(e.y), () => { ctx.save(); ctx.translate(lx(lane), ry(e.y)); ctx.scale(k * 0.9, k * 0.9); drawEques(ctx, e, T); ctx.restore() }])
   for (const r of G.runners) items.push([ry(r.y), () => { ctx.save(); ctx.translate(lx(r.lane), ry(r.y)); ctx.scale(k, k); drawPig(ctx, T, true); ctx.restore() }])
@@ -843,8 +867,10 @@ function draw() {
   ctx.restore()
 }
 function hpBar(x, y, frac, color) {
-  const w = 30 * k, h = 4
-  ctx.fillStyle = 'rgba(27, 23, 21, .7)'; ctx.fillRect(x - w / 2 - 1, y - 1, w + 2, h + 2)
+  const w = 46 * k, h = Math.max(5, 7 * k)
+  if (!color) color = frac > 0.6 ? '#7fb069' : frac > 0.3 ? '#e0a63a' : '#e2574c'   // your soldiers: green, then yellow, then red
+  ctx.fillStyle = 'rgba(27, 23, 21, .85)'; ctx.beginPath(); ctx.roundRect(x - w / 2 - 2, y - 2, w + 4, h + 4, 4); ctx.fill()
+  ctx.fillStyle = 'rgba(255, 255, 255, .15)'; ctx.fillRect(x - w / 2, y, w, h)
   ctx.fillStyle = color; ctx.fillRect(x - w / 2, y, w * Math.max(0, frac), h)
 }
 const ghostUnit = type => ({ type, hp: UNITS[type].hp, max: UNITS[type].hp, anim: 0, hurt: 0, armed: true, arm: 0, aiming: false })
@@ -911,12 +937,13 @@ function tutorial(event, type) {
   if (event === 'start') say('start', 'Drag a supply cart onto the field. Carts bring rations.')
   if (event === 'placed' && type === 'cart') say('cart', 'Tap the glowing grain to collect it. Then place slingers in front of your carts.')
   if (event === 'placed' && type === 'slinger') say('slinger', 'Slingers shoot at anyone coming down their lane. Cover all five lanes!')
+  if (event === 'hurt' && levelIndex === 0) say('hurt', 'A soldier is hurt! Drag him to another square to pull him out of the fight.')
   if (event === 'equites') say('equites', 'The equites saved that lane, but they only charge once.')
 }
 function select(type) { G.selected = type; G.dismiss = false; syncTray() }
 
 // ---------- input: drag a card onto a square, or tap a card then a square ----------
-let drag = null
+let drag = null, moveDrag = null
 function cellAt(clientX, clientY) {
   const r = canvas.getBoundingClientRect()
   const x = clientX - r.left, y = clientY - r.top
@@ -932,10 +959,17 @@ function startDrag(e, type) {
 }
 document.addEventListener('pointermove', e => {
   const c = cellAt(e.clientX, e.clientY)
+  if (moveDrag) { if (Math.hypot(e.clientX - moveDrag.x0, e.clientY - moveDrag.y0) > 8) moveDrag.moved = true; G.hover = c?.inGrid ? c : null; return }
   if (drag) { if (Math.hypot(e.clientX - drag.x0, e.clientY - drag.y0) > 8) drag.moved = true }
   if (drag || e.pointerType === 'mouse') G.hover = c?.inGrid ? c : null
 })
 document.addEventListener('pointerup', e => {
+  if (moveDrag) {
+    const c = cellAt(e.clientX, e.clientY), m = moveDrag
+    moveDrag = null; G.hover = null
+    if (m.moved && c?.inGrid && G.units.includes(m.u) && G.phase === 'play') moveUnit(m.u, c.lane, c.row)
+    return
+  }
   if (!drag) return
   const c = cellAt(e.clientX, e.clientY), d = drag
   drag = null
@@ -953,7 +987,9 @@ canvas.addEventListener('pointerdown', e => {
   if (d) return collect(d)
   if (!c.inGrid) return
   if (G.dismiss) { const u = unitAt(c.lane, c.row); if (u) { removeUnit(u, false); sfx.place() } G.dismiss = false; syncTray(); return }
-  if (G.selected) { if (place(G.selected, c.lane, c.row)) select(null) }
+  if (G.selected) { if (place(G.selected, c.lane, c.row)) select(null); return }
+  const u = unitAt(c.lane, c.row)
+  if (u && MOVABLE(u.type) && !u.travel) { moveDrag = { u, x0: e.clientX, y0: e.clientY, moved: false }; canvas.setPointerCapture(e.pointerId) }
 })
 document.getElementById('dismiss').addEventListener('click', () => { if (G.phase !== 'play') return; G.dismiss = !G.dismiss; G.selected = null; syncTray() })
 document.getElementById('speed').addEventListener('click', e => { G.speed = G.speed === 1 ? 2 : 1; e.currentTarget.textContent = G.speed + '×' })
@@ -1005,6 +1041,7 @@ function showBriefing(i) {
       <li><b>Drag</b> a unit onto a square, or tap it and then tap a square.</li>
       <li><b>Supply carts</b> bring rations. <b>Tap the grain</b> to collect it, and grain also falls from the sky.</li>
       <li><b>Slingers</b> shoot down their whole lane. <b>Triarii</b> kneel behind their shields and hold the line.</li>
+      <li><b>Drag a soldier on the field</b> to move him to another empty square, to save him or to help another lane.</li>
       <li>If an enemy reaches the camp, the <b>equites</b> charge down that lane, but only once.</li>
     </ul>` : ''
   showPanel(`<span class="eyebrow">Battle ${i + 1} of ${LEVELS.length} · ${L.year}</span><h2>${L.name}</h2><p>${L.blurb}</p>${howto}
