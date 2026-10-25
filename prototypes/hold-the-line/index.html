@@ -153,19 +153,19 @@ const w = (t, foes, big) => ({ t, foes, big })
 const rep = (n, t) => Array(n).fill(t)
 const BASE = ['cart', 'slinger', 'hastatus', 'triarius', 'caltrops']
 const LEVELS = [
-  { id: 'regillus', name: 'Lake Regillus', year: '496 BC', enemy: 'the Latin League', theme: 'lake', start: 150, units: BASE,
+  { id: 'regillus', name: 'Lake Regillus', year: '496 BC', enemy: 'the Latin League', theme: 'lake', start: 100, units: BASE,
     blurb: 'The Latin League marches on Rome to bring back Tarquin, the king the Romans drove out.',
     after: 'Legend says Castor and Pollux, the divine twins, fought for Rome that day. Rome built them a temple in the Forum, and its columns still stand.',
     waves: [w(30, ['warrior']), w(52, ['warrior']), w(70, ['warrior']), w(85, ['warrior', 'warrior']), w(100, ['shield']), w(114, ['warrior', 'warrior']), w(128, ['shield', 'warrior']),
       w(144, ['chief', 'warrior', 'warrior', 'shield', 'warrior', 'warrior'], 'A great wave approaches!'), w(168, ['warrior', 'shield']), w(180, ['cavalry']), w(192, ['warrior', 'cavalry', 'shield']),
       w(210, ['chief', 'warrior', 'warrior', 'shield', 'warrior', 'cavalry', 'shield', 'warrior', 'warrior', 'cavalry'], 'The final wave!')] },
-  { id: 'volsci', name: 'The Volscian Raids', year: '5th century BC', enemy: 'the Volsci', theme: 'hills', start: 125, units: [...BASE, 'princeps'], newUnit: 'princeps',
+  { id: 'volsci', name: 'The Volscian Raids', year: '5th century BC', enemy: 'the Volsci', theme: 'hills', start: 175, units: [...BASE, 'princeps'], newUnit: 'princeps',
     blurb: 'From the hills south of Rome, the Volsci raid Roman farms year after year.',
     after: 'The wars with the Volsci and their allies the Aequi went on for generations. In one of them, the story goes, Cincinnatus left his plough to lead Rome, won, and went back to his farm.',
     waves: [w(28, ['raider']), w(46, ['warrior']), w(60, ['raider', 'raider']), w(76, ['warrior', 'warrior']), w(90, ['shield']), w(104, rep(3, 'raider')), w(120, ['warrior', 'shield']),
       w(136, ['chief', ...rep(4, 'raider'), 'warrior', 'warrior', 'shield'], 'A great wave approaches!'), w(165, ['raider', 'raider', 'warrior']), w(180, ['shield', 'warrior', 'raider']),
       w(198, ['chief', ...rep(5, 'raider'), ...rep(3, 'warrior'), 'shield', 'shield', 'cavalry'], 'The final wave!')] },
-  { id: 'veii', name: 'The Siege of Veii', year: '396 BC', enemy: 'the Etruscans of Veii', theme: 'walls', start: 125, units: [...BASE, 'princeps', 'shed'], newUnit: 'shed',
+  { id: 'veii', name: 'The Siege of Veii', year: '396 BC', enemy: 'the Etruscans of Veii', theme: 'walls', start: 175, units: [...BASE, 'princeps', 'shed'], newUnit: 'shed',
     blurb: 'Veii, a rich Etruscan city a day’s march from Rome. Its archers shoot from a distance while its warriors sally out.',
     after: 'After a ten-year siege, Camillus took Veii, by tradition through a tunnel dug under its walls. Rome’s land almost doubled.',
     waves: [w(28, ['warrior']), w(46, ['archer']), w(62, ['warrior', 'warrior']), w(78, ['shield']), w(92, ['archer', 'warrior']), w(108, ['shield', 'archer']), w(124, ['warrior', 'warrior', 'archer']),
@@ -177,7 +177,7 @@ const LEVELS = [
     waves: [w(28, ['samnite']), w(46, ['samnite']), w(62, ['samnite']), w(80, ['linen']), w(92, ['samnite', 'samnite']), w(106, ['cavalry', 'samnite']), w(120, ['linen', 'samnite']),
       w(136, ['chief', ...rep(4, 'samnite'), 'linen', 'cavalry'], 'A great wave approaches!'), w(166, ['samnite', 'linen']), w(180, ['cavalry', 'cavalry', 'samnite']),
       w(196, ['chief', ...rep(4, 'samnite'), ...rep(2, 'linen'), 'cavalry', 'cavalry'], 'The final wave!')] },
-  { id: 'beneventum', name: 'Beneventum', year: '275 BC', enemy: 'King Pyrrhus', theme: 'river', start: 200, units: [...BASE, 'princeps', 'shed', 'rorarii', 'pigs'], newUnit: 'pigs',
+  { id: 'beneventum', name: 'Beneventum', year: '275 BC', enemy: 'King Pyrrhus', theme: 'river', start: 250, units: [...BASE, 'princeps', 'shed', 'rorarii', 'pigs'], newUnit: 'pigs',
     blurb: 'King Pyrrhus of Epirus brings a professional army and war elephants, beasts the Romans first met only five years before.',
     after: 'Pyrrhus sailed home. His earlier victories had cost him so many men that a “Pyrrhic victory” still means a win not worth its price.',
     waves: [w(28, ['warrior']), w(46, ['phalangite']), w(62, ['warrior', 'warrior']), w(78, ['cavalry']), w(92, ['phalangite', 'warrior']), w(108, ['elephant']), w(126, ['phalangite', 'phalangite']),
@@ -229,7 +229,7 @@ const sfx = {
 function rr(c, x, y, w, h, r) { c.beginPath(); c.roundRect(x, y, w, h, r) }
 function shadow(c, rx, ry) { c.fillStyle = 'rgba(25, 35, 10, .28)'; c.beginPath(); c.ellipse(0, 0, rx, ry, 0, 0, TAU); c.fill() }
 function line(c, x1, y1, x2, y2, color, width) { c.strokeStyle = color; c.lineWidth = width; c.lineCap = 'round'; c.beginPath(); c.moveTo(x1, y1); c.lineTo(x2, y2); c.stroke() }
-function feathers(c, y) { [[-4, '#1b1715', -7], [0, '#6a2f6e', 0], [4, '#1b1715', 7]].forEach(([dx, col, lean]) => line(c, dx * 0.6, y, dx + lean * 0.35, y - 15, col, 2.6)) }
+function feathers(c, y, col) { [[-4, -7], [0, 0], [4, 7]].forEach(([dx, lean]) => { line(c, dx * 0.6, y, dx + lean * 0.35, y - 16, '#1b1715', 3.6); line(c, dx * 0.6, y, dx + lean * 0.35, y - 16, col, 2.4) }) }
 function romanHelmet(c, y) {
   c.fillStyle = SKIN_SHADE; c.fillRect(-3, y + 4, 6, 5)
   c.fillStyle = '#c9a24a'; c.beginPath(); c.arc(0, y, 8.5, 0, TAU); c.fill()
@@ -271,7 +271,9 @@ const DRAW_UNIT = {
   },
   hastatus(c, u, T) {
     shadow(c, 14, 4.5); romanLegs(c)
-    c.fillStyle = '#8e2b22'; c.strokeStyle = '#e0a63a'; c.lineWidth = 1.6; rr(c, -23, -42, 12, 34, 4); c.fill(); c.stroke()
+    line(c, -6, -10, 6, -66, '#6b4a2b', 1.8); line(c, 5.3, -61, 6.6, -71, '#cfd4d8', 1.5)   // the second pilum, slung on his back
+    c.fillStyle = '#8e2b22'; c.strokeStyle = '#e0a63a'; c.lineWidth = 2; rr(c, -23, -42, 12, 34, 4); c.fill(); c.stroke()
+    c.fillStyle = '#e0a63a'; c.fillRect(-18, -42, 2, 34)
     c.fillStyle = '#a8392f'; rr(c, -10.5, -34, 21, 22, 5); c.fill()
     line(c, -8, -33, 8, -22, '#5a3a22', 1.6); line(c, 8, -33, -8, -22, '#5a3a22', 1.6)
     c.fillStyle = '#5a3a22'; c.fillRect(-10.5, -19, 21, 2.5)
@@ -281,31 +283,32 @@ const DRAW_UNIT = {
       line(c, 9, -30, thrown ? 14 : 12, thrown ? -47 : -36, SKIN, 4.2)
       if (!thrown) { line(c, 12, -18, 14.5, -62, '#6b4a2b', 2.2); line(c, 14.2, -56, 14.8, -71, '#cfd4d8', 1.6) }
     }
-    romanHelmet(c, -42); feathers(c, -49)
+    romanHelmet(c, -42); feathers(c, -49, '#e0a63a')
   },
   triarius(c, u) {
     shadow(c, 16, 5)
     // kneeling behind a big shield, spear planted (Livy 8.8)
-    c.fillStyle = '#8e2b22'; c.strokeStyle = '#e0a63a'; c.lineWidth = 1.8; rr(c, -17, -40, 34, 38, 6); c.fill(); c.stroke()
+    line(c, 6, -2, 26, -80, '#6b4a2b', 2.6); line(c, 24.6, -74.5, 27.2, -88, '#cfd4d8', 2.2)   // the long hasta, slanting at the enemy
+    c.fillStyle = '#8e2b22'; c.strokeStyle = '#e9e1cf'; c.lineWidth = 2.6; rr(c, -19, -42, 38, 40, 7); c.fill(); c.stroke()
+    c.fillStyle = '#c9a24a'; c.beginPath(); c.arc(-15, -22, 3, 0, TAU); c.arc(15, -22, 3, 0, TAU); c.fill()
     if (u.hp < u.max * 0.5) { line(c, -12, -30, -6, -22, '#3b120e', 1.4); line(c, 13, -12, 8, -6, '#3b120e', 1.4) }
     if (u.hp < u.max * 0.25) { line(c, -15, -10, -9, -16, '#3b120e', 1.4); line(c, 10, -36, 14, -28, '#3b120e', 1.4) }
-    line(c, 10, -4, 16, -76, '#6b4a2b', 2.4); line(c, 15.5, -70, 16.3, -84, '#cfd4d8', 1.8)
     romanLegs(c, true)
-    c.fillStyle = '#a8392f'; rr(c, -10.5, -31, 21, 20, 5); c.fill()
-    c.fillStyle = '#8d939a'; rr(c, -10, -31, 20, 13, 4); c.fill()
-    c.fillStyle = '#6d737a'; for (let y = -29; y < -19; y += 3) for (let x = -8 + (y % 2 ? 1.5 : 0); x < 9; x += 3) c.fillRect(x, y, 1.2, 1.2)
-    line(c, 9, -27, 12, -36, SKIN, 4.2)
-    romanHelmet(c, -38); feathers(c, -45)
+    c.fillStyle = '#8d939a'; rr(c, -11, -31, 22, 21, 5); c.fill()   // a full mail shirt: the triarii were the older, wealthier men
+    c.fillStyle = '#6d737a'; for (let y = -29; y < -12; y += 3) for (let x = -9 + (y % 2 ? 1.5 : 0); x < 10; x += 3) c.fillRect(x, y, 1.2, 1.2)
+    line(c, 9, -27, 16, -34, SKIN, 4.2)
+    romanHelmet(c, -38)
+    c.fillStyle = '#f2ede0'; c.strokeStyle = '#1b1715'; c.lineWidth = 1.2; c.beginPath(); c.ellipse(0, -50, 3.6, 9, 0, 0, TAU); c.fill(); c.stroke()   // white horsehair crest
   },
   princeps(c, u, T) {
     shadow(c, 14, 4.5); romanLegs(c)
-    c.fillStyle = '#8e2b22'; c.strokeStyle = '#e0a63a'; c.lineWidth = 1.6; rr(c, -24, -44, 13, 37, 4); c.fill(); c.stroke()
+    c.fillStyle = '#8e2b22'; c.strokeStyle = '#4f8fb8'; c.lineWidth = 2; rr(c, -24, -44, 13, 37, 4); c.fill(); c.stroke()
     c.fillStyle = '#a8392f'; rr(c, -10.5, -34, 21, 22, 5); c.fill()
     c.fillStyle = '#8d939a'; rr(c, -10, -34, 20, 12, 4); c.fill()
     c.fillStyle = '#6d737a'; for (let y = -32; y < -23; y += 3) for (let x = -8 + (y % 2 ? 1.5 : 0); x < 9; x += 3) c.fillRect(x, y, 1.2, 1.2)
     c.fillStyle = '#5a3a22'; c.fillRect(-10.5, -19, 21, 2.5)
     swordArm(c, T, !u.fighting)
-    romanHelmet(c, -42); feathers(c, -49)
+    romanHelmet(c, -42); feathers(c, -49, '#4f8fb8')
   },
   shed(c, u) {
     shadow(c, 27, 6)
@@ -683,7 +686,7 @@ function update(dt) {
   renderBar()
   // grain falling from the sky
   G.nextSky -= dt
-  if (G.nextSky <= 0) { G.nextSky = 7 + Math.random() * 1.5; G.drops.push({ x: cell * (0.45 + Math.random() * (COLS - 0.9)), y: -12, ty: ry(0.6 + Math.random() * 5.2), v: 25, life: 10, falling: true }) }
+  if (G.nextSky <= 0) { G.nextSky = 10 + Math.random() * 2; G.drops.push({ x: cell * (0.45 + Math.random() * (COLS - 0.9)), y: -12, ty: ry(0.6 + Math.random() * 5.2), v: 25, life: 10, falling: true }) }
   for (const d of G.drops) { if (d.falling) { d.y += 70 * k * dt; if (d.y >= d.ty) { d.y = d.ty; d.falling = false } } else d.life -= dt }
   G.drops = G.drops.filter(d => !d.gone && (d.falling || d.life > 0))
   for (const t in G.cool) G.cool[t] = Math.max(0, G.cool[t] - dt)
