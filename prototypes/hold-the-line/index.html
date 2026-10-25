@@ -1,0 +1,767 @@
+<title>Hold the Line</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Nunito:wght@600;800;900&display=swap">
+<style>
+/* One screen, phone first: card tray on top, the battlefield (five lanes, enemies march down from the top), controls below.
+   A single deliberate look (Roman red and dark wood), the same palette as the Ave Caesar app. */
+:root {
+  --rome: #8e2b22; --rome-deep: #6e1f18; --ink: #1b1715; --wood: #2a211c; --parch: #fbf3e4; --gold: #e0a63a; --muted: #cdb9a0;
+  --display: 'Marcellus', Georgia, serif; --body: 'Nunito', system-ui, sans-serif;
+  color-scheme: dark;
+}
+[hidden] { display: none !important; }
+html, body { height: 100%; }
+body { background: var(--rome); color: var(--parch); font-family: var(--body); overscroll-behavior: none; }
+.game { max-width: 520px; margin: 0 auto; padding-inline: 16px; padding-block: 10px 14px; display: flex; flex-direction: column; gap: 8px; }
+.tray { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 6px; }
+.card { position: relative; display: flex; flex-direction: column; align-items: center; gap: 1px; padding: 4px 2px 3px; border-radius: 10px;
+  background: var(--parch); color: var(--ink); border: 2px solid var(--ink); font: 900 13px/1 var(--body); font-variant-numeric: tabular-nums;
+  touch-action: none; user-select: none; -webkit-user-select: none; cursor: grab; overflow: hidden; box-shadow: 0 3px 0 var(--ink); }
+.card canvas { width: 46px; height: 46px; pointer-events: none; }
+.card .name { font: 800 9.5px/1.1 var(--body); color: #5a4636; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; }
+.card .cost { display: flex; align-items: center; gap: 2px; }
+.card .cool { position: absolute; left: 0; right: 0; top: 0; background: rgba(27, 23, 21, .55); pointer-events: none; }
+.card.poor { filter: grayscale(.7) brightness(.8); }
+.card.poor .cost { color: var(--rome); }
+.card.selected { outline: 3px solid var(--gold); outline-offset: 1px; transform: translateY(-3px); box-shadow: 0 6px 0 var(--ink); }
+.card:focus-visible, button:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+.wheat { width: 12px; height: 12px; flex: none; }
+.field-wrap { position: relative; align-self: center; border-radius: 14px; overflow: hidden; border: 3px solid var(--ink); box-shadow: 0 4px 0 var(--ink); line-height: 0; }
+#field { display: block; touch-action: none; }
+.hud { position: absolute; top: 8px; left: 8px; right: 8px; display: flex; justify-content: space-between; align-items: flex-start; pointer-events: none; line-height: 1.2; }
+.rations { display: flex; align-items: center; gap: 6px; padding: 5px 12px 5px 8px; border-radius: 999px; background: rgba(27, 23, 21, .82);
+  font: 900 18px/1 var(--body); font-variant-numeric: tabular-nums; color: var(--parch); }
+.rations .wheat { width: 20px; height: 20px; }
+.rations.bump { animation: bump .25s; }
+@keyframes bump { 50% { transform: scale(1.15); } }
+.tool { pointer-events: auto; border: 2px solid var(--ink); background: var(--parch); color: var(--ink); border-radius: 999px; padding: 6px 12px;
+  font: 800 13px/1 var(--body); box-shadow: 0 2px 0 var(--ink); cursor: pointer; }
+.tool.on { background: var(--gold); }
+.banner { position: absolute; left: 50%; top: 22%; transform: translateX(-50%); width: max-content; max-width: 86%; text-align: center; line-height: 1.25;
+  padding: 10px 16px; border-radius: 12px; background: rgba(27, 23, 21, .88); color: var(--parch); font: 800 15px/1.3 var(--body); pointer-events: none; }
+.banner.big { font: 400 24px/1.15 var(--display); color: var(--gold); background: rgba(110, 31, 24, .92); }
+.overlay { position: absolute; inset: 0; display: grid; place-items: center; padding: 18px; background: rgba(27, 23, 21, .72); line-height: 1.4; }
+.panel { background: var(--parch); color: var(--ink); border-radius: 16px; border: 3px solid var(--ink); padding: 18px 18px 16px; max-width: 360px;
+  display: flex; flex-direction: column; gap: 10px; box-shadow: 0 5px 0 var(--ink); }
+.panel .eyebrow { font: 800 11px/1 var(--body); letter-spacing: .14em; text-transform: uppercase; color: var(--rome); }
+.panel h1, .panel h2 { margin: 0; font: 400 30px/1.05 var(--display); text-wrap: balance; }
+.panel p { margin: 0; font-size: 14.5px; }
+.panel ul { margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 4px; font-size: 14px; }
+.primary { border: 2px solid var(--ink); background: var(--gold); color: var(--ink); border-radius: 999px; padding: 12px 20px; font: 900 17px/1 var(--body);
+  box-shadow: 0 3px 0 var(--ink); cursor: pointer; }
+.primary:active, .tool:active { transform: translateY(2px); box-shadow: 0 1px 0 var(--ink); }
+.controls { display: flex; align-items: center; gap: 8px; }
+.progress { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 11px; }
+.progress .label { font: 800 11px/1 var(--body); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.bar { position: relative; height: 10px; border-radius: 999px; background: var(--rome-deep); border: 2px solid var(--ink); }
+.bar .fill { position: absolute; inset: 0 auto 0 0; width: 0; border-radius: 999px; background: var(--gold); }
+.bar .flag { position: absolute; top: -9px; width: 10px; height: 9px; margin-left: -1px; border-left: 2px solid var(--ink); }
+.bar .flag::after { content: ''; position: absolute; left: 0; top: 0; width: 8px; height: 6px; background: var(--parch); }
+.controls .tool { padding: 8px 11px; }
+@media (prefers-reduced-motion: reduce) { .rations.bump { animation: none; } }
+</style>
+
+<main class="game">
+  <div class="tray" id="tray" aria-label="Your units. Drag one onto the field, or tap it and then tap a square."></div>
+  <div class="field-wrap" id="wrap">
+    <canvas id="field" aria-label="The battlefield: five lanes in front of the Roman camp. Latin soldiers march down from the top."></canvas>
+    <div class="hud">
+      <div class="rations" id="rations" aria-live="polite"><svg class="wheat" viewBox="0 0 20 20" aria-hidden="true"><g fill="#e0a63a"><ellipse cx="10" cy="4" rx="2.4" ry="3.6"/><ellipse cx="6.5" cy="8" rx="2.2" ry="3.3" transform="rotate(-30 6.5 8)"/><ellipse cx="13.5" cy="8" rx="2.2" ry="3.3" transform="rotate(30 13.5 8)"/><ellipse cx="7" cy="12.5" rx="2" ry="3" transform="rotate(-30 7 12.5)"/><ellipse cx="13" cy="12.5" rx="2" ry="3" transform="rotate(30 13 12.5)"/></g><path d="M10 6v13" stroke="#b8862a" stroke-width="1.6"/></svg><span id="count">100</span></div>
+      <button class="tool" id="dismiss" title="Send a soldier home (frees the square)">Dismiss</button>
+    </div>
+    <div class="banner" id="banner" hidden></div>
+    <div class="overlay" id="overlay">
+      <div class="panel">
+        <span class="eyebrow">Lake Regillus · 496 BC</span>
+        <h1>Hold the Line</h1>
+        <p>The Latin League marches on Rome. Stop every warrior before he reaches your camp.</p>
+        <ul>
+          <li><b>Drag</b> a unit onto a square, or tap it and then tap a square.</li>
+          <li><b>Supply carts</b> bring rations. <b>Tap the grain</b> to collect it, and grain also falls from the sky.</li>
+          <li><b>Slingers</b> shoot down their whole lane. <b>Triarii</b> kneel behind their shields and hold the line.</li>
+          <li>If a Latin reaches the camp, the <b>equites</b> charge down that lane, but only once.</li>
+        </ul>
+        <button class="primary" id="start">To battle</button>
+      </div>
+    </div>
+  </div>
+  <div class="controls">
+    <div class="progress"><span class="label" id="level">Lake Regillus</span><div class="bar" id="bar"><div class="fill" id="fill"></div></div></div>
+    <button class="tool" id="pause">Pause</button>
+    <button class="tool" id="speed">1×</button>
+    <button class="tool" id="sound">Sound</button>
+  </div>
+</main>
+
+<script>
+const TAU = Math.PI * 2
+const COLS = 5, ROWS = 7, APPROACH = 0.95, CAMP = 0.85   // the field in cells: the Latin approach on top, the camp below
+const SKIN = '#e0b088', SKIN_SHADE = '#c48e66', INK = '#2a211c'
+
+// ---------- the armies ----------
+const UNITS = {
+  cart:     { name: 'Supply cart', short: 'Cart', cost: 50, recharge: 7.5, hp: 300 },
+  slinger:  { name: 'Slinger', short: 'Slinger', cost: 100, recharge: 7.5, hp: 300, reload: 1.5, dmg: 20, range: 99 },
+  hastatus: { name: 'Hastatus', short: 'Hastatus', cost: 150, recharge: 7.5, hp: 300, reload: 2, dmg: 45, range: 2.7 },
+  triarius: { name: 'Triarius', short: 'Triarius', cost: 50, recharge: 25, hp: 1500 },
+  caltrops: { name: 'Caltrops', short: 'Caltrops', cost: 25, recharge: 25, hp: 300, armTime: 10, dmg: 450 },
+}
+const ORDER = ['cart', 'slinger', 'hastatus', 'triarius', 'caltrops']
+const FOES = {
+  warrior: { name: 'Latin warrior', hp: 200, speed: 0.22, dps: 40 },
+  shield:  { name: 'Shield-bearer', hp: 200, shield: 400, speed: 0.22, dps: 40, intro: 'Shield-bearers! Their bronze shields soak up stones until they break.' },
+  cavalry: { name: 'Latin horseman', hp: 330, speed: 0.6, after: 0.28, dps: 40, jumps: true, intro: 'Horsemen! They leap over the first soldier in their way.' },
+  chief:   { name: 'War chief', hp: 240, speed: 0.3, dps: 40 },
+}
+const LEVEL = {
+  name: 'Lake Regillus', year: '496 BC',
+  waves: [
+    { t: 30, foes: ['warrior'] },
+    { t: 52, foes: ['warrior'] },
+    { t: 70, foes: ['warrior'] },
+    { t: 85, foes: ['warrior', 'warrior'] },
+    { t: 100, foes: ['shield'] },
+    { t: 114, foes: ['warrior', 'warrior'] },
+    { t: 128, foes: ['shield', 'warrior'] },
+    { t: 144, big: 'A great wave approaches!', foes: ['chief', 'warrior', 'warrior', 'shield', 'warrior', 'warrior'] },
+    { t: 168, foes: ['warrior', 'shield'] },
+    { t: 180, foes: ['cavalry'] },
+    { t: 192, foes: ['warrior', 'cavalry', 'shield'] },
+    { t: 210, big: 'The final wave!', foes: ['chief', 'warrior', 'warrior', 'shield', 'warrior', 'cavalry', 'shield', 'warrior', 'warrior', 'cavalry'] },
+  ],
+}
+
+// ---------- sound (made in code, no files) ----------
+const sfx = {
+  ac: null, on: true, last: {},
+  init() { if (this.ac) return; try { this.ac = new (window.AudioContext || window.webkitAudioContext)() } catch { this.ac = null } },
+  ok(name, gap = 0.05) { if (!this.on || !this.ac) return false; const now = this.ac.currentTime; if (now - (this.last[name] ?? -1) < gap) return false; this.last[name] = now; return true },
+  tone(f, dur, { type = 'sine', vol = 0.12, to = null, at = 0 } = {}) {
+    const a = this.ac, t = a.currentTime + at, o = a.createOscillator(), g = a.createGain()
+    o.type = type; o.frequency.setValueAtTime(f, t); if (to) o.frequency.exponentialRampToValueAtTime(to, t + dur)
+    g.gain.setValueAtTime(vol, t); g.gain.exponentialRampToValueAtTime(0.001, t + dur)
+    o.connect(g).connect(a.destination); o.start(t); o.stop(t + dur + 0.02)
+  },
+  noise(dur, { vol = 0.15, freq = 1200, at = 0 } = {}) {
+    const a = this.ac, t = a.currentTime + at, n = Math.floor(a.sampleRate * dur), buf = a.createBuffer(1, n, a.sampleRate), d = buf.getChannelData(0)
+    for (let i = 0; i < n; i++) d[i] = (Math.random() * 2 - 1) * (1 - i / n)
+    const s = a.createBufferSource(), f = a.createBiquadFilter(), g = a.createGain()
+    s.buffer = buf; f.type = 'lowpass'; f.frequency.value = freq; g.gain.value = vol
+    s.connect(f).connect(g).connect(a.destination); s.start(t)
+  },
+  sling() { if (this.ok('sling', 0.08)) this.noise(0.09, { vol: 0.06, freq: 3000 }) },
+  throw() { if (this.ok('throw', 0.08)) this.noise(0.18, { vol: 0.08, freq: 1400 }) },
+  hit() { if (this.ok('hit', 0.06)) { this.noise(0.07, { vol: 0.12, freq: 700 }); this.tone(140, 0.08, { type: 'triangle', vol: 0.06 }) } },
+  clang() { if (this.ok('clang', 0.06)) { this.tone(900, 0.12, { type: 'square', vol: 0.025 }); this.tone(1310, 0.1, { type: 'triangle', vol: 0.03 }) } },
+  chop() { if (this.ok('chop', 0.35)) this.noise(0.06, { vol: 0.07, freq: 900 }) },
+  place() { if (this.ok('place')) { this.tone(190, 0.1, { type: 'triangle', vol: 0.12 }); this.noise(0.05, { vol: 0.06, freq: 600 }) } },
+  collect() { if (this.ok('collect')) { this.tone(660, 0.09, { vol: 0.08 }); this.tone(990, 0.12, { vol: 0.07, at: 0.07 }) } },
+  die() { if (this.ok('die', 0.08)) this.tone(220, 0.25, { type: 'triangle', vol: 0.07, to: 90 }) },
+  crack() { if (this.ok('crack')) { this.noise(0.2, { vol: 0.14, freq: 2500 }); this.tone(500, 0.2, { type: 'square', vol: 0.03, to: 200 }) } },
+  boom() { if (this.ok('boom')) { this.noise(0.45, { vol: 0.25, freq: 400 }); this.tone(90, 0.4, { type: 'sine', vol: 0.15, to: 40 }) } },
+  horn() { if (this.ok('horn', 1)) { this.tone(196, 1.1, { type: 'sawtooth', vol: 0.05 }); this.tone(294, 0.9, { type: 'sawtooth', vol: 0.035, at: 0.25 }) } },
+  charge() { if (this.ok('charge', 0.5)) { [262, 330, 392, 523].forEach((f, i) => this.tone(f, 0.22, { type: 'square', vol: 0.04, at: i * 0.09 })); this.noise(0.8, { vol: 0.1, freq: 300 }) } },
+  win() { if (this.ok('win', 1)) [392, 494, 587, 784].forEach((f, i) => this.tone(f, 0.35, { type: 'triangle', vol: 0.09, at: i * 0.14 })) },
+  lose() { if (this.ok('lose', 1)) [392, 349, 311, 262].forEach((f, i) => this.tone(f, 0.4, { type: 'sawtooth', vol: 0.04, at: i * 0.2 })) },
+  deny() { if (this.ok('deny', 0.15)) this.tone(150, 0.12, { type: 'square', vol: 0.04 }) },
+}
+
+// ---------- drawing the little soldiers (feet at 0,0; 72 units = one square) ----------
+function rr(c, x, y, w, h, r) { c.beginPath(); c.roundRect(x, y, w, h, r) }
+function shadow(c, rx, ry) { c.fillStyle = 'rgba(25, 35, 10, .28)'; c.beginPath(); c.ellipse(0, 0, rx, ry, 0, 0, TAU); c.fill() }
+function line(c, x1, y1, x2, y2, color, width) { c.strokeStyle = color; c.lineWidth = width; c.lineCap = 'round'; c.beginPath(); c.moveTo(x1, y1); c.lineTo(x2, y2); c.stroke() }
+function feathers(c, y) { [[-4, '#1b1715', -7], [0, '#6a2f6e', 0], [4, '#1b1715', 7]].forEach(([dx, col, lean]) => line(c, dx * 0.6, y, dx + lean * 0.35, y - 15, col, 2.6)) }
+function romanHelmet(c, y) {
+  c.fillStyle = SKIN_SHADE; c.fillRect(-3, y + 4, 6, 5)
+  c.fillStyle = '#c9a24a'; c.beginPath(); c.arc(0, y, 8.5, 0, TAU); c.fill()
+  c.strokeStyle = '#8a6a2a'; c.lineWidth = 1.4; c.beginPath(); c.arc(0, y, 8.5, 0.15, Math.PI - 0.15); c.stroke()
+  c.fillStyle = '#8a6a2a'; c.beginPath(); c.arc(0, y - 8, 2, 0, TAU); c.fill()
+}
+function romanLegs(c, kneel = false) {
+  if (kneel) { c.fillStyle = SKIN; rr(c, -8, -11, 7, 9, 2); c.fill(); c.fillStyle = '#5a3a22'; c.fillRect(-9.5, -4, 10, 3.5); c.fillStyle = SKIN; c.fillRect(2, -13, 5, 11); c.fillStyle = '#5a3a22'; c.fillRect(1.5, -3, 6, 3); return }
+  c.fillStyle = SKIN; c.fillRect(-6, -14, 4.5, 12); c.fillRect(1.5, -14, 4.5, 12)
+  c.fillStyle = '#5a3a22'; c.fillRect(-6.5, -3, 5.5, 3); c.fillRect(1, -3, 5.5, 3)
+}
+const DRAW_UNIT = {
+  slinger(c, u, T) {
+    shadow(c, 13, 4); romanLegs(c)
+    c.fillStyle = '#8e2b22'; c.strokeStyle = '#5a1a14'; c.lineWidth = 1.5; c.beginPath(); c.arc(-12, -24, 7.5, 0, TAU); c.fill(); c.stroke()
+    c.fillStyle = '#d9ccb0'; rr(c, -9.5, -33, 19, 21, 5); c.fill()
+    c.fillStyle = '#8a6a44'; c.fillRect(-9.5, -19, 19, 2.5)
+    const throwing = u.anim > 0, a = throwing ? -Math.PI / 2 + (1 - u.anim / 0.35) * 4 : u.aiming ? T * 10 : Math.PI / 2
+    line(c, 8, -30, 11, -43, SKIN, 4.2)
+    const sx = 11 + Math.cos(a) * 10, sy = -48 + Math.sin(a) * 4
+    line(c, 11, -43, sx, sy, '#6b4a2b', 1.2)
+    if (!throwing || u.anim > 0.25) { c.fillStyle = '#8a8a80'; c.beginPath(); c.arc(sx, sy, 2.3, 0, TAU); c.fill() }
+    // a wolf skin over the head, as Polybius describes the light troops
+    c.fillStyle = SKIN_SHADE; c.fillRect(-3, -37, 6, 4)
+    c.fillStyle = '#7a5636'
+    c.beginPath(); c.moveTo(-8, -40); c.quadraticCurveTo(0, -18, 8, -40); c.fill()
+    c.beginPath(); c.arc(0, -42, 8.5, 0, TAU); c.fill()
+    c.beginPath(); c.moveTo(-7.5, -46); c.lineTo(-5, -55); c.lineTo(-1.5, -49); c.fill()
+    c.beginPath(); c.moveTo(7.5, -46); c.lineTo(5, -55); c.lineTo(1.5, -49); c.fill()
+    c.fillStyle = '#9a744c'; c.beginPath(); c.arc(0, -43, 4, 0, TAU); c.fill()
+  },
+  hastatus(c, u) {
+    shadow(c, 14, 4.5); romanLegs(c)
+    c.fillStyle = '#8e2b22'; c.strokeStyle = '#e0a63a'; c.lineWidth = 1.6; rr(c, -23, -42, 12, 34, 4); c.fill(); c.stroke()
+    c.fillStyle = '#a8392f'; rr(c, -10.5, -34, 21, 22, 5); c.fill()
+    line(c, -8, -33, 8, -22, '#5a3a22', 1.6); line(c, 8, -33, -8, -22, '#5a3a22', 1.6)
+    c.fillStyle = '#5a3a22'; c.fillRect(-10.5, -19, 21, 2.5)
+    const thrown = u.anim > 0
+    line(c, 9, -30, thrown ? 14 : 12, thrown ? -47 : -36, SKIN, 4.2)
+    if (!thrown) { line(c, 12, -18, 14.5, -62, '#6b4a2b', 2.2); line(c, 14.2, -56, 14.8, -71, '#cfd4d8', 1.6) }
+    romanHelmet(c, -42); feathers(c, -49)
+  },
+  triarius(c, u) {
+    shadow(c, 16, 5)
+    // kneeling behind a big shield, spear planted (Livy 8.8)
+    c.fillStyle = '#8e2b22'; c.strokeStyle = '#e0a63a'; c.lineWidth = 1.8; rr(c, -17, -40, 34, 38, 6); c.fill(); c.stroke()
+    if (u.hp < u.max * 0.5) { line(c, -12, -30, -6, -22, '#3b120e', 1.4); line(c, 13, -12, 8, -6, '#3b120e', 1.4) }
+    if (u.hp < u.max * 0.25) { line(c, -15, -10, -9, -16, '#3b120e', 1.4); line(c, 10, -36, 14, -28, '#3b120e', 1.4) }
+    line(c, 10, -4, 16, -76, '#6b4a2b', 2.4); line(c, 15.5, -70, 16.3, -84, '#cfd4d8', 1.8)
+    romanLegs(c, true)
+    c.fillStyle = '#a8392f'; rr(c, -10.5, -31, 21, 20, 5); c.fill()
+    c.fillStyle = '#8d939a'; rr(c, -10, -31, 20, 13, 4); c.fill()
+    c.fillStyle = '#6d737a'; for (let y = -29; y < -19; y += 3) for (let x = -8 + (y % 2 ? 1.5 : 0); x < 9; x += 3) c.fillRect(x, y, 1.2, 1.2)
+    line(c, 9, -27, 12, -36, SKIN, 4.2)
+    romanHelmet(c, -38); feathers(c, -45)
+  },
+  cart(c, u) {
+    shadow(c, 25, 5)
+    if (u.anim > 0) { const g = c.createRadialGradient(0, -24, 2, 0, -24, 34); g.addColorStop(0, `rgba(240, 200, 90, ${u.anim})`); g.addColorStop(1, 'rgba(240, 200, 90, 0)'); c.fillStyle = g; c.beginPath(); c.arc(0, -24, 34, 0, TAU); c.fill() }
+    line(c, -5, -28, -4, -46, '#6b4a2b', 2.4); line(c, 5, -28, 4, -46, '#6b4a2b', 2.4); line(c, -6, -44, 6, -44, '#6b4a2b', 2)
+    c.fillStyle = '#3f2a16'; c.beginPath(); c.ellipse(-22, -10, 4.5, 10, 0, 0, TAU); c.fill(); c.beginPath(); c.ellipse(22, -10, 4.5, 10, 0, 0, TAU); c.fill()
+    c.fillStyle = '#8a6236'; rr(c, -20, -27, 40, 19, 3); c.fill()
+    c.strokeStyle = '#6b4a2b'; c.lineWidth = 1; for (const y of [-21, -15]) { c.beginPath(); c.moveTo(-19, y); c.lineTo(19, y); c.stroke() }
+    for (const [x, y] of [[-11, -29], [11, -29], [0, -33]]) {
+      c.fillStyle = '#e9dcc0'; c.beginPath(); c.ellipse(x, y, 7.5, 6.5, 0, 0, TAU); c.fill()
+      c.strokeStyle = '#b8a47e'; c.lineWidth = 1; c.stroke(); line(c, x - 2, y - 6, x + 2, y - 6, '#8a6a44', 1.6)
+    }
+  },
+  caltrops(c, u, T) {
+    if (!u.armed) {
+      c.fillStyle = '#8a6a44'; c.beginPath(); c.ellipse(0, -5, 15, 5.5, 0, 0, TAU); c.fill()
+      c.fillStyle = '#6b4a2b'; c.beginPath(); c.ellipse(0, -6, 9, 3, 0, 0, TAU); c.fill()
+      c.strokeStyle = 'rgba(251, 243, 228, .85)'; c.lineWidth = 2.2; c.beginPath(); c.ellipse(0, -5, 19, 8, 0, -Math.PI / 2, -Math.PI / 2 + TAU * (1 - u.arm / UNITS.caltrops.armTime)); c.stroke()
+      return
+    }
+    for (const [x, y] of [[-10, -3], [2, -6], [11, -2], [-3, 1], [7, 3]]) {
+      c.strokeStyle = '#3b3f46'; c.lineWidth = 1.8
+      c.beginPath(); for (let i = 0; i < 4; i++) { const a = i * Math.PI / 2 + 0.4; c.moveTo(x, y); c.lineTo(x + Math.cos(a) * 4.5, y + Math.sin(a) * 2.6 - (i === 1 ? 3 : 0)) } c.stroke()
+    }
+    if (Math.sin(T * 3) > 0.85) { c.fillStyle = 'rgba(255, 255, 255, .9)'; c.beginPath(); c.arc(2, -8, 1.6, 0, TAU); c.fill() }
+  },
+}
+const FOE_TUNIC = { warrior: '#6b7a4a', shield: '#4d5a6a', chief: '#7a4a5e', cavalry: '#4d5a6a' }
+function drawFoe(c, f, T) {
+  const walk = f.eating || f.jump ? 0 : Math.sin(f.phase * 7), bob = Math.abs(walk) * -1.2
+  const chop = f.eating ? Math.sin(f.phase * 10) : -0.4
+  if (f.type === 'cavalry') return drawRider(c, f)
+  shadow(c, 13, 4)
+  if (f.type === 'chief') {   // the war chief carries the League's standard
+    line(c, 13, -6, 13, -80, '#5a3a22', 2.2)
+    c.fillStyle = '#d4392d'; c.beginPath(); c.moveTo(13, -80); c.lineTo(33, -76 + Math.sin(T * 6) * 2); c.lineTo(13, -66); c.fill()
+    c.fillStyle = '#e0a63a'; c.beginPath(); c.arc(19, -73, 2.6, 0, TAU); c.fill()
+  }
+  line(c, -4, -14, -4 + walk * 3, -1, SKIN, 4.6); line(c, 4, -14, 4 - walk * 3, -1, SKIN, 4.6)
+  c.fillStyle = '#3f2a16'; c.fillRect(-7 + walk * 3, -3, 6, 3); c.fillRect(1 - walk * 3, -3, 6, 3)
+  c.fillStyle = FOE_TUNIC[f.type]; rr(c, -10, -34 + bob, 20, 22, 5); c.fill()
+  c.fillStyle = '#3f2a16'; c.fillRect(-10, -20 + bob, 20, 2.5)
+  // weapon arm (their right, our left)
+  const ax = -13 + Math.sin(chop) * 2, ay = -40 + chop * 8
+  line(c, -8, -30 + bob, ax, ay + 8, SKIN, 4.2)
+  if (f.type === 'shield') { line(c, ax, ay + 18, ax - 2, ay - 22, '#6b4a2b', 2.2); line(c, ax - 1.8, ay - 18, ax - 2.2, ay - 28, '#cfd4d8', 1.8) }
+  else { line(c, ax, ay + 12, ax + 1, ay - 6, '#6b4a2b', 2.2); c.fillStyle = '#9aa3aa'; c.beginPath(); c.moveTo(ax + 1, ay - 6); c.lineTo(ax - 6, ay - 9); c.lineTo(ax - 5, ay - 1); c.closePath(); c.fill() }
+  // head, facing us
+  c.fillStyle = SKIN; c.beginPath(); c.arc(0, -42 + bob, 8, 0, TAU); c.fill()
+  c.fillStyle = INK; c.fillRect(-4, -43 + bob, 2, 2); c.fillRect(2, -43 + bob, 2, 2)
+  line(c, -5, -46 + bob, -1.5, -45 + bob, INK, 1.3); line(c, 5, -46 + bob, 1.5, -45 + bob, INK, 1.3)
+  if (f.type === 'warrior') { c.fillStyle = '#5a3a22'; c.beginPath(); c.arc(0, -46 + bob, 8.5, Math.PI * 1.05, Math.PI * 1.95); c.fill(); c.beginPath(); c.arc(0, -38 + bob, 6, 0.15, Math.PI - 0.15); c.fill() }
+  else {
+    c.fillStyle = '#b08a3e'; c.beginPath(); c.arc(0, -44 + bob, 8.8, Math.PI, 0); c.fill(); c.fillRect(-8.8, -45 + bob, 3, 8); c.fillRect(5.8, -45 + bob, 3, 8)
+    if (f.type === 'chief') { c.fillStyle = '#d4392d'; rr(c, -2, -60 + bob, 4, 9, 2); c.fill(); c.beginPath(); c.ellipse(0, -60 + bob, 8, 3, 0, Math.PI, 0); c.fill() }
+  }
+  // shields
+  if (f.type === 'shield' && f.shield > 0) {
+    c.fillStyle = '#b08a3e'; c.strokeStyle = '#6b5326'; c.lineWidth = 2; c.beginPath(); c.arc(3, -25 + bob, 15, 0, TAU); c.fill(); c.stroke()
+    c.strokeStyle = '#8a6a2a'; c.lineWidth = 1.2; c.beginPath(); c.arc(3, -25 + bob, 10, 0, TAU); c.stroke()
+    c.fillStyle = '#6b5326'; c.beginPath(); c.arc(3, -25 + bob, 3, 0, TAU); c.fill()
+    const r = f.shield / f.shieldMax
+    if (r < 0.66) { line(c, -6, -33 + bob, 1, -26 + bob, '#3f2a16', 1.4); line(c, 1, -26 + bob, -2, -18 + bob, '#3f2a16', 1.2) }
+    if (r < 0.33) { line(c, 12, -32 + bob, 6, -24 + bob, '#3f2a16', 1.4); line(c, 6, -24 + bob, 11, -15 + bob, '#3f2a16', 1.2) }
+  } else if (f.type === 'warrior' || f.type === 'chief') {
+    c.fillStyle = '#6b4a2b'; c.strokeStyle = '#3f2a16'; c.lineWidth = 1.4; c.beginPath(); c.ellipse(10, -25 + bob, 6, 9, 0, 0, TAU); c.fill(); c.stroke()
+  }
+}
+function drawRider(c, f) {
+  const g = f.jump ? 0 : Math.sin(f.phase * (f.jumped ? 8 : 13)), sh = f.jump ? 0.6 : 1
+  shadow(c, 14 * sh, 5 * sh)
+  if (f.jump) c.translate(0, -Math.sin(f.jump.t * Math.PI) * 26)
+  line(c, -5, -18, -5 + g * 2, -2, '#4a3420', 3.6); line(c, 5, -18, 5 - g * 2, -2, '#4a3420', 3.6)
+  c.fillStyle = '#7a5636'; c.beginPath(); c.ellipse(0, -24, 11, 10, 0, 0, TAU); c.fill()
+  // rider
+  line(c, -10, -34, -12, -24, FOE_TUNIC.cavalry, 3.6); line(c, 10, -34, 12, -24, FOE_TUNIC.cavalry, 3.6)
+  c.fillStyle = FOE_TUNIC.cavalry; rr(c, -8, -52, 16, 19, 5); c.fill()
+  line(c, -9, -46, -12, -40, SKIN, 3.6); line(c, -12, -30, -15, -82, '#6b4a2b', 2.2); line(c, -14.6, -76, -15.3, -88, '#cfd4d8', 1.8)
+  c.fillStyle = SKIN; c.beginPath(); c.arc(0, -59, 7, 0, TAU); c.fill()
+  c.fillStyle = INK; c.fillRect(-3.5, -60, 2, 2); c.fillRect(1.5, -60, 2, 2)
+  c.fillStyle = '#b08a3e'; c.beginPath(); c.arc(0, -61, 7.6, Math.PI, 0); c.fill()
+  // the horse's head, closest to us
+  c.fillStyle = '#4a3420'; c.beginPath(); c.moveTo(-4, -31); c.lineTo(-6, -38); c.lineTo(-1, -33); c.fill(); c.beginPath(); c.moveTo(4, -31); c.lineTo(6, -38); c.lineTo(1, -33); c.fill()
+  c.fillStyle = '#8a6440'; c.beginPath(); c.ellipse(0, -17, 6, 12, 0, 0, TAU); c.fill()
+  c.fillStyle = '#5a3e26'; c.beginPath(); c.ellipse(0, -8, 4.5, 4, 0, 0, TAU); c.fill()
+  c.fillStyle = INK; c.fillRect(-4.5, -23, 2, 2); c.fillRect(2.5, -23, 2, 2)
+}
+function drawEques(c, e, T) {
+  const g = e.state === 'charge' ? Math.sin(T * 16) : 0
+  shadow(c, 12, 4)
+  line(c, -5, -14, -5 + g * 2, -1, '#3f2a16', 3.4); line(c, 5, -14, 5 - g * 2, -1, '#3f2a16', 3.4)
+  c.fillStyle = '#e9e1cf'; c.beginPath(); c.ellipse(0, -20, 10, 13, 0, 0, TAU); c.fill()
+  c.strokeStyle = '#b8b0a0'; c.lineWidth = 1; c.stroke()
+  line(c, 0, -8, g * 2, 2, '#b8b0a0', 3)
+  c.fillStyle = '#8e2b22'; c.beginPath(); c.moveTo(-8, -40); c.lineTo(8, -40); c.lineTo(10, -24); c.lineTo(-10, -24); c.fill()
+  line(c, 9, -36, 13, -70, '#6b4a2b', 2); line(c, 12.8, -65, 13.4, -76, '#cfd4d8', 1.6)
+  romanHelmet(c, -46); c.fillStyle = '#d4392d'; c.beginPath(); c.ellipse(0, -55, 3, 7, 0, 0, TAU); c.fill()
+}
+
+// ---------- the field ----------
+const canvas = document.getElementById('field'), ctx = canvas.getContext('2d')
+const bg = document.createElement('canvas'), bctx = bg.getContext('2d')
+let W = 0, H = 0, cell = 72, k = 1, dpr = 1
+const lx = lane => (lane + 0.5) * cell
+const ry = row => (APPROACH + row) * cell
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+
+function layout() {
+  const wrap = document.getElementById('wrap'), game = document.querySelector('.game')
+  const avail = Math.min(game.clientWidth - 32, 480)
+  const used = document.getElementById('tray').offsetHeight + document.querySelector('.controls').offsetHeight + 46
+  const maxH = Math.max(380, window.innerHeight - used)
+  cell = Math.floor(Math.min(avail / COLS, maxH / (ROWS + APPROACH + CAMP)))
+  W = cell * COLS; H = Math.round(cell * (ROWS + APPROACH + CAMP)); k = cell / 72
+  dpr = window.devicePixelRatio || 1
+  for (const cv of [canvas, bg]) { cv.width = Math.round(W * dpr); cv.height = Math.round(H * dpr) }
+  canvas.style.width = W + 'px'; canvas.style.height = H + 'px'
+  wrap.style.width = (W + 6) + 'px'
+  paintField()
+}
+function paintField() {
+  const c = bctx
+  c.setTransform(dpr, 0, 0, dpr, 0, 0)
+  let seed = 11; const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647
+  // the Latin approach, with the lake on the left
+  const top = ry(0)
+  c.fillStyle = '#74853f'; c.fillRect(0, 0, W, top)
+  c.fillStyle = '#c9b48a'; c.beginPath(); c.ellipse(-cell * 0.1, -cell * 0.1, cell * 1.75, cell * 0.92, 0, 0, TAU); c.fill()
+  const lake = c.createRadialGradient(0, 0, 4, 0, 0, cell * 1.7); lake.addColorStop(0, '#3f7aa0'); lake.addColorStop(1, '#5d93b5')
+  c.fillStyle = lake; c.beginPath(); c.ellipse(-cell * 0.1, -cell * 0.1, cell * 1.65, cell * 0.82, 0, 0, TAU); c.fill()
+  c.strokeStyle = 'rgba(255,255,255,.35)'; c.lineWidth = 1.2
+  for (const [x, y] of [[0.35, 0.18], [0.9, 0.35], [0.5, 0.5]]) { c.beginPath(); c.moveTo(x * cell - 7, y * cell); c.quadraticCurveTo(x * cell, y * cell - 3, x * cell + 7, y * cell); c.stroke() }
+  // the lawn: a checkerboard of squares
+  for (let r = 0; r < ROWS; r++) for (let col = 0; col < COLS; col++) {
+    c.fillStyle = (r + col) % 2 ? '#8b9e4e' : '#94a856'
+    c.fillRect(col * cell, ry(r), cell, cell)
+  }
+  for (let i = 0; i < 520; i++) {
+    const x = rnd() * W, y = rnd() * ry(ROWS)
+    c.strokeStyle = rnd() < 0.5 ? 'rgba(60, 80, 30, .3)' : 'rgba(215, 225, 140, .22)'; c.lineWidth = 1
+    c.beginPath(); c.moveTo(x, y); c.lineTo(x + (rnd() - 0.5) * 3, y - 4); c.stroke()
+  }
+  for (let i = 0; i < 14; i++) { c.fillStyle = rnd() < 0.5 ? '#f2e6c8' : '#e9c44a'; c.beginPath(); c.arc(rnd() * W, top + rnd() * (ry(ROWS) - top), 1.6, 0, TAU); c.fill() }
+  // the camp: trodden earth, a palisade, tents
+  const camp = ry(ROWS)
+  c.fillStyle = '#b59a6a'; c.fillRect(0, camp, W, H - camp)
+  c.fillStyle = 'rgba(90, 60, 30, .18)'; for (let i = 0; i < 60; i++) c.fillRect(rnd() * W, camp + rnd() * (H - camp), 2, 1)
+  for (let x = cell * 0.6; x < W; x += cell * 1.3) {
+    c.fillStyle = '#efe4cc'; c.beginPath(); c.moveTo(x - cell * 0.32, H); c.lineTo(x, H - cell * 0.42); c.lineTo(x + cell * 0.32, H); c.fill()
+    c.strokeStyle = '#b8a47e'; c.lineWidth = 1; c.beginPath(); c.moveTo(x, H - cell * 0.42); c.lineTo(x, H); c.stroke()
+  }
+  const stake = cell * 0.13
+  for (let x = 0; x < W + stake; x += stake) {
+    c.fillStyle = '#7a5636'; c.fillRect(x, camp + 2, stake - 2, cell * 0.16)
+    c.beginPath(); c.moveTo(x, camp + 2); c.lineTo(x + (stake - 2) / 2, camp - cell * 0.07); c.lineTo(x + stake - 2, camp + 2); c.fill()
+  }
+  c.fillStyle = 'rgba(0,0,0,.18)'; c.fillRect(0, camp + cell * 0.16 + 2, W, 3)
+}
+
+// ---------- the game ----------
+let G = null
+function buildQueue() {
+  const q = []
+  for (const w of LEVEL.waves) { const gap = w.big ? 0.7 : 1.6; w.foes.forEach((type, i) => q.push({ t: w.t + i * gap, type, wave: w })) }
+  return q.sort((a, b) => a.t - b.t)
+}
+function newGame() {
+  LEVEL.waves.forEach(w => { w.announced = false })
+  G = {
+    t: 0, phase: 'ready', speed: G?.speed ?? 1, paused: false, rations: 100, ids: 0,
+    units: [], foes: [], shots: [], drops: [], fx: [], corpses: [],
+    equites: Array.from({ length: COLS }, () => ({ state: 'ready', y: ROWS + 0.62 })),
+    cool: { cart: 0, slinger: 0, hastatus: 0, triarius: 15, caltrops: 20 },
+    queue: buildQueue(), total: 0, spawned: 0, killed: 0, lost: 0, nextSky: 4, shake: 0,
+    introduced: new Set(), selected: null, dismiss: false, hover: null, lastLane: -1, tips: {},
+  }
+  G.total = G.queue.length
+  renderTray(); renderBar(); updateCount()
+}
+
+function spawn(type) {
+  const F = FOES[type]
+  let lane; do lane = Math.floor(Math.random() * COLS); while (lane === G.lastLane && Math.random() < 0.7)
+  G.lastLane = lane
+  G.foes.push({ id: ++G.ids, type, lane, y: -0.75, hp: F.hp, max: F.hp, shield: F.shield ?? 0, shieldMax: F.shield ?? 0,
+    speed: F.speed * (0.92 + Math.random() * 0.16), jumped: false, jump: null, eating: null, flash: 0, phase: Math.random() * TAU, dx: (Math.random() - 0.5) * 0.12 })
+  G.spawned++
+}
+function unitAt(lane, row) { return G.units.find(u => u.lane === lane && u.row === row) }
+function place(type, lane, row) {
+  const U = UNITS[type]
+  if (lane < 0 || lane >= COLS || row < 0 || row >= ROWS || unitAt(lane, row)) return false
+  if (G.rations < U.cost || G.cool[type] > 0) { sfx.deny(); return false }
+  G.rations -= U.cost; G.cool[type] = U.recharge
+  G.units.push({ type, lane, row, hp: U.hp, max: U.hp, cd: type === 'cart' ? 5 : 0.4, anim: 0, hurt: 0, armed: false, arm: U.armTime ?? 0, aiming: false })
+  for (let i = 0; i < 6; i++) G.fx.push({ kind: 'dust', x: lx(lane) + (Math.random() - 0.5) * cell * 0.6, y: ry(row + 0.82), vx: (Math.random() - 0.5) * 30, vy: -Math.random() * 20, t: 0.5 })
+  sfx.place(); updateCount(); tutorial('placed', type)
+  return true
+}
+function removeUnit(u, lost = true) { G.units = G.units.filter(x => x !== u); if (lost) G.lost++; for (const f of G.foes) if (f.eating === u) f.eating = null }
+function hurtFoe(f, dmg, kind) {
+  if (f.hp <= 0) return
+  if (f.shield > 0) {
+    const a = Math.min(f.shield, dmg); f.shield -= a; dmg -= a
+    if (f.shield <= 0) { sfx.crack(); for (let i = 0; i < 8; i++) G.fx.push({ kind: 'shard', x: lx(f.lane), y: ry(f.y) - 25 * k, vx: (Math.random() - 0.5) * 90, vy: -Math.random() * 70, t: 0.6 }) }
+    else sfx.clang()
+  } else sfx.hit()
+  f.hp -= dmg; f.flash = 0.12
+  if (f.hp <= 0) {
+    f.hp = 0; G.killed++; sfx.die()
+    G.corpses.push({ type: f.type, lane: f.lane, y: Math.min(f.y, ROWS + 0.3), dx: f.dx, t: 0, dir: Math.random() < 0.5 ? 1 : -1, shieldMax: f.shieldMax, phase: 0 })
+  }
+}
+function explode(u) {
+  removeUnit(u, false)
+  for (const f of G.foes) if (f.lane === u.lane && f.hp > 0 && f.y >= u.row - 0.25 && f.y <= u.row + 1.4) hurtFoe(f, UNITS.caltrops.dmg)
+  G.shake = Math.max(G.shake, 5); sfx.boom()
+  G.fx.push({ kind: 'ring', x: lx(u.lane), y: ry(u.row + 0.7), t: 0.45 })
+  for (let i = 0; i < 16; i++) G.fx.push({ kind: 'dust', x: lx(u.lane), y: ry(u.row + 0.7), vx: (Math.random() - 0.5) * 160, vy: -Math.random() * 120, t: 0.7 })
+}
+function collect(d) {
+  d.gone = true; G.rations += d.v; updateCount(true); sfx.collect()
+  G.fx.push({ kind: 'text', text: '+' + d.v, x: d.x, y: d.y - 10, t: 0.8 })
+  tutorial('collected')
+}
+
+function update(dt) {
+  G.t += dt
+  // spawns, wave announcements, new enemies
+  while (G.queue.length && G.queue[0].t <= G.t) {
+    const e = G.queue.shift()
+    if (e.wave.big && !e.wave.announced) { e.wave.announced = true; announce(e.wave.big, true); sfx.horn() }
+    if (FOES[e.type].intro && !G.introduced.has(e.type)) { G.introduced.add(e.type); announce(FOES[e.type].intro) }
+    if (G.spawned === 0) announce('The Latins are coming!')
+    spawn(e.type)
+  }
+  renderBar()
+  // grain falling from the sky
+  G.nextSky -= dt
+  if (G.nextSky <= 0) { G.nextSky = 8 + Math.random() * 2; G.drops.push({ x: cell * (0.45 + Math.random() * (COLS - 0.9)), y: -12, ty: ry(0.6 + Math.random() * 5.2), v: 25, life: 10, falling: true }) }
+  for (const d of G.drops) { if (d.falling) { d.y += 70 * k * dt; if (d.y >= d.ty) { d.y = d.ty; d.falling = false } } else d.life -= dt }
+  G.drops = G.drops.filter(d => !d.gone && (d.falling || d.life > 0))
+  for (const t in G.cool) G.cool[t] = Math.max(0, G.cool[t] - dt)
+  // your units
+  for (const u of G.units) {
+    const U = UNITS[u.type]
+    u.cd -= dt; u.anim = Math.max(0, u.anim - dt); u.hurt = Math.max(0, u.hurt - dt)
+    if (u.type === 'cart' && u.cd <= 0) {
+      u.cd = 20; u.anim = 0.7
+      G.drops.push({ x: lx(u.lane) + (Math.random() - 0.5) * cell * 0.4, y: ry(u.row + 0.2), ty: ry(u.row + 0.55), v: 25, life: 10, falling: true })
+    }
+    if (u.type === 'caltrops' && !u.armed) { u.arm -= dt; if (u.arm <= 0) u.armed = true }
+    if (U.dmg && u.type !== 'caltrops') {
+      const near = G.foes.some(f => f.lane === u.lane && f.hp > 0 && f.y < u.row + 1.05 && f.y > Math.max(-0.55, u.row + 0.5 - U.range))
+      u.aiming = near
+      if (near && u.cd <= 0) {
+        u.cd = U.reload; u.anim = 0.35
+        G.shots.push({ lane: u.lane, y: u.row + 0.45, kind: u.type === 'slinger' ? 'stone' : 'pilum', dmg: U.dmg, speed: u.type === 'slinger' ? 7 : 6, end: u.row + 0.5 - U.range - 0.3, x0: (Math.random() - 0.5) * 0.1 })
+        u.type === 'slinger' ? sfx.sling() : sfx.throw()
+      }
+    }
+  }
+  // missiles
+  for (const s of G.shots) {
+    s.y -= s.speed * dt
+    const hit = G.foes.filter(f => f.lane === s.lane && f.hp > 0 && !f.jump && s.y <= f.y + 0.05 && s.y >= f.y - 0.85).sort((a, b) => b.y - a.y)[0]
+    if (hit) { hurtFoe(hit, s.dmg, s.kind); s.done = true; G.fx.push({ kind: 'spark', x: lx(s.lane), y: ry(s.y), t: 0.25 }) }
+    if (s.y < Math.max(-1, s.end)) s.done = true
+  }
+  G.shots = G.shots.filter(s => !s.done)
+  // the Latins
+  for (const f of G.foes) {
+    if (f.hp <= 0) continue
+    f.flash = Math.max(0, f.flash - dt); f.phase += dt
+    if (f.jump) {
+      f.jump.t += dt / 0.6; f.y = f.jump.from + (f.jump.to - f.jump.from) * Math.min(1, f.jump.t)
+      if (f.jump.t >= 1) { f.jump = null; f.speed = FOES.cavalry.after }
+      continue
+    }
+    const u = G.units.find(u => u.lane === f.lane && f.y >= u.row + 0.3 && f.y < u.row + 1.0)
+    if (u) {
+      if (u.type === 'caltrops' && u.armed) { explode(u); continue }
+      if (FOES[f.type].jumps && !f.jumped) { f.jumped = true; f.jump = { from: f.y, to: u.row + 1.35, t: 0 }; f.eating = null; continue }
+      f.eating = u; u.hp -= FOES[f.type].dps * dt; u.hurt = 0.12; sfx.chop()
+      if (u.hp <= 0) removeUnit(u)
+    } else {
+      f.eating = null
+      const e = G.equites[f.lane]
+      f.y = Math.min(f.y + f.speed * dt, e.state === 'charge' ? ROWS + 0.35 : 99)
+      if (Math.random() < dt * 1.5) G.fx.push({ kind: 'dust', x: lx(f.lane) + f.dx * cell, y: ry(f.y), vx: (Math.random() - 0.5) * 12, vy: -6, t: 0.5 })
+    }
+    if (f.y >= ROWS + 0.3) {
+      const e = G.equites[f.lane]
+      if (e.state === 'ready') { e.state = 'charge'; G.shake = Math.max(G.shake, 6); sfx.charge(); announce('The equites charge!'); tutorial('equites') }
+      else if (e.state === 'used') return lose()
+    }
+  }
+  // the equites ride up their lane once, cutting down everyone in it
+  for (const [lane, e] of G.equites.entries()) {
+    if (e.state !== 'charge') continue
+    e.y -= 4.2 * dt
+    for (const f of G.foes) if (f.lane === lane && f.hp > 0 && Math.abs(f.y - e.y) < 0.6) hurtFoe(f, 9999)
+    if (Math.random() < dt * 30) G.fx.push({ kind: 'dust', x: lx(lane) + (Math.random() - 0.5) * cell * 0.5, y: ry(e.y), vx: (Math.random() - 0.5) * 40, vy: -Math.random() * 30, t: 0.6 })
+    if (e.y < -1.3) e.state = 'used'
+  }
+  G.foes = G.foes.filter(f => f.hp > 0)
+  for (const c of G.corpses) c.t += dt
+  G.corpses = G.corpses.filter(c => c.t < 3.5)
+  for (const p of G.fx) { p.t -= dt; if (p.vx != null) { p.x += p.vx * dt; p.y += p.vy * dt; p.vy += 120 * dt } if (p.kind === 'text') p.y -= 30 * dt }
+  G.fx = G.fx.filter(p => p.t > 0)
+  G.shake = Math.max(0, G.shake - dt * 12)
+  if (!G.queue.length && !G.foes.length) win()
+}
+
+// ---------- drawing a frame ----------
+function draw() {
+  ctx.setTransform(dpr, 0, 0, dpr, 0, 0)
+  ctx.save()
+  if (G.shake > 0 && !reduceMotion) ctx.translate((Math.random() - 0.5) * G.shake, (Math.random() - 0.5) * G.shake)
+  ctx.drawImage(bg, 0, 0, W, H)
+  const T = G.t
+  // where the selected unit can go
+  const placing = G.selected || G.dismiss
+  if (placing) {
+    for (let r = 0; r < ROWS; r++) for (let c = 0; c < COLS; c++) {
+      const taken = !!unitAt(c, r)
+      if (G.dismiss ? taken : !taken) { ctx.fillStyle = 'rgba(251, 243, 228, .10)'; ctx.fillRect(c * cell + 2, ry(r) + 2, cell - 4, cell - 4) }
+    }
+    if (G.hover) {
+      const { lane, row } = G.hover, ok = G.dismiss ? !!unitAt(lane, row) : !unitAt(lane, row)
+      ctx.strokeStyle = ok ? '#fbf3e4' : 'rgba(212, 57, 45, .9)'; ctx.lineWidth = 3; ctx.strokeRect(lane * cell + 3, ry(row) + 3, cell - 6, cell - 6)
+      if (ok && G.selected) { ctx.save(); ctx.globalAlpha = 0.55; ctx.translate(lx(lane), ry(row + 0.82)); ctx.scale(k, k); DRAW_UNIT[G.selected](ctx, ghostUnit(G.selected), T); ctx.restore() }
+    }
+  }
+  // everything on the ground, back to front
+  const items = []
+  for (const c of G.corpses) items.push([ry(c.y) - 2, () => {
+    ctx.save(); ctx.globalAlpha = Math.max(0, Math.min(1, 3.5 - c.t)) * 0.7
+    ctx.translate(lx(c.lane) + c.dx * cell, ry(c.y) - 6 * k); ctx.scale(k, k); ctx.rotate(c.dir * Math.min(1, c.t * 4) * Math.PI / 2)
+    drawFoe(ctx, { type: c.type, phase: 0, eating: null, shield: 0, shieldMax: c.shieldMax }, T); ctx.restore()
+  }])
+  for (const u of G.units) items.push([ry(u.row + 0.82), () => {
+    ctx.save(); ctx.translate(lx(u.lane) + (u.hurt > 0 && !reduceMotion ? (Math.random() - 0.5) * 2.5 : 0), ry(u.row + 0.82)); ctx.scale(k, k)
+    DRAW_UNIT[u.type](ctx, u, T); ctx.restore()
+    if (u.hp < u.max && u.type !== 'caltrops') hpBar(lx(u.lane), ry(u.row + 0.82) + 5 * k, u.hp / u.max, '#7fb069')
+  }])
+  for (const f of G.foes) items.push([ry(f.y), () => {
+    ctx.save(); ctx.translate(lx(f.lane) + f.dx * cell, ry(f.y)); ctx.scale(k, k)
+    if (f.flash > 0) ctx.filter = 'brightness(1.35)'
+    drawFoe(ctx, f, T); ctx.restore()
+    if (f.hp < f.max || (f.shieldMax && f.shield < f.shieldMax)) hpBar(lx(f.lane) + f.dx * cell, ry(f.y) - 72 * k, (f.hp + f.shield) / (f.max + f.shieldMax), '#e2574c')
+  }])
+  for (const [lane, e] of G.equites.entries()) if (e.state !== 'used') items.push([ry(e.y), () => { ctx.save(); ctx.translate(lx(lane), ry(e.y)); ctx.scale(k * 0.9, k * 0.9); drawEques(ctx, e, T); ctx.restore() }])
+  items.sort((a, b) => a[0] - b[0]).forEach(([, fn]) => fn())
+  // stones and javelins
+  for (const s of G.shots) {
+    const x = lx(s.lane) + s.x0 * cell, y = ry(s.y) - 14 * k
+    if (s.kind === 'stone') { ctx.fillStyle = '#5f5f58'; ctx.beginPath(); ctx.arc(x, y, 3 * k + 1, 0, TAU); ctx.fill() }
+    else { line(ctx, x, y + 12 * k, x, y - 4 * k, '#6b4a2b', 2); line(ctx, x, y - 2 * k, x, y - 9 * k, '#cfd4d8', 1.8) }
+  }
+  // grain
+  for (const d of G.drops) {
+    if (!d.falling && d.life < 3 && Math.floor(d.life * 6) % 2) continue
+    const r = 15 * k + 3, pulse = 1 + Math.sin(T * 5) * 0.06
+    const g = ctx.createRadialGradient(d.x, d.y, 2, d.x, d.y, r * 1.6 * pulse); g.addColorStop(0, 'rgba(255, 220, 120, .75)'); g.addColorStop(1, 'rgba(255, 220, 120, 0)')
+    ctx.fillStyle = g; ctx.beginPath(); ctx.arc(d.x, d.y, r * 1.6 * pulse, 0, TAU); ctx.fill()
+    ctx.fillStyle = '#e9dcc0'; ctx.strokeStyle = '#8a6a44'; ctx.lineWidth = 1.5; ctx.beginPath(); ctx.ellipse(d.x, d.y + 2, r * 0.7, r * 0.62, 0, 0, TAU); ctx.fill(); ctx.stroke()
+    ctx.fillStyle = '#e0a63a'; for (const [ox, oy, a] of [[0, -0.75, 0], [-0.35, -0.6, -0.5], [0.35, -0.6, 0.5]]) { ctx.beginPath(); ctx.ellipse(d.x + ox * r, d.y + oy * r, r * 0.16, r * 0.3, a, 0, TAU); ctx.fill() }
+    line(ctx, d.x - r * 0.3, d.y - r * 0.4, d.x + r * 0.3, d.y - r * 0.4, '#8a6a44', 2)
+  }
+  // effects
+  for (const p of G.fx) {
+    const a = Math.max(0, Math.min(1, p.t * 2.5))
+    if (p.kind === 'dust') { ctx.fillStyle = `rgba(205, 185, 140, ${a * 0.6})`; ctx.beginPath(); ctx.arc(p.x, p.y, 3 * k + (0.7 - p.t) * 8, 0, TAU); ctx.fill() }
+    if (p.kind === 'spark') { ctx.strokeStyle = `rgba(255, 230, 150, ${a})`; ctx.lineWidth = 2; ctx.beginPath(); for (let i = 0; i < 5; i++) { const an = i * TAU / 5; ctx.moveTo(p.x, p.y - 14 * k); ctx.lineTo(p.x + Math.cos(an) * 8 * k, p.y - 14 * k + Math.sin(an) * 8 * k) } ctx.stroke() }
+    if (p.kind === 'shard') { ctx.fillStyle = `rgba(176, 138, 62, ${a})`; ctx.fillRect(p.x, p.y, 4 * k, 3 * k) }
+    if (p.kind === 'ring') { ctx.strokeStyle = `rgba(251, 243, 228, ${a})`; ctx.lineWidth = 3; ctx.beginPath(); ctx.ellipse(p.x, p.y, (0.5 - p.t) * cell * 2, (0.5 - p.t) * cell, 0, 0, TAU); ctx.stroke() }
+    if (p.kind === 'text') { ctx.fillStyle = `rgba(251, 243, 228, ${a})`; ctx.strokeStyle = `rgba(27, 23, 21, ${a})`; ctx.lineWidth = 3; ctx.font = `900 ${Math.round(16 * k + 4)}px Nunito, system-ui, sans-serif`; ctx.textAlign = 'center'; ctx.strokeText(p.text, p.x, p.y); ctx.fillText(p.text, p.x, p.y) }
+  }
+  ctx.restore()
+}
+function hpBar(x, y, frac, color) {
+  const w = 30 * k, h = 4
+  ctx.fillStyle = 'rgba(27, 23, 21, .7)'; ctx.fillRect(x - w / 2 - 1, y - 1, w + 2, h + 2)
+  ctx.fillStyle = color; ctx.fillRect(x - w / 2, y, w * Math.max(0, frac), h)
+}
+const ghostUnit = type => ({ type, hp: UNITS[type].hp, max: UNITS[type].hp, anim: 0, hurt: 0, armed: true, arm: 0, aiming: false })
+
+// ---------- the card tray, controls and messages ----------
+const tray = document.getElementById('tray')
+function renderTray() {
+  tray.innerHTML = ''
+  for (const type of ORDER) {
+    const U = UNITS[type], b = document.createElement('button')
+    b.className = 'card'; b.dataset.type = type
+    b.setAttribute('aria-label', `${U.name}, costs ${U.cost} rations`)
+    b.innerHTML = `<canvas width="92" height="92"></canvas><span class="name">${U.short}</span><span class="cost"><svg class="wheat" viewBox="0 0 20 20" aria-hidden="true"><use href="#wheat"/></svg>${U.cost}</span><span class="cool"></span>`
+    const ic = b.querySelector('canvas').getContext('2d')
+    ic.setTransform(2, 0, 0, 2, 0, 0); const sc = { cart: 0.62, caltrops: 1.15 }[type] ?? 0.52
+    ic.translate(23, { cart: 38, caltrops: 30 }[type] ?? 44); ic.scale(sc, sc)
+    DRAW_UNIT[type](ic, ghostUnit(type), 0)
+    b.addEventListener('pointerdown', e => startDrag(e, type))
+    b.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); select(G.selected === type ? null : type) } })
+    tray.append(b)
+  }
+  // the grain icon, defined once
+  if (!document.getElementById('wheat-def')) {
+    const svg = document.querySelector('.rations svg').cloneNode(true)
+    svg.id = 'wheat-def'; svg.style.display = 'none'
+    const sym = document.createElementNS('http://www.w3.org/2000/svg', 'symbol'); sym.id = 'wheat'; sym.setAttribute('viewBox', '0 0 20 20')
+    sym.append(...svg.childNodes); svg.innerHTML = ''; svg.append(sym); document.body.append(svg)
+    document.querySelector('.rations svg').innerHTML = '<use href="#wheat"/>'
+  }
+}
+function syncTray() {
+  for (const b of tray.children) {
+    const type = b.dataset.type, U = UNITS[type]
+    b.classList.toggle('poor', G.rations < U.cost)
+    b.classList.toggle('selected', G.selected === type)
+    b.querySelector('.cool').style.height = (G.cool[type] / U.recharge * 100) + '%'
+  }
+  document.getElementById('dismiss').classList.toggle('on', G.dismiss)
+}
+let shownCount = -1
+function updateCount(bump) {
+  const el = document.getElementById('count')
+  if (shownCount !== G.rations) { el.textContent = G.rations; shownCount = G.rations }
+  if (bump) { const r = document.getElementById('rations'); r.classList.remove('bump'); void r.offsetWidth; r.classList.add('bump') }
+}
+function renderBar() {
+  const bar = document.getElementById('bar')
+  if (!bar.querySelector('.flag')) {
+    let i = 0
+    for (const w of LEVEL.waves) { if (w.big) { const f = document.createElement('span'); f.className = 'flag'; f.style.left = (i / buildQueue().length * 100) + '%'; bar.append(f) } i += w.foes.length }
+  }
+  document.getElementById('fill').style.width = (G.spawned / G.total * 100) + '%'
+}
+let bannerTimer = null
+function announce(text, big = false, ms = 2600) {
+  const el = document.getElementById('banner')
+  el.textContent = text; el.className = 'banner' + (big ? ' big' : ''); el.hidden = false
+  clearTimeout(bannerTimer); bannerTimer = setTimeout(() => { el.hidden = true }, ms)
+}
+// first-game hints, each shown once
+function tutorial(event, type) {
+  const say = (key, text, ms = 4200) => { if (G.tips[key]) return; G.tips[key] = true; announce(text, false, ms) }
+  if (event === 'start') say('start', 'Drag a supply cart onto the field. Carts bring rations.')
+  if (event === 'placed' && type === 'cart') say('cart', 'Tap the glowing grain to collect it. Then place slingers in front of your carts.')
+  if (event === 'placed' && type === 'slinger') say('slinger', 'Slingers shoot at anyone coming down their lane. Cover all five lanes!')
+  if (event === 'equites') say('equites', 'The equites saved that lane, but they only charge once.')
+}
+function select(type) { G.selected = type; G.dismiss = false; syncTray() }
+
+// ---------- input: drag a card onto a square, or tap a card then a square ----------
+let drag = null
+function cellAt(clientX, clientY) {
+  const r = canvas.getBoundingClientRect()
+  const x = clientX - r.left, y = clientY - r.top
+  if (x < 0 || y < 0 || x > r.width || y > r.height) return null
+  const lane = Math.floor(x / cell), row = Math.floor(y / cell - APPROACH)
+  return { lane, row, x, y, inGrid: row >= 0 && row < ROWS && lane >= 0 && lane < COLS }
+}
+function startDrag(e, type) {
+  if (G.phase !== 'play') return
+  e.preventDefault(); sfx.init()
+  drag = { type, x0: e.clientX, y0: e.clientY, moved: false, wasSelected: G.selected === type }
+  select(type)
+}
+document.addEventListener('pointermove', e => {
+  const c = cellAt(e.clientX, e.clientY)
+  if (drag) { if (Math.hypot(e.clientX - drag.x0, e.clientY - drag.y0) > 8) drag.moved = true }
+  if (drag || e.pointerType === 'mouse') G.hover = c?.inGrid ? c : null
+})
+document.addEventListener('pointerup', e => {
+  if (!drag) return
+  const c = cellAt(e.clientX, e.clientY), d = drag
+  drag = null
+  if (d.moved) {
+    if (c?.inGrid) place(d.type, c.lane, c.row)
+    select(null); G.hover = null
+  } else if (d.wasSelected) select(null)     // tapping the selected card again puts it back
+})
+canvas.addEventListener('pointerdown', e => {
+  if (!G || G.phase !== 'play' || drag) return
+  sfx.init()
+  const c = cellAt(e.clientX, e.clientY); if (!c) return
+  // grain first: it's the most urgent tap
+  const d = G.drops.find(d => Math.hypot(d.x - c.x, d.y - c.y) < 26 * k + 8)
+  if (d) return collect(d)
+  if (!c.inGrid) return
+  if (G.dismiss) { const u = unitAt(c.lane, c.row); if (u) { removeUnit(u, false); sfx.place() } G.dismiss = false; syncTray(); return }
+  if (G.selected) { if (place(G.selected, c.lane, c.row)) select(null) }
+})
+document.getElementById('dismiss').addEventListener('click', () => { if (G.phase !== 'play') return; G.dismiss = !G.dismiss; G.selected = null; syncTray() })
+document.getElementById('pause').addEventListener('click', () => {
+  if (G.phase !== 'play' && G.phase !== 'paused') return
+  if (G.phase === 'play') { G.phase = 'paused'; showPanel(`<span class="eyebrow">Paused</span><h2>Hold the Line</h2><p>${G.killed} Latins down, ${G.total - G.spawned} still to come.</p><button class="primary" id="resume">Resume</button>`, () => { G.phase = 'play'; last = performance.now() }, 'resume') }
+})
+document.getElementById('speed').addEventListener('click', e => { G.speed = G.speed === 1 ? 2 : 1; e.currentTarget.textContent = G.speed + '×' })
+document.getElementById('sound').addEventListener('click', e => { sfx.init(); sfx.on = !sfx.on; e.currentTarget.textContent = sfx.on ? 'Sound' : 'Muted'; e.currentTarget.classList.toggle('on', !sfx.on) })
+
+const overlay = document.getElementById('overlay')
+function showPanel(html, onGo, id) {
+  overlay.innerHTML = `<div class="panel">${html}</div>`; overlay.hidden = false
+  overlay.querySelector('#' + id).addEventListener('click', () => { overlay.hidden = true; onGo() })
+}
+function startGame() { newGame(); G.phase = 'play'; last = performance.now(); sfx.init(); sfx.horn(); tutorial('start') }
+document.getElementById('start').addEventListener('click', () => { overlay.hidden = true; startGame() })
+function win() {
+  if (G.phase !== 'play') return
+  G.phase = 'won'; sfx.win()
+  setTimeout(() => showPanel(`<span class="eyebrow">Victory · ${LEVEL.year}</span><h2>The Latins are routed</h2>
+    <p>You held the line at ${LEVEL.name}: ${G.killed} Latins fell and you lost ${G.lost === 1 ? 'one soldier' : G.lost + ' soldiers'}. ${G.equites.filter(e => e.state === 'ready').length} squadrons of equites never had to ride.</p>
+    <p>Legend says Castor and Pollux, the divine twins, fought for Rome that day.</p>
+    <button class="primary" id="again">Play again</button>`, startGame, 'again'), 1200)
+}
+function lose() {
+  if (G.phase !== 'play') return
+  G.phase = 'lost'; sfx.lose(); G.shake = 8
+  setTimeout(() => showPanel(`<span class="eyebrow">Defeat · ${LEVEL.year}</span><h2>The Latins broke into the camp</h2>
+    <p>${G.killed} Latins fell before the line broke. Build supply carts early, cover every lane, and keep triarii for the strongest attacks.</p>
+    <button class="primary" id="again">Try again</button>`, startGame, 'again'), 1400)
+}
+
+// ---------- the loop ----------
+let last = performance.now()
+function frame(now) {
+  const dt = Math.min(0.05, (now - last) / 1000); last = now
+  if (G.phase === 'play') { const steps = G.speed; for (let i = 0; i < steps; i++) update(dt) }
+  else if (G.phase === 'won' || G.phase === 'lost') { for (const c of G.corpses) c.t = Math.min(c.t + dt, 1); G.shake = Math.max(0, G.shake - dt * 12) }
+  draw(); syncTray()
+  requestAnimationFrame(frame)
+}
+newGame()
+layout()
+window.addEventListener('resize', layout)
+requestAnimationFrame(frame)
+window.__hold = { get G() { return G }, place, collect, update, startGame, UNITS, FOES }
+</script>
