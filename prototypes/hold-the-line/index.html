@@ -91,6 +91,9 @@ body { background: var(--rome); color: var(--parch); font-family: var(--body); o
 .guide i { color: var(--soft-ink); }
 .guide .price { font: 800 12px/1 var(--body); color: var(--soft-ink); margin-left: 4px; }
 .panel h3 { margin: 6px 0 0; font: 400 19px/1.1 var(--display); }
+.panel-top { position: sticky; top: -18px; z-index: 1; display: flex; justify-content: space-between; align-items: center; gap: 8px;
+  margin: -18px -18px 0; padding: 12px 14px 10px 18px; background: var(--parch); border-bottom: 1px solid var(--sand); border-radius: 13px 13px 0 0; }
+.panel-top .close { flex: none; background: var(--gold); }
 @media (prefers-reduced-motion: reduce) { .rations.bump { animation: none; } }
 </style>
 
@@ -1055,15 +1058,22 @@ function showGuide(focus, onBack) {
   if (wasPlaying) G.phase = 'paused'
   const back = onBack ?? (() => { overlay.hidden = true; if (wasPlaying) { G.phase = 'play'; last = performance.now() } })
   const foes = [...new Set(LEVEL.waves.flatMap(x => x.foes))]
-  showPanel(`<span class="eyebrow">Unit guide · ${LEVEL.name}</span><h2>Your soldiers</h2>
+  showPanel(`<div class="panel-top"><span class="eyebrow">Unit guide · ${LEVEL.name}</span><button class="tool close" id="back-top" aria-label="Close the guide">${wasPlaying ? 'Back to battle' : 'Close'} ✕</button></div><h2>Your soldiers</h2>
     <ul class="guide">${LEVEL.units.map(t => `<li class="${t === focus ? 'focus' : ''}"><canvas class="ic" data-unit="${t}" width="88" height="88"></canvas>
       <div><b>${UNITS[t].name}</b><span class="price">${UNITS[t].cost} rations</span><p>${UNIT_GUIDE[t]}</p></div></li>`).join('')}</ul>
     <h3>The enemy in this battle</h3>
     <ul class="guide">${foes.map(t => `<li><canvas class="ic" data-foe="${t}" width="88" height="88"></canvas><div><b>${FOES[t].name}</b><p>${FOE_GUIDE[t]}</p></div></li>`).join('')}</ul>
-    <button class="primary" id="back">${wasPlaying ? 'Back to the battle' : 'Back'}</button>`, { back })
+    <button class="primary" id="back">${wasPlaying ? 'Back to the battle' : 'Back'}</button>`, { back, 'back-top': back })
   overlay.querySelector('.focus')?.scrollIntoView({ block: 'center' })
+  // tapping outside the guide, or Esc, closes it too
+  closeGuide = back
+  overlay.querySelector('.panel').classList.add('guide-panel')
 }
 document.getElementById('guide').addEventListener('click', () => { if (G.phase === 'play') showGuide() })
+let closeGuide = null
+const guideOpen = () => !overlay.hidden && overlay.querySelector('.guide-panel')
+document.addEventListener('pointerdown', e => { if (guideOpen() && !e.target.closest('.panel')) { e.preventDefault(); closeGuide() } })
+document.addEventListener('keydown', e => { if (e.key === 'Escape' && guideOpen()) closeGuide() })
 function newFoesOf(i) {
   const seen = new Set(LEVELS.slice(0, i).flatMap(L => L.waves.flatMap(x => x.foes)))
   return [...new Set(LEVELS[i].waves.flatMap(x => x.foes))].filter(t => !seen.has(t) && FOES[t].intro)
