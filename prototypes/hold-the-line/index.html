@@ -18,6 +18,7 @@ body { background: var(--rome); color: var(--parch); font-family: var(--body); o
 .card { position: relative; display: flex; flex-direction: column; align-items: center; gap: 1px; padding: 4px 2px 3px; border-radius: 10px;
   background: var(--parch); color: var(--ink); border: 2px solid var(--ink); font: 900 13px/1 var(--body); font-variant-numeric: tabular-nums;
   touch-action: none; user-select: none; -webkit-user-select: none; cursor: grab; overflow: hidden; box-shadow: 0 3px 0 var(--ink); }
+.card { -webkit-touch-callout: none; }
 .card canvas { width: 46px; height: 46px; pointer-events: none; }
 .card .name { font: 800 9.5px/1.1 var(--body); color: #5a4636; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; }
 .card .cost { display: flex; align-items: center; gap: 2px; }
@@ -58,7 +59,8 @@ body { background: var(--rome); color: var(--parch); font-family: var(--body); o
 .bar .fill { position: absolute; inset: 0 auto 0 0; width: 0; border-radius: 999px; background: var(--gold); }
 .bar .flag { position: absolute; top: -9px; width: 10px; height: 9px; margin-left: -1px; border-left: 2px solid var(--ink); }
 .bar .flag::after { content: ''; position: absolute; left: 0; top: 0; width: 8px; height: 6px; background: var(--parch); }
-.controls .tool { padding: 8px 11px; }
+.controls { gap: 6px; }
+.controls .tool { padding: 8px 9px; font-size: 12.5px; }
 .overlay { overflow-y: auto; place-items: start center; }
 .overlay .panel { margin-block: auto; }
 .panel h2 { font-size: 26px; }
@@ -80,6 +82,15 @@ body { background: var(--rome); color: var(--parch); font-family: var(--body); o
 .history { font-style: italic; color: var(--soft-ink); }
 .row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
 .row .primary { flex: 1 1 auto; }
+.guide { list-style: none; padding: 0 !important; margin: 0; display: flex; flex-direction: column; gap: 6px; }
+.guide li { display: flex; gap: 10px; align-items: flex-start; padding: 6px; border-radius: 12px; font-size: 13.5px; line-height: 1.35; }
+.guide li.focus { background: var(--sand); outline: 2px solid var(--gold); }
+.guide canvas { width: 44px; height: 44px; flex: none; background: var(--sand); border-radius: 10px; }
+.guide li.focus canvas { background: var(--paper); }
+.guide p { margin: 2px 0 0; font-size: 13.5px; }
+.guide i { color: var(--soft-ink); }
+.guide .price { font: 800 12px/1 var(--body); color: var(--soft-ink); margin-left: 4px; }
+.panel h3 { margin: 6px 0 0; font: 400 19px/1.1 var(--display); }
 @media (prefers-reduced-motion: reduce) { .rations.bump { animation: none; } }
 </style>
 
@@ -98,6 +109,7 @@ body { background: var(--rome); color: var(--parch); font-family: var(--body); o
     <div class="progress"><span class="label" id="level">Lake Regillus</span><div class="bar" id="bar"><div class="fill" id="fill"></div></div></div>
     <button class="tool" id="pause">Pause</button>
     <button class="tool" id="speed">1×</button>
+    <button class="tool" id="guide">Guide</button>
     <button class="tool" id="sound">Sound</button>
   </div>
 </main>
@@ -111,7 +123,7 @@ const SKIN = '#e0b088', SKIN_SHADE = '#c48e66', INK = '#2a211c'
 const UNITS = {
   cart:     { name: 'Supply cart', short: 'Cart', cost: 50, recharge: 7.5, hp: 300, about: 'Brings a sack of grain every 20 seconds.' },
   slinger:  { name: 'Slinger', short: 'Slinger', cost: 100, recharge: 7.5, hp: 300, reload: 1.5, dmg: 20, range: 99, about: 'Shoots at anyone coming down his lane.' },
-  hastatus: { name: 'Hastatus', short: 'Hastatus', cost: 150, recharge: 7.5, hp: 300, reload: 2, dmg: 45, range: 2.7, about: 'Throws heavy javelins at close range.' },
+  hastatus: { name: 'Hastatus', short: 'Hastatus', cost: 150, recharge: 7.5, hp: 300, reload: 2, dmg: 45, range: 2.7, melee: 35, about: 'Throws heavy javelins at close range, then fights with his sword.' },
   triarius: { name: 'Triarius', short: 'Triarius', cost: 50, recharge: 25, hp: 1500, about: 'A veteran who kneels behind his shield and holds the lane.' },
   caltrops: { name: 'Caltrops', short: 'Caltrops', cost: 25, recharge: 25, hp: 300, armTime: 10, dmg: 450, about: 'Iron spikes hidden in the grass. They arm after 10 seconds.' },
   princeps: { name: 'Princeps', short: 'Princeps', cost: 100, recharge: 10, hp: 700, melee: 55, about: 'A soldier in his prime: tough, and he cuts down whoever reaches him.' },
@@ -131,6 +143,8 @@ const FOES = {
   phalangite: { name: 'Phalangite', hp: 220, shield: 300, speed: 0.18, dps: 45, intro: 'Pyrrhus’s phalanx: long pikes behind big bronze shields.' },
   elephant:   { name: 'War elephant', hp: 2000, speed: 0.15, dps: 250, intro: 'War elephants! They crush whatever stands in their way. Send the pigs!' },
 }
+const UNIT_GUIDE = {"cart": "Makes a sack of grain (25 rations) every 20 seconds. It doesn’t fight. <i>Tip: build several early, at the back.</i>", "slinger": "Shoots a stone down his whole lane every 1.5 seconds. Fragile once an enemy reaches him. <i>Tip: put something sturdy in front of him.</i>", "hastatus": "Throws heavy javelins at enemies within about 2½ squares, more than twice a stone’s damage, then fights with his sword when they reach him. <i>Tip: javelins break shields fast.</i>", "triarius": "Five times a slinger’s health and no attack. He holds enemies in place while your other soldiers hit them. <i>Tip: in front of your shooters.</i>", "caltrops": "Hidden iron spikes. After 10 seconds they are armed, and the first enemy to step on them sets them off: everyone on that spot takes a huge hit. Before that, enemies trample them. <i>Tip: a horseman wastes his leap on unarmed caltrops.</i>", "princeps": "A tough swordsman who cuts down whoever reaches his square. <i>Tip: a strong front line against fast raiders.</i>", "shed": "A wooden shed covered in hides. Arrows do almost nothing to it. <i>Tip: put it in front, so archers shoot the shed instead of your slingers.</i>", "rorarii": "Throw javelins into their own lane and both lanes beside it. <i>Tip: in the middle lanes they cover three lanes at once.</i>", "pigs": "Charge up the lane when an enemy comes near. An elephant they reach panics and runs back, trampling its own army; other enemies just take a hit. One use. <i>Tip: keep them in front of your line.</i>"}
+const FOE_GUIDE = {"warrior": "The basic enemy. One or two slingers in a lane handle him.", "chief": "Carries the standard and walks a little faster.", "shield": "His bronze shield soaks up hits until it breaks (the bronze bar). Javelins break it quickly.", "cavalry": "Fast. He leaps over the first soldier in his way, once, then slows down. Give him something cheap to leap, or armed caltrops.", "raider": "Fast but weak, and comes in bursts. Keep a shooter in every lane.", "archer": "Stops about three squares from your first soldier and shoots it. Put a siege shed in front; your slingers still reach him.", "samnite": "Tougher than a Latin warrior. Two shooters per lane.", "linen": "Very tough elite. Hold him with a triarius and hit him from several soldiers at once.", "phalangite": "A big shield and a long pike. Break the shield with javelins.", "elephant": "Crushes soldiers in seconds and takes a lot of hits. War pigs make him flee; caltrops help."}
 // A campaign of five battles, in historical order. Each adds an enemy and a Roman unit.
 const w = (t, foes, big) => ({ t, foes, big })
 const rep = (n, t) => Array(n).fill(t)
@@ -219,6 +233,14 @@ function romanHelmet(c, y) {
   c.strokeStyle = '#8a6a2a'; c.lineWidth = 1.4; c.beginPath(); c.arc(0, y, 8.5, 0.15, Math.PI - 0.15); c.stroke()
   c.fillStyle = '#8a6a2a'; c.beginPath(); c.arc(0, y - 8, 2, 0, TAU); c.fill()
 }
+// the gladius: swings while fighting, held ready otherwise
+function swordArm(c, T, idle = false) {
+  const a = idle ? -0.4 : -0.9 + Math.max(0, Math.sin(T * 9)) * 1.8
+  const hx = 10 + Math.sin(a) * 5, hy = -32 - Math.cos(a) * 7
+  line(c, 9, -30, hx, hy, SKIN, 4.2)
+  line(c, hx, hy, hx + Math.sin(a) * 13, hy - Math.cos(a) * 13, '#cfd4d8', 2.6)
+  line(c, hx - Math.cos(a) * 3.5, hy - Math.sin(a) * 3.5, hx + Math.cos(a) * 3.5, hy + Math.sin(a) * 3.5, '#8a6a2a', 1.8)
+}
 function romanLegs(c, kneel = false) {
   if (kneel) { c.fillStyle = SKIN; rr(c, -8, -11, 7, 9, 2); c.fill(); c.fillStyle = '#5a3a22'; c.fillRect(-9.5, -4, 10, 3.5); c.fillStyle = SKIN; c.fillRect(2, -13, 5, 11); c.fillStyle = '#5a3a22'; c.fillRect(1.5, -3, 6, 3); return }
   c.fillStyle = SKIN; c.fillRect(-6, -14, 4.5, 12); c.fillRect(1.5, -14, 4.5, 12)
@@ -244,15 +266,18 @@ const DRAW_UNIT = {
     c.beginPath(); c.moveTo(7.5, -46); c.lineTo(5, -55); c.lineTo(1.5, -49); c.fill()
     c.fillStyle = '#9a744c'; c.beginPath(); c.arc(0, -43, 4, 0, TAU); c.fill()
   },
-  hastatus(c, u) {
+  hastatus(c, u, T) {
     shadow(c, 14, 4.5); romanLegs(c)
     c.fillStyle = '#8e2b22'; c.strokeStyle = '#e0a63a'; c.lineWidth = 1.6; rr(c, -23, -42, 12, 34, 4); c.fill(); c.stroke()
     c.fillStyle = '#a8392f'; rr(c, -10.5, -34, 21, 22, 5); c.fill()
     line(c, -8, -33, 8, -22, '#5a3a22', 1.6); line(c, 8, -33, -8, -22, '#5a3a22', 1.6)
     c.fillStyle = '#5a3a22'; c.fillRect(-10.5, -19, 21, 2.5)
-    const thrown = u.anim > 0
-    line(c, 9, -30, thrown ? 14 : 12, thrown ? -47 : -36, SKIN, 4.2)
-    if (!thrown) { line(c, 12, -18, 14.5, -62, '#6b4a2b', 2.2); line(c, 14.2, -56, 14.8, -71, '#cfd4d8', 1.6) }
+    if (u.fighting) swordArm(c, T)     // pilum thrown, gladius drawn
+    else {
+      const thrown = u.anim > 0
+      line(c, 9, -30, thrown ? 14 : 12, thrown ? -47 : -36, SKIN, 4.2)
+      if (!thrown) { line(c, 12, -18, 14.5, -62, '#6b4a2b', 2.2); line(c, 14.2, -56, 14.8, -71, '#cfd4d8', 1.6) }
+    }
     romanHelmet(c, -42); feathers(c, -49)
   },
   triarius(c, u) {
@@ -276,11 +301,7 @@ const DRAW_UNIT = {
     c.fillStyle = '#8d939a'; rr(c, -10, -34, 20, 12, 4); c.fill()
     c.fillStyle = '#6d737a'; for (let y = -32; y < -23; y += 3) for (let x = -8 + (y % 2 ? 1.5 : 0); x < 9; x += 3) c.fillRect(x, y, 1.2, 1.2)
     c.fillStyle = '#5a3a22'; c.fillRect(-10.5, -19, 21, 2.5)
-    const a = u.fighting ? -0.9 + Math.max(0, Math.sin(T * 9)) * 1.8 : -0.4     // the sword arm swings while he fights
-    const hx = 10 + Math.sin(a) * 5, hy = -32 - Math.cos(a) * 7
-    line(c, 9, -30, hx, hy, SKIN, 4.2)
-    line(c, hx, hy, hx + Math.sin(a) * 13, hy - Math.cos(a) * 13, '#cfd4d8', 2.6)
-    line(c, hx - Math.cos(a) * 3.5, hy - Math.sin(a) * 3.5, hx + Math.cos(a) * 3.5, hy + Math.sin(a) * 3.5, '#8a6a2a', 1.8)
+    swordArm(c, T, !u.fighting)
     romanHelmet(c, -42); feathers(c, -49)
   },
   shed(c, u) {
@@ -673,7 +694,7 @@ function update(dt) {
       G.drops.push({ x: lx(u.lane) + (Math.random() - 0.5) * cell * 0.4, y: ry(u.row + 0.2), ty: ry(u.row + 0.55), v: 25, life: 10, falling: true })
     }
     if (u.type === 'caltrops' && !u.armed) { u.arm -= dt; if (u.arm <= 0) u.armed = true }
-    if (u.type === 'princeps') {   // fights whoever reaches his square
+    if (U.melee) {   // swordsmen fight whoever reaches their square
       const foe = G.foes.filter(f => f.lane === u.lane && f.hp > 0 && !f.jump && !f.fleeing && f.y >= u.row - 0.1 && f.y <= u.row + 1.0).sort((a, b) => b.y - a.y)[0]
       u.fighting = !!foe
       if (foe) { hurtFoe(foe, U.melee * dt, true); if (Math.random() < dt * 2.5) { sfx.clang(); G.fx.push({ kind: 'spark', x: lx(u.lane), y: ry(u.row + 0.4), t: 0.2 }) } }
@@ -681,7 +702,7 @@ function update(dt) {
     if (u.type === 'pigs' && G.foes.some(f => f.lane === u.lane && f.hp > 0 && !f.fleeing && f.y >= u.row - U.trigger && f.y <= u.row + 1)) {
       removeUnit(u, false); G.runners.push({ lane: u.lane, y: u.row + 0.82 }); sfx.squeal()
     }
-    if (U.reload) {
+    if (U.reload && !(U.melee && u.fighting)) {
       const lanes = U.spread ? [u.lane - 1, u.lane, u.lane + 1].filter(l => l >= 0 && l < COLS) : [u.lane]
       const near = lanes.some(l => G.foes.some(f => f.lane === l && f.hp > 0 && f.y < u.row + 1.05 && f.y > Math.max(-0.55, u.row + 0.5 - U.range)))
       u.aiming = near
@@ -889,6 +910,7 @@ function renderTray() {
     ic.translate(23, { cart: 38, caltrops: 30, shed: 40, pigs: 36 }[type] ?? 44); ic.scale(sc, sc)
     DRAW_UNIT[type](ic, ghostUnit(type), 0)
     b.addEventListener('pointerdown', e => startDrag(e, type))
+    b.addEventListener('contextmenu', e => e.preventDefault())
     b.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); select(G.selected === type ? null : type) } })
     tray.append(b)
   }
@@ -955,12 +977,13 @@ function startDrag(e, type) {
   if (G.phase !== 'play') return
   e.preventDefault(); sfx.init()
   drag = { type, x0: e.clientX, y0: e.clientY, moved: false, wasSelected: G.selected === type }
+  drag.hold = setTimeout(() => { if (drag && !drag.moved) { drag = null; select(null); showGuide(type) } }, 450)   // press and hold: the unit guide
   select(type)
 }
 document.addEventListener('pointermove', e => {
   const c = cellAt(e.clientX, e.clientY)
   if (moveDrag) { if (Math.hypot(e.clientX - moveDrag.x0, e.clientY - moveDrag.y0) > 8) moveDrag.moved = true; G.hover = c?.inGrid ? c : null; return }
-  if (drag) { if (Math.hypot(e.clientX - drag.x0, e.clientY - drag.y0) > 8) drag.moved = true }
+  if (drag) { if (Math.hypot(e.clientX - drag.x0, e.clientY - drag.y0) > 8) { drag.moved = true; clearTimeout(drag.hold) } }
   if (drag || e.pointerType === 'mouse') G.hover = c?.inGrid ? c : null
 })
 document.addEventListener('pointerup', e => {
@@ -972,7 +995,7 @@ document.addEventListener('pointerup', e => {
   }
   if (!drag) return
   const c = cellAt(e.clientX, e.clientY), d = drag
-  drag = null
+  clearTimeout(d.hold); drag = null
   if (d.moved) {
     if (c?.inGrid) place(d.type, c.lane, c.row)
     select(null); G.hover = null
@@ -1027,6 +1050,20 @@ function showMap() {
     <ol class="road">${stops}</ol>`,
     Object.fromEntries(LEVELS.map((L, i) => [`lvl${i}`, () => showBriefing(i)])))
 }
+function showGuide(focus, onBack) {
+  const wasPlaying = G?.phase === 'play'
+  if (wasPlaying) G.phase = 'paused'
+  const back = onBack ?? (() => { overlay.hidden = true; if (wasPlaying) { G.phase = 'play'; last = performance.now() } })
+  const foes = [...new Set(LEVEL.waves.flatMap(x => x.foes))]
+  showPanel(`<span class="eyebrow">Unit guide · ${LEVEL.name}</span><h2>Your soldiers</h2>
+    <ul class="guide">${LEVEL.units.map(t => `<li class="${t === focus ? 'focus' : ''}"><canvas class="ic" data-unit="${t}" width="88" height="88"></canvas>
+      <div><b>${UNITS[t].name}</b><span class="price">${UNITS[t].cost} rations</span><p>${UNIT_GUIDE[t]}</p></div></li>`).join('')}</ul>
+    <h3>The enemy in this battle</h3>
+    <ul class="guide">${foes.map(t => `<li><canvas class="ic" data-foe="${t}" width="88" height="88"></canvas><div><b>${FOES[t].name}</b><p>${FOE_GUIDE[t]}</p></div></li>`).join('')}</ul>
+    <button class="primary" id="back">${wasPlaying ? 'Back to the battle' : 'Back'}</button>`, { back })
+  overlay.querySelector('.focus')?.scrollIntoView({ block: 'center' })
+}
+document.getElementById('guide').addEventListener('click', () => { if (G.phase === 'play') showGuide() })
 function newFoesOf(i) {
   const seen = new Set(LEVELS.slice(0, i).flatMap(L => L.waves.flatMap(x => x.foes)))
   return [...new Set(LEVELS[i].waves.flatMap(x => x.foes))].filter(t => !seen.has(t) && FOES[t].intro)
@@ -1038,7 +1075,7 @@ function showBriefing(i) {
     ...(i > 0 ? newFoesOf(i).map(t => `<li><canvas class="ic" data-foe="${t}" width="88" height="88"></canvas><span><b>New enemy.</b> ${FOES[t].intro}</span></li>`) : []),
   ]
   const howto = i === 0 ? `<ul>
-      <li><b>Drag</b> a unit onto a square, or tap it and then tap a square.</li>
+      <li><b>Drag</b> a unit onto a square, or tap it and then tap a square. <b>Press and hold</b> a unit to see what it does.</li>
       <li><b>Supply carts</b> bring rations. <b>Tap the grain</b> to collect it, and grain also falls from the sky.</li>
       <li><b>Slingers</b> shoot down their whole lane. <b>Triarii</b> kneel behind their shields and hold the line.</li>
       <li><b>Drag a soldier on the field</b> to move him to another empty square, to save him or to help another lane.</li>
@@ -1046,8 +1083,8 @@ function showBriefing(i) {
     </ul>` : ''
   showPanel(`<span class="eyebrow">Battle ${i + 1} of ${LEVELS.length} · ${L.year}</span><h2>${L.name}</h2><p>${L.blurb}</p>${howto}
     ${news.length ? `<ul class="news">${news.join('')}</ul>` : ''}
-    <div class="row"><button class="primary" id="go">To battle</button><button class="tool" id="map">Map</button></div>`,
-    { go: () => startLevel(i), map: showMap })
+    <div class="row"><button class="primary" id="go">To battle</button><button class="tool" id="guide-b">Unit guide</button><button class="tool" id="map">Map</button></div>`,
+    { go: () => startLevel(i), map: showMap, 'guide-b': () => { newGame(i); showGuide(null, () => showBriefing(i)) } })
 }
 function startLevel(i) {
   overlay.hidden = true
