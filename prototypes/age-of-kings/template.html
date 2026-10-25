@@ -308,6 +308,17 @@ button:focus-visible { outline: 3px solid var(--ochre); outline-offset: 2px; }
 .battle-sum b { text-align: right; font-variant-numeric: tabular-nums; }
 .battle-sum span:nth-last-child(2), .battle-sum b:last-child { color: var(--bad); }
 
+/* Legion Run */
+.march-wrap { position: relative; border-radius: 18px; overflow: hidden; border: 3px solid var(--panel); align-self: center; touch-action: none; }
+.march-wrap canvas { display: block; touch-action: none; cursor: grab; }
+.march-overlay { position: absolute; inset: 0; background: rgba(27,23,21,.78); color: var(--ink); display: grid; align-content: center; justify-items: center; gap: 12px; padding: 24px; text-align: center; }
+.march-overlay p { margin: 0; max-width: 34ch; }
+.gate-banner { background: var(--ink); color: var(--tile-ink); border-radius: var(--radius); padding: 12px 14px; min-height: 64px; border-left: 6px solid var(--ochre); }
+.gate-banner p { margin: 0; font-size: 15px; }
+.gate-banner .eyebrow { font: 800 11px/1 var(--body); letter-spacing: .14em; text-transform: uppercase; color: #8e2b22; }
+.gate-banner.ok { border-left-color: var(--good); }
+.gate-banner.bad { border-left-color: var(--bad); }
+
 /* Tile colours: last, so they override the neutral backgrounds above */
 .c1 { background: var(--tile-1); } .c2 { background: var(--tile-2); } .c3 { background: var(--tile-3); }
 .c4 { background: var(--tile-4); } .c5 { background: var(--tile-5); }
@@ -414,7 +425,7 @@ let state = { screen: 'rome' }
 let busy = false
 let run = null // { plan, step, results }
 
-function go(next) { state = next; render() }
+function go(next) { if (state.screen === 'battle' && next.screen !== 'battle') stopLoop(); state = next; render() }
 const RENDER = {}
 function render() {
   busy = false
@@ -587,7 +598,8 @@ const ERA_ARMY = {
   'middle-republic': 'veteran legions hardened against Carthage',
   'late-republic': 'professional soldiers, paid and equipped by the state',
 }
-const SKILL = { min: 0.89, max: 1.14 }
+// On the march, gates change your strength by about -20% (all wrong) to +14% (all right)
+const SKILL = { min: 0.8, max: 1.14 }
 // The most strength a chapter can give (each fact once; forced last items give nothing)
 function chapterMax(c) {
   const rank = [1, 2, 3]
@@ -761,7 +773,7 @@ function renderHome() {
     go({ screen: 'briefing' })
   })
   app.querySelector('#chronicle').addEventListener('click', () => openChronicle())
-  app.querySelector('#battle')?.addEventListener('click', () => { window.scrollTo(0, 0); go({ screen: 'battle', phase: 0, scores: [] }) })
+  app.querySelector('#battle')?.addEventListener('click', () => { window.scrollTo(0, 0); go({ screen: 'battle' }) })
   app.querySelector('#next-chapter')?.addEventListener('click', () => { loadChapter(chapterIndex + 1); window.scrollTo(0, 0); go({ screen: 'home' }) })
   app.querySelectorAll('.level-card').forEach(b => b.addEventListener('click', () => { run = null; startGame(b.dataset.type, +b.dataset.set) }))
 }
@@ -1239,9 +1251,9 @@ function battleCardHtml() {
   const next = CHAPTERS[chapterIndex + 1]
   let advice
   if (won) advice = `Victory${last ? `: ${last.survivors} survivors marched on` : ''}.`
-  else if (you * SKILL.max < enemy) advice = 'Even a perfect fight can’t win yet. Recruit more soldiers in this chapter’s games first.'
-  else if (you * SKILL.min >= enemy) advice = 'Your legion is strong enough to win even with a poor fight.'
-  else advice = 'You can win this, but only if you fight well. More soldiers make it safer.'
+  else if (you * SKILL.max < enemy) advice = 'Even a perfect march can’t win yet. Recruit more soldiers in this chapter’s games first.'
+  else if (you * SKILL.min >= enemy) advice = 'Your legion is strong enough to win even with mistakes on the road.'
+  else advice = 'You can win this if you choose the right gates on the road. More soldiers make it safer.'
   return `<section class="battle-card ${won ? 'won' : ''}">
     <span class="eyebrow">Chapter battle · ${esc(b.year)}</span>
     <h2>${esc(b.name)}</h2>
@@ -1249,176 +1261,285 @@ function battleCardHtml() {
     <p class="task">${advice}</p>
     <div class="actions">
       ${won ? (next ? `<button class="primary" id="next-chapter">Next chapter: ${esc(next.short)}</button>` : '<span class="task"><b>You have conquered every chapter so far.</b></span>')
-        : `<button class="primary" id="battle">Prepare for battle</button>`}
+        : `<button class="primary" id="battle">March to battle</button>`}
     </div>
   </section>`
 }
 
-// Each phase scores 0..1; their average decides the skill multiplier.
-const BATTLE_PHASES = ['Javelin volley', 'Hold the line', 'Send in the triarii']
-let battleLoop = null
-const stopLoop = () => { if (battleLoop) cancelAnimationFrame(battleLoop); battleLoop = null }
+// ---------- Legion Run: the march to battle ----------
+// Your army marches up the road towards the enemy. Drag to steer it through the gate with the right
+// answer (reinforcements) and around barricades; at the end it clashes with the enemy and strength
+// decides. Gate rewards are sized so that all gates right adds about +14% and all wrong about -20%,
+// which keeps the "70 / 80 / 90% of a chapter's soldiers" balance.
+const MARCH = { gates: 8, gap: 640, first: 560, speed: 92, gainPct: 0.0175, lossPct: 0.025, maxFigures: 220 }
+let march = null
+const stopLoop = () => { if (march) march.alive = false }
+
+function marchGates() {
+  const pool = []
+  for (const set of CH.quizzes) for (const q of set.questions) {
+    const wrong = q.options.map((o, i) => i).filter(i => i !== q.a && q.options[i].length <= 44)
+    if (q.options[q.a].length <= 44 && wrong.length) pool.push({ q: q.q, right: q.options[q.a], wrong: q.options[wrong[Math.floor(Math.random() * wrong.length)]], why: q.why, sec: q.sec })
+  }
+  for (const d of CH.decks) for (const c of d.cards) pool.push({ q: `True or false? ${c.claim}`, right: c.answer ? 'True' : 'False', wrong: c.answer ? 'False' : 'True', why: c.why, sec: c.sec })
+  return shuffle(pool).slice(0, MARCH.gates).map((g, i) => ({ ...g, rightOnLeft: Math.random() < 0.5, y: MARCH.first + i * MARCH.gap, passed: null }))
+}
+
 function renderBattle() {
   stopLoop()
-  const g = state, b = CH.battle
-  const head = `<header class="top"><div class="brand"><small>Battle · ${esc(b.year)}</small><h1>${esc(b.name)}</h1></div>
-    ${g.phase === 0 || g.phase === 4 ? '<button class="ghost" id="leave">Back</button>' : ''}</header>
-    ${g.phase >= 1 && g.phase <= 3 ? `<span class="round-pill">Phase ${g.phase} of 3 · ${BATTLE_PHASES[g.phase - 1]}</span>` : ''}`
-  if (g.phase === 0) {
-    app.innerHTML = `${head}
-      <section class="briefing">
-        <span class="eyebrow">Against ${esc(b.enemy)}</span>
-        <p>${esc(b.intro)}</p>
-        <button class="read-more" data-read="${b.sec}">Read about it in the chronicle</button>
-        ${strengthBars(armyStrength(CH), enemyStrength(CH), b.enemy)}
-        <p style="font-size:14px">Your legion: ${menCount()} men, ${esc(ERA_ARMY[CH.era] ?? 'Roman soldiers')} (×${eraQuality(CH)} for the era). In battle, how well you fight multiplies your strength by ${SKILL.min} to ${SKILL.max}.</p>
-        <div class="actions"><button class="primary" id="go">To battle!</button></div>
-      </section>`
-    app.querySelector('#go').addEventListener('click', () => { g.phase = 1; renderBattle() })
-  } else if (g.phase === 1) battleJavelins(head)
-  else if (g.phase === 2) battleLine(head)
-  else if (g.phase === 3) battleReserve(head)
-  else battleResult(head)
-  app.querySelector('#leave')?.addEventListener('click', () => { stopLoop(); go({ screen: 'home' }) })
-}
-function nextPhase(score) {
-  state.scores.push(Math.max(0, Math.min(1, score)))
-  state.phase++
-  setTimeout(() => { if (state.screen === 'battle') renderBattle() }, 900)
-}
-
-// Phase 1: tap when the needle is in the middle of the meter, three times
-function battleJavelins(head) {
-  const g = state, throws = []
-  app.innerHTML = `${head}
-    <p class="task">Your hastati hurl their javelins. Tap <b>Throw</b> when the marker is in the gold zone. Three volleys.</p>
-    <div class="meter"><span class="zone"></span><span class="needle" id="needle"></span></div>
-    <p class="task" id="throws">Volley 1 of 3</p>
-    <button class="primary big" id="throw">Throw!</button>`
-  const needle = app.querySelector('#needle'), info = app.querySelector('#throws')
-  let x = 0, t0 = performance.now(), speed = 2.4
-  const tick = now => { x = 0.5 + 0.5 * Math.sin((now - t0) / 1000 * speed); needle.style.left = (x * 100) + '%'; battleLoop = requestAnimationFrame(tick) }
-  battleLoop = requestAnimationFrame(tick)
-  app.querySelector('#throw').addEventListener('click', () => {
-    if (throws.length >= 3) return
-    const score = Math.max(0, 1 - Math.abs(x - 0.5) / 0.5)
-    throws.push(score)
-    info.textContent = `${score > 0.84 ? 'A perfect volley!' : score > 0.6 ? 'A good volley.' : 'Wide of the mark.'} ${throws.length < 3 ? `Volley ${throws.length + 1} of 3` : ''}`
-    speed += 0.8
-    if (throws.length === 3) { stopLoop(); nextPhase(throws.reduce((a, b) => a + b, 0) / 3) }
-  })
-}
-
-// Phase 2: attacks come at the left, centre or right; tap that part of the line in time
-function battleLine(head) {
-  const g = state, lanes = ['Left', 'Centre', 'Right'], total = 6
-  let i = 0, hits = 0, target = -1, deadline = 0, window_ = 1500
-  app.innerHTML = `${head}
-    <p class="task">The enemy charges. Tap the part of the line where the attack falls, before it breaks through.</p>
-    <div class="lanes3">${lanes.map((l, k) => `<button class="lane" data-lane="${k}"><span class="lane-name">${l}</span><span class="lane-timer"><span></span></span></button>`).join('')}</div>
-    <p class="task" id="line-info">Get ready…</p>`
-  const info = app.querySelector('#line-info'), buttons = [...app.querySelectorAll('.lane')]
-  const show = () => {
-    if (state !== g) return
-    if (i >= total) { stopLoop(); return nextPhase(hits / total) }
-    target = Math.floor(Math.random() * 3)
-    deadline = performance.now() + window_
-    buttons.forEach((b, k) => b.classList.toggle('attack', k === target))
-    info.textContent = `Attack ${i + 1} of ${total}`
-  }
-  const resolve = ok => {
-    if (target < 0) return
-    if (ok) hits++
-    buttons[target].classList.remove('attack')
-    buttons[target].querySelector('.lane-timer span').style.width = '0'
-    buttons[target].classList.add(ok ? 'held' : 'broken')
-    const done = buttons[target]
-    setTimeout(() => done.classList.remove('held', 'broken'), 350)
-    target = -1; i++; window_ = Math.max(800, window_ - 120)
-    setTimeout(show, 450)
-  }
-  const tick = now => {
-    if (target >= 0) {
-      const left = Math.max(0, deadline - now) / window_
-      buttons[target].querySelector('.lane-timer span').style.width = (left * 100) + '%'
-      if (now >= deadline) resolve(false)
-    }
-    battleLoop = requestAnimationFrame(tick)
-  }
-  battleLoop = requestAnimationFrame(tick)
-  buttons.forEach((b, k) => b.addEventListener('click', () => { if (target >= 0) resolve(k === target) }))
-  setTimeout(show, 900)
-}
-
-// Phase 3: hold the triarii back until the pressure is near breaking point, then send them in
-function battleReserve(head) {
-  const g = state
-  const rise = 2600 + Math.random() * 1800, breakAt = rise + 900
-  app.innerHTML = `${head}
-    <p class="task">Your veterans wait behind the line. Send them in when the pressure is close to breaking point, not too early, not too late.</p>
-    <div class="pressure"><span id="pressure-fill"></span><span class="pressure-mark"></span></div>
-    <p class="task" id="pressure-info">The line holds…</p>
-    <button class="primary big" id="send">Send in the triarii!</button>`
-  const fill = app.querySelector('#pressure-fill'), info = app.querySelector('#pressure-info')
-  let p = 0, t0 = performance.now(), done = false
-  const finish = score => { if (done) return; done = true; stopLoop(); nextPhase(score) }
-  const tick = now => {
-    const t = now - t0
-    p = Math.min(100, 100 * Math.pow(Math.min(1, t / rise), 1.6))
-    fill.style.width = p + '%'
-    fill.classList.toggle('hot', p >= 85)
-    if (p >= 85 && t < breakAt) info.textContent = 'The line is bending!'
-    if (t >= breakAt) { info.textContent = 'The line broke before the triarii arrived.'; return finish(0) }
-    battleLoop = requestAnimationFrame(tick)
-  }
-  battleLoop = requestAnimationFrame(tick)
-  app.querySelector('#send').addEventListener('click', () => {
-    const score = p >= 85 ? 1 : p >= 60 ? 0.3 + 0.7 * (p - 60) / 25 : 0.3 * p / 60
-    info.textContent = score >= 1 ? 'Perfect timing: the triarii crash in as the line bends!' : score >= 0.5 ? 'A little early, but they help.' : 'Far too early: they tire before the enemy breaks.'
-    finish(score)
-  })
-}
-
-function battleResult(head) {
-  const g = state, b = CH.battle
-  if (!g.outcome) {
-    const skill = g.scores.reduce((a, x) => a + x, 0) / g.scores.length
-    const mult = +(SKILL.min + (SKILL.max - SKILL.min) * skill).toFixed(2)
-    const you = armyStrength(CH), enemy = enemyStrength(CH), total = Math.round(you * mult)
-    const won = total >= enemy
-    let survivors = menCount(), lossRate = 0
-    if (won) {
-      const margin = total / Math.max(1, enemy)
-      lossRate = Math.max(0.6, Math.min(0.8, 0.8 - (margin - 1) * (0.2 / 0.3)))
-      for (const u of Object.keys(legion.army)) legion.army[u] = Math.round(legion.army[u] * (1 - lossRate))
-      survivors = menCount()
-      if (!legion.conquered.includes(CH.id)) legion.conquered.push(CH.id)
-    }
-    legion.battles.push({ chapter: CH.id, won, you, mult, enemy, survivors, at: new Date().toISOString() })
-    saveLegion()
-    renderHud()
-    g.outcome = { skill, mult, you, enemy, total, won, survivors, lossRate }
-  }
-  const o = g.outcome, next = CHAPTERS[chapterIndex + 1]
-  app.innerHTML = `${head}
-    <section class="result">
-      <h2>${o.won ? (o.total >= o.enemy * 1.25 ? 'A crushing victory!' : 'Victory!') : 'Defeat. Your legion retreats.'}</h2>
-      <div class="battle-sum">
-        <span>Your legion</span><b>${o.you}</b>
-        <span>× how well you fought</span><b>×${o.mult}</b>
-        <span>Your strength on the day</span><b>${o.total}</b>
-        <span>${esc(b.enemy)}</span><b>${o.enemy}</b>
+  const b = CH.battle
+  const you = armyStrength(CH), enemy = enemyStrength(CH)
+  app.innerHTML = `
+    <header class="top"><div class="brand"><small>The road to battle · ${esc(b.year)}</small><h1>${esc(b.name)}</h1></div>
+      <button class="ghost" id="leave">Back</button></header>
+    <div class="gate-banner" id="banner"><p>${esc(b.intro)}</p></div>
+    <div class="march-wrap">
+      <canvas id="road" aria-label="Your legion marching to battle. Drag left and right to steer."></canvas>
+      <div class="march-overlay" id="overlay">
+        <p><b>Drag left and right</b> to steer your legion.</p>
+        <p>Pass through the gate with the <b>right answer</b> to win reinforcements. Avoid the barricades. At the end of the road: ${esc(b.enemy)}.</p>
+        <button class="primary big" id="go">March!</button>
       </div>
-      <p class="task">Phases: ${BATTLE_PHASES.map((n, k) => `${n} ${Math.round(100 * g.scores[k])}%`).join(' · ')}</p>
-      ${o.won ? `<p>The battle cost ${Math.round(o.lossRate * 100)}% of your soldiers. <b>${o.survivors} survivors</b> march on${next ? ` to <b>${esc(next.short)}</b>` : ''}, and every soldier you recruit there joins them.</p>`
-        : `<p>You were <b>${o.enemy - o.total}</b> strength short. A retreat costs no soldiers: recruit more in this chapter’s games (facts you missed join as veterans) and attack again.</p>`}
-      <div class="actions">
-        ${o.won && next ? `<button class="primary" id="go-next">On to ${esc(next.short)}</button>` : ''}
-        <button class="${o.won && next ? 'ghost' : 'primary'}" id="to-chapter">${o.won ? 'Back to the chapter' : 'Recruit more soldiers'}</button>
-      </div>
-    </section>`
-  app.querySelector('#go-next')?.addEventListener('click', () => { loadChapter(chapterIndex + 1); window.scrollTo(0, 0); go({ screen: 'home' }) })
-  app.querySelector('#to-chapter').addEventListener('click', () => go({ screen: 'home' }))
+    </div>
+    <p class="task" style="text-align:center">Your legion ${you} · ${esc(b.enemy)} ${enemy} · <button class="read-more" data-read="${b.sec}" style="margin:0;color:var(--ink)">Read about the battle</button></p>`
+  app.querySelector('#leave').addEventListener('click', () => { stopLoop(); go({ screen: 'home' }) })
+  setupMarch(you, enemy)
+  app.querySelector('#go').addEventListener('click', () => { app.querySelector('#overlay').hidden = true; march.phase = 'march'; march.last = performance.now() })
+}
+
+function setupMarch(you, enemy) {
+  const canvas = app.querySelector('#road'), ctx = canvas.getContext('2d')
+  const W = Math.min(app.clientWidth, 528), H = Math.round(Math.min(window.innerHeight * 0.58, 560))
+  const dpr = window.devicePixelRatio || 1
+  canvas.width = W * dpr; canvas.height = H * dpr
+  canvas.style.width = W + 'px'; canvas.style.height = H + 'px'
+  ctx.setTransform(dpr, 0, 0, dpr, 0, 0)
+  const q = eraQuality(CH)
+  const road = { left: W * 0.08, right: W * 0.92 }
+  const mid = (road.left + road.right) / 2
+  // Your soldiers: the real army plus any reinforcements won on the road
+  const soldiers = []
+  const addSoldier = (t, temp = false, x = mid, y = H * 0.8) => soldiers.push({ t, temp, x: x + (Math.random() - 0.5) * 10, y: y + (Math.random() - 0.5) * 10 })
+  for (const [t, n] of Object.entries(legion.army)) for (let i = 0; i < n; i++) addSoldier(t)
+  shuffleInPlace(soldiers)
+  const strengthOf = list => Math.round(list.reduce((n, s) => n + STRENGTH[s.t], 0) * q)
+  const enemyMen = Math.max(12, Math.min(MARCH.maxFigures, Math.round(enemy / (1.7 * q))))
+  const gates = marchGates()
+  const endY = MARCH.first + MARCH.gates * MARCH.gap + 260
+  const barricades = gates.slice(0, -1).map((g, i) => i % 2 ? null : { y: g.y + MARCH.gap / 2, lane: Math.floor(Math.random() * 3) }).filter(Boolean)
+  march = {
+    alive: true, phase: 'ready', dist: 0, cx: mid, target: mid, last: performance.now(), soldiers, gates, barricades,
+    enemyMen, enemy, you, gained: 0, lost: 0, pops: [], floats: [], clashT: 0, outcome: null,
+  }
+  const m = march
+  const playerY = H * 0.8
+  const worldToScreen = wy => playerY - (wy - m.dist)
+  const laneX = lane => road.left + (road.right - road.left) * (lane + 0.5) / 3
+  const laneW = (road.right - road.left) / 3
+
+  // Steering: the crowd follows your finger or mouse horizontally
+  const setTarget = e => { const r = canvas.getBoundingClientRect(); m.target = Math.max(road.left + 24, Math.min(road.right - 24, e.clientX - r.left)) }
+  canvas.addEventListener('pointerdown', e => { canvas.setPointerCapture(e.pointerId); setTarget(e) })
+  canvas.addEventListener('pointermove', e => { if (e.buttons || e.pointerType !== 'mouse') setTarget(e) })
+  const keys = e => { if (!m.alive) return document.removeEventListener('keydown', keys); if (e.key === 'ArrowLeft') m.target = Math.max(road.left + 24, m.target - 40); if (e.key === 'ArrowRight') m.target = Math.min(road.right - 24, m.target + 40) }
+  document.addEventListener('keydown', keys)
+
+  const banner = app.querySelector('#banner')
+  let bannerFor = null
+  const showQuestion = g => { bannerFor = g; banner.className = 'gate-banner'; banner.innerHTML = `<span class="eyebrow">Gate ${gates.indexOf(g) + 1} of ${gates.length}</span><p><b>${esc(g.q)}</b></p>` }
+  const showVerdict = (g, ok, n) => {
+    banner.className = 'gate-banner ' + (ok ? 'ok' : 'bad')
+    banner.innerHTML = ok ? `<p><b>Right! +${n} soldiers.</b> ${esc(g.why)}</p>`
+      : `<p><b>Wrong: −${n} soldiers.</b> The answer is “${esc(g.right)}”. ${esc(g.why)}</p><button class="read-more" data-read="${g.sec}">Read more in the chronicle</button>`
+  }
+
+  // Crowd layout: a sunflower spiral around the centre, so the blob grows naturally
+  const layout = (n, cx, cy, gapPx) => { const pts = []; for (let i = 0; i < n; i++) { const r = gapPx * Math.sqrt(i + 0.5), a = i * 2.39996; pts.push([cx + r * Math.cos(a) * 1.15, cy + r * Math.sin(a) * 0.8]) } return pts }
+  const pop = (x, y, color) => m.pops.push({ x, y, r: 3, a: 1, color })
+  const float = (text, color) => m.floats.push({ text, color, y: playerY - 60, a: 1 })
+
+  function update(dt, now) {
+    if (m.phase === 'march') {
+      m.dist += MARCH.speed * dt
+      // next gate's question appears in good time to read it
+      const next = gates.find(g => !g.passed)
+      if (next && next !== bannerFor && next.y - m.dist < H * 1.6 && (!bannerFor || bannerFor.passed && now - bannerFor.passedAt > 2200)) showQuestion(next)
+      for (const g of gates) if (!g.passed && m.dist >= g.y) {
+        const leftSide = m.cx < mid
+        const ok = leftSide === g.rightOnLeft
+        g.passed = ok ? 'right' : 'wrong'; g.passedAt = now; g.side = leftSide ? 'left' : 'right'
+        if (ok) {
+          const n = Math.max(1, Math.round(MARCH.gainPct * m.enemy / q))
+          for (let i = 0; i < n; i++) addSoldier('hastatus', true, m.cx + (Math.random() - 0.5) * 60, playerY - 40)
+          m.gained += n; float(`+${n}`, '#7fb069'); showVerdict(g, true, n)
+        } else {
+          const n = penalty()
+          m.lost += n; float(`−${n}`, '#e2574c'); showVerdict(g, false, n); buzz()
+        }
+      }
+      // A barricade costs a few soldiers (as much as a wrong gate) if the crowd's centre runs into its lane
+      for (const b of m.barricades) if (!b.hit && m.dist >= b.y) {
+        b.hit = true
+        if (Math.abs(m.cx - laneX(b.lane)) < laneW / 2) {
+          const n = penalty()
+          m.lost += n; b.crashed = true; float(`−${n}`, '#e2574c'); buzz()
+        }
+      }
+      if (m.dist >= endY - 120) { m.phase = 'clash'; m.clashT = 0; banner.className = 'gate-banner'; banner.innerHTML = `<p><b>${esc(CH.battle.enemy)}!</b> The armies clash.</p>`; resolveClash() }
+    } else if (m.phase === 'clash') {
+      m.clashT += dt
+      // keep closing in until the front ranks meet
+      const reach = 5.2 * 0.8 * (Math.sqrt(m.soldiers.length) + Math.sqrt(m.enemyMen)) + 6
+      m.dist = Math.min(endY - reach, m.dist + MARCH.speed * 1.6 * dt)
+      const o = m.outcome, k = Math.min(1, m.clashT / 2.6)
+      // the losing side collapses fast, the winner's losses come slowly
+      const kMine = o.won ? k * k : Math.sqrt(k), kEnemy = o.won ? Math.sqrt(k) : k * k
+      const wantMine = Math.round(o.startMine - (o.startMine - o.endMine) * kMine)
+      const wantEnemy = Math.round(o.startEnemy - (o.startEnemy - o.endEnemy) * kEnemy)
+      while (m.soldiers.length > wantMine) { const s = removeOne(false, true); if (!s) break; pop(s.x, s.y, '#e0a63a') }
+      while (m.enemyMen > wantEnemy) { m.enemyMen--; pop(mid + (Math.random() - 0.5) * 120, playerY - 70 - Math.random() * 30, '#9aa6b2') }
+      if (k >= 1 && m.phase === 'clash') { m.phase = 'done'; setTimeout(() => { if (state.screen === 'battle') showMarchResult() }, 700) }
+    }
+    // the crowd's centre follows the steering target; each soldier eases towards its spot
+    m.cx += (m.target - m.cx) * Math.min(1, dt * 7)
+    const spots = layout(m.soldiers.length, m.cx, playerY, 5.2)
+    m.soldiers.forEach((s, i) => { const [tx, ty] = spots[i]; s.x += (tx - s.x) * Math.min(1, dt * 6); s.y += (ty - s.y) * Math.min(1, dt * 6) })
+    m.pops = m.pops.filter(p => (p.r += dt * 40, p.a -= dt * 2.5) > 0)
+    m.floats = m.floats.filter(f => (f.y -= dt * 40, f.a -= dt * 0.8) > 0)
+  }
+  // A penalty removes soldiers worth MARCH.lossPct of the enemy's strength, weakest first
+  function penalty() {
+    const budget = MARCH.lossPct * m.enemy / q
+    let removed = 0, n = 0
+    const order = ['hastatus', 'princeps', 'triarius', 'centurio']
+    while (removed < budget && m.soldiers.length) {
+      const i = m.soldiers.findIndex(s => s.temp) >= 0 ? m.soldiers.findIndex(s => s.temp)
+        : m.soldiers.findIndex(s => s.t === order.find(t => m.soldiers.some(x => x.t === t)))
+      const [s] = m.soldiers.splice(i, 1)
+      removed += STRENGTH[s.t]; n++
+      pop(s.x, s.y, '#e2574c')
+    }
+    return n
+  }
+  // Remove a soldier: road losses take reinforcements first; in the clash, the front ranks fall first
+  function removeOne(tempFirst, front) {
+    if (!m.soldiers.length) return null
+    let i = tempFirst ? m.soldiers.findIndex(s => s.temp) : -1
+    if (i < 0 && front) i = m.soldiers.reduce((best, s, k) => s.y < m.soldiers[best].y ? k : best, 0)
+    if (i < 0) i = m.soldiers.length - 1
+    return m.soldiers.splice(i, 1)[0]
+  }
+  function resolveClash() {
+    m.target = mid   // the legion wheels into the centre to meet the enemy
+    const mine = strengthOf(m.soldiers), won = mine >= m.enemy
+    const margin = mine / Math.max(1, m.enemy)
+    const lossRate = won ? Math.max(0.6, Math.min(0.8, 0.8 - (margin - 1) * (0.2 / 0.3))) : 0
+    m.outcome = { mine, won, lossRate, startMine: m.soldiers.length, startEnemy: m.enemyMen,
+      endMine: won ? Math.round(m.soldiers.length * (1 - lossRate)) : 0, endEnemy: won ? 0 : Math.max(1, Math.round(m.enemyMen * 0.3)) }
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, W, H)
+    ctx.fillStyle = '#7d8b4a'; ctx.fillRect(0, 0, W, H)                       // fields
+    ctx.fillStyle = '#d8c7a0'; ctx.fillRect(road.left, 0, road.right - road.left, H)   // the road
+    ctx.strokeStyle = 'rgba(27,23,21,.18)'; ctx.setLineDash([14, 18]); ctx.lineWidth = 2
+    ctx.lineDashOffset = -m.dist; ctx.beginPath(); ctx.moveTo(mid, 0); ctx.lineTo(mid, H); ctx.stroke(); ctx.setLineDash([])
+    for (const b of m.barricades) {                                                    // barricades with stakes
+      const y = worldToScreen(b.y); if (y < -30 || y > H + 30) continue
+      const x0 = laneX(b.lane) - laneW / 2 + 4, w = laneW - 8
+      ctx.fillStyle = b.crashed ? '#8e2b22' : '#6b4a2b'; ctx.fillRect(x0, y - 7, w, 14)
+      ctx.fillStyle = '#3f2a16'; for (let x = x0 + 6; x < x0 + w - 4; x += 14) { ctx.beginPath(); ctx.moveTo(x - 5, y - 7); ctx.lineTo(x, y - 20); ctx.lineTo(x + 5, y - 7); ctx.fill() }
+    }
+    for (const g of m.gates) {                                                         // answer gates
+      const y = worldToScreen(g.y); if (y < -60 || y > H + 60) continue
+      const half = (road.right - road.left) / 2
+      ;[['left', road.left], ['right', mid]].forEach(([side, x]) => {
+        const isRight = (side === 'left') === g.rightOnLeft
+        const label = isRight ? g.right : g.wrong
+        const chosen = g.side === side
+        ctx.fillStyle = g.passed ? (chosen ? (g.passed === 'right' ? 'rgba(127,176,105,.9)' : 'rgba(226,87,76,.9)') : 'rgba(251,243,228,.45)') : 'rgba(251,243,228,.92)'
+        ctx.fillRect(x + 6, y - 26, half - 12, 44)
+        ctx.strokeStyle = '#1b1715'; ctx.lineWidth = 2; ctx.strokeRect(x + 6, y - 26, half - 12, 44)
+        ctx.fillStyle = '#1b1715'; ctx.font = '800 12.5px Nunito, system-ui, sans-serif'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle'
+        wrapText(ctx, label, x + half / 2, y - 4, half - 22, 14)
+      })
+      ctx.fillStyle = '#6b4a2b'; [road.left + 2, mid - 3, road.right - 6].forEach(px => ctx.fillRect(px, y - 34, 5, 58))
+    }
+    const enemyY = worldToScreen(endY)                                                 // the enemy army
+    if (enemyY > -80 && m.enemyMen > 0) {
+      // the enemy closes in until its front rank touches yours
+      const reach = 5.2 * 0.8 * (Math.sqrt(m.soldiers.length) + Math.sqrt(m.enemyMen)) + 6
+      const pts = layout(m.enemyMen, mid, Math.min(enemyY, playerY - reach), 5.2)
+      for (const [x, y] of pts) drawFigure(x, y, '#9aa6b2', '#2b3440', false, true)
+    }
+    for (const s of m.soldiers) drawFigure(s.x, s.y, UNITS[s.t].color, '#1b1715', s.t === 'centurio')   // your legion
+    for (const p of m.pops) { ctx.globalAlpha = Math.max(0, p.a); ctx.strokeStyle = p.color; ctx.lineWidth = 2; ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2); ctx.stroke() }
+    ctx.globalAlpha = 1
+    for (const f of m.floats) { ctx.globalAlpha = Math.max(0, f.a); ctx.fillStyle = f.color; ctx.font = '800 26px Nunito, system-ui, sans-serif'; ctx.textAlign = 'center'; ctx.fillText(f.text, m.cx, f.y) }
+    ctx.globalAlpha = 1
+    // strength counter
+    ctx.fillStyle = 'rgba(27,23,21,.8)'; ctx.fillRect(8, 8, 150, 50)
+    ctx.fillStyle = '#fbf3e4'; ctx.font = '800 13px Nunito, system-ui, sans-serif'; ctx.textAlign = 'left'; ctx.textBaseline = 'alphabetic'
+    ctx.fillText(`Your legion  ${strengthOf(m.soldiers)}`, 16, 28)
+    ctx.fillStyle = '#e88b80'; ctx.fillText(`Enemy        ${m.outcome ? Math.round(m.enemy * m.enemyMen / m.outcome.startEnemy) : m.enemy}`, 16, 48)
+  }
+  function drawFigure(x, y, fill, stroke, crest, enemyFig) {
+    ctx.fillStyle = fill; ctx.strokeStyle = stroke; ctx.lineWidth = 1.4
+    ctx.beginPath(); ctx.arc(x, y, 4.6, 0, Math.PI * 2); ctx.fill(); ctx.stroke()
+    ctx.fillStyle = enemyFig ? '#2b3440' : '#1b1715'; ctx.beginPath(); ctx.arc(x, y - 1, 1.6, 0, Math.PI * 2); ctx.fill()
+    if (crest) { ctx.strokeStyle = '#e2574c'; ctx.lineWidth = 2; ctx.beginPath(); ctx.arc(x, y - 1, 5.6, Math.PI * 1.15, Math.PI * 1.85); ctx.stroke() }
+  }
+  const loop = now => {
+    if (!m.alive) return
+    const dt = Math.min(0.05, (now - m.last) / 1000); m.last = now
+    update(dt, now); draw()
+    requestAnimationFrame(loop)
+  }
+  requestAnimationFrame(loop)
+}
+function wrapText(ctx, text, x, y, maxW, lineH) {
+  const words = String(text).split(' '), lines = []
+  let line = ''
+  for (const w of words) { const t = line ? line + ' ' + w : w; if (ctx.measureText(t).width > maxW && line) { lines.push(line); line = w } else line = t }
+  lines.push(line)
+  const shown = lines.slice(0, 3)
+  shown.forEach((l, i) => ctx.fillText(l, x, y + (i - (shown.length - 1) / 2) * lineH))
+}
+function shuffleInPlace(a) { for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]] } return a }
+
+function showMarchResult() {
+  const m = march, o = m.outcome, b = CH.battle, next = CHAPTERS[chapterIndex + 1]
+  let survivors = menCount()
+  if (o.won && !m.applied) {
+    for (const u of Object.keys(legion.army)) legion.army[u] = Math.round(legion.army[u] * (1 - o.lossRate))
+    survivors = menCount()
+    if (!legion.conquered.includes(CH.id)) legion.conquered.push(CH.id)
+  }
+  if (!m.applied) { legion.battles.push({ chapter: CH.id, won: o.won, you: m.you, gained: m.gained, lost: m.lost, enemy: m.enemy, survivors, at: new Date().toISOString() }); saveLegion(); renderHud(); m.applied = true }
+  const right = m.gates.filter(g => g.passed === 'right').length
+  const box = document.createElement('section')
+  box.className = 'result'
+  box.innerHTML = `
+    <h2>${o.won ? (o.mine >= m.enemy * 1.25 ? 'A crushing victory!' : 'Victory!') : 'Defeat. Your legion retreats.'}</h2>
+    <div class="battle-sum">
+      <span>Your legion at the start</span><b>${m.you}</b>
+      <span>Reinforcements from ${right} of ${m.gates.length} right gates</span><b>+${Math.round(m.gained * eraQuality(CH))}</b>
+      <span>Lost at wrong gates and barricades</span><b>−${m.you + Math.round(m.gained * eraQuality(CH)) - o.mine}</b>
+      <span>Your strength in the battle</span><b>${o.mine}</b>
+      <span>${esc(b.enemy)}</span><b>${m.enemy}</b>
+    </div>
+    ${o.won ? `<p>The battle cost ${Math.round(o.lossRate * 100)}% of your soldiers. <b>${survivors} survivors</b> march on${next ? ` to <b>${esc(next.short)}</b>` : ''}. Reinforcements from the gates fought for this battle only.</p>`
+      : `<p>You were <b>${m.enemy - o.mine}</b> strength short. A retreat costs no soldiers: recruit more in this chapter’s games, then march again.</p>`}
+    <div class="actions">
+      ${o.won && next ? `<button class="primary" id="go-next">On to ${esc(next.short)}</button>` : ''}
+      ${o.won ? '' : '<button class="primary" id="again">March again</button>'}
+      <button class="ghost" id="to-chapter">${o.won ? 'Back to the chapter' : 'Recruit more soldiers'}</button>
+    </div>`
+  app.querySelector('.march-wrap').replaceWith(box)
+  box.scrollIntoView({ block: 'nearest' })
+  box.querySelector('#go-next')?.addEventListener('click', () => { loadChapter(chapterIndex + 1); window.scrollTo(0, 0); go({ screen: 'home' }) })
+  box.querySelector('#again')?.addEventListener('click', () => go({ screen: 'battle' }))
+  box.querySelector('#to-chapter').addEventListener('click', () => go({ screen: 'home' }))
 }
 
 // ---------- results ----------
