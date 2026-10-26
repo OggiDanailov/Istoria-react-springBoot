@@ -94,6 +94,18 @@ body { background: var(--rome); color: var(--parch); font-family: var(--body); o
 .panel-top { position: sticky; top: -18px; z-index: 1; display: flex; justify-content: space-between; align-items: center; gap: 8px;
   margin: -18px -18px 0; padding: 12px 14px 10px 18px; background: var(--parch); border-bottom: 1px solid var(--sand); border-radius: 13px 13px 0 0; }
 .panel-top .close { flex: none; background: var(--gold); }
+.deploy { position: absolute; left: 10px; right: 10px; top: 54px; display: flex; gap: 10px; align-items: center; padding: 10px 12px; border-radius: 14px;
+  background: rgba(27, 23, 21, .9); color: var(--parch); line-height: 1.3; }
+.deploy p { margin: 0; flex: 1; min-width: 0; font: 700 13.5px/1.3 var(--body); }
+.deploy .primary { flex: none; padding: 10px 14px; font-size: 15px; }
+.cost.free { color: var(--rome); font-size: 12px; }
+.score-pick { display: flex; flex-direction: column; gap: 6px; padding: 10px; border-radius: 12px; background: var(--sand); }
+.score-pick .label { font: 800 11px/1 var(--body); letter-spacing: .12em; text-transform: uppercase; color: var(--soft-ink); }
+.chips { display: flex; gap: 6px; flex-wrap: wrap; }
+.chips { flex-wrap: nowrap !important; gap: 4px !important; }
+.chips button { flex: 1; min-width: 0; border: 2px solid var(--ink); background: var(--paper); color: var(--ink); border-radius: 999px; padding: 6px 2px; font: 800 12.5px/1 var(--body); cursor: pointer; }
+.chips button[aria-pressed="true"] { background: var(--gold); }
+.score-pick .army { margin: 0; font-size: 13px; }
 @media (prefers-reduced-motion: reduce) { .rations.bump { animation: none; } }
 </style>
 
@@ -106,6 +118,7 @@ body { background: var(--rome); color: var(--parch); font-family: var(--body); o
       <button class="tool" id="dismiss" title="Send a soldier home (frees the square)">Dismiss</button>
     </div>
     <div class="banner" id="banner" hidden></div>
+    <div class="deploy" id="deploy" hidden><p id="deploy-text"></p><button class="primary" id="begin">Begin the battle</button></div>
     <div class="overlay" id="overlay"></div>
   </div>
   <div class="controls">
@@ -165,7 +178,7 @@ const LEVELS = [
     waves: [w(28, ['raider']), w(46, ['warrior']), w(60, ['raider', 'raider']), w(76, ['warrior', 'warrior']), w(90, ['shield']), w(104, rep(3, 'raider')), w(120, ['warrior', 'shield']),
       w(136, ['chief', ...rep(4, 'raider'), 'warrior', 'warrior', 'shield'], 'A great wave approaches!'), w(165, ['raider', 'raider', 'warrior']), w(180, ['shield', 'warrior', 'raider']),
       w(198, ['chief', ...rep(5, 'raider'), ...rep(3, 'warrior'), 'shield', 'shield', 'cavalry'], 'The final wave!')] },
-  { id: 'veii', name: 'The Siege of Veii', year: '396 BC', enemy: 'the Etruscans of Veii', theme: 'walls', start: 175, units: [...BASE, 'princeps', 'shed'], newUnit: 'shed',
+  { id: 'veii', name: 'The Siege of Veii', year: '396 BC', enemy: 'the Etruscans of Veii', theme: 'walls', start: 150, units: [...BASE, 'princeps', 'shed'], newUnit: 'shed',
     blurb: 'Veii, a rich Etruscan city a day’s march from Rome. Its archers shoot from a distance while its warriors sally out.',
     after: 'After a ten-year siege, Camillus took Veii, by tradition through a tunnel dug under its walls. Rome’s land almost doubled.',
     waves: [w(28, ['warrior']), w(46, ['archer']), w(62, ['warrior', 'warrior']), w(78, ['shield']), w(92, ['archer', 'warrior']), w(108, ['shield', 'archer']), w(124, ['warrior', 'warrior', 'archer']),
@@ -177,7 +190,7 @@ const LEVELS = [
     waves: [w(28, ['samnite']), w(46, ['samnite']), w(62, ['samnite']), w(80, ['linen']), w(92, ['samnite', 'samnite']), w(106, ['cavalry', 'samnite']), w(120, ['linen', 'samnite']),
       w(136, ['chief', ...rep(4, 'samnite'), 'linen', 'cavalry'], 'A great wave approaches!'), w(166, ['samnite', 'linen']), w(180, ['cavalry', 'cavalry', 'samnite']),
       w(196, ['chief', ...rep(4, 'samnite'), ...rep(2, 'linen'), 'cavalry', 'cavalry'], 'The final wave!')] },
-  { id: 'beneventum', name: 'Beneventum', year: '275 BC', enemy: 'King Pyrrhus', theme: 'river', start: 250, units: [...BASE, 'princeps', 'shed', 'rorarii', 'pigs'], newUnit: 'pigs',
+  { id: 'beneventum', name: 'Beneventum', year: '275 BC', enemy: 'King Pyrrhus', theme: 'river', start: 300, units: [...BASE, 'princeps', 'shed', 'rorarii', 'pigs'], newUnit: 'pigs',
     blurb: 'King Pyrrhus of Epirus brings a professional army and war elephants, beasts the Romans first met only five years before.',
     after: 'Pyrrhus sailed home. His earlier victories had cost him so many men that a “Pyrrhic victory” still means a win not worth its price.',
     waves: [w(28, ['warrior']), w(46, ['phalangite']), w(62, ['warrior', 'warrior']), w(78, ['cavalry']), w(92, ['phalangite', 'warrior']), w(108, ['elephant']), w(126, ['phalangite', 'phalangite']),
@@ -185,6 +198,19 @@ const LEVELS = [
       w(205, ['chief', 'elephant', ...rep(3, 'phalangite'), ...rep(2, 'warrior'), 'elephant', 'cavalry', 'cavalry'], 'The final wave!')] },
 ]
 let LEVEL = LEVELS[0]
+// What the chapter's quiz score buys for its battle: starting grain and veteran soldiers, placed free before the
+// first enemy arrives. 80% gives the battle's normal start; every 10 points more or less adds or removes grain and
+// a veteran. Tuned so that at 70% only a strong player wins, at 80% an average one, and at 90% nearly everyone.
+const SCORE = { grainPer10: 75, minGrain: 25, at80: -25, vetsAt80: 1, vetsPer10: 1, sky: [12, 14] }
+const VET_ORDER = ['slinger', 'triarius', 'slinger', 'hastatus', 'slinger', 'triarius', 'slinger']
+function armyFor(score, L = LEVEL) {
+  const steps = (score - 80) / 10
+  const grain = Math.max(SCORE.minGrain, Math.round((L.start + SCORE.at80 + steps * SCORE.grainPer10) / 25) * 25)
+  const vets = {}
+  VET_ORDER.slice(0, Math.max(0, Math.round(SCORE.vetsAt80 + steps * SCORE.vetsPer10))).forEach(t => { vets[t] = (vets[t] ?? 0) + 1 })
+  return { grain, vets }
+}
+let quizScore = 80   // for testing; in the app it comes from the chapter's quizzes
 
 // ---------- sound (made in code, no files) ----------
 const sfx = {
@@ -602,11 +628,12 @@ function buildQueue() {
   for (const w of LEVEL.waves) { const gap = w.big ? 0.7 : 1.6; w.foes.forEach((type, i) => q.push({ t: w.t + i * gap, type, wave: w })) }
   return q.sort((a, b) => a.t - b.t)
 }
-function newGame(i = levelIndex) {
+function newGame(i = levelIndex, score = quizScore) {
   levelIndex = i; LEVEL = LEVELS[i]
+  const army = armyFor(score)
   LEVEL.waves.forEach(w => { w.announced = false })
   G = {
-    t: 0, phase: 'ready', speed: G?.speed ?? 1, paused: false, rations: LEVEL.start ?? 100, ids: 0,
+    t: 0, phase: 'ready', speed: G?.speed ?? 1, paused: false, rations: army.grain, vets: army.vets, score, ids: 0,
     units: [], foes: [], shots: [], foeShots: [], runners: [], drops: [], fx: [], corpses: [],
     equites: Array.from({ length: COLS }, () => ({ state: 'ready', y: ROWS + 0.62 })),
     cool: Object.fromEntries(LEVEL.units.map(t => [t, { triarius: 15, caltrops: 20, shed: 10, pigs: 10 }[t] ?? 0])),
@@ -631,18 +658,23 @@ function unitAt(lane, row) { return G.units.find(u => u.lane === lane && u.row =
 function place(type, lane, row) {
   const U = UNITS[type]
   if (!LEVEL.units.includes(type) || lane < 0 || lane >= COLS || row < 0 || row >= ROWS || unitAt(lane, row)) return false
-  if (G.rations < U.cost || G.cool[type] > 0) { sfx.deny(); return false }
-  G.rations -= U.cost; G.cool[type] = U.recharge
+  if (G.phase === 'deploy') {
+    if (!(G.vets[type] > 0)) { sfx.deny(); return false }
+    G.vets[type]--
+  } else {
+    if (G.rations < U.cost || G.cool[type] > 0) { sfx.deny(); return false }
+    G.rations -= U.cost; G.cool[type] = U.recharge
+  }
   G.units.push({ type, lane, row, hp: U.hp, max: U.hp, cd: type === 'cart' ? 5 : 0.4, anim: 0, hurt: 0, armed: false, arm: U.armTime ?? 0, aiming: false, fighting: false })
   for (let i = 0; i < 6; i++) G.fx.push({ kind: 'dust', x: lx(lane) + (Math.random() - 0.5) * cell * 0.6, y: ry(row + 0.82), vx: (Math.random() - 0.5) * 30, vy: -Math.random() * 20, t: 0.5 })
-  sfx.place(); updateCount(); tutorial('placed', type)
+  sfx.place(); updateCount(); if (G.phase !== 'deploy') tutorial('placed', type); else syncDeploy()
   return true
 }
 const MOVABLE = t => t !== 'caltrops' && t !== 'pigs'
 function moveUnit(u, lane, row) {
   if (unitAt(lane, row) || (u.lane === lane && u.row === row)) return false
   u.fromLane = u.lane; u.fromRow = u.row; u.lane = lane; u.row = row
-  u.travel = Math.max(0.4, Math.hypot(u.lane - u.fromLane, u.row - u.fromRow) / 2.2); u.travelT = 0   // about two squares a second
+  u.travel = G.phase === 'deploy' ? 0 : Math.max(0.4, Math.hypot(u.lane - u.fromLane, u.row - u.fromRow) / 2.2); u.travelT = 0   // about two squares a second
   for (const f of G.foes) if (f.eating === u) f.eating = null
   sfx.place(); return true
 }
@@ -686,7 +718,7 @@ function update(dt) {
   renderBar()
   // grain falling from the sky
   G.nextSky -= dt
-  if (G.nextSky <= 0) { G.nextSky = 10 + Math.random() * 2; G.drops.push({ x: cell * (0.45 + Math.random() * (COLS - 0.9)), y: -12, ty: ry(0.6 + Math.random() * 5.2), v: 25, life: 10, falling: true }) }
+  if (G.nextSky <= 0) { G.nextSky = SCORE.sky[0] + Math.random() * (SCORE.sky[1] - SCORE.sky[0]); G.drops.push({ x: cell * (0.45 + Math.random() * (COLS - 0.9)), y: -12, ty: ry(0.6 + Math.random() * 5.2), v: 25, life: 10, falling: true }) }
   for (const d of G.drops) { if (d.falling) { d.y += 70 * k * dt; if (d.y >= d.ty) { d.y = d.ty; d.falling = false } } else d.life -= dt }
   G.drops = G.drops.filter(d => !d.gone && (d.falling || d.life > 0))
   for (const t in G.cool) G.cool[t] = Math.max(0, G.cool[t] - dt)
@@ -906,11 +938,14 @@ const ghostUnit = type => ({ type, hp: UNITS[type].hp, max: UNITS[type].hp, anim
 const tray = document.getElementById('tray')
 function renderTray() {
   tray.innerHTML = ''
-  for (const type of LEVEL.units) {
+  const deploying = G?.phase === 'deploy'
+  for (const type of deploying ? Object.keys(G.vets) : LEVEL.units) {
     const U = UNITS[type], b = document.createElement('button')
     b.className = 'card'; b.dataset.type = type
     b.setAttribute('aria-label', `${U.name}, costs ${U.cost} rations`)
-    b.innerHTML = `<canvas width="92" height="92"></canvas><span class="name">${U.short}</span><span class="cost"><svg class="wheat" viewBox="0 0 20 20" aria-hidden="true"><use href="#wheat"/></svg>${U.cost}</span><span class="cool"></span>`
+    b.innerHTML = deploying
+      ? `<canvas width="92" height="92"></canvas><span class="name">${U.short}</span><span class="cost free">Free ×<span class="n">${G.vets[type]}</span></span><span class="cool"></span>`
+      : `<canvas width="92" height="92"></canvas><span class="name">${U.short}</span><span class="cost"><svg class="wheat" viewBox="0 0 20 20" aria-hidden="true"><use href="#wheat"/></svg>${U.cost}</span><span class="cool"></span>`
     const ic = b.querySelector('canvas').getContext('2d')
     ic.setTransform(2, 0, 0, 2, 0, 0); const sc = { cart: 0.62, caltrops: 1.15, shed: 0.62, pigs: 1 }[type] ?? 0.52
     ic.translate(23, { cart: 38, caltrops: 30, shed: 40, pigs: 36 }[type] ?? 44); ic.scale(sc, sc)
@@ -932,6 +967,7 @@ function renderTray() {
 function syncTray() {
   for (const b of tray.children) {
     const type = b.dataset.type, U = UNITS[type]
+    if (G.phase === 'deploy') { b.querySelector('.n').textContent = G.vets[type]; b.classList.toggle('poor', !G.vets[type]); b.classList.toggle('selected', G.selected === type); continue }
     b.classList.toggle('poor', G.rations < U.cost)
     b.classList.toggle('selected', G.selected === type)
     b.querySelector('.cool').style.height = (G.cool[type] / U.recharge * 100) + '%'
@@ -980,7 +1016,7 @@ function cellAt(clientX, clientY) {
   return { lane, row, x, y, inGrid: row >= 0 && row < ROWS && lane >= 0 && lane < COLS }
 }
 function startDrag(e, type) {
-  if (G.phase !== 'play') return
+  if (G.phase !== 'play' && G.phase !== 'deploy') return
   e.preventDefault(); sfx.init()
   drag = { type, x0: e.clientX, y0: e.clientY, moved: false, wasSelected: G.selected === type }
   drag.hold = setTimeout(() => { if (drag && !drag.moved) { drag = null; select(null); showGuide(type) } }, 450)   // press and hold: the unit guide
@@ -996,7 +1032,7 @@ document.addEventListener('pointerup', e => {
   if (moveDrag) {
     const c = cellAt(e.clientX, e.clientY), m = moveDrag
     moveDrag = null; G.hover = null
-    if (m.moved && c?.inGrid && G.units.includes(m.u) && G.phase === 'play') moveUnit(m.u, c.lane, c.row)
+    if (m.moved && c?.inGrid && G.units.includes(m.u) && (G.phase === 'play' || G.phase === 'deploy')) moveUnit(m.u, c.lane, c.row)
     return
   }
   if (!drag) return
@@ -1008,7 +1044,7 @@ document.addEventListener('pointerup', e => {
   } else if (d.wasSelected) select(null)     // tapping the selected card again puts it back
 })
 canvas.addEventListener('pointerdown', e => {
-  if (!G || G.phase !== 'play' || drag) return
+  if (!G || (G.phase !== 'play' && G.phase !== 'deploy') || drag) return
   sfx.init()
   const c = cellAt(e.clientX, e.clientY); if (!c) return
   // grain first: it's the most urgent tap
@@ -1096,15 +1132,42 @@ function showBriefing(i) {
     </ul>` : ''
   showPanel(`<span class="eyebrow">Battle ${i + 1} of ${LEVELS.length} · ${L.year}</span><h2>${L.name}</h2><p>${L.blurb}</p>${howto}
     ${news.length ? `<ul class="news">${news.join('')}</ul>` : ''}
+    <div class="score-pick"><span class="label">Your quiz result (test switch)</span>
+      <div class="chips">${[60, 70, 80, 90, 100].map(v => `<button id="score${v}" aria-pressed="${v === quizScore}">${v}%</button>`).join('')}</div>
+      <p class="army" id="army-line">${armyLine(quizScore, L)}</p></div>
     <div class="row"><button class="primary" id="go">To battle</button><button class="tool" id="guide-b">Unit guide</button><button class="tool" id="map">Map</button></div>`,
-    { go: () => startLevel(i), map: showMap, 'guide-b': () => { newGame(i); showGuide(null, () => showBriefing(i)) } })
+    { go: () => startLevel(i), map: showMap, 'guide-b': () => { newGame(i); showGuide(null, () => showBriefing(i)) },
+      ...Object.fromEntries([60, 70, 80, 90, 100].map(v => [`score${v}`, () => {
+        quizScore = v
+        overlay.querySelectorAll('.chips button').forEach(b => b.setAttribute('aria-pressed', b.id === `score${v}`))
+        overlay.querySelector('#army-line').textContent = armyLine(v, L)
+      }])) })
 }
-function startLevel(i) {
+function armyLine(score, L) {
+  const a = armyFor(score, L), vets = Object.entries(a.vets).map(([t, n]) => `${n} ${n === 1 ? UNITS[t].name.toLowerCase() : UNITS[t].name.toLowerCase() + (t === 'triarius' ? '' : 's')}`.replace('triarius', n === 1 ? 'triarius' : 'triarii').replace('hastatuss', 'hastati'))
+  return `You start with ${a.grain} grain${vets.length ? ` and veterans: ${vets.join(', ')}` : ' and no veterans'}.`
+}
+function startLevel(i, score = quizScore) {
   overlay.hidden = true
-  newGame(i); G.phase = 'play'; last = performance.now()
-  sfx.init(); sfx.horn()
-  if (i === 0) tutorial('start'); else announce(`${LEVEL.name} · ${LEVEL.year}`, true)
+  newGame(i, score); sfx.init()
+  if (Object.values(G.vets).some(n => n > 0)) { G.phase = 'deploy'; renderTray(); layout(); syncDeploy() }
+  else beginBattle()
 }
+function syncDeploy() {
+  const left = Object.values(G.vets).reduce((a, b) => a + b, 0), box = document.getElementById('deploy')
+  box.hidden = G.phase !== 'deploy'
+  document.getElementById('deploy-text').textContent = left
+    ? `Your quiz result earned you veterans. Drag them onto the field for free (${left} still to place).`
+    : 'Your veterans are in place. Drag to adjust, then begin.'
+}
+function beginBattle() {
+  if (G.phase !== 'deploy' && G.phase !== 'ready') return
+  G.phase = 'play'; G.selected = null; last = performance.now()
+  syncDeploy(); renderTray(); layout()
+  sfx.horn()
+  if (levelIndex === 0) tutorial('start'); else announce(`${LEVEL.name} · ${LEVEL.year}`, true)
+}
+document.getElementById('begin').addEventListener('click', beginBattle)
 function starsFor() { const used = G.equites.filter(e => e.state !== 'ready').length; return used === 0 ? 3 : used <= 2 ? 2 : 1 }
 function win() {
   if (G.phase !== 'play') return
@@ -1153,6 +1216,6 @@ newGame(0)
 showMap()
 window.addEventListener('resize', layout)
 requestAnimationFrame(frame)
-window.__hold = { get G() { return G }, place, collect, update, startLevel, showMap, LEVELS, UNITS, FOES, progress }
+window.__hold = { get G() { return G }, place, collect, update, startLevel, beginBattle, armyFor, showMap, LEVELS, UNITS, FOES, progress }
 </script>
 
