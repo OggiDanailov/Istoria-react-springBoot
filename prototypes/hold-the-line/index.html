@@ -2,136 +2,16 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Nunito:wght@600;800;900&display=swap">
 <style>
-/* One screen, phone first: card tray on top, the battlefield (five lanes, enemies march down from the top), controls below.
-   A single deliberate look (Roman red and dark wood), the same palette as the Ave Caesar app. */
-:root {
-  --rome: #8e2b22; --rome-deep: #6e1f18; --ink: #1b1715; --wood: #2a211c; --parch: #fbf3e4; --gold: #e0a63a; --muted: #cdb9a0;
-  --paper: #fff8ea; --sand: #efe3c8; --soft-ink: #6b5646; --star: #c58a1e;
-  --display: 'Marcellus', Georgia, serif; --body: 'Nunito', system-ui, sans-serif;
-  color-scheme: dark;
-}
-[hidden] { display: none !important; }
+:root { --page: #8e2b22; }
 html, body { height: 100%; }
-body { background: var(--rome); color: var(--parch); font-family: var(--body); overscroll-behavior: none; }
-.game { max-width: 520px; margin: 0 auto; padding-inline: 16px; padding-block: 10px 14px; display: flex; flex-direction: column; gap: 8px; }
-.tray { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 6px; }
-.card { position: relative; display: flex; flex-direction: column; align-items: center; gap: 1px; padding: 4px 2px 3px; border-radius: 10px;
-  background: var(--parch); color: var(--ink); border: 2px solid var(--ink); font: 900 13px/1 var(--body); font-variant-numeric: tabular-nums;
-  touch-action: none; user-select: none; -webkit-user-select: none; cursor: grab; overflow: hidden; box-shadow: 0 3px 0 var(--ink); }
-.card { -webkit-touch-callout: none; }
-.card canvas { width: 46px; height: 46px; pointer-events: none; }
-.card .name { font: 800 9.5px/1.1 var(--body); color: #5a4636; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; }
-.card .cost { display: flex; align-items: center; gap: 2px; }
-.card .cool { position: absolute; left: 0; right: 0; top: 0; background: rgba(27, 23, 21, .55); pointer-events: none; }
-.card.poor { filter: grayscale(.7) brightness(.8); }
-.card.poor .cost { color: var(--rome); }
-.card.selected { outline: 3px solid var(--gold); outline-offset: 1px; transform: translateY(-3px); box-shadow: 0 6px 0 var(--ink); }
-.card:focus-visible, button:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
-.wheat { width: 12px; height: 12px; flex: none; }
-.field-wrap { position: relative; align-self: center; border-radius: 14px; overflow: hidden; border: 3px solid var(--ink); box-shadow: 0 4px 0 var(--ink); line-height: 0; }
-#field { display: block; touch-action: none; }
-.hud { position: absolute; top: 8px; left: 8px; right: 8px; display: flex; justify-content: space-between; align-items: flex-start; pointer-events: none; line-height: 1.2; }
-.rations { display: flex; align-items: center; gap: 6px; padding: 5px 12px 5px 8px; border-radius: 999px; background: rgba(27, 23, 21, .82);
-  font: 900 18px/1 var(--body); font-variant-numeric: tabular-nums; color: var(--parch); }
-.rations .wheat { width: 20px; height: 20px; }
-.rations.bump { animation: bump .25s; }
-@keyframes bump { 50% { transform: scale(1.15); } }
-.tool { pointer-events: auto; border: 2px solid var(--ink); background: var(--parch); color: var(--ink); border-radius: 999px; padding: 6px 12px;
-  font: 800 13px/1 var(--body); box-shadow: 0 2px 0 var(--ink); cursor: pointer; }
-.tool.on { background: var(--gold); }
-.banner { position: absolute; left: 50%; top: 22%; transform: translateX(-50%); width: max-content; max-width: 86%; text-align: center; line-height: 1.25;
-  padding: 10px 16px; border-radius: 12px; background: rgba(27, 23, 21, .88); color: var(--parch); font: 800 15px/1.3 var(--body); pointer-events: none; }
-.banner.big { font: 400 24px/1.15 var(--display); color: var(--gold); background: rgba(110, 31, 24, .92); }
-.overlay { position: absolute; inset: 0; display: grid; place-items: center; padding: 18px; background: rgba(27, 23, 21, .72); line-height: 1.4; }
-.panel { background: var(--parch); color: var(--ink); border-radius: 16px; border: 3px solid var(--ink); padding: 18px 18px 16px; max-width: 360px;
-  display: flex; flex-direction: column; gap: 10px; box-shadow: 0 5px 0 var(--ink); }
-.panel .eyebrow { font: 800 11px/1 var(--body); letter-spacing: .14em; text-transform: uppercase; color: var(--rome); }
-.panel h1, .panel h2 { margin: 0; font: 400 30px/1.05 var(--display); text-wrap: balance; }
-.panel p { margin: 0; font-size: 14.5px; }
-.panel ul { margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 4px; font-size: 14px; }
-.primary { border: 2px solid var(--ink); background: var(--gold); color: var(--ink); border-radius: 999px; padding: 12px 20px; font: 900 17px/1 var(--body);
-  box-shadow: 0 3px 0 var(--ink); cursor: pointer; }
-.primary:active, .tool:active { transform: translateY(2px); box-shadow: 0 1px 0 var(--ink); }
-.controls { display: flex; align-items: center; gap: 8px; }
-.progress { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 11px; }
-.progress .label { font: 800 11px/1 var(--body); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.bar { position: relative; height: 10px; border-radius: 999px; background: var(--rome-deep); border: 2px solid var(--ink); }
-.bar .fill { position: absolute; inset: 0 auto 0 0; width: 0; border-radius: 999px; background: var(--gold); }
-.bar .flag { position: absolute; top: -9px; width: 10px; height: 9px; margin-left: -1px; border-left: 2px solid var(--ink); }
-.bar .flag::after { content: ''; position: absolute; left: 0; top: 0; width: 8px; height: 6px; background: var(--parch); }
-.controls { gap: 6px; }
-.controls .tool { padding: 8px 9px; font-size: 12.5px; }
-.overlay { overflow-y: auto; place-items: start center; }
-.overlay .panel { margin-block: auto; }
-.panel h2 { font-size: 26px; }
-.road { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 7px; }
-.road li:nth-child(even) { padding-left: 26px; }
-.road li:nth-child(odd) { padding-right: 26px; }
-.road button { width: 100%; display: flex; align-items: center; gap: 10px; text-align: left; padding: 8px 10px; border-radius: 12px; border: 2px solid var(--ink);
-  background: var(--paper); color: var(--ink); font: inherit; cursor: pointer; box-shadow: 0 2px 0 var(--ink); }
-.road .num { flex: none; width: 28px; height: 28px; border-radius: 50%; display: grid; place-items: center; background: var(--rome); color: var(--parch); font: 900 14px/1 var(--body); }
-.road .done .num { background: var(--gold); color: var(--ink); }
-.road .what { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; font-size: 15px; }
-.road small { color: var(--soft-ink); font-size: 12px; }
-.road .stars, .big-stars { color: var(--star); letter-spacing: 1px; font-size: 16px; }
-.big-stars { font-size: 34px !important; letter-spacing: 6px; line-height: 1; }
-.road .locked button { opacity: .55; cursor: not-allowed; box-shadow: none; }
-.news { list-style: none; padding: 0 !important; margin: 0; display: flex; flex-direction: column; gap: 8px; }
-.news li { display: flex; gap: 10px; align-items: center; font-size: 13.5px; }
-.news canvas { width: 44px; height: 44px; flex: none; background: var(--sand); border-radius: 10px; }
-.history { font-style: italic; color: var(--soft-ink); }
-.row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
-.row .primary { flex: 1 1 auto; }
-.guide { list-style: none; padding: 0 !important; margin: 0; display: flex; flex-direction: column; gap: 6px; }
-.guide li { display: flex; gap: 10px; align-items: flex-start; padding: 6px; border-radius: 12px; font-size: 13.5px; line-height: 1.35; }
-.guide li.focus { background: var(--sand); outline: 2px solid var(--gold); }
-.guide canvas { width: 44px; height: 44px; flex: none; background: var(--sand); border-radius: 10px; }
-.guide li.focus canvas { background: var(--paper); }
-.guide p { margin: 2px 0 0; font-size: 13.5px; }
-.guide i { color: var(--soft-ink); }
-.guide .price { font: 800 12px/1 var(--body); color: var(--soft-ink); margin-left: 4px; }
-.panel h3 { margin: 6px 0 0; font: 400 19px/1.1 var(--display); }
-.panel-top { position: sticky; top: -18px; z-index: 1; display: flex; justify-content: space-between; align-items: center; gap: 8px;
-  margin: -18px -18px 0; padding: 12px 14px 10px 18px; background: var(--parch); border-bottom: 1px solid var(--sand); border-radius: 13px 13px 0 0; }
-.panel-top .close { flex: none; background: var(--gold); }
-.deploy { position: absolute; left: 10px; right: 10px; top: 54px; display: flex; gap: 10px; align-items: center; padding: 10px 12px; border-radius: 14px;
-  background: rgba(27, 23, 21, .9); color: var(--parch); line-height: 1.3; }
-.deploy p { margin: 0; flex: 1; min-width: 0; font: 700 13.5px/1.3 var(--body); }
-.deploy .primary { flex: none; padding: 10px 14px; font-size: 15px; }
-.cost.free { color: var(--rome); font-size: 12px; }
-.score-pick { display: flex; flex-direction: column; gap: 6px; padding: 10px; border-radius: 12px; background: var(--sand); }
-.score-pick .label { font: 800 11px/1 var(--body); letter-spacing: .12em; text-transform: uppercase; color: var(--soft-ink); }
-.chips { display: flex; gap: 6px; flex-wrap: wrap; }
-.chips { flex-wrap: nowrap !important; gap: 4px !important; }
-.chips button { flex: 1; min-width: 0; border: 2px solid var(--ink); background: var(--paper); color: var(--ink); border-radius: 999px; padding: 6px 2px; font: 800 12.5px/1 var(--body); cursor: pointer; }
-.chips button[aria-pressed="true"] { background: var(--gold); }
-.score-pick .army { margin: 0; font-size: 13px; }
-.twist { margin: 0; padding: 10px 12px; border-radius: 12px; background: var(--sand); border-left: 4px solid var(--rome); font-size: 14px; }
-@media (prefers-reduced-motion: reduce) { .rations.bump { animation: none; } }
+body { background: var(--page); overscroll-behavior: none; }
 </style>
-
-<main class="game">
-  <div class="tray" id="tray" aria-label="Your units. Drag one onto the field, or tap it and then tap a square."></div>
-  <div class="field-wrap" id="wrap">
-    <canvas id="field" aria-label="The battlefield: five lanes in front of the Roman camp. Latin soldiers march down from the top."></canvas>
-    <div class="hud">
-      <div class="rations" id="rations" aria-live="polite"><svg class="wheat" viewBox="0 0 20 20" aria-hidden="true"><g fill="#e0a63a"><ellipse cx="10" cy="4" rx="2.4" ry="3.6"/><ellipse cx="6.5" cy="8" rx="2.2" ry="3.3" transform="rotate(-30 6.5 8)"/><ellipse cx="13.5" cy="8" rx="2.2" ry="3.3" transform="rotate(30 13.5 8)"/><ellipse cx="7" cy="12.5" rx="2" ry="3" transform="rotate(-30 7 12.5)"/><ellipse cx="13" cy="12.5" rx="2" ry="3" transform="rotate(30 13 12.5)"/></g><path d="M10 6v13" stroke="#b8862a" stroke-width="1.6"/></svg><span id="count">100</span></div>
-      <button class="tool" id="dismiss" title="Send a soldier home (frees the square)">Dismiss</button>
-    </div>
-    <div class="banner" id="banner" hidden></div>
-    <div class="deploy" id="deploy" hidden><p id="deploy-text"></p><button class="primary" id="begin">Begin the battle</button></div>
-    <div class="overlay" id="overlay"></div>
-  </div>
-  <div class="controls">
-    <div class="progress"><span class="label" id="level">Lake Regillus</span><div class="bar" id="bar"><div class="fill" id="fill"></div></div></div>
-    <button class="tool" id="pause">Pause</button>
-    <button class="tool" id="speed">1×</button>
-    <button class="tool" id="guide">Guide</button>
-    <button class="tool" id="sound">Sound</button>
-  </div>
-</main>
-
+<div id="game"></div>
+<script>const HTL_CSS = "/* One screen, phone first: card tray on top, the battlefield (five lanes, enemies march down from the top), controls below.\n   A single deliberate look (Roman red and dark wood), the same palette as the Ave Caesar app. */\n:host {\n  --rome: #8e2b22; --rome-deep: #6e1f18; --ink: #1b1715; --wood: #2a211c; --parch: #fbf3e4; --gold: #e0a63a; --muted: #cdb9a0;\n  --paper: #fff8ea; --sand: #efe3c8; --soft-ink: #6b5646; --star: #c58a1e;\n  --display: 'Marcellus', Georgia, serif; --body: 'Nunito', system-ui, sans-serif;\n  color-scheme: dark;\n}\n[hidden] { display: none !important; }\n:host { display: block; background: var(--rome); color: var(--parch); font-family: var(--body); }\n.game { max-width: 520px; margin: 0 auto; padding-inline: 16px; padding-block: 10px 14px; display: flex; flex-direction: column; gap: 8px; }\n.tray { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 6px; }\n.card { position: relative; display: flex; flex-direction: column; align-items: center; gap: 1px; padding: 4px 2px 3px; border-radius: 10px;\n  background: var(--parch); color: var(--ink); border: 2px solid var(--ink); font: 900 13px/1 var(--body); font-variant-numeric: tabular-nums;\n  touch-action: none; user-select: none; -webkit-user-select: none; cursor: grab; overflow: hidden; box-shadow: 0 3px 0 var(--ink); }\n.card { -webkit-touch-callout: none; }\n.card canvas { width: 46px; height: 46px; pointer-events: none; }\n.card .name { font: 800 9.5px/1.1 var(--body); color: #5a4636; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; }\n.card .cost { display: flex; align-items: center; gap: 2px; }\n.card .cool { position: absolute; left: 0; right: 0; top: 0; background: rgba(27, 23, 21, .55); pointer-events: none; }\n.card.poor { filter: grayscale(.7) brightness(.8); }\n.card.poor .cost { color: var(--rome); }\n.card.selected { outline: 3px solid var(--gold); outline-offset: 1px; transform: translateY(-3px); box-shadow: 0 6px 0 var(--ink); }\n.card:focus-visible, button:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }\n.wheat { width: 12px; height: 12px; flex: none; }\n.field-wrap { position: relative; align-self: center; border-radius: 14px; overflow: hidden; border: 3px solid var(--ink); box-shadow: 0 4px 0 var(--ink); line-height: 0; }\n#field { display: block; touch-action: none; }\n.hud { position: absolute; top: 8px; left: 8px; right: 8px; display: flex; justify-content: space-between; align-items: flex-start; pointer-events: none; line-height: 1.2; }\n.rations { display: flex; align-items: center; gap: 6px; padding: 5px 12px 5px 8px; border-radius: 999px; background: rgba(27, 23, 21, .82);\n  font: 900 18px/1 var(--body); font-variant-numeric: tabular-nums; color: var(--parch); }\n.rations .wheat { width: 20px; height: 20px; }\n.rations.bump { animation: bump .25s; }\n@keyframes bump { 50% { transform: scale(1.15); } }\n.tool { pointer-events: auto; border: 2px solid var(--ink); background: var(--parch); color: var(--ink); border-radius: 999px; padding: 6px 12px;\n  font: 800 13px/1 var(--body); box-shadow: 0 2px 0 var(--ink); cursor: pointer; }\n.tool.on { background: var(--gold); }\n.banner { position: absolute; left: 50%; top: 22%; transform: translateX(-50%); width: max-content; max-width: 86%; text-align: center; line-height: 1.25;\n  padding: 10px 16px; border-radius: 12px; background: rgba(27, 23, 21, .88); color: var(--parch); font: 800 15px/1.3 var(--body); pointer-events: none; }\n.banner.big { font: 400 24px/1.15 var(--display); color: var(--gold); background: rgba(110, 31, 24, .92); }\n.overlay { position: absolute; inset: 0; display: grid; place-items: center; padding: 18px; background: rgba(27, 23, 21, .72); line-height: 1.4; }\n.panel { background: var(--parch); color: var(--ink); border-radius: 16px; border: 3px solid var(--ink); padding: 18px 18px 16px; max-width: 360px;\n  display: flex; flex-direction: column; gap: 10px; box-shadow: 0 5px 0 var(--ink); }\n.panel .eyebrow { font: 800 11px/1 var(--body); letter-spacing: .14em; text-transform: uppercase; color: var(--rome); }\n.panel h1, .panel h2 { margin: 0; font: 400 30px/1.05 var(--display); text-wrap: balance; }\n.panel p { margin: 0; font-size: 14.5px; }\n.panel ul { margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 4px; font-size: 14px; }\n.primary { border: 2px solid var(--ink); background: var(--gold); color: var(--ink); border-radius: 999px; padding: 12px 20px; font: 900 17px/1 var(--body);\n  box-shadow: 0 3px 0 var(--ink); cursor: pointer; }\n.primary:active, .tool:active { transform: translateY(2px); box-shadow: 0 1px 0 var(--ink); }\n.controls { display: flex; align-items: center; gap: 8px; }\n.progress { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 11px; }\n.progress .label { font: 800 11px/1 var(--body); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }\n.bar { position: relative; height: 10px; border-radius: 999px; background: var(--rome-deep); border: 2px solid var(--ink); }\n.bar .fill { position: absolute; inset: 0 auto 0 0; width: 0; border-radius: 999px; background: var(--gold); }\n.bar .flag { position: absolute; top: -9px; width: 10px; height: 9px; margin-left: -1px; border-left: 2px solid var(--ink); }\n.bar .flag::after { content: ''; position: absolute; left: 0; top: 0; width: 8px; height: 6px; background: var(--parch); }\n.controls { gap: 6px; }\n.controls .tool { padding: 8px 9px; font-size: 12.5px; }\n.overlay { overflow-y: auto; place-items: start center; }\n.overlay .panel { margin-block: auto; }\n.panel h2 { font-size: 26px; }\n.road { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 7px; }\n.road li:nth-child(even) { padding-left: 26px; }\n.road li:nth-child(odd) { padding-right: 26px; }\n.road button { width: 100%; display: flex; align-items: center; gap: 10px; text-align: left; padding: 8px 10px; border-radius: 12px; border: 2px solid var(--ink);\n  background: var(--paper); color: var(--ink); font: inherit; cursor: pointer; box-shadow: 0 2px 0 var(--ink); }\n.road .num { flex: none; width: 28px; height: 28px; border-radius: 50%; display: grid; place-items: center; background: var(--rome); color: var(--parch); font: 900 14px/1 var(--body); }\n.road .done .num { background: var(--gold); color: var(--ink); }\n.road .what { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; font-size: 15px; }\n.road small { color: var(--soft-ink); font-size: 12px; }\n.road .stars, .big-stars { color: var(--star); letter-spacing: 1px; font-size: 16px; }\n.big-stars { font-size: 34px !important; letter-spacing: 6px; line-height: 1; }\n.road .locked button { opacity: .55; cursor: not-allowed; box-shadow: none; }\n.news { list-style: none; padding: 0 !important; margin: 0; display: flex; flex-direction: column; gap: 8px; }\n.news li { display: flex; gap: 10px; align-items: center; font-size: 13.5px; }\n.news canvas { width: 44px; height: 44px; flex: none; background: var(--sand); border-radius: 10px; }\n.history { font-style: italic; color: var(--soft-ink); }\n.row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }\n.row .primary { flex: 1 1 auto; }\n.guide { list-style: none; padding: 0 !important; margin: 0; display: flex; flex-direction: column; gap: 6px; }\n.guide li { display: flex; gap: 10px; align-items: flex-start; padding: 6px; border-radius: 12px; font-size: 13.5px; line-height: 1.35; }\n.guide li.focus { background: var(--sand); outline: 2px solid var(--gold); }\n.guide canvas { width: 44px; height: 44px; flex: none; background: var(--sand); border-radius: 10px; }\n.guide li.focus canvas { background: var(--paper); }\n.guide p { margin: 2px 0 0; font-size: 13.5px; }\n.guide i { color: var(--soft-ink); }\n.guide .price { font: 800 12px/1 var(--body); color: var(--soft-ink); margin-left: 4px; }\n.panel h3 { margin: 6px 0 0; font: 400 19px/1.1 var(--display); }\n.panel-top { position: sticky; top: -18px; z-index: 1; display: flex; justify-content: space-between; align-items: center; gap: 8px;\n  margin: -18px -18px 0; padding: 12px 14px 10px 18px; background: var(--parch); border-bottom: 1px solid var(--sand); border-radius: 13px 13px 0 0; }\n.panel-top .close { flex: none; background: var(--gold); }\n.deploy { position: absolute; left: 10px; right: 10px; top: 54px; display: flex; gap: 10px; align-items: center; padding: 10px 12px; border-radius: 14px;\n  background: rgba(27, 23, 21, .9); color: var(--parch); line-height: 1.3; }\n.deploy p { margin: 0; flex: 1; min-width: 0; font: 700 13.5px/1.3 var(--body); }\n.deploy .primary { flex: none; padding: 10px 14px; font-size: 15px; }\n.cost.free { color: var(--rome); font-size: 12px; }\n.score-pick { display: flex; flex-direction: column; gap: 6px; padding: 10px; border-radius: 12px; background: var(--sand); }\n.score-pick .label { font: 800 11px/1 var(--body); letter-spacing: .12em; text-transform: uppercase; color: var(--soft-ink); }\n.chips { display: flex; gap: 6px; flex-wrap: wrap; }\n.chips { flex-wrap: nowrap !important; gap: 4px !important; }\n.chips button { flex: 1; min-width: 0; border: 2px solid var(--ink); background: var(--paper); color: var(--ink); border-radius: 999px; padding: 6px 2px; font: 800 12.5px/1 var(--body); cursor: pointer; }\n.chips button[aria-pressed=\"true\"] { background: var(--gold); }\n.score-pick .army { margin: 0; font-size: 13px; }\n.twist { margin: 0; padding: 10px 12px; border-radius: 12px; background: var(--sand); border-left: 4px solid var(--rome); font-size: 14px; }\n@media (prefers-reduced-motion: reduce) { .rations.bump { animation: none; } }\n"</script>
 <script>
+// Hold the Line: a Roman lane-defence game. HoldTheLine.mount(element, options) runs one copy of it.
+// Its styles come from HTL_CSS (game.css, added by the build).
+window.HoldTheLine = (() => {
 const TAU = Math.PI * 2
 const COLS = 5, ROWS = 7, APPROACH = 0.95, CAMP = 0.85   // the field in cells: the Latin approach on top, the camp below
 const SKIN = '#e0b088', SKIN_SHADE = '#c48e66', INK = '#2a211c'
@@ -540,7 +420,7 @@ function drawEques(c, e, T) {
 }
 
 // ---------- the field ----------
-const canvas = document.getElementById('field'), ctx = canvas.getContext('2d')
+let canvas, ctx
 const bg = document.createElement('canvas'), bctx = bg.getContext('2d')
 let W = 0, H = 0, cell = 72, k = 1, dpr = 1
 const lx = lane => (lane + 0.5) * cell
@@ -548,9 +428,9 @@ const ry = row => (APPROACH + row) * cell
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
 
 function layout() {
-  const wrap = document.getElementById('wrap'), game = document.querySelector('.game')
+  const wrap = $('wrap'), game = sroot.querySelector('.game')
   const avail = Math.min(game.clientWidth - 32, 480)
-  const used = document.getElementById('tray').offsetHeight + document.querySelector('.controls').offsetHeight + 46
+  const used = $('tray').offsetHeight + sroot.querySelector('.controls').offsetHeight + 46 + Math.max(0, host.getBoundingClientRect().top)
   const maxH = Math.max(380, window.innerHeight - used)
   cell = Math.floor(Math.min(avail / COLS, maxH / (ROWS + APPROACH + CAMP)))
   W = cell * COLS; H = Math.round(cell * (ROWS + APPROACH + CAMP)); k = cell / 72
@@ -649,7 +529,7 @@ function newGame(i = levelIndex, score = quizScore) {
     introduced: new Set(), selected: null, dismiss: false, hover: null, lastLane: -1, tips: {},
   }
   G.total = G.queue.length
-  renderTray(); renderBar(true); updateCount(); document.getElementById('level').textContent = LEVEL.name
+  renderTray(); renderBar(true); updateCount(); $('level').textContent = LEVEL.name
   layout()
 }
 
@@ -963,7 +843,7 @@ function hpBar(x, y, frac, color) {
 const ghostUnit = type => ({ type, hp: UNITS[type].hp, max: UNITS[type].hp, anim: 0, hurt: 0, armed: true, arm: 0, aiming: false })
 
 // ---------- the card tray, controls and messages ----------
-const tray = document.getElementById('tray')
+let tray
 function renderTray() {
   tray.innerHTML = ''
   const deploying = G?.phase === 'deploy'
@@ -984,12 +864,12 @@ function renderTray() {
     tray.append(b)
   }
   // the grain icon, defined once
-  if (!document.getElementById('wheat-def')) {
-    const svg = document.querySelector('.rations svg').cloneNode(true)
+  if (!$('wheat-def')) {
+    const svg = sroot.querySelector('.rations svg').cloneNode(true)
     svg.id = 'wheat-def'; svg.style.display = 'none'
     const sym = document.createElementNS('http://www.w3.org/2000/svg', 'symbol'); sym.id = 'wheat'; sym.setAttribute('viewBox', '0 0 20 20')
-    sym.append(...svg.childNodes); svg.innerHTML = ''; svg.append(sym); document.body.append(svg)
-    document.querySelector('.rations svg').innerHTML = '<use href="#wheat"/>'
+    sym.append(...svg.childNodes); svg.innerHTML = ''; svg.append(sym); sroot.append(svg)
+    sroot.querySelector('.rations svg').innerHTML = '<use href="#wheat"/>'
   }
 }
 function syncTray() {
@@ -1000,26 +880,26 @@ function syncTray() {
     b.classList.toggle('selected', G.selected === type)
     b.querySelector('.cool').style.height = (G.cool[type] / U.recharge * 100) + '%'
   }
-  document.getElementById('dismiss').classList.toggle('on', G.dismiss)
+  $('dismiss').classList.toggle('on', G.dismiss)
 }
 let shownCount = -1
 function updateCount(bump) {
-  const el = document.getElementById('count')
+  const el = $('count')
   if (shownCount !== G.rations) { el.textContent = G.rations; shownCount = G.rations }
-  if (bump) { const r = document.getElementById('rations'); r.classList.remove('bump'); void r.offsetWidth; r.classList.add('bump') }
+  if (bump) { const r = $('rations'); r.classList.remove('bump'); void r.offsetWidth; r.classList.add('bump') }
 }
 function renderBar(reset) {
-  const bar = document.getElementById('bar')
+  const bar = $('bar')
   if (reset) bar.querySelectorAll('.flag').forEach(f => f.remove())
   if (!bar.querySelector('.flag')) {
     let i = 0
     for (const w of LEVEL.waves) { if (w.big) { const f = document.createElement('span'); f.className = 'flag'; f.style.left = (i / buildQueue().length * 100) + '%'; bar.append(f) } i += w.foes.length }
   }
-  document.getElementById('fill').style.width = (G.spawned / G.total * 100) + '%'
+  $('fill').style.width = (G.spawned / G.total * 100) + '%'
 }
 let bannerTimer = null
 function announce(text, big = false, ms = 2600) {
-  const el = document.getElementById('banner')
+  const el = $('banner')
   el.textContent = text; el.className = 'banner' + (big ? ' big' : ''); el.hidden = false
   clearTimeout(bannerTimer); bannerTimer = setTimeout(() => { el.hidden = true }, ms)
 }
@@ -1051,12 +931,14 @@ function startDrag(e, type) {
   select(type)
 }
 document.addEventListener('pointermove', e => {
+  if (!mounted) return
   const c = cellAt(e.clientX, e.clientY)
   if (moveDrag) { if (Math.hypot(e.clientX - moveDrag.x0, e.clientY - moveDrag.y0) > 8) moveDrag.moved = true; G.hover = c?.inGrid ? c : null; return }
   if (drag) { if (Math.hypot(e.clientX - drag.x0, e.clientY - drag.y0) > 8) { drag.moved = true; clearTimeout(drag.hold) } }
   if (drag || e.pointerType === 'mouse') G.hover = c?.inGrid ? c : null
 })
 document.addEventListener('pointerup', e => {
+  if (!mounted) return
   if (moveDrag) {
     const c = cellAt(e.clientX, e.clientY), m = moveDrag
     moveDrag = null; G.hover = null
@@ -1071,25 +953,9 @@ document.addEventListener('pointerup', e => {
     select(null); G.hover = null
   } else if (d.wasSelected) select(null)     // tapping the selected card again puts it back
 })
-canvas.addEventListener('pointerdown', e => {
-  if (!G || (G.phase !== 'play' && G.phase !== 'deploy') || drag) return
-  sfx.init()
-  const c = cellAt(e.clientX, e.clientY); if (!c) return
-  // grain first: it's the most urgent tap
-  const d = G.drops.find(d => Math.hypot(d.x - c.x, d.y - c.y) < 26 * k + 8)
-  if (d) return collect(d)
-  if (!c.inGrid) return
-  if (G.dismiss) { const u = unitAt(c.lane, c.row); if (u) { removeUnit(u, false); sfx.place() } G.dismiss = false; syncTray(); return }
-  if (G.selected) { if (place(G.selected, c.lane, c.row)) select(null); return }
-  const u = unitAt(c.lane, c.row)
-  if (u && MOVABLE(u.type) && !u.travel) { moveDrag = { u, x0: e.clientX, y0: e.clientY, moved: false }; canvas.setPointerCapture(e.pointerId) }
-})
-document.getElementById('dismiss').addEventListener('click', () => { if (G.phase !== 'play') return; G.dismiss = !G.dismiss; G.selected = null; syncTray() })
-document.getElementById('speed').addEventListener('click', e => { G.speed = G.speed === 1 ? 2 : 1; e.currentTarget.textContent = G.speed + '×' })
-document.getElementById('sound').addEventListener('click', e => { sfx.init(); sfx.on = !sfx.on; e.currentTarget.textContent = sfx.on ? 'Sound' : 'Muted'; e.currentTarget.classList.toggle('on', !sfx.on) })
 
 // ---------- campaign map, briefings, results ----------
-const overlay = document.getElementById('overlay')
+let overlay
 function showPanel(html, handlers) {
   overlay.innerHTML = `<div class="panel">${html}</div>`; overlay.hidden = false; overlay.scrollTop = 0
   for (const [id, fn] of Object.entries(handlers)) overlay.querySelector('#' + id)?.addEventListener('click', fn)
@@ -1136,10 +1002,9 @@ function showGuide(focus, onBack) {
   closeGuide = back
   overlay.querySelector('.panel').classList.add('guide-panel')
 }
-document.getElementById('guide').addEventListener('click', () => { if (G.phase === 'play') showGuide() })
 let closeGuide = null
-const guideOpen = () => !overlay.hidden && overlay.querySelector('.guide-panel')
-document.addEventListener('pointerdown', e => { if (guideOpen() && !e.target.closest('.panel')) { e.preventDefault(); closeGuide() } })
+const guideOpen = () => mounted && !overlay.hidden && overlay.querySelector('.guide-panel')
+document.addEventListener('pointerdown', e => { if (guideOpen() && !e.composedPath().some(n => n.classList?.contains('panel'))) { e.preventDefault(); closeGuide() } })
 document.addEventListener('keydown', e => { if (e.key === 'Escape' && guideOpen()) closeGuide() })
 const foeTypes = L => [...new Set(L.waves.flatMap(x => x.foes.flatMap(t => t.split('+'))))]
 function newFoesOf(i) {
@@ -1161,11 +1026,11 @@ function showBriefing(i) {
     </ul>` : ''
   showPanel(`<span class="eyebrow">Battle ${i + 1} of ${LEVELS.length} · ${L.year}</span><h2>${L.name}</h2><p>${L.blurb}</p>${howto}${L.twist ? `<p class="twist"><b>This battle:</b> ${L.twist}</p>` : ''}
     ${news.length ? `<ul class="news">${news.join('')}</ul>` : ''}
-    <div class="score-pick"><span class="label">Your quiz result (test switch)</span>
+    ${opts.mode === 'chapter' ? `<p class="twist"><b>Your chapter test: ${quizScore}%.</b> ${armyLine(quizScore, L)}</p>` : `<div class="score-pick"><span class="label">Your quiz result (test switch)</span>
       <div class="chips">${[60, 70, 80, 90, 100].map(v => `<button id="score${v}" aria-pressed="${v === quizScore}">${v}%</button>`).join('')}</div>
-      <p class="army" id="army-line">${armyLine(quizScore, L)}</p></div>
-    <div class="row"><button class="primary" id="go">To battle</button><button class="tool" id="guide-b">Unit guide</button><button class="tool" id="map">Map</button></div>`,
-    { go: () => startLevel(i), map: showMap, 'guide-b': () => { newGame(i); showGuide(null, () => showBriefing(i)) },
+      <p class="army" id="army-line">${armyLine(quizScore, L)}</p></div>`}
+    <div class="row"><button class="primary" id="go">To battle</button><button class="tool" id="guide-b">Unit guide</button><button class="tool" id="map">${opts.mode === 'chapter' ? 'Back to the chapter' : 'Map'}</button></div>`,
+    { go: () => startLevel(i), map: opts.mode === 'chapter' ? () => exit({ left: true }) : showMap, 'guide-b': () => { newGame(i); showGuide(null, () => showBriefing(i)) },
       ...Object.fromEntries([60, 70, 80, 90, 100].map(v => [`score${v}`, () => {
         quizScore = v
         overlay.querySelectorAll('.chips button').forEach(b => b.setAttribute('aria-pressed', b.id === `score${v}`))
@@ -1183,9 +1048,9 @@ function startLevel(i, score = quizScore) {
   else beginBattle()
 }
 function syncDeploy() {
-  const left = Object.values(G.vets).reduce((a, b) => a + b, 0), box = document.getElementById('deploy')
+  const left = Object.values(G.vets).reduce((a, b) => a + b, 0), box = $('deploy')
   box.hidden = G.phase !== 'deploy'
-  document.getElementById('deploy-text').textContent = left
+  $('deploy-text').textContent = left
     ? `Your quiz result earned you veterans. Drag them onto the field for free (${left} still to place).`
     : 'Your veterans are in place. Drag to adjust, then begin.'
 }
@@ -1196,20 +1061,20 @@ function beginBattle() {
   sfx.horn()
   if (levelIndex === 0) tutorial('start'); else announce(`${LEVEL.name} · ${LEVEL.year}`, true)
 }
-document.getElementById('begin').addEventListener('click', beginBattle)
 function starsFor() { const used = G.equites.filter(e => e.state !== 'ready').length; return used === 0 ? 3 : used <= 2 ? 2 : 1 }
 function win() {
   if (G.phase !== 'play') return
   G.phase = 'won'; sfx.win()
   const stars = starsFor(), i = levelIndex, next = LEVELS[i + 1]
-  progress.stars[i] = Math.max(progress.stars[i] ?? 0, stars); saveProgress()
+  if (opts.mode !== 'chapter') { progress.stars[i] = Math.max(progress.stars[i] ?? 0, stars); saveProgress() }
   setTimeout(() => showPanel(`<span class="eyebrow">Victory · ${LEVEL.year}</span><h2>You held the line at ${LEVEL.name}</h2>
     <p class="big-stars" aria-label="${stars} of 3 stars">${starText(stars)}</p>
     <p>${G.killed} enemies fell and you lost ${G.lost === 1 ? 'one soldier' : G.lost + ' soldiers'}. ${stars === 3 ? 'The equites never had to ride.' : 'Win without the equites charging for three stars.'}</p>
     <p class="history">${LEVEL.after}</p>
-    ${next ? '' : '<p><b>You have won the whole campaign: Rome rules Italy.</b></p>'}
-    <div class="row">${next ? `<button class="primary" id="next">Next: ${next.name}</button>` : ''}<button class="tool" id="again">Play again</button><button class="tool" id="map">Map</button></div>`,
-    { next: () => showBriefing(i + 1), again: () => startLevel(i), map: showMap }), 1200)
+    ${next || opts.mode === 'chapter' ? '' : '<p><b>You have won the whole campaign: Rome rules Italy.</b></p>'}
+    ${opts.mode === 'chapter' ? `<div class="row"><button class="primary" id="continue">Continue</button><button class="tool" id="again">Play again</button></div>`
+      : `<div class="row">${next ? `<button class="primary" id="next">Next: ${next.name}</button>` : ''}<button class="tool" id="again">Play again</button><button class="tool" id="map">Map</button></div>`}`,
+    { next: () => showBriefing(i + 1), again: () => startLevel(i), map: showMap, continue: () => exit({ won: true, stars }) }), 1200)
 }
 function lose() {
   if (G.phase !== 'play') return
@@ -1221,30 +1086,101 @@ function lose() {
     beneventum: 'Keep war pigs ready in front of your line: an elephant they reach runs back and tramples its own army.' }[LEVEL.id]
   setTimeout(() => showPanel(`<span class="eyebrow">Defeat · ${LEVEL.year}</span><h2>${LEVEL.enemy[0].toUpperCase() + LEVEL.enemy.slice(1)} broke into the camp</h2>
     <p>${G.killed} enemies fell before the line broke. ${hint}</p>
-    <div class="row"><button class="primary" id="again">Try again</button><button class="tool" id="map">Map</button></div>`,
-    { again: () => startLevel(levelIndex), map: showMap }), 1400)
+    ${opts.mode === 'chapter' ? `<p>Go back to the chapter: re-read the sections you missed and retake the test for a stronger army. Or fight again with the same army.</p>
+    <div class="row"><button class="primary" id="chapter">Back to the chapter</button><button class="tool" id="again">Fight again</button></div>`
+      : `<div class="row"><button class="primary" id="again">Try again</button><button class="tool" id="map">Map</button></div>`}`,
+    { again: () => startLevel(levelIndex), map: showMap, chapter: () => exit({ won: false }) }), 1400)
 }
-document.getElementById('pause').addEventListener('click', () => {
-  if (G.phase !== 'play') return
-  G.phase = 'paused'
-  showPanel(`<span class="eyebrow">Paused · ${LEVEL.name}</span><h2>Hold the Line</h2><p>${G.killed} enemies down, ${G.total - G.spawned} still to come.</p>
-    <div class="row"><button class="primary" id="resume">Resume</button><button class="tool" id="map">Leave the battle</button></div>`,
-    { resume: () => { overlay.hidden = true; G.phase = 'play'; last = performance.now() }, map: showMap })
-})
 
 // ---------- the loop ----------
 let last = performance.now()
 function frame(now) {
+  if (!mounted) return
   const dt = Math.min(0.05, (now - last) / 1000); last = now
   if (G.phase === 'play') { for (let i = 0; i < G.speed; i++) update(dt) }
   else if (G.phase === 'won' || G.phase === 'lost') { for (const c of G.corpses) c.t = Math.min(c.t + dt, 1); G.shake = Math.max(0, G.shake - dt * 12) }
   draw(); syncTray()
   requestAnimationFrame(frame)
 }
-newGame(0)
-showMap()
-window.addEventListener('resize', layout)
-requestAnimationFrame(frame)
-window.__hold = { get G() { return G }, place, collect, update, startLevel, beginBattle, armyFor, showMap, LEVELS, UNITS, FOES, progress }
-</script>
 
+// ---------- mounting: one game inside a host element (its styles kept apart in a shadow root) ----------
+const MARKUP = `<main class="game">
+  <div class="tray" id="tray" aria-label="Your units. Drag one onto the field, or tap it and then tap a square."></div>
+  <div class="field-wrap" id="wrap">
+    <canvas id="field" aria-label="The battlefield: five lanes in front of the Roman camp. Latin soldiers march down from the top."></canvas>
+    <div class="hud">
+      <div class="rations" id="rations" aria-live="polite"><svg class="wheat" viewBox="0 0 20 20" aria-hidden="true"><g fill="#e0a63a"><ellipse cx="10" cy="4" rx="2.4" ry="3.6"/><ellipse cx="6.5" cy="8" rx="2.2" ry="3.3" transform="rotate(-30 6.5 8)"/><ellipse cx="13.5" cy="8" rx="2.2" ry="3.3" transform="rotate(30 13.5 8)"/><ellipse cx="7" cy="12.5" rx="2" ry="3" transform="rotate(-30 7 12.5)"/><ellipse cx="13" cy="12.5" rx="2" ry="3" transform="rotate(30 13 12.5)"/></g><path d="M10 6v13" stroke="#b8862a" stroke-width="1.6"/></svg><span id="count">100</span></div>
+      <button class="tool" id="dismiss" title="Send a soldier home (frees the square)">Dismiss</button>
+    </div>
+    <div class="banner" id="banner" hidden></div>
+    <div class="deploy" id="deploy" hidden><p id="deploy-text"></p><button class="primary" id="begin">Begin the battle</button></div>
+    <div class="overlay" id="overlay"></div>
+  </div>
+  <div class="controls">
+    <div class="progress"><span class="label" id="level">Lake Regillus</span><div class="bar" id="bar"><div class="fill" id="fill"></div></div></div>
+    <button class="tool" id="pause">Pause</button>
+    <button class="tool" id="speed">1×</button>
+    <button class="tool" id="guide">Guide</button>
+    <button class="tool" id="sound">Sound</button>
+  </div>
+</main>`
+let host = null, sroot = null, mounted = false, opts = { mode: 'campaign' }
+const $ = id => sroot.getElementById(id)
+function bindControls() {
+  canvas.addEventListener('pointerdown', e => {
+    if (!G || (G.phase !== 'play' && G.phase !== 'deploy') || drag) return
+    sfx.init()
+    const c = cellAt(e.clientX, e.clientY); if (!c) return
+    // grain first: it's the most urgent tap
+    const d = G.drops.find(d => Math.hypot(d.x - c.x, d.y - c.y) < 26 * k + 8)
+    if (d) return collect(d)
+    if (!c.inGrid) return
+    if (G.dismiss) { const u = unitAt(c.lane, c.row); if (u) { removeUnit(u, false); sfx.place() } G.dismiss = false; syncTray(); return }
+    if (G.selected) { if (place(G.selected, c.lane, c.row)) select(null); return }
+    const u = unitAt(c.lane, c.row)
+    if (u && MOVABLE(u.type) && !u.travel) { moveDrag = { u, x0: e.clientX, y0: e.clientY, moved: false }; canvas.setPointerCapture(e.pointerId) }
+  })
+  $('dismiss').addEventListener('click', () => { if (G.phase !== 'play') return; G.dismiss = !G.dismiss; G.selected = null; syncTray() })
+  $('speed').addEventListener('click', e => { G.speed = G.speed === 1 ? 2 : 1; e.currentTarget.textContent = G.speed + '×' })
+  $('sound').addEventListener('click', e => { sfx.init(); sfx.on = !sfx.on; e.currentTarget.textContent = sfx.on ? 'Sound' : 'Muted'; e.currentTarget.classList.toggle('on', !sfx.on) })
+  $('guide').addEventListener('click', () => { if (G.phase === 'play') showGuide() })
+  $('begin').addEventListener('click', beginBattle)
+  $('pause').addEventListener('click', () => {
+    if (G.phase !== 'play') return
+    G.phase = 'paused'
+    showPanel(`<span class="eyebrow">Paused · ${LEVEL.name}</span><h2>Hold the Line</h2><p>${G.killed} enemies down, ${G.total - G.spawned} still to come.</p>
+      <div class="row"><button class="primary" id="resume">Resume</button><button class="tool" id="map">Leave the battle</button></div>`,
+      { resume: () => { overlay.hidden = true; G.phase = 'play'; last = performance.now() }, map: opts.mode === 'chapter' ? () => exit({ left: true }) : showMap })
+  })
+
+}
+function exit(result) { const cb = opts.onExit; unmount(); cb?.(result) }
+// opts: { mode: 'campaign' } (the standalone page: map, five battles, saved stars)
+//    or { mode: 'chapter', level, score, onExit({ won, stars, left }) } (one battle with the army a chapter test earned)
+function mount(el, o = {}) {
+  unmount()
+  host = el; opts = { mode: 'campaign', ...o }
+  sroot = host.shadowRoot ?? host.attachShadow({ mode: 'open' })
+  sroot.innerHTML = `<style>${HTL_CSS}</style>` + MARKUP
+  canvas = $('field'); ctx = canvas.getContext('2d'); tray = $('tray'); overlay = $('overlay')
+  shownCount = -1; mounted = true
+  bindControls()
+  window.addEventListener('resize', layout)
+  if (opts.mode === 'chapter') { quizScore = opts.score; newGame(opts.level, opts.score); showBriefing(opts.level) }
+  else { newGame(0); showMap() }
+  last = performance.now(); requestAnimationFrame(frame)
+}
+function unmount() {
+  if (!mounted) return
+  mounted = false; drag = null; moveDrag = null
+  clearTimeout(bannerTimer); window.removeEventListener('resize', layout)
+  sroot.innerHTML = ''
+}
+return { mount, unmount, armyFor, LEVELS, debug: { get G() { return G }, place, collect, update, startLevel, beginBattle, armyFor, showMap, LEVELS, UNITS, FOES, progress } }
+})()
+
+</script>
+<script>
+HoldTheLine.mount(document.getElementById('game'))
+window.__hold = HoldTheLine.debug   // for the scripted test players
+</script>

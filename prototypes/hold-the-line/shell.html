@@ -1,0 +1,17 @@
+<title>Hold the Line</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Nunito:wght@600;800;900&display=swap">
+<style>
+:root { --page: #8e2b22; }
+html, body { height: 100%; }
+body { background: var(--page); overscroll-behavior: none; }
+</style>
+<div id="game"></div>
+<script>const HTL_CSS = __HTL_CSS__</script>
+<script>
+__HTL_JS__
+</script>
+<script>
+HoldTheLine.mount(document.getElementById('game'))
+window.__hold = HoldTheLine.debug   // for the scripted test players
+</script>
