@@ -106,6 +106,7 @@ body { background: var(--rome); color: var(--parch); font-family: var(--body); o
 .chips button { flex: 1; min-width: 0; border: 2px solid var(--ink); background: var(--paper); color: var(--ink); border-radius: 999px; padding: 6px 2px; font: 800 12.5px/1 var(--body); cursor: pointer; }
 .chips button[aria-pressed="true"] { background: var(--gold); }
 .score-pick .army { margin: 0; font-size: 13px; }
+.twist { margin: 0; padding: 10px 12px; border-radius: 12px; background: var(--sand); border-left: 4px solid var(--rome); font-size: 14px; }
 @media (prefers-reduced-motion: reduce) { .rations.bump { animation: none; } }
 </style>
 
@@ -157,10 +158,11 @@ const FOES = {
   samnite:    { name: 'Samnite warrior', hp: 260, speed: 0.22, dps: 40, intro: 'Samnites: tough warriors from the mountains.' },
   linen:      { name: 'Linen Legion', hp: 480, speed: 0.2, dps: 45, intro: 'The Linen Legion! Samnite warriors in white, sworn to fight to the death.' },
   phalangite: { name: 'Phalangite', hp: 220, shield: 300, speed: 0.18, dps: 45, intro: 'Pyrrhus’s phalanx: long pikes behind big bronze shields.' },
+  calf:       { name: 'Elephant calf', hp: 300, speed: 0.15, dps: 60, intro: 'An elephant calf walks ahead of its mother. Wound it and the mother panics, as happened at Beneventum.' },
   elephant:   { name: 'War elephant', hp: 2000, speed: 0.15, dps: 250, intro: 'War elephants! They crush whatever stands in their way. Send the pigs!' },
 }
 const UNIT_GUIDE = {"cart": "Makes a sack of grain (25 rations) every 20 seconds. It doesn’t fight. <i>Tip: build several early, at the back.</i>", "slinger": "Shoots a stone down his whole lane every 1.5 seconds. Fragile once an enemy reaches him. <i>Tip: put something sturdy in front of him.</i>", "hastatus": "Throws heavy javelins at enemies within about 2½ squares, more than twice a stone’s damage, then fights with his sword when they reach him. <i>Tip: javelins break shields fast.</i>", "triarius": "Five times a slinger’s health and no attack. He holds enemies in place while your other soldiers hit them. <i>Tip: in front of your shooters.</i>", "caltrops": "Hidden iron spikes. After 10 seconds they are armed, and the first enemy to step on them sets them off: everyone on that spot takes a huge hit. Before that, enemies trample them. <i>Tip: a horseman wastes his leap on unarmed caltrops.</i>", "princeps": "A tough swordsman who cuts down whoever reaches his square. <i>Tip: a strong front line against fast raiders.</i>", "shed": "A wooden shed covered in hides. Arrows do almost nothing to it. <i>Tip: put it in front, so archers shoot the shed instead of your slingers.</i>", "rorarii": "Throw javelins into their own lane and both lanes beside it. <i>Tip: in the middle lanes they cover three lanes at once.</i>", "pigs": "Charge up the lane when an enemy comes near. An elephant they reach panics and runs back, trampling its own army; other enemies just take a hit. One use. <i>Tip: keep them in front of your line.</i>"}
-const FOE_GUIDE = {"warrior": "The basic enemy. One or two slingers in a lane handle him.", "chief": "Carries the standard and walks a little faster.", "shield": "His bronze shield soaks up hits until it breaks (the bronze bar). Javelins break it quickly.", "cavalry": "Fast. He leaps over the first soldier in his way, once, then slows down. Give him something cheap to leap, or armed caltrops.", "raider": "Fast but weak, and comes in bursts. Keep a shooter in every lane.", "archer": "Stops about three squares from your first soldier and shoots it. Put a siege shed in front; your slingers still reach him.", "samnite": "Tougher than a Latin warrior. Two shooters per lane.", "linen": "Very tough elite. Hold him with a triarius and hit him from several soldiers at once.", "phalangite": "A big shield and a long pike. Break the shield with javelins.", "elephant": "Crushes soldiers in seconds and takes a lot of hits. War pigs make him flee; caltrops help."}
+const FOE_GUIDE = {"calf": "Walks ahead of its mother. Wound it badly and the mother panics: both run back, trampling Pyrrhus’s own soldiers. Aim your slingers at the calf.", "warrior": "The basic enemy. One or two slingers in a lane handle him.", "chief": "Carries the standard and walks a little faster.", "shield": "His bronze shield soaks up hits until it breaks (the bronze bar). Javelins break it quickly.", "cavalry": "Fast. He leaps over the first soldier in his way, once, then slows down. Give him something cheap to leap, or armed caltrops.", "raider": "Fast but weak, and comes in bursts. Keep a shooter in every lane.", "archer": "Stops about three squares from your first soldier and shoots it. Put a siege shed in front; your slingers still reach him.", "samnite": "Tougher than a Latin warrior. Two shooters per lane.", "linen": "Very tough elite. Hold him with a triarius and hit him from several soldiers at once.", "phalangite": "A big shield and a long pike. Break the shield with javelins.", "elephant": "Crushes soldiers in seconds and takes a lot of hits. War pigs make him flee; caltrops help."}
 // A campaign of five battles, in historical order. Each adds an enemy and a Roman unit.
 const w = (t, foes, big) => ({ t, foes, big })
 const rep = (n, t) => Array(n).fill(t)
@@ -178,7 +180,8 @@ const LEVELS = [
     waves: [w(28, ['raider']), w(46, ['warrior']), w(60, ['raider', 'raider']), w(76, ['warrior', 'warrior']), w(90, ['shield']), w(104, rep(3, 'raider')), w(120, ['warrior', 'shield']),
       w(136, ['chief', ...rep(4, 'raider'), 'warrior', 'warrior', 'shield'], 'A great wave approaches!'), w(165, ['raider', 'raider', 'warrior']), w(180, ['shield', 'warrior', 'raider']),
       w(198, ['chief', ...rep(5, 'raider'), ...rep(3, 'warrior'), 'shield', 'shield', 'cavalry'], 'The final wave!')] },
-  { id: 'veii', name: 'The Siege of Veii', year: '396 BC', enemy: 'the Etruscans of Veii', theme: 'walls', start: 150, units: [...BASE, 'princeps', 'shed'], newUnit: 'shed',
+  { id: 'veii', name: 'The Siege of Veii', year: '396 BC', enemy: 'the Etruscans of Veii', theme: 'walls', start: 150, gates: [1, 3],
+    twist: 'The Etruscans can only come out of the city’s two gates. Most fight in the gate lanes, a few fan out to the lanes beside them, so build your defence around the gates.', units: [...BASE, 'princeps', 'shed'], newUnit: 'shed',
     blurb: 'Veii, a rich Etruscan city a day’s march from Rome. Its archers shoot from a distance while its warriors sally out.',
     after: 'After a ten-year siege, Camillus took Veii, by tradition through a tunnel dug under its walls. Rome’s land almost doubled.',
     waves: [w(28, ['warrior']), w(46, ['archer']), w(62, ['warrior', 'warrior']), w(78, ['shield']), w(92, ['archer', 'warrior']), w(108, ['shield', 'archer']), w(124, ['warrior', 'warrior', 'archer']),
@@ -190,12 +193,13 @@ const LEVELS = [
     waves: [w(28, ['samnite']), w(46, ['samnite']), w(62, ['samnite']), w(80, ['linen']), w(92, ['samnite', 'samnite']), w(106, ['cavalry', 'samnite']), w(120, ['linen', 'samnite']),
       w(136, ['chief', ...rep(4, 'samnite'), 'linen', 'cavalry'], 'A great wave approaches!'), w(166, ['samnite', 'linen']), w(180, ['cavalry', 'cavalry', 'samnite']),
       w(196, ['chief', ...rep(4, 'samnite'), ...rep(2, 'linen'), 'cavalry', 'cavalry'], 'The final wave!')] },
-  { id: 'beneventum', name: 'Beneventum', year: '275 BC', enemy: 'King Pyrrhus', theme: 'river', start: 300, units: [...BASE, 'princeps', 'shed', 'rorarii', 'pigs'], newUnit: 'pigs',
+  { id: 'beneventum', name: 'Beneventum', year: '275 BC', enemy: 'King Pyrrhus', theme: 'river', start: 250, tired: 80,
+    twist: 'Pyrrhus got lost on a night march: his first troops arrive exhausted and slow. Some elephants bring a calf; wound the calf and its mother panics.', units: [...BASE, 'princeps', 'shed', 'rorarii', 'pigs'], newUnit: 'pigs',
     blurb: 'King Pyrrhus of Epirus brings a professional army and war elephants, beasts the Romans first met only five years before.',
     after: 'Pyrrhus sailed home. His earlier victories had cost him so many men that a “Pyrrhic victory” still means a win not worth its price.',
-    waves: [w(28, ['warrior']), w(46, ['phalangite']), w(62, ['warrior', 'warrior']), w(78, ['cavalry']), w(92, ['phalangite', 'warrior']), w(108, ['elephant']), w(126, ['phalangite', 'phalangite']),
-      w(140, ['chief', ...rep(3, 'phalangite'), 'warrior', 'warrior', 'cavalry'], 'A great wave approaches!'), w(170, ['elephant', 'warrior']), w(188, ['phalangite', 'cavalry']),
-      w(205, ['chief', 'elephant', ...rep(3, 'phalangite'), ...rep(2, 'warrior'), 'elephant', 'cavalry', 'cavalry'], 'The final wave!')] },
+    waves: [w(28, ['warrior']), w(46, ['phalangite']), w(62, ['warrior', 'warrior']), w(78, ['cavalry']), w(92, ['phalangite', 'warrior']), w(108, ['elephant+calf']), w(126, ['phalangite', 'phalangite']),
+      w(140, ['chief', ...rep(3, 'phalangite'), 'warrior', 'warrior', 'cavalry'], 'A great wave approaches!'), w(170, ['elephant+calf', 'warrior']), w(188, ['phalangite', 'cavalry']),
+      w(205, ['chief', 'elephant+calf', ...rep(3, 'phalangite'), ...rep(2, 'warrior'), 'elephant', 'cavalry', 'cavalry'], 'The final wave!')] },
 ]
 let LEVEL = LEVELS[0]
 // What the chapter's quiz score buys for its battle: starting grain and veteran soldiers, placed free before the
@@ -415,6 +419,7 @@ const FOE_LOOK = {
 function drawFoe(c, f, T) {
   if (f.type === 'cavalry') return drawRider(c, f)
   if (f.type === 'elephant') return drawElephant(c, f, T)
+  if (f.type === 'calf') { c.save(); c.scale(0.55, 0.55); drawElephant(c, f, T, true); c.restore(); return }
   const L = FOE_LOOK[f.type] ?? FOE_LOOK.warrior
   const walk = f.eating || f.jump || f.shooting ? 0 : Math.sin(f.phase * (L.fast ? 12 : 7)), bob = Math.abs(walk) * -1.2
   const chop = f.eating ? Math.sin(f.phase * 10) : -0.4
@@ -458,6 +463,7 @@ function drawFoe(c, f, T) {
     helmet(); line(c, -6, -49 + bob, -10, -63 + bob, '#e9e1cf', 2.4); line(c, 6, -49 + bob, 10, -63 + bob, '#e9e1cf', 2.4)   // Samnite helmets carried tall feathers
     if (L.white) { c.fillStyle = '#d4392d'; c.beginPath(); c.ellipse(0, -55 + bob, 2.6, 6, 0, 0, TAU); c.fill() }
   }
+  if (f.tired && !f.eating) { c.fillStyle = '#9fd0f0'; for (const [x, y] of [[-11, -50], [11, -47]]) { const dy = (f.phase * 20) % 8; c.beginPath(); c.ellipse(x, y + dy + bob, 1.4, 2.2, 0, 0, TAU); c.fill() } }   // sweat: exhausted after the night march
   if (L.head === 'macedon') {
     c.fillStyle = '#b08a3e'; c.beginPath(); c.moveTo(-8.8, -44 + bob); c.quadraticCurveTo(-7, -60 + bob, 5, -58 + bob); c.quadraticCurveTo(3, -52 + bob, 8.8, -44 + bob); c.closePath(); c.fill()
     c.fillRect(-8.8, -45 + bob, 3, 8); c.fillRect(5.8, -45 + bob, 3, 8)
@@ -492,7 +498,7 @@ function drawRider(c, f) {
   c.fillStyle = '#5a3e26'; c.beginPath(); c.ellipse(0, -8, 4.5, 4, 0, 0, TAU); c.fill()
   c.fillStyle = INK; c.fillRect(-4.5, -23, 2, 2); c.fillRect(2.5, -23, 2, 2)
 }
-function drawElephant(c, f, T) {
+function drawElephant(c, f, T, calf = false) {
   const step = f.eating ? Math.sin(f.phase * 9) : Math.sin(f.phase * 3.5)
   c.save(); c.scale(1.2, 1.2)
   shadow(c, 27, 8)
@@ -500,6 +506,7 @@ function drawElephant(c, f, T) {
   rr(c, -22, -26 - Math.max(0, step) * 3, 12, 26, 4); c.fill()
   rr(c, 10, -26 - Math.max(0, -step) * 3, 12, 26, 4); c.fill()
   c.fillStyle = '#7b7f86'; c.beginPath(); c.ellipse(0, -44, 28, 22, 0, 0, TAU); c.fill()
+  if (!calf) {
   c.fillStyle = '#6a2f6e'; rr(c, -24, -64, 48, 12, 4); c.fill()   // a royal purple cloth
   c.fillStyle = '#c9a24a'; c.fillRect(-24, -54, 48, 2)
   // the tower, with a soldier
@@ -508,11 +515,12 @@ function drawElephant(c, f, T) {
   c.fillStyle = SKIN; c.beginPath(); c.arc(0, -92, 4.5, 0, TAU); c.fill()
   c.fillStyle = '#b08a3e'; c.beginPath(); c.arc(0, -94, 5, Math.PI, 0); c.fill()
   line(c, 7, -86, 10, -110, '#6b4a2b', 1.6)
+  }
   // ears, head, tusks, trunk
   c.fillStyle = '#6f737a'; c.beginPath(); c.ellipse(-21, -44, 11, 15, -0.3, 0, TAU); c.fill(); c.beginPath(); c.ellipse(21, -44, 11, 15, 0.3, 0, TAU); c.fill()
   c.fillStyle = '#868a91'; c.beginPath(); c.ellipse(0, -40, 13, 15, 0, 0, TAU); c.fill()
-  c.strokeStyle = '#f2ead8'; c.lineWidth = 3; c.lineCap = 'round'
-  c.beginPath(); c.moveTo(-6, -32); c.quadraticCurveTo(-12, -24, -9, -18); c.moveTo(6, -32); c.quadraticCurveTo(12, -24, 9, -18); c.stroke()
+  if (!calf) { c.strokeStyle = '#f2ead8'; c.lineWidth = 3; c.lineCap = 'round'
+  c.beginPath(); c.moveTo(-6, -32); c.quadraticCurveTo(-12, -24, -9, -18); c.moveTo(6, -32); c.quadraticCurveTo(12, -24, 9, -18); c.stroke() }
   const sw = Math.sin(T * 3 + f.phase) * 5 + (f.eating ? Math.sin(f.phase * 9) * 6 : 0)
   c.strokeStyle = '#868a91'; c.lineWidth = 7; c.beginPath(); c.moveTo(0, -34); c.quadraticCurveTo(sw * 0.4, -18, sw, -7); c.stroke()
   c.fillStyle = INK; c.fillRect(-7, -45, 2.5, 2.5); c.fillRect(4.5, -45, 2.5, 2.5)
@@ -645,15 +653,30 @@ function newGame(i = levelIndex, score = quizScore) {
   layout()
 }
 
-function spawn(type) {
+function spawn(type, lane = null, y = -0.75) {
+  if (type === 'elephant+calf') {   // the calf walks a little ahead of its mother
+    const mother = spawn('elephant'), calf = spawn('calf', mother.lane, -0.05)
+    calf.mother = mother; calf.speed = mother.speed; G.spawned--
+    return mother
+  }
   const F = FOES[type]
-  let lane; do lane = Math.floor(Math.random() * COLS); while (lane === G.lastLane && Math.random() < 0.7)
+  let from = null
+  if (lane == null && LEVEL.gates) {   // out of a city gate, sometimes fanning out to the next lane
+    from = LEVEL.gates[Math.floor(Math.random() * LEVEL.gates.length)]
+    lane = Math.random() < 0.55 ? from : Math.max(0, Math.min(COLS - 1, from + (Math.random() < 0.5 ? -1 : 1)))
+  }
+  if (lane == null) { do lane = Math.floor(Math.random() * COLS); while (lane === G.lastLane && Math.random() < 0.7) }
   G.lastLane = lane
-  const hp = Math.round(F.hp * EASE)
-  G.foes.push({ id: ++G.ids, type, lane, y: -0.75, hp, max: hp, shield: F.shield ?? 0, shieldMax: F.shield ?? 0,
-    speed: F.speed * (0.92 + Math.random() * 0.16), jumped: false, jump: null, eating: null, flash: 0, cd: 1, anim: 0, shooting: false, fleeing: false, phase: Math.random() * TAU, dx: (Math.random() - 0.5) * 0.12 })
+  const hp = Math.round(F.hp * EASE), tired = LEVEL.tired && G.t < LEVEL.tired
+  const f = { id: ++G.ids, type, lane, fromLane: from, y, hp, max: hp, shield: F.shield ?? 0, shieldMax: F.shield ?? 0, tired,
+    speed: F.speed * (0.92 + Math.random() * 0.16) * (tired ? 0.55 : 1), jumped: false, jump: null, eating: null, flash: 0, cd: 1, anim: 0, shooting: false, fleeing: false, phase: Math.random() * TAU, dx: (Math.random() - 0.5) * 0.12 }
+  G.foes.push(f)
   G.spawned++
+  if (tired && !G.tips.tired) { G.tips.tired = true; announce('Pyrrhus’s men arrive exhausted after getting lost on a night march!', false, 3600) }
+  return f
 }
+// where a foe is drawn: out of a gate he walks across to his lane
+const foeX = f => f.fromLane != null && f.y < 0.3 ? lx(f.fromLane) + (lx(f.lane) - lx(f.fromLane)) * Math.max(0, Math.min(1, (f.y + 0.75) / 1.05)) + f.dx * cell : lx(f.lane) + f.dx * cell
 function unitAt(lane, row) { return G.units.find(u => u.lane === lane && u.row === row) }
 function place(type, lane, row) {
   const U = UNITS[type]
@@ -687,6 +710,11 @@ function hurtFoe(f, dmg, quiet = false) {
     else if (!quiet) sfx.clang()
   } else if (!quiet) sfx.hit()
   f.hp -= dmg; f.flash = 0.12
+  if (f.type === 'calf' && f.hp < f.max * 0.5 && !f.fleeing) {
+    f.fleeing = true; f.eating = null
+    const m = f.mother
+    if (m && m.hp > 0 && !m.fleeing) { m.fleeing = true; m.eating = null; sfx.trumpet(); announce('The calf is hurt! Its mother panics and stampedes back.') }
+  }
   if (f.hp <= 0) {
     f.hp = 0; G.killed++; sfx.die()
     G.corpses.push({ type: f.type, lane: f.lane, y: Math.min(f.y, ROWS + 0.3), dx: f.dx, t: 0, dir: Math.random() < 0.5 ? 1 : -1, shieldMax: f.shieldMax, phase: 0 })
@@ -711,7 +739,7 @@ function update(dt) {
   while (G.queue.length && G.queue[0].t <= G.t) {
     const e = G.queue.shift()
     if (e.wave.big && !e.wave.announced) { e.wave.announced = true; announce(e.wave.big, true); sfx.horn() }
-    if (FOES[e.type].intro && !G.introduced.has(e.type)) { G.introduced.add(e.type); announce(FOES[e.type].intro) }
+    for (const t of e.type.split('+')) if (FOES[t].intro && !G.introduced.has(t)) { G.introduced.add(t); announce(FOES[t].intro, false, 3600) }
     if (G.spawned === 0 && levelIndex === 0) announce('The Latins are coming!')
     spawn(e.type)
   }
@@ -787,7 +815,7 @@ function update(dt) {
     if (f.fleeing) {   // a panicked elephant runs back up the lane, trampling its own side
       f.y -= 0.9 * dt
       f.trampled ??= new Set()
-      for (const o of G.foes) if (o !== f && o.lane === f.lane && o.hp > 0 && Math.abs(o.y - f.y) < 0.55 && !f.trampled.has(o)) { f.trampled.add(o); hurtFoe(o, 300) }
+      if (f.type === 'elephant') for (const o of G.foes) if (o !== f && o !== f.calf && o.type !== 'calf' && o.lane === f.lane && o.hp > 0 && Math.abs(o.y - f.y) < 0.55 && !f.trampled.has(o)) { f.trampled.add(o); hurtFoe(o, 300) }
       if (f.y < -1.4) { f.hp = 0; G.killed++ }
       continue
     }
@@ -819,7 +847,7 @@ function update(dt) {
       }
       const e = G.equites[f.lane]
       f.y = Math.min(f.y + f.speed * dt, e.state === 'charge' ? ROWS + 0.35 : 99)
-      if (Math.random() < dt * 1.5) G.fx.push({ kind: 'dust', x: lx(f.lane) + f.dx * cell, y: ry(f.y), vx: (Math.random() - 0.5) * 12, vy: -6, t: 0.5 })
+      if (Math.random() < dt * 1.5) G.fx.push({ kind: 'dust', x: foeX(f), y: ry(f.y), vx: (Math.random() - 0.5) * 12, vy: -6, t: 0.5 })
     }
     if (f.y >= ROWS + 0.3) {
       const e = G.equites[f.lane]
@@ -889,10 +917,10 @@ function draw() {
     }])
   }
   for (const f of G.foes) items.push([ry(f.y), () => {
-    ctx.save(); ctx.translate(lx(f.lane) + f.dx * cell, ry(f.y)); ctx.scale(k, k)
+    ctx.save(); ctx.translate(foeX(f), ry(f.y)); ctx.scale(k, k)
     if (f.flash > 0) ctx.filter = 'brightness(1.35)'
     drawFoe(ctx, f, T); ctx.restore()
-    if (f.hp < f.max || (f.shieldMax && f.shield < f.shieldMax)) hpBar(lx(f.lane) + f.dx * cell, ry(f.y) - (f.type === 'elephant' ? 140 : f.type === 'phalangite' ? 80 : 74) * k, (f.hp + f.shield) / (f.max + f.shieldMax), f.shield > 0 ? '#b08a3e' : '#e2574c')
+    if (f.hp < f.max || (f.shieldMax && f.shield < f.shieldMax)) hpBar(foeX(f), ry(f.y) - (f.type === 'elephant' ? 140 : f.type === 'calf' ? 74 : f.type === 'phalangite' ? 80 : 74) * k, (f.hp + f.shield) / (f.max + f.shieldMax), f.shield > 0 ? '#b08a3e' : '#e2574c')
   }])
   for (const [lane, e] of G.equites.entries()) if (e.state !== 'used') items.push([ry(e.y), () => { ctx.save(); ctx.translate(lx(lane), ry(e.y)); ctx.scale(k * 0.9, k * 0.9); drawEques(ctx, e, T); ctx.restore() }])
   for (const r of G.runners) items.push([ry(r.y), () => { ctx.save(); ctx.translate(lx(r.lane), ry(r.y)); ctx.scale(k, k); drawPig(ctx, T, true); ctx.restore() }])
@@ -1096,7 +1124,7 @@ function showGuide(focus, onBack) {
   const wasPlaying = G?.phase === 'play'
   if (wasPlaying) G.phase = 'paused'
   const back = onBack ?? (() => { overlay.hidden = true; if (wasPlaying) { G.phase = 'play'; last = performance.now() } })
-  const foes = [...new Set(LEVEL.waves.flatMap(x => x.foes))]
+  const foes = foeTypes(LEVEL)
   showPanel(`<div class="panel-top"><span class="eyebrow">Unit guide · ${LEVEL.name}</span><button class="tool close" id="back-top" aria-label="Close the guide">${wasPlaying ? 'Back to battle' : 'Close'} ✕</button></div><h2>Your soldiers</h2>
     <ul class="guide">${LEVEL.units.map(t => `<li class="${t === focus ? 'focus' : ''}"><canvas class="ic" data-unit="${t}" width="88" height="88"></canvas>
       <div><b>${UNITS[t].name}</b><span class="price">${UNITS[t].cost} rations</span><p>${UNIT_GUIDE[t]}</p></div></li>`).join('')}</ul>
@@ -1113,9 +1141,10 @@ let closeGuide = null
 const guideOpen = () => !overlay.hidden && overlay.querySelector('.guide-panel')
 document.addEventListener('pointerdown', e => { if (guideOpen() && !e.target.closest('.panel')) { e.preventDefault(); closeGuide() } })
 document.addEventListener('keydown', e => { if (e.key === 'Escape' && guideOpen()) closeGuide() })
+const foeTypes = L => [...new Set(L.waves.flatMap(x => x.foes.flatMap(t => t.split('+'))))]
 function newFoesOf(i) {
-  const seen = new Set(LEVELS.slice(0, i).flatMap(L => L.waves.flatMap(x => x.foes)))
-  return [...new Set(LEVELS[i].waves.flatMap(x => x.foes))].filter(t => !seen.has(t) && FOES[t].intro)
+  const seen = new Set(LEVELS.slice(0, i).flatMap(foeTypes))
+  return foeTypes(LEVELS[i]).filter(t => !seen.has(t) && FOES[t].intro)
 }
 function showBriefing(i) {
   const L = LEVELS[i]
@@ -1130,7 +1159,7 @@ function showBriefing(i) {
       <li><b>Drag a soldier on the field</b> to move him to another empty square, to save him or to help another lane.</li>
       <li>If an enemy reaches the camp, the <b>equites</b> charge down that lane, but only once.</li>
     </ul>` : ''
-  showPanel(`<span class="eyebrow">Battle ${i + 1} of ${LEVELS.length} · ${L.year}</span><h2>${L.name}</h2><p>${L.blurb}</p>${howto}
+  showPanel(`<span class="eyebrow">Battle ${i + 1} of ${LEVELS.length} · ${L.year}</span><h2>${L.name}</h2><p>${L.blurb}</p>${howto}${L.twist ? `<p class="twist"><b>This battle:</b> ${L.twist}</p>` : ''}
     ${news.length ? `<ul class="news">${news.join('')}</ul>` : ''}
     <div class="score-pick"><span class="label">Your quiz result (test switch)</span>
       <div class="chips">${[60, 70, 80, 90, 100].map(v => `<button id="score${v}" aria-pressed="${v === quizScore}">${v}%</button>`).join('')}</div>
