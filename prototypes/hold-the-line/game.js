@@ -1040,7 +1040,7 @@ function syncDeploy() {
   const left = Object.values(G.vets).reduce((a, b) => a + b, 0), box = $('deploy')
   box.hidden = G.phase !== 'deploy'
   $('deploy-text').textContent = left
-    ? `Your quiz result earned you veterans. Drag them onto the field for free (${left} still to place).`
+    ? `Your test score earned you veterans. Drag them onto the field for free (${left} still to place).`
     : 'Your veterans are in place. Drag to adjust, then begin.'
 }
 function beginBattle() {

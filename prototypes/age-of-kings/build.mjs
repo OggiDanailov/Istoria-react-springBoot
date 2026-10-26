@@ -27,21 +27,17 @@ function sectionsFrom(markdown) {
   })
 }
 
-// Two quiz sets of 10 single-answer questions each (4 easy, 3 medium, 3 hard)
-function quizSets(dir) {
+// Every usable single-answer quiz question, by difficulty: the page draws two rounds of ten (4 easy, 3 medium,
+// 3 hard) from it for each attempt of the chapter test, so a retake gets new questions
+function quizPool(dir) {
   const byLevel = { 1: [], 2: [], 3: [] }
   for (const file of fs.readdirSync(dir).filter(f => /_batch\d+\.json$/.test(f)).sort()) {
     for (const q of JSON.parse(fs.readFileSync(path.join(dir, file), 'utf8')).questions) {
       if (ok(q) && q.correctAnswers.length === 1 && q.options.every(o => o.length <= 80)) byLevel[q.difficulty].push(q)
     }
   }
-  const take = (lvl, n, skip) => byLevel[lvl].slice(skip, skip + n)
-  return [0, 1].map(i => [...take(1, 4, i * 4), ...take(2, 3, i * 3), ...take(3, 3, i * 3)])
-    .filter(set => set.length >= 8)
-    .map((qs, i) => ({
-      name: ['Raise a Legion', 'Reinforcements'][i], blurb: `${qs.length} questions, ${qs.length} soldiers`,
-      questions: qs.map(q => ({ q: q.question, options: q.options, a: q.correctAnswers[0], level: q.difficulty, why: q.explanation, sec: q.textReference.replace(/^#/, '') })),
-    }))
+  return Object.fromEntries(Object.entries(byLevel).map(([lvl, qs]) => [lvl,
+    qs.map(q => ({ q: q.question, options: q.options, a: q.correctAnswers[0], level: q.difficulty, why: q.explanation, sec: q.textReference.replace(/^#/, '') }))]))
 }
 
 const chapters = []
@@ -71,19 +67,21 @@ for (const c of CONFIG.chapters) {
       .filter(w => w.people.length >= 2),
     maps: [{ name: 'Where It Happened', blurb: 'Place the towns on the map', places: g.places.filter(p => ok(p) && p.lat > 36 && p.lat < 47.5 && p.lon > 6 && p.lon < 19.5).map(p => ({ name: p.name, lat: p.lat, lon: p.lon, why: p.why, sec: p.sectionId })) }]
       .filter(m => m.places.length >= 3),
-    quizzes: quizSets(dir),
+    quizPool: quizPool(dir),
   }
   // Every link must point at a real section
   const ids = new Set(sections.map(s => s.id))
   const links = [...ch.timelines.flatMap(t => t.events.map(e => e.sec)), ...ch.matches.flatMap(m => m.secs), ...ch.decks.flatMap(d => d.cards.map(x => x.sec)),
     ...ch.odds.flatMap(o => o.rounds.map(r => r.sec)), ...ch.whos.flatMap(w => w.people.map(p => p.sec)), ...ch.maps.flatMap(m => m.places.map(p => p.sec)),
-    ...ch.quizzes.flatMap(q => q.questions.map(x => x.sec))]
+    ...Object.values(ch.quizPool).flat().map(x => x.sec)]
   if (ch.battle && !ids.has(ch.battle.sec)) links.push(ch.battle.sec)
   const broken = links.filter(l => !ids.has(l))
   if (broken.length) throw new Error(`${c.id}: links to unknown sections: ${[...new Set(broken)].join(', ')}`)
   chapters.push(ch)
   const count = k => ch[k].reduce((n, s) => n + (s.events ?? s.pairs ?? s.cards ?? s.rounds ?? s.people ?? s.places ?? s.questions).length, 0)
-  console.log(`- ${c.id}: ${['timelines', 'matches', 'decks', 'odds', 'whos', 'maps', 'quizzes'].map(k => `${k} ${ch[k].length}/${count(k)}`).join(', ')}`)
+  const pool = ch.quizPool, sizes = [1, 2, 3].map(l => pool[l].length)
+  if (sizes[0] < 8 || sizes[1] < 6 || sizes[2] < 6) console.log(`  ! ${c.id}: small quiz pool (easy/medium/hard ${sizes.join('/')}), fewer questions per round`)
+  console.log(`- ${c.id}: ${['timelines', 'matches', 'decks', 'odds', 'whos', 'maps'].map(k => `${k} ${ch[k].length}/${count(k)}`).join(', ')}, quiz pool ${sizes.join('/')}`)
 }
 if (!chapters.length) throw new Error('No chapters with game data')
 
@@ -91,6 +89,9 @@ const template = fs.readFileSync(path.join(HERE, 'template.html'), 'utf8')
 const land = fs.readFileSync(path.join(HERE, 'land.json'), 'utf8').trim()
 // Embedded JSON must not close the <script> tag
 const json = v => JSON.stringify(v).replace(/</g, '\\u003c')
-const html = template.replace('__ERAS__', () => json(CONFIG.eras)).replace('__CHAPTERS__', () => json(chapters)).replace('__LAND__', () => land)
+// Hold the Line, the chapter battles, from ../hold-the-line (game.css and game.js)
+const HTL = path.resolve(HERE, '../hold-the-line')
+const htl = `<script>const HTL_CSS = ${json(fs.readFileSync(path.join(HTL, 'game.css'), 'utf8'))}</script>\n<script>\n${fs.readFileSync(path.join(HTL, 'game.js'), 'utf8')}\n</script>`
+const html = template.replace('__HTL__', () => htl).replace('__ERAS__', () => json(CONFIG.eras)).replace('__CHAPTERS__', () => json(chapters)).replace('__LAND__', () => land)
 fs.writeFileSync(path.join(HERE, 'index.html'), html)
 console.log(`index.html: ${chapters.length} chapters, ${Math.round(html.length / 1024)} KB`)
