@@ -1,0 +1,53 @@
+{
+  "description": "Key facts for the Kingdom chapter: written by hand from the reviewed chapter text. Every entry links to the section that explains it.",
+  "people": [
+    { "name": "Romulus", "text": "Legendary founder and first king of Rome; chose the first hundred senators.", "sec": "romulus-the-king" },
+    { "name": "Remus", "text": "Romulus's twin brother, killed after the two quarrelled over founding their city.", "sec": "romulus-and-remus" },
+    { "name": "Rhea Silvia", "text": "Vestal Virgin and mother of the twins, a princess of Alba Longa.", "sec": "romulus-and-remus" },
+    { "name": "Numa Pompilius", "text": "The peaceful second king; founded the Vestal Virgins and, legend says, added January and February.", "sec": "numa-tullus-ancus" },
+    { "name": "Tullus Hostilius", "text": "The warlike third king; destroyed Alba Longa and built the senate house, the Curia Hostilia.", "sec": "numa-tullus-ancus" },
+    { "name": "Ancus Marcius", "text": "Fourth king; founded the port of Ostia and built the first bridge over the Tiber, the Pons Sublicius.", "sec": "numa-tullus-ancus" },
+    { "name": "Tarquinius Priscus", "text": "The first Etruscan king; built the Cloaca Maxima and the Circus Maximus and held the first triumph.", "sec": "tarquinius-priscus" },
+    { "name": "Servius Tullius", "text": "Sixth king; held the first census and sorted citizens into five classes by wealth.", "sec": "servius-tullius" },
+    { "name": "Tarquin the Proud", "text": "Tarquinius Superbus, the seventh and last king, remembered as a tyrant.", "sec": "tarquin-the-proud" },
+    { "name": "Lucretia", "text": "Noblewoman whose rape by the king's son and her death sparked the uprising against the kings.", "sec": "tarquin-the-proud" },
+    { "name": "Lucius Junius Brutus", "text": "The king's nephew who led the revolt; one of Rome's first two consuls.", "sec": "birth-of-the-republic" },
+    { "name": "Lars Porsenna", "text": "Etruscan king of Clusium who marched on Rome to bring Tarquin back.", "sec": "birth-of-the-republic" },
+    { "name": "Horatius Cocles", "text": "Hero who, legend says, held the Pons Sublicius alone until it could be torn down.", "sec": "birth-of-the-republic" }
+  ],
+  "dates": [
+    { "when": "c. 1700 BC", "text": "Possible first traces of settlement on the Capitoline Hill.", "sec": "origins" },
+    { "when": "753 BC", "text": "The traditional founding of Rome, celebrated on 21 April; Romans counted years from it.", "sec": "romulus-and-remus" },
+    { "when": "c. 730–720 BC", "text": "A wall is built on the Palatine Hill.", "sec": "origins" },
+    { "when": "c. 600 BC", "text": "The villages have become a city, with a forum, monumental buildings and temples.", "sec": "origins" },
+    { "when": "509 BC", "text": "Tarquin the Proud is expelled; two consuls are elected and the Republic begins.", "sec": "birth-of-the-republic" },
+    { "when": "c. 496 BC", "text": "Rome defeats an alliance of Latin towns at Lake Regillus.", "sec": "birth-of-the-republic" },
+    { "when": "495 BC", "text": "Tarquin dies in exile at Cumae.", "sec": "birth-of-the-republic" },
+    { "when": "390 BC", "text": "The Gauls sack Rome, destroying many early records.", "sec": "how-reliable" },
+    { "when": "c. 200 BC", "text": "Fabius Pictor writes the first history of Rome, in Greek.", "sec": "how-reliable" }
+  ],
+  "terms": [
+    { "latin": "rex", "english": "king", "sec": "origins" },
+    { "latin": "senatus", "english": "the Senate, from *senex*, “old man”", "sec": "romulus-the-king" },
+    { "latin": "patres", "english": "“fathers”: Romulus's first hundred advisers", "sec": "romulus-the-king" },
+    { "latin": "patricii", "english": "patricians, Rome's hereditary aristocracy", "sec": "romulus-the-king" },
+    { "latin": "plebs", "english": "Rome's common people", "sec": "numa-tullus-ancus" },
+    { "latin": "lictores", "english": "the twelve attendants who walked ahead of the king", "sec": "romulus-the-king" },
+    { "latin": "fasces", "english": "a bundle of rods around an axe: the power to punish", "sec": "how-kings-ruled" },
+    { "latin": "imperium", "english": "the supreme power to command armies, govern and judge", "sec": "how-kings-ruled" },
+    { "latin": "interrex", "english": "“between-king”: a senator who looked for the next king", "sec": "how-kings-ruled" },
+    { "latin": "interregnum", "english": "the time without a king", "sec": "how-kings-ruled" },
+    { "latin": "comitia curiata", "english": "the Curiate Assembly, which accepted or rejected a new king", "sec": "how-kings-ruled" },
+    { "latin": "auspicia", "english": "signs that the gods approved, read by an augur", "sec": "how-kings-ruled" },
+    { "latin": "sella curulis", "english": "the curule chair, the king's seat of office", "sec": "how-kings-ruled" },
+    { "latin": "Pontifex Maximus", "english": "the chief priest, an office created by Numa", "sec": "numa-tullus-ancus" },
+    { "latin": "Cloaca Maxima", "english": "the Great Sewer that drained the ground between the hills", "sec": "tarquinius-priscus" },
+    { "latin": "triumphus", "english": "the victory parade for a successful general", "sec": "tarquinius-priscus" },
+    { "latin": "census", "english": "the count of citizens, first held by Servius Tullius", "sec": "servius-tullius" },
+    { "latin": "comitia centuriata", "english": "the voting assembly by wealth, in which the rich had the most say", "sec": "servius-tullius" },
+    { "latin": "mos maiorum", "english": "“the ways of the ancestors”: Roman custom", "sec": "tarquin-the-proud" },
+    { "latin": "consules", "english": "the two consuls elected each year instead of a king", "sec": "birth-of-the-republic" },
+    { "latin": "res publica", "english": "“the public thing”: the Republic", "sec": "birth-of-the-republic" },
+    { "latin": "ab urbe condita", "english": "“from the founding of the city”: how Romans counted years", "sec": "romulus-and-remus" }
+  ]
+}

@@ -68,12 +68,15 @@ for (const c of CONFIG.chapters) {
     maps: [{ name: 'Where It Happened', blurb: 'Place the towns on the map', places: g.places.filter(p => ok(p) && p.lat > 36 && p.lat < 47.5 && p.lon > 6 && p.lon < 19.5).map(p => ({ name: p.name, lat: p.lat, lon: p.lon, why: p.why, sec: p.sectionId })) }]
       .filter(m => m.places.length >= 3),
     quizPool: quizPool(dir),
+    // optional, written by hand: people, dates and Latin words, each linked to its section
+    keyFacts: fs.existsSync(path.join(dir, 'keyfacts.json')) ? JSON.parse(fs.readFileSync(path.join(dir, 'keyfacts.json'), 'utf8')) : null,
   }
   // Every link must point at a real section
   const ids = new Set(sections.map(s => s.id))
   const links = [...ch.timelines.flatMap(t => t.events.map(e => e.sec)), ...ch.matches.flatMap(m => m.secs), ...ch.decks.flatMap(d => d.cards.map(x => x.sec)),
     ...ch.odds.flatMap(o => o.rounds.map(r => r.sec)), ...ch.whos.flatMap(w => w.people.map(p => p.sec)), ...ch.maps.flatMap(m => m.places.map(p => p.sec)),
-    ...Object.values(ch.quizPool).flat().map(x => x.sec)]
+    ...Object.values(ch.quizPool).flat().map(x => x.sec),
+    ...(ch.keyFacts ? [...ch.keyFacts.people, ...ch.keyFacts.dates, ...ch.keyFacts.terms].map(x => x.sec) : [])]
   if (ch.battle && !ids.has(ch.battle.sec)) links.push(ch.battle.sec)
   const broken = links.filter(l => !ids.has(l))
   if (broken.length) throw new Error(`${c.id}: links to unknown sections: ${[...new Set(broken)].join(', ')}`)

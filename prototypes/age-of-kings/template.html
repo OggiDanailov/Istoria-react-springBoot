@@ -251,6 +251,14 @@ button:focus-visible { outline: 3px solid var(--ochre); outline-offset: 2px; }
 .sheet-body h3 { font-size: 19px; margin-bottom: 6px; }
 .sheet-body p { margin: 0 0 10px; max-width: 65ch; line-height: 1.55; }
 .sheet-body em { color: #8e2b22; font-style: italic; }
+.kf-tabs { display: flex; gap: 6px; margin: 4px 0 10px; position: sticky; top: -6px; background: var(--ink); padding: 6px 0; z-index: 1; }
+.kf-tabs button { border: 1.5px solid #c9b48a; background: transparent; color: var(--tile-ink); border-radius: 999px; padding: 6px 12px; font-weight: 800; font-size: 14px; }
+.kf-tabs button[aria-selected="true"] { background: var(--tile-ink); color: var(--ink); border-color: var(--tile-ink); }
+.kf { margin: 0; display: grid; }
+.kf-row { display: grid; grid-template-columns: minmax(0, 8em) 1fr; gap: 10px; padding: 9px 0; border-bottom: 1px solid #e2d6bf; }
+.kf dt { font-weight: 800; font-size: 14.5px; }
+.kf dd { margin: 0; font-size: 14.5px; line-height: 1.4; }
+.kf-read { border: none; background: none; color: #8e2b22; font-weight: 800; font-size: 13px; padding: 0 2px; text-decoration: underline; text-underline-offset: 2px; }
 .latin-note { margin: 8px 0 4px !important; padding: 10px 12px; border-radius: 12px; background: #f3e6c8; font-size: 14px; }   /* Latin words: in Roman red, easy to spot or to skip */
 .sheet-body .unit-row { display: grid; grid-template-columns: 24px 1fr auto; gap: 10px; align-items: center; padding: 8px 0; border-bottom: 1px solid #e2d6bf; }
 .sheet-body .unit-row svg { width: 20px; height: 26px; }
@@ -619,6 +627,26 @@ const latinNote = () => CHAPTER.some(x => /\*[^*]+\*/.test(x.body)) ? '<p class=
 const chronicleHtml = () => latinNote() + CHAPTER.map(s => `<section data-sec="${s.id}"><h3>${esc(s.title)}</h3>${s.body.split(/\n\s*\n/).map(p => `<p>${inline(p.trim())}</p>`).join('')}</section>`).join('') +
   `<p style="font-size:13px;color:#6b5d50;margin-top:14px">Written from the Wikipedia articles ${CH.sources.map(t => `“${esc(t)}”`).join(', ')} (CC BY-SA 4.0).</p>`
 const openChronicle = focusId => openSheet(CH.title, chronicleHtml(), focusId)
+// Key facts: a short reference of the chapter's people, dates and Latin words, each linked to its section
+const KF_TABS = [['people', 'People'], ['dates', 'Dates'], ['terms', 'Latin words']]
+function openKeyFacts(tab = 'people') {
+  const k = CH.keyFacts
+  if (!k) return
+  const rows = {
+    people: k.people.map(p => [esc(p.name), inline(p.text), p.sec]),
+    dates: k.dates.map(d => [esc(d.when), inline(d.text), d.sec]),
+    terms: k.terms.map(t => [`<em>${esc(t.latin)}</em>`, inline(t.english), t.sec]),
+  }[tab]
+  openSheet('Key facts', `
+    <div class="kf-tabs" role="tablist">${KF_TABS.map(([id, label]) => `<button role="tab" aria-selected="${id === tab}" data-kf="${id}">${label}</button>`).join('')}</div>
+    <dl class="kf">${rows.map(([a, b, sec]) => `<div class="kf-row"><dt>${a}</dt><dd>${b} <button class="kf-read" data-read="${sec}">Read</button></dd></div>`).join('')}</dl>
+    <p style="font-size:13px;color:#6b5d50;margin-top:10px">Tap “Read” to open that part of the chronicle.</p>`)
+}
+document.getElementById('sheet-body').addEventListener('click', e => {
+  const kf = e.target.closest('[data-kf]'), read = e.target.closest('.kf-read')
+  if (kf) openKeyFacts(kf.dataset.kf)
+  if (read) openChronicle(read.dataset.read)
+})
 function openProgress() {
   openSheet('Your progress', `
     <p style="font-size:14px">Each chapter ends with a test made of all its games; your first answer to each question counts. The test score sets your army for the chapter’s battle: around 80% gives a fair fight, 90% a comfortable one, and below 70% only an expert wins.</p>
@@ -737,6 +765,7 @@ function renderHome() {
   app.querySelector('#chronicle')?.addEventListener('click', () => openChronicle())
   app.querySelectorAll('.to-battle').forEach(b => b.addEventListener('click', () => { window.scrollTo(0, 0); go({ screen: 'battle' }) }))
   app.querySelector('#retake')?.addEventListener('click', retakeTest)
+  app.querySelectorAll('.key-facts').forEach(b => b.addEventListener('click', () => openKeyFacts()))
   app.querySelector('#next-chapter')?.addEventListener('click', () => { loadChapter(chapterIndex + 1); window.scrollTo(0, 0); go({ screen: 'home' }) })
   app.querySelectorAll('.level-card').forEach(b => b.addEventListener('click', () => { run = null; startGame(b.dataset.type, +b.dataset.set) }))
 }
@@ -752,7 +781,7 @@ function testCardHtml() {
       <p class="task">${done ? `<b>${done} of ${rounds.length} rounds done</b> · score so far <b>${score}%</b>.` : `Read the chronicle, then play the ${rounds.length} rounds of the test. Your <b>first</b> answer to each question counts.`}</p>
       <ol class="test-steps">${rounds.map(r => `<li class="${roundDone(r, t) ? 'done' : r === up ? 'next' : ''}">${roundDone(r, t) ? '✓ ' : ''}${esc(roundTitle(r))}</li>`).join('')}</ol>
       ${up ? `<p class="task">Up next: <b>${esc(roundTitle(up))} · ${esc(GAMES[up.type].sets[up.set].name)}</b></p>` : ''}
-      <div class="actions"><button class="primary" id="test-go">${done ? 'Play the next round' : 'Start the test'}</button><button class="ghost" id="chronicle">Read the chronicle</button></div>
+      <div class="actions"><button class="primary" id="test-go">${done ? 'Play the next round' : 'Start the test'}</button><button class="ghost" id="chronicle">Read the chronicle</button>${CH.keyFacts ? '<button class="ghost key-facts">Key facts</button>' : ''}</div>
     </section>
     <section class="battle-card locked">
       <span class="eyebrow">${esc(L.year)} · locked</span>
@@ -764,14 +793,14 @@ function testCardHtml() {
       <span class="eyebrow">${esc(L.year)} · victory ${'★'.repeat(t.stars)}</span>
       <h2>You held the line at ${esc(L.name)}</h2>
       <p class="task">Won with a test score of ${score}%. ${esc(L.after)}</p>
-      <div class="actions">${next ? `<button class="primary" id="next-chapter">Next chapter: ${esc(next.short)}</button>` : '<span class="task"><b>You have conquered every chapter so far.</b></span>'}<button class="ghost to-battle">Fight again</button></div>
+      <div class="actions">${next ? `<button class="primary" id="next-chapter">Next chapter: ${esc(next.short)}</button>` : '<span class="task"><b>You have conquered every chapter so far.</b></span>'}<button class="ghost to-battle">Fight again</button>${CH.keyFacts ? '<button class="ghost key-facts">Key facts</button>' : ''}</div>
     </section>`
   return `<section class="battle-card">
       <span class="eyebrow">Test complete${t.attempt > 1 ? ` · attempt ${t.attempt}` : ''} · ${esc(L.year)}</span>
       <h2>${score}%: the battle of ${esc(L.name)} awaits</h2>
       <p class="task">Your army: ${armyLine(score)}. ${verdictFor(score)}</p>
       ${lost ? `<p class="task">You lost ${lost === 1 ? 'once' : lost + ' times'} with this army. Re-read where your mistakes came from and retake the test for a stronger army, or fight again.</p>${rereadHtml(t)}` : ''}
-      <div class="actions"><button class="primary to-battle">To battle</button><button class="ghost" id="retake">Retake the test</button></div>
+      <div class="actions"><button class="primary to-battle">To battle</button><button class="ghost" id="retake">Retake the test</button>${CH.keyFacts ? '<button class="ghost key-facts">Key facts</button>' : ''}</div>
     </section>`
 }
 // Plays the rounds not yet done, one after another
@@ -1530,7 +1559,7 @@ function renderResult() {
       ${r.reviewSecs?.length ? `<div class="review">
         <h3>${r.earned === 1 ? 'Review these sections, then try again' : 'Learn from your mistakes'}</h3>
         <p class="task">These mistakes count in your chapter test. Re-read the sections before the battle.</p>
-        <div class="review-links">${r.reviewSecs.map(id => `<button data-read="${id}">${esc(CHAPTER.find(s => s.id === id)?.title ?? id)}</button>`).join('')}</div>
+        <div class="review-links">${r.reviewSecs.map(id => `<button data-read="${id}">${esc(CHAPTER.find(s => s.id === id)?.title ?? id)}</button>`).join('')}${CH.keyFacts ? '<button class="key-facts-r">Key facts</button>' : ''}</div>
       </div>` : ''}
       ${r.recapHtml}
       <div class="feedback" id="fb">
@@ -1546,6 +1575,7 @@ function renderResult() {
     </section>`
   bindBack()
   app.querySelector('#again')?.addEventListener('click', () => startGame(r.type, r.set))
+  app.querySelector('.key-facts-r')?.addEventListener('click', () => openKeyFacts())
   app.querySelectorAll('[data-chip]').forEach(c => c.addEventListener('click', () => c.setAttribute('aria-pressed', c.getAttribute('aria-pressed') === 'true' ? 'false' : 'true')))
   app.querySelector('#fb-send')?.addEventListener('click', async e => {
     const tags = [...app.querySelectorAll('[data-chip][aria-pressed="true"]')].map(c => c.dataset.chip)
