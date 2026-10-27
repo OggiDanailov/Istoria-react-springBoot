@@ -270,6 +270,8 @@ button:focus-visible { outline: 3px solid var(--ochre); outline-offset: 2px; }
 .cmap .land { fill: #eadfc2; stroke: #b9a77e; stroke-width: .6; }
 .cmap .river { fill: none; stroke: #5b93b8; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
 .cmap .river.big { stroke-width: 9; stroke: #8fb7cf; }
+.cmap .river.big.small { stroke-width: 4; }
+.cmap .river-name { font-size: 7.5px; font-style: italic; fill: #3f6f8f; }
 .cmap .hill { fill: #d6bd8c; stroke: #a8895a; stroke-width: .8; }
 .cmap .area { fill: none; stroke: #8e2b22; stroke-width: 1; stroke-dasharray: 2.5 2; }
 .cmap .island { fill: #d6bd8c; stroke: #a8895a; stroke-width: .6; }
@@ -669,7 +671,8 @@ function chronicleMap(m) {
   if (m.hills) {
     art += `<rect class="ground" x="0" y="0" width="${W}" height="${H}"/>`
     for (const h of m.hills) { const [x, y] = P(h.lat, h.lon), r = h.r / (b.latMax - b.latMin) * H; art += `<ellipse class="hill" cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" rx="${(r * 1.15).toFixed(1)}" ry="${r.toFixed(1)}"/>` }
-    art += `<path class="river big" d="${path(m.river)}"/>`
+    for (const r of m.rivers ?? [{ pts: m.river }]) art += `<path class="river big ${r.small ? 'small' : ''}" d="${path(r.pts)}"${m.riverWidth ? ` style="stroke-width:${r.small ? m.riverWidth * 0.6 : m.riverWidth}"` : ''}/>`
+    for (const r of m.rivers ?? []) if (r.name) { const [x, y] = P(...r.pts[Math.floor(r.pts.length / 2)]); art += `<text class="river-name" x="${x.toFixed(1)}" y="${(y - 7).toFixed(1)}" text-anchor="middle">${esc(r.name)}</text>` }
     for (const p of m.places) {
       const [x, y] = P(p.lat, p.lon)
       if (p.kind === 'area') art += `<ellipse class="area" cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" rx="9" ry="5.5"/>`

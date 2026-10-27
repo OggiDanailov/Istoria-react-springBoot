@@ -1,0 +1,203 @@
+{
+  "description": "Maps for the chronicle, written by hand. Coordinates from Wikipedia; each map sits at the start of its section. Rivers inside the city are simplified.",
+  "maps": [
+    {
+      "id": "war-494",
+      "sec": "first-secession",
+      "title": "Rome at war, 494 BC",
+      "caption": "That year Rome faced three enemies at once: the Sabines to the north-east and the Aequi and Volsci in the hills to the east and south-east. Without the plebeian soldiers, it had no army to meet them.",
+      "bounds": {
+        "latMin": 41.42,
+        "latMax": 42.32,
+        "lonMin": 12.15,
+        "lonMax": 13.45
+      },
+      "places": [
+        {
+          "name": "Rome",
+          "latin": "Roma",
+          "lat": 41.893,
+          "lon": 12.483,
+          "kind": "rome",
+          "side": "r",
+          "dy": -4
+        }
+      ],
+      "peoples": [
+        {
+          "name": "Sabines",
+          "latin": "Sabini",
+          "lat": 42.17,
+          "lon": 12.86
+        },
+        {
+          "name": "Aequi",
+          "lat": 41.98,
+          "lon": 13.2
+        },
+        {
+          "name": "Volsci",
+          "lat": 41.6,
+          "lon": 13.12
+        },
+        {
+          "name": "Latins",
+          "latin": "Latini",
+          "lat": 41.68,
+          "lon": 12.62
+        }
+      ]
+    },
+    {
+      "id": "sacred-mount",
+      "sec": "menenius-agrippa",
+      "title": "From the Forum to the Sacred Mount",
+      "caption": "The plebs walked out of the city to the Sacred Mount (Mons Sacer), a low hill by the Anio river about three miles from the Forum. In 449 BC they gathered first on the Aventine. The rivers are simplified.",
+      "bounds": {
+        "latMin": 41.877,
+        "latMax": 41.953,
+        "lonMin": 12.458,
+        "lonMax": 12.558
+      },
+      "hills": [
+        {
+          "name": "Sacred Mount",
+          "latin": "Mons Sacer",
+          "lat": 41.9425,
+          "lon": 12.5336,
+          "r": 0.0022,
+          "side": "l"
+        },
+        {
+          "name": "Aventine",
+          "latin": "Mons Aventinus",
+          "lat": 41.8834,
+          "lon": 12.4805,
+          "r": 0.0024,
+          "side": "r"
+        }
+      ],
+      "places": [
+        {
+          "name": "Forum",
+          "latin": "Forum Romanum",
+          "lat": 41.8925,
+          "lon": 12.4857,
+          "kind": "area",
+          "side": "r",
+          "dy": 0
+        }
+      ],
+      "rivers": [
+        {
+          "name": "Tiber",
+          "pts": [
+            [
+              41.953,
+              12.489
+            ],
+            [
+              41.945,
+              12.496
+            ],
+            [
+              41.937,
+              12.497
+            ],
+            [
+              41.93,
+              12.489
+            ],
+            [
+              41.924,
+              12.478
+            ],
+            [
+              41.918,
+              12.4715
+            ],
+            [
+              41.912,
+              12.4745
+            ],
+            [
+              41.906,
+              12.4715
+            ],
+            [
+              41.9035,
+              12.4672
+            ],
+            [
+              41.9,
+              12.4668
+            ],
+            [
+              41.897,
+              12.4695
+            ],
+            [
+              41.8945,
+              12.4735
+            ],
+            [
+              41.892,
+              12.4765
+            ],
+            [
+              41.8906,
+              12.4778
+            ],
+            [
+              41.8885,
+              12.4779
+            ],
+            [
+              41.886,
+              12.4768
+            ],
+            [
+              41.883,
+              12.475
+            ],
+            [
+              41.877,
+              12.4726
+            ]
+          ]
+        },
+        {
+          "name": "Anio",
+          "small": true,
+          "pts": [
+            [
+              41.946,
+              12.558
+            ],
+            [
+              41.944,
+              12.546
+            ],
+            [
+              41.9455,
+              12.536
+            ],
+            [
+              41.9435,
+              12.524
+            ],
+            [
+              41.94,
+              12.512
+            ],
+            [
+              41.937,
+              12.497
+            ]
+          ]
+        }
+      ],
+      "riverWidth": 5
+    }
+  ]
+}
