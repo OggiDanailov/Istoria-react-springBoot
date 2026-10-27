@@ -250,7 +250,8 @@ button:focus-visible { outline: 3px solid var(--ochre); outline-offset: 2px; }
 .sheet-body section.focus { background: #f3dfa9; }
 .sheet-body h3 { font-size: 19px; margin-bottom: 6px; }
 .sheet-body p { margin: 0 0 10px; max-width: 65ch; line-height: 1.55; }
-.sheet-body em { color: #8e2b22; font-style: italic; }   /* Latin words: in Roman red, easy to spot or to skip */
+.sheet-body em { color: #8e2b22; font-style: italic; }
+.latin-note { margin: 8px 0 4px !important; padding: 10px 12px; border-radius: 12px; background: #f3e6c8; font-size: 14px; }   /* Latin words: in Roman red, easy to spot or to skip */
 .sheet-body .unit-row { display: grid; grid-template-columns: 24px 1fr auto; gap: 10px; align-items: center; padding: 8px 0; border-bottom: 1px solid #e2d6bf; }
 .sheet-body .unit-row svg { width: 20px; height: 26px; }
 .sheet-body .unit-row b { font-variant-numeric: tabular-nums; }
@@ -614,7 +615,8 @@ function openSheet(title, html, focusId) {
   }
 }
 function closeSheet() { document.getElementById('sheet').hidden = true }
-const chronicleHtml = () => CHAPTER.map(s => `<section data-sec="${s.id}"><h3>${esc(s.title)}</h3>${s.body.split(/\n\s*\n/).map(p => `<p>${inline(p.trim())}</p>`).join('')}</section>`).join('') +
+const latinNote = () => CHAPTER.some(x => /\*[^*]+\*/.test(x.body)) ? '<p class="latin-note">Words in <em>red italics</em> are <b>Latin</b>, the language the Romans spoke, given next to the English. Many English words come from them.</p>' : ''
+const chronicleHtml = () => latinNote() + CHAPTER.map(s => `<section data-sec="${s.id}"><h3>${esc(s.title)}</h3>${s.body.split(/\n\s*\n/).map(p => `<p>${inline(p.trim())}</p>`).join('')}</section>`).join('') +
   `<p style="font-size:13px;color:#6b5d50;margin-top:14px">Written from the Wikipedia articles ${CH.sources.map(t => `“${esc(t)}”`).join(', ')} (CC BY-SA 4.0).</p>`
 const openChronicle = focusId => openSheet(CH.title, chronicleHtml(), focusId)
 function openProgress() {
