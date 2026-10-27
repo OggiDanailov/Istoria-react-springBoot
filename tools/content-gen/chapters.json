@@ -50,7 +50,8 @@
         "enemy": "The Latin League",
         "sec": "birth-of-the-republic",
         "intro": "The exiled Tarquin has not given up. An alliance of Latin towns marches on Rome, and the armies meet at Lake Regillus. Win, and the young Republic survives."
-      }
+      },
+      "locked": true
     },
     {
       "id": "conflict-of-orders-origins",
