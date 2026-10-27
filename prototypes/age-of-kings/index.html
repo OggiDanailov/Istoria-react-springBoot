@@ -1861,7 +1861,8 @@ const fb = { db: null, uid: null }
 // Stars a player has in a chapter, out of 3 per game set
 function chapterStars(c) {
   const earned = Object.entries(stars).filter(([k]) => k.startsWith(c.id + ':')).reduce((n, [, v]) => n + v, 0) + (tests[c.id]?.stars ?? 0)
-  const sets = ['timelines', 'matches', 'decks', 'odds', 'whos', 'maps', 'quizzes'].reduce((n, k) => n + c[k].length, 0) + (c.battle ? 1 : 0)
+  // quiz rounds are drawn from the question pool for each attempt, so they are counted from the draw
+  const sets = ['timelines', 'matches', 'decks', 'odds', 'whos', 'maps'].reduce((n, k) => n + c[k].length, 0) + quizSetsFor(c).length + (c.battle ? 1 : 0)
   return { earned, max: sets * 3 }
 }
 const eraChapters = era => CHAPTERS.map((c, i) => ({ c, i })).filter(x => x.c.era === era.id)
