@@ -77,7 +77,8 @@
         "enemy": "Volsci, Aequi and Sabines",
         "sec": "first-secession",
         "intro": "Rome is at war with three neighbours: the Sabines, and the Aequi and Volsci, hill tribes to the east and south-east. The plebeians are back from the Sacred Mount, with tribunes of their own. Now Rome needs every soldier."
-      }
+      },
+      "locked": true
     },
     {
       "id": "conflict-of-orders-resolution",

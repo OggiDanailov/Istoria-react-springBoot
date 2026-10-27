@@ -1,0 +1,145 @@
+{
+  "batchName": "Early Republic: The Conflict of the Orders - Origins (509-450 BCE) - Latin words",
+  "chapterName": "Early Republic: The Conflict of the Orders - Origins (509-450 BCE)",
+  "difficulty": 1,
+  "batchOrder": 9,
+  "description": "Written by hand from the chapter text: the Latin words it explains",
+  "questions": [
+    {
+      "question": "What does the Latin word veto mean?",
+      "options": [
+        "I forbid",
+        "I agree",
+        "I appeal",
+        "I command"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#tribunes-of-the-plebs",
+      "explanation": "A tribune who said veto blocked an act of a magistrate or even the Senate.",
+      "sourceQuote": "From this grew the veto (Latin for \"I forbid\")",
+      "reviewFlags": []
+    },
+    {
+      "question": "What was a secessio plebis?",
+      "options": [
+        "A mass withdrawal of the plebs from Rome",
+        "A meeting of the Senate",
+        "A new written law",
+        "A tax for the army"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#first-secession",
+      "explanation": "The plebs left the city together, like a general strike, until their demands were met.",
+      "sourceQuote": "This tactic became known as a *secessio* (in full *secessio plebis*, \"the withdrawal of the plebs\")",
+      "reviewFlags": []
+    },
+    {
+      "question": "Plebeians filled the ranks of the exercitus. What was it?",
+      "options": [
+        "The army",
+        "The Senate",
+        "The Plebeian Council",
+        "The priesthood"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#patricians-and-plebeians",
+      "explanation": "Plebeian soldiers were most of the army, which is why their refusal to fight was so powerful.",
+      "sourceQuote": "filled the ranks of the army (*exercitus*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "What was nexum?",
+      "options": [
+        "Debt bondage",
+        "A plebeian assembly",
+        "A marriage between patricians and plebeians",
+        "A tribune’s oath"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#patricians-and-plebeians",
+      "explanation": "A debtor who could not pay could be enslaved: the Romans called this nexum.",
+      "sourceQuote": "a form of debt bondage the Romans called *nexum*.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Plebiscites take their name from the Latin plebiscita. What did it mean?",
+      "options": [
+        "Decisions of the plebs",
+        "Votes of the Senate",
+        "Laws of the kings",
+        "Rights of the soldiers"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#plebeian-council",
+      "explanation": "Plebiscites were the resolutions of the Plebeian Council; at first they bound only plebeians.",
+      "sourceQuote": "and passed resolutions called plebiscites (*plebiscita*, \"decisions of the plebs\").",
+      "reviewFlags": []
+    },
+    {
+      "question": "The second board of decemvirs ruled with no provocatio. What was it?",
+      "options": [
+        "The right of appeal",
+        "The right to marry",
+        "The right to vote by tribe",
+        "The right to own land"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#appius-claudius-and-verginia",
+      "explanation": "Without the right of appeal, citizens had no protection against the decemvirs.",
+      "sourceQuote": "ruling with no tribunes to check them and no right of appeal (*provocatio*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "Romans called debt aes alienum. What does it mean, word for word?",
+      "options": [
+        "Someone else’s bronze",
+        "A heavy burden",
+        "The lender’s chain",
+        "Borrowed grain"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#debt-crisis",
+      "explanation": "Bronze was Rome’s early money, so a debt was literally bronze that belonged to someone else.",
+      "sourceQuote": "debt (*aes alienum*, literally \"someone else's bronze\")",
+      "reviewFlags": []
+    },
+    {
+      "question": "In the Twelve Tables, what was the patria potestas?",
+      "options": [
+        "A father’s power over his son",
+        "The power of the consuls",
+        "A patrician’s right to land",
+        "The protection of the tribunes"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#twelve-tables",
+      "explanation": "The Tables limited it: a father who sold his son three times lost his power over him.",
+      "sourceQuote": "lost his power over him, the *patria potestas* (\"power of the father\").",
+      "reviewFlags": []
+    }
+  ]
+}

@@ -1,0 +1,179 @@
+{
+  "description": "Key facts for this chapter, written by hand from the chapter text. Every entry links to the section that explains it.",
+  "people": [
+    {
+      "name": "Sicinius",
+      "text": "The plebeian leader who masterminded the first walkout; later one of the first tribunes.",
+      "sec": "first-secession"
+    },
+    {
+      "name": "Menenius Agrippa",
+      "text": "Former consul who won the strikers back with the fable of the belly.",
+      "sec": "menenius-agrippa"
+    },
+    {
+      "name": "Appius Claudius",
+      "text": "The most notorious of the decemvirs, whose tyranny led to the second secession.",
+      "sec": "appius-claudius-and-verginia"
+    },
+    {
+      "name": "Verginia",
+      "text": "Plebeian girl killed by her own father to save her from Appius Claudius.",
+      "sec": "appius-claudius-and-verginia"
+    },
+    {
+      "name": "Livy",
+      "text": "The Roman historian who wrote the fullest account of these years, about five centuries later.",
+      "sec": "debt-crisis"
+    }
+  ],
+  "dates": [
+    {
+      "when": "509 BC",
+      "text": "The last king is driven out; two consuls rule the new Republic.",
+      "sec": "patricians-and-plebeians"
+    },
+    {
+      "when": "495 BC",
+      "text": "The debt crisis: a ragged ex-soldier stirs up the Forum.",
+      "sec": "debt-crisis"
+    },
+    {
+      "when": "494 BC",
+      "text": "The first secession to the Sacred Mount.",
+      "sec": "first-secession"
+    },
+    {
+      "when": "493 BC",
+      "text": "The first tribunes of the plebs take office.",
+      "sec": "tribunes-of-the-plebs"
+    },
+    {
+      "when": "471 BC",
+      "text": "The *Lex Publilia*: the plebs vote by tribe.",
+      "sec": "plebeian-council"
+    },
+    {
+      "when": "457 BC",
+      "text": "The number of tribunes rises to ten.",
+      "sec": "demand-for-written-law"
+    },
+    {
+      "when": "c. 450 BC",
+      "text": "The decemvirs are appointed to write down the laws.",
+      "sec": "demand-for-written-law"
+    },
+    {
+      "when": "449 BC",
+      "text": "The Twelve Tables are published; the second secession ends the decemvirs’ rule.",
+      "sec": "twelve-tables"
+    },
+    {
+      "when": "287 BC",
+      "text": "The Conflict of the Orders ends.",
+      "sec": "patricians-and-plebeians"
+    }
+  ],
+  "terms": [
+    {
+      "latin": "res publica",
+      "english": "“the public thing”: the Republic",
+      "sec": "patricians-and-plebeians"
+    },
+    {
+      "latin": "consules",
+      "english": "the two consuls, elected each year",
+      "sec": "patricians-and-plebeians"
+    },
+    {
+      "latin": "patricii",
+      "english": "patricians, the aristocratic families who held power",
+      "sec": "patricians-and-plebeians"
+    },
+    {
+      "latin": "plebs",
+      "english": "the common people, most citizens and most soldiers",
+      "sec": "patricians-and-plebeians"
+    },
+    {
+      "latin": "ordo, ordines",
+      "english": "a rank of society, hence “Conflict of the Orders”",
+      "sec": "patricians-and-plebeians"
+    },
+    {
+      "latin": "nexum",
+      "english": "debt bondage",
+      "sec": "patricians-and-plebeians"
+    },
+    {
+      "latin": "aes alienum",
+      "english": "debt: literally “someone else’s bronze”",
+      "sec": "debt-crisis"
+    },
+    {
+      "latin": "secessio plebis",
+      "english": "“the withdrawal of the plebs”, a mass walkout",
+      "sec": "first-secession"
+    },
+    {
+      "latin": "Mons Sacer",
+      "english": "the Sacred Mount, where the plebs camped",
+      "sec": "first-secession"
+    },
+    {
+      "latin": "tribunus plebis",
+      "english": "tribune of the plebs, the commoners’ protector",
+      "sec": "tribunes-of-the-plebs"
+    },
+    {
+      "latin": "veto",
+      "english": "“I forbid”: a tribune’s power to block",
+      "sec": "tribunes-of-the-plebs"
+    },
+    {
+      "latin": "appello tribunos",
+      "english": "“I call upon the tribunes!”",
+      "sec": "tribunes-of-the-plebs"
+    },
+    {
+      "latin": "concilium plebis",
+      "english": "the Plebeian Council",
+      "sec": "plebeian-council"
+    },
+    {
+      "latin": "plebiscita",
+      "english": "“decisions of the plebs”: plebiscites",
+      "sec": "plebeian-council"
+    },
+    {
+      "latin": "clientes, patroni",
+      "english": "clients and their patrons",
+      "sec": "plebeian-council"
+    },
+    {
+      "latin": "pontifices",
+      "english": "the priests who interpreted the unwritten law",
+      "sec": "demand-for-written-law"
+    },
+    {
+      "latin": "decemviri",
+      "english": "“ten men” who wrote down the laws",
+      "sec": "demand-for-written-law"
+    },
+    {
+      "latin": "patria potestas",
+      "english": "“power of the father”",
+      "sec": "twelve-tables"
+    },
+    {
+      "latin": "conubium",
+      "english": "the right to marry",
+      "sec": "twelve-tables"
+    },
+    {
+      "latin": "provocatio",
+      "english": "the right of appeal",
+      "sec": "appius-claudius-and-verginia"
+    }
+  ]
+}

@@ -250,6 +250,48 @@
           ]
         }
       ]
+    },
+    {
+      "name": "Latin Words",
+      "blurb": "Match each Latin word to its meaning.",
+      "pairs": [
+        {
+          "name": "Tribunus plebis",
+          "match": "Tribune of the plebs, the commoners’ protector",
+          "sectionId": "tribunes-of-the-plebs",
+          "reviewFlags": []
+        },
+        {
+          "name": "Veto",
+          "match": "“I forbid”: a tribune’s power to block",
+          "sectionId": "tribunes-of-the-plebs",
+          "reviewFlags": []
+        },
+        {
+          "name": "Nexum",
+          "match": "Debt bondage",
+          "sectionId": "patricians-and-plebeians",
+          "reviewFlags": []
+        },
+        {
+          "name": "Concilium plebis",
+          "match": "The Plebeian Council",
+          "sectionId": "plebeian-council",
+          "reviewFlags": []
+        },
+        {
+          "name": "Provocatio",
+          "match": "The right of appeal",
+          "sectionId": "appius-claudius-and-verginia",
+          "reviewFlags": []
+        },
+        {
+          "name": "Patria potestas",
+          "match": "“Power of the father” over his son",
+          "sectionId": "twelve-tables",
+          "reviewFlags": []
+        }
+      ]
     }
   ],
   "trueFalseDecks": [
