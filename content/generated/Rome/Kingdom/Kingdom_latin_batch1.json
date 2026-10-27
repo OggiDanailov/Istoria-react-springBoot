@@ -1,0 +1,145 @@
+{
+  "batchName": "The Roman Kingdom - Latin words",
+  "chapterName": "Early Rome & the Kingdom: The Foundation of an Empire (753-509 BCE)",
+  "difficulty": 1,
+  "batchOrder": 9,
+  "description": "Written by hand from the reviewed chapter text: the Latin words it explains",
+  "questions": [
+    {
+      "question": "What did the Latin word rex mean?",
+      "options": [
+        "King",
+        "Senator",
+        "Priest",
+        "Soldier"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#origins",
+      "explanation": "Rex meant king; the Romans had seven of them before the Republic.",
+      "sourceQuote": "Long before any king (*rex*), the site of Rome (*Roma*) had real advantages.",
+      "reviewFlags": []
+    },
+    {
+      "question": "In the legend, a lupa fed the twins Romulus and Remus. What was a lupa?",
+      "options": [
+        "A she-wolf",
+        "A she-bear",
+        "A goat",
+        "A shepherdess"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#romulus-and-remus",
+      "explanation": "A she-wolf (lupa) suckled the twins in a cave called the Lupercal.",
+      "sourceQuote": "Instead a she-wolf (*lupa*) suckled them in a cave called the Lupercal",
+      "reviewFlags": []
+    },
+    {
+      "question": "Ancus Marcius founded Ostia. What does its Latin root ostium mean?",
+      "options": [
+        "River mouth",
+        "Salt",
+        "Harbour wall",
+        "Ship"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#numa-tullus-ancus",
+      "explanation": "Ostia lay at the mouth of the Tiber, and ostium means river mouth.",
+      "sourceQuote": "He founded Ostia (from *ostium*, \"river mouth\"), a port at the river's mouth",
+      "reviewFlags": []
+    },
+    {
+      "question": "The Senate (senatus) took its name from which Latin word?",
+      "options": [
+        "senex, \"old man\"",
+        "sanctus, \"holy\"",
+        "signum, \"sign\"",
+        "sella, \"chair\""
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#romulus-the-king",
+      "explanation": "The Senate was a council of elders: senatus comes from senex, \"old man\".",
+      "sourceQuote": "together they formed the Senate (*senatus*, from *senex*, \"old man\")",
+      "reviewFlags": []
+    },
+    {
+      "question": "The word \"republic\" comes from the Latin res publica. What did it mean?",
+      "options": [
+        "\"The public thing\"",
+        "\"Rule by the people\"",
+        "\"The city of the fathers\"",
+        "\"The law of the consuls\""
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#birth-of-the-republic",
+      "explanation": "Res publica meant \"the public thing\": the state belonged to the people, not to a king.",
+      "sourceQuote": "This marked the birth of the Republic (*res publica*, \"the public thing\").",
+      "reviewFlags": []
+    },
+    {
+      "question": "Rome's last king was called Superbus. What does it mean?",
+      "options": [
+        "The Proud",
+        "The Elder",
+        "The Great",
+        "The Cruel"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#tarquin-the-proud",
+      "explanation": "Lucius Tarquinius Superbus was \"Tarquin the Proud\"; the earlier Tarquin was Priscus, \"the Elder\".",
+      "sourceQuote": "Lucius Tarquinius Superbus (*Superbus*, \"the Proud\")",
+      "reviewFlags": []
+    },
+    {
+      "question": "Romans counted years ab urbe condita. What did that mean?",
+      "options": [
+        "From the founding of the city",
+        "Under the rule of the kings",
+        "In the year of the consuls",
+        "Since the war with the Sabines"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#romulus-and-remus",
+      "explanation": "Years were counted from Rome's traditional founding in 753 BC, abbreviated AUC.",
+      "sourceQuote": "the year from which Romans counted *ab urbe condita* (\"from the founding of the city\", abbreviated AUC)",
+      "reviewFlags": []
+    },
+    {
+      "question": "Tarquin the Proud was said to ignore the mos maiorum. What was it?",
+      "options": [
+        "The ways of the ancestors",
+        "The laws of the Twelve Tables",
+        "The advice of the augurs",
+        "The rights of the plebs"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#tarquin-the-proud",
+      "explanation": "The mos maiorum, \"the ways of the ancestors\", was the unwritten custom Romans expected their rulers to respect.",
+      "sourceQuote": "ignored custom (*mos maiorum*, \"the ways of the ancestors\") and the Senate",
+      "reviewFlags": []
+    }
+  ]
+}

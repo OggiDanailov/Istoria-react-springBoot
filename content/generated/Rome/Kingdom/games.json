@@ -244,6 +244,48 @@
           "reviewFlags": []
         }
       ]
+    },
+    {
+      "name": "Latin Words",
+      "blurb": "Match each Latin word to its meaning.",
+      "pairs": [
+        {
+          "name": "Rex",
+          "match": "King",
+          "sectionId": "origins",
+          "reviewFlags": []
+        },
+        {
+          "name": "Res publica",
+          "match": "“The public thing”: the Republic",
+          "sectionId": "birth-of-the-republic",
+          "reviewFlags": []
+        },
+        {
+          "name": "Patres",
+          "match": "“Fathers”: Romulus’s first hundred advisers",
+          "sectionId": "romulus-the-king",
+          "reviewFlags": []
+        },
+        {
+          "name": "Plebs",
+          "match": "Rome’s common people",
+          "sectionId": "numa-tullus-ancus",
+          "reviewFlags": []
+        },
+        {
+          "name": "Mos maiorum",
+          "match": "“The ways of the ancestors”",
+          "sectionId": "tarquin-the-proud",
+          "reviewFlags": []
+        },
+        {
+          "name": "Pontifex Maximus",
+          "match": "The chief priest, an office created by Numa",
+          "sectionId": "numa-tullus-ancus",
+          "reviewFlags": []
+        }
+      ]
     }
   ],
   "trueFalseDecks": [
