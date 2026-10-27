@@ -40,6 +40,14 @@ body {
   color: var(--ink); font: 500 16px/1.45 var(--body); -webkit-tap-highlight-color: transparent;
 }
 .battle-host { margin-inline: -16px; }
+.test-steps { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+.test-steps li { font-size: 12px; font-weight: 800; padding: 4px 9px; border-radius: 999px; border: 1px solid var(--panel-line); color: var(--ink-soft); }
+.test-steps li.done { background: #2f3a26; border-color: #3f5233; color: var(--good); }
+.test-steps li.next { background: var(--ochre); border-color: var(--ochre); color: var(--tile-ink); }
+.battle-card.locked { border-color: var(--panel-line); }
+.battle-card.locked h2, .battle-card.locked .task { color: var(--ink-soft); }
+.level-card.up-next { border: 2px solid var(--ochre); }
+.up-next-label { color: var(--ochre); font-weight: 800; }
 .test-progress { display: grid; gap: 6px; font-size: 13.5px; color: var(--ink-soft); }
 .test-progress .mini-progress { margin-top: 0; }
 .app { max-width: 560px; min-height: 100%; margin: 0 auto; padding-inline: 16px; padding-block: 14px 24px; display: flex; flex-direction: column; gap: 14px; }
@@ -468,7 +476,13 @@ function header(kicker, title, back = true) {
 function playHeader() {
   const g = GAMES[state.type]
   return header(`${g.title}${g.sets.length > 1 ? ' ' + NUMERALS[state.set] : ''}`, g.sets[state.set].name) +
-    (run ? `<span class="round-pill">Round ${run.step + 1} of ${run.plan.length}</span>` : '')
+    testPill(state)
+}
+function testPill(r) {
+  const t = testOf(CH), rounds = testRounds()
+  if (!TEST_TYPES.includes(r.type) || testComplete(t)) return ''
+  const done = rounds.filter(x => roundDone(x, t)).length
+  return `<span class="round-pill">Chapter test · ${roundDone(r, t) ? `${done} of ${rounds.length} done` : `round ${done + 1} of ${rounds.length}`}</span>`
 }
 const statusLine = (task, left) => `<div class="status"><p class="task">${task}</p><span class="score">${left} left · ${plural(state.mistakes, 'mistake')}</span></div>`
 function bindBack() { app.querySelector('#back')?.addEventListener('click', () => { run = null; go({ screen: 'home' }) }) }
@@ -556,6 +570,9 @@ function noteMiss(key, sec) {
 function earn(key, unitKey, fromEl, { forced = false } = {}) { record(key, true, { forced }); return '' }
 function reward(key) { record(key, true); return null }
 const recruitLine = () => ''
+// The next round of the test to play (chronology rounds open one after another)
+const nextTestRound = (t = testOf(CH)) => testRounds().find(r => !roundDone(r, t) && (r.type !== 'chrono' || r.set === 0 || (stars[starKey('chrono', r.set - 1)] ?? 0) > 0))
+const roundTitle = r => `${GAMES[r.type].title}${GAMES[r.type].sets.length > 1 ? ' ' + NUMERALS[r.set] : ''}`
 const isUnlocked = i => i === 0 || !!tests[CHAPTERS[i - 1].id]?.won
 const battleName = i => HoldTheLine.LEVELS[i]?.name ?? CHAPTERS[i].battle?.name ?? 'the battle'
 
@@ -694,15 +711,15 @@ function leaveChapter() {
 
 // ---------- home (one chapter) ----------
 function renderHome() {
-  const t = testOf(CH)
+  const t = testOf(CH), up = testComplete(t) ? null : nextTestRound(t)
   const chronoUnlocked = i => i === 0 || (stars[starKey('chrono', i - 1)] ?? 0) > 0
   const list = type => {
     const g = GAMES[type], inTest = TEST_TYPES.includes(type)
     const unlocked = type === 'chrono' ? chronoUnlocked : () => true
     return `<div class="levels">${g.sets.map((s, i) => `
-      <button class="level-card" data-type="${type}" data-set="${i}" ${unlocked(i) ? '' : 'disabled'}>
+      <button class="level-card ${up && up.type === type && up.set === i ? 'up-next' : ''}" data-type="${type}" data-set="${i}" ${unlocked(i) ? '' : 'disabled'}>
         <span class="num c${((TYPE_COLOR[type] + i - 1) % 5) + 1}">${NUMERALS[i]}</span>
-        <span class="meta"><b>${esc(s.name)}</b><span>${!unlocked(i) ? 'Finish the previous level to unlock' : inTest && t.done[`${type}:${i}`] ? '✓ Done in this test' : esc(s.blurb)}</span></span>
+        <span class="meta"><b>${esc(s.name)}</b><span>${!unlocked(i) ? 'Finish the previous level to unlock' : inTest && t.done[`${type}:${i}`] ? '✓ Done in this test' : up && up.type === type && up.set === i ? '<b class="up-next-label">Up next in your test</b>' : esc(s.blurb)}</span></span>
         ${starRow(stars[starKey(type, i)] ?? 0)}
       </button>`).join('')}</div>`
   }
@@ -725,12 +742,21 @@ function testCardHtml() {
   const t = testOf(CH), rounds = testRounds(), done = rounds.filter(r => roundDone(r, t)).length
   const L = HoldTheLine.LEVELS[chapterIndex], score = pct(t.score), next = CHAPTERS[chapterIndex + 1]
   const lost = t.battles.filter(b => !b.won && b.attempt === t.attempt).length
-  if (done < rounds.length) return `<section class="run-card">
-      <h2>${done ? 'Continue the chapter test' : 'The chapter test'}</h2>
-      <p class="task">Read the chronicle, then play every round below (${rounds.length} in all). Your <b>first</b> answer to each question counts, and the score sets your army for the battle of ${esc(L.name)}.</p>
-      ${done ? `<div class="test-progress"><div class="mini-progress"><span style="width:${Math.round(100 * done / rounds.length)}%"></span></div><span>${done} of ${rounds.length} rounds done · score so far <b>${score}%</b></span></div>` : ''}
-      <div class="actions"><button class="primary" id="test-go">${done ? 'Next round' : 'Start the test'}</button><button class="ghost" id="chronicle">Read the chronicle</button></div>
+  if (done < rounds.length) {
+    const up = nextTestRound(t)
+    return `<section class="run-card">
+      <h2>The chapter test</h2>
+      <p class="task">${done ? `<b>${done} of ${rounds.length} rounds done</b> · score so far <b>${score}%</b>.` : `Read the chronicle, then play the ${rounds.length} rounds of the test. Your <b>first</b> answer to each question counts.`}</p>
+      <ol class="test-steps">${rounds.map(r => `<li class="${roundDone(r, t) ? 'done' : r === up ? 'next' : ''}">${roundDone(r, t) ? '✓ ' : ''}${esc(roundTitle(r))}</li>`).join('')}</ol>
+      ${up ? `<p class="task">Up next: <b>${esc(roundTitle(up))} · ${esc(GAMES[up.type].sets[up.set].name)}</b></p>` : ''}
+      <div class="actions"><button class="primary" id="test-go">${done ? 'Play the next round' : 'Start the test'}</button><button class="ghost" id="chronicle">Read the chronicle</button></div>
+    </section>
+    <section class="battle-card locked">
+      <span class="eyebrow">${esc(L.year)} · locked</span>
+      <h2>The battle of ${esc(L.name)}</h2>
+      <p class="task">Unlocks when all ${rounds.length} rounds of the test are done. Your score then sets your army.</p>
     </section>`
+  }
   if (t.won) return `<section class="battle-card won">
       <span class="eyebrow">${esc(L.year)} · victory ${'★'.repeat(t.stars)}</span>
       <h2>You held the line at ${esc(L.name)}</h2>
@@ -747,11 +773,11 @@ function testCardHtml() {
 }
 // Plays the rounds not yet done, one after another
 function continueTest() {
-  const rounds = testRounds().filter(r => !roundDone(r))
-  if (!rounds.length) return go({ screen: 'home' })
-  run = { plan: rounds, step: 0, results: [] }
+  const next = nextTestRound()
+  if (!next) return go({ screen: 'home' })
+  run = null
   if (!Object.keys(testOf(CH).answers).length) return go({ screen: 'briefing' })
-  startGame(rounds[0].type, rounds[0].set)
+  startGame(next.type, next.set)
 }
 function retakeTest(e) {
   const b = e.currentTarget
@@ -780,8 +806,7 @@ function finish(recapHtml, earned = starCount(state.mistakes), note) {
   stars[key] = Math.max(stars[key] ?? 0, earned)
   saveStars()
   if (run) run.results.push({ type: state.type, set: state.set, stars: earned })
-  go({ screen: 'result', type: state.type, set: state.set, mistakes: state.mistakes, earned, recapHtml, note, reviewSecs, feedbackSent: false })
-  if (completed && !run) toast(`<b>Test complete: ${pct(testOf(CH).score)}%.</b> The battle of ${esc(battleName(chapterIndex))} is ready.`, 5000)
+  go({ screen: 'result', type: state.type, set: state.set, mistakes: state.mistakes, earned, recapHtml, note, reviewSecs, feedbackSent: false, completed })
 }
 const recapList = items => `<ol class="recap">${items.map(i => `<li class="${i.miss ? 'miss' : ''}"><div>${i.when ? `<span class="when">${esc(i.when)}</span>` : ''}<b>${esc(i.title)}</b>${i.text ? `<p>${esc(i.text)}</p>` : ''}</div></li>`).join('')}</ol>`
 
@@ -1198,7 +1223,7 @@ function renderBriefing() {
       <div class="actions"><button class="primary" id="go">Start round 1</button><button class="ghost dark" id="read">Read the chronicle first</button></div>
     </section>`
   bindBack()
-  app.querySelector('#go').addEventListener('click', () => startGame(run.plan[0].type, run.plan[0].set))
+  app.querySelector('#go').addEventListener('click', () => { const n = nextTestRound(); startGame(n.type, n.set) })
   app.querySelector('#read').addEventListener('click', () => openChronicle())
 }
 
@@ -1206,7 +1231,7 @@ function renderBriefing() {
 // Your legion marches up a road. Drag to steer it through the gate with the right answer and around
 // barricades. Gate questions are the chapter's quiz and true/false items under the same keys, so each
 // fact still recruits only once, whichever game it is answered in.
-const MARCH = { gates: 8, gap: 640, first: 560, speed: 92 }
+const MARCH = { gates: 8, gap: 640, first: 560, speed: 60 }   // slow enough to read each question before its gate
 let anim = null   // the running canvas game (Legion Run or the battlefield)
 const stopLoop = () => { if (anim) anim.alive = false; anim = null }
 
@@ -1481,19 +1506,24 @@ function renderBattle() {
 
 // ---------- results ----------
 function renderResult() {
-  const r = state, g = GAMES[r.type]
-  const inRun = !!run
-  const lastRound = inRun && run.step === run.plan.length - 1
-  const nextInType = !inRun && r.set < g.sets.length - 1
+  const r = state, g = GAMES[r.type], t = testOf(CH), next = nextTestRound(t)
+  // What to do next: the next round of the test, then the battle
+  const actions = r.completed
+    ? `<p class="task"><b>Test complete: ${pct(t.score)}%.</b> Your army: ${armyLine(pct(t.score))}.</p>
+       <div class="actions"><button class="primary" id="to-battle">To the battle of ${esc(battleName(chapterIndex))}</button><button class="ghost" id="to-chapter">Back to the chapter</button></div>`
+    : !testComplete(t)
+      ? `<div class="actions">${next ? `<button class="primary" id="next-round">Next round: ${esc(roundTitle(next))}</button>` : ''}${r.type === 'march' ? '<button class="ghost" id="again">Play again</button>' : ''}<button class="ghost" id="to-chapter">Back to the chapter</button></div>`
+      : `<div class="actions"><button class="ghost" id="again">Play again</button><button class="ghost" id="to-chapter">Back to the chapter</button></div>`
   app.innerHTML = `
     ${header(`${g.title}${g.sets.length > 1 ? ' ' + NUMERALS[r.set] : ''} complete`, g.sets[r.set].name)}
-    ${run ? `<span class="round-pill">Round ${run.step + 1} of ${run.plan.length}</span>` : ''}
+    ${testPill(r)}
     <section class="result">
       <div>
         ${starRow(r.earned, 'big-stars')}
         <h2 style="margin-top:10px">${r.earned === 3 ? 'Perfect!' : r.earned === 2 ? 'Well done!' : 'You made it to the end'}</h2>
         <p class="task" style="margin-top:4px">${esc(r.note ?? (r.mistakes === 0 ? 'No mistakes.' : `${plural(r.mistakes, 'mistake')}. Three stars need a clean run.`))}</p>
       </div>
+      ${actions}
       ${r.reviewSecs?.length ? `<div class="review">
         <h3>${r.earned === 1 ? 'Review these sections, then try again' : 'Learn from your mistakes'}</h3>
         <p class="task">These mistakes count in your chapter test. Re-read the sections before the battle.</p>
@@ -1510,11 +1540,6 @@ function renderResult() {
         <div><button class="ghost" id="fb-send">${fb.db ? 'Send feedback' : 'Copy feedback'}</button></div>
         <p class="task" id="fb-help" ${fb.db ? 'hidden' : ''}>This copies your answers so you can paste them in a message to whoever sent you this game.</p>`}
       </div>
-      <div class="actions">
-        ${inRun ? `<button class="primary" id="next">${lastRound ? 'Finish the test' : 'Next round'}</button>`
-          : nextInType ? `<button class="primary" id="next">Next: ${esc(g.sets[r.set + 1].name)}</button>` : ''}
-        ${inRun ? '' : '<button class="ghost" id="again">Play again</button>'}
-      </div>
     </section>`
   bindBack()
   app.querySelector('#again')?.addEventListener('click', () => startGame(r.type, r.set))
@@ -1523,7 +1548,7 @@ function renderResult() {
     const tags = [...app.querySelectorAll('[data-chip][aria-pressed="true"]')].map(c => c.dataset.chip)
     const comment = app.querySelector('#fb-text').value.trim()
     if (!tags.length && !comment) return toast('Pick a word or write a comment first.')
-    const entry = { game: GAMES[r.type].title, set: GAMES[r.type].sets[r.set].name, stars: r.earned, mistakes: r.mistakes, tags, comment, inChapterRun: !!run, at: new Date().toISOString() }
+    const entry = { game: GAMES[r.type].title, set: GAMES[r.type].sets[r.set].name, stars: r.earned, mistakes: r.mistakes, tags, comment, inTest: TEST_TYPES.includes(r.type), at: new Date().toISOString() }
     if (fb.db) {
       e.target.disabled = true
       try {
@@ -1549,12 +1574,9 @@ function renderResult() {
       toast('Select-all is done: copy the text in the box and send it.')
     }
   })
-  app.querySelector('#next')?.addEventListener('click', () => {
-    if (!inRun) return startGame(r.type, r.set + 1)
-    if (lastRound) return go({ screen: 'runDone' })
-    run.step++
-    startGame(run.plan[run.step].type, run.plan[run.step].set)
-  })
+  app.querySelector('#next-round')?.addEventListener('click', () => startGame(next.type, next.set))
+  app.querySelector('#to-battle')?.addEventListener('click', () => { window.scrollTo(0, 0); go({ screen: 'battle' }) })
+  app.querySelector('#to-chapter')?.addEventListener('click', () => { window.scrollTo(0, 0); go({ screen: 'home' }) })
 }
 function renderRunDone() {
   const t = testOf(CH), score = pct(t.score)
