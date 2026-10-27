@@ -69,6 +69,8 @@ for (const c of CONFIG.chapters) {
       .filter(m => m.places.length >= 3),
     quizPool: quizPool(dir),
     // optional, written by hand: people, dates and Latin words, each linked to its section
+    // optional, written by hand: small maps shown at the start of chronicle sections
+    chronicleMaps: fs.existsSync(path.join(dir, 'maps.json')) ? JSON.parse(fs.readFileSync(path.join(dir, 'maps.json'), 'utf8')).maps : [],
     keyFacts: fs.existsSync(path.join(dir, 'keyfacts.json')) ? JSON.parse(fs.readFileSync(path.join(dir, 'keyfacts.json'), 'utf8')) : null,
   }
   // Every link must point at a real section
@@ -76,7 +78,8 @@ for (const c of CONFIG.chapters) {
   const links = [...ch.timelines.flatMap(t => t.events.map(e => e.sec)), ...ch.matches.flatMap(m => m.secs), ...ch.decks.flatMap(d => d.cards.map(x => x.sec)),
     ...ch.odds.flatMap(o => o.rounds.map(r => r.sec)), ...ch.whos.flatMap(w => w.people.map(p => p.sec)), ...ch.maps.flatMap(m => m.places.map(p => p.sec)),
     ...Object.values(ch.quizPool).flat().map(x => x.sec),
-    ...(ch.keyFacts ? [...ch.keyFacts.people, ...ch.keyFacts.dates, ...ch.keyFacts.terms].map(x => x.sec) : [])]
+    ...(ch.keyFacts ? [...ch.keyFacts.people, ...ch.keyFacts.dates, ...ch.keyFacts.terms].map(x => x.sec) : []),
+    ...ch.chronicleMaps.map(m => m.sec)]
   if (ch.battle && !ids.has(ch.battle.sec)) links.push(ch.battle.sec)
   const broken = links.filter(l => !ids.has(l))
   if (broken.length) throw new Error(`${c.id}: links to unknown sections: ${[...new Set(broken)].join(', ')}`)

@@ -259,6 +259,28 @@ button:focus-visible { outline: 3px solid var(--ochre); outline-offset: 2px; }
 .kf dt { font-weight: 800; font-size: 14.5px; }
 .kf dd { margin: 0; font-size: 14.5px; line-height: 1.4; }
 .kf-read { border: none; background: none; color: #8e2b22; font-weight: 800; font-size: 13px; padding: 0 2px; text-decoration: underline; text-underline-offset: 2px; }
+.cmap { margin: 4px 0 12px; }
+.cmap svg { display: block; width: 100%; height: auto; border-radius: 12px; border: 1px solid #d9caa8; background: #e8dcbc; cursor: zoom-in; }
+.cmap figcaption { font-size: 13px; color: #5a4d40; margin-top: 6px; line-height: 1.4; }
+.cmap .tap { color: #8a7a68; }
+.cmap.zoom { position: fixed; inset: 0; z-index: 80; margin: 0; padding: 14px; background: rgba(251, 243, 228, .98); display: grid; align-content: center; gap: 8px; }
+.cmap.zoom svg { max-height: 82vh; cursor: zoom-out; }
+.cmap.zoom .tap { display: none; }
+.cmap .sea { fill: #a9c8d8; } .cmap .ground { fill: #eadfc2; }
+.cmap .land { fill: #eadfc2; stroke: #b9a77e; stroke-width: .6; }
+.cmap .river { fill: none; stroke: #5b93b8; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.cmap .river.big { stroke-width: 9; stroke: #8fb7cf; }
+.cmap .hill { fill: #d6bd8c; stroke: #a8895a; stroke-width: .8; }
+.cmap .area { fill: none; stroke: #8e2b22; stroke-width: 1; stroke-dasharray: 2.5 2; }
+.cmap .island { fill: #d6bd8c; stroke: #a8895a; stroke-width: .6; }
+.cmap .bridge { stroke: #5a3a22; stroke-width: 2.4; stroke-linecap: round; }
+.cmap .town { fill: #1b1715; } .cmap .rome { fill: #8e2b22; stroke: #fbf3e4; stroke-width: 1.4; }
+.cmap .lake { fill: #5b93b8; stroke: #fbf3e4; stroke-width: .8; }
+.cmap text { font: 800 9px var(--body); fill: #1b1715; paint-order: stroke; stroke: #f6efdd; stroke-width: 2.6px; stroke-linejoin: round; }
+.cmap text .la { font-style: italic; font-weight: 700; font-size: 8px; fill: #8e2b22; }
+.cmap text .note { font-weight: 600; font-size: 7.5px; fill: #6b5d50; }
+.cmap .people { font-size: 8px; letter-spacing: .16em; text-transform: uppercase; fill: #7a6a55; }
+.cmap .edge { font-size: 8px; fill: #5a4d40; }
 .latin-note { margin: 8px 0 4px !important; padding: 10px 12px; border-radius: 12px; background: #f3e6c8; font-size: 14px; }   /* Latin words: in Roman red, easy to spot or to skip */
 .sheet-body .unit-row { display: grid; grid-template-columns: 24px 1fr auto; gap: 10px; align-items: center; padding: 8px 0; border-bottom: 1px solid #e2d6bf; }
 .sheet-body .unit-row svg { width: 20px; height: 26px; }
@@ -583,7 +605,11 @@ const recruitLine = () => ''
 // The next round of the test to play (chronology rounds open one after another)
 const nextTestRound = (t = testOf(CH)) => testRounds().find(r => !roundDone(r, t) && (r.type !== 'chrono' || r.set === 0 || (stars[starKey('chrono', r.set - 1)] ?? 0) > 0))
 const roundTitle = r => `${GAMES[r.type].title}${GAMES[r.type].sets.length > 1 ? ' ' + NUMERALS[r.set] : ''}`
-const isUnlocked = i => i === 0 || !!tests[CHAPTERS[i - 1].id]?.won
+// For reviewing: a switch in the progress sheet opens every chapter (the battles still need a finished test)
+const OPEN_ALL_KEY = 'ave-caesar-open-all'
+let openAll = false
+try { openAll = localStorage.getItem(OPEN_ALL_KEY) === '1' } catch {}
+const isUnlocked = i => i === 0 || openAll || !!tests[CHAPTERS[i - 1].id]?.won
 const battleName = i => HoldTheLine.LEVELS[i]?.name ?? CHAPTERS[i].battle?.name ?? 'the battle'
 
 function renderHud() {
@@ -624,9 +650,54 @@ function openSheet(title, html, focusId) {
 }
 function closeSheet() { document.getElementById('sheet').hidden = true }
 const latinNote = () => CHAPTER.some(x => /\*[^*]+\*/.test(x.body)) ? '<p class="latin-note">Words in <em>red italics</em> are <b>Latin</b>, the language the Romans spoke, given next to the English. Many English words come from them.</p>' : ''
-const chronicleHtml = () => latinNote() + CHAPTER.map(s => `<section data-sec="${s.id}"><h3>${esc(s.title)}</h3>${s.body.split(/\n\s*\n/).map(p => `<p>${inline(p.trim())}</p>`).join('')}</section>`).join('') +
+const chronicleHtml = () => latinNote() + CHAPTER.map(s => `<section data-sec="${s.id}"><h3>${esc(s.title)}</h3>${(CH.chronicleMaps ?? []).filter(m => m.sec === s.id).map(chronicleMap).join('')}${s.body.split(/\n\s*\n/).map(p => `<p>${inline(p.trim())}</p>`).join('')}</section>`).join('') +
   `<p style="font-size:13px;color:#6b5d50;margin-top:14px">Written from the Wikipedia articles ${CH.sources.map(t => `“${esc(t)}”`).join(', ')} (CC BY-SA 4.0).</p>`
 const openChronicle = focusId => openSheet(CH.title, chronicleHtml(), focusId)
+// ---------- maps in the chronicle ----------
+// Drawn from the chapter's maps.json: a region map (coast, Tiber, towns, peoples, far-away places as arrows at the
+// edge) or a city map (hills, river, landmarks). Tap to enlarge.
+function chronicleMap(m) {
+  const b = m.bounds, kx = Math.cos((b.latMin + b.latMax) / 2 * Math.PI / 180)
+  const W = 300, H = Math.round(W * (b.latMax - b.latMin) / ((b.lonMax - b.lonMin) * kx))
+  const P = (lat, lon) => [(lon - b.lonMin) / (b.lonMax - b.lonMin) * W, (b.latMax - lat) / (b.latMax - b.latMin) * H]
+  const path = pts => pts.map(([la, lo], i) => `${i ? 'L' : 'M'}${P(la, lo).map(v => v.toFixed(1)).join(',')}`).join(' ')
+  const label = (x, y, p, gap = 7) => {
+    const r = p.side !== 'l', tx = (x + (r ? gap : -gap)).toFixed(1), ty = y + 3.2 + (p.dy ?? 0)
+    return `<text x="${tx}" y="${ty.toFixed(1)}" text-anchor="${r ? 'start' : 'end'}">${esc(p.name)}${p.note ? ` <tspan class="note">(${esc(p.note)})</tspan>` : ''}${p.latin ? `<tspan class="la" x="${tx}" dy="9.5">${esc(p.latin)}</tspan>` : ''}</text>`
+  }
+  let art = ''
+  if (m.hills) {
+    art += `<rect class="ground" x="0" y="0" width="${W}" height="${H}"/>`
+    for (const h of m.hills) { const [x, y] = P(h.lat, h.lon), r = h.r / (b.latMax - b.latMin) * H; art += `<ellipse class="hill" cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" rx="${(r * 1.15).toFixed(1)}" ry="${r.toFixed(1)}"/>` }
+    art += `<path class="river big" d="${path(m.river)}"/>`
+    for (const p of m.places) {
+      const [x, y] = P(p.lat, p.lon)
+      if (p.kind === 'area') art += `<ellipse class="area" cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" rx="9" ry="5.5"/>`
+      if (p.kind === 'island') art += `<ellipse class="island" cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" rx="3" ry="6"/>`
+      if (p.kind === 'bridge') art += `<line class="bridge" x1="${(x - 8).toFixed(1)}" y1="${y.toFixed(1)}" x2="${(x + 8).toFixed(1)}" y2="${y.toFixed(1)}"/>`
+    }
+    for (const h of m.hills) { const [x, y] = P(h.lat, h.lon), r = h.r / (b.latMax - b.latMin) * H; art += label(x, y, h, r * 1.15 + 3) }
+    for (const p of m.places) { const [x, y] = P(p.lat, p.lon); art += label(x, y, p, p.kind === 'area' ? 11 : 9) }
+  } else {
+    art += `<rect class="sea" x="0" y="0" width="${W}" height="${H}"/>`
+    art += `<path class="land" d="${LAND.map(l => path(l.pts.map(([lo, la]) => [la, lo])) + 'Z').join(' ')}"/>`
+    art += `<path class="river" d="${path(TIBER)}"/>`
+    for (const p of m.peoples ?? []) { const [x, y] = P(p.lat, p.lon); art += `<text class="people" x="${x.toFixed(1)}" y="${y.toFixed(1)}" text-anchor="middle">${esc(p.name)}${p.latin ? `<tspan class="la" x="${x.toFixed(1)}" dy="9">${esc(p.latin)}</tspan>` : ''}</text>` }
+    for (const p of m.places) {
+      const [x, y] = P(p.lat, p.lon)
+      art += p.kind === 'lake' ? `<ellipse class="lake" cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" rx="4.5" ry="3"/>` : `<circle class="${p.kind === 'rome' ? 'rome' : 'town'}" cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${p.kind === 'rome' ? 5 : 3}"/>`
+      art += label(x, y, p)
+    }
+    for (const e of m.edges ?? []) {
+      const x = P(b.latMin, e.lon)[0], top = e.dir === 'n'
+      art += `<text class="edge" x="${x.toFixed(1)}" y="${top ? 12 : H - 6}" text-anchor="middle">${top ? '↑' : '↓'} ${esc(e.text)} · ${e.km} km</text>`
+    }
+  }
+  return `<figure class="cmap" tabindex="0" aria-label="Map: ${esc(m.title)}. Tap to enlarge.">
+    <svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(m.title)}">${art}</svg>
+    <figcaption><b>${esc(m.title)}.</b> ${esc(m.caption)} <span class="tap">Tap the map to enlarge it.</span></figcaption>
+  </figure>`
+}
 // Key facts: a short reference of the chapter's people, dates and Latin words, each linked to its section
 const KF_TABS = [['people', 'People'], ['dates', 'Dates'], ['terms', 'Latin words']]
 function openKeyFacts(tab = 'people') {
@@ -643,6 +714,8 @@ function openKeyFacts(tab = 'people') {
     <p style="font-size:13px;color:#6b5d50;margin-top:10px">Tap “Read” to open that part of the chronicle.</p>`)
 }
 document.getElementById('sheet-body').addEventListener('click', e => {
+  const map = e.target.closest('.cmap')
+  if (map) { map.classList.toggle('zoom'); return }
   const kf = e.target.closest('[data-kf]'), read = e.target.closest('.kf-read')
   if (kf) openKeyFacts(kf.dataset.kf)
   if (read) openChronicle(read.dataset.read)
@@ -654,7 +727,15 @@ function openProgress() {
       const t = tests[c.id], started = t && Object.keys(t.answers).length, lost = t?.battles?.filter(b => !b.won).length ?? 0
       return `<div class="unit-row"><span><b>${esc(c.short)}</b><br><span style="font-size:13.5px">${started ? `Test score ${pct(t.score)}%${t.attempt > 1 ? ` (attempt ${t.attempt})` : ''}` : 'Test not started'} · ${esc(battleName(i))}: ${t?.won ? `won ${'★'.repeat(t.stars)}` : lost ? `lost ${lost === 1 ? 'once' : lost + ' times'}` : 'not fought yet'}</span></span></div>`
     }).join('')}
+    <p style="margin-top:16px;font-size:14px"><button class="ghost dark" id="open-all">${openAll ? 'Lock chapters again' : 'Open all chapters (for reviewing)'}</button><br>
+      <span style="font-size:13px;color:#6b5d50">${openAll ? 'All chapters are open. Normally each chapter opens when you win the battle before it.' : 'Lets you read and play any chapter without winning the battles before it. Scores and battles are not changed.'}</span></p>
     <p style="margin-top:16px"><button class="ghost dark" id="reset-progress">Reset my progress</button></p>`)
+  document.getElementById('open-all').addEventListener('click', () => {
+    openAll = !openAll
+    try { openAll ? localStorage.setItem(OPEN_ALL_KEY, '1') : localStorage.removeItem(OPEN_ALL_KEY) } catch {}
+    closeSheet(); render()
+    toast(openAll ? 'All chapters are open for reviewing.' : 'Chapters are locked again: each opens when you win the battle before it.')
+  })
   document.getElementById('reset-progress').addEventListener('click', e => {
     if (e.target.dataset.confirm !== '1') { e.target.dataset.confirm = '1'; e.target.textContent = 'Tap again to erase all tests, stars and battles'; return }
     try { localStorage.removeItem(TEST_KEY); localStorage.removeItem(STORE_KEY) } catch {}

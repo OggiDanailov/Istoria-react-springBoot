@@ -1,0 +1,253 @@
+{
+  "description": "Maps for the chronicle, written by hand. Coordinates from Wikipedia; each map sits at the start of its section. Labels: side 'r' or 'l' puts the label right or left of the dot, dy moves it up (-) or down (+).",
+  "maps": [
+    {
+      "id": "latium",
+      "sec": "origins",
+      "title": "Rome and its neighbours",
+      "caption": "The kings' Rome was one town among many in Latium, between the Etruscans to the north and the Sabines and Volsci in the hills. Where exactly Lake Regillus lay is uncertain.",
+      "bounds": {
+        "latMin": 41.45,
+        "latMax": 42.36,
+        "lonMin": 11.68,
+        "lonMax": 13.02
+      },
+      "places": [
+        {
+          "name": "Rome",
+          "latin": "Roma",
+          "lat": 41.893,
+          "lon": 12.483,
+          "kind": "rome",
+          "side": "r",
+          "dy": -4
+        },
+        {
+          "name": "Ostia",
+          "lat": 41.756,
+          "lon": 12.291,
+          "side": "l"
+        },
+        {
+          "name": "Veii",
+          "lat": 42.024,
+          "lon": 12.401,
+          "side": "r"
+        },
+        {
+          "name": "Tarquinii",
+          "lat": 42.249,
+          "lon": 11.756,
+          "side": "r"
+        },
+        {
+          "name": "Alba Longa",
+          "lat": 41.747,
+          "lon": 12.65,
+          "side": "r"
+        },
+        {
+          "name": "Lake Regillus",
+          "latin": "Lacus Regillus",
+          "lat": 41.855,
+          "lon": 12.68,
+          "kind": "lake",
+          "side": "r"
+        },
+        {
+          "name": "Ardea",
+          "lat": 41.612,
+          "lon": 12.541,
+          "side": "r"
+        }
+      ],
+      "peoples": [
+        {
+          "name": "Etruscans",
+          "latin": "Etrusci",
+          "lat": 42.13,
+          "lon": 11.98
+        },
+        {
+          "name": "Sabines",
+          "latin": "Sabini",
+          "lat": 42.2,
+          "lon": 12.78
+        },
+        {
+          "name": "Latins",
+          "latin": "Latini",
+          "lat": 41.67,
+          "lon": 12.4
+        },
+        {
+          "name": "Volsci",
+          "lat": 41.53,
+          "lon": 12.86
+        }
+      ],
+      "edges": [
+        {
+          "name": "Clusium",
+          "text": "Clusium, Porsenna's city",
+          "dir": "n",
+          "km": 150,
+          "lon": 12.3
+        },
+        {
+          "name": "Cumae",
+          "text": "Cumae, where Tarquin died",
+          "dir": "s",
+          "km": 190,
+          "lon": 12.62
+        }
+      ]
+    },
+    {
+      "id": "hills",
+      "sec": "romulus-the-king",
+      "title": "The hills of Rome",
+      "caption": "The city grew from villages on these hills. The Forum lay in the valley below the Palatine and the Capitoline, close to the Tiber crossing. The site of the old wooden bridge, the Pons Sublicius, is approximate.",
+      "bounds": {
+        "latMin": 41.876,
+        "latMax": 41.906,
+        "lonMin": 12.459,
+        "lonMax": 12.509
+      },
+      "hills": [
+        {
+          "name": "Capitoline",
+          "latin": "Capitolium",
+          "lat": 41.8933,
+          "lon": 12.4831,
+          "r": 0.0016,
+          "side": "l"
+        },
+        {
+          "name": "Palatine",
+          "latin": "Palatium",
+          "lat": 41.8894,
+          "lon": 12.4875,
+          "r": 0.002,
+          "side": "r"
+        },
+        {
+          "name": "Aventine",
+          "latin": "Mons Aventinus",
+          "lat": 41.8834,
+          "lon": 12.4805,
+          "r": 0.0022,
+          "side": "l"
+        },
+        {
+          "name": "Caelian",
+          "lat": 41.8857,
+          "lon": 12.4955,
+          "r": 0.0019,
+          "side": "r",
+          "dy": 26
+        },
+        {
+          "name": "Esquiline",
+          "lat": 41.8955,
+          "lon": 12.4985,
+          "r": 0.0022,
+          "side": "r"
+        },
+        {
+          "name": "Viminal",
+          "lat": 41.8995,
+          "lon": 12.4955,
+          "r": 0.0013,
+          "side": "r"
+        },
+        {
+          "name": "Quirinal",
+          "lat": 41.9005,
+          "lon": 12.4885,
+          "r": 0.0017,
+          "side": "l"
+        }
+      ],
+      "places": [
+        {
+          "name": "Forum",
+          "latin": "Forum Romanum",
+          "lat": 41.8925,
+          "lon": 12.4857,
+          "kind": "area",
+          "side": "r",
+          "dy": 2
+        },
+        {
+          "name": "Circus Maximus",
+          "lat": 41.8861,
+          "lon": 12.4852,
+          "kind": "area",
+          "side": "r",
+          "dy": 2
+        },
+        {
+          "name": "Tiber Island",
+          "lat": 41.8906,
+          "lon": 12.4777,
+          "kind": "island",
+          "side": "l"
+        },
+        {
+          "name": "Pons Sublicius",
+          "lat": 41.8875,
+          "lon": 12.4776,
+          "kind": "bridge",
+          "side": "l"
+        }
+      ],
+      "river": [
+        [
+          41.906,
+          12.4715
+        ],
+        [
+          41.9035,
+          12.4672
+        ],
+        [
+          41.9,
+          12.4668
+        ],
+        [
+          41.897,
+          12.4695
+        ],
+        [
+          41.8945,
+          12.4735
+        ],
+        [
+          41.892,
+          12.4765
+        ],
+        [
+          41.8906,
+          12.4778
+        ],
+        [
+          41.8885,
+          12.4779
+        ],
+        [
+          41.886,
+          12.4768
+        ],
+        [
+          41.883,
+          12.475
+        ],
+        [
+          41.877,
+          12.4726
+        ]
+      ]
+    }
+  ]
+}
