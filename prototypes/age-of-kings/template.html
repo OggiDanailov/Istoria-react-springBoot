@@ -284,6 +284,9 @@ button:focus-visible { outline: 3px solid var(--ochre); outline-offset: 2px; }
 .cmap .island { fill: #d6bd8c; stroke: #a8895a; stroke-width: .6; }
 .cmap .bridge { stroke: #5a3a22; stroke-width: 2.4; stroke-linecap: round; }
 .cmap .town { fill: #1b1715; } .cmap .rome { fill: #8e2b22; stroke: #fbf3e4; stroke-width: 1.4; }
+.cmap .route { fill: none; stroke: #8e2b22; stroke-width: 1.6; stroke-dasharray: 4 3; }
+.cmap .route-head { fill: #8e2b22; }
+.cmap .battle { stroke: #8e2b22; stroke-width: 2.4; stroke-linecap: round; }
 .cmap .lake { fill: #5b93b8; stroke: #fbf3e4; stroke-width: .8; }
 .cmap text { font: 800 9px var(--body); fill: #1b1715; paint-order: stroke; stroke: #f6efdd; stroke-width: 2.6px; stroke-linejoin: round; }
 .cmap text .la { font-style: italic; font-weight: 700; font-size: 8px; fill: #8e2b22; }
@@ -693,12 +696,20 @@ function chronicleMap(m) {
     for (const p of m.places) { const [x, y] = P(p.lat, p.lon); art += label(x, y, p, p.kind === 'area' ? 11 : 9) }
   } else {
     art += `<rect class="sea" x="0" y="0" width="${W}" height="${H}"/>`
-    art += `<path class="land" d="${LAND.map(l => path(l.pts.map(([lo, la]) => [la, lo])) + 'Z').join(' ')}"/>`
+    // tiny outlines (San Marino, the Vatican) would show as stray shapes at this scale
+    art += `<path class="land" d="${LAND.filter(l => l.pts.length > 6).map(l => path(l.pts.map(([lo, la]) => [la, lo])) + 'Z').join(' ')}"/>`
     art += `<path class="river" d="${path(TIBER)}"/>`
+    // routes: a dashed line with an arrowhead at the end
+    for (const r of m.routes ?? []) {
+      const pts = r.pts.map(([la, lo]) => P(la, lo)), [x1, y1] = pts.at(-2), [x2, y2] = pts.at(-1), a = Math.atan2(y2 - y1, x2 - x1)
+      art += `<path class="route" d="${path(r.pts)}"/><path class="route-head" d="M${x2.toFixed(1)},${y2.toFixed(1)} L${(x2 - 7 * Math.cos(a - 0.45)).toFixed(1)},${(y2 - 7 * Math.sin(a - 0.45)).toFixed(1)} L${(x2 - 7 * Math.cos(a + 0.45)).toFixed(1)},${(y2 - 7 * Math.sin(a + 0.45)).toFixed(1)} Z"/>`
+    }
     for (const p of m.peoples ?? []) { const [x, y] = P(p.lat, p.lon); art += `<text class="people" x="${x.toFixed(1)}" y="${y.toFixed(1)}" text-anchor="middle">${esc(p.name)}${p.latin ? `<tspan class="la" x="${x.toFixed(1)}" dy="9">${esc(p.latin)}</tspan>` : ''}</text>` }
     for (const p of m.places) {
       const [x, y] = P(p.lat, p.lon)
-      art += p.kind === 'lake' ? `<ellipse class="lake" cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" rx="4.5" ry="3"/>` : `<circle class="${p.kind === 'rome' ? 'rome' : 'town'}" cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${p.kind === 'rome' ? 5 : 3}"/>`
+      art += p.kind === 'lake' ? `<ellipse class="lake" cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" rx="4.5" ry="3"/>`
+        : p.kind === 'battle' ? `<path class="battle" d="M${(x - 4).toFixed(1)},${(y - 4).toFixed(1)} L${(x + 4).toFixed(1)},${(y + 4).toFixed(1)} M${(x + 4).toFixed(1)},${(y - 4).toFixed(1)} L${(x - 4).toFixed(1)},${(y + 4).toFixed(1)}"/>`
+        : `<circle class="${p.kind === 'rome' ? 'rome' : 'town'}" cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${p.kind === 'rome' ? 5 : 3}"/>`
       art += label(x, y, p)
     }
     for (const e of m.edges ?? []) {

@@ -1,0 +1,145 @@
+{
+  "batchName": "Early Republic: The Conflict of the Orders - Toward Resolution (450-367 BCE) - Latin words",
+  "chapterName": "Early Republic: The Conflict of the Orders - Toward Resolution (450-367 BCE)",
+  "difficulty": 1,
+  "batchOrder": 9,
+  "description": "Written by hand from the chapter text: the Latin words it explains",
+  "questions": [
+    {
+      "question": "What did Brennus mean by “Vae victis!”?",
+      "options": [
+        "Woe to the vanquished!",
+        "Gold for the victors!",
+        "Rome has fallen!",
+        "Peace with Rome!"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#sack-of-rome",
+      "explanation": "He threw his sword onto the scales when the Romans complained about rigged weights.",
+      "sourceQuote": "declared, “Woe to the vanquished!” (*Vae victis!*)",
+      "reviewFlags": []
+    },
+    {
+      "question": "The Romans took Veii through a cuniculus. What was it?",
+      "options": [
+        "A tunnel",
+        "A siege tower",
+        "A battering ram",
+        "A bridge"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#siege-of-veii",
+      "explanation": "They dug it through the soft volcanic rock under the city.",
+      "sourceQuote": "They dug a tunnel (*cuniculus*) through the soft volcanic rock",
+      "reviewFlags": []
+    },
+    {
+      "question": "What were the anseres that woke Marcus Manlius?",
+      "options": [
+        "The sacred geese of Juno",
+        "The guard dogs",
+        "The temple bells",
+        "The Vestal Virgins"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#sack-of-rome",
+      "explanation": "The guards and dogs slept, but the geese honked.",
+      "sourceQuote": "but the sacred geese (*anseres*) of Juno honked.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What was the ager publicus that the land law limited?",
+      "options": [
+        "Public land owned by the Roman state",
+        "Farmland owned by plebeians",
+        "Land given to the gods",
+        "The common pasture of the patricians"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#licinian-laws",
+      "explanation": "Rich landowners had grabbed huge areas of it; the law capped each person at about 120 hectares (300 acres).",
+      "sourceQuote": "The land law targeted public land (*ager publicus*) owned by the Roman state.",
+      "reviewFlags": []
+    },
+    {
+      "question": "After Veii fell, its people received civitas sine suffragio. What was that?",
+      "options": [
+        "Citizenship without the right to vote",
+        "Freedom from taxes",
+        "The right to elect their own consuls",
+        "Exile from Italy"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#rome-after-the-sack",
+      "explanation": "It bound the newly conquered city closer to Rome.",
+      "sourceQuote": "by giving its people citizenship without the right to vote (*civitas sine suffragio*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "The dictator Publius Manlius Capitolinus chose a plebeian magister equitum. What was that?",
+      "options": [
+        "His deputy, the “master of the horse”",
+        "His chief priest",
+        "His army’s standard-bearer",
+        "A judge of criminal trials"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#licinius-and-sextius",
+      "explanation": "Picking a plebeian deputy angered the patricians.",
+      "sourceQuote": "angered patricians by picking a plebeian deputy, a \"master of the horse\" (*magister equitum*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "What was the dies Alliensis?",
+      "options": [
+        "The ill-omened anniversary of the Allia, 18 July",
+        "The day the Gauls left Rome",
+        "The festival of the sacred geese",
+        "The day Veii fell"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#battle-of-the-allia",
+      "explanation": "The day of the defeat at the Allia became a day when public business stopped.",
+      "sourceQuote": "Its anniversary, 18 July, became an ill-omened day (*dies Alliensis*, \"the day of the Allia\").",
+      "reviewFlags": []
+    },
+    {
+      "question": "Livy called some later tribunes mancipia nobilium. What did he mean?",
+      "options": [
+        "Slaves of the nobility",
+        "Friends of the people",
+        "Sons of the patricians",
+        "Masters of the law"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#modern-verdict",
+      "explanation": "Once in power, the plebeian leaders joined the patricians in a new nobility and forgot the poor.",
+      "sourceQuote": "and Livy called some tribunes “slaves of the nobility” (*mancipia nobilium*).",
+      "reviewFlags": []
+    }
+  ]
+}

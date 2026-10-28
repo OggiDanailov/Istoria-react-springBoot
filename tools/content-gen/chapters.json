@@ -103,7 +103,8 @@
         "enemy": "Veii",
         "sec": "siege-of-veii",
         "intro": "Veii, a great Etruscan city just 16 km from Rome, has held out for years. Camillus, named dictator, has a plan: a tunnel through the soft rock beneath the walls."
-      }
+      },
+      "locked": true
     },
     {
       "id": "samnite-wars",

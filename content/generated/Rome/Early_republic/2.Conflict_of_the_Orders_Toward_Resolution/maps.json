@@ -1,0 +1,136 @@
+{
+  "description": "Maps for the chronicle, written by hand. Coordinates from Wikipedia; each map sits at the start of its section.",
+  "maps": [
+    {
+      "id": "rome-veii",
+      "sec": "siege-of-veii",
+      "title": "Rome and Veii",
+      "caption": "Veii stood on a plateau of soft volcanic rock about 16 km (10 miles) north of Rome, its nearest great rival. Caere, another Etruscan city, was Rome's ally.",
+      "bounds": {
+        "latMin": 41.72,
+        "latMax": 42.14,
+        "lonMin": 12.0,
+        "lonMax": 12.72
+      },
+      "places": [
+        {
+          "name": "Rome",
+          "latin": "Roma",
+          "lat": 41.893,
+          "lon": 12.483,
+          "kind": "rome",
+          "side": "r",
+          "dy": -4
+        },
+        {
+          "name": "Veii",
+          "lat": 42.023,
+          "lon": 12.39,
+          "side": "r",
+          "dy": -2
+        },
+        {
+          "name": "Caere",
+          "lat": 41.995,
+          "lon": 12.098,
+          "side": "r"
+        }
+      ],
+      "peoples": [
+        {
+          "name": "Etruscans",
+          "latin": "Etrusci",
+          "lat": 42.09,
+          "lon": 12.2
+        },
+        {
+          "name": "Latins",
+          "latin": "Latini",
+          "lat": 41.78,
+          "lon": 12.6
+        }
+      ]
+    },
+    {
+      "id": "gauls",
+      "sec": "battle-of-the-allia",
+      "title": "The Gauls march on Rome",
+      "caption": "The Senones came from the Adriatic coast near today's Rimini, by way of Clusium, and met the Romans at the Allia, about 16 km north of Rome. The route is drawn only roughly, and the battlefield's exact site is uncertain.",
+      "bounds": {
+        "latMin": 41.7,
+        "latMax": 44.25,
+        "lonMin": 11.0,
+        "lonMax": 13.6
+      },
+      "places": [
+        {
+          "name": "Rome",
+          "latin": "Roma",
+          "lat": 41.893,
+          "lon": 12.483,
+          "kind": "rome",
+          "side": "l",
+          "dy": 6
+        },
+        {
+          "name": "Allia",
+          "lat": 42.03,
+          "lon": 12.58,
+          "kind": "battle",
+          "side": "r"
+        },
+        {
+          "name": "Clusium",
+          "lat": 43.017,
+          "lon": 11.95,
+          "side": "l"
+        },
+        {
+          "name": "Rimini",
+          "lat": 44.059,
+          "lon": 12.568,
+          "side": "l"
+        }
+      ],
+      "peoples": [
+        {
+          "name": "Senones",
+          "lat": 43.75,
+          "lon": 12.95
+        },
+        {
+          "name": "Etruscans",
+          "latin": "Etrusci",
+          "lat": 42.65,
+          "lon": 11.75
+        }
+      ],
+      "routes": [
+        {
+          "pts": [
+            [
+              43.95,
+              12.55
+            ],
+            [
+              43.45,
+              12.15
+            ],
+            [
+              43.017,
+              11.95
+            ],
+            [
+              42.55,
+              12.2
+            ],
+            [
+              42.06,
+              12.56
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}

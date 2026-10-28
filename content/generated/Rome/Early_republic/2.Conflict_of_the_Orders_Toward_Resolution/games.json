@@ -244,6 +244,48 @@
           "reviewFlags": []
         }
       ]
+    },
+    {
+      "name": "Latin Words",
+      "blurb": "Match each Latin word to its meaning.",
+      "pairs": [
+        {
+          "name": "Vae victis!",
+          "match": "“Woe to the vanquished!”, said by Brennus",
+          "sectionId": "sack-of-rome",
+          "reviewFlags": []
+        },
+        {
+          "name": "Cuniculus",
+          "match": "The tunnel the Romans dug into Veii",
+          "sectionId": "siege-of-veii",
+          "reviewFlags": []
+        },
+        {
+          "name": "Dies Alliensis",
+          "match": "The ill-omened anniversary of the Allia",
+          "sectionId": "battle-of-the-allia",
+          "reviewFlags": []
+        },
+        {
+          "name": "Ager publicus",
+          "match": "Public land owned by the Roman state",
+          "sectionId": "licinian-laws",
+          "reviewFlags": []
+        },
+        {
+          "name": "Civitas sine suffragio",
+          "match": "Citizenship without the right to vote",
+          "sectionId": "rome-after-the-sack",
+          "reviewFlags": []
+        },
+        {
+          "name": "Magister equitum",
+          "match": "“Master of the horse”: a dictator’s deputy",
+          "sectionId": "licinius-and-sextius",
+          "reviewFlags": []
+        }
+      ]
     }
   ],
   "trueFalseDecks": [

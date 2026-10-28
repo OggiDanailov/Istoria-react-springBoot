@@ -1,0 +1,199 @@
+{
+  "description": "Key facts for this chapter, written by hand from the chapter text. Every entry links to the section that explains it.",
+  "people": [
+    {
+      "name": "Marcus Furius Camillus",
+      "text": "Dictator who took Veii through a tunnel; in Livy’s story he also drove the Gauls out of Rome.",
+      "sec": "siege-of-veii"
+    },
+    {
+      "name": "Brennus",
+      "text": "The Gallic chief who won at the Allia and said “Woe to the vanquished!”",
+      "sec": "sack-of-rome"
+    },
+    {
+      "name": "Marcus Manlius",
+      "text": "Former consul woken by the sacred geese, who threw the first Gaul off the Capitoline.",
+      "sec": "sack-of-rome"
+    },
+    {
+      "name": "Lucius Albinus",
+      "text": "Citizen who carried the Vestal Virgins and the sacred objects to Caere on his wagon.",
+      "sec": "sack-of-rome"
+    },
+    {
+      "name": "Marcus Papirius",
+      "text": "Old former magistrate who struck a Gaul with his ivory staff, starting the massacre.",
+      "sec": "sack-of-rome"
+    },
+    {
+      "name": "Aruns",
+      "text": "The man who, Livy says, brought the Gauls to Clusium to take revenge.",
+      "sec": "battle-of-the-allia"
+    },
+    {
+      "name": "Gaius Licinius Stolo",
+      "text": "Tribune of the plebs who led the ten-year campaign for the new laws; later fined for breaking his own land limit.",
+      "sec": "licinius-and-sextius"
+    },
+    {
+      "name": "Lucius Sextius Lateranus",
+      "text": "Licinius’s fellow tribune, Rome’s first plebeian consul in 366 BC.",
+      "sec": "first-plebeian-consul"
+    },
+    {
+      "name": "Lucius Genucius",
+      "text": "Tribune whose law of 342 BC made sharing the consulship regular.",
+      "sec": "modern-verdict"
+    }
+  ],
+  "dates": [
+    {
+      "when": "444 BC",
+      "text": "Consular tribunes begin to replace the consuls in many years.",
+      "sec": "conflict-of-the-orders"
+    },
+    {
+      "when": "c. 396 BC",
+      "text": "Camillus takes Veii.",
+      "sec": "siege-of-veii"
+    },
+    {
+      "when": "390 BC",
+      "text": "The Gauls win at the Allia and sack Rome (traditional date; historians prefer c. 387 BC).",
+      "sec": "battle-of-the-allia"
+    },
+    {
+      "when": "375 BC",
+      "text": "Licinius and Sextius begin their campaign.",
+      "sec": "licinius-and-sextius"
+    },
+    {
+      "when": "367 BC",
+      "text": "The Senate accepts the laws of Licinius and Sextius.",
+      "sec": "licinius-and-sextius"
+    },
+    {
+      "when": "366 BC",
+      "text": "Lucius Sextius becomes the first plebeian consul.",
+      "sec": "first-plebeian-consul"
+    },
+    {
+      "when": "342 BC",
+      "text": "The law of Genucius: one consul is regularly a plebeian.",
+      "sec": "modern-verdict"
+    },
+    {
+      "when": "337 BC",
+      "text": "The first plebeian praetor.",
+      "sec": "first-plebeian-consul"
+    },
+    {
+      "when": "295 BC",
+      "text": "Rome crushes the Senones.",
+      "sec": "rome-after-the-sack"
+    }
+  ],
+  "terms": [
+    {
+      "latin": "patricii, plebeii",
+      "english": "patricians and plebeians",
+      "sec": "conflict-of-the-orders"
+    },
+    {
+      "latin": "tribuni militum consulari potestate",
+      "english": "“military tribunes with consular power”: consular tribunes",
+      "sec": "conflict-of-the-orders"
+    },
+    {
+      "latin": "cuniculus",
+      "english": "the tunnel into Veii",
+      "sec": "siege-of-veii"
+    },
+    {
+      "latin": "praeda",
+      "english": "spoils of war",
+      "sec": "siege-of-veii"
+    },
+    {
+      "latin": "Iuno Regina",
+      "english": "“Queen Juno”, Veii’s goddess, invited to Rome",
+      "sec": "siege-of-veii"
+    },
+    {
+      "latin": "Galli",
+      "english": "the Gauls",
+      "sec": "battle-of-the-allia"
+    },
+    {
+      "latin": "dies Alliensis",
+      "english": "“the day of the Allia”, an ill-omened day",
+      "sec": "battle-of-the-allia"
+    },
+    {
+      "latin": "arx",
+      "english": "the citadel on the Capitoline",
+      "sec": "sack-of-rome"
+    },
+    {
+      "latin": "sellae curules",
+      "english": "the ivory chairs of high office",
+      "sec": "sack-of-rome"
+    },
+    {
+      "latin": "anseres",
+      "english": "the sacred geese of Juno",
+      "sec": "sack-of-rome"
+    },
+    {
+      "latin": "Vae victis!",
+      "english": "“Woe to the vanquished!”",
+      "sec": "sack-of-rome"
+    },
+    {
+      "latin": "civitas sine suffragio",
+      "english": "citizenship without the vote",
+      "sec": "rome-after-the-sack"
+    },
+    {
+      "latin": "dies religiosus",
+      "english": "a day when public business stopped",
+      "sec": "rome-after-the-sack"
+    },
+    {
+      "latin": "tribuni plebis",
+      "english": "tribunes of the plebs",
+      "sec": "licinius-and-sextius"
+    },
+    {
+      "latin": "rogationes",
+      "english": "bills put to an assembly",
+      "sec": "licinius-and-sextius"
+    },
+    {
+      "latin": "magister equitum",
+      "english": "“master of the horse”, a dictator’s deputy",
+      "sec": "licinius-and-sextius"
+    },
+    {
+      "latin": "ager publicus",
+      "english": "public land of the Roman state",
+      "sec": "licinian-laws"
+    },
+    {
+      "latin": "Libri Sibyllini",
+      "english": "the Sibylline Books of prophecy",
+      "sec": "licinian-laws"
+    },
+    {
+      "latin": "decemviri sacris faciundis",
+      "english": "the ten priests who kept the Sibylline Books",
+      "sec": "licinian-laws"
+    },
+    {
+      "latin": "nobilitas",
+      "english": "the new nobility of patricians and rich plebeians",
+      "sec": "modern-verdict"
+    }
+  ]
+}
