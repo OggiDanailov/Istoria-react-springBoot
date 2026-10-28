@@ -474,7 +474,7 @@ let LEVEL = LEVELS[0]
 // What the chapter's quiz score buys for its battle: starting grain and veteran soldiers, placed free before the
 // first enemy arrives. 80% gives the battle's normal start; every 10 points more or less adds or removes grain and
 // a veteran. Tuned so that at 70% only a strong player wins, at 80% an average one, and at 90% nearly everyone.
-const MEDICUS = { heals: 3, wait: 10 }, AUGUR = { seconds: 15, reload: 0.6, damage: 1.5 }
+const MEDICUS = { heals: 1, wait: 10 }, AUGUR = { seconds: 15, reload: 0.6, damage: 1.5 }
 const SCORE = { grainPer10: 75, minGrain: 25, at80: -25, vetsAt80: 1, vetsPer10: 1, sky: [12, 14] }
 const VET_ORDER = ['slinger', 'triarius', 'slinger', 'hastatus', 'slinger', 'triarius', 'slinger']
 function armyFor(score, L = LEVEL) {
@@ -1285,7 +1285,7 @@ function syncTray() {
   $('dismiss').classList.toggle('on', G.dismiss)
   const med = $('medicus'), aug = $('augur')
   med.hidden = !G.hasMedicus; aug.hidden = !G.hasAugur
-  if (G.hasMedicus) { $('med-n').textContent = G.medicusWait > 0 ? `${Math.ceil(G.medicusWait)}s` : G.medicus; med.classList.toggle('on', G.heal); med.disabled = !G.medicus }
+  if (G.hasMedicus) { $('med-n').textContent = !G.medicus ? '✓' : G.medicusWait > 0 ? `${Math.ceil(G.medicusWait)}s` : MEDICUS.heals > 1 ? G.medicus : ''; med.classList.toggle('on', G.heal); med.disabled = !G.medicus }
   if (G.hasAugur) { aug.textContent = G.augur ? 'Augur' : G.t < G.blessUntil ? `Blessed ${Math.ceil(G.blessUntil - G.t)}s` : 'Augur ✓'; aug.disabled = !G.augur; aug.classList.toggle('on', G.t < G.blessUntil) }
 }
 let shownCount = -1
@@ -1459,7 +1459,7 @@ function syncDeploy() {
   $('deploy-text').textContent = left
     ? `Your test score earned you veterans. Drag them onto the field for free (${left} still to place).`
     : 'Your veterans are in place. Drag to adjust, then begin.'
-  if (G.hasMedicus) $('deploy-text').textContent += ` Your medicus can heal ${MEDICUS.heals} wounded soldiers: tap ✚ Medicus, then the soldier.`
+  if (G.hasMedicus) $('deploy-text').textContent += ` Your medicus can heal ${MEDICUS.heals === 1 ? 'one wounded soldier, once per battle' : `${MEDICUS.heals} wounded soldiers`}: tap ✚ Medicus, then the soldier.`
   if (G.hasAugur) $('deploy-text').textContent += ' Once per battle, tap Augur for good omens: your soldiers fight harder for a while.'
 }
 function beginBattle() {

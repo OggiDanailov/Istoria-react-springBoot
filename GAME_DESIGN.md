@@ -84,7 +84,7 @@ Starting grain and veterans by score (veterans in order: slinger, triarius, slin
 
 | Score | Helper | What it does |
 |---|---|---|
-| 80%+ | **Medicus** (army doctor) | heals a wounded soldier to full: tap ✚ Medicus, then the soldier. 3 heals per battle, 10 seconds apart |
+| 80%+ | **Medicus** (army doctor) | heals a wounded soldier to full: tap ✚ Medicus, then the soldier. once per battle |
 | 90%+ | **Augur** (priest who reads the omens in the flight of birds) | once per battle: for 15 seconds your soldiers throw faster and hit 1.5× harder |
 
 Free grain also falls from the sky every 12–14 seconds, and supply carts bring 25 every 20 seconds, so building carts
