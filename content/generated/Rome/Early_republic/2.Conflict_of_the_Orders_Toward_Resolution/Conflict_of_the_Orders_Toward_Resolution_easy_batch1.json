@@ -8,18 +8,18 @@
     {
       "question": "Under the land law of Licinius and Sextius, how much public land could one individual hold?",
       "options": [
-        "About 300 acres",
-        "About one and a quarter acres",
-        "About 30 acres",
-        "About 3,000 acres"
+        "About 120 hectares (300 acres)",
+        "About half a hectare (one and a quarter acres)",
+        "About 12 hectares (30 acres)",
+        "About 1,200 hectares (3,000 acres)"
       ],
       "correctAnswers": [
         0
       ],
       "difficulty": 1,
       "textReference": "#licinian-laws",
-      "explanation": "The law capped holdings of public land at about 300 acres. Such laws were easy to dodge, and Licinius himself was later fined for breaking his own limit.",
-      "sourceQuote": "The law limited any individual to about 300 acres of it.",
+      "explanation": "The law capped holdings of public land at about 120 hectares (300 acres). Such laws were easy to dodge, and Licinius himself was later fined for breaking his own limit.",
+      "sourceQuote": "The law limited any individual to about 120 hectares (300 acres) of it.",
       "reviewFlags": []
     },
     {

@@ -40,7 +40,7 @@ The old men who had held high office stayed behind. They sat outside their house
 
 One night the Gauls scaled the Capitoline cliff. The guards and dogs slept, but the sacred geese of Juno honked. Their noise roused Marcus Manlius, a former consul, who hurled the first attacker down the slope.
 
-Famine and disease finally forced a deal: a ransom of a thousand pounds of gold. When the Romans complained that the Gauls were using rigged weights, Brennus threw his sword onto the scales and declared, “Woe to the vanquished!” In Livy's telling, Camillus arrived just in time, cancelled the deal and routed the Gauls.
+Famine and disease finally forced a deal: a ransom of about 330 kg (a thousand pounds) of gold. When the Romans complained that the Gauls were using rigged weights, Brennus threw his sword onto the scales and declared, “Woe to the vanquished!” In Livy's telling, Camillus arrived just in time, cancelled the deal and routed the Gauls.
 
 ## Did Camillus Really Save Rome? {#sack-reliability}
 
@@ -78,7 +78,7 @@ A second dictator, Publius Manlius Capitolinus, angered patricians by picking a 
 
 The laws of Licinius and Sextius tackled the plebeians' most painful problems. Debt weighed heavily on small farmers, whose creditors were usually wealthy patricians. Under the new debt law, interest already paid was subtracted from the sum owed. The rest could be paid off in three equal yearly instalments.
 
-The land law targeted public land owned by the Roman state. Ordinary citizens received small plots of about one and a quarter acres, barely enough to feed a family. Rich landowners, meanwhile, grabbed huge swathes of public land for themselves. The law limited any individual to about 300 acres of it. It also banned grazing more than 100 cattle there, to protect the common pasture poor farmers relied on. Such laws were easy to dodge. Licinius himself was later fined for breaking his own limit.
+The land law targeted public land owned by the Roman state. Ordinary citizens received small plots of about half a hectare (one and a quarter acres), barely enough to feed a family. Rich landowners, meanwhile, grabbed huge swathes of public land for themselves. The law limited any individual to about 120 hectares (300 acres) of it. It also banned grazing more than 100 cattle there, to protect the common pasture poor farmers relied on. Such laws were easy to dodge. Licinius himself was later fined for breaking his own limit.
 
 A fourth law concerned the Sibylline Books, a collection of prophecies. According to tradition, Tarquinius Superbus, Rome's seventh and last king, bought them from a prophetess at Cumae, a Greek city near Naples. Two patrician priests guarded the books and consulted them in times of plague, famine or war. The new law replaced them with ten priests, five of them plebeians. For the first time, the patricians' monopoly on priesthoods was broken.
 

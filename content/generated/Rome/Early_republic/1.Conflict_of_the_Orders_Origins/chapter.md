@@ -20,7 +20,7 @@ The crowd erupted, and the story raced through the city. Everyone waited for the
 
 In 494 BC Rome was at war with three neighbouring peoples: the Sabines, and the Aequi and Volsci, hill tribes to the east and south-east. The plebeian soldiers were called up as usual. This time they refused to march.
 
-Advised by Sicinius (*Lucius Sicinius Vellutus*), the plebeian leader who masterminded the walkout, they left the city together and camped on the *Mons Sacer*, the "Sacred Mount", a hill just over three miles away. There they built simple defences and waited.
+Advised by Sicinius (*Lucius Sicinius Vellutus*), the plebeian leader who masterminded the walkout, they left the city together and camped on the *Mons Sacer*, the "Sacred Mount", a hill about 5 km (just over three miles) away. There they built simple defences and waited.
 
 This tactic became known as a *secessio* (in full *secessio plebis*, "the withdrawal of the plebs"), or secession: a mass withdrawal, much like a modern general strike. Its power lay in numbers. Plebeians were the vast majority of Romans and produced most of the city's food and goods. When they left, shops and workshops closed, trade stopped, and the city faced its enemies with no army.
 
@@ -42,7 +42,7 @@ The great prize of the first secession of 494 BC was the tribune of the plebs (*
 
 Tribunes commanded no troops. Their power rested on an oath: they were sacrosanct, meaning the plebeians swore that anyone who laid hands on one could be killed without penalty. Shielded by this, a tribune could protect a citizen from a magistrate by placing his own untouchable person in the way. From this grew the veto (Latin for "I forbid"), the power to block the acts of consuls, other magistrates and even the Senate. A Roman under threat could cry "I call upon the tribunes!" (*appello tribunos*).
 
-There were limits. A tribune had to be physically present to intervene, and his protection held only within Rome and a mile beyond. Ancient sources say there were first two or five tribunes, rising to ten in 457 BC.
+There were limits. A tribune had to be physically present to intervene, and his protection held only within Rome and about 1.5 km (a mile) beyond. Ancient sources say there were first two or five tribunes, rising to ten in 457 BC.
 
 ## A Parliament of the Plebs {#plebeian-council}
 
@@ -70,7 +70,7 @@ The decemvirs, a board of ten men appointed around 450 BC to write down Rome's l
 
 They were a list of specific rules rather than a grand code. Trials ended at sunset. Fruit falling onto a neighbour's land still belonged to the tree's owner. A father who sold his son three times lost his power over him, the *patria potestas* ("power of the father").
 
-Debt rules were harsh but clear. A debtor had thirty days to pay; then his creditor could bind him in chains of at least fifteen pounds and feed him a pound of bread a day for sixty days. Not everything helped the plebs: one law banned marriage (*conubium*) between patricians and plebeians.
+Debt rules were harsh but clear. A debtor had thirty days to pay; then his creditor could bind him in chains of at least 5 kg (fifteen pounds) and feed him about 330 g (a pound) of bread a day for sixty days. Not everything helped the plebs: one law banned marriage (*conubium*) between patricians and plebeians.
 
 Later Romans revered the Tables, which formed the basis of Roman law for a thousand years.
 

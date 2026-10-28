@@ -136,19 +136,19 @@
     {
       "question": "How far did a tribune's protection extend?",
       "options": [
-        "Within Rome and a mile beyond",
+        "Within Rome and about 1.5 km (a mile) beyond",
         "Throughout the whole of Italy",
         "Only inside the Forum itself",
         "Wherever the Roman army marched",
-        "Within ten miles of the city"
+        "Within 15 km (ten miles) of the city"
       ],
       "correctAnswers": [
         0
       ],
       "difficulty": 2,
       "textReference": "#tribunes-of-the-plebs",
-      "explanation": "A tribune's protection held only within Rome and a mile beyond. He also had to be physically present to intervene.",
-      "sourceQuote": "A tribune had to be physically present to intervene, and his protection held only within Rome and a mile beyond.",
+      "explanation": "A tribune's protection held only within Rome and about 1.5 km (a mile) beyond. He also had to be physically present to intervene.",
+      "sourceQuote": "A tribune had to be physically present to intervene, and his protection held only within Rome and about 1.5 km (a mile) beyond.",
       "reviewFlags": []
     },
     {

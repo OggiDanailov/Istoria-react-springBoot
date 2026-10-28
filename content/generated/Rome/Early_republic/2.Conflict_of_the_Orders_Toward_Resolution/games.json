@@ -287,9 +287,9 @@
           "reviewFlags": []
         },
         {
-          "claim": "The Romans agreed to pay the Gauls a ransom of a hundred pounds of gold.",
+          "claim": "The Romans agreed to pay the Gauls a ransom of about 33 kg (a hundred pounds) of gold.",
           "answer": false,
-          "why": "Famine and disease forced a deal of a thousand pounds of gold.",
+          "why": "Famine and disease forced a deal of about 330 kg (a thousand pounds) of gold.",
           "sectionId": "sack-of-rome",
           "reviewFlags": []
         },
@@ -335,9 +335,9 @@
           "reviewFlags": []
         },
         {
-          "claim": "The land law limited any individual to about 3,000 acres of public land.",
+          "claim": "The land law limited any individual to about 1,200 hectares (3,000 acres) of public land.",
           "answer": false,
-          "why": "The limit was about 300 acres, and no one could graze more than 100 cattle on public land.",
+          "why": "The limit was about 120 hectares (300 acres), and no one could graze more than 100 cattle on public land.",
           "sectionId": "licinian-laws",
           "reviewFlags": []
         },

@@ -69,8 +69,8 @@
         "A tribune could free any chained debtor",
         "A debtor had thirty days to pay",
         "Debts were cancelled every seventh year",
-        "Chains had to weigh at least fifteen pounds",
-        "A chained debtor got a pound of bread a day",
+        "Chains had to weigh at least 5 kg (fifteen pounds)",
+        "A chained debtor got about 330 g (a pound) of bread a day",
         "Interest was capped at one per cent a year"
       ],
       "correctAnswers": [
@@ -80,8 +80,8 @@
       ],
       "difficulty": 3,
       "textReference": "#twelve-tables",
-      "explanation": "After thirty days, a creditor could chain a debtor in fetters of at least fifteen pounds and feed him a pound of bread a day for sixty days. The rules were harsh but clear.",
-      "sourceQuote": "A debtor had thirty days to pay; then his creditor could bind him in chains of at least fifteen pounds and feed him a pound of bread a day for sixty days.",
+      "explanation": "After thirty days, a creditor could chain a debtor in fetters of at least 5 kg (fifteen pounds) and feed him about 330 g (a pound) of bread a day for sixty days. The rules were harsh but clear.",
+      "sourceQuote": "A debtor had thirty days to pay; then his creditor could bind him in chains of at least 5 kg (fifteen pounds) and feed him about 330 g (a pound) of bread a day for sixty days.",
       "reviewFlags": []
     },
     {

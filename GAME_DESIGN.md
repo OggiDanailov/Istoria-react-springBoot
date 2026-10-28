@@ -113,6 +113,8 @@ ambushes (Volscian Raids), mountain rocks and the sacred chickens (Aquilonia).
 - **Latin in the test**: a "Latin Words" match round and a few Latin quiz questions.
 - **Key facts**: about 10 people, 9 dates and 20 Latin words, each linked to its section (`keyfacts.json`).
 - **Maps**: one or two small maps in the chronicle (`maps.json`), coordinates from Wikipedia, uncertain sites noted.
+- **Measurements**: metric first, the source's unit in parentheses: "about 5 km (three miles)". Ancient miles and pounds
+  are Roman (a mile is about 1.5 km, a pound about 330 g).
 - **Games are about history, not historians**: no modern scholars as answers.
 - **Odd One Out**: exactly one defensible answer (check other ways of grouping the four items).
 - **Reviewed chapters are locked** (`"locked": true` in `tools/content-gen/chapters.json`) so a regeneration can't

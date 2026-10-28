@@ -25,7 +25,7 @@
           "label": "Plebeians walk out to the Sacred Mount",
           "when": "494 BC",
           "year": -494,
-          "fact": "Plebeian soldiers refused to fight and camped on the Mons Sacer, a hill just over three miles from Rome.",
+          "fact": "Plebeian soldiers refused to fight and camped on the Mons Sacer, a hill about 5 km (just over three miles) from Rome.",
           "sectionId": "first-secession",
           "reviewFlags": []
         },
@@ -330,7 +330,7 @@
         {
           "claim": "In the first secession of 494 BC, the plebeians camped on the Mons Sacer.",
           "answer": true,
-          "why": "They camped on the Mons Sacer, the 'Sacred Mount', just over three miles from Rome.",
+          "why": "They camped on the Mons Sacer, the 'Sacred Mount', about 5 km (just over three miles) from Rome.",
           "sectionId": "first-secession",
           "reviewFlags": []
         },
@@ -385,7 +385,7 @@
         {
           "claim": "Under the Twelve Tables, a debtor had thirty days to pay.",
           "answer": true,
-          "why": "After thirty days his creditor could chain him and feed him a pound of bread a day for sixty days.",
+          "why": "After thirty days his creditor could chain him and feed him about 330 g (a pound) of bread a day for sixty days.",
           "sectionId": "twelve-tables",
           "reviewFlags": []
         },
