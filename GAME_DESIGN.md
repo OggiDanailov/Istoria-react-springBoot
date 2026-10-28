@@ -119,7 +119,8 @@ ambushes (Volscian Raids), mountain rocks and the sacred chickens (Aquilonia).
 - **Maps**: one or two small maps in the chronicle (`maps.json`), coordinates from Wikipedia, uncertain sites noted.
 - **Measurements**: metric first, the source's unit in parentheses: "about 5 km (three miles)". Ancient miles and pounds
   are Roman (a mile is about 1.5 km, a pound about 330 g).
-- **Games are about history, not historians**: no modern scholars as answers.
+- **Sources count as history**: ancient writers (Livy, Fabius Pictor…) and modern historians may be in the games when
+  the chapter explains who they are and what they argued; not when the chapter only names them in passing.
 - **Odd One Out**: exactly one defensible answer (check other ways of grouping the four items).
 - **Reviewed chapters are locked** (`"locked": true` in `tools/content-gen/chapters.json`) so a regeneration can't
   overwrite them.
