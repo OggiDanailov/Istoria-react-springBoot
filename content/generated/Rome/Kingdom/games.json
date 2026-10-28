@@ -456,10 +456,10 @@
         "Tarquinius Priscus",
         "Servius Tullius",
         "Numa Pompilius",
-        "Lars Porsenna"
+        "Tarquin the Proud"
       ],
       "oddIndex": 2,
-      "why": "Tradition calls Tarquinius Priscus and Servius Etruscan-born, and Porsenna was an Etruscan king; Numa was a Sabine.",
+      "why": "All four were kings of Rome. Tarquinius Priscus, Servius Tullius and Tarquin the Proud are remembered as Etruscan by birth or family; Numa was a Sabine.",
       "sectionId": "numa-tullus-ancus",
       "reviewFlags": []
     },
@@ -489,14 +489,14 @@
     },
     {
       "items": [
-        "Tim Cornell",
-        "Arnaldo Momigliano",
-        "Mary Beard",
-        "Fabius Pictor"
+        "Lictors",
+        "Fasces",
+        "Sella curulis",
+        "Pons Sublicius"
       ],
       "oddIndex": 3,
-      "why": "Three are modern scholars who question the traditions; Fabius Pictor was the ancient Roman who wrote Rome's first history around 200 BC.",
-      "sectionId": "how-reliable",
+      "why": "Lictors, the fasces and the curule chair were signs of the king's power; the Pons Sublicius was the wooden bridge over the Tiber.",
+      "sectionId": "how-kings-ruled",
       "reviewFlags": []
     }
   ],
