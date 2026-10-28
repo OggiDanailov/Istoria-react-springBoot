@@ -751,22 +751,23 @@ document.getElementById('sheet-body').addEventListener('click', e => {
   if (qa) openAnswers(qa.dataset.qa)
   if (read) openChronicle(read.dataset.read)
 })
+function toggleReview() {
+  openAll = !openAll
+  try { openAll ? localStorage.setItem(OPEN_ALL_KEY, '1') : localStorage.removeItem(OPEN_ALL_KEY) } catch {}
+  closeSheet(); render()
+  toast(openAll ? 'Review mode is on: everything is open.' : 'Review mode is off: each chapter opens when you win the battle before it.')
+}
 function openProgress() {
   openSheet('Your progress', `
+    <p style="margin:0 0 14px;font-size:14px"><button class="ghost dark" id="open-all">${openAll ? 'Turn review mode off' : 'Review mode: open everything'}</button><br>
+      <span style="font-size:13px;color:#6b5d50">${openAll ? 'Review mode is on: every chapter is open, each chapter has its questions and answers, and every battle can be played at a score you pick. Review battles don’t change your progress.' : 'For reviewing content: opens every chapter, shows each chapter’s questions with their answers, and lets you play any battle at a score you pick. Your real progress isn’t changed.'}</span></p>
     <p style="font-size:14px">Each chapter ends with a test made of all its games; your first answer to each question counts. The test score sets your army for the chapter’s battle: around 80% gives a fair fight, 90% a comfortable one, and below 70% only an expert wins.</p>
     ${CHAPTERS.map((c, i) => {
       const t = tests[c.id], started = t && Object.keys(t.answers).length, lost = t?.battles?.filter(b => !b.won).length ?? 0
       return `<div class="unit-row"><span><b>${esc(c.short)}</b><br><span style="font-size:13.5px">${started ? `Test score ${pct(t.score)}%${t.attempt > 1 ? ` (attempt ${t.attempt})` : ''}` : 'Test not started'} · ${esc(battleName(i))}: ${t?.won ? `won ${'★'.repeat(t.stars)}` : lost ? `lost ${lost === 1 ? 'once' : lost + ' times'}` : 'not fought yet'}</span></span></div>`
     }).join('')}
-    <p style="margin-top:16px;font-size:14px"><button class="ghost dark" id="open-all">${openAll ? 'Turn review mode off' : 'Review mode: open everything'}</button><br>
-      <span style="font-size:13px;color:#6b5d50">${openAll ? 'Review mode is on: every chapter is open, each chapter has its questions and answers, and every battle can be played at a score you pick. Review battles don’t change your progress.' : 'For reviewing content: opens every chapter, shows each chapter’s questions with their answers, and lets you play any battle at a score you pick. Your real progress isn’t changed.'}</span></p>
     <p style="margin-top:16px"><button class="ghost dark" id="reset-progress">Reset my progress</button></p>`)
-  document.getElementById('open-all').addEventListener('click', () => {
-    openAll = !openAll
-    try { openAll ? localStorage.setItem(OPEN_ALL_KEY, '1') : localStorage.removeItem(OPEN_ALL_KEY) } catch {}
-    closeSheet(); render()
-    toast(openAll ? 'Review mode is on: everything is open.' : 'Review mode is off: each chapter opens when you win the battle before it.')
-  })
+  document.getElementById('open-all').addEventListener('click', toggleReview)
   document.getElementById('reset-progress').addEventListener('click', e => {
     if (e.target.dataset.confirm !== '1') { e.target.dataset.confirm = '1'; e.target.textContent = 'Tap again to erase all tests, stars and battles'; return }
     try { localStorage.removeItem(TEST_KEY); localStorage.removeItem(STORE_KEY) } catch {}
@@ -828,8 +829,10 @@ function renderRome() {
         ${chs.length ? progressBar(total) : ''}
       </button>` }).join('')}
     </div>
+    <p><button class="ghost" id="review-toggle">${openAll ? 'Turn review mode off' : 'Review mode: open everything'}</button></p>
     <p class="footnote">Every chapter is generated from Wikipedia and fact-checked by AI. Early Roman dates are the traditional ones; historians doubt many of them.</p>`
   app.querySelectorAll('[data-era]').forEach(b => b.addEventListener('click', () => openEra(ERAS.find(e => e.id === b.dataset.era))))
+  app.querySelector('#review-toggle')?.addEventListener('click', toggleReview)
 }
 function renderEra(eraId) {
   const era = ERAS.find(e => e.id === eraId)
