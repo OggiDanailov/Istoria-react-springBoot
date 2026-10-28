@@ -1,0 +1,201 @@
+{
+  "batchName": "Middle Republic: The Fall of Carthage and Corinth (167-133 BCE) - Hard Batch 1",
+  "chapterName": "Middle Republic: The Fall of Carthage and Corinth (167-133 BCE)",
+  "difficulty": 3,
+  "batchOrder": 5,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "When a rash Roman attack on Hasdrubal's camp at Nepheris ended in heavy losses, what did Scipio Aemilianus do?",
+      "options": [
+        "Covered the retreat with 300 cavalry and rescued trapped men at night",
+        "Burned the Carthaginian fleet in revenge",
+        "Took command from the consul and stormed the camp",
+        "Negotiated a truce with Hasdrubal",
+        "Abandoned the siege and returned to Rome",
+        "Rallied the Numidian allies to counter-attack"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#a-faltering-siege",
+      "explanation": "Scipio, whose advice against the attack had been ignored, led 300 cavalry in disciplined charges and returned at night for trapped men. Visiting senators took note of his conduct.",
+      "sourceQuote": "Scipio led 300 cavalry in disciplined charges that covered the retreat, then rode back at night to rescue trapped men.",
+      "reviewFlags": []
+    },
+    {
+      "question": "In which year did Numantia finally fall, ending a struggle that had begun with its revolt in 154 BC?",
+      "options": [
+        "134 BC",
+        "146 BC",
+        "143 BC",
+        "133 BC",
+        "129 BC",
+        "151 BC"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 3,
+      "textReference": "#numantine-war",
+      "explanation": "Numantia fell in 133 BC, a year after Scipio took command in 134 BC. Afterwards Spain stayed largely at peace for more than half a century.",
+      "sourceQuote": "Numantia fell in 133 BC, and Spain stayed largely at peace for more than half a century.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which outcomes followed the fall of Carthage in 146 BC? (select all that apply)",
+      "options": [
+        "Survivors were resettled 16 km inland",
+        "Hasdrubal was killed in the Temple of Eshmoun",
+        "About 50,000 survivors were sold into slavery",
+        "Sacred statues were returned to Sicilian cities",
+        "The Romans sowed the ground with salt",
+        "The Roman deserters were pardoned"
+      ],
+      "correctAnswers": [
+        2,
+        3
+      ],
+      "difficulty": 3,
+      "textReference": "#fall-of-carthage",
+      "explanation": "Around 50,000 survivors were enslaved, and statues Carthage had looted from Sicilian cities were ceremonially returned. The salting story is probably a 19th-century invention.",
+      "sourceQuote": "Around 50,000 survivors were sold into slavery.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did the Carthaginians respond to Scipio's harbour mole in 147 BC?",
+      "options": [
+        "They wrecked it with fireships",
+        "They dug a secret channel and sailed out a new fleet",
+        "They tunnelled under the city walls",
+        "They bribed the Roman engineers",
+        "They surrendered the harbour district",
+        "They called the Macedonian fleet to break it"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 3,
+      "textReference": "#scipio-takes-command",
+      "explanation": "Carthage secretly dug a new channel to the sea and sailed out with a newly built fleet. They held their own, but many ships were trapped against the sea wall and lost as they withdrew.",
+      "sourceQuote": "The Carthaginians secretly dug a new channel to the sea and sailed out with a newly built fleet.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Why did the Roman plan of 123 BC to found a new colony on the site of Carthage collapse?",
+      "options": [
+        "Plague broke out among the colonists",
+        "Numidian raids destroyed the settlers",
+        "The Senate's ten-man commission blocked it",
+        "Utica refused to provide a harbour",
+        "Rumours that wolves dug up its boundary markers",
+        "The first emperor vetoed it"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 3,
+      "textReference": "#after-carthage",
+      "explanation": "Opponents spread rumours that wolves had dug up the colony's boundary markers, a terrible omen, and the plan collapsed. A new Roman Carthage was only completed in 29 BC by the man who became Rome's first emperor.",
+      "sourceQuote": "Opponents spread rumours that wolves had dug up its boundary markers, a terrible omen, and the plan collapsed.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Who wrote the one complete ancient narrative of the Third Punic War, and when?",
+      "options": [
+        "It survives only on coins and inscriptions",
+        "It was written by Cato as propaganda",
+        "It was Polybius's draft, later heavily edited",
+        "It was written three centuries later by a Greek author",
+        "It was written by a Carthaginian exile",
+        "It survives only as a list of contents"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 3,
+      "textReference": "#polybius-and-the-sources",
+      "explanation": "The only complete narrative was written by a Greek author in the 2nd century AD, three centuries after the war. It seems to draw mainly on Polybius, but scholars have found several problems with it.",
+      "sourceQuote": "The one complete narrative of the war was written by a Greek author in the 2nd century AD, three centuries later.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What happened to the general Hasdrubal after the disaster at Oroscopa in 151 BC?",
+      "options": [
+        "He died on the battlefield",
+        "He escaped home and was condemned to death by Carthage",
+        "He was hailed a hero and made ruler",
+        "He was handed to Rome as a hostage",
+        "He was executed by the Numidians",
+        "He fled into exile at Utica"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 3,
+      "textReference": "#carthage-under-rome",
+      "explanation": "Carthage condemned Hasdrubal to death in a bid to placate Rome, but it was too late. He was later released to lead a field army when Rome attacked.",
+      "sourceQuote": "Hasdrubal escaped home, where his own city condemned him to death in a bid to placate Rome.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did the Roman embassy of 147 BC announce to the Achaean League, sparking war?",
+      "options": [
+        "It must join Rome's war on Carthage",
+        "It must return its hostages to Rome",
+        "It must hand over Corinth's fleet",
+        "It must dissolve entirely",
+        "It must pay a heavy indemnity",
+        "It must shrink back to its original core"
+      ],
+      "correctAnswers": [
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#sack-of-corinth",
+      "explanation": "The embassy demanded the League shrink back to its original core, and the envoys were nearly mobbed. War followed, ending with Mummius routing the Greeks outside Corinth.",
+      "sourceQuote": "The next year a Roman embassy announced that the League must shrink back to its original core; the envoys were nearly mobbed.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which measures did Carthage take after rejecting Rome's ultimatum in 149 BC? (select all that apply)",
+      "options": [
+        "Hired Celtiberian mercenaries",
+        "Handed Utica to the Numidians",
+        "Moved its population 16 km inland",
+        "Released Hasdrubal to lead a field army",
+        "Recalled its warships from Utica",
+        "Freed slaves willing to fight"
+      ],
+      "correctAnswers": [
+        3,
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#the-ultimatum",
+      "explanation": "Carthage freed slaves who were willing to fight and released the condemned general Hasdrubal to lead a field army. Its huge walls, with barracks for 24,000 soldiers built inside, also gave it a strong defence.",
+      "sourceQuote": "Slaves willing to fight were freed, and Hasdrubal, the general recently condemned to death, was released to lead a field army.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What do historians say about the origin of the famous phrase 'Carthage must be destroyed' (Carthago delenda est)?",
+      "options": [
+        "It was inscribed on Cato's tomb",
+        "It survives in Livy's surviving books",
+        "It is a later tradition credited to Cato since the 18th century",
+        "Scipio coined it at Numantia",
+        "Polybius recorded Cato saying it",
+        "Cato's speeches show it word for word"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 3,
+      "textReference": "#carthago-delenda-est",
+      "explanation": "Cato has been credited with ending every speech with the phrase only since the 18th century. It is a later tradition rather than a quotation recorded by ancient writers.",
+      "sourceQuote": "The phrase is a later tradition rather than a quotation recorded by ancient writers.",
+      "reviewFlags": []
+    }
+  ]
+}

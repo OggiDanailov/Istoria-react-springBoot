@@ -1,0 +1,619 @@
+{
+  "chapterName": "Middle Republic: The Fall of Carthage and Corinth (167-133 BCE)",
+  "model": "claude-opus-5-5",
+  "briefing": {
+    "title": "Carthage, 149 BC",
+    "paragraphs": [
+      "In 149 BC a Roman army lands at Utica on the coast of North Africa, a short march from Carthage. Rome is now the dominant power in the Mediterranean, and Carthage, its old rival in what is now Tunisia, has already lost two great wars to it.",
+      "Carthage has paid off its war debt and threatens no one, but many Roman senators want it gone. Within three years Rome will wipe out both Carthage and the Greek city of Corinth. In Spain, the hilltop town of Numantia awaits its turn."
+    ]
+  },
+  "timelines": [
+    {
+      "name": "Rome Crushes Its Rival",
+      "blurb": "Four turning points, from a harsh peace to the last stand in Spain.",
+      "events": [
+        {
+          "label": "Harsh peace ends Second Punic War",
+          "when": "201 BC",
+          "year": -201,
+          "fact": "Carthage lost its overseas lands, owed 10,000 silver talents over 50 years and could not wage war without Rome's permission.",
+          "sectionId": "carthage-under-rome",
+          "reviewFlags": []
+        },
+        {
+          "label": "Hasdrubal's army surrenders at Oroscopa",
+          "when": "151 BC",
+          "year": -151,
+          "fact": "Carthage's attempt to strike back at the Numidian king ended in disaster and handed Rome its pretext for war.",
+          "sectionId": "carthage-under-rome",
+          "reviewFlags": []
+        },
+        {
+          "label": "Carthage falls to Scipio",
+          "when": "Spring 146 BC",
+          "year": -146,
+          "fact": "After six days of street fighting, about 50,000 survivors were sold into slavery.",
+          "sectionId": "fall-of-carthage",
+          "reviewFlags": []
+        },
+        {
+          "label": "Numantia falls after a long siege",
+          "when": "133 BC",
+          "year": -133,
+          "fact": "Starved out by Scipio's ring of seven forts, most surviving Numantines killed themselves rather than surrender.",
+          "sectionId": "numantine-war",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "The Long Shadow of Carthage",
+      "blurb": "From the first war with Carthage to the city's rebirth as a Roman town.",
+      "events": [
+        {
+          "label": "First Punic War begins",
+          "when": "264 BC",
+          "year": -264,
+          "fact": "The first of Rome's three wars with Carthage lasted until 241 BC and ended in Carthage's defeat.",
+          "sectionId": "carthage-under-rome",
+          "reviewFlags": []
+        },
+        {
+          "label": "Polybius arrives in Rome as a hostage",
+          "when": "167 BC",
+          "year": -167,
+          "fact": "The Greek historian Polybius was one of many hostages taken from the Achaean League, and he became a friend of Scipio Aemilianus.",
+          "sectionId": "polybius-and-the-sources",
+          "reviewFlags": []
+        },
+        {
+          "label": "Rome declares war after Utica defects",
+          "when": "149 BC",
+          "year": -149,
+          "fact": "Utica, a large port 55 km (34 miles) north of Carthage, gave Rome the harbour it needed to invade.",
+          "sectionId": "carthago-delenda-est",
+          "reviewFlags": []
+        },
+        {
+          "label": "Scipio Aemilianus elected consul",
+          "when": "147 BC",
+          "year": -147,
+          "fact": "At 36 or 37 he was below the legal age of 41, so the Senate suspended the age rules for the year.",
+          "sectionId": "scipio-takes-command",
+          "reviewFlags": []
+        },
+        {
+          "label": "Wolf rumours wreck a new colony",
+          "when": "123 BC",
+          "year": -123,
+          "fact": "Opponents claimed wolves had dug up the boundary markers of a planned colony on the site, a terrible omen, and the plan collapsed.",
+          "sectionId": "after-carthage",
+          "reviewFlags": []
+        },
+        {
+          "label": "First emperor completes Roman Carthage",
+          "when": "29 BC",
+          "year": -29,
+          "fact": "The man who became Rome's first emperor built a new Roman Carthage, which grew into a leading city of the empire.",
+          "sectionId": "after-carthage",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Wars on Three Fronts",
+      "blurb": "Africa, Greece and Spain, and the long memory of Carthage.",
+      "events": [
+        {
+          "label": "Second Punic War begins",
+          "when": "218 BC",
+          "year": -218,
+          "fact": "Carthage's second war with Rome lasted until 201 BC and ended in another defeat.",
+          "sectionId": "carthage-under-rome",
+          "reviewFlags": []
+        },
+        {
+          "label": "Numantia revolts",
+          "when": "154 BC",
+          "year": -154,
+          "fact": "The Celtiberian town of Numantia, on the Douro river in Spain, began a long and bloody war with Rome.",
+          "sectionId": "numantine-war",
+          "reviewFlags": []
+        },
+        {
+          "label": "Achaean League conquers Sparta",
+          "when": "148 BC",
+          "year": -148,
+          "fact": "The Greek alliance seized Sparta in defiance of Rome, and war followed soon after.",
+          "sectionId": "sack-of-corinth",
+          "reviewFlags": []
+        },
+        {
+          "label": "Mummius sacks Corinth",
+          "when": "146 BC",
+          "year": -146,
+          "fact": "In the same year as Carthage fell, the consul Mummius destroyed Corinth, massacring its men and enslaving its women and children.",
+          "sectionId": "sack-of-corinth",
+          "reviewFlags": []
+        },
+        {
+          "label": "Fighting in Spain flares again",
+          "when": "143 BC",
+          "year": -143,
+          "fact": "After dying down in 151 BC, the war with Numantia restarted, and a string of Roman commanders failed.",
+          "sectionId": "numantine-war",
+          "reviewFlags": []
+        },
+        {
+          "label": "Scipio sent to finish Numantia",
+          "when": "134 BC",
+          "year": -134,
+          "fact": "Scipio Aemilianus raised 20,000 men and 40,000 allies, including Numidian cavalry and 12 war elephants.",
+          "sectionId": "numantine-war",
+          "reviewFlags": []
+        },
+        {
+          "label": "Punic still spoken in North Africa",
+          "when": "Until the 7th century AD",
+          "year": 650,
+          "fact": "Under Roman rule local towns kept much of their culture, and Carthage's Punic language survived for centuries.",
+          "sectionId": "after-carthage",
+          "reviewFlags": []
+        },
+        {
+          "label": "Rome and Carthage sign symbolic peace",
+          "when": "1985",
+          "year": 1985,
+          "fact": "The mayors of Rome and modern Carthage signed a symbolic peace treaty more than 2,000 years after the war.",
+          "sectionId": "after-carthage",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "matchSets": [
+    {
+      "name": "Latin Words",
+      "blurb": "Match each Latin word to its meaning.",
+      "pairs": [
+        {
+          "name": "Carthago delenda est",
+          "match": "'Carthage must be destroyed', a motto later credited to Cato",
+          "sectionId": "carthago-delenda-est",
+          "reviewFlags": []
+        },
+        {
+          "name": "lex Villia annalis",
+          "match": "Law setting 41 as the minimum age for a consul",
+          "sectionId": "scipio-takes-command",
+          "reviewFlags": []
+        },
+        {
+          "name": "moles",
+          "match": "Stone barrier Scipio built across Carthage's harbour approach",
+          "sectionId": "scipio-takes-command",
+          "reviewFlags": []
+        },
+        {
+          "name": "agnomen",
+          "match": "Honorary surname such as 'Africanus' or 'Achaicus'",
+          "sectionId": "after-carthage",
+          "reviewFlags": []
+        },
+        {
+          "name": "ager publicus",
+          "match": "Land owned by the Roman state, as Carthage's territory became",
+          "sectionId": "after-carthage",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Places and Powers",
+      "blurb": "Match each place or alliance to its role in the wars.",
+      "pairs": [
+        {
+          "name": "Utica",
+          "match": "Port that defected to Rome, later seat of the province of Africa",
+          "sectionId": "after-carthage",
+          "reviewFlags": []
+        },
+        {
+          "name": "Nepheris",
+          "match": "Hasdrubal's fortified base 25 km (16 miles) south of Carthage",
+          "sectionId": "a-faltering-siege",
+          "reviewFlags": []
+        },
+        {
+          "name": "Numantia",
+          "match": "Celtiberian hilltop town on the Douro, starved out in 133 BC",
+          "sectionId": "numantine-war",
+          "reviewFlags": []
+        },
+        {
+          "name": "Corinth",
+          "match": "Rich Greek port on the isthmus, destroyed by Mummius in 146 BC",
+          "sectionId": "sack-of-corinth",
+          "reviewFlags": []
+        },
+        {
+          "name": "Achaean League",
+          "match": "Alliance of Peloponnese city-states that conquered Sparta in 148 BC",
+          "sectionId": "sack-of-corinth",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "trueFalseDecks": [
+    {
+      "name": "The Road to Ruin",
+      "blurb": "From the peace of 201 BC to Carthage's last days.",
+      "cards": [
+        {
+          "claim": "The peace of 201 BC made Carthage pay 10,000 silver talents over 50 years.",
+          "answer": true,
+          "why": "Carthage also lost its overseas lands and could not wage war without Rome's express permission.",
+          "sectionId": "carthage-under-rome",
+          "reviewFlags": []
+        },
+        {
+          "claim": "After the defeat at Oroscopa, Carthage honoured Hasdrubal as a hero.",
+          "answer": false,
+          "why": "His own city condemned him to death in a bid to placate Rome, but it was too late.",
+          "sectionId": "carthage-under-rome",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Ancient writers record Cato ending every speech with 'Carthage must be destroyed'.",
+          "answer": false,
+          "why": "The phrase is a later tradition, credited to him since the 18th century, not a quotation recorded by ancient writers.",
+          "sectionId": "carthago-delenda-est",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Rome's final demand was that the Carthaginians resettle 16 km (10 miles) from the sea.",
+          "answer": true,
+          "why": "For a people who lived by sea trade this was a death sentence, so they broke off talks and prepared to fight.",
+          "sectionId": "the-ultimatum",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Carthage's main landward wall was only 2 metres (7 feet) thick.",
+          "answer": false,
+          "why": "It was 9 metres (30 feet) thick and up to 20 metres (70 feet) high, with barracks for 24,000 soldiers inside it.",
+          "sectionId": "the-ultimatum",
+          "reviewFlags": []
+        },
+        {
+          "claim": "The rash Roman attack on Hasdrubal's camp at Nepheris was launched on Scipio's advice.",
+          "answer": false,
+          "why": "It was launched against Scipio's advice and ended in heavy losses; Scipio's cavalry charges covered the retreat.",
+          "sectionId": "a-faltering-siege",
+          "reviewFlags": []
+        },
+        {
+          "claim": "The Senate suspended the age rules so Scipio Aemilianus could become consul.",
+          "answer": true,
+          "why": "At 36 or 37 he was below the minimum age of 41, but public demand for him was overwhelming.",
+          "sectionId": "scipio-takes-command",
+          "reviewFlags": []
+        },
+        {
+          "claim": "In 146 BC the Romans fought street by street through Carthage for six days.",
+          "answer": true,
+          "why": "They killed everyone they met and burned buildings behind them; only on the last day did Scipio agree to take prisoners.",
+          "sectionId": "fall-of-carthage",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "After the Flames",
+      "blurb": "Carthage's aftermath, Corinth, Numantia and the sources.",
+      "cards": [
+        {
+          "claim": "Around 50,000 Carthaginian survivors were sold into slavery.",
+          "answer": true,
+          "why": "After the six days of fighting, about 50,000 survivors were enslaved.",
+          "sectionId": "fall-of-carthage",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Ancient writers confirm that the Romans sowed Carthage's ground with salt.",
+          "answer": false,
+          "why": "The salt story is probably a 19th-century invention and is almost certainly false.",
+          "sectionId": "fall-of-carthage",
+          "reviewFlags": []
+        },
+        {
+          "claim": "The new Roman province of Africa was governed from Utica.",
+          "answer": true,
+          "why": "Utica, the nearby port that had sided with Rome, became the seat of the province, a major source of grain.",
+          "sectionId": "after-carthage",
+          "reviewFlags": []
+        },
+        {
+          "claim": "The colony Roman reformers voted to found at Carthage in 123 BC thrived.",
+          "answer": false,
+          "why": "Opponents spread rumours that wolves had dug up its boundary markers, and the plan collapsed.",
+          "sectionId": "after-carthage",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Mummius, the conqueror of Corinth, was a famous expert on art.",
+          "answer": false,
+          "why": "He was famously ignorant of art, warning contractors that if they lost any priceless statues they would have to supply new ones.",
+          "sectionId": "sack-of-corinth",
+          "reviewFlags": []
+        },
+        {
+          "claim": "After Corinth fell, the Greek states came under the Roman province of Macedonia.",
+          "answer": true,
+          "why": "Greek independence was over, and Mummius took the honorary surname 'Achaicus'.",
+          "sectionId": "sack-of-corinth",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Scipio Aemilianus took Numantia by storming its walls in a direct assault.",
+          "answer": false,
+          "why": "Instead of attacking, he built a ring of seven forts around the town and starved it out.",
+          "sectionId": "numantine-war",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Polybius came to Rome in 167 BC as a hostage from the Achaean League.",
+          "answer": true,
+          "why": "There he became a friend of Scipio Aemilianus and later accompanied him to Africa during the final war.",
+          "sectionId": "polybius-and-the-sources",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "oddOneOut": [
+    {
+      "items": [
+        "Lose its overseas lands",
+        "Pay 10,000 silver talents",
+        "Hand over every weapon",
+        "No war without Rome's permission"
+      ],
+      "oddIndex": 2,
+      "why": "Three were terms of the peace of 201 BC. Handing over every weapon was a Roman demand in 149 BC, just before the final war.",
+      "sectionId": "carthage-under-rome",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Fear of Carthaginian trade",
+        "Chaos after the Numidian king died",
+        "Glory and loot",
+        "Carthage's military threat"
+      ],
+      "oddIndex": 3,
+      "why": "Three are modern explanations for why Rome wanted war. By 151 BC Carthage posed no military threat to Rome.",
+      "sectionId": "carthago-delenda-est",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Failed attempts to scale walls",
+        "An unhealthy camp",
+        "Fleet damaged by fireships",
+        "A mole across the harbour"
+      ],
+      "oddIndex": 3,
+      "why": "Three were Roman setbacks in the first two years of the siege. The mole was Scipio's later move to cut off supply ships.",
+      "sectionId": "a-faltering-siege",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Deserters burn the Temple of Eshmoun",
+        "Hasdrubal surrenders to Scipio",
+        "Sicilian statues returned",
+        "Ground sown with salt"
+      ],
+      "oddIndex": 3,
+      "why": "Three really happened at Carthage's fall in 146 BC. The salting of the ground is probably a 19th-century invention.",
+      "sectionId": "fall-of-carthage",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Ten-man Senate commission",
+        "Curse on resettling the site",
+        "Colony founded on the site",
+        "Land made public land"
+      ],
+      "oddIndex": 2,
+      "why": "Three were measures taken right after 146 BC to keep Carthage in ruins. A colony failed in 123 BC and only came in 29 BC.",
+      "sectionId": "after-carthage",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Thousands of hostages taken",
+        "Blocking the absorption of Sparta",
+        "Demand to shrink to its core",
+        "Its warships burned at Utica"
+      ],
+      "oddIndex": 3,
+      "why": "Three were Achaean grievances against Rome. The warships burned at Utica belonged to Carthage.",
+      "sectionId": "sack-of-corinth",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Coins",
+        "Inscriptions",
+        "Polybius's full account",
+        "Archaeology"
+      ],
+      "oddIndex": 2,
+      "why": "Historians use coins, inscriptions and archaeology to fill gaps. Large parts of Polybius's account of the Third Punic War are lost.",
+      "sectionId": "polybius-and-the-sources",
+      "reviewFlags": []
+    }
+  ],
+  "whoAmI": [
+    {
+      "name": "Carthage's Last War",
+      "blurb": "Three men at the heart of Rome's final war with Carthage.",
+      "people": [
+        {
+          "name": "Scipio Aemilianus",
+          "options": [
+            "Scipio Aemilianus",
+            "Hasdrubal",
+            "Cato",
+            "Mummius"
+          ],
+          "clues": [
+            "As a military tribune, I led 300 cavalry to cover a retreat from an attack I had advised against.",
+            "I was only 36 or 37 when the Senate suspended the age rules so I could be consul.",
+            "I built a stone mole across Carthage's harbour approach to stop supply ships.",
+            "After taking Carthage, I took the surname 'Africanus', just like my adoptive grandfather."
+          ],
+          "sectionId": "scipio-takes-command",
+          "reviewFlags": []
+        },
+        {
+          "name": "Hasdrubal",
+          "options": [
+            "Hasdrubal",
+            "Scipio Aemilianus",
+            "Cato",
+            "Mummius"
+          ],
+          "clues": [
+            "Before 151 BC I was a general unknown to history.",
+            "After my army surrendered at Oroscopa, my own city condemned me to death.",
+            "I tortured Roman prisoners to death on Carthage's walls in full view of their comrades.",
+            "I surrendered to Scipio for my life, and my wife cursed me and walked into the burning temple."
+          ],
+          "sectionId": "fall-of-carthage",
+          "reviewFlags": []
+        },
+        {
+          "name": "Cato",
+          "options": [
+            "Cato",
+            "Scipio Aemilianus",
+            "Hasdrubal",
+            "Mummius"
+          ],
+          "clues": [
+            "Ancient writers never recorded the famous phrase later put in my mouth.",
+            "Around 153 BC I visited Carthage as an envoy and was alarmed by its wealth and strength.",
+            "I was the elderly senator who became the most famous voice for finishing Carthage off.",
+            "Since the 18th century, I've been credited with ending every speech with 'Carthage must be destroyed'."
+          ],
+          "sectionId": "carthago-delenda-est",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Greece, Spain and the Story",
+      "blurb": "A conqueror, a historian and a general far from Carthage.",
+      "people": [
+        {
+          "name": "Mummius",
+          "options": [
+            "Mummius",
+            "Polybius",
+            "Scipio Aemilianus",
+            "Cato"
+          ],
+          "clues": [
+            "I arrived in Greece with 23,000 infantry and 3,500 cavalry.",
+            "I routed a much smaller Greek army outside a rich port on the isthmus.",
+            "I warned contractors that if they lost any priceless statues, they would have to supply new ones.",
+            "I took the honorary surname 'Achaicus'."
+          ],
+          "sectionId": "sack-of-corinth",
+          "reviewFlags": []
+        },
+        {
+          "name": "Polybius",
+          "options": [
+            "Polybius",
+            "Mummius",
+            "Scipio Aemilianus",
+            "Cato"
+          ],
+          "clues": [
+            "I lived from about 200 to about 118 BC.",
+            "I came to Rome in 167 BC as one of the Achaean League's hostages.",
+            "Large parts of what I wrote about the Third Punic War are now lost.",
+            "I am a Greek historian and the main ancient guide to Rome's wars with Carthage."
+          ],
+          "sectionId": "polybius-and-the-sources",
+          "reviewFlags": []
+        },
+        {
+          "name": "Scipio Aemilianus",
+          "options": [
+            "Scipio Aemilianus",
+            "Mummius",
+            "Polybius",
+            "Cato"
+          ],
+          "clues": [
+            "In 134 BC I raised 20,000 men and 40,000 allies, with Numidian cavalry and 12 war elephants.",
+            "Rather than attack a hilltop town on the Douro, I ringed it with seven forts and starved it out.",
+            "A Greek historian who was my friend tends to show me in a flattering light.",
+            "Rome sent me to Spain because I had already destroyed Carthage."
+          ],
+          "sectionId": "numantine-war",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "places": [
+    {
+      "name": "Carthage",
+      "wikipediaTitle": "Carthage",
+      "lat": 36.8528,
+      "lon": 10.3233,
+      "why": "Rome's great rival in North Africa, besieged from 149 BC and destroyed in 146 BC.",
+      "sectionId": "fall-of-carthage",
+      "coordinates": "Carthage archaeological site",
+      "reviewFlags": []
+    },
+    {
+      "name": "Corinth",
+      "wikipediaTitle": "Ancient Corinth",
+      "lat": 37.9053455,
+      "lon": 22.8801924,
+      "why": "Rich Greek port of the Achaean League, sacked by Mummius in the same year Carthage fell.",
+      "sectionId": "sack-of-corinth",
+      "coordinates": "Wikipedia: Ancient Corinth",
+      "reviewFlags": []
+    },
+    {
+      "name": "Numantia",
+      "wikipediaTitle": "Numantia",
+      "lat": 41.80958611,
+      "lon": -2.44425833,
+      "why": "Celtiberian hilltop town on the Douro that resisted Rome until Scipio starved it out in 133 BC.",
+      "sectionId": "numantine-war",
+      "coordinates": "Wikipedia: Numantia",
+      "reviewFlags": []
+    },
+    {
+      "name": "Macedonia",
+      "wikipediaTitle": "Macedonia (ancient kingdom)",
+      "lat": 40.76,
+      "lon": 22.52,
+      "why": "Kingdom north of Greece whose pretender allied with Carthage, and the Roman province that later took in the Greek states.",
+      "sectionId": "a-faltering-siege",
+      "coordinates": "Pella, the old royal capital",
+      "reviewFlags": []
+    }
+  ]
+}

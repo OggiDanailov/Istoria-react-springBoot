@@ -1,0 +1,430 @@
+{
+  "description": "Maps for the chronicle, written by hand. Coordinates from Wikipedia; each map sits at the start of its section.",
+  "maps": [
+    {
+      "id": "three-wars",
+      "sec": "carthage-under-rome",
+      "title": "Rome’s wars, 149–133 BC",
+      "caption": "In these years Rome destroyed Carthage in Africa and Corinth in Greece (both in 146 BC) and starved out Numantia in Spain (133 BC).",
+      "bounds": {
+        "latMin": 34.6,
+        "latMax": 45.2,
+        "lonMin": -6.5,
+        "lonMax": 27.5
+      },
+      "places": [
+        {
+          "name": "Rome",
+          "latin": "Roma",
+          "lat": 41.893,
+          "lon": 12.483,
+          "kind": "rome",
+          "side": "r",
+          "dy": -4
+        },
+        {
+          "name": "Carthage",
+          "latin": "Carthago",
+          "lat": 36.853,
+          "lon": 10.323,
+          "kind": "battle",
+          "side": "l",
+          "dy": 4
+        },
+        {
+          "name": "Corinth",
+          "lat": 37.91,
+          "lon": 22.88,
+          "kind": "battle",
+          "side": "l"
+        },
+        {
+          "name": "Numantia",
+          "lat": 41.81,
+          "lon": -2.44,
+          "kind": "battle",
+          "side": "r"
+        }
+      ],
+      "peoples": [
+        {
+          "name": "Spain",
+          "latin": "Hispania",
+          "lat": 39.6,
+          "lon": -3.6
+        },
+        {
+          "name": "Numidians",
+          "lat": 35.2,
+          "lon": 2.4
+        },
+        {
+          "name": "Achaean League",
+          "lat": 36.4,
+          "lon": 21.6
+        },
+        {
+          "name": "Macedonia",
+          "lat": 41.2,
+          "lon": 22.6
+        }
+      ]
+    },
+    {
+      "id": "numantia",
+      "sec": "numantine-war",
+      "title": "Numantia, 134–133 BC: starved out",
+      "caption": "Instead of storming the hilltop town, Scipio Aemilianus built a ring of seven forts around Numantia and starved it out. The plan is simplified.",
+      "plan": true,
+      "height": 200,
+      "key": {
+        "rome": "Romans",
+        "enemy": "Numantines"
+      },
+      "rivers": [
+        {
+          "pts": [
+            [
+              0,
+              178
+            ],
+            [
+              60,
+              170
+            ],
+            [
+              130,
+              176
+            ],
+            [
+              210,
+              168
+            ],
+            [
+              300,
+              174
+            ]
+          ],
+          "name": "River Douro",
+          "label": [
+            245,
+            162
+          ]
+        }
+      ],
+      "units": [
+        {
+          "side": "enemy",
+          "d": "M124,92 a26,20 0 1,0 52,0 a26,20 0 1,0 -52,0",
+          "name": "Numantia, on its hill",
+          "lx": 150,
+          "ly": 96
+        },
+        {
+          "side": "rome",
+          "x": 143,
+          "y": 28,
+          "w": 14,
+          "h": 12,
+          "name": "Scipio’s seven forts, linked by a wall",
+          "ly": 22
+        },
+        {
+          "side": "rome",
+          "x": 200,
+          "y": 50,
+          "w": 14,
+          "h": 12
+        },
+        {
+          "side": "rome",
+          "x": 214,
+          "y": 99,
+          "w": 14,
+          "h": 12
+        },
+        {
+          "side": "rome",
+          "x": 174,
+          "y": 138,
+          "w": 14,
+          "h": 12
+        },
+        {
+          "side": "rome",
+          "x": 112,
+          "y": 138,
+          "w": 14,
+          "h": 12
+        },
+        {
+          "side": "rome",
+          "x": 72,
+          "y": 99,
+          "w": 14,
+          "h": 12
+        },
+        {
+          "side": "rome",
+          "x": 86,
+          "y": 50,
+          "w": 14,
+          "h": 12
+        }
+      ],
+      "moves": [
+        {
+          "side": "rome",
+          "dashed": true,
+          "noHead": true,
+          "pts": [
+            [
+              222.5,
+              92.0
+            ],
+            [
+              222.1,
+              98.1
+            ],
+            [
+              220.9,
+              104.1
+            ],
+            [
+              219.0,
+              109.9
+            ],
+            [
+              216.2,
+              115.6
+            ],
+            [
+              212.8,
+              121.0
+            ],
+            [
+              208.7,
+              126.1
+            ],
+            [
+              203.9,
+              130.8
+            ],
+            [
+              198.5,
+              135.1
+            ],
+            [
+              192.6,
+              138.9
+            ],
+            [
+              186.2,
+              142.2
+            ],
+            [
+              179.5,
+              145.0
+            ],
+            [
+              172.4,
+              147.2
+            ],
+            [
+              165.1,
+              148.7
+            ],
+            [
+              157.6,
+              149.7
+            ],
+            [
+              150.0,
+              150.0
+            ],
+            [
+              142.4,
+              149.7
+            ],
+            [
+              134.9,
+              148.7
+            ],
+            [
+              127.6,
+              147.2
+            ],
+            [
+              120.5,
+              145.0
+            ],
+            [
+              113.8,
+              142.2
+            ],
+            [
+              107.4,
+              138.9
+            ],
+            [
+              101.5,
+              135.1
+            ],
+            [
+              96.1,
+              130.8
+            ],
+            [
+              91.3,
+              126.1
+            ],
+            [
+              87.2,
+              121.0
+            ],
+            [
+              83.8,
+              115.6
+            ],
+            [
+              81.0,
+              109.9
+            ],
+            [
+              79.1,
+              104.1
+            ],
+            [
+              77.9,
+              98.1
+            ],
+            [
+              77.5,
+              92.0
+            ],
+            [
+              77.9,
+              85.9
+            ],
+            [
+              79.1,
+              79.9
+            ],
+            [
+              81.0,
+              74.1
+            ],
+            [
+              83.8,
+              68.4
+            ],
+            [
+              87.2,
+              63.0
+            ],
+            [
+              91.3,
+              57.9
+            ],
+            [
+              96.1,
+              53.2
+            ],
+            [
+              101.5,
+              48.9
+            ],
+            [
+              107.4,
+              45.1
+            ],
+            [
+              113.7,
+              41.8
+            ],
+            [
+              120.5,
+              39.0
+            ],
+            [
+              127.6,
+              36.8
+            ],
+            [
+              134.9,
+              35.3
+            ],
+            [
+              142.4,
+              34.3
+            ],
+            [
+              150.0,
+              34.0
+            ],
+            [
+              157.6,
+              34.3
+            ],
+            [
+              165.1,
+              35.3
+            ],
+            [
+              172.4,
+              36.8
+            ],
+            [
+              179.5,
+              39.0
+            ],
+            [
+              186.2,
+              41.8
+            ],
+            [
+              192.6,
+              45.1
+            ],
+            [
+              198.5,
+              48.9
+            ],
+            [
+              203.9,
+              53.2
+            ],
+            [
+              208.7,
+              57.9
+            ],
+            [
+              212.8,
+              63.0
+            ],
+            [
+              216.2,
+              68.4
+            ],
+            [
+              219.0,
+              74.1
+            ],
+            [
+              220.9,
+              79.9
+            ],
+            [
+              222.1,
+              85.9
+            ],
+            [
+              222.5,
+              92.0
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}

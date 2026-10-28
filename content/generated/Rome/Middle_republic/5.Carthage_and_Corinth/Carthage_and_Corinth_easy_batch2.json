@@ -1,0 +1,179 @@
+{
+  "batchName": "Middle Republic: The Fall of Carthage and Corinth (167-133 BCE) - Easy Batch 2",
+  "chapterName": "Middle Republic: The Fall of Carthage and Corinth (167-133 BCE)",
+  "difficulty": 1,
+  "batchOrder": 2,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "How did the historian Polybius first come to Rome in 167 BC?",
+      "options": [
+        "As a hostage from the Achaean League",
+        "As a prisoner taken at Corinth",
+        "As a tutor hired by Cato",
+        "As an envoy of Macedonia"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#polybius-and-the-sources",
+      "explanation": "Polybius was one of the many hostages Rome took from the Achaean League. In Rome he became a friend of Scipio Aemilianus.",
+      "sourceQuote": "He came to Rome in 167 BC as one of the many hostages taken from the Achaean League, the alliance of southern Greek cities that Rome distrusted.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did Scipio Aemilianus finally defeat Numantia?",
+      "options": [
+        "He bribed its leaders to surrender",
+        "He stormed it with war elephants",
+        "He diverted the Douro river",
+        "He built seven forts and starved it out"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#numantine-war",
+      "explanation": "Instead of attacking, Scipio ringed Numantia with seven forts and starved it out. After disease and famine, most surviving Numantines killed themselves rather than surrender.",
+      "sourceQuote": "Instead of attacking, Scipio built a ring of seven forts around Numantia and starved it out.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How was Scipio Aemilianus able to become consul in 147 BC despite being too young?",
+      "options": [
+        "His age was falsified in records",
+        "The army proclaimed him in Africa",
+        "The Senate suspended the age rules",
+        "He was first appointed dictator"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#scipio-takes-command",
+      "explanation": "Public demand, helped by his famous family name, led the Senate to suspend the age rules for the year. He was then elected consul and given sole command in Africa.",
+      "sourceQuote": "But public demand was so strong, helped by his famous family name, that the Senate suspended the age rules for the year.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How was Scipio Aemilianus related to the general who had won the Second Punic War?",
+      "options": [
+        "He was his son",
+        "He was his great-grandson",
+        "He was his adopted grandson",
+        "He was his son-in-law"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#a-faltering-siege",
+      "explanation": "Scipio Aemilianus was the adopted grandson of the victor of the Second Punic War. At the start of the Third Punic War he was serving as a military tribune.",
+      "sourceQuote": "Scipio Aemilianus, adopted grandson of the general who had won the Second Punic War, was serving as a military tribune (*tribunus militum*), a middle-ranking post.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which elderly Roman senator, whose hatred of Carthage became legendary, was alarmed by the city's wealth when he visited it as an envoy around 153 BC?",
+      "options": [
+        "Scipio Aemilianus",
+        "Mummius",
+        "Cato",
+        "Polybius"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#carthago-delenda-est",
+      "explanation": "Cato visited Carthage as an envoy around 153 BC and was alarmed by its growing wealth and strength. He was the most famous voice of the Senate faction wanting Carthage destroyed.",
+      "sourceQuote": "Around 153 BC he visited the city as an envoy and was alarmed by its growing wealth and strength.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Carthage, Rome's great rival, was a wealthy trading city in what is now which country?",
+      "options": [
+        "Western Sicily",
+        "Eastern Libya",
+        "Southern Spain",
+        "Northern Tunisia"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#carthage-under-rome",
+      "explanation": "Carthage was a wealthy trading city in what is now northern Tunisia. By the mid-2nd century BC it had already lost two long wars to Rome.",
+      "sourceQuote": "Its great rival, Carthage (*Carthago*), a wealthy trading city in what is now northern Tunisia, had lost two long wars to Rome.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What honorary surname did Scipio Aemilianus take after destroying Carthage?",
+      "options": [
+        "Magnus",
+        "Africanus",
+        "Achaicus",
+        "Punicus"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#after-carthage",
+      "explanation": "Scipio took the surname \"Africanus\", just as his adoptive grandfather had done. He also celebrated a triumph, Rome's victory parade.",
+      "sourceQuote": "He also took the honorary surname (*agnomen*) \"Africanus\", just as his adoptive grandfather had done.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Under the peace of 201 BC, what was Carthage forbidden to do without Rome's express permission?",
+      "options": [
+        "Wage war at all",
+        "Mint its own coins",
+        "Trade with Greek cities",
+        "Elect its own magistrates"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#carthage-under-rome",
+      "explanation": "Carthage could not wage war at all without Rome's permission, a clause that proved poisonous. It also had to pay 10,000 silver talents over 50 years.",
+      "sourceQuote": "It was also forbidden to wage war at all without Rome's express permission.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which famous Greek city did Rome destroy in 146 BC, the same year Carthage fell?",
+      "options": [
+        "Sparta",
+        "Athens",
+        "Thebes",
+        "Corinth"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#sack-of-corinth",
+      "explanation": "Rome destroyed Corinth in 146 BC, the same year as Carthage. Corinth was a rich port on the isthmus joining southern Greece to the mainland.",
+      "sourceQuote": "In the same year that Carthage fell, 146 BC, Rome destroyed another famous city: Corinth, a rich Greek port on the narrow isthmus joining southern Greece to the mainland.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Hoping to buy peace in 149 BC, what did Carthage's envoys first agree to hand over to Rome?",
+      "options": [
+        "The city of Utica",
+        "Half of its grain harvest",
+        "Its royal family as hostages",
+        "Every weapon in the city"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#the-ultimatum",
+      "explanation": "The envoys were told to hand over every weapon in the city, and they reluctantly obeyed. Surviving records claim 200,000 sets of armour and 2,000 catapults were carried away.",
+      "sourceQuote": "Its envoys were told to hand over every weapon in the city, and they reluctantly obeyed.",
+      "reviewFlags": []
+    }
+  ]
+}

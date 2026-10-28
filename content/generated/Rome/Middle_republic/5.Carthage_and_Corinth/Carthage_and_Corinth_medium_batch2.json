@@ -1,0 +1,189 @@
+{
+  "batchName": "Middle Republic: The Fall of Carthage and Corinth (167-133 BCE) - Medium Batch 2",
+  "chapterName": "Middle Republic: The Fall of Carthage and Corinth (167-133 BCE)",
+  "difficulty": 2,
+  "batchOrder": 4,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "What did a leading senatorial opponent of destroying Carthage argue?",
+      "options": [
+        "Carthage had already been punished enough",
+        "Fear of a strong enemy kept Rome united",
+        "Rome's armies were needed in Spain",
+        "Carthage's trade made Rome rich",
+        "War would anger the Numidian king"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#carthago-delenda-est",
+      "explanation": "He argued that fear of a strong enemy kept the common people in check and Rome united. Not every senator shared Cato's hatred of Carthage.",
+      "sourceQuote": "A leading opponent argued that fear of a strong enemy kept the common people in check and Rome united.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Who spent half a century raiding and seizing Carthaginian land, always with Rome's backing?",
+      "options": [
+        "The Achaean League",
+        "The king of Macedonia",
+        "The king of the Numidians",
+        "The city of Utica",
+        "The Celtiberian tribes"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#carthage-under-rome",
+      "explanation": "The Numidian king was Rome's ally, and Rome backed him every time Carthage appealed. Because Carthage could not wage war without Rome's permission, it was left defenceless.",
+      "sourceQuote": "The king of the Numidians, the native people who controlled much of modern Algeria and Tunisia, was Rome's ally.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Why must historians treat Polybius's account of the Third Punic War with some caution?",
+      "options": [
+        "He hated the Romans",
+        "He never left Greece",
+        "He tends to flatter his patron Scipio",
+        "He relied only on Livy",
+        "He wrote centuries after the war"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#polybius-and-the-sources",
+      "explanation": "Though normally careful and reliable, Polybius tends to show his friend and patron Scipio in a flattering light. Large parts of his account of the war are also lost.",
+      "sourceQuote": "Normally a careful and reliable historian, Polybius tends to show his patron in a flattering light.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did Carthage's attempt to strike back at the Numidians in 151 BC end?",
+      "options": [
+        "In disaster at the Battle of Oroscopa",
+        "In a narrow victory that alarmed Rome",
+        "In a stalemate settled by Roman envoys",
+        "In a Numidian retreat to the desert",
+        "In the capture of the Numidian king"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#carthage-under-rome",
+      "explanation": "At Oroscopa the Carthaginian army surrendered, and many soldiers were massacred by the Numidians. The campaign also gave Rome its pretext for war.",
+      "sourceQuote": "The campaign ended in disaster at the Battle of Oroscopa: the army surrendered, and many soldiers were massacred by the Numidians.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What honorary surname did the consul Mummius take after destroying Corinth?",
+      "options": [
+        "Achaicus",
+        "Africanus",
+        "Macedonicus",
+        "Corinthius",
+        "Numantinus"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#sack-of-corinth",
+      "explanation": "Mummius took the surname \"Achaicus\", after the Achaean League he had defeated. With Corinth's fall, Greek independence was over.",
+      "sourceQuote": "Mummius took the honorary surname \"Achaicus\".",
+      "reviewFlags": []
+    },
+    {
+      "question": "Who led the 12 war elephants in Scipio's army at Numantia?",
+      "options": [
+        "A Celtiberian chief who defected",
+        "A Carthaginian exile",
+        "A Macedonian pretender",
+        "A Numidian prince who later became Rome's enemy",
+        "Hasdrubal, freed from captivity"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#numantine-war",
+      "explanation": "The elephants were led by a Numidian prince who would later become a dangerous enemy of Rome. Scipio raised 20,000 men and 40,000 allies for the campaign.",
+      "sourceQuote": "He raised 20,000 men and 40,000 allies, including Numidian cavalry and 12 war elephants led by a Numidian prince who would later become a dangerous enemy of Rome.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What was Carthage's situation by 151 BC, as Rome's war faction pressed for its destruction?",
+      "options": [
+        "Ruled directly by the Numidian king",
+        "Debt-free and prospering, but no military threat",
+        "Rearming with a large new navy",
+        "Allied with Macedonia against Rome",
+        "Bankrupt and unable to pay its debt"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#carthago-delenda-est",
+      "explanation": "Carthage had paid off its war debt and was prospering, but posed no military threat to Rome. Even so, a Senate faction had long wanted to finish it off.",
+      "sourceQuote": "By 151 BC Carthage had paid off its war debt and was prospering, but it posed no military threat to Rome.",
+      "reviewFlags": []
+    },
+    {
+      "question": "With whom did Carthage ally during the siege, someone who was also fighting Rome?",
+      "options": [
+        "The king of the Numidians",
+        "The Achaean League",
+        "The city of Utica",
+        "The Numantine Celtiberians",
+        "A pretender to the Macedonian throne"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#a-faltering-siege",
+      "explanation": "Carthage allied with a pretender who had seized the throne of Macedonia, the kingdom north of Greece, and was fighting Rome there. Rome was facing enemies on several fronts.",
+      "sourceQuote": "Carthage even allied with a pretender who had seized the throne of Macedonia, the kingdom north of Greece, and was fighting Rome there.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Before being made consul, which junior office had Scipio Aemilianus planned to stand for in 147 BC?",
+      "options": [
+        "Praetor",
+        "Quaestor",
+        "Censor",
+        "Aedile",
+        "Tribune of the plebs"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#scipio-takes-command",
+      "explanation": "Scipio planned to stand for aedile, a junior office overseeing the city of Rome. At 36 or 37 he was below the minimum age of 41 for consul set by the lex Villia annalis.",
+      "sourceQuote": "He planned to stand for aedile (*aedilis*), a junior office overseeing the city of Rome.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How is the Roman historian Livy's account of this period known today?",
+      "options": [
+        "Only through a list of contents",
+        "Through Polybius's quotations of him",
+        "Only through inscriptions",
+        "In full, from medieval copies",
+        "Through a Greek translation"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#polybius-and-the-sources",
+      "explanation": "Livy, who relied heavily on Polybius, is known for this period only through a list of contents. Other ancient histories survive only in fragments.",
+      "sourceQuote": "The great Roman historian Livy, who relied heavily on Polybius, is known for this period only through a list of contents.",
+      "reviewFlags": []
+    }
+  ]
+}

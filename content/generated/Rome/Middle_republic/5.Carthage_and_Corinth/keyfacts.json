@@ -1,0 +1,139 @@
+{
+  "description": "Key facts for this chapter, written by hand from the chapter text. Every entry links to the section that explains it.",
+  "people": [
+    {
+      "name": "Cato",
+      "text": "Elderly senator whose hatred of Carthage became legendary.",
+      "sec": "carthago-delenda-est"
+    },
+    {
+      "name": "Hasdrubal",
+      "text": "Carthaginian general who ruled the city in its last stand, then surrendered.",
+      "sec": "carthage-under-rome"
+    },
+    {
+      "name": "Scipio Aemilianus",
+      "text": "Took Carthage in 146 BC and Numantia in 133 BC.",
+      "sec": "a-faltering-siege"
+    },
+    {
+      "name": "Mummius",
+      "text": "Consul who destroyed Corinth in 146 BC.",
+      "sec": "sack-of-corinth"
+    },
+    {
+      "name": "Polybius",
+      "text": "Greek historian, Scipio’s friend and an eyewitness at Carthage.",
+      "sec": "polybius-and-the-sources"
+    }
+  ],
+  "dates": [
+    {
+      "when": "151 BC",
+      "text": "Carthage fights the Numidians and loses at Oroscopa.",
+      "sec": "carthage-under-rome"
+    },
+    {
+      "when": "149 BC",
+      "text": "Utica defects; Rome declares war.",
+      "sec": "carthago-delenda-est"
+    },
+    {
+      "when": "147 BC",
+      "text": "Scipio Aemilianus becomes consul, under the legal age.",
+      "sec": "scipio-takes-command"
+    },
+    {
+      "when": "146 BC",
+      "text": "Carthage destroyed after six days of street fighting.",
+      "sec": "fall-of-carthage"
+    },
+    {
+      "when": "146 BC",
+      "text": "Mummius sacks Corinth.",
+      "sec": "sack-of-corinth"
+    },
+    {
+      "when": "134 BC",
+      "text": "Scipio sent to finish Numantia.",
+      "sec": "numantine-war"
+    },
+    {
+      "when": "133 BC",
+      "text": "Numantia falls.",
+      "sec": "numantine-war"
+    },
+    {
+      "when": "123 BC",
+      "text": "A plan for a colony at Carthage fails.",
+      "sec": "after-carthage"
+    },
+    {
+      "when": "29 BC",
+      "text": "A new Roman Carthage is completed.",
+      "sec": "after-carthage"
+    }
+  ],
+  "terms": [
+    {
+      "latin": "Carthago",
+      "english": "Carthage",
+      "sec": "carthage-under-rome"
+    },
+    {
+      "latin": "senatus",
+      "english": "the Senate",
+      "sec": "carthago-delenda-est"
+    },
+    {
+      "latin": "Carthago delenda est",
+      "english": "“Carthage must be destroyed”",
+      "sec": "carthago-delenda-est"
+    },
+    {
+      "latin": "tribunus militum",
+      "english": "a military tribune",
+      "sec": "a-faltering-siege"
+    },
+    {
+      "latin": "aedilis",
+      "english": "an aedile, a junior city official",
+      "sec": "scipio-takes-command"
+    },
+    {
+      "latin": "lex Villia annalis",
+      "english": "the law on minimum ages for office",
+      "sec": "scipio-takes-command"
+    },
+    {
+      "latin": "moles",
+      "english": "a mole, a stone barrier in the sea",
+      "sec": "scipio-takes-command"
+    },
+    {
+      "latin": "ager publicus",
+      "english": "public land",
+      "sec": "after-carthage"
+    },
+    {
+      "latin": "triumphus",
+      "english": "a victory parade",
+      "sec": "after-carthage"
+    },
+    {
+      "latin": "agnomen",
+      "english": "an honorary surname",
+      "sec": "after-carthage"
+    },
+    {
+      "latin": "provincia",
+      "english": "a province",
+      "sec": "after-carthage"
+    },
+    {
+      "latin": "Hispania",
+      "english": "Spain",
+      "sec": "numantine-war"
+    }
+  ]
+}

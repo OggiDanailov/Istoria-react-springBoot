@@ -1,0 +1,145 @@
+{
+  "batchName": "Middle Republic: The Fall of Carthage and Corinth (167-133 BCE) - Latin words",
+  "chapterName": "Middle Republic: The Fall of Carthage and Corinth (167-133 BCE)",
+  "difficulty": 1,
+  "batchOrder": 9,
+  "description": "Written by hand from the chapter text: the Latin words it explains",
+  "questions": [
+    {
+      "question": "What does Carthago delenda est mean?",
+      "options": [
+        "Carthage must be destroyed",
+        "Carthage is defeated",
+        "Carthage will rise again",
+        "Carthage belongs to Rome"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#carthago-delenda-est",
+      "explanation": "Cato has been credited with ending every speech with it, but the phrase is a later tradition.",
+      "sourceQuote": "with the words \"Carthage must be destroyed\" (*Carthago delenda est*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "After the war, Carthage’s lands became the Roman provincia of Africa. Where was it governed from?",
+      "options": [
+        "Utica",
+        "Carthage",
+        "Nepheris",
+        "Rome"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#after-carthage",
+      "explanation": "Utica, a nearby port, had sided with Rome; the province became a major source of grain.",
+      "sourceQuote": "Carthage's lands became the Roman province (*provincia*) of Africa, governed from Utica",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did Scipio Aemilianus celebrate the fall of Carthage?",
+      "options": [
+        "With a triumphus, Rome’s victory parade",
+        "By founding a colony on the site",
+        "With games at Utica",
+        "By building a temple to Eshmoun"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#after-carthage",
+      "explanation": "He also took the honorary surname Africanus, like his adoptive grandfather.",
+      "sourceQuote": "celebrated a triumph (*triumphus*), Rome's victory parade.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Why did Scipio build a moles across Carthage’s harbour approach?",
+      "options": [
+        "To stop supply ships getting into the city",
+        "To give his ships a safe harbour",
+        "To carry siege towers to the walls",
+        "To protect Utica from raids"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#scipio-takes-command",
+      "explanation": "The Carthaginians answered by secretly digging a new channel to the sea.",
+      "sourceQuote": "Supply ships kept slipping into Carthage, so Scipio built a huge mole (*moles*), a stone barrier across the harbour approach.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What happened to Carthage’s land after 146 BC?",
+      "options": [
+        "It was confiscated as ager publicus, Roman public land",
+        "It was given to the Numidian king",
+        "It was shared among Scipio’s soldiers",
+        "It was returned to the survivors"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#after-carthage",
+      "explanation": "A curse was also laid on anyone who tried to resettle the site.",
+      "sourceQuote": "The land was confiscated as public land (*ager publicus*), the property of the Roman state.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which agnomen did Mummius take after destroying Corinth?",
+      "options": [
+        "Achaicus",
+        "Africanus",
+        "Corinthius",
+        "Macedonicus"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#sack-of-corinth",
+      "explanation": "Scipio Aemilianus took “Africanus” after Carthage, as his adoptive grandfather had.",
+      "sourceQuote": "Mummius took the honorary surname \"Achaicus\".",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did the lex Villia annalis set?",
+      "options": [
+        "Minimum ages for offices: 41 for a consul",
+        "The size of a legion",
+        "Limits on a general’s loot",
+        "The rules for a triumph"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#scipio-takes-command",
+      "explanation": "In 147 BC the Senate suspended the age rules so that Scipio, 36 or 37, could be consul.",
+      "sourceQuote": "a law on minimum ages (*lex Villia annalis*) set the bar at 41.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What was Scipio Aemilianus’s rank in the first years of the siege of Carthage?",
+      "options": [
+        "Military tribune (tribunus militum)",
+        "Consul",
+        "Aedile",
+        "Praetor"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#a-faltering-siege",
+      "explanation": "He saved Roman troops more than once, and visiting senators took note.",
+      "sourceQuote": "was serving as a military tribune (*tribunus militum*), a middle-ranking post.",
+      "reviewFlags": []
+    }
+  ]
+}

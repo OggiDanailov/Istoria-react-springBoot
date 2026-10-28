@@ -1,0 +1,189 @@
+{
+  "batchName": "Middle Republic: The Fall of Carthage and Corinth (167-133 BCE) - Medium Batch 1",
+  "chapterName": "Middle Republic: The Fall of Carthage and Corinth (167-133 BCE)",
+  "difficulty": 2,
+  "batchOrder": 3,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "What did Hasdrubal's wife do when her husband surrendered to Scipio?",
+      "options": [
+        "She fled the city by sea",
+        "She was taken to Rome as a hostage",
+        "She begged Scipio to spare him",
+        "She cursed him and walked into the burning temple",
+        "She surrendered alongside him"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#fall-of-carthage",
+      "explanation": "Watching from a rampart, she blessed Scipio, cursed her husband for cowardice, and walked into the burning temple with their children. Hasdrubal had surrendered in exchange for his life and freedom.",
+      "sourceQuote": "His wife, watching from a rampart, blessed Scipio, cursed her husband for his cowardice, and walked into the burning temple with their children.",
+      "reviewFlags": []
+    },
+    {
+      "question": "After Carthage agreed to disarm in 149 BC, what happened to its warships?",
+      "options": [
+        "They were sailed to Rome as trophies",
+        "They were sold to Greek merchants",
+        "They were burned in the harbour at Utica",
+        "They were sunk at the harbour mouth",
+        "They were handed to the Numidians"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#the-ultimatum",
+      "explanation": "Carthage's warships sailed to Utica and were burned in the harbour. Only afterwards did Rome reveal its real demand that the city be abandoned.",
+      "sourceQuote": "Carthage's warships sailed to Utica and were burned in the harbour.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did Hasdrubal do inside Carthage in 148 BC?",
+      "options": [
+        "Fled to Macedonia",
+        "Overthrew the civilian leaders and took command",
+        "Opened secret talks with Scipio",
+        "Surrendered the harbour to Rome",
+        "Was executed by the city council"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#a-faltering-siege",
+      "explanation": "Hasdrubal overthrew Carthage's civilian leaders and took command himself. That same year a new Roman commander failed to take several towns loyal to Carthage.",
+      "sourceQuote": "Inside the city, Hasdrubal overthrew the civilian leaders and took command himself.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What symbolic act involving Rome and Carthage took place in 1985?",
+      "options": [
+        "UNESCO rebuilt Carthage's harbour",
+        "Italy returned Carthaginian statues",
+        "The mayors of Rome and Carthage signed a peace treaty",
+        "Rome lifted the ancient curse on the site",
+        "Cato's speeches were publicly burned"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#after-carthage",
+      "explanation": "In 1985 the mayors of Rome and modern Carthage signed a symbolic peace treaty. After 146 BC, Rome had laid a curse on anyone who tried to resettle the site.",
+      "sourceQuote": "In 1985 the mayors of Rome and modern Carthage signed a symbolic peace treaty.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did the Senate respond to the peace deals that beaten Roman generals made with Numantia?",
+      "options": [
+        "It exiled both generals to Greece",
+        "It ratified them after long debate",
+        "It accepted one and rejected the other",
+        "It doubled the tribute Numantia owed",
+        "It refused them and handed a general to the Numantines"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#numantine-war",
+      "explanation": "The Senate refused to honour either deal and handed the beaten general over to the Numantines as a prisoner. One treaty had been negotiated by a young officer whose family the Numantines trusted.",
+      "sourceQuote": "The Senate refused to honour either deal, and simply handed the beaten general over to the Numantines as a prisoner.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Who held out to the end in the Temple of Eshmoun and burned it down around themselves?",
+      "options": [
+        "Macedonian allies",
+        "About 900 Roman deserters",
+        "Carthaginian priests",
+        "Numidian mercenaries",
+        "Hasdrubal's bodyguard"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#fall-of-carthage",
+      "explanation": "About 900 Roman deserters who had fought for Carthage knew they could expect no mercy. They held out in the temple of Eshmoun, a Carthaginian god of healing, and set it alight.",
+      "sourceQuote": "About 900 Roman deserters who had fought for Carthage knew they could expect no mercy.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How long did Carthage's Punic language continue to be spoken in North Africa?",
+      "options": [
+        "Until the 3rd century AD",
+        "Until the 7th century AD",
+        "It died out within a generation",
+        "Until the 19th century",
+        "Until the 1st century BC"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#after-carthage",
+      "explanation": "Punic was still spoken in North Africa until the 7th century AD. Local towns in the province of Africa also kept much of their own government and culture.",
+      "sourceQuote": "Local towns kept much of their own government and culture, and the Punic language of Carthage was still spoken in North Africa until the 7th century AD.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which Achaean League ambition did Rome keep blocking, souring relations before the war of 146 BC?",
+      "options": [
+        "Building a fleet",
+        "Conquering Athens",
+        "Absorbing Sparta",
+        "Freeing Macedonia",
+        "Allying with Carthage"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#sack-of-corinth",
+      "explanation": "Rome blocked the League's wish to absorb Sparta, and had also taken thousands of Achaean hostages. In 148 BC the League conquered Sparta anyway.",
+      "sourceQuote": "Rome had taken thousands of Achaean hostages during its war with Macedonia, and it kept blocking the League's ambitions, above all its wish to absorb Sparta.",
+      "reviewFlags": []
+    },
+    {
+      "question": "After Scipio's night attack broke into Carthage, how did Hasdrubal make surrender unthinkable?",
+      "options": [
+        "He sent Scipio a declaration of no quarter",
+        "He burned the city's grain stores",
+        "He tortured Roman prisoners to death on the walls",
+        "He executed all Roman deserters",
+        "He sank ships in the harbour mouth"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#scipio-takes-command",
+      "explanation": "Hasdrubal tortured Roman prisoners to death on the walls in full view of their comrades. Carthaginian councillors who protested were executed too.",
+      "sourceQuote": "Hasdrubal, the general now ruling Carthage, answered by torturing Roman prisoners to death on the walls in full view of their comrades.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Who led the large Roman army that landed at Utica in 149 BC?",
+      "options": [
+        "Both of that year's consuls",
+        "Mummius as proconsul",
+        "Scipio Aemilianus as consul",
+        "A single praetor",
+        "Cato as senior envoy"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#the-ultimatum",
+      "explanation": "The army was led by both consuls, the two chief magistrates Rome elected each year. One ancient account puts it at 84,000 men; modern historians estimate 40,000 to 50,000.",
+      "sourceQuote": "It was led by both of that year's consuls, the two chief magistrates Rome elected annually to command its armies.",
+      "reviewFlags": []
+    }
+  ]
+}

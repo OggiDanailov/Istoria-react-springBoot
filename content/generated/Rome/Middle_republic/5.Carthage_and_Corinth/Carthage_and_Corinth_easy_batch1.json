@@ -1,0 +1,179 @@
+{
+  "batchName": "Middle Republic: The Fall of Carthage and Corinth (167-133 BCE) - Easy Batch 1",
+  "chapterName": "Middle Republic: The Fall of Carthage and Corinth (167-133 BCE)",
+  "difficulty": 1,
+  "batchOrder": 1,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "After breaking through Carthage's walls in 146 BC, for how many days did the Romans fight street by street?",
+      "options": [
+        "Two days",
+        "Thirty days",
+        "Six days",
+        "Ten days"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#fall-of-carthage",
+      "explanation": "For six days the Romans fought through the residential districts, killing everyone they met and burning buildings. Only on the last day did Scipio agree to take prisoners.",
+      "sourceQuote": "For six days the Romans fought street by street through the residential districts, killing everyone they met and burning the buildings behind them.",
+      "reviewFlags": []
+    },
+    {
+      "question": "In which land was Numantia, the hilltop town that defied Rome for years?",
+      "options": [
+        "North Africa",
+        "Gaul",
+        "Spain",
+        "Greece"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#numantine-war",
+      "explanation": "Numantia stood on the Douro river in Spain. Its people were Celtiberians, Celtic-speaking tribes of the Spanish interior.",
+      "sourceQuote": "Its enemy was the Celtiberians, Celtic-speaking tribes of the Spanish interior, and above all the hilltop town of Numantia on the Douro river.",
+      "reviewFlags": []
+    },
+    {
+      "question": "From which fortified base did Hasdrubal harass Roman supply lines during the siege of Carthage?",
+      "options": [
+        "Utica",
+        "Nepheris",
+        "Numantia",
+        "Oroscopa"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#a-faltering-siege",
+      "explanation": "Hasdrubal led an army of at least 20,000 from a fortified base at Nepheris, 25 km south of Carthage. From there he harassed Roman supply lines.",
+      "sourceQuote": "It settled down to a siege, while Hasdrubal, the Carthaginian general leading an army of at least 20,000 from a fortified base at Nepheris, 25 km (16 miles) south of the city, harassed Roman supply lines.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Who is our main ancient guide to Rome's wars with Carthage?",
+      "options": [
+        "Cato",
+        "Polybius",
+        "Livy",
+        "Plutarch"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#polybius-and-the-sources",
+      "explanation": "Polybius, a Greek historian who lived from about 200 to about 118 BC, is the main source. He was with Scipio in Africa during the final war.",
+      "sourceQuote": "Our main guide to Rome's wars with Carthage is Polybius, a Greek historian who lived from about 200 to about 118 BC.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did Scipio build to stop supply ships from slipping into Carthage?",
+      "options": [
+        "A ring of seven forts",
+        "A chain across the harbour",
+        "A line of fireships",
+        "A huge stone mole"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#scipio-takes-command",
+      "explanation": "Scipio built a huge mole, a stone barrier across the harbour approach. The Carthaginians responded by secretly digging a new channel to the sea.",
+      "sourceQuote": "Supply ships kept slipping into Carthage, so Scipio built a huge mole (*moles*), a stone barrier across the harbour approach.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What event in 149 BC gave Rome a harbour in Africa and prompted it to declare war on Carthage?",
+      "options": [
+        "The Numidian king died",
+        "Corinth joined Rome",
+        "Utica defected to Rome",
+        "Sicily revolted"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#carthago-delenda-est",
+      "explanation": "Utica, a large port 55 km north of Carthage, defected to Rome in 149 BC. With a harbour now available, Rome declared war.",
+      "sourceQuote": "In 149 BC Utica, a large port 55 km (34 miles) north of Carthage, defected to Rome.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What was Rome's 'real demand' that made Carthage break off talks and prepare to fight?",
+      "options": [
+        "Pay a new indemnity in grain",
+        "Accept a Roman governor",
+        "Abandon the city and resettle inland",
+        "Hand over its leading families"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#the-ultimatum",
+      "explanation": "The Carthaginians were told to abandon their city and resettle 16 km from the sea while Carthage was destroyed. For a people who lived by sea trade, this was a death sentence.",
+      "sourceQuote": "The Carthaginians must abandon their city and resettle 16 km (10 miles) from the sea, and Carthage itself would be destroyed.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did Mummius, famously ignorant of art, warn the contractors shipping Corinth's treasures to Italy?",
+      "options": [
+        "Paintings should be sold off in Greece",
+        "Any damaged statues would be melted down",
+        "Only bronze statues were worth sending",
+        "Any lost works must be replaced with new ones"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#sack-of-corinth",
+      "explanation": "Mummius warned that if the contractors lost any priceless statues or paintings, they would have to supply new ones. The remark became famous as proof of his ignorance of art.",
+      "sourceQuote": "Shipping priceless statues and paintings to Italy, he warned the contractors that if they lost any, they would have to supply new ones.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What became of Carthage's lands after the war?",
+      "options": [
+        "They formed a free allied city-state",
+        "They joined the province of Macedonia",
+        "They became the Roman province of Africa",
+        "They were given to the Numidian king"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#after-carthage",
+      "explanation": "Carthage's lands became the Roman province of Africa, governed from Utica. The province became a major source of grain.",
+      "sourceQuote": "Carthage's lands became the Roman province (*provincia*) of Africa, governed from Utica, a nearby port that had sided with Rome.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What is the truth behind the famous story that the Romans sowed Carthage's ground with salt?",
+      "options": [
+        "It is recorded by Polybius",
+        "It was proven by soil samples",
+        "It is probably a 19th-century invention",
+        "It was Cato's own proposal"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#fall-of-carthage",
+      "explanation": "The salting story is almost certainly false and probably a 19th-century invention. Modern evidence like archaeology helps historians dismiss such tales.",
+      "sourceQuote": "The story that the Romans sowed the ground with salt so nothing would grow is probably a 19th-century invention.",
+      "reviewFlags": []
+    }
+  ]
+}

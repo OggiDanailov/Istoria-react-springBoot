@@ -282,7 +282,15 @@
       },
       "short": "Carthage Destroyed",
       "era": "middle-republic",
-      "mapArea": "mediterranean"
+      "mapArea": "mediterranean",
+      "battle": {
+        "name": "The Siege of Carthage",
+        "year": "146 BC",
+        "enemy": "Hasdrubal",
+        "sec": "fall-of-carthage",
+        "intro": "Hasdrubal’s defenders fight for every street of Carthage. Break through the walls and hold what you take."
+      },
+      "locked": true
     },
     {
       "id": "the-gracchi",
