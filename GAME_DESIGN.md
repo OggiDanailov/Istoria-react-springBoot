@@ -17,6 +17,10 @@ It describes the prototype (`prototypes/age-of-kings`, battles in `prototypes/ho
 
 One battle per chapter. The battle is locked until every round of the test is done.
 
+**Review mode** (for checking content; in the progress sheet): every chapter open, a "Questions & answers" sheet per
+chapter listing everything the test can ask with the answers, and every battle playable at a chosen score (60–100%).
+Review battles don't change progress.
+
 | Era | Chapter | Battle |
 |---|---|---|
 | The Kingdom | Early Rome & the Kingdom (753–509 BC) | Lake Regillus (496 BC) |

@@ -23,7 +23,8 @@ Also in the prototype:
   links from every wrong answer to its section. **Key facts** (`keyfacts.json`): people, dates and Latin words.
 - **Feedback** after every round: owners and members of the owner's organization save it to the page;
   everyone else copies a short summary to paste into a message.
-- **For reviewing**: "Open all chapters" in the progress sheet (tap the score in the top bar).
+- **Review mode** (progress sheet: tap the score in the top bar): every chapter open, each chapter's questions with
+  answers, and every battle playable at a chosen score, without changing progress.
 
 Published (private) at https://claude.ai/artifact/7vX45xzWiZhyPC2siymC4j.
 To try it locally, open `index.html` in a browser.
