@@ -33,7 +33,7 @@ Review battles don't change progress.
 | | Scipio and the Road to Zama (216–201 BC) | *not built yet* |
 | | Rome Turns East (200–167 BC) | *not built yet* |
 | | The Fall of Carthage and Corinth (167–133 BC) | *not built yet* |
-| | The Gracchi (133–121 BC) | *not built yet* |
+| | The Gracchi (133–121 BC) | none (a political chapter) |
 
 A chapter whose battle isn't built yet opens the next chapter as soon as its test is finished.
 
@@ -134,6 +134,8 @@ ambushes (Volscian Raids), mountain rocks and the sacred chickens (Aquilonia).
 - **Maps**: one or two small maps in the chronicle (`maps.json`), coordinates from Wikipedia, uncertain sites noted.
   Map Drop covers Italy for the Kingdom and Early Republic, and the whole Mediterranean from the Middle Republic on
   (`mapArea` in `chapters.json`).
+  Battles can also get a simple battle plan (`"plan": true`: unit blocks and arrows, Rome red, the enemy blue),
+  as for Cannae, Zama, Pydna and Numantia.
 - **Measurements**: metric first, the source's unit in parentheses: "about 5 km (three miles)". Ancient miles and pounds
   are Roman (a mile is about 1.5 km, a pound about 330 g).
 - **Sources count as history**: ancient writers (Livy, Fabius Pictor…) and modern historians may be in the games when

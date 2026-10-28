@@ -1,0 +1,179 @@
+{
+  "batchName": "Middle Republic: The Gracchi (133-121 BCE) - Easy Batch 2",
+  "chapterName": "Middle Republic: The Gracchi (133-121 BCE)",
+  "difficulty": 1,
+  "batchOrder": 2,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "What emergency measure did the Senate pass for the first time in 121 BC?",
+      "options": [
+        "A list of outlaws who could be killed",
+        "The appointment of a dictator",
+        "A formal declaration of war on Gaius",
+        "A 'final decree' to defend the state by any means"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#fall-of-gaius",
+      "explanation": "The senatus consultum ultimum urged the consul Opimius to defend the state by any means necessary.",
+      "sourceQuote": "It passed its first \"final decree\" (*senatus consultum ultimum*), urging him to defend the state by any means necessary.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which relative of Tiberius helped run the land commission after his death?",
+      "options": [
+        "His younger brother Gaius",
+        "His cousin Scipio Nasica",
+        "His sister",
+        "His mother Cornelia"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#land-commission",
+      "explanation": "Tiberius's land law survived his murder, and the commission kept working, staffed by his allies, including Gaius.",
+      "sourceQuote": "The commission it created kept working, staffed by his allies, including his younger brother Gaius Gracchus.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What happened to the bodies of Tiberius and his supporters after they were killed?",
+      "options": [
+        "They were thrown into the Tiber",
+        "They were returned to their families",
+        "They were displayed in the Forum",
+        "They were buried on the Capitoline"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#death-of-tiberius",
+      "explanation": "The bodies were dumped in the river that runs through Rome. The men had been beaten to death with stones, wooden chairs and other blunt objects.",
+      "sourceQuote": "They were beaten to death with stones, wooden chairs and other blunt objects, and their bodies were thrown into the Tiber, the river that runs through Rome.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which year do ancient and modern writers see as the start of the Roman Republic's decline?",
+      "options": [
+        "111 BC",
+        "146 BC",
+        "133 BC",
+        "121 BC"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#turning-point",
+      "explanation": "133 BC was the year of Tiberius Gracchus's murder. A famous Roman orator later wrote that Tiberius had divided one people into two factions.",
+      "sourceQuote": "Both ancient and modern writers see 133 BC, the year of Tiberius Gracchus's murder, as the start of the Republic's decline.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did Gaius Gracchus change the way speeches were given in the Forum?",
+      "options": [
+        "He delivered his speeches in Greek",
+        "He had heralds read his written speeches",
+        "He spoke standing in a war chariot",
+        "He faced the crowd instead of the senate house"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#gaius-gracchus-rises",
+      "explanation": "By turning towards the crowd, Gaius in effect turned his back on the Senate. He ranked among the greatest Roman orators of his age.",
+      "sourceQuote": "He even changed how speeches were given in the Forum: instead of facing the senate house, he turned towards the crowd, in effect turning his back on the Senate.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What surviving objects let historians trace the work of the Gracchan land commission?",
+      "options": [
+        "Boundary stones carved with commissioners' names",
+        "Papyrus registers listing new settlers",
+        "Wax tablets recording each allotment",
+        "Bronze coins stamped with land grants"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#land-commission",
+      "explanation": "Boundary stones called cippi, carved with the commissioners' names, have been found all over southern Italy.",
+      "sourceQuote": "Its progress can still be traced through boundary stones (*cippi*) carved with the commissioners' names, found all over southern Italy.",
+      "reviewFlags": []
+    },
+    {
+      "question": "In 122 BC, Gaius Gracchus proposed granting Roman citizenship to which group?",
+      "options": [
+        "The Latins, Rome's closest allies",
+        "The Numantines of Spain",
+        "The Greeks of Pergamum",
+        "Rome's freed slaves"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#fall-of-gaius",
+      "explanation": "It was his boldest proposal, and it also offered new rights to other Italians. A rival tribune vetoed it.",
+      "sourceQuote": "In 122 BC Gaius Gracchus, serving a second year as tribune, made his boldest proposal: citizenship for the Latins, Rome's closest allies, and new rights for other Italians.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which body did Tiberius Gracchus bypass when he took his land bill straight to the Plebeian Council?",
+      "options": [
+        "The board of censors",
+        "The Senate",
+        "The College of Pontiffs",
+        "The consuls' council"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#breaking-the-rules",
+      "explanation": "Custom expected a bill to be discussed in the Senate first, but Tiberius went directly to the assembly of ordinary citizens.",
+      "sourceQuote": "He took his bill straight to the Plebeian Council (*concilium plebis*), the assembly of ordinary citizens, without first consulting the Senate (*senatus*), as custom expected.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which king's bequest of his kingdom and treasury to Rome did Tiberius want to use for his land scheme?",
+      "options": [
+        "The king of Pergamum",
+        "The king of Numidia",
+        "The king of Egypt",
+        "The king of Syria"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#breaking-the-rules",
+      "explanation": "The king of Pergamum left his kingdom and treasury to Rome, and Tiberius proposed tapping this windfall after the Senate starved the land commission of money.",
+      "sourceQuote": "Then news arrived that the king of Pergamum, a rich Greek kingdom in western Asia Minor, had died and left his treasury and kingdom to Rome.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What high office did the father of the Gracchi brothers hold twice?",
+      "options": [
+        "Pontifex maximus",
+        "Tribune of the plebs",
+        "Dictator",
+        "Consul"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#family-of-the-gracchi",
+      "explanation": "Their father was twice consul, one of the two heads of state elected each year. He also served as censor and celebrated two triumphs.",
+      "sourceQuote": "Their father, also called Tiberius, had twice been consul, one of the two heads of state elected each year.",
+      "reviewFlags": []
+    }
+  ]
+}

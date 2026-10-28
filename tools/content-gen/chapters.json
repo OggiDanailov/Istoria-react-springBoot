@@ -308,7 +308,8 @@
       },
       "short": "The Gracchi",
       "era": "middle-republic",
-      "mapArea": "mediterranean"
+      "mapArea": "mediterranean",
+      "locked": true
     }
   ]
 }

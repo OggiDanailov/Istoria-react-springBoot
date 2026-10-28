@@ -1,0 +1,139 @@
+{
+  "description": "Key facts for this chapter, written by hand from the chapter text. Every entry links to the section that explains it.",
+  "people": [
+    {
+      "name": "Tiberius Gracchus",
+      "text": "Tribune in 133 BC whose land law split Rome; murdered on the Capitoline.",
+      "sec": "the-land-law"
+    },
+    {
+      "name": "Gaius Gracchus",
+      "text": "His younger brother, tribune in 123–122 BC; died in 121 BC.",
+      "sec": "gaius-gracchus-rises"
+    },
+    {
+      "name": "Cornelia",
+      "text": "Their mother, daughter of a famous general, who raised and educated them.",
+      "sec": "family-of-the-gracchi"
+    },
+    {
+      "name": "Scipio Nasica",
+      "text": "Chief priest who led the mob that killed Tiberius.",
+      "sec": "death-of-tiberius"
+    },
+    {
+      "name": "Opimius",
+      "text": "Consul who crushed Gaius and built a temple of Concord.",
+      "sec": "fall-of-gaius"
+    }
+  ],
+  "dates": [
+    {
+      "when": "137 BC",
+      "text": "Tiberius, as quaestor, saves a Roman army at Numantia.",
+      "sec": "tiberius-at-war"
+    },
+    {
+      "when": "133 BC",
+      "text": "Tiberius’s land law; he is murdered on the Capitoline.",
+      "sec": "the-land-law"
+    },
+    {
+      "when": "129 BC",
+      "text": "The land commission’s work slows after the allies protest.",
+      "sec": "land-commission"
+    },
+    {
+      "when": "126 BC",
+      "text": "Gaius goes to Sardinia as quaestor.",
+      "sec": "gaius-gracchus-rises"
+    },
+    {
+      "when": "123 BC",
+      "text": "Gaius’s first year as tribune: grain law, colonies, juries.",
+      "sec": "laws-of-gaius"
+    },
+    {
+      "when": "122 BC",
+      "text": "Gaius proposes citizenship for the Latins; it fails.",
+      "sec": "fall-of-gaius"
+    },
+    {
+      "when": "121 BC",
+      "text": "The Senate’s first final decree; Gaius dies.",
+      "sec": "fall-of-gaius"
+    },
+    {
+      "when": "111 BC",
+      "text": "The land commission is closed, its work done.",
+      "sec": "turning-point"
+    }
+  ],
+  "terms": [
+    {
+      "latin": "quaestor",
+      "english": "a junior finance officer",
+      "sec": "tiberius-at-war"
+    },
+    {
+      "latin": "tribunus plebis",
+      "english": "a tribune of the plebs",
+      "sec": "the-land-law"
+    },
+    {
+      "latin": "ager publicus",
+      "english": "public land",
+      "sec": "the-land-law"
+    },
+    {
+      "latin": "lex Sempronia agraria",
+      "english": "Tiberius’s land law",
+      "sec": "the-land-law"
+    },
+    {
+      "latin": "concilium plebis",
+      "english": "the Plebeian Council",
+      "sec": "breaking-the-rules"
+    },
+    {
+      "latin": "senatus",
+      "english": "the Senate",
+      "sec": "breaking-the-rules"
+    },
+    {
+      "latin": "intercessio",
+      "english": "a tribune’s veto",
+      "sec": "breaking-the-rules"
+    },
+    {
+      "latin": "pontifex maximus",
+      "english": "the chief priest",
+      "sec": "death-of-tiberius"
+    },
+    {
+      "latin": "cippi",
+      "english": "boundary stones",
+      "sec": "land-commission"
+    },
+    {
+      "latin": "coloniae",
+      "english": "colonies of citizens",
+      "sec": "laws-of-gaius"
+    },
+    {
+      "latin": "equites",
+      "english": "equestrians, rich men outside the Senate",
+      "sec": "laws-of-gaius"
+    },
+    {
+      "latin": "senatus consultum ultimum",
+      "english": "the Senate’s “final decree”",
+      "sec": "fall-of-gaius"
+    },
+    {
+      "latin": "Concordia",
+      "english": "Concord, goddess of civic harmony",
+      "sec": "turning-point"
+    }
+  ]
+}

@@ -1,0 +1,189 @@
+{
+  "batchName": "Middle Republic: The Gracchi (133-121 BCE) - Medium Batch 1",
+  "chapterName": "Middle Republic: The Gracchi (133-121 BCE)",
+  "difficulty": 2,
+  "batchOrder": 3,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Why did the Roman consul at Numantia send Tiberius Gracchus to negotiate with the enemy?",
+      "options": [
+        "The Numantines trusted his father's name",
+        "He spoke the local Celtiberian language",
+        "The Senate had named him as envoy",
+        "He was the most senior officer present",
+        "He had once been a hostage in Numantia"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#tiberius-at-war",
+      "explanation": "Tiberius's father had governed the region decades earlier, so the Numantines trusted the family. Tiberius managed to save the trapped army.",
+      "sourceQuote": "The commanding consul sent Tiberius to negotiate, because the Numantines trusted his family name: his father had governed the region decades earlier.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did Tiberius deal with the fellow tribune who vetoed his land bill?",
+      "options": [
+        "He prosecuted him for treason",
+        "He waited for his term to expire",
+        "He bribed him to withdraw the veto",
+        "He had him removed and voted out of office",
+        "He asked the Senate to exile him"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#breaking-the-rules",
+      "explanation": "Deposing a tribune was unprecedented and unconstitutional. With the veto gone, the bill passed.",
+      "sourceQuote": "Tiberius had him physically removed and voted out of office, something without precedent and against the constitution.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Where did Gaius Gracchus and his ally make their armed stand in 121 BC?",
+      "options": [
+        "The temple of Castor in the Forum",
+        "A villa on the Palatine Hill",
+        "The temple of Diana on the Aventine",
+        "The fortifications on the Janiculum",
+        "The chief temple on the Capitoline"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#fall-of-gaius",
+      "explanation": "Gaius and his ally armed their followers and occupied the Aventine temple. Opimius attacked with armed citizens and Cretan archers.",
+      "sourceQuote": "Gaius and his close ally armed their followers and seized the temple of Diana on the Aventine Hill, in the south of Rome.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What prompted a senator to accuse Tiberius Gracchus of wanting to make himself king?",
+      "options": [
+        "His raising of a private army",
+        "His plan to use the Pergamene bequest",
+        "His plan to marry an Egyptian princess",
+        "A crown offered to him by the crowd",
+        "His wearing of a purple royal robe"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#breaking-the-rules",
+      "explanation": "By claiming the Pergamene windfall, Tiberius intruded on finance and foreign affairs, which belonged to the Senate.",
+      "sourceQuote": "Finance and foreign affairs belonged to the Senate, and a senator accused Tiberius of wanting to make himself king.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did Gaius Gracchus achieve as quaestor in Sardinia during a harsh winter?",
+      "options": [
+        "He built a new harbour for the fleet",
+        "He collected years of unpaid taxes",
+        "He put down a slave uprising",
+        "He founded a Roman colony there",
+        "He got supplies from the islanders for the troops"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#gaius-gracchus-rises",
+      "explanation": "Gaius obtained supplies for the struggling Roman troops. When his commander's posting was extended, he went home without permission.",
+      "sourceQuote": "During a harsh winter he managed to obtain supplies from the islanders for the struggling Roman troops.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Besides saving the Roman army, what did Tiberius persuade the Numantines to hand back?",
+      "options": [
+        "The army's lost standards",
+        "Prisoners from an earlier war",
+        "His father's old sword",
+        "The captured Roman consul",
+        "His captured account books"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#tiberius-at-war",
+      "explanation": "As quaestor, Tiberius kept the army's accounts, and he even recovered his captured books. Rome nonetheless rejected his treaty as humiliating.",
+      "sourceQuote": "Tiberius saved the army, and even persuaded the enemy to hand back his captured account books.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What violent incident during a sacrifice in 121 BC set off the final crisis for Gaius Gracchus?",
+      "options": [
+        "Gaius's house was set on fire",
+        "The consul Opimius was wounded by a dagger",
+        "An attendant was stabbed to death with styluses",
+        "A tribune was thrown from the Tarpeian Rock",
+        "A priest was murdered at the altar"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#fall-of-gaius",
+      "explanation": "An attendant who jeered at the Gracchans was killed with writing styluses. Opimius then called the Senate together.",
+      "sourceQuote": "During a sacrifice, an attendant jeered at the Gracchans and was stabbed to death with writing styluses.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Roughly how much public land did the old law Tiberius wanted to enforce allow one person to hold?",
+      "options": [
+        "About 50 hectares (125 acres)",
+        "About 1,200 hectares (3,000 acres)",
+        "About 120 hectares (300 acres)",
+        "About 500 hectares (1,250 acres)",
+        "About 12 hectares (30 acres)"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#the-land-law",
+      "explanation": "Tiberius believed this old, widely ignored limit applied. His law would enforce it and give the surplus to poor citizens.",
+      "sourceQuote": "Tiberius believed that an old, widely ignored law limited how much public land anyone could hold to about 120 hectares (300 acres).",
+      "reviewFlags": []
+    },
+    {
+      "question": "Italian anger over the land commission helped lead to which later conflict?",
+      "options": [
+        "The Jugurthine War",
+        "The Social War",
+        "The Servile War",
+        "The Numantine War",
+        "The Third Punic War"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#land-commission",
+      "explanation": "The Social War was a later revolt of Rome's Italian allies. Some of their grievances began with land taken by the Gracchan commission.",
+      "sourceQuote": "Italian anger over the land helped lead to the Social War, a later revolt of the allies against Rome.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did the consul respond when Scipio Nasica demanded force to stop Tiberius's re-election?",
+      "options": [
+        "He ordered troops to the Capitoline",
+        "He arrested Tiberius",
+        "He refused",
+        "He named a dictator",
+        "He fled the city"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#death-of-tiberius",
+      "explanation": "After the consul refused, Nasica shouted the old emergency formula for raising troops and led the mob himself.",
+      "sourceQuote": "When the consul refused, Scipio Nasica shouted the old formula for raising troops in an emergency: \"Let those who want the state to be safe follow me.\"",
+      "reviewFlags": []
+    }
+  ]
+}

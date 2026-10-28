@@ -962,9 +962,9 @@ function testCardHtml() {
       <div class="actions"><button class="primary" id="test-go">${done ? 'Play the next round' : 'Start the test'}</button><button class="ghost" id="chronicle">Read the chronicle</button>${CH.keyFacts ? '<button class="ghost key-facts">Key facts</button>' : ''}</div>
     </section>
     ${!L ? `<section class="battle-card locked">
-      <span class="eyebrow">Coming soon</span>
-      <h2>${esc(CH.battle?.name ?? 'This chapter’s battle')}</h2>
-      <p class="task">This battle isn’t built yet. Finish the test to open the next chapter.</p>
+      <span class="eyebrow">${CH.battle ? 'Coming soon' : 'No battle'}</span>
+      <h2>${esc(CH.battle?.name ?? 'Finish the test')}</h2>
+      <p class="task">${CH.battle ? 'This battle isn’t built yet. ' : ''}Finish the test to open the next chapter.</p>
     </section>` : openAll ? reviewBattleHtml(L) : `<section class="battle-card locked">
       <span class="eyebrow">${esc(L.year)} · locked</span>
       <h2>${esc(Cap(battleOf(chapterIndex)))}</h2>
@@ -976,8 +976,8 @@ function testCardHtml() {
     if (!t.won) { t.won = true; saveTests() }
     return `<section class="battle-card won">
       <span class="eyebrow">Test complete · ${score}%</span>
-      <h2>${esc(CH.battle?.name ?? 'This chapter’s battle')}: coming soon</h2>
-      <p class="task">The battle for this chapter isn’t built yet, so ${next ? 'the next chapter is already open' : 'you have finished every chapter so far'}.</p>
+      <h2>${CH.battle ? `${esc(CH.battle.name)}: coming soon` : 'Chapter complete'}</h2>
+      <p class="task">${CH.battle ? 'The battle for this chapter isn’t built yet, so ' : 'This chapter has no battle, so '}${next ? 'the next chapter is already open' : 'you have finished every chapter so far'}.</p>
       <div class="actions">${next ? `<button class="primary" id="next-chapter">Next chapter: ${esc(next.short)}</button>` : ''}<button class="ghost" id="retake">Retake the test</button>${CH.keyFacts ? '<button class="ghost key-facts">Key facts</button>' : ''}</div>
     </section>`
   }

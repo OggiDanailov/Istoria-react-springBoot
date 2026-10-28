@@ -1,0 +1,192 @@
+{
+  "batchName": "Middle Republic: The Gracchi (133-121 BCE) - Medium Batch 2",
+  "chapterName": "Middle Republic: The Gracchi (133-121 BCE)",
+  "difficulty": 2,
+  "batchOrder": 4,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "One of the triumphs celebrated by the Gracchi's father honoured him for what achievement?",
+      "options": [
+        "Destroying the city of Carthage",
+        "Bringing twenty years of peace to Spain",
+        "Clearing the seas of Cilician pirates",
+        "Completing the conquest of Macedon",
+        "Crushing a revolt in Sardinia"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#family-of-the-gracchi",
+      "explanation": "The elder Tiberius was honoured for pacifying Spain. That reputation later made the Numantines trust his son.",
+      "sourceQuote": "One honoured him for bringing twenty years of peace to Spain.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did Opimius win his trial for executing citizens without appeal?",
+      "options": [
+        "He claimed Gaius had attacked first",
+        "He proved the dead men were not citizens",
+        "He fled into exile before the verdict",
+        "He bribed the equestrian jurors",
+        "He cited the Senate's emergency decree"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#turning-point",
+      "explanation": "Ironically, Opimius was prosecuted under Gaius's own law. His acquittal gave Senate emergency decrees new legitimacy.",
+      "sourceQuote": "Prosecuted under Gaius's own law against executing citizens without appeal, Opimius won by pointing to the Senate's emergency decree, giving such decrees new legitimacy.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Gaius Gracchus was accused of helping a revolt in 125 BC at which Latin town?",
+      "options": [
+        "Capua",
+        "Tusculum",
+        "Praeneste",
+        "Fregellae",
+        "Alba Fucens"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#gaius-gracchus-rises",
+      "explanation": "Gaius cleared himself of the charge and went on to be elected tribune for 123 BC.",
+      "sourceQuote": "He was later accused of helping a revolt in 125 BC at Fregellae, a Latin town south-east of Rome, but cleared himself and was elected tribune for 123 BC.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which benefits did Tiberius claim his land law would bring? (select all that apply)",
+      "options": [
+        "Helping the poor",
+        "Slowing the drift of country people into the city",
+        "Citizenship for the Italian allies",
+        "More men qualifying for army service",
+        "Funding a fleet against pirates"
+      ],
+      "correctAnswers": [
+        0,
+        1,
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#the-land-law",
+      "explanation": "Tiberius linked land ownership to poverty, urban migration and military recruitment. He also blamed rich landowners for a supposed decline in Rome's population.",
+      "sourceQuote": "He argued that this would help the poor, slow the drift of country people into the city, and increase the number of men who owned enough property to qualify for army service.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did an inscription carved one night say about Opimius's new temple?",
+      "options": [
+        "It honoured the wrong goddess",
+        "It was built on the Gracchi's graves",
+        "It was paid for with Pergamene gold",
+        "It was the product of mad discord",
+        "It was the work of a tyrant"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#turning-point",
+      "explanation": "The graffiti read: 'A work of mad discord produces a temple of Concord.' It showed that not everyone accepted the official story of restored harmony.",
+      "sourceQuote": "One night someone carved an inscription: \"A work of mad discord produces a temple of Concord.\"",
+      "reviewFlags": []
+    },
+    {
+      "question": "Why did Scipio Nasica draw his toga over his head as he led the attack on Tiberius?",
+      "options": [
+        "To present the attack as a religious rite",
+        "To shield his head from stones",
+        "To hide his face from the voters",
+        "To show mourning for the Republic",
+        "To show he carried no weapon"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#death-of-tiberius",
+      "explanation": "Priests covered their heads at sacrifices, so Nasica framed the killing as a rite to rid Rome of a would-be tyrant.",
+      "sourceQuote": "Drawing his toga over his head, as a priest did at a sacrifice, he led a mob to the voting place, framing the attack as a religious rite to rid Rome of a would-be tyrant.",
+      "reviewFlags": []
+    },
+    {
+      "question": "After 129 BC, which group's protests slowed the work of the land commission?",
+      "options": [
+        "The equestrian tax collectors",
+        "Rome's Italian allies",
+        "The priests of Rome's temples",
+        "Rome's urban poor",
+        "Spanish auxiliary troops"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#land-commission",
+      "explanation": "The allies said the commissioners were seizing land they had long used, which they saw as their reward for loyalty.",
+      "sourceQuote": "Rome's Italian allies, the peoples of Italy who fought alongside Rome but lacked citizenship, protested that the commissioners were seizing land they had long used.",
+      "reviewFlags": []
+    },
+    {
+      "question": "In which region of Italy did Gaius Gracchus distribute land after renewing his brother's land law?",
+      "options": [
+        "Etruria",
+        "Cisalpine Gaul",
+        "Samnium",
+        "Campania",
+        "Apulia"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#laws-of-gaius",
+      "explanation": "Gaius handed out land in Apulia, in Italy's south-east. Realising Italy lacked enough land, he also planned colonies.",
+      "sourceQuote": "He also renewed his brother's land law and distributed land in Apulia, the south-eastern region of Italy.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which episode shows Cornelia's lasting influence over her son Gaius?",
+      "options": [
+        "She wrote his most famous speeches",
+        "He dropped one of his own bills at her request",
+        "She chose his fellow tribunes for him",
+        "She persuaded him to seize the Aventine",
+        "He named his Carthage colony in her honour"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#family-of-the-gracchi",
+      "explanation": "Years after raising her children, Cornelia could still persuade Gaius to abandon a bill. She had devoted herself to their education after her husband died.",
+      "sourceQuote": "Her influence lasted: years later, Gaius dropped one of his own bills because Cornelia asked him to.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did the equestrians gain from Gaius Gracchus's laws? (select all that apply)",
+      "options": [
+        "Tax-collecting contracts in the province of Asia",
+        "Seats on juries trying corrupt officials",
+        "Land allotments in Apulia",
+        "Automatic seats in the Senate",
+        "Command of the new colonies"
+      ],
+      "correctAnswers": [
+        0,
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#laws-of-gaius",
+      "explanation": "Gaius courted these wealthy non-senators with tax contracts and jury seats. An unintended result was that their tax companies came to exploit the provinces.",
+      "sourceQuote": "They received tax-collecting contracts in the province of Asia and seats on the juries that tried corrupt officials.",
+      "reviewFlags": []
+    }
+  ]
+}

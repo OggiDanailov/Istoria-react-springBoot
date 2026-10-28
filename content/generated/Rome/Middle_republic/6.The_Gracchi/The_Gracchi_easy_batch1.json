@@ -1,0 +1,179 @@
+{
+  "batchName": "Middle Republic: The Gracchi (133-121 BCE) - Easy Batch 1",
+  "chapterName": "Middle Republic: The Gracchi (133-121 BCE)",
+  "difficulty": 1,
+  "batchOrder": 1,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "What did Opimius build beside the senate house after Gaius Gracchus's death?",
+      "options": [
+        "A triumphal arch",
+        "A temple to the goddess Concord",
+        "A temple to the god Mars",
+        "A statue of himself"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#turning-point",
+      "explanation": "Opimius ritually purified the city and dedicated a grand temple to Concord, symbol of civic harmony.",
+      "sourceQuote": "Opimius ritually purified the city and built a grand temple to the goddess Concord (*Concordia*), symbol of civic harmony, beside the senate house.",
+      "reviewFlags": []
+    },
+    {
+      "question": "As a quaestor in Spain in 137 BC, what was Tiberius Gracchus responsible for?",
+      "options": [
+        "The army's siege engines",
+        "The army's finances",
+        "The army's cavalry",
+        "The army's grain fleet"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#tiberius-at-war",
+      "explanation": "A quaestor was a junior officer in charge of an army's finances. Tiberius served in the disastrous campaign against Numantia.",
+      "sourceQuote": "In 137 BC he went to Spain as a quaestor (*quaestor*), a junior officer in charge of an army's finances.",
+      "reviewFlags": []
+    },
+    {
+      "question": "To which office was Tiberius Gracchus elected in 133 BC?",
+      "options": [
+        "Praetor",
+        "Consul",
+        "Tribune of the plebs",
+        "Censor"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#the-land-law",
+      "explanation": "Tiberius became tribune of the plebs, one of ten officials meant to protect ordinary citizens. He used the office to push his land reform.",
+      "sourceQuote": "In 133 BC Tiberius Gracchus was elected tribune of the plebs (*tribunus plebis*), one of ten officials whose job was to protect ordinary citizens.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Who led the mob that killed Tiberius Gracchus?",
+      "options": [
+        "His cousin Scipio Nasica, the chief priest",
+        "The consul Opimius",
+        "The tribune who had vetoed his bill",
+        "The censor of that year"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#death-of-tiberius",
+      "explanation": "Scipio Nasica, Tiberius's own cousin and head of Rome's state religion, led the attack after the consul refused to use force.",
+      "sourceQuote": "Tiberius's own cousin, Scipio Nasica, was chief priest (*pontifex maximus*), head of Rome's state religion.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Where did Gaius Gracchus plan an overseas colony of Roman citizens?",
+      "options": [
+        "Pergamum",
+        "Corinth",
+        "Carthage",
+        "Numantia"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#laws-of-gaius",
+      "explanation": "Gaius saw that Italy lacked enough land for everyone, so he planned colonies, including one at Carthage.",
+      "sourceQuote": "Gaius saw that Italy did not have enough land for everyone, so he planned colonies (*coloniae*), new settlements of citizens, including one overseas at Carthage.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What kind of land did Tiberius Gracchus's reform target?",
+      "options": [
+        "Private farms owned by Italian allies",
+        "Provincial land in Spain and Africa",
+        "Public land Rome had seized in conquering Italy",
+        "Temple estates owned by Rome's priests"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#the-land-law",
+      "explanation": "The reform targeted public land (ager publicus). According to traditional accounts, wealthy families had occupied huge stretches of it.",
+      "sourceQuote": "He chose a burning issue: public land (*ager publicus*), territory Rome had taken in its conquests across Italy.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did Gaius Gracchus's grain law do?",
+      "options": [
+        "Set a fixed, slightly below-harvest grain price",
+        "Placed a heavy tax on grain merchants",
+        "Handed out grain free to all citizens",
+        "Banned grain imports from overseas"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#laws-of-gaius",
+      "explanation": "The law fixed the price per modius of grain. The state would buy grain when it was cheap and store it in public granaries.",
+      "sourceQuote": "His grain law set a fixed, slightly below-harvest price for each measure of about 8.7 litres (one modius) of grain.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Where did Tiberius Gracchus begin his military career in 147 BC?",
+      "options": [
+        "The siege of Corinth",
+        "The siege of Carthage",
+        "The siege of Numantia",
+        "The siege of Syracuse"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#tiberius-at-war",
+      "explanation": "Tiberius served under his brother-in-law at Carthage. One ancient biographer claims he was among the first Romans to climb its walls.",
+      "sourceQuote": "He served under his brother-in-law in the siege of Carthage (*Carthago*), Rome's great rival city in North Africa.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Cornelia, mother of the Gracchi, turned down a marriage proposal from which ruler?",
+      "options": [
+        "The king of Egypt",
+        "The king of Pergamum",
+        "The king of Macedon",
+        "The king of Numidia"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#family-of-the-gracchi",
+      "explanation": "After her husband died, Cornelia refused the king of Egypt and devoted herself to raising and educating her children.",
+      "sourceQuote": "She even turned down a marriage proposal from the king of Egypt.",
+      "reviewFlags": []
+    },
+    {
+      "question": "About how much younger was Gaius Gracchus than his brother Tiberius?",
+      "options": [
+        "About five years",
+        "About two years",
+        "About fifteen years",
+        "About nine years"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#gaius-gracchus-rises",
+      "explanation": "Gaius was born around 154 BC, about nine years after Tiberius. He served in Spain in 133 BC and sat on the land commission.",
+      "sourceQuote": "Gaius Gracchus, born around 154 BC, was about nine years younger than his murdered brother Tiberius.",
+      "reviewFlags": []
+    }
+  ]
+}

@@ -1,0 +1,629 @@
+{
+  "chapterName": "Middle Republic: The Gracchi (133-121 BCE)",
+  "model": "claude-opus-5-5",
+  "briefing": {
+    "title": "Rome, 133 BC",
+    "paragraphs": [
+      "Rome now rules Italy, and its armies have fought from Carthage in North Africa to the hill towns of Spain. At home, trouble is brewing. Rich families farm huge stretches of conquered public land with slaves, while small farmers are pushed off the land.",
+      "Two brothers from the very top of Roman society, Tiberius Gracchus and his younger brother Gaius Gracchus, set out to change this. As tribunes they push bold laws on land, grain and citizenship, breaking old political customs. Their enemies will answer with something Rome has almost never seen: political murder."
+    ]
+  },
+  "timelines": [
+    {
+      "name": "The Gracchi: Key Moments",
+      "blurb": "Put the big turning points of the brothers' lives in order.",
+      "events": [
+        {
+          "label": "Tiberius Gracchus is born",
+          "when": "163 or 162 BC",
+          "year": -163,
+          "fact": "Tiberius was born into Rome's elite, son of a two-time consul and of Cornelia, daughter of a celebrated general.",
+          "sectionId": "family-of-the-gracchi",
+          "reviewFlags": []
+        },
+        {
+          "label": "Tiberius fights at the siege of Carthage",
+          "when": "147 BC",
+          "year": -147,
+          "fact": "Serving under his brother-in-law, Tiberius was said by one ancient biographer to be among the first Romans to climb Carthage's walls.",
+          "sectionId": "tiberius-at-war",
+          "reviewFlags": []
+        },
+        {
+          "label": "Tiberius passes his land law",
+          "when": "133 BC",
+          "year": -133,
+          "fact": "As tribune of the plebs, Tiberius pushed through a law handing surplus public land to poor Roman citizens.",
+          "sectionId": "the-land-law",
+          "reviewFlags": []
+        },
+        {
+          "label": "Gaius dies after the Aventine fight",
+          "when": "121 BC",
+          "year": -121,
+          "fact": "After Opimius attacked the Gracchans on the Aventine Hill, Gaius fled across the Tiber and was killed or took his own life.",
+          "sectionId": "fall-of-gaius",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Careers and Consequences",
+      "blurb": "Follow both brothers and the aftermath of their reforms.",
+      "events": [
+        {
+          "label": "Gaius Gracchus is born",
+          "when": "Around 154 BC",
+          "year": -154,
+          "fact": "Gaius was about nine years younger than his brother Tiberius.",
+          "sectionId": "gaius-gracchus-rises",
+          "reviewFlags": []
+        },
+        {
+          "label": "Tiberius saves a trapped army in Spain",
+          "when": "137 BC",
+          "year": -137,
+          "fact": "As quaestor, a junior finance officer, Tiberius negotiated a treaty with Numantia that saved a surrounded Roman army, but Rome rejected it.",
+          "sectionId": "tiberius-at-war",
+          "reviewFlags": []
+        },
+        {
+          "label": "Scipio Nasica dies at Pergamum",
+          "when": "The year after Tiberius's murder",
+          "year": -132,
+          "fact": "Charged with murder, the chief priest Scipio Nasica was sent on a convenient mission to Pergamum, where he died.",
+          "sectionId": "death-of-tiberius",
+          "reviewFlags": []
+        },
+        {
+          "label": "Gaius goes as quaestor to Sardinia",
+          "when": "126 BC",
+          "year": -126,
+          "fact": "In a harsh winter Gaius obtained supplies from the islanders for the struggling Roman troops.",
+          "sectionId": "gaius-gracchus-rises",
+          "reviewFlags": []
+        },
+        {
+          "label": "Gaius's first year as tribune",
+          "when": "123 BC",
+          "year": -123,
+          "fact": "Gaius began passing a sweeping set of laws on grain, land, colonies, courts and the equestrians.",
+          "sectionId": "laws-of-gaius",
+          "reviewFlags": []
+        },
+        {
+          "label": "The land commission is closed",
+          "when": "111 BC",
+          "year": -111,
+          "fact": "Despite the brothers' deaths, the land commission lasted until 111 BC, closing only once its work was done.",
+          "sectionId": "turning-point",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "From Carthage to the Final Decree",
+      "blurb": "A harder run through wars, reforms and violence.",
+      "events": [
+        {
+          "label": "Gaius Gracchus is born",
+          "when": "Around 154 BC",
+          "year": -154,
+          "fact": "Gaius, the younger brother, would later present himself as Tiberius's heir.",
+          "sectionId": "gaius-gracchus-rises",
+          "reviewFlags": []
+        },
+        {
+          "label": "Tiberius at the siege of Carthage",
+          "when": "147 BC",
+          "year": -147,
+          "fact": "Carthage was Rome's great rival city in North Africa, and the siege launched Tiberius's military career.",
+          "sectionId": "tiberius-at-war",
+          "reviewFlags": []
+        },
+        {
+          "label": "Disaster at Numantia",
+          "when": "137 BC",
+          "year": -137,
+          "fact": "After a confused night retreat the Roman army was surrounded, and the Numantines trusted Tiberius because his father had governed the region.",
+          "sectionId": "tiberius-at-war",
+          "reviewFlags": []
+        },
+        {
+          "label": "Tiberius murdered on the Capitoline",
+          "when": "133 BC",
+          "year": -133,
+          "fact": "A mob led by Scipio Nasica beat Tiberius and his followers to death and threw their bodies into the Tiber.",
+          "sectionId": "death-of-tiberius",
+          "reviewFlags": []
+        },
+        {
+          "label": "Land commission's work slows",
+          "when": "After 129 BC",
+          "year": -129,
+          "fact": "Italian allies protested that the commissioners were seizing land they had long used as a reward for loyalty.",
+          "sectionId": "land-commission",
+          "reviewFlags": []
+        },
+        {
+          "label": "Revolt at Fregellae",
+          "when": "125 BC",
+          "year": -125,
+          "fact": "Gaius was accused of helping this revolt in a Latin town south-east of Rome, but cleared himself.",
+          "sectionId": "gaius-gracchus-rises",
+          "reviewFlags": []
+        },
+        {
+          "label": "Gaius proposes citizenship for Latins",
+          "when": "122 BC",
+          "year": -122,
+          "fact": "A rival tribune vetoed the proposal and outbid Gaius with grand schemes of his own, and the bills failed.",
+          "sectionId": "fall-of-gaius",
+          "reviewFlags": []
+        },
+        {
+          "label": "Senate passes its first final decree",
+          "when": "121 BC",
+          "year": -121,
+          "fact": "The senatus consultum ultimum urged the consul Opimius to defend the state by any means necessary.",
+          "sectionId": "fall-of-gaius",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "matchSets": [
+    {
+      "name": "People and Places",
+      "blurb": "Match each name to its role in the story of the Gracchi.",
+      "pairs": [
+        {
+          "name": "Cornelia",
+          "match": "Mother of the Gracchi who turned down the king of Egypt",
+          "sectionId": "family-of-the-gracchi",
+          "reviewFlags": []
+        },
+        {
+          "name": "Scipio Nasica",
+          "match": "Chief priest who led the mob that killed Tiberius",
+          "sectionId": "death-of-tiberius",
+          "reviewFlags": []
+        },
+        {
+          "name": "Opimius",
+          "match": "Consul who crushed Gaius and built a temple of Concord",
+          "sectionId": "turning-point",
+          "reviewFlags": []
+        },
+        {
+          "name": "Numantia",
+          "match": "Spanish hill town where a Roman army was surrounded",
+          "sectionId": "tiberius-at-war",
+          "reviewFlags": []
+        },
+        {
+          "name": "Pergamum",
+          "match": "Greek kingdom whose king left his treasury to Rome",
+          "sectionId": "breaking-the-rules",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Latin Words",
+      "blurb": "Match each Latin word to its meaning.",
+      "pairs": [
+        {
+          "name": "ager publicus",
+          "match": "Public land Rome had taken in its conquests across Italy",
+          "sectionId": "the-land-law",
+          "reviewFlags": []
+        },
+        {
+          "name": "intercessio",
+          "match": "A tribune's veto, used to try to block Tiberius's bill",
+          "sectionId": "breaking-the-rules",
+          "reviewFlags": []
+        },
+        {
+          "name": "cippi",
+          "match": "Boundary stones carved with the land commissioners' names",
+          "sectionId": "land-commission",
+          "reviewFlags": []
+        },
+        {
+          "name": "senatus consultum ultimum",
+          "match": "Senate's 'final decree' to defend the state by any means",
+          "sectionId": "fall-of-gaius",
+          "reviewFlags": []
+        },
+        {
+          "name": "equites",
+          "match": "Wealthy non-senators given Asian tax contracts and jury seats",
+          "sectionId": "laws-of-gaius",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "trueFalseDecks": [
+    {
+      "name": "Tiberius Gracchus",
+      "blurb": "From the Spanish wars to the Capitoline.",
+      "cards": [
+        {
+          "claim": "Cornelia accepted a marriage proposal from the king of Egypt.",
+          "answer": false,
+          "why": "Cornelia turned the king of Egypt down and devoted herself to raising and educating her children.",
+          "sectionId": "family-of-the-gracchi",
+          "reviewFlags": []
+        },
+        {
+          "claim": "The Numantines trusted Tiberius because his father had governed the region.",
+          "answer": true,
+          "why": "The consul sent Tiberius to negotiate precisely because the Numantines trusted his family name.",
+          "sectionId": "tiberius-at-war",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Rome gladly accepted the treaty Tiberius made with Numantia.",
+          "answer": false,
+          "why": "Rome refused the treaty as humiliating, and the consul was handed over to the Numantines naked and bound.",
+          "sectionId": "tiberius-at-war",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Tiberius believed an old law limited public land holdings to about 120 hectares (300 acres).",
+          "answer": true,
+          "why": "His agrarian law would enforce that limit and hand the surplus to poor Roman citizens.",
+          "sectionId": "the-land-law",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Tiberius first submitted his land bill to the Senate for approval.",
+          "answer": false,
+          "why": "He took it straight to the Plebeian Council without consulting the Senate, breaking custom.",
+          "sectionId": "breaking-the-rules",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Tiberius had a fellow tribune who vetoed his bill removed from office.",
+          "answer": true,
+          "why": "He had the tribune physically removed and voted out of office, something without precedent.",
+          "sectionId": "breaking-the-rules",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Tiberius's supporters fought back fiercely with swords on the Capitoline.",
+          "answer": false,
+          "why": "They did not fight back; they were beaten to death with stones, wooden chairs and other blunt objects.",
+          "sectionId": "death-of-tiberius",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Scipio Nasica, who led the mob against Tiberius, was his own cousin.",
+          "answer": true,
+          "why": "Scipio Nasica was Tiberius's cousin and Rome's chief priest (pontifex maximus).",
+          "sectionId": "death-of-tiberius",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Gaius and the Aftermath",
+      "blurb": "The land commission, Gaius's laws and their legacy.",
+      "cards": [
+        {
+          "claim": "The land commission distributed some 3,268 square kilometres (1.3 million jugera) of land.",
+          "answer": true,
+          "why": "That was enough for somewhere between 70,000 and 130,000 settlers.",
+          "sectionId": "land-commission",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Rome's Italian allies welcomed the land commission's work.",
+          "answer": false,
+          "why": "The allies protested that the commissioners were seizing land they had long used as a reward for loyalty.",
+          "sectionId": "land-commission",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Gaius was about nine years younger than Tiberius.",
+          "answer": true,
+          "why": "Gaius was born around 154 BC, Tiberius in 163 or 162 BC.",
+          "sectionId": "gaius-gracchus-rises",
+          "reviewFlags": []
+        },
+        {
+          "claim": "When speaking in the Forum, Gaius made a point of facing the senate house.",
+          "answer": false,
+          "why": "He turned towards the crowd instead, in effect turning his back on the Senate.",
+          "sectionId": "gaius-gracchus-rises",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Gaius's grain law set a price well above the harvest price.",
+          "answer": false,
+          "why": "It set a fixed price slightly below the harvest price for each modius, about 8.7 litres.",
+          "sectionId": "laws-of-gaius",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Gaius planned an overseas colony at Carthage.",
+          "answer": true,
+          "why": "Seeing that Italy lacked enough land, he planned colonies, including one at Carthage.",
+          "sectionId": "laws-of-gaius",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Gaius's proposal of citizenship for the Latins passed easily in 122 BC.",
+          "answer": false,
+          "why": "A rival tribune vetoed it, a consul warned that newcomers would 'swamp everything', and the bills failed.",
+          "sectionId": "fall-of-gaius",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Opimius was acquitted by pointing to the Senate's emergency decree.",
+          "answer": true,
+          "why": "Prosecuted under Gaius's own law, he won, giving such decrees new legitimacy.",
+          "sectionId": "turning-point",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "oddOneOut": [
+    {
+      "items": [
+        "Consul twice",
+        "Censor",
+        "Two triumphs",
+        "Chief priest"
+      ],
+      "oddIndex": 3,
+      "why": "The Gracchi's father was twice consul, censor and won two triumphs. Chief priest was the office of their cousin Scipio Nasica.",
+      "sectionId": "family-of-the-gracchi",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Help the poor",
+        "Slow drift to the city",
+        "More men fit for the army",
+        "Citizenship for the Latins"
+      ],
+      "oddIndex": 3,
+      "why": "Tiberius argued his land law would help the poor, slow migration to Rome and raise army numbers. Citizenship for the Latins was Gaius's later proposal.",
+      "sectionId": "the-land-law",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Bypassing the Senate",
+        "Removing a vetoing tribune",
+        "Seeking a second term in a row",
+        "Asking the Senate first"
+      ],
+      "oddIndex": 3,
+      "why": "Tiberius broke custom by bypassing the Senate, ousting a tribune and seeking re-election. He never consulted the Senate first.",
+      "sectionId": "breaking-the-rules",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Stones",
+        "Wooden chairs",
+        "Writing styluses",
+        "Blunt objects"
+      ],
+      "oddIndex": 2,
+      "why": "Tiberius and his followers were killed with stones, chairs and blunt objects. Styluses killed an attendant who jeered at the Gracchans in 121 BC.",
+      "sectionId": "death-of-tiberius",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Quaestor in Sardinia",
+        "Served in Spain in 133 BC",
+        "Climbed Carthage's walls",
+        "Sat on the land commission"
+      ],
+      "oddIndex": 2,
+      "why": "Gaius served in Sardinia, in Spain in 133 BC and on the land commission. Climbing Carthage's walls is told of Tiberius.",
+      "sectionId": "gaius-gracchus-rises",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Fixed grain price",
+        "Colony at Carthage",
+        "Removing a vetoing tribune",
+        "Equestrians on juries"
+      ],
+      "oddIndex": 2,
+      "why": "Gaius passed laws on grain, colonies and equestrian juries. Removing a vetoing tribune was Tiberius's act in 133 BC.",
+      "sectionId": "laws-of-gaius",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Murder on the Capitoline",
+        "Senate's first final decree",
+        "Seizure of the temple of Diana",
+        "Death of Gaius"
+      ],
+      "oddIndex": 0,
+      "why": "The final decree, the seizure of the temple of Diana and Gaius's death all came in 121 BC. The Capitoline murder of Tiberius was in 133 BC.",
+      "sectionId": "fall-of-gaius",
+      "reviewFlags": []
+    }
+  ],
+  "whoAmI": [
+    {
+      "name": "The Gracchus Family",
+      "blurb": "A mother and her two famous sons.",
+      "people": [
+        {
+          "name": "Cornelia",
+          "options": [
+            "Cornelia",
+            "Tiberius Gracchus",
+            "Gaius Gracchus",
+            "Opimius"
+          ],
+          "clues": [
+            "Years later, one of my sons dropped his own bill because I asked him to.",
+            "After my husband died, I devoted myself to raising and educating my children.",
+            "I turned down a marriage proposal from the king of Egypt.",
+            "I was the daughter of a celebrated general and the mother of the two reforming brothers."
+          ],
+          "sectionId": "family-of-the-gracchi",
+          "reviewFlags": []
+        },
+        {
+          "name": "Tiberius Gracchus",
+          "options": [
+            "Gaius Gracchus",
+            "Tiberius Gracchus",
+            "Scipio Nasica",
+            "Cornelia"
+          ],
+          "clues": [
+            "I married the daughter of a former consul from a rival family.",
+            "After a rejected treaty, a proposal to send me to the enemy in chains was defeated.",
+            "As quaestor in Spain, I negotiated a deal that saved a Roman army trapped by Numantia.",
+            "I was the elder of the two reforming brothers, killed on the Capitoline in 133 BC."
+          ],
+          "sectionId": "tiberius-at-war",
+          "reviewFlags": []
+        },
+        {
+          "name": "Gaius Gracchus",
+          "options": [
+            "Opimius",
+            "Scipio Nasica",
+            "Tiberius Gracchus",
+            "Gaius Gracchus"
+          ],
+          "clues": [
+            "I left my post in Sardinia without permission, arguing I had already served long enough.",
+            "I was accused of helping the revolt at Fregellae, but cleared myself.",
+            "Speaking in the Forum, I turned towards the crowd and away from the senate house.",
+            "I was the younger of the two reforming brothers, tribune in 123 and 122 BC."
+          ],
+          "sectionId": "gaius-gracchus-rises",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Blood in the Streets",
+      "blurb": "Victims and killers of 133 and 121 BC.",
+      "people": [
+        {
+          "name": "Scipio Nasica",
+          "options": [
+            "Opimius",
+            "Scipio Nasica",
+            "Gaius Gracchus",
+            "Tiberius Gracchus"
+          ],
+          "clues": [
+            "I died in Pergamum the year after a famous killing.",
+            "Charged with murder, I was sent away on a convenient mission.",
+            "As chief priest, I drew my toga over my head and led a mob to the voting place.",
+            "I was the cousin of the tribune killed on the Capitoline in 133 BC."
+          ],
+          "sectionId": "death-of-tiberius",
+          "reviewFlags": []
+        },
+        {
+          "name": "Opimius",
+          "options": [
+            "Scipio Nasica",
+            "Tiberius Gracchus",
+            "Opimius",
+            "Cornelia"
+          ],
+          "clues": [
+            "Prosecuted for executing citizens without appeal, I won by citing the Senate's decree.",
+            "I ritually purified Rome and built a temple to Concord beside the senate house.",
+            "I marched on the temple of Diana with armed citizens and Cretan archers.",
+            "As consul in 121 BC, I received the Senate's first 'final decree'."
+          ],
+          "sectionId": "turning-point",
+          "reviewFlags": []
+        },
+        {
+          "name": "Tiberius Gracchus",
+          "options": [
+            "Tiberius Gracchus",
+            "Opimius",
+            "Scipio Nasica",
+            "Gaius Gracchus"
+          ],
+          "clues": [
+            "A senator accused me of wanting to be king when I eyed the treasure of Pergamum.",
+            "I had a fellow tribune who vetoed my bill removed from office.",
+            "Country people flocked to Rome in 133 BC to support my land bill.",
+            "My followers and I were beaten to death on the Capitoline and thrown into the Tiber."
+          ],
+          "sectionId": "breaking-the-rules",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "places": [
+    {
+      "name": "Carthage",
+      "wikipediaTitle": "Carthage",
+      "lat": 36.853,
+      "lon": 10.323,
+      "why": "Rome's great rival in North Africa, where Tiberius fought in 147 BC and where Gaius later planned an overseas colony.",
+      "sectionId": "tiberius-at-war",
+      "coordinates": "Carthage archaeological site",
+      "reviewFlags": []
+    },
+    {
+      "name": "Numantia",
+      "wikipediaTitle": "Numantia",
+      "lat": 41.80958611,
+      "lon": -2.44425833,
+      "why": "Hill town in north-central Spain where Tiberius saved a trapped Roman army with a treaty that Rome then rejected.",
+      "sectionId": "tiberius-at-war",
+      "coordinates": "Wikipedia: Numantia",
+      "reviewFlags": []
+    },
+    {
+      "name": "Pergamum",
+      "wikipediaTitle": "Pergamon",
+      "lat": 39.1325,
+      "lon": 27.18416667,
+      "why": "Greek kingdom in Asia Minor whose king left his treasury to Rome, which Tiberius wanted for his land scheme.",
+      "sectionId": "breaking-the-rules",
+      "coordinates": "Wikipedia: Pergamon",
+      "reviewFlags": []
+    },
+    {
+      "name": "Sardinia",
+      "wikipediaTitle": "Sardinia",
+      "lat": 40,
+      "lon": 9,
+      "why": "Large island where Gaius served as quaestor in 126 BC before leaving without permission.",
+      "sectionId": "gaius-gracchus-rises",
+      "coordinates": "Wikipedia: Sardinia",
+      "reviewFlags": []
+    },
+    {
+      "name": "Apulia",
+      "wikipediaTitle": "Apulia",
+      "lat": 41,
+      "lon": 16,
+      "why": "South-eastern region of Italy where Gaius distributed land under his renewal of his brother's law.",
+      "sectionId": "laws-of-gaius",
+      "coordinates": "Wikipedia: Apulia",
+      "reviewFlags": []
+    }
+  ]
+}

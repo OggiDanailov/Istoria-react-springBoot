@@ -1,0 +1,193 @@
+{
+  "description": "Maps for the chronicle, written by hand. Coordinates from Wikipedia; each map sits at the start of its section.",
+  "maps": [
+    {
+      "id": "land-italy",
+      "sec": "land-commission",
+      "title": "The land commission and Gaius’s colonies",
+      "caption": "Boundary stones carved with the commissioners' names have been found all over southern Italy. Gaius distributed land in Apulia and planned a colony overseas at Carthage. Fregellae, a Latin town, revolted in 125 BC.",
+      "bounds": {
+        "latMin": 36.4,
+        "latMax": 43.2,
+        "lonMin": 8.0,
+        "lonMax": 17.6
+      },
+      "places": [
+        {
+          "name": "Rome",
+          "latin": "Roma",
+          "lat": 41.893,
+          "lon": 12.483,
+          "kind": "rome",
+          "side": "l",
+          "dy": -4
+        },
+        {
+          "name": "Fregellae",
+          "lat": 41.537,
+          "lon": 13.539,
+          "side": "r"
+        },
+        {
+          "name": "Carthage",
+          "latin": "Carthago",
+          "lat": 36.853,
+          "lon": 10.323,
+          "side": "r",
+          "note": "planned colony"
+        }
+      ],
+      "peoples": [
+        {
+          "name": "Apulia",
+          "lat": 41.2,
+          "lon": 16.0
+        },
+        {
+          "name": "Sardinia",
+          "lat": 40.1,
+          "lon": 9.0
+        },
+        {
+          "name": "Southern Italy",
+          "lat": 39.6,
+          "lon": 16.2
+        }
+      ]
+    },
+    {
+      "id": "rome-133",
+      "sec": "death-of-tiberius",
+      "title": "Rome, 133 and 121 BC",
+      "caption": "Tiberius Gracchus was killed on the Capitoline Hill in 133 BC, during the vote for tribunes. In 121 BC Gaius and his followers held the temple of Diana on the Aventine; Gaius fled across the Tiber. The temple of Concord stood by the Forum.",
+      "bounds": {
+        "latMin": 41.876,
+        "latMax": 41.906,
+        "lonMin": 12.451,
+        "lonMax": 12.513
+      },
+      "hills": [
+        {
+          "name": "Capitoline",
+          "latin": "Capitolium",
+          "lat": 41.8933,
+          "lon": 12.4831,
+          "r": 0.0016,
+          "side": "l",
+          "note": "133 BC"
+        },
+        {
+          "name": "Palatine",
+          "latin": "Palatium",
+          "lat": 41.8894,
+          "lon": 12.4875,
+          "r": 0.002,
+          "side": "r"
+        },
+        {
+          "name": "Aventine",
+          "latin": "Mons Aventinus",
+          "lat": 41.8834,
+          "lon": 12.4805,
+          "r": 0.0022,
+          "side": "l",
+          "note": "121 BC"
+        },
+        {
+          "name": "Caelian",
+          "lat": 41.8857,
+          "lon": 12.4955,
+          "r": 0.0019,
+          "side": "r",
+          "dy": 26
+        },
+        {
+          "name": "Esquiline",
+          "lat": 41.8955,
+          "lon": 12.4985,
+          "r": 0.0022,
+          "side": "r"
+        },
+        {
+          "name": "Viminal",
+          "lat": 41.8995,
+          "lon": 12.4955,
+          "r": 0.0013,
+          "side": "r"
+        },
+        {
+          "name": "Quirinal",
+          "lat": 41.9005,
+          "lon": 12.4885,
+          "r": 0.0017,
+          "side": "l"
+        }
+      ],
+      "places": [
+        {
+          "name": "Forum",
+          "latin": "Forum Romanum",
+          "lat": 41.8925,
+          "lon": 12.4857,
+          "kind": "area",
+          "side": "r",
+          "dy": 2,
+          "note": "temple of Concord"
+        },
+        {
+          "name": "Pons Sublicius",
+          "lat": 41.8875,
+          "lon": 12.4776,
+          "kind": "bridge",
+          "side": "l"
+        }
+      ],
+      "river": [
+        [
+          41.906,
+          12.4715
+        ],
+        [
+          41.9035,
+          12.4672
+        ],
+        [
+          41.9,
+          12.4668
+        ],
+        [
+          41.897,
+          12.4695
+        ],
+        [
+          41.8945,
+          12.4735
+        ],
+        [
+          41.892,
+          12.4765
+        ],
+        [
+          41.8906,
+          12.4778
+        ],
+        [
+          41.8885,
+          12.4779
+        ],
+        [
+          41.886,
+          12.4768
+        ],
+        [
+          41.883,
+          12.475
+        ],
+        [
+          41.877,
+          12.4726
+        ]
+      ]
+    }
+  ]
+}

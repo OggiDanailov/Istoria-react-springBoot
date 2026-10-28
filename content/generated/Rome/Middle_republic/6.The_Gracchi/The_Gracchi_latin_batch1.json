@@ -1,0 +1,145 @@
+{
+  "batchName": "Middle Republic: The Gracchi (133-121 BCE) - Latin words",
+  "chapterName": "Middle Republic: The Gracchi (133-121 BCE)",
+  "difficulty": 1,
+  "batchOrder": 9,
+  "description": "Written by hand from the chapter text: the Latin words it explains",
+  "questions": [
+    {
+      "question": "In 133 BC Tiberius was elected tribunus plebis. What was that?",
+      "options": [
+        "One of ten officials who protected ordinary citizens",
+        "One of the two consuls",
+        "The chief priest",
+        "A commander of cavalry"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#the-land-law",
+      "explanation": "He used the office to propose his land law.",
+      "sourceQuote": "Tiberius Gracchus was elected tribune of the plebs (*tribunus plebis*), one of ten officials whose job was to protect ordinary citizens.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Scipio Nasica, who led the mob against Tiberius, was pontifex maximus. What was that?",
+      "options": [
+        "The chief priest, head of Rome’s state religion",
+        "The leader of the Senate",
+        "A consul",
+        "A judge"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#death-of-tiberius",
+      "explanation": "He framed the attack as a religious rite to rid Rome of a would-be tyrant.",
+      "sourceQuote": "Scipio Nasica, was chief priest (*pontifex maximus*), head of Rome's state religion.",
+      "reviewFlags": []
+    },
+    {
+      "question": "After crushing Gaius, Opimius built a temple to Concordia. Who was she?",
+      "options": [
+        "The goddess of civic harmony",
+        "The goddess of victory",
+        "The goddess of the harvest",
+        "The goddess of the hunt"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#turning-point",
+      "explanation": "Someone carved: “A work of mad discord produces a temple of Concord.”",
+      "sourceQuote": "built a grand temple to the goddess Concord (*Concordia*), symbol of civic harmony",
+      "reviewFlags": []
+    },
+    {
+      "question": "What was the lex Sempronia agraria?",
+      "options": [
+        "Tiberius’s land law",
+        "Gaius’s grain law",
+        "A law on jury courts",
+        "A law founding colonies"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#the-land-law",
+      "explanation": "It enforced an old limit of about 120 hectares on public land and gave the surplus to poor citizens.",
+      "sourceQuote": "His agrarian law (*lex Sempronia agraria*) would enforce that limit",
+      "reviewFlags": []
+    },
+    {
+      "question": "Where did Tiberius take his land bill, without consulting the Senate first?",
+      "options": [
+        "The Plebeian Council (concilium plebis)",
+        "The Centuriate Assembly",
+        "The college of priests",
+        "The consuls"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#breaking-the-rules",
+      "explanation": "Custom expected him to consult the Senate first.",
+      "sourceQuote": "He took his bill straight to the Plebeian Council (*concilium plebis*)",
+      "reviewFlags": []
+    },
+    {
+      "question": "Gaius saw that Italy did not have enough land for everyone. What did he plan?",
+      "options": [
+        "Coloniae, including one overseas at Carthage",
+        "A war to win land in Gaul",
+        "Buying land from the Italian allies",
+        "Moving the poor to Sicily"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#laws-of-gaius",
+      "explanation": "In 121 BC a new tribune moved to cancel the colony at Carthage.",
+      "sourceQuote": "so he planned colonies (*coloniae*), new settlements of citizens, including one overseas at Carthage.",
+      "reviewFlags": []
+    },
+    {
+      "question": "As quaestor in Spain in 137 BC, what was Tiberius in charge of?",
+      "options": [
+        "An army’s finances",
+        "The cavalry",
+        "The siege engines",
+        "The army’s priests"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#tiberius-at-war",
+      "explanation": "He negotiated the deal that saved the army trapped by Numantia.",
+      "sourceQuote": "In 137 BC he went to Spain as a quaestor (*quaestor*), a junior officer in charge of an army's finances.",
+      "reviewFlags": []
+    },
+    {
+      "question": "In 121 BC the Senate passed its first senatus consultum ultimum. What did it urge the consul to do?",
+      "options": [
+        "Defend the state by any means necessary",
+        "Hold new elections",
+        "Make peace with Gaius",
+        "Send Gaius into exile"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#fall-of-gaius",
+      "explanation": "Opimius marched on the Gracchans on the Aventine; Gaius died across the Tiber.",
+      "sourceQuote": "It passed its first \"final decree\" (*senatus consultum ultimum*), urging him to defend the state by any means necessary.",
+      "reviewFlags": []
+    }
+  ]
+}
