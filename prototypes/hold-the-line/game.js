@@ -74,6 +74,7 @@ let LEVEL = LEVELS[0]
 // What the chapter's quiz score buys for its battle: starting grain and veteran soldiers, placed free before the
 // first enemy arrives. 80% gives the battle's normal start; every 10 points more or less adds or removes grain and
 // a veteran. Tuned so that at 70% only a strong player wins, at 80% an average one, and at 90% nearly everyone.
+const MEDICUS = { heals: 3, wait: 10 }, AUGUR = { seconds: 15, reload: 0.6, damage: 1.5 }
 const SCORE = { grainPer10: 75, minGrain: 25, at80: -25, vetsAt80: 1, vetsPer10: 1, sky: [12, 14] }
 const VET_ORDER = ['slinger', 'triarius', 'slinger', 'hastatus', 'slinger', 'triarius', 'slinger']
 function armyFor(score, L = LEVEL) {
@@ -81,7 +82,8 @@ function armyFor(score, L = LEVEL) {
   const grain = Math.max(SCORE.minGrain, Math.round((L.start + SCORE.at80 + steps * SCORE.grainPer10) / 25) * 25)
   const vets = {}
   VET_ORDER.slice(0, Math.max(0, Math.round(SCORE.vetsAt80 + steps * SCORE.vetsPer10))).forEach(t => { vets[t] = (vets[t] ?? 0) + 1 })
-  return { grain, vets }
+  // helpers: a medicus (army doctor) from 80%, an augur from 90%
+  return { grain, vets, medicus: score >= 80, augur: score >= 90 }
 }
 let quizScore = 80   // for testing; in the app it comes from the chapter's quizzes
 
@@ -516,6 +518,8 @@ function newGame(i = levelIndex, score = quizScore) {
     cool: Object.fromEntries(LEVEL.units.map(t => [t, { triarius: 15, caltrops: 20, shed: 10, pigs: 10 }[t] ?? 0])),
     queue: buildQueue(), total: 0, spawned: 0, killed: 0, lost: 0, nextSky: 4, shake: 0,
     introduced: new Set(), selected: null, dismiss: false, hover: null, lastLane: -1, tips: {},
+    hasMedicus: army.medicus, medicus: army.medicus ? MEDICUS.heals : 0, medicusWait: 0, heal: false,
+    hasAugur: army.augur, augur: army.augur ? 1 : 0, blessUntil: -1,
   }
   G.total = G.queue.length
   renderTray(); renderBar(true); updateCount(); $('level').textContent = LEVEL.name
@@ -620,6 +624,9 @@ function update(dt) {
   G.drops = G.drops.filter(d => !d.gone && (d.falling || d.life > 0))
   for (const t in G.cool) G.cool[t] = Math.max(0, G.cool[t] - dt)
   // your units
+  const blessed = G.t < G.blessUntil   // the augur's good omens
+  G.medicusWait = Math.max(0, G.medicusWait - dt)
+  if ((G.hasMedicus || G.hasAugur) && Math.floor(G.t) !== Math.floor(G.t - dt)) syncTray()   // the helpers' countdowns
   for (const u of [...G.units]) {
     const U = UNITS[u.type]
     u.cd -= dt; u.anim = Math.max(0, u.anim - dt); u.hurt = Math.max(0, u.hurt - dt)
@@ -632,7 +639,7 @@ function update(dt) {
     if (U.melee) {   // swordsmen fight whoever reaches their square
       const foe = G.foes.filter(f => f.lane === u.lane && f.hp > 0 && !f.jump && !f.fleeing && f.y >= u.row - 0.1 && f.y <= u.row + 1.0).sort((a, b) => b.y - a.y)[0]
       u.fighting = !!foe
-      if (foe) { hurtFoe(foe, U.melee * dt, true); if (Math.random() < dt * 2.5) { sfx.clang(); G.fx.push({ kind: 'spark', x: lx(u.lane), y: ry(u.row + 0.4), t: 0.2 }) } }
+      if (foe) { hurtFoe(foe, U.melee * dt * (blessed ? AUGUR.damage : 1), true); if (Math.random() < dt * 2.5) { sfx.clang(); G.fx.push({ kind: 'spark', x: lx(u.lane), y: ry(u.row + 0.4), t: 0.2 }) } }
     }
     if (u.type === 'pigs' && G.foes.some(f => f.lane === u.lane && f.hp > 0 && !f.fleeing && f.y >= u.row - U.trigger && f.y <= u.row + 1)) {
       removeUnit(u, false); G.runners.push({ lane: u.lane, y: u.row + 0.82 }); sfx.squeal()
@@ -642,8 +649,8 @@ function update(dt) {
       const near = lanes.some(l => G.foes.some(f => f.lane === l && f.hp > 0 && f.y < u.row + 1.05 && f.y > Math.max(-0.55, u.row + 0.5 - U.range)))
       u.aiming = near
       if (near && u.cd <= 0) {
-        u.cd = U.reload; u.anim = 0.35
-        for (const l of lanes) G.shots.push({ lane: l, from: u.lane, y: u.row + 0.45, y0: u.row + 0.45, kind: u.type === 'slinger' ? 'stone' : 'pilum', dmg: U.dmg, speed: u.type === 'slinger' ? 7 : 6, end: u.row + 0.5 - U.range - 0.3, x0: (Math.random() - 0.5) * 0.1 })
+        u.cd = U.reload * (blessed ? AUGUR.reload : 1); u.anim = 0.35
+        for (const l of lanes) G.shots.push({ lane: l, from: u.lane, y: u.row + 0.45, y0: u.row + 0.45, kind: u.type === 'slinger' ? 'stone' : 'pilum', dmg: U.dmg * (blessed ? AUGUR.damage : 1), speed: u.type === 'slinger' ? 7 : 6, end: u.row + 0.5 - U.range - 0.3, x0: (Math.random() - 0.5) * 0.1 })
         u.type === 'slinger' ? sfx.sling() : sfx.throw()
       }
     }
@@ -766,6 +773,10 @@ function draw() {
       }
     }
   }
+  if (G.heal) for (const u of G.units) if (u.hp < u.max && u.type !== 'caltrops' && u.type !== 'pigs') {
+    ctx.fillStyle = 'rgba(127, 176, 105, .28)'; ctx.fillRect(u.lane * cell + 3, ry(u.row) + 3, cell - 6, cell - 6)
+    ctx.strokeStyle = '#7fb069'; ctx.lineWidth = 2.5; ctx.strokeRect(u.lane * cell + 3, ry(u.row) + 3, cell - 6, cell - 6)
+  }
   // everything on the ground, back to front
   const items = []
   for (const c of G.corpses) items.push([ry(c.y) - 2, () => {
@@ -781,6 +792,7 @@ function draw() {
     items.push([uy, () => {
       ctx.save(); ctx.translate(ux + (u.hurt > 0 && !reduceMotion ? (Math.random() - 0.5) * 2.5 : 0), uy); ctx.scale(k, k)
       if (moveDrag?.moved && moveDrag.u === u) ctx.globalAlpha = 0.45
+      if (G.t < G.blessUntil && u.type !== 'caltrops' && u.type !== 'pigs') { const g = ctx.createRadialGradient(0, -26, 2, 0, -26, 30); g.addColorStop(0, 'rgba(240, 200, 90, .55)'); g.addColorStop(1, 'rgba(240, 200, 90, 0)'); ctx.fillStyle = g; ctx.beginPath(); ctx.arc(0, -26, 30, 0, TAU); ctx.fill() }
       DRAW_UNIT[u.type](ctx, u, T); ctx.restore()
       if (u.hp < u.max && u.type !== 'caltrops' && u.type !== 'pigs') hpBar(ux, uy + 5 * k, u.hp / u.max)
     }])
@@ -818,6 +830,7 @@ function draw() {
     if (p.kind === 'spark') { ctx.strokeStyle = `rgba(255, 230, 150, ${a})`; ctx.lineWidth = 2; ctx.beginPath(); for (let i = 0; i < 5; i++) { const an = i * TAU / 5; ctx.moveTo(p.x, p.y - 14 * k); ctx.lineTo(p.x + Math.cos(an) * 8 * k, p.y - 14 * k + Math.sin(an) * 8 * k) } ctx.stroke() }
     if (p.kind === 'shard') { ctx.fillStyle = `rgba(176, 138, 62, ${a})`; ctx.fillRect(p.x, p.y, 4 * k, 3 * k) }
     if (p.kind === 'ring') { ctx.strokeStyle = `rgba(251, 243, 228, ${a})`; ctx.lineWidth = 3; ctx.beginPath(); ctx.ellipse(p.x, p.y, (0.5 - p.t) * cell * 2, (0.5 - p.t) * cell, 0, 0, TAU); ctx.stroke() }
+    if (p.kind === 'heal') { const y = p.y - (0.9 - p.t) * 30; ctx.fillStyle = `rgba(127, 176, 105, ${a})`; ctx.fillRect(p.x - 3, y - 11, 6, 22); ctx.fillRect(p.x - 11, y - 3, 22, 6) }
     if (p.kind === 'text') { ctx.fillStyle = `rgba(251, 243, 228, ${a})`; ctx.strokeStyle = `rgba(27, 23, 21, ${a})`; ctx.lineWidth = 3; ctx.font = `900 ${Math.round(16 * k + 4)}px Nunito, system-ui, sans-serif`; ctx.textAlign = 'center'; ctx.strokeText(p.text, p.x, p.y); ctx.fillText(p.text, p.x, p.y) }
   }
   ctx.restore()
@@ -870,6 +883,10 @@ function syncTray() {
     b.querySelector('.cool').style.height = (G.cool[type] / U.recharge * 100) + '%'
   }
   $('dismiss').classList.toggle('on', G.dismiss)
+  const med = $('medicus'), aug = $('augur')
+  med.hidden = !G.hasMedicus; aug.hidden = !G.hasAugur
+  if (G.hasMedicus) { $('med-n').textContent = G.medicusWait > 0 ? `${Math.ceil(G.medicusWait)}s` : G.medicus; med.classList.toggle('on', G.heal); med.disabled = !G.medicus }
+  if (G.hasAugur) { aug.textContent = G.augur ? 'Augur' : G.t < G.blessUntil ? `Blessed ${Math.ceil(G.blessUntil - G.t)}s` : 'Augur ✓'; aug.disabled = !G.augur; aug.classList.toggle('on', G.t < G.blessUntil) }
 }
 let shownCount = -1
 function updateCount(bump) {
@@ -901,7 +918,7 @@ function tutorial(event, type) {
   if (event === 'hurt' && levelIndex === 0) say('hurt', 'A soldier is hurt! Drag him to another square to pull him out of the fight.')
   if (event === 'equites') say('equites', 'The equites saved that lane, but they only charge once.')
 }
-function select(type) { G.selected = type; G.dismiss = false; syncTray() }
+function select(type) { G.selected = type; G.dismiss = false; G.heal = false; syncTray() }
 
 // ---------- input: drag a card onto a square, or tap a card then a square ----------
 let drag = null, moveDrag = null
@@ -1028,7 +1045,7 @@ function showBriefing(i) {
 }
 function armyLine(score, L) {
   const a = armyFor(score, L), vets = Object.entries(a.vets).map(([t, n]) => `${n} ${n === 1 ? UNITS[t].name.toLowerCase() : UNITS[t].name.toLowerCase() + (t === 'triarius' ? '' : 's')}`.replace('triarius', n === 1 ? 'triarius' : 'triarii').replace('hastatuss', 'hastati'))
-  return `You start with ${a.grain} grain${vets.length ? ` and veterans: ${vets.join(', ')}` : ' and no veterans'}.`
+  return `You start with ${a.grain} grain${vets.length ? ` and veterans: ${vets.join(', ')}` : ' and no veterans'}.${a.medicus ? ` A medicus (army doctor) comes with you${a.augur ? ', and an augur' : ''}.` : ''}`
 }
 function startLevel(i, score = quizScore) {
   overlay.hidden = true
@@ -1042,6 +1059,8 @@ function syncDeploy() {
   $('deploy-text').textContent = left
     ? `Your test score earned you veterans. Drag them onto the field for free (${left} still to place).`
     : 'Your veterans are in place. Drag to adjust, then begin.'
+  if (G.hasMedicus) $('deploy-text').textContent += ` Your medicus can heal ${MEDICUS.heals} wounded soldiers: tap ✚ Medicus, then the soldier.`
+  if (G.hasAugur) $('deploy-text').textContent += ' Once per battle, tap Augur for good omens: your soldiers fight harder for a while.'
 }
 function beginBattle() {
   if (G.phase !== 'deploy' && G.phase !== 'ready') return
@@ -1099,7 +1118,11 @@ const MARKUP = `<main class="game">
     <canvas id="field" aria-label="The battlefield: five lanes in front of the Roman camp. Latin soldiers march down from the top."></canvas>
     <div class="hud">
       <div class="rations" id="rations" aria-live="polite"><svg class="wheat" viewBox="0 0 20 20" aria-hidden="true"><g fill="#e0a63a"><ellipse cx="10" cy="4" rx="2.4" ry="3.6"/><ellipse cx="6.5" cy="8" rx="2.2" ry="3.3" transform="rotate(-30 6.5 8)"/><ellipse cx="13.5" cy="8" rx="2.2" ry="3.3" transform="rotate(30 13.5 8)"/><ellipse cx="7" cy="12.5" rx="2" ry="3" transform="rotate(-30 7 12.5)"/><ellipse cx="13" cy="12.5" rx="2" ry="3" transform="rotate(30 13 12.5)"/></g><path d="M10 6v13" stroke="#b8862a" stroke-width="1.6"/></svg><span id="count">100</span></div>
-      <button class="tool" id="dismiss" title="Send a soldier home (frees the square)">Dismiss</button>
+      <div class="hud-right">
+        <button class="tool" id="dismiss" title="Send a soldier home (frees the square)">Dismiss</button>
+        <button class="tool helper" id="medicus" hidden title="Tap, then tap a wounded soldier to heal him">✚ Medicus <b id="med-n"></b></button>
+        <button class="tool helper" id="augur" hidden title="Once per battle: good omens make your soldiers fight harder">Augur</button>
+      </div>
     </div>
     <div class="banner" id="banner" hidden></div>
     <div class="deploy" id="deploy" hidden><p id="deploy-text"></p><button class="primary" id="begin">Begin the battle</button></div>
@@ -1124,12 +1147,30 @@ function bindControls() {
     const d = G.drops.find(d => Math.hypot(d.x - c.x, d.y - c.y) < 26 * k + 8)
     if (d) return collect(d)
     if (!c.inGrid) return
+    if (G.heal) {
+      const u = unitAt(c.lane, c.row)
+      if (u && u.hp < u.max && u.type !== 'caltrops' && u.type !== 'pigs') {
+        u.hp = u.max; G.medicus--; G.medicusWait = MEDICUS.wait; G.heal = false; sfx.collect()
+        G.fx.push({ kind: 'heal', x: lx(u.lane), y: ry(u.row + 0.5), t: 0.9 })
+      } else sfx.deny()
+      syncTray(); return
+    }
     if (G.dismiss) { const u = unitAt(c.lane, c.row); if (u) { removeUnit(u, false); sfx.place() } G.dismiss = false; syncTray(); return }
     if (G.selected) { if (place(G.selected, c.lane, c.row)) select(null); return }
     const u = unitAt(c.lane, c.row)
     if (u && MOVABLE(u.type) && !u.travel) { moveDrag = { u, x0: e.clientX, y0: e.clientY, moved: false }; canvas.setPointerCapture(e.pointerId) }
   })
-  $('dismiss').addEventListener('click', () => { if (G.phase !== 'play') return; G.dismiss = !G.dismiss; G.selected = null; syncTray() })
+  $('dismiss').addEventListener('click', () => { if (G.phase !== 'play') return; G.dismiss = !G.dismiss; G.heal = false; G.selected = null; syncTray() })
+  $('medicus').addEventListener('click', () => {
+    if (G.phase !== 'play' || !G.medicus || G.medicusWait > 0) { sfx.deny(); return }
+    G.heal = !G.heal; G.dismiss = false; G.selected = null; syncTray()
+    if (G.heal) announce('Tap a wounded soldier to heal him.', false, 2000)
+  })
+  $('augur').addEventListener('click', () => {
+    if (G.phase !== 'play' || !G.augur) { sfx.deny(); return }
+    G.augur = 0; G.blessUntil = G.t + AUGUR.seconds; sfx.charge(); syncTray()
+    announce(`The augur reads the birds: the gods favour Rome! Your soldiers fight harder for ${AUGUR.seconds} seconds.`, true, 3200)
+  })
   $('speed').addEventListener('click', e => { G.speed = G.speed === 1 ? 2 : 1; e.currentTarget.textContent = G.speed + '×' })
   $('sound').addEventListener('click', e => { sfx.init(); sfx.on = !sfx.on; e.currentTarget.textContent = sfx.on ? 'Sound' : 'Muted'; e.currentTarget.classList.toggle('on', !sfx.on) })
   $('guide').addEventListener('click', () => { if (G.phase === 'play') showGuide() })

@@ -3,7 +3,7 @@
 How the game works today: the chapter test, the point system, the battles and the content rules.
 It describes the prototype (`prototypes/age-of-kings`, battles in `prototypes/hold-the-line`); the real app will follow it.
 
-**Last updated**: October 27, 2026
+**Last updated**: October 28, 2026
 
 ---
 
@@ -79,6 +79,13 @@ Starting grain and veterans by score (veterans in order: slinger, triarius, slin
 | 80% | 75 | 150 | 125 | 175 | 225 | 1 |
 | 90% | 150 | 225 | 200 | 250 | 300 | 2 |
 | 100% | 225 | 300 | 275 | 325 | 375 | 3 |
+
+**Helpers** (also earned by the score):
+
+| Score | Helper | What it does |
+|---|---|---|
+| 80%+ | **Medicus** (army doctor) | heals a wounded soldier to full: tap ✚ Medicus, then the soldier. 3 heals per battle, 10 seconds apart |
+| 90%+ | **Augur** (priest who reads the omens in the flight of birds) | once per battle: for 15 seconds your soldiers throw faster and hit 1.5× harder |
 
 Free grain also falls from the sky every 12–14 seconds, and supply carts bring 25 every 20 seconds, so building carts
 early always matters.
