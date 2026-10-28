@@ -1,0 +1,159 @@
+{
+  "description": "Maps for the chronicle, written by hand. Coordinates from Wikipedia; each map sits at the start of its section.",
+  "maps": [
+    {
+      "id": "pyrrhus-italy",
+      "sec": "heraclea-and-asculum",
+      "title": "Pyrrhus in Italy",
+      "caption": "Pyrrhus crossed from Epirus to Tarentum, the strongest Greek city of the south. He won at Heraclea (280 BC) and Asculum (279 BC), and was stopped at Beneventum (275 BC). His crossing is drawn only roughly.",
+      "bounds": {
+        "latMin": 38.0,
+        "latMax": 42.1,
+        "lonMin": 12.3,
+        "lonMax": 18.7
+      },
+      "places": [
+        {
+          "name": "Rome",
+          "latin": "Roma",
+          "lat": 41.893,
+          "lon": 12.483,
+          "kind": "rome",
+          "side": "r",
+          "dy": -4
+        },
+        {
+          "name": "Beneventum",
+          "lat": 41.133,
+          "lon": 14.783,
+          "kind": "battle",
+          "side": "l",
+          "dy": -6
+        },
+        {
+          "name": "Asculum",
+          "lat": 41.216,
+          "lon": 15.558,
+          "kind": "battle",
+          "side": "r"
+        },
+        {
+          "name": "Heraclea",
+          "lat": 40.22,
+          "lon": 16.67,
+          "kind": "battle",
+          "side": "l"
+        },
+        {
+          "name": "Tarentum",
+          "lat": 40.471,
+          "lon": 17.243,
+          "side": "r",
+          "dy": -4
+        },
+        {
+          "name": "Thurii",
+          "lat": 39.716,
+          "lon": 16.497,
+          "side": "l"
+        },
+        {
+          "name": "Locri",
+          "lat": 38.24,
+          "lon": 16.26,
+          "side": "l"
+        },
+        {
+          "name": "Naples",
+          "latin": "Neapolis",
+          "lat": 40.836,
+          "lon": 14.249,
+          "side": "l",
+          "dy": 8
+        }
+      ],
+      "peoples": [
+        {
+          "name": "Samnites",
+          "lat": 41.75,
+          "lon": 14.6
+        },
+        {
+          "name": "Lucanians",
+          "lat": 40.45,
+          "lon": 15.75
+        },
+        {
+          "name": "Bruttians",
+          "lat": 38.95,
+          "lon": 16.35
+        }
+      ],
+      "routes": [
+        {
+          "pts": [
+            [
+              40.15,
+              18.65
+            ],
+            [
+              40.3,
+              17.9
+            ],
+            [
+              40.43,
+              17.32
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pyrrhus-sicily",
+      "sec": "pyrrhus-in-sicily",
+      "title": "Pyrrhus in Sicily",
+      "caption": "Pyrrhus came to help Syracuse against Carthage, which held the west of the island. He won most of Sicily but could not take Lilybaeum, supplied by sea from Africa.",
+      "bounds": {
+        "latMin": 36.6,
+        "latMax": 38.4,
+        "lonMin": 12.1,
+        "lonMax": 15.8
+      },
+      "places": [
+        {
+          "name": "Syracuse",
+          "lat": 37.075,
+          "lon": 15.286,
+          "side": "l"
+        },
+        {
+          "name": "Lilybaeum",
+          "lat": 37.8,
+          "lon": 12.44,
+          "kind": "battle",
+          "side": "r"
+        }
+      ],
+      "peoples": [
+        {
+          "name": "Carthaginian west",
+          "lat": 37.55,
+          "lon": 13.0
+        },
+        {
+          "name": "Greek cities",
+          "lat": 37.35,
+          "lon": 14.7
+        }
+      ],
+      "edges": [
+        {
+          "text": "Carthage, in North Africa",
+          "dir": "s",
+          "km": 230,
+          "lon": 13.45
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,145 @@
+{
+  "batchName": "Early Republic: Final Conquest of Italy (290-264 BCE) - Latin words",
+  "chapterName": "Early Republic: Final Conquest of Italy (290-264 BCE)",
+  "difficulty": 1,
+  "batchOrder": 9,
+  "description": "Written by hand from the chapter text: the Latin words it explains",
+  "questions": [
+    {
+      "question": "What was the Via Appia?",
+      "options": [
+        "The Appian Way, a road south from Rome",
+        "A wall around Rome",
+        "An aqueduct",
+        "A sea route to Sicily"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#rome-after-the-samnite-wars",
+      "explanation": "It carried Roman armies and influence deep into the south, toward Capua.",
+      "sourceQuote": "It also built the Appian Way (*Via Appia*), a great road running south",
+      "reviewFlags": []
+    },
+    {
+      "question": "What does Magna Graecia mean?",
+      "options": [
+        "Great Greece",
+        "Greek Sea",
+        "Old Greece",
+        "Greek Alliance"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#tarentum-calls-for-help",
+      "explanation": "It was the name for the rich Greek cities of southern Italy, such as Tarentum.",
+      "sourceQuote": "Southern Italy was home to *Magna Graecia*, or Great Greece,",
+      "reviewFlags": []
+    },
+    {
+      "question": "Why are the wars with Carthage called “Punic”?",
+      "options": [
+        "From Punici, the Romans’ name for the Carthaginians",
+        "From the Punic river in Africa",
+        "From a Carthaginian king named Punicus",
+        "From the Latin for “sea war”"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#italy-united-264-bc",
+      "explanation": "The Carthaginians were of Phoenician origin, and the Romans called them Punici.",
+      "sourceQuote": "\"Punic\" comes from *Punici*, the Romans' name for the Carthaginians",
+      "reviewFlags": []
+    },
+    {
+      "question": "The Hortensian law banned votes on nundinae. What were they?",
+      "options": [
+        "Market days",
+        "Holy days of Jupiter",
+        "The days of the census",
+        "Days of mourning"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#why-the-plebs-seceded",
+      "explanation": "Banning votes on market days made it harder for country farmers, who came to town to trade, to vote.",
+      "sourceQuote": "it banned votes on market days (*nundinae*),",
+      "reviewFlags": []
+    },
+    {
+      "question": "Pyrrhus left a praesidium in Tarentum. What was it?",
+      "options": [
+        "A small garrison of his soldiers",
+        "A governor",
+        "A treaty with Rome",
+        "A fleet of ships"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#beneventum-and-withdrawal",
+      "explanation": "The garrison was allowed to go home in peace when Tarentum fell in 272 BC.",
+      "sourceQuote": "leaving only a small garrison (*praesidium*) of his soldiers in Tarentum.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What were Rome’s socii?",
+      "options": [
+        "States allied to Rome that had to supply soldiers",
+        "Roman colonies in the south",
+        "The Greek cities Rome ruled directly",
+        "Rome’s enemies in Sicily"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#how-rome-ruled-italy",
+      "explanation": "They stayed independent in name but sent troops for Rome’s wars.",
+      "sourceQuote": "its allies (*socii*), that stayed independent in name",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did the lex Hortensia of 287 BC do?",
+      "options": [
+        "Made every decision of the Plebeian Council binding on all citizens",
+        "Gave the plebeians their own consul",
+        "Cancelled all debts",
+        "Founded new colonies"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#lex-hortensia",
+      "explanation": "It removed the need for the Senate to approve plebeian decisions, ending the Conflict of the Orders.",
+      "sourceQuote": "made every decision (*plebiscitum*) of the Plebeian Council (*concilium plebis*) binding on all citizens",
+      "reviewFlags": []
+    },
+    {
+      "question": "Some communities received civitas sine suffragio. What was it?",
+      "options": [
+        "Citizenship without the right to vote",
+        "Full Roman citizenship",
+        "Freedom from military service",
+        "The right to found colonies"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#how-rome-ruled-italy",
+      "explanation": "It was one of Rome’s tools for absorbing conquered peoples.",
+      "sourceQuote": "a partial version without the right to vote (*civitas sine suffragio*).",
+      "reviewFlags": []
+    }
+  ]
+}

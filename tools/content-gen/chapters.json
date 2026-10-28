@@ -154,7 +154,8 @@
         "enemy": "Pyrrhus of Epirus",
         "sec": "beneventum-and-withdrawal",
         "intro": "Pyrrhus, the Greek king who has beaten Rome twice at a terrible cost, faces the Romans one last time at Beneventum. Ancient accounts disagree on how it ended. Today, the outcome is up to you."
-      }
+      },
+      "locked": true
     }
   ]
 }

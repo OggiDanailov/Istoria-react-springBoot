@@ -244,6 +244,48 @@
           "reviewFlags": []
         }
       ]
+    },
+    {
+      "name": "Latin Words",
+      "blurb": "Match each Latin word to its meaning.",
+      "pairs": [
+        {
+          "name": "Via Appia",
+          "match": "The Appian Way, the road south from Rome",
+          "sectionId": "rome-after-the-samnite-wars",
+          "reviewFlags": []
+        },
+        {
+          "name": "Lex Hortensia",
+          "match": "The law making plebeian decisions binding on all",
+          "sectionId": "lex-hortensia",
+          "reviewFlags": []
+        },
+        {
+          "name": "Nundinae",
+          "match": "Market days, when the law banned votes",
+          "sectionId": "why-the-plebs-seceded",
+          "reviewFlags": []
+        },
+        {
+          "name": "Magna Graecia",
+          "match": "“Great Greece”: the Greek cities of the south",
+          "sectionId": "tarentum-calls-for-help",
+          "reviewFlags": []
+        },
+        {
+          "name": "Praesidium",
+          "match": "A garrison, like the one Pyrrhus left in Tarentum",
+          "sectionId": "beneventum-and-withdrawal",
+          "reviewFlags": []
+        },
+        {
+          "name": "Punici",
+          "match": "The Romans’ name for the Carthaginians",
+          "sectionId": "italy-united-264-bc",
+          "reviewFlags": []
+        }
+      ]
     }
   ],
   "trueFalseDecks": [
@@ -376,28 +418,26 @@
     {
       "items": [
         "Samnites",
-        "Lucanians",
-        "Gauls",
-        "Umbrians"
+        "Etruscans",
+        "Umbrians",
+        "Lucanians"
       ],
-      "oddIndex": 1,
-      "why": "Samnites, Gauls and Umbrians (with the Etruscans) fought Rome together at Sentinum in 295 BC; the Lucanians were not part of that alliance.",
+      "oddIndex": 3,
+      "why": "The Samnites, Etruscans and Umbrians (with the Gauls) fought Rome together at Sentinum in 295 BC; the Lucanians were not part of that alliance.",
       "sectionId": "rome-after-the-samnite-wars",
       "reviewFlags": []
     },
     {
       "items": [
-        "Sentinum",
-        "Heraclea",
-        "Asculum",
-        "Beneventum"
+        "Naples",
+        "Tarentum",
+        "Locri",
+        "Carthage"
       ],
-      "oddIndex": 0,
-      "why": "Heraclea, Asculum and Beneventum were battles between Rome and Pyrrhus; Sentinum was Rome's 295 BC win over the Samnite alliance, before Pyrrhus arrived.",
-      "sectionId": "heraclea-and-asculum",
-      "reviewFlags": [
-        "fact-check: The sectionId heraclea-and-asculum does not cover Beneventum or Sentinum, which are explained in other sections."
-      ]
+      "oddIndex": 3,
+      "why": "Naples, Tarentum and Locri were Greek cities of southern Italy that lent Rome transport ships in 264 BC; Carthage was the North African power Rome went to war with that year.",
+      "sectionId": "how-rome-ruled-italy",
+      "reviewFlags": []
     },
     {
       "items": [

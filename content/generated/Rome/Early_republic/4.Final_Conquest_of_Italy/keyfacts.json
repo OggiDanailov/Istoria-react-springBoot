@@ -1,0 +1,139 @@
+{
+  "description": "Key facts for this chapter, written by hand from the chapter text. Every entry links to the section that explains it.",
+  "people": [
+    {
+      "name": "Quintus Hortensius",
+      "text": "Plebeian dictator whose law of 287 BC ended the Conflict of the Orders.",
+      "sec": "lex-hortensia"
+    },
+    {
+      "name": "Pyrrhus",
+      "text": "King of Epirus who won costly victories over Rome, then went home after Beneventum.",
+      "sec": "heraclea-and-asculum"
+    },
+    {
+      "name": "Livy",
+      "text": "The Roman historian whose tradition blamed debt for the last secession.",
+      "sec": "why-the-plebs-seceded"
+    }
+  ],
+  "dates": [
+    {
+      "when": "295 BC",
+      "text": "Sentinum: Rome beats the Samnites, Gauls, Etruscans and Umbrians.",
+      "sec": "rome-after-the-samnite-wars"
+    },
+    {
+      "when": "287 BC",
+      "text": "The last secession and the Hortensian law.",
+      "sec": "lex-hortensia"
+    },
+    {
+      "when": "282 BC",
+      "text": "The battle of Populonia ends Etruscan power.",
+      "sec": "rome-after-the-samnite-wars"
+    },
+    {
+      "when": "281 BC",
+      "text": "Tarentum rejects Rome’s ultimatum; Pyrrhus is called in.",
+      "sec": "tarentum-calls-for-help"
+    },
+    {
+      "when": "280 BC",
+      "text": "Pyrrhus wins at Heraclea.",
+      "sec": "heraclea-and-asculum"
+    },
+    {
+      "when": "279 BC",
+      "text": "Pyrrhus wins again at Asculum: a “Pyrrhic victory”.",
+      "sec": "heraclea-and-asculum"
+    },
+    {
+      "when": "275 BC",
+      "text": "Beneventum: Pyrrhus is forced onto the defensive and sails home.",
+      "sec": "beneventum-and-withdrawal"
+    },
+    {
+      "when": "272 BC",
+      "text": "Tarentum falls to Rome; Pyrrhus is killed at Argos.",
+      "sec": "beneventum-and-withdrawal"
+    },
+    {
+      "when": "264 BC",
+      "text": "The last Etruscan resistance is crushed; the First Punic War begins.",
+      "sec": "italy-united-264-bc"
+    }
+  ],
+  "terms": [
+    {
+      "latin": "coloniae",
+      "english": "colonies of Roman citizens",
+      "sec": "rome-after-the-samnite-wars"
+    },
+    {
+      "latin": "Via Appia",
+      "english": "the Appian Way",
+      "sec": "rome-after-the-samnite-wars"
+    },
+    {
+      "latin": "secessio",
+      "english": "a mass walkout of the plebs",
+      "sec": "lex-hortensia"
+    },
+    {
+      "latin": "lex Hortensia",
+      "english": "the Hortensian law of 287 BC",
+      "sec": "lex-hortensia"
+    },
+    {
+      "latin": "plebiscitum",
+      "english": "a decision of the Plebeian Council",
+      "sec": "lex-hortensia"
+    },
+    {
+      "latin": "concilium plebis",
+      "english": "the Plebeian Council",
+      "sec": "lex-hortensia"
+    },
+    {
+      "latin": "tribus",
+      "english": "tribal voting districts",
+      "sec": "why-the-plebs-seceded"
+    },
+    {
+      "latin": "ager publicus",
+      "english": "public land",
+      "sec": "why-the-plebs-seceded"
+    },
+    {
+      "latin": "nundinae",
+      "english": "market days",
+      "sec": "why-the-plebs-seceded"
+    },
+    {
+      "latin": "Magna Graecia",
+      "english": "“Great Greece”: the Greek south",
+      "sec": "tarentum-calls-for-help"
+    },
+    {
+      "latin": "praesidium",
+      "english": "a garrison",
+      "sec": "beneventum-and-withdrawal"
+    },
+    {
+      "latin": "civitas sine suffragio",
+      "english": "citizenship without the vote",
+      "sec": "how-rome-ruled-italy"
+    },
+    {
+      "latin": "socii",
+      "english": "Rome’s allies",
+      "sec": "how-rome-ruled-italy"
+    },
+    {
+      "latin": "Punici",
+      "english": "the Carthaginians, hence “Punic”",
+      "sec": "italy-united-264-bc"
+    }
+  ]
+}
