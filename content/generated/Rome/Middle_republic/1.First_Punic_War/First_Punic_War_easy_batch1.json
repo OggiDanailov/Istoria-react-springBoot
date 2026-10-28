@@ -1,0 +1,179 @@
+{
+  "batchName": "Middle Republic: The First Punic War (264-241 BCE) - Easy Batch 1",
+  "chapterName": "Middle Republic: The First Punic War (264-241 BCE)",
+  "difficulty": 1,
+  "batchOrder": 1,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "How long did the First Punic War last?",
+      "options": [
+        "17 years",
+        "10 years",
+        "23 years",
+        "30 years"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#rome-and-carthage",
+      "explanation": "The war ran for 23 years, from 264 to 241 BC. It was the longest continuous conflict and the greatest naval war of the ancient world.",
+      "sourceQuote": "The war that ended this friendship lasted 23 years, from 264 to 241 BC.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did Sicily become after the First Punic War?",
+      "options": [
+        "An independent Greek kingdom",
+        "Rome's first province",
+        "Part of the kingdom of Syracuse",
+        "A shared Roman-Carthaginian zone"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#peace-and-aftermath",
+      "explanation": "Sicily became Rome's first province, an overseas territory run by a Roman governor. It was also a vital source of grain.",
+      "sourceQuote": "Sicily became Rome's first province (*provincia*), an overseas territory run by a Roman governor, and a vital source of grain.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What happened to Regulus, the Roman consul who invaded Africa?",
+      "options": [
+        "He captured the city of Carthage",
+        "He drowned in a storm at sea",
+        "He was captured by the Carthaginians",
+        "He celebrated a triumph in Rome"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#regulus-in-africa",
+      "explanation": "In 255 BC Carthage's retrained army crushed his army and Regulus was captured. He had earlier come within 16 km of Carthage by taking Tunis.",
+      "sourceQuote": "In 255 BC the retrained army crushed the Romans, and Regulus was captured.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Under the Treaty of Lutatius, how much did Carthage agree to pay Rome?",
+      "options": [
+        "10,000 talents over fifty years",
+        "3,200 talents over ten years",
+        "1,200 talents at once",
+        "500 talents over five years"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#peace-and-aftermath",
+      "explanation": "Carthage agreed to pay 3,200 talents of silver over ten years. It also had to leave Sicily and free all prisoners.",
+      "sourceQuote": "Under the Treaty of Lutatius in 241 BC, Carthage left Sicily, freed all prisoners and agreed to pay 3,200 talents of silver over ten years.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did the Romans call Akragas, Carthage's main base on Sicily?",
+      "options": [
+        "Lilybaeum",
+        "Agrigentum",
+        "Panormus",
+        "Messana"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#siege-of-akragas",
+      "explanation": "The Romans called the southern Sicilian port of Akragas 'Agrigentum'. A Roman army of about 40,000 besieged it in 262 BC.",
+      "sourceQuote": "Carthage made Akragas, a port halfway along Sicily's south coast that the Romans called Agrigentum, its main base on the island.",
+      "reviewFlags": []
+    },
+    {
+      "question": "In what year did the Second Punic War begin?",
+      "options": [
+        "202 BC",
+        "218 BC",
+        "241 BC",
+        "237 BC"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#peace-and-aftermath",
+      "explanation": "Resentment over Rome's harsh treatment smouldered until the Second Punic War began in 218 BC. Meanwhile Hamilcar had built a new power base in Spain.",
+      "sourceQuote": "Resentment smouldered, and in 218 BC the Second Punic War began.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which consul gave Rome its first naval victory, at Mylae in 260 BC?",
+      "options": [
+        "Gaius Duilius",
+        "Regulus",
+        "Catulus",
+        "Scipio"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#corvus-and-mylae",
+      "explanation": "Gaius Duilius won at Mylae against about 130 Carthaginian ships. His ravens grappled the first 30 ships, including the enemy flagship.",
+      "sourceQuote": "Gaius Duilius, the consul who gave Rome its first naval victory, faced about 130 Carthaginian ships.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which Carthaginian general took command in Sicily in 247 BC and waged a guerrilla war from the mountain of Eryx?",
+      "options": [
+        "Hanno",
+        "Hasdrubal",
+        "Hannibal",
+        "Hamilcar Barca"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#drepana-and-stalemate",
+      "explanation": "Hamilcar Barca took command in 247 BC and tied down the Roman legions from the mountain of Eryx, near Drepana.",
+      "sourceQuote": "In 247 BC Hamilcar Barca, the Carthaginian general who kept up the fight in western Sicily, took command.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Who were the Mamertines, whose call for help drew Rome into Sicily?",
+      "options": [
+        "A Carthaginian garrison force",
+        "Italian mercenaries who had seized Messana",
+        "Greek colonists from Syracuse",
+        "Roman allied sailors from the south"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#messana",
+      "explanation": "The Mamertines were Italian mercenaries who seized Messana in 289 BC. Many Romans disliked the idea of aiding soldiers who had stolen a city.",
+      "sourceQuote": "In 289 BC Italian mercenaries called the Mamertines had seized it.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Who is the main ancient source for the First Punic War?",
+      "options": [
+        "Polybius",
+        "Herodotus",
+        "Thucydides",
+        "Livy"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#sources-and-debates",
+      "explanation": "Almost everything known about the war comes from Polybius, a Greek taken to Rome as a hostage in 167 BC. He wrote about a century after the fighting.",
+      "sourceQuote": "Almost everything we know about this war comes from Polybius, a Greek taken to Rome as a hostage in 167 BC.",
+      "reviewFlags": []
+    }
+  ]
+}

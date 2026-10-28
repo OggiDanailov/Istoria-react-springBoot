@@ -164,7 +164,8 @@ Style:
 - When you mention a group with a known size (e.g. "seven kings"), cover every member of it in the chapter.
 - Clearly mark legend, tradition and disputed claims as such ("According to tradition...", "Ancient writers claimed...", "Modern historians doubt...").
 - Give measurements in metric units first, with the source's unit in parentheses: "about 5 km (three miles)", "about 330 kg (a thousand pounds)", "about 120 hectares (300 acres)". Ancient miles and pounds are Roman ones (a Roman mile is about 1.5 km, a Roman pound about 330 g).
-- Mention dates where they matter, written like "753 BC".`
+- Mention dates where they matter, written like "753 BC".
+- Latin: after the English name of a key Roman institution, office, law, ritual or object, give the Latin term in parentheses and italics at its first mention: "the Senate (*senatus*)", "the two consuls (*consules*)", "unconditional surrender (*deditio*)". About 10 to 15 per chapter, only real Latin you are sure of; skip it where the Latin is the same as the English word. Latin names for places or peoples only when they are well known (e.g. "Carthage (*Carthago*)").`
 
 const QUESTIONS_SYSTEM = `You write quiz questions for Ave Caesar, a history quiz app. People open it for fun, the way they'd open a trivia game, and learn something real along the way.
 
@@ -209,7 +210,8 @@ function cost(u) {
 // (for free) and only repeats the failed one. Changing a prompt changes the hash.
 const RESPONSES_DIR = path.join(HERE, '.cache', 'responses')
 
-async function callClaude(client, request) {
+// `incomplete(result)` names what's missing from a well-formed but incomplete answer; it is retried, not saved
+async function callClaude(client, request, incomplete = () => null) {
   const key = createHash('sha256').update(JSON.stringify({ MODEL, ...request })).digest('hex').slice(0, 32)
   const file = path.join(RESPONSES_DIR, `${key}.json`)
   if (fs.existsSync(file)) {
@@ -219,6 +221,12 @@ async function callClaude(client, request) {
   for (let attempt = 1; ; attempt++) {
     try {
       const result = await requestClaude(client, request)
+      const missing = incomplete(result)
+      if (missing) {
+        if (attempt === 3) throw new Error(`Incomplete answer: ${missing}`)
+        console.log(`    incomplete answer (${missing}), asking again (${attempt}/2)...`)
+        continue
+      }
       fs.mkdirSync(RESPONSES_DIR, { recursive: true })
       fs.writeFileSync(file, JSON.stringify(result))
       return result
@@ -337,7 +345,12 @@ const Games = z.object({
   places: z.array(z.object({ name: z.string(), wikipediaTitle: z.string(), lat: z.number(), lon: z.number(), why: z.string(), sectionId: z.string() })),
 })
 
-const GAMES_SYSTEM = `You write the content for the mini-games of Ave Caesar, a history learning game played on phones. People play for fun and should learn real history.
+// The Map Drop area: Italy for the early chapters, the whole Mediterranean once Rome fights overseas
+const MAP_AREAS = {
+  italy: { text: 'Italy and its surroundings (nothing outside Italy, Sicily, Sardinia and the neighbouring coasts)', apartKm: 15, lat: [36, 47.5], lon: [6, 19.5] },
+  mediterranean: { text: 'the Mediterranean world (Italy, Sicily, Spain, North Africa, Greece and Asia Minor; nothing further east than Syria)', apartKm: 100, lat: [29, 47.5], lon: [-10, 37] },
+}
+const gamesSystem = area => `You write the content for the mini-games of Ave Caesar, a history learning game played on phones. People play for fun and should learn real history.
 
 You get a chapter split into sections. Players have just read the chapter once, so only use people, places and terms the chapter makes memorable: ones it names at least twice or that a whole section is about. The games are mostly about the history itself (the people of the period, events, places, institutions), but the sources are part of history too: ancient writers (Livy, Fabius Pictor…) and modern historians may appear where the chapter explains who they are and what they argued, e.g. in a section on how reliable the story is. Never use a scholar the chapter only names in passing. Use names exactly as the chapter writes them. Everything you write must be supported by that chapter, which is the only ground truth; every item names the section (sectionId) that explains it, because that is where a player who gets it wrong is sent. Mark legend and disputed tradition as such. Write measurements as the chapter does: metric first, the old unit in parentheses. Spread items across all sections. Explain unfamiliar names in a few words where space allows (in facts, explanations and clues), never in short labels.
 
@@ -348,7 +361,7 @@ Write:
 - trueFalseDecks: 2 decks of 8 statements, about half true. A false statement changes one clear detail so it is plainly false according to the chapter (not a trick of wording). why: one or two sentences giving the real fact.
 - oddOneOut: 7 rounds of 4 short items (at most 40 characters each) where three share a property the chapter clearly states and one does not, though it looks like it belongs. oddIndex is its position. why: names the shared property and why the odd one differs.
 - whoAmI: 2 sets of 3 or 4 people. clues: exactly 4, written in the first person, ordered from hardest to easiest, never containing the person's name, each true only of that person among the options. options: exactly 4 names including the right one; the other three are real people of the same kind from this period (preferably from the chapter).
-- places: 5 to 7 places from the chapter to put on a map of Italy and its surroundings (nothing outside Italy, Sicily, Sardinia and the neighbouring coasts): towns, cities, regions, rivers, lakes or battlefields, at least 15 km apart from each other and from Rome (so not hills, buildings or districts inside one city). name: as the chapter calls it. wikipediaTitle: the English Wikipedia article that has the place's coordinates (an ancient site or the modern town on the spot). lat/lon: your best estimate. why: one sentence on its role in the chapter.`
+- places: 5 to 7 places from the chapter to put on a map of ${area.text}: towns, cities, regions, rivers, lakes or battlefields, at least ${area.apartKm} km apart from each other and from Rome (so not hills, buildings or districts inside one city). name: as the chapter calls it. wikipediaTitle: the English Wikipedia article that has the place's coordinates (an ancient site or the modern town on the spot). lat/lon: your best estimate. why: one sentence on its role in the chapter.`
 
 const GAMES_VERIFIER_SYSTEM = `You fact-check the mini-game content of a history learning game against the chapter it was written from. The chapter is the only ground truth.
 
@@ -430,11 +443,11 @@ const mentions = (name, sections) => {
 async function writeGames(client, chapter, sections, outDir) {
   const ask = `Chapter: ${chapter.chapterName}\nValid sectionId values: ${sections.map(s => `"${s.id}"`).join(', ')}.`
   const games = Games.parse(await timed('game data written', () => callClaude(client, {
-    system: GAMES_SYSTEM,
+    system: gamesSystem(MAP_AREAS[chapter.mapArea ?? 'italy']),
     content: [chapterBlock(sections), { type: 'text', text: ask }],
     schema: gamesSchema,
     effort: 'high',
-  })))
+  }, g => ['timelines', 'matchSets', 'trueFalseDecks', 'oddOneOut', 'whoAmI', 'places'].filter(k => !g[k]?.length).join(', ') || null)))
   const flags = gameProblems(games, sections)
   const addFlag = (id, msg) => flags.set(id, [...(flags.get(id) ?? []), msg])
 
@@ -467,9 +480,10 @@ async function writeGames(client, chapter, sections, outDir) {
   // Places must be far enough apart to tell them apart on a map (and from Rome, which is always shown)
   const ROME = { lat: 41.893, lon: 12.483 }
   games.places.forEach((p, i) => {
-    if (km(p, ROME) < 12) addFlag(`place-${i + 1}`, 'less than 12 km from Rome: too close to show on the map')
-    if (p.lat < 36 || p.lat > 47.5 || p.lon < 6 || p.lon > 19.5) addFlag(`place-${i + 1}`, 'outside the map area (Italy and its neighbours)')
-    games.places.slice(0, i).forEach((q, j) => { if (km(p, q) < 12) addFlag(`place-${i + 1}`, `less than 12 km from ${q.name} (place ${j + 1}): too close to show on the map`) })
+    const area = MAP_AREAS[chapter.mapArea ?? 'italy'], near = area.apartKm * 0.8
+    if (km(p, ROME) < near) addFlag(`place-${i + 1}`, `less than ${near} km from Rome: too close to show on the map`)
+    if (p.lat < area.lat[0] || p.lat > area.lat[1] || p.lon < area.lon[0] || p.lon > area.lon[1]) addFlag(`place-${i + 1}`, 'outside the map area')
+    games.places.slice(0, i).forEach((q, j) => { if (km(p, q) < near) addFlag(`place-${i + 1}`, `less than ${near} km from ${q.name} (place ${j + 1}): too close to show on the map`) })
   })
 
   const items = gameItems(games)

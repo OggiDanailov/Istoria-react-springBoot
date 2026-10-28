@@ -28,6 +28,14 @@ Review battles don't change progress.
 | | Conflict of the Orders: Toward Resolution | The Siege of Veii (396 BC) |
 | | The Samnite Wars | Aquilonia (293 BC) |
 | | Final Conquest of Italy | Beneventum (275 BC) |
+| Middle Republic | The First Punic War (264–241 BC) | *not built yet* |
+| | Hannibal in Italy (241–216 BC) | *not built yet* |
+| | Scipio and the Road to Zama (216–201 BC) | *not built yet* |
+| | Rome Turns East (200–167 BC) | *not built yet* |
+| | The Fall of Carthage and Corinth (167–133 BC) | *not built yet* |
+| | The Gracchi (133–121 BC) | *not built yet* |
+
+A chapter whose battle isn't built yet opens the next chapter as soon as its test is finished.
 
 ## 2. The chapter test
 
@@ -124,6 +132,8 @@ ambushes (Volscian Raids), mountain rocks and the sacred chickens (Aquilonia).
 - **Latin in the test**: a "Latin Words" match round and a few Latin quiz questions.
 - **Key facts**: about 10 people, 9 dates and 20 Latin words, each linked to its section (`keyfacts.json`).
 - **Maps**: one or two small maps in the chronicle (`maps.json`), coordinates from Wikipedia, uncertain sites noted.
+  Map Drop covers Italy for the Kingdom and Early Republic, and the whole Mediterranean from the Middle Republic on
+  (`mapArea` in `chapters.json`).
 - **Measurements**: metric first, the source's unit in parentheses: "about 5 km (three miles)". Ancient miles and pounds
   are Roman (a mile is about 1.5 km, a pound about 330 g).
 - **Sources count as history**: ancient writers (Livy, Fabius Pictor…) and modern historians may be in the games when

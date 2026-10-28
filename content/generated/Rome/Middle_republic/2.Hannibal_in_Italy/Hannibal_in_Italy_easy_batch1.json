@@ -1,0 +1,179 @@
+{
+  "batchName": "Middle Republic: Hannibal in Italy (241-216 BCE) - Easy Batch 1",
+  "chapterName": "Middle Republic: Hannibal in Italy (241-216 BCE)",
+  "difficulty": 1,
+  "batchOrder": 1,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "In 238 BC Rome broke its treaty with Carthage to seize which islands?",
+      "options": [
+        "Crete and Cyprus",
+        "Sardinia and Corsica",
+        "The Balearic Islands",
+        "Sicily and Malta"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#after-the-first-war",
+      "explanation": "Rome seized Carthaginian Sardinia and Corsica while Carthage was distracted by the Truceless War. Many Carthaginians were deeply embittered by this.",
+      "sourceQuote": "In 238 BC it broke the treaty and seized Carthaginian Sardinia and Corsica.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Under which ruler did the historian Livy write?",
+      "options": [
+        "The dictator Sulla",
+        "The emperor Augustus",
+        "The emperor Nero",
+        "King Philip V of Macedon"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#sources-and-blame",
+      "explanation": "Livy wrote in Rome under Augustus and leaned heavily on Polybius. He was openly patriotic, and his battle descriptions are often inaccurate.",
+      "sourceQuote": "Livy, writing in Rome under the emperor Augustus, relied heavily on Polybius but was openly patriotic.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did Hannibal seize at Cannae in spring 216 BC, prompting Rome to raise a huge army?",
+      "options": [
+        "A sacred temple of Jupiter",
+        "A large Roman supply depot",
+        "The consuls' war treasury",
+        "A Roman fleet at anchor"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#battle-of-cannae",
+      "explanation": "Hannibal captured a large Roman supply depot at Cannae, a village in Apulia. The Senate answered with the biggest army Rome had ever raised.",
+      "sourceQuote": "In spring 216 BC Hannibal seized a large Roman supply depot at Cannae, a village on the plain of Apulia in south-east Italy.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did the Roman Senate respond to Hannibal's peace offer after Cannae?",
+      "options": [
+        "It refused to talk and banned the word 'peace'",
+        "It asked for a one-year truce",
+        "It accepted and surrendered Sicily",
+        "It sent Varro to negotiate terms"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#after-cannae",
+      "explanation": "The Senate refused to negotiate, banned the word 'peace' and even enlisted slaves. Rome went on fighting for fourteen more years.",
+      "sourceQuote": "The Senate refused to talk, banned the word 'peace' and enlisted even slaves.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How long did Hannibal's crossing of the Alps take?",
+      "options": [
+        "3 days",
+        "6 weeks",
+        "15 days",
+        "4 months"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#crossing-the-alps",
+      "explanation": "Hannibal crossed the Alps in 15 days in late autumn. Along the way his men faced ambushes, falling boulders and bitter cold.",
+      "sourceQuote": "Hannibal reached the Alps in late autumn and crossed them in 15 days.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What mocking nickname did Romans give Fabius Maximus?",
+      "options": [
+        "The Miser",
+        "The Delayer",
+        "The Coward",
+        "The Old Fox"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#fabius-the-delayer",
+      "explanation": "Fabius was mocked as the Delayer (Cunctator) for refusing to fight a pitched battle. Events later vindicated his cautious strategy.",
+      "sourceQuote": "Soldiers, senators and ordinary citizens mocked him as the Delayer (*Cunctator*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did the nickname 'Barca', given to Hannibal's father, mean?",
+      "options": [
+        "The Lion",
+        "The Hammer",
+        "Thunder",
+        "Lightning"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#barcas-in-spain",
+      "explanation": "Barca meant 'lightning'. Hannibal's father crushed the mercenary revolt in 237 BC and then led his army to Spain.",
+      "sourceQuote": "Hannibal's father, a Carthaginian general nicknamed Barca, meaning 'lightning', crushed the mercenary revolt in 237 BC.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Where was most of the First Punic War between Rome and Carthage fought?",
+      "options": [
+        "Along the coast of Gaul",
+        "On and around Sicily",
+        "In the hills of Tunisia",
+        "In southern Spain"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#after-the-first-war",
+      "explanation": "The First Punic War was fought mostly on and around Sicily, and losing it cost Carthage its Sicilian possessions. It was also the greatest naval war of the ancient world.",
+      "sourceQuote": "The First Punic War, fought mostly on and around Sicily, had been the longest continuous conflict and the greatest naval war of the ancient world.",
+      "reviewFlags": []
+    },
+    {
+      "question": "According to Polybius, which kind of Alpine pass did Hannibal take?",
+      "options": [
+        "The most southerly pass",
+        "The shortest pass",
+        "The lowest pass",
+        "The highest pass"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#which-pass",
+      "explanation": "Polybius says Hannibal took the highest pass. That supports the Col de la Traversette, the highest pass in the western Alps.",
+      "sourceQuote": "Polybius wrote that Hannibal took the highest pass, and the Traversette is the highest in the western Alps.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Why did Hannibal invade Italy by land rather than by sea?",
+      "options": [
+        "To collect Greek allies at Massalia",
+        "The Senate had closed Italy's ports",
+        "To avoid Rome's control of the sea",
+        "Carthage had no warships left"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#crossing-the-alps",
+      "explanation": "Rome controlled the sea, so Hannibal marched overland. Rome had planned to fight in Spain and Africa instead.",
+      "sourceQuote": "Hannibal instead carried the war to Italy by land, avoiding Rome's control of the sea.",
+      "reviewFlags": []
+    }
+  ]
+}

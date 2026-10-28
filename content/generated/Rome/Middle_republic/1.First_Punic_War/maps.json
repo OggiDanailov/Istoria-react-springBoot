@@ -1,0 +1,166 @@
+{
+  "description": "Maps for the chronicle, written by hand. Coordinates from Wikipedia; each map sits at the start of its section.",
+  "maps": [
+    {
+      "id": "west-med",
+      "sec": "rome-and-carthage",
+      "title": "Rome and Carthage, 264 BC",
+      "caption": "Carthage held the coast of North Africa, Sardinia, Corsica, western Sicily and southern Spain (off the map to the west). Rome ruled Italy. Sicily lay between them. The dashed line is Regulus's invasion of Africa in 256 BC, drawn roughly.",
+      "bounds": {
+        "latMin": 35.6,
+        "latMax": 44.0,
+        "lonMin": 6.8,
+        "lonMax": 16.6
+      },
+      "places": [
+        {
+          "name": "Rome",
+          "latin": "Roma",
+          "lat": 41.893,
+          "lon": 12.483,
+          "kind": "rome",
+          "side": "r",
+          "dy": -4
+        },
+        {
+          "name": "Carthage",
+          "latin": "Carthago",
+          "lat": 36.853,
+          "lon": 10.323,
+          "side": "l",
+          "dy": 6
+        },
+        {
+          "name": "Cape Ecnomus",
+          "lat": 37.1,
+          "lon": 13.94,
+          "kind": "battle",
+          "side": "r",
+          "dy": 8
+        }
+      ],
+      "peoples": [
+        {
+          "name": "Sardinia",
+          "lat": 40.1,
+          "lon": 9.0
+        },
+        {
+          "name": "Corsica",
+          "lat": 42.15,
+          "lon": 9.1
+        },
+        {
+          "name": "Sicily",
+          "lat": 37.55,
+          "lon": 14.2
+        },
+        {
+          "name": "Italy",
+          "lat": 40.9,
+          "lon": 15.4
+        }
+      ],
+      "routes": [
+        {
+          "pts": [
+            [
+              37.05,
+              13.85
+            ],
+            [
+              37.15,
+              12.6
+            ],
+            [
+              37.1,
+              11.6
+            ],
+            [
+              37.05,
+              11.15
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sicily",
+      "sec": "siege-of-akragas",
+      "title": "The war in Sicily",
+      "caption": "Rome crossed the strait at Messana in 264 BC and pushed Carthage back to its strongholds in the west, Lilybaeum and Drepana. The final sea battle was fought off the Aegates Islands.",
+      "bounds": {
+        "latMin": 36.55,
+        "latMax": 38.75,
+        "lonMin": 10.95,
+        "lonMax": 15.8
+      },
+      "places": [
+        {
+          "name": "Messana",
+          "lat": 38.19,
+          "lon": 15.55,
+          "side": "l",
+          "dy": 14
+        },
+        {
+          "name": "Mylae",
+          "lat": 38.22,
+          "lon": 15.24,
+          "kind": "battle",
+          "side": "l",
+          "dy": -14
+        },
+        {
+          "name": "Syracuse",
+          "lat": 37.075,
+          "lon": 15.286,
+          "side": "l"
+        },
+        {
+          "name": "Akragas",
+          "lat": 37.31,
+          "lon": 13.58,
+          "kind": "battle",
+          "side": "r"
+        },
+        {
+          "name": "Panormus",
+          "lat": 38.12,
+          "lon": 13.36,
+          "side": "r"
+        },
+        {
+          "name": "Drepana",
+          "lat": 38.02,
+          "lon": 12.51,
+          "kind": "battle",
+          "side": "r",
+          "dy": -6
+        },
+        {
+          "name": "Lilybaeum",
+          "lat": 37.8,
+          "lon": 12.44,
+          "side": "r",
+          "dy": 6
+        },
+        {
+          "name": "Aegates Islands",
+          "lat": 37.97,
+          "lon": 12.2,
+          "kind": "battle",
+          "side": "l",
+          "dy": -14
+        }
+      ],
+      "peoples": [
+        {
+          "name": "Carthaginian west",
+          "lat": 37.5,
+          "lon": 13.2
+        }
+      ]
+    }
+  ]
+}

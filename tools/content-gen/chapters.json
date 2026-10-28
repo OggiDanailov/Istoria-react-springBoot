@@ -156,6 +156,135 @@
         "intro": "Pyrrhus, the Greek king who has beaten Rome twice at a terrible cost, faces the Romans one last time at Beneventum. Ancient accounts disagree on how it ended. Today, the outcome is up to you."
       },
       "locked": true
+    },
+    {
+      "id": "first-punic-war",
+      "folder": "Rome/Middle_republic/1.First_Punic_War",
+      "chapterName": "Middle Republic: The First Punic War (264-241 BCE)",
+      "period": "264-241 BCE",
+      "sources": [
+        "First Punic War",
+        "Corvus (boarding device)",
+        "Battle of the Aegates"
+      ],
+      "counts": {
+        "easy": 20,
+        "medium": 20,
+        "hard": 10
+      },
+      "short": "The First Punic War",
+      "era": "middle-republic",
+      "mapArea": "mediterranean",
+      "battle": {
+        "name": "Agrigentum",
+        "year": "261 BC",
+        "enemy": "Carthage’s relief army",
+        "sec": "siege-of-akragas",
+        "intro": "Rome besieges Akragas, which the Romans call Agrigentum. Carthage sends a relief army of 50,000 infantry, 6,000 cavalry and 60 war elephants. Hold the siege lines."
+      },
+      "locked": true
+    },
+    {
+      "id": "hannibal-in-italy",
+      "folder": "Rome/Middle_republic/2.Hannibal_in_Italy",
+      "chapterName": "Middle Republic: Hannibal in Italy (241-216 BCE)",
+      "period": "241-216 BCE",
+      "sources": [
+        "Second Punic War",
+        "Hannibal's crossing of the Alps",
+        "Battle of Cannae"
+      ],
+      "counts": {
+        "easy": 20,
+        "medium": 20,
+        "hard": 10
+      },
+      "short": "Hannibal in Italy",
+      "era": "middle-republic",
+      "mapArea": "mediterranean",
+      "battle": {
+        "name": "Cannae",
+        "year": "216 BC",
+        "enemy": "Hannibal",
+        "sec": "battle-of-cannae",
+        "intro": "Rome has raised its biggest army ever to crush Hannibal on the plain of Cannae. Hannibal has laid a trap. Can you hold where Rome broke?"
+      },
+      "locked": true
+    },
+    {
+      "id": "scipio-and-zama",
+      "folder": "Rome/Middle_republic/3.Scipio_and_Zama",
+      "chapterName": "Middle Republic: Scipio and the Road to Zama (216-201 BCE)",
+      "period": "216-201 BCE",
+      "sources": [
+        "Scipio Africanus",
+        "Battle of the Metaurus",
+        "Battle of Zama"
+      ],
+      "counts": {
+        "easy": 20,
+        "medium": 20,
+        "hard": 10
+      },
+      "short": "Scipio and Zama",
+      "era": "middle-republic",
+      "mapArea": "mediterranean"
+    },
+    {
+      "id": "rome-turns-east",
+      "folder": "Rome/Middle_republic/4.Rome_Turns_East",
+      "chapterName": "Middle Republic: Rome Turns East (200-167 BCE)",
+      "period": "200-167 BCE",
+      "sources": [
+        "Second Macedonian War",
+        "Roman–Seleucid War",
+        "Third Macedonian War"
+      ],
+      "counts": {
+        "easy": 20,
+        "medium": 20,
+        "hard": 10
+      },
+      "short": "Rome Turns East",
+      "era": "middle-republic",
+      "mapArea": "mediterranean"
+    },
+    {
+      "id": "carthage-and-corinth",
+      "folder": "Rome/Middle_republic/5.Carthage_and_Corinth",
+      "chapterName": "Middle Republic: The Fall of Carthage and Corinth (167-133 BCE)",
+      "period": "167-133 BCE",
+      "sources": [
+        "Third Punic War",
+        "Achaean War",
+        "Numantine War"
+      ],
+      "counts": {
+        "easy": 20,
+        "medium": 20,
+        "hard": 10
+      },
+      "short": "Carthage Destroyed",
+      "era": "middle-republic",
+      "mapArea": "mediterranean"
+    },
+    {
+      "id": "the-gracchi",
+      "folder": "Rome/Middle_republic/6.The_Gracchi",
+      "chapterName": "Middle Republic: The Gracchi (133-121 BCE)",
+      "period": "133-121 BCE",
+      "sources": [
+        "Tiberius Gracchus",
+        "Gaius Gracchus"
+      ],
+      "counts": {
+        "easy": 20,
+        "medium": 20,
+        "hard": 10
+      },
+      "short": "The Gracchi",
+      "era": "middle-republic",
+      "mapArea": "mediterranean"
     }
   ]
 }

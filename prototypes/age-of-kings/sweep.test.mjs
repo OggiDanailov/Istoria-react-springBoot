@@ -22,7 +22,7 @@ const visited = await page.evaluate(async () => {
     go({ screen: 'home' }); check('home complete ' + i)
     go({ screen: 'runDone' }); check('runDone ' + i)
     go({ screen: 'result', type: 'tf', set: 0, mistakes: 1, earned: 2, recapHtml: '', note: null, reviewSecs: [CHAPTER[0].id], feedbackSent: false, completed: true }); check('result ' + i)
-    go({ screen: 'battle' }); await wait(150); if (!document.querySelector('#battle-host')?.shadowRoot?.innerHTML) log.push('NO BATTLE ' + i)
+    if (HoldTheLine.LEVELS[i]) { go({ screen: 'battle' }); await wait(150); if (!document.querySelector('#battle-host')?.shadowRoot?.innerHTML) log.push('NO BATTLE ' + i) }
     go({ screen: 'home' })
   }
   return log

@@ -1,0 +1,691 @@
+{
+  "chapterName": "Middle Republic: Hannibal in Italy (241-216 BCE)",
+  "model": "claude-opus-5-5",
+  "briefing": {
+    "title": "Italy, 218 BC",
+    "paragraphs": [
+      "In 218 BC Carthage, a rich trading city in what is now Tunisia, is still smarting from defeat in the First Punic War. Rome has stripped it of Sicily, then Sardinia and Corsica. But from a new power base in Spain, the young general Hannibal is ready to strike back.",
+      "Rather than wait for Rome to attack Spain or Africa, he marches his army, elephants and all, over the Alps into Italy. Rome's legions and its Italian allies face their sternest test: can the Republic survive an enemy genius on its own soil?"
+    ]
+  },
+  "timelines": [
+    {
+      "name": "The Big Picture",
+      "blurb": "Four turning points from defeat to Carthage's greatest victory.",
+      "events": [
+        {
+          "label": "First Punic War ends",
+          "when": "241 BC",
+          "year": -241,
+          "fact": "After twenty-three years of war, fought mostly around Sicily, a defeated Carthage gave up its Sicilian possessions.",
+          "sectionId": "after-the-first-war",
+          "reviewFlags": []
+        },
+        {
+          "label": "Army officers choose Hannibal",
+          "when": "221 BC",
+          "year": -221,
+          "fact": "When Barca's son-in-law was murdered, the officers in Spain chose Hannibal, then just 26, as their commander.",
+          "sectionId": "barcas-in-spain",
+          "reviewFlags": []
+        },
+        {
+          "label": "Hannibal crosses the Alps",
+          "when": "Late autumn 218 BC",
+          "year": -218,
+          "fact": "He crossed in 15 days and entered northern Italy in November with about 20,000 infantry and 6,000 cavalry.",
+          "sectionId": "crossing-the-alps",
+          "reviewFlags": []
+        },
+        {
+          "label": "Battle of Cannae",
+          "when": "2 August 216 BC",
+          "year": -216,
+          "fact": "Hannibal's double envelopment destroyed the biggest army Rome had ever raised.",
+          "sectionId": "battle-of-cannae",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Road to Disaster",
+      "blurb": "From a broken treaty to Roman armies destroyed in Italy.",
+      "events": [
+        {
+          "label": "Rome seizes Sardinia and Corsica",
+          "when": "238 BC",
+          "year": -238,
+          "fact": "Rome broke the treaty while Carthage fought the Truceless War against its own mercenaries, deeply embittering many Carthaginians.",
+          "sectionId": "after-the-first-war",
+          "reviewFlags": []
+        },
+        {
+          "label": "Ebro Treaty agreed",
+          "when": "226 BC",
+          "year": -226,
+          "fact": "The treaty made the Ebro, a river in north-east Spain, the northern limit of Carthage's sphere.",
+          "sectionId": "barcas-in-spain",
+          "reviewFlags": []
+        },
+        {
+          "label": "Hannibal besieges Saguntum",
+          "when": "219 BC",
+          "year": -219,
+          "fact": "The city on Spain's east coast held out for eight months, but Rome sent no help.",
+          "sectionId": "saguntum",
+          "reviewFlags": []
+        },
+        {
+          "label": "Roman army trapped at the Trebia",
+          "when": "December 218 BC",
+          "year": -218,
+          "fact": "Only about 10,000 of 40,000 Romans fought their way out, and Gauls flocked to Hannibal.",
+          "sectionId": "trebia-and-trasimene",
+          "reviewFlags": []
+        },
+        {
+          "label": "Ambush at Lake Trasimene",
+          "when": "Spring 217 BC",
+          "year": -217,
+          "fact": "Some 15,000 Romans died, the consul among them, and 10,000 were captured.",
+          "sectionId": "trebia-and-trasimene",
+          "reviewFlags": []
+        },
+        {
+          "label": "Fabius elected consul",
+          "when": "215 BC",
+          "year": -215,
+          "fact": "Events vindicated the cautious 'Delayer', who was elected consul in 215 and again in 214 BC.",
+          "sectionId": "fabius-the-delayer",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Fathers, Dictators and Historians",
+      "blurb": "Eight steps from the Barcas in Spain to the historian who told the story.",
+      "events": [
+        {
+          "label": "Barca leads his army to Iberia",
+          "when": "237 BC",
+          "year": -237,
+          "fact": "After crushing the mercenary revolt, Hannibal's father went to Spain to build Carthage a stronger base against Rome.",
+          "sectionId": "barcas-in-spain",
+          "reviewFlags": []
+        },
+        {
+          "label": "Barca killed fighting local tribes",
+          "when": "Around 228 BC",
+          "year": -228,
+          "fact": "He reportedly died before the eyes of his young son Hannibal, and command passed to his son-in-law.",
+          "sectionId": "barcas-in-spain",
+          "reviewFlags": []
+        },
+        {
+          "label": "Barca's son-in-law is murdered",
+          "when": "221 BC",
+          "year": -221,
+          "fact": "His murder put Hannibal, aged 26, in command of the Carthaginian army in Spain.",
+          "sectionId": "barcas-in-spain",
+          "reviewFlags": []
+        },
+        {
+          "label": "Rome declares war on Carthage",
+          "when": "Spring 218 BC",
+          "year": -218,
+          "fact": "War came after Carthage rejected the curt demands of a Roman embassy led by Fabius Maximus.",
+          "sectionId": "saguntum",
+          "reviewFlags": []
+        },
+        {
+          "label": "Fabius made dictator",
+          "when": "217 BC, after Trasimene",
+          "year": -217,
+          "fact": "Panicked voters gave him supreme command for a limited term, and he refused to fight the battle Hannibal wanted.",
+          "sectionId": "fabius-the-delayer",
+          "reviewFlags": []
+        },
+        {
+          "label": "Rome raises its biggest army ever",
+          "when": "Spring 216 BC",
+          "year": -216,
+          "fact": "Eight legions plus as many allies, about 86,000 men, marched against Hannibal near Cannae.",
+          "sectionId": "battle-of-cannae",
+          "reviewFlags": []
+        },
+        {
+          "label": "Fabius consul for a second time",
+          "when": "214 BC",
+          "year": -214,
+          "fact": "Rome turned again to the man it had once mocked as the Delayer.",
+          "sectionId": "fabius-the-delayer",
+          "reviewFlags": []
+        },
+        {
+          "label": "Polybius taken to Rome as hostage",
+          "when": "167 BC",
+          "year": -167,
+          "fact": "This Greek, later the most trusted ancient historian of the war, wrote his account after 146 BC.",
+          "sectionId": "sources-and-blame",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "matchSets": [
+    {
+      "name": "Who's Who",
+      "blurb": "Match each person to their role in the war or its story.",
+      "pairs": [
+        {
+          "name": "Barca",
+          "match": "Hannibal's father, who built Carthage a base in Iberia",
+          "sectionId": "barcas-in-spain",
+          "reviewFlags": []
+        },
+        {
+          "name": "Fabius Maximus",
+          "match": "Dictator who avoided pitched battles and wore Hannibal down",
+          "sectionId": "fabius-the-delayer",
+          "reviewFlags": []
+        },
+        {
+          "name": "Varro",
+          "match": "Consul of humble origins, blamed by Livy for Cannae",
+          "sectionId": "sources-and-blame",
+          "reviewFlags": []
+        },
+        {
+          "name": "Polybius",
+          "match": "Greek hostage, the most trusted ancient historian of the war",
+          "sectionId": "sources-and-blame",
+          "reviewFlags": []
+        },
+        {
+          "name": "Livy",
+          "match": "Openly patriotic Roman historian writing under Augustus",
+          "sectionId": "sources-and-blame",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Words and Deals",
+      "blurb": "Match each term to its meaning.",
+      "pairs": [
+        {
+          "name": "Truceless War",
+          "match": "Carthage's fight against its own rebel mercenaries and subjects",
+          "sectionId": "after-the-first-war",
+          "reviewFlags": []
+        },
+        {
+          "name": "Ebro Treaty",
+          "match": "Made a river in north-east Spain Carthage's northern limit",
+          "sectionId": "barcas-in-spain",
+          "reviewFlags": []
+        },
+        {
+          "name": "Dictator",
+          "match": "Emergency office giving one man supreme command for a limited term",
+          "sectionId": "fabius-the-delayer",
+          "reviewFlags": []
+        },
+        {
+          "name": "Sibylline Books",
+          "match": "Sacred prophecies consulted by Roman priests in emergencies",
+          "sectionId": "after-cannae",
+          "reviewFlags": []
+        },
+        {
+          "name": "Hannibalism",
+          "match": "French scholars' word for hunting Hannibal's Alpine pass",
+          "sectionId": "which-pass",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Latin Words",
+      "blurb": "Match each Latin word to its meaning.",
+      "pairs": [
+        {
+          "name": "Hispania",
+          "match": "Iberia: today Spain and Portugal",
+          "sectionId": "barcas-in-spain",
+          "reviewFlags": []
+        },
+        {
+          "name": "Gallia Cisalpina",
+          "match": "Celtic lands of the Po valley in northern Italy",
+          "sectionId": "saguntum",
+          "reviewFlags": []
+        },
+        {
+          "name": "Coloniae",
+          "match": "Settlements Rome founded on the best land",
+          "sectionId": "saguntum",
+          "reviewFlags": []
+        },
+        {
+          "name": "Socii",
+          "match": "Rome’s Italian allies, whom Hannibal set free",
+          "sectionId": "trebia-and-trasimene",
+          "reviewFlags": []
+        },
+        {
+          "name": "Cunctator",
+          "match": "“The Delayer”, Fabius’s mocking nickname",
+          "sectionId": "fabius-the-delayer",
+          "reviewFlags": []
+        },
+        {
+          "name": "Libri Sibyllini",
+          "match": "Sacred prophecies kept for emergencies",
+          "sectionId": "after-cannae",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "trueFalseDecks": [
+    {
+      "name": "From Carthage to the Alps",
+      "blurb": "The road to war and the great march.",
+      "cards": [
+        {
+          "claim": "Rome seized Sardinia and Corsica while Carthage was fighting its rebellious mercenaries.",
+          "answer": true,
+          "why": "In 238 BC Rome broke the treaty and took them during the Truceless War, embittering many Carthaginians.",
+          "sectionId": "after-the-first-war",
+          "reviewFlags": []
+        },
+        {
+          "claim": "The nickname Barca, given to Hannibal's father, meant 'thunder'.",
+          "answer": false,
+          "why": "Barca meant 'lightning'.",
+          "sectionId": "barcas-in-spain",
+          "reviewFlags": []
+        },
+        {
+          "claim": "The Ebro Treaty made the Ebro the southern limit of Carthage's sphere in Spain.",
+          "answer": false,
+          "why": "The Ebro, a river in north-east Spain, became the northern limit of Carthage's sphere.",
+          "sectionId": "barcas-in-spain",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Saguntum held out against Hannibal for eight months, and Rome sent no help.",
+          "answer": true,
+          "why": "After the siege of 219 BC Hannibal sold its people as slaves and shared the loot.",
+          "sectionId": "saguntum",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Hannibal's elephants crossed the Rhône on rafts covered with earth.",
+          "answer": true,
+          "why": "The earth made the elephants believe they were still on land.",
+          "sectionId": "crossing-the-alps",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Hannibal took 40 days to cross the Alps.",
+          "answer": false,
+          "why": "He crossed the Alps in 15 days, reaching them in late autumn and entering Italy in November.",
+          "sectionId": "crossing-the-alps",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Peat bogs near the Col de la Traversette held unusual levels of gut bacteria from horses and mules.",
+          "answer": true,
+          "why": "Researchers found churned soil and these bacteria, radiocarbon dated to around 218 BC, though sceptics call the evidence thin.",
+          "sectionId": "which-pass",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Polybius wrote that Hannibal took the lowest pass over the Alps.",
+          "answer": false,
+          "why": "Polybius wrote that he took the highest pass, and the Traversette is the highest in the western Alps.",
+          "sectionId": "which-pass",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Disasters in Italy",
+      "blurb": "Trebia, Trasimene, Fabius and Cannae.",
+      "cards": [
+        {
+          "claim": "At the Trebia only about 10,000 of 40,000 Romans fought their way out.",
+          "answer": true,
+          "why": "The Carthaginians surrounded the Romans on ground of Hannibal's choosing in December 218 BC.",
+          "sectionId": "trebia-and-trasimene",
+          "reviewFlags": []
+        },
+        {
+          "claim": "The Roman consul escaped the ambush at Lake Trasimene.",
+          "answer": false,
+          "why": "Some 15,000 Romans died at Trasimene, the consul among them.",
+          "sectionId": "trebia-and-trasimene",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Hannibal freed captured Italian allies and sent them home to praise Carthage.",
+          "answer": true,
+          "why": "Roman prisoners were treated harshly, but allies were freed because Hannibal hoped to pull Rome's alliance apart.",
+          "sectionId": "trebia-and-trasimene",
+          "reviewFlags": []
+        },
+        {
+          "claim": "When Fabius's term as dictator ended, the voters renewed his powers.",
+          "answer": false,
+          "why": "His powers were not renewed; the voters elected Varro and an aristocratic colleague as consuls for 216 BC.",
+          "sectionId": "fabius-the-delayer",
+          "reviewFlags": []
+        },
+        {
+          "claim": "At Cannae Hannibal placed his veteran African infantry in the centre of his line.",
+          "answer": false,
+          "why": "Gauls and Spaniards held the crescent-shaped centre; the Africans waited at either end and turned inward on the flanks.",
+          "sectionId": "battle-of-cannae",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Rome's army at Cannae numbered about 86,000 men.",
+          "answer": true,
+          "why": "It was the biggest army Rome had ever raised: eight legions plus as many allies.",
+          "sectionId": "battle-of-cannae",
+          "reviewFlags": []
+        },
+        {
+          "claim": "After Cannae the Senate opened peace talks with Hannibal.",
+          "answer": false,
+          "why": "The Senate refused to talk, banned the word 'peace' and enlisted even slaves.",
+          "sectionId": "after-cannae",
+          "reviewFlags": []
+        },
+        {
+          "claim": "The Senate greeted Varro warmly after Cannae, unlike other defeated generals.",
+          "answer": true,
+          "why": "This is one reason some historians suspect Varro was made a scapegoat for Cannae.",
+          "sectionId": "sources-and-blame",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "oddOneOut": [
+    {
+      "items": [
+        "Rhône",
+        "Ebro",
+        "Trebia",
+        "Lake Trasimene"
+      ],
+      "oddIndex": 3,
+      "why": "The Rhône, Ebro and Trebia are rivers; Trasimene is a lake in central Italy, scene of Hannibal's ambush.",
+      "sectionId": "trebia-and-trasimene",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Little St Bernard Pass",
+        "Massalia",
+        "Col de Clapier",
+        "Col de la Traversette"
+      ],
+      "oddIndex": 1,
+      "why": "The other three are candidate Alpine passes for Hannibal's crossing; Massalia was a Greek city, now Marseille.",
+      "sectionId": "which-pass",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Silver mines",
+        "Shipyards",
+        "Sicily",
+        "Rich farmland"
+      ],
+      "oddIndex": 2,
+      "why": "Barca's Spanish domain gave Carthage silver mines, shipyards and farmland; Sicily was lost to Rome in 241 BC.",
+      "sectionId": "barcas-in-spain",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Trebia",
+        "Lake Trasimene",
+        "Saguntum",
+        "Cannae"
+      ],
+      "oddIndex": 2,
+      "why": "Hannibal destroyed Roman armies at the Trebia, Lake Trasimene and Cannae, all in Italy; Saguntum was a city in Spain that he besieged and took in 219 BC.",
+      "sectionId": "saguntum",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Consulted the Sibylline Books",
+        "Banned the word 'peace'",
+        "Enlisted even slaves",
+        "Accepted Hannibal's terms"
+      ],
+      "oddIndex": 3,
+      "why": "Rome did the first three after Cannae; it refused Hannibal's moderate peace terms and fought on for fourteen years.",
+      "sectionId": "after-cannae",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Pack infantry very deep",
+        "Avoid pitched battles",
+        "Harass the invaders",
+        "Cut supply lines"
+      ],
+      "oddIndex": 0,
+      "why": "Avoiding battle, harassing and cutting supplies made up the Fabian strategy; packing infantry deep was the Roman plan at Cannae.",
+      "sectionId": "fabius-the-delayer",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Greek hostage in Rome",
+        "Wrote under Augustus",
+        "Interviewed both sides",
+        "Survives in fragments after 216 BC"
+      ],
+      "oddIndex": 1,
+      "why": "Three describe Polybius; writing under the emperor Augustus describes Livy.",
+      "sectionId": "sources-and-blame",
+      "reviewFlags": []
+    }
+  ],
+  "whoAmI": [
+    {
+      "name": "Commanders",
+      "blurb": "Generals and consuls of the war's first years.",
+      "people": [
+        {
+          "name": "Hannibal",
+          "options": [
+            "Hannibal",
+            "Barca",
+            "Fabius Maximus",
+            "Varro"
+          ],
+          "clues": [
+            "I sold a captured city's people as slaves and shared the loot with my soldiers and my home city.",
+            "In my greatest battle I stood among the Gauls and Spaniards in my centre as it gave ground.",
+            "As a boy I reportedly watched my father die fighting tribes in Spain.",
+            "I led an army with elephants over the Alps into Italy."
+          ],
+          "sectionId": "crossing-the-alps",
+          "reviewFlags": []
+        },
+        {
+          "name": "Barca",
+          "options": [
+            "Barca",
+            "Hannibal",
+            "Varro",
+            "Fabius Maximus"
+          ],
+          "clues": [
+            "I was killed around 228 BC, fighting local tribes.",
+            "I carved out a near-royal domain in Iberia, rich in silver mines and shipyards.",
+            "In 237 BC I crushed the revolt of Carthage's mercenaries.",
+            "My nickname means 'lightning', and my son would invade Italy."
+          ],
+          "sectionId": "barcas-in-spain",
+          "reviewFlags": []
+        },
+        {
+          "name": "Varro",
+          "options": [
+            "Fabius Maximus",
+            "Varro",
+            "Hannibal",
+            "Barca"
+          ],
+          "clues": [
+            "After my army was destroyed, the Senate greeted me warmly, unlike other defeated generals.",
+            "Some historians suspect I was made a scapegoat by a powerful family.",
+            "I escaped the slaughter at Cannae with just 70 horsemen.",
+            "A consul of reportedly humble origins, I demanded an aggressive war in 216 BC."
+          ],
+          "sectionId": "sources-and-blame",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Rome's Shield and Its Storytellers",
+      "blurb": "A patient general and the historians who told the tale.",
+      "people": [
+        {
+          "name": "Fabius Maximus",
+          "options": [
+            "Varro",
+            "Hannibal",
+            "Fabius Maximus",
+            "Barca"
+          ],
+          "clues": [
+            "I led an embassy to Carthage whose curt demands were rejected.",
+            "I was elected consul in 215 and again in 214 BC.",
+            "After the disaster at Lake Trasimene the voters made me dictator.",
+            "Soldiers and citizens mocked me as Cunctator, the Delayer."
+          ],
+          "sectionId": "fabius-the-delayer",
+          "reviewFlags": []
+        },
+        {
+          "name": "Polybius",
+          "options": [
+            "Livy",
+            "Polybius",
+            "Fabius Pictor",
+            "Cato the Elder"
+          ],
+          "clues": [
+            "My account survives only in fragments after 216 BC.",
+            "My patron was the grandson of the consul killed at Cannae.",
+            "I interviewed participants from both sides of the war.",
+            "I was a Greek taken to Rome as a hostage in 167 BC."
+          ],
+          "sectionId": "sources-and-blame",
+          "reviewFlags": []
+        },
+        {
+          "name": "Livy",
+          "options": [
+            "Polybius",
+            "Fabius Pictor",
+            "Cato the Elder",
+            "Livy"
+          ],
+          "clues": [
+            "Modern scholars find my battle descriptions often inaccurate.",
+            "I put the Roman dead at Cannae at about 48,000.",
+            "I relied heavily on a Greek hostage's history but was openly patriotic.",
+            "I wrote in Rome two centuries after the war, under the emperor Augustus."
+          ],
+          "sectionId": "sources-and-blame",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "places": [
+    {
+      "name": "Carthage",
+      "wikipediaTitle": "Carthage",
+      "lat": 36.853,
+      "lon": 10.323,
+      "why": "The wealthy trading city in modern Tunisia that lost the First Punic War to Rome.",
+      "sectionId": "after-the-first-war",
+      "coordinates": "Carthage archaeological site",
+      "reviewFlags": []
+    },
+    {
+      "name": "Saguntum",
+      "wikipediaTitle": "Sagunto",
+      "lat": 39.68,
+      "lon": -0.2783,
+      "why": "This east-coast Spanish city tied to Rome fell to Hannibal after an eight-month siege, leading to war.",
+      "sectionId": "saguntum",
+      "coordinates": "Wikipedia: Sagunto",
+      "reviewFlags": []
+    },
+    {
+      "name": "New Carthage",
+      "wikipediaTitle": "Cartagena, Spain",
+      "lat": 37.6019,
+      "lon": -0.9842,
+      "why": "Hannibal's main base in Spain, from which he marched north in May or June 218 BC.",
+      "sectionId": "crossing-the-alps",
+      "coordinates": "Wikipedia: Cartagena, Spain",
+      "reviewFlags": []
+    },
+    {
+      "name": "Massalia",
+      "wikipediaTitle": "Marseille",
+      "lat": 43.2964,
+      "lon": 5.37,
+      "why": "A Roman army landed at this Greek city but missed Hannibal as he crossed the Rhône.",
+      "sectionId": "crossing-the-alps",
+      "coordinates": "Wikipedia: Marseille",
+      "reviewFlags": []
+    },
+    {
+      "name": "Trebia",
+      "wikipediaTitle": "Battle of the Trebia",
+      "lat": 44.98847222,
+      "lon": 9.56736111,
+      "why": "At this tributary of the Po, Hannibal surrounded a combined Roman army in December 218 BC.",
+      "sectionId": "trebia-and-trasimene",
+      "coordinates": "Wikipedia: Battle of the Trebia",
+      "reviewFlags": []
+    },
+    {
+      "name": "Lake Trasimene",
+      "wikipediaTitle": "Lake Trasimeno",
+      "lat": 43.14,
+      "lon": 12.1,
+      "why": "Hannibal's ambush here in spring 217 BC killed some 15,000 Romans and a consul.",
+      "sectionId": "trebia-and-trasimene",
+      "coordinates": "Wikipedia: Lake Trasimeno",
+      "reviewFlags": []
+    },
+    {
+      "name": "Cannae",
+      "wikipediaTitle": "Cannae",
+      "lat": 41.29638889,
+      "lon": 16.15166667,
+      "why": "On this Apulian plain Hannibal's double envelopment destroyed Rome's biggest army on 2 August 216 BC.",
+      "sectionId": "battle-of-cannae",
+      "coordinates": "Wikipedia: Cannae",
+      "reviewFlags": []
+    }
+  ]
+}

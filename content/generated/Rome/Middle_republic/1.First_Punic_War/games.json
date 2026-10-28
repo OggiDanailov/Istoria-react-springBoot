@@ -1,0 +1,681 @@
+{
+  "chapterName": "Middle Republic: The First Punic War (264-241 BCE)",
+  "model": "claude-opus-5-5",
+  "briefing": {
+    "title": "Sicily, 264 BC",
+    "paragraphs": [
+      "Two great powers face each other across the western Mediterranean. Rome now rules the Italian peninsula south of the River Arno. Carthage, a rich trading city in what is now Tunisia, controls the North African coast, southern Spain, Sardinia, Corsica and western Sicily.",
+      "Old friends, they are about to become enemies. At Messana, on Sicily's tip facing Italy, mercenaries beg both for help. Rome, which has almost no navy, votes for war. Ahead lie 23 years of fighting, the greatest naval war of the ancient world, with Sicily as the prize."
+    ]
+  },
+  "timelines": [
+    {
+      "name": "The War in Four Steps",
+      "blurb": "Put the big turning points of the First Punic War in order.",
+      "events": [
+        {
+          "label": "Roman legions cross to Messana",
+          "when": "264 BC",
+          "year": -264,
+          "fact": "Two legions of about 4,500 men each crossed the strait to Sicily, starting the war with Carthage.",
+          "sectionId": "messana",
+          "reviewFlags": []
+        },
+        {
+          "label": "Regulus invades Africa",
+          "when": "256 BC",
+          "year": -256,
+          "fact": "After winning off Cape Ecnomus, the consul Regulus landed near Cape Bon to strike Carthage at home.",
+          "sectionId": "regulus-in-africa",
+          "reviewFlags": []
+        },
+        {
+          "label": "Roman victory at the Aegates Islands",
+          "when": "10 March 241 BC",
+          "year": -241,
+          "fact": "Catulus's well-drilled crews rammed the laden Carthaginian ships, sinking 50 and capturing 70.",
+          "sectionId": "battle-of-the-aegates",
+          "reviewFlags": []
+        },
+        {
+          "label": "Second Punic War begins",
+          "when": "218 BC",
+          "year": -218,
+          "fact": "Carthaginian resentment over the peace and the seizure of Sardinia smouldered until a new war broke out.",
+          "sectionId": "peace-and-aftermath",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "From Friends to Foes",
+      "blurb": "Follow Rome and Carthage from old allies to bitter rivals.",
+      "events": [
+        {
+          "label": "First Rome–Carthage treaty",
+          "when": "509 BC",
+          "year": -509,
+          "fact": "Rome and Carthage were long friends, signing treaties in 509 BC, 348 BC and around 279 BC.",
+          "sectionId": "rome-and-carthage",
+          "reviewFlags": []
+        },
+        {
+          "label": "Mamertines seize Messana",
+          "when": "289 BC",
+          "year": -289,
+          "fact": "Italian mercenaries called the Mamertines took the city whose cry for help later sparked the war.",
+          "sectionId": "messana",
+          "reviewFlags": []
+        },
+        {
+          "label": "Romans besiege Akragas",
+          "when": "262 BC",
+          "year": -262,
+          "fact": "About 40,000 Romans besieged Carthage's main base on Sicily, a port the Romans called Agrigentum.",
+          "sectionId": "siege-of-akragas",
+          "reviewFlags": []
+        },
+        {
+          "label": "Duilius wins at Mylae",
+          "when": "260 BC",
+          "year": -260,
+          "fact": "Using the corvus boarding bridge, Gaius Duilius gave Rome its first naval victory.",
+          "sectionId": "corvus-and-mylae",
+          "reviewFlags": []
+        },
+        {
+          "label": "Hamilcar Barca takes command in Sicily",
+          "when": "247 BC",
+          "year": -247,
+          "fact": "From the mountain of Eryx, near Drepana, Hamilcar Barca waged a guerrilla war that tied down the legions.",
+          "sectionId": "drepana-and-stalemate",
+          "reviewFlags": []
+        },
+        {
+          "label": "Rome seizes Sardinia and Corsica",
+          "when": "237 BC",
+          "year": -237,
+          "fact": "Rome called Carthage's move to recover Sardinia an act of war and forced it to give up both islands.",
+          "sectionId": "peace-and-aftermath",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "The Long War in Detail",
+      "blurb": "A harder sequence, from Rome's rise in Italy to the historian who told the story.",
+      "events": [
+        {
+          "label": "Rome rules Italy south of the Arno",
+          "when": "272 BC",
+          "year": -272,
+          "fact": "After a century of conquest, Rome controlled the Italian peninsula south of the river that flows past Pisa.",
+          "sectionId": "rome-and-carthage",
+          "reviewFlags": []
+        },
+        {
+          "label": "King of Syracuse switches to Rome",
+          "when": "263 BC",
+          "year": -263,
+          "fact": "Facing 40,000 Romans, the king of the strongest Greek city on Sicily changed sides and agreed to feed Rome's army.",
+          "sectionId": "messana",
+          "reviewFlags": []
+        },
+        {
+          "label": "Carthage's relief army beaten at Akragas",
+          "when": "Spring 261 BC",
+          "year": -261,
+          "fact": "It was one of only two full-scale pitched battles fought on Sicily in the whole war.",
+          "sectionId": "siege-of-akragas",
+          "reviewFlags": []
+        },
+        {
+          "label": "Storm wrecks Rome's returning fleet",
+          "when": "255 BC",
+          "year": -255,
+          "fact": "On the way home, 384 of 464 ships sank, drowning about 100,000 men.",
+          "sectionId": "regulus-in-africa",
+          "reviewFlags": []
+        },
+        {
+          "label": "Elephants stampede at Panormus",
+          "when": "251 BC",
+          "year": -251,
+          "fact": "Showered with javelins, Carthage's war elephants panicked and trampled back through their own infantry.",
+          "sectionId": "drepana-and-stalemate",
+          "reviewFlags": []
+        },
+        {
+          "label": "Roman fleet routed at Drepana",
+          "when": "249 BC",
+          "year": -249,
+          "fact": "A failed Roman night attack gave Carthage its greatest naval victory of the war.",
+          "sectionId": "drepana-and-stalemate",
+          "reviewFlags": []
+        },
+        {
+          "label": "Rich Romans pay for a new fleet",
+          "when": "c. 243 BC",
+          "year": -243,
+          "fact": "With Rome nearly bankrupt, the richest citizens each funded a warship, to be repaid from Carthage's future war payments.",
+          "sectionId": "battle-of-the-aegates",
+          "reviewFlags": []
+        },
+        {
+          "label": "Polybius taken to Rome as a hostage",
+          "when": "167 BC",
+          "year": -167,
+          "fact": "This Greek historian, our main source, wrote about a century after the fighting.",
+          "sectionId": "sources-and-debates",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "matchSets": [
+    {
+      "name": "Who Did What?",
+      "blurb": "Match each figure of the war to their role.",
+      "pairs": [
+        {
+          "name": "Gaius Duilius",
+          "match": "Consul who won Rome's first naval victory, at Mylae in 260 BC",
+          "sectionId": "corvus-and-mylae",
+          "reviewFlags": []
+        },
+        {
+          "name": "Regulus",
+          "match": "Consul who invaded Africa, took Tunis and was captured in 255 BC",
+          "sectionId": "regulus-in-africa",
+          "reviewFlags": []
+        },
+        {
+          "name": "Hamilcar Barca",
+          "match": "Carthaginian general who fought a guerrilla war from Eryx",
+          "sectionId": "drepana-and-stalemate",
+          "reviewFlags": []
+        },
+        {
+          "name": "Catulus",
+          "match": "Consul whose fleet won the final battle at the Aegates Islands",
+          "sectionId": "battle-of-the-aegates",
+          "reviewFlags": []
+        },
+        {
+          "name": "Polybius",
+          "match": "Greek hostage in Rome whose history is our main source for the war",
+          "sectionId": "sources-and-debates",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Words of War",
+      "blurb": "Match each term to its meaning.",
+      "pairs": [
+        {
+          "name": "Corvus",
+          "match": "'Raven': spiked boarding bridge that pinned enemy ships together",
+          "sectionId": "corvus-and-mylae",
+          "reviewFlags": []
+        },
+        {
+          "name": "Quinquereme",
+          "match": "'Five-oared' galley, the standard warship, rowed by 280 oarsmen",
+          "sectionId": "rome-builds-a-fleet",
+          "reviewFlags": []
+        },
+        {
+          "name": "Rostrum",
+          "match": "Bronze ram at the waterline used to smash enemy hulls",
+          "sectionId": "rome-builds-a-fleet",
+          "reviewFlags": []
+        },
+        {
+          "name": "Provincia",
+          "match": "Overseas territory run by a Roman governor; Sicily was the first",
+          "sectionId": "peace-and-aftermath",
+          "reviewFlags": []
+        },
+        {
+          "name": "Mamertines",
+          "match": "Italian mercenaries who seized Messana in 289 BC",
+          "sectionId": "messana",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Latin Words",
+      "blurb": "Match each Latin word to its meaning.",
+      "pairs": [
+        {
+          "name": "Comitia",
+          "match": "The popular assembly that voted for war in 264 BC",
+          "sectionId": "messana",
+          "reviewFlags": []
+        },
+        {
+          "name": "Praeda",
+          "match": "Plunder, promised to the voters by a consul",
+          "sectionId": "messana",
+          "reviewFlags": []
+        },
+        {
+          "name": "Legiones",
+          "match": "Roman army units of about 4,500 men each",
+          "sectionId": "messana",
+          "reviewFlags": []
+        },
+        {
+          "name": "Socii",
+          "match": "Rome’s allies, who lent it small squadrons",
+          "sectionId": "rome-builds-a-fleet",
+          "reviewFlags": []
+        },
+        {
+          "name": "Triumphus",
+          "match": "A victory parade through Rome",
+          "sectionId": "peace-and-aftermath",
+          "reviewFlags": []
+        },
+        {
+          "name": "Punici",
+          "match": "The Romans’ name for the Carthaginians",
+          "sectionId": "rome-and-carthage",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "trueFalseDecks": [
+    {
+      "name": "Land, Politics and Peace",
+      "blurb": "How the war began on land, and how it ended at the table.",
+      "cards": [
+        {
+          "claim": "Before the war, Carthage held the western half of Sicily.",
+          "answer": true,
+          "why": "Carthage's empire included Sardinia, Corsica and the western half of Sicily.",
+          "sectionId": "rome-and-carthage",
+          "reviewFlags": []
+        },
+        {
+          "claim": "During the war with a Greek king from Epirus in the 270s BC, Carthage once ferried Roman troops in its ships.",
+          "answer": true,
+          "why": "The two cities were still friends then; Carthage supplied Rome and once carried Roman troops by sea.",
+          "sectionId": "rome-and-carthage",
+          "reviewFlags": []
+        },
+        {
+          "claim": "The Roman Senate voted clearly in favour of going to war over Messana.",
+          "answer": false,
+          "why": "The Senate was deadlocked, so the question went to the popular assembly (comitia), which voted yes.",
+          "sectionId": "messana",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Carthage relied mostly on its own citizens as soldiers.",
+          "answer": false,
+          "why": "Carthage relied mostly on hired foreign soldiers.",
+          "sectionId": "siege-of-akragas",
+          "reviewFlags": []
+        },
+        {
+          "claim": "After taking Akragas, the Romans sold 25,000 inhabitants into slavery.",
+          "answer": true,
+          "why": "The garrison slipped away after the battle, and the Romans enslaved 25,000 of the townspeople.",
+          "sectionId": "siege-of-akragas",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Regulus took Tunis, just 16 km (10 miles) from Carthage.",
+          "answer": true,
+          "why": "After a surprise dawn attack routed a Carthaginian army, Regulus captured Tunis close to Carthage.",
+          "sectionId": "regulus-in-africa",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Under the Treaty of Lutatius, Carthage agreed to pay 3,200 talents of silver over twenty years.",
+          "answer": false,
+          "why": "The 3,200 talents were to be paid over ten years.",
+          "sectionId": "peace-and-aftermath",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Sardinia became Rome's first province.",
+          "answer": false,
+          "why": "Sicily became Rome's first province and a vital source of grain; Sardinia was seized later, in 237 BC.",
+          "sectionId": "peace-and-aftermath",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Ships, Storms and Sources",
+      "blurb": "Rome's leap to sea power, and how we know about it.",
+      "cards": [
+        {
+          "claim": "Rome built its first fleet by copying a shipwrecked Carthaginian warship.",
+          "answer": true,
+          "why": "In 260 BC Rome copied a stranded Carthaginian quinquereme, though its copies were heavier and slower.",
+          "sectionId": "rome-builds-a-fleet",
+          "reviewFlags": []
+        },
+        {
+          "claim": "A quinquereme was rowed by 120 oarsmen.",
+          "answer": false,
+          "why": "It was rowed by 280 oarsmen; 120 was the number of marines it might carry before battle.",
+          "sectionId": "rome-builds-a-fleet",
+          "reviewFlags": []
+        },
+        {
+          "claim": "At Mylae, the ravens grappled the first 30 Carthaginian ships, including the flagship.",
+          "answer": true,
+          "why": "The flagship's commander escaped in a small boat, and Duilius's men captured 20 more ships afterwards.",
+          "sectionId": "corvus-and-mylae",
+          "reviewFlags": []
+        },
+        {
+          "claim": "In 255 BC a storm sank 384 of 464 Roman ships on the way home from Africa.",
+          "answer": true,
+          "why": "The disaster drowned about 100,000 men.",
+          "sectionId": "regulus-in-africa",
+          "reviewFlags": []
+        },
+        {
+          "claim": "The battle of Drepana was Rome's greatest naval victory of the war.",
+          "answer": false,
+          "why": "Drepana was Carthage's greatest naval victory: a failed Roman night attack ended with Roman ships pinned against the shore.",
+          "sectionId": "drepana-and-stalemate",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Catulus's fleet won at the Aegates Islands by using the corvus.",
+          "answer": false,
+          "why": "The new fleet had no corvus; the Romans won as sailors, ramming their laden opponents.",
+          "sectionId": "battle-of-the-aegates",
+          "reviewFlags": []
+        },
+        {
+          "claim": "The fleet that won the war was paid for by Rome's richest citizens.",
+          "answer": true,
+          "why": "About 200 quinqueremes were built at no cost to the state, to be repaid from Carthage's future war payments.",
+          "sectionId": "battle-of-the-aegates",
+          "reviewFlags": []
+        },
+        {
+          "claim": "The bronze rams found off western Sicily suggest ships larger than Polybius describes.",
+          "answer": false,
+          "why": "The rams' size suggests smaller ships than the quinqueremes Polybius describes, though their location supports him.",
+          "sectionId": "sources-and-debates",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "oddOneOut": [
+    {
+      "items": [
+        "Sardinia",
+        "Syracuse",
+        "Corsica",
+        "Western Sicily"
+      ],
+      "oddIndex": 1,
+      "why": "Sardinia, Corsica and western Sicily belonged to Carthage before the war. Syracuse was the strongest Greek city on Sicily, and it sided with Rome in 263 BC.",
+      "sectionId": "rome-and-carthage",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Hamilcar Barca",
+        "Gaius Duilius",
+        "Regulus",
+        "Catulus"
+      ],
+      "oddIndex": 0,
+      "why": "Duilius, Regulus and Catulus were Roman consuls. Hamilcar Barca was Carthage's general in Sicily.",
+      "sectionId": "drepana-and-stalemate",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Lipari Islands",
+        "Drepana",
+        "Mylae",
+        "Phintias"
+      ],
+      "oddIndex": 2,
+      "why": "Rome lost at sea at the Lipari Islands, Drepana and Phintias. Mylae was Rome's first naval victory, won by Gaius Duilius.",
+      "sectionId": "corvus-and-mylae",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "50,000 infantry",
+        "120 warships",
+        "6,000 cavalry",
+        "60 war elephants"
+      ],
+      "oddIndex": 1,
+      "why": "Infantry, cavalry and elephants made up Carthage's relief army at Akragas. The 120 warships were the fleet Rome began building in 260 BC.",
+      "sectionId": "siege-of-akragas",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Leave Sicily",
+        "Free all prisoners",
+        "Pay 3,200 talents",
+        "Give up Sardinia"
+      ],
+      "oddIndex": 3,
+      "why": "The first three were terms of the Treaty of Lutatius in 241 BC. Carthage was forced to give up Sardinia only later, in 237 BC.",
+      "sectionId": "peace-and-aftermath",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Bronze rams",
+        "An iron corvus spike",
+        "Helmets",
+        "Storage jars"
+      ],
+      "oddIndex": 1,
+      "why": "Divers since 2010 have found rams, helmets and storage jars from the Aegates battle. The Roman fleet there carried no corvus.",
+      "sectionId": "sources-and-debates",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Tunis",
+        "Messana",
+        "Akragas",
+        "Panormus"
+      ],
+      "oddIndex": 0,
+      "why": "Messana, Akragas and Panormus are cities on Sicily. Tunis is in Africa, near Carthage, and was taken by Regulus.",
+      "sectionId": "regulus-in-africa",
+      "reviewFlags": []
+    }
+  ],
+  "whoAmI": [
+    {
+      "name": "Commanders at Sea",
+      "blurb": "Three Roman consuls who fought the war on the water.",
+      "people": [
+        {
+          "name": "Gaius Duilius",
+          "options": [
+            "Gaius Duilius",
+            "Catulus",
+            "Regulus",
+            "Hamilcar Barca"
+          ],
+          "clues": [
+            "I faced about 130 Carthaginian ships off Sicily's north coast.",
+            "When the enemy swung round to strike from the side, my men captured 20 more ships.",
+            "My boarding bridges, the ravens, pinned the first 30 enemy ships, including the flagship.",
+            "As consul in 260 BC, I gave Rome its first naval victory, at Mylae."
+          ],
+          "sectionId": "corvus-and-mylae",
+          "reviewFlags": []
+        },
+        {
+          "name": "Catulus",
+          "options": [
+            "Gaius Duilius",
+            "Catulus",
+            "Regulus",
+            "Hamilcar Barca"
+          ],
+          "clues": [
+            "I was wounded, so my deputy led the decisive fight.",
+            "In 242 BC I sealed off the last Carthaginian strongholds and drilled my crews relentlessly.",
+            "After the war I celebrated a triumph, a victory parade through Rome.",
+            "As consul, I won the war's final battle, at the Aegates Islands in 241 BC."
+          ],
+          "sectionId": "battle-of-the-aegates",
+          "reviewFlags": []
+        },
+        {
+          "name": "Regulus",
+          "options": [
+            "Gaius Duilius",
+            "Catulus",
+            "Regulus",
+            "Hamilcar Barca"
+          ],
+          "clues": [
+            "In 256 BC I sailed as consul with a fleet of 330 warships.",
+            "We met 350 Carthaginian ships off Cape Ecnomus, perhaps history's largest naval battle by number of combatants.",
+            "Carthage lost 94 ships that day; Rome lost 24.",
+            "I then landed near Cape Bon, in Africa, to strike Carthage at home."
+          ],
+          "sectionId": "regulus-in-africa",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Generals and a Historian",
+      "blurb": "Two generals on land, and the man who told their story.",
+      "people": [
+        {
+          "name": "Hamilcar Barca",
+          "options": [
+            "Hamilcar Barca",
+            "Regulus",
+            "Catulus",
+            "Gaius Duilius"
+          ],
+          "clues": [
+            "In 237 BC I led my veterans to Spain to build a new power base.",
+            "From the mountain of Eryx, near Drepana, I waged a guerrilla war that tied down the Roman legions.",
+            "In 241 BC my city ordered me to make peace.",
+            "I am the Carthaginian general who took command in Sicily in 247 BC."
+          ],
+          "sectionId": "drepana-and-stalemate",
+          "reviewFlags": []
+        },
+        {
+          "name": "Regulus",
+          "options": [
+            "Hamilcar Barca",
+            "Regulus",
+            "Catulus",
+            "Gaius Duilius"
+          ],
+          "clues": [
+            "I routed a Carthaginian army in a surprise dawn attack.",
+            "I took Tunis, just 16 km (10 miles) from Carthage.",
+            "Carthage asked me for peace, but my terms were so harsh that it fought on.",
+            "In 255 BC an army retrained by a Spartan mercenary crushed my men, and I was taken prisoner."
+          ],
+          "sectionId": "regulus-in-africa",
+          "reviewFlags": []
+        },
+        {
+          "name": "Polybius",
+          "options": [
+            "Polybius",
+            "Fabius Pictor",
+            "Livy",
+            "Diodorus Siculus"
+          ],
+          "clues": [
+            "My accuracy has been debated for 150 years, but most modern historians accept my account.",
+            "Bronze rams found off western Sicily since 2010 support where I placed the final battle.",
+            "I was a Greek taken to Rome as a hostage in 167 BC.",
+            "Almost everything known about the First Punic War comes from my history, written about a century later."
+          ],
+          "sectionId": "sources-and-debates",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "places": [
+    {
+      "name": "Carthage",
+      "wikipediaTitle": "Carthage",
+      "lat": 36.853,
+      "lon": 10.323,
+      "why": "The great trading city in what is now Tunisia that fought Rome for 23 years and was the target of Regulus's invasion.",
+      "sectionId": "rome-and-carthage",
+      "coordinates": "Carthage archaeological site",
+      "reviewFlags": []
+    },
+    {
+      "name": "Messana",
+      "wikipediaTitle": "Messina",
+      "lat": 38.19361111,
+      "lon": 15.55416667,
+      "why": "The city on Sicily's north-eastern tip, held by the Mamertines, whose plea for help sparked the war in 264 BC.",
+      "sectionId": "messana",
+      "coordinates": "Wikipedia: Messina",
+      "reviewFlags": []
+    },
+    {
+      "name": "Syracuse",
+      "wikipediaTitle": "Syracuse, Sicily",
+      "lat": 37.06916667,
+      "lon": 15.2875,
+      "why": "The strongest Greek city on Sicily, whose king switched to Rome's side in 263 BC and fed its army.",
+      "sectionId": "messana",
+      "coordinates": "Wikipedia: Syracuse, Sicily",
+      "reviewFlags": []
+    },
+    {
+      "name": "Akragas",
+      "wikipediaTitle": "Agrigento",
+      "lat": 37.3125,
+      "lon": 13.575,
+      "why": "Carthage's main base on Sicily, besieged by Rome in 262 BC and taken after a pitched battle in 261 BC.",
+      "sectionId": "siege-of-akragas",
+      "coordinates": "Wikipedia: Agrigento",
+      "reviewFlags": []
+    },
+    {
+      "name": "Aegates Islands",
+      "wikipediaTitle": "Aegadian Islands",
+      "lat": 37.96666667,
+      "lon": 12.2,
+      "why": "Islands just west of Sicily where Catulus's fleet won the war's final battle on 10 March 241 BC.",
+      "sectionId": "battle-of-the-aegates",
+      "coordinates": "Wikipedia: Aegadian Islands",
+      "reviewFlags": []
+    },
+    {
+      "name": "Sardinia",
+      "wikipediaTitle": "Sardinia",
+      "lat": 40,
+      "lon": 9,
+      "why": "A Carthaginian island that Rome forced Carthage to surrender, along with Corsica, in 237 BC.",
+      "sectionId": "peace-and-aftermath",
+      "coordinates": "Wikipedia: Sardinia",
+      "reviewFlags": []
+    }
+  ]
+}

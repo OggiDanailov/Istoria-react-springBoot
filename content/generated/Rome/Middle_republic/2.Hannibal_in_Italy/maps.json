@@ -1,0 +1,357 @@
+{
+  "description": "Maps for the chronicle, written by hand. Coordinates from Wikipedia; each map sits at the start of its section.",
+  "maps": [
+    {
+      "id": "march",
+      "sec": "crossing-the-alps",
+      "title": "Hannibal’s march, 218–216 BC",
+      "caption": "From New Carthage, Hannibal marched along the coast of Spain, crossed the Pyrenees, the Rhône and the Alps, then won at the Trebia, Lake Trasimene and Cannae. The route is drawn roughly: no one knows which Alpine pass he used.",
+      "bounds": {
+        "latMin": 36.9,
+        "latMax": 46.4,
+        "lonMin": -5.2,
+        "lonMax": 18.6
+      },
+      "places": [
+        {
+          "name": "Rome",
+          "latin": "Roma",
+          "lat": 41.893,
+          "lon": 12.483,
+          "kind": "rome",
+          "side": "l",
+          "dy": 8
+        },
+        {
+          "name": "New Carthage",
+          "lat": 37.6,
+          "lon": -0.98,
+          "side": "r",
+          "dy": 6
+        },
+        {
+          "name": "Saguntum",
+          "lat": 39.68,
+          "lon": -0.28,
+          "side": "r"
+        },
+        {
+          "name": "Massalia",
+          "lat": 43.3,
+          "lon": 5.37,
+          "side": "r",
+          "dy": 8
+        },
+        {
+          "name": "Trebia",
+          "lat": 44.99,
+          "lon": 9.57,
+          "kind": "battle",
+          "side": "r",
+          "dy": -6
+        },
+        {
+          "name": "Lake Trasimene",
+          "lat": 43.14,
+          "lon": 12.1,
+          "kind": "battle",
+          "side": "r",
+          "dy": -12
+        },
+        {
+          "name": "Cannae",
+          "lat": 41.3,
+          "lon": 16.15,
+          "kind": "battle",
+          "side": "l",
+          "dy": 14
+        }
+      ],
+      "peoples": [
+        {
+          "name": "Iberia",
+          "latin": "Hispania",
+          "lat": 40.0,
+          "lon": -2.9
+        },
+        {
+          "name": "Gauls",
+          "lat": 45.6,
+          "lon": 2.3
+        },
+        {
+          "name": "Alps",
+          "lat": 46.0,
+          "lon": 8.0
+        }
+      ],
+      "routes": [
+        {
+          "pts": [
+            [
+              37.6,
+              -0.98
+            ],
+            [
+              38.6,
+              -0.1
+            ],
+            [
+              39.7,
+              -0.3
+            ],
+            [
+              40.8,
+              0.8
+            ],
+            [
+              41.6,
+              2.4
+            ],
+            [
+              42.4,
+              3.0
+            ],
+            [
+              43.3,
+              3.6
+            ],
+            [
+              43.95,
+              4.75
+            ],
+            [
+              44.4,
+              5.6
+            ],
+            [
+              44.7,
+              6.6
+            ],
+            [
+              44.7,
+              7.1
+            ],
+            [
+              44.85,
+              7.7
+            ],
+            [
+              45.0,
+              9.3
+            ]
+          ]
+        },
+        {
+          "pts": [
+            [
+              44.95,
+              9.8
+            ],
+            [
+              44.4,
+              10.9
+            ],
+            [
+              43.6,
+              11.2
+            ],
+            [
+              43.2,
+              11.95
+            ]
+          ]
+        },
+        {
+          "pts": [
+            [
+              43.0,
+              12.4
+            ],
+            [
+              42.4,
+              13.6
+            ],
+            [
+              41.8,
+              15.0
+            ],
+            [
+              41.35,
+              16.0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cannae",
+      "sec": "battle-of-cannae",
+      "title": "Cannae, 216 BC: the trap",
+      "caption": "Hannibal’s crescent of Gauls and Spaniards gave ground as the Romans pushed in. His African infantry turned inward on both flanks, and his cavalry, after routing the Roman horse, rode behind the Roman army to strike its rear. A simplified plan.",
+      "plan": true,
+      "height": 205,
+      "key": {
+        "rome": "Romans and allies",
+        "enemy": "Hannibal’s army"
+      },
+      "units": [
+        {
+          "side": "rome",
+          "x": 100,
+          "y": 38,
+          "w": 100,
+          "h": 48,
+          "name": "Roman infantry, packed deep",
+          "ly": 31
+        },
+        {
+          "side": "rome",
+          "x": 50,
+          "y": 62,
+          "w": 40,
+          "h": 18,
+          "name": "Roman cavalry",
+          "ly": 56
+        },
+        {
+          "side": "rome",
+          "x": 210,
+          "y": 62,
+          "w": 40,
+          "h": 18,
+          "name": "Allied cavalry",
+          "ly": 92
+        },
+        {
+          "side": "enemy",
+          "d": "M112,130 Q150,92 188,130 L188,139 Q150,104 112,139 Z",
+          "name": "Gauls and Spaniards",
+          "lx": 150,
+          "ly": 152
+        },
+        {
+          "side": "enemy",
+          "x": 82,
+          "y": 116,
+          "w": 24,
+          "h": 24,
+          "name": "Africans",
+          "lx": 94,
+          "ly": 163
+        },
+        {
+          "side": "enemy",
+          "x": 194,
+          "y": 116,
+          "w": 24,
+          "h": 24,
+          "name": "Africans",
+          "lx": 206,
+          "ly": 163
+        },
+        {
+          "side": "enemy",
+          "x": 44,
+          "y": 114,
+          "w": 32,
+          "h": 16,
+          "name": "Spanish and Gallic horse",
+          "lx": 60,
+          "ly": 178
+        },
+        {
+          "side": "enemy",
+          "x": 224,
+          "y": 114,
+          "w": 32,
+          "h": 16,
+          "name": "Cavalry",
+          "lx": 240,
+          "ly": 140
+        }
+      ],
+      "moves": [
+        {
+          "side": "enemy",
+          "pts": [
+            [
+              60,
+              112
+            ],
+            [
+              66,
+              84
+            ]
+          ]
+        },
+        {
+          "side": "enemy",
+          "dashed": true,
+          "pts": [
+            [
+              44,
+              108
+            ],
+            [
+              30,
+              60
+            ],
+            [
+              70,
+              14
+            ],
+            [
+              226,
+              14
+            ],
+            [
+              246,
+              54
+            ]
+          ]
+        },
+        {
+          "side": "enemy",
+          "pts": [
+            [
+              94,
+              114
+            ],
+            [
+              103,
+              95
+            ]
+          ]
+        },
+        {
+          "side": "enemy",
+          "pts": [
+            [
+              206,
+              114
+            ],
+            [
+              197,
+              95
+            ]
+          ]
+        },
+        {
+          "side": "enemy",
+          "dashed": true,
+          "pts": [
+            [
+              150,
+              96
+            ],
+            [
+              150,
+              118
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}

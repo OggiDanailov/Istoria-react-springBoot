@@ -1,0 +1,145 @@
+{
+  "batchName": "Middle Republic: Hannibal in Italy (241-216 BCE) - Latin words",
+  "chapterName": "Middle Republic: Hannibal in Italy (241-216 BCE)",
+  "difficulty": 1,
+  "batchOrder": 9,
+  "description": "Written by hand from the chapter text: the Latin words it explains",
+  "questions": [
+    {
+      "question": "Fabius Maximus was mocked as the Cunctator. What does it mean?",
+      "options": [
+        "The Delayer",
+        "The Coward",
+        "The Old Man",
+        "The Shield"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#fabius-the-delayer",
+      "explanation": "He refused to fight the pitched battle Hannibal wanted; events after Cannae proved him right.",
+      "sourceQuote": "Soldiers, senators and ordinary citizens mocked him as the Delayer (*Cunctator*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "Barca led his army to Hispania in 237 BC. What was Hispania?",
+      "options": [
+        "Iberia: today Spain and Portugal",
+        "North Africa west of Carthage",
+        "Southern Gaul",
+        "The island of Sardinia"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#barcas-in-spain",
+      "explanation": "There he carved out a domain rich in silver mines, farmland and recruits.",
+      "sourceQuote": "That same year he led his army to Iberia (*Hispania*), the peninsula that is now Spain and Portugal.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did Hannibal treat Rome’s Italian allies (socii) captured at Trasimene?",
+      "options": [
+        "He freed them and sent them home",
+        "He sold them as slaves",
+        "He forced them into his army",
+        "He held them for ransom"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#trebia-and-trasimene",
+      "explanation": "He hoped to pull Rome’s alliance apart; Roman prisoners were treated harshly.",
+      "sourceQuote": "but Rome's Italian allies (*socii*) were freed and sent home to praise Carthage.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What was Gallia Cisalpina?",
+      "options": [
+        "The Po valley lands of Celtic tribes in northern Italy",
+        "The Greek south of Italy",
+        "The Roman province of Sicily",
+        "The coast of southern France"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#saguntum",
+      "explanation": "Rome was founding colonies there, and the angry Gauls listened to Hannibal’s envoys.",
+      "sourceQuote": "in Cisalpine Gaul (*Gallia Cisalpina*), the Po valley lands of Celtic tribes in northern Italy",
+      "reviewFlags": []
+    },
+    {
+      "question": "Why were the Gauls of the Po valley angry with Rome before 218 BC?",
+      "options": [
+        "Rome was founding coloniae of settlers on their best land",
+        "Rome had banned their trade with Carthage",
+        "Rome had taken their children as hostages",
+        "Rome had destroyed their temples"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#saguntum",
+      "explanation": "Hannibal’s envoys were already courting them, and after the Trebia most Gallic tribes joined him.",
+      "sourceQuote": "Rome was founding new colonies (*coloniae*) of settlers on the best land.",
+      "reviewFlags": []
+    },
+    {
+      "question": "After Cannae, Roman priests consulted the Libri Sibyllini. What were they?",
+      "options": [
+        "Sacred prophecies kept for emergencies",
+        "The records of the Senate",
+        "The laws of the Twelve Tables",
+        "Letters from the gods of Carthage"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#after-cannae",
+      "explanation": "In the panic, people were even buried alive in Rome’s cattle market as a sacrifice.",
+      "sourceQuote": "Priests consulted the Sibylline Books (*Libri Sibyllini*), sacred prophecies kept for emergencies",
+      "reviewFlags": []
+    },
+    {
+      "question": "At Cannae, how did the two consules share command of the army?",
+      "options": [
+        "They took turns, day by day",
+        "One led the infantry, the other the cavalry",
+        "The older consul always commanded",
+        "They drew lots before the battle"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#battle-of-cannae",
+      "explanation": "Tradition says Varro held command on 2 August 216 BC, the day of battle.",
+      "sourceQuote": "The two consuls took turns in command day by day",
+      "reviewFlags": []
+    },
+    {
+      "question": "How big was the army the Senate raised in 216 BC?",
+      "options": [
+        "Eight legiones plus as many allies: about 86,000 men",
+        "Four legiones: about 20,000 men",
+        "Two legiones and a fleet: about 40,000 men",
+        "Twenty legiones: about 200,000 men"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#battle-of-cannae",
+      "explanation": "It was the biggest army Rome had ever raised, packed unusually deep to smash Hannibal’s centre.",
+      "sourceQuote": "eight Roman legions (*legiones*) plus as many allies, about 86,000 men.",
+      "reviewFlags": []
+    }
+  ]
+}

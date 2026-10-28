@@ -1,0 +1,179 @@
+{
+  "batchName": "Middle Republic: The First Punic War (264-241 BCE) - Easy Batch 2",
+  "chapterName": "Middle Republic: The First Punic War (264-241 BCE)",
+  "difficulty": 1,
+  "batchOrder": 2,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Which Roman consul commanded the fleet that won the war's final battle?",
+      "options": [
+        "Scipio",
+        "Catulus",
+        "Gaius Duilius",
+        "Regulus"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#battle-of-the-aegates",
+      "explanation": "Catulus brought the fleet to Sicily in 242 BC and drilled his crews relentlessly. He later celebrated a triumph in Rome.",
+      "sourceQuote": "Catulus, the consul who won the war's final battle, brought the fleet to Sicily in 242 BC.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Near which islands was the final battle of the First Punic War fought in 241 BC?",
+      "options": [
+        "The Balearic Islands",
+        "The Aegates Islands",
+        "The Maltese Islands",
+        "The Lipari Islands"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#battle-of-the-aegates",
+      "explanation": "The decisive battle was fought on 10 March 241 BC near the Aegates Islands, just west of Sicily. The Romans left their masts and sails ashore before rowing out.",
+      "sourceQuote": "On 10 March 241 BC, near the Aegates Islands just west of Sicily, the Romans left masts and sails ashore and rowed into a strong headwind to intercept.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which Sicilian city, facing Italy across a narrow strait, sparked the First Punic War?",
+      "options": [
+        "Panormus",
+        "Messana",
+        "Syracuse",
+        "Akragas"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#messana",
+      "explanation": "The war began over Messana, today's Messina, on Sicily's north-eastern tip. Both Rome and Carthage were asked to help the city's occupiers.",
+      "sourceQuote": "The war began over Messana, today's Messina, a city on Sicily's north-eastern tip facing Italy.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Carthage, Rome's great rival in the First Punic War, stood in which modern country?",
+      "options": [
+        "Morocco",
+        "Egypt",
+        "Tunisia",
+        "Libya"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#rome-and-carthage",
+      "explanation": "Carthage was a great trading city in what is now Tunisia. Its empire stretched along the North African coast and into southern Spain.",
+      "sourceQuote": "Across the sea stood Carthage (*Carthago*), a great trading city in what is now Tunisia.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Since 2010, what have divers found off western Sicily from the Battle of the Aegates?",
+      "options": [
+        "More than two dozen bronze rams",
+        "Carthaginian treaty tablets",
+        "An intact corvus boarding bridge",
+        "The wreck of Duilius's flagship"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#sources-and-debates",
+      "explanation": "Divers have recovered more than two dozen bronze rams, along with helmets and hundreds of storage jars. Their location supports Polybius's account.",
+      "sourceQuote": "Since 2010, divers off western Sicily have found more than two dozen bronze rams from the Aegates battle, plus helmets and hundreds of storage jars.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Why are Rome's wars with Carthage called the \"Punic\" Wars?",
+      "options": [
+        "They were named after the Punic River in Sicily",
+        "The word means 'sea war' in Latin",
+        "Punic was the name of Carthage's royal family",
+        "Romans called Carthaginians Punici, meaning Phoenicians"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#rome-and-carthage",
+      "explanation": "The Romans called the Carthaginians Punici, meaning Phoenicians, after their ancestors. That is why this conflict is known as the First Punic War.",
+      "sourceQuote": "Romans called the Carthaginians *Punici*, meaning Phoenicians, after their ancestors.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What kind of soldiers did Carthage mostly rely on for its armies?",
+      "options": [
+        "Levies from allied Greek cities",
+        "Slaves freed for service",
+        "Citizen conscripts from Carthage",
+        "Hired foreign soldiers"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#siege-of-akragas",
+      "explanation": "Carthage relied mostly on hired foreign soldiers. It sent a relief army including 60 war elephants to save Akragas.",
+      "sourceQuote": "Carthage, which relied mostly on hired foreign soldiers, shipped over a relief army of 50,000 infantry, 6,000 cavalry and 60 war elephants.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What does the name of the standard warship of the age, the quinquereme, mean?",
+      "options": [
+        "\"Bronze-beaked\"",
+        "\"Five-oared\"",
+        "\"Fast runner\"",
+        "\"Three-decked\""
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#rome-builds-a-fleet",
+      "explanation": "Quinquereme means 'five-oared'. It was a galley about 45 m long with a heavy bronze ram at the waterline.",
+      "sourceQuote": "That ship was a quinquereme, meaning \"five-oared\", the standard warship of the age.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Rome's spiked boarding bridge, the corvus, was nicknamed after which creature?",
+      "options": [
+        "The wolf",
+        "The scorpion",
+        "The eagle",
+        "The raven"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#corvus-and-mylae",
+      "explanation": "Corvus means raven; the bridge had a heavy iron spike shaped like a bird's beak. It was fitted to make up for Rome's poor seamanship.",
+      "sourceQuote": "To make up for poor seamanship, the Romans fitted their ships with a boarding bridge nicknamed the raven (*corvus*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "Rome had almost no navy in 260 BC. How did it design its first big fleet?",
+      "options": [
+        "By copying a shipwrecked Carthaginian warship",
+        "By hiring Greek shipwrights from Syracuse",
+        "By buying ships from Egypt",
+        "By enlarging its river barges"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#rome-builds-a-fleet",
+      "explanation": "The Romans copied a shipwrecked Carthaginian warship. Before this they had always borrowed small squadrons from their allies.",
+      "sourceQuote": "In 260 BC it began building a fleet, copying a shipwrecked Carthaginian warship.",
+      "reviewFlags": []
+    }
+  ]
+}

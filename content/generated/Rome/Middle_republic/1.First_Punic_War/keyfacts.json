@@ -1,0 +1,139 @@
+{
+  "description": "Key facts for this chapter, written by hand from the chapter text. Every entry links to the section that explains it.",
+  "people": [
+    {
+      "name": "Gaius Duilius",
+      "text": "Consul who won Rome’s first naval victory, at Mylae in 260 BC.",
+      "sec": "corvus-and-mylae"
+    },
+    {
+      "name": "Regulus",
+      "text": "Consul who invaded Africa in 256 BC and was captured in 255 BC.",
+      "sec": "regulus-in-africa"
+    },
+    {
+      "name": "Hamilcar Barca",
+      "text": "Carthaginian general in Sicily from 247 BC; he later led his veterans to Spain.",
+      "sec": "drepana-and-stalemate"
+    },
+    {
+      "name": "Catulus",
+      "text": "Consul whose fleet won the final battle, at the Aegates Islands in 241 BC.",
+      "sec": "battle-of-the-aegates"
+    },
+    {
+      "name": "Polybius",
+      "text": "Greek historian, our main source for the war.",
+      "sec": "sources-and-debates"
+    }
+  ],
+  "dates": [
+    {
+      "when": "264 BC",
+      "text": "Roman legions cross to Sicily: the war begins.",
+      "sec": "messana"
+    },
+    {
+      "when": "261 BC",
+      "text": "Carthage’s relief army is beaten at Akragas.",
+      "sec": "siege-of-akragas"
+    },
+    {
+      "when": "260 BC",
+      "text": "Rome builds a fleet; Duilius wins at Mylae.",
+      "sec": "corvus-and-mylae"
+    },
+    {
+      "when": "256 BC",
+      "text": "Cape Ecnomus, perhaps the largest sea battle ever; Regulus lands in Africa.",
+      "sec": "regulus-in-africa"
+    },
+    {
+      "when": "255 BC",
+      "text": "Regulus is captured; a storm sinks most of Rome’s fleet.",
+      "sec": "regulus-in-africa"
+    },
+    {
+      "when": "249 BC",
+      "text": "Carthage’s greatest naval victory, at Drepana.",
+      "sec": "drepana-and-stalemate"
+    },
+    {
+      "when": "247 BC",
+      "text": "Hamilcar Barca takes command in Sicily.",
+      "sec": "drepana-and-stalemate"
+    },
+    {
+      "when": "241 BC",
+      "text": "Battle of the Aegates Islands; peace; Sicily becomes Rome’s first province.",
+      "sec": "battle-of-the-aegates"
+    },
+    {
+      "when": "237 BC",
+      "text": "Rome forces Carthage to give up Sardinia and Corsica.",
+      "sec": "peace-and-aftermath"
+    }
+  ],
+  "terms": [
+    {
+      "latin": "Carthago",
+      "english": "Carthage",
+      "sec": "rome-and-carthage"
+    },
+    {
+      "latin": "Punici",
+      "english": "the Carthaginians (“Phoenicians”), hence “Punic”",
+      "sec": "rome-and-carthage"
+    },
+    {
+      "latin": "senatus",
+      "english": "the Senate",
+      "sec": "messana"
+    },
+    {
+      "latin": "comitia",
+      "english": "the popular assembly",
+      "sec": "messana"
+    },
+    {
+      "latin": "consules",
+      "english": "the two consuls",
+      "sec": "messana"
+    },
+    {
+      "latin": "praeda",
+      "english": "plunder",
+      "sec": "messana"
+    },
+    {
+      "latin": "legiones",
+      "english": "legions of about 4,500 men",
+      "sec": "messana"
+    },
+    {
+      "latin": "socii",
+      "english": "Rome’s allies",
+      "sec": "rome-builds-a-fleet"
+    },
+    {
+      "latin": "rostrum",
+      "english": "a warship’s bronze ram",
+      "sec": "rome-builds-a-fleet"
+    },
+    {
+      "latin": "corvus",
+      "english": "“the raven”: the boarding bridge",
+      "sec": "corvus-and-mylae"
+    },
+    {
+      "latin": "triumphus",
+      "english": "a victory parade",
+      "sec": "peace-and-aftermath"
+    },
+    {
+      "latin": "provincia",
+      "english": "an overseas territory under a Roman governor",
+      "sec": "peace-and-aftermath"
+    }
+  ]
+}

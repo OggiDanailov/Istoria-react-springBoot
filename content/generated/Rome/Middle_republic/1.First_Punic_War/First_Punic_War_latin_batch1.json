@@ -1,0 +1,145 @@
+{
+  "batchName": "Middle Republic: The First Punic War (264-241 BCE) - Latin words",
+  "chapterName": "Middle Republic: The First Punic War (264-241 BCE)",
+  "difficulty": 1,
+  "batchOrder": 9,
+  "description": "Written by hand from the chapter text: the Latin words it explains",
+  "questions": [
+    {
+      "question": "What was the rostrum on a Roman warship?",
+      "options": [
+        "A bronze ram at the waterline",
+        "A boarding bridge",
+        "The captain’s deck",
+        "A sail made of linen"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#rome-builds-a-fleet",
+      "explanation": "It was used to smash enemy hulls, and could weigh up to 270 kg (600 lb).",
+      "sourceQuote": "At the waterline sat a bronze ram (*rostrum*) weighing up to 270 kg (600 lb), used for smashing enemy hulls.",
+      "reviewFlags": []
+    },
+    {
+      "question": "After the war Sicily became Rome’s first provincia. What was that?",
+      "options": [
+        "An overseas territory run by a Roman governor",
+        "An allied city with its own king",
+        "A Roman colony of veterans",
+        "A free Greek city"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#peace-and-aftermath",
+      "explanation": "Sicily also became a vital source of grain for Rome.",
+      "sourceQuote": "Sicily became Rome's first province (*provincia*), an overseas territory run by a Roman governor",
+      "reviewFlags": []
+    },
+    {
+      "question": "Why is the war called “Punic”?",
+      "options": [
+        "From Punici, the Romans’ name for the Carthaginians",
+        "From a Sicilian city called Punicum",
+        "From the Latin for “sea war”",
+        "From the name of a Carthaginian king"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#rome-and-carthage",
+      "explanation": "Punici means Phoenicians, the ancestors of the Carthaginians.",
+      "sourceQuote": "Romans called the Carthaginians *Punici*, meaning Phoenicians, after their ancestors.",
+      "reviewFlags": []
+    },
+    {
+      "question": "In 264 BC the deadlocked Senate passed the question of war to the comitia. What was it?",
+      "options": [
+        "The popular assembly",
+        "The council of priests",
+        "The two consuls",
+        "The allied cities"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#messana",
+      "explanation": "One of the consuls urged war and promised rich plunder; the people voted yes.",
+      "sourceQuote": "so the question went to the popular assembly (*comitia*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did a consul promise the voters to win support for war in 264 BC?",
+      "options": [
+        "Praeda: rich plunder",
+        "Land in Sicily for every voter",
+        "An end to debts",
+        "A triumph for every soldier"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#messana",
+      "explanation": "Many Romans disliked aiding the Mamertines, but the promise of plunder helped carry the vote.",
+      "sourceQuote": "promised rich plunder (*praeda*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "Before 260 BC, how did Rome get warships?",
+      "options": [
+        "It borrowed small squadrons from its allies (socii)",
+        "It hired the Carthaginian fleet",
+        "It bought ships from Egypt",
+        "It had a large navy of its own"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#rome-builds-a-fleet",
+      "explanation": "In 260 BC it began building its own fleet, copying a shipwrecked Carthaginian warship.",
+      "sourceQuote": "having always borrowed small squadrons from its allies (*socii*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "About how many men were in each of the two legiones that crossed to Sicily in 264 BC?",
+      "options": [
+        "About 4,500",
+        "About 1,000",
+        "About 10,000",
+        "About 40,000"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#messana",
+      "explanation": "By 263 BC there were 40,000 Romans on the island.",
+      "sourceQuote": "two legions (*legiones*), Roman army units of about 4,500 men each",
+      "reviewFlags": []
+    },
+    {
+      "question": "What was the triumphus that Catulus celebrated?",
+      "options": [
+        "A victory parade through Rome",
+        "A naval review at the coast",
+        "A feast for the whole army",
+        "A sacrifice at Carthage"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#peace-and-aftermath",
+      "explanation": "Catulus’s fleet had won the final battle of the war at the Aegates Islands.",
+      "sourceQuote": "celebrated a triumph (*triumphus*), a victory parade through Rome.",
+      "reviewFlags": []
+    }
+  ]
+}

@@ -1,0 +1,190 @@
+{
+  "batchName": "Middle Republic: The First Punic War (264-241 BCE) - Medium Batch 1",
+  "chapterName": "Middle Republic: The First Punic War (264-241 BCE)",
+  "difficulty": 2,
+  "batchOrder": 3,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "What were the ships of Rome's final fleet, which carried no corvus, modelled on?",
+      "options": [
+        "Greek triremes from Syracuse",
+        "Duilius's flagship from Mylae",
+        "The heavy ships of Ecnomus",
+        "Egyptian royal galleys",
+        "A fast captured blockade runner"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#battle-of-the-aegates",
+      "explanation": "About 200 quinqueremes were built on the model of a fast captured blockade runner. With no corvus, Romans had to win as sailors.",
+      "sourceQuote": "About 200 quinqueremes were built at no cost to the state, modelled on a fast captured blockade runner.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did the Romans defeat Carthage's war elephants at Panormus in 251 BC?",
+      "options": [
+        "By blocking the road with chained wagons",
+        "By digging hidden pits in the road",
+        "By showering them with javelins from old siege earthworks",
+        "By frightening them with burning pigs",
+        "By charging them with heavy cavalry"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#drepana-and-stalemate",
+      "explanation": "Javelins from behind old earthworks panicked the elephants, which stampeded back through their own infantry. The Carthaginians then fled.",
+      "sourceQuote": "The Roman commander showered the beasts with javelins from behind old siege earthworks.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Why did Rome's victory at Akragas fail to bring a breakthrough in Sicily? (select all that apply)",
+      "options": [
+        "Sicily's rugged hills favoured defenders",
+        "Rome's army had been wiped out in the battle",
+        "Carthage's coastal towns could be supplied by sea",
+        "Syracuse turned against Rome again",
+        "Carthage's elephants held all the mountain passes"
+      ],
+      "correctAnswers": [
+        0,
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#siege-of-akragas",
+      "explanation": "The hilly terrain favoured defenders, and Carthage's fortified coastal towns could be resupplied by sea. Years of raids and sieges followed.",
+      "sourceQuote": "Sicily's rugged hills favoured defenders.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did a Roman consul attempt at Drepana in 249 BC, leading to Carthage's greatest naval victory of the war?",
+      "options": [
+        "A landing behind Hamilcar's lines",
+        "A naval assault in a storm",
+        "A blockade using sunken ships",
+        "A siege with floating towers",
+        "A night surprise attack on the enemy fleet"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#drepana-and-stalemate",
+      "explanation": "The consul tried a night surprise attack, but his ships scattered in the dark and were pinned against the shore. It was Carthage's greatest naval victory of the war.",
+      "sourceQuote": "A Roman consul then tried a night surprise attack on the enemy fleet at Drepana.",
+      "reviewFlags": []
+    },
+    {
+      "question": "When Carthage tried to recover Sardinia in 237 BC, what did Rome do?",
+      "options": [
+        "It agreed to share the island",
+        "It ignored the move entirely",
+        "It demanded Carthage hand over Hamilcar",
+        "It called it an act of war and forced Carthage to give up Sardinia and Corsica",
+        "It invaded Africa a second time"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#peace-and-aftermath",
+      "explanation": "Rome cynically treated the move as an act of war, seized Sardinia and Corsica, and demanded 1,200 more talents. This fuelled Carthaginian resentment.",
+      "sourceQuote": "It forced Carthage to surrender Sardinia and Corsica and pay 1,200 more talents.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Where did Hamilcar Barca lead his veterans in 237 BC to build a new power base?",
+      "options": [
+        "Numidia",
+        "Corsica",
+        "Sardinia",
+        "Spain",
+        "Gaul"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#peace-and-aftermath",
+      "explanation": "Hamilcar took his veterans to Spain in 237 BC. Carthage had earlier crushed its own rebellious foreign soldiers with great savagery.",
+      "sourceQuote": "That year Hamilcar led his veterans to Spain to build a new power base.",
+      "reviewFlags": []
+    },
+    {
+      "question": "After Regulus took Tunis, why did Carthage keep fighting instead of making peace?",
+      "options": [
+        "Egypt promised a large army",
+        "Its people rose up against the council",
+        "Regulus's peace terms were too harsh",
+        "Regulus refused to negotiate at all",
+        "Hamilcar Barca forbade it"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#regulus-in-africa",
+      "explanation": "Carthage asked for peace, but Regulus demanded such harsh terms that it chose to fight on. Tunis lay just 16 km from Carthage.",
+      "sourceQuote": "Carthage asked for peace, but his terms were so harsh that it fought on.",
+      "reviewFlags": []
+    },
+    {
+      "question": "When a Greek king from Epirus fought both Rome and Carthage in the 270s BC, how did Carthage help Rome?",
+      "options": [
+        "It sent war elephants to Italy",
+        "It once ferried Roman troops in its ships",
+        "It handed Rome the island of Corsica",
+        "It paid Rome's mercenaries for a year",
+        "It lent Rome its best admiral"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#rome-and-carthage",
+      "explanation": "Carthage supplied Rome and once carried Roman troops in its ships. The two cities had signed treaties in 509, 348 and around 279 BC.",
+      "sourceQuote": "When a Greek king from Epirus, in north-western Greece, fought them both in the 270s BC, Carthage supplied Rome and once ferried Roman troops in its ships.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What was the main tactical idea behind the corvus?",
+      "options": [
+        "Shooting arrows from a high platform",
+        "Turning a sea battle into a land battle",
+        "Setting enemy ships on fire",
+        "Towing captured ships back to port",
+        "Ramming ships below the waterline"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#corvus-and-mylae",
+      "explanation": "The corvus pinned two ships together so Roman soldiers could charge across. That suited Rome's legions, which excelled at land fighting.",
+      "sourceQuote": "A sea battle became a land battle, the kind Rome's legions excelled at.",
+      "reviewFlags": []
+    },
+    {
+      "question": "With the Senate deadlocked over helping Messana, who finally decided to send Roman forces?",
+      "options": [
+        "The chief priest after consulting omens",
+        "The Senate in a second vote",
+        "The two consuls acting alone",
+        "Rome's Italian allies",
+        "The popular assembly"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#messana",
+      "explanation": "The question went to the popular assembly, which voted yes. One consul had urged war and promised rich plunder.",
+      "sourceQuote": "The Senate (*senatus*) was deadlocked, so the question went to the popular assembly (*comitia*).",
+      "reviewFlags": []
+    }
+  ]
+}

@@ -1,0 +1,195 @@
+{
+  "batchName": "Middle Republic: Hannibal in Italy (241-216 BCE) - Medium Batch 2",
+  "chapterName": "Middle Republic: Hannibal in Italy (241-216 BCE)",
+  "difficulty": 2,
+  "batchOrder": 4,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Roughly how many of the 40,000 Romans at the Trebia fought their way out?",
+      "options": [
+        "About 35,000",
+        "About 2,000",
+        "About 20,000",
+        "About 10,000",
+        "About 30,000"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#trebia-and-trasimene",
+      "explanation": "The Romans were surrounded on ground of Hannibal's choosing, and only about a quarter escaped. Afterwards Gauls flocked to Hannibal's army.",
+      "sourceQuote": "The Carthaginians surrounded the Romans, and only about 10,000 of 40,000 fought their way out.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How is Varro, one of the two consuls for 216 BC, described?",
+      "options": [
+        "A Greek-educated senator who sought peace",
+        "A veteran general who backed Fabius's strategy",
+        "An aristocrat who favoured a middle course",
+        "A former dictator recalled from Sicily",
+        "A man of reportedly humble origins demanding aggressive war"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#fabius-the-delayer",
+      "explanation": "Varro reportedly came from humble origins and demanded an aggressive war. His aristocratic colleague favoured a middle course.",
+      "sourceQuote": "For 216 BC the voters elected two consuls: Varro, a man of reportedly humble origins who demanded an aggressive war, and an aristocratic colleague who favoured a middle course.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Why might Polybius's account of Cannae be biased?",
+      "options": [
+        "His patron was the grandson of the consul killed there",
+        "He wrote under the emperor Augustus",
+        "He relied only on Carthaginian sources",
+        "He had served as an officer under Hannibal",
+        "He was Varro's personal secretary"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#sources-and-blame",
+      "explanation": "Polybius's patron descended from Varro's colleague, the consul who died at Cannae. His account also survives only in fragments after 216 BC.",
+      "sourceQuote": "But his account survives only in fragments after 216 BC, and his patron was the grandson of the consul killed at Cannae.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which assets did the Barcas' Spanish domain give Carthage? (select all that apply)",
+      "options": [
+        "Silver mines",
+        "Control of the Rhône crossings",
+        "Shipyards",
+        "Rich farmland",
+        "A deep pool of recruits"
+      ],
+      "correctAnswers": [
+        0,
+        2,
+        3,
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#barcas-in-spain",
+      "explanation": "Years of mountain fighting won a near-royal domain that supplied silver, farmland, shipyards and soldiers. Before that, Carthage had held only a few coastal towns in Spain.",
+      "sourceQuote": "It gave Carthage silver mines, rich farmland, shipyards and a deep pool of recruits.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did researchers report finding in peat bogs near the Col de la Traversette? (select all that apply)",
+      "options": [
+        "Material radiocarbon-dated to around 218 BC",
+        "Carthaginian weapons and camp remains",
+        "Soil heavily churned by animals and people",
+        "The bones of a war elephant",
+        "Unusual levels of horse and mule gut bacteria"
+      ],
+      "correctAnswers": [
+        0,
+        2,
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#which-pass",
+      "explanation": "The researchers reported churned soil and unusual levels of gut bacteria from horses and mules, dated to around 218 BC. No weapons or camps have been found on any route.",
+      "sourceQuote": "Researchers studying peat bogs on both sides of its summit found soil heavily churned, they argue, by thousands of animals and people.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Whom did Hannibal place in the crescent-shaped centre of his line at Cannae?",
+      "options": [
+        "Freed Italian allies",
+        "Veteran African infantry",
+        "Gauls and Spaniards, with himself among them",
+        "Spanish and Gallic horsemen",
+        "His war elephants"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#battle-of-cannae",
+      "explanation": "Gauls and Spaniards held the centre, which bulged toward the enemy and was meant to give ground. Veteran African infantry waited at either end.",
+      "sourceQuote": "He placed Gauls and Spaniards in the centre, bulging toward the enemy in a crescent, and stood among them himself.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Why did Hannibal free captured Roman allies after his early victories and send them home?",
+      "options": [
+        "To pull Rome's alliance apart",
+        "Because he could not feed them",
+        "To honour the terms of the Ebro Treaty",
+        "To exchange them for Carthaginian prisoners",
+        "To recruit them as guides over the Apennines"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#trebia-and-trasimene",
+      "explanation": "Hannibal sent Rome's Italian allies home to praise Carthage, hoping to break up Rome's alliance. Roman prisoners, by contrast, were treated harshly.",
+      "sourceQuote": "Hannibal hoped to pull Rome's alliance apart.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which places went over to Hannibal after Cannae? (select all that apply)",
+      "options": [
+        "Massalia",
+        "Ostia",
+        "Capua",
+        "Saguntum",
+        "Tarentum"
+      ],
+      "correctAnswers": [
+        2,
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#after-cannae",
+      "explanation": "Capua, Italy's second city, and the port of Tarentum both defected to Hannibal. Rome had lost perhaps 150,000 men in just 20 months.",
+      "sourceQuote": "Capua, Italy's second city, and the port of Tarentum went over to Hannibal.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Where did a Roman army land in 218 BC, only to miss Hannibal as he passed?",
+      "options": [
+        "At Tarentum",
+        "In Sardinia",
+        "At New Carthage",
+        "At Massalia",
+        "At Saguntum"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#crossing-the-alps",
+      "explanation": "The Roman army landed at Massalia, a Greek city that is now Marseille, but Hannibal had already slipped past. He then crossed the Rhône and pushed on toward the Alps.",
+      "sourceQuote": "A Roman army that landed at Massalia, a Greek city now Marseille, missed him.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which Alpine pass has recently gained ground as Hannibal's likely route?",
+      "options": [
+        "Little St Bernard Pass",
+        "Col de Clapier",
+        "Col de la Traversette",
+        "Brenner Pass",
+        "Great St Bernard Pass"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#which-pass",
+      "explanation": "The Col de la Traversette, on the modern French-Italian border, is now a leading candidate. Sceptics still argue the evidence is too thin to be certain.",
+      "sourceQuote": "Recently the Traversette, on the modern French-Italian border, has gained ground.",
+      "reviewFlags": []
+    }
+  ]
+}

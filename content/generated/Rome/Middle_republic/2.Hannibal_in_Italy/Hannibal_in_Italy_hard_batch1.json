@@ -1,0 +1,203 @@
+{
+  "batchName": "Middle Republic: Hannibal in Italy (241-216 BCE) - Hard Batch 1",
+  "chapterName": "Middle Republic: Hannibal in Italy (241-216 BCE)",
+  "difficulty": 3,
+  "batchOrder": 5,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "How did Hannibal's father reportedly die around 228 BC?",
+      "options": [
+        "Of fever while crossing the Ebro",
+        "Drowned in a shipwreck off Sardinia",
+        "Murdered by his own officers",
+        "Recalled and executed in Carthage",
+        "Captured and executed by a Roman army",
+        "Killed fighting local tribes in Spain"
+      ],
+      "correctAnswers": [
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#barcas-in-spain",
+      "explanation": "He was killed fighting local tribes, reportedly in front of his young son Hannibal. Command then passed to his son-in-law.",
+      "sourceQuote": "He was killed fighting local tribes around 228 BC, reportedly before the eyes of his young son Hannibal.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How long had the First Punic War lasted when it ended in 241 BC?",
+      "options": [
+        "Fourteen years",
+        "Thirty years",
+        "Seventeen years",
+        "Twenty-three years",
+        "Ten years",
+        "Eight years"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 3,
+      "textReference": "#after-the-first-war",
+      "explanation": "The war lasted twenty-three years, the longest continuous conflict of the ancient world. Under Rome's peace terms, Carthage gave up its possessions on Sicily.",
+      "sourceQuote": "In 241 BC Rome and Carthage (*Carthago*), a wealthy trading city in what is now Tunisia, ended twenty-three years of war.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which points lead some historians to suspect Varro was made a scapegoat for Cannae? (select all that apply)",
+      "options": [
+        "The commander usually stood on the right, where his colleague fought",
+        "The Senate greeted him warmly after the battle",
+        "His colleague's powerful family guarded its reputation",
+        "Voters later elected Varro dictator",
+        "Livy openly praised Varro's courage in the battle",
+        "Polybius named Varro's colleague as the true commander"
+      ],
+      "correctAnswers": [
+        0,
+        1,
+        2
+      ],
+      "difficulty": 3,
+      "textReference": "#sources-and-blame",
+      "explanation": "Unlike other defeated generals, Varro was welcomed by the Senate. His colleague's family protected its reputation, and his colleague fought on the right wing, the commander's usual post.",
+      "sourceQuote": "Tellingly, the Senate greeted Varro warmly after the battle, unlike other defeated generals.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did Polybius and Livy differ on Roman deaths at Cannae?",
+      "options": [
+        "Polybius gave 70,000 infantry; Livy about 48,000",
+        "Polybius gave 150,000; Livy about 80,000",
+        "Both gave exactly 50,000 killed",
+        "Polybius gave about 48,000; Livy 70,000 infantry",
+        "Polybius gave 86,000; Livy about 70,000",
+        "Polybius gave 10,000; Livy about 8,000"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#after-cannae",
+      "explanation": "Polybius counted 70,000 infantry killed and 10,000 captured, while Livy gave about 48,000 dead. Hannibal lost between 5,700 and 8,000 men.",
+      "sourceQuote": "Polybius, the most trusted ancient historian, put losses at 70,000 infantry killed and 10,000 captured.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How was command of the Roman army arranged at Cannae?",
+      "options": [
+        "Fabius held supreme command as dictator",
+        "Varro led the infantry, his colleague the cavalry",
+        "The two consuls alternated command day by day",
+        "A senior legate commanded in the consuls' absence",
+        "The Senate chose a commander by lot each week",
+        "Varro's colleague held sole command throughout"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 3,
+      "textReference": "#battle-of-cannae",
+      "explanation": "The consuls took turns in command day by day. Tradition says Varro held command on 2 August 216 BC, the day of the battle.",
+      "sourceQuote": "The two consuls took turns in command day by day, and tradition says Varro held it on 2 August 216 BC, the day of battle.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did Hannibal do after Saguntum fell? (select all that apply)",
+      "options": [
+        "Shared the loot with the citizens of Carthage",
+        "Sent its leaders to Carthage as hostages",
+        "Sold its people as slaves",
+        "Handed the city back to Rome",
+        "Shared the loot with his soldiers",
+        "Resettled it with Gallic colonists"
+      ],
+      "correctAnswers": [
+        0,
+        2,
+        4
+      ],
+      "difficulty": 3,
+      "textReference": "#saguntum",
+      "explanation": "Hannibal enslaved the Saguntines and shared the spoils with both his army and the people of Carthage. The siege had lasted eight months without any Roman help.",
+      "sourceQuote": "When it fell, Hannibal sold its people as slaves and shared the loot with his soldiers and the citizens of Carthage.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How was Fabius vindicated after his dictatorship was not renewed?",
+      "options": [
+        "He led the peace embassy after Cannae",
+        "He was elected consul in 215 and 214 BC",
+        "He was granted a triumph after Trasimene",
+        "He commanded the left wing at Cannae",
+        "He was made dictator again for 216 BC",
+        "He was named censor for life"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 3,
+      "textReference": "#fabius-the-delayer",
+      "explanation": "After the disaster at Cannae, voters elected Fabius consul in 215 and again in 214 BC. In 216 BC they had preferred Varro's call for aggressive war.",
+      "sourceQuote": "Events would soon vindicate Fabius, who was elected consul in 215 and again in 214 BC.",
+      "reviewFlags": []
+    },
+    {
+      "question": "With roughly what force did Hannibal enter northern Italy in November 218 BC?",
+      "options": [
+        "86,000 men including Gallic allies",
+        "20,000 infantry, 6,000 cavalry, a few elephants",
+        "30,000 infantry, 8,000 cavalry, 20 elephants",
+        "60,000 infantry and cavalry combined",
+        "40,000 infantry, 10,000 cavalry, 37 elephants",
+        "12,000 infantry, 2,000 cavalry, no elephants"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 3,
+      "textReference": "#crossing-the-alps",
+      "explanation": "He arrived with about 20,000 infantry, 6,000 cavalry and the few survivors of 37 elephants. On the descent, his exhausted troops had to rebuild a path broken by a landslide.",
+      "sourceQuote": "In November he entered northern Italy with about 20,000 infantry, 6,000 cavalry and the few survivors of 37 elephants.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which sequence of Hannibal's victories in Italy is in the correct chronological order?",
+      "options": [
+        "Trasimene, Ticinus, Trebia",
+        "Ticinus, Trasimene, Trebia",
+        "Trebia, Trasimene, Ticinus",
+        "Trasimene, Trebia, Ticinus",
+        "Trebia, Ticinus, Trasimene",
+        "Ticinus, Trebia, Trasimene"
+      ],
+      "correctAnswers": [
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#trebia-and-trasimene",
+      "explanation": "The Ticinus came in late November 218 BC, the Trebia in December 218 BC and Lake Trasimene in spring 217 BC. Before Trasimene, Hannibal crossed the Apennines by an unguarded route.",
+      "sourceQuote": "In late November 218 BC his cavalry routed Roman horsemen at the Ticinus, a river in the Po valley, and most Gallic tribes declared for him.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Polybius says Hannibal cheered his men by pointing to the plains of the Po below. Why does this count against the Little St Bernard Pass?",
+      "options": [
+        "Its peat bogs show no disturbance",
+        "The plains cannot be seen from it",
+        "It was guarded by Roman forts",
+        "It lies too far east of the Rhône",
+        "It is the highest pass in the Alps",
+        "It was blocked by a landslide"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 3,
+      "textReference": "#which-pass",
+      "explanation": "The Po plains are visible from the Traversette but not from the Little St Bernard. Sceptics still argue the evidence is too thin to be certain.",
+      "sourceQuote": "That view is visible from the Traversette, but not from the Little St Bernard.",
+      "reviewFlags": []
+    }
+  ]
+}

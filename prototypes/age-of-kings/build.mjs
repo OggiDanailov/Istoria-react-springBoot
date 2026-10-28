@@ -53,7 +53,7 @@ for (const c of CONFIG.chapters) {
   const got = sections.reduce((n, x) => n + words(x.body), 0)
   if (got !== expected) throw new Error(`${c.id}: chronicle has ${got} words but chapter.md has ${expected}`)
   const ch = {
-    id: c.id, era: c.era, short: c.short, title: c.chapterName.replace(/\s*\([^)]*\)\s*$/, '').replace(/^Early Republic:\s*/, '').replace(/ - /g, ': '), period: c.period.replace('BCE', 'BC'),
+    id: c.id, era: c.era, short: c.short, title: c.chapterName.replace(/\s*\([^)]*\)\s*$/, '').replace(/^(Early|Middle|Late) Republic:\s*/, '').replace(/ - /g, ': '), period: c.period.replace('BCE', 'BC'),
     sources: c.sources, briefing: g.briefing, sections, battle: c.battle,
     timelines: g.timelines.map(t => ({ name: t.name, blurb: t.blurb, events: t.events.filter(ok).map(e => ({ label: e.label, when: e.when, y: e.year, fact: e.fact, sec: e.sectionId })) }))
       .filter(t => t.events.length >= 3),
@@ -65,7 +65,7 @@ for (const c of CONFIG.chapters) {
       .filter(o => o.rounds.length >= 3),
     whos: g.whoAmI.map(w => ({ name: w.name, blurb: w.blurb, people: w.people.filter(ok).map(p => ({ name: p.name, options: p.options, clues: p.clues, sec: p.sectionId })) }))
       .filter(w => w.people.length >= 2),
-    maps: [{ name: 'Where It Happened', blurb: 'Place the towns on the map', places: g.places.filter(p => ok(p) && p.lat > 36 && p.lat < 47.5 && p.lon > 6 && p.lon < 19.5).map(p => ({ name: p.name, lat: p.lat, lon: p.lon, why: p.why, sec: p.sectionId })) }]
+    maps: [{ name: 'Where It Happened', blurb: 'Place the towns on the map', places: g.places.filter(p => ok(p) && inArea(p, c.mapArea)).map(p => ({ name: p.name, lat: p.lat, lon: p.lon, why: p.why, sec: p.sectionId })) }]
       .filter(m => m.places.length >= 3),
     quizPool: quizPool(dir),
     // optional, written by hand: people, dates and Latin words, each linked to its section
@@ -92,6 +92,11 @@ for (const c of CONFIG.chapters) {
 if (!chapters.length) throw new Error('No chapters with game data')
 
 const template = fs.readFileSync(path.join(HERE, 'template.html'), 'utf8')
+// Map Drop: Italy for the early chapters, the Mediterranean once Rome fights overseas (as in content-gen)
+function inArea(p, area = 'italy') {
+  const [lat, lon] = area === 'mediterranean' ? [[29, 47.5], [-10, 37]] : [[36, 47.5], [6, 19.5]]
+  return p.lat > lat[0] && p.lat < lat[1] && p.lon > lon[0] && p.lon < lon[1]
+}
 const land = fs.readFileSync(path.join(HERE, 'land.json'), 'utf8').trim()
 // Embedded JSON must not close the <script> tag
 const json = v => JSON.stringify(v).replace(/</g, '\\u003c')

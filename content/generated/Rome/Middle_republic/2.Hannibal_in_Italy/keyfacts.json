@@ -1,0 +1,129 @@
+{
+  "description": "Key facts for this chapter, written by hand from the chapter text. Every entry links to the section that explains it.",
+  "people": [
+    {
+      "name": "Barca",
+      "text": "Hannibal’s father, “lightning”, who built Carthage a base in Spain.",
+      "sec": "barcas-in-spain"
+    },
+    {
+      "name": "Hannibal",
+      "text": "Carthaginian general who crossed the Alps and won at the Trebia, Trasimene and Cannae.",
+      "sec": "barcas-in-spain"
+    },
+    {
+      "name": "Fabius Maximus",
+      "text": "Dictator who avoided battle and wore Hannibal down: the Delayer.",
+      "sec": "fabius-the-delayer"
+    },
+    {
+      "name": "Varro",
+      "text": "Consul of humble origins, blamed by Livy for Cannae.",
+      "sec": "fabius-the-delayer"
+    },
+    {
+      "name": "Polybius",
+      "text": "Greek historian, the most trusted ancient source for these years.",
+      "sec": "sources-and-blame"
+    },
+    {
+      "name": "Livy",
+      "text": "Patriotic Roman historian who wrote under Augustus.",
+      "sec": "sources-and-blame"
+    }
+  ],
+  "dates": [
+    {
+      "when": "238 BC",
+      "text": "Rome seizes Sardinia and Corsica.",
+      "sec": "after-the-first-war"
+    },
+    {
+      "when": "237 BC",
+      "text": "Barca leads his army to Spain.",
+      "sec": "barcas-in-spain"
+    },
+    {
+      "when": "226 BC",
+      "text": "The Ebro Treaty.",
+      "sec": "barcas-in-spain"
+    },
+    {
+      "when": "221 BC",
+      "text": "The army chooses Hannibal, aged 26, as commander.",
+      "sec": "barcas-in-spain"
+    },
+    {
+      "when": "219 BC",
+      "text": "Hannibal besieges and takes Saguntum.",
+      "sec": "saguntum"
+    },
+    {
+      "when": "218 BC",
+      "text": "Rome declares war; Hannibal crosses the Alps; the Trebia.",
+      "sec": "crossing-the-alps"
+    },
+    {
+      "when": "217 BC",
+      "text": "Ambush at Lake Trasimene; Fabius becomes dictator.",
+      "sec": "trebia-and-trasimene"
+    },
+    {
+      "when": "2 August 216 BC",
+      "text": "The battle of Cannae.",
+      "sec": "battle-of-cannae"
+    }
+  ],
+  "terms": [
+    {
+      "latin": "Carthago",
+      "english": "Carthage",
+      "sec": "after-the-first-war"
+    },
+    {
+      "latin": "Hispania",
+      "english": "Iberia: Spain and Portugal",
+      "sec": "barcas-in-spain"
+    },
+    {
+      "latin": "Gallia Cisalpina",
+      "english": "Cisalpine Gaul, the Po valley",
+      "sec": "saguntum"
+    },
+    {
+      "latin": "coloniae",
+      "english": "colonies of settlers",
+      "sec": "saguntum"
+    },
+    {
+      "latin": "consules",
+      "english": "the two consuls",
+      "sec": "trebia-and-trasimene"
+    },
+    {
+      "latin": "socii",
+      "english": "Rome’s Italian allies",
+      "sec": "trebia-and-trasimene"
+    },
+    {
+      "latin": "Cunctator",
+      "english": "“the Delayer”",
+      "sec": "fabius-the-delayer"
+    },
+    {
+      "latin": "senatus",
+      "english": "the Senate",
+      "sec": "battle-of-cannae"
+    },
+    {
+      "latin": "legiones",
+      "english": "legions",
+      "sec": "battle-of-cannae"
+    },
+    {
+      "latin": "Libri Sibyllini",
+      "english": "the Sibylline Books of prophecy",
+      "sec": "after-cannae"
+    }
+  ]
+}

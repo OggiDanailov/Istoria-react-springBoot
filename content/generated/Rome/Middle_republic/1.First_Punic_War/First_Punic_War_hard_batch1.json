@@ -1,0 +1,203 @@
+{
+  "batchName": "Middle Republic: The First Punic War (264-241 BCE) - Hard Batch 1",
+  "chapterName": "Middle Republic: The First Punic War (264-241 BCE)",
+  "difficulty": 3,
+  "batchOrder": 5,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Which factors helped Rome win the Battle of the Aegates Islands? (select all that apply)",
+      "options": [
+        "A strong tailwind filled the Roman sails",
+        "Roman crews had been drilled relentlessly",
+        "Corvus bridges let legionaries board",
+        "Catulus personally led the fight unhurt",
+        "Carthaginian ships were weighed down with grain",
+        "Carthage was short of trained rowers"
+      ],
+      "correctAnswers": [
+        1,
+        4,
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#battle-of-the-aegates",
+      "explanation": "Carthage's fleet was laden with grain and short of trained rowers, while Catulus had drilled his crews hard. The wounded Catulus left the fight to his deputy, and the Romans rowed into a headwind.",
+      "sourceQuote": "Carthage took nine months to gather 250 warships, short of trained rowers and loaded with grain for its starving garrisons.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Roughly how many galleys did Rome build over the course of the First Punic War?",
+      "options": [
+        "About 200",
+        "About 464",
+        "About 330",
+        "Over 1,000",
+        "Over 3,000",
+        "About 120"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 3,
+      "textReference": "#peace-and-aftermath",
+      "explanation": "Rome built over 1,000 galleys during the war. This laid the foundation for 600 years of Roman mastery at sea.",
+      "sourceQuote": "Rome had built over 1,000 galleys during the war, laying the foundation for 600 years of mastery at sea.",
+      "reviewFlags": []
+    },
+    {
+      "question": "At Mylae, after the ravens grappled the first 30 Carthaginian ships, what happened when the rest swung round to strike from the side?",
+      "options": [
+        "They rescued all 30 grappled ships",
+        "The Romans retreated to harbour",
+        "They broke through and sank Duilius's flagship",
+        "A storm scattered both fleets",
+        "Duilius's men captured 20 more",
+        "Duilius was captured"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 3,
+      "textReference": "#corvus-and-mylae",
+      "explanation": "The corvus could swing from side to side, and Duilius's men captured 20 more ships. The faster survivors fled.",
+      "sourceQuote": "When the rest swung round to strike from the side, Duilius's men captured 20 more.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What have the seabed finds from the Aegates battle suggested? (select all that apply)",
+      "options": [
+        "They reveal ships larger than quinqueremes",
+        "They prove the corvus was used at the Aegates",
+        "Storage jars confirm Carthage's ships carried supplies",
+        "They show Polybius placed the battle wrongly",
+        "The rams suggest smaller ships than quinqueremes",
+        "Their location supports Polybius's account"
+      ],
+      "correctAnswers": [
+        2,
+        4,
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#sources-and-debates",
+      "explanation": "The finds' location backs Polybius and the jars confirm the Carthaginian ships carried supplies. But the rams' size suggests smaller ships than the quinqueremes he describes.",
+      "sourceQuote": "Their location supports Polybius, and the jars confirm Carthage's ships carried supplies.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Following the disaster at Drepana, which second defeat all but swept Rome from the sea for seven years?",
+      "options": [
+        "Lilybaeum",
+        "Phintias",
+        "Mylae",
+        "Ecnomus",
+        "Lipari",
+        "Panormus"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 3,
+      "textReference": "#drepana-and-stalemate",
+      "explanation": "The defeat off Phintias, on Sicily's south coast, left Rome almost without a navy for seven years. By then Carthage held only Lilybaeum and Drepana in Sicily.",
+      "sourceQuote": "A second defeat off Phintias, on Sicily's south coast, all but swept Rome from the sea for seven years.",
+      "reviewFlags": []
+    },
+    {
+      "question": "After rescuing survivors from Africa in 255 BC, the Roman fleet hit a storm on the way home. How bad was the loss?",
+      "options": [
+        "24 of 330 ships lost",
+        "All 464 ships sunk with no survivors",
+        "150 ships sunk, about 30,000 drowned",
+        "94 of 350 ships lost",
+        "384 of 464 ships sunk, about 100,000 drowned",
+        "220 of 330 ships sunk, about 50,000 drowned"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 3,
+      "textReference": "#regulus-in-africa",
+      "explanation": "The storm sank 384 of 464 ships and drowned about 100,000 men. Another storm sank 150 Roman ships in 253 BC.",
+      "sourceQuote": "A rescue fleet beat Carthage's navy, but a storm on the way home sank 384 of 464 ships, drowning about 100,000 men.",
+      "reviewFlags": []
+    },
+    {
+      "question": "By 272 BC, Rome controlled the Italian peninsula south of which river?",
+      "options": [
+        "Adige",
+        "Rubicon",
+        "Tiber",
+        "Arno",
+        "Volturnus",
+        "Po"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 3,
+      "textReference": "#rome-and-carthage",
+      "explanation": "Rome controlled Italy south of the River Arno, which flows past Pisa. It had spent a century conquering its neighbours.",
+      "sourceQuote": "By 272 BC it controlled the Italian peninsula south of the River Arno, which flows past Pisa.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How many oarsmen rowed a standard quinquereme?",
+      "options": [
+        "200",
+        "500",
+        "280",
+        "120",
+        "300",
+        "170"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 3,
+      "textReference": "#rome-builds-a-fleet",
+      "explanation": "A quinquereme was about 45 m long and rowed by 280 oarsmen. It also carried 20 deck crew and usually 40 marines.",
+      "sourceQuote": "It was a galley about 45 m (150 ft) long, rowed by 280 oarsmen.",
+      "reviewFlags": []
+    },
+    {
+      "question": "When two Roman legions crossed to Messana in 264 BC, what did they find?",
+      "options": [
+        "Carthage's fleet blockading the harbour",
+        "A Carthaginian garrison holding the citadel",
+        "The city had been abandoned",
+        "The Mamertines had already expelled the Carthaginians",
+        "Syracuse had captured the city",
+        "The Mamertines had surrendered to Syracuse"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 3,
+      "textReference": "#messana",
+      "explanation": "Carthage had acted first and garrisoned Messana, but the Mamertines had already thrown the Carthaginians out by the time Rome arrived. Each legion numbered about 4,500 men.",
+      "sourceQuote": "The Mamertines had already expelled the Carthaginians.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What was notable about the battle fought outside Akragas in spring 261 BC?",
+      "options": [
+        "It was Hamilcar Barca's only defeat",
+        "It was fought at night",
+        "It was one of only two full-scale pitched battles on Sicily in the war",
+        "It was won by Carthage's elephants",
+        "It ended with Regulus's capture",
+        "It was the first use of the corvus"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 3,
+      "textReference": "#siege-of-akragas",
+      "explanation": "The Carthaginian relief army was heavily defeated in one of only two full-scale pitched battles on Sicily. The garrison slipped away and 25,000 inhabitants were sold into slavery.",
+      "sourceQuote": "He was heavily defeated in one of only two full-scale pitched battles fought on Sicily in the whole war.",
+      "reviewFlags": []
+    }
+  ]
+}

@@ -1,0 +1,179 @@
+{
+  "batchName": "Middle Republic: Hannibal in Italy (241-216 BCE) - Easy Batch 2",
+  "chapterName": "Middle Republic: Hannibal in Italy (241-216 BCE)",
+  "difficulty": 1,
+  "batchOrder": 2,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "What word did French scholars coin for the endless hunt for Hannibal's Alpine route?",
+      "options": [
+        "Hannibalism",
+        "Punicology",
+        "Barcamania",
+        "Alpinomania"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#which-pass",
+      "explanation": "'Hannibalism' describes chasing a question that may have no answer. Polybius gives just three place names, and no weapons or camps have been found.",
+      "sourceQuote": "French scholars coined a word, 'Hannibalism', for chasing a question that may have no answer.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What is Hannibal's famous manoeuvre at Cannae called?",
+      "options": [
+        "Testudo formation",
+        "Double envelopment",
+        "Oblique order",
+        "Feigned retreat"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#battle-of-cannae",
+      "explanation": "Hannibal's African infantry closed in on both flanks while his cavalry struck the Roman rear. This pincer movement has been studied by generals ever since.",
+      "sourceQuote": "This 'double envelopment', or pincer movement, has been studied by generals ever since.",
+      "reviewFlags": []
+    },
+    {
+      "question": "After Hannibal's cavalry won at the Ticinus in 218 BC, who declared for him?",
+      "options": [
+        "Rome's Sicilian allies",
+        "The Greek city of Massalia",
+        "Most Gallic tribes",
+        "The city of Capua"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#trebia-and-trasimene",
+      "explanation": "After the cavalry victory at the Ticinus, most Gallic tribes declared for Hannibal. More Gauls flocked to him after the Trebia, swelling his army to some 60,000.",
+      "sourceQuote": "In late November 218 BC his cavalry routed Roman horsemen at the Ticinus, a river in the Po valley, and most Gallic tribes declared for him.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How old was Hannibal when the army's officers chose him as their commander in 221 BC?",
+      "options": [
+        "26",
+        "19",
+        "35",
+        "42"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#barcas-in-spain",
+      "explanation": "Hannibal was just 26 when the officers picked him. He took over after his brother-in-law, the previous commander, was murdered.",
+      "sourceQuote": "When the son-in-law was murdered in 221 BC, the army's officers chose Hannibal, then just 26, as their commander.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Where did Hannibal ambush a Roman army in 217 BC, killing the consul leading it?",
+      "options": [
+        "Lake Trasimene",
+        "The Ticinus",
+        "Cannae",
+        "Saguntum"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#trebia-and-trasimene",
+      "explanation": "At Lake Trasimene in central Italy, some 15,000 Romans died, the consul among them. Another 10,000 were captured.",
+      "sourceQuote": "At Lake Trasimene in central Italy he sprang an ambush.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did Hannibal get his elephants across the Rhône?",
+      "options": [
+        "By marching them upstream to the river's source",
+        "By swimming them across a shallow ford",
+        "Over a stone bridge built by his engineers",
+        "On rafts covered with earth so they seemed on land"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#crossing-the-alps",
+      "explanation": "The rafts were covered with earth so the elephants believed they were still on land. Meanwhile a detachment crossed upstream to attack the hostile Gauls from behind.",
+      "sourceQuote": "His elephants were coaxed onto rafts covered with earth, so they believed they were still on land.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What emergency office did Roman voters give Fabius after the defeat at Trasimene?",
+      "options": [
+        "Praetor",
+        "Dictator",
+        "Tribune of the plebs",
+        "Censor"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#fabius-the-delayer",
+      "explanation": "A dictator held supreme command for a limited term. Fabius was the same senator who had carried Rome's ultimatum to Carthage.",
+      "sourceQuote": "The voters turned to Fabius Maximus, the senator who had carried Rome's ultimatum to Carthage, and made him dictator, an emergency office giving one man supreme command for a limited term.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Who reportedly told Hannibal, 'You know how to win a victory, Hannibal; you do not know how to use it'?",
+      "options": [
+        "Fabius Maximus",
+        "His cavalry commander",
+        "A Gallic chieftain",
+        "The consul Varro"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#after-cannae",
+      "explanation": "His cavalry commander is said to have urged a march on Rome after Cannae. Modern historians note that Hannibal's battered army was in no state to assault the city.",
+      "sourceQuote": "His cavalry commander urged a march on Rome and, it is said, cried: 'You know how to win a victory, Hannibal; you do not know how to use it.'",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which Spanish city, which had an agreement with Rome, did Hannibal besiege in 219 BC?",
+      "options": [
+        "Gades",
+        "Saguntum",
+        "New Carthage",
+        "Massalia"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#saguntum",
+      "explanation": "Hannibal besieged Saguntum after he had conquered the other tribes south of the Ebro. The city held out for eight months, and Rome sent no help.",
+      "sourceQuote": "When that failed, he besieged the city in 219 BC.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did the Greek historian Polybius come to live in Rome?",
+      "options": [
+        "He was taken there as a hostage",
+        "He fled there from Carthage",
+        "He served there as an ambassador",
+        "He was hired as a tutor by the Senate"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#sources-and-blame",
+      "explanation": "Polybius was taken to Rome as a hostage in 167 BC. He interviewed participants from both sides, and modern historians generally trust him.",
+      "sourceQuote": "Polybius was a Greek taken to Rome as a hostage in 167 BC, who wrote after 146 BC.",
+      "reviewFlags": []
+    }
+  ]
+}

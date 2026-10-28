@@ -1,0 +1,190 @@
+{
+  "batchName": "Middle Republic: The First Punic War (264-241 BCE) - Medium Batch 2",
+  "chapterName": "Middle Republic: The First Punic War (264-241 BCE)",
+  "difficulty": 2,
+  "batchOrder": 4,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "What makes the Battle of Cape Ecnomus in 256 BC stand out?",
+      "options": [
+        "It was fought entirely at night",
+        "It was possibly the largest naval battle in history by combatants",
+        "It was the first battle with the corvus",
+        "It was Carthage's greatest naval victory",
+        "It ended the war"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#regulus-in-africa",
+      "explanation": "With some 680 ships and up to 290,000 crew and marines, Ecnomus may be history's largest naval battle by number of combatants. Carthage lost 94 ships, Rome 24.",
+      "sourceQuote": "With some 680 ships and up to 290,000 crew and marines, it was possibly the largest naval battle in history by number of combatants.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Whom did Carthage hire to retrain its army against Regulus?",
+      "options": [
+        "A deserter from the Roman legions",
+        "An Egyptian general",
+        "A Spartan mercenary commander",
+        "An Athenian admiral",
+        "A Macedonian engineer"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#regulus-in-africa",
+      "explanation": "A Spartan mercenary commander retrained Carthage's army. In 255 BC the retrained army crushed the Romans and captured Regulus.",
+      "sourceQuote": "Carthage hired a Spartan mercenary commander to retrain its army.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Nearly bankrupt by 243 BC, how did Rome pay for its final war fleet?",
+      "options": [
+        "By having its richest citizens each fund a warship",
+        "By melting down temple treasures",
+        "By borrowing money from Egypt",
+        "By selling captured Sicilians into slavery",
+        "By taxing its Italian allies heavily"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#battle-of-the-aegates",
+      "explanation": "The Senate asked the richest Romans to fund a warship each, to be repaid from Carthage's future war payments. Egypt had refused Carthage a loan.",
+      "sourceQuote": "So the Senate asked the richest Romans each to fund a warship, to be repaid from Carthage's future war payments.",
+      "reviewFlags": []
+    },
+    {
+      "question": "During the siege of Akragas, what gave the garrison its chance to break into the Roman camp?",
+      "options": [
+        "The Romans withdrew to meet a fleet",
+        "The Romans were celebrating a festival",
+        "A Roman consul fell ill",
+        "A storm destroyed the Roman siege works",
+        "Roman troops scattered to gather crops at harvest"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#siege-of-akragas",
+      "explanation": "Feeding 40,000 men was hard while Carthage ruled the sea, so at harvest time the troops scattered for food. The garrison burst out but was driven back.",
+      "sourceQuote": "Feeding so many men was hard while Carthage ruled the sea, and at harvest time the troops scattered to gather crops.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did Rome's first homemade warships compare with the Carthaginian original they copied?",
+      "options": [
+        "Larger and better armed",
+        "Smaller with fewer oarsmen",
+        "Lighter and faster",
+        "Heavier and slower",
+        "Identical in every respect"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#rome-builds-a-fleet",
+      "explanation": "Rome's novice shipwrights built 120 warships that were heavier and slower than the originals. Rowing a quinquereme in unison demanded long training.",
+      "sourceQuote": "Rome built 120 warships, but its novice shipwrights produced copies that were heavier and slower than the originals.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Why do we have no Carthaginian account of the First Punic War?",
+      "options": [
+        "Polybius burned them in Rome",
+        "They were lost in a shipwreck",
+        "Hamilcar destroyed them on leaving Sicily",
+        "They perished when Carthage was destroyed in 146 BC",
+        "Carthaginians never kept written records"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#sources-and-debates",
+      "explanation": "Carthage's records were lost when Rome destroyed the city in 146 BC. That leaves Polybius, writing about a century after the war, as the main source.",
+      "sourceQuote": "Carthage's own records perished when the city was destroyed in 146 BC.",
+      "reviewFlags": []
+    },
+    {
+      "question": "At which battles is the corvus clearly mentioned in our sources? (select all that apply)",
+      "options": [
+        "Drepana",
+        "Ecnomus",
+        "Aegates Islands",
+        "Mylae",
+        "Lipari Islands"
+      ],
+      "correctAnswers": [
+        1,
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#sources-and-debates",
+      "explanation": "The corvus is clearly mentioned only at Mylae and Ecnomus, then vanishes. Some think its weight made ships top-heavy in storms.",
+      "sourceQuote": "It is clearly mentioned only at Mylae and Ecnomus, then vanishes.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What happened on Rome's first naval venture, a raid on the Lipari Islands?",
+      "options": [
+        "Every ship was captured, along with the consul",
+        "The ships ran aground on the Sicilian coast",
+        "The crews mutinied and sailed home",
+        "The fleet was wrecked by a storm",
+        "The consul won a small but famous victory"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#rome-builds-a-fleet",
+      "explanation": "Carthaginian ships trapped the 17 Roman ships in harbour at night, and the raw crews panicked. Every ship and the consul himself were captured.",
+      "sourceQuote": "The raw crews panicked, and every ship was captured, along with the consul himself.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did the king of Syracuse do in 263 BC when facing 40,000 Romans?",
+      "options": [
+        "Fled to Carthage with his treasury",
+        "Paid Rome to leave Sicily",
+        "Switched sides and agreed to feed Rome's army",
+        "Fought a pitched battle and was killed",
+        "Invited a Carthaginian garrison into Syracuse"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#messana",
+      "explanation": "Syracuse, the strongest Greek city on Sicily, switched sides and agreed to supply Rome's army. Earlier it had been pressing the Mamertines at Messana.",
+      "sourceQuote": "In 263 BC, facing 40,000 Romans, the king of Syracuse switched sides and agreed to feed Rome's army.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What mistake did the overconfident Carthaginians make at the Battle of Mylae?",
+      "options": [
+        "They attacked at night in a storm",
+        "They left their rams in harbour",
+        "They rushed in without keeping formation",
+        "They waited too long to engage",
+        "They split their fleet in two"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#corvus-and-mylae",
+      "explanation": "Sure of their skill, the Carthaginians charged in without formation and were grappled by the ravens. Their flagship's commander escaped in a small boat.",
+      "sourceQuote": "Sure of their skill, the Carthaginians rushed in without keeping formation.",
+      "reviewFlags": []
+    }
+  ]
+}

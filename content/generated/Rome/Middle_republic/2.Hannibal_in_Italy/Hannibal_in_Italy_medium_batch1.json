@@ -1,0 +1,189 @@
+{
+  "batchName": "Middle Republic: Hannibal in Italy (241-216 BCE) - Medium Batch 1",
+  "chapterName": "Middle Republic: Hannibal in Italy (241-216 BCE)",
+  "difficulty": 2,
+  "batchOrder": 3,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "What did the Ebro Treaty of 226 BC establish?",
+      "options": [
+        "The Ebro as the northern limit of Carthage's sphere",
+        "Carthage's right to settle Cisalpine Gaul",
+        "The return of Sardinia to Carthage",
+        "The Ebro as Rome's frontier in Italy",
+        "Joint Roman-Carthaginian rule of Saguntum"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#barcas-in-spain",
+      "explanation": "The treaty made the Ebro, a river in north-east Spain, the northern limit of Carthage's sphere. Rome's later deal with Saguntum, south of the river, would cause trouble.",
+      "sourceQuote": "In 226 BC Rome and Carthage agreed the Ebro Treaty, which made the Ebro, a river in north-east Spain, the northern limit of Carthage's sphere.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Who led the Roman embassy that delivered Rome's demands to Carthage after Saguntum fell?",
+      "options": [
+        "Cato the Elder",
+        "Fabius Maximus",
+        "Claudius Marcellus",
+        "Varro",
+        "Scipio Africanus"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#saguntum",
+      "explanation": "Fabius Maximus, later famous as Rome's most patient general, led the embassy. Its curt demands were rejected, and Rome declared war in spring 218 BC.",
+      "sourceQuote": "Rome sent an embassy to Carthage led by Fabius Maximus, the senator later famous as Rome's most patient general.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What desperate religious act followed Cannae after priests consulted the Sibylline Books?",
+      "options": [
+        "A new temple was built to Carthage's gods",
+        "People were buried alive in Rome's cattle market",
+        "The consul Varro was sacrificed to Mars",
+        "The Vestal Virgins were exiled from Rome",
+        "All temples were closed for a year"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#after-cannae",
+      "explanation": "People were buried alive in the cattle market as a sacrifice. The Sibylline Books were sacred prophecies kept for emergencies.",
+      "sourceQuote": "Priests consulted the Sibylline Books (*Libri Sibyllini*), sacred prophecies kept for emergencies, and people were buried alive in Rome's cattle market as a sacrifice.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did the 'Fabian strategy' involve?",
+      "options": [
+        "Seeking one decisive battle as quickly as possible",
+        "Avoiding pitched battles and cutting supply lines",
+        "Bribing the Gauls to abandon Hannibal",
+        "Fortifying Rome and abandoning the countryside",
+        "Invading Africa to force Hannibal home"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#fabius-the-delayer",
+      "explanation": "Fabius harassed the invaders and cut their supplies while Rome rebuilt its strength. The strategy was deeply unpopular while Hannibal plundered Italy's farmland.",
+      "sourceQuote": "He avoided pitched battles, harassed the invaders and cut their supply lines, wearing them down while Rome rebuilt its strength.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Why were the Celtic tribes of Cisalpine Gaul angry with Rome in 218 BC?",
+      "options": [
+        "Rome had banned their Druid priests",
+        "Rome demanded heavy tribute in silver",
+        "Rome had enslaved their Iberian allies",
+        "Rome was drafting their men into its legions",
+        "Rome was founding settler colonies on their best land"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#saguntum",
+      "explanation": "Rome was planting colonies of settlers on the best land of the Po valley. Hannibal's envoys were already courting the angry Gauls.",
+      "sourceQuote": "Meanwhile, in Cisalpine Gaul (*Gallia Cisalpina*), the Po valley lands of Celtic tribes in northern Italy, Rome was founding new colonies (*coloniae*) of settlers on the best land.",
+      "reviewFlags": []
+    },
+    {
+      "question": "From which base did Hannibal begin his march to Italy in 218 BC?",
+      "options": [
+        "Massalia, modern Marseille",
+        "Gades, modern Cádiz",
+        "New Carthage, modern Cartagena",
+        "Saguntum, on Spain's east coast",
+        "Carthage, in modern Tunisia"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#crossing-the-alps",
+      "explanation": "New Carthage, now Cartagena, was Hannibal's main base. He marched north from it in May or June 218 BC.",
+      "sourceQuote": "In May or June 218 BC he marched north from New Carthage, his main base, now Cartagena.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did Carthage cope with its war debt to Rome after the First Punic War?",
+      "options": [
+        "It paid by surrendering its fleet",
+        "It paid it with ease",
+        "It took fifty years to pay",
+        "The Ebro Treaty cancelled it",
+        "It defaulted and was invaded"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#after-the-first-war",
+      "explanation": "Carthage remained the most prosperous port of its day and paid the debt easily. The Barca family soon began planning how to stand up to Rome again.",
+      "sourceQuote": "It remained the most prosperous port of its day and paid its war debt to Rome with ease.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Against whom did Carthage fight the Truceless War after 241 BC?",
+      "options": [
+        "Iberian tribes south of the Ebro",
+        "The Celtic tribes of the Po valley",
+        "The Roman legions in Sicily",
+        "Its own rebellious mercenaries and African subjects",
+        "Greek colonists from Massalia"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#after-the-first-war",
+      "explanation": "Carthage was fighting for its life against its own mercenaries and African subjects. Rome used the distraction to seize Sardinia and Corsica.",
+      "sourceQuote": "Carthage was soon fighting for its life against its own rebellious mercenaries and African subjects, a struggle known as the Truceless War.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How large was the army Rome raised to confront Hannibal at Cannae?",
+      "options": [
+        "About 150,000 men",
+        "About 86,000 men",
+        "About 40,000 men",
+        "About 26,000 men",
+        "About 60,000 men"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#battle-of-cannae",
+      "explanation": "Eight Roman legions plus as many allied troops made about 86,000 men, the biggest army Rome had ever raised. The Romans packed their infantry unusually deep.",
+      "sourceQuote": "The Senate (*senatus*) answered with the biggest army Rome had ever raised: eight Roman legions (*legiones*) plus as many allies, about 86,000 men.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Why did Rome's agreement with Saguntum alarm Carthage?",
+      "options": [
+        "Saguntum had sheltered Carthage's rebel mercenaries",
+        "Saguntum lay north of the Ebro, in Rome's sphere",
+        "Saguntum was Carthage's main silver port",
+        "Saguntum lay well south of the Ebro, in Carthage's sphere",
+        "Saguntum controlled the Alpine passes"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#saguntum",
+      "explanation": "Saguntum lay well south of the Ebro, so Carthage saw the agreement as Roman meddling in its own sphere. The city later stood alone against Hannibal's conquests.",
+      "sourceQuote": "Some time after the Ebro Treaty, Rome made a separate agreement with Saguntum, a city on Spain's east coast lying well south of the river.",
+      "reviewFlags": []
+    }
+  ]
+}
