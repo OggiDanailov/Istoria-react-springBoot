@@ -290,6 +290,7 @@ button:focus-visible { outline: 3px solid var(--ochre); outline-offset: 2px; }
 .cmap text .note { font-weight: 600; font-size: 7.5px; fill: #6b5d50; }
 .cmap .people { font-size: 8px; letter-spacing: .16em; text-transform: uppercase; fill: #7a6a55; }
 .cmap .edge { font-size: 8px; fill: #5a4d40; }
+.sources { font-size: 11.5px !important; color: #8a7a68; margin-top: 18px !important; line-height: 1.35; }
 .latin-note { margin: 8px 0 4px !important; padding: 10px 12px; border-radius: 12px; background: #f3e6c8; font-size: 14px; }   /* Latin words: in Roman red, easy to spot or to skip */
 .sheet-body .unit-row { display: grid; grid-template-columns: 24px 1fr auto; gap: 10px; align-items: center; padding: 8px 0; border-bottom: 1px solid #e2d6bf; }
 .sheet-body .unit-row svg { width: 20px; height: 26px; }
@@ -619,6 +620,8 @@ const OPEN_ALL_KEY = 'ave-caesar-open-all'
 let openAll = false
 try { openAll = localStorage.getItem(OPEN_ALL_KEY) === '1' } catch {}
 const isUnlocked = i => i === 0 || openAll || !!tests[CHAPTERS[i - 1].id]?.won
+const battleOf = i => { const n = battleName(i); return /^The /.test(n) ? 'the ' + n.slice(4) : 'the battle of ' + n }
+const Cap = t => t[0].toUpperCase() + t.slice(1)
 const battleName = i => HoldTheLine.LEVELS[i]?.name ?? CHAPTERS[i].battle?.name ?? 'the battle'
 
 function renderHud() {
@@ -660,7 +663,7 @@ function openSheet(title, html, focusId) {
 function closeSheet() { document.getElementById('sheet').hidden = true }
 const latinNote = () => CHAPTER.some(x => /\*[^*]+\*/.test(x.body)) ? '<p class="latin-note">Words in <em>red italics</em> are <b>Latin</b>, the language the Romans spoke, given next to the English. Many English words come from them.</p>' : ''
 const chronicleHtml = () => latinNote() + CHAPTER.map(s => `<section data-sec="${s.id}"><h3>${esc(s.title)}</h3>${(CH.chronicleMaps ?? []).filter(m => m.sec === s.id).map(chronicleMap).join('')}${s.body.split(/\n\s*\n/).map(p => `<p>${inline(p.trim())}</p>`).join('')}</section>`).join('') +
-  `<p style="font-size:13px;color:#6b5d50;margin-top:14px">Written from the Wikipedia articles ${CH.sources.map(t => `“${esc(t)}”`).join(', ')} (CC BY-SA 4.0).</p>`
+  `<p class="sources">Sources: Wikipedia, ${CH.sources.map(t => `“${esc(t)}”`).join(', ')} · CC BY-SA 4.0</p>`
 const openChronicle = focusId => openSheet(CH.title, chronicleHtml(), focusId)
 // ---------- maps in the chronicle ----------
 // Drawn from the chapter's maps.json: a region map (coast, Tiber, towns, peoples, far-away places as arrows at the
@@ -825,7 +828,7 @@ function renderRome() {
         <span class="era-period">${esc(era.period)}</span>
         <b>${esc(era.name)}</b>
         <span class="era-blurb">${esc(era.blurb)}</span>
-        <span class="era-meta">${!chs.length ? 'Coming soon' : !open ? `Locked: win the battle of ${esc(battleName(chs[0].i - 1))} first` : `${plural(chs.length, 'chapter')} · ${chs.filter(x => tests[x.c.id]?.won).length} won · ${total.earned} / ${total.max} ★`}</span>
+        <span class="era-meta">${!chs.length ? 'Coming soon' : !open ? `Locked: win ${esc(battleOf(chs[0].i - 1))} first` : `${plural(chs.length, 'chapter')} · ${chs.filter(x => tests[x.c.id]?.won).length} won · ${total.earned} / ${total.max} ★`}</span>
         ${chs.length ? progressBar(total) : ''}
       </button>` }).join('')}
     </div>
@@ -843,7 +846,7 @@ function renderEra(eraId) {
     <ol class="chapters">${eraChapters(era).map(({ c, i }, n) => { const s = chapterStars(c), open = isUnlocked(i), won = !!tests[c.id]?.won; return `
       <li><button class="chapter-card" data-chapter="${i}" ${open ? '' : 'disabled'}>
         <span class="chapter-num ${won ? 'won' : ''}">${won ? '✓' : n + 1}</span>
-        <span class="chapter-meta"><b>${esc(c.short)}</b><span>${open ? `${esc(c.title)} · ${esc(c.period)}` : `Locked: win the battle of ${esc(battleName(i - 1))} first`}</span>${progressBar(s)}</span>
+        <span class="chapter-meta"><b>${esc(c.short)}</b><span>${open ? `${esc(c.title)} · ${esc(c.period)}` : `Locked: win ${esc(battleOf(i - 1))} first`}</span>${progressBar(s)}</span>
         <span class="stars">${s.earned}★</span>
       </button></li>` }).join('')}
     </ol>`
@@ -875,6 +878,7 @@ function renderHome() {
       <button class="ghost" id="up">${eraChapters(ERAS.find(e => e.id === CH.era)).length > 1 ? 'Chapters' : 'All eras'}</button></header>
     ${reviewCardHtml()}
     ${testCardHtml()}
+    ${openAll && testComplete(t) ? reviewBattleHtml(HoldTheLine.LEVELS[chapterIndex]) : ''}
     ${SECTIONS.map(([type, label]) => GAMES[type].sets.length ? `<p class="section-label">${label}</p>${list(type)}` : '').join('')}
     <p class="footnote">Generated from Wikipedia and fact-checked by AI. Early Roman dates are the traditional ones; historians doubt many of them.</p>`
   app.querySelector('#up').addEventListener('click', leaveChapter)
@@ -895,11 +899,15 @@ function reviewCardHtml() {
   return `<section class="run-card review-card">
       <span class="eyebrow">Review mode</span>
       <div class="actions"><button class="primary" id="qa">Questions &amp; answers</button><button class="ghost" id="chronicle-r">Read the chronicle</button>${CH.keyFacts ? '<button class="ghost key-facts">Key facts</button>' : ''}</div>
-      <p class="task">Play the battle of ${esc(battleName(chapterIndex))} with the army of a test score of:</p>
+    </section>`
+}
+const reviewBattleHtml = L => `<section class="battle-card review-card">
+      <span class="eyebrow">${esc(L.year)} · review mode</span>
+      <h2>${esc(Cap(battleOf(chapterIndex)))}</h2>
+      <p class="task">Play it with the army of a test score of:</p>
       <div class="actions">${[60, 70, 80, 90, 100].map(v => `<button class="ghost review-battle" data-score="${v}">${v}%</button>`).join('')}</div>
       <p class="task" style="font-size:13px">Review battles don’t change your progress.</p>
     </section>`
-}
 // The card at the top of a chapter: the test while it's under way, then the battle
 function testCardHtml() {
   const t = testOf(CH), rounds = testRounds(), done = rounds.filter(r => roundDone(r, t)).length
@@ -914,11 +922,11 @@ function testCardHtml() {
       ${up ? `<p class="task">Up next: <b>${esc(roundTitle(up))} · ${esc(GAMES[up.type].sets[up.set].name)}</b></p>` : ''}
       <div class="actions"><button class="primary" id="test-go">${done ? 'Play the next round' : 'Start the test'}</button><button class="ghost" id="chronicle">Read the chronicle</button>${CH.keyFacts ? '<button class="ghost key-facts">Key facts</button>' : ''}</div>
     </section>
-    <section class="battle-card locked">
+    ${openAll ? reviewBattleHtml(L) : `<section class="battle-card locked">
       <span class="eyebrow">${esc(L.year)} · locked</span>
-      <h2>The battle of ${esc(L.name)}</h2>
+      <h2>${esc(Cap(battleOf(chapterIndex)))}</h2>
       <p class="task">Unlocks when all ${rounds.length} rounds of the test are done. Your score then sets your army.</p>
-    </section>`
+    </section>`}`
   }
   if (t.won) return `<section class="battle-card won">
       <span class="eyebrow">${esc(L.year)} · victory ${'★'.repeat(t.stars)}</span>
@@ -928,7 +936,7 @@ function testCardHtml() {
     </section>`
   return `<section class="battle-card">
       <span class="eyebrow">Test complete${t.attempt > 1 ? ` · attempt ${t.attempt}` : ''} · ${esc(L.year)}</span>
-      <h2>${score}%: the battle of ${esc(L.name)} awaits</h2>
+      <h2>${score}%: ${esc(battleOf(chapterIndex))} awaits</h2>
       <p class="task">Your army: ${armyLine(score)}. ${verdictFor(score)}</p>
       ${lost ? `<p class="task">You lost ${lost === 1 ? 'once' : lost + ' times'} with this army. Re-read where your mistakes came from and retake the test for a stronger army, or fight again.</p>${rereadHtml(t)}` : ''}
       <div class="actions"><button class="primary to-battle">To battle</button><button class="ghost" id="retake">Retake the test</button>${CH.keyFacts ? '<button class="ghost key-facts">Key facts</button>' : ''}</div>
@@ -1674,7 +1682,7 @@ function renderResult() {
   // What to do next: the next round of the test, then the battle
   const actions = r.completed
     ? `<p class="task"><b>Test complete: ${pct(t.score)}%.</b> Your army: ${armyLine(pct(t.score))}.</p>
-       <div class="actions"><button class="primary" id="to-battle">To the battle of ${esc(battleName(chapterIndex))}</button><button class="ghost" id="to-chapter">Back to the chapter</button></div>`
+       <div class="actions"><button class="primary" id="to-battle">To ${esc(battleOf(chapterIndex))}</button><button class="ghost" id="to-chapter">Back to the chapter</button></div>`
     : !testComplete(t)
       ? `<div class="actions">${next ? `<button class="primary" id="next-round">Next round: ${esc(roundTitle(next))}</button>` : ''}${r.type === 'march' ? '<button class="ghost" id="again">Play again</button>' : ''}<button class="ghost" id="to-chapter">Back to the chapter</button></div>`
       : `<div class="actions"><button class="ghost" id="again">Play again</button><button class="ghost" id="to-chapter">Back to the chapter</button></div>`
@@ -1752,7 +1760,7 @@ function renderRunDone() {
       <div>
         <p class="big-stars" style="margin:0">${score}%</p>
         <h2 style="margin-top:10px">${score >= 90 ? 'Excellent!' : score >= 80 ? 'Well done.' : score >= 70 ? 'You passed, just.' : 'A weak result.'}</h2>
-        <p class="task" style="margin-top:4px">Your army for the battle of ${esc(battleName(chapterIndex))}: ${armyLine(score)}. ${verdictFor(score)}</p>
+        <p class="task" style="margin-top:4px">Your army for ${esc(battleOf(chapterIndex))}: ${armyLine(score)}. ${verdictFor(score)}</p>
       </div>
       ${score < 90 && rereadHtml(t) ? `<div class="review"><h3>Where your mistakes came from</h3>${rereadHtml(t)}</div>` : ''}
       <div class="actions"><button class="primary" id="to-battle">To battle</button><button class="ghost" id="menu">Back to the chapter</button></div>
