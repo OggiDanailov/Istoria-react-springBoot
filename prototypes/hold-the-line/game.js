@@ -566,7 +566,7 @@ const MOVABLE = t => t !== 'caltrops' && t !== 'pigs'
 function moveUnit(u, lane, row) {
   if (unitAt(lane, row) || (u.lane === lane && u.row === row)) return false
   u.fromLane = u.lane; u.fromRow = u.row; u.lane = lane; u.row = row
-  u.travel = G.phase === 'deploy' ? 0 : Math.max(0.4, Math.hypot(u.lane - u.fromLane, u.row - u.fromRow) / 2.2); u.travelT = 0   // about two squares a second
+  u.travel = G.phase === 'deploy' ? 0 : Math.max(0.25, Math.hypot(u.lane - u.fromLane, u.row - u.fromRow) / 4); u.travelT = 0   // about four squares a second
   for (const f of G.foes) if (f.eating === u) f.eating = null
   sfx.place(); return true
 }
