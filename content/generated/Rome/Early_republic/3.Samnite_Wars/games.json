@@ -244,6 +244,48 @@
           "reviewFlags": []
         }
       ]
+    },
+    {
+      "name": "Latin Words",
+      "blurb": "Match each Latin word to its meaning.",
+      "pairs": [
+        {
+          "name": "Deditio",
+          "match": "Unconditional surrender to Rome",
+          "sectionId": "first-war-outbreak",
+          "reviewFlags": []
+        },
+        {
+          "name": "Iugum",
+          "match": "The yoke of spears the defeated walked under",
+          "sectionId": "caudine-forks",
+          "reviewFlags": []
+        },
+        {
+          "name": "Devotio",
+          "match": "A commander giving his life to the gods for victory",
+          "sectionId": "third-war-sentinum",
+          "reviewFlags": []
+        },
+        {
+          "name": "Legio linteata",
+          "match": "The Linen Legion, sworn never to flee",
+          "sectionId": "aquilonia-and-the-end",
+          "reviewFlags": []
+        },
+        {
+          "name": "Socii",
+          "match": "Rome’s allies, who sent soldiers for its wars",
+          "sectionId": "roman-alliance-system",
+          "reviewFlags": []
+        },
+        {
+          "name": "Pro consule",
+          "match": "“In place of a consul”: a proconsul",
+          "sectionId": "second-war-outbreak",
+          "reviewFlags": []
+        }
+      ]
     }
   ],
   "trueFalseDecks": [
@@ -375,13 +417,13 @@
   "oddOneOut": [
     {
       "items": [
+        "Samnites",
         "Etruscans",
         "Umbrians",
-        "Senone Gauls",
         "Lucanians"
       ],
       "oddIndex": 3,
-      "why": "Etruscans, Umbrians and Senone Gauls joined the Samnites' coalition against Rome by 295 BC; the Lucanians instead asked Rome for protection.",
+      "why": "The Samnites, Etruscans and Umbrians (with the Senone Gauls) fought Rome together in 295 BC; the Lucanians had asked Rome for protection against the Samnites.",
       "sectionId": "third-war-sentinum",
       "reviewFlags": []
     },
@@ -399,25 +441,25 @@
     },
     {
       "items": [
-        "Thucydides",
+        "Diodorus",
         "Polybius",
-        "Livy",
-        "Dionysius of Halicarnassus"
+        "Dionysius of Halicarnassus",
+        "Livy"
       ],
-      "oddIndex": 2,
-      "why": "Thucydides, Polybius and Dionysius were Greek historians; Livy was a Roman historian writing about three centuries after the wars.",
+      "oddIndex": 3,
+      "why": "Diodorus, Polybius and Dionysius of Halicarnassus were Greek historians; Livy was Roman and wrote in Latin.",
       "sectionId": "doubting-livy",
       "reviewFlags": []
     },
     {
       "items": [
         "Mount Gaurus",
-        "Lake Vadimo",
+        "Suessula",
         "Lautulae",
         "Sentinum"
       ],
       "oddIndex": 2,
-      "why": "Mount Gaurus, Lake Vadimo and Sentinum were Roman victories; at Lautulae in 315 BC the Samnites won.",
+      "why": "Rome won at Mount Gaurus, Suessula and Sentinum; at Lautulae in 315 BC the Samnites won.",
       "sectionId": "second-war-turning",
       "reviewFlags": []
     },

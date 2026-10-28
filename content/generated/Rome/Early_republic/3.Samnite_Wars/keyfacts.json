@@ -1,0 +1,179 @@
+{
+  "description": "Key facts for this chapter, written by hand from the chapter text. Every entry links to the section that explains it.",
+  "people": [
+    {
+      "name": "Marcus Valerius Corvus",
+      "text": "Consul who won at Mount Gaurus and Suessula in 343 BC.",
+      "sec": "first-war-campaigns"
+    },
+    {
+      "name": "Publius Decius Mus (father)",
+      "text": "Junior officer who saved a trapped army by seizing a hilltop in 343 BC.",
+      "sec": "first-war-campaigns"
+    },
+    {
+      "name": "Quintus Publilius Philo",
+      "text": "Commander at Naples whose command was extended: an early proconsul.",
+      "sec": "second-war-outbreak"
+    },
+    {
+      "name": "Gaius Pontius",
+      "text": "Samnite commander who trapped the Romans at the Caudine Forks.",
+      "sec": "caudine-forks"
+    },
+    {
+      "name": "Herennius",
+      "text": "Pontius’s father, who advised freeing all the Romans or killing them all.",
+      "sec": "caudine-forks"
+    },
+    {
+      "name": "Fabius Maximus Rullianus",
+      "text": "Rome’s leading general, who crossed the Ciminian Forest and won at Sentinum.",
+      "sec": "second-war-turning"
+    },
+    {
+      "name": "Gellius Egnatius",
+      "text": "Samnite commander who rallied the Etruscans and others against Rome.",
+      "sec": "third-war-sentinum"
+    },
+    {
+      "name": "Publius Decius Mus (son)",
+      "text": "Consul who sacrificed his life (devotio) at Sentinum.",
+      "sec": "third-war-sentinum"
+    },
+    {
+      "name": "Lucius Papirius Cursor",
+      "text": "Consul who took Aquilonia in 293 BC.",
+      "sec": "aquilonia-and-the-end"
+    },
+    {
+      "name": "Livy",
+      "text": "The Roman historian who is our main guide to these wars.",
+      "sec": "first-war-outbreak"
+    }
+  ],
+  "dates": [
+    {
+      "when": "354 BC",
+      "text": "Rome and the Samnites sign a treaty.",
+      "sec": "samnites-and-rome"
+    },
+    {
+      "when": "343 BC",
+      "text": "The First Samnite War begins.",
+      "sec": "first-war-outbreak"
+    },
+    {
+      "when": "326 BC",
+      "text": "The Great (Second) Samnite War begins.",
+      "sec": "second-war-outbreak"
+    },
+    {
+      "when": "321 BC",
+      "text": "The Caudine Forks: a Roman army passes under the yoke.",
+      "sec": "caudine-forks"
+    },
+    {
+      "when": "310 BC",
+      "text": "Victory over the Etruscans at Lake Vadimo.",
+      "sec": "second-war-turning"
+    },
+    {
+      "when": "304 BC",
+      "text": "Peace ends the Great Samnite War.",
+      "sec": "second-war-turning"
+    },
+    {
+      "when": "295 BC",
+      "text": "Sentinum: Rome defeats Samnites, Etruscans, Umbrians and Gauls.",
+      "sec": "third-war-sentinum"
+    },
+    {
+      "when": "293 BC",
+      "text": "Rome takes Aquilonia.",
+      "sec": "aquilonia-and-the-end"
+    },
+    {
+      "when": "290 BC",
+      "text": "The last Samnite resistance is crushed.",
+      "sec": "aquilonia-and-the-end"
+    }
+  ],
+  "terms": [
+    {
+      "latin": "deditio",
+      "english": "unconditional surrender",
+      "sec": "first-war-outbreak"
+    },
+    {
+      "latin": "fetiales",
+      "english": "priests who demanded redress and declared war",
+      "sec": "first-war-outbreak"
+    },
+    {
+      "latin": "consules",
+      "english": "the two consuls",
+      "sec": "first-war-campaigns"
+    },
+    {
+      "latin": "triumphi",
+      "english": "victory parades",
+      "sec": "first-war-campaigns"
+    },
+    {
+      "latin": "coloni, colonia",
+      "english": "colonists and a colony",
+      "sec": "second-war-outbreak"
+    },
+    {
+      "latin": "imperium",
+      "english": "the power of military command",
+      "sec": "second-war-outbreak"
+    },
+    {
+      "latin": "pro consule",
+      "english": "“in place of a consul”: a proconsul",
+      "sec": "second-war-outbreak"
+    },
+    {
+      "latin": "Furculae Caudinae",
+      "english": "the Caudine Forks",
+      "sec": "caudine-forks"
+    },
+    {
+      "latin": "iugum",
+      "english": "the yoke of spears",
+      "sec": "caudine-forks"
+    },
+    {
+      "latin": "silva Ciminia",
+      "english": "the Ciminian Forest",
+      "sec": "second-war-turning"
+    },
+    {
+      "latin": "devotio",
+      "english": "giving one’s life to the gods for victory",
+      "sec": "third-war-sentinum"
+    },
+    {
+      "latin": "legio linteata",
+      "english": "the Linen Legion, sworn never to flee",
+      "sec": "aquilonia-and-the-end"
+    },
+    {
+      "latin": "foedus iniquum",
+      "english": "an unequal treaty",
+      "sec": "roman-alliance-system"
+    },
+    {
+      "latin": "socii",
+      "english": "Rome’s allies",
+      "sec": "roman-alliance-system"
+    },
+    {
+      "latin": "praeda",
+      "english": "spoils of war",
+      "sec": "roman-alliance-system"
+    }
+  ]
+}

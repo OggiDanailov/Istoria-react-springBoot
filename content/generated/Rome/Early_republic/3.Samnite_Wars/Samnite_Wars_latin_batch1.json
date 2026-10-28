@@ -1,0 +1,145 @@
+{
+  "batchName": "Early Republic: The Samnite Wars (367-290 BCE) - Latin words",
+  "chapterName": "Early Republic: The Samnite Wars (367-290 BCE)",
+  "difficulty": 1,
+  "batchOrder": 9,
+  "description": "Written by hand from the chapter text: the Latin words it explains",
+  "questions": [
+    {
+      "question": "At the Caudine Forks the Romans walked under the iugum. What was it?",
+      "options": [
+        "A yoke made of spears",
+        "A triumphal arch",
+        "A wooden bridge",
+        "A row of shields"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#caudine-forks",
+      "explanation": "Passing under the yoke showed that an army had been defeated and subjugated.",
+      "sourceQuote": "The Romans filed out unarmed under the yoke (*iugum*), a frame of spears",
+      "reviewFlags": []
+    },
+    {
+      "question": "What was the devotio of Publius Decius Mus at Sentinum?",
+      "options": [
+        "He offered his own life to the gods and charged the enemy",
+        "He deserted to the Samnites",
+        "He swore never to retreat",
+        "He made peace with the Gauls"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#third-war-sentinum",
+      "explanation": "His sacrifice rallied his men, and the coalition collapsed.",
+      "sourceQuote": "Decius then devoted himself (*devotio*): he prayed to the gods",
+      "reviewFlags": []
+    },
+    {
+      "question": "Who were Rome’s socii?",
+      "options": [
+        "Its allies, who sent soldiers for its wars",
+        "Its enemies in Samnium",
+        "Its colonists",
+        "Its priests"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#roman-alliance-system",
+      "explanation": "Allied peoples kept their own governments but sent troops at their own expense.",
+      "sourceQuote": "Allied peoples, the *socii* (\"allies\"), kept their own governments,",
+      "reviewFlags": []
+    },
+    {
+      "question": "What was a deditio, like Capua’s surrender in Livy’s story?",
+      "options": [
+        "An unconditional surrender to Rome",
+        "A peace treaty between equals",
+        "A declaration of war",
+        "A new colony"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#first-war-outbreak",
+      "explanation": "By surrendering, Campania became Roman property that Rome had to defend.",
+      "sourceQuote": "a surrender the Romans called *deditio*.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did the title pro consule mean?",
+      "options": [
+        "In place of a consul",
+        "Before the consuls",
+        "Against the consuls",
+        "Chosen by the consuls"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#second-war-outbreak",
+      "explanation": "Commanders whose command was extended to finish a campaign became proconsuls.",
+      "sourceQuote": "with the title of proconsul (*pro consule*, \"in place of a consul\").",
+      "reviewFlags": []
+    },
+    {
+      "question": "At Aquilonia, what was the legio linteata?",
+      "options": [
+        "The Linen Legion of Samnites sworn never to flee",
+        "A Roman legion of veterans",
+        "Rome’s Etruscan allies",
+        "The guard of the consuls"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#aquilonia-and-the-end",
+      "explanation": "Elite Samnite units swore a sacred oath never to flee, on pain of death.",
+      "sourceQuote": "Elite units, the Linen Legion (*legio linteata*), swore a sacred oath",
+      "reviewFlags": []
+    },
+    {
+      "question": "The Samnites were forced into a foedus iniquum. What was it?",
+      "options": [
+        "An unequal treaty with Rome",
+        "A treaty between equals",
+        "A truce for one year",
+        "A marriage alliance"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#roman-alliance-system",
+      "explanation": "After 290 BC the Samnites had to ally with Rome on Rome’s terms.",
+      "sourceQuote": "on unequal terms (*foedus iniquum*, an \"unequal treaty\").",
+      "reviewFlags": []
+    },
+    {
+      "question": "Fabius’s brother crossed the silva Ciminia. What was it?",
+      "options": [
+        "The Ciminian Forest, which no Roman had crossed",
+        "A mountain pass in Samnium",
+        "A river in Etruria",
+        "A sacred grove in Rome"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#second-war-turning",
+      "explanation": "He crossed it disguised as a shepherd, and Fabius then led his army through it.",
+      "sourceQuote": "through the dreaded Ciminian Forest (*silva Ciminia*), which no Roman had ever crossed.",
+      "reviewFlags": []
+    }
+  ]
+}

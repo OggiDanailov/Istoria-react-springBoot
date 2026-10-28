@@ -1,0 +1,199 @@
+{
+  "description": "Maps for the chronicle, written by hand. Coordinates from Wikipedia; each map sits at the start of its section.",
+  "maps": [
+    {
+      "id": "samnium",
+      "sec": "samnites-and-rome",
+      "title": "Rome, Campania and Samnium",
+      "caption": "The River Liris divided Latium from Campania, the rich plain around Capua and Naples. The Samnites held the Apennine mountains behind it. Several sites are approximate, and Aquilonia's location is unknown.",
+      "bounds": {
+        "latMin": 40.7,
+        "latMax": 42.1,
+        "lonMin": 12.3,
+        "lonMax": 15.9
+      },
+      "places": [
+        {
+          "name": "Rome",
+          "latin": "Roma",
+          "lat": 41.893,
+          "lon": 12.483,
+          "kind": "rome",
+          "side": "r",
+          "dy": -4
+        },
+        {
+          "name": "Fregellae",
+          "lat": 41.537,
+          "lon": 13.539,
+          "side": "r"
+        },
+        {
+          "name": "Cales",
+          "lat": 41.207,
+          "lon": 14.12,
+          "side": "l"
+        },
+        {
+          "name": "Capua",
+          "lat": 41.08,
+          "lon": 14.25,
+          "side": "l",
+          "dy": 6
+        },
+        {
+          "name": "Naples",
+          "latin": "Neapolis",
+          "lat": 40.836,
+          "lon": 14.249,
+          "side": "r"
+        },
+        {
+          "name": "Caudine Forks",
+          "lat": 41.05,
+          "lon": 14.617,
+          "kind": "battle",
+          "side": "r"
+        },
+        {
+          "name": "Bovianum",
+          "lat": 41.486,
+          "lon": 14.471,
+          "side": "r"
+        },
+        {
+          "name": "Luceria",
+          "lat": 41.506,
+          "lon": 15.335,
+          "side": "r"
+        },
+        {
+          "name": "Venusia",
+          "lat": 40.962,
+          "lon": 15.815,
+          "side": "l"
+        }
+      ],
+      "peoples": [
+        {
+          "name": "Samnites",
+          "lat": 41.72,
+          "lon": 14.6
+        },
+        {
+          "name": "Latins",
+          "latin": "Latini",
+          "lat": 41.65,
+          "lon": 12.95
+        }
+      ],
+      "rivers": [
+        {
+          "name": "Liris",
+          "pts": [
+            [
+              41.98,
+              13.38
+            ],
+            [
+              41.8,
+              13.5
+            ],
+            [
+              41.6,
+              13.58
+            ],
+            [
+              41.42,
+              13.72
+            ],
+            [
+              41.24,
+              13.77
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sentinum",
+      "sec": "third-war-sentinum",
+      "title": "Sentinum, 295 BC",
+      "caption": "Gellius Egnatius led a Samnite army north to join the Etruscans, Umbrians and Senone Gauls. The coalition was beaten at Sentinum, east of the Apennines. The route is drawn only roughly.",
+      "bounds": {
+        "latMin": 41.0,
+        "latMax": 44.1,
+        "lonMin": 10.9,
+        "lonMax": 15.2
+      },
+      "places": [
+        {
+          "name": "Rome",
+          "latin": "Roma",
+          "lat": 41.893,
+          "lon": 12.483,
+          "kind": "rome",
+          "side": "l",
+          "dy": 6
+        },
+        {
+          "name": "Sentinum",
+          "lat": 43.418,
+          "lon": 12.852,
+          "kind": "battle",
+          "side": "r"
+        }
+      ],
+      "peoples": [
+        {
+          "name": "Samnites",
+          "lat": 41.5,
+          "lon": 14.45
+        },
+        {
+          "name": "Etruscans",
+          "latin": "Etrusci",
+          "lat": 42.95,
+          "lon": 11.55
+        },
+        {
+          "name": "Umbrians",
+          "latin": "Umbri",
+          "lat": 42.95,
+          "lon": 12.7
+        },
+        {
+          "name": "Senones",
+          "lat": 43.85,
+          "lon": 13.0
+        }
+      ],
+      "routes": [
+        {
+          "pts": [
+            [
+              41.55,
+              14.2
+            ],
+            [
+              42.0,
+              13.6
+            ],
+            [
+              42.45,
+              13.0
+            ],
+            [
+              42.8,
+              12.3
+            ],
+            [
+              42.95,
+              11.95
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}

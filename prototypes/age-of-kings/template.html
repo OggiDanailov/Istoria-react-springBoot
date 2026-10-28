@@ -699,6 +699,7 @@ function chronicleMap(m) {
     // tiny outlines (San Marino, the Vatican) would show as stray shapes at this scale
     art += `<path class="land" d="${LAND.filter(l => l.pts.length > 6).map(l => path(l.pts.map(([lo, la]) => [la, lo])) + 'Z').join(' ')}"/>`
     art += `<path class="river" d="${path(TIBER)}"/>`
+    for (const r of m.rivers ?? []) { art += `<path class="river" d="${path(r.pts)}"/>`; if (r.name) { const [x, y] = P(...r.pts[Math.floor(r.pts.length / 2)]); art += `<text class="river-name" x="${(x + 5).toFixed(1)}" y="${y.toFixed(1)}">${esc(r.name)}</text>` } }
     // routes: a dashed line with an arrowhead at the end
     for (const r of m.routes ?? []) {
       const pts = r.pts.map(([la, lo]) => P(la, lo)), [x1, y1] = pts.at(-2), [x2, y2] = pts.at(-1), a = Math.atan2(y2 - y1, x2 - x1)

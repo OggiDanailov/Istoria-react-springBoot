@@ -128,7 +128,8 @@
         "enemy": "The Samnites",
         "sec": "aquilonia-and-the-end",
         "intro": "Some 40,000 Samnites gather at Aquilonia. Their elite units have sworn a sacred oath never to flee. The consul Papirius Cursor attacks."
-      }
+      },
+      "locked": true
     },
     {
       "id": "final-conquest-of-italy",
