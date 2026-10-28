@@ -1,0 +1,179 @@
+{
+  "batchName": "Middle Republic: Rome Turns East (200-167 BCE) - Easy Batch 2",
+  "chapterName": "Middle Republic: Rome Turns East (200-167 BCE)",
+  "difficulty": 1,
+  "batchOrder": 2,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "A talent, the unit used for Philip V's war payment to Rome, was roughly how much silver?",
+      "options": [
+        "260 kg",
+        "6 kg",
+        "26 kg",
+        "2.6 kg"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#freedom-of-the-greeks",
+      "explanation": "A talent was roughly 26 kg of silver. Philip had to pay 1,000 of them after his defeat.",
+      "sourceQuote": "Philip had to withdraw every garrison from the Greek cities of Europe and Asia and pay 1,000 talents, a talent being roughly 26 kg of silver.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What title did Antiochus III earn after recovering Armenia and Iran and taking Syria and Judea?",
+      "options": [
+        "King of Kings",
+        "Saviour",
+        "Lord of Asia",
+        "Great King"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#cold-war-with-antiochus",
+      "explanation": "His sweeping conquests won Antiochus III the title \"Great King\". With Philip beaten, he pushed into western Asia Minor and then crossed into Thrace.",
+      "sourceQuote": "He had brought Armenia and Iran back under his control and taken Syria and Judea from Egypt, earning the title \"Great King\".",
+      "reviewFlags": []
+    },
+    {
+      "question": "Why were Roman soldiers not frightened by the lunar eclipse the night before Pydna?",
+      "options": [
+        "An officer had predicted it",
+        "It happened while they slept",
+        "Priests declared it a lucky sign",
+        "They had seen one at Cynoscephalae"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#pydna",
+      "explanation": "Because an officer had predicted the eclipse, the Roman troops stayed calm. Aemilius still offered sacrifice after sacrifice until the omens were favourable.",
+      "sourceQuote": "An officer had predicted it, so the Roman soldiers were not frightened.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What does the name Cynoscephalae, the hills where Rome fought Philip V in 197 BC, mean?",
+      "options": [
+        "Wolf's Teeth",
+        "Eagle's Nest",
+        "Horse's Back",
+        "Dog's Heads"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#cynoscephalae",
+      "explanation": "Cynoscephalae means \"Dog's Heads\". The hills lie in Thessaly, where the two armies were camped near each other in June 197 BC.",
+      "sourceQuote": "In June 197 BC the two armies were camped near each other among the Cynoscephalae hills, whose name means \"Dog's Heads\", in Thessaly.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did Flamininus defeat Philip V at the Aous river gorge?",
+      "options": [
+        "He blocked the gorge and starved the Macedonians out",
+        "He lured Philip onto open ground with a pretended retreat",
+        "He sent troops along a hidden mountain path to attack from behind",
+        "He landed troops by sea behind the Macedonian camp"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#flamininus-takes-command",
+      "explanation": "The ground favoured the Macedonians, but Flamininus was shown a hidden path through the mountains. Philip fled into Thessaly, leaving about 2,000 men dead or wounded.",
+      "sourceQuote": "He sent troops round to strike from behind, and Philip fled into Thessaly, leaving about 2,000 men dead or wounded.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which Roman consul was sent in 168 BC to finish the war against Perseus?",
+      "options": [
+        "Flamininus",
+        "Aemilius Paullus",
+        "Mummius",
+        "Scipio Africanus"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#pydna",
+      "explanation": "Aemilius Paullus, an experienced consul serving for the second time, was sent to end the war. He went on to win at Pydna and celebrate a triumph.",
+      "sourceQuote": "In 168 BC Rome sent Aemilius Paullus, an experienced consul serving for the second time, to finish the war against Perseus, king of Macedon.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did Flamininus proclaim at the Isthmian Games of 196 BC?",
+      "options": [
+        "Freedom for the Greek communities Philip had ruled",
+        "A new war against Antiochus III",
+        "Roman annexation of Macedon as a province",
+        "Thessaly's return to Macedonian rule"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#freedom-of-the-greeks",
+      "explanation": "At the great festival near Corinth, Flamininus proclaimed freedom (libertas) for the Greeks, and the crowd erupted in joy. The freedom had limits, though: Roman troops stayed in key fortresses.",
+      "sourceQuote": "At the Isthmian Games of May 196 BC, a great festival near Corinth, the Roman commander Flamininus proclaimed freedom (*libertas*) for the Greek communities Philip had ruled.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Who took command of Rome's war against Philip V in 198 BC?",
+      "options": [
+        "Aemilius Paullus",
+        "Flamininus",
+        "Cato the Elder",
+        "Scipio Africanus"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#flamininus-takes-command",
+      "explanation": "Flamininus took over in 198 BC while still under thirty. He hardened Rome's demands and soon beat Philip at the Aous river.",
+      "sourceQuote": "In 198 BC command passed to Flamininus, a consul not yet thirty who proudly called himself a lover of Greek culture.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What was the Macedonian phalanx?",
+      "options": [
+        "A flexible formation of small, independent units",
+        "A screen of light troops armed with javelins",
+        "A dense block of men armed with very long spears",
+        "A wedge of heavy cavalry led by the king"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#cynoscephalae",
+      "explanation": "The phalanx was a dense mass of spearmen with very long spears. At Cynoscephalae the more flexible Roman legions beat it.",
+      "sourceQuote": "Macedon relied on the phalanx, a dense block of men armed with very long spears.",
+      "reviewFlags": []
+    },
+    {
+      "question": "After the Peace of Apamea, who received the land Antiochus III gave up?",
+      "options": [
+        "Rome's allies Pergamon and Rhodes",
+        "The Aetolian League",
+        "Rome, as its first eastern province",
+        "Egypt, which recovered its lost lands"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#peace-of-apamea",
+      "explanation": "Rome took no land for itself and handed the territory to its loyal allies. The Aetolians, by contrast, were reduced to a dependent state.",
+      "sourceQuote": "The territory went to its loyal allies, Pergamon and Rhodes.",
+      "reviewFlags": []
+    }
+  ]
+}

@@ -1,0 +1,191 @@
+{
+  "batchName": "Middle Republic: Rome Turns East (200-167 BCE) - Medium Batch 1",
+  "chapterName": "Middle Republic: Rome Turns East (200-167 BCE)",
+  "difficulty": 2,
+  "batchOrder": 3,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Which fortresses were known as the \"fetters of Greece\"? (select all that apply)",
+      "options": [
+        "Demetrias",
+        "Chalcis",
+        "Pella",
+        "Ephesus",
+        "Corinth"
+      ],
+      "correctAnswers": [
+        0,
+        1,
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#freedom-of-the-greeks",
+      "explanation": "Whoever held Corinth, Chalcis and Demetrias could control Greece, and Rome kept troops in all three. The legions did not fully leave until 194 BC.",
+      "sourceQuote": "Rome kept troops in Corinth, Chalcis and Demetrias, three fortresses known as the \"fetters of Greece\" because whoever held them could control the country.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What new demand did Flamininus make of Philip V, beyond simply stopping attacks on Greek cities?",
+      "options": [
+        "Withdraw garrisons from everywhere beyond Macedon, even Thessaly",
+        "Pay Rome's costs for the entire war",
+        "Surrender his war elephants and his whole navy",
+        "Hand over his eldest son as a hostage to Rome",
+        "Break off his secret pact with Antiochus III"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#flamininus-takes-command",
+      "explanation": "Flamininus demanded compensation for every harmed city and withdrawal from everywhere beyond Macedon, including Thessaly. Philip stormed out of the meeting.",
+      "sourceQuote": "Flamininus raised the price: Philip must compensate every city he had harmed and pull his garrisons out of everywhere beyond Macedon, even Thessaly, the broad plain of north-central Greece that Macedon had held since 353 BC.",
+      "reviewFlags": []
+    },
+    {
+      "question": "According to ancient writers, why did the peace talks of winter 198 BC go nowhere?",
+      "options": [
+        "Philip's envoys were murdered on the way to Rome",
+        "Flamininus was waiting to learn whether his command would be extended",
+        "Philip refused to give up Thessaly under any terms",
+        "Antiochus III threatened to invade if Philip made peace",
+        "The Senate had already ordered a final campaign"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#cynoscephalae",
+      "explanation": "Ancient writers claimed Flamininus wanted a quick peace only if he was to be replaced. Once he learned his command would be extended, his friends in Rome quietly sank the deal.",
+      "sourceQuote": "Elections were under way in Rome, and Flamininus did not yet know whether his command would be extended (*prorogatio*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "Why did the Centuriate Assembly at first reject war with Philip V in 200 BC?",
+      "options": [
+        "Anger at Athens for refusing to pay troops",
+        "Fear of Philip's alliance with Antiochus III",
+        "Exhaustion after years of fighting Carthage",
+        "Omens declared the war unlucky",
+        "A tribune vetoed the consul's proposal"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#rome-looks-east",
+      "explanation": "The almost unanimous and unprecedented refusal was blamed on war-weariness after the Second Punic War. At a second meeting the consul changed their minds.",
+      "sourceQuote": "It refused almost unanimously, an unprecedented rejection blamed on exhaustion after years of fighting Carthage.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What became of the great Carthaginian general at Antiochus III's court after Apamea?",
+      "options": [
+        "He returned to Carthage and led it in a new war",
+        "He was handed to Rome and executed in the Forum",
+        "He retired peacefully on the island of Rhodes",
+        "He fled and years later killed himself rather than be surrendered",
+        "He was sent to Rome as one of the twenty hostages"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#peace-of-apamea",
+      "explanation": "Antiochus was required to hand over Rome's enemies, but the general fled. Years later he took his own life rather than be surrendered.",
+      "sourceQuote": "The great Carthaginian general at his court fled instead, and years later killed himself rather than be surrendered.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Ancient accounts of how the Battle of Pydna began disagree. What does the version favoured by the Roman historian who told it at greatest length say?",
+      "options": [
+        "Aemilius drove a riderless horse toward the enemy",
+        "A Roman officer challenged a Macedonian to single combat",
+        "A mule broke loose at a river and a scuffle over it grew",
+        "Perseus attacked during the lunar eclipse",
+        "The Macedonians charged at dawn after a feast"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#pydna",
+      "explanation": "In this humbler version, a runaway mule sparked a scuffle while both sides drew water, and the armies poured in. Other writers said Aemilius provoked the battle with a riderless horse.",
+      "sourceQuote": "The version favoured by the Roman historian who told the story at greatest length is humbler: a mule broke loose while both sides were drawing water from a river, a scuffle over it grew, and both armies poured in.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How much tribute did each of the four Macedonian republics have to pay Rome?",
+      "options": [
+        "Double what the king had taken",
+        "Half what the king had taken",
+        "Nothing at all",
+        "One-tenth of their harvests",
+        "The same as the king had taken"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#end-of-macedon",
+      "explanation": "Each republic paid Rome half what the king had collected. The republics were centred on Amphipolis, Thessalonica, Pella and Pelagonia.",
+      "sourceQuote": "It was split into four republics, centred on Amphipolis, Thessalonica, Pella and Pelagonia, each paying Rome a tribute (*tributum*) half what the king had taken.",
+      "reviewFlags": []
+    },
+    {
+      "question": "At which great shrine was the king of Pergamon nearly murdered, in a plot blamed on Perseus?",
+      "options": [
+        "Delphi",
+        "Olympia",
+        "Dodona",
+        "Samothrace",
+        "Delos"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#perseus-road-to-war",
+      "explanation": "The near-murder at Delphi, the shrine of Apollo, came soon after the king accused Perseus in Rome. Rome then declared Perseus a public enemy, and war began in 171 BC.",
+      "sourceQuote": "Soon afterwards that king was nearly murdered on a visit to Delphi, the great shrine of Apollo, and the plot was blamed on Perseus.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What happened near the hill of Callinicus in Thessaly early in the war with Perseus?",
+      "options": [
+        "Perseus surrendered his treasury to a Roman fleet",
+        "Roman troops mutinied and demanded to go home",
+        "The Romans crushed Perseus's phalanx in under an hour",
+        "The Aetolians switched sides to join Perseus",
+        "Perseus's cavalry and light troops won a clear victory over Rome"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#perseus-road-to-war",
+      "explanation": "Perseus killed 2,000 Roman infantry and 200 cavalry for small losses. Even so, Rome answered his peace offers by demanding total surrender.",
+      "sourceQuote": "Near a hill called Callinicus in Thessaly, Perseus's cavalry and light troops won a clear victory, killing 2,000 Roman infantry and 200 cavalry for small losses of their own.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Who did Philip V call up for the army that fought at Cynoscephalae?",
+      "options": [
+        "A small elite guard of 5,000 picked men",
+        "Only professional mercenaries from Crete and Gaul",
+        "Conscripts from the Greek cities he had seized",
+        "Every man he could spare, from aged veterans to underage boys",
+        "Soldiers lent to him by Antiochus III"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#cynoscephalae",
+      "explanation": "Philip scraped together about 18,000 Macedonians, from old veterans to boys. Thracian light troops and hired soldiers fought alongside them.",
+      "sourceQuote": "Philip now called up every man his kingdom could spare, from aged veterans to underage boys: about 18,000 Macedonians, plus Thracian light troops and hired soldiers.",
+      "reviewFlags": []
+    }
+  ]
+}

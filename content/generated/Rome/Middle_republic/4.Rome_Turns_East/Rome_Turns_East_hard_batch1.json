@@ -1,0 +1,204 @@
+{
+  "batchName": "Middle Republic: Rome Turns East (200-167 BCE) - Hard Batch 1",
+  "chapterName": "Middle Republic: Rome Turns East (200-167 BCE)",
+  "difficulty": 3,
+  "batchOrder": 5,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Before Pydna, on which sacrifice did Aemilius Paullus finally get favourable omens, and with what condition?",
+      "options": [
+        "The first ox; victory if Rome attacked before the eclipse",
+        "The twelfth ox; victory if Rome crossed the river first",
+        "The twenty-first ox; victory if Rome did not strike first",
+        "The twenty-first ox; victory if Rome attacked at dawn",
+        "The hundredth ox; victory if Rome waited for the full moon",
+        "The seventh ox; victory if Rome did not strike first"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 3,
+      "textReference": "#pydna",
+      "explanation": "The pious Aemilius kept sacrificing until the twenty-first ox, and the omens promised victory only if Rome did not strike first.",
+      "sourceQuote": "Aemilius, a pious man, offered sacrifice after sacrifice, and only on the twenty-first ox did the omens promise victory if Rome did not strike first.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which marriage alliances did Perseus make after becoming king? (select all that apply)",
+      "options": [
+        "He engaged his daughter to the king of Bithynia",
+        "He married a princess of Pergamon",
+        "He engaged his daughter to a Ptolemy of Egypt",
+        "He married his son to an Aetolian noblewoman",
+        "He engaged his son to a Thracian princess",
+        "He married a Seleucid princess"
+      ],
+      "correctAnswers": [
+        0,
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#perseus-road-to-war",
+      "explanation": "Perseus married a Seleucid princess and engaged his daughter to the king of Bithynia, a rival of Pergamon. He also drove out a Thracian king who was Rome's ally.",
+      "sourceQuote": "The new king built alliances by marriage, taking a Seleucid princess as his wife and engaging his daughter to the king of Bithynia, a rival of Pergamon.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which of these were terms imposed on Philip V after Cynoscephalae? (select all that apply)",
+      "options": [
+        "Pay 1,000 talents",
+        "Give up his navy except his flagship",
+        "Never sail west of a certain cape",
+        "Keep no war elephants",
+        "Split his kingdom into four republics",
+        "Pay 15,000 talents over twelve years"
+      ],
+      "correctAnswers": [
+        0,
+        1,
+        3
+      ],
+      "difficulty": 3,
+      "textReference": "#freedom-of-the-greeks",
+      "explanation": "Philip paid 1,000 talents, kept only his flagship, had his army capped at 5,000 and could field no elephants. The 15,000 talents and the cape clause belong to Antiochus's later treaty, and the four republics came after Perseus's fall.",
+      "sourceQuote": "He gave up his entire navy except his flagship, and his army was capped at 5,000 men, with no war elephants and no marching abroad without permission from the Senate (*senatus*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "During the cold war from 196 BC, how did Rome and Antiochus III see Greece and Asia Minor?",
+      "options": [
+        "Rome saw Greece as its sphere and Asia Minor as a buffer; Antiochus saw the reverse",
+        "Antiochus saw Greece as his heartland and Syria as a mere buffer",
+        "Both agreed that Greece should be shared equally between them",
+        "Rome saw Greece as a buffer and the Italian coast as its sphere",
+        "Both saw Asia Minor as a neutral zone best left to Pergamon",
+        "Rome claimed Asia Minor outright, while Antiochus claimed only Thrace"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#cold-war-with-antiochus",
+      "explanation": "Each side's buffer zone was the other's core interest, which made clashes almost inevitable. Flamininus publicly promised to free the Greeks of Asia, while Roman negotiators privately told Antiochus to stay on his side of the straits.",
+      "sourceQuote": "Rome saw Greece as its own sphere of influence and Asia Minor as a buffer zone; Antiochus saw Asia Minor as the heart of his empire and Greece as the buffer.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How large were the armies at Magnesia, according to ancient and modern estimates?",
+      "options": [
+        "Ancient: 30,000 against 72,000; modern: about 60,000 each",
+        "Ancient: 18,000 against 30,000; modern: about 20,000 each",
+        "Ancient: 72,000 against 50,000; modern: about 30,000 each",
+        "Ancient: 50,000 each; modern: 72,000 against 30,000",
+        "Ancient: 100,000 against 20,000; modern: about 40,000 each",
+        "Ancient: 72,000 against 30,000; modern: about 50,000 each"
+      ],
+      "correctAnswers": [
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#thermopylae-and-magnesia",
+      "explanation": "Ancient writers gave Antiochus a huge advantage of 72,000 against 30,000, but one modern study argues the sides were roughly equal at about 50,000. The battle took place around December 190 BC.",
+      "sourceQuote": "Ancient writers gave him 72,000 men against 30,000 Romans and allies; one modern study argues both sides had about 50,000.",
+      "reviewFlags": []
+    },
+    {
+      "question": "When did the final instalment of the Seleucid payments under the Peace of Apamea reach Rome?",
+      "options": [
+        "In 176 BC, exactly on schedule",
+        "In 187 BC, at the king's death",
+        "In 179 BC, two years early",
+        "It never arrived, and Rome let it go",
+        "In 168 BC, after Pydna",
+        "In 173 BC, slightly late"
+      ],
+      "correctAnswers": [
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#peace-of-apamea",
+      "explanation": "The last payment came slightly late, in 173 BC. Rome enforced only the clauses on land and money and let the military limits slide.",
+      "sourceQuote": "In practice Rome enforced only the clauses on land and money; the last payment arrived, slightly late, in 173 BC.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What event in 204 BC gave Philip V and Antiochus III their opening against Egypt?",
+      "options": [
+        "Rome defeated Carthage, Egypt's main ally",
+        "Egypt's king was captured in battle by Philip",
+        "Egypt's queen fled to Pergamon with the treasury",
+        "The king of Egypt died, leaving a six-year-old heir",
+        "A revolt broke out in Alexandria against the king",
+        "Egypt lost its navy in a storm off Rhodes"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 3,
+      "textReference": "#rome-looks-east",
+      "explanation": "A child on Egypt's throne tempted its ambitious neighbours. Philip and Antiochus made a secret pact to divide Egypt's overseas possessions.",
+      "sourceQuote": "In 204 BC the king of Egypt died and left his throne to a six-year-old boy.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which measures did Rome impose on the Macedonians after dismantling their kingdom? (select all that apply)",
+      "options": [
+        "Pella was razed to the ground",
+        "The gold and silver mines were closed",
+        "A Roman governor was installed at Pella",
+        "The national council was abolished",
+        "All Macedonians were forced to adopt Latin",
+        "Marriage between the districts was banned"
+      ],
+      "correctAnswers": [
+        1,
+        3,
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#end-of-macedon",
+      "explanation": "Rome broke Macedonian unity by abolishing the national council, closing the mines and banning marriage across districts. Pella survived as the centre of one of the four republics.",
+      "sourceQuote": "The national council was abolished, the gold and silver mines were closed and marriage between the districts was banned.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did Philip V do in revenge after a small Roman force helped relieve Athens?",
+      "options": [
+        "Melted down the treasures of the Acropolis",
+        "Executed the Athenian envoys at his court",
+        "Massacred the Athenian garrison at Piraeus",
+        "Exiled all Athenians living in Macedonian towns",
+        "Burned shrines and tombs outside the city and wrecked its rural sanctuaries",
+        "Seized the Athenian fleet and sank it at sea"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 3,
+      "textReference": "#flamininus-takes-command",
+      "explanation": "Philip wrecked the sanctuaries of the Athenian countryside so thoroughly that they were never used again. The early Roman war was slow, and one commander even faced a mutiny of 2,000 veterans.",
+      "sourceQuote": "Philip took revenge by burning the shrines and tombs outside the city and wrecking the sanctuaries of the Athenian countryside so thoroughly that they were never used again.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did the Battle of Cynoscephalae begin?",
+      "options": [
+        "Thracian troops ambushed a Roman foraging party",
+        "The armies drew up formally after days of manoeuvre",
+        "Philip charged after a failed parley on the shore",
+        "Small detachments blundered into each other and the skirmish grew",
+        "A mule broke loose and both sides fought over it",
+        "Flamininus launched a surprise dawn attack on Philip's camp"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 3,
+      "textReference": "#cynoscephalae",
+      "explanation": "The two armies were camped near each other in the hills, and a chance encounter swelled into a full battle. The more flexible Roman legions then beat the phalanx.",
+      "sourceQuote": "Small detachments blundered into each other and the skirmish swelled into a full battle.",
+      "reviewFlags": []
+    }
+  ]
+}

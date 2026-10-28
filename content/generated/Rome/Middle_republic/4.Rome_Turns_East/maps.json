@@ -1,0 +1,262 @@
+{
+  "description": "Maps for the chronicle, written by hand. Coordinates from Wikipedia; each map sits at the start of its section.",
+  "maps": [
+    {
+      "id": "greek-east",
+      "sec": "rome-looks-east",
+      "title": "Greece and the East, 200–168 BC",
+      "caption": "Rome fought Macedon in northern Greece (Cynoscephalae, Pydna) and the Seleucid king Antiochus in Greece and Asia Minor (Thermopylae, Magnesia). Its allies Pergamon and Rhodes gained the land Antiochus gave up at Apamea. Cynoscephalae's exact site is uncertain.",
+      "bounds": {
+        "latMin": 35.6,
+        "latMax": 42.4,
+        "lonMin": 19.0,
+        "lonMax": 31.0
+      },
+      "places": [
+        {
+          "name": "Pella",
+          "lat": 40.76,
+          "lon": 22.52,
+          "side": "r",
+          "dy": -4
+        },
+        {
+          "name": "Pydna",
+          "lat": 40.37,
+          "lon": 22.58,
+          "kind": "battle",
+          "side": "r",
+          "dy": 6
+        },
+        {
+          "name": "Cynoscephalae",
+          "lat": 39.42,
+          "lon": 22.58,
+          "kind": "battle",
+          "side": "l"
+        },
+        {
+          "name": "Thermopylae",
+          "lat": 38.8,
+          "lon": 22.53,
+          "kind": "battle",
+          "side": "l"
+        },
+        {
+          "name": "Corinth",
+          "lat": 37.91,
+          "lon": 22.88,
+          "side": "l"
+        },
+        {
+          "name": "Athens",
+          "lat": 37.97,
+          "lon": 23.73,
+          "side": "r",
+          "dy": 4
+        },
+        {
+          "name": "Samothrace",
+          "lat": 40.45,
+          "lon": 25.59,
+          "side": "r"
+        },
+        {
+          "name": "Pergamon",
+          "lat": 39.13,
+          "lon": 27.18,
+          "side": "r",
+          "dy": -4
+        },
+        {
+          "name": "Magnesia",
+          "lat": 38.62,
+          "lon": 27.43,
+          "kind": "battle",
+          "side": "r",
+          "dy": 4
+        },
+        {
+          "name": "Ephesus",
+          "lat": 37.94,
+          "lon": 27.34,
+          "side": "l",
+          "dy": 4
+        },
+        {
+          "name": "Rhodes",
+          "lat": 36.17,
+          "lon": 27.92,
+          "side": "r"
+        },
+        {
+          "name": "Apamea",
+          "lat": 38.07,
+          "lon": 30.17,
+          "side": "l"
+        }
+      ],
+      "peoples": [
+        {
+          "name": "Macedon",
+          "lat": 41.35,
+          "lon": 21.6
+        },
+        {
+          "name": "Asia Minor",
+          "lat": 39.6,
+          "lon": 29.8
+        },
+        {
+          "name": "Aetolians",
+          "lat": 38.42,
+          "lon": 21.55
+        }
+      ]
+    },
+    {
+      "id": "pydna",
+      "sec": "pydna",
+      "title": "Pydna, 168 BC: gaps in the phalanx",
+      "caption": "At first the phalanx's long spears pierced Roman shields. On uneven ground gaps opened in its ranks, and Aemilius Paullus sent small units into them to strike the exposed flanks, where the long spears were useless. A simplified plan.",
+      "plan": true,
+      "height": 190,
+      "key": {
+        "rome": "Romans",
+        "enemy": "Macedonians"
+      },
+      "units": [
+        {
+          "side": "rome",
+          "x": 46,
+          "y": 42,
+          "w": 40,
+          "h": 14
+        },
+        {
+          "side": "rome",
+          "x": 96,
+          "y": 42,
+          "w": 40,
+          "h": 14,
+          "name": "Roman legions",
+          "lx": 150,
+          "ly": 34
+        },
+        {
+          "side": "rome",
+          "x": 146,
+          "y": 42,
+          "w": 40,
+          "h": 14
+        },
+        {
+          "side": "rome",
+          "x": 196,
+          "y": 42,
+          "w": 40,
+          "h": 14
+        },
+        {
+          "side": "rome",
+          "x": 246,
+          "y": 42,
+          "w": 10,
+          "h": 14
+        },
+        {
+          "side": "rome",
+          "x": 106,
+          "y": 74,
+          "w": 14,
+          "h": 10,
+          "name": "Small units",
+          "lx": 96,
+          "ly": 81,
+          "anchor": "end"
+        },
+        {
+          "side": "rome",
+          "x": 182,
+          "y": 74,
+          "w": 14,
+          "h": 10
+        },
+        {
+          "side": "enemy",
+          "x": 40,
+          "y": 114,
+          "w": 66,
+          "h": 24
+        },
+        {
+          "side": "enemy",
+          "x": 122,
+          "y": 104,
+          "w": 56,
+          "h": 24
+        },
+        {
+          "side": "enemy",
+          "x": 194,
+          "y": 118,
+          "w": 66,
+          "h": 24,
+          "name": "The phalanx: long spears, in a dense block",
+          "lx": 150,
+          "ly": 160
+        }
+      ],
+      "moves": [
+        {
+          "side": "rome",
+          "pts": [
+            [
+              113,
+              86
+            ],
+            [
+              114,
+              112
+            ],
+            [
+              102,
+              124
+            ]
+          ]
+        },
+        {
+          "side": "rome",
+          "pts": [
+            [
+              189,
+              86
+            ],
+            [
+              187,
+              112
+            ],
+            [
+              198,
+              126
+            ]
+          ]
+        },
+        {
+          "side": "enemy",
+          "dashed": true,
+          "pts": [
+            [
+              150,
+              102
+            ],
+            [
+              150,
+              62
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}

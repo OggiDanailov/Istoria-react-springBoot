@@ -255,7 +255,15 @@
       },
       "short": "Rome Turns East",
       "era": "middle-republic",
-      "mapArea": "mediterranean"
+      "mapArea": "mediterranean",
+      "battle": {
+        "name": "Pydna",
+        "year": "168 BC",
+        "enemy": "Perseus of Macedon",
+        "sec": "pydna",
+        "intro": "King Perseus’s phalanx bristles with long spears that pierce Roman shields. Hold the line until gaps open in its ranks."
+      },
+      "locked": true
     },
     {
       "id": "carthage-and-corinth",

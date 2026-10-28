@@ -1,0 +1,129 @@
+{
+  "description": "Key facts for this chapter, written by hand from the chapter text. Every entry links to the section that explains it.",
+  "people": [
+    {
+      "name": "Philip V",
+      "text": "King of Macedon, beaten at Cynoscephalae in 197 BC.",
+      "sec": "rome-looks-east"
+    },
+    {
+      "name": "Flamininus",
+      "text": "Young consul who beat Philip and proclaimed the freedom of the Greeks.",
+      "sec": "flamininus-takes-command"
+    },
+    {
+      "name": "Antiochus III",
+      "text": "Seleucid “Great King”, beaten at Thermopylae and Magnesia.",
+      "sec": "cold-war-with-antiochus"
+    },
+    {
+      "name": "Perseus",
+      "text": "Philip’s son, the last king of Macedon.",
+      "sec": "perseus-road-to-war"
+    },
+    {
+      "name": "Aemilius Paullus",
+      "text": "Consul who won at Pydna in 168 BC.",
+      "sec": "pydna"
+    }
+  ],
+  "dates": [
+    {
+      "when": "200 BC",
+      "text": "Rome declares war on Philip V at the second vote.",
+      "sec": "rome-looks-east"
+    },
+    {
+      "when": "197 BC",
+      "text": "Cynoscephalae: the legions beat the phalanx.",
+      "sec": "cynoscephalae"
+    },
+    {
+      "when": "196 BC",
+      "text": "Flamininus proclaims the freedom of the Greeks.",
+      "sec": "freedom-of-the-greeks"
+    },
+    {
+      "when": "192 BC",
+      "text": "Antiochus lands in Greece at Demetrias.",
+      "sec": "cold-war-with-antiochus"
+    },
+    {
+      "when": "191 BC",
+      "text": "Antiochus is crushed at Thermopylae.",
+      "sec": "thermopylae-and-magnesia"
+    },
+    {
+      "when": "190 BC",
+      "text": "Battle of Magnesia.",
+      "sec": "thermopylae-and-magnesia"
+    },
+    {
+      "when": "188 BC",
+      "text": "Peace of Apamea.",
+      "sec": "peace-of-apamea"
+    },
+    {
+      "when": "171 BC",
+      "text": "War with Perseus begins.",
+      "sec": "perseus-road-to-war"
+    },
+    {
+      "when": "168 BC",
+      "text": "Battle of Pydna; the end of the Macedonian kingdom.",
+      "sec": "pydna"
+    }
+  ],
+  "terms": [
+    {
+      "latin": "comitia centuriata",
+      "english": "the Centuriate Assembly, which declared war",
+      "sec": "rome-looks-east"
+    },
+    {
+      "latin": "prorogatio",
+      "english": "the extension of a command",
+      "sec": "cynoscephalae"
+    },
+    {
+      "latin": "legiones",
+      "english": "legions",
+      "sec": "cynoscephalae"
+    },
+    {
+      "latin": "comitia tributa",
+      "english": "the Tribal Assembly",
+      "sec": "freedom-of-the-greeks"
+    },
+    {
+      "latin": "senatus",
+      "english": "the Senate",
+      "sec": "freedom-of-the-greeks"
+    },
+    {
+      "latin": "libertas",
+      "english": "freedom",
+      "sec": "freedom-of-the-greeks"
+    },
+    {
+      "latin": "obsides",
+      "english": "hostages",
+      "sec": "peace-of-apamea"
+    },
+    {
+      "latin": "hostis",
+      "english": "a public enemy",
+      "sec": "perseus-road-to-war"
+    },
+    {
+      "latin": "triumphus",
+      "english": "a victory parade",
+      "sec": "end-of-macedon"
+    },
+    {
+      "latin": "tributum",
+      "english": "tribute, a tax paid to Rome",
+      "sec": "end-of-macedon"
+    }
+  ]
+}

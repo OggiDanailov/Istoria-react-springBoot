@@ -1,0 +1,145 @@
+{
+  "batchName": "Middle Republic: Rome Turns East (200-167 BCE) - Latin words",
+  "chapterName": "Middle Republic: Rome Turns East (200-167 BCE)",
+  "difficulty": 1,
+  "batchOrder": 9,
+  "description": "Written by hand from the chapter text: the Latin words it explains",
+  "questions": [
+    {
+      "question": "At the Isthmian Games of 196 BC, Flamininus proclaimed libertas for the Greeks. What does it mean?",
+      "options": [
+        "Freedom",
+        "Peace",
+        "Alliance",
+        "Citizenship"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#freedom-of-the-greeks",
+      "explanation": "The crowd erupted in joy, though Rome kept troops in the “fetters of Greece”.",
+      "sourceQuote": "the Roman commander Flamininus proclaimed freedom (*libertas*) for the Greek communities Philip had ruled.",
+      "reviewFlags": []
+    },
+    {
+      "question": "In 171 BC Rome declared Perseus a hostis. What was that?",
+      "options": [
+        "A public enemy",
+        "A friend of Rome",
+        "A client king",
+        "A hostage"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#perseus-road-to-war",
+      "explanation": "Rome had heard the king of Pergamon accuse him of preparing for war.",
+      "sourceQuote": "Rome declared him a public enemy (*hostis*), and war began in 171 BC.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did Aemilius Paullus celebrate his victory over Perseus?",
+      "options": [
+        "With a triumphus, Perseus led in chains before it",
+        "With games at Corinth",
+        "By building a temple at Pydna",
+        "By freeing all the Macedonian prisoners"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#end-of-macedon",
+      "explanation": "Perseus spent the rest of his life under guard at Alba Fucens, in central Italy.",
+      "sourceQuote": "celebrated a triumph (*triumphus*), the grand victory parade, with Perseus led in chains before it.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Under the Peace of Apamea, Antiochus sent twenty obsides to Rome. Who were they?",
+      "options": [
+        "Hostages, including his youngest son",
+        "Ambassadors to the Senate",
+        "War elephants",
+        "Ships’ captains"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#peace-of-apamea",
+      "explanation": "He also had to hand over Rome’s enemies, but Hannibal fled instead.",
+      "sourceQuote": "Twenty hostages (*obsides*), including his youngest son, went to Rome",
+      "reviewFlags": []
+    },
+    {
+      "question": "How much tributum did each of the four Macedonian republics pay Rome?",
+      "options": [
+        "Half what the king had taken",
+        "Twice what the king had taken",
+        "The same as under the king",
+        "Nothing at all"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#end-of-macedon",
+      "explanation": "Rome declared the Macedonians free but dismantled their kingdom.",
+      "sourceQuote": "each paying Rome a tribute (*tributum*) half what the king had taken.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which Roman assembly voted unanimously for peace with Philip V in 197 BC?",
+      "options": [
+        "The Tribal Assembly (comitia tributa)",
+        "The Centuriate Assembly",
+        "The Senate",
+        "The Assembly of the Curiae"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#freedom-of-the-greeks",
+      "explanation": "Philip had to withdraw his garrisons, pay 1,000 talents and give up his navy.",
+      "sourceQuote": "the Tribal Assembly (*comitia tributa*), another of the citizen assemblies, voted unanimously for it.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What happened when a consul first asked the comitia centuriata to declare war on Philip V in 200 BC?",
+      "options": [
+        "It refused almost unanimously",
+        "It voted for war at once",
+        "It asked the Senate to decide",
+        "It voted to make peace with Carthage"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#rome-looks-east",
+      "explanation": "The refusal was blamed on exhaustion; at a second meeting the consul changed their minds.",
+      "sourceQuote": "In 200 BC one of the consuls asked the Centuriate Assembly (*comitia centuriata*), the citizen body that alone could declare war, to vote for war.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Why did Flamininus care whether his command got a prorogatio?",
+      "options": [
+        "If replaced, he wanted the credit for a quick peace",
+        "He wanted to become consul again at once",
+        "He hoped to be sent to Spain",
+        "He wanted to retire to Greece"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#cynoscephalae",
+      "explanation": "Once he learned his command was extended, his friends in Rome quietly sank the peace talks.",
+      "sourceQuote": "Flamininus did not yet know whether his command would be extended (*prorogatio*).",
+      "reviewFlags": []
+    }
+  ]
+}

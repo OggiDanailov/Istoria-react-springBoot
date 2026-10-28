@@ -1,0 +1,190 @@
+{
+  "batchName": "Middle Republic: Rome Turns East (200-167 BCE) - Medium Batch 2",
+  "chapterName": "Middle Republic: Rome Turns East (200-167 BCE)",
+  "difficulty": 2,
+  "batchOrder": 4,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Where did Antiochus III land in 192 BC, announcing he would free the Greeks from Roman rule?",
+      "options": [
+        "Chalcis",
+        "Thessalonica",
+        "Athens",
+        "Corinth",
+        "Demetrias"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#cold-war-with-antiochus",
+      "explanation": "Antiochus landed at the coastal fortress of Demetrias after the Aetolians invited him. The Senate saw this as an intrusion it could not accept.",
+      "sourceQuote": "In 192 BC he landed at Demetrias, a fortress on the Greek coast, announcing he would free the Greeks from Roman rule.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which two smaller powers first appealed to Rome for help against Philip V? (select all that apply)",
+      "options": [
+        "Sparta",
+        "Pergamon",
+        "Carthage",
+        "Rhodes",
+        "Bithynia"
+      ],
+      "correctAnswers": [
+        1,
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#rome-looks-east",
+      "explanation": "Rhodes, a rich island trading state, and Pergamon, a kingdom in western Asia Minor, appealed to Rome. Athens joined them later after Macedonian troops helped raid its territory.",
+      "sourceQuote": "This alarmed two smaller powers: Rhodes, a rich island trading state, and Pergamon, a kingdom in western Asia Minor.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did Aemilius Paullus's army break the Macedonian phalanx at Pydna?",
+      "options": [
+        "Archers shot down the spearmen from nearby hills",
+        "Small units slipped into gaps on uneven ground and struck its flanks",
+        "The legions held firm until the phalanx tired and fled",
+        "Cavalry encircled the phalanx on open, level ground",
+        "Elephants charged straight through the front ranks"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#pydna",
+      "explanation": "Uneven ground opened gaps in the phalanx, and Roman units slipped in like wedges where the long spears were useless. The battle was over within about an hour.",
+      "sourceQuote": "Aemilius sent small units to slip into them like wedges and strike the exposed flanks, where the long spears were useless.",
+      "reviewFlags": []
+    },
+    {
+      "question": "At Magnesia, what threw Antiochus III's own infantry into disorder?",
+      "options": [
+        "A mutiny among his mercenaries",
+        "A sudden storm off the coast",
+        "The flight of the king himself",
+        "A Rhodian landing behind his lines",
+        "His own war elephants"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#thermopylae-and-magnesia",
+      "explanation": "Antiochus's elephants turned into a liability and disrupted his infantry. On another wing, the king of Pergamon's cavalry charge smashed his line.",
+      "sourceQuote": "The king of Pergamon led a cavalry charge that smashed one wing, and Antiochus's own elephants threw his infantry into disorder.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did Flamininus, Rome's commander from 198 BC, proudly describe himself?",
+      "options": [
+        "As a lover of Greek culture",
+        "As the avenger of Carthage",
+        "As heir to Alexander the Great",
+        "As a son of the god Apollo",
+        "As protector of Egypt's young king"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#flamininus-takes-command",
+      "explanation": "Flamininus, not yet thirty, styled himself a lover of Greek culture. He later staged the proclamation of Greek freedom at the Isthmian Games.",
+      "sourceQuote": "In 198 BC command passed to Flamininus, a consul not yet thirty who proudly called himself a lover of Greek culture.",
+      "reviewFlags": []
+    },
+    {
+      "question": "When Rome declared that the Greek cities of Asia should be free, how did Antiochus III respond?",
+      "options": [
+        "He garrisoned every one of them",
+        "He withdrew his army to Syria",
+        "He offered them to Pergamon",
+        "He declared them free himself",
+        "He executed the Roman envoys"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#cold-war-with-antiochus",
+      "explanation": "Antiochus neatly took the wind out of Rome's sails by declaring the cities free himself. Roman negotiators, meanwhile, privately told his envoys to stay on his side of the straits.",
+      "sourceQuote": "Antiochus neatly answered by declaring them free himself.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which war did Rome justify in 195 BC using the slogan of Greek freedom?",
+      "options": [
+        "A war against Sparta",
+        "A war against Rhodes",
+        "A war against Thrace",
+        "A war against Athens",
+        "A war against Epirus"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#freedom-of-the-greeks",
+      "explanation": "Rome turned its own freedom slogan into a reason to fight Sparta in 195 BC. Meanwhile the Aetolian League was claiming Rome meant to become Greece's new master.",
+      "sourceQuote": "Meanwhile, Rome used the slogan of Greek freedom to justify a war against Sparta in 195 BC.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which naval power stopped a fleet of Antiochus III led by the old Carthaginian general who had once invaded Italy?",
+      "options": [
+        "The Carthaginians",
+        "The Athenians",
+        "The Rhodians",
+        "The Macedonians",
+        "The Egyptians"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#thermopylae-and-magnesia",
+      "explanation": "The Rhodians stopped this fleet, commanded by the former invader of Italy who now served at Antiochus's court. Rome and its allies won command of the sea in two major naval battles.",
+      "sourceQuote": "One of Antiochus's fleets, stopped by the Rhodians, was led by the old Carthaginian general who had once invaded Italy and now served at the king's court.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What happened to Epirus, the region that had backed Perseus?",
+      "options": [
+        "It was freed and exempted from tribute",
+        "It became the fifth Macedonian republic",
+        "Its royal family was deported to Alba Fucens",
+        "Roman troops sacked seventy towns in one day and enslaved 150,000 people",
+        "It was handed to Pergamon as a reward"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#end-of-macedon",
+      "explanation": "Epirus in north-western Greece suffered brutal punishment for supporting Perseus. Royal Macedonian officials, meanwhile, were deported to Italy.",
+      "sourceQuote": "In Epirus, the region of north-western Greece that had backed Perseus, Roman troops sacked seventy towns on a single day and enslaved 150,000 people.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Why did the military limits of the Peace of Apamea lapse?",
+      "options": [
+        "They were set to expire after exactly ten years",
+        "The Seleucids paid an extra fee to buy them out",
+        "They were tied to Antiochus personally and ended when he died",
+        "Pergamon asked Rome to lift them after a new alliance",
+        "Rome cancelled them as a reward for prompt payment"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#peace-of-apamea",
+      "explanation": "The military clauses applied to Antiochus himself, who died in 187 BC. His successors rebuilt their navy and fielded elephants again, and Rome largely looked the other way.",
+      "sourceQuote": "The military limits were tied to Antiochus personally and lapsed when he died in 187 BC.",
+      "reviewFlags": []
+    }
+  ]
+}

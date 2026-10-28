@@ -1,0 +1,691 @@
+{
+  "chapterName": "Middle Republic: Rome Turns East (200-167 BCE)",
+  "model": "claude-opus-5-5",
+  "briefing": {
+    "title": "Greece, 200 BC",
+    "paragraphs": [
+      "Rome has just beaten Carthage, and its citizens are exhausted. Across the Adriatic Sea, Philip V, king of Macedon, is grabbing Greek cities, and Rhodes, Pergamon and Athens beg Rome for help. Further east, Antiochus III rules the vast Seleucid Empire from Syria and eyes the same lands.",
+      "Over the next thirty years Roman legions will clash with Macedon's famous phalanx and with the Seleucid 'Great King'. Rome will promise the Greeks freedom. The question is whether that freedom is real, or whether Rome is becoming Greece's new master."
+    ]
+  },
+  "timelines": [
+    {
+      "name": "Level 1: The Big Battles",
+      "blurb": "Four turning points of Rome's wars in the East.",
+      "events": [
+        {
+          "label": "Rome beats Philip at Cynoscephalae",
+          "when": "June 197 BC",
+          "year": -197,
+          "fact": "Rome's flexible legions defeated Philip V's phalanx among the 'Dog's Heads' hills in Thessaly.",
+          "sectionId": "cynoscephalae",
+          "reviewFlags": []
+        },
+        {
+          "label": "Antiochus lands at Demetrias",
+          "when": "192 BC",
+          "year": -192,
+          "fact": "Invited by the Aetolian League, the Seleucid king Antiochus III landed in Greece claiming he would free the Greeks from Rome.",
+          "sectionId": "cold-war-with-antiochus",
+          "reviewFlags": []
+        },
+        {
+          "label": "Peace confirmed at Apamea",
+          "when": "188 BC",
+          "year": -188,
+          "fact": "Antiochus III gave up all lands north and west of the Taurus Mountains and agreed to pay 15,000 talents.",
+          "sectionId": "peace-of-apamea",
+          "reviewFlags": []
+        },
+        {
+          "label": "Aemilius Paullus wins at Pydna",
+          "when": "168 BC",
+          "year": -168,
+          "fact": "In about an hour Roman units broke the Macedonian phalanx of Perseus on the Macedonian coast.",
+          "sectionId": "pydna",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Level 2: From Philip to Perseus",
+      "blurb": "Follow Rome's road from a reluctant vote to a new Macedonian war.",
+      "events": [
+        {
+          "label": "Egypt's throne passes to a boy",
+          "when": "204 BC",
+          "year": -204,
+          "fact": "The death of Egypt's king left a six-year-old on the throne, tempting Philip V and Antiochus III to carve up his possessions.",
+          "sectionId": "rome-looks-east",
+          "reviewFlags": []
+        },
+        {
+          "label": "Assembly first rejects war on Philip",
+          "when": "200 BC",
+          "year": -200,
+          "fact": "The Centuriate Assembly, which alone could declare war, refused almost unanimously before a consul changed its mind.",
+          "sectionId": "rome-looks-east",
+          "reviewFlags": []
+        },
+        {
+          "label": "Flamininus proclaims Greek freedom",
+          "when": "May 196 BC",
+          "year": -196,
+          "fact": "At the Isthmian Games near Corinth, Flamininus announced freedom for the Greek communities Philip had ruled, and the crowd erupted.",
+          "sectionId": "freedom-of-the-greeks",
+          "reviewFlags": []
+        },
+        {
+          "label": "Antiochus crushed at Thermopylae",
+          "when": "191 BC",
+          "year": -191,
+          "fact": "Heavily outnumbered, Antiochus III was beaten at the narrow pass and fled to Ephesus less than six months after landing.",
+          "sectionId": "thermopylae-and-magnesia",
+          "reviewFlags": []
+        },
+        {
+          "label": "Perseus succeeds Philip V",
+          "when": "179 BC",
+          "year": -179,
+          "fact": "Philip V's ambitious son Perseus built alliances by marriage, wedding a Seleucid princess.",
+          "sectionId": "perseus-road-to-war",
+          "reviewFlags": []
+        },
+        {
+          "label": "Rome's war with Perseus begins",
+          "when": "171 BC",
+          "year": -171,
+          "fact": "After Perseus was blamed for a plot against the king of Pergamon, Rome declared him a public enemy (hostis).",
+          "sectionId": "perseus-road-to-war",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Level 3: The Whole Story",
+      "blurb": "Eight moments, from Macedon's old grip on Thessaly to the march over Olympus.",
+      "events": [
+        {
+          "label": "Macedon takes control of Thessaly",
+          "when": "353 BC",
+          "year": -353,
+          "fact": "Macedon had held Thessaly, the broad plain of north-central Greece, since 353 BC, which is why Flamininus' demand to leave it was so harsh.",
+          "sectionId": "flamininus-takes-command",
+          "reviewFlags": []
+        },
+        {
+          "label": "Flamininus takes command",
+          "when": "198 BC",
+          "year": -198,
+          "fact": "The consul, not yet thirty, demanded that Philip V withdraw from everywhere beyond Macedon.",
+          "sectionId": "flamininus-takes-command",
+          "reviewFlags": []
+        },
+        {
+          "label": "Rome wars on Sparta",
+          "when": "195 BC",
+          "year": -195,
+          "fact": "Rome used the slogan of Greek freedom to justify a war against Sparta.",
+          "sectionId": "freedom-of-the-greeks",
+          "reviewFlags": []
+        },
+        {
+          "label": "Last Roman legions leave Greece",
+          "when": "194 BC",
+          "year": -194,
+          "fact": "Despite the proclamation of freedom, the legions did not fully leave Greece until 194 BC.",
+          "sectionId": "freedom-of-the-greeks",
+          "reviewFlags": []
+        },
+        {
+          "label": "Antiochus beaten at Magnesia",
+          "when": "Around December 190 BC",
+          "year": -190,
+          "fact": "A cavalry charge led by the king of Pergamon and Antiochus's own panicking elephants decided the battle.",
+          "sectionId": "thermopylae-and-magnesia",
+          "reviewFlags": []
+        },
+        {
+          "label": "Antiochus III dies",
+          "when": "187 BC",
+          "year": -187,
+          "fact": "The military limits of Apamea were tied to Antiochus personally and lapsed at his death.",
+          "sectionId": "peace-of-apamea",
+          "reviewFlags": []
+        },
+        {
+          "label": "Last Apamea payment arrives",
+          "when": "173 BC",
+          "year": -173,
+          "fact": "Rome enforced the money clauses, and the final instalment came slightly late.",
+          "sectionId": "peace-of-apamea",
+          "reviewFlags": []
+        },
+        {
+          "label": "Consul forces way over Olympus",
+          "when": "169 BC",
+          "year": -169,
+          "fact": "A Roman consul pushed his army over the Olympus mountains into Macedon, building bridges for his elephants.",
+          "sectionId": "perseus-road-to-war",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "matchSets": [
+    {
+      "name": "Kings and Consuls",
+      "blurb": "Match each leader to what he did.",
+      "pairs": [
+        {
+          "name": "Philip V",
+          "match": "Macedonian king whose phalanx lost at Cynoscephalae",
+          "sectionId": "cynoscephalae",
+          "reviewFlags": []
+        },
+        {
+          "name": "Antiochus III",
+          "match": "Seleucid 'Great King' beaten at Thermopylae and Magnesia",
+          "sectionId": "thermopylae-and-magnesia",
+          "reviewFlags": []
+        },
+        {
+          "name": "Perseus",
+          "match": "Last king of Macedon, led in chains in a Roman triumph",
+          "sectionId": "end-of-macedon",
+          "reviewFlags": []
+        },
+        {
+          "name": "Flamininus",
+          "match": "Young consul who proclaimed Greek freedom at the Isthmian Games",
+          "sectionId": "freedom-of-the-greeks",
+          "reviewFlags": []
+        },
+        {
+          "name": "Aemilius Paullus",
+          "match": "Pious consul who sacrificed 21 oxen before winning at Pydna",
+          "sectionId": "pydna",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Words of War and Politics",
+      "blurb": "Match each term to its meaning.",
+      "pairs": [
+        {
+          "name": "Phalanx",
+          "match": "Dense Macedonian block of men armed with very long spears",
+          "sectionId": "cynoscephalae",
+          "reviewFlags": []
+        },
+        {
+          "name": "Fetters of Greece",
+          "match": "Corinth, Chalcis and Demetrias, fortresses that controlled Greece",
+          "sectionId": "freedom-of-the-greeks",
+          "reviewFlags": []
+        },
+        {
+          "name": "Aetolian League",
+          "match": "Central Greek federation that invited Antiochus to free Greece",
+          "sectionId": "cold-war-with-antiochus",
+          "reviewFlags": []
+        },
+        {
+          "name": "Centuriate Assembly",
+          "match": "The citizen body that alone could declare war",
+          "sectionId": "rome-looks-east",
+          "reviewFlags": []
+        },
+        {
+          "name": "Prorogatio",
+          "match": "Extension of a Roman commander's term in the field",
+          "sectionId": "cynoscephalae",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Latin Words",
+      "blurb": "Match each Latin word to its meaning.",
+      "pairs": [
+        {
+          "name": "Comitia tributa",
+          "match": "The Tribal Assembly, which approved peace with Philip",
+          "sectionId": "freedom-of-the-greeks",
+          "reviewFlags": []
+        },
+        {
+          "name": "Libertas",
+          "match": "Freedom, proclaimed for the Greeks in 196 BC",
+          "sectionId": "freedom-of-the-greeks",
+          "reviewFlags": []
+        },
+        {
+          "name": "Obsides",
+          "match": "Hostages, like the twenty sent by Antiochus",
+          "sectionId": "peace-of-apamea",
+          "reviewFlags": []
+        },
+        {
+          "name": "Hostis",
+          "match": "A public enemy, as Rome declared Perseus",
+          "sectionId": "perseus-road-to-war",
+          "reviewFlags": []
+        },
+        {
+          "name": "Triumphus",
+          "match": "The grand victory parade, with Perseus in chains",
+          "sectionId": "end-of-macedon",
+          "reviewFlags": []
+        },
+        {
+          "name": "Tributum",
+          "match": "The tax the four Macedonian republics paid",
+          "sectionId": "end-of-macedon",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "trueFalseDecks": [
+    {
+      "name": "The War with Philip",
+      "blurb": "Rome's first big fight in Greece.",
+      "cards": [
+        {
+          "claim": "In 200 BC the Centuriate Assembly at first voted almost unanimously against war with Philip V.",
+          "answer": true,
+          "why": "The unprecedented rejection was blamed on exhaustion after the war with Carthage; a second meeting approved the war.",
+          "sectionId": "rome-looks-east",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Rhodes and Pergamon appealed to Carthage for help against Philip V.",
+          "answer": false,
+          "why": "They appealed to Rome, which had just beaten Carthage in the Second Punic War.",
+          "sectionId": "rome-looks-east",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Flamininus was over sixty when he took command against Philip in 198 BC.",
+          "answer": false,
+          "why": "Flamininus was a consul not yet thirty years old.",
+          "sectionId": "flamininus-takes-command",
+          "reviewFlags": []
+        },
+        {
+          "claim": "At the Aous river, Flamininus sent troops along a hidden mountain path to strike Philip from behind.",
+          "answer": true,
+          "why": "Outflanked, Philip fled into Thessaly, leaving about 2,000 men dead or wounded.",
+          "sectionId": "flamininus-takes-command",
+          "reviewFlags": []
+        },
+        {
+          "claim": "During peace talks in winter 198 BC, Philip refused to step ashore and spoke from the prow of his ship.",
+          "answer": true,
+          "why": "The suspicious king stayed on his ship, and the talks went nowhere.",
+          "sectionId": "cynoscephalae",
+          "reviewFlags": []
+        },
+        {
+          "claim": "The name Cynoscephalae means 'Lion's Gate'.",
+          "answer": false,
+          "why": "Cynoscephalae means 'Dog's Heads', the name of the hills in Thessaly where the battle was fought.",
+          "sectionId": "cynoscephalae",
+          "reviewFlags": []
+        },
+        {
+          "claim": "After his defeat, Philip's army was capped at 5,000 men.",
+          "answer": true,
+          "why": "He also had to pay 1,000 talents, give up his navy except his flagship and keep no war elephants.",
+          "sectionId": "freedom-of-the-greeks",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Flamininus proclaimed the freedom of the Greeks at the Olympic Games.",
+          "answer": false,
+          "why": "He made the proclamation at the Isthmian Games of May 196 BC, a great festival near Corinth.",
+          "sectionId": "freedom-of-the-greeks",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Antiochus and Perseus",
+      "blurb": "The Seleucid king and the last king of Macedon.",
+      "cards": [
+        {
+          "claim": "Antiochus III landed at Demetrias in 192 BC after an invitation from the Aetolian League.",
+          "answer": true,
+          "why": "The Aetolians, now resentful of Rome, invited him to liberate Greece.",
+          "sectionId": "cold-war-with-antiochus",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Most Greeks welcomed Antiochus III as their liberator.",
+          "answer": false,
+          "why": "He got a chilly welcome: most Greeks found Rome's promises of freedom more convincing.",
+          "sectionId": "thermopylae-and-magnesia",
+          "reviewFlags": []
+        },
+        {
+          "claim": "At Magnesia, Antiochus's own elephants threw his infantry into disorder.",
+          "answer": true,
+          "why": "That, together with a cavalry charge by the king of Pergamon, cost him the battle.",
+          "sectionId": "thermopylae-and-magnesia",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Under the Peace of Apamea, Rome took large territories in Asia Minor for itself.",
+          "answer": false,
+          "why": "Rome took no land; the territory went to its loyal allies Pergamon and Rhodes.",
+          "sectionId": "peace-of-apamea",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Perseus took a Seleucid princess as his wife.",
+          "answer": true,
+          "why": "He built alliances by marriage, also engaging his daughter to the king of Bithynia.",
+          "sectionId": "perseus-road-to-war",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Near the hill of Callinicus, the Romans won a clear victory over Perseus.",
+          "answer": false,
+          "why": "Perseus's cavalry and light troops won, killing 2,000 Roman infantry and 200 cavalry.",
+          "sectionId": "perseus-road-to-war",
+          "reviewFlags": []
+        },
+        {
+          "claim": "The lunar eclipse before Pydna terrified the Roman soldiers.",
+          "answer": false,
+          "why": "An officer had predicted the eclipse, so the Roman soldiers were not frightened.",
+          "sectionId": "pydna",
+          "reviewFlags": []
+        },
+        {
+          "claim": "After Pydna, Rome split Macedon into four republics.",
+          "answer": true,
+          "why": "They were centred on Amphipolis, Thessalonica, Pella and Pelagonia, each paying half the king's old tribute.",
+          "sectionId": "end-of-macedon",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "oddOneOut": [
+    {
+      "items": [
+        "Rhodes",
+        "Aetolian League",
+        "Pergamon",
+        "Athens"
+      ],
+      "oddIndex": 1,
+      "why": "Rhodes, Pergamon and Athens appealed to Rome against Philip V. The Aetolian League did not; it later invited Antiochus III into Greece.",
+      "sectionId": "rome-looks-east",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Corinth",
+        "Chalcis",
+        "Pella",
+        "Demetrias"
+      ],
+      "oddIndex": 2,
+      "why": "Corinth, Chalcis and Demetrias were the 'fetters of Greece' where Rome kept troops. Pella was Macedon's capital and later a centre of one of the four republics.",
+      "sectionId": "freedom-of-the-greeks",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Armenia",
+        "Iran",
+        "Syria and Judea",
+        "Thessaly"
+      ],
+      "oddIndex": 3,
+      "why": "Antiochus III brought Armenia and Iran back under control and took Syria and Judea from Egypt. Thessaly had been held by Macedon since 353 BC.",
+      "sectionId": "cold-war-with-antiochus",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Pay 15,000 talents",
+        "Army capped at 5,000 men",
+        "Only ten large warships",
+        "Give up war elephants"
+      ],
+      "oddIndex": 1,
+      "why": "The other three were terms of the Peace of Apamea imposed on Antiochus III. The 5,000-man army cap was imposed on Philip V.",
+      "sectionId": "peace-of-apamea",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Cynoscephalae",
+        "Thermopylae",
+        "Callinicus",
+        "Pydna"
+      ],
+      "oddIndex": 2,
+      "why": "Rome won at Cynoscephalae, Thermopylae and Pydna. At Callinicus, Perseus’s cavalry and light troops defeated the Romans.",
+      "sectionId": "perseus-road-to-war",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Lunar eclipse",
+        "Runaway mule",
+        "Hidden path at the Aous",
+        "Riderless horse"
+      ],
+      "oddIndex": 2,
+      "why": "The eclipse, the mule and the horse belong to stories about Pydna. The hidden path helped Flamininus beat Philip at the Aous river.",
+      "sectionId": "pydna",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Pydna",
+        "Pella",
+        "Samothrace",
+        "Ephesus"
+      ],
+      "oddIndex": 3,
+      "why": "Perseus fled from Pydna to Pella and then to Samothrace. Ephesus, in Asia Minor, was where Antiochus III fled after Thermopylae.",
+      "sectionId": "end-of-macedon",
+      "reviewFlags": []
+    }
+  ],
+  "whoAmI": [
+    {
+      "name": "The Kings",
+      "blurb": "Three rulers who took on Rome.",
+      "people": [
+        {
+          "name": "Philip V",
+          "options": [
+            "Philip V",
+            "Antiochus III",
+            "Perseus",
+            "Flamininus"
+          ],
+          "clues": [
+            "In revenge I burned the shrines and tombs outside Athens.",
+            "Suspicious of the Romans, I talked peace from the prow of my ship.",
+            "After my defeat I paid 1,000 talents and kept only my flagship.",
+            "Roman legions beat my phalanx at Cynoscephalae in 197 BC."
+          ],
+          "sectionId": "cynoscephalae",
+          "reviewFlags": []
+        },
+        {
+          "name": "Antiochus III",
+          "options": [
+            "Philip V",
+            "Antiochus III",
+            "Perseus",
+            "Flamininus"
+          ],
+          "clues": [
+            "I brought Armenia and Iran back under my control.",
+            "When Rome said the Greek cities of Asia should be free, I declared them free myself.",
+            "I gave up all my lands north and west of the Taurus Mountains.",
+            "I was beaten at Thermopylae and again at Magnesia."
+          ],
+          "sectionId": "thermopylae-and-magnesia",
+          "reviewFlags": []
+        },
+        {
+          "name": "Perseus",
+          "options": [
+            "Philip V",
+            "Antiochus III",
+            "Perseus",
+            "Flamininus"
+          ],
+          "clues": [
+            "I engaged my daughter to the king of Bithynia.",
+            "My cavalry beat the Romans near the hill of Callinicus.",
+            "I hid in a sanctuary on Samothrace before surrendering.",
+            "I was the last king of Macedon, defeated at Pydna in 168 BC."
+          ],
+          "sectionId": "end-of-macedon",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "The Commanders",
+      "blurb": "Men who led armies in Rome's Greek wars.",
+      "people": [
+        {
+          "name": "Flamininus",
+          "options": [
+            "Flamininus",
+            "Aemilius Paullus",
+            "Philip V",
+            "Perseus"
+          ],
+          "clues": [
+            "Ancient writers claimed my friends in Rome sank a peace deal once my command was extended.",
+            "I became consul before I was thirty and called myself a lover of Greek culture.",
+            "At the Aous river I was shown a hidden path through the mountains.",
+            "At the Isthmian Games of 196 BC I proclaimed freedom for the Greeks."
+          ],
+          "sectionId": "freedom-of-the-greeks",
+          "reviewFlags": []
+        },
+        {
+          "name": "Aemilius Paullus",
+          "options": [
+            "Flamininus",
+            "Aemilius Paullus",
+            "Philip V",
+            "Perseus"
+          ],
+          "clues": [
+            "In 168 BC I was serving as consul for the second time.",
+            "I sent troops on a secret march, pretending they were off to raid the coast.",
+            "Only on the twenty-first ox did my sacrifices promise victory.",
+            "I won at Pydna and led a captured king in chains in my triumph."
+          ],
+          "sectionId": "pydna",
+          "reviewFlags": []
+        },
+        {
+          "name": "Philip V",
+          "options": [
+            "Flamininus",
+            "Aemilius Paullus",
+            "Philip V",
+            "Perseus"
+          ],
+          "clues": [
+            "I made a secret pact with Antiochus III to carve up Egypt's overseas possessions.",
+            "I seized Greek cities along the Dardanelles.",
+            "I called up aged veterans and underage boys, about 18,000 Macedonians.",
+            "Outflanked at the Aous river, I fled into Thessaly."
+          ],
+          "sectionId": "rome-looks-east",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "places": [
+    {
+      "name": "Cynoscephalae",
+      "wikipediaTitle": "Battle of Cynoscephalae",
+      "lat": 39.42,
+      "lon": 22.58,
+      "why": "In these 'Dog's Heads' hills of Thessaly, Rome's legions beat Philip V's phalanx in 197 BC.",
+      "sectionId": "cynoscephalae",
+      "coordinates": "model estimate",
+      "reviewFlags": []
+    },
+    {
+      "name": "Pydna",
+      "wikipediaTitle": "Pydna",
+      "lat": 40.36666667,
+      "lon": 22.58333333,
+      "why": "On this Macedonian coast Aemilius Paullus destroyed Perseus's army in 168 BC.",
+      "sectionId": "pydna",
+      "coordinates": "Wikipedia: Pydna",
+      "reviewFlags": []
+    },
+    {
+      "name": "Corinth",
+      "wikipediaTitle": "Ancient Corinth",
+      "lat": 37.9053455,
+      "lon": 22.8801924,
+      "why": "Near Corinth Flamininus proclaimed Greek freedom, yet Rome kept troops in it as one of the 'fetters of Greece'.",
+      "sectionId": "freedom-of-the-greeks",
+      "coordinates": "Wikipedia: Ancient Corinth",
+      "reviewFlags": []
+    },
+    {
+      "name": "Magnesia",
+      "wikipediaTitle": "Magnesia ad Sipylum",
+      "lat": 38.61666667,
+      "lon": 27.43333333,
+      "why": "Around December 190 BC Rome and its allies defeated Antiochus III here in western Asia Minor.",
+      "sectionId": "thermopylae-and-magnesia",
+      "coordinates": "Wikipedia: Magnesia ad Sipylum",
+      "reviewFlags": []
+    },
+    {
+      "name": "Apamea",
+      "wikipediaTitle": "Apamea (Phrygia)",
+      "lat": 38.07166667,
+      "lon": 30.16555556,
+      "why": "The peace terms imposed on Antiochus III were confirmed at this inland town of Asia Minor in 188 BC.",
+      "sectionId": "peace-of-apamea",
+      "coordinates": "Wikipedia: Apamea (Phrygia)",
+      "reviewFlags": []
+    },
+    {
+      "name": "Samothrace",
+      "wikipediaTitle": "Samothrace",
+      "lat": 40.45,
+      "lon": 25.5875,
+      "why": "Perseus took refuge in a sanctuary on this sacred island before surrendering to Rome.",
+      "sectionId": "end-of-macedon",
+      "coordinates": "Wikipedia: Samothrace",
+      "reviewFlags": []
+    },
+    {
+      "name": "Rhodes",
+      "wikipediaTitle": "Rhodes",
+      "lat": 36.17,
+      "lon": 27.92,
+      "why": "This rich island trading state appealed to Rome against Philip V and was rewarded with land after Apamea.",
+      "sectionId": "rome-looks-east",
+      "coordinates": "Wikipedia: Rhodes",
+      "reviewFlags": []
+    }
+  ]
+}

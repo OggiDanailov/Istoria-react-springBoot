@@ -1,0 +1,179 @@
+{
+  "batchName": "Middle Republic: Rome Turns East (200-167 BCE) - Easy Batch 1",
+  "chapterName": "Middle Republic: Rome Turns East (200-167 BCE)",
+  "difficulty": 1,
+  "batchOrder": 1,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Into how many republics did Rome split the kingdom of Macedon?",
+      "options": [
+        "Two",
+        "Three",
+        "Four",
+        "Seven"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#end-of-macedon",
+      "explanation": "Macedon was broken into four republics, centred on Amphipolis, Thessalonica, Pella and Pelagonia. Rome first declared the Macedonians free and then dismantled their kingdom.",
+      "sourceQuote": "It was split into four republics, centred on Amphipolis, Thessalonica, Pella and Pelagonia, each paying Rome a tribute (*tributum*) half what the king had taken.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Where did Antiochus III make his stand against the Romans in 191 BC?",
+      "options": [
+        "Cynoscephalae",
+        "Marathon",
+        "Pydna",
+        "Thermopylae"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#thermopylae-and-magnesia",
+      "explanation": "Heavily outnumbered, Antiochus chose the narrow pass of Thermopylae and was crushed there. He fled to Ephesus less than six months after landing in Greece.",
+      "sourceQuote": "Heavily outnumbered, Antiochus chose to make a stand at Thermopylae, the narrow coastal pass in central Greece.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Where was the decisive battle between Rome and Antiochus III fought around December 190 BC?",
+      "options": [
+        "Pergamon",
+        "Apamea",
+        "Ephesus",
+        "Magnesia"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#thermopylae-and-magnesia",
+      "explanation": "The armies met near Magnesia in western Asia Minor. A cavalry charge led by the king of Pergamon helped break Antiochus's army.",
+      "sourceQuote": "Around December 190 BC the armies met near Magnesia in western Asia Minor.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which two kings made a secret pact to carve up Egypt's overseas possessions after 204 BC?",
+      "options": [
+        "Philip V of Macedon and Antiochus III",
+        "Hannibal of Carthage and Philip V",
+        "Philip V of Macedon and Eumenes of Pergamon",
+        "Perseus of Macedon and Antiochus III"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#rome-looks-east",
+      "explanation": "Philip V of Macedon and Antiochus III of the Seleucid Empire saw Egypt's weakness as their chance. Philip moved first, seizing Greek cities along the Dardanelles and in Asia Minor.",
+      "sourceQuote": "Philip V, king of Macedon, the warrior kingdom on Greece's northern border, and Antiochus III, ruler of the Seleucid Empire, the vast realm governed from Syria, made a secret pact to carve up Egypt's overseas possessions.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Who accused Perseus before the Roman Senate of preparing for war?",
+      "options": [
+        "The Rhodians",
+        "The king of Pergamon",
+        "The Aetolian League",
+        "The king of Bithynia"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#perseus-road-to-war",
+      "explanation": "The king of Pergamon, Rome's closest friend in the region, went to Rome in person. He even warned that Perseus might invade Italy.",
+      "sourceQuote": "The king of Pergamon, Rome's closest friend in the region, travelled to Rome and accused Perseus before the Senate of preparing for war ever since he took the throne, warning that he might even invade Italy.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which Greek federation, by now resentful of Rome, invited Antiochus III to liberate Greece?",
+      "options": [
+        "The Boeotian League",
+        "The Delian League",
+        "The Achaean League",
+        "The Aetolian League"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#cold-war-with-antiochus",
+      "explanation": "The Aetolian League had fought on Rome's side but felt cheated afterwards. Its invitation brought Antiochus to Greece in 192 BC.",
+      "sourceQuote": "The spark came from the Aetolian League, the central Greek federation that now resented Rome.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Where did Perseus take refuge in a sanctuary after his defeat at Pydna?",
+      "options": [
+        "Delos",
+        "Delphi",
+        "Samothrace",
+        "Rhodes"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#end-of-macedon",
+      "explanation": "Perseus fled first to his capital, Pella, and then to the sacred island of Samothrace. A Roman fleet blockaded it until he surrendered.",
+      "sourceQuote": "He fled to his capital, Pella, then on to Samothrace, a sacred island in the northern Aegean, where he took refuge in a sanctuary.",
+      "reviewFlags": []
+    },
+    {
+      "question": "In the Roman Republic, which body alone could declare war?",
+      "options": [
+        "The two consuls",
+        "The Senate",
+        "The Tribal Assembly",
+        "The Centuriate Assembly"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#rome-looks-east",
+      "explanation": "Only the Centuriate Assembly (comitia centuriata) could declare war. In 200 BC it at first rejected war with Philip V almost unanimously.",
+      "sourceQuote": "In 200 BC one of the consuls asked the Centuriate Assembly (*comitia centuriata*), the citizen body that alone could declare war, to vote for war.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Who succeeded Philip V as king of Macedon in 179 BC?",
+      "options": [
+        "Alexander",
+        "Demetrius",
+        "Antiochus IV",
+        "Perseus"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#perseus-road-to-war",
+      "explanation": "Philip's ambitious son Perseus took the throne. He quickly built alliances through marriage and courted Greeks wary of Rome.",
+      "sourceQuote": "In 179 BC Philip V of Macedon died and was succeeded by his ambitious son Perseus.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How much did Antiochus III agree to pay Rome under the Peace of Apamea?",
+      "options": [
+        "15,000 talents over twelve years",
+        "5,000 talents over five years",
+        "1,000 talents in one payment",
+        "50,000 talents over twenty years"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#peace-of-apamea",
+      "explanation": "Antiochus agreed to pay 15,000 talents over twelve years. He also had to keep only ten large warships and give up war elephants.",
+      "sourceQuote": "He agreed to pay 15,000 talents over twelve years, to keep only ten large warships, to give up war elephants and never to sail west of a certain cape.",
+      "reviewFlags": []
+    }
+  ]
+}
