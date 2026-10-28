@@ -1,0 +1,145 @@
+{
+  "batchName": "Middle Republic: Scipio and the Road to Zama (216-201 BCE) - Latin words",
+  "chapterName": "Middle Republic: Scipio and the Road to Zama (216-201 BCE)",
+  "difficulty": 1,
+  "batchOrder": 9,
+  "description": "Written by hand from the chapter text: the Latin words it explains",
+  "questions": [
+    {
+      "question": "After Zama, Scipio took the agnomen Africanus. What is an agnomen?",
+      "options": [
+        "An honorary surname",
+        "A military rank",
+        "A Roman province",
+        "A crown of laurel"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#peace-and-africanus",
+      "explanation": "Africanus means “the African”, for his victory over Carthage.",
+      "sourceQuote": "He took the honorary surname (*agnomen*) Africanus, \"the African\".",
+      "reviewFlags": []
+    },
+    {
+      "question": "At Zama, who filled the open lanes between the Roman maniples?",
+      "options": [
+        "Light skirmishers (velites)",
+        "War elephants",
+        "Numidian horsemen",
+        "Veteran triarii"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#battle-of-zama",
+      "explanation": "Most of Hannibal’s elephants ran down the lanes, where they were cut off and killed.",
+      "sourceQuote": "leaving open lanes filled with light skirmishers (*velites*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "What was the triumphus Scipio celebrated in 201 BC?",
+      "options": [
+        "The grand victory parade through Rome",
+        "A naval review at Ostia",
+        "A feast for the Senate",
+        "A games festival in Carthage"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#peace-and-africanus",
+      "explanation": "He also deposited about 40 tonnes of silver in the treasury.",
+      "sourceQuote": "Scipio returned home to celebrate a triumph (*triumphus*), the grand victory parade through Rome.",
+      "reviewFlags": []
+    },
+    {
+      "question": "In 213 BC Scipio was elected aedilis. What did an aedile do?",
+      "options": [
+        "Looked after the city’s streets and festivals",
+        "Commanded a legion",
+        "Led the Senate",
+        "Judged lawsuits"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#survivor-of-cannae",
+      "explanation": "A tribune objected that Scipio was too young, but backed down before the crowd.",
+      "sourceQuote": "In 213 BC voters elected him aedile (*aedilis*), an official who looked after the city's streets and festivals.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Who was the princeps senatus who fought Scipio’s plan to invade Africa?",
+      "options": [
+        "The leader of the Senate, an elderly cautious general",
+        "The youngest senator",
+        "The chief priest of Jupiter",
+        "The consul of 205 BC"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#consul-at-thirty-one",
+      "explanation": "He may have been partly driven by jealousy of Scipio’s popularity.",
+      "sourceQuote": "The leader of the Senate (*princeps senatus*), an elderly general famous for his cautious strategy, fought Scipio's plan hard.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did Scipio change the usual layout of his manipuli at Zama?",
+      "options": [
+        "He lined them up one behind another, leaving open lanes",
+        "He packed them into one deep block",
+        "He hid them behind the cavalry",
+        "He spread them out in a single long line"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#battle-of-zama",
+      "explanation": "Normally the maniples stood staggered like a chessboard.",
+      "sourceQuote": "Normally his infantry companies, the maniples (*manipuli*), stood staggered like a chessboard.",
+      "reviewFlags": []
+    },
+    {
+      "question": "In 210 BC Scipio received imperium pro consule. Why was that extraordinary?",
+      "options": [
+        "He had never held one of Rome’s senior offices",
+        "He was not a Roman citizen",
+        "He had lost a battle in Spain",
+        "He was already consul"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#command-in-spain",
+      "explanation": "He was the first Roman given such power without first serving as consul.",
+      "sourceQuote": "yet he received the full military authority of a consul (*imperium pro consule*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "What was Scipio’s rank at Cannae in 216 BC?",
+      "options": [
+        "Military tribune (tribunus militum), a junior officer",
+        "Consul",
+        "Commander of the cavalry",
+        "Aedile"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#survivor-of-cannae",
+      "explanation": "He survived the disaster and rallied the stragglers.",
+      "sourceQuote": "In 216 BC Scipio served as a military tribune (*tribunus militum*), a junior officer, at Cannae",
+      "reviewFlags": []
+    }
+  ]
+}

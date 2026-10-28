@@ -1,0 +1,691 @@
+{
+  "chapterName": "Middle Republic: Scipio and the Road to Zama (216-201 BCE)",
+  "model": "claude-opus-5-5",
+  "briefing": {
+    "title": "Cannae, 216 BC",
+    "paragraphs": [
+      "It is 216 BC, and Rome is reeling. Hannibal, the general of Carthage, a great trading city on the coast of modern Tunisia, has marched an army from Spain over the Alps. At Cannae in southern Italy he has crushed the Romans: at least 67,500 lie dead or captured.",
+      "Among the survivors is a young officer named Scipio. Within a few years Rome will hand him an army, though he has held no senior office. Can he win back Spain, carry the war to Africa and face Hannibal himself?"
+    ]
+  },
+  "timelines": [
+    {
+      "name": "Level 1: The Big Turning Points",
+      "blurb": "Four milestones from disaster to final victory.",
+      "events": [
+        {
+          "label": "Disaster at Cannae",
+          "when": "216 BC",
+          "year": -216,
+          "fact": "At least 67,500 Romans were killed or captured at Cannae, but the young Scipio survived and rallied the stragglers.",
+          "sectionId": "survivor-of-cannae",
+          "reviewFlags": []
+        },
+        {
+          "label": "Scipio storms New Carthage",
+          "when": "209 BC",
+          "year": -209,
+          "fact": "Scipio sent a party across the lagoon at low tide and captured Carthage's main supply base in Spain.",
+          "sectionId": "new-carthage",
+          "reviewFlags": []
+        },
+        {
+          "label": "Battle of Zama",
+          "when": "202 BC",
+          "year": -202,
+          "fact": "Scipio defeated Hannibal near Zama, in what is now Tunisia, after the Roman cavalry struck the Carthaginian rear.",
+          "sectionId": "battle-of-zama",
+          "reviewFlags": []
+        },
+        {
+          "label": "Rome destroys Carthage",
+          "when": "146 BC",
+          "year": -146,
+          "fact": "Long after the harsh peace of 201 BC had made Carthage subordinate, Rome destroyed the city altogether.",
+          "sectionId": "peace-and-africanus",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Level 2: From the Alps to the Peace",
+      "blurb": "Follow the war from Hannibal's invasion to Carthage's surrender.",
+      "events": [
+        {
+          "label": "Hannibal crosses the Alps into Italy",
+          "when": "218 BC",
+          "year": -218,
+          "fact": "Hannibal's march from Spain over the Alps started the Second Punic War.",
+          "sectionId": "survivor-of-cannae",
+          "reviewFlags": []
+        },
+        {
+          "label": "Scipio elected aedile",
+          "when": "213 BC",
+          "year": -213,
+          "fact": "A tribune objected that Scipio was too young to be aedile, the official for streets and festivals, but the crowd's enthusiasm made him back down.",
+          "sectionId": "survivor-of-cannae",
+          "reviewFlags": []
+        },
+        {
+          "label": "Scipio's father and uncle killed in Spain",
+          "when": "211 BC",
+          "year": -211,
+          "fact": "The brothers split their forces to attack three enemy armies at once and were each beaten separately.",
+          "sectionId": "command-in-spain",
+          "reviewFlags": []
+        },
+        {
+          "label": "Battle of the Metaurus",
+          "when": "207 BC",
+          "year": -207,
+          "fact": "Claudius Nero's flank attack destroyed the army of Hannibal's brother beside the Metaurus river in north-east Italy.",
+          "sectionId": "battle-of-the-metaurus",
+          "reviewFlags": []
+        },
+        {
+          "label": "Scipio lands in Africa near Utica",
+          "when": "Summer 204 BC",
+          "year": -204,
+          "fact": "Scipio's fleet landed about 20 km (12 miles) north of Utica, a major Carthaginian port, and Masinissa joined him.",
+          "sectionId": "invasion-of-africa",
+          "reviewFlags": []
+        },
+        {
+          "label": "Carthage accepts Rome's peace terms",
+          "when": "Spring 201 BC",
+          "year": -201,
+          "fact": "Carthage had to pay 10,000 silver talents over 50 years and keep only ten warships.",
+          "sectionId": "peace-and-africanus",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Level 3: Scipio's Rise Step by Step",
+      "blurb": "Eight moments in the career of Scipio and the story of how we know it.",
+      "events": [
+        {
+          "label": "Cavalry clash on the river Ticinus",
+          "when": "218 BC",
+          "year": -218,
+          "fact": "One ancient account says young Scipio saved his surrounded father here; other writers credited an unnamed slave.",
+          "sectionId": "survivor-of-cannae",
+          "reviewFlags": []
+        },
+        {
+          "label": "Scipio given the Spanish command",
+          "when": "210 BC",
+          "year": -210,
+          "fact": "At about 25, Scipio became the first Roman given a consul's military authority without first serving as consul.",
+          "sectionId": "command-in-spain",
+          "reviewFlags": []
+        },
+        {
+          "label": "Battle of Baecula",
+          "when": "208 BC",
+          "year": -208,
+          "fact": "Scipio won the battle, but Hannibal's brother slipped away with most of his army and headed for Italy.",
+          "sectionId": "conquest-of-spain",
+          "reviewFlags": []
+        },
+        {
+          "label": "Decisive victory at Ilipa",
+          "when": "206 BC",
+          "year": -206,
+          "fact": "At Ilipa, north of modern Seville, Scipio routed the remaining Carthaginian forces and drove them from Spain.",
+          "sectionId": "conquest-of-spain",
+          "reviewFlags": []
+        },
+        {
+          "label": "Scipio serves as consul at 31",
+          "when": "205 BC",
+          "year": -205,
+          "fact": "The normal minimum age for consul was 42, yet Scipio was elected amid wild enthusiasm.",
+          "sectionId": "consul-at-thirty-one",
+          "reviewFlags": []
+        },
+        {
+          "label": "Enemy camps burned at night",
+          "when": "203 BC",
+          "year": -203,
+          "fact": "Scipio set the Numidian camp's reed huts ablaze and then fell on the Carthaginian camp, killing thousands in the dark.",
+          "sectionId": "invasion-of-africa",
+          "reviewFlags": []
+        },
+        {
+          "label": "Scipio's triumph as Africanus",
+          "when": "After the peace of 201 BC",
+          "year": -201,
+          "fact": "Scipio paraded through Rome, took the surname Africanus and deposited about 40 tonnes (123,000 Roman pounds) of silver in the treasury.",
+          "sectionId": "peace-and-africanus",
+          "reviewFlags": []
+        },
+        {
+          "label": "Polybius sent to Rome as a hostage",
+          "when": "167 BC",
+          "year": -167,
+          "fact": "Polybius, the Greek historian who is our main surviving source on Scipio, came to Rome as a hostage.",
+          "sectionId": "sources-and-legend",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "matchSets": [
+    {
+      "name": "People and Names",
+      "blurb": "Match each name to the role it played in the war.",
+      "pairs": [
+        {
+          "name": "Hannibal",
+          "match": "Carthaginian general who marched from Spain over the Alps into Italy",
+          "sectionId": "survivor-of-cannae",
+          "reviewFlags": []
+        },
+        {
+          "name": "Claudius Nero",
+          "match": "Consul who marched north in secret to win at the Metaurus",
+          "sectionId": "battle-of-the-metaurus",
+          "reviewFlags": []
+        },
+        {
+          "name": "Masinissa",
+          "match": "Numidian prince who left Carthage to become Rome's best ally",
+          "sectionId": "conquest-of-spain",
+          "reviewFlags": []
+        },
+        {
+          "name": "Polybius",
+          "match": "Greek historian, once a hostage in Rome; our most reliable source",
+          "sectionId": "sources-and-legend",
+          "reviewFlags": []
+        },
+        {
+          "name": "Africanus",
+          "match": "Honorary surname Scipio took after his victory over Carthage",
+          "sectionId": "peace-and-africanus",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Roman Offices and Terms",
+      "blurb": "Match each Roman term to its meaning.",
+      "pairs": [
+        {
+          "name": "Consul",
+          "match": "One of two magistrates elected each year to lead Rome's armies",
+          "sectionId": "survivor-of-cannae",
+          "reviewFlags": []
+        },
+        {
+          "name": "Aedile",
+          "match": "Official who looked after the city's streets and festivals",
+          "sectionId": "survivor-of-cannae",
+          "reviewFlags": []
+        },
+        {
+          "name": "Military tribune",
+          "match": "Junior officer; the rank Scipio held at Cannae",
+          "sectionId": "survivor-of-cannae",
+          "reviewFlags": []
+        },
+        {
+          "name": "Velites",
+          "match": "Light skirmishers who filled the open lanes at Zama",
+          "sectionId": "battle-of-zama",
+          "reviewFlags": []
+        },
+        {
+          "name": "Princeps senatus",
+          "match": "Leader of the Senate, who fought Scipio's plan to invade Africa",
+          "sectionId": "consul-at-thirty-one",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Latin Words",
+      "blurb": "Match each Latin word to its meaning.",
+      "pairs": [
+        {
+          "name": "Imperium pro consule",
+          "match": "A consul’s full military authority, given to Scipio",
+          "sectionId": "command-in-spain",
+          "reviewFlags": []
+        },
+        {
+          "name": "Senatus",
+          "match": "Rome’s council of elder statesmen",
+          "sectionId": "command-in-spain",
+          "reviewFlags": []
+        },
+        {
+          "name": "Legiones",
+          "match": "The army units of Cannae survivors that Scipio led",
+          "sectionId": "consul-at-thirty-one",
+          "reviewFlags": []
+        },
+        {
+          "name": "Manipuli",
+          "match": "Infantry companies, usually set like a chessboard",
+          "sectionId": "battle-of-zama",
+          "reviewFlags": []
+        },
+        {
+          "name": "Triumphus",
+          "match": "The grand victory parade through Rome",
+          "sectionId": "peace-and-africanus",
+          "reviewFlags": []
+        },
+        {
+          "name": "Agnomen",
+          "match": "An honorary surname, like Africanus",
+          "sectionId": "peace-and-africanus",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "trueFalseDecks": [
+    {
+      "name": "Italy and Spain",
+      "blurb": "From Cannae to the conquest of Spain and the Metaurus.",
+      "cards": [
+        {
+          "claim": "At Cannae at least 67,500 Romans were killed or captured.",
+          "answer": true,
+          "why": "The chapter gives at least 67,500 Romans killed or captured at Cannae, including Scipio's future father-in-law, a consul.",
+          "sectionId": "survivor-of-cannae",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Scipio had already served as consul before he received the Spanish command.",
+          "answer": false,
+          "why": "Scipio had held none of Rome's senior offices. He was the first Roman given a consul's military authority without first serving as consul.",
+          "sectionId": "command-in-spain",
+          "reviewFlags": []
+        },
+        {
+          "claim": "The lagoon guarding New Carthage's northern side could be waded at low tide.",
+          "answer": true,
+          "why": "Scipio sent a party across the lagoon at low tide while the walls were under attack.",
+          "sectionId": "new-carthage",
+          "reviewFlags": []
+        },
+        {
+          "claim": "At New Carthage Scipio told his troops that the war god Mars had promised him help in a vision.",
+          "answer": false,
+          "why": "Scipio claimed the sea god Neptune had promised him help, feeding the legend that he was a favourite of the gods.",
+          "sectionId": "new-carthage",
+          "reviewFlags": []
+        },
+        {
+          "claim": "At Baecula Scipio destroyed the whole army of Hannibal's brother.",
+          "answer": false,
+          "why": "Scipio won the battle, but his opponent slipped away with most of his army, crossed the Pyrenees and headed for Italy.",
+          "sectionId": "conquest-of-spain",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Italica, a town Scipio founded near Seville, later became the birthplace of three Roman emperors.",
+          "answer": true,
+          "why": "Scipio founded Italica about 9 km northwest of Seville, and three Roman emperors were later born there.",
+          "sectionId": "conquest-of-spain",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Claudius Nero marched north with 7,000 picked men without waiting for the Senate's approval.",
+          "answer": true,
+          "why": "After reading the captured letters, Claudius Nero marched north in secret, gathering volunteers and supplies on the way.",
+          "sectionId": "battle-of-the-metaurus",
+          "reviewFlags": []
+        },
+        {
+          "claim": "After the Metaurus, Hannibal marched straight on Rome.",
+          "answer": false,
+          "why": "After his brother's head was thrown into his camp, Hannibal withdrew to Bruttium, the 'toe' of Italy.",
+          "sectionId": "battle-of-the-metaurus",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Africa, Zama and the Sources",
+      "blurb": "From the debate in the Senate to the peace and the legend.",
+      "cards": [
+        {
+          "claim": "Scipio was elected consul at 31, although the normal minimum age was 42.",
+          "answer": true,
+          "why": "He was elected consul for 205 BC amid wild enthusiasm at 31, well below the usual minimum age of 42.",
+          "sectionId": "consul-at-thirty-one",
+          "reviewFlags": []
+        },
+        {
+          "claim": "The core of Scipio's army in Sicily was two legions of Cannae survivors.",
+          "answer": true,
+          "why": "Scipio could only ask for volunteers, and his core force was two legions of Cannae survivors posted to Sicily.",
+          "sectionId": "consul-at-thirty-one",
+          "reviewFlags": []
+        },
+        {
+          "claim": "In 204 BC Scipio's fleet landed about 20 km (12 miles) north of Carthage itself.",
+          "answer": false,
+          "why": "The fleet landed about 20 km (12 miles) north of Utica, a major Carthaginian port, which Scipio then besieged.",
+          "sectionId": "invasion-of-africa",
+          "reviewFlags": []
+        },
+        {
+          "claim": "During winter peace talks, Scipio's envoys secretly studied the enemy camps and their reed huts.",
+          "answer": true,
+          "why": "The envoys used each visit to study the camps' layout, exits and huts of reeds, which Scipio later set ablaze.",
+          "sectionId": "invasion-of-africa",
+          "reviewFlags": []
+        },
+        {
+          "claim": "At Zama Hannibal had more cavalry than Scipio.",
+          "answer": false,
+          "why": "Hannibal had only 4,000 cavalry, while Scipio had more than 6,000, many of them brought by Masinissa.",
+          "sectionId": "battle-of-zama",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Under the peace of 201 BC Carthage had to pay 10,000 silver talents over 50 years.",
+          "answer": true,
+          "why": "Carthage also gave up its war elephants, kept only ten warships and could not wage war outside Africa.",
+          "sectionId": "peace-and-africanus",
+          "reviewFlags": []
+        },
+        {
+          "claim": "After Zama Scipio accepted his admirers' offer to make him dictator for life.",
+          "answer": false,
+          "why": "Scipio refused to become consul for life and dictator, a restraint later Roman writers praised.",
+          "sectionId": "peace-and-africanus",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Scipio's own memoirs, written in Greek, survive and are our main source about him.",
+          "answer": false,
+          "why": "His memoirs are lost. What survives comes mainly from Polybius, the Greek historian.",
+          "sectionId": "sources-and-legend",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "oddOneOut": [
+    {
+      "items": [
+        "Baecula",
+        "Ilipa",
+        "Utica",
+        "Gades"
+      ],
+      "oddIndex": 2,
+      "why": "Baecula, Ilipa and Gades are in southern Spain, which Scipio won from Carthage; Utica is a Carthaginian port in Africa that he besieged in 204 BC.",
+      "sectionId": "conquest-of-spain",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Ilipa",
+        "Metaurus",
+        "Baecula",
+        "New Carthage"
+      ],
+      "oddIndex": 1,
+      "why": "Scipio won at Baecula, Ilipa and New Carthage, all in Spain; the Metaurus was won in Italy by Claudius Nero and his fellow consul.",
+      "sectionId": "battle-of-the-metaurus",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Aedile",
+        "Dictator",
+        "Military tribune",
+        "Consul"
+      ],
+      "oddIndex": 1,
+      "why": "Scipio served as military tribune, aedile and consul. When admirers urged him to become dictator, he refused.",
+      "sectionId": "peace-and-africanus",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Pay 10,000 silver talents",
+        "Give up its war elephants",
+        "No wars outside Africa",
+        "Surrender every warship"
+      ],
+      "oddIndex": 3,
+      "why": "The first three were terms of the peace of 201 BC. Carthage did not lose every warship: it kept ten.",
+      "sectionId": "peace-and-africanus",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Reed-hut camps set ablaze",
+        "Elephants ran down open lanes",
+        "Trumpets blared, shields banged",
+        "Cavalry struck the enemy rear"
+      ],
+      "oddIndex": 0,
+      "why": "Three happened in the battle of Zama in 202 BC. The burning of the reed-hut camps was Scipio's night attack in 203 BC.",
+      "sectionId": "battle-of-zama",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Sword-point oath after Cannae",
+        "Claudius Nero's secret march north",
+        "Hannibal ranking the great generals",
+        "Scipio as a son of Jupiter"
+      ],
+      "oddIndex": 1,
+      "why": "The oath story, Hannibal's ranking of generals and Scipio's divine birth are legends historians doubt. Claudius Nero's march north is told as solid history.",
+      "sectionId": "sources-and-legend",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Modern Cartagena",
+        "Carthage's last stronghold in Spain",
+        "Carthage's main supply base",
+        "Guarded by a northern lagoon"
+      ],
+      "oddIndex": 1,
+      "why": "Three describe New Carthage, stormed in 209 BC. Carthage's last stronghold in Spain was Gades, modern Cádiz.",
+      "sectionId": "new-carthage",
+      "reviewFlags": []
+    }
+  ],
+  "whoAmI": [
+    {
+      "name": "Commanders at War",
+      "blurb": "Generals who fought in Italy and Spain.",
+      "people": [
+        {
+          "name": "Scipio",
+          "options": [
+            "Hannibal",
+            "Scipio",
+            "Claudius Nero",
+            "Masinissa"
+          ],
+          "clues": [
+            "Voters made me aedile in 213 BC, though a tribune said I was too young.",
+            "I served as a military tribune at Cannae and rallied the stragglers.",
+            "At about 25 I received a consul's authority without ever having been consul.",
+            "I stormed New Carthage after telling my troops that Neptune had promised me help."
+          ],
+          "sectionId": "command-in-spain",
+          "reviewFlags": []
+        },
+        {
+          "name": "Claudius Nero",
+          "options": [
+            "Scipio",
+            "Masinissa",
+            "Claudius Nero",
+            "Hannibal"
+          ],
+          "clues": [
+            "I had a dead enemy commander's head thrown into his brother's camp.",
+            "In 207 BC I was the consul shadowing Hannibal in the far south of Italy.",
+            "Without waiting for the Senate's approval, I marched 7,000 picked men north in secret.",
+            "My flank attack won the battle beside the Metaurus river."
+          ],
+          "sectionId": "battle-of-the-metaurus",
+          "reviewFlags": []
+        },
+        {
+          "name": "Hannibal",
+          "options": [
+            "Claudius Nero",
+            "Scipio",
+            "Masinissa",
+            "Hannibal"
+          ],
+          "clues": [
+            "Recalled from Italy, I landed in Africa with 15,000 to 20,000 veterans.",
+            "After my defeat I told Carthage's leaders to make peace on whatever terms they could get.",
+            "Two of my brothers helped beat and kill Scipio's father and uncle in Spain.",
+            "In 218 BC I marched an army from Spain over the Alps into Italy."
+          ],
+          "sectionId": "survivor-of-cannae",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Africa and After",
+      "blurb": "An ally, a victor and the historian who told their story.",
+      "people": [
+        {
+          "name": "Masinissa",
+          "options": [
+            "Hannibal",
+            "Masinissa",
+            "Claudius Nero",
+            "Scipio"
+          ],
+          "clues": [
+            "As a young Numidian prince I fought for Carthage in Spain.",
+            "When a rival drove me from my kingdom, I joined Rome.",
+            "I helped hunt down the rival Numidian king and took over much of his kingdom.",
+            "Many of the horsemen who gave Rome its cavalry edge at Zama were mine."
+          ],
+          "sectionId": "conquest-of-spain",
+          "reviewFlags": []
+        },
+        {
+          "name": "Scipio",
+          "options": [
+            "Masinissa",
+            "Hannibal",
+            "Claudius Nero",
+            "Scipio"
+          ],
+          "clues": [
+            "In Sicily I drilled an army built around Cannae survivors for about a year.",
+            "My envoys studied enemy camps of reed huts, which I later set ablaze.",
+            "Admirers urged me to become consul for life and dictator, but I refused.",
+            "After beating Hannibal at Zama, I took the surname Africanus."
+          ],
+          "sectionId": "peace-and-africanus",
+          "reviewFlags": []
+        },
+        {
+          "name": "Polybius",
+          "options": [
+            "Scipio",
+            "Claudius Nero",
+            "Polybius",
+            "Masinissa"
+          ],
+          "clues": [
+            "My main informant about Scipio was his friend and second-in-command.",
+            "I counted 20,000 Carthaginians killed at Zama against 1,500 Roman dead.",
+            "I argued that Scipio won through careful planning, not the favour of the gods.",
+            "Born a Greek around 200 BC, I was sent to Rome as a hostage in 167 BC."
+          ],
+          "sectionId": "sources-and-legend",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "places": [
+    {
+      "name": "Cannae",
+      "wikipediaTitle": "Cannae",
+      "lat": 41.29638889,
+      "lon": 16.15166667,
+      "why": "In southern Italy, where at least 67,500 Romans were killed or captured in 216 BC and the young Scipio survived as a military tribune.",
+      "sectionId": "survivor-of-cannae",
+      "coordinates": "Wikipedia: Cannae",
+      "reviewFlags": []
+    },
+    {
+      "name": "New Carthage",
+      "wikipediaTitle": "Cartagena, Spain",
+      "lat": 37.6019,
+      "lon": -0.9842,
+      "why": "Carthage's main supply base in Spain, stormed by Scipio in 209 BC across a lagoon waded at low tide.",
+      "sectionId": "new-carthage",
+      "coordinates": "Wikipedia: Cartagena, Spain",
+      "reviewFlags": []
+    },
+    {
+      "name": "Ilipa",
+      "wikipediaTitle": "Alcalá del Río",
+      "lat": 37.51666667,
+      "lon": -5.96666667,
+      "why": "North of modern Seville, where Scipio's decisive victory in 206 BC drove the Carthaginians from Spain.",
+      "sectionId": "conquest-of-spain",
+      "coordinates": "Wikipedia: Alcalá del Río",
+      "reviewFlags": []
+    },
+    {
+      "name": "Metaurus",
+      "wikipediaTitle": "Metauro",
+      "lat": 43.8292,
+      "lon": 13.0546,
+      "why": "River in north-east Italy where Claudius Nero's flank attack destroyed the army of Hannibal's brother in 207 BC.",
+      "sectionId": "battle-of-the-metaurus",
+      "coordinates": "Wikipedia: Metauro",
+      "reviewFlags": []
+    },
+    {
+      "name": "Sicily",
+      "wikipediaTitle": "Sicily",
+      "lat": 37.5,
+      "lon": 14,
+      "why": "Scipio's province in 205 BC, where he drilled his army of volunteers and Cannae survivors before crossing to Africa.",
+      "sectionId": "consul-at-thirty-one",
+      "coordinates": "Wikipedia: Sicily",
+      "reviewFlags": []
+    },
+    {
+      "name": "Utica",
+      "wikipediaTitle": "Utica, Tunisia",
+      "lat": 37.05694444,
+      "lon": 10.06194444,
+      "why": "Major Carthaginian port that Scipio besieged after landing in Africa in 204 BC; it held out.",
+      "sectionId": "invasion-of-africa",
+      "coordinates": "Wikipedia: Utica, Tunisia",
+      "reviewFlags": []
+    },
+    {
+      "name": "Zama",
+      "wikipediaTitle": "Zama Regia",
+      "lat": 36.112,
+      "lon": 9.2856,
+      "why": "In what is now Tunisia, where Scipio defeated Hannibal in 202 BC and ended the war.",
+      "sectionId": "battle-of-zama",
+      "coordinates": "Wikipedia: Zama (Tunisia)",
+      "reviewFlags": []
+    }
+  ]
+}

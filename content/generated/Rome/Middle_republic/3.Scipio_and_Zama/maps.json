@@ -1,0 +1,408 @@
+{
+  "description": "Maps for the chronicle, written by hand. Coordinates from Wikipedia; each map sits at the start of its section.",
+  "maps": [
+    {
+      "id": "scipio-wars",
+      "sec": "command-in-spain",
+      "title": "Scipio’s war, 210–202 BC",
+      "caption": "Scipio won Spain from Carthage (New Carthage, Baecula, Ilipa), while in Italy Claudius Nero beat Hannibal’s brother at the Metaurus. In 204 BC Scipio crossed from Sicily to Africa and won at Zama. Routes are drawn roughly.",
+      "bounds": {
+        "latMin": 35.3,
+        "latMax": 44.6,
+        "lonMin": -7.6,
+        "lonMax": 16.0
+      },
+      "places": [
+        {
+          "name": "Rome",
+          "latin": "Roma",
+          "lat": 41.893,
+          "lon": 12.483,
+          "kind": "rome",
+          "side": "r",
+          "dy": -4
+        },
+        {
+          "name": "New Carthage",
+          "lat": 37.6,
+          "lon": -0.98,
+          "kind": "battle",
+          "side": "r"
+        },
+        {
+          "name": "Baecula",
+          "lat": 38.09,
+          "lon": -3.78,
+          "kind": "battle",
+          "side": "r",
+          "dy": -6
+        },
+        {
+          "name": "Ilipa",
+          "lat": 37.52,
+          "lon": -5.97,
+          "kind": "battle",
+          "side": "r",
+          "dy": 4
+        },
+        {
+          "name": "Gades",
+          "lat": 36.53,
+          "lon": -6.29,
+          "side": "r",
+          "dy": 4
+        },
+        {
+          "name": "Metaurus",
+          "lat": 43.83,
+          "lon": 13.05,
+          "kind": "battle",
+          "side": "l"
+        },
+        {
+          "name": "Carthage",
+          "latin": "Carthago",
+          "lat": 36.853,
+          "lon": 10.323,
+          "side": "r",
+          "dy": -4
+        },
+        {
+          "name": "Zama",
+          "lat": 36.11,
+          "lon": 9.29,
+          "kind": "battle",
+          "side": "r",
+          "dy": 8
+        }
+      ],
+      "peoples": [
+        {
+          "name": "Spain",
+          "latin": "Hispania",
+          "lat": 40.2,
+          "lon": -4.0
+        },
+        {
+          "name": "Numidia",
+          "lat": 35.75,
+          "lon": 4.3
+        },
+        {
+          "name": "Sicily",
+          "lat": 37.55,
+          "lon": 14.2
+        }
+      ],
+      "routes": [
+        {
+          "pts": [
+            [
+              37.8,
+              12.4
+            ],
+            [
+              37.5,
+              11.3
+            ],
+            [
+              37.15,
+              10.25
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "zama",
+      "sec": "battle-of-zama",
+      "title": "Zama, 202 BC: lanes for the elephants",
+      "caption": "Scipio lined up his maniples one behind another, leaving lanes. Hannibal’s elephants charged, panicked at the trumpets and mostly ran down the lanes. Roman and Numidian horsemen chased the Carthaginian cavalry away, then came back to strike the rear of Hannibal’s veterans. A simplified plan.",
+      "plan": true,
+      "height": 205,
+      "key": {
+        "rome": "Scipio’s army",
+        "enemy": "Hannibal’s army"
+      },
+      "units": [
+        {
+          "side": "rome",
+          "x": 100,
+          "y": 40,
+          "w": 16,
+          "h": 11,
+          "name": "Maniples in columns, open lanes between",
+          "lx": 158,
+          "ly": 33
+        },
+        {
+          "side": "rome",
+          "x": 130,
+          "y": 40,
+          "w": 16,
+          "h": 11
+        },
+        {
+          "side": "rome",
+          "x": 160,
+          "y": 40,
+          "w": 16,
+          "h": 11
+        },
+        {
+          "side": "rome",
+          "x": 190,
+          "y": 40,
+          "w": 16,
+          "h": 11
+        },
+        {
+          "side": "rome",
+          "x": 100,
+          "y": 56,
+          "w": 16,
+          "h": 11
+        },
+        {
+          "side": "rome",
+          "x": 130,
+          "y": 56,
+          "w": 16,
+          "h": 11
+        },
+        {
+          "side": "rome",
+          "x": 160,
+          "y": 56,
+          "w": 16,
+          "h": 11
+        },
+        {
+          "side": "rome",
+          "x": 190,
+          "y": 56,
+          "w": 16,
+          "h": 11
+        },
+        {
+          "side": "rome",
+          "x": 100,
+          "y": 72,
+          "w": 16,
+          "h": 11
+        },
+        {
+          "side": "rome",
+          "x": 130,
+          "y": 72,
+          "w": 16,
+          "h": 11
+        },
+        {
+          "side": "rome",
+          "x": 160,
+          "y": 72,
+          "w": 16,
+          "h": 11
+        },
+        {
+          "side": "rome",
+          "x": 190,
+          "y": 72,
+          "w": 16,
+          "h": 11
+        },
+        {
+          "side": "rome",
+          "x": 34,
+          "y": 50,
+          "w": 40,
+          "h": 16,
+          "name": "Roman cavalry",
+          "ly": 44
+        },
+        {
+          "side": "rome",
+          "x": 226,
+          "y": 50,
+          "w": 40,
+          "h": 16,
+          "name": "Masinissa’s horse",
+          "ly": 44
+        },
+        {
+          "side": "enemy",
+          "x": 100,
+          "y": 102,
+          "w": 106,
+          "h": 8,
+          "name": "80 elephants",
+          "lx": 153,
+          "ly": 99
+        },
+        {
+          "side": "enemy",
+          "x": 96,
+          "y": 118,
+          "w": 114,
+          "h": 10,
+          "name": "First line",
+          "lx": 153,
+          "ly": 125.5
+        },
+        {
+          "side": "enemy",
+          "x": 96,
+          "y": 134,
+          "w": 114,
+          "h": 10,
+          "name": "Second line",
+          "lx": 153,
+          "ly": 141.5
+        },
+        {
+          "side": "enemy",
+          "x": 96,
+          "y": 154,
+          "w": 114,
+          "h": 12,
+          "name": "Hannibal’s veterans",
+          "lx": 153,
+          "ly": 162.5
+        },
+        {
+          "side": "enemy",
+          "x": 34,
+          "y": 118,
+          "w": 40,
+          "h": 14,
+          "name": "Cavalry",
+          "ly": 140
+        },
+        {
+          "side": "enemy",
+          "x": 226,
+          "y": 118,
+          "w": 40,
+          "h": 14,
+          "name": "Cavalry",
+          "ly": 140
+        }
+      ],
+      "moves": [
+        {
+          "side": "enemy",
+          "dashed": true,
+          "pts": [
+            [
+              123,
+              100
+            ],
+            [
+              123,
+              48
+            ]
+          ]
+        },
+        {
+          "side": "enemy",
+          "dashed": true,
+          "pts": [
+            [
+              153,
+              100
+            ],
+            [
+              153,
+              48
+            ]
+          ]
+        },
+        {
+          "side": "enemy",
+          "dashed": true,
+          "pts": [
+            [
+              183,
+              100
+            ],
+            [
+              183,
+              48
+            ]
+          ]
+        },
+        {
+          "side": "rome",
+          "pts": [
+            [
+              54,
+              68
+            ],
+            [
+              54,
+              114
+            ]
+          ]
+        },
+        {
+          "side": "rome",
+          "pts": [
+            [
+              246,
+              68
+            ],
+            [
+              246,
+              114
+            ]
+          ]
+        },
+        {
+          "side": "rome",
+          "dashed": true,
+          "pts": [
+            [
+              24,
+              140
+            ],
+            [
+              24,
+              182
+            ],
+            [
+              110,
+              182
+            ],
+            [
+              118,
+              170
+            ]
+          ]
+        },
+        {
+          "side": "rome",
+          "dashed": true,
+          "pts": [
+            [
+              276,
+              140
+            ],
+            [
+              276,
+              182
+            ],
+            [
+              196,
+              182
+            ],
+            [
+              188,
+              170
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}

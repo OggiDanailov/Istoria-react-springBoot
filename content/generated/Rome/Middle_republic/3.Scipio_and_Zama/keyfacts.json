@@ -1,0 +1,139 @@
+{
+  "description": "Key facts for this chapter, written by hand from the chapter text. Every entry links to the section that explains it.",
+  "people": [
+    {
+      "name": "Scipio (Africanus)",
+      "text": "Roman general who conquered Spain and beat Hannibal at Zama.",
+      "sec": "command-in-spain"
+    },
+    {
+      "name": "Hannibal",
+      "text": "Carthaginian general, recalled from Italy and defeated at Zama.",
+      "sec": "battle-of-zama"
+    },
+    {
+      "name": "Masinissa",
+      "text": "Numidian prince who joined Rome and brought its cavalry at Zama.",
+      "sec": "conquest-of-spain"
+    },
+    {
+      "name": "Claudius Nero",
+      "text": "Consul whose secret march north won the Metaurus in 207 BC.",
+      "sec": "battle-of-the-metaurus"
+    },
+    {
+      "name": "Polybius",
+      "text": "Greek historian, our main and generally reliable source.",
+      "sec": "sources-and-legend"
+    }
+  ],
+  "dates": [
+    {
+      "when": "216 BC",
+      "text": "Scipio survives Cannae as a military tribune.",
+      "sec": "survivor-of-cannae"
+    },
+    {
+      "when": "211 BC",
+      "text": "Scipio’s father and uncle are killed in Spain.",
+      "sec": "command-in-spain"
+    },
+    {
+      "when": "210 BC",
+      "text": "Scipio, about 25, is given the Spanish command.",
+      "sec": "command-in-spain"
+    },
+    {
+      "when": "209 BC",
+      "text": "Scipio storms New Carthage.",
+      "sec": "new-carthage"
+    },
+    {
+      "when": "207 BC",
+      "text": "Hannibal’s brother is killed at the Metaurus.",
+      "sec": "battle-of-the-metaurus"
+    },
+    {
+      "when": "206 BC",
+      "text": "Victory at Ilipa: Carthage loses Spain.",
+      "sec": "conquest-of-spain"
+    },
+    {
+      "when": "204 BC",
+      "text": "Scipio lands in Africa near Utica.",
+      "sec": "invasion-of-africa"
+    },
+    {
+      "when": "202 BC",
+      "text": "The battle of Zama.",
+      "sec": "battle-of-zama"
+    },
+    {
+      "when": "201 BC",
+      "text": "Peace: Carthage becomes subordinate to Rome.",
+      "sec": "peace-and-africanus"
+    }
+  ],
+  "terms": [
+    {
+      "latin": "Carthago",
+      "english": "Carthage",
+      "sec": "survivor-of-cannae"
+    },
+    {
+      "latin": "consules",
+      "english": "the two consuls",
+      "sec": "survivor-of-cannae"
+    },
+    {
+      "latin": "tribunus militum",
+      "english": "a military tribune, a junior officer",
+      "sec": "survivor-of-cannae"
+    },
+    {
+      "latin": "aedilis",
+      "english": "an official for streets and festivals",
+      "sec": "survivor-of-cannae"
+    },
+    {
+      "latin": "imperium pro consule",
+      "english": "a consul’s full military authority",
+      "sec": "command-in-spain"
+    },
+    {
+      "latin": "senatus",
+      "english": "the Senate",
+      "sec": "command-in-spain"
+    },
+    {
+      "latin": "princeps senatus",
+      "english": "the leader of the Senate",
+      "sec": "consul-at-thirty-one"
+    },
+    {
+      "latin": "legiones",
+      "english": "legions",
+      "sec": "consul-at-thirty-one"
+    },
+    {
+      "latin": "manipuli",
+      "english": "maniples, infantry companies",
+      "sec": "battle-of-zama"
+    },
+    {
+      "latin": "velites",
+      "english": "light skirmishers",
+      "sec": "battle-of-zama"
+    },
+    {
+      "latin": "triumphus",
+      "english": "a victory parade",
+      "sec": "peace-and-africanus"
+    },
+    {
+      "latin": "agnomen",
+      "english": "an honorary surname",
+      "sec": "peace-and-africanus"
+    }
+  ]
+}

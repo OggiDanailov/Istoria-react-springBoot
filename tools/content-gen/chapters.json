@@ -228,7 +228,15 @@
       },
       "short": "Scipio and Zama",
       "era": "middle-republic",
-      "mapArea": "mediterranean"
+      "mapArea": "mediterranean",
+      "battle": {
+        "name": "Zama",
+        "year": "202 BC",
+        "enemy": "Hannibal",
+        "sec": "battle-of-zama",
+        "intro": "Hannibal faces Scipio near Zama with 80 war elephants and his veterans from Italy. Open lanes for the elephants and hold your lines."
+      },
+      "locked": true
     },
     {
       "id": "rome-turns-east",

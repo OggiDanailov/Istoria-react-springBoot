@@ -1,0 +1,179 @@
+{
+  "batchName": "Middle Republic: Scipio and the Road to Zama (216-201 BCE) - Easy Batch 1",
+  "chapterName": "Middle Republic: Scipio and the Road to Zama (216-201 BCE)",
+  "difficulty": 1,
+  "batchOrder": 1,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "What rank did Scipio hold at the Battle of Cannae in 216 BC?",
+      "options": [
+        "Praetor",
+        "Aedile",
+        "Military tribune",
+        "Consul"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#survivor-of-cannae",
+      "explanation": "Scipio was a military tribune, a junior officer, at Cannae. He survived the disaster and rallied the stragglers.",
+      "sourceQuote": "In 216 BC Scipio served as a military tribune (*tribunus militum*), a junior officer, at Cannae in southern Italy.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which province did Scipio receive as consul, with permission to cross to Africa?",
+      "options": [
+        "Gaul",
+        "Sicily",
+        "Spain",
+        "Sardinia"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#consul-at-thirty-one",
+      "explanation": "As a compromise, Scipio got Sicily as his province and could cross to Africa if he judged it best.",
+      "sourceQuote": "Scipio received Sicily as his province, with permission to cross to Africa if he judged it best.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which city, the Carthaginians' main supply base in Spain, did Scipio storm in 209 BC?",
+      "options": [
+        "Saguntum",
+        "New Carthage",
+        "Utica",
+        "Gades"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#new-carthage",
+      "explanation": "Instead of chasing the three Carthaginian armies, Scipio struck at New Carthage, modern Cartagena. It was the enemy's main supply base.",
+      "sourceQuote": "Rather than chase the three Carthaginian armies, he struck at New Carthage, modern Cartagena on Spain's south-east coast.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What honorary surname did Scipio take after defeating Carthage?",
+      "options": [
+        "Cunctator",
+        "Africanus",
+        "Magnus",
+        "Augustus"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#peace-and-africanus",
+      "explanation": "Scipio took the surname Africanus, \"the African\". He also celebrated a triumph, Rome's grand victory parade.",
+      "sourceQuote": "He took the honorary surname (*agnomen*) Africanus, \"the African\".",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did the Romans learn of the plan for Hannibal's brother to join Hannibal in 207 BC?",
+      "options": [
+        "Spies in Carthage sent word",
+        "They captured his messengers",
+        "Masinissa warned them",
+        "A Carthaginian deserter told them"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#battle-of-the-metaurus",
+      "explanation": "The Romans captured the messengers carrying his letters and learned of the plan to meet Hannibal in central Italy. The letters reached the consul Claudius Nero.",
+      "sourceQuote": "Then the Romans captured his messengers and learned of his plan to meet Hannibal in central Italy.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Over which mountain range did Hannibal march his army from Spain into Italy in 218 BC?",
+      "options": [
+        "The Alps",
+        "The Apennines",
+        "The Balkans",
+        "The Atlas Mountains"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#survivor-of-cannae",
+      "explanation": "Hannibal led his army from Spain over the Alps and into Italy, starting the Second Punic War. Among the Romans who rode out to stop him was the teenage Scipio.",
+      "sourceQuote": "The Carthaginian general Hannibal marched an army from Spain, over the Alps and into Italy.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How old was Scipio when he was elected consul for 205 BC?",
+      "options": [
+        "31",
+        "25",
+        "50",
+        "42"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#consul-at-thirty-one",
+      "explanation": "Scipio was 31, well below the normal minimum age of 42 for the consulship. He was elected amid wild enthusiasm after returning from Spain.",
+      "sourceQuote": "He was 31, while the normal minimum age for the office was 42.",
+      "reviewFlags": []
+    },
+    {
+      "question": "In what year did Scipio and Hannibal meet near Zama?",
+      "options": [
+        "202 BC",
+        "216 BC",
+        "146 BC",
+        "207 BC"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#battle-of-zama",
+      "explanation": "In 202 BC the two generals met near Zama, in modern Tunisia. Scipio refused Hannibal's terms, and battle followed.",
+      "sourceQuote": "In 202 BC, near Zama in what is now Tunisia, Scipio and Hannibal met to parley.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which Greek historian is the main surviving source for Scipio's career?",
+      "options": [
+        "Herodotus",
+        "Thucydides",
+        "Polybius",
+        "Xenophon"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#sources-and-legend",
+      "explanation": "Most of what we know comes from Polybius, who was sent to Rome as a hostage in 167 BC. He interviewed participants on both sides.",
+      "sourceQuote": "What survives comes mainly from Polybius, a Greek historian born around 200 BC who was sent to Rome as a hostage in 167 BC.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which major Carthaginian port did Scipio besiege after landing in Africa in 204 BC?",
+      "options": [
+        "Utica",
+        "Gades",
+        "Syracuse",
+        "New Carthage"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#invasion-of-africa",
+      "explanation": "Scipio landed about 20 km north of Utica and besieged it, but the city held out. Two enemy armies camped nearby.",
+      "sourceQuote": "Scipio besieged Utica, but it held out, and two enemy armies camped nearby.",
+      "reviewFlags": []
+    }
+  ]
+}

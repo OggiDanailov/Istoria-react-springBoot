@@ -1,0 +1,179 @@
+{
+  "batchName": "Middle Republic: Scipio and the Road to Zama (216-201 BCE) - Easy Batch 2",
+  "chapterName": "Middle Republic: Scipio and the Road to Zama (216-201 BCE)",
+  "difficulty": 1,
+  "batchOrder": 2,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "In what year did Rome finally destroy the city of Carthage?",
+      "options": [
+        "146 BC",
+        "202 BC",
+        "201 BC",
+        "218 BC"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#peace-and-africanus",
+      "explanation": "After the peace of 201 BC Carthage was plainly subordinate to Rome, and Rome destroyed the city altogether in 146 BC.",
+      "sourceQuote": "Carthage was now plainly subordinate to Rome, and in 146 BC Rome destroyed the city altogether.",
+      "reviewFlags": []
+    },
+    {
+      "question": "About how old was Scipio when he received the Spanish command in 210 BC?",
+      "options": [
+        "About 31",
+        "About 25",
+        "About 42",
+        "About 18"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#command-in-spain",
+      "explanation": "The people's assembly gave the Spanish command to Scipio when he was about 25. Normally only a man who had held a senior office could lead an army in his own right.",
+      "sourceQuote": "In 210 BC the people's assembly gave the Spanish command to the younger Scipio, then about 25.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Beside which river was the army of Hannibal's brother trapped and destroyed in 207 BC?",
+      "options": [
+        "The Po",
+        "The Ticinus",
+        "The Tiber",
+        "The Metaurus"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#battle-of-the-metaurus",
+      "explanation": "After a night retreat, the Carthaginian army was trapped beside the Metaurus in north-east Italy. Hannibal's brother died in the battle that followed.",
+      "sourceQuote": "His guides deserted him, and dawn found his weary army trapped beside the Metaurus, a river in north-east Italy.",
+      "reviewFlags": []
+    },
+    {
+      "question": "At which battle in 206 BC did Scipio deliver the decisive blow against the Carthaginians in Spain?",
+      "options": [
+        "Cannae",
+        "Zama",
+        "Ilipa",
+        "Baecula"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#conquest-of-spain",
+      "explanation": "At Ilipa, north of modern Seville, Scipio routed the remaining Carthaginian forces and drove them from the peninsula.",
+      "sourceQuote": "The decisive blow fell in 206 BC at Ilipa, north of modern Seville.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did Scipio destroy the two enemy armies camped near Utica in 203 BC?",
+      "options": [
+        "He starved them out with a long blockade",
+        "He flooded their camps by diverting a river",
+        "He set their camps ablaze in a night attack",
+        "He drove war elephants through their lines"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#invasion-of-africa",
+      "explanation": "Scipio split his army one evening and set the Numidian camp on fire. In the chaos his men also fell on the Carthaginian camp, and thousands died in the dark.",
+      "sourceQuote": "One evening in 203 BC he marched out, split his army, and set the Numidian camp ablaze.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What happened to Scipio's father and uncle in Spain in 211 BC?",
+      "options": [
+        "They were taken prisoner and later ransomed",
+        "They captured New Carthage and were celebrated",
+        "They split their forces, were beaten separately and killed",
+        "They were recalled to Rome in disgrace"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#command-in-spain",
+      "explanation": "The brothers divided their forces to attack three enemy armies at once, and each was defeated and killed. Two of the victorious Carthaginian commanders were Hannibal's own brothers.",
+      "sourceQuote": "Each was beaten separately, and both men were killed.",
+      "reviewFlags": []
+    },
+    {
+      "question": "In which arm did Scipio outnumber Hannibal at Zama, despite having fewer men overall?",
+      "options": [
+        "Cavalry",
+        "War elephants",
+        "Heavy infantry",
+        "Warships"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#battle-of-zama",
+      "explanation": "Scipio had more than 6,000 cavalry, many brought by Masinissa, against only 4,000 on Hannibal's side. Hannibal still had more men overall, about 40,000.",
+      "sourceQuote": "Scipio had around 29,000 to 30,000 men but more than 6,000 cavalry, many of them brought by Masinissa, the Numidian king allied to Rome.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which Numidian prince, who had once fought for Carthage in Spain, became Rome's most valuable ally?",
+      "options": [
+        "Masinissa",
+        "Hiero",
+        "Jugurtha",
+        "Juba"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#conquest-of-spain",
+      "explanation": "Masinissa joined Rome after his rival drove him from his kingdom. He became Rome's most valuable ally.",
+      "sourceQuote": "When his rival drove him from his kingdom, Masinissa joined Rome and became its most valuable ally.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which god did Scipio tell his troops had promised him help in a vision at New Carthage?",
+      "options": [
+        "Apollo",
+        "Neptune",
+        "Mars",
+        "Jupiter"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#new-carthage",
+      "explanation": "Scipio claimed the sea god Neptune had promised him help. The story fed a growing legend that Scipio was a favourite of the gods.",
+      "sourceQuote": "He told his troops that the sea god Neptune had promised him help in a vision.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Later versions of the Scipio legend made him the son of which god?",
+      "options": [
+        "Hercules",
+        "Mars",
+        "Neptune",
+        "Jupiter"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#sources-and-legend",
+      "explanation": "Later legend made Scipio a son of Jupiter, Rome's chief god. Even in his lifetime, tales spread of divine visions and prophetic dreams.",
+      "sourceQuote": "Later versions even made him a son of Jupiter, Rome's chief god.",
+      "reviewFlags": []
+    }
+  ]
+}

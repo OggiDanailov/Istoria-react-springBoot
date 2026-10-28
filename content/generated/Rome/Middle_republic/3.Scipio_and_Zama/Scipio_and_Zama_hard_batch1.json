@@ -1,0 +1,203 @@
+{
+  "batchName": "Middle Republic: Scipio and the Road to Zama (216-201 BCE) - Hard Batch 1",
+  "chapterName": "Middle Republic: Scipio and the Road to Zama (216-201 BCE)",
+  "difficulty": 3,
+  "batchOrder": 5,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "What finally broke the deadlock between the Roman infantry and Hannibal's veteran third line at Zama?",
+      "options": [
+        "Fleeing elephants trampled the Carthaginian line",
+        "Roman cavalry returned and struck the Carthaginian rear",
+        "Reinforcements arrived from the siege of Utica",
+        "Hannibal's veterans ran out of javelins",
+        "Scipio's reserve line outflanked the veterans",
+        "Masinissa's infantry broke through the centre"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 3,
+      "textReference": "#battle-of-zama",
+      "explanation": "The two sides fought \"with the greatest fire and fury\" until the Roman cavalry came back and hit the enemy from behind. Polybius counted 20,000 Carthaginians killed against 1,500 Roman dead.",
+      "sourceQuote": "Neither gave way until the Roman cavalry returned and struck the Carthaginian rear.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which of the following contributed to the Carthaginian disaster at the Metaurus in 207 BC? (select all that apply)",
+      "options": [
+        "Hannibal sent troops to block his retreat",
+        "Masinissa's horsemen attacked his rear",
+        "Claudius Nero struck his flank with half his men",
+        "His weary army was trapped beside a river",
+        "His guides deserted him during the night retreat",
+        "His elephants were sent down lanes by trumpets"
+      ],
+      "correctAnswers": [
+        2,
+        3,
+        4
+      ],
+      "difficulty": 3,
+      "textReference": "#battle-of-the-metaurus",
+      "explanation": "Deserted by his guides and trapped at the river, Hannibal's brother was then hit in the flank by Claudius Nero. The trumpets and lanes belong to Zama, and Masinissa was not at the Metaurus.",
+      "sourceQuote": "In the battle, Claudius Nero led half his men behind the Roman lines and smashed into the enemy flank.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How do modern historians view the story that after Cannae Scipio forced young nobles plotting to flee abroad to swear loyalty at sword-point?",
+      "options": [
+        "They think it happened after Zama instead",
+        "They suspect it was invented",
+        "They think the nobles meant to join Hannibal",
+        "They accept it as confirmed by Polybius",
+        "They place the episode at the Ticinus",
+        "They credit the deed to Scipio's father"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 3,
+      "textReference": "#survivor-of-cannae",
+      "explanation": "The tale of Scipio bursting in on the would-be deserters is a later story that modern historians doubt. What is clear is that he survived Cannae and rallied the stragglers.",
+      "sourceQuote": "Modern historians suspect it was invented.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What restriction did the Senate's compromise place on Scipio's recruitment for the African expedition?",
+      "options": [
+        "He could take no more than a single legion",
+        "He could use only allied, non-Roman troops",
+        "He could recruit only from Sicilian cities",
+        "He could not sail until Hannibal left Italy",
+        "He had to share command with the princeps senatus",
+        "He could not call up soldiers normally, only ask for volunteers"
+      ],
+      "correctAnswers": [
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#consul-at-thirty-one",
+      "explanation": "Scipio was limited to volunteers rather than a normal levy. He drilled his army for about a year, from units of 80 men up to the whole force.",
+      "sourceQuote": "But he could not call up soldiers in the usual way, only ask for volunteers.",
+      "reviewFlags": []
+    },
+    {
+      "question": "According to Polybius, why did Scipio order his men to kill everyone they met when New Carthage fell?",
+      "options": [
+        "To avenge his father and uncle",
+        "To punish a massacre of Roman refugees",
+        "To stop the garrison escaping by sea",
+        "To terrify the region into surrender",
+        "To honour Neptune with a sacrifice",
+        "Because his soldiers had mutinied"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 3,
+      "textReference": "#new-carthage",
+      "explanation": "Polybius saw the slaughter as deliberate terror, claiming soldiers even cut dogs in half. Once the citadel surrendered, Scipio spared the citizens and enslaved only non-citizens.",
+      "sourceQuote": "Polybius, a Greek historian of the period, thought the aim was to terrify the region into surrender, and claimed the soldiers even cut dogs in half.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which city, modern Cádiz, was Carthage's last stronghold in Spain, giving up soon after Ilipa?",
+      "options": [
+        "Baecula",
+        "Utica",
+        "Gades",
+        "Italica",
+        "New Carthage",
+        "Ilipa"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 3,
+      "textReference": "#conquest-of-spain",
+      "explanation": "Gades surrendered after Scipio's decisive victory at Ilipa. The mopping-up before it was harsh, and the people of one town killed themselves rather than surrender.",
+      "sourceQuote": "Soon Gades, modern Cádiz, Carthage's last stronghold in Spain, gave up too.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did Carthage do after Hannibal returned from Italy with his veterans?",
+      "options": [
+        "Surrendered Utica to Scipio as a gesture",
+        "Asked Masinissa to mediate a peace",
+        "Accepted Scipio's terms without a fight",
+        "Sent Hannibal on to reconquer Spain",
+        "Executed the generals beaten at the Great Plains",
+        "Rejected a draft treaty Rome's Senate had approved"
+      ],
+      "correctAnswers": [
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#invasion-of-africa",
+      "explanation": "Hannibal's return restored Carthage's nerve, so it rejected the draft treaty. He had landed with 15,000 to 20,000 veterans but few horses.",
+      "sourceQuote": "His arrival restored Carthage's nerve, and it rejected a draft treaty that Rome's Senate had already approved.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Roughly how many reinforcements did Scipio bring with him when he arrived in Spain in 210 BC?",
+      "options": [
+        "About 7,000",
+        "About 40,000",
+        "About 25,000",
+        "About 10,000",
+        "About 15,000",
+        "About 4,000"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 3,
+      "textReference": "#command-in-spain",
+      "explanation": "Scipio reached Spain in early autumn with about 10,000 reinforcements. He was taking over after his father and uncle had been killed there.",
+      "sourceQuote": "Scipio arrived in Spain in early autumn with about 10,000 reinforcements.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which of these were terms of the peace Carthage accepted in 201 BC? (select all that apply)",
+      "options": [
+        "It could fight in Africa only with Rome's permission",
+        "It could keep only ten warships",
+        "It could not wage war outside Africa at all",
+        "It had to tear down its city walls",
+        "It had to hand over Spain to Masinissa",
+        "It had to surrender Hannibal to Rome"
+      ],
+      "correctAnswers": [
+        0,
+        1,
+        2
+      ],
+      "difficulty": 3,
+      "textReference": "#peace-and-africanus",
+      "explanation": "Carthage lost the right to make war freely and was cut down to ten warships. Masinissa's Numidian kingdom was also confirmed.",
+      "sourceQuote": "It could not wage war outside Africa at all, nor inside Africa without Rome's permission.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Against the legend of divine visions, what did Polybius argue lay behind Scipio's success?",
+      "options": [
+        "Careful planning and clear thinking",
+        "Genuine favour from the god Neptune",
+        "Steady backing from the Senate",
+        "Masinissa's superior cavalry",
+        "Sheer luck on the battlefield",
+        "The devotion of his Spanish allies"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#sources-and-legend",
+      "explanation": "Polybius rejected the tales of gods and prophetic dreams and credited Scipio's own planning and judgment. Some legends even had Spaniards hailing Scipio as king and god.",
+      "sourceQuote": "Polybius disagreed, arguing that Scipio succeeded through careful planning and clear thinking.",
+      "reviewFlags": []
+    }
+  ]
+}

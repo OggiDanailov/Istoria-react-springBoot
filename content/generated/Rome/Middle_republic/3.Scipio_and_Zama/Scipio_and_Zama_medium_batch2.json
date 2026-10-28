@@ -1,0 +1,191 @@
+{
+  "batchName": "Middle Republic: Scipio and the Road to Zama (216-201 BCE) - Medium Batch 2",
+  "chapterName": "Middle Republic: Scipio and the Road to Zama (216-201 BCE)",
+  "difficulty": 2,
+  "batchOrder": 4,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "What happened to Masinissa's Numidian rival after the Battle of the Great Plains?",
+      "options": [
+        "He fled to Spain and joined the Carthaginians there",
+        "He was killed fighting beside Hannibal at Zama",
+        "He made peace with Rome and kept his kingdom",
+        "He was executed by the Carthaginians for failure",
+        "Masinissa and Scipio's second-in-command hunted him down and captured him"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#invasion-of-africa",
+      "explanation": "The rival king was captured, and Masinissa took over much of his kingdom. At the Great Plains, Carthage's shaken troops broke at the first charge.",
+      "sourceQuote": "Masinissa and Scipio's second-in-command then hunted down the rival Numidian king and captured him.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did Scipio use the winter peace talks of 204-203 BC to his advantage?",
+      "options": [
+        "He swapped prisoners to win back Roman captives",
+        "He stalled until Hannibal had left Italy for good",
+        "He recruited Carthaginian deserters as guides",
+        "He bribed the rival Numidian king to change sides",
+        "His envoys studied the enemy camps' layout, exits and reed huts"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#invasion-of-africa",
+      "explanation": "Each diplomatic visit was also a spying mission. Scipio then burned the camps in a night attack.",
+      "sourceQuote": "His envoys used each visit to study the enemy camps, their layout, their exits and their huts of reeds.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What bold step did the consul Claudius Nero take after reading the captured Carthaginian letters?",
+      "options": [
+        "Attacked Hannibal's camp in the south at once",
+        "Opened secret peace talks with Hannibal",
+        "Asked the Senate to appoint a dictator",
+        "Sailed to Spain to cut the enemy's supply lines",
+        "Marched north in secret with 7,000 picked men without Senate approval"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#battle-of-the-metaurus",
+      "explanation": "Claudius Nero marched hundreds of kilometres north, gathering volunteers and supplies on the way, and joined his fellow consul by night.",
+      "sourceQuote": "Without waiting for the Senate's approval, Claudius Nero took 7,000 picked men and marched north in secret, hundreds of kilometres, gathering volunteers and supplies as he went.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What made the Carthaginian commander realise a second Roman army had arrived before the Metaurus?",
+      "options": [
+        "A Roman deserter revealed the night march",
+        "He intercepted a letter from Claudius Nero",
+        "His scouts spotted dust from a marching column",
+        "He remembered hearing a second trumpet signal",
+        "He saw the Roman campfires suddenly double"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#battle-of-the-metaurus",
+      "explanation": "A second trumpet was the signal that a second commander had arrived. He noticed the Roman army had grown and retreated in the dark.",
+      "sourceQuote": "He remembered hearing a second trumpet, the signal that a second commander had arrived, and he retreated in the dark.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What was the outcome of Scipio's battle near Baecula in 208 BC?",
+      "options": [
+        "He destroyed the enemy army down to the last man",
+        "He captured Hannibal's brother alive on the field",
+        "The battle ended in a draw and a short truce",
+        "He was defeated and forced back to New Carthage",
+        "He won, but his opponent escaped with most of his army toward Italy"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#conquest-of-spain",
+      "explanation": "Scipio won the battle, but Hannibal's brother slipped away, crossed the Pyrenees and headed for Italy to join Hannibal.",
+      "sourceQuote": "Scipio won the battle but not the campaign.",
+      "reviewFlags": []
+    },
+    {
+      "question": "When Scipio was elected aedile in 213 BC, what happened after a tribune objected that he was too young?",
+      "options": [
+        "The Senate annulled the election result",
+        "Scipio withdrew and waited two more years",
+        "A dictator was appointed to settle the dispute",
+        "The consuls overruled the tribune by decree",
+        "The crowd's enthusiasm made the tribune back down"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#survivor-of-cannae",
+      "explanation": "Popular enthusiasm forced the tribune to drop his objection. An aedile looked after the city's streets and festivals.",
+      "sourceQuote": "A tribune objected that he was too young, but the crowd's enthusiasm made the tribune back down.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Italica, the town Scipio founded near Seville, later became famous as what?",
+      "options": [
+        "Rome's main naval base in Spain",
+        "The site of Hannibal's winter quarters",
+        "Carthage's last stronghold in Spain",
+        "The birthplace of three Roman emperors",
+        "The capital of Masinissa's kingdom"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#conquest-of-spain",
+      "explanation": "Scipio founded Italica about 9 km northwest of Seville. It later produced three Roman emperors.",
+      "sourceQuote": "Around this time Scipio also founded Italica, about 9 km northwest of Seville, which later became the birthplace of three Roman emperors.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did the Romans do as Hannibal's elephants charged at Zama?",
+      "options": [
+        "Fell back to their fortified camp",
+        "Hid in pits dug across the plain",
+        "Released pigs to frighten the elephants",
+        "Threw burning pitch at the animals",
+        "Blared trumpets and banged their shields"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#battle-of-zama",
+      "explanation": "The noise panicked some elephants, which fled back through their own cavalry. The Roman horsemen then chased the Carthaginian cavalry off the field.",
+      "sourceQuote": "When the elephants charged, the Romans blared trumpets and banged their shields.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Why did many senators think Scipio's plan to invade Africa was reckless? (select all that apply)",
+      "options": [
+        "Rome's last invasion of Africa had ended in disaster",
+        "Rome had no warships to escort an invasion",
+        "Masinissa had just sided with Carthage",
+        "Hannibal's youngest brother would soon land in northern Italy",
+        "Hannibal was still in Italy"
+      ],
+      "correctAnswers": [
+        0,
+        3,
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#consul-at-thirty-one",
+      "explanation": "Hannibal was still in Italy, his youngest brother was about to arrive with another army, and Rome's African invasion in the First Punic War had failed. The leader of the Senate fought the plan hard.",
+      "sourceQuote": "And Rome's last invasion of Africa, during the First Punic War, had ended in disaster.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did Scipio respond when admirers urged him to become consul for life and dictator?",
+      "options": [
+        "He went into voluntary exile instead",
+        "He accepted a dictatorship for one year",
+        "He let the Senate vote, and it said no",
+        "He refused",
+        "He accepted only the consulship for life"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#peace-and-africanus",
+      "explanation": "Scipio turned down the offer, and later Roman writers praised his restraint. It contrasts with the generals who seized power in the Republic's final century.",
+      "sourceQuote": "Yet when admirers urged him to become consul for life and dictator, he refused.",
+      "reviewFlags": []
+    }
+  ]
+}

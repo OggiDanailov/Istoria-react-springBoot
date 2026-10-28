@@ -1,0 +1,189 @@
+{
+  "batchName": "Middle Republic: Scipio and the Road to Zama (216-201 BCE) - Medium Batch 1",
+  "chapterName": "Middle Republic: Scipio and the Road to Zama (216-201 BCE)",
+  "difficulty": 2,
+  "batchOrder": 3,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "What scene, a favourite of Renaissance painters, is known as the \"Continence of Scipio\"?",
+      "options": [
+        "Scipio freeing Spanish hostages without conditions",
+        "Scipio refusing to become consul for life and dictator",
+        "Scipio rejecting Hannibal's terms before Zama",
+        "Scipio returning a beautiful captive untouched to her fiancé",
+        "Scipio sparing the citizens of Gades after its surrender"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#new-carthage",
+      "explanation": "In this tale from a much later writer, Scipio gave a beautiful captive back unharmed to her Spanish fiancé. Scipio also treated the 300 Spanish hostages in New Carthage generously.",
+      "sourceQuote": "In it, Scipio returned a beautiful captive untouched to her Spanish fiancé.",
+      "reviewFlags": []
+    },
+    {
+      "question": "According to one ancient account, what did young Scipio do in the cavalry clash on the river Ticinus?",
+      "options": [
+        "Carried news of the defeat to Rome",
+        "Led the charge that won the battle",
+        "Saved his surrounded father's life",
+        "Captured several of Hannibal's elephants",
+        "Killed a Carthaginian general in single combat"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#survivor-of-cannae",
+      "explanation": "One account says Scipio rescued his father when enemy horsemen surrounded him. Other writers gave the credit to an unnamed slave.",
+      "sourceQuote": "According to one ancient account, enemy horsemen surrounded Scipio's father in a cavalry clash on the river Ticinus in northern Italy, and young Scipio saved his life.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How do historians regard the famous story of Hannibal ranking the greatest generals in conversation with Scipio?",
+      "options": [
+        "They date it to the parley before Zama",
+        "They accept it because Polybius reports it",
+        "They consider the meeting apocryphal",
+        "They trace it to Scipio's lost memoirs",
+        "They think the speaker was Masinissa"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#sources-and-legend",
+      "explanation": "Historians think this meeting never happened. It belongs with the many legends that grew around Scipio.",
+      "sourceQuote": "A famous story has Hannibal later ranking the greatest generals in conversation with Scipio, but historians consider the meeting apocryphal.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Who made up the core of the army Scipio took to Africa?",
+      "options": [
+        "Veterans of the victory at the Metaurus",
+        "Numidian horsemen sent by Masinissa",
+        "Fresh conscripts called up in Rome",
+        "Spanish tribesmen recruited after Ilipa",
+        "Two legions of Cannae survivors posted to Sicily"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#consul-at-thirty-one",
+      "explanation": "Scipio's core force was two legions of men who had survived Cannae and been sent to Sicily. He drilled the army for about a year.",
+      "sourceQuote": "The core of his force was two legions (*legiones*) made up of survivors of Cannae who had been posted to Sicily.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What war indemnity did Carthage have to pay under the peace of 201 BC?",
+      "options": [
+        "40 tonnes of gold paid at once",
+        "1,000 silver talents over 10 years",
+        "10,000 silver talents over 50 years",
+        "3,200 silver talents over 50 years",
+        "5,000 silver talents over 20 years"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#peace-and-africanus",
+      "explanation": "Carthage had to pay 10,000 silver talents over half a century. It also gave up its war elephants.",
+      "sourceQuote": "It had to pay 10,000 silver talents over 50 years, gave up its war elephants and kept only ten warships.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What do modern scholars suspect really lay behind Scipio's appointment to Spain?",
+      "options": [
+        "The army in Spain proclaimed him its general",
+        "His uncle had named him successor before dying",
+        "The consuls drew lots and his name came up",
+        "The people forced him on a strongly unwilling Senate",
+        "Senators chose him, then had the people vote to make it look legitimate"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#command-in-spain",
+      "explanation": "Scholars think the Senate picked Scipio and used a popular vote to legitimise an irregular command. A Roman historian two centuries later instead portrayed the Senate as dithering.",
+      "sourceQuote": "Modern scholars suspect instead that the senators picked Scipio themselves, then had the people vote on it to make an irregular command look legitimate.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did Scipio arrange his infantry maniples at Zama to deal with Hannibal's elephants?",
+      "options": [
+        "Behind a line of sharpened stakes and trenches",
+        "Packed tightly into a single solid square",
+        "In their usual staggered, chessboard-like pattern",
+        "One behind another, leaving open lanes filled with skirmishers",
+        "Spread thinly along a ridge above the plain"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#battle-of-zama",
+      "explanation": "Instead of the normal staggered formation, Scipio lined up his maniples to create lanes. Most of the elephants ran down these lanes, where they were cut off and killed.",
+      "sourceQuote": "Instead he lined them up one behind another, leaving open lanes filled with light skirmishers (*velites*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "Why might Polybius's picture of Scipio be flattering, despite his general reliability?",
+      "options": [
+        "He was close to Scipio's family, and his main informant was Scipio's friend",
+        "He had served as an officer in Scipio's African army",
+        "He was paid by the Senate to glorify Roman generals",
+        "He relied only on Scipio's own Greek memoirs",
+        "He was Scipio's son and wrote a family history"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#sources-and-legend",
+      "explanation": "Polybius was a close friend of Scipio's relatives, and his main informant was Scipio's second-in-command. Scipio's own memoirs and his son's history are lost.",
+      "sourceQuote": "But he was a close friend of Scipio's relatives, and his main informant about Scipio was Scipio's own friend and second-in-command, so his picture may be flattering.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What made Scipio's command in Spain unprecedented?",
+      "options": [
+        "He was the first Roman to command an army overseas",
+        "He was appointed directly by a dictator",
+        "He got consular power without ever having been consul",
+        "He was chosen by the Senate alone, without a vote",
+        "He shared command with a Numidian prince"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#command-in-spain",
+      "explanation": "Scipio had held none of Rome's senior offices, yet he received the full military authority of a consul. No Roman had been given such power before without first serving as consul.",
+      "sourceQuote": "He was the first Roman ever given such power without first serving as consul.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What weakness in New Carthage's defences did Scipio exploit?",
+      "options": [
+        "Its walls had been damaged by an earthquake",
+        "The harbour was left unguarded during a festival",
+        "The lagoon on its north side could be waded at low tide",
+        "A traitor opened the main gate at night",
+        "The citadel had run out of drinking water"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#new-carthage",
+      "explanation": "Scipio sent a party across the shallow lagoon while the walls were under attack. He told his troops Neptune had promised him help.",
+      "sourceQuote": "A lagoon guarded the city's northern side, but at low tide it could be waded.",
+      "reviewFlags": []
+    }
+  ]
+}
