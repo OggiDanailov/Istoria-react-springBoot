@@ -731,18 +731,28 @@ const lx = lane => (lane + 0.5) * cell
 const ry = row => (APPROACH + row) * cell
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
 
+// Wide screens (a computer, a tablet, a phone turned sideways): cards on the left, the field in the middle,
+// grain, tools, messages and controls on the right. Tall screens: everything stacked, field at full width.
+const WIDE = window.matchMedia('(min-aspect-ratio: 5/4) and (min-width: 600px)')
 function layout() {
-  const wrap = $('wrap'), game = sroot.querySelector('.game')
-  const avail = Math.min(game.clientWidth - 32, 480)
-  const used = $('tray').offsetHeight + sroot.querySelector('.controls').offsetHeight + sroot.querySelector('.status').offsetHeight + $('banner').offsetHeight + 62 + Math.max(0, host.getBoundingClientRect().top)
-  const maxH = Math.max(380, window.innerHeight - used)
+  const wrap = $('wrap'), game = sroot.querySelector('.game'), top = Math.max(0, host.getBoundingClientRect().top)
+  let avail, maxH
+  if (WIDE.matches) {
+    const sides = $('tray').offsetWidth + sroot.querySelector('.side').offsetWidth + 2 * 14
+    avail = Math.min(game.clientWidth - sides - 32, 1000)
+    maxH = Math.max(300, window.innerHeight - top - 28)
+  } else {
+    avail = Math.min(game.clientWidth - 32, 480)
+    const used = $('tray').offsetHeight + sroot.querySelector('.controls').offsetHeight + sroot.querySelector('.status').offsetHeight + $('banner').offsetHeight + 62 + top
+    maxH = Math.max(380, window.innerHeight - used)
+  }
   cell = Math.floor(Math.min(avail / COLS, maxH / (ROWS + APPROACH + CAMP)))
   W = cell * COLS; H = Math.round(cell * (ROWS + APPROACH + CAMP)); k = cell / 72
   dpr = Math.min(2, window.devicePixelRatio || 1)
   for (const cv of [canvas, bg]) { cv.width = Math.round(W * dpr); cv.height = Math.round(H * dpr) }
   canvas.style.width = W + 'px'; canvas.style.height = H + 'px'
   wrap.style.width = (W + 6) + 'px'
-  for (const el of [sroot.querySelector('.status'), $('banner')]) el.style.width = (W + 6) + 'px'
+  for (const el of [sroot.querySelector('.status'), $('banner')]) el.style.width = WIDE.matches ? '' : (W + 6) + 'px'
   paintField()
 }
 const LAWN = { lake: ['#94a856', '#8b9e4e'], hills: ['#93a252', '#89984b'], walls: ['#98a95a', '#8fa052'], mountains: ['#8a9d4f', '#819449'], river: ['#97aa58', '#8ea050'],
@@ -1689,6 +1699,12 @@ function frame(now) {
 // ---------- mounting: one game inside a host element (its styles kept apart in a shadow root) ----------
 const MARKUP = `<main class="game">
   <div class="tray" id="tray" aria-label="Your units. Drag one onto the field, or tap it and then tap a square."></div>
+  <div class="field-wrap" id="wrap">
+    <canvas id="field" aria-label="The battlefield: five lanes in front of the Roman camp. Latin soldiers march down from the top."></canvas>
+    <div class="deploy" id="deploy" hidden><p id="deploy-text"></p><button class="primary" id="begin">Begin the battle</button></div>
+    <div class="overlay" id="overlay"></div>
+  </div>
+  <div class="side">
   <div class="status">
       <div class="rations" id="rations" aria-live="polite"><svg class="wheat" viewBox="0 0 20 20" aria-hidden="true"><g fill="#e0a63a"><ellipse cx="10" cy="4" rx="2.4" ry="3.6"/><ellipse cx="6.5" cy="8" rx="2.2" ry="3.3" transform="rotate(-30 6.5 8)"/><ellipse cx="13.5" cy="8" rx="2.2" ry="3.3" transform="rotate(30 13.5 8)"/><ellipse cx="7" cy="12.5" rx="2" ry="3" transform="rotate(-30 7 12.5)"/><ellipse cx="13" cy="12.5" rx="2" ry="3" transform="rotate(30 13 12.5)"/></g><path d="M10 6v13" stroke="#b8862a" stroke-width="1.6"/></svg><span id="count">100</span></div>
     <div class="hud-right">
@@ -1697,11 +1713,6 @@ const MARKUP = `<main class="game">
       <button class="tool helper" id="augur" hidden title="Once per battle: good omens make your soldiers fight harder">Augur</button>
     </div>
   </div>
-  <div class="field-wrap" id="wrap">
-    <canvas id="field" aria-label="The battlefield: five lanes in front of the Roman camp. Latin soldiers march down from the top."></canvas>
-    <div class="deploy" id="deploy" hidden><p id="deploy-text"></p><button class="primary" id="begin">Begin the battle</button></div>
-    <div class="overlay" id="overlay"></div>
-  </div>
   <div class="msg" id="banner" aria-live="polite"></div>
   <div class="controls">
     <div class="progress"><span class="label" id="level">Lake Regillus</span><div class="bar" id="bar"><div class="fill" id="fill"></div></div></div>
@@ -1709,6 +1720,7 @@ const MARKUP = `<main class="game">
     <button class="tool" id="speed">1×</button>
     <button class="tool" id="guide">Guide</button>
     <button class="tool" id="sound">Sound</button>
+  </div>
   </div>
 </main>`
 let host = null, sroot = null, mounted = false, opts = { mode: 'campaign' }
@@ -1770,7 +1782,7 @@ function mount(el, o = {}) {
   canvas = $('field'); ctx = canvas.getContext('2d'); tray = $('tray'); overlay = $('overlay')
   shownCount = -1; mounted = true
   bindControls()
-  window.addEventListener('resize', layout)
+  window.addEventListener('resize', layout); WIDE.addEventListener?.('change', () => requestAnimationFrame(layout))
   if (opts.mode === 'chapter') { quizScore = opts.score; newGame(opts.level, opts.score); showBriefing(opts.level) }
   else { newGame(0); showMap() }
   last = performance.now(); requestAnimationFrame(frame)

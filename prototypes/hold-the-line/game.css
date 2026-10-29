@@ -120,3 +120,23 @@
 .twist { margin: 0; padding: 10px 12px; border-radius: 12px; background: var(--sand); border-left: 4px solid var(--rome); font-size: 14px; }
 @media (prefers-reduced-motion: reduce) { .rations.bump { animation: none; } }
 .tool.helper.on:disabled { opacity: 1; background: var(--gold); }
+
+/* phone held upright: the side column is just the next rows down */
+.side { display: contents; }
+.tray { order: 0; } .status { order: 1; } .field-wrap { order: 2; } .msg { order: 3; } .controls { order: 4; }   /* grain and tools above the field */
+/* wide screens: cards on the left, the field in the middle, everything else on the right */
+@media (min-aspect-ratio: 5/4) and (min-width: 600px) {
+  .game { max-width: none; display: grid; grid-template-columns: auto auto 200px; align-items: start; justify-content: center; column-gap: 14px; }
+  .tray { grid-column: 1; grid-template-columns: repeat(2, 56px); align-content: start; }
+  .tray.many .card canvas, .card canvas { width: 40px; height: 40px; }
+  .tray.many .card .cost { font-size: 12px; }
+  .field-wrap { grid-column: 2; align-self: start; }
+  .side { grid-column: 3; display: flex; flex-direction: column; gap: 10px; }
+  .tray, .field-wrap, .side { grid-row: 1; order: 0; }
+  .status { flex-direction: column; align-items: stretch; width: auto; }
+  .status .rations { justify-content: center; font-size: 20px; }
+  .hud-right { flex-direction: column; align-items: stretch; }
+  .msg { justify-content: flex-start; text-align: left; min-height: 5.5em; align-items: flex-start; width: auto; }
+  .controls { flex-wrap: wrap; }
+  .controls .progress { flex-basis: 100%; }
+}

@@ -40,6 +40,7 @@ body {
   color: var(--ink); font: 500 16px/1.45 var(--body); -webkit-tap-highlight-color: transparent;
 }
 .battle-host { margin-inline: -16px; }
+@media (min-aspect-ratio: 5/4) and (min-width: 600px) { .app:has(.battle-host) { max-width: none; } }   /* a battle on a wide screen uses the width */
 .test-steps { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
 .test-steps li { font-size: 12px; font-weight: 800; padding: 4px 9px; border-radius: 999px; border: 1px solid var(--panel-line); color: var(--ink-soft); }
 .test-steps li.done { background: #2f3a26; border-color: #3f5233; color: var(--good); }
