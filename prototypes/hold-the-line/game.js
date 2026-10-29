@@ -21,6 +21,10 @@ const UNITS = {
   cornicen: { name: 'Trumpeter', short: 'Trumpeter', cost: 75, recharge: 20, hp: 250, horn: { range: 2.6, every: 10 }, about: 'At Zama the Romans blared trumpets and panicked Hannibal’s elephants. He blares at any elephant coming at his lane or the lanes beside it.' },
   maniple:  { name: 'Maniple', short: 'Maniple', cost: 125, recharge: 10, hp: 650, melee: 35, flank: 70, about: 'A small, flexible unit. It fights in its own lane and strikes enemies in the lanes beside it from the side, where shields don’t protect them.' },
   torch:    { name: 'Torch-bearer', short: 'Torch', cost: 50, recharge: 12, hp: 100, burn: 3, about: 'Sets a house on fire. Place him on a house: no more defenders can burst out of it, and the square is free again.' },
+  legionary:  { name: 'Legionary', short: 'Legionary', cost: 125, recharge: 8, hp: 450, reload: 3, dmg: 50, range: 2.7, melee: 40, breaks: true, about: 'Marius’s legionary. His pilum bends when it strikes, so an enemy shield it hits is useless.' },
+  centurion:  { name: 'Centurion', short: 'Centurion', cost: 100, recharge: 15, hp: 600, melee: 30, aura: 1.3, about: 'An officer with a vine-wood stick. The soldiers in the eight squares around him fight 30% harder.' },
+  testudo:    { name: 'Testudo', short: 'Testudo', cost: 75, recharge: 15, hp: 1200, melee: 15, arrowMul: 0.1, about: '“The tortoise”: soldiers lock their shields in front and over their heads. Arrows and stones barely hurt it.' },
+  fourthline: { name: 'Fourth line', short: '4th line', cost: 100, recharge: 10, hp: 500, melee: 40, antiCav: 3, about: 'Caesar’s hidden fourth line at Pharsalus: picked men who thrust their pila up at the horsemen. Three times as deadly against cavalry.' },
   lilia:    { name: 'Lilia', short: 'Lilia', cost: 50, recharge: 12, hp: 400, pit: { dmg: 110, slow: 0.5 }, about: 'Caesar’s “lilies” at Alesia: hidden pits with a sharpened stake in each. Enemies walk over them, get hurt and slow down. They don’t block the lane, and they last.' },
   supplyboat:  { name: 'Supply boat', short: 'Supply', cost: 50, recharge: 7.5, hp: 300, grain: true, ship: 'supply', about: 'A round-bellied merchant boat. Brings a sack of grain every 20 seconds.' },
   archership:  { name: 'Archer ship', short: 'Archers', cost: 100, recharge: 7.5, hp: 300, reload: 1.5, dmg: 20, range: 99, kind: 'arrow', ship: 'archers', about: 'A light liburnian with archers on deck. Shoots at any ship coming down its lane.' },
@@ -35,14 +39,14 @@ const FOES = {
   warrior:    { name: 'Warrior', hp: 200, speed: 0.22, dps: 40 },
   chief:      { name: 'War chief', hp: 240, speed: 0.3, dps: 40 },
   shield:     { name: 'Shield-bearer', hp: 200, shield: 400, speed: 0.22, dps: 40, intro: 'Shield-bearers! Their bronze shields soak up stones until they break.' },
-  cavalry:    { name: 'Horseman', hp: 330, speed: 0.6, after: 0.28, dps: 40, jumps: true, intro: 'Horsemen! They leap over the first soldier in their way.' },
+  cavalry:    { name: 'Horseman', hp: 330, speed: 0.6, after: 0.28, dps: 40, jumps: true, mounted: true, intro: 'Horsemen! They leap over the first soldier in their way.' },
   raider:     { name: 'Volscian raider', hp: 150, speed: 0.42, dps: 35, intro: 'Volscian raiders! They run fast and come in bursts.' },
   archer:     { name: 'Etruscan archer', hp: 180, speed: 0.22, dps: 30, bow: { range: 3.2, reload: 2.2, dmg: 25 }, intro: 'Etruscan archers! They stop out of reach and shoot your front soldier.' },
   samnite:    { name: 'Samnite warrior', hp: 260, speed: 0.22, dps: 40, intro: 'Samnites: tough warriors from the mountains.' },
   linen:      { name: 'Linen Legion', hp: 480, speed: 0.2, dps: 45, intro: 'The Linen Legion! Samnite warriors in white, sworn to fight to the death.' },
   phalangite: { name: 'Phalangite', hp: 220, shield: 300, speed: 0.18, dps: 45, intro: 'Pyrrhus’s phalanx: long pikes behind big bronze shields.' },
   balearic:   { name: 'Balearic slinger', hp: 150, speed: 0.24, dps: 25, bow: { range: 4.2, reload: 2.6, dmg: 20, sling: true }, intro: 'Balearic slingers! Carthage’s hired slingers hit your soldiers from far away.' },
-  numidian:   { name: 'Numidian horseman', hp: 180, speed: 0.5, dps: 30, switches: 2, intro: 'Numidian horsemen! When something blocks them, they ride around it into the next lane.' },
+  numidian:   { name: 'Numidian horseman', hp: 180, speed: 0.5, dps: 30, switches: 2, mounted: true, intro: 'Numidian horsemen! When something blocks them, they ride around it into the next lane.' },
   gaul:       { name: 'Gallic warrior', hp: 220, speed: 0.28, dps: 45, intro: 'Gauls! Fast and fierce, but without armour.' },
   african:    { name: 'African infantry', hp: 280, shield: 250, speed: 0.2, dps: 45, flanks: true, intro: 'Hannibal’s African infantry close in on the outer lanes, as they did at Cannae.' },
   charger:    { name: 'Charging elephant', hp: 1500, speed: 0.42, after: 0.15, dps: 250, elephant: true, charges: true, intro: 'Hannibal’s elephants charge! An elephant that reaches the camp down an empty lane runs out of the battle. Trumpets panic them.' },
@@ -56,11 +60,22 @@ const FOES = {
   deceres:    { name: 'Great ship', hp: 900, shield: 300, speed: 0.12, dps: 70, bow: { range: 3, reload: 2.5, dmg: 25 }, ship: 'great', intro: 'Antony’s great ships, with towers full of archers. Slow, but very hard to sink. Hold them with a harpax.' },
   egyptian:   { name: 'Cleopatra’s ship', hp: 220, speed: 0.3, dps: 35, egyptian: true, ship: 'egyptian', intro: 'Cleopatra’s Egyptian squadron, under purple sails.' },
   flagship:   { name: 'Antony’s flagship', hp: 1200, shield: 300, speed: 0.1, dps: 80, bow: { range: 3, reload: 2.2, dmg: 30 }, flagship: true, ship: 'great', intro: 'Antony’s flagship joins the battle!' },
+  teuton:     { name: 'Teuton warrior', hp: 300, speed: 0.24, dps: 50, intro: 'The Teutones! Huge warriors from the north, charging uphill at your lines.' },
+  ambron:     { name: 'Ambrone', hp: 200, speed: 0.34, dps: 45, intro: 'The Ambrones, allies of the Teutones: fast and wild.' },
+  lucanian:   { name: 'Lucanian', hp: 240, shield: 200, speed: 0.22, dps: 40, intro: 'Lucanians from the south, fighting beside the Samnites.' },
+  murmillo:   { name: 'Murmillo', hp: 300, shield: 400, speed: 0.2, dps: 50, intro: 'Gladiators! The murmillo fights behind a big shield.' },
+  retiarius:  { name: 'Retiarius', hp: 200, speed: 0.3, dps: 35, nets: true, intro: 'The retiarius throws his net: the first soldier he reaches can’t fight for a few seconds.' },
+  slave:      { name: 'Rebel slave', hp: 130, speed: 0.36, dps: 30, intro: 'Spartacus’s army: tens of thousands of runaway slaves.' },
+  spartacus:  { name: 'Spartacus', hp: 1800, speed: 0.2, dps: 120, intro: 'Spartacus himself charges at your lines!' },
+  horsearcher:{ name: 'Parthian horse archer', hp: 200, speed: 0.45, dps: 25, mounted: true, kites: true, bow: { range: 3.4, reload: 1.7, dmg: 20 }, intro: 'Parthian horse archers! They keep their distance and shoot, and ride back if you come too close.' },
+  cataphract: { name: 'Cataphract', hp: 600, shield: 300, speed: 0.3, dps: 70, mounted: true, intro: 'Cataphracts: horse and rider covered in armour.' },
+  pompeian:   { name: 'Pompeian legionary', hp: 300, shield: 200, speed: 0.2, dps: 45, intro: 'Pompey’s legions: Romans fighting Romans.' },
+  slingarcher:{ name: 'Pompey’s archer', hp: 160, speed: 0.22, dps: 25, bow: { range: 3.2, reload: 2.2, dmg: 22 }, intro: 'Pompey’s archers and slingers from the East. They stop out of reach and shoot.' },
   calf:       { name: 'Elephant calf', hp: 300, speed: 0.15, dps: 60, intro: 'An elephant calf walks ahead of its mother. Wound it and the mother panics, as happened at Beneventum.' },
   elephant:   { name: 'War elephant', hp: 2000, speed: 0.15, dps: 250, elephant: true, intro: 'War elephants! They crush whatever stands in their way. Send the pigs!' },
 }
-const UNIT_GUIDE = {"cart": "Makes a sack of grain (25 rations) every 20 seconds. It doesn’t fight. <i>Tip: build several early, at the back.</i>", "slinger": "Shoots a stone down his whole lane every 1.5 seconds. Fragile once an enemy reaches him. <i>Tip: put something sturdy in front of him.</i>", "hastatus": "Throws heavy javelins at enemies within about 2½ squares, more than twice a stone’s damage, then fights with his sword when they reach him. <i>Tip: javelins break shields fast.</i>", "triarius": "Five times a slinger’s health and no attack. He holds enemies in place while your other soldiers hit them. <i>Tip: in front of your shooters.</i>", "caltrops": "Hidden iron spikes. After 10 seconds they are armed, and the first enemy to step on them sets them off: everyone on that spot takes a huge hit. Before that, enemies trample them. <i>Tip: a horseman wastes his leap on unarmed caltrops.</i>", "princeps": "A tough swordsman who cuts down whoever reaches his square. <i>Tip: a strong front line against fast raiders.</i>", "shed": "A wooden shed covered in hides. Arrows do almost nothing to it. <i>Tip: put it in front, so archers shoot the shed instead of your slingers.</i>", "rorarii": "Throw javelins into their own lane and both lanes beside it. <i>Tip: in the middle lanes they cover three lanes at once.</i>", "scorpio": "Shoots a heavy bolt every 3½ seconds that flies through every enemy in its lane, hitting each one. <i>Tip: great against crowded lanes and elephants.</i>", "velites": "Cheap javelin throwers with a short range. When an enemy reaches them they fall back one square (once), so they keep throwing. <i>Tip: a cheap first line.</i>", "cornicen": "Doesn’t fight. When an elephant comes within 2½ squares in his lane or the lanes beside it, he blares his horn and every such elephant panics and runs back. Then he needs 10 seconds to catch his breath. <i>Tip: a little in front of your shooters.</i>", "maniple": "A tough unit that fights in its lane and also hits enemies in the two lanes beside it from the side. Shields don’t stop blows from the side. <i>Tip: between two lanes the phalanx is coming down.</i>", "torch": "Can only be placed on a house. After 3 seconds the house burns down: no more ambushes from it, and you can build on the square. <i>Tip: burn the houses near your lines first.</i>", "lilia": "Hidden pits with sharp stakes. They don’t stop anyone: every enemy who crosses one takes a hit and slows to half speed while crossing. Enemies don’t attack them, so they last the whole battle. <i>Tip: put them where your shooters can hit the slowed enemy.</i>", "supplyboat": "Makes a sack of grain (25 rations) every 20 seconds. It doesn’t fight. <i>Tip: several early, at the back.</i>", "archership": "Shoots an arrow down its whole lane every 1.5 seconds. Fragile once an enemy ship reaches it.", "quinquereme": "Five times an archer ship’s strength and no attack. Holds enemy ships while the others shoot.", "rammer": "Rams any ship that reaches its square, hard.", "ballista": "A heavy bolt every 3½ seconds that flies through every ship in its lane.", "fireship": "Lit after 10 seconds; then the first enemy ship to touch it burns, and everything on that spot takes a huge hit. One use.", "harpax": "Fires a grappling hook that catches the first ship in its lane and holds it still for 4 seconds, so your other ships can hit it. <i>Tip: behind your archers, on the busiest lanes.</i>", "pigs": "Charge up the lane when an enemy comes near. An elephant they reach panics and runs back, trampling its own army; other enemies just take a hit. One use. <i>Tip: keep them in front of your line.</i>"}
-const FOE_GUIDE = {"calf": "Walks ahead of its mother. Wound it badly and the mother panics: both run back, trampling Pyrrhus’s own soldiers. Aim your slingers at the calf.", "warrior": "The basic enemy. One or two slingers in a lane handle him.", "chief": "Carries the standard and walks a little faster.", "shield": "His bronze shield soaks up hits until it breaks (the bronze bar). Javelins break it quickly.", "cavalry": "Fast. He leaps over the first soldier in his way, once, then slows down. Give him something cheap to leap, or armed caltrops.", "raider": "Fast but weak, and comes in bursts. Keep a shooter in every lane.", "archer": "Stops about three squares from your first soldier and shoots it. Put a siege shed in front; your slingers still reach him.", "samnite": "Tougher than a Latin warrior. Two shooters per lane.", "linen": "Very tough elite. Hold him with a triarius and hit him from several soldiers at once.", "phalangite": "A big shield and a long pike. Break the shield with javelins.", "elephant": "Crushes soldiers in seconds and takes a lot of hits. War pigs make him flee; caltrops help.", "balearic": "Stops about four squares from your first soldier and slings stones at it. Your slingers still reach him.", "numidian": "Fast and light. When a soldier blocks him he rides into a free lane beside it, up to twice. Block the lanes beside, or shoot him early.", "gaul": "Fast and hits hard, but has no armour. Shoot him before he reaches your line.", "african": "Comes down the outer lanes, with a shield. Javelins break it.", "charger": "Charges fast, then slows down. If it reaches the camp in a lane with no Roman soldiers, it runs out of the battle (as at Zama). Trumpeters panic it.", "veteran": "Hannibal’s best: very tough, with a shield. Hold him and hit him from several soldiers.", "thracian": "Fast light troops. Keep a shooter in every lane.", "pikeman": "His pike strikes a square ahead of him, so swordsmen can’t reach him. His shield stops missiles from the front, but not from the side lanes (rorarii, maniples). Rough ground breaks his shield.", "bowman": "Stops about three squares from your first soldier and shoots it. Put a siege shed in front.", "galley": "A warship with thick timbers (the brown bar) that soak up hits before the hull is damaged.", "deceres": "A huge ship with archer towers: it stops out of reach and shoots, and takes a lot to sink.", "egyptian": "Fast but light. Cleopatra’s ships may not stay for the whole battle…", "flagship": "Antony’s own ship: the biggest of all, with archers. Watch what happens when Cleopatra sails away.", "militia": "Defends his city. Comes down the street or bursts out of a house.", "volunteer": "Fast and weak, often in groups."}
+const UNIT_GUIDE = {"cart": "Makes a sack of grain (25 rations) every 20 seconds. It doesn’t fight. <i>Tip: build several early, at the back.</i>", "slinger": "Shoots a stone down his whole lane every 1.5 seconds. Fragile once an enemy reaches him. <i>Tip: put something sturdy in front of him.</i>", "hastatus": "Throws heavy javelins at enemies within about 2½ squares, more than twice a stone’s damage, then fights with his sword when they reach him. <i>Tip: javelins break shields fast.</i>", "triarius": "Five times a slinger’s health and no attack. He holds enemies in place while your other soldiers hit them. <i>Tip: in front of your shooters.</i>", "caltrops": "Hidden iron spikes. After 10 seconds they are armed, and the first enemy to step on them sets them off: everyone on that spot takes a huge hit. Before that, enemies trample them. <i>Tip: a horseman wastes his leap on unarmed caltrops.</i>", "princeps": "A tough swordsman who cuts down whoever reaches his square. <i>Tip: a strong front line against fast raiders.</i>", "shed": "A wooden shed covered in hides. Arrows do almost nothing to it. <i>Tip: put it in front, so archers shoot the shed instead of your slingers.</i>", "rorarii": "Throw javelins into their own lane and both lanes beside it. <i>Tip: in the middle lanes they cover three lanes at once.</i>", "scorpio": "Shoots a heavy bolt every 3½ seconds that flies through every enemy in its lane, hitting each one. <i>Tip: great against crowded lanes and elephants.</i>", "velites": "Cheap javelin throwers with a short range. When an enemy reaches them they fall back one square (once), so they keep throwing. <i>Tip: a cheap first line.</i>", "cornicen": "Doesn’t fight. When an elephant comes within 2½ squares in his lane or the lanes beside it, he blares his horn and every such elephant panics and runs back. Then he needs 10 seconds to catch his breath. <i>Tip: a little in front of your shooters.</i>", "maniple": "A tough unit that fights in its lane and also hits enemies in the two lanes beside it from the side. Shields don’t stop blows from the side. <i>Tip: between two lanes the phalanx is coming down.</i>", "torch": "Can only be placed on a house. After 3 seconds the house burns down: no more ambushes from it, and you can build on the square. <i>Tip: burn the houses near your lines first.</i>", "legionary": "Throws a heavy pilum at enemies within about 2½ squares, then fights with his sword. A pilum that hits a shield ruins it at once. <i>Tip: put him where the shields come.</i>", "centurion": "Fights a little himself, but above all makes every soldier in the eight squares around him 30% stronger. <i>Tip: in the middle of a group of shooters.</i>", "testudo": "Very tough, fights a little, and takes only a tenth of the damage from arrows and stones. <i>Tip: in front of your line against archers.</i>", "fourthline": "A tough swordsman who deals triple damage to anyone on horseback. <i>Tip: in the lanes the cavalry is coming down.</i>", "lilia": "Hidden pits with sharp stakes. They don’t stop anyone: every enemy who crosses one takes a hit and slows to half speed while crossing. Enemies don’t attack them, so they last the whole battle. <i>Tip: put them where your shooters can hit the slowed enemy.</i>", "supplyboat": "Makes a sack of grain (25 rations) every 20 seconds. It doesn’t fight. <i>Tip: several early, at the back.</i>", "archership": "Shoots an arrow down its whole lane every 1.5 seconds. Fragile once an enemy ship reaches it.", "quinquereme": "Five times an archer ship’s strength and no attack. Holds enemy ships while the others shoot.", "rammer": "Rams any ship that reaches its square, hard.", "ballista": "A heavy bolt every 3½ seconds that flies through every ship in its lane.", "fireship": "Lit after 10 seconds; then the first enemy ship to touch it burns, and everything on that spot takes a huge hit. One use.", "harpax": "Fires a grappling hook that catches the first ship in its lane and holds it still for 4 seconds, so your other ships can hit it. <i>Tip: behind your archers, on the busiest lanes.</i>", "pigs": "Charge up the lane when an enemy comes near. An elephant they reach panics and runs back, trampling its own army; other enemies just take a hit. One use. <i>Tip: keep them in front of your line.</i>"}
+const FOE_GUIDE = {"calf": "Walks ahead of its mother. Wound it badly and the mother panics: both run back, trampling Pyrrhus’s own soldiers. Aim your slingers at the calf.", "warrior": "The basic enemy. One or two slingers in a lane handle him.", "chief": "Carries the standard and walks a little faster.", "shield": "His bronze shield soaks up hits until it breaks (the bronze bar). Javelins break it quickly.", "cavalry": "Fast. He leaps over the first soldier in his way, once, then slows down. Give him something cheap to leap, or armed caltrops.", "raider": "Fast but weak, and comes in bursts. Keep a shooter in every lane.", "archer": "Stops about three squares from your first soldier and shoots it. Put a siege shed in front; your slingers still reach him.", "samnite": "Tougher than a Latin warrior. Two shooters per lane.", "linen": "Very tough elite. Hold him with a triarius and hit him from several soldiers at once.", "phalangite": "A big shield and a long pike. Break the shield with javelins.", "elephant": "Crushes soldiers in seconds and takes a lot of hits. War pigs make him flee; caltrops help.", "balearic": "Stops about four squares from your first soldier and slings stones at it. Your slingers still reach him.", "numidian": "Fast and light. When a soldier blocks him he rides into a free lane beside it, up to twice. Block the lanes beside, or shoot him early.", "gaul": "Fast and hits hard, but has no armour. Shoot him before he reaches your line.", "african": "Comes down the outer lanes, with a shield. Javelins break it.", "charger": "Charges fast, then slows down. If it reaches the camp in a lane with no Roman soldiers, it runs out of the battle (as at Zama). Trumpeters panic it.", "veteran": "Hannibal’s best: very tough, with a shield. Hold him and hit him from several soldiers.", "thracian": "Fast light troops. Keep a shooter in every lane.", "pikeman": "His pike strikes a square ahead of him, so swordsmen can’t reach him. His shield stops missiles from the front, but not from the side lanes (rorarii, maniples). Rough ground breaks his shield.", "bowman": "Stops about three squares from your first soldier and shoots it. Put a siege shed in front.", "galley": "A warship with thick timbers (the brown bar) that soak up hits before the hull is damaged.", "deceres": "A huge ship with archer towers: it stops out of reach and shoots, and takes a lot to sink.", "egyptian": "Fast but light. Cleopatra’s ships may not stay for the whole battle…", "flagship": "Antony’s own ship: the biggest of all, with archers. Watch what happens when Cleopatra sails away.", "teuton": "A huge, tough warrior. Hold him and hit him from several soldiers.", "ambron": "Fast and hits hard. Shoot him early.", "lucanian": "A spearman with a shield. Javelins and pila break it.", "murmillo": "A gladiator with a big shield (the bronze bar). Pila ruin it at once.", "retiarius": "Throws a net over the first soldier he reaches: that soldier can’t fight for 3 seconds.", "slave": "Weak, fast and many. Keep shooters in every lane.", "spartacus": "The rebel leader: very tough and deadly up close. Slow him and hit him from everywhere.", "horsearcher": "Shoots from about three squares away, and rides back up the lane when a soldier is close. A testudo shrugs off his arrows.", "cataphract": "Armoured horse and rider: slow for cavalry, very tough. The fourth line and pila deal with him.", "pompeian": "A Roman legionary on the other side, with a shield. Pila break it.", "slingarcher": "Stops out of reach and shoots your front soldier. A testudo shrugs it off.", "militia": "Defends his city. Comes down the street or bursts out of a house.", "volunteer": "Fast and weak, often in groups."}
 // A campaign of five battles, in historical order. Each adds an enemy and a Roman unit.
 const w = (t, foes, big, from) => ({ t, foes, big, from })
 const rep = (n, t) => Array(n).fill(t)
@@ -141,6 +156,40 @@ const LEVELS = [
     waves: [w(26, ['militia']), w(40, ['volunteer', 'volunteer']), w(56, ['militia', 'bowman']), w(70, ['militia', 'militia'], null, 'houses'), w(86, ['shield', 'volunteer', 'volunteer']), w(102, ['bowman', 'bowman', 'militia']),
       w(116, ['militia', 'militia', 'volunteer'], null, 'houses'), w(132, ['chief', ...rep(3, 'militia'), ...rep(3, 'volunteer'), 'shield', 'bowman'], 'A great wave approaches!'), w(162, ['militia', 'volunteer', 'volunteer'], null, 'houses'),
       w(178, ['shield', 'shield', 'bowman', 'militia']), w(196, ['chief', ...rep(4, 'militia'), ...rep(4, 'volunteer'), ...rep(2, 'shield'), 'bowman'], 'The last stand at the Byrsa!')] },
+  { id: 'aquae-sextiae', name: 'Aquae Sextiae', year: '102 BC', enemy: 'the Teutones and Ambrones', theme: 'hill', start: 300, cols: 6, rows: 8, uphill: 3,
+    twist: 'The Teutones charge uphill at Marius’s position, so they slow down on the last three rows. Late in the battle Marius’s 3,000 hidden men strike them from behind.',
+    events: [{ t: 178, ambush: 250, text: 'Marius’s 3,000 hidden men strike the Teutones from behind!' }],
+    units: ['cart', 'slinger', 'velites', 'hastatus', 'triarius', 'caltrops', 'princeps', 'scorpio', 'legionary'], newUnit: 'legionary',
+    blurb: 'In 102 BC the Teutones and Ambrones march on Italy. Near Aquae Sextiae, in southern Gaul, Marius waits for them on high ground.',
+    after: 'Ancient writers claimed 100,000 or more Teutones were killed or captured. The next year Marius destroyed the Cimbri at Vercellae.',
+    waves: [w(26, ['ambron']), w(40, ['teuton']), w(54, ['ambron', 'ambron']), w(70, ['teuton', 'warrior']), w(86, ['shield', 'teuton']), w(100, ['ambron', 'ambron', 'ambron']), w(116, ['teuton', 'teuton', 'shield']),
+      w(132, ['chief', ...rep(3, 'teuton'), 'ambron', 'ambron', 'shield'], 'A great wave approaches!'), w(160, ['teuton', 'teuton', 'ambron', 'cavalry']), w(178, ['shield', 'teuton', 'teuton']),
+      w(194, ['chief', ...rep(4, 'teuton'), ...rep(3, 'ambron'), 'shield', 'cavalry'], 'The final wave!')] },
+  { id: 'colline-gate', name: 'The Colline Gate', year: '82 BC', enemy: 'the Samnites and Lucanians', theme: 'rome', start: 300, cols: 6, rows: 8,
+    twist: 'Sulla’s own wing, on the left, breaks: its two lanes lose their equites. Hold on: Crassus is winning on the right, and in time his wing routs the enemy there.',
+    events: [{ t: 120, wings: [0, 1], text: 'Sulla’s wing breaks! No equites on the two left lanes.' }, { t: 170, rout: [3, 4, 5], text: 'Crassus has won on the right! The enemy there flees.' }],
+    units: ['cart', 'slinger', 'velites', 'legionary', 'triarius', 'caltrops', 'maniple', 'scorpio', 'centurion'], newUnit: 'centurion',
+    blurb: '1 November 82 BC: a great Samnite and Lucanian army stands at Rome’s Colline Gate. Sulla races back to save the city.',
+    after: 'Sulla won. The next day thousands of prisoners were killed, and he made himself dictator.',
+    waves: [w(26, ['samnite']), w(40, ['lucanian']), w(54, ['samnite', 'samnite']), w(70, ['lucanian', 'samnite']), w(86, ['linen', 'samnite']), w(100, ['lucanian', 'lucanian', 'cavalry']), w(114, ['samnite', 'samnite', 'lucanian']),
+      w(130, ['chief', ...rep(3, 'samnite'), 'lucanian', 'lucanian', 'linen'], 'A great wave approaches!'), w(156, ['samnite', 'lucanian', 'cavalry']), w(176, ['linen', 'samnite', 'samnite']),
+      w(194, ['chief', ...rep(4, 'samnite'), ...rep(3, 'lucanian'), 'linen', 'cavalry'], 'The final wave!')] },
+  { id: 'silarius', name: 'The Silarius River', year: '71 BC', enemy: 'Spartacus', theme: 'silarius', start: 300, cols: 6, rows: 8, ditch: 2, river: true,
+    twist: 'The slave army must wade the river, which slows it (you can’t build in it). Gladiators lead the charge: watch for the retiarius’s net. In the final wave Spartacus himself attacks.',
+    units: ['cart', 'slinger', 'velites', 'legionary', 'triarius', 'caltrops', 'maniple', 'scorpio', 'centurion'],
+    blurb: 'Trapped by Crassus, Spartacus turns and throws his whole army at the legions by the Silarius River.',
+    after: 'Most of the rebels died on the field. Spartacus fell fighting, though his body was never found, and 6,000 captives were crucified along the Appian Way.',
+    waves: [w(26, ['slave']), w(38, ['slave', 'slave']), w(52, ['murmillo']), w(66, ['slave', 'slave', 'retiarius']), w(82, ['murmillo', 'slave', 'slave']), w(98, ['retiarius', 'retiarius', 'slave']), w(114, ['murmillo', 'murmillo', 'slave', 'slave']),
+      w(130, ['chief', ...rep(4, 'slave'), 'murmillo', 'retiarius', 'cavalry'], 'A great wave approaches!'), w(158, [...rep(3, 'slave'), 'retiarius', 'murmillo']), w(176, ['murmillo', 'murmillo', 'retiarius', 'slave']),
+      w(194, ['spartacus', ...rep(4, 'slave'), 'murmillo', 'murmillo', 'retiarius', 'retiarius'], 'Spartacus leads the final charge!')] },
+  { id: 'carrhae', name: 'Carrhae', year: '53 BC', enemy: 'the Parthians', theme: 'desert', start: 325, cols: 6, rows: 8, noSky: true,
+    twist: 'In the desert no grain falls from the sky: build supply carts. Parthian horse archers keep their distance and shoot, riding back if you come close, and their camels bring them endless arrows. Form a testudo.',
+    units: ['cart', 'slinger', 'velites', 'legionary', 'triarius', 'caltrops', 'centurion', 'scorpio', 'testudo'], newUnit: 'testudo',
+    blurb: 'Crassus leads seven legions into the dry plains of Mesopotamia. Near Carrhae, Parthian horsemen ride out of the dust to the sound of drums.',
+    after: 'Crassus was killed, about 20,000 Romans died and the legions’ eagles were lost. Rome would not get them back for more than thirty years.',
+    waves: [w(26, ['horsearcher']), w(42, ['horsearcher', 'horsearcher']), w(58, ['cataphract']), w(72, ['horsearcher', 'horsearcher', 'horsearcher']), w(88, ['cataphract', 'horsearcher']), w(104, ['horsearcher', 'horsearcher', 'cataphract']), w(120, ['cataphract', 'cataphract']),
+      w(136, [...rep(5, 'horsearcher'), 'cataphract', 'cataphract'], 'The drums thunder: a great attack!'), w(166, ['horsearcher', 'horsearcher', 'cataphract', 'horsearcher']),
+      w(190, [...rep(5, 'horsearcher'), ...rep(3, 'cataphract')], 'The final attack!')] },
   { id: 'alesia', name: 'Alesia', year: '52 BC', enemy: 'Vercingetorix and the Gallic relief army', theme: 'alesia', start: 300, cols: 6, rows: 8, twoFronts: true,
     twist: 'Two fronts: Vercingetorix attacks from the town above, and later a Gallic relief army attacks from behind you, from below. Your soldiers fight toward whichever side the enemy comes from, and each side has its own equites.',
     units: ['cart', 'slinger', 'velites', 'hastatus', 'triarius', 'princeps', 'scorpio', 'maniple', 'lilia'], newUnit: 'lilia',
@@ -149,6 +198,15 @@ const LEVELS = [
     waves: [w(26, ['gaul']), w(42, ['warrior', 'gaul']), w(58, ['shield', 'gaul']), w(74, ['gaul', 'gaul', 'warrior']), w(92, ['gaul', 'gaul'], 'The Gallic relief army attacks from behind!', 'below'),
       w(108, ['shield', 'gaul']), w(120, ['cavalry', 'gaul'], null, 'below'), w(134, ['chief', ...rep(3, 'gaul'), 'shield', 'warrior'], 'Vercingetorix attacks from the town!'), w(152, ['gaul', 'gaul', 'shield', 'cavalry'], null, 'below'),
       w(168, ['shield', 'gaul', 'gaul']), w(186, ['chief', ...rep(4, 'gaul'), 'shield', 'cavalry'], 'The relief army’s final assault!', 'below'), w(190, ['chief', ...rep(3, 'gaul'), 'shield', 'shield'])] },
+  { id: 'pharsalus', name: 'Pharsalus', year: '48 BC', enemy: 'Pompey', theme: 'pharsalus', start: 325, cols: 6, rows: 8,
+    twist: 'Romans against Romans. Pompey’s 7,000 horsemen charge your left wing. Caesar’s answer was a hidden fourth line of picked men who thrust their pila at the riders.',
+    units: ['cart', 'slinger', 'velites', 'legionary', 'triarius', 'maniple', 'scorpio', 'centurion', 'fourthline'], newUnit: 'fourthline',
+    blurb: 'On the plain of Pharsalus, in Thessaly, Caesar’s veterans face Pompey’s far larger army. Pompey is sure his cavalry will win the day.',
+    after: 'Pompey’s cavalry broke and fled, his legions followed, and Pompey escaped to Egypt, where he was murdered. Caesar was master of Rome.',
+    waves: [w(26, ['pompeian']), w(42, ['pompeian', 'slingarcher']), w(58, ['pompeian', 'pompeian']), w(74, ['cavalry', 'pompeian']), w(90, ['slingarcher', 'pompeian', 'pompeian']), w(106, ['cavalry', 'cavalry', 'pompeian']),
+      w(122, rep(6, 'cavalry'), 'Pompey’s 7,000 horsemen charge your left wing!', [0, 1, 2]),
+      w(140, ['chief', ...rep(3, 'pompeian'), 'slingarcher', 'slingarcher'], 'A great wave approaches!'), w(166, ['pompeian', 'pompeian', 'cavalry', 'slingarcher']),
+      w(190, ['chief', ...rep(5, 'pompeian'), 'cavalry', 'cavalry', 'slingarcher'], 'The final wave!')] },
   { id: 'actium', name: 'Actium', year: '31 BC', enemy: 'Antony and Cleopatra', theme: 'sea', sea: true, start: 300, cols: 6, rows: 8,
     twist: 'A battle at sea: every unit is a ship. Watch Cleopatra’s squadron: halfway through, her ships hoist their sails and flee, and Antony follows her.',
     events: [{ t: 150, cleopatra: true, text: 'Cleopatra’s squadron hoists its sails and flees!' }, { t: 172, antony: true, text: 'Antony abandons his fleet and follows Cleopatra!' }],
@@ -327,6 +385,32 @@ const DRAW_UNIT = {
     c.fillStyle = '#7a5636'; c.beginPath(); c.arc(0, -44, 8.4, Math.PI, 0); c.fill()   // leather cap
   },
   pigs(c, u, T) { drawPig(c, T, false) },
+  legionary(c, u, T) {
+    shadow(c, 14, 4.5); romanLegs(c)
+    c.fillStyle = '#8e2b22'; c.strokeStyle = '#e0a63a'; c.lineWidth = 2; rr(c, -24, -44, 13, 36, 5); c.fill(); c.stroke()   // the curved scutum
+    c.fillStyle = '#c9a24a'; c.beginPath(); c.arc(-17.5, -26, 3, 0, TAU); c.fill()
+    c.fillStyle = '#8d939a'; rr(c, -10.5, -34, 21, 22, 5); c.fill()   // mail shirt
+    c.fillStyle = '#6d737a'; for (let y = -32; y < -14; y += 3) for (let x = -8 + (y % 2 ? 1.5 : 0); x < 9; x += 3) c.fillRect(x, y, 1.2, 1.2)
+    c.fillStyle = '#5a3a22'; c.fillRect(-10.5, -19, 21, 2.5)
+    if (u.fighting) swordArm(c, T)
+    else { const thrown = u.anim > 0; line(c, 9, -30, thrown ? 14 : 12, thrown ? -47 : -36, SKIN, 4.2); if (!thrown) { line(c, 12, -18, 14.5, -62, '#6b4a2b', 2.2); line(c, 14.2, -56, 14.8, -71, '#cfd4d8', 1.6) } }
+    romanHelmet(c, -42)
+  },
+  centurion(c, u, T) {
+    DRAW_UNIT.princeps(c, u, T)
+    c.fillStyle = '#d4392d'; c.strokeStyle = '#1b1715'; c.lineWidth = 1; c.beginPath(); c.ellipse(0, -51, 11, 3.6, 0, 0, TAU); c.fill(); c.stroke()   // the crest worn crosswise
+    line(c, -14, -6, -10, -40, '#8a6a3a', 2.4)   // the vine-wood stick
+  },
+  testudo(c) {
+    shadow(c, 20, 6)
+    for (const [x, y] of [[-11, -36], [11, -36], [-11, -16], [11, -16]]) { c.fillStyle = '#8e2b22'; c.strokeStyle = '#e0a63a'; c.lineWidth = 1.6; rr(c, x - 10, y - 10, 20, 20, 3); c.fill(); c.stroke(); c.fillStyle = '#c9a24a'; c.beginPath(); c.arc(x, y, 2.4, 0, TAU); c.fill() }
+    c.fillStyle = '#8e2b22'; c.strokeStyle = '#e0a63a'; rr(c, -21, -56, 42, 12, 3); c.fill(); c.stroke()   // shields held over their heads
+  },
+  fourthline(c, u, T) {
+    DRAW_UNIT.legionary(c, u, T)
+    if (!u.fighting) { line(c, 14, -40, 20, -86, '#6b4a2b', 2.4); line(c, 19.5, -80, 20.8, -94, '#cfd4d8', 2) }   // the pilum raised to thrust at riders
+    c.fillStyle = '#e0a63a'; c.beginPath(); c.ellipse(0, -51, 3, 6, 0, 0, TAU); c.fill()
+  },
   lilia(c) {   // three pits, each with a sharpened stake, half hidden under brushwood
     for (const [x, y] of [[-14, -4], [3, -10], [14, -2]]) {
       c.fillStyle = '#4a3420'; c.beginPath(); c.ellipse(x, y, 8, 3.6, 0, 0, TAU); c.fill()
@@ -438,15 +522,25 @@ const FOE_LOOK = {
   balearic:   { tunic: '#e9e1cf', head: 'hair', weapon: 'sling' },
   thracian:   { tunic: '#5f7f8f', head: 'thracian', weapon: 'javelin', fast: true },
   bowman:     { tunic: '#6a2f6e', head: 'hair', weapon: 'bow' },
+  slingarcher:{ tunic: '#c9a24a', head: 'hair', weapon: 'bow' },
+  teuton:     { tunic: '#7a6a4a', head: 'gaul', weapon: 'axe', shield: 'oval' },
+  ambron:     { tunic: '#9a7a4a', head: 'gaul', weapon: 'spear', fast: true },
+  lucanian:   { tunic: '#c9b48a', head: 'helmet', weapon: 'spear', shield: 'round' },
+  murmillo:   { tunic: '#d9c89a', head: 'murmillo', weapon: 'sword', shield: 'long' },
+  retiarius:  { tunic: '#d9c89a', head: 'hair', weapon: 'trident' },
+  slave:      { tunic: '#9a8a70', head: 'hair', weapon: 'javelin', fast: true },
+  spartacus:  { tunic: '#6a2f6e', head: 'thraex', weapon: 'sica', shield: 'small', big: 1.3 },
+  pompeian:   { tunic: '#8e2b22', head: 'roman', weapon: 'sword', shield: 'scutum' },
   militia:    { tunic: '#b8864e', head: 'hair', weapon: 'axe' },
   volunteer:  { tunic: '#9a8a70', head: 'hair', weapon: 'javelin', fast: true },
 }
 function drawFoe(c, f, T) {
   if (FOES[f.type]?.ship) return drawShip(c, FOES[f.type].ship, T, true, f)
-  if (f.type === 'cavalry' || f.type === 'numidian') return drawRider(c, f, f.type === 'numidian')
+  if (FOES[f.type]?.mounted) return drawRider(c, f, f.type)
   if (FOES[f.type]?.elephant) return drawElephant(c, f, T, false, f.type === 'charger')
   if (f.type === 'calf') { c.save(); c.scale(0.55, 0.55); drawElephant(c, f, T, true); c.restore(); return }
   const L = FOE_LOOK[f.type] ?? FOE_LOOK.warrior
+  if (L.big) c.scale(L.big, L.big)   // a leader stands out
   const walk = f.eating || f.jump || f.shooting ? 0 : Math.sin(f.phase * (L.fast ? 12 : 7)), bob = Math.abs(walk) * -1.2
   const chop = f.eating ? Math.sin(f.phase * 10) : -0.4
   shadow(c, 13, 4)
@@ -455,6 +549,7 @@ function drawFoe(c, f, T) {
     c.fillStyle = '#d4392d'; c.beginPath(); c.moveTo(13, -80); c.lineTo(33, -76 + Math.sin(T * 6) * 2); c.lineTo(13, -66); c.fill()
     c.fillStyle = '#e0a63a'; c.beginPath(); c.arc(19, -73, 2.6, 0, TAU); c.fill()
   }
+  if (L.weapon === 'trident') { line(c, -13, -18, -15, -72, '#6b4a2b', 2); for (const dx of [-4, 0, 4]) line(c, -15 + dx, -70, -15 + dx * 1.2, -80, '#cfd4d8', 1.6); c.strokeStyle = 'rgba(230, 220, 190, .9)'; c.lineWidth = 1; for (let i = -2; i <= 2; i++) { c.beginPath(); c.moveTo(6 + i * 3, -38); c.lineTo(10 + i * 3, -14); c.stroke(); c.beginPath(); c.moveTo(2, -30 + i * 4); c.lineTo(17, -30 + i * 4); c.stroke() } }   // trident and net
   if (L.weapon === 'pike') { line(c, -12, -30, -5, 26, '#6b4a2b', 2.6); line(c, -5.4, 22, -4.2, 33, '#cfd4d8', 2.2) }   // the long pike, lowered at the enemy
   if (L.weapon === 'sarissa') { line(c, -12, -6, -14, -102, '#6b4a2b', 2.4); line(c, -13.8, -96, -14.2, -109, '#cfd4d8', 2) }   // the long pike, held upright
   line(c, -4, -14, -4 + walk * 3, -1, SKIN, 4.6); line(c, 4, -14, 4 - walk * 3, -1, SKIN, 4.6)
@@ -480,6 +575,7 @@ function drawFoe(c, f, T) {
     if (L.weapon === 'axe') { line(c, ax, ay + 12, ax + 1, ay - 6, '#6b4a2b', 2.2); c.fillStyle = '#9aa3aa'; c.beginPath(); c.moveTo(ax + 1, ay - 6); c.lineTo(ax - 6, ay - 9); c.lineTo(ax - 5, ay - 1); c.closePath(); c.fill() }
     if (L.weapon === 'spear') { line(c, ax, ay + 18, ax - 2, ay - 22, '#6b4a2b', 2.2); line(c, ax - 1.8, ay - 18, ax - 2.2, ay - 28, '#cfd4d8', 1.8) }
     if (L.weapon === 'javelin') { line(c, ax, ay + 10, ax - 1, ay - 14, '#6b4a2b', 1.8); line(c, ax - 0.9, ay - 11, ax - 1.1, ay - 18, '#cfd4d8', 1.5) }
+    if (L.weapon === 'sica') { c.strokeStyle = '#cfd4d8'; c.lineWidth = 2.6; c.beginPath(); c.arc(ax + 6, ay - 2, 8, Math.PI * 0.9, Math.PI * 1.55); c.stroke() }   // the Thracian curved sword
     if (L.weapon === 'sword') { line(c, ax, ay + 5, ax - 1, ay - 9, '#cfd4d8', 2.6); line(c, ax - 3, ay + 4, ax + 3, ay + 4, '#8a6a2a', 1.6) }
   }
   // head, facing us
@@ -501,6 +597,13 @@ function drawFoe(c, f, T) {
     c.fillStyle = '#d9b25a'; c.beginPath(); c.arc(0, -46 + bob, 8.8, Math.PI, 0); c.fill(); c.fillRect(-9.2, -47 + bob, 3.4, 13); c.fillRect(5.8, -47 + bob, 3.4, 13)
     line(c, -4.5, -38 + bob, 4.5, -38 + bob, '#b8913a', 2.2)
   }
+  if (L.head === 'murmillo' || L.head === 'thraex') {   // a gladiator's full helmet with a grille
+    c.fillStyle = '#b08a3e'; c.beginPath(); c.arc(0, -43 + bob, 9.4, 0, TAU); c.fill()
+    c.strokeStyle = '#6b5326'; c.lineWidth = 1; for (let i = -2; i <= 2; i++) { c.beginPath(); c.moveTo(i * 2.6, -46 + bob); c.lineTo(i * 2.6, -37 + bob); c.stroke() }
+    if (L.head === 'murmillo') { c.fillStyle = '#8e2b22'; c.beginPath(); c.ellipse(0, -55 + bob, 3, 7, 0, 0, TAU); c.fill() }
+    else { c.strokeStyle = '#b08a3e'; c.lineWidth = 3; c.beginPath(); c.moveTo(-4, -52 + bob); c.quadraticCurveTo(2, -64 + bob, 9, -58 + bob); c.stroke() }   // the griffin crest
+  }
+  if (L.head === 'roman') { romanHelmet(c, -44 + bob); c.fillStyle = '#4a5a8a'; c.beginPath(); c.ellipse(0, -53 + bob, 2.6, 6, 0, 0, TAU); c.fill() }   // a Roman of the other side: a blue crest
   if (L.head === 'thracian') {   // a tall, forward-curving cap
     c.fillStyle = '#b8392d'; c.beginPath(); c.moveTo(-8.8, -44 + bob); c.quadraticCurveTo(-3, -64 + bob, 9, -58 + bob); c.quadraticCurveTo(5, -52 + bob, 8.8, -44 + bob); c.closePath(); c.fill()
   }
@@ -517,24 +620,29 @@ function drawFoe(c, f, T) {
     if (r < 0.66) { line(c, -6, -33 + bob, 1, -26 + bob, '#3f2a16', 1.4); line(c, 1, -26 + bob, -2, -18 + bob, '#3f2a16', 1.2) }
     if (r < 0.33) { line(c, 12, -32 + bob, 6, -24 + bob, '#3f2a16', 1.4); line(c, 6, -24 + bob, 11, -15 + bob, '#3f2a16', 1.2) }
   }
+  if (L.shield === 'small') { c.fillStyle = '#c9a24a'; c.strokeStyle = '#6b5326'; c.lineWidth = 1.2; rr(c, 4, -34 + bob, 11, 13, 2); c.fill(); c.stroke() }
+  if (L.shield === 'scutum') { c.fillStyle = f.shield > 0 ? '#8e2b22' : '#6b4a2b'; c.strokeStyle = '#4a5a8a'; c.lineWidth = 1.6; rr(c, 4, -40 + bob, 13, 30, 4); c.fill(); c.stroke(); c.fillStyle = '#c9a24a'; c.beginPath(); c.arc(10.5, -25 + bob, 2.6, 0, TAU); c.fill() }
   if (L.shield === 'oval') { c.fillStyle = '#6b4a2b'; c.strokeStyle = '#3f2a16'; c.lineWidth = 1.4; c.beginPath(); c.ellipse(10, -25 + bob, 6, 9, 0, 0, TAU); c.fill(); c.stroke() }
   if (L.shield === 'long') { c.fillStyle = L.white ? '#e9e1cf' : '#c9a86a'; c.strokeStyle = '#5a3a22'; c.lineWidth = 1.4; rr(c, 4, -40 + bob, 13, 30, [7, 7, 3, 3]); c.fill(); c.stroke(); line(c, 10.5, -37 + bob, 10.5, -13 + bob, '#8a6a44', 1.2) }
 }
-function drawRider(c, f, numidian = false) {
-  const g = f.jump ? 0 : Math.sin(f.phase * (f.jumped ? 8 : 13)), sh = f.jump ? 0.6 : 1, tunic = numidian ? '#d9c89a' : '#4d5a6a'
+function drawRider(c, f, kind = 'cavalry') {
+  const numidian = kind === 'numidian', parthian = kind === 'horsearcher', armoured = kind === 'cataphract'
+  const g = f.jump ? 0 : Math.sin(f.phase * (f.jumped ? 8 : 13)), sh = f.jump ? 0.6 : 1, tunic = numidian ? '#d9c89a' : parthian ? '#c9a24a' : armoured ? '#8d939a' : '#4d5a6a'
   shadow(c, 14 * sh, 5 * sh)
   if (f.jump) c.translate(0, -Math.sin(f.jump.t * Math.PI) * 26)
   line(c, -5, -18, -5 + g * 2, -2, '#4a3420', 3.6); line(c, 5, -18, 5 - g * 2, -2, '#4a3420', 3.6)
   c.fillStyle = '#7a5636'; c.beginPath(); c.ellipse(0, -24, 11, 10, 0, 0, TAU); c.fill()
   line(c, -10, -34, -12, -24, tunic, 3.6); line(c, 10, -34, 12, -24, tunic, 3.6)
   c.fillStyle = tunic; rr(c, -8, -52, 16, 19, 5); c.fill()
-  line(c, -9, -46, -12, -40, SKIN, 3.6); line(c, -12, -30, -15, -82, '#6b4a2b', 2.2); line(c, -14.6, -76, -15.3, -88, '#cfd4d8', 1.8)
+  if (parthian) { line(c, -9, -46, -14, -48, SKIN, 3.6); c.strokeStyle = '#5a3a22'; c.lineWidth = 2; c.beginPath(); c.arc(-11, -48, 11, Math.PI * 0.6, Math.PI * 1.4); c.stroke() }   // the composite bow
+  else { line(c, -9, -46, -12, -40, SKIN, 3.6); line(c, -12, -30, -15, -82, '#6b4a2b', 2.2); line(c, -14.6, -76, -15.3, -88, '#cfd4d8', 1.8) }
   c.fillStyle = SKIN; c.beginPath(); c.arc(0, -59, 7, 0, TAU); c.fill()
   c.fillStyle = INK; c.fillRect(-3.5, -60, 2, 2); c.fillRect(1.5, -60, 2, 2)
-  c.fillStyle = numidian ? '#2a1d14' : '#b08a3e'; c.beginPath(); c.arc(0, -61, 7.6, Math.PI, 0); c.fill()   // Numidians rode bareheaded
+  c.fillStyle = numidian ? '#2a1d14' : parthian ? '#e9e1cf' : armoured ? '#9aa3aa' : '#b08a3e'; c.beginPath(); c.arc(0, -61, 7.6, Math.PI, 0); c.fill()   // Numidians rode bareheaded; Parthians wore caps
   // the horse's head, closest to us
   c.fillStyle = '#4a3420'; c.beginPath(); c.moveTo(-4, -31); c.lineTo(-6, -38); c.lineTo(-1, -33); c.fill(); c.beginPath(); c.moveTo(4, -31); c.lineTo(6, -38); c.lineTo(1, -33); c.fill()
-  c.fillStyle = '#8a6440'; c.beginPath(); c.ellipse(0, -17, 6, 12, 0, 0, TAU); c.fill()
+  c.fillStyle = armoured ? '#8d939a' : '#8a6440'; c.beginPath(); c.ellipse(0, -17, 6, 12, 0, 0, TAU); c.fill()
+  if (armoured) { c.fillStyle = '#6d737a'; for (let y = -26; y < -8; y += 3) for (let x = -4; x <= 4; x += 3) c.fillRect(x, y, 1.4, 1.4) }   // scale armour on the horse
   c.fillStyle = '#5a3e26'; c.beginPath(); c.ellipse(0, -8, 4.5, 4, 0, 0, TAU); c.fill()
   c.fillStyle = INK; c.fillRect(-4.5, -23, 2, 2); c.fillRect(2.5, -23, 2, 2)
 }
@@ -637,7 +745,7 @@ function layout() {
   paintField()
 }
 const LAWN = { lake: ['#94a856', '#8b9e4e'], hills: ['#93a252', '#89984b'], walls: ['#98a95a', '#8fa052'], mountains: ['#8a9d4f', '#819449'], river: ['#97aa58', '#8ea050'],
-  sea: ['#4f87ab', '#4a81a4'], siege: ['#a3a75a', '#999d52'], alesia: ['#93a352', '#8a9a4b'], plain: ['#aea961', '#a39e59'], zama: ['#b6a766', '#ab9c5d'], olympus: ['#8fa354', '#86994d'], carthage: ['#c4b48e', '#b9a982'] }
+  sea: ['#4f87ab', '#4a81a4'], hill: ['#8fa24f', '#86994a'], rome: ['#99a95a', '#90a052'], silarius: ['#97aa58', '#8ea050'], desert: ['#d4bf8a', '#cbb57f'], pharsalus: ['#a4ab5e', '#9aa157'], siege: ['#a3a75a', '#999d52'], alesia: ['#93a352', '#8a9a4b'], plain: ['#aea961', '#a39e59'], zama: ['#b6a766', '#ab9c5d'], olympus: ['#8fa354', '#86994d'], carthage: ['#c4b48e', '#b9a982'] }
 function paintField() {
   const c = bctx, theme = LEVEL.theme
   c.setTransform(dpr, 0, 0, dpr, 0, 0)
@@ -672,6 +780,26 @@ function paintField() {
   }
   if (theme === 'river') {   // Pyrrhus's camp beyond the field
     for (let x = cell * 0.4; x < W; x += cell * 1.1) { c.fillStyle = '#8a6a9a'; c.beginPath(); c.moveTo(x - cell * 0.3, top * 0.7); c.lineTo(x, top * 0.12); c.lineTo(x + cell * 0.3, top * 0.7); c.fill(); c.fillStyle = '#6a2f6e'; c.fillRect(x - 1, top * 0.04, 2, top * 0.1) }
+  }
+  if (theme === 'hill') {   // the Teutones' wagons below the hill
+    c.fillStyle = '#7f8f4a'; c.fillRect(0, 0, W, top)
+    for (let x = cell * 0.3; x < W; x += cell * 0.9) { c.fillStyle = '#6b4a2b'; c.fillRect(x, top * 0.45, cell * 0.6, top * 0.25); c.fillStyle = '#d9c89a'; c.beginPath(); c.ellipse(x + cell * 0.3, top * 0.45, cell * 0.3, top * 0.22, 0, Math.PI, 0); c.fill(); c.fillStyle = '#3f2a16'; c.beginPath(); c.arc(x + cell * 0.12, top * 0.72, 4, 0, TAU); c.arc(x + cell * 0.48, top * 0.72, 4, 0, TAU); c.fill() }
+  }
+  if (theme === 'rome') {   // the Samnite camp before Rome's walls
+    c.fillStyle = '#8a9a52'; c.fillRect(0, 0, W, top)
+    for (let x = cell * 0.4; x < W; x += cell * 1.0) { c.fillStyle = '#6a5a8a'; c.beginPath(); c.moveTo(x - cell * 0.28, top * 0.75); c.lineTo(x, top * 0.18); c.lineTo(x + cell * 0.28, top * 0.75); c.fill() }
+  }
+  if (theme === 'silarius') {   // the mountains of Lucania
+    for (const [x, ht] of [[0.5, 0.9], [1.9, 1.1], [3.3, 0.85], [4.6, 1.05], [5.7, 0.8]]) { c.fillStyle = '#7d8796'; c.beginPath(); c.moveTo((x - 0.9) * cell, top); c.lineTo(x * cell, top - ht * top); c.lineTo((x + 0.9) * cell, top); c.fill() }
+  }
+  if (theme === 'desert') {   // dunes, and a camel train bringing arrows
+    c.fillStyle = '#e0c992'; c.fillRect(0, 0, W, top)
+    c.fillStyle = '#d4b878'; for (const x of [0.2, 0.55, 0.85]) { c.beginPath(); c.ellipse(W * x, top, W * 0.22, top * 0.55, 0, Math.PI, 0); c.fill() }
+    for (const x of [0.15, 0.3, 0.45]) { const cx = W * x, cy = top * 0.42; c.fillStyle = '#9a6a3a'; c.beginPath(); c.ellipse(cx, cy, 9, 5, 0, 0, TAU); c.fill(); c.beginPath(); c.arc(cx - 2, cy - 5, 4, 0, TAU); c.fill(); line(c, cx + 8, cy - 2, cx + 12, cy - 9, '#9a6a3a', 3); for (const dx of [-6, -2, 3, 7]) line(c, cx + dx, cy + 3, cx + dx, cy + 11, '#7a4a2a', 1.6) }
+  }
+  if (theme === 'pharsalus') {   // Pompey's camp on its hill
+    c.fillStyle = '#8a9a52'; c.beginPath(); c.moveTo(0, top); c.quadraticCurveTo(W * 0.4, -top * 0.5, W, top * 0.6); c.lineTo(W, top); c.fill()
+    for (let x = cell * 0.6; x < W; x += cell * 1.1) { c.fillStyle = '#efe4cc'; c.beginPath(); c.moveTo(x - cell * 0.24, top * 0.6); c.lineTo(x, top * 0.18); c.lineTo(x + cell * 0.24, top * 0.6); c.fill() }
   }
   if (theme === 'sea') {   // the headland of Actium, with Apollo's temple, beyond the open sea
     c.fillStyle = '#4f87ab'; c.fillRect(0, 0, W, top)
@@ -723,7 +851,12 @@ function paintField() {
     c.beginPath(); c.moveTo(x, y); c.lineTo(x + (rnd() - 0.5) * 3, y - 4); c.stroke()
   }
   for (let i = 0; i < 14; i++) { c.fillStyle = rnd() < 0.5 ? '#f2e6c8' : '#e9c44a'; c.beginPath(); c.arc(rnd() * W, top + rnd() * (ry(ROWS) - top), 1.6, 0, TAU); c.fill() }
-  if (LEVEL.ditch != null) {   // the siege ditch: a trench with stakes
+  if (LEVEL.uphill) { const g = c.createLinearGradient(0, top, 0, ry(ROWS)); g.addColorStop(0, 'rgba(255, 255, 255, 0)'); g.addColorStop(1, 'rgba(60, 40, 20, .14)'); c.fillStyle = g; c.fillRect(0, top, W, ry(ROWS) - top) }   // the slope up to the Roman lines
+  if (LEVEL.ditch != null && LEVEL.river) {   // a river across the field
+    const y = ry(LEVEL.ditch)
+    c.fillStyle = '#5d93b5'; c.fillRect(0, y + cell * 0.1, W, cell * 0.8)
+    c.strokeStyle = 'rgba(230, 240, 250, .45)'; c.lineWidth = 1.4; for (let x = cell * 0.2; x < W; x += cell * 0.5) { c.beginPath(); c.moveTo(x, y + cell * 0.45); c.quadraticCurveTo(x + cell * 0.12, y + cell * 0.38, x + cell * 0.24, y + cell * 0.45); c.stroke() }
+  } else if (LEVEL.ditch != null) {   // the siege ditch: a trench with stakes
     const y = ry(LEVEL.ditch)
     c.fillStyle = '#7a5a36'; c.fillRect(0, y + cell * 0.18, W, cell * 0.64)
     c.fillStyle = '#5e4428'; c.fillRect(0, y + cell * 0.34, W, cell * 0.32)
@@ -834,7 +967,8 @@ function spawnEntry(e) {
     const c = G.blocks[e.block] ??= 1 + Math.floor(Math.random() * (COLS - 2))
     return spawn(e.type, c + e.off)
   }
-  if (e.wave.from === 'below') return spawn(e.type, null, -0.75, -1)   // a second front: they attack from the other side
+  if (e.wave.from === 'below') return spawn(e.type, null, -0.75, -1)
+  if (Array.isArray(e.wave.from)) return spawn(e.type, e.wave.from[Math.floor(Math.random() * e.wave.from.length)])   // a charge on one wing   // a second front: they attack from the other side
   if (e.wave.from === 'houses') {   // defenders burst out of a house still standing
     const open = G.houses.filter(h => !h.burned)
     if (open.length) { const h = open[Math.floor(Math.random() * open.length)]; return spawn(e.type, h.lane, h.row + 0.55) }
@@ -928,10 +1062,12 @@ function update(dt) {
       const before = G.queue.length; G.queue = G.queue.filter(e => !test(FOES[e.type])); G.total -= before - G.queue.length
     }
     if (ev.cleopatra) leave(F => F.egyptian)
+    if (ev.ambush) for (const f of G.foes) if (f.hp > 0 && f.y < ROWS / 2) { hurtFoe(f, ev.ambush); G.fx.push({ kind: 'ring', x: lx(f.lane), y: ry(f.y), t: 0.45 }) }   // struck from behind
+    if (ev.rout) for (const f of G.foes) if (f.hp > 0 && ev.rout.includes(f.lane)) { f.fleeing = true; f.eating = null }
     if (ev.antony) leave(F => F.flagship)
   }
   // grain falling from the sky
-  G.nextSky -= dt
+  if (!LEVEL.noSky) G.nextSky -= dt
   if (G.nextSky <= 0) { G.nextSky = SCORE.sky[0] + Math.random() * (SCORE.sky[1] - SCORE.sky[0]); G.drops.push({ x: cell * (0.45 + Math.random() * (COLS - 0.9)), y: -12, ty: ry(0.6 + Math.random() * (ROWS - 1.8)), v: 25, life: 10, falling: true }) }
   for (const d of G.drops) { if (d.falling) { d.y += 70 * k * dt; if (d.y >= d.ty) { d.y = d.ty; d.falling = false } } else d.life -= dt }
   G.drops = G.drops.filter(d => !d.gone && (d.falling || d.life > 0))
@@ -944,6 +1080,8 @@ function update(dt) {
     const U = UNITS[u.type]
     u.cd -= dt; u.anim = Math.max(0, u.anim - dt); u.hurt = Math.max(0, u.hurt - dt)
     if (u.travel) { u.travelT += dt; if (u.travelT >= u.travel) u.travel = 0; continue }
+    if (u.netted > 0) { u.netted -= dt; continue }   // caught in a retiarius's net
+    const pow = (blessed ? AUGUR.damage : 1) * (G.units.some(c => UNITS[c.type].aura && c !== u && Math.abs(c.lane - u.lane) <= 1 && Math.abs(c.row - u.row) <= 1) ? 1.3 : 1)
     if (U.grain && u.cd <= 0) {
       u.cd = 20; u.anim = 0.7
       G.drops.push({ x: lx(u.lane) + (Math.random() - 0.5) * cell * 0.4, y: ry(u.row + 0.2), ty: ry(u.row + 0.55), v: 25, life: 10, falling: true })
@@ -969,11 +1107,11 @@ function update(dt) {
     if (U.melee) {   // swordsmen fight whoever reaches their square
       const foe = G.foes.filter(f => f.lane === u.lane && f.hp > 0 && !f.jump && !f.fleeing && (f.dir < 0 ? f.y >= u.row + 0.6 && f.y <= u.row + 1.45 : f.y >= u.row - 0.1 && f.y <= u.row + 1.0)).sort((a, b) => b.y - a.y)[0]
       u.fighting = !!foe
-      if (foe) { hurtFoe(foe, U.melee * dt * (blessed ? AUGUR.damage : 1), true); if (Math.random() < dt * 2.5) { sfx.clang(); G.fx.push({ kind: 'spark', x: lx(u.lane), y: ry(u.row + 0.4), t: 0.2 }) } }
+      if (foe) { hurtFoe(foe, U.melee * dt * pow * (U.antiCav && FOES[foe.type].mounted ? U.antiCav : 1), true); if (Math.random() < dt * 2.5) { sfx.clang(); G.fx.push({ kind: 'spark', x: lx(u.lane), y: ry(u.row + 0.4), t: 0.2 }) } }
     }
     if (U.flank) {   // the maniple strikes enemies in the lanes beside it, from the side
       const side = G.foes.filter(f => Math.abs(f.lane - u.lane) === 1 && f.hp > 0 && !f.jump && !f.fleeing && Math.abs(f.y - (u.row + 0.6)) < 0.75)
-      for (const f of side) { hurtFoe(f, U.flank * dt * (blessed ? AUGUR.damage : 1), true, true); if (Math.random() < dt * 2) G.fx.push({ kind: 'spark', x: (lx(u.lane) + lx(f.lane)) / 2, y: ry(u.row + 0.4), t: 0.2 }) }
+      for (const f of side) { hurtFoe(f, U.flank * dt * pow, true, true); if (Math.random() < dt * 2) G.fx.push({ kind: 'spark', x: (lx(u.lane) + lx(f.lane)) / 2, y: ry(u.row + 0.4), t: 0.2 }) }
       if (side.length) u.fighting = true
     }
     if (u.type === 'pigs' && G.foes.some(f => f.lane === u.lane && f.hp > 0 && !f.fleeing && f.y >= u.row - U.trigger && f.y <= u.row + 1)) {
@@ -990,7 +1128,7 @@ function update(dt) {
         // shoot at the closest threat, up the field or (on two fronts) down it
         const target = inReach.sort((a, b) => Math.abs(a.y - u.row - 0.5) - Math.abs(b.y - u.row - 0.5))[0], down = below(target) && !above(target)
         u.cd = U.reload * (blessed ? AUGUR.reload : 1); u.anim = 0.35
-        for (const l of lanes) G.shots.push({ lane: l, from: u.lane, dir: down ? 1 : -1, y: u.row + (down ? 0.8 : 0.45), y0: u.row + (down ? 0.8 : 0.45), kind: U.kind ?? (U.pierce ? 'bolt' : u.type === 'slinger' ? 'stone' : 'pilum'), pierce: !!U.pierce, grapple: U.grapple, dmg: U.dmg * (blessed ? AUGUR.damage : 1), speed: U.pierce ? 9 : u.type === 'slinger' ? 7 : 6, end: down ? u.row + 0.5 + U.range + 0.3 : u.row + 0.5 - U.range - 0.3, x0: (Math.random() - 0.5) * 0.1 })
+        for (const l of lanes) G.shots.push({ lane: l, from: u.lane, dir: down ? 1 : -1, y: u.row + (down ? 0.8 : 0.45), y0: u.row + (down ? 0.8 : 0.45), kind: U.kind ?? (U.pierce ? 'bolt' : u.type === 'slinger' ? 'stone' : 'pilum'), pierce: !!U.pierce, grapple: U.grapple, dmg: U.dmg * pow, breaks: U.breaks, speed: U.pierce ? 9 : u.type === 'slinger' ? 7 : 6, end: down ? u.row + 0.5 + U.range + 0.3 : u.row + 0.5 - U.range - 0.3, x0: (Math.random() - 0.5) * 0.1 })
         U.kind === 'arrow' ? sfx.bow() : u.type === 'slinger' ? sfx.sling() : sfx.throw()
       }
     }
@@ -1002,6 +1140,7 @@ function update(dt) {
     const hit = G.foes.filter(f => f.lane === s.lane && f.hp > 0 && !f.jump && !s.hits?.has(f) && s.y <= f.y + 0.05 && s.y >= f.y - 0.85).sort((a, b) => sd < 0 ? b.y - a.y : a.y - b.y)[0]
     if (hit) {
       hurtFoe(hit, s.dmg, s.kind, s.from != null && s.from !== s.lane)   // a javelin from the next lane hits the side
+      if (s.breaks && hit.shield > 0) { hit.shield = 0; sfx.crack() }   // the pilum bends: the shield is useless
       if (s.grapple) { hit.pinned = s.grapple; G.fx.push({ kind: 'ring', x: lx(s.lane), y: ry(hit.y), t: 0.4 }) }
       if (s.pierce) (s.hits ??= new Set()).add(hit); else s.done = true   // a scorpion bolt flies on through
       G.fx.push({ kind: 'spark', x: lx(s.lane), y: ry(s.y), t: 0.25 })
@@ -1061,6 +1200,7 @@ function update(dt) {
         const r = Math.floor(f.y + 0.3), free = [f.lane - 1, f.lane + 1].filter(l => l >= 0 && l < COLS && !unitAt(l, r) && !unitAt(l, r + 1) && !unitAt(l, r - 1)).sort(() => Math.random() - 0.5)
         if (free.length) { f.slide = { from: f.lane, t: 0 }; f.lane = free[0]; f.switched = (f.switched ?? 0) + 1; f.eating = null; continue }
       }
+      if (F.nets && !f.netted) { f.netted = true; u.netted = 3; if (!G.tips.net) { G.tips.net = true; announce('Caught in the net! That soldier can’t fight for a few seconds.') } }
       if (u.type === 'velites' && !u.fell && canStand(u.lane, u.row + f.dir)) { u.fell = true; moveUnit(u, u.lane, u.row + f.dir); continue }   // velites fall back, once
       if (UNITS[u.type].trap && u.armed) { explode(u); continue }
       if (FOES[f.type].jumps && !f.jumped) { f.jumped = true; f.jump = { from: f.y, to: f.dir < 0 ? u.row - 0.35 : u.row + 1.35, t: 0 }; f.eating = null; continue }
@@ -1074,6 +1214,7 @@ function update(dt) {
         const target = f.dir < 0
           ? G.units.filter(x => x.lane === f.lane && !x.travel && x.row + 0.82 < f.y).sort((a, b) => b.row - a.row)[0]
           : G.units.filter(x => x.lane === f.lane && !x.travel && x.row + 0.82 > f.y).sort((a, b) => a.row - b.row)[0]
+        if (F.kites && target && Math.abs(target.row + 0.82 - f.y) < 1.7) { f.y = Math.max(-0.7, f.y - f.dir * f.speed * 0.7 * dt); f.shooting = false; continue }   // the Parthian shot: ride back and keep shooting
         f.shooting = !!target && Math.abs(target.row + 0.82 - f.y) <= bow.range && (f.dir < 0 ? f.y < ROWS + 0.4 : f.y > -0.4)
         if (f.shooting) {
           f.cd -= dt
@@ -1085,6 +1226,7 @@ function update(dt) {
       let v = f.speed
       const r = Math.floor(f.y)
       if (f.pinned > 0) { f.pinned -= dt; v = 0 }   // held by a grappling hook
+      if (LEVEL.uphill && f.dir > 0 && r >= ROWS - LEVEL.uphill) v *= 0.7   // charging uphill
       if (r === LEVEL.ditch) v *= 0.4   // climbing through the siege ditch
       if (pit) v *= UNITS.lilia.pit.slow   // picking a way between the pits
       if (isRough(f.lane, r)) {
