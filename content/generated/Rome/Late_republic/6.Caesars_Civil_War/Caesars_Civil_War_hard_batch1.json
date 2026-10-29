@@ -1,0 +1,202 @@
+{
+  "batchName": "Late Republic: Caesar's Civil War and the Ides of March (49-44 BCE) - Hard Batch 1",
+  "chapterName": "Late Republic: Caesar's Civil War and the Ides of March (49-44 BCE)",
+  "difficulty": 3,
+  "batchOrder": 5,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Which Pharsalus casualty figures come from Caesar's own claims? (select all that apply)",
+      "options": [
+        "200 of his own men lost",
+        "1,200 of his own men lost",
+        "60,000 enemy killed",
+        "1,000 of his own men lost",
+        "6,000 enemy killed",
+        "10,000 enemy killed"
+      ],
+      "correctAnswers": [
+        0,
+        2
+      ],
+      "difficulty": 3,
+      "textReference": "#battle-of-pharsalus",
+      "explanation": "Caesar claimed to have lost 200 men and killed 60,000. Another ancient historian gives the likelier figures of 1,200 and 6,000.",
+      "sourceQuote": "Caesar claimed to have lost 200 men and killed 60,000; another ancient historian gives a likelier 1,200 and 6,000.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How long did Caesar hold the dictatorship he took in December 49 BC before resigning it?",
+      "options": [
+        "Seventy-two days",
+        "One year",
+        "Three months",
+        "Six months",
+        "Eleven days",
+        "Fifty days"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 3,
+      "textReference": "#spain-and-the-treasury",
+      "explanation": "Caesar ran elections, won a second consulship, and resigned after just eleven days before setting off after Pompey.",
+      "sourceQuote": "He ran elections, won a second consulship, and resigned the dictatorship after just eleven days before setting off after Pompey.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How do historians view the civil war's role in the fall of the Republic? (select all that apply)",
+      "options": [
+        "A war forced on Rome by a Parthian invasion",
+        "A plan Caesar had designed from the very start",
+        "A struggle provoked mainly by Cleopatra",
+        "A symptom of a Republic already unable to reform",
+        "The blow that broke the Republic, triggered by miscalculation",
+        "A brief crisis the Republic easily survived"
+      ],
+      "correctAnswers": [
+        3,
+        4
+      ],
+      "difficulty": 3,
+      "textReference": "#aftermath-and-debate",
+      "explanation": "Some historians see the war as the blow that broke the Republic, triggered by miscalculation rather than design. Others see it as a symptom of a Republic already unable to reform itself.",
+      "sourceQuote": "Others call it a symptom of a Republic already unable to reform itself.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did Caesar settle Egypt's throne after defeating the Egyptians?",
+      "options": [
+        "Egypt was made a Roman province",
+        "Cleopatra ruled alone as sole queen",
+        "The boy king was restored under Roman guard",
+        "Cleopatra's infant son was named king",
+        "The regent ruled until a new king came of age",
+        "Cleopatra became queen alongside a younger brother"
+      ],
+      "correctAnswers": [
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#pompey-and-cleopatra",
+      "explanation": "Caesar made Cleopatra queen with a younger brother and cruised the Nile with her for three months. In 47 BC she bore a son who carried the Caesar name.",
+      "sourceQuote": "Caesar made Cleopatra queen alongside a younger brother and cruised the Nile with her for three months.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Caesar's last words are disputed. Which versions do ancient writers report? (select all that apply)",
+      "options": [
+        "He spoke no last words at all",
+        "\"Avenge me, Antony!\" in Greek",
+        "\"The die is cast\" spoken in Latin",
+        "\"Et tu, Brute?\" spoken in Latin",
+        "\"Jupiter alone is king\" in Latin",
+        "\"You too, child?\" spoken in Greek"
+      ],
+      "correctAnswers": [
+        0,
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#ides-of-march",
+      "explanation": "Some ancient writers say Caesar said nothing; others report \"You too, child?\" in Greek. One says he covered his face on seeing Brutus.",
+      "sourceQuote": "Some ancient writers say he spoke none; others report \"You too, child?\" in Greek.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What happened to Pompey's elder son after the battle of Munda?",
+      "options": [
+        "He was pardoned by Caesar",
+        "He drowned fleeing the battle",
+        "He stabbed himself at Utica",
+        "He fled to Egypt",
+        "He joined the plot against Caesar",
+        "He was caught and beheaded"
+      ],
+      "correctAnswers": [
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#munda-and-honours",
+      "explanation": "Caesar won at Munda, losing around 1,000 men, and Pompey's elder son was caught and beheaded. One ancient writer says Caesar fought there for his life for the first time.",
+      "sourceQuote": "He won, losing around 1,000 men, and Pompey's elder son was caught and beheaded.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which ancient claim about Caesar's motives for war do modern historians doubt?",
+      "options": [
+        "That the Senate voted 370 to 22",
+        "That the Senate passed its final decree",
+        "That pro-Caesar tribunes fled to him",
+        "That gang violence engulfed Rome",
+        "That he feared prosecution if he disarmed",
+        "That he wanted a second consulship"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 3,
+      "textReference": "#road-to-war",
+      "explanation": "Modern historians doubt that fear of prosecution drove Caesar. Pride on both sides seems to have tipped Rome into war.",
+      "sourceQuote": "Modern historians doubt ancient claims that he feared prosecution.",
+      "reviewFlags": []
+    },
+    {
+      "question": "According to one ancient writer, why did Caesar's veterans charge at Thapsus before he gave the order?",
+      "options": [
+        "He was still landing his troops",
+        "He had been wounded by an elephant",
+        "He was sacrificing for good omens",
+        "He had fallen from his horse",
+        "He was having an epileptic fit",
+        "He was negotiating with the Numidian king"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 3,
+      "textReference": "#zela-and-thapsus",
+      "explanation": "One ancient writer says Caesar was having an epileptic fit. The battle was lopsided: some 10,000 Pompeians died against about 50 of Caesar's men.",
+      "sourceQuote": "At Thapsus, in modern Tunisia, in 46 BC, Caesar's veterans charged before he gave the order; one ancient writer says he was having an epileptic fit.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Of the three incidents ancient writers saw as the last straws against Caesar, which came last?",
+      "options": [
+        "Mark Antony offering a diadem at the Lupercalia",
+        "Some in a crowd hailing Caesar as king",
+        "Two tribunes being stripped of office",
+        "Caesar celebrating triumphs with 72 lictors",
+        "Caesar staying seated before a Senate delegation",
+        "A diadem appearing on Caesar's statue"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#three-last-straws",
+      "explanation": "The Lupercalia, a February festival, came after the January 44 BC episode of the statue's diadem and the cries of \"rex\". Antony offered the diadem twice.",
+      "sourceQuote": "Third, at the Lupercalia, a February festival, Mark Antony, Caesar's loyal lieutenant and fellow consul, twice placed a diadem on his head.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What is notable about Caesar's own account of the crossing of the Rubicon?",
+      "options": [
+        "It quotes a Greek poet",
+        "It never mentions the river at all",
+        "It credits Mark Antony with the idea",
+        "It dates the crossing to 9 March",
+        "It records \"the die is cast\"",
+        "It describes a bad omen at the river"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 3,
+      "textReference": "#crossing-the-rubicon",
+      "explanation": "Caesar's own account never mentions the Rubicon. The famous lines come from other ancient writers, who disagree over what he said.",
+      "sourceQuote": "Another ancient writer says he quoted a Greek poet instead, and Caesar's own account never mentions the river at all.",
+      "reviewFlags": []
+    }
+  ]
+}

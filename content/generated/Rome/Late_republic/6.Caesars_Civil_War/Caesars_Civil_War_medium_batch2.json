@@ -1,0 +1,190 @@
+{
+  "batchName": "Late Republic: Caesar's Civil War and the Ides of March (49-44 BCE) - Medium Batch 2",
+  "chapterName": "Late Republic: Caesar's Civil War and the Ides of March (49-44 BCE)",
+  "difficulty": 2,
+  "batchOrder": 4,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Why did Brutus refuse to have Mark Antony killed along with Caesar?",
+      "options": [
+        "Antony had secretly joined the plot",
+        "He feared Antony's legions in Gaul",
+        "Antony was away fighting the Parthians",
+        "Antony was his brother-in-law",
+        "Killing only Caesar looked like removing a tyrant"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#ides-of-march",
+      "explanation": "Brutus argued that killing only Caesar would look like removing a tyrant rather than a purge. Antony later brokered the compromise after the murder.",
+      "sourceQuote": "Brutus refused, arguing that killing only Caesar would look like removing a tyrant rather than a purge.",
+      "reviewFlags": []
+    },
+    {
+      "question": "According to an anecdote, how did Caesar handle tripping as he landed in Africa?",
+      "options": [
+        "He sacrificed a bull to cancel the omen",
+        "He sailed back and landed further along",
+        "He ordered his officers to keep it secret",
+        "He seized sand, claiming to have hold of Africa",
+        "He postponed the invasion for three days"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#zela-and-thapsus",
+      "explanation": "Caesar laughed off the bad omen by grabbing sand and crying, \"I have hold of you, Africa!\"",
+      "sourceQuote": "According to an anecdote, Caesar tripped on landing and laughed off the bad omen by grabbing sand and crying, \"I have hold of you, Africa!\"",
+      "reviewFlags": []
+    },
+    {
+      "question": "What was Caesar presented with when he reached Alexandria after Pompey's death? (select all that apply)",
+      "options": [
+        "Pompey's last letter",
+        "Pompey's sword",
+        "Pompey's head",
+        "Pompey's signet ring",
+        "Pompey's war chest"
+      ],
+      "correctAnswers": [
+        2,
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#pompey-and-cleopatra",
+      "explanation": "Caesar was given Pompey's head and signet ring. He wept at the ring and recoiled from the head, though historians debate whether his grief was genuine.",
+      "sourceQuote": "Julius Caesar reached Alexandria, Egypt's capital, three days later and was presented with Pompey's head and signet ring.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Why did the plotters choose a Senate meeting for the assassination?",
+      "options": [
+        "Caesar's friends could not protect him there",
+        "The tribunes had promised to help",
+        "The meeting would be held at night",
+        "Mark Antony was certain to be absent",
+        "It was held in a temple of Jupiter"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#ides-of-march",
+      "explanation": "At a Senate meeting Caesar's friends could not protect him. The Ides of March meeting was the last before he left to fight the Parthians.",
+      "sourceQuote": "They chose a Senate meeting, where Caesar's friends could not protect him.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Why did senators take offence when a delegation brought Caesar new honours?",
+      "options": [
+        "He refused the honours outright",
+        "He demanded a royal diadem instead",
+        "He had the delegation arrested",
+        "He stayed seated when etiquette demanded he stand",
+        "He kept them waiting outside for hours"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#three-last-straws",
+      "explanation": "Caesar stayed seated and joked that his honours should be cut back. It looked as if he no longer cared about the Senate.",
+      "sourceQuote": "Etiquette demanded he stand; he stayed seated and joked that his honours should be cut back.",
+      "reviewFlags": []
+    },
+    {
+      "question": "After the garrison at Corfinium surrendered, what did Caesar do?",
+      "options": [
+        "Let his legions plunder the town freely",
+        "Freed the senators and returned soldiers' pay",
+        "Sold the garrison soldiers into slavery",
+        "Sent the prisoners east in chains",
+        "Executed the senators among the garrison"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#crossing-the-rubicon",
+      "explanation": "Caesar freed some fifty senators and noblemen and even returned the soldiers' pay. This shrewd clemency kept Italy from turning on him.",
+      "sourceQuote": "Caesar freed some fifty senators and noblemen and even returned the soldiers' pay.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did Caesar do that angered ordinary Romans after some in a crowd hailed him as king?",
+      "options": [
+        "Had the arresting tribunes stripped of office",
+        "Accepted the title of rex",
+        "Banned public gatherings in the Forum",
+        "Had the shouting man executed",
+        "Raised taxes on the city's poor"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#three-last-straws",
+      "explanation": "The tribunes arrested the first man to shout \"king\", and Caesar responded by removing them from office, which angered ordinary Romans.",
+      "sourceQuote": "When the tribunes arrested the first man to shout, Caesar had them stripped of office, angering ordinary Romans.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did Caesar want to secure before giving up his army?",
+      "options": [
+        "A second term as consul",
+        "Command of a war against Parthia",
+        "Pompey's exile from Rome",
+        "A triumph for his Gallic wars",
+        "Control of the state treasury"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#road-to-war",
+      "explanation": "Caesar wanted a second consulship before disarming, while Pompey and the hardliners demanded he disarm first.",
+      "sourceQuote": "Caesar wanted a second term as consul, Rome's highest office, before giving up his army.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did Caesar say he was defending by going to war?",
+      "options": [
+        "Pompey's safety in Rome",
+        "Rome's grain supply",
+        "The Senate's emergency authority",
+        "His personal honour, or dignitas",
+        "The rights of Rome's Gallic allies"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#road-to-war",
+      "explanation": "Caesar framed the war as a defence of his dignitas. Pride on both sides seems to have tipped Rome into war.",
+      "sourceQuote": "Caesar said he was defending his personal honour (*dignitas*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "Where did the Second Triumvirate defeat Brutus in 42 BC?",
+      "options": [
+        "Actium",
+        "Dyrrachium",
+        "Philippi",
+        "Munda",
+        "Pharsalus"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#aftermath-and-debate",
+      "explanation": "The triumvirs beat Brutus at Philippi in northern Greece. They also declared Caesar a god and revived murderous purges.",
+      "sourceQuote": "They declared Caesar a god, revived murderous purges of their enemies, and defeated Brutus at Philippi, in northern Greece, in 42 BC.",
+      "reviewFlags": []
+    }
+  ]
+}

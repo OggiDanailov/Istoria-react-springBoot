@@ -1,0 +1,145 @@
+{
+  "batchName": "Late Republic: Caesar's Civil War and the Ides of March (49-44 BCE) - Latin words",
+  "chapterName": "Late Republic: Caesar's Civil War and the Ides of March (49-44 BCE)",
+  "difficulty": 1,
+  "batchOrder": 9,
+  "description": "Written by hand from the chapter text: the Latin words it explains",
+  "questions": [
+    {
+      "question": "What did Caesar reportedly say as he crossed the Rubicon?",
+      "options": [
+        "Alea iacta est: “the die is cast”",
+        "Veni, vidi, vici",
+        "Et tu, Brute",
+        "Carthago delenda est"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#crossing-the-rubicon",
+      "explanation": "Another ancient writer says he quoted a Greek poet instead, and Caesar’s own account never mentions the river.",
+      "sourceQuote": "he declared \"the die is cast\" (*alea iacta est*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "After which battle did Caesar write veni, vidi, vici?",
+      "options": [
+        "Zela, against a king of Pontus",
+        "Pharsalus",
+        "Thapsus",
+        "Munda"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#zela-and-thapsus",
+      "explanation": "“I came, I saw, I conquered” summed up a very short campaign.",
+      "sourceQuote": "Caesar summed up the brief campaign in a letter: \"I came, I saw, I conquered\" (*veni, vidi, vici*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "On which day was Caesar killed?",
+      "options": [
+        "The Ides of March (Idus Martiae), 15 March",
+        "The Kalends of January",
+        "The Lupercalia, in February",
+        "His birthday, in July"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#ides-of-march",
+      "explanation": "It was the last Senate meeting before he left to fight the Parthians.",
+      "sourceQuote": "fell on the Ides of March (*Idus Martiae*), 15 March.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Why was Caesar’s clementia at Corfinium shrewd?",
+      "options": [
+        "Because Italy did not turn on him",
+        "Because it filled his treasury",
+        "Because it ended the war at once",
+        "Because the Senate demanded it"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#crossing-the-rubicon",
+      "explanation": "Unlike earlier civil-war leaders, he took no revenge and his troops did not plunder.",
+      "sourceQuote": "This mercy (*clementia*) was shrewd.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Hailed as rex, Caesar punned: “I am not Rex, but Caesar.” Why was it a pun?",
+      "options": [
+        "Rex means king, and was also a Roman family name",
+        "Rex was the name of his horse",
+        "Rex was the title of a priest he held",
+        "Rex was his nickname in Gaul"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#three-last-straws",
+      "explanation": "When the tribunes arrested the first man to shout, Caesar had them stripped of office.",
+      "sourceQuote": "He punned, \"I am not Rex, but Caesar,\" since Rex was also a Roman family name.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How many lictores marched before Caesar at his triumphs in 46 BC?",
+      "options": [
+        "Seventy-two, three times a dictator’s usual number",
+        "Twelve, like a consul",
+        "Twenty-four, like a dictator",
+        "One hundred"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#munda-and-honours",
+      "explanation": "They carried the fasces, bundles of rods around an axe.",
+      "sourceQuote": "Seventy-two attendants (*lictores*) marched before him carrying the fasces",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did Caesar say he was defending when the civil war began?",
+      "options": [
+        "His dignitas, his personal honour",
+        "The freedom of the Gauls",
+        "The rights of the Senate",
+        "His wealth"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#road-to-war",
+      "explanation": "Modern historians doubt ancient claims that he feared prosecution.",
+      "sourceQuote": "Caesar said he was defending his personal honour (*dignitas*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "Early in 44 BC Caesar was made dictator perpetuo. What does it mean?",
+      "options": [
+        "Dictator for life",
+        "Dictator for a year",
+        "Dictator of the provinces",
+        "Dictator for a war"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#munda-and-honours",
+      "explanation": "A flattering Senate also gave him the title “Father of his Country”.",
+      "sourceQuote": "Early in 44 BC he was made dictator for life (*dictator perpetuo*).",
+      "reviewFlags": []
+    }
+  ]
+}

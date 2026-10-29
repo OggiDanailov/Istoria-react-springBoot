@@ -1,0 +1,625 @@
+{
+  "chapterName": "Late Republic: Caesar's Civil War and the Ides of March (49-44 BCE)",
+  "model": "claude-opus-5-5",
+  "briefing": {
+    "title": "Rome, 49 BC",
+    "paragraphs": [
+      "It is January 49 BC. Julius Caesar has spent almost ten years conquering Gaul, roughly modern France. He is rich, famous and backed by devoted legions. In Rome, the Senate, the council of the city's leading men, has drawn close to his former ally Pompey, Rome's most celebrated general. Together they demand that Caesar give up his army first.",
+      "Caesar refuses to lose face. At a small river called the Rubicon he must choose: disarm, or lead his men into Italy as a rebel. His choice will unleash civil war, and five years later it will end in blood on the Ides of March."
+    ]
+  },
+  "timelines": [
+    {
+      "name": "First Steps",
+      "blurb": "Four turning points from the Rubicon to the end of the Caesarian wars.",
+      "events": [
+        {
+          "label": "Caesar crosses the Rubicon",
+          "when": "January 49 BC",
+          "year": -49,
+          "fact": "Leading his troops across this small river into Italy proper made Caesar a rebel.",
+          "sectionId": "crossing-the-rubicon",
+          "reviewFlags": []
+        },
+        {
+          "label": "Caesar defeats Pompey at Pharsalus",
+          "when": "9 August 48 BC",
+          "year": -48,
+          "fact": "A hidden fourth line of Caesar's infantry routed Pompey's cavalry, and Pompey's left wing collapsed.",
+          "sectionId": "battle-of-pharsalus",
+          "reviewFlags": []
+        },
+        {
+          "label": "Caesar murdered on the Ides of March",
+          "when": "15 March 44 BC",
+          "year": -44,
+          "fact": "Stabbed 23 times at a Senate meeting in the Theatre of Pompey, he fell near Pompey's statue.",
+          "sectionId": "ides-of-march",
+          "reviewFlags": []
+        },
+        {
+          "label": "Antony and Cleopatra beaten at Actium",
+          "when": "31 BC",
+          "year": -31,
+          "fact": "After this defeat off western Greece, both Mark Antony and Cleopatra took their own lives.",
+          "sectionId": "aftermath-and-debate",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "The Campaigns",
+      "blurb": "Follow the civil war from the Senate's vote to the last battle in Spain.",
+      "events": [
+        {
+          "label": "Senate votes both men should disarm",
+          "when": "1 December 50 BC",
+          "year": -50,
+          "fact": "The Senate voted 370 to 22, but Pompey and a consul rejected the vote.",
+          "sectionId": "road-to-war",
+          "reviewFlags": []
+        },
+        {
+          "label": "Caesar wins at Ilerda in Spain",
+          "when": "June 49 BC",
+          "year": -49,
+          "fact": "Defeating Pompey's commanders in north-east Spain soon brought the whole peninsula under Caesar's control.",
+          "sectionId": "spain-and-the-treasury",
+          "reviewFlags": []
+        },
+        {
+          "label": "Pompey murdered on arrival in Egypt",
+          "when": "48 BC, after Pharsalus",
+          "year": -48,
+          "fact": "He was stabbed in a boat on the orders of Egypt's boy king, in sight of his wife.",
+          "sectionId": "pompey-and-cleopatra",
+          "reviewFlags": []
+        },
+        {
+          "label": "Veni, vidi, vici at Zela",
+          "when": "Mid-47 BC",
+          "year": -47,
+          "fact": "Caesar routed a king of Pontus, a realm on the Black Sea, and summed it up as 'I came, I saw, I conquered'.",
+          "sectionId": "zela-and-thapsus",
+          "reviewFlags": []
+        },
+        {
+          "label": "Pompeians crushed at Thapsus",
+          "when": "46 BC",
+          "year": -46,
+          "fact": "In modern Tunisia some 10,000 Pompeians died, against about 50 of Caesar's men.",
+          "sectionId": "zela-and-thapsus",
+          "reviewFlags": []
+        },
+        {
+          "label": "Pompey's sons defeated at Munda",
+          "when": "45 BC",
+          "year": -45,
+          "fact": "On a ridge in southern Spain Caesar fought, as one writer put it, for his life; Pompey's elder son was caught and beheaded.",
+          "sectionId": "munda-and-honours",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "From Civil War to Empire",
+      "blurb": "Eight steps from Caesar's first act of mercy to Rome's first emperor.",
+      "events": [
+        {
+          "label": "Corfinium's garrison surrenders",
+          "when": "Early 49 BC",
+          "year": -49,
+          "fact": "At this town in central Italy Caesar freed some fifty senators and noblemen and even returned the soldiers' pay.",
+          "sectionId": "crossing-the-rubicon",
+          "reviewFlags": []
+        },
+        {
+          "label": "Pompey stabbed in a boat off Egypt",
+          "when": "48 BC",
+          "year": -48,
+          "fact": "Caesar reached Alexandria three days later and was presented with Pompey's head and signet ring.",
+          "sectionId": "pompey-and-cleopatra",
+          "reviewFlags": []
+        },
+        {
+          "label": "Cleopatra bears a son",
+          "when": "47 BC",
+          "year": -47,
+          "fact": "Caesar believed the boy was his and let him carry the Caesar name.",
+          "sectionId": "pompey-and-cleopatra",
+          "reviewFlags": []
+        },
+        {
+          "label": "Caesar celebrates four triumphs",
+          "when": "46 BC",
+          "year": -46,
+          "fact": "Seventy-two lictors carrying the fasces marched before him, three times a dictator's usual number.",
+          "sectionId": "munda-and-honours",
+          "reviewFlags": []
+        },
+        {
+          "label": "Caesar made dictator for life",
+          "when": "Early 44 BC",
+          "year": -44,
+          "fact": "The title dictator perpetuo crowned a flood of honours that included 'Father of his Country'.",
+          "sectionId": "munda-and-honours",
+          "reviewFlags": []
+        },
+        {
+          "label": "Second Triumvirate is formed",
+          "when": "43 BC",
+          "year": -43,
+          "fact": "Caesar's heir, Mark Antony and another Caesarian general formed this three-man ruling alliance.",
+          "sectionId": "aftermath-and-debate",
+          "reviewFlags": []
+        },
+        {
+          "label": "Brutus defeated at Philippi",
+          "when": "42 BC",
+          "year": -42,
+          "fact": "The triumvirs beat Caesar's assassin at Philippi, in northern Greece.",
+          "sectionId": "aftermath-and-debate",
+          "reviewFlags": []
+        },
+        {
+          "label": "Caesar's heir becomes first emperor",
+          "when": "27 BC",
+          "year": -27,
+          "fact": "The grandnephew named in Caesar's will, who had taken the Caesar name, became Rome's first emperor.",
+          "sectionId": "aftermath-and-debate",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "matchSets": [
+    {
+      "name": "Latin Words",
+      "blurb": "Match each Latin word to its meaning.",
+      "pairs": [
+        {
+          "name": "Senatus consultum ultimum",
+          "match": "The Senate's emergency final decree, passed in January 49 BC",
+          "sectionId": "road-to-war",
+          "reviewFlags": []
+        },
+        {
+          "name": "Dignitas",
+          "match": "The personal honour Caesar said he was defending",
+          "sectionId": "road-to-war",
+          "reviewFlags": []
+        },
+        {
+          "name": "Clementia",
+          "match": "The shrewd mercy Caesar showed his defeated enemies",
+          "sectionId": "crossing-the-rubicon",
+          "reviewFlags": []
+        },
+        {
+          "name": "Parens patriae",
+          "match": "'Father of his Country', a title the Senate heaped on Caesar",
+          "sectionId": "munda-and-honours",
+          "reviewFlags": []
+        },
+        {
+          "name": "Lictores",
+          "match": "Attendants carrying the fasces; 72 marched before Caesar",
+          "sectionId": "munda-and-honours",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Places of the War",
+      "blurb": "Match each place to what happened there.",
+      "pairs": [
+        {
+          "name": "Rubicon",
+          "match": "Small river between Caesar's province and Italy proper",
+          "sectionId": "crossing-the-rubicon",
+          "reviewFlags": []
+        },
+        {
+          "name": "Corfinium",
+          "match": "Town where a garrison surrendered after a week and was spared",
+          "sectionId": "crossing-the-rubicon",
+          "reviewFlags": []
+        },
+        {
+          "name": "Brundisium",
+          "match": "Port on Italy's heel from which Pompey sailed east",
+          "sectionId": "crossing-the-rubicon",
+          "reviewFlags": []
+        },
+        {
+          "name": "Pharsalus",
+          "match": "Battle where a hidden fourth line routed Pompey's cavalry",
+          "sectionId": "battle-of-pharsalus",
+          "reviewFlags": []
+        },
+        {
+          "name": "Munda",
+          "match": "Ridge in southern Spain where Caesar fought for his life",
+          "sectionId": "munda-and-honours",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "trueFalseDecks": [
+    {
+      "name": "From the Rubicon to Pharsalus",
+      "blurb": "The first two years of the civil war.",
+      "cards": [
+        {
+          "claim": "In December 50 BC the Senate voted 370 to 22 that both Caesar and Pompey should lay down their commands.",
+          "answer": true,
+          "why": "The Senate voted 370 to 22 for both to disarm, but Pompey and a consul rejected the vote.",
+          "sectionId": "road-to-war",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Caesar's own account of the war describes his crossing of the Rubicon in detail.",
+          "answer": false,
+          "why": "Caesar's own account never mentions the river at all; the famous words come from other ancient writers.",
+          "sectionId": "crossing-the-rubicon",
+          "reviewFlags": []
+        },
+        {
+          "claim": "After Corfinium surrendered, Caesar freed some fifty senators and noblemen and returned the soldiers' pay.",
+          "answer": true,
+          "why": "This mercy (clementia) was shrewd: Caesar took no revenge, so Italy did not turn on him.",
+          "sectionId": "crossing-the-rubicon",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Caesar reached Brundisium too late to stop Pompey sailing east.",
+          "answer": true,
+          "why": "Pompey sailed from Brundisium to raise an army in the east; Caesar arrived on 9 March, too late.",
+          "sectionId": "crossing-the-rubicon",
+          "reviewFlags": []
+        },
+        {
+          "claim": "When Caesar marched to Spain, he left Brutus in charge of Italy.",
+          "answer": false,
+          "why": "He left Mark Antony, his trusted lieutenant, in charge of Italy.",
+          "sectionId": "spain-and-the-treasury",
+          "reviewFlags": []
+        },
+        {
+          "claim": "In 49 BC Caesar held the office of dictator for a full year.",
+          "answer": false,
+          "why": "He resigned the dictatorship after just eleven days, having run elections and won a second consulship.",
+          "sectionId": "spain-and-the-treasury",
+          "reviewFlags": []
+        },
+        {
+          "claim": "At Pharsalus Pompey had far more cavalry than Caesar.",
+          "answer": true,
+          "why": "Pompey had 5,000 to 7,000 cavalry to Caesar's 1,000.",
+          "sectionId": "battle-of-pharsalus",
+          "reviewFlags": []
+        },
+        {
+          "claim": "At Pharsalus Caesar hid a fourth line of men behind his left wing.",
+          "answer": false,
+          "why": "The hidden fourth line stood behind Caesar's right; it jabbed javelins at Pompey's charging cavalry.",
+          "sectionId": "battle-of-pharsalus",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "From Egypt to the Ides",
+      "blurb": "Cleopatra, the last battles and the fall of Caesar.",
+      "cards": [
+        {
+          "claim": "Pompey was stabbed to death on the orders of Egypt's boy king.",
+          "answer": true,
+          "why": "Egyptian officials and two Roman officers who had served under Pompey killed him in a boat, in sight of his wife.",
+          "sectionId": "pompey-and-cleopatra",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Caesar cruised the Nile with Cleopatra for three years.",
+          "answer": false,
+          "why": "He cruised the Nile with her for three months.",
+          "sectionId": "pompey-and-cleopatra",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Caesar wrote 'I came, I saw, I conquered' after his victory at Thapsus.",
+          "answer": false,
+          "why": "The famous letter summed up his brief campaign at Zela against a king of Pontus.",
+          "sectionId": "zela-and-thapsus",
+          "reviewFlags": []
+        },
+        {
+          "claim": "At his triumphs 72 lictors marched before Caesar, three times a dictator's usual number.",
+          "answer": true,
+          "why": "The lictors carried the fasces, bundles of rods around an axe symbolising the power to punish.",
+          "sectionId": "munda-and-honours",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Caesar's birth month, Quinctilis, was renamed August in his honour.",
+          "answer": false,
+          "why": "Quinctilis was renamed July.",
+          "sectionId": "munda-and-honours",
+          "reviewFlags": []
+        },
+        {
+          "claim": "At the Lupercalia Caesar accepted the diadem Mark Antony placed on his head.",
+          "answer": false,
+          "why": "Caesar set it aside, declaring that Jupiter alone was king of the Romans, and the crowd cheered.",
+          "sectionId": "three-last-straws",
+          "reviewFlags": []
+        },
+        {
+          "claim": "On the Ides of March Caesar was stabbed 23 times and fell near Pompey's statue.",
+          "answer": true,
+          "why": "He was killed in a hall of the Theatre of Pompey after one plotter pulled down his toga.",
+          "sectionId": "ides-of-march",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Caesar's will named his 18-year-old grandnephew as his heir.",
+          "answer": true,
+          "why": "The heir took the Caesar name and in 27 BC became Rome's first emperor.",
+          "sectionId": "aftermath-and-debate",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "oddOneOut": [
+    {
+      "items": [
+        "Ilerda",
+        "Dyrrachium",
+        "Zela",
+        "Thapsus"
+      ],
+      "oddIndex": 1,
+      "why": "Caesar won at Ilerda, Zela and Thapsus, but at Dyrrachium Pompey broke out and forced him to retreat into Thessaly.",
+      "sectionId": "battle-of-pharsalus",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Fifty days of thanksgiving",
+        "Title 'Father of his Country'",
+        "Diadem offered at the Lupercalia",
+        "Quinctilis renamed July"
+      ],
+      "oddIndex": 2,
+      "why": "Three were honours the Senate heaped on Caesar after Munda; the diadem was placed on his head by Mark Antony, and Caesar set it aside.",
+      "sectionId": "munda-and-honours",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Seizing the state treasury",
+        "Staying seated before senators",
+        "Diadem on his statue",
+        "Diadem at the Lupercalia"
+      ],
+      "oddIndex": 0,
+      "why": "Ancient writers named three incidents of 45 and 44 BC as the last straws; the treasury seizure happened back in 49 BC.",
+      "sectionId": "three-last-straws",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Freed senators at Corfinium",
+        "Returned the soldiers' pay",
+        "Let his troops take no plunder",
+        "Threatened a vetoing tribune"
+      ],
+      "oddIndex": 3,
+      "why": "Freeing the senators, returning the pay and forbidding plunder were Caesar’s shrewd mercy (clementia) in Italy in 49 BC; threatening a tribune’s life to seize the treasury was the opposite.",
+      "sectionId": "crossing-the-rubicon",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Pharsalus",
+        "Thapsus",
+        "Philippi",
+        "Actium"
+      ],
+      "oddIndex": 1,
+      "why": "Pharsalus, Philippi and Actium are in or off Greece; Thapsus is in modern Tunisia in North Africa.",
+      "sectionId": "aftermath-and-debate",
+      "reviewFlags": []
+    }
+  ],
+  "whoAmI": [
+    {
+      "name": "Caesar's Circle",
+      "blurb": "Allies, rivals and friends who turned on him.",
+      "people": [
+        {
+          "name": "Pompey",
+          "options": [
+            "Pompey",
+            "Julius Caesar",
+            "Mark Antony",
+            "Brutus"
+          ],
+          "clues": [
+            "As gang violence engulfed Rome, the Senate drew close to me.",
+            "I rejected the Senate's 370-to-22 vote that both rival commanders should disarm.",
+            "I abandoned Rome with many senators and sailed from Brundisium to raise an army in the east.",
+            "I was Rome's most celebrated general and once Caesar's ally."
+          ],
+          "sectionId": "road-to-war",
+          "reviewFlags": []
+        },
+        {
+          "name": "Mark Antony",
+          "options": [
+            "Mark Antony",
+            "Pompey",
+            "Brutus",
+            "Julius Caesar"
+          ],
+          "clues": [
+            "When Caesar marched to Spain in 49 BC, he left me in charge of Italy.",
+            "After the Ides of March I brokered a compromise: no punishment for the killers, but Caesar's appointments would stand.",
+            "At the Lupercalia I twice placed a diadem on Caesar's head.",
+            "I married Cleopatra and was beaten at Actium in 31 BC."
+          ],
+          "sectionId": "three-last-straws",
+          "reviewFlags": []
+        },
+        {
+          "name": "Brutus",
+          "options": [
+            "Brutus",
+            "Pompey",
+            "Mark Antony",
+            "Julius Caesar"
+          ],
+          "clues": [
+            "My mother had been Caesar's lover.",
+            "After Pharsalus I sought pardon, and Caesar welcomed me warmly.",
+            "I refused to have Mark Antony killed, so the deed would look like removing a tyrant.",
+            "One ancient writer says Caesar covered his face when he saw me among his killers."
+          ],
+          "sectionId": "ides-of-march",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Rulers and Rivals",
+      "blurb": "Power, war and violent ends.",
+      "people": [
+        {
+          "name": "Julius Caesar",
+          "options": [
+            "Julius Caesar",
+            "Pompey",
+            "Mark Antony",
+            "Brutus"
+          ],
+          "clues": [
+            "Seventy-two lictors marched before me in my triumphs.",
+            "I said my personal honour (dignitas) was at stake when my enemies demanded I disarm.",
+            "After a quick campaign at Zela I wrote, 'I came, I saw, I conquered.'",
+            "In January 49 BC I led my troops across the Rubicon."
+          ],
+          "sectionId": "crossing-the-rubicon",
+          "reviewFlags": []
+        },
+        {
+          "name": "Cleopatra",
+          "options": [
+            "Cleopatra",
+            "Mark Antony",
+            "Pompey",
+            "Brutus"
+          ],
+          "clues": [
+            "My father's will named me co-ruler with my brother, the boy king.",
+            "I slipped secretly into the besieged palace quarter of Alexandria.",
+            "I was made queen alongside a younger brother and cruised the Nile for three months.",
+            "In 47 BC I bore a son who was allowed to carry the Caesar name."
+          ],
+          "sectionId": "pompey-and-cleopatra",
+          "reviewFlags": []
+        },
+        {
+          "name": "Pompey",
+          "options": [
+            "Pompey",
+            "Julius Caesar",
+            "Mark Antony",
+            "Brutus"
+          ],
+          "clues": [
+            "At Dyrrachium I broke out of the walls built around my army.",
+            "At Pharsalus I planned for my cavalry to sweep round the enemy's flank.",
+            "I was stabbed to death in a boat off Egypt, in sight of my wife.",
+            "Caesar fell near my statue, in a hall of the theatre that bore my name."
+          ],
+          "sectionId": "battle-of-pharsalus",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "places": [
+    {
+      "name": "Rubicon",
+      "wikipediaTitle": "Rubicon",
+      "lat": 44.1681,
+      "lon": 12.4431,
+      "why": "Crossing this small river, the boundary between his province and Italy proper, made Caesar a rebel in January 49 BC.",
+      "sectionId": "crossing-the-rubicon",
+      "coordinates": "Wikipedia: Rubicon",
+      "reviewFlags": []
+    },
+    {
+      "name": "Brundisium",
+      "wikipediaTitle": "Brindisi",
+      "lat": 40.63333333,
+      "lon": 17.93333333,
+      "why": "Pompey sailed from this port on the heel of Italy to raise an army in the east before Caesar could stop him.",
+      "sectionId": "crossing-the-rubicon",
+      "coordinates": "Wikipedia: Brindisi",
+      "reviewFlags": []
+    },
+    {
+      "name": "Ilerda",
+      "wikipediaTitle": "Lleida",
+      "lat": 41.61666667,
+      "lon": 0.63333333,
+      "why": "Here in north-east Spain Caesar defeated Pompey's commanders in June 49 BC.",
+      "sectionId": "spain-and-the-treasury",
+      "coordinates": "Wikipedia: Lleida",
+      "reviewFlags": []
+    },
+    {
+      "name": "Pharsalus",
+      "wikipediaTitle": "Farsala",
+      "lat": 39.3,
+      "lon": 22.38333333,
+      "why": "Caesar's decisive victory over Pompey in Thessaly on 9 August 48 BC.",
+      "sectionId": "battle-of-pharsalus",
+      "coordinates": "Wikipedia: Farsala",
+      "reviewFlags": []
+    },
+    {
+      "name": "Alexandria",
+      "wikipediaTitle": "Alexandria",
+      "lat": 31.1975,
+      "lon": 29.8925,
+      "why": "In Egypt's capital Caesar was shown Pompey's head, was besieged in the palace quarter and met Cleopatra.",
+      "sectionId": "pompey-and-cleopatra",
+      "coordinates": "Wikipedia: Alexandria",
+      "reviewFlags": []
+    },
+    {
+      "name": "Zela",
+      "wikipediaTitle": "Zile",
+      "lat": 40.3,
+      "lon": 35.88333333,
+      "why": "Caesar's quick victory over a king of Pontus here inspired 'I came, I saw, I conquered'.",
+      "sectionId": "zela-and-thapsus",
+      "coordinates": "Wikipedia: Zile",
+      "reviewFlags": []
+    },
+    {
+      "name": "Thapsus",
+      "wikipediaTitle": "Thapsus",
+      "lat": 35.62083333,
+      "lon": 11.04166667,
+      "why": "Caesar's veterans crushed a new Pompeian army in North Africa here in 46 BC.",
+      "sectionId": "zela-and-thapsus",
+      "coordinates": "Wikipedia: Thapsus",
+      "reviewFlags": []
+    }
+  ]
+}

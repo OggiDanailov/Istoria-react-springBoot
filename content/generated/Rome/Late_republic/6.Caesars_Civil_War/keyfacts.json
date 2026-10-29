@@ -1,0 +1,144 @@
+{
+  "description": "Key facts for this chapter, written by hand from the chapter text. Every entry links to the section that explains it.",
+  "people": [
+    {
+      "name": "Julius Caesar",
+      "text": "Crossed the Rubicon, won the civil war, was made dictator for life and was killed on the Ides of March.",
+      "sec": "crossing-the-rubicon"
+    },
+    {
+      "name": "Pompey",
+      "text": "The Senate’s champion; beaten at Pharsalus, murdered in Egypt.",
+      "sec": "battle-of-pharsalus"
+    },
+    {
+      "name": "Mark Antony",
+      "text": "Caesar’s loyal lieutenant and fellow consul in 44 BC.",
+      "sec": "three-last-straws"
+    },
+    {
+      "name": "Brutus",
+      "text": "Aristocrat pardoned by Caesar, then a leader of the plot against him.",
+      "sec": "ides-of-march"
+    },
+    {
+      "name": "Cleopatra",
+      "text": "Queen of Egypt, Caesar’s lover, mother of his son.",
+      "sec": "pompey-and-cleopatra"
+    }
+  ],
+  "dates": [
+    {
+      "when": "10 or 11 January 49 BC",
+      "text": "Caesar crosses the Rubicon.",
+      "sec": "crossing-the-rubicon"
+    },
+    {
+      "when": "49 BC",
+      "text": "Victory at Ilerda in Spain.",
+      "sec": "spain-and-the-treasury"
+    },
+    {
+      "when": "9 August 48 BC",
+      "text": "Pharsalus: Pompey defeated.",
+      "sec": "battle-of-pharsalus"
+    },
+    {
+      "when": "48 BC",
+      "text": "Pompey is murdered in Egypt.",
+      "sec": "pompey-and-cleopatra"
+    },
+    {
+      "when": "47 BC",
+      "text": "Zela: “I came, I saw, I conquered.”",
+      "sec": "zela-and-thapsus"
+    },
+    {
+      "when": "46 BC",
+      "text": "Thapsus; four triumphs in Rome.",
+      "sec": "zela-and-thapsus"
+    },
+    {
+      "when": "45 BC",
+      "text": "Munda: the last battle against Pompey’s sons.",
+      "sec": "munda-and-honours"
+    },
+    {
+      "when": "February 44 BC",
+      "text": "The diadem at the Lupercalia.",
+      "sec": "three-last-straws"
+    },
+    {
+      "when": "15 March 44 BC",
+      "text": "Caesar is killed on the Ides of March.",
+      "sec": "ides-of-march"
+    }
+  ],
+  "terms": [
+    {
+      "latin": "senatus",
+      "english": "the Senate",
+      "sec": "road-to-war"
+    },
+    {
+      "latin": "senatus consultum ultimum",
+      "english": "the final decree",
+      "sec": "road-to-war"
+    },
+    {
+      "latin": "tribuni plebis",
+      "english": "tribunes of the plebs",
+      "sec": "road-to-war"
+    },
+    {
+      "latin": "dignitas",
+      "english": "personal honour",
+      "sec": "road-to-war"
+    },
+    {
+      "latin": "alea iacta est",
+      "english": "“the die is cast”",
+      "sec": "crossing-the-rubicon"
+    },
+    {
+      "latin": "clementia",
+      "english": "mercy",
+      "sec": "crossing-the-rubicon"
+    },
+    {
+      "latin": "veni, vidi, vici",
+      "english": "“I came, I saw, I conquered”",
+      "sec": "zela-and-thapsus"
+    },
+    {
+      "latin": "triumphi",
+      "english": "victory parades",
+      "sec": "munda-and-honours"
+    },
+    {
+      "latin": "lictores",
+      "english": "attendants carrying the fasces",
+      "sec": "munda-and-honours"
+    },
+    {
+      "latin": "parens patriae",
+      "english": "“Father of his Country”",
+      "sec": "munda-and-honours"
+    },
+    {
+      "latin": "dictator perpetuo",
+      "english": "dictator for life",
+      "sec": "munda-and-honours"
+    },
+    {
+      "latin": "rex",
+      "english": "king",
+      "sec": "three-last-straws"
+    },
+    {
+      "latin": "Idus Martiae",
+      "english": "the Ides of March",
+      "sec": "ides-of-march"
+    }
+  ]
+}

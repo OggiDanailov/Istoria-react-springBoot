@@ -1,0 +1,179 @@
+{
+  "batchName": "Late Republic: Caesar's Civil War and the Ides of March (49-44 BCE) - Easy Batch 2",
+  "chapterName": "Late Republic: Caesar's Civil War and the Ides of March (49-44 BCE)",
+  "difficulty": 1,
+  "batchOrder": 2,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Near whose statue did Caesar fall after he was stabbed?",
+      "options": [
+        "Jupiter's",
+        "Romulus's",
+        "Pompey's",
+        "His own"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#ides-of-march",
+      "explanation": "He was killed in a hall in the Theatre of Pompey and fell near the statue of his old rival after 23 stab wounds.",
+      "sourceQuote": "Stabbed 23 times, he fell near Pompey's statue.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Roughly how many men joined Brutus and his brother-in-law in the plot against Caesar?",
+      "options": [
+        "About two hundred",
+        "About twelve",
+        "About twenty",
+        "About sixty"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#ides-of-march",
+      "explanation": "About sixty men joined the conspiracy, many of them Caesar's own officers.",
+      "sourceQuote": "About sixty men joined them, many of them Caesar's own officers.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which month was renamed in Caesar's honour?",
+      "options": [
+        "March",
+        "June",
+        "August",
+        "July"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#munda-and-honours",
+      "explanation": "His birth month, Quinctilis, became July. The Senate also voted fifty days of thanksgiving and the title \"Father of his Country\".",
+      "sourceQuote": "A flattering Senate heaped on honours: fifty days of thanksgiving, the title \"Father of his Country\" (*parens patriae*), and the renaming of his birth month, Quinctilis, which became July.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Near which place did the armies of Caesar and Pompey meet on 9 August 48 BC?",
+      "options": [
+        "Pharsalus",
+        "Munda",
+        "Philippi",
+        "Actium"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#battle-of-pharsalus",
+      "explanation": "The decisive battle took place near Pharsalus in Thessaly. By Caesar's own count he was outnumbered roughly two to one in infantry.",
+      "sourceQuote": "On 9 August 48 BC the armies met near Pharsalus.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What office was Caesar granted early in 44 BC?",
+      "options": [
+        "Dictator for life",
+        "Consul for life",
+        "Rome's first emperor",
+        "King of the Romans"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#munda-and-honours",
+      "explanation": "Early in 44 BC Caesar was made dictator for life (dictator perpetuo), the climax of the honours heaped on him after Munda.",
+      "sourceQuote": "Early in 44 BC he was made dictator for life (*dictator perpetuo*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which campaign did Caesar sum up with the words \"I came, I saw, I conquered\"?",
+      "options": [
+        "His crossing of the Rubicon",
+        "His quick victory near Zela",
+        "His victory at Thapsus",
+        "His conquest of Gaul"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#zela-and-thapsus",
+      "explanation": "Caesar used the phrase in a letter about his brief campaign against the king of Pontus near Zela, where his men rallied while digging camp.",
+      "sourceQuote": "Caesar summed up the brief campaign in a letter: \"I came, I saw, I conquered\" (*veni, vidi, vici*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "What surprise did Caesar prepare to beat Pompey's cavalry charge at Pharsalus?",
+      "options": [
+        "A reserve of war elephants on his left",
+        "A hidden fourth line of infantry behind his right",
+        "A cavalry ambush hidden in nearby woods",
+        "A trench lined with sharpened stakes"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#battle-of-pharsalus",
+      "explanation": "When Pompey's horsemen charged, Caesar's hidden fourth line leapt up and jabbed javelins at them. The cavalry fled and Pompey's left wing collapsed.",
+      "sourceQuote": "But Caesar had hidden a fourth line behind his right.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Who became Rome's first emperor in 27 BC?",
+      "options": [
+        "Cleopatra's son by Caesar",
+        "Mark Antony",
+        "Caesar's grandnephew and heir",
+        "Brutus"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#aftermath-and-debate",
+      "explanation": "Caesar's will named his 18-year-old grandnephew as heir, and he took the Caesar name. In 27 BC he became Rome's first emperor.",
+      "sourceQuote": "In 27 BC the heir became Rome's first emperor.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Whom did Caesar leave in charge of Italy when he marched to Spain in 49 BC?",
+      "options": [
+        "Cato",
+        "Brutus",
+        "Mark Antony",
+        "Cicero"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#spain-and-the-treasury",
+      "explanation": "Caesar trusted his lieutenant Mark Antony with Italy while he marched west. In June he defeated Pompey's commanders at Ilerda.",
+      "sourceQuote": "Leaving Mark Antony, his trusted lieutenant, in charge of Italy, Caesar marched to Spain.",
+      "reviewFlags": []
+    },
+    {
+      "question": "On what date did the Ides of March fall?",
+      "options": [
+        "22 February",
+        "1 March",
+        "13 March",
+        "15 March"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#ides-of-march",
+      "explanation": "The Ides of March was 15 March, the date of the last Senate meeting before Caesar left to fight the Parthians.",
+      "sourceQuote": "The last one before he left to fight the Parthians, a great eastern empire, fell on the Ides of March (*Idus Martiae*), 15 March.",
+      "reviewFlags": []
+    }
+  ]
+}

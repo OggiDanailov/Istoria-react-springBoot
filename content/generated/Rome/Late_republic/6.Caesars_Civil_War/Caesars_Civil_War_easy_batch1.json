@@ -1,0 +1,179 @@
+{
+  "batchName": "Late Republic: Caesar's Civil War and the Ides of March (49-44 BCE) - Easy Batch 1",
+  "chapterName": "Late Republic: Caesar's Civil War and the Ides of March (49-44 BCE)",
+  "difficulty": 1,
+  "batchOrder": 1,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Why was Caesar's reply \"I am not Rex, but Caesar\" a pun?",
+      "options": [
+        "Caesar was also a Greek word for king",
+        "Rex was also a Roman family name",
+        "Caesar was the name of a Roman god",
+        "Rex was a nickname for Pompey"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#three-last-straws",
+      "explanation": "Rex meant king but was also a Roman family name, so Caesar joked that the crowd had his name wrong.",
+      "sourceQuote": "He punned, \"I am not Rex, but Caesar,\" since Rex was also a Roman family name.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did the Rubicon river mark when Caesar crossed it in January 49 BC?",
+      "options": [
+        "The boundary between his province and Italy proper",
+        "The edge of Rome's sacred city boundary",
+        "The frontier between Italy and Greece",
+        "The border between Spain and Gaul"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#crossing-the-rubicon",
+      "explanation": "The small Rubicon separated Caesar's province from Italy proper, so leading troops across it made him a rebel.",
+      "sourceQuote": "On 10 or 11 January 49 BC, Julius Caesar led his troops across the Rubicon, a small river marking the boundary between his province and Italy proper.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which land had Julius Caesar spent almost ten years conquering by late 50 BC?",
+      "options": [
+        "Spain",
+        "Gaul",
+        "Britain",
+        "Germania"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#road-to-war",
+      "explanation": "Caesar had been conquering Gaul, roughly modern France, for almost a decade. By late 50 BC he was rich, famous and backed by devoted legions.",
+      "sourceQuote": "For almost ten years Julius Caesar had been conquering Gaul, the vast land roughly matching modern France.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did Caesar do when Mark Antony placed a diadem on his head at the Lupercalia?",
+      "options": [
+        "Set it aside, saying Jupiter alone was king",
+        "Wore it for the rest of the festival",
+        "Threw it into the crowd in anger",
+        "Placed it on Pompey's statue instead"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#three-last-straws",
+      "explanation": "The crowd fell silent at the diadem but cheered when Caesar set it aside. Many suspected he was testing support for a crown.",
+      "sourceQuote": "Caesar set it aside, declaring that Jupiter alone was king of the Romans, and the crowd cheered.",
+      "reviewFlags": []
+    },
+    {
+      "question": "On 1 December 50 BC, what did the Senate vote 370 to 22 in favour of?",
+      "options": [
+        "Pompey taking sole command of Italy",
+        "Caesar alone giving up his army",
+        "Caesar standing for consul while armed",
+        "Both Caesar and Pompey giving up their commands"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#road-to-war",
+      "explanation": "The Senate overwhelmingly backed both men laying down their commands. Pompey and a consul rejected the vote anyway.",
+      "sourceQuote": "On 1 December 50 BC the Senate voted 370 to 22 that both men should lay down their commands, but Pompey and a consul rejected the vote.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did the king of Numidia bring to back the last Pompeian army in North Africa?",
+      "options": [
+        "Some 120 war elephants",
+        "A chest of Egyptian gold",
+        "Thousands of archers",
+        "A fleet of warships"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#zela-and-thapsus",
+      "explanation": "The Numidian king, ruling roughly modern Algeria, supported the Pompeians with some 120 war elephants.",
+      "sourceQuote": "A new Pompeian army had gathered in North Africa, backed by the king of Numidia, roughly modern Algeria, with some 120 war elephants.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Where did Pompey flee after his defeat at Pharsalus?",
+      "options": [
+        "Pontus",
+        "North Africa",
+        "Spain",
+        "Egypt"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#pompey-and-cleopatra",
+      "explanation": "Pompey fled to Egypt, where he was stabbed to death in sight of his wife on the orders of Egypt's boy king.",
+      "sourceQuote": "After his defeat at Pharsalus, Pompey, once Rome's greatest general, fled to Egypt.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did Cleopatra reach Caesar while he was besieged in Alexandria's palace quarter?",
+      "options": [
+        "She met him on a cruise up the Nile",
+        "She slipped secretly into the palace",
+        "She was handed over by her brother's regent",
+        "She sailed in with his reinforcements"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#pompey-and-cleopatra",
+      "explanation": "Cleopatra, feuding with her brother the boy king, secretly entered the palace and became Caesar's lover.",
+      "sourceQuote": "Cleopatra slipped secretly into the palace and became Caesar's lover.",
+      "reviewFlags": []
+    },
+    {
+      "question": "At which battle was Mark Antony defeated in 31 BC?",
+      "options": [
+        "Actium",
+        "Munda",
+        "Philippi",
+        "Pharsalus"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#aftermath-and-debate",
+      "explanation": "Antony, married to Cleopatra, was beaten at Actium off western Greece, and both took their own lives.",
+      "sourceQuote": "Antony, who had married Cleopatra, queen of Egypt and Caesar's former lover, was beaten at Actium, off western Greece, in 31 BC, and both took their own lives.",
+      "reviewFlags": []
+    },
+    {
+      "question": "According to one ancient biographer, what did Caesar declare when crossing the Rubicon?",
+      "options": [
+        "\"The die is cast\"",
+        "\"I am not Rex, but Caesar\"",
+        "\"I came, I saw, I conquered\"",
+        "\"I have hold of you, Africa\""
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#crossing-the-rubicon",
+      "explanation": "One ancient biographer reports \"the die is cast\" (alea iacta est). Another ancient writer says he quoted a Greek poet instead.",
+      "sourceQuote": "According to one ancient biographer, he declared \"the die is cast\" (*alea iacta est*).",
+      "reviewFlags": []
+    }
+  ]
+}

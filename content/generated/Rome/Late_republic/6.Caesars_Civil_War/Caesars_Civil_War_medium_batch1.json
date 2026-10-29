@@ -1,0 +1,189 @@
+{
+  "batchName": "Late Republic: Caesar's Civil War and the Ides of March (49-44 BCE) - Medium Batch 1",
+  "chapterName": "Late Republic: Caesar's Civil War and the Ides of March (49-44 BCE)",
+  "difficulty": 2,
+  "batchOrder": 3,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "From which port did Pompey sail to raise an army in the east?",
+      "options": [
+        "Ostia",
+        "Dyrrachium",
+        "Corfinium",
+        "Alexandria",
+        "Brundisium"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#crossing-the-rubicon",
+      "explanation": "Pompey left from Brundisium on the heel of Italy. Caesar arrived on 9 March, too late to stop him.",
+      "sourceQuote": "Pompey sailed from Brundisium, a port on the heel of Italy, to raise an army in the east.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Who led the rebellion in Spain that ended at Munda in 45 BC?",
+      "options": [
+        "The king of Pontus",
+        "Brutus and his brother-in-law",
+        "Cleopatra's younger brother",
+        "The sons of Pompey",
+        "The king of Numidia"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#munda-and-honours",
+      "explanation": "Pompey's sons raised the rebellion in Spain. At Munda Caesar's men wavered and he rushed to the front himself.",
+      "sourceQuote": "Then came rebellion in Spain, led by the sons of his dead rival Pompey.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What compromise did Mark Antony broker after the assassination?",
+      "options": [
+        "Assassins pardoned, Caesar's will cancelled",
+        "Caesar declared a tyrant, his acts annulled",
+        "Assassins unpunished, Caesar's appointments kept",
+        "Assassins exiled, their property seized",
+        "Brutus made consul in Caesar's place"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#aftermath-and-debate",
+      "explanation": "The assassins escaped punishment, but Caesar's appointments stood. Meanwhile citizens hid indoors and angry crowds later burned the hall where he died.",
+      "sourceQuote": "Mark Antony, Caesar's fellow consul, brokered a compromise: the assassins would go unpunished, but Caesar's appointments would stand.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Why was it striking that 72 lictors marched before Caesar at his triumphs?",
+      "options": [
+        "It was three times a dictator's usual number",
+        "It equalled one for each of his victories",
+        "It matched the number of senators he pardoned",
+        "It was the number granted to Pompey",
+        "It was the number reserved for kings"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#munda-and-honours",
+      "explanation": "The lictors carried the fasces, symbols of the power to punish, and 72 was triple a dictator's normal escort.",
+      "sourceQuote": "That was three times a dictator's usual number.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Where did Caesar defeat Pompey's commanders in June 49 BC?",
+      "options": [
+        "Zela",
+        "Utica",
+        "Thapsus",
+        "Munda",
+        "Ilerda"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#spain-and-the-treasury",
+      "explanation": "Caesar won at Ilerda in north-east Spain, and the whole peninsula soon fell to him.",
+      "sourceQuote": "In June he defeated Pompey's commanders at Ilerda, in north-east Spain, and the peninsula soon fell to him.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did Caesar overcome a tribune who vetoed his seizure of the state treasury?",
+      "options": [
+        "He waited for his term to end",
+        "He threatened the man's life",
+        "He bribed him with silver bars",
+        "He had him exiled to Gaul",
+        "He had the Senate overrule him"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#spain-and-the-treasury",
+      "explanation": "Caesar threatened the tribune until he gave way, then took some 15,000 gold bars and 30,000 silver bars. He left the episode out of his own account.",
+      "sourceQuote": "When a tribune vetoed his plan to seize the state treasury, Caesar threatened the man's life until he gave way.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What personal link did Brutus, who sought pardon after Pharsalus, have to Caesar?",
+      "options": [
+        "He was Pompey's son-in-law",
+        "His mother had been Caesar's lover",
+        "He had been Caesar's tribune",
+        "He was Caesar's grandnephew",
+        "He was married to Caesar's daughter"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#battle-of-pharsalus",
+      "explanation": "Brutus was a young aristocrat whose mother had been Caesar's lover, and Caesar welcomed him warmly.",
+      "sourceQuote": "Among those who sought pardon was Brutus, a young aristocrat whose mother had been Caesar's lover.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did Caesar try to do to Pompey's army at Dyrrachium?",
+      "options": [
+        "Attack it at night from the sea",
+        "Bribe its officers to desert",
+        "Starve it by burning its fleet",
+        "Wall it in",
+        "Lure it into a river crossing"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#battle-of-pharsalus",
+      "explanation": "Caesar tried to wall Pompey in at Dyrrachium, but after months of skirmishing Pompey broke out and forced him to retreat into Thessaly.",
+      "sourceQuote": "At Dyrrachium, a port in modern Albania, he tried to wall in the army of his rival Pompey.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What happened to Egypt's boy king after Caesar's reinforcements arrived?",
+      "options": [
+        "He made peace and shared the throne",
+        "He was exiled to Cyprus",
+        "He was beheaded on Caesar's orders",
+        "He drowned while fleeing",
+        "He was taken to Rome in chains"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#pompey-and-cleopatra",
+      "explanation": "Caesar crushed the Egyptians and the king drowned in flight. The king's regent had earlier besieged Caesar in the palace quarter.",
+      "sourceQuote": "When reinforcements arrived, Caesar crushed the Egyptians, and the king drowned in flight.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did Caesar react when his most uncompromising Senate enemy took his own life at Utica?",
+      "options": [
+        "He regretted losing the chance to pardon him",
+        "He ordered the man's family exiled",
+        "He punished the doctor who stitched the wound",
+        "He celebrated with a public festival",
+        "He had the body displayed in Rome"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#zela-and-thapsus",
+      "explanation": "The man stabbed himself and tore open the doctor's stitches. Caesar, who prized clemency, regretted not being able to pardon him.",
+      "sourceQuote": "Caesar regretted losing the chance to pardon him.",
+      "reviewFlags": []
+    }
+  ]
+}

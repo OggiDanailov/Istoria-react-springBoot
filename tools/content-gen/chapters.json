@@ -469,7 +469,15 @@
       "short": "Civil War and the Ides",
       "era": "late-republic",
       "mapArea": "wide",
-      "plannedBattle": "Pharsalus (48 BC)"
+      "battle": {
+        "name": "Pharsalus",
+        "year": "48 BC",
+        "enemy": "Pompey",
+        "sec": "battle-of-pharsalus",
+        "level": "pharsalus",
+        "intro": "Pompey’s 7,000 horsemen are about to sweep round your wing. Caesar has hidden a fourth line to meet them."
+      },
+      "locked": true
     },
     {
       "id": "end-of-the-republic",

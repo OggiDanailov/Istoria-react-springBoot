@@ -1,0 +1,279 @@
+{
+  "description": "Maps for the chronicle, written by hand. Coordinates from Wikipedia; each map sits at the start of its section.",
+  "maps": [
+    {
+      "id": "civil-war",
+      "sec": "crossing-the-rubicon",
+      "title": "Caesar’s civil war, 49–45 BC",
+      "caption": "From the Rubicon Caesar took Italy, beat Pompey's generals at Ilerda in Spain and Pompey himself at Pharsalus, followed him to Alexandria, won at Zela in Pontus, at Thapsus in Africa and finally at Munda in Spain.",
+      "bounds": {
+        "latMin": 30.2,
+        "latMax": 46.5,
+        "lonMin": -7.0,
+        "lonMax": 37.5
+      },
+      "places": [
+        {
+          "name": "Rome",
+          "latin": "Roma",
+          "lat": 41.893,
+          "lon": 12.483,
+          "kind": "rome",
+          "side": "l",
+          "dy": 8
+        },
+        {
+          "name": "Rubicon",
+          "lat": 44.17,
+          "lon": 12.44,
+          "side": "r"
+        },
+        {
+          "name": "Ilerda",
+          "lat": 41.62,
+          "lon": 0.63,
+          "kind": "battle",
+          "side": "r"
+        },
+        {
+          "name": "Munda",
+          "lat": 37.4,
+          "lon": -4.9,
+          "kind": "battle",
+          "side": "r"
+        },
+        {
+          "name": "Dyrrachium",
+          "lat": 41.32,
+          "lon": 19.45,
+          "kind": "battle",
+          "side": "r",
+          "dy": -6
+        },
+        {
+          "name": "Pharsalus",
+          "lat": 39.3,
+          "lon": 22.38,
+          "kind": "battle",
+          "side": "r",
+          "dy": 6
+        },
+        {
+          "name": "Alexandria",
+          "lat": 31.2,
+          "lon": 29.9,
+          "side": "l"
+        },
+        {
+          "name": "Zela",
+          "lat": 40.3,
+          "lon": 35.88,
+          "kind": "battle",
+          "side": "l"
+        },
+        {
+          "name": "Thapsus",
+          "lat": 35.62,
+          "lon": 11.04,
+          "kind": "battle",
+          "side": "r"
+        }
+      ]
+    },
+    {
+      "id": "pharsalus",
+      "sec": "battle-of-pharsalus",
+      "title": "Pharsalus, 48 BC: the fourth line",
+      "caption": "Pompey's cavalry swept round Caesar's right wing. Caesar's hidden fourth line leapt up and jabbed their javelins at the horsemen, who fled; then Pompey's left wing collapsed. A simplified plan.",
+      "plan": true,
+      "height": 200,
+      "key": {
+        "rome": "Caesar",
+        "enemy": "Pompey"
+      },
+      "units": [
+        {
+          "side": "rome",
+          "x": 70,
+          "y": 34,
+          "w": 30,
+          "h": 12,
+          "name": "Caesar’s three lines",
+          "lx": 150,
+          "ly": 26
+        },
+        {
+          "side": "rome",
+          "x": 110,
+          "y": 34,
+          "w": 30,
+          "h": 12
+        },
+        {
+          "side": "rome",
+          "x": 150,
+          "y": 34,
+          "w": 30,
+          "h": 12
+        },
+        {
+          "side": "rome",
+          "x": 190,
+          "y": 34,
+          "w": 30,
+          "h": 12
+        },
+        {
+          "side": "rome",
+          "x": 230,
+          "y": 34,
+          "w": 30,
+          "h": 12
+        },
+        {
+          "side": "rome",
+          "x": 70,
+          "y": 52,
+          "w": 30,
+          "h": 12
+        },
+        {
+          "side": "rome",
+          "x": 110,
+          "y": 52,
+          "w": 30,
+          "h": 12
+        },
+        {
+          "side": "rome",
+          "x": 150,
+          "y": 52,
+          "w": 30,
+          "h": 12
+        },
+        {
+          "side": "rome",
+          "x": 190,
+          "y": 52,
+          "w": 30,
+          "h": 12
+        },
+        {
+          "side": "rome",
+          "x": 230,
+          "y": 52,
+          "w": 30,
+          "h": 12
+        },
+        {
+          "side": "rome",
+          "x": 70,
+          "y": 70,
+          "w": 30,
+          "h": 12
+        },
+        {
+          "side": "rome",
+          "x": 110,
+          "y": 70,
+          "w": 30,
+          "h": 12
+        },
+        {
+          "side": "rome",
+          "x": 150,
+          "y": 70,
+          "w": 30,
+          "h": 12
+        },
+        {
+          "side": "rome",
+          "x": 190,
+          "y": 70,
+          "w": 30,
+          "h": 12
+        },
+        {
+          "side": "rome",
+          "x": 230,
+          "y": 70,
+          "w": 30,
+          "h": 12
+        },
+        {
+          "side": "rome",
+          "x": 266,
+          "y": 46,
+          "w": 22,
+          "h": 12,
+          "name": "Cavalry",
+          "lx": 277,
+          "ly": 40
+        },
+        {
+          "side": "rome",
+          "x": 232,
+          "y": 90,
+          "w": 40,
+          "h": 10,
+          "name": "The hidden fourth line",
+          "lx": 226,
+          "ly": 99,
+          "anchor": "end"
+        },
+        {
+          "side": "enemy",
+          "x": 40,
+          "y": 140,
+          "w": 200,
+          "h": 26,
+          "name": "Pompey’s legions, much larger",
+          "lx": 140,
+          "ly": 182
+        },
+        {
+          "side": "enemy",
+          "x": 246,
+          "y": 134,
+          "w": 46,
+          "h": 28,
+          "name": "Pompey’s cavalry",
+          "lx": 269,
+          "ly": 176
+        }
+      ],
+      "moves": [
+        {
+          "side": "enemy",
+          "pts": [
+            [
+              270,
+              132
+            ],
+            [
+              280,
+              104
+            ],
+            [
+              270,
+              82
+            ]
+          ]
+        },
+        {
+          "side": "rome",
+          "pts": [
+            [
+              262,
+              96
+            ],
+            [
+              276,
+              114
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}
