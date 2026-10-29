@@ -34,6 +34,13 @@ Review battles don't change progress.
 | | Rome Turns East (200–167 BC) | Pydna (168 BC) |
 | | The Fall of Carthage and Corinth (167–133 BC) | The Siege of Carthage (146 BC) |
 | | The Gracchi (133–121 BC) | none (a political chapter) |
+| Late Republic | Marius and the Northern Invaders (121–100 BC) | Aquae Sextiae (102 BC) |
+| | The Social War and Sulla (91–78 BC) | The Colline Gate (82 BC) |
+| | Spartacus and Pompey (78–63 BC) | The Silarius River (71 BC) |
+| | Cicero, Catiline and the Triumvirate (63–53 BC) | Carrhae (53 BC) |
+| | Caesar in Gaul (58–50 BC) | Alesia (52 BC), on two fronts |
+| | Caesar's Civil War and the Ides of March (49–44 BC) | Pharsalus (48 BC) |
+| | Antony, Octavian and the End of the Republic (44–27 BC) | Actium (31 BC), at sea |
 
 A chapter without a battle (the Gracchi) opens the next chapter as soon as its test is finished.
 
@@ -144,7 +151,22 @@ twist built into the field or the timeline:
 | Pydna | the phalanx: blocks three lanes wide, pikes reach a square ahead, shields stop missiles from the front only | Maniple: strikes the lanes beside it from the side | rough ground breaks the phalanx's shields |
 | Siege of Carthage | citizens, freed slaves, Carthaginian archers | Torch-bearer: burns a house | houses block squares, and defenders burst out of them |
 
-Checked with the scripted players: at 80% the average player wins each of them (Cannae, the hardest, only just). Twists still planned: Castor and Pollux (Lake Regillus),
+Checked with the scripted players: at 80% the average player wins each of them (Cannae, the hardest, only just).
+
+The Late Republic adds two new kinds of battle and keeps the 6 × 8 field:
+
+| Battle | New enemy | New Roman unit | Twist |
+|---|---|---|---|
+| Aquae Sextiae | Teutones, Ambrones | Legionary: his pilum ruins any shield it hits | they charge uphill (slower on the last rows); Marius's hidden men strike from behind |
+| The Colline Gate | Samnites, Lucanians | Centurion: soldiers around him fight 30% harder | Sulla's wing breaks (one lane loses its equites), then Crassus routs the right |
+| The Silarius River | gladiators (murmillo, retiarius whose net stops a soldier), Spartacus | — | the river slows the charge; Spartacus attacks in the last wave |
+| Carrhae | Parthian horse archers (ride back and keep shooting), cataphracts | Testudo: arrows barely hurt it | desert: no grain from the sky |
+| Alesia | the Gauls inside and the relief army outside | Lilia: hidden pits that hurt and slow | **two fronts**: enemies come from above and below; equites on both edges |
+| Pharsalus | Pompey's legionaries, archers, a 7,000-horse charge on the left | Fourth line: triple damage to cavalry | the cavalry charge on one wing |
+| Actium | Antony's warships and great ships, Cleopatra's squadron | Harpax ship: a hook that holds a ship still | **at sea**: every unit is a ship; Cleopatra flees mid-battle and Antony follows |
+
+Starting grain in these battles is 250–400 at 80% (Carrhae has the most, since nothing falls from the sky). The
+average scripted player wins most of them at 80%; Pharsalus and the Colline Gate are the hardest. Twists still planned: Castor and Pollux (Lake Regillus),
 ambushes (Volscian Raids), mountain rocks and the sacred chickens (Aquilonia).
 
 ## 7. Content rules (every chapter)
