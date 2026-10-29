@@ -1,0 +1,633 @@
+{
+  "chapterName": "Late Republic: Marius and the Northern Invaders (121-100 BCE)",
+  "model": "claude-opus-5-5",
+  "briefing": {
+    "title": "Rome, 107 BC",
+    "paragraphs": [
+      "Rome rules the Mediterranean, but its aristocratic leaders look rotten. In north Africa, the Numidian king Jugurtha has bribed Roman envoys, humiliated Roman armies and slipped out of every trap. Many voters now believe their nobles can simply be bought.",
+      "An outsider steps forward. Gaius Marius, a 'new man' from the hill town of Arpinum, has just been elected consul and handed the war over the Senate's head. Far to the north, the Cimbri and Teutones are on the move, and Rome will soon need a saviour."
+    ]
+  },
+  "timelines": [
+    {
+      "name": "Rise of an Outsider",
+      "blurb": "Four milestones in the life of Gaius Marius.",
+      "events": [
+        {
+          "label": "Marius born near Arpinum",
+          "when": "c. 157 BC",
+          "year": -157,
+          "fact": "Marius came from a wealthy, locally prominent family in a hill town south-east of Rome.",
+          "sectionId": "marius-origins",
+          "reviewFlags": []
+        },
+        {
+          "label": "Battle of the Muthul River",
+          "when": "109 BC",
+          "year": -109,
+          "fact": "Marius led about 2,000 men through the Numidians and probably saved Metellus's army.",
+          "sectionId": "metellus-and-the-muthul",
+          "reviewFlags": []
+        },
+        {
+          "label": "Roman disaster at Arausio",
+          "when": "105 BC",
+          "year": -105,
+          "fact": "Two feuding Roman commanders lost their armies one after the other, and only a few hundred Romans escaped.",
+          "sectionId": "cimbri-and-arausio",
+          "reviewFlags": []
+        },
+        {
+          "label": "Marius crushes the Cimbri at Vercellae",
+          "when": "101 BC",
+          "year": -101,
+          "fact": "On the Raudine Plain, Sulla's cavalry, the Roman infantry and Marius's flank attack destroyed the Cimbri.",
+          "sectionId": "aquae-sextiae-and-vercellae",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "From Africa to the Capitol",
+      "blurb": "Order six turning points of Marius's career.",
+      "events": [
+        {
+          "label": "Marius shines at the siege of Numantia",
+          "when": "134 BC",
+          "year": -134,
+          "fact": "At this Celtic stronghold in Spain, the commander reportedly tapped Marius on the shoulder and said, 'Perhaps this is the man.'",
+          "sectionId": "marius-origins",
+          "reviewFlags": []
+        },
+        {
+          "label": "Marius serves as tribune of the plebs",
+          "when": "119 BC",
+          "year": -119,
+          "fact": "He narrowed the voting walkways so the rich could no longer peer at voters' choices.",
+          "sectionId": "marius-origins",
+          "reviewFlags": []
+        },
+        {
+          "label": "Rome declares war on Jugurtha",
+          "when": "111 BC",
+          "year": -111,
+          "fact": "Popular pressure forced the war, but a consul soon accepted a lenient peace that reeked of bribery.",
+          "sectionId": "jugurtha",
+          "reviewFlags": []
+        },
+        {
+          "label": "Marius's first consulship begins",
+          "when": "107 BC",
+          "year": -107,
+          "fact": "A tribune allied to Marius had the Assembly of the plebs give him the African war instead of Metellus.",
+          "sectionId": "marius-becomes-consul",
+          "reviewFlags": []
+        },
+        {
+          "label": "Jugurtha paraded in Marius's triumph",
+          "when": "104 BC",
+          "year": -104,
+          "fact": "The captured Numidian king was led through Rome and later died in an underground prison.",
+          "sectionId": "capture-of-jugurtha",
+          "reviewFlags": []
+        },
+        {
+          "label": "Saturninus's followers stoned to death",
+          "when": "100 BC",
+          "year": -100,
+          "fact": "A mob tore tiles off the Senate house roof and stoned the prisoners, possibly with Marius's tacit approval.",
+          "sectionId": "saturninus-and-the-sixth-consulship",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Wars on Two Fronts",
+      "blurb": "Eight events from Arpinum to the modern debate.",
+      "events": [
+        {
+          "label": "Arpinum gains full Roman citizenship",
+          "when": "188 BC",
+          "year": -188,
+          "fact": "Marius's hometown had only recently become fully Roman when he was born.",
+          "sectionId": "marius-origins",
+          "reviewFlags": []
+        },
+        {
+          "label": "Numidia's old king dies",
+          "when": "118 BC",
+          "year": -118,
+          "fact": "He left his north African kingdom jointly to his two sons and his adopted nephew Jugurtha.",
+          "sectionId": "jugurtha",
+          "reviewFlags": []
+        },
+        {
+          "label": "Cimbri destroy a Roman army at Noreia",
+          "when": "113 BC",
+          "year": -113,
+          "fact": "The migrants struck back after discovering that a Roman consul had laid an ambush for them in Noricum.",
+          "sectionId": "cimbri-and-arausio",
+          "reviewFlags": []
+        },
+        {
+          "label": "Metellus takes over the African war",
+          "when": "109 BC",
+          "year": -109,
+          "fact": "The honest aristocrat retrained a slack army and made Marius his right-hand man.",
+          "sectionId": "metellus-and-the-muthul",
+          "reviewFlags": []
+        },
+        {
+          "label": "Tigurini kill a Roman consul",
+          "when": "107 BC",
+          "year": -107,
+          "fact": "This Celtic tribe, allies of the Cimbri, destroyed a Roman army in Gaul.",
+          "sectionId": "cimbri-and-arausio",
+          "reviewFlags": []
+        },
+        {
+          "label": "Ambush near Serif beaten off",
+          "when": "106 BC",
+          "year": -106,
+          "fact": "The Romans held two hills until nightfall, then routed Jugurtha and the Mauretanian king with a dawn attack.",
+          "sectionId": "capture-of-jugurtha",
+          "reviewFlags": []
+        },
+        {
+          "label": "Teutones crushed near Aquae Sextiae",
+          "when": "102 BC",
+          "year": -102,
+          "fact": "As they charged uphill, about 3,000 hidden Romans hit them from behind.",
+          "sectionId": "aquae-sextiae-and-vercellae",
+          "reviewFlags": []
+        },
+        {
+          "label": "Idea of 'Marian reforms' is born",
+          "when": "1840s",
+          "year": 1840,
+          "fact": "German scholars began crediting Marius with turning citizen militias into a professional army.",
+          "sectionId": "marian-reforms-debate",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "matchSets": [
+    {
+      "name": "Friends and Foes of Marius",
+      "blurb": "Match each name to its role in the story.",
+      "pairs": [
+        {
+          "name": "Jugurtha",
+          "match": "Numidian prince who believed every Roman had a price",
+          "sectionId": "jugurtha",
+          "reviewFlags": []
+        },
+        {
+          "name": "Metellus",
+          "match": "Honest aristocrat who retrained the slack army in Africa",
+          "sectionId": "metellus-and-the-muthul",
+          "reviewFlags": []
+        },
+        {
+          "name": "Sulla",
+          "match": "Financial officer who took a captive king from the Mauretanians",
+          "sectionId": "capture-of-jugurtha",
+          "reviewFlags": []
+        },
+        {
+          "name": "Saturninus",
+          "match": "Radical tribune stoned to death in the Senate house in 100 BC",
+          "sectionId": "saturninus-and-the-sixth-consulship",
+          "reviewFlags": []
+        },
+        {
+          "name": "Cimbri",
+          "match": "Germanic people from Jutland who wandered into Spain",
+          "sectionId": "cimbri-and-arausio",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Latin Words",
+      "blurb": "Match each Latin word to its meaning.",
+      "pairs": [
+        {
+          "name": "Novus homo",
+          "match": "'New man': the first of his family to reach high office",
+          "sectionId": "marius-origins",
+          "reviewFlags": []
+        },
+        {
+          "name": "Capite censi",
+          "match": "'Head count': men with no property at all",
+          "sectionId": "capture-of-jugurtha",
+          "reviewFlags": []
+        },
+        {
+          "name": "Iugum",
+          "match": "Frame of spears that beaten soldiers had to stoop beneath",
+          "sectionId": "jugurtha",
+          "reviewFlags": []
+        },
+        {
+          "name": "Senatus consultum ultimum",
+          "match": "Emergency decree telling magistrates to restore order at any cost",
+          "sectionId": "saturninus-and-the-sixth-consulship",
+          "reviewFlags": []
+        },
+        {
+          "name": "Muli Mariani",
+          "match": "'Marius's mules': soldiers made to carry their own gear",
+          "sectionId": "marian-reforms-debate",
+          "reviewFlags": []
+        },
+        {
+          "name": "Terror cimbricus",
+          "match": "The “Cimbrian terror” that gripped Rome after Arausio",
+          "sectionId": "cimbri-and-arausio",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "trueFalseDecks": [
+    {
+      "name": "Marius and the African War",
+      "blurb": "From Arpinum to the capture of Jugurtha.",
+      "cards": [
+        {
+          "claim": "Marius's hometown Arpinum had only gained full Roman citizenship in 188 BC.",
+          "answer": true,
+          "why": "Arpinum, a hill town south-east of Rome, became fully Roman in 188 BC, about 30 years before Marius was born.",
+          "sectionId": "marius-origins",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Modern historians agree that Marius's father was a humble labourer.",
+          "answer": false,
+          "why": "Modern historians reject that ancient claim. The family was locally prominent and wealthy, probably from large landholdings.",
+          "sectionId": "marius-origins",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Jugurtha bribed a Roman commission into giving him the poorer eastern half of Numidia.",
+          "answer": false,
+          "why": "He bribed the commission into giving him the richer western half.",
+          "sectionId": "jugurtha",
+          "reviewFlags": []
+        },
+        {
+          "claim": "At the Muthul River, Marius led a column of about 2,000 men through the enemy to link up with Metellus.",
+          "answer": true,
+          "why": "Marius gathered scattered detachments, broke through to Metellus and probably saved the army from destruction.",
+          "sectionId": "metellus-and-the-muthul",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Ancient writers say a fortune-teller in Utica urged Marius to trust the gods and test his luck.",
+          "answer": true,
+          "why": "The fortune-teller in this African city told him to test his luck as often as he could, and he ran for consul.",
+          "sectionId": "marius-becomes-consul",
+          "reviewFlags": []
+        },
+        {
+          "claim": "The Senate voted to hand the African command from Metellus to Marius.",
+          "answer": false,
+          "why": "The Senate tried to keep Metellus in charge. A tribune allied to Marius had the Assembly of the plebs give him the war instead.",
+          "sectionId": "marius-becomes-consul",
+          "reviewFlags": []
+        },
+        {
+          "claim": "After the town of Capsa surrendered, Marius killed its adult men and enslaved the rest.",
+          "answer": true,
+          "why": "Marius reached Capsa, in the far south, after a dangerous desert march and treated it brutally.",
+          "sectionId": "capture-of-jugurtha",
+          "reviewFlags": []
+        },
+        {
+          "claim": "The king of Mauretania who handed over Jugurtha was Jugurtha's brother.",
+          "answer": false,
+          "why": "He was Jugurtha's father-in-law. He handed Jugurtha over in chains after Sulla entered his camp.",
+          "sectionId": "capture-of-jugurtha",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Invaders and Upheaval",
+      "blurb": "The northern tribes, the bloody year 100 BC and the reform debate.",
+      "cards": [
+        {
+          "claim": "The Cimbri came from the Jutland peninsula in modern Denmark.",
+          "answer": true,
+          "why": "They were a Germanic people who set out from Jutland together with their neighbours the Teutones.",
+          "sectionId": "cimbri-and-arausio",
+          "reviewFlags": []
+        },
+        {
+          "claim": "At Arausio the two Roman commanders worked closely together from a single camp.",
+          "answer": false,
+          "why": "They loathed each other and camped on opposite banks of the Rhône. One attacked alone, and both armies were destroyed.",
+          "sectionId": "cimbri-and-arausio",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Arausio was Rome's worst defeat since Hannibal's victory at Cannae.",
+          "answer": true,
+          "why": "The disaster set off the 'Cimbrian terror', with Romans expecting the barbarians at the gates.",
+          "sectionId": "cimbri-and-arausio",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Instead of marching on Italy, the Cimbri wandered into Britain, giving Marius precious time.",
+          "answer": false,
+          "why": "They wandered into Spain, which gave Marius time to rebuild and drill his army in Gaul.",
+          "sectionId": "consul-again-and-again",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Near Aquae Sextiae, the Teutones were hit from behind by about 3,000 Romans hidden nearby.",
+          "answer": true,
+          "why": "The Teutones were charging uphill at the Roman position when the hidden force struck.",
+          "sectionId": "aquae-sextiae-and-vercellae",
+          "reviewFlags": []
+        },
+        {
+          "claim": "After Vercellae, Marius granted citizenship to about a thousand Italian allied soldiers without asking the Senate.",
+          "answer": true,
+          "why": "He rewarded the allied soldiers on his own authority.",
+          "sectionId": "aquae-sextiae-and-vercellae",
+          "reviewFlags": []
+        },
+        {
+          "claim": "In 100 BC Marius marched an army into Rome to crush Saturninus.",
+          "answer": false,
+          "why": "Marius rejected bringing an army near the city. He rallied volunteers and veterans and cut off the rebels' water supply on the Capitoline Hill.",
+          "sectionId": "saturninus-and-the-sixth-consulship",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Today most specialists call the 'Marian reforms' a construct of modern scholarship.",
+          "answer": true,
+          "why": "His recruitment of propertyless volunteers seems to have been a one-off, and Rome kept relying mainly on conscription.",
+          "sectionId": "marian-reforms-debate",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "oddOneOut": [
+    {
+      "items": [
+        "Cimbri",
+        "Teutones",
+        "Numidians",
+        "Ambrones"
+      ],
+      "oddIndex": 2,
+      "why": "The Cimbri, Teutones and Ambrones were northern tribes that moved on Italy. The Numidians were Jugurtha's people in north Africa.",
+      "sectionId": "aquae-sextiae-and-vercellae",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Noreia",
+        "Arausio",
+        "Vercellae",
+        "Gaul, 109 BC"
+      ],
+      "oddIndex": 2,
+      "why": "At Noreia, Arausio and in Gaul in 109 BC the northern migrants destroyed Roman armies. Vercellae was Marius's great victory over the Cimbri.",
+      "sectionId": "cimbri-and-arausio",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Cirta",
+        "Numantia",
+        "Capsa",
+        "Utica"
+      ],
+      "oddIndex": 1,
+      "why": "Cirta, Capsa and Utica were in north Africa. Numantia was a Celtic stronghold in Spain, where young Marius made his name.",
+      "sectionId": "marius-origins",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Cheaper state grain",
+        "Farmland for veterans",
+        "Exile for Metellus",
+        "Narrower voting walkways"
+      ],
+      "oddIndex": 3,
+      "why": "Saturninus pushed the grain, land and exile laws in 100 BC. Marius himself narrowed the voting walkways as tribune in 119 BC.",
+      "sectionId": "saturninus-and-the-sixth-consulship",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Introduced the cohorts",
+        "Recruited the head count",
+        "Raised 70,000 men for Gaul",
+        "Granted allies citizenship"
+      ],
+      "oddIndex": 0,
+      "why": "The chapter says Marius really did recruit the head count, raise about 70,000 men against the northern tribes and give citizenship to allied soldiers. No ancient source says he introduced the cohorts.",
+      "sectionId": "marian-reforms-debate",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Marius's first consulship",
+        "Head count recruited",
+        "Jugurtha in a triumph",
+        "Sulla takes the cavalry"
+      ],
+      "oddIndex": 2,
+      "why": "Marius’s first consulship, his recruitment of the head count and Sulla taking charge of his cavalry all came in 107 BC. Jugurtha was paraded in Marius’s triumph in 104 BC.",
+      "sectionId": "capture-of-jugurtha",
+      "reviewFlags": []
+    }
+  ],
+  "whoAmI": [
+    {
+      "name": "The War in Africa",
+      "blurb": "Three men who fought over Numidia.",
+      "people": [
+        {
+          "name": "Jugurtha",
+          "options": [
+            "Jugurtha",
+            "Metellus",
+            "Sulla",
+            "Marius"
+          ],
+          "clues": [
+            "My uncle adopted me and left me a share of his kingdom.",
+            "I besieged a cousin in Cirta and killed him along with the Italian traders who defended it.",
+            "I trapped a Roman army near the Muthul River, then switched to guerrilla warfare.",
+            "I was the Numidian king handed over in chains and paraded in a Roman triumph."
+          ],
+          "sectionId": "jugurtha",
+          "reviewFlags": []
+        },
+        {
+          "name": "Metellus",
+          "options": [
+            "Jugurtha",
+            "Metellus",
+            "Sulla",
+            "Marius"
+          ],
+          "clues": [
+            "I stormed a desert fortress after a forty-day siege.",
+            "I retrained a slack army and chose my officers for ability rather than rank.",
+            "Allegedly, I sneered that my ambitious officer should wait and run for consul alongside my son.",
+            "I was the honest aristocrat the Senate sent in 109 BC to take over the war against Jugurtha."
+          ],
+          "sectionId": "metellus-and-the-muthul",
+          "reviewFlags": []
+        },
+        {
+          "name": "Sulla",
+          "options": [
+            "Jugurtha",
+            "Metellus",
+            "Sulla",
+            "Marius"
+          ],
+          "clues": [
+            "As a young aristocrat I had a playboy reputation.",
+            "I became Marius's financial officer and commanded his cavalry in Africa.",
+            "I wore a ring showing the capture of a Numidian king.",
+            "I walked into the Mauretanian king's camp and came back with Jugurtha."
+          ],
+          "sectionId": "capture-of-jugurtha",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Rome's Stormy Politics",
+      "blurb": "Three men at the heart of Rome's political battles.",
+      "people": [
+        {
+          "name": "Gaius Marius",
+          "options": [
+            "Gaius Marius",
+            "Saturninus",
+            "Metellus",
+            "Sulla"
+          ],
+          "clues": [
+            "As tribune in 119 BC I narrowed the walkways where voters cast their ballots.",
+            "I was a 'new man' from a hill town south-east of Rome.",
+            "I held five consulships in a row, from 104 to 100 BC.",
+            "As commander I defeated the Teutones at Aquae Sextiae and the Cimbri at Vercellae."
+          ],
+          "sectionId": "consul-again-and-again",
+          "reviewFlags": []
+        },
+        {
+          "name": "Saturninus",
+          "options": [
+            "Gaius Marius",
+            "Saturninus",
+            "Metellus",
+            "Sulla"
+          ],
+          "clues": [
+            "In 100 BC I was serving my second term as tribune.",
+            "I pushed laws for cheaper state grain and farmland for veterans.",
+            "My public appeal helped carry Marius to re-election for 102 BC.",
+            "I held out on the Capitoline Hill and was stoned to death in the Senate house."
+          ],
+          "sectionId": "saturninus-and-the-sixth-consulship",
+          "reviewFlags": []
+        },
+        {
+          "name": "Metellus",
+          "options": [
+            "Gaius Marius",
+            "Saturninus",
+            "Metellus",
+            "Sulla"
+          ],
+          "clues": [
+            "My relatives followed Marius around in mourning clothes, demanding my recall.",
+            "A law pushed by a radical tribune drove me into exile in 100 BC.",
+            "The Senate extended my command, but the Assembly of the plebs gave the war to my officer.",
+            "I sailed home from Africa in fury and received the honorary name Numidicus."
+          ],
+          "sectionId": "marius-becomes-consul",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "places": [
+    {
+      "name": "Numantia",
+      "wikipediaTitle": "Numantia",
+      "lat": 41.80958611,
+      "lon": -2.44425833,
+      "why": "At the siege of this Celtic stronghold in Spain in 134 BC, young Marius first made his name.",
+      "sectionId": "marius-origins",
+      "coordinates": "Wikipedia: Numantia",
+      "reviewFlags": []
+    },
+    {
+      "name": "Cirta",
+      "wikipediaTitle": "Cirta",
+      "lat": 36.3675,
+      "lon": 6.61194444,
+      "why": "Jugurtha besieged his cousin here in 113 BC and killed him along with the Italian traders who defended the city.",
+      "sectionId": "jugurtha",
+      "coordinates": "Wikipedia: Cirta",
+      "reviewFlags": []
+    },
+    {
+      "name": "Utica",
+      "wikipediaTitle": "Utica, Tunisia",
+      "lat": 37.05694444,
+      "lon": 10.06194444,
+      "why": "In this African city a fortune-teller urged Marius to trust the gods and test his luck.",
+      "sectionId": "marius-becomes-consul",
+      "coordinates": "Wikipedia: Utica, Tunisia",
+      "reviewFlags": []
+    },
+    {
+      "name": "Capsa",
+      "wikipediaTitle": "Gafsa",
+      "lat": 34.4225,
+      "lon": 8.78416667,
+      "why": "Marius made a dangerous desert march to this southern town and killed its adult men after it surrendered.",
+      "sectionId": "capture-of-jugurtha",
+      "coordinates": "Wikipedia: Gafsa",
+      "reviewFlags": []
+    },
+    {
+      "name": "Arausio",
+      "wikipediaTitle": "Orange, Vaucluse",
+      "lat": 44.1383,
+      "lon": 4.8097,
+      "why": "In 105 BC the Cimbri destroyed two feuding Roman armies here, Rome's worst defeat since Cannae.",
+      "sectionId": "cimbri-and-arausio",
+      "coordinates": "Wikipedia: Orange, Vaucluse",
+      "reviewFlags": []
+    },
+    {
+      "name": "Vercellae",
+      "wikipediaTitle": "Vercelli",
+      "lat": 45.32555556,
+      "lon": 8.42305556,
+      "why": "In 101 BC Marius and his colleague annihilated the Cimbri here on the Raudine Plain.",
+      "sectionId": "aquae-sextiae-and-vercellae",
+      "coordinates": "Wikipedia: Vercelli",
+      "reviewFlags": []
+    }
+  ]
+}

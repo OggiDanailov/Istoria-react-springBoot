@@ -1,0 +1,168 @@
+{
+  "description": "Maps for the chronicle, written by hand. Coordinates from Wikipedia; each map sits at the start of its section.",
+  "maps": [
+    {
+      "id": "numidia",
+      "sec": "jugurtha",
+      "title": "The war against Jugurtha, 111–105 BC",
+      "caption": "Jugurtha's Numidia lay west of the Roman province of Africa, with Mauretania beyond. The site of the battle by the Muthul River is uncertain.",
+      "bounds": {
+        "latMin": 33.9,
+        "latMax": 37.6,
+        "lonMin": 2.6,
+        "lonMax": 11.4
+      },
+      "places": [
+        {
+          "name": "Cirta",
+          "lat": 36.37,
+          "lon": 6.61,
+          "side": "r"
+        },
+        {
+          "name": "Utica",
+          "lat": 37.06,
+          "lon": 10.06,
+          "side": "l"
+        },
+        {
+          "name": "Capsa",
+          "lat": 34.42,
+          "lon": 8.78,
+          "side": "r"
+        },
+        {
+          "name": "Muthul River",
+          "lat": 36.25,
+          "lon": 8.75,
+          "kind": "battle",
+          "side": "l",
+          "note": "site uncertain"
+        }
+      ],
+      "peoples": [
+        {
+          "name": "Numidia",
+          "lat": 35.5,
+          "lon": 6.3
+        },
+        {
+          "name": "Mauretania",
+          "lat": 35.0,
+          "lon": 3.6
+        },
+        {
+          "name": "Roman Africa",
+          "lat": 35.6,
+          "lon": 10.0
+        }
+      ]
+    },
+    {
+      "id": "cimbri",
+      "sec": "cimbri-and-arausio",
+      "title": "The northern invaders, 113–101 BC",
+      "caption": "The Cimbri and Teutones came south from Jutland, beat Roman armies at Noreia and Arausio, and were finally destroyed by Marius at Aquae Sextiae and Vercellae. Their routes are drawn roughly; Noreia's site is uncertain.",
+      "bounds": {
+        "latMin": 41.5,
+        "latMax": 57.2,
+        "lonMin": -1.0,
+        "lonMax": 17.5
+      },
+      "places": [
+        {
+          "name": "Rome",
+          "latin": "Roma",
+          "lat": 41.893,
+          "lon": 12.483,
+          "kind": "rome",
+          "side": "r",
+          "dy": -4
+        },
+        {
+          "name": "Noreia",
+          "lat": 46.9,
+          "lon": 14.4,
+          "kind": "battle",
+          "side": "r"
+        },
+        {
+          "name": "Arausio",
+          "lat": 44.14,
+          "lon": 4.81,
+          "kind": "battle",
+          "side": "l"
+        },
+        {
+          "name": "Aquae Sextiae",
+          "lat": 43.53,
+          "lon": 5.45,
+          "kind": "battle",
+          "side": "r",
+          "dy": 6
+        },
+        {
+          "name": "Vercellae",
+          "lat": 45.33,
+          "lon": 8.42,
+          "kind": "battle",
+          "side": "r"
+        }
+      ],
+      "peoples": [
+        {
+          "name": "Cimbri",
+          "lat": 56.2,
+          "lon": 9.2
+        },
+        {
+          "name": "Gaul",
+          "lat": 47.0,
+          "lon": 3.0
+        }
+      ],
+      "routes": [
+        {
+          "pts": [
+            [
+              55.6,
+              9.4
+            ],
+            [
+              52.5,
+              11.0
+            ],
+            [
+              49.5,
+              12.8
+            ],
+            [
+              47.2,
+              14.2
+            ]
+          ]
+        },
+        {
+          "pts": [
+            [
+              46.7,
+              13.8
+            ],
+            [
+              47.2,
+              10.5
+            ],
+            [
+              46.6,
+              6.8
+            ],
+            [
+              44.5,
+              5.0
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}

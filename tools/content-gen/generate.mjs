@@ -348,6 +348,7 @@ const Games = z.object({
 // The Map Drop area: Italy for the early chapters, the whole Mediterranean once Rome fights overseas
 const MAP_AREAS = {
   italy: { text: 'Italy and its surroundings (nothing outside Italy, Sicily, Sardinia and the neighbouring coasts)', apartKm: 15, lat: [36, 47.5], lon: [6, 19.5] },
+  wide: { text: 'the Roman world (Italy, Spain, Gaul and Britain, North Africa, Greece, Asia Minor, Syria and Mesopotamia)', apartKm: 100, lat: [29, 56], lon: [-10, 46] },
   mediterranean: { text: 'the Mediterranean world (Italy, Sicily, Spain, North Africa, Greece and Asia Minor; nothing further east than Syria)', apartKm: 100, lat: [29, 47.5], lon: [-10, 37] },
 }
 const gamesSystem = area => `You write the content for the mini-games of Ave Caesar, a history learning game played on phones. People play for fun and should learn real history.

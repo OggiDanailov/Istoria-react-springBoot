@@ -310,6 +310,154 @@
       "era": "middle-republic",
       "mapArea": "mediterranean",
       "locked": true
+    },
+    {
+      "id": "marius",
+      "folder": "Rome/Late_republic/1.Marius_and_the_Northern_Invaders",
+      "chapterName": "Late Republic: Marius and the Northern Invaders (121-100 BCE)",
+      "period": "121-100 BCE",
+      "sources": [
+        "Gaius Marius",
+        "Jugurthine War",
+        "Cimbrian War"
+      ],
+      "counts": {
+        "easy": 20,
+        "medium": 20,
+        "hard": 10
+      },
+      "short": "Marius",
+      "era": "late-republic",
+      "mapArea": "wide",
+      "battle": {
+        "name": "Aquae Sextiae",
+        "year": "102 BC",
+        "enemy": "the Teutones",
+        "sec": "aquae-sextiae-and-vercellae",
+        "level": "aquae-sextiae",
+        "intro": "The Teutones march past Marius’s camp for six days, jeering. Now they charge uphill at the Roman lines."
+      },
+      "locked": true
+    },
+    {
+      "id": "social-war-and-sulla",
+      "folder": "Rome/Late_republic/2.The_Social_War_and_Sulla",
+      "chapterName": "Late Republic: The Social War and Sulla (91-78 BCE)",
+      "period": "91-78 BCE",
+      "sources": [
+        "Social War (91–87 BC)",
+        "Sulla",
+        "Sulla's civil war"
+      ],
+      "counts": {
+        "easy": 20,
+        "medium": 20,
+        "hard": 10
+      },
+      "short": "Social War and Sulla",
+      "era": "late-republic",
+      "mapArea": "wide",
+      "plannedBattle": "The Colline Gate (82 BC)"
+    },
+    {
+      "id": "spartacus-and-pompey",
+      "folder": "Rome/Late_republic/3.Spartacus_and_Pompey",
+      "chapterName": "Late Republic: Spartacus and Pompey (78-63 BCE)",
+      "period": "78-63 BCE",
+      "sources": [
+        "Third Servile War",
+        "Pompey",
+        "Third Mithridatic War"
+      ],
+      "counts": {
+        "easy": 20,
+        "medium": 20,
+        "hard": 10
+      },
+      "short": "Spartacus and Pompey",
+      "era": "late-republic",
+      "mapArea": "wide",
+      "plannedBattle": "Against Spartacus (71 BC)"
+    },
+    {
+      "id": "cicero-and-the-triumvirate",
+      "folder": "Rome/Late_republic/4.Cicero_and_the_Triumvirate",
+      "chapterName": "Late Republic: Cicero, Catiline and the Triumvirate (63-53 BCE)",
+      "period": "63-53 BCE",
+      "sources": [
+        "Catilinarian conspiracy",
+        "First Triumvirate",
+        "Battle of Carrhae"
+      ],
+      "counts": {
+        "easy": 20,
+        "medium": 20,
+        "hard": 10
+      },
+      "short": "The Triumvirate",
+      "era": "late-republic",
+      "mapArea": "wide",
+      "plannedBattle": "Carrhae (53 BC)"
+    },
+    {
+      "id": "caesar-in-gaul",
+      "folder": "Rome/Late_republic/5.Caesar_in_Gaul",
+      "chapterName": "Late Republic: Caesar in Gaul (58-50 BCE)",
+      "period": "58-50 BCE",
+      "sources": [
+        "Gallic Wars",
+        "Battle of Alesia",
+        "Vercingetorix"
+      ],
+      "counts": {
+        "easy": 20,
+        "medium": 20,
+        "hard": 10
+      },
+      "short": "Caesar in Gaul",
+      "era": "late-republic",
+      "mapArea": "wide",
+      "plannedBattle": "Alesia (52 BC)"
+    },
+    {
+      "id": "caesars-civil-war",
+      "folder": "Rome/Late_republic/6.Caesars_Civil_War",
+      "chapterName": "Late Republic: Caesar's Civil War and the Ides of March (49-44 BCE)",
+      "period": "49-44 BCE",
+      "sources": [
+        "Caesar's civil war",
+        "Battle of Pharsalus",
+        "Assassination of Julius Caesar"
+      ],
+      "counts": {
+        "easy": 20,
+        "medium": 20,
+        "hard": 10
+      },
+      "short": "Civil War and the Ides",
+      "era": "late-republic",
+      "mapArea": "wide",
+      "plannedBattle": "Pharsalus (48 BC)"
+    },
+    {
+      "id": "end-of-the-republic",
+      "folder": "Rome/Late_republic/7.End_of_the_Republic",
+      "chapterName": "Late Republic: Antony, Octavian and the End of the Republic (44-27 BCE)",
+      "period": "44-27 BCE",
+      "sources": [
+        "Second Triumvirate",
+        "Battle of Actium",
+        "Final war of the Roman Republic"
+      ],
+      "counts": {
+        "easy": 20,
+        "medium": 20,
+        "hard": 10
+      },
+      "short": "End of the Republic",
+      "era": "late-republic",
+      "mapArea": "wide",
+      "plannedBattle": "Actium (31 BC)"
     }
   ]
 }

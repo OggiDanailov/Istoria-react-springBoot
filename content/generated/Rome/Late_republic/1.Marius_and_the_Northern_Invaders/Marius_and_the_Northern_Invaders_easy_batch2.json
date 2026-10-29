@@ -1,0 +1,179 @@
+{
+  "batchName": "Late Republic: Marius and the Northern Invaders (121-100 BCE) - Easy Batch 2",
+  "chapterName": "Late Republic: Marius and the Northern Invaders (121-100 BCE)",
+  "difficulty": 1,
+  "batchOrder": 2,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "What practice did the famous nickname \"Marius's mules\" refer to?",
+      "options": [
+        "Pack animals bred for the legions",
+        "Captured Numidian cavalry horses",
+        "Slaves hauling siege engines",
+        "Soldiers carrying their own gear"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#marian-reforms-debate",
+      "explanation": "\"Marius's mules\" referred to soldiers carrying their own gear. In fact this was routine for Roman generals, not a Marian innovation.",
+      "sourceQuote": "Making soldiers carry their own gear, the famous \"Marius's mules\" (*muli Mariani*), was routine for Roman generals.",
+      "reviewFlags": []
+    },
+    {
+      "question": "The Cimbri, who threatened Rome from the north, came from which region?",
+      "options": [
+        "The Black Sea coast",
+        "The Iberian peninsula",
+        "The Balkan mountains",
+        "The Jutland peninsula"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#cimbri-and-arausio",
+      "explanation": "The Cimbri were a Germanic people from the Jutland peninsula in modern Denmark. They migrated together with their neighbours the Teutones.",
+      "sourceQuote": "The Cimbri, a Germanic people from the Jutland peninsula in modern Denmark, were on the move with their neighbours the Teutones.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Why did Marius partly choose to serve as Metellus's right-hand man in Africa?",
+      "options": [
+        "To escape a bribery trial in Rome",
+        "To avenge a brother killed by Jugurtha",
+        "To boost his chances of becoming consul",
+        "To claim Numidian lands for his family"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#metellus-and-the-muthul",
+      "explanation": "Marius joined Metellus partly to boost his own chances of becoming consul. He served as Metellus's senior officer.",
+      "sourceQuote": "His senior officer and right-hand man was Gaius Marius, the ambitious newcomer from Arpinum, who joined partly to boost his own chances of becoming consul.",
+      "reviewFlags": []
+    },
+    {
+      "question": "When Marius asked leave to run for consul, Metellus allegedly sneered that he should wait and stand alongside whom?",
+      "options": [
+        "A Numidian prince",
+        "Sulla",
+        "Metellus's own son",
+        "Metellus's brother"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#marius-becomes-consul",
+      "explanation": "Metellus allegedly told Marius to wait and stand alongside Metellus's own son, who was then only about twenty. Marius campaigned from the camp anyway.",
+      "sourceQuote": "Allegedly he sneered that Marius should wait and stand alongside Metellus's own son, who was then about twenty.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which body overruled the Senate and gave Marius command of the war against Jugurtha?",
+      "options": [
+        "The Numidian royal court",
+        "The college of augurs",
+        "The Assembly of the plebs",
+        "The council of praetors"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#marius-becomes-consul",
+      "explanation": "A tribune allied to Marius took the question to the Assembly of the plebs, which gave him the war. The Senate had tried to keep Metellus in charge.",
+      "sourceQuote": "The Senate tried to keep Metellus in charge by extending his command, but a tribune allied to Marius took the question to the Assembly of the plebs (*concilium plebis*), the popular voting body.",
+      "reviewFlags": []
+    },
+    {
+      "question": "In 107 BC Marius recruited the \"head count\" (capite censi). Who were they?",
+      "options": [
+        "Italian mercenaries",
+        "Freed slaves",
+        "Men with no property",
+        "Wealthy cavalrymen"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#capture-of-jugurtha",
+      "explanation": "The head count were men with no property at all. Normally only property owners could serve in the legions.",
+      "sourceQuote": "Marius instead appealed for volunteers, including veterans and men with no property at all, the so-called \"head count\" (*capite censi*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did Jugurtha get the richer half of Numidia when a Roman commission divided the kingdom?",
+      "options": [
+        "He threatened to invade Sicily",
+        "He married into the Roman nobility",
+        "He won it in single combat",
+        "He bribed the commission's members"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#jugurtha",
+      "explanation": "Jugurtha bribed the Roman commissioners into giving him the richer western half. Episodes like this convinced many Romans that their aristocratic leaders could simply be bought.",
+      "sourceQuote": "A Roman commission divided the kingdom, but Jugurtha bribed its members into giving him the richer western half.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Where did Marius and his colleague defeat the Cimbri in 101 BC?",
+      "options": [
+        "Noreia",
+        "Numantia",
+        "Vercellae",
+        "Arausio"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#aquae-sextiae-and-vercellae",
+      "explanation": "The Cimbri were destroyed at Vercellae, on the Raudine Plain. More than 120,000 reportedly died.",
+      "sourceQuote": "In 101 BC Marius joined his colleague at Vercellae, on the Raudine Plain.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which Roman officer entered the Mauretanian king's camp and received Jugurtha in chains?",
+      "options": [
+        "Metellus",
+        "Sulla",
+        "Marius himself",
+        "Saturninus"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#capture-of-jugurtha",
+      "explanation": "Sulla bravely entered the Mauretanian king's camp, and the king handed Jugurtha over. Fighting alone had failed to catch the elusive king.",
+      "sourceQuote": "Sulla bravely entered the Mauretanian king's camp, and the king handed over Jugurtha in chains.",
+      "reviewFlags": []
+    },
+    {
+      "question": "In 102 BC Marius went west to confront which northern peoples?",
+      "options": [
+        "The Helvetii and the Suebi",
+        "The Cimbri and the Tigurini",
+        "The Belgae and the Arverni",
+        "The Teutones and the Ambrones"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#aquae-sextiae-and-vercellae",
+      "explanation": "Marius went west to face the Teutones and their allies the Ambrones, while his fellow consul guarded the Alps. He crushed both near Aquae Sextiae.",
+      "sourceQuote": "Gaius Marius, Rome's repeatedly elected consul, went west to meet the Teutones and their allies the Ambrones, while his fellow consul guarded the Alps.",
+      "reviewFlags": []
+    }
+  ]
+}

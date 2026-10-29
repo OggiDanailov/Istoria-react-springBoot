@@ -1,0 +1,144 @@
+{
+  "description": "Key facts for this chapter, written by hand from the chapter text. Every entry links to the section that explains it.",
+  "people": [
+    {
+      "name": "Gaius Marius",
+      "text": "The “new man” from Arpinum: consul seven times, conqueror of Jugurtha and the northern tribes.",
+      "sec": "marius-origins"
+    },
+    {
+      "name": "Jugurtha",
+      "text": "Numidian king who believed every Roman had a price.",
+      "sec": "jugurtha"
+    },
+    {
+      "name": "Metellus",
+      "text": "Honest aristocrat who commanded in Africa before Marius.",
+      "sec": "metellus-and-the-muthul"
+    },
+    {
+      "name": "Sulla",
+      "text": "Marius’s officer who took Jugurtha captive, later his deadliest rival.",
+      "sec": "capture-of-jugurtha"
+    },
+    {
+      "name": "Saturninus",
+      "text": "Radical tribune, killed in 100 BC.",
+      "sec": "saturninus-and-the-sixth-consulship"
+    }
+  ],
+  "dates": [
+    {
+      "when": "157 BC",
+      "text": "Marius is born near Arpinum.",
+      "sec": "marius-origins"
+    },
+    {
+      "when": "111 BC",
+      "text": "Rome declares war on Jugurtha.",
+      "sec": "jugurtha"
+    },
+    {
+      "when": "109 BC",
+      "text": "Battle of the Muthul River.",
+      "sec": "metellus-and-the-muthul"
+    },
+    {
+      "when": "107 BC",
+      "text": "Marius’s first consulship; he recruits the head count.",
+      "sec": "marius-becomes-consul"
+    },
+    {
+      "when": "105 BC",
+      "text": "Disaster at Arausio.",
+      "sec": "cimbri-and-arausio"
+    },
+    {
+      "when": "104 BC",
+      "text": "Jugurtha paraded in Marius’s triumph; Marius’s run of consulships begins.",
+      "sec": "capture-of-jugurtha"
+    },
+    {
+      "when": "102 BC",
+      "text": "Victory over the Teutones at Aquae Sextiae.",
+      "sec": "aquae-sextiae-and-vercellae"
+    },
+    {
+      "when": "101 BC",
+      "text": "Victory over the Cimbri at Vercellae.",
+      "sec": "aquae-sextiae-and-vercellae"
+    },
+    {
+      "when": "100 BC",
+      "text": "Saturninus and his followers are killed.",
+      "sec": "saturninus-and-the-sixth-consulship"
+    }
+  ],
+  "terms": [
+    {
+      "latin": "novus homo",
+      "english": "a “new man”, first of his family in high office",
+      "sec": "marius-origins"
+    },
+    {
+      "latin": "tribunus plebis",
+      "english": "a tribune of the plebs",
+      "sec": "marius-origins"
+    },
+    {
+      "latin": "ambitus",
+      "english": "electoral bribery",
+      "sec": "marius-origins"
+    },
+    {
+      "latin": "senatus",
+      "english": "the Senate",
+      "sec": "jugurtha"
+    },
+    {
+      "latin": "consules",
+      "english": "the two consuls",
+      "sec": "jugurtha"
+    },
+    {
+      "latin": "iugum",
+      "english": "the yoke of spears",
+      "sec": "jugurtha"
+    },
+    {
+      "latin": "concilium plebis",
+      "english": "the Assembly of the plebs",
+      "sec": "marius-becomes-consul"
+    },
+    {
+      "latin": "capite censi",
+      "english": "the “head count”, men with no property",
+      "sec": "capture-of-jugurtha"
+    },
+    {
+      "latin": "triumphus",
+      "english": "a victory procession",
+      "sec": "capture-of-jugurtha"
+    },
+    {
+      "latin": "terror cimbricus",
+      "english": "the “Cimbrian terror”",
+      "sec": "cimbri-and-arausio"
+    },
+    {
+      "latin": "senatus consultum ultimum",
+      "english": "the Senate’s emergency decree",
+      "sec": "saturninus-and-the-sixth-consulship"
+    },
+    {
+      "latin": "proletarii",
+      "english": "the poorest class",
+      "sec": "marian-reforms-debate"
+    },
+    {
+      "latin": "muli Mariani",
+      "english": "“Marius’s mules”: soldiers carrying their gear",
+      "sec": "marian-reforms-debate"
+    }
+  ]
+}

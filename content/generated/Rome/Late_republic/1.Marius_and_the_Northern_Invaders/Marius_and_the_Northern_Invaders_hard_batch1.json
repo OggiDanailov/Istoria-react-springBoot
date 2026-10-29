@@ -1,0 +1,204 @@
+{
+  "batchName": "Late Republic: Marius and the Northern Invaders (121-100 BCE) - Hard Batch 1",
+  "chapterName": "Late Republic: Marius and the Northern Invaders (121-100 BCE)",
+  "difficulty": 3,
+  "batchOrder": 5,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Which usual rules did Marius's election as consul for 104 BC break? (select all that apply)",
+      "options": [
+        "It came so soon after his first term",
+        "He stood for office while absent",
+        "He was facing a bribery trial at the time",
+        "He was under the minimum age",
+        "He was not a Roman citizen",
+        "He had never held a judicial post"
+      ],
+      "correctAnswers": [
+        0,
+        1
+      ],
+      "difficulty": 3,
+      "textReference": "#consul-again-and-again",
+      "explanation": "Standing in absence and so soon after his first term broke the usual rules, but the Assembly set them aside. Marius was still in Africa when elected.",
+      "sourceQuote": "Standing in absence, and so soon after his first term, broke the usual rules, but the Assembly simply set them aside.",
+      "reviewFlags": []
+    },
+    {
+      "question": "In what year had Marius's hometown, Arpinum, gained full Roman citizenship?",
+      "options": [
+        "218 BC",
+        "146 BC",
+        "241 BC",
+        "167 BC",
+        "188 BC",
+        "201 BC"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 3,
+      "textReference": "#marius-origins",
+      "explanation": "Arpinum only gained full Roman citizenship in 188 BC, about thirty years before Marius's birth. Despite local wealth, he remained an outsider in Rome.",
+      "sourceQuote": "His hometown had only gained full Roman citizenship in 188 BC.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which pieces of evidence undercut the traditional \"Marian reforms\" picture? (select all that apply)",
+      "options": [
+        "No ancient source says he introduced cohorts",
+        "Rome abandoned conscription right after 107 BC",
+        "Late Republican armies came mostly from the cities",
+        "Citizen cavalry still appears in later evidence",
+        "Eagle standards shared the field with wolf and ox standards for decades",
+        "Archaeology shows his javelin design lasted for centuries"
+      ],
+      "correctAnswers": [
+        0,
+        3,
+        4
+      ],
+      "difficulty": 3,
+      "textReference": "#marian-reforms-debate",
+      "explanation": "Citizen cavalry persists, eagles shared the field with other standards, and no source credits Marius with cohorts. Archaeology suggests any javelin redesign was soon dropped, and armies still came mostly from the countryside.",
+      "sourceQuote": "Citizen cavalry still appears in later evidence, and eagle standards shared the field with wolf and ox standards for decades.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What was unprecedented about the Senate's emergency decree in 100 BC?",
+      "options": [
+        "It allowed troops inside the city",
+        "It was ratified by the Assembly of the plebs",
+        "It was the first ever passed by the Senate",
+        "It was the first to target serving officials rather than private citizens",
+        "It gave command to a dictator",
+        "It was proposed by a tribune"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 3,
+      "textReference": "#saturninus-and-the-sixth-consulship",
+      "explanation": "For the first time, the decree targeted serving officials rather than private citizens. Marius nonetheless refused to bring an army near the city.",
+      "sourceQuote": "For the first time, such a decree targeted serving officials rather than private citizens.",
+      "reviewFlags": []
+    },
+    {
+      "question": "After the victories over the northern tribes, what controversial step did Marius take regarding Italian allied soldiers?",
+      "options": [
+        "He enslaved those who had deserted",
+        "He granted citizenship to about a thousand without asking the Senate",
+        "He enrolled them all in the cavalry",
+        "He gave them all of Cisalpine Gaul",
+        "He paid them double the Roman soldiers' wages",
+        "He disbanded their units entirely"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 3,
+      "textReference": "#aquae-sextiae-and-vercellae",
+      "explanation": "Marius granted citizenship to about a thousand Italian allied soldiers without consulting the Senate. A biographer says he was hailed as Rome's \"third founder\", though modern historians doubt it.",
+      "sourceQuote": "Afterwards Marius granted citizenship to about a thousand Italian allied soldiers without asking the Senate.",
+      "reviewFlags": []
+    },
+    {
+      "question": "In what year did Rome, under popular pressure, finally declare war on Jugurtha?",
+      "options": [
+        "109 BC",
+        "111 BC",
+        "116 BC",
+        "113 BC",
+        "118 BC",
+        "107 BC"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 3,
+      "textReference": "#jugurtha",
+      "explanation": "Rome declared war in 111 BC, two years after the massacre at Cirta. The early results were humiliating, including a peace that reeked of bribery.",
+      "sourceQuote": "Under popular pressure, Rome declared war in 111 BC.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Why do historians see the transfer of the African command to Marius in 107 BC as a turning point?",
+      "options": [
+        "It made the consulship open to non-citizens",
+        "It abolished the tribunes' veto",
+        "It ended the Senate's right to declare war",
+        "Using popular votes to overrule the Senate on commands became a habit",
+        "It created the first permanent provincial governorship",
+        "It was the first time a novus homo held any command"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 3,
+      "textReference": "#marius-becomes-consul",
+      "explanation": "Overruling the Senate on military commands by popular vote became a habit copied by later generals. This fuelled bitter personal rivalries.",
+      "sourceQuote": "Using popular votes to overrule the Senate on military commands became a habit, and ambitious generals after Marius copied it, fuelling bitter personal rivalries.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did Sulla do that an ancient biographer linked to \"the first seed\" of his hatred with Marius?",
+      "options": [
+        "He testified against Marius for bribery",
+        "He refused to march in Marius's triumph",
+        "He executed Jugurtha without orders",
+        "He stole the spoils of Capsa",
+        "He wore a ring showing Jugurtha's capture",
+        "He married Metellus's daughter"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 3,
+      "textReference": "#capture-of-jugurtha",
+      "explanation": "Sulla wore a ring depicting the capture, and the quarrel over credit was called \"the first seed\" of their hatred. Jugurtha was paraded in Marius's triumph in 104 BC.",
+      "sourceQuote": "But Sulla wore a ring showing the capture, and an ancient biographer called the quarrel over credit \"the first seed\" of their hatred.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which Celtic tribe, allied to the Cimbri, destroyed a Roman army and killed a consul in 107 BC?",
+      "options": [
+        "The Tigurini",
+        "The Allobroges",
+        "The Ambrones",
+        "The Boii",
+        "The Arverni",
+        "The Helvetii"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#cimbri-and-arausio",
+      "explanation": "The Tigurini, a Celtic tribe allied to the Cimbri, destroyed a Roman army in 107 BC. Two years later came the catastrophe at Arausio.",
+      "sourceQuote": "In 107 BC their allies the Tigurini, a Celtic tribe, destroyed another army and killed a consul.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which actions did Marius take during the Battle of the Muthul? (select all that apply)",
+      "options": [
+        "Gathered several scattered detachments",
+        "Withdrew to the river to secure the water",
+        "Led a column of about 2,000 men through the enemy",
+        "Stormed a desert fortress after a forty-day siege",
+        "Captured Jugurtha's royal standard",
+        "Helped seize a hill held by Numidian infantry"
+      ],
+      "correctAnswers": [
+        0,
+        2,
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#metellus-and-the-muthul",
+      "explanation": "Marius gathered scattered units, led about 2,000 men through the enemy to Metellus, and helped seize a hill before striking the cavalry from behind. The forty-day siege of a desert fortress came later, under Metellus.",
+      "sourceQuote": "He gathered several scattered detachments and led a column of about 2,000 men through the enemy to link up with Metellus.",
+      "reviewFlags": []
+    }
+  ]
+}

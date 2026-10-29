@@ -459,6 +459,7 @@ function drawFoe(c, f, T) {
   c.fillStyle = SKIN; c.beginPath(); c.arc(0, -42 + bob, 8, 0, TAU); c.fill()
   c.fillStyle = INK; c.fillRect(-4, -43 + bob, 2, 2); c.fillRect(2, -43 + bob, 2, 2)
   line(c, -5, -46 + bob, -1.5, -45 + bob, INK, 1.3); line(c, 5, -46 + bob, 1.5, -45 + bob, INK, 1.3)
+  if (f.dir < 0) { c.fillStyle = L.head === 'gaul' ? '#d9b25a' : '#4a3020'; c.beginPath(); c.arc(0, -42 + bob, 8.2, 0, TAU); c.fill() }   // walking away from us: the back of the head
   const helmet = () => { c.fillStyle = '#b08a3e'; c.beginPath(); c.arc(0, -44 + bob, 8.8, Math.PI, 0); c.fill() }
   if (L.head === 'hair') { c.fillStyle = '#5a3a22'; c.beginPath(); c.arc(0, -46 + bob, 8.5, Math.PI * 1.05, Math.PI * 1.95); c.fill(); c.beginPath(); c.arc(0, -38 + bob, 6, 0.15, Math.PI - 0.15); c.fill() }
   if (L.head === 'helmet' || L.head === 'chief') { helmet(); c.fillRect(-8.8, -45 + bob, 3, 8); c.fillRect(5.8, -45 + bob, 3, 8) }
@@ -700,6 +701,7 @@ function newGame(i = levelIndex, score = quizScore) {
     t: 0, phase: 'ready', speed: G?.speed ?? 1, paused: false, rations: army.grain, vets: army.vets, score, ids: 0,
     units: [], foes: [], shots: [], foeShots: [], runners: [], drops: [], fx: [], corpses: [],
     equites: Array.from({ length: COLS }, () => ({ state: 'ready', y: ROWS + 0.62 })),
+    equitesTop: LEVEL.twoFronts ? Array.from({ length: COLS }, () => ({ state: 'ready', y: -0.55 })) : [],
     cool: Object.fromEntries(LEVEL.units.map(t => [t, { triarius: 15, caltrops: 20, shed: 10, pigs: 10 }[t] ?? 0])),
     queue: buildQueue(), total: 0, spawned: 0, killed: 0, lost: 0, nextSky: 4, shake: 0,
     introduced: new Set(), selected: null, dismiss: false, hover: null, lastLane: -1, tips: {},
@@ -712,7 +714,8 @@ function newGame(i = levelIndex, score = quizScore) {
   layout()
 }
 
-function spawn(type, lane = null, y = -0.75) {
+function spawn(type, lane = null, y = -0.75, dir = 1) {
+  if (dir < 0 && y === -0.75) y = ROWS + 0.75   // from below: they come up out of the far side
   if (type === 'elephant+calf') {   // the calf walks a little ahead of its mother
     const mother = spawn('elephant'), calf = spawn('calf', mother.lane, -0.05)
     calf.mother = mother; calf.speed = mother.speed; G.spawned--
@@ -728,7 +731,7 @@ function spawn(type, lane = null, y = -0.75) {
   if (lane == null) { do lane = Math.floor(Math.random() * COLS); while (lane === G.lastLane && Math.random() < 0.7) }
   G.lastLane = lane
   const hp = Math.round(F.hp * EASE), tired = LEVEL.tired && G.t < LEVEL.tired
-  const f = { id: ++G.ids, type, lane, fromLane: from, y, hp, max: hp, shield: F.shield ?? 0, shieldMax: F.shield ?? 0, tired,
+  const f = { id: ++G.ids, type, lane, fromLane: from, y, dir, hp, max: hp, shield: F.shield ?? 0, shieldMax: F.shield ?? 0, tired,
     speed: F.speed * (0.92 + Math.random() * 0.16) * (tired ? 0.55 : 1), jumped: false, jump: null, eating: null, flash: 0, cd: 1, anim: 0, shooting: false, fleeing: false, phase: Math.random() * TAU, dx: (Math.random() - 0.5) * 0.12 }
   G.foes.push(f)
   G.spawned++
@@ -740,6 +743,7 @@ function spawnEntry(e) {
     const c = G.blocks[e.block] ??= 1 + Math.floor(Math.random() * (COLS - 2))
     return spawn(e.type, c + e.off)
   }
+  if (e.wave.from === 'below') return spawn(e.type, null, -0.75, -1)   // a second front: they attack from the other side
   if (e.wave.from === 'houses') {   // defenders burst out of a house still standing
     const open = G.houses.filter(h => !h.burned)
     if (open.length) { const h = open[Math.floor(Math.random() * open.length)]; return spawn(e.type, h.lane, h.row + 0.55) }
@@ -866,7 +870,7 @@ function update(dt) {
       }
     }
     if (U.melee) {   // swordsmen fight whoever reaches their square
-      const foe = G.foes.filter(f => f.lane === u.lane && f.hp > 0 && !f.jump && !f.fleeing && f.y >= u.row - 0.1 && f.y <= u.row + 1.0).sort((a, b) => b.y - a.y)[0]
+      const foe = G.foes.filter(f => f.lane === u.lane && f.hp > 0 && !f.jump && !f.fleeing && (f.dir < 0 ? f.y >= u.row + 0.6 && f.y <= u.row + 1.45 : f.y >= u.row - 0.1 && f.y <= u.row + 1.0)).sort((a, b) => b.y - a.y)[0]
       u.fighting = !!foe
       if (foe) { hurtFoe(foe, U.melee * dt * (blessed ? AUGUR.damage : 1), true); if (Math.random() < dt * 2.5) { sfx.clang(); G.fx.push({ kind: 'spark', x: lx(u.lane), y: ry(u.row + 0.4), t: 0.2 }) } }
     }
@@ -880,33 +884,39 @@ function update(dt) {
     }
     if (U.reload && !(U.melee && u.fighting)) {
       const lanes = U.spread ? [u.lane - 1, u.lane, u.lane + 1].filter(l => l >= 0 && l < COLS) : [u.lane]
-      const near = lanes.some(l => G.foes.some(f => f.lane === l && f.hp > 0 && f.y < u.row + 1.05 && f.y > Math.max(-0.55, u.row + 0.5 - U.range)))
+      const above = f => f.y < u.row + 1.05 && f.y > Math.max(-0.55, u.row + 0.5 - U.range)
+      const below = f => LEVEL.twoFronts && f.y > u.row + 0.6 && f.y < Math.min(ROWS + 0.7, u.row + 0.5 + U.range + 0.6)
+      const inReach = G.foes.filter(f => lanes.includes(f.lane) && f.hp > 0 && (above(f) || below(f)))
+      const near = inReach.length > 0
       u.aiming = near
       if (near && u.cd <= 0) {
+        // shoot at the closest threat, up the field or (on two fronts) down it
+        const target = inReach.sort((a, b) => Math.abs(a.y - u.row - 0.5) - Math.abs(b.y - u.row - 0.5))[0], down = below(target) && !above(target)
         u.cd = U.reload * (blessed ? AUGUR.reload : 1); u.anim = 0.35
-        for (const l of lanes) G.shots.push({ lane: l, from: u.lane, y: u.row + 0.45, y0: u.row + 0.45, kind: U.pierce ? 'bolt' : u.type === 'slinger' ? 'stone' : 'pilum', pierce: !!U.pierce, dmg: U.dmg * (blessed ? AUGUR.damage : 1), speed: U.pierce ? 9 : u.type === 'slinger' ? 7 : 6, end: u.row + 0.5 - U.range - 0.3, x0: (Math.random() - 0.5) * 0.1 })
+        for (const l of lanes) G.shots.push({ lane: l, from: u.lane, dir: down ? 1 : -1, y: u.row + (down ? 0.8 : 0.45), y0: u.row + (down ? 0.8 : 0.45), kind: U.pierce ? 'bolt' : u.type === 'slinger' ? 'stone' : 'pilum', pierce: !!U.pierce, dmg: U.dmg * (blessed ? AUGUR.damage : 1), speed: U.pierce ? 9 : u.type === 'slinger' ? 7 : 6, end: down ? u.row + 0.5 + U.range + 0.3 : u.row + 0.5 - U.range - 0.3, x0: (Math.random() - 0.5) * 0.1 })
         u.type === 'slinger' ? sfx.sling() : sfx.throw()
       }
     }
   }
   // missiles
   for (const s of G.shots) {
-    s.y -= s.speed * dt
-    const hit = G.foes.filter(f => f.lane === s.lane && f.hp > 0 && !f.jump && !s.hits?.has(f) && s.y <= f.y + 0.05 && s.y >= f.y - 0.85).sort((a, b) => b.y - a.y)[0]
+    const sd = s.dir ?? -1
+    s.y += sd * s.speed * dt
+    const hit = G.foes.filter(f => f.lane === s.lane && f.hp > 0 && !f.jump && !s.hits?.has(f) && s.y <= f.y + 0.05 && s.y >= f.y - 0.85).sort((a, b) => sd < 0 ? b.y - a.y : a.y - b.y)[0]
     if (hit) {
       hurtFoe(hit, s.dmg, s.kind, s.from != null && s.from !== s.lane)   // a javelin from the next lane hits the side
       if (s.pierce) (s.hits ??= new Set()).add(hit); else s.done = true   // a scorpion bolt flies on through
       G.fx.push({ kind: 'spark', x: lx(s.lane), y: ry(s.y), t: 0.25 })
     }
-    if (s.y < Math.max(-1, s.end)) s.done = true
+    if (sd < 0 ? s.y < Math.max(-1, s.end) : s.y > Math.min(ROWS + 1, s.end)) s.done = true
   }
   G.shots = G.shots.filter(s => !s.done)
   // enemy arrows hit the first soldier in their lane
   for (const s of G.foeShots) {
-    s.y += 6 * dt
+    s.y += 6 * dt * (s.dir ?? 1)
     const u = G.units.find(x => x.lane === s.lane && !x.travel && s.y >= x.row + 0.15 && s.y <= x.row + 0.95)
     if (u) { s.done = true; u.hp -= s.dmg * (UNITS[u.type].arrowMul ?? 1); u.hurt = 0.12; sfx.thunk(); if (u.hp <= 0) removeUnit(u) }
-    if (s.y > ROWS + 0.5) s.done = true
+    if (s.y > ROWS + 0.5 || s.y < -1) s.done = true
   }
   G.foeShots = G.foeShots.filter(s => !s.done)
   // war pigs charging up their lane
@@ -940,7 +950,9 @@ function update(dt) {
       continue
     }
     const F = FOES[f.type], reach = F.reach ?? 0   // pikes strike a square ahead
-    const u = G.units.find(u => u.lane === f.lane && !u.travel && f.y >= u.row + 0.3 - reach && f.y < u.row + 1.0)
+    const u = f.dir < 0
+      ? G.units.find(u => u.lane === f.lane && !u.travel && f.y <= u.row + 1.34 + reach && f.y > u.row + 0.6)
+      : G.units.find(u => u.lane === f.lane && !u.travel && f.y >= u.row + 0.3 - reach && f.y < u.row + 1.0)
     const bow = F.bow
     if (u) {
       f.shooting = false
@@ -949,9 +961,9 @@ function update(dt) {
         const r = Math.floor(f.y + 0.3), free = [f.lane - 1, f.lane + 1].filter(l => l >= 0 && l < COLS && !unitAt(l, r) && !unitAt(l, r + 1) && !unitAt(l, r - 1)).sort(() => Math.random() - 0.5)
         if (free.length) { f.slide = { from: f.lane, t: 0 }; f.lane = free[0]; f.switched = (f.switched ?? 0) + 1; f.eating = null; continue }
       }
-      if (u.type === 'velites' && !u.fell && canStand(u.lane, u.row + 1)) { u.fell = true; moveUnit(u, u.lane, u.row + 1); continue }   // velites fall back, once
+      if (u.type === 'velites' && !u.fell && canStand(u.lane, u.row + f.dir)) { u.fell = true; moveUnit(u, u.lane, u.row + f.dir); continue }   // velites fall back, once
       if (u.type === 'caltrops' && u.armed) { explode(u); continue }
-      if (FOES[f.type].jumps && !f.jumped) { f.jumped = true; f.jump = { from: f.y, to: u.row + 1.35, t: 0 }; f.eating = null; continue }
+      if (FOES[f.type].jumps && !f.jumped) { f.jumped = true; f.jump = { from: f.y, to: f.dir < 0 ? u.row - 0.35 : u.row + 1.35, t: 0 }; f.eating = null; continue }
       f.eating = u; u.hp -= FOES[f.type].dps * dt; u.hurt = 0.12; sfx.chop()
       if (u.hp < u.max * 0.5 && u.type !== 'triarius') tutorial('hurt')
       if (u.hp <= 0) removeUnit(u)
@@ -959,11 +971,13 @@ function update(dt) {
       f.eating = null
       // archers stop within range of the first soldier ahead and shoot
       if (bow) {
-        const target = G.units.filter(x => x.lane === f.lane && !x.travel && x.row + 0.82 > f.y).sort((a, b) => a.row - b.row)[0]
-        f.shooting = !!target && target.row + 0.82 - f.y <= bow.range && f.y > -0.4
+        const target = f.dir < 0
+          ? G.units.filter(x => x.lane === f.lane && !x.travel && x.row + 0.82 < f.y).sort((a, b) => b.row - a.row)[0]
+          : G.units.filter(x => x.lane === f.lane && !x.travel && x.row + 0.82 > f.y).sort((a, b) => a.row - b.row)[0]
+        f.shooting = !!target && Math.abs(target.row + 0.82 - f.y) <= bow.range && (f.dir < 0 ? f.y < ROWS + 0.4 : f.y > -0.4)
         if (f.shooting) {
           f.cd -= dt
-          if (f.cd <= 0) { f.cd = bow.reload; f.anim = 0.3; G.foeShots.push({ lane: f.lane, y: f.y - 0.35, dmg: bow.dmg, dx: f.dx, stone: !!bow.sling }); bow.sling ? sfx.sling() : sfx.bow() }
+          if (f.cd <= 0) { f.cd = bow.reload; f.anim = 0.3; G.foeShots.push({ lane: f.lane, y: f.y - (f.dir < 0 ? 0.6 : 0.35), dir: f.dir, dmg: bow.dmg, dx: f.dx, stone: !!bow.sling }); bow.sling ? sfx.sling() : sfx.bow() }
           continue
         }
       }
@@ -980,8 +994,14 @@ function update(dt) {
         }
       }
       if (F.charges && !f.charged && f.y > 3) { f.charged = true; f.speed = F.after }
-      f.y = Math.min(f.y + v * dt, e.state === 'charge' ? ROWS + 0.35 : 99)
+      if (f.dir < 0) f.y = Math.max(f.y - v * dt, G.equitesTop[f.lane]?.state === 'charge' ? -0.35 : -99)
+      else f.y = Math.min(f.y + v * dt, e.state === 'charge' ? ROWS + 0.35 : 99)
       if (Math.random() < dt * 1.5) G.fx.push({ kind: 'dust', x: foeX(f), y: ry(f.y), vx: (Math.random() - 0.5) * 12, vy: -6, t: 0.5 })
+    }
+    if (f.dir < 0 && f.y <= -0.3) {   // through the far line: the equites on that side charge
+      const e = G.equitesTop[f.lane]
+      if (e.state === 'ready') { e.state = 'charge'; G.charges++; G.shake = Math.max(G.shake, 6); sfx.charge(); announce('The equites charge!') }
+      else if (e.state === 'used') return lose()
     }
     if (f.y >= ROWS + 0.3) {
       if (LEVEL.openLanes && F.elephant && !G.units.some(x => x.lane === f.lane)) {   // Scipio's lanes: down an empty lane, an elephant runs out of the battle
@@ -1001,6 +1021,13 @@ function update(dt) {
     for (const f of G.foes) if (f.lane === lane && f.hp > 0 && Math.abs(f.y - e.y) < 0.6) hurtFoe(f, 9999)
     if (Math.random() < dt * 30) G.fx.push({ kind: 'dust', x: lx(lane) + (Math.random() - 0.5) * cell * 0.5, y: ry(e.y), vx: (Math.random() - 0.5) * 40, vy: -Math.random() * 30, t: 0.6 })
     if (e.y < -1.3) e.state = 'used'
+  }
+  for (const [lane, e] of G.equitesTop.entries()) {   // on two fronts, the equites at the top ride down their lane
+    if (e.state !== 'charge') continue
+    e.y += 4.2 * dt
+    for (const f of G.foes) if (f.lane === lane && f.hp > 0 && Math.abs(f.y - e.y) < 0.6) hurtFoe(f, 9999)
+    if (Math.random() < dt * 30) G.fx.push({ kind: 'dust', x: lx(lane) + (Math.random() - 0.5) * cell * 0.5, y: ry(e.y), vx: (Math.random() - 0.5) * 40, vy: -Math.random() * 30, t: 0.6 })
+    if (e.y > ROWS + 1.3) e.state = 'used'
   }
   G.foes = G.foes.filter(f => f.hp > 0)
   for (const c of G.corpses) c.t += dt
@@ -1067,15 +1094,17 @@ function draw() {
     drawFoe(ctx, f, T); ctx.restore()
     if (f.hp < f.max || (f.shieldMax && f.shield < f.shieldMax)) hpBar(foeX(f), ry(f.y) - (FOES[f.type].elephant ? 140 : f.type === 'calf' ? 74 : f.type === 'phalangite' ? 80 : 74) * k, (f.hp + f.shield) / (f.max + f.shieldMax), f.shield > 0 ? '#b08a3e' : '#e2574c')
   }])
+  for (const [lane, e] of G.equitesTop.entries()) if (e.state !== 'used') items.push([ry(e.y), () => { ctx.save(); ctx.translate(lx(lane), ry(e.y)); ctx.scale(k * 0.9, k * 0.9); drawEques(ctx, e, T); ctx.restore() }])
   for (const [lane, e] of G.equites.entries()) if (e.state !== 'used') items.push([ry(e.y), () => { ctx.save(); ctx.translate(lx(lane), ry(e.y)); ctx.scale(k * 0.9, k * 0.9); drawEques(ctx, e, T); ctx.restore() }])
   for (const r of G.runners) items.push([ry(r.y), () => { ctx.save(); ctx.translate(lx(r.lane), ry(r.y)); ctx.scale(k, k); drawPig(ctx, T, true); ctx.restore() }])
   items.sort((a, b) => a[0] - b[0]).forEach(([, fn]) => fn())
   for (const s of G.foeShots) { const x = lx(s.lane) + s.dx * cell, y = ry(s.y) - 20 * k; if (s.stone) { ctx.fillStyle = '#5f5f58'; ctx.beginPath(); ctx.arc(x, y, 3 * k + 1, 0, TAU); ctx.fill(); continue } line(ctx, x, y - 9 * k, x, y + 5 * k, '#3f2a16', 1.5); line(ctx, x - 2.5 * k, y + 2 * k, x, y + 6 * k, '#9aa3aa', 1.5); line(ctx, x + 2.5 * k, y + 2 * k, x, y + 6 * k, '#9aa3aa', 1.5) }
   // stones and javelins
   for (const s of G.shots) {
-    const sideways = Math.min(1, (s.y0 - s.y) / 0.9), x = lx(s.from ?? s.lane) + (lx(s.lane) - lx(s.from ?? s.lane)) * sideways + s.x0 * cell, y = ry(s.y) - 14 * k
+    const sideways = Math.min(1, Math.abs(s.y0 - s.y) / 0.9), x = lx(s.from ?? s.lane) + (lx(s.lane) - lx(s.from ?? s.lane)) * sideways + s.x0 * cell, y = ry(s.y) - 14 * k
     if (s.kind === 'stone') { ctx.fillStyle = '#5f5f58'; ctx.beginPath(); ctx.arc(x, y, 3 * k + 1, 0, TAU); ctx.fill() }
     else if (s.kind === 'bolt') { line(ctx, x, y + 14 * k, x, y - 8 * k, '#4a3420', 3); line(ctx, x, y - 6 * k, x, y - 13 * k, '#cfd4d8', 2.6) }
+    else if (s.dir > 0) { line(ctx, x, y - 12 * k, x, y + 4 * k, '#6b4a2b', 2); line(ctx, x, y + 2 * k, x, y + 9 * k, '#cfd4d8', 1.8) }   // a javelin thrown down the field
     else { line(ctx, x, y + 12 * k, x, y - 4 * k, '#6b4a2b', 2); line(ctx, x, y - 2 * k, x, y - 9 * k, '#cfd4d8', 1.8) }
   }
   // grain

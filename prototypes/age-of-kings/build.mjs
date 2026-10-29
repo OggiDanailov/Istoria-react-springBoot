@@ -94,7 +94,7 @@ if (!chapters.length) throw new Error('No chapters with game data')
 const template = fs.readFileSync(path.join(HERE, 'template.html'), 'utf8')
 // Map Drop: Italy for the early chapters, the Mediterranean once Rome fights overseas (as in content-gen)
 function inArea(p, area = 'italy') {
-  const [lat, lon] = area === 'mediterranean' ? [[29, 47.5], [-10, 37]] : [[36, 47.5], [6, 19.5]]
+  const [lat, lon] = area === 'wide' ? [[29, 56], [-10, 46]] : area === 'mediterranean' ? [[29, 47.5], [-10, 37]] : [[36, 47.5], [6, 19.5]]
   return p.lat > lat[0] && p.lat < lat[1] && p.lon > lon[0] && p.lon < lon[1]
 }
 const land = fs.readFileSync(path.join(HERE, 'land.json'), 'utf8').trim()

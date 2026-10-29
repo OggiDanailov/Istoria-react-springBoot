@@ -636,8 +636,10 @@ try { openAll = localStorage.getItem(OPEN_ALL_KEY) === '1' } catch {}
 const isUnlocked = i => i === 0 || openAll || !!tests[CHAPTERS[i - 1].id]?.won
 const battleOf = i => { const n = battleName(i); return /^The /.test(n) ? 'the ' + n.slice(4) : 'the battle of ' + n }
 const Cap = t => t[0].toUpperCase() + t.slice(1)
-const lockedText = i => HoldTheLine.LEVELS[i] ? `Locked: win ${battleOf(i)} first` : `Locked: finish ${CHAPTERS[i].short} first`
-const battleName = i => HoldTheLine.LEVELS[i]?.name ?? CHAPTERS[i].battle?.name ?? 'the battle'
+// a chapter's battle: named by id in chapters.json (battle.level), or else the battle in the same position
+const levelOf = i => { const b = CHAPTERS[i]?.battle; return !b ? null : b.level ? HoldTheLine.LEVELS.find(L => L.id === b.level) ?? null : HoldTheLine.LEVELS[i] ?? null }
+const lockedText = i => levelOf(i) ? `Locked: win ${battleOf(i)} first` : `Locked: finish ${CHAPTERS[i].short} first`
+const battleName = i => levelOf(i)?.name ?? CHAPTERS[i].battle?.name ?? 'the battle'
 
 function renderHud() {
   const t = testOf(CH), rounds = testRounds(), done = rounds.filter(r => roundDone(r, t)).length, any = Object.keys(t.answers).length
@@ -649,7 +651,7 @@ function renderHud() {
 }
 const VET_NAMES = { slinger: ['slinger', 'slingers'], triarius: ['triarius', 'triarii'], hastatus: ['hastatus', 'hastati'] }
 function armyLine(score) {
-  const a = HoldTheLine.armyFor(score, HoldTheLine.LEVELS[chapterIndex])
+  const a = HoldTheLine.armyFor(score, levelOf(chapterIndex))
   const vets = Object.entries(a.vets).filter(([, n]) => n).map(([t, n]) => `${n} veteran ${VET_NAMES[t]?.[n === 1 ? 0 : 1] ?? t}`)
   return `${a.grain} grain${vets.length ? ' and ' + vets.join(', ') : ', no veterans'}`
 }
@@ -917,7 +919,7 @@ function renderHome() {
       <button class="ghost" id="up">${eraChapters(ERAS.find(e => e.id === CH.era)).length > 1 ? 'Chapters' : 'All eras'}</button></header>
     ${reviewCardHtml()}
     ${testCardHtml()}
-    ${openAll && testComplete(t) && HoldTheLine.LEVELS[chapterIndex] ? reviewBattleHtml(HoldTheLine.LEVELS[chapterIndex]) : ''}
+    ${openAll && testComplete(t) && levelOf(chapterIndex) ? reviewBattleHtml(levelOf(chapterIndex)) : ''}
     ${SECTIONS.map(([type, label]) => GAMES[type].sets.length ? `<p class="section-label">${label}</p>${list(type)}` : '').join('')}
     <p class="footnote">Generated from Wikipedia and fact-checked by AI. Early Roman dates are the traditional ones; historians doubt many of them.</p>`
   app.querySelector('#up').addEventListener('click', leaveChapter)
@@ -950,7 +952,7 @@ const reviewBattleHtml = L => `<section class="battle-card review-card">
 // The card at the top of a chapter: the test while it's under way, then the battle
 function testCardHtml() {
   const t = testOf(CH), rounds = testRounds(), done = rounds.filter(r => roundDone(r, t)).length
-  const L = HoldTheLine.LEVELS[chapterIndex], score = pct(t.score), next = CHAPTERS[chapterIndex + 1]
+  const L = levelOf(chapterIndex), score = pct(t.score), next = CHAPTERS[chapterIndex + 1]
   const lost = t.battles.filter(b => !b.won && b.attempt === t.attempt).length
   if (done < rounds.length) {
     const up = nextTestRound(t)
@@ -1711,11 +1713,11 @@ function drawFigure(ctx, x, y, kind, { dir = 1, walk = null, attack = null, scal
 function renderBattle() {
   const t = testOf(CH), i = chapterIndex, review = state.reviewScore != null && openAll
   const score = review ? state.reviewScore : pct(t.score)
-  if (!HoldTheLine.LEVELS[i] || (!review && !testComplete(t))) return go({ screen: 'home' })   // no battle built yet, or the test isn't done
+  if (!levelOf(i) || (!review && !testComplete(t))) return go({ screen: 'home' })   // no battle built yet, or the test isn't done
   window.scrollTo(0, 0)
   app.innerHTML = '<div class="battle-host" id="battle-host"></div>'
   HoldTheLine.mount(app.querySelector('#battle-host'), {
-    mode: 'chapter', level: i, score,
+    mode: 'chapter', level: HoldTheLine.LEVELS.indexOf(levelOf(i)), score,
     onExit: r => {
       if (!r.left && !review) {
         t.battles.push({ won: !!r.won, score, attempt: t.attempt, at: new Date().toISOString() })

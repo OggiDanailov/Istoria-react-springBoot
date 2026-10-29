@@ -1,0 +1,179 @@
+{
+  "batchName": "Late Republic: Marius and the Northern Invaders (121-100 BCE) - Easy Batch 1",
+  "chapterName": "Late Republic: Marius and the Northern Invaders (121-100 BCE)",
+  "difficulty": 1,
+  "batchOrder": 1,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Why, in part, did Rome keep re-electing Marius as consul during the northern threat?",
+      "options": [
+        "To reward him for capturing Carthage",
+        "To avoid another clash between rival commanders",
+        "Because the Senate had been dissolved",
+        "Because no other candidates were legally eligible"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#consul-again-and-again",
+      "explanation": "Romans wanted to avoid a repeat of Arausio, where feuding commanders had doomed the army. Marius's rebuilt army was drilled hard near Aquae Sextiae.",
+      "sourceQuote": "Rome kept re-electing him, partly to avoid another clash between rival commanders like the one that had doomed Arausio.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Numidia, the kingdom at the centre of the war against Jugurtha, lay roughly in which modern country?",
+      "options": [
+        "Egypt",
+        "Algeria",
+        "Libya",
+        "Morocco"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#jugurtha",
+      "explanation": "Numidia lay on the north African coast, roughly modern Algeria. It had been a loyal ally of Rome since the wars against Carthage.",
+      "sourceQuote": "Numidia was a kingdom on the north African coast, roughly modern Algeria, and a loyal ally of Rome since the wars against Carthage (*Carthago*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "What happened to Saturninus and the other prisoners locked in the Senate house?",
+      "options": [
+        "They were exiled to Africa",
+        "They escaped disguised as slaves",
+        "A mob stoned them with roof tiles",
+        "They were pardoned by Marius"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#saturninus-and-the-sixth-consulship",
+      "explanation": "A mob climbed onto the roof, tore off the tiles and stoned the prisoners to death. This may have happened with Marius's tacit approval.",
+      "sourceQuote": "He locked them in the Senate house to await trial, but a mob climbed onto the roof, tore off the tiles and stoned the prisoners to death, possibly with Marius's tacit approval.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which aristocrat, known for honesty and courage, did the Senate send in 109 BC to take over the war against Jugurtha?",
+      "options": [
+        "Sulla",
+        "Metellus",
+        "Saturninus",
+        "Scipio"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#metellus-and-the-muthul",
+      "explanation": "The Senate sent Metellus after years of disgrace in the war. He retrained a slack army and chose officers for ability rather than rank.",
+      "sourceQuote": "After years of disgrace, the Senate sent Metellus, an aristocrat with a reputation for honesty and courage, to take over the war against Jugurtha, the defiant king of Numidia in north Africa.",
+      "reviewFlags": []
+    },
+    {
+      "question": "In Roman politics, what did it mean to call Marius a \"new man\" (novus homo)?",
+      "options": [
+        "He was the youngest man ever elected consul",
+        "He had only recently been granted citizenship",
+        "He was the first of his family to reach high office",
+        "He had been adopted into a patrician family"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#marius-origins",
+      "explanation": "A novus homo was the first of his family to reach high office. The old aristocracy never let Marius forget his status as an outsider.",
+      "sourceQuote": "In Rome, though, Marius was a \"new man\" (*novus homo*), the first of his family to reach high office, and the old aristocracy never let him forget it.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How many consulships in a row did Marius hold from 104 to 100 BC?",
+      "options": [
+        "Three",
+        "Four",
+        "Six",
+        "Five"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#consul-again-and-again",
+      "explanation": "Marius held five consecutive consulships from 104 to 100 BC, on top of his first in 107 BC. This placed unprecedented power in one man's hands.",
+      "sourceQuote": "In the end Marius held five consulships in a row, from 104 to 100 BC, on top of his first in 107 BC.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Arausio in 105 BC was Rome's worst defeat since which earlier disaster?",
+      "options": [
+        "Cannae",
+        "Carrhae",
+        "The Allia",
+        "The Caudine Forks"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#cimbri-and-arausio",
+      "explanation": "Arausio was Rome's worst defeat since Hannibal's victory at Cannae over a century earlier. Panic swept the city amid talk of the \"Cimbrian terror\".",
+      "sourceQuote": "Arausio was Rome's worst defeat since Hannibal's victory at Cannae over a century earlier.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Near which hill town south-east of Rome was Gaius Marius born, around 157 BC?",
+      "options": [
+        "Capua",
+        "Tusculum",
+        "Praeneste",
+        "Arpinum"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#marius-origins",
+      "explanation": "Marius was born near Arpinum, a hill town south-east of Rome. His family was locally prominent and wealthy, probably from large landholdings.",
+      "sourceQuote": "Gaius Marius, the outsider who would be elected to Rome's highest office more often than any man before him, was born around 157 BC near Arpinum, a hill town south-east of Rome.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did Marius force Saturninus and his rebels on the Capitoline Hill to surrender in 100 BC?",
+      "options": [
+        "He set fire to the temple",
+        "He marched a legion into the city",
+        "He cut off their water supply",
+        "He bribed their bodyguards"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#saturninus-and-the-sixth-consulship",
+      "explanation": "Marius rallied volunteers and veterans and cut off the water supply to the Capitoline Hill. He refused to bring an army near the city.",
+      "sourceQuote": "Instead he rallied volunteers and veterans, cut off the water supply to the Capitoline Hill where the rebels held out, and forced their surrender.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Where and when did the idea of the \"Marian reforms\" of the Roman army originate?",
+      "options": [
+        "With French scholars in the 1700s",
+        "With German scholars in the 1840s",
+        "With Roman historians under Augustus",
+        "With Byzantine chroniclers"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#marian-reforms-debate",
+      "explanation": "The idea began with German scholars in the 1840s. Most specialists now call it a construct of modern scholarship.",
+      "sourceQuote": "The idea began with German scholars in the 1840s.",
+      "reviewFlags": []
+    }
+  ]
+}

@@ -1,0 +1,189 @@
+{
+  "batchName": "Late Republic: Marius and the Northern Invaders (121-100 BCE) - Medium Batch 1",
+  "chapterName": "Late Republic: Marius and the Northern Invaders (121-100 BCE)",
+  "difficulty": 2,
+  "batchOrder": 3,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "As tribune of the plebs in 119 BC, what law did Marius pass?",
+      "options": [
+        "He limited consuls to a single term",
+        "He narrowed voting walkways to stop the rich peering at ballots",
+        "He banned senators from trading overseas",
+        "He gave citizenship to all Latin allies",
+        "He doubled the state grain ration"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#marius-origins",
+      "explanation": "Marius narrowed the walkways where voters cast ballots so the rich could no longer spy on their choices. His career afterwards was bumpy, including a bribery charge that ended in acquittal.",
+      "sourceQuote": "He passed a law narrowing the walkways where voters cast their ballots, so that the rich could no longer peer at their choices.",
+      "reviewFlags": []
+    },
+    {
+      "question": "According to ancient writers, what did a fortune-teller in Utica urge Marius to do?",
+      "options": [
+        "Sacrifice to Neptune before sailing",
+        "Beware the ides of March",
+        "Marry into the family of Metellus",
+        "Trust the gods and test his luck as often as he could",
+        "Return to Arpinum and avoid politics"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#marius-becomes-consul",
+      "explanation": "Ancient writers say the Utica fortune-teller told Marius to trust the gods and test his luck often. He went on to campaign for the consulship from the camp.",
+      "sourceQuote": "Ancient writers say a fortune-teller in the African city of Utica urged Marius to trust the gods and test his luck as often as he could.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did Marius's army turn the tables after being ambushed near Serif in 106 BC?",
+      "options": [
+        "It held two hills until nightfall, then attacked the enemy camp at dawn",
+        "It feigned surrender and struck during the parley",
+        "It retreated to the coast and was rescued by the fleet",
+        "It formed a hollow square and marched to Cirta",
+        "It bribed the Mauretanian king to switch sides mid-battle"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#capture-of-jugurtha",
+      "explanation": "The Romans held two hills until nightfall, then routed the enemy with a dawn surprise attack on their camp. The ambush was led by Jugurtha and his father-in-law, the king of Mauretania.",
+      "sourceQuote": "The Romans held two hills until nightfall, then routed the enemy with a surprise attack on their camp at dawn.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What fatal problem doomed the huge Roman force at Arausio in 105 BC?",
+      "options": [
+        "The two commanders loathed each other and camped on opposite banks",
+        "Plague swept through the camp",
+        "The army was caught crossing the Alps in winter",
+        "Their supply fleet was sunk in a storm",
+        "Allied Gauls deserted in the middle of battle"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#cimbri-and-arausio",
+      "explanation": "The commanders camped on opposite banks of the Rhône; one attacked alone and was wiped out, then the other's army was destroyed. Only a few hundred Romans escaped.",
+      "sourceQuote": "The two commanders loathed each other and camped on opposite banks of the Rhône.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What decided the battle against the Teutones near Aquae Sextiae?",
+      "options": [
+        "A downhill charge by the Roman legions",
+        "A flood that swept away their wagons",
+        "Their allies switching sides",
+        "About 3,000 hidden men striking them from behind",
+        "A Roman cavalry charge led by Sulla"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#aquae-sextiae-and-vercellae",
+      "explanation": "As the Teutones charged uphill, about 3,000 Romans hidden nearby hit them from behind. Ancient estimates of the dead and captured ran from 100,000 to 200,000.",
+      "sourceQuote": "Days later the Teutones charged uphill at the Roman position, only to be hit from behind by about 3,000 men hidden nearby.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What stroke of luck gave Marius time to rebuild Rome's army after Arausio?",
+      "options": [
+        "A harsh winter killed most of the Teutones",
+        "The Cimbri wandered into Spain instead of marching on Italy",
+        "The Cimbri agreed to a truce",
+        "The Cimbri's king died suddenly",
+        "The Gauls blocked the Alpine passes"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#consul-again-and-again",
+      "explanation": "Rather than invading Italy, the Cimbri wandered into Spain, buying Marius precious time. He used it to drill his troops and build a network of spies.",
+      "sourceQuote": "Instead of marching on Italy, the Cimbri wandered into Spain, giving Marius precious time.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What happened to the propertyless volunteers Marius recruited in 107 BC, according to modern specialists?",
+      "options": [
+        "They were enrolled as citizen cavalry",
+        "They became Rome's first standing army",
+        "They settled permanently in Numidia",
+        "They were discharged after the African war",
+        "They formed the core of the army at Vercellae"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#marian-reforms-debate",
+      "explanation": "The 107 BC recruits were discharged after Africa, and the army Marius led against the Cimbri was raised traditionally. Rome kept relying mainly on conscription.",
+      "sourceQuote": "Those men were discharged after Africa, and the army Marius took over against the Cimbri had been raised in the traditional way.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did Jugurtha set his trap for the Romans near the Muthul River?",
+      "options": [
+        "He bribed their scouts to lead them astray",
+        "He lured them into a narrow mountain pass",
+        "He cut them off from water and caught them on open desert",
+        "He attacked at night with war elephants",
+        "He flooded their camp by damming the river"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#metellus-and-the-muthul",
+      "explanation": "Jugurtha cut the Romans off from water and caught them in open desert, where his light cavalry had every advantage. The Numidian horsemen broke the army into isolated groups.",
+      "sourceQuote": "He cut the Romans off from the water they needed and caught them on open desert, where his nimble light cavalry had every advantage.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Whose public appeal helped carry Marius's uncertain re-election for 102 BC?",
+      "options": [
+        "Sulla",
+        "Catulus",
+        "Saturninus",
+        "Jugurtha",
+        "Metellus"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#consul-again-and-again",
+      "explanation": "Saturninus, a young tribune and rabble-rousing champion of the poor, publicly backed Marius. The two later became partners in the bloody year 100 BC.",
+      "sourceQuote": "Re-election for 102 BC was not certain, but a public appeal from Saturninus, a young tribune and rabble-rousing champion of the poor, helped carry him.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Some modern historians argue that what, rather than Marius, taught Roman soldiers to turn on fellow Romans?",
+      "options": [
+        "Brutal civil fighting with Italian allies",
+        "Service in Hellenistic mercenary armies",
+        "Exposure to Gallic customs",
+        "The wars against Carthage",
+        "The slave revolts in Sicily"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#marian-reforms-debate",
+      "explanation": "Some historians point to brutal civil fighting with Italian allies instead. Much of the old picture of Marius rests on two moralising ancient critics.",
+      "sourceQuote": "Some modern historians argue instead that brutal civil fighting with Italian allies, not Marius, taught Roman soldiers to turn their swords on fellow Romans.",
+      "reviewFlags": []
+    }
+  ]
+}

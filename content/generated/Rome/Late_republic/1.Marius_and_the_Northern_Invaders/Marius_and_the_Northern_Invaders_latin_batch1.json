@@ -1,0 +1,145 @@
+{
+  "batchName": "Late Republic: Marius and the Northern Invaders (121-100 BCE) - Latin words",
+  "chapterName": "Late Republic: Marius and the Northern Invaders (121-100 BCE)",
+  "difficulty": 1,
+  "batchOrder": 9,
+  "description": "Written by hand from the chapter text: the Latin words it explains",
+  "questions": [
+    {
+      "question": "Marius was a novus homo. What did that mean?",
+      "options": [
+        "The first of his family to reach high office",
+        "A newly freed slave",
+        "A newcomer to Rome from Africa",
+        "A young man under thirty"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#marius-origins",
+      "explanation": "The old aristocracy never let him forget it.",
+      "sourceQuote": "In Rome, though, Marius was a \"new man\" (*novus homo*), the first of his family to reach high office",
+      "reviewFlags": []
+    },
+    {
+      "question": "In 104 BC Jugurtha was paraded in Marius’s triumphus. What was it?",
+      "options": [
+        "The grand victory procession through Rome",
+        "A public trial in the Forum",
+        "A gladiator show",
+        "A sacrifice on the Capitol"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#capture-of-jugurtha",
+      "explanation": "Jugurtha later died in an underground prison.",
+      "sourceQuote": "In 104 BC Jugurtha was paraded in Marius's triumph (*triumphus*), the grand victory procession through Rome",
+      "reviewFlags": []
+    },
+    {
+      "question": "What was the terror cimbricus?",
+      "options": [
+        "The panic in Rome after the disaster at Arausio",
+        "A Germanic war cry",
+        "A Roman law against the Cimbri",
+        "The name of the Cimbri’s king"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#cimbri-and-arausio",
+      "explanation": "Romans expected the barbarians at the gates at any moment.",
+      "sourceQuote": "Romans spoke of the \"Cimbrian terror\" (*terror cimbricus*)",
+      "reviewFlags": []
+    },
+    {
+      "question": "Marius was charged with ambitus after an election. What was it?",
+      "options": [
+        "Electoral bribery",
+        "Treason",
+        "Cowardice in battle",
+        "Stealing public money"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#marius-origins",
+      "explanation": "He was acquitted, and later a governorship in Spain made him rich.",
+      "sourceQuote": "He was then charged with electoral bribery (*ambitus*), though he was acquitted.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Who were the capite censi that Marius recruited in 107 BC?",
+      "options": [
+        "Men with no property at all, the “head count”",
+        "Veterans of the Numidian war",
+        "Italian allies",
+        "Freed slaves"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#capture-of-jugurtha",
+      "explanation": "Normally only men who owned property could serve in the legions.",
+      "sourceQuote": "men with no property at all, the so-called \"head count\" (*capite censi*)",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which body gave the war against Jugurtha to Marius, overruling the Senate?",
+      "options": [
+        "The Assembly of the plebs (concilium plebis)",
+        "The college of priests",
+        "The consuls",
+        "The Centuriate Assembly"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#marius-becomes-consul",
+      "explanation": "Historians see this as a turning point: generals after Marius copied it.",
+      "sourceQuote": "took the question to the Assembly of the plebs (*concilium plebis*), the popular voting body.",
+      "reviewFlags": []
+    },
+    {
+      "question": "In the old picture of the “Marian reforms”, Marius made soldiers of the proletarii. Who were they?",
+      "options": [
+        "The poorest class",
+        "The Italian allies",
+        "The cavalry",
+        "The sons of senators"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#marian-reforms-debate",
+      "explanation": "Most specialists now call this picture “a construct of modern scholarship”.",
+      "sourceQuote": "drawn from the poorest class (*proletarii*)",
+      "reviewFlags": []
+    },
+    {
+      "question": "What was new about the senatus consultum ultimum of 100 BC?",
+      "options": [
+        "For the first time it targeted serving officials",
+        "It was the first time the Senate met",
+        "It gave Marius a seventh consulship",
+        "It banished Metellus"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#saturninus-and-the-sixth-consulship",
+      "explanation": "It told the magistrates to do whatever was needed to restore order.",
+      "sourceQuote": "For the first time, such a decree targeted serving officials rather than private citizens.",
+      "reviewFlags": []
+    }
+  ]
+}

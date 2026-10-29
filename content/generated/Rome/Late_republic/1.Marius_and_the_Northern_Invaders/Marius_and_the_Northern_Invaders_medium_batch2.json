@@ -1,0 +1,191 @@
+{
+  "batchName": "Late Republic: Marius and the Northern Invaders (121-100 BCE) - Medium Batch 2",
+  "chapterName": "Late Republic: Marius and the Northern Invaders (121-100 BCE)",
+  "difficulty": 2,
+  "batchOrder": 4,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Which measures did the tribune Saturninus push in 100 BC? (select all that apply)",
+      "options": [
+        "Farmland for veterans, including Italian allies",
+        "Cancellation of all debts",
+        "Cheaper state grain",
+        "Exile for Metellus",
+        "Abolition of the Senate"
+      ],
+      "correctAnswers": [
+        0,
+        2,
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#saturninus-and-the-sixth-consulship",
+      "explanation": "Saturninus pushed cheaper grain, farmland for veterans including Italian allies, and exile for Metellus. Marius helped pass the land law and drive Metellus out before growing uneasy.",
+      "sourceQuote": "His partner was Saturninus, a radical tribune serving his second term, who pushed laws offering cheaper state grain, farmland for veterans, including Italian allies, and exile for Marius's old enemy Metellus, his former commander in Africa.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What act during the elections of 100 BC led the Senate to pass its emergency decree?",
+      "options": [
+        "Marius marched troops into the Forum",
+        "Metellus returned from exile with an army",
+        "Italian allies stormed the Senate house",
+        "Saturninus seized the treasury",
+        "Saturninus and an ally had a rival consular candidate murdered"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#saturninus-and-the-sixth-consulship",
+      "explanation": "The murder of a rival consular candidate prompted the senatus consultum ultimum. It told magistrates to do whatever was needed to restore order.",
+      "sourceQuote": "When Saturninus and an ally had a rival candidate for consul murdered during the elections, the Senate passed its emergency decree (*senatus consultum ultimum*), telling the magistrates to do whatever was needed to restore order.",
+      "reviewFlags": []
+    },
+    {
+      "question": "At which siege did the young Marius first make his name in 134 BC?",
+      "options": [
+        "Carthage",
+        "Corinth",
+        "Numantia",
+        "Capsa",
+        "Cirta"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#marius-origins",
+      "explanation": "Marius made his name at the siege of Numantia, a Celtic stronghold in Spain. A later story says his commander tapped him on the shoulder and said, \"Perhaps this is the man.\"",
+      "sourceQuote": "He first made his name as a young officer in 134 BC at the siege of Numantia, a Celtic stronghold in Spain.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did Marius do to the town of Capsa after it surrendered?",
+      "options": [
+        "He gave it to the king of Mauretania",
+        "He resettled it with Roman veterans",
+        "He killed its adult men and enslaved the rest",
+        "He held its leaders hostage for ransom",
+        "He spared it and made it his base"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#capture-of-jugurtha",
+      "explanation": "After a dangerous desert march, Marius killed Capsa's adult men and enslaved the rest. Winning proved harder than he had boasted.",
+      "sourceQuote": "He made a dangerous desert march to the town of Capsa in the far south and, after it surrendered, killed its adult men and enslaved the rest.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did Jugurtha do after escaping the Battle of the Muthul?",
+      "options": [
+        "He dismissed his weaker troops and turned to guerrilla warfare",
+        "He sailed to Rome to bribe the Senate",
+        "He surrendered to Metellus",
+        "He hired Gallic mercenaries for a pitched battle",
+        "He fled to Egypt"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#metellus-and-the-muthul",
+      "explanation": "Jugurtha dismissed his weaker troops and switched to guerrilla warfare. Metellus took town after town, but the king slipped away every time.",
+      "sourceQuote": "Jugurtha escaped, dismissed his weaker troops and switched to guerrilla warfare.",
+      "reviewFlags": []
+    },
+    {
+      "question": "After Cirta surrendered in 113 BC, whom did Jugurtha kill along with his cousin?",
+      "options": [
+        "Mauretanian envoys",
+        "Italian traders who had helped defend it",
+        "Carthaginian exiles",
+        "The city's priests",
+        "The Roman commissioners"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#jugurtha",
+      "explanation": "Jugurtha killed his cousin along with the Italian traders who had helped defend Cirta. Popular outrage pushed Rome toward war.",
+      "sourceQuote": "When it surrendered, he killed his cousin along with the Italian traders who had helped defend it.",
+      "reviewFlags": []
+    },
+    {
+      "question": "A Roman army in the Jugurthine War was forced to \"pass under the yoke\". What did this involve?",
+      "options": [
+        "Wearing iron collars in a parade",
+        "Surrendering their eagle standards",
+        "Stooping beneath a frame of spears",
+        "Being sold into slavery",
+        "Pulling a plough across Numidian fields"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#jugurtha",
+      "explanation": "The yoke was a frame of spears that beaten soldiers had to stoop beneath, a deep humiliation. It followed a lenient peace that reeked of bribery.",
+      "sourceQuote": "Then another Roman army was trapped and forced to pass under the yoke (*iugum*), a frame of spears that beaten soldiers had to stoop beneath.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What honorary name did Metellus receive after he was replaced and sailed home?",
+      "options": [
+        "Macedonicus",
+        "Africanus",
+        "Magnus",
+        "Numidicus",
+        "Germanicus"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#marius-becomes-consul",
+      "explanation": "Metellus sailed home in fury but received a victory parade and the name Numidicus. Command of the war passed to Marius by popular vote.",
+      "sourceQuote": "Metellus sailed home in fury and received a victory parade and the honorary name Numidicus.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Why did the Cimbri annihilate a Roman army at Noreia?",
+      "options": [
+        "Jugurtha had paid them to attack",
+        "A Roman envoy had insulted their king",
+        "They discovered the consul had laid an ambush while they were leaving",
+        "The Romans refused them land in Italy",
+        "The Romans had seized their cattle"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#cimbri-and-arausio",
+      "explanation": "Ordered to leave Noricum, the Cimbri began to comply until they found the consul had set an ambush. Enraged, they destroyed his army.",
+      "sourceQuote": "A Roman consul ordered them to leave and they began to comply, until they discovered he had laid an ambush.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What sparked the battle near Aquae Sextiae in which the Ambrones were crushed?",
+      "options": [
+        "Ambrones stealing Roman horses",
+        "A Roman herald being killed",
+        "A night raid on the Roman supply train",
+        "A scuffle between Roman water-carriers and bathing Ambrones",
+        "A duel between rival chieftains"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#aquae-sextiae-and-vercellae",
+      "explanation": "A scuffle between Roman servants fetching water and bathing Ambrones exploded into a battle. Days later the Teutones were defeated too.",
+      "sourceQuote": "Near Aquae Sextiae a scuffle between Roman servants fetching water and bathing Ambrones exploded into battle, and the Ambrones were crushed.",
+      "reviewFlags": []
+    }
+  ]
+}
