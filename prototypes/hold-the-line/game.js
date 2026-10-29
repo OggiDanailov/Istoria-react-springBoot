@@ -8,11 +8,11 @@ const SKIN = '#e0b088', SKIN_SHADE = '#c48e66', INK = '#2a211c'
 
 // ---------- the armies ----------
 const UNITS = {
-  cart:     { name: 'Supply cart', short: 'Cart', cost: 50, recharge: 7.5, hp: 300, about: 'Brings a sack of grain every 20 seconds.' },
+  cart:     { name: 'Supply cart', short: 'Cart', cost: 50, recharge: 7.5, hp: 300, grain: true, about: 'Brings a sack of grain every 20 seconds.' },
   slinger:  { name: 'Slinger', short: 'Slinger', cost: 100, recharge: 7.5, hp: 300, reload: 1.5, dmg: 20, range: 99, about: 'Shoots at anyone coming down his lane.' },
   hastatus: { name: 'Hastatus', short: 'Hastatus', cost: 150, recharge: 7.5, hp: 300, reload: 2, dmg: 45, range: 2.7, melee: 35, about: 'Throws heavy javelins at close range, then fights with his sword.' },
   triarius: { name: 'Triarius', short: 'Triarius', cost: 50, recharge: 25, hp: 1500, about: 'A veteran who kneels behind his shield and holds the lane.' },
-  caltrops: { name: 'Caltrops', short: 'Caltrops', cost: 25, recharge: 25, hp: 300, armTime: 10, dmg: 450, about: 'Iron spikes hidden in the grass. They arm after 10 seconds.' },
+  caltrops: { name: 'Caltrops', short: 'Caltrops', cost: 25, recharge: 25, hp: 300, armTime: 10, dmg: 450, trap: true, about: 'Iron spikes hidden in the grass. They arm after 10 seconds.' },
   princeps: { name: 'Princeps', short: 'Princeps', cost: 100, recharge: 10, hp: 700, melee: 55, about: 'A soldier in his prime: tough, and he cuts down whoever reaches him.' },
   shed:     { name: 'Siege shed', short: 'Shed', cost: 75, recharge: 20, hp: 1200, arrowMul: 0.15, about: 'A wooden shed covered in hides, like the ones Livy says the Romans built at Veii. Arrows barely hurt it, so put it in front.' },
   rorarii:  { name: 'Rorarii', short: 'Rorarii', cost: 225, recharge: 7.5, hp: 300, reload: 1.6, dmg: 20, range: 99, spread: true, about: 'Light troops Livy names in the early legion. They throw javelins into three lanes at once.' },
@@ -22,6 +22,13 @@ const UNITS = {
   maniple:  { name: 'Maniple', short: 'Maniple', cost: 125, recharge: 10, hp: 650, melee: 35, flank: 70, about: 'A small, flexible unit. It fights in its own lane and strikes enemies in the lanes beside it from the side, where shields don’t protect them.' },
   torch:    { name: 'Torch-bearer', short: 'Torch', cost: 50, recharge: 12, hp: 100, burn: 3, about: 'Sets a house on fire. Place him on a house: no more defenders can burst out of it, and the square is free again.' },
   lilia:    { name: 'Lilia', short: 'Lilia', cost: 50, recharge: 12, hp: 400, pit: { dmg: 110, slow: 0.5 }, about: 'Caesar’s “lilies” at Alesia: hidden pits with a sharpened stake in each. Enemies walk over them, get hurt and slow down. They don’t block the lane, and they last.' },
+  supplyboat:  { name: 'Supply boat', short: 'Supply', cost: 50, recharge: 7.5, hp: 300, grain: true, ship: 'supply', about: 'A round-bellied merchant boat. Brings a sack of grain every 20 seconds.' },
+  archership:  { name: 'Archer ship', short: 'Archers', cost: 100, recharge: 7.5, hp: 300, reload: 1.5, dmg: 20, range: 99, kind: 'arrow', ship: 'archers', about: 'A light liburnian with archers on deck. Shoots at any ship coming down its lane.' },
+  quinquereme: { name: 'Quinquereme', short: 'Quinquereme', cost: 50, recharge: 25, hp: 1500, ship: 'heavy', about: 'A big warship with a strong hull. It doesn’t attack, but holds the enemy back.' },
+  rammer:      { name: 'Ramming ship', short: 'Rammer', cost: 100, recharge: 10, hp: 700, melee: 55, ship: 'ram', about: 'Fast and nimble, with a bronze ram at the bow. It smashes any ship that comes alongside.' },
+  ballista:    { name: 'Ballista ship', short: 'Ballista', cost: 175, recharge: 15, hp: 300, reload: 3.5, dmg: 110, range: 99, pierce: true, ship: 'ballista', about: 'A ship carrying a bolt-thrower. Each bolt flies through every ship in its lane.' },
+  fireship:    { name: 'Fire pots', short: 'Fire pots', cost: 25, recharge: 25, hp: 300, armTime: 10, dmg: 450, trap: true, ship: 'fire', about: 'A small boat full of burning pitch. Once it’s lit (10 seconds), the first enemy to touch it goes up in flames.' },
+  harpax:      { name: 'Harpax ship', short: 'Harpax', cost: 150, recharge: 12, hp: 350, reload: 4, dmg: 35, range: 99, kind: 'hook', grapple: 4, ship: 'harpax', about: 'Agrippa’s invention: a grappling hook fired from a catapult. It catches an enemy ship and holds it still for 4 seconds.' },
   pigs:     { name: 'War pigs', short: 'Pigs', cost: 75, recharge: 20, hp: 100, trigger: 1.8, about: 'Ancient writers say squealing pigs panicked Pyrrhus’s elephants. The pigs charge the first enemy that comes near; an elephant they reach runs back through its own army.' },
 }
 const FOES = {
@@ -45,11 +52,15 @@ const FOES = {
   bowman:     { name: 'Carthaginian archer', hp: 180, speed: 0.22, dps: 30, bow: { range: 3.2, reload: 2.2, dmg: 25 }, intro: 'Carthaginian archers! They stop out of reach and shoot your front soldier. A siege shed protects your line.' },
   militia:    { name: 'Carthaginian citizen', hp: 170, speed: 0.24, dps: 35, intro: 'Carthage’s citizens defend their streets and homes.' },
   volunteer:  { name: 'Freed slave', hp: 120, speed: 0.4, dps: 30, intro: 'Carthage freed its slaves to fight. They are fast but lightly armed.' },
+  galley:     { name: 'Antony’s warship', hp: 320, shield: 150, speed: 0.2, dps: 45, ship: 'galley', intro: 'Antony’s warships! Their thick timbers soak up the first hits.' },
+  deceres:    { name: 'Great ship', hp: 900, shield: 300, speed: 0.12, dps: 70, bow: { range: 3, reload: 2.5, dmg: 25 }, ship: 'great', intro: 'Antony’s great ships, with towers full of archers. Slow, but very hard to sink. Hold them with a harpax.' },
+  egyptian:   { name: 'Cleopatra’s ship', hp: 220, speed: 0.3, dps: 35, egyptian: true, ship: 'egyptian', intro: 'Cleopatra’s Egyptian squadron, under purple sails.' },
+  flagship:   { name: 'Antony’s flagship', hp: 1200, shield: 300, speed: 0.1, dps: 80, bow: { range: 3, reload: 2.2, dmg: 30 }, flagship: true, ship: 'great', intro: 'Antony’s flagship joins the battle!' },
   calf:       { name: 'Elephant calf', hp: 300, speed: 0.15, dps: 60, intro: 'An elephant calf walks ahead of its mother. Wound it and the mother panics, as happened at Beneventum.' },
   elephant:   { name: 'War elephant', hp: 2000, speed: 0.15, dps: 250, elephant: true, intro: 'War elephants! They crush whatever stands in their way. Send the pigs!' },
 }
-const UNIT_GUIDE = {"cart": "Makes a sack of grain (25 rations) every 20 seconds. It doesn’t fight. <i>Tip: build several early, at the back.</i>", "slinger": "Shoots a stone down his whole lane every 1.5 seconds. Fragile once an enemy reaches him. <i>Tip: put something sturdy in front of him.</i>", "hastatus": "Throws heavy javelins at enemies within about 2½ squares, more than twice a stone’s damage, then fights with his sword when they reach him. <i>Tip: javelins break shields fast.</i>", "triarius": "Five times a slinger’s health and no attack. He holds enemies in place while your other soldiers hit them. <i>Tip: in front of your shooters.</i>", "caltrops": "Hidden iron spikes. After 10 seconds they are armed, and the first enemy to step on them sets them off: everyone on that spot takes a huge hit. Before that, enemies trample them. <i>Tip: a horseman wastes his leap on unarmed caltrops.</i>", "princeps": "A tough swordsman who cuts down whoever reaches his square. <i>Tip: a strong front line against fast raiders.</i>", "shed": "A wooden shed covered in hides. Arrows do almost nothing to it. <i>Tip: put it in front, so archers shoot the shed instead of your slingers.</i>", "rorarii": "Throw javelins into their own lane and both lanes beside it. <i>Tip: in the middle lanes they cover three lanes at once.</i>", "scorpio": "Shoots a heavy bolt every 3½ seconds that flies through every enemy in its lane, hitting each one. <i>Tip: great against crowded lanes and elephants.</i>", "velites": "Cheap javelin throwers with a short range. When an enemy reaches them they fall back one square (once), so they keep throwing. <i>Tip: a cheap first line.</i>", "cornicen": "Doesn’t fight. When an elephant comes within 2½ squares in his lane or the lanes beside it, he blares his horn and every such elephant panics and runs back. Then he needs 10 seconds to catch his breath. <i>Tip: a little in front of your shooters.</i>", "maniple": "A tough unit that fights in its lane and also hits enemies in the two lanes beside it from the side. Shields don’t stop blows from the side. <i>Tip: between two lanes the phalanx is coming down.</i>", "torch": "Can only be placed on a house. After 3 seconds the house burns down: no more ambushes from it, and you can build on the square. <i>Tip: burn the houses near your lines first.</i>", "lilia": "Hidden pits with sharp stakes. They don’t stop anyone: every enemy who crosses one takes a hit and slows to half speed while crossing. Enemies don’t attack them, so they last the whole battle. <i>Tip: put them where your shooters can hit the slowed enemy.</i>", "pigs": "Charge up the lane when an enemy comes near. An elephant they reach panics and runs back, trampling its own army; other enemies just take a hit. One use. <i>Tip: keep them in front of your line.</i>"}
-const FOE_GUIDE = {"calf": "Walks ahead of its mother. Wound it badly and the mother panics: both run back, trampling Pyrrhus’s own soldiers. Aim your slingers at the calf.", "warrior": "The basic enemy. One or two slingers in a lane handle him.", "chief": "Carries the standard and walks a little faster.", "shield": "His bronze shield soaks up hits until it breaks (the bronze bar). Javelins break it quickly.", "cavalry": "Fast. He leaps over the first soldier in his way, once, then slows down. Give him something cheap to leap, or armed caltrops.", "raider": "Fast but weak, and comes in bursts. Keep a shooter in every lane.", "archer": "Stops about three squares from your first soldier and shoots it. Put a siege shed in front; your slingers still reach him.", "samnite": "Tougher than a Latin warrior. Two shooters per lane.", "linen": "Very tough elite. Hold him with a triarius and hit him from several soldiers at once.", "phalangite": "A big shield and a long pike. Break the shield with javelins.", "elephant": "Crushes soldiers in seconds and takes a lot of hits. War pigs make him flee; caltrops help.", "balearic": "Stops about four squares from your first soldier and slings stones at it. Your slingers still reach him.", "numidian": "Fast and light. When a soldier blocks him he rides into a free lane beside it, up to twice. Block the lanes beside, or shoot him early.", "gaul": "Fast and hits hard, but has no armour. Shoot him before he reaches your line.", "african": "Comes down the outer lanes, with a shield. Javelins break it.", "charger": "Charges fast, then slows down. If it reaches the camp in a lane with no Roman soldiers, it runs out of the battle (as at Zama). Trumpeters panic it.", "veteran": "Hannibal’s best: very tough, with a shield. Hold him and hit him from several soldiers.", "thracian": "Fast light troops. Keep a shooter in every lane.", "pikeman": "His pike strikes a square ahead of him, so swordsmen can’t reach him. His shield stops missiles from the front, but not from the side lanes (rorarii, maniples). Rough ground breaks his shield.", "bowman": "Stops about three squares from your first soldier and shoots it. Put a siege shed in front.", "militia": "Defends his city. Comes down the street or bursts out of a house.", "volunteer": "Fast and weak, often in groups."}
+const UNIT_GUIDE = {"cart": "Makes a sack of grain (25 rations) every 20 seconds. It doesn’t fight. <i>Tip: build several early, at the back.</i>", "slinger": "Shoots a stone down his whole lane every 1.5 seconds. Fragile once an enemy reaches him. <i>Tip: put something sturdy in front of him.</i>", "hastatus": "Throws heavy javelins at enemies within about 2½ squares, more than twice a stone’s damage, then fights with his sword when they reach him. <i>Tip: javelins break shields fast.</i>", "triarius": "Five times a slinger’s health and no attack. He holds enemies in place while your other soldiers hit them. <i>Tip: in front of your shooters.</i>", "caltrops": "Hidden iron spikes. After 10 seconds they are armed, and the first enemy to step on them sets them off: everyone on that spot takes a huge hit. Before that, enemies trample them. <i>Tip: a horseman wastes his leap on unarmed caltrops.</i>", "princeps": "A tough swordsman who cuts down whoever reaches his square. <i>Tip: a strong front line against fast raiders.</i>", "shed": "A wooden shed covered in hides. Arrows do almost nothing to it. <i>Tip: put it in front, so archers shoot the shed instead of your slingers.</i>", "rorarii": "Throw javelins into their own lane and both lanes beside it. <i>Tip: in the middle lanes they cover three lanes at once.</i>", "scorpio": "Shoots a heavy bolt every 3½ seconds that flies through every enemy in its lane, hitting each one. <i>Tip: great against crowded lanes and elephants.</i>", "velites": "Cheap javelin throwers with a short range. When an enemy reaches them they fall back one square (once), so they keep throwing. <i>Tip: a cheap first line.</i>", "cornicen": "Doesn’t fight. When an elephant comes within 2½ squares in his lane or the lanes beside it, he blares his horn and every such elephant panics and runs back. Then he needs 10 seconds to catch his breath. <i>Tip: a little in front of your shooters.</i>", "maniple": "A tough unit that fights in its lane and also hits enemies in the two lanes beside it from the side. Shields don’t stop blows from the side. <i>Tip: between two lanes the phalanx is coming down.</i>", "torch": "Can only be placed on a house. After 3 seconds the house burns down: no more ambushes from it, and you can build on the square. <i>Tip: burn the houses near your lines first.</i>", "lilia": "Hidden pits with sharp stakes. They don’t stop anyone: every enemy who crosses one takes a hit and slows to half speed while crossing. Enemies don’t attack them, so they last the whole battle. <i>Tip: put them where your shooters can hit the slowed enemy.</i>", "supplyboat": "Makes a sack of grain (25 rations) every 20 seconds. It doesn’t fight. <i>Tip: several early, at the back.</i>", "archership": "Shoots an arrow down its whole lane every 1.5 seconds. Fragile once an enemy ship reaches it.", "quinquereme": "Five times an archer ship’s strength and no attack. Holds enemy ships while the others shoot.", "rammer": "Rams any ship that reaches its square, hard.", "ballista": "A heavy bolt every 3½ seconds that flies through every ship in its lane.", "fireship": "Lit after 10 seconds; then the first enemy ship to touch it burns, and everything on that spot takes a huge hit. One use.", "harpax": "Fires a grappling hook that catches the first ship in its lane and holds it still for 4 seconds, so your other ships can hit it. <i>Tip: behind your archers, on the busiest lanes.</i>", "pigs": "Charge up the lane when an enemy comes near. An elephant they reach panics and runs back, trampling its own army; other enemies just take a hit. One use. <i>Tip: keep them in front of your line.</i>"}
+const FOE_GUIDE = {"calf": "Walks ahead of its mother. Wound it badly and the mother panics: both run back, trampling Pyrrhus’s own soldiers. Aim your slingers at the calf.", "warrior": "The basic enemy. One or two slingers in a lane handle him.", "chief": "Carries the standard and walks a little faster.", "shield": "His bronze shield soaks up hits until it breaks (the bronze bar). Javelins break it quickly.", "cavalry": "Fast. He leaps over the first soldier in his way, once, then slows down. Give him something cheap to leap, or armed caltrops.", "raider": "Fast but weak, and comes in bursts. Keep a shooter in every lane.", "archer": "Stops about three squares from your first soldier and shoots it. Put a siege shed in front; your slingers still reach him.", "samnite": "Tougher than a Latin warrior. Two shooters per lane.", "linen": "Very tough elite. Hold him with a triarius and hit him from several soldiers at once.", "phalangite": "A big shield and a long pike. Break the shield with javelins.", "elephant": "Crushes soldiers in seconds and takes a lot of hits. War pigs make him flee; caltrops help.", "balearic": "Stops about four squares from your first soldier and slings stones at it. Your slingers still reach him.", "numidian": "Fast and light. When a soldier blocks him he rides into a free lane beside it, up to twice. Block the lanes beside, or shoot him early.", "gaul": "Fast and hits hard, but has no armour. Shoot him before he reaches your line.", "african": "Comes down the outer lanes, with a shield. Javelins break it.", "charger": "Charges fast, then slows down. If it reaches the camp in a lane with no Roman soldiers, it runs out of the battle (as at Zama). Trumpeters panic it.", "veteran": "Hannibal’s best: very tough, with a shield. Hold him and hit him from several soldiers.", "thracian": "Fast light troops. Keep a shooter in every lane.", "pikeman": "His pike strikes a square ahead of him, so swordsmen can’t reach him. His shield stops missiles from the front, but not from the side lanes (rorarii, maniples). Rough ground breaks his shield.", "bowman": "Stops about three squares from your first soldier and shoots it. Put a siege shed in front.", "galley": "A warship with thick timbers (the brown bar) that soak up hits before the hull is damaged.", "deceres": "A huge ship with archer towers: it stops out of reach and shoots, and takes a lot to sink.", "egyptian": "Fast but light. Cleopatra’s ships may not stay for the whole battle…", "flagship": "Antony’s own ship: the biggest of all, with archers. Watch what happens when Cleopatra sails away.", "militia": "Defends his city. Comes down the street or bursts out of a house.", "volunteer": "Fast and weak, often in groups."}
 // A campaign of five battles, in historical order. Each adds an enemy and a Roman unit.
 const w = (t, foes, big, from) => ({ t, foes, big, from })
 const rep = (n, t) => Array(n).fill(t)
@@ -138,6 +149,15 @@ const LEVELS = [
     waves: [w(26, ['gaul']), w(42, ['warrior', 'gaul']), w(58, ['shield', 'gaul']), w(74, ['gaul', 'gaul', 'warrior']), w(92, ['gaul', 'gaul'], 'The Gallic relief army attacks from behind!', 'below'),
       w(108, ['shield', 'gaul']), w(120, ['cavalry', 'gaul'], null, 'below'), w(134, ['chief', ...rep(3, 'gaul'), 'shield', 'warrior'], 'Vercingetorix attacks from the town!'), w(152, ['gaul', 'gaul', 'shield', 'cavalry'], null, 'below'),
       w(168, ['shield', 'gaul', 'gaul']), w(186, ['chief', ...rep(4, 'gaul'), 'shield', 'cavalry'], 'The relief army’s final assault!', 'below'), w(190, ['chief', ...rep(3, 'gaul'), 'shield', 'shield'])] },
+  { id: 'actium', name: 'Actium', year: '31 BC', enemy: 'Antony and Cleopatra', theme: 'sea', sea: true, start: 300, cols: 6, rows: 8,
+    twist: 'A battle at sea: every unit is a ship. Watch Cleopatra’s squadron: halfway through, her ships hoist their sails and flee, and Antony follows her.',
+    events: [{ t: 150, cleopatra: true, text: 'Cleopatra’s squadron hoists its sails and flees!' }, { t: 172, antony: true, text: 'Antony abandons his fleet and follows Cleopatra!' }],
+    units: ['supplyboat', 'archership', 'quinquereme', 'rammer', 'ballista', 'fireship', 'harpax'], newUnit: 'harpax',
+    blurb: 'Off the headland of Actium, in western Greece, Octavian’s fleet under Agrippa blocks the fleet of Antony and Cleopatra. Whoever wins rules the Roman world.',
+    after: 'Antony and Cleopatra escaped to Egypt, where both killed themselves the next year. Octavian, soon called Augustus, was master of the Roman world.',
+    waves: [w(26, ['galley']), w(42, ['egyptian', 'galley']), w(58, ['galley', 'galley']), w(74, ['deceres']), w(90, ['egyptian', 'egyptian', 'galley']), w(106, ['deceres', 'galley']), w(122, ['egyptian', 'egyptian', 'galley', 'galley']),
+      w(136, ['flagship', 'deceres', 'galley', 'galley', 'egyptian', 'egyptian', 'egyptian'], 'Antony’s fleet attacks in force!'), w(164, ['galley', 'galley', 'deceres']),
+      w(186, ['deceres', 'deceres', ...rep(4, 'galley')], 'The last of Antony’s fleet!')] },
 ]
 let LEVEL = LEVELS[0]
 // What the chapter's quiz score buys for its battle: starting grain and veteran soldiers, placed free before the
@@ -220,6 +240,7 @@ function romanLegs(c, kneel = false) {
   c.fillStyle = '#5a3a22'; c.fillRect(-6.5, -3, 5.5, 3); c.fillRect(1, -3, 5.5, 3)
 }
 const DRAW_UNIT = {
+  ...Object.fromEntries(['supplyboat', 'archership', 'quinquereme', 'rammer', 'ballista', 'fireship', 'harpax'].map(t => [t, (c, u, T) => drawShip(c, UNITS[t].ship, T, false, u)])),
   slinger(c, u, T) {
     shadow(c, 13, 4); romanLegs(c)
     c.fillStyle = '#8e2b22'; c.strokeStyle = '#5a1a14'; c.lineWidth = 1.5; c.beginPath(); c.arc(-12, -24, 7.5, 0, TAU); c.fill(); c.stroke()
@@ -421,6 +442,7 @@ const FOE_LOOK = {
   volunteer:  { tunic: '#9a8a70', head: 'hair', weapon: 'javelin', fast: true },
 }
 function drawFoe(c, f, T) {
+  if (FOES[f.type]?.ship) return drawShip(c, FOES[f.type].ship, T, true, f)
   if (f.type === 'cavalry' || f.type === 'numidian') return drawRider(c, f, f.type === 'numidian')
   if (FOES[f.type]?.elephant) return drawElephant(c, f, T, false, f.type === 'charger')
   if (f.type === 'calf') { c.save(); c.scale(0.55, 0.55); drawElephant(c, f, T, true); c.restore(); return }
@@ -547,7 +569,41 @@ function drawElephant(c, f, T, calf = false, african = false) {
   if (f.fleeing) { c.strokeStyle = '#fbf3e4'; c.lineWidth = 2; for (const s of [-1, 1]) { c.beginPath(); c.moveTo(s * 30, -66); c.lineTo(s * 38, -74); c.moveTo(s * 32, -56); c.lineTo(s * 41, -58); c.stroke() } }
   c.restore()
 }
+// A ship seen from above and behind (ours) or ahead (theirs), feet at 0,0. o: what kind of ship and whose
+function drawShip(c, kind, T, foe = false, f = null) {
+  const big = kind === 'great' || kind === 'heavy', small = kind === 'fire' || kind === 'supply'
+  const L = big ? 64 : small ? 40 : 52, Wd = big ? 30 : small ? 22 : 24, top = -L - 4
+  c.fillStyle = 'rgba(20, 50, 80, .25)'; c.beginPath(); c.ellipse(0, -3, Wd * 0.6, 5, 0, 0, TAU); c.fill()   // its shadow on the water
+  // oars, sweeping
+  if (!small) { const sw = Math.sin(T * 6 + (f?.phase ?? 0)) * 4; c.strokeStyle = '#6b4a2b'; c.lineWidth = 1.4; for (let i = 0; i < 4; i++) { const y = top + 14 + i * (L - 24) / 3; c.beginPath(); c.moveTo(-Wd / 2, y); c.lineTo(-Wd / 2 - 10, y + sw); c.moveTo(Wd / 2, y); c.lineTo(Wd / 2 + 10, y + sw); c.stroke() } }
+  // the hull: pointed toward the enemy
+  const hull = foe ? (kind === 'egyptian' ? '#8a6a3a' : '#5a3a3a') : '#7a5636'
+  c.fillStyle = hull; c.beginPath()
+  if (foe) { c.moveTo(0, -2); c.quadraticCurveTo(Wd / 2, -12, Wd / 2, -L / 2); c.lineTo(Wd / 2, top + 6); c.quadraticCurveTo(0, top - 2, -Wd / 2, top + 6); c.lineTo(-Wd / 2, -L / 2); c.quadraticCurveTo(-Wd / 2, -12, 0, -2) }
+  else { c.moveTo(0, top); c.quadraticCurveTo(Wd / 2, top + 10, Wd / 2, -L / 2); c.lineTo(Wd / 2, -10); c.quadraticCurveTo(0, 0, -Wd / 2, -10); c.lineTo(-Wd / 2, -L / 2); c.quadraticCurveTo(-Wd / 2, top + 10, 0, top) }
+  c.fill()
+  c.fillStyle = foe ? '#7a5050' : '#9a7448'; rr(c, -Wd / 2 + 4, top + 8, Wd - 8, L - 18, 4); c.fill()   // the deck
+  if (kind === 'ram' || foe) { const ry0 = foe ? -2 : top; c.fillStyle = '#b08a3e'; c.beginPath(); c.moveTo(-4, ry0 + (foe ? -4 : 4)); c.lineTo(0, ry0 + (foe ? 6 : -6)); c.lineTo(4, ry0 + (foe ? -4 : 4)); c.fill() }   // the bronze ram
+  if (foe && kind !== 'egyptian') { c.fillStyle = '#e9e1cf'; c.beginPath(); c.arc(-6, -12, 2.4, 0, TAU); c.arc(6, -12, 2.4, 0, TAU); c.fill(); c.fillStyle = INK; c.beginPath(); c.arc(-6, -12, 1.1, 0, TAU); c.arc(6, -12, 1.1, 0, TAU); c.fill() }   // painted eyes on the bow
+  if (kind === 'supply') for (const [x, y] of [[-5, -22], [5, -24], [0, -32]]) { c.fillStyle = '#e9dcc0'; c.beginPath(); c.ellipse(x, y, 5, 4.5, 0, 0, TAU); c.fill() }
+  if (kind === 'fire') { c.fillStyle = '#3f2a16'; for (const [x, y] of [[-5, -18], [5, -20], [0, -28]]) { c.beginPath(); c.arc(x, y, 4, 0, TAU); c.fill() } if (f?.armed !== false) { const fl = Math.sin(T * 18) * 2; c.fillStyle = '#e0a63a'; c.beginPath(); c.ellipse(0, -32 + fl * 0.3, 5, 9, 0, 0, TAU); c.fill(); c.fillStyle = '#d4392d'; c.beginPath(); c.ellipse(0, -30, 3, 5, 0, 0, TAU); c.fill() } }
+  if (kind === 'ballista') { line(c, -9, -30, 9, -30, '#6b4a2b', 3); line(c, 0, -40, 0, -22, '#4a3420', 2.4) }
+  if (kind === 'harpax') { line(c, 0, -42, 0, -22, '#4a3420', 2.4); c.strokeStyle = '#9aa3aa'; c.lineWidth = 2; c.beginPath(); c.arc(0, -44, 4, 0.2, Math.PI - 0.2); c.stroke(); line(c, 0, -48, 0, -40, '#9aa3aa', 2) }
+  if (kind === 'archers') for (const x of [-5, 5]) { c.fillStyle = SKIN; c.beginPath(); c.arc(x, -30, 3.2, 0, TAU); c.fill(); c.fillStyle = '#c9a24a'; c.beginPath(); c.arc(x, -31, 3.4, Math.PI, 0); c.fill() }
+  if (kind === 'great') { c.fillStyle = '#8a6236'; rr(c, -9, -L * 0.62, 18, 16, 2); c.fill(); c.fillStyle = '#5a3a22'; for (let x = -9; x < 9; x += 5) c.fillRect(x, -L * 0.62 - 3, 3, 3) }   // an archer tower
+  // the mast and its sail
+  if (kind !== 'fire') {
+    const sail = foe ? (kind === 'egyptian' || f?.type === 'flagship' ? '#6a2f6e' : '#8a3a3a') : '#e9e1cf', my = -L * 0.5
+    line(c, 0, my + 6, 0, my - 26, '#5a3a22', 2.2)
+    c.fillStyle = sail; rr(c, -Wd / 2 - 2, my - 24, Wd + 4, 14, 2); c.fill()
+    if (!foe) { c.fillStyle = '#8e2b22'; c.fillRect(-Wd / 2 - 2, my - 19, Wd + 4, 3) }
+    if (foe && kind === 'egyptian') { c.fillStyle = '#c9a24a'; c.beginPath(); c.arc(0, my - 17, 3, 0, TAU); c.fill() }
+  }
+  if (f?.pinned > 0) { c.strokeStyle = '#cfd4d8'; c.lineWidth = 1.4; c.setLineDash([3, 2]); c.beginPath(); c.moveTo(0, -4); c.lineTo(0, 30); c.stroke(); c.setLineDash([]) }   // the hook's line
+}
 function drawEques(c, e, T) {
+  if (LEVEL.sea) { drawShip(c, 'ram', T); return }   // at sea: the reserve squadron
+
   const g = e.state === 'charge' ? Math.sin(T * 16) : 0
   shadow(c, 12, 4)
   line(c, -5, -14, -5 + g * 2, -1, '#3f2a16', 3.4); line(c, 5, -14, 5 - g * 2, -1, '#3f2a16', 3.4)
@@ -581,7 +637,7 @@ function layout() {
   paintField()
 }
 const LAWN = { lake: ['#94a856', '#8b9e4e'], hills: ['#93a252', '#89984b'], walls: ['#98a95a', '#8fa052'], mountains: ['#8a9d4f', '#819449'], river: ['#97aa58', '#8ea050'],
-  siege: ['#a3a75a', '#999d52'], alesia: ['#93a352', '#8a9a4b'], plain: ['#aea961', '#a39e59'], zama: ['#b6a766', '#ab9c5d'], olympus: ['#8fa354', '#86994d'], carthage: ['#c4b48e', '#b9a982'] }
+  sea: ['#4f87ab', '#4a81a4'], siege: ['#a3a75a', '#999d52'], alesia: ['#93a352', '#8a9a4b'], plain: ['#aea961', '#a39e59'], zama: ['#b6a766', '#ab9c5d'], olympus: ['#8fa354', '#86994d'], carthage: ['#c4b48e', '#b9a982'] }
 function paintField() {
   const c = bctx, theme = LEVEL.theme
   c.setTransform(dpr, 0, 0, dpr, 0, 0)
@@ -616,6 +672,11 @@ function paintField() {
   }
   if (theme === 'river') {   // Pyrrhus's camp beyond the field
     for (let x = cell * 0.4; x < W; x += cell * 1.1) { c.fillStyle = '#8a6a9a'; c.beginPath(); c.moveTo(x - cell * 0.3, top * 0.7); c.lineTo(x, top * 0.12); c.lineTo(x + cell * 0.3, top * 0.7); c.fill(); c.fillStyle = '#6a2f6e'; c.fillRect(x - 1, top * 0.04, 2, top * 0.1) }
+  }
+  if (theme === 'sea') {   // the headland of Actium, with Apollo's temple, beyond the open sea
+    c.fillStyle = '#4f87ab'; c.fillRect(0, 0, W, top)
+    c.fillStyle = '#9a9468'; c.beginPath(); c.moveTo(W * 0.55, 0); c.quadraticCurveTo(W * 0.7, top * 0.7, W, top * 0.5); c.lineTo(W, 0); c.fill()
+    c.fillStyle = '#efe4cc'; c.fillRect(W * 0.8, top * 0.12, 18, top * 0.24); c.beginPath(); c.moveTo(W * 0.8 - 3, top * 0.13); c.lineTo(W * 0.8 + 9, top * 0.02); c.lineTo(W * 0.8 + 21, top * 0.13); c.fill()
   }
   if (theme === 'alesia') {   // the hilltop town of Alesia, with its stone-and-timber wall and round huts
     c.fillStyle = '#7f8f4a'; c.beginPath(); c.moveTo(0, top); c.quadraticCurveTo(W / 2, -top * 0.9, W, top); c.fill()
@@ -652,7 +713,11 @@ function paintField() {
     c.fillStyle = LAWN[theme][(r + col) % 2]
     c.fillRect(col * cell, ry(r), cell, cell)
   }
-  for (let i = 0; i < 520; i++) {
+  if (LEVEL.sea) for (let i = 0; i < 160; i++) {   // little waves
+    const x = rnd() * W, y = top + rnd() * (ry(ROWS) - top)
+    c.strokeStyle = 'rgba(230, 240, 250, .28)'; c.lineWidth = 1.2; c.beginPath(); c.moveTo(x - 5, y); c.quadraticCurveTo(x, y - 3, x + 5, y); c.stroke()
+  }
+  if (!LEVEL.sea) for (let i = 0; i < 520; i++) {
     const x = rnd() * W, y = rnd() * ry(ROWS)
     c.strokeStyle = rnd() < 0.5 ? 'rgba(60, 80, 30, .3)' : 'rgba(215, 225, 140, .22)'; c.lineWidth = 1
     c.beginPath(); c.moveTo(x, y); c.lineTo(x + (rnd() - 0.5) * 3, y - 4); c.stroke()
@@ -670,6 +735,12 @@ function paintField() {
   }
   // the camp: trodden earth, a palisade, tents (on two fronts: Caesar's outer wall, and the plain beyond)
   const camp = ry(ROWS)
+  if (LEVEL.sea) {   // at sea: Octavian's harbour, where the reserve squadron waits behind a boom of floating logs
+    c.fillStyle = '#3f7299'; c.fillRect(0, camp, W, H - camp)
+    for (let x = 0; x < W; x += cell * 0.3) { c.fillStyle = '#6b4a2b'; rr(c, x + 2, camp + 1, cell * 0.24, cell * 0.08, 3); c.fill() }
+    c.fillStyle = '#c9b48a'; c.fillRect(0, H - cell * 0.12, W, cell * 0.12)
+    return
+  }
   if (LEVEL.twoFronts) {
     c.fillStyle = '#86964a'; c.fillRect(0, camp, W, H - camp)
     const stake = cell * 0.13
@@ -791,12 +862,12 @@ function place(type, lane, row) {
     if (G.rations < U.cost || G.cool[type] > 0) { sfx.deny(); return false }
     G.rations -= U.cost; G.cool[type] = U.recharge
   }
-  G.units.push({ type, lane, row, hp: U.hp, max: U.hp, cd: type === 'cart' ? 5 : 0.4, anim: 0, hurt: 0, armed: false, arm: U.armTime ?? 0, aiming: false, fighting: false })
+  G.units.push({ type, lane, row, hp: U.hp, max: U.hp, cd: U.grain ? 5 : 0.4, anim: 0, hurt: 0, armed: false, arm: U.armTime ?? 0, aiming: false, fighting: false })
   for (let i = 0; i < 6; i++) G.fx.push({ kind: 'dust', x: lx(lane) + (Math.random() - 0.5) * cell * 0.6, y: ry(row + 0.82), vx: (Math.random() - 0.5) * 30, vy: -Math.random() * 20, t: 0.5 })
   sfx.place(); updateCount(); if (G.phase !== 'deploy') tutorial('placed', type); else syncDeploy()
   return true
 }
-const MOVABLE = t => t !== 'caltrops' && t !== 'pigs' && t !== 'torch' && t !== 'lilia'
+const MOVABLE = t => !UNITS[t].trap && t !== 'pigs' && t !== 'torch' && t !== 'lilia'
 function moveUnit(u, lane, row) {
   if (!canStand(lane, row) || (u.lane === lane && u.row === row)) return false
   u.fromLane = u.lane; u.fromRow = u.row; u.lane = lane; u.row = row
@@ -825,7 +896,7 @@ function hurtFoe(f, dmg, quiet = false, flank = false) {
 }
 function explode(u) {
   removeUnit(u, false)
-  for (const f of G.foes) if (f.lane === u.lane && f.hp > 0 && f.y >= u.row - 0.25 && f.y <= u.row + 1.4) hurtFoe(f, UNITS.caltrops.dmg)
+  for (const f of G.foes) if (f.lane === u.lane && f.hp > 0 && f.y >= u.row - 0.25 && f.y <= u.row + 1.4) hurtFoe(f, UNITS[u.type].dmg)
   G.shake = Math.max(G.shake, 5); sfx.boom()
   G.fx.push({ kind: 'ring', x: lx(u.lane), y: ry(u.row + 0.7), t: 0.45 })
   for (let i = 0; i < 16; i++) G.fx.push({ kind: 'dust', x: lx(u.lane), y: ry(u.row + 0.7), vx: (Math.random() - 0.5) * 160, vy: -Math.random() * 120, t: 0.7 })
@@ -852,6 +923,12 @@ function update(dt) {
     ev.done = true; announce(ev.text, true, 4200); sfx.horn()
     if (ev.wings) for (const l of ev.wings) if (G.equites[l].state === 'ready') G.equites[l].state = 'used'
     if (ev.masinissa) for (const e of G.equites) if (e.state === 'used') { e.state = 'ready'; e.y = ROWS + 0.62 }
+    const leave = test => {   // these ships turn and sail away; those still to come never arrive
+      for (const f of G.foes) if (test(FOES[f.type])) { f.fleeing = true; f.eating = null }
+      const before = G.queue.length; G.queue = G.queue.filter(e => !test(FOES[e.type])); G.total -= before - G.queue.length
+    }
+    if (ev.cleopatra) leave(F => F.egyptian)
+    if (ev.antony) leave(F => F.flagship)
   }
   // grain falling from the sky
   G.nextSky -= dt
@@ -867,11 +944,11 @@ function update(dt) {
     const U = UNITS[u.type]
     u.cd -= dt; u.anim = Math.max(0, u.anim - dt); u.hurt = Math.max(0, u.hurt - dt)
     if (u.travel) { u.travelT += dt; if (u.travelT >= u.travel) u.travel = 0; continue }
-    if (u.type === 'cart' && u.cd <= 0) {
+    if (U.grain && u.cd <= 0) {
       u.cd = 20; u.anim = 0.7
       G.drops.push({ x: lx(u.lane) + (Math.random() - 0.5) * cell * 0.4, y: ry(u.row + 0.2), ty: ry(u.row + 0.55), v: 25, life: 10, falling: true })
     }
-    if (u.type === 'caltrops' && !u.armed) { u.arm -= dt; if (u.arm <= 0) u.armed = true }
+    if (U.trap && !u.armed) { u.arm -= dt; if (u.arm <= 0) u.armed = true }
     if (u.type === 'torch') {   // the house burns down
       u.burn = (u.burn ?? 0) + dt
       if (u.burn >= U.burn) {
@@ -913,8 +990,8 @@ function update(dt) {
         // shoot at the closest threat, up the field or (on two fronts) down it
         const target = inReach.sort((a, b) => Math.abs(a.y - u.row - 0.5) - Math.abs(b.y - u.row - 0.5))[0], down = below(target) && !above(target)
         u.cd = U.reload * (blessed ? AUGUR.reload : 1); u.anim = 0.35
-        for (const l of lanes) G.shots.push({ lane: l, from: u.lane, dir: down ? 1 : -1, y: u.row + (down ? 0.8 : 0.45), y0: u.row + (down ? 0.8 : 0.45), kind: U.pierce ? 'bolt' : u.type === 'slinger' ? 'stone' : 'pilum', pierce: !!U.pierce, dmg: U.dmg * (blessed ? AUGUR.damage : 1), speed: U.pierce ? 9 : u.type === 'slinger' ? 7 : 6, end: down ? u.row + 0.5 + U.range + 0.3 : u.row + 0.5 - U.range - 0.3, x0: (Math.random() - 0.5) * 0.1 })
-        u.type === 'slinger' ? sfx.sling() : sfx.throw()
+        for (const l of lanes) G.shots.push({ lane: l, from: u.lane, dir: down ? 1 : -1, y: u.row + (down ? 0.8 : 0.45), y0: u.row + (down ? 0.8 : 0.45), kind: U.kind ?? (U.pierce ? 'bolt' : u.type === 'slinger' ? 'stone' : 'pilum'), pierce: !!U.pierce, grapple: U.grapple, dmg: U.dmg * (blessed ? AUGUR.damage : 1), speed: U.pierce ? 9 : u.type === 'slinger' ? 7 : 6, end: down ? u.row + 0.5 + U.range + 0.3 : u.row + 0.5 - U.range - 0.3, x0: (Math.random() - 0.5) * 0.1 })
+        U.kind === 'arrow' ? sfx.bow() : u.type === 'slinger' ? sfx.sling() : sfx.throw()
       }
     }
   }
@@ -925,6 +1002,7 @@ function update(dt) {
     const hit = G.foes.filter(f => f.lane === s.lane && f.hp > 0 && !f.jump && !s.hits?.has(f) && s.y <= f.y + 0.05 && s.y >= f.y - 0.85).sort((a, b) => sd < 0 ? b.y - a.y : a.y - b.y)[0]
     if (hit) {
       hurtFoe(hit, s.dmg, s.kind, s.from != null && s.from !== s.lane)   // a javelin from the next lane hits the side
+      if (s.grapple) { hit.pinned = s.grapple; G.fx.push({ kind: 'ring', x: lx(s.lane), y: ry(hit.y), t: 0.4 }) }
       if (s.pierce) (s.hits ??= new Set()).add(hit); else s.done = true   // a scorpion bolt flies on through
       G.fx.push({ kind: 'spark', x: lx(s.lane), y: ry(s.y), t: 0.25 })
     }
@@ -984,7 +1062,7 @@ function update(dt) {
         if (free.length) { f.slide = { from: f.lane, t: 0 }; f.lane = free[0]; f.switched = (f.switched ?? 0) + 1; f.eating = null; continue }
       }
       if (u.type === 'velites' && !u.fell && canStand(u.lane, u.row + f.dir)) { u.fell = true; moveUnit(u, u.lane, u.row + f.dir); continue }   // velites fall back, once
-      if (u.type === 'caltrops' && u.armed) { explode(u); continue }
+      if (UNITS[u.type].trap && u.armed) { explode(u); continue }
       if (FOES[f.type].jumps && !f.jumped) { f.jumped = true; f.jump = { from: f.y, to: f.dir < 0 ? u.row - 0.35 : u.row + 1.35, t: 0 }; f.eating = null; continue }
       f.eating = u; u.hp -= FOES[f.type].dps * dt; u.hurt = 0.12; sfx.chop()
       if (u.hp < u.max * 0.5 && u.type !== 'triarius') tutorial('hurt')
@@ -1006,6 +1084,7 @@ function update(dt) {
       const e = G.equites[f.lane]
       let v = f.speed
       const r = Math.floor(f.y)
+      if (f.pinned > 0) { f.pinned -= dt; v = 0 }   // held by a grappling hook
       if (r === LEVEL.ditch) v *= 0.4   // climbing through the siege ditch
       if (pit) v *= UNITS.lilia.pit.slow   // picking a way between the pits
       if (isRough(f.lane, r)) {
@@ -1126,6 +1205,8 @@ function draw() {
   for (const s of G.shots) {
     const sideways = Math.min(1, Math.abs(s.y0 - s.y) / 0.9), x = lx(s.from ?? s.lane) + (lx(s.lane) - lx(s.from ?? s.lane)) * sideways + s.x0 * cell, y = ry(s.y) - 14 * k
     if (s.kind === 'stone') { ctx.fillStyle = '#5f5f58'; ctx.beginPath(); ctx.arc(x, y, 3 * k + 1, 0, TAU); ctx.fill() }
+    else if (s.kind === 'arrow') { const d = s.dir > 0 ? -1 : 1; line(ctx, x, y + 8 * k * d, x, y - 6 * k * d, '#3f2a16', 1.5); line(ctx, x, y - 4 * k * d, x, y - 8 * k * d, '#9aa3aa', 1.8) }
+    else if (s.kind === 'hook') { line(ctx, x, y + 10 * k, x, y - 4 * k, '#4a3420', 2); ctx.strokeStyle = '#9aa3aa'; ctx.lineWidth = 2; ctx.beginPath(); ctx.arc(x, y - 6 * k, 4 * k, Math.PI + 0.3, -0.3); ctx.stroke() }
     else if (s.kind === 'bolt') { line(ctx, x, y + 14 * k, x, y - 8 * k, '#4a3420', 3); line(ctx, x, y - 6 * k, x, y - 13 * k, '#cfd4d8', 2.6) }
     else if (s.dir > 0) { line(ctx, x, y - 12 * k, x, y + 4 * k, '#6b4a2b', 2); line(ctx, x, y + 2 * k, x, y + 9 * k, '#cfd4d8', 1.8) }   // a javelin thrown down the field
     else { line(ctx, x, y + 12 * k, x, y - 4 * k, '#6b4a2b', 2); line(ctx, x, y - 2 * k, x, y - 9 * k, '#cfd4d8', 1.8) }
