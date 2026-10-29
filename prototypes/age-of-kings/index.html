@@ -410,7 +410,8 @@ button:focus-visible { outline: 3px solid var(--ochre); outline-offset: 2px; }
 // Its styles come from HTL_CSS (game.css, added by the build).
 window.HoldTheLine = (() => {
 const TAU = Math.PI * 2
-const COLS = 5, ROWS = 7, APPROACH = 0.95, CAMP = 0.85   // the field in cells: the Latin approach on top, the camp below
+let COLS = 5, ROWS = 7   // the field in cells; from the Middle Republic on, battles are fought on a bigger field
+const APPROACH = 0.95, CAMP = 0.85   // the enemy's approach on top, the camp below
 const SKIN = '#e0b088', SKIN_SHADE = '#c48e66', INK = '#2a211c'
 
 // ---------- the armies ----------
@@ -423,6 +424,11 @@ const UNITS = {
   princeps: { name: 'Princeps', short: 'Princeps', cost: 100, recharge: 10, hp: 700, melee: 55, about: 'A soldier in his prime: tough, and he cuts down whoever reaches him.' },
   shed:     { name: 'Siege shed', short: 'Shed', cost: 75, recharge: 20, hp: 1200, arrowMul: 0.15, about: 'A wooden shed covered in hides, like the ones Livy says the Romans built at Veii. Arrows barely hurt it, so put it in front.' },
   rorarii:  { name: 'Rorarii', short: 'Rorarii', cost: 225, recharge: 7.5, hp: 300, reload: 1.6, dmg: 20, range: 99, spread: true, about: 'Light troops Livy names in the early legion. They throw javelins into three lanes at once.' },
+  scorpio:  { name: 'Scorpion', short: 'Scorpion', cost: 175, recharge: 15, hp: 300, reload: 3.5, dmg: 110, range: 99, pierce: true, about: 'A bolt-shooting machine, used in Roman sieges. Each bolt flies through everyone in its lane.' },
+  velites:  { name: 'Velites', short: 'Velites', cost: 50, recharge: 5, hp: 180, reload: 2.4, dmg: 26, range: 3.6, skirmish: true, about: 'Young light troops with javelins. When the enemy reaches them, they fall back one square, once.' },
+  cornicen: { name: 'Trumpeter', short: 'Trumpeter', cost: 75, recharge: 20, hp: 250, horn: { range: 2.6, every: 10 }, about: 'At Zama the Romans blared trumpets and panicked Hannibal’s elephants. He blares at any elephant coming at his lane or the lanes beside it.' },
+  maniple:  { name: 'Maniple', short: 'Maniple', cost: 125, recharge: 10, hp: 650, melee: 35, flank: 70, about: 'A small, flexible unit. It fights in its own lane and strikes enemies in the lanes beside it from the side, where shields don’t protect them.' },
+  torch:    { name: 'Torch-bearer', short: 'Torch', cost: 50, recharge: 12, hp: 100, burn: 3, about: 'Sets a house on fire. Place him on a house: no more defenders can burst out of it, and the square is free again.' },
   pigs:     { name: 'War pigs', short: 'Pigs', cost: 75, recharge: 20, hp: 100, trigger: 1.8, about: 'Ancient writers say squealing pigs panicked Pyrrhus’s elephants. The pigs charge the first enemy that comes near; an elephant they reach runs back through its own army.' },
 }
 const FOES = {
@@ -435,13 +441,24 @@ const FOES = {
   samnite:    { name: 'Samnite warrior', hp: 260, speed: 0.22, dps: 40, intro: 'Samnites: tough warriors from the mountains.' },
   linen:      { name: 'Linen Legion', hp: 480, speed: 0.2, dps: 45, intro: 'The Linen Legion! Samnite warriors in white, sworn to fight to the death.' },
   phalangite: { name: 'Phalangite', hp: 220, shield: 300, speed: 0.18, dps: 45, intro: 'Pyrrhus’s phalanx: long pikes behind big bronze shields.' },
+  balearic:   { name: 'Balearic slinger', hp: 150, speed: 0.24, dps: 25, bow: { range: 4.2, reload: 2.6, dmg: 20, sling: true }, intro: 'Balearic slingers! Carthage’s hired slingers hit your soldiers from far away.' },
+  numidian:   { name: 'Numidian horseman', hp: 180, speed: 0.5, dps: 30, switches: 2, intro: 'Numidian horsemen! When something blocks them, they ride around it into the next lane.' },
+  gaul:       { name: 'Gallic warrior', hp: 220, speed: 0.28, dps: 45, intro: 'Gauls! Fast and fierce, but without armour.' },
+  african:    { name: 'African infantry', hp: 280, shield: 250, speed: 0.2, dps: 45, flanks: true, intro: 'Hannibal’s African infantry close in on the outer lanes, as they did at Cannae.' },
+  charger:    { name: 'Charging elephant', hp: 1500, speed: 0.42, after: 0.15, dps: 250, elephant: true, charges: true, intro: 'Hannibal’s elephants charge! An elephant that reaches the camp down an empty lane runs out of the battle. Trumpets panic them.' },
+  veteran:    { name: 'Veteran of Italy', hp: 420, shield: 250, speed: 0.19, dps: 50, intro: 'Hannibal’s veterans from Italy: his best soldiers, saved for last.' },
+  thracian:   { name: 'Thracian', hp: 180, speed: 0.38, dps: 40, intro: 'Thracian light troops: fast and fierce.' },
+  pikeman:    { name: 'Macedonian phalangite', hp: 260, shield: 380, speed: 0.16, dps: 45, reach: 0.9, frontShield: true, phalanx: true, intro: 'The phalanx! Its long pikes strike a square ahead, and its shields stop missiles from the front. Hit it from the side, or let it cross rough ground.' },
+  bowman:     { name: 'Carthaginian archer', hp: 180, speed: 0.22, dps: 30, bow: { range: 3.2, reload: 2.2, dmg: 25 }, intro: 'Carthaginian archers! They stop out of reach and shoot your front soldier. A siege shed protects your line.' },
+  militia:    { name: 'Carthaginian citizen', hp: 170, speed: 0.24, dps: 35, intro: 'Carthage’s citizens defend their streets and homes.' },
+  volunteer:  { name: 'Freed slave', hp: 120, speed: 0.4, dps: 30, intro: 'Carthage freed its slaves to fight. They are fast but lightly armed.' },
   calf:       { name: 'Elephant calf', hp: 300, speed: 0.15, dps: 60, intro: 'An elephant calf walks ahead of its mother. Wound it and the mother panics, as happened at Beneventum.' },
-  elephant:   { name: 'War elephant', hp: 2000, speed: 0.15, dps: 250, intro: 'War elephants! They crush whatever stands in their way. Send the pigs!' },
+  elephant:   { name: 'War elephant', hp: 2000, speed: 0.15, dps: 250, elephant: true, intro: 'War elephants! They crush whatever stands in their way. Send the pigs!' },
 }
-const UNIT_GUIDE = {"cart": "Makes a sack of grain (25 rations) every 20 seconds. It doesn’t fight. <i>Tip: build several early, at the back.</i>", "slinger": "Shoots a stone down his whole lane every 1.5 seconds. Fragile once an enemy reaches him. <i>Tip: put something sturdy in front of him.</i>", "hastatus": "Throws heavy javelins at enemies within about 2½ squares, more than twice a stone’s damage, then fights with his sword when they reach him. <i>Tip: javelins break shields fast.</i>", "triarius": "Five times a slinger’s health and no attack. He holds enemies in place while your other soldiers hit them. <i>Tip: in front of your shooters.</i>", "caltrops": "Hidden iron spikes. After 10 seconds they are armed, and the first enemy to step on them sets them off: everyone on that spot takes a huge hit. Before that, enemies trample them. <i>Tip: a horseman wastes his leap on unarmed caltrops.</i>", "princeps": "A tough swordsman who cuts down whoever reaches his square. <i>Tip: a strong front line against fast raiders.</i>", "shed": "A wooden shed covered in hides. Arrows do almost nothing to it. <i>Tip: put it in front, so archers shoot the shed instead of your slingers.</i>", "rorarii": "Throw javelins into their own lane and both lanes beside it. <i>Tip: in the middle lanes they cover three lanes at once.</i>", "pigs": "Charge up the lane when an enemy comes near. An elephant they reach panics and runs back, trampling its own army; other enemies just take a hit. One use. <i>Tip: keep them in front of your line.</i>"}
-const FOE_GUIDE = {"calf": "Walks ahead of its mother. Wound it badly and the mother panics: both run back, trampling Pyrrhus’s own soldiers. Aim your slingers at the calf.", "warrior": "The basic enemy. One or two slingers in a lane handle him.", "chief": "Carries the standard and walks a little faster.", "shield": "His bronze shield soaks up hits until it breaks (the bronze bar). Javelins break it quickly.", "cavalry": "Fast. He leaps over the first soldier in his way, once, then slows down. Give him something cheap to leap, or armed caltrops.", "raider": "Fast but weak, and comes in bursts. Keep a shooter in every lane.", "archer": "Stops about three squares from your first soldier and shoots it. Put a siege shed in front; your slingers still reach him.", "samnite": "Tougher than a Latin warrior. Two shooters per lane.", "linen": "Very tough elite. Hold him with a triarius and hit him from several soldiers at once.", "phalangite": "A big shield and a long pike. Break the shield with javelins.", "elephant": "Crushes soldiers in seconds and takes a lot of hits. War pigs make him flee; caltrops help."}
+const UNIT_GUIDE = {"cart": "Makes a sack of grain (25 rations) every 20 seconds. It doesn’t fight. <i>Tip: build several early, at the back.</i>", "slinger": "Shoots a stone down his whole lane every 1.5 seconds. Fragile once an enemy reaches him. <i>Tip: put something sturdy in front of him.</i>", "hastatus": "Throws heavy javelins at enemies within about 2½ squares, more than twice a stone’s damage, then fights with his sword when they reach him. <i>Tip: javelins break shields fast.</i>", "triarius": "Five times a slinger’s health and no attack. He holds enemies in place while your other soldiers hit them. <i>Tip: in front of your shooters.</i>", "caltrops": "Hidden iron spikes. After 10 seconds they are armed, and the first enemy to step on them sets them off: everyone on that spot takes a huge hit. Before that, enemies trample them. <i>Tip: a horseman wastes his leap on unarmed caltrops.</i>", "princeps": "A tough swordsman who cuts down whoever reaches his square. <i>Tip: a strong front line against fast raiders.</i>", "shed": "A wooden shed covered in hides. Arrows do almost nothing to it. <i>Tip: put it in front, so archers shoot the shed instead of your slingers.</i>", "rorarii": "Throw javelins into their own lane and both lanes beside it. <i>Tip: in the middle lanes they cover three lanes at once.</i>", "scorpio": "Shoots a heavy bolt every 3½ seconds that flies through every enemy in its lane, hitting each one. <i>Tip: great against crowded lanes and elephants.</i>", "velites": "Cheap javelin throwers with a short range. When an enemy reaches them they fall back one square (once), so they keep throwing. <i>Tip: a cheap first line.</i>", "cornicen": "Doesn’t fight. When an elephant comes within 2½ squares in his lane or the lanes beside it, he blares his horn and every such elephant panics and runs back. Then he needs 10 seconds to catch his breath. <i>Tip: a little in front of your shooters.</i>", "maniple": "A tough unit that fights in its lane and also hits enemies in the two lanes beside it from the side. Shields don’t stop blows from the side. <i>Tip: between two lanes the phalanx is coming down.</i>", "torch": "Can only be placed on a house. After 3 seconds the house burns down: no more ambushes from it, and you can build on the square. <i>Tip: burn the houses near your lines first.</i>", "pigs": "Charge up the lane when an enemy comes near. An elephant they reach panics and runs back, trampling its own army; other enemies just take a hit. One use. <i>Tip: keep them in front of your line.</i>"}
+const FOE_GUIDE = {"calf": "Walks ahead of its mother. Wound it badly and the mother panics: both run back, trampling Pyrrhus’s own soldiers. Aim your slingers at the calf.", "warrior": "The basic enemy. One or two slingers in a lane handle him.", "chief": "Carries the standard and walks a little faster.", "shield": "His bronze shield soaks up hits until it breaks (the bronze bar). Javelins break it quickly.", "cavalry": "Fast. He leaps over the first soldier in his way, once, then slows down. Give him something cheap to leap, or armed caltrops.", "raider": "Fast but weak, and comes in bursts. Keep a shooter in every lane.", "archer": "Stops about three squares from your first soldier and shoots it. Put a siege shed in front; your slingers still reach him.", "samnite": "Tougher than a Latin warrior. Two shooters per lane.", "linen": "Very tough elite. Hold him with a triarius and hit him from several soldiers at once.", "phalangite": "A big shield and a long pike. Break the shield with javelins.", "elephant": "Crushes soldiers in seconds and takes a lot of hits. War pigs make him flee; caltrops help.", "balearic": "Stops about four squares from your first soldier and slings stones at it. Your slingers still reach him.", "numidian": "Fast and light. When a soldier blocks him he rides into a free lane beside it, up to twice. Block the lanes beside, or shoot him early.", "gaul": "Fast and hits hard, but has no armour. Shoot him before he reaches your line.", "african": "Comes down the outer lanes, with a shield. Javelins break it.", "charger": "Charges fast, then slows down. If it reaches the camp in a lane with no Roman soldiers, it runs out of the battle (as at Zama). Trumpeters panic it.", "veteran": "Hannibal’s best: very tough, with a shield. Hold him and hit him from several soldiers.", "thracian": "Fast light troops. Keep a shooter in every lane.", "pikeman": "His pike strikes a square ahead of him, so swordsmen can’t reach him. His shield stops missiles from the front, but not from the side lanes (rorarii, maniples). Rough ground breaks his shield.", "bowman": "Stops about three squares from your first soldier and shoots it. Put a siege shed in front.", "militia": "Defends his city. Comes down the street or bursts out of a house.", "volunteer": "Fast and weak, often in groups."}
 // A campaign of five battles, in historical order. Each adds an enemy and a Roman unit.
-const w = (t, foes, big) => ({ t, foes, big })
+const w = (t, foes, big, from) => ({ t, foes, big, from })
 const rep = (n, t) => Array(n).fill(t)
 const BASE = ['cart', 'slinger', 'hastatus', 'triarius', 'caltrops']
 const LEVELS = [
@@ -477,6 +494,49 @@ const LEVELS = [
     waves: [w(28, ['warrior']), w(46, ['phalangite']), w(62, ['warrior', 'warrior']), w(78, ['cavalry']), w(92, ['phalangite', 'warrior']), w(108, ['elephant+calf']), w(126, ['phalangite', 'phalangite']),
       w(140, ['chief', ...rep(3, 'phalangite'), 'warrior', 'warrior', 'cavalry'], 'A great wave approaches!'), w(170, ['elephant+calf', 'warrior']), w(188, ['phalangite', 'cavalry']),
       w(205, ['chief', 'elephant+calf', ...rep(3, 'phalangite'), ...rep(2, 'warrior'), 'elephant', 'cavalry', 'cavalry'], 'The final wave!')] },
+  { id: 'agrigentum', name: 'Agrigentum', year: '261 BC', enemy: 'Carthage’s relief army', theme: 'siege', start: 225, cols: 6, rows: 8, ditch: 1,
+    twist: 'A bigger field: six lanes and eight rows. The Romans dug a ditch around their siege lines: enemies crossing it slow right down, and you can’t build in it.', units: ['cart', 'slinger', 'hastatus', 'triarius', 'caltrops', 'princeps', 'rorarii', 'scorpio'], newUnit: 'scorpio',
+    blurb: 'Rome besieges Akragas, which the Romans call Agrigentum. Carthage sends a relief army of hired soldiers, slingers and 60 war elephants.',
+    after: 'The relief army was heavily defeated and the garrison slipped away. The Romans sold 25,000 of the city’s people into slavery, but Sicily was far from won.',
+    waves: [w(28, ['warrior']), w(44, ['balearic']), w(58, ['warrior', 'warrior']), w(72, ['shield', 'warrior']), w(88, ['balearic', 'warrior', 'warrior']), w(104, ['elephant']), w(118, ['shield', 'shield', 'warrior']),
+      w(134, ['chief', ...rep(3, 'warrior'), 'shield', 'shield', 'balearic', 'elephant'], 'A great wave approaches!'), w(166, ['balearic', 'balearic', 'shield', 'warrior']), w(182, ['elephant', 'warrior', 'warrior']),
+      w(200, ['chief', 'elephant', 'elephant', ...rep(3, 'shield'), ...rep(4, 'warrior'), ...rep(2, 'balearic')], 'The final wave!')] },
+  { id: 'cannae', name: 'Cannae', year: '216 BC', enemy: 'Hannibal', theme: 'plain', start: 300, cols: 6, rows: 8,
+    twist: 'Hannibal’s trap: his African infantry close in on the outer lanes, and late in the battle his cavalry routs the Roman horse on the left wing, so the left lane loses its equites.',
+    events: [{ t: 160, text: 'Hannibal’s horsemen are closing in on the Roman left wing!' }, { t: 175, wings: [0], text: 'Hannibal’s cavalry has routed the Roman horse on the left wing! No equites on the left lane now.' }],
+    units: ['cart', 'slinger', 'velites', 'hastatus', 'triarius', 'caltrops', 'princeps', 'rorarii', 'scorpio'], newUnit: 'velites',
+    blurb: 'Rome’s biggest army ever faces Hannibal on the open plain of Cannae. Hannibal has laid a trap. Can you hold where Rome broke?',
+    after: 'At Cannae Rome lost perhaps 50,000 men in an afternoon. Yet the Senate refused to talk peace, and Rome fought on for fourteen more years.',
+    waves: [w(26, ['gaul']), w(40, ['numidian']), w(54, ['gaul', 'warrior']), w(70, ['numidian', 'gaul']), w(86, ['shield', 'gaul', 'gaul']), w(100, ['numidian', 'numidian']), w(116, ['gaul', 'gaul', 'shield']),
+      w(132, ['chief', ...rep(4, 'gaul'), 'numidian', 'numidian', 'shield'], 'A great wave approaches!'), w(160, ['african', 'african', 'african'], 'The Africans close in from the sides!'), w(176, ['numidian', 'gaul', 'gaul', 'african']),
+      w(196, ['chief', ...rep(4, 'gaul'), ...rep(3, 'african'), ...rep(3, 'numidian')], 'The final wave!')] },
+  { id: 'zama', name: 'Zama', year: '202 BC', enemy: 'Hannibal', theme: 'zama', start: 300, cols: 6, rows: 8, openLanes: true,
+    twist: 'Scipio’s lanes: an elephant that reaches the camp down a lane with no Roman soldiers in it runs out of the battle without harm. At the end, Masinissa’s cavalry comes back and your equites can charge again.',
+    events: [{ t: 194, masinissa: true, text: 'Masinissa’s cavalry is back! Your equites can charge again.' }],
+    units: ['cart', 'slinger', 'velites', 'hastatus', 'triarius', 'caltrops', 'princeps', 'scorpio', 'cornicen'], newUnit: 'cornicen',
+    blurb: 'Near Zama, in Africa, Hannibal faces Scipio with 80 war elephants in front and his veterans from Italy held back for the end.',
+    after: 'Zama ended the Second Punic War. Carthage gave up its elephants and its fleet, and Scipio took the name Africanus.',
+    waves: [w(26, ['warrior']), w(40, ['charger']), w(56, ['warrior', 'warrior']), w(72, ['shield', 'warrior']), w(88, ['charger', 'warrior']), w(104, ['gaul', 'gaul', 'shield']), w(120, ['veteran']),
+      w(136, ['chief', 'charger', 'charger', ...rep(3, 'warrior'), 'shield'], 'Hannibal’s first line advances!'), w(164, ['shield', 'shield', 'gaul', 'gaul', 'warrior'], 'The second line!'),
+      w(188, ['chief', ...rep(4, 'veteran'), 'shield', 'shield', 'gaul'], 'Hannibal’s veterans: the final wave!')] },
+  { id: 'pydna', name: 'Pydna', year: '168 BC', enemy: 'King Perseus of Macedon', theme: 'olympus', start: 275, cols: 6, rows: 8,
+    rough: [[1, 3], [4, 3], [0, 4], [3, 4], [2, 5], [5, 5]],
+    twist: 'The phalanx comes in blocks, three lanes wide. Its long pikes strike a square ahead. On the rough ground (the stony squares) its shields break, as gaps opened in its ranks at Pydna.',
+    units: ['cart', 'slinger', 'velites', 'hastatus', 'triarius', 'caltrops', 'rorarii', 'scorpio', 'maniple'], newUnit: 'maniple',
+    blurb: 'At Pydna, by the sea below Mount Olympus, King Perseus’s phalanx bristles with long pikes that pierce Roman shields.',
+    after: 'Within about an hour the phalanx broke. Perseus was led in chains in Aemilius Paullus’s triumph, and the kingdom of Macedon was no more.',
+    waves: [w(26, ['pikeman']), w(42, ['thracian']), w(56, ['pikeman', 'thracian']), w(72, ['phalanx3']), w(90, ['cavalry', 'thracian']), w(106, ['phalanx3', 'thracian']), w(122, ['thracian', 'thracian', 'thracian']),
+      w(138, ['chief', 'phalanx3', 'phalanx3', 'thracian', 'thracian'], 'A great wave approaches!'), w(170, ['cavalry', 'pikeman', 'pikeman', 'thracian']),
+      w(190, ['chief', 'phalanx3', 'phalanx3', 'phalanx3', ...rep(3, 'thracian'), 'cavalry'], 'The final wave!')] },
+  { id: 'carthage', name: 'The Siege of Carthage', year: '146 BC', enemy: 'the Carthaginians', theme: 'carthage', start: 275, cols: 6, rows: 8,
+    houses: [[0, 1], [2, 1], [5, 1], [3, 2], [1, 3], [4, 3]],
+    twist: 'Street fighting: houses fill some squares. You can’t build on them, and defenders burst out of them. A torch-bearer burns a house down.',
+    units: ['cart', 'slinger', 'hastatus', 'triarius', 'princeps', 'shed', 'scorpio', 'maniple', 'torch'], newUnit: 'torch',
+    blurb: 'Spring 146 BC: the Romans have broken through Carthage’s walls. For six days they fight street by street toward the citadel, the Byrsa.',
+    after: 'Carthage was destroyed and about 50,000 survivors were sold into slavery. The same year Rome destroyed Corinth. Rome now ruled the Mediterranean.',
+    waves: [w(26, ['militia']), w(40, ['volunteer', 'volunteer']), w(56, ['militia', 'bowman']), w(70, ['militia', 'militia'], null, 'houses'), w(86, ['shield', 'volunteer', 'volunteer']), w(102, ['bowman', 'bowman', 'militia']),
+      w(116, ['militia', 'militia', 'volunteer'], null, 'houses'), w(132, ['chief', ...rep(3, 'militia'), ...rep(3, 'volunteer'), 'shield', 'bowman'], 'A great wave approaches!'), w(162, ['militia', 'volunteer', 'volunteer'], null, 'houses'),
+      w(178, ['shield', 'shield', 'bowman', 'militia']), w(196, ['chief', ...rep(4, 'militia'), ...rep(4, 'volunteer'), ...rep(2, 'shield'), 'bowman'], 'The last stand at the Byrsa!')] },
 ]
 let LEVEL = LEVELS[0]
 // What the chapter's quiz score buys for its battle: starting grain and veteran soldiers, placed free before the
@@ -645,6 +705,54 @@ const DRAW_UNIT = {
     c.fillStyle = '#7a5636'; c.beginPath(); c.arc(0, -44, 8.4, Math.PI, 0); c.fill()   // leather cap
   },
   pigs(c, u, T) { drawPig(c, T, false) },
+  scorpio(c, u) {
+    shadow(c, 20, 5)
+    for (const x of [-14, 0, 14]) line(c, x, -2, 0, -22, '#5a3a22', 2.6)   // the tripod
+    c.fillStyle = '#8a6236'; rr(c, -6, -34, 12, 13, 2); c.fill()
+    c.strokeStyle = '#5a3a22'; c.lineWidth = 3.2; c.beginPath(); c.moveTo(-23, -24); c.quadraticCurveTo(-12, -36, 0, -31); c.quadraticCurveTo(12, -36, 23, -24); c.stroke()   // the bow arms
+    const pulled = u.anim > 0 ? -27 : -18
+    line(c, -23, -24, 0, pulled, '#e9e1cf', 1); line(c, 23, -24, 0, pulled, '#e9e1cf', 1)
+    line(c, 0, -48, 0, -18, '#4a3420', 2.4)   // the slide
+    if (!(u.anim > 0)) { line(c, 0, -50, 0, -26, '#6b4a2b', 1.8); line(c, 0, -52, 0, -46, '#cfd4d8', 2.2) }   // a bolt, loaded
+    c.fillStyle = '#c9a24a'; c.beginPath(); c.arc(0, -31, 2.2, 0, TAU); c.fill()
+  },
+  velites(c, u) {
+    shadow(c, 12, 4); romanLegs(c)
+    c.fillStyle = '#b08a3e'; c.strokeStyle = '#6b5326'; c.lineWidth = 1.4; c.beginPath(); c.arc(-11, -24, 8.5, 0, TAU); c.fill(); c.stroke()   // the parma, a small round shield
+    c.fillStyle = '#d9ccb0'; rr(c, -9, -33, 18, 21, 5); c.fill()
+    c.fillStyle = '#6b4a2b'; c.fillRect(-9, -19, 18, 2.5)
+    const thrown = u.anim > 0
+    line(c, 8, -30, thrown ? 13 : 11, thrown ? -46 : -36, SKIN, 4)
+    if (!thrown) { line(c, 11, -22, 12.5, -56, '#6b4a2b', 1.6); line(c, 12.3, -52, 12.7, -61, '#cfd4d8', 1.3) }
+    c.fillStyle = SKIN_SHADE; c.fillRect(-3, -37, 6, 4)
+    romanHelmet(c, -42)
+    c.fillStyle = '#7a5636'; c.beginPath(); c.moveTo(-8, -44); c.quadraticCurveTo(0, -56, 8, -44); c.lineTo(10, -32); c.lineTo(-10, -32); c.closePath(); c.fill()   // a wolf skin over the helmet, as Polybius describes
+    c.fillStyle = '#5e4128'; c.beginPath(); c.moveTo(-6, -50); c.lineTo(-4, -57); c.lineTo(-1, -51); c.fill(); c.beginPath(); c.moveTo(6, -50); c.lineTo(4, -57); c.lineTo(1, -51); c.fill()
+  },
+  cornicen(c, u) {
+    shadow(c, 13, 4); romanLegs(c)
+    c.fillStyle = '#a8392f'; rr(c, -10, -34, 20, 22, 5); c.fill(); c.fillStyle = '#5a3a22'; c.fillRect(-10, -19, 20, 2.5)
+    c.strokeStyle = '#d4a63a'; c.lineWidth = 3.4; c.beginPath(); c.arc(2, -36, 15, -0.3, Math.PI * 1.55); c.stroke()   // the cornu, a great bronze horn curled round the body
+    c.fillStyle = '#d4a63a'; c.beginPath(); c.ellipse(16, -42, 4, 6.5, 0.3, 0, TAU); c.fill()   // its bell
+    line(c, -6, -50, 4, -38, '#6b4a2b', 2)
+    romanHelmet(c, -42)
+    if (u.anim > 0) { c.strokeStyle = `rgba(251, 243, 228, ${Math.min(1, u.anim)})`; c.lineWidth = 2; for (const r of [8, 14, 20]) { c.beginPath(); c.arc(16, -42, r, -0.9, 0.9); c.stroke() } }
+  },
+  maniple(c, u, T) {
+    line(c, -26, 0, -26, -84, '#5a3a22', 2.2)   // the maniple's standard, the signum
+    c.fillStyle = '#c9a24a'; for (const y of [-76, -67, -58]) { c.beginPath(); c.arc(-26, y, 3.6, 0, TAU); c.fill() }
+    c.beginPath(); c.moveTo(-26, -92); c.lineTo(-30, -84); c.lineTo(-22, -84); c.fill()
+    DRAW_UNIT.princeps(c, u, T)
+  },
+  torch(c, u, T) {
+    shadow(c, 12, 4); romanLegs(c)
+    c.fillStyle = '#a8392f'; rr(c, -9.5, -33, 19, 21, 5); c.fill(); c.fillStyle = '#5a3a22'; c.fillRect(-9.5, -19, 19, 2.5)
+    line(c, 8, -30, 12, -46, SKIN, 4); line(c, 12, -40, 14, -62, '#5a3a22', 2.6)
+    const fl = Math.sin(T * 20) * 2
+    c.fillStyle = '#e0a63a'; c.beginPath(); c.ellipse(14, -68 + fl * 0.3, 5, 9, 0, 0, TAU); c.fill()
+    c.fillStyle = '#d4392d'; c.beginPath(); c.ellipse(14, -66, 3, 5.5, 0, 0, TAU); c.fill()
+    romanHelmet(c, -42)
+  },
   cart(c, u) {
     shadow(c, 25, 5)
     if (u.anim > 0) { const g = c.createRadialGradient(0, -24, 2, 0, -24, 34); g.addColorStop(0, `rgba(240, 200, 90, ${u.anim})`); g.addColorStop(1, 'rgba(240, 200, 90, 0)'); c.fillStyle = g; c.beginPath(); c.arc(0, -24, 34, 0, TAU); c.fill() }
@@ -694,10 +802,19 @@ const FOE_LOOK = {
   samnite:    { tunic: '#d8cfb8', head: 'samnite', weapon: 'spear', shield: 'long', discs: true },
   linen:      { tunic: '#f4efe2', head: 'samnite', weapon: 'sword', shield: 'long', discs: true, white: true },
   phalangite: { tunic: '#8a3a3a', head: 'macedon', weapon: 'sarissa', shield: 'round' },
+  pikeman:    { tunic: '#a33a2a', head: 'macedon', weapon: 'pike', shield: 'round' },
+  gaul:       { tunic: '#d7a27a', head: 'gaul', weapon: 'sword', shield: 'oval', fast: true },
+  african:    { tunic: '#8d939a', head: 'helmet', weapon: 'spear', shield: 'round' },
+  veteran:    { tunic: '#6a2f6e', head: 'chief', weapon: 'spear', shield: 'round' },
+  balearic:   { tunic: '#e9e1cf', head: 'hair', weapon: 'sling' },
+  thracian:   { tunic: '#5f7f8f', head: 'thracian', weapon: 'javelin', fast: true },
+  bowman:     { tunic: '#6a2f6e', head: 'hair', weapon: 'bow' },
+  militia:    { tunic: '#b8864e', head: 'hair', weapon: 'axe' },
+  volunteer:  { tunic: '#9a8a70', head: 'hair', weapon: 'javelin', fast: true },
 }
 function drawFoe(c, f, T) {
-  if (f.type === 'cavalry') return drawRider(c, f)
-  if (f.type === 'elephant') return drawElephant(c, f, T)
+  if (f.type === 'cavalry' || f.type === 'numidian') return drawRider(c, f, f.type === 'numidian')
+  if (FOES[f.type]?.elephant) return drawElephant(c, f, T, false, f.type === 'charger')
   if (f.type === 'calf') { c.save(); c.scale(0.55, 0.55); drawElephant(c, f, T, true); c.restore(); return }
   const L = FOE_LOOK[f.type] ?? FOE_LOOK.warrior
   const walk = f.eating || f.jump || f.shooting ? 0 : Math.sin(f.phase * (L.fast ? 12 : 7)), bob = Math.abs(walk) * -1.2
@@ -708,6 +825,7 @@ function drawFoe(c, f, T) {
     c.fillStyle = '#d4392d'; c.beginPath(); c.moveTo(13, -80); c.lineTo(33, -76 + Math.sin(T * 6) * 2); c.lineTo(13, -66); c.fill()
     c.fillStyle = '#e0a63a'; c.beginPath(); c.arc(19, -73, 2.6, 0, TAU); c.fill()
   }
+  if (L.weapon === 'pike') { line(c, -12, -30, -5, 26, '#6b4a2b', 2.6); line(c, -5.4, 22, -4.2, 33, '#cfd4d8', 2.2) }   // the long pike, lowered at the enemy
   if (L.weapon === 'sarissa') { line(c, -12, -6, -14, -102, '#6b4a2b', 2.4); line(c, -13.8, -96, -14.2, -109, '#cfd4d8', 2) }   // the long pike, held upright
   line(c, -4, -14, -4 + walk * 3, -1, SKIN, 4.6); line(c, 4, -14, 4 - walk * 3, -1, SKIN, 4.6)
   c.fillStyle = '#3f2a16'; c.fillRect(-7 + walk * 3, -3, 6, 3); c.fillRect(1 - walk * 3, -3, 6, 3)
@@ -717,7 +835,12 @@ function drawFoe(c, f, T) {
   c.fillStyle = '#3f2a16'; c.fillRect(-10, -20 + bob, 20, 2.5)
   // weapon arm (their right, our left)
   const ax = -13 + Math.sin(chop) * 2, ay = -40 + chop * 8
-  if (L.weapon === 'bow') {
+  if (L.weapon === 'sling') {   // a Balearic slinger whirls his sling overhead
+    const a = f.anim > 0 ? 0 : f.shooting ? T * 10 : 1.4
+    line(c, -8, -30 + bob, -11, -44 + bob, SKIN, 4)
+    const sx = -11 + Math.cos(a) * 9, sy = -50 + Math.sin(a) * 3.5
+    line(c, -11, -44 + bob, sx, sy + bob, '#6b4a2b', 1.2); c.fillStyle = '#8a8a80'; c.beginPath(); c.arc(sx, sy + bob, 2.2, 0, TAU); c.fill()
+  } else if (L.weapon === 'bow') {
     line(c, -8, -30 + bob, -12, -32 + bob, SKIN, 4)
     c.strokeStyle = '#5a3a22'; c.lineWidth = 2; c.beginPath(); c.arc(-4, -32 + bob, 12, Math.PI * 0.65, Math.PI * 1.35); c.stroke()
     c.strokeStyle = '#e9e1cf'; c.lineWidth = 0.8; c.beginPath(); c.moveTo(-9.3, -42.8 + bob); c.lineTo(f.anim > 0 ? -12 : -4, -32 + bob); c.lineTo(-9.3, -21.2 + bob); c.stroke()
@@ -743,6 +866,13 @@ function drawFoe(c, f, T) {
     if (L.white) { c.fillStyle = '#d4392d'; c.beginPath(); c.ellipse(0, -55 + bob, 2.6, 6, 0, 0, TAU); c.fill() }
   }
   if (f.tired && !f.eating) { c.fillStyle = '#9fd0f0'; for (const [x, y] of [[-11, -50], [11, -47]]) { const dy = (f.phase * 20) % 8; c.beginPath(); c.ellipse(x, y + dy + bob, 1.4, 2.2, 0, 0, TAU); c.fill() } }   // sweat: exhausted after the night march
+  if (L.head === 'gaul') {   // long fair hair and a moustache
+    c.fillStyle = '#d9b25a'; c.beginPath(); c.arc(0, -46 + bob, 8.8, Math.PI, 0); c.fill(); c.fillRect(-9.2, -47 + bob, 3.4, 13); c.fillRect(5.8, -47 + bob, 3.4, 13)
+    line(c, -4.5, -38 + bob, 4.5, -38 + bob, '#b8913a', 2.2)
+  }
+  if (L.head === 'thracian') {   // a tall, forward-curving cap
+    c.fillStyle = '#b8392d'; c.beginPath(); c.moveTo(-8.8, -44 + bob); c.quadraticCurveTo(-3, -64 + bob, 9, -58 + bob); c.quadraticCurveTo(5, -52 + bob, 8.8, -44 + bob); c.closePath(); c.fill()
+  }
   if (L.head === 'macedon') {
     c.fillStyle = '#b08a3e'; c.beginPath(); c.moveTo(-8.8, -44 + bob); c.quadraticCurveTo(-7, -60 + bob, 5, -58 + bob); c.quadraticCurveTo(3, -52 + bob, 8.8, -44 + bob); c.closePath(); c.fill()
     c.fillRect(-8.8, -45 + bob, 3, 8); c.fillRect(5.8, -45 + bob, 3, 8)
@@ -759,8 +889,8 @@ function drawFoe(c, f, T) {
   if (L.shield === 'oval') { c.fillStyle = '#6b4a2b'; c.strokeStyle = '#3f2a16'; c.lineWidth = 1.4; c.beginPath(); c.ellipse(10, -25 + bob, 6, 9, 0, 0, TAU); c.fill(); c.stroke() }
   if (L.shield === 'long') { c.fillStyle = L.white ? '#e9e1cf' : '#c9a86a'; c.strokeStyle = '#5a3a22'; c.lineWidth = 1.4; rr(c, 4, -40 + bob, 13, 30, [7, 7, 3, 3]); c.fill(); c.stroke(); line(c, 10.5, -37 + bob, 10.5, -13 + bob, '#8a6a44', 1.2) }
 }
-function drawRider(c, f) {
-  const g = f.jump ? 0 : Math.sin(f.phase * (f.jumped ? 8 : 13)), sh = f.jump ? 0.6 : 1, tunic = '#4d5a6a'
+function drawRider(c, f, numidian = false) {
+  const g = f.jump ? 0 : Math.sin(f.phase * (f.jumped ? 8 : 13)), sh = f.jump ? 0.6 : 1, tunic = numidian ? '#d9c89a' : '#4d5a6a'
   shadow(c, 14 * sh, 5 * sh)
   if (f.jump) c.translate(0, -Math.sin(f.jump.t * Math.PI) * 26)
   line(c, -5, -18, -5 + g * 2, -2, '#4a3420', 3.6); line(c, 5, -18, 5 - g * 2, -2, '#4a3420', 3.6)
@@ -770,14 +900,14 @@ function drawRider(c, f) {
   line(c, -9, -46, -12, -40, SKIN, 3.6); line(c, -12, -30, -15, -82, '#6b4a2b', 2.2); line(c, -14.6, -76, -15.3, -88, '#cfd4d8', 1.8)
   c.fillStyle = SKIN; c.beginPath(); c.arc(0, -59, 7, 0, TAU); c.fill()
   c.fillStyle = INK; c.fillRect(-3.5, -60, 2, 2); c.fillRect(1.5, -60, 2, 2)
-  c.fillStyle = '#b08a3e'; c.beginPath(); c.arc(0, -61, 7.6, Math.PI, 0); c.fill()
+  c.fillStyle = numidian ? '#2a1d14' : '#b08a3e'; c.beginPath(); c.arc(0, -61, 7.6, Math.PI, 0); c.fill()   // Numidians rode bareheaded
   // the horse's head, closest to us
   c.fillStyle = '#4a3420'; c.beginPath(); c.moveTo(-4, -31); c.lineTo(-6, -38); c.lineTo(-1, -33); c.fill(); c.beginPath(); c.moveTo(4, -31); c.lineTo(6, -38); c.lineTo(1, -33); c.fill()
   c.fillStyle = '#8a6440'; c.beginPath(); c.ellipse(0, -17, 6, 12, 0, 0, TAU); c.fill()
   c.fillStyle = '#5a3e26'; c.beginPath(); c.ellipse(0, -8, 4.5, 4, 0, 0, TAU); c.fill()
   c.fillStyle = INK; c.fillRect(-4.5, -23, 2, 2); c.fillRect(2.5, -23, 2, 2)
 }
-function drawElephant(c, f, T, calf = false) {
+function drawElephant(c, f, T, calf = false, african = false) {
   const step = f.eating ? Math.sin(f.phase * 9) : Math.sin(f.phase * 3.5)
   c.save(); c.scale(1.2, 1.2)
   shadow(c, 27, 8)
@@ -786,14 +916,16 @@ function drawElephant(c, f, T, calf = false) {
   rr(c, 10, -26 - Math.max(0, -step) * 3, 12, 26, 4); c.fill()
   c.fillStyle = '#7b7f86'; c.beginPath(); c.ellipse(0, -44, 28, 22, 0, 0, TAU); c.fill()
   if (!calf) {
-  c.fillStyle = '#6a2f6e'; rr(c, -24, -64, 48, 12, 4); c.fill()   // a royal purple cloth
+  c.fillStyle = african ? '#9a2a22' : '#6a2f6e'; rr(c, -24, -64, 48, 12, 4); c.fill()   // a royal purple cloth (Carthage's: red)
+  if (african) { c.fillStyle = SKIN; c.beginPath(); c.arc(0, -72, 5, 0, TAU); c.fill(); c.fillStyle = '#e9e1cf'; rr(c, -6, -68, 12, 6, 2); c.fill() }   // a driver on its neck, no tower
   c.fillStyle = '#c9a24a'; c.fillRect(-24, -54, 48, 2)
-  // the tower, with a soldier
+  if (!african) {   // the tower, with a soldier
   c.fillStyle = '#8a6236'; rr(c, -13, -86, 26, 22, 2); c.fill(); c.strokeStyle = '#5a3a22'; c.lineWidth = 1; c.strokeRect(-13, -86, 26, 22)
   c.fillStyle = '#5a3a22'; for (let x = -13; x < 13; x += 6) c.fillRect(x, -90, 4, 4)
   c.fillStyle = SKIN; c.beginPath(); c.arc(0, -92, 4.5, 0, TAU); c.fill()
   c.fillStyle = '#b08a3e'; c.beginPath(); c.arc(0, -94, 5, Math.PI, 0); c.fill()
   line(c, 7, -86, 10, -110, '#6b4a2b', 1.6)
+  }
   }
   // ears, head, tusks, trunk
   c.fillStyle = '#6f737a'; c.beginPath(); c.ellipse(-21, -44, 11, 15, -0.3, 0, TAU); c.fill(); c.beginPath(); c.ellipse(21, -44, 11, 15, 0.3, 0, TAU); c.fill()
@@ -839,7 +971,8 @@ function layout() {
   wrap.style.width = (W + 6) + 'px'
   paintField()
 }
-const LAWN = { lake: ['#94a856', '#8b9e4e'], hills: ['#93a252', '#89984b'], walls: ['#98a95a', '#8fa052'], mountains: ['#8a9d4f', '#819449'], river: ['#97aa58', '#8ea050'] }
+const LAWN = { lake: ['#94a856', '#8b9e4e'], hills: ['#93a252', '#89984b'], walls: ['#98a95a', '#8fa052'], mountains: ['#8a9d4f', '#819449'], river: ['#97aa58', '#8ea050'],
+  siege: ['#a3a75a', '#999d52'], plain: ['#aea961', '#a39e59'], zama: ['#b6a766', '#ab9c5d'], olympus: ['#8fa354', '#86994d'], carthage: ['#c4b48e', '#b9a982'] }
 function paintField() {
   const c = bctx, theme = LEVEL.theme
   c.setTransform(dpr, 0, 0, dpr, 0, 0)
@@ -875,6 +1008,30 @@ function paintField() {
   if (theme === 'river') {   // Pyrrhus's camp beyond the field
     for (let x = cell * 0.4; x < W; x += cell * 1.1) { c.fillStyle = '#8a6a9a'; c.beginPath(); c.moveTo(x - cell * 0.3, top * 0.7); c.lineTo(x, top * 0.12); c.lineTo(x + cell * 0.3, top * 0.7); c.fill(); c.fillStyle = '#6a2f6e'; c.fillRect(x - 1, top * 0.04, 2, top * 0.1) }
   }
+  if (theme === 'siege') {   // Akragas on its hill, behind golden stone walls
+    c.fillStyle = '#a89a6a'; c.beginPath(); c.moveTo(0, top); c.quadraticCurveTo(W / 2, -top * 0.7, W, top); c.fill()
+    c.fillStyle = '#d4b46a'; c.fillRect(W * 0.1, top * 0.42, W * 0.8, top * 0.32)
+    c.fillStyle = '#b8964e'; for (let x = W * 0.1; x < W * 0.9; x += 14) c.fillRect(x, top * 0.34, 8, 6)
+    c.fillStyle = '#efe4cc'; for (const x of [0.3, 0.5, 0.7]) { c.fillRect(W * x - 9, top * 0.12, 18, top * 0.3); c.beginPath(); c.moveTo(W * x - 11, top * 0.13); c.lineTo(W * x, top * 0.02); c.lineTo(W * x + 11, top * 0.13); c.fill() }
+  }
+  if (theme === 'plain') {   // the open plain of Apulia, the River Aufidus beyond
+    c.fillStyle = '#b9a76a'; c.fillRect(0, 0, W, top)
+    c.strokeStyle = '#5d93b5'; c.lineWidth = cell * 0.16; c.beginPath(); c.moveTo(0, top * 0.3); c.bezierCurveTo(W * 0.3, top * 0.05, W * 0.6, top * 0.5, W, top * 0.2); c.stroke()
+  }
+  if (theme === 'zama') {   // a dry North African plain, with palms
+    c.fillStyle = '#c9ad6a'; c.fillRect(0, 0, W, top)
+    for (const x of [0.6, 2.2, 4.1, 5.4]) { const px = x * cell; line(c, px, top * 0.95, px + 4, top * 0.22, '#6b4a2b', 3); c.fillStyle = '#4f7a3a'; for (const a of [-2.6, -2, -1.3, -0.7, -0.1]) { c.beginPath(); c.ellipse(px + 4 + Math.cos(a) * 10, top * 0.22 + Math.sin(a) * 5, 11, 3, a, 0, TAU); c.fill() } }
+  }
+  if (theme === 'olympus') {   // Mount Olympus behind, the sea to the right
+    c.fillStyle = '#7d8796'; c.beginPath(); c.moveTo(-cell * 0.5, top); c.lineTo(W * 0.35, -top * 0.2); c.lineTo(W * 0.82, top); c.fill()
+    c.fillStyle = '#eef0f2'; c.beginPath(); c.moveTo(W * 0.35, -top * 0.2); c.lineTo(W * 0.28, top * 0.25); c.lineTo(W * 0.42, top * 0.25); c.fill()
+    c.fillStyle = '#5d93b5'; c.fillRect(W * 0.82, 0, W * 0.18, top)
+  }
+  if (theme === 'carthage') {   // the city rising to the Byrsa, its citadel
+    c.fillStyle = '#c9b48a'; c.beginPath(); c.moveTo(W * 0.15, top); c.quadraticCurveTo(W * 0.5, -top * 0.6, W * 0.85, top); c.fill()
+    c.fillStyle = '#efe4cc'; for (let i = 0; i < 9; i++) c.fillRect(W * (0.06 + i * 0.105), top * (0.42 + (i % 3) * 0.12), cell * 0.32, top * 0.5)
+    c.fillStyle = '#e8dcc0'; c.fillRect(W * 0.44, top * 0.08, W * 0.12, top * 0.3); c.fillStyle = '#b8964e'; c.beginPath(); c.moveTo(W * 0.42, top * 0.1); c.lineTo(W * 0.5, -top * 0.04); c.lineTo(W * 0.58, top * 0.1); c.fill()
+  }
   // the lawn: a checkerboard of squares
   for (let r = 0; r < ROWS; r++) for (let col = 0; col < COLS; col++) {
     c.fillStyle = LAWN[theme][(r + col) % 2]
@@ -886,6 +1043,16 @@ function paintField() {
     c.beginPath(); c.moveTo(x, y); c.lineTo(x + (rnd() - 0.5) * 3, y - 4); c.stroke()
   }
   for (let i = 0; i < 14; i++) { c.fillStyle = rnd() < 0.5 ? '#f2e6c8' : '#e9c44a'; c.beginPath(); c.arc(rnd() * W, top + rnd() * (ry(ROWS) - top), 1.6, 0, TAU); c.fill() }
+  if (LEVEL.ditch != null) {   // the siege ditch: a trench with stakes
+    const y = ry(LEVEL.ditch)
+    c.fillStyle = '#7a5a36'; c.fillRect(0, y + cell * 0.18, W, cell * 0.64)
+    c.fillStyle = '#5e4428'; c.fillRect(0, y + cell * 0.34, W, cell * 0.32)
+    c.fillStyle = '#4a3420'; for (let x = cell * 0.1; x < W; x += cell * 0.35) { c.beginPath(); c.moveTo(x, y + cell * 0.84); c.lineTo(x + cell * 0.06, y + cell * 0.62); c.lineTo(x + cell * 0.12, y + cell * 0.84); c.fill() }
+  }
+  for (const [l, r] of LEVEL.rough ?? []) {   // rough, stony ground
+    c.fillStyle = 'rgba(120, 110, 90, .45)'; c.fillRect(l * cell + 3, ry(r) + 3, cell - 6, cell - 6)
+    for (let i = 0; i < 8; i++) { c.fillStyle = rnd() < 0.5 ? '#8f8a7a' : '#a8a28e'; c.beginPath(); c.ellipse(l * cell + cell * (0.15 + rnd() * 0.7), ry(r) + cell * (0.2 + rnd() * 0.65), cell * (0.05 + rnd() * 0.07), cell * (0.04 + rnd() * 0.04), 0, 0, TAU); c.fill() }
+  }
   // the camp: trodden earth, a palisade, tents
   const camp = ry(ROWS)
   c.fillStyle = '#b59a6a'; c.fillRect(0, camp, W, H - camp)
@@ -912,11 +1079,18 @@ const saveProgress = () => { try { localStorage.setItem(SAVE_KEY, JSON.stringify
 const unlocked = i => i === 0 || (progress.stars[i - 1] ?? 0) > 0
 function buildQueue() {
   const q = []
-  for (const w of LEVEL.waves) { const gap = w.big ? 0.7 : 1.6; w.foes.forEach((type, i) => q.push({ t: w.t + i * gap, type, wave: w })) }
+  let block = 0
+  for (const w of LEVEL.waves) {
+    const gap = w.big ? 0.7 : 1.6
+    w.foes.forEach((type, i) => {
+      if (type === 'phalanx3') { block++; for (const off of [-1, 0, 1]) q.push({ t: w.t + i * gap, type: 'pikeman', wave: w, block, off }) }   // a block of the phalanx, three lanes wide
+      else q.push({ t: w.t + i * gap, type, wave: w })
+    })
+  }
   return q.sort((a, b) => a.t - b.t)
 }
 function newGame(i = levelIndex, score = quizScore) {
-  levelIndex = i; LEVEL = LEVELS[i]
+  levelIndex = i; LEVEL = LEVELS[i]; COLS = LEVEL.cols ?? 5; ROWS = LEVEL.rows ?? 7
   const army = armyFor(score)
   LEVEL.waves.forEach(w => { w.announced = false })
   G = {
@@ -928,6 +1102,7 @@ function newGame(i = levelIndex, score = quizScore) {
     introduced: new Set(), selected: null, dismiss: false, hover: null, lastLane: -1, tips: {},
     hasMedicus: army.medicus, medicus: army.medicus ? MEDICUS.heals : 0, medicusWait: 0, heal: false,
     hasAugur: army.augur, augur: army.augur ? 1 : 0, blessUntil: -1,
+    houses: (LEVEL.houses ?? []).map(([lane, row]) => ({ lane, row, burned: false })), blocks: {}, events: (LEVEL.events ?? []).map(e => ({ ...e })), charges: 0,
   }
   G.total = G.queue.length
   renderTray(); renderBar(true); updateCount(); $('level').textContent = LEVEL.name
@@ -946,6 +1121,7 @@ function spawn(type, lane = null, y = -0.75) {
     from = LEVEL.gates[Math.floor(Math.random() * LEVEL.gates.length)]
     lane = Math.random() < 0.55 ? from : Math.max(0, Math.min(COLS - 1, from + (Math.random() < 0.5 ? -1 : 1)))
   }
+  if (lane == null && F.flanks) lane = [0, 1, COLS - 2, COLS - 1][Math.floor(Math.random() * 4)]   // they close in from the sides
   if (lane == null) { do lane = Math.floor(Math.random() * COLS); while (lane === G.lastLane && Math.random() < 0.7) }
   G.lastLane = lane
   const hp = Math.round(F.hp * EASE), tired = LEVEL.tired && G.t < LEVEL.tired
@@ -956,12 +1132,31 @@ function spawn(type, lane = null, y = -0.75) {
   if (tired && !G.tips.tired) { G.tips.tired = true; announce('Pyrrhus’s men arrive exhausted after getting lost on a night march!', false, 3600) }
   return f
 }
-// where a foe is drawn: out of a gate he walks across to his lane
-const foeX = f => f.fromLane != null && f.y < 0.3 ? lx(f.fromLane) + (lx(f.lane) - lx(f.fromLane)) * Math.max(0, Math.min(1, (f.y + 0.75) / 1.05)) + f.dx * cell : lx(f.lane) + f.dx * cell
+function spawnEntry(e) {
+  if (e.block) {   // the phalanx keeps its lanes side by side
+    const c = G.blocks[e.block] ??= 1 + Math.floor(Math.random() * (COLS - 2))
+    return spawn(e.type, c + e.off)
+  }
+  if (e.wave.from === 'houses') {   // defenders burst out of a house still standing
+    const open = G.houses.filter(h => !h.burned)
+    if (open.length) { const h = open[Math.floor(Math.random() * open.length)]; return spawn(e.type, h.lane, h.row + 0.55) }
+  }
+  return spawn(e.type)
+}
+// where a foe is drawn: out of a gate he walks across to his lane; a horseman riding round slides across
+const foeX = f => f.slide ? lx(f.slide.from) + (lx(f.lane) - lx(f.slide.from)) * Math.min(1, f.slide.t) + f.dx * cell : f.fromLane != null && f.y < 0.3 ? lx(f.fromLane) + (lx(f.lane) - lx(f.fromLane)) * Math.max(0, Math.min(1, (f.y + 0.75) / 1.05)) + f.dx * cell : lx(f.lane) + f.dx * cell
 function unitAt(lane, row) { return G.units.find(u => u.lane === lane && u.row === row) }
+const houseAt = (lane, row) => G.houses.find(h => h.lane === lane && h.row === row && !h.burned)
+const isRough = (lane, row) => !!LEVEL.rough?.some(([l, r]) => l === lane && r === row)
+// not in the siege ditch, not on a house (a torch-bearer goes only on a house)
+function canPlace(type, lane, row) {
+  if (lane < 0 || lane >= COLS || row < 0 || row >= ROWS || unitAt(lane, row) || row === LEVEL.ditch) return false
+  return type === 'torch' ? !!houseAt(lane, row) : !houseAt(lane, row)
+}
+const canStand = (lane, row) => canPlace('slinger', lane, row)
 function place(type, lane, row) {
   const U = UNITS[type]
-  if (!LEVEL.units.includes(type) || lane < 0 || lane >= COLS || row < 0 || row >= ROWS || unitAt(lane, row)) return false
+  if (!LEVEL.units.includes(type) || !canPlace(type, lane, row)) return false
   if (G.phase === 'deploy') {
     if (!(G.vets[type] > 0)) { sfx.deny(); return false }
     G.vets[type]--
@@ -974,18 +1169,18 @@ function place(type, lane, row) {
   sfx.place(); updateCount(); if (G.phase !== 'deploy') tutorial('placed', type); else syncDeploy()
   return true
 }
-const MOVABLE = t => t !== 'caltrops' && t !== 'pigs'
+const MOVABLE = t => t !== 'caltrops' && t !== 'pigs' && t !== 'torch'
 function moveUnit(u, lane, row) {
-  if (unitAt(lane, row) || (u.lane === lane && u.row === row)) return false
+  if (!canStand(lane, row) || (u.lane === lane && u.row === row)) return false
   u.fromLane = u.lane; u.fromRow = u.row; u.lane = lane; u.row = row
   u.travel = G.phase === 'deploy' ? 0 : Math.max(0.25, Math.hypot(u.lane - u.fromLane, u.row - u.fromRow) / 4); u.travelT = 0   // about four squares a second
   for (const f of G.foes) if (f.eating === u) f.eating = null
   sfx.place(); return true
 }
 function removeUnit(u, lost = true) { G.units = G.units.filter(x => x !== u); if (lost) G.lost++; for (const f of G.foes) if (f.eating === u) f.eating = null }
-function hurtFoe(f, dmg, quiet = false) {
+function hurtFoe(f, dmg, quiet = false, flank = false) {
   if (f.hp <= 0) return
-  if (f.shield > 0) {
+  if (f.shield > 0 && !(flank && FOES[f.type].frontShield)) {
     const a = Math.min(f.shield, dmg); f.shield -= a; dmg -= a
     if (f.shield <= 0) { sfx.crack(); for (let i = 0; i < 8; i++) G.fx.push({ kind: 'shard', x: lx(f.lane), y: ry(f.y) - 25 * k, vx: (Math.random() - 0.5) * 90, vy: -Math.random() * 70, t: 0.6 }) }
     else if (!quiet) sfx.clang()
@@ -1022,12 +1217,18 @@ function update(dt) {
     if (e.wave.big && !e.wave.announced) { e.wave.announced = true; announce(e.wave.big, true); sfx.horn() }
     for (const t of e.type.split('+')) if (FOES[t].intro && !G.introduced.has(t)) { G.introduced.add(t); announce(FOES[t].intro, false, 3600) }
     if (G.spawned === 0 && levelIndex === 0) announce('The Latins are coming!')
-    spawn(e.type)
+    spawnEntry(e)
   }
   renderBar()
+  // the battle's turning points
+  for (const ev of G.events) if (!ev.done && G.t >= ev.t) {
+    ev.done = true; announce(ev.text, true, 4200); sfx.horn()
+    if (ev.wings) for (const l of ev.wings) if (G.equites[l].state === 'ready') G.equites[l].state = 'used'
+    if (ev.masinissa) for (const e of G.equites) if (e.state === 'used') { e.state = 'ready'; e.y = ROWS + 0.62 }
+  }
   // grain falling from the sky
   G.nextSky -= dt
-  if (G.nextSky <= 0) { G.nextSky = SCORE.sky[0] + Math.random() * (SCORE.sky[1] - SCORE.sky[0]); G.drops.push({ x: cell * (0.45 + Math.random() * (COLS - 0.9)), y: -12, ty: ry(0.6 + Math.random() * 5.2), v: 25, life: 10, falling: true }) }
+  if (G.nextSky <= 0) { G.nextSky = SCORE.sky[0] + Math.random() * (SCORE.sky[1] - SCORE.sky[0]); G.drops.push({ x: cell * (0.45 + Math.random() * (COLS - 0.9)), y: -12, ty: ry(0.6 + Math.random() * (ROWS - 1.8)), v: 25, life: 10, falling: true }) }
   for (const d of G.drops) { if (d.falling) { d.y += 70 * k * dt; if (d.y >= d.ty) { d.y = d.ty; d.falling = false } } else d.life -= dt }
   G.drops = G.drops.filter(d => !d.gone && (d.falling || d.life > 0))
   for (const t in G.cool) G.cool[t] = Math.max(0, G.cool[t] - dt)
@@ -1044,10 +1245,32 @@ function update(dt) {
       G.drops.push({ x: lx(u.lane) + (Math.random() - 0.5) * cell * 0.4, y: ry(u.row + 0.2), ty: ry(u.row + 0.55), v: 25, life: 10, falling: true })
     }
     if (u.type === 'caltrops' && !u.armed) { u.arm -= dt; if (u.arm <= 0) u.armed = true }
+    if (u.type === 'torch') {   // the house burns down
+      u.burn = (u.burn ?? 0) + dt
+      if (u.burn >= U.burn) {
+        const h = houseAt(u.lane, u.row); if (h) h.burned = true
+        removeUnit(u, false); sfx.boom()
+        for (let i = 0; i < 14; i++) G.fx.push({ kind: 'dust', x: lx(u.lane), y: ry(u.row + 0.6), vx: (Math.random() - 0.5) * 90, vy: -Math.random() * 90, t: 0.8 })
+      }
+      continue
+    }
+    if (U.horn && u.cd <= 0) {   // the trumpeter panics elephants coming at him
+      const scared = G.foes.filter(f => FOES[f.type].elephant && f.hp > 0 && !f.fleeing && Math.abs(f.lane - u.lane) <= 1 && f.y >= u.row - U.horn.range && f.y <= u.row + 1)
+      if (scared.length) {
+        u.cd = U.horn.every; u.anim = 0.9; sfx.trumpet()
+        for (const f of scared) { f.fleeing = true; f.eating = null }
+        if (!G.tips.horn) { G.tips.horn = true; announce('The trumpets blare and the elephants panic!') }
+      }
+    }
     if (U.melee) {   // swordsmen fight whoever reaches their square
       const foe = G.foes.filter(f => f.lane === u.lane && f.hp > 0 && !f.jump && !f.fleeing && f.y >= u.row - 0.1 && f.y <= u.row + 1.0).sort((a, b) => b.y - a.y)[0]
       u.fighting = !!foe
       if (foe) { hurtFoe(foe, U.melee * dt * (blessed ? AUGUR.damage : 1), true); if (Math.random() < dt * 2.5) { sfx.clang(); G.fx.push({ kind: 'spark', x: lx(u.lane), y: ry(u.row + 0.4), t: 0.2 }) } }
+    }
+    if (U.flank) {   // the maniple strikes enemies in the lanes beside it, from the side
+      const side = G.foes.filter(f => Math.abs(f.lane - u.lane) === 1 && f.hp > 0 && !f.jump && !f.fleeing && Math.abs(f.y - (u.row + 0.6)) < 0.75)
+      for (const f of side) { hurtFoe(f, U.flank * dt * (blessed ? AUGUR.damage : 1), true, true); if (Math.random() < dt * 2) G.fx.push({ kind: 'spark', x: (lx(u.lane) + lx(f.lane)) / 2, y: ry(u.row + 0.4), t: 0.2 }) }
+      if (side.length) u.fighting = true
     }
     if (u.type === 'pigs' && G.foes.some(f => f.lane === u.lane && f.hp > 0 && !f.fleeing && f.y >= u.row - U.trigger && f.y <= u.row + 1)) {
       removeUnit(u, false); G.runners.push({ lane: u.lane, y: u.row + 0.82 }); sfx.squeal()
@@ -1058,7 +1281,7 @@ function update(dt) {
       u.aiming = near
       if (near && u.cd <= 0) {
         u.cd = U.reload * (blessed ? AUGUR.reload : 1); u.anim = 0.35
-        for (const l of lanes) G.shots.push({ lane: l, from: u.lane, y: u.row + 0.45, y0: u.row + 0.45, kind: u.type === 'slinger' ? 'stone' : 'pilum', dmg: U.dmg * (blessed ? AUGUR.damage : 1), speed: u.type === 'slinger' ? 7 : 6, end: u.row + 0.5 - U.range - 0.3, x0: (Math.random() - 0.5) * 0.1 })
+        for (const l of lanes) G.shots.push({ lane: l, from: u.lane, y: u.row + 0.45, y0: u.row + 0.45, kind: U.pierce ? 'bolt' : u.type === 'slinger' ? 'stone' : 'pilum', pierce: !!U.pierce, dmg: U.dmg * (blessed ? AUGUR.damage : 1), speed: U.pierce ? 9 : u.type === 'slinger' ? 7 : 6, end: u.row + 0.5 - U.range - 0.3, x0: (Math.random() - 0.5) * 0.1 })
         u.type === 'slinger' ? sfx.sling() : sfx.throw()
       }
     }
@@ -1066,8 +1289,12 @@ function update(dt) {
   // missiles
   for (const s of G.shots) {
     s.y -= s.speed * dt
-    const hit = G.foes.filter(f => f.lane === s.lane && f.hp > 0 && !f.jump && s.y <= f.y + 0.05 && s.y >= f.y - 0.85).sort((a, b) => b.y - a.y)[0]
-    if (hit) { hurtFoe(hit, s.dmg, s.kind); s.done = true; G.fx.push({ kind: 'spark', x: lx(s.lane), y: ry(s.y), t: 0.25 }) }
+    const hit = G.foes.filter(f => f.lane === s.lane && f.hp > 0 && !f.jump && !s.hits?.has(f) && s.y <= f.y + 0.05 && s.y >= f.y - 0.85).sort((a, b) => b.y - a.y)[0]
+    if (hit) {
+      hurtFoe(hit, s.dmg, s.kind, s.from != null && s.from !== s.lane)   // a javelin from the next lane hits the side
+      if (s.pierce) (s.hits ??= new Set()).add(hit); else s.done = true   // a scorpion bolt flies on through
+      G.fx.push({ kind: 'spark', x: lx(s.lane), y: ry(s.y), t: 0.25 })
+    }
     if (s.y < Math.max(-1, s.end)) s.done = true
   }
   G.shots = G.shots.filter(s => !s.done)
@@ -1086,7 +1313,7 @@ function update(dt) {
     const hit = G.foes.find(f => f.lane === r.lane && f.hp > 0 && !f.fleeing && !f.jump && Math.abs(f.y - r.y) < 0.55)
     if (hit) {
       r.done = true
-      if (hit.type === 'elephant') { hit.fleeing = true; hit.eating = null; sfx.trumpet(); announce('The elephant panics!') } else hurtFoe(hit, 200)
+      if (FOES[hit.type].elephant) { hit.fleeing = true; hit.eating = null; sfx.trumpet(); announce('The elephant panics!') } else hurtFoe(hit, 200)
       G.fx.push({ kind: 'ring', x: lx(r.lane), y: ry(r.y), t: 0.45 })
     }
     if (r.y < -1) r.done = true
@@ -1099,19 +1326,27 @@ function update(dt) {
     if (f.fleeing) {   // a panicked elephant runs back up the lane, trampling its own side
       f.y -= 0.9 * dt
       f.trampled ??= new Set()
-      if (f.type === 'elephant') for (const o of G.foes) if (o !== f && o !== f.calf && o.type !== 'calf' && o.lane === f.lane && o.hp > 0 && Math.abs(o.y - f.y) < 0.55 && !f.trampled.has(o)) { f.trampled.add(o); hurtFoe(o, 300) }
+      if (FOES[f.type].elephant) for (const o of G.foes) if (o !== f && o !== f.calf && o.type !== 'calf' && o.lane === f.lane && o.hp > 0 && Math.abs(o.y - f.y) < 0.55 && !f.trampled.has(o)) { f.trampled.add(o); hurtFoe(o, 300) }
       if (f.y < -1.4) { f.hp = 0; G.killed++ }
       continue
     }
+    if (f.slide) { f.slide.t += dt / 0.45; if (f.slide.t >= 1) f.slide = null }
     if (f.jump) {
       f.jump.t += dt / 0.6; f.y = f.jump.from + (f.jump.to - f.jump.from) * Math.min(1, f.jump.t)
       if (f.jump.t >= 1) { f.jump = null; f.speed = FOES.cavalry.after }
       continue
     }
-    const u = G.units.find(u => u.lane === f.lane && !u.travel && f.y >= u.row + 0.3 && f.y < u.row + 1.0)
-    const bow = FOES[f.type].bow
+    const F = FOES[f.type], reach = F.reach ?? 0   // pikes strike a square ahead
+    const u = G.units.find(u => u.lane === f.lane && !u.travel && f.y >= u.row + 0.3 - reach && f.y < u.row + 1.0)
+    const bow = F.bow
     if (u) {
       f.shooting = false
+      if (F.charges && !f.charged) { f.charged = true; f.speed = F.after }
+      if (F.switches && (f.switched ?? 0) < F.switches && !f.slide) {   // Numidians ride round whoever blocks them
+        const r = Math.floor(f.y + 0.3), free = [f.lane - 1, f.lane + 1].filter(l => l >= 0 && l < COLS && !unitAt(l, r) && !unitAt(l, r + 1) && !unitAt(l, r - 1)).sort(() => Math.random() - 0.5)
+        if (free.length) { f.slide = { from: f.lane, t: 0 }; f.lane = free[0]; f.switched = (f.switched ?? 0) + 1; f.eating = null; continue }
+      }
+      if (u.type === 'velites' && !u.fell && canStand(u.lane, u.row + 1)) { u.fell = true; moveUnit(u, u.lane, u.row + 1); continue }   // velites fall back, once
       if (u.type === 'caltrops' && u.armed) { explode(u); continue }
       if (FOES[f.type].jumps && !f.jumped) { f.jumped = true; f.jump = { from: f.y, to: u.row + 1.35, t: 0 }; f.eating = null; continue }
       f.eating = u; u.hp -= FOES[f.type].dps * dt; u.hurt = 0.12; sfx.chop()
@@ -1125,17 +1360,34 @@ function update(dt) {
         f.shooting = !!target && target.row + 0.82 - f.y <= bow.range && f.y > -0.4
         if (f.shooting) {
           f.cd -= dt
-          if (f.cd <= 0) { f.cd = bow.reload; f.anim = 0.3; G.foeShots.push({ lane: f.lane, y: f.y - 0.35, dmg: bow.dmg, dx: f.dx }); sfx.bow() }
+          if (f.cd <= 0) { f.cd = bow.reload; f.anim = 0.3; G.foeShots.push({ lane: f.lane, y: f.y - 0.35, dmg: bow.dmg, dx: f.dx, stone: !!bow.sling }); bow.sling ? sfx.sling() : sfx.bow() }
           continue
         }
       }
       const e = G.equites[f.lane]
-      f.y = Math.min(f.y + f.speed * dt, e.state === 'charge' ? ROWS + 0.35 : 99)
+      let v = f.speed
+      const r = Math.floor(f.y)
+      if (r === LEVEL.ditch) v *= 0.4   // climbing through the siege ditch
+      if (isRough(f.lane, r)) {
+        v *= 0.75
+        if (F.phalanx && f.shield > 0) {   // rough ground opens gaps in the phalanx
+          f.shield = 0; sfx.crack()
+          for (let i = 0; i < 8; i++) G.fx.push({ kind: 'shard', x: lx(f.lane), y: ry(f.y) - 25 * k, vx: (Math.random() - 0.5) * 90, vy: -Math.random() * 70, t: 0.6 })
+          if (!G.tips.rough) { G.tips.rough = true; announce('Rough ground! Gaps open in the phalanx and its shields break.') }
+        }
+      }
+      if (F.charges && !f.charged && f.y > 3) { f.charged = true; f.speed = F.after }
+      f.y = Math.min(f.y + v * dt, e.state === 'charge' ? ROWS + 0.35 : 99)
       if (Math.random() < dt * 1.5) G.fx.push({ kind: 'dust', x: foeX(f), y: ry(f.y), vx: (Math.random() - 0.5) * 12, vy: -6, t: 0.5 })
     }
     if (f.y >= ROWS + 0.3) {
+      if (LEVEL.openLanes && F.elephant && !G.units.some(x => x.lane === f.lane)) {   // Scipio's lanes: down an empty lane, an elephant runs out of the battle
+        f.hp = 0; G.killed++
+        if (!G.tips.lanes) { G.tips.lanes = true; announce('The elephant ran down an empty lane and out of the battle, as at Zama!') }
+        continue
+      }
       const e = G.equites[f.lane]
-      if (e.state === 'ready') { e.state = 'charge'; G.shake = Math.max(G.shake, 6); sfx.charge(); announce('The equites charge!'); tutorial('equites') }
+      if (e.state === 'ready') { e.state = 'charge'; G.charges++; G.shake = Math.max(G.shake, 6); sfx.charge(); announce('The equites charge!'); tutorial('equites') }
       else if (e.state === 'used') return lose()
     }
   }
@@ -1168,11 +1420,11 @@ function draw() {
   const placing = G.selected || G.dismiss || moving
   if (placing) {
     for (let r = 0; r < ROWS; r++) for (let c = 0; c < COLS; c++) {
-      const taken = !!unitAt(c, r)
-      if (G.dismiss ? taken : !taken) { ctx.fillStyle = 'rgba(251, 243, 228, .10)'; ctx.fillRect(c * cell + 2, ry(r) + 2, cell - 4, cell - 4) }
+      const ok = G.dismiss ? !!unitAt(c, r) : canPlace(G.selected ?? moving?.type ?? 'slinger', c, r)
+      if (ok) { ctx.fillStyle = 'rgba(251, 243, 228, .10)'; ctx.fillRect(c * cell + 2, ry(r) + 2, cell - 4, cell - 4) }
     }
     if (G.hover) {
-      const { lane, row } = G.hover, ok = G.dismiss ? !!unitAt(lane, row) : !unitAt(lane, row)
+      const { lane, row } = G.hover, ok = G.dismiss ? !!unitAt(lane, row) : canPlace(G.selected ?? moving?.type ?? 'slinger', lane, row)
       ctx.strokeStyle = ok ? '#fbf3e4' : 'rgba(212, 57, 45, .9)'; ctx.lineWidth = 3; ctx.strokeRect(lane * cell + 3, ry(row) + 3, cell - 6, cell - 6)
       if (ok && G.selected) { ctx.save(); ctx.globalAlpha = 0.55; ctx.translate(lx(lane), ry(row + 0.82)); ctx.scale(k, k); DRAW_UNIT[G.selected](ctx, ghostUnit(G.selected), T); ctx.restore() }
       if (ok && moving) {
@@ -1205,20 +1457,22 @@ function draw() {
       if (u.hp < u.max && u.type !== 'caltrops' && u.type !== 'pigs') hpBar(ux, uy + 5 * k, u.hp / u.max)
     }])
   }
+  for (const h of G.houses) if (!h.burned) items.push([ry(h.row + 0.5), () => drawHouse(h, T)])
   for (const f of G.foes) items.push([ry(f.y), () => {
     ctx.save(); ctx.translate(foeX(f), ry(f.y)); ctx.scale(k, k)
     if (f.flash > 0) ctx.filter = 'brightness(1.35)'
     drawFoe(ctx, f, T); ctx.restore()
-    if (f.hp < f.max || (f.shieldMax && f.shield < f.shieldMax)) hpBar(foeX(f), ry(f.y) - (f.type === 'elephant' ? 140 : f.type === 'calf' ? 74 : f.type === 'phalangite' ? 80 : 74) * k, (f.hp + f.shield) / (f.max + f.shieldMax), f.shield > 0 ? '#b08a3e' : '#e2574c')
+    if (f.hp < f.max || (f.shieldMax && f.shield < f.shieldMax)) hpBar(foeX(f), ry(f.y) - (FOES[f.type].elephant ? 140 : f.type === 'calf' ? 74 : f.type === 'phalangite' ? 80 : 74) * k, (f.hp + f.shield) / (f.max + f.shieldMax), f.shield > 0 ? '#b08a3e' : '#e2574c')
   }])
   for (const [lane, e] of G.equites.entries()) if (e.state !== 'used') items.push([ry(e.y), () => { ctx.save(); ctx.translate(lx(lane), ry(e.y)); ctx.scale(k * 0.9, k * 0.9); drawEques(ctx, e, T); ctx.restore() }])
   for (const r of G.runners) items.push([ry(r.y), () => { ctx.save(); ctx.translate(lx(r.lane), ry(r.y)); ctx.scale(k, k); drawPig(ctx, T, true); ctx.restore() }])
   items.sort((a, b) => a[0] - b[0]).forEach(([, fn]) => fn())
-  for (const s of G.foeShots) { const x = lx(s.lane) + s.dx * cell, y = ry(s.y) - 20 * k; line(ctx, x, y - 9 * k, x, y + 5 * k, '#3f2a16', 1.5); line(ctx, x - 2.5 * k, y + 2 * k, x, y + 6 * k, '#9aa3aa', 1.5); line(ctx, x + 2.5 * k, y + 2 * k, x, y + 6 * k, '#9aa3aa', 1.5) }
+  for (const s of G.foeShots) { const x = lx(s.lane) + s.dx * cell, y = ry(s.y) - 20 * k; if (s.stone) { ctx.fillStyle = '#5f5f58'; ctx.beginPath(); ctx.arc(x, y, 3 * k + 1, 0, TAU); ctx.fill(); continue } line(ctx, x, y - 9 * k, x, y + 5 * k, '#3f2a16', 1.5); line(ctx, x - 2.5 * k, y + 2 * k, x, y + 6 * k, '#9aa3aa', 1.5); line(ctx, x + 2.5 * k, y + 2 * k, x, y + 6 * k, '#9aa3aa', 1.5) }
   // stones and javelins
   for (const s of G.shots) {
     const sideways = Math.min(1, (s.y0 - s.y) / 0.9), x = lx(s.from ?? s.lane) + (lx(s.lane) - lx(s.from ?? s.lane)) * sideways + s.x0 * cell, y = ry(s.y) - 14 * k
     if (s.kind === 'stone') { ctx.fillStyle = '#5f5f58'; ctx.beginPath(); ctx.arc(x, y, 3 * k + 1, 0, TAU); ctx.fill() }
+    else if (s.kind === 'bolt') { line(ctx, x, y + 14 * k, x, y - 8 * k, '#4a3420', 3); line(ctx, x, y - 6 * k, x, y - 13 * k, '#cfd4d8', 2.6) }
     else { line(ctx, x, y + 12 * k, x, y - 4 * k, '#6b4a2b', 2); line(ctx, x, y - 2 * k, x, y - 9 * k, '#cfd4d8', 1.8) }
   }
   // grain
@@ -1234,7 +1488,7 @@ function draw() {
   // effects
   for (const p of G.fx) {
     const a = Math.max(0, Math.min(1, p.t * 2.5))
-    if (p.kind === 'dust') { ctx.fillStyle = `rgba(205, 185, 140, ${a * 0.6})`; ctx.beginPath(); ctx.arc(p.x, p.y, 3 * k + (0.7 - p.t) * 8, 0, TAU); ctx.fill() }
+    if (p.kind === 'dust') { ctx.fillStyle = `rgba(205, 185, 140, ${a * 0.6})`; ctx.beginPath(); ctx.arc(p.x, p.y, Math.max(0.5, 3 * k + (0.7 - p.t) * 8), 0, TAU); ctx.fill() }
     if (p.kind === 'spark') { ctx.strokeStyle = `rgba(255, 230, 150, ${a})`; ctx.lineWidth = 2; ctx.beginPath(); for (let i = 0; i < 5; i++) { const an = i * TAU / 5; ctx.moveTo(p.x, p.y - 14 * k); ctx.lineTo(p.x + Math.cos(an) * 8 * k, p.y - 14 * k + Math.sin(an) * 8 * k) } ctx.stroke() }
     if (p.kind === 'shard') { ctx.fillStyle = `rgba(176, 138, 62, ${a})`; ctx.fillRect(p.x, p.y, 4 * k, 3 * k) }
     if (p.kind === 'ring') { ctx.strokeStyle = `rgba(251, 243, 228, ${a})`; ctx.lineWidth = 3; ctx.beginPath(); ctx.ellipse(p.x, p.y, (0.5 - p.t) * cell * 2, (0.5 - p.t) * cell, 0, 0, TAU); ctx.stroke() }
@@ -1242,6 +1496,20 @@ function draw() {
     if (p.kind === 'text') { ctx.fillStyle = `rgba(251, 243, 228, ${a})`; ctx.strokeStyle = `rgba(27, 23, 21, ${a})`; ctx.lineWidth = 3; ctx.font = `900 ${Math.round(16 * k + 4)}px Nunito, system-ui, sans-serif`; ctx.textAlign = 'center'; ctx.strokeText(p.text, p.x, p.y); ctx.fillText(p.text, p.x, p.y) }
   }
   ctx.restore()
+}
+// a house of Carthage: whitewashed walls and a flat roof; it burns when a torch-bearer stands on it
+function drawHouse(h, T) {
+  const x = h.lane * cell, y = ry(h.row), s = cell
+  ctx.fillStyle = 'rgba(25, 35, 10, .25)'; ctx.fillRect(x + s * 0.1, y + s * 0.82, s * 0.86, s * 0.1)
+  ctx.fillStyle = '#ede2c8'; ctx.fillRect(x + s * 0.08, y + s * 0.2, s * 0.84, s * 0.64)
+  ctx.fillStyle = '#c9b48a'; ctx.fillRect(x + s * 0.05, y + s * 0.12, s * 0.9, s * 0.1)
+  ctx.fillStyle = '#5a3a22'; ctx.fillRect(x + s * 0.42, y + s * 0.52, s * 0.16, s * 0.32)
+  ctx.fillStyle = '#3f2a16'; ctx.fillRect(x + s * 0.18, y + s * 0.34, s * 0.12, s * 0.1); ctx.fillRect(x + s * 0.7, y + s * 0.34, s * 0.12, s * 0.1)
+  const torch = G.units.find(u => u.type === 'torch' && u.lane === h.lane && u.row === h.row)
+  if (torch) {
+    const p = Math.min(1, (torch.burn ?? 0) / UNITS.torch.burn)
+    for (let i = 0; i < 5; i++) { const fx = x + s * (0.2 + i * 0.15), fy = y + s * 0.18 - Math.abs(Math.sin(T * 9 + i)) * s * 0.2 * p; ctx.fillStyle = i % 2 ? '#e0a63a' : '#d4392d'; ctx.beginPath(); ctx.ellipse(fx, fy, s * 0.06, s * 0.14 * p + 2, 0, 0, TAU); ctx.fill() }
+  }
 }
 function hpBar(x, y, frac, color) {
   const w = 46 * k, h = Math.max(5, 7 * k)
@@ -1322,7 +1590,7 @@ function tutorial(event, type) {
   const say = (key, text, ms = 4200) => { if (G.tips[key]) return; G.tips[key] = true; announce(text, false, ms) }
   if (event === 'start') say('start', 'Drag a supply cart onto the field. Carts bring rations.')
   if (event === 'placed' && type === 'cart') say('cart', 'Tap the glowing grain to collect it. Then place slingers in front of your carts.')
-  if (event === 'placed' && type === 'slinger') say('slinger', 'Slingers shoot at anyone coming down their lane. Cover all five lanes!')
+  if (event === 'placed' && type === 'slinger') say('slinger', `Slingers shoot at anyone coming down their lane. Cover all ${['', '', '', 'three', 'four', 'five', 'six', 'seven'][COLS]} lanes!`)
   if (event === 'hurt' && levelIndex === 0) say('hurt', 'A soldier is hurt! Drag him to another square to pull him out of the fight.')
   if (event === 'equites') say('equites', 'The equites saved that lane, but they only charge once.')
 }
@@ -1392,11 +1660,11 @@ function showMap() {
     const s = progress.stars[i] ?? 0, open = unlocked(i)
     return `<li class="stop ${s ? 'done' : open ? 'open' : 'locked'}"><button id="lvl${i}" ${open ? '' : 'disabled'}>
       <span class="num">${i + 1}</span>
-      <span class="what"><b>${L.name}</b><small>${open ? `${L.year} · ${L.enemy}` : `Locked: win ${LEVELS[i - 1].name} first`}</small></span>
+      <span class="what"><b>${L.name}</b><small>${open ? `${L.year} · ${L.enemy}` : `Locked: win ${LEVELS[i - 1].name.replace(/^The /, 'the ')} first`}</small></span>
       ${open ? `<span class="stars" aria-label="${s} of 3 stars">${starText(s)}</span>` : ''}</button></li>`
   }).join('')
   showPanel(`<span class="eyebrow">Campaign · the rise of Rome</span><h1>Hold the Line</h1>
-    <p>Five battles, from the Latin League to King Pyrrhus. Each one brings a new enemy and a new Roman unit.</p>
+    <p>${LEVELS.length} battles, from the Latin League to the fall of Carthage. Each one brings a new enemy and a new Roman unit.</p>
     <ol class="road">${stops}</ol>`,
     Object.fromEntries(LEVELS.map((L, i) => [`lvl${i}`, () => showBriefing(i)])))
 }
@@ -1420,7 +1688,7 @@ let closeGuide = null
 const guideOpen = () => mounted && !overlay.hidden && overlay.querySelector('.guide-panel')
 document.addEventListener('pointerdown', e => { if (guideOpen() && !e.composedPath().some(n => n.classList?.contains('panel'))) { e.preventDefault(); closeGuide() } })
 document.addEventListener('keydown', e => { if (e.key === 'Escape' && guideOpen()) closeGuide() })
-const foeTypes = L => [...new Set(L.waves.flatMap(x => x.foes.flatMap(t => t.split('+'))))]
+const foeTypes = L => [...new Set(L.waves.flatMap(x => x.foes.flatMap(t => t.split('+')).map(t => t === 'phalanx3' ? 'pikeman' : t)))]
 function newFoesOf(i) {
   const seen = new Set(LEVELS.slice(0, i).flatMap(foeTypes))
   return foeTypes(LEVELS[i]).filter(t => !seen.has(t) && FOES[t].intro)
@@ -1477,17 +1745,17 @@ function beginBattle() {
   sfx.horn()
   if (levelIndex === 0) tutorial('start'); else announce(`${LEVEL.name} · ${LEVEL.year}`, true)
 }
-function starsFor() { const used = G.equites.filter(e => e.state !== 'ready').length; return used === 0 ? 3 : used <= 2 ? 2 : 1 }
+function starsFor() { const used = G.charges; return used === 0 ? 3 : used <= 2 ? 2 : 1 }
 function win() {
   if (G.phase !== 'play') return
   G.phase = 'won'; sfx.win()
   const stars = starsFor(), i = levelIndex, next = LEVELS[i + 1]
   if (opts.mode !== 'chapter') { progress.stars[i] = Math.max(progress.stars[i] ?? 0, stars); saveProgress() }
-  setTimeout(() => showPanel(`<span class="eyebrow">Victory · ${LEVEL.year}</span><h2>You held the line at ${LEVEL.name}</h2>
+  setTimeout(() => showPanel(`<span class="eyebrow">Victory · ${LEVEL.year}</span><h2>You held the line at ${LEVEL.name.replace(/^The /, 'the ')}</h2>
     <p class="big-stars" aria-label="${stars} of 3 stars">${starText(stars)}</p>
     <p>${G.killed} enemies fell and you lost ${G.lost === 1 ? 'one soldier' : G.lost + ' soldiers'}. ${stars === 3 ? 'The equites never had to ride.' : 'Win without the equites charging for three stars.'}</p>
     <p class="history">${LEVEL.after}</p>
-    ${next || opts.mode === 'chapter' ? '' : '<p><b>You have won the whole campaign: Rome rules Italy.</b></p>'}
+    ${next || opts.mode === 'chapter' ? '' : '<p><b>You have won the whole campaign: Rome rules the Mediterranean.</b></p>'}
     ${opts.mode === 'chapter' ? `<div class="row"><button class="primary" id="continue">Continue</button><button class="tool" id="again">Play again</button></div>`
       : `<div class="row">${next ? `<button class="primary" id="next">Next: ${next.name}</button>` : ''}<button class="tool" id="again">Play again</button><button class="tool" id="map">Map</button></div>`}`,
     { next: () => showBriefing(i + 1), again: () => startLevel(i), map: showMap, continue: () => exit({ won: true, stars }) }), 1200)
@@ -1512,7 +1780,7 @@ function lose() {
 let last = performance.now()
 function frame(now) {
   if (!mounted) return
-  const dt = Math.min(0.05, (now - last) / 1000); last = now
+  const dt = Math.max(0, Math.min(0.05, (now - last) / 1000)); last = now   // the first frame can come in a hair before `last`
   if (G.phase === 'play') { for (let i = 0; i < G.speed; i++) update(dt) }
   else if (G.phase === 'won' || G.phase === 'lost') { for (const c of G.corpses) c.t = Math.min(c.t + dt, 1); G.shake = Math.max(0, G.shake - dt * 12) }
   draw(); syncTray()

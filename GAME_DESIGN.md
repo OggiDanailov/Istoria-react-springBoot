@@ -3,7 +3,7 @@
 How the game works today: the chapter test, the point system, the battles and the content rules.
 It describes the prototype (`prototypes/age-of-kings`, battles in `prototypes/hold-the-line`); the real app will follow it.
 
-**Last updated**: October 28, 2026
+**Last updated**: October 29, 2026
 
 ---
 
@@ -28,14 +28,14 @@ Review battles don't change progress.
 | | Conflict of the Orders: Toward Resolution | The Siege of Veii (396 BC) |
 | | The Samnite Wars | Aquilonia (293 BC) |
 | | Final Conquest of Italy | Beneventum (275 BC) |
-| Middle Republic | The First Punic War (264–241 BC) | *not built yet* |
-| | Hannibal in Italy (241–216 BC) | *not built yet* |
-| | Scipio and the Road to Zama (216–201 BC) | *not built yet* |
-| | Rome Turns East (200–167 BC) | *not built yet* |
-| | The Fall of Carthage and Corinth (167–133 BC) | *not built yet* |
+| Middle Republic | The First Punic War (264–241 BC) | Agrigentum (261 BC) |
+| | Hannibal in Italy (241–216 BC) | Cannae (216 BC) |
+| | Scipio and the Road to Zama (216–201 BC) | Zama (202 BC) |
+| | Rome Turns East (200–167 BC) | Pydna (168 BC) |
+| | The Fall of Carthage and Corinth (167–133 BC) | The Siege of Carthage (146 BC) |
 | | The Gracchi (133–121 BC) | none (a political chapter) |
 
-A chapter whose battle isn't built yet opens the next chapter as soon as its test is finished.
+A chapter without a battle (the Gracchi) opens the next chapter as soon as its test is finished.
 
 ## 2. The chapter test
 
@@ -95,6 +95,16 @@ Starting grain and veterans by score (veterans in order: slinger, triarius, slin
 | 80%+ | **Medicus** (army doctor) | heals a wounded soldier to full: tap ✚ Medicus, then the soldier. once per battle |
 | 90%+ | **Augur** (priest who reads the omens in the flight of birds) | once per battle: for 15 seconds your soldiers throw faster and hit 1.5× harder |
 
+The Middle Republic battles (a bigger field, tougher enemies):
+
+| Score | Agrigentum | Cannae | Zama | Pydna | Siege of Carthage | Veterans |
+|---|---|---|---|---|---|---|
+| 60% | 50 | 125 | 125 | 100 | 100 | none |
+| 70% | 125 | 200 | 200 | 175 | 175 | none |
+| 80% | 200 | 275 | 275 | 250 | 250 | 1 |
+| 90% | 275 | 350 | 350 | 325 | 325 | 2 |
+| 100% | 350 | 425 | 425 | 400 | 400 | 3 |
+
 Free grain also falls from the sky every 12–14 seconds, and supply carts bring 25 every 20 seconds, so building carts
 early always matters.
 
@@ -121,7 +131,20 @@ tap), move placed soldiers to another square, collect grain. If an enemy reaches
 once; a second break loses the battle. Stars: 3 if the equites never charged, 2 if one or two lanes needed them, 1 otherwise.
 
 Each battle adds a new enemy and a new Roman unit, and some have a twist from their history: the gates of Veii, Pyrrhus's
-exhausted night march and the elephant calf at Beneventum. Twists still planned: Castor and Pollux (Lake Regillus),
+exhausted night march and the elephant calf at Beneventum.
+
+From the Middle Republic on, battles are fought on a **bigger field: 6 lanes × 8 rows** (5 × 7 before), and each has a
+twist built into the field or the timeline:
+
+| Battle | New enemy | New Roman unit | Twist |
+|---|---|---|---|
+| Agrigentum | Balearic slingers (shoot from far) | Scorpion: a bolt that flies through the whole lane | the siege ditch: enemies crossing it slow down; no building in it |
+| Cannae | Gauls, Numidians (ride round a blocker into the next lane), Africans (outer lanes) | Velites: cheap javelins, fall back one square once | late on, the left wing collapses: no equites on the left lane |
+| Zama | charging elephants, Hannibal's veterans | Trumpeter: panics elephants in three lanes | Scipio's lanes: an elephant down an empty lane runs out of the battle; Masinissa returns, equites ready again |
+| Pydna | the phalanx: blocks three lanes wide, pikes reach a square ahead, shields stop missiles from the front only | Maniple: strikes the lanes beside it from the side | rough ground breaks the phalanx's shields |
+| Siege of Carthage | citizens, freed slaves, Carthaginian archers | Torch-bearer: burns a house | houses block squares, and defenders burst out of them |
+
+Checked with the scripted players: at 80% the average player wins each of them (Cannae, the hardest, only just). Twists still planned: Castor and Pollux (Lake Regillus),
 ambushes (Volscian Raids), mountain rocks and the sacred chickens (Aquilonia).
 
 ## 7. Content rules (every chapter)
