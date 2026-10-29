@@ -734,14 +734,15 @@ const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').match
 function layout() {
   const wrap = $('wrap'), game = sroot.querySelector('.game')
   const avail = Math.min(game.clientWidth - 32, 480)
-  const used = $('tray').offsetHeight + sroot.querySelector('.controls').offsetHeight + 46 + Math.max(0, host.getBoundingClientRect().top)
+  const used = $('tray').offsetHeight + sroot.querySelector('.controls').offsetHeight + sroot.querySelector('.status').offsetHeight + $('banner').offsetHeight + 62 + Math.max(0, host.getBoundingClientRect().top)
   const maxH = Math.max(380, window.innerHeight - used)
   cell = Math.floor(Math.min(avail / COLS, maxH / (ROWS + APPROACH + CAMP)))
   W = cell * COLS; H = Math.round(cell * (ROWS + APPROACH + CAMP)); k = cell / 72
-  dpr = window.devicePixelRatio || 1
+  dpr = Math.min(2, window.devicePixelRatio || 1)
   for (const cv of [canvas, bg]) { cv.width = Math.round(W * dpr); cv.height = Math.round(H * dpr) }
   canvas.style.width = W + 'px'; canvas.style.height = H + 'px'
   wrap.style.width = (W + 6) + 'px'
+  for (const el of [sroot.querySelector('.status'), $('banner')]) el.style.width = (W + 6) + 'px'
   paintField()
 }
 const LAWN = { lake: ['#94a856', '#8b9e4e'], hills: ['#93a252', '#89984b'], walls: ['#98a95a', '#8fa052'], mountains: ['#8a9d4f', '#819449'], river: ['#97aa58', '#8ea050'],
@@ -1326,7 +1327,7 @@ function draw() {
     items.push([uy, () => {
       ctx.save(); ctx.translate(ux + (u.hurt > 0 && !reduceMotion ? (Math.random() - 0.5) * 2.5 : 0), uy); ctx.scale(k, k)
       if (moveDrag?.moved && moveDrag.u === u) ctx.globalAlpha = 0.45
-      if (G.t < G.blessUntil && u.type !== 'caltrops' && u.type !== 'pigs') { const g = ctx.createRadialGradient(0, -26, 2, 0, -26, 30); g.addColorStop(0, 'rgba(240, 200, 90, .55)'); g.addColorStop(1, 'rgba(240, 200, 90, 0)'); ctx.fillStyle = g; ctx.beginPath(); ctx.arc(0, -26, 30, 0, TAU); ctx.fill() }
+      if (G.t < G.blessUntil && u.type !== 'caltrops' && u.type !== 'pigs') { ctx.globalAlpha = 0.55; ctx.drawImage(glow('240, 200, 90'), -30, -56, 60, 60); ctx.globalAlpha = 1 }
       DRAW_UNIT[u.type](ctx, u, T); ctx.restore()
       if (u.hp < u.max && u.type !== 'caltrops' && u.type !== 'pigs') hpBar(ux, uy + 5 * k, u.hp / u.max)
     }])
@@ -1334,7 +1335,7 @@ function draw() {
   for (const h of G.houses) if (!h.burned) items.push([ry(h.row + 0.5), () => drawHouse(h, T)])
   for (const f of G.foes) items.push([ry(f.y), () => {
     ctx.save(); ctx.translate(foeX(f), ry(f.y)); ctx.scale(k, k)
-    if (f.flash > 0) ctx.filter = 'brightness(1.35)'
+    if (f.flash > 0) ctx.globalAlpha = 0.65   // a hit makes him flicker (a canvas filter would be far too slow on phones)
     drawFoe(ctx, f, T); ctx.restore()
     if (f.hp < f.max || (f.shieldMax && f.shield < f.shieldMax)) hpBar(foeX(f), ry(f.y) - (FOES[f.type].elephant ? 140 : f.type === 'calf' ? 74 : f.type === 'phalangite' ? 80 : 74) * k, (f.hp + f.shield) / (f.max + f.shieldMax), f.shield > 0 ? '#b08a3e' : '#e2574c')
   }])
@@ -1357,8 +1358,7 @@ function draw() {
   for (const d of G.drops) {
     if (!d.falling && d.life < 3 && Math.floor(d.life * 6) % 2) continue
     const r = 15 * k + 3, pulse = 1 + Math.sin(T * 5) * 0.06
-    const g = ctx.createRadialGradient(d.x, d.y, 2, d.x, d.y, r * 1.6 * pulse); g.addColorStop(0, 'rgba(255, 220, 120, .75)'); g.addColorStop(1, 'rgba(255, 220, 120, 0)')
-    ctx.fillStyle = g; ctx.beginPath(); ctx.arc(d.x, d.y, r * 1.6 * pulse, 0, TAU); ctx.fill()
+    const R = r * 1.6 * pulse; ctx.globalAlpha = 0.75; ctx.drawImage(glow('255, 220, 120'), d.x - R, d.y - R, R * 2, R * 2); ctx.globalAlpha = 1
     ctx.fillStyle = '#e9dcc0'; ctx.strokeStyle = '#8a6a44'; ctx.lineWidth = 1.5; ctx.beginPath(); ctx.ellipse(d.x, d.y + 2, r * 0.7, r * 0.62, 0, 0, TAU); ctx.fill(); ctx.stroke()
     ctx.fillStyle = '#e0a63a'; for (const [ox, oy, a] of [[0, -0.75, 0], [-0.35, -0.6, -0.5], [0.35, -0.6, 0.5]]) { ctx.beginPath(); ctx.ellipse(d.x + ox * r, d.y + oy * r, r * 0.16, r * 0.3, a, 0, TAU); ctx.fill() }
     line(ctx, d.x - r * 0.3, d.y - r * 0.4, d.x + r * 0.3, d.y - r * 0.4, '#8a6a44', 2)
@@ -1388,6 +1388,17 @@ function drawHouse(h, T) {
     const p = Math.min(1, (torch.burn ?? 0) / UNITS.torch.burn)
     for (let i = 0; i < 5; i++) { const fx = x + s * (0.2 + i * 0.15), fy = y + s * 0.18 - Math.abs(Math.sin(T * 9 + i)) * s * 0.2 * p; ctx.fillStyle = i % 2 ? '#e0a63a' : '#d4392d'; ctx.beginPath(); ctx.ellipse(fx, fy, s * 0.06, s * 0.14 * p + 2, 0, 0, TAU); ctx.fill() }
   }
+}
+// a soft round glow, painted once and then stamped wherever it's needed
+const glows = {}
+function glow(rgb) {
+  if (!glows[rgb]) {
+    const c = document.createElement('canvas'); c.width = c.height = 64
+    const x = c.getContext('2d'), g = x.createRadialGradient(32, 32, 2, 32, 32, 32)
+    g.addColorStop(0, `rgba(${rgb}, 1)`); g.addColorStop(1, `rgba(${rgb}, 0)`); x.fillStyle = g; x.fillRect(0, 0, 64, 64)
+    glows[rgb] = c
+  }
+  return glows[rgb]
 }
 function hpBar(x, y, frac, color) {
   const w = 46 * k, h = Math.max(5, 7 * k)
@@ -1428,19 +1439,27 @@ function renderTray() {
     sroot.querySelector('.rations svg').innerHTML = '<use href="#wheat"/>'
   }
 }
+// Runs every frame, so it touches the page only when something has actually changed (phones repaint slowly)
+const setText = (el, t) => { t = String(t); if (el.textContent !== t) el.textContent = t }
 function syncTray() {
   for (const b of tray.children) {
     const type = b.dataset.type, U = UNITS[type]
+    const key = G.phase === 'deploy' ? `d${G.vets[type]}${G.selected === type}` : `${G.rations < U.cost}${G.selected === type}${Math.ceil(G.cool[type] / U.recharge * 50)}`
+    if (b._key === key) continue
+    b._key = key
     if (G.phase === 'deploy') { b.querySelector('.n').textContent = G.vets[type]; b.classList.toggle('poor', !G.vets[type]); b.classList.toggle('selected', G.selected === type); continue }
     b.classList.toggle('poor', G.rations < U.cost)
     b.classList.toggle('selected', G.selected === type)
-    b.querySelector('.cool').style.height = (G.cool[type] / U.recharge * 100) + '%'
+    b.querySelector('.cool').style.height = (Math.ceil(G.cool[type] / U.recharge * 50) * 2) + '%'
   }
+  const key = `${G.dismiss}${G.hasMedicus}${G.medicus}${Math.ceil(G.medicusWait)}${G.heal}${G.hasAugur}${G.augur}${Math.ceil(G.blessUntil - G.t)}`
+  if (syncTray.key === key) return
+  syncTray.key = key
   $('dismiss').classList.toggle('on', G.dismiss)
   const med = $('medicus'), aug = $('augur')
   med.hidden = !G.hasMedicus; aug.hidden = !G.hasAugur
-  if (G.hasMedicus) { $('med-n').textContent = !G.medicus ? '✓' : G.medicusWait > 0 ? `${Math.ceil(G.medicusWait)}s` : MEDICUS.heals > 1 ? G.medicus : ''; med.classList.toggle('on', G.heal); med.disabled = !G.medicus }
-  if (G.hasAugur) { aug.textContent = G.augur ? 'Augur' : G.t < G.blessUntil ? `Blessed ${Math.ceil(G.blessUntil - G.t)}s` : 'Augur ✓'; aug.disabled = !G.augur; aug.classList.toggle('on', G.t < G.blessUntil) }
+  if (G.hasMedicus) { setText($('med-n'), !G.medicus ? '✓' : G.medicusWait > 0 ? `${Math.ceil(G.medicusWait)}s` : MEDICUS.heals > 1 ? G.medicus : ''); med.classList.toggle('on', G.heal); med.disabled = !G.medicus }
+  if (G.hasAugur) { setText(aug, G.augur ? 'Augur' : G.t < G.blessUntil ? `Blessed ${Math.ceil(G.blessUntil - G.t)}s` : 'Augur ✓'); aug.disabled = !G.augur; aug.classList.toggle('on', G.t < G.blessUntil) }
 }
 let shownCount = -1
 function updateCount(bump) {
@@ -1460,8 +1479,8 @@ function renderBar(reset) {
 let bannerTimer = null
 function announce(text, big = false, ms = 2600) {
   const el = $('banner')
-  el.textContent = text; el.className = 'banner' + (big ? ' big' : ''); el.hidden = false
-  clearTimeout(bannerTimer); bannerTimer = setTimeout(() => { el.hidden = true }, ms)
+  el.textContent = text; el.className = 'msg' + (big ? ' big' : '')
+  clearTimeout(bannerTimer); bannerTimer = setTimeout(() => { el.textContent = '' }, ms)   // the line keeps its height, so the field never jumps
 }
 // first-game hints, each shown once
 function tutorial(event, type) {
@@ -1668,20 +1687,20 @@ function frame(now) {
 // ---------- mounting: one game inside a host element (its styles kept apart in a shadow root) ----------
 const MARKUP = `<main class="game">
   <div class="tray" id="tray" aria-label="Your units. Drag one onto the field, or tap it and then tap a square."></div>
+  <div class="status">
+      <div class="rations" id="rations" aria-live="polite"><svg class="wheat" viewBox="0 0 20 20" aria-hidden="true"><g fill="#e0a63a"><ellipse cx="10" cy="4" rx="2.4" ry="3.6"/><ellipse cx="6.5" cy="8" rx="2.2" ry="3.3" transform="rotate(-30 6.5 8)"/><ellipse cx="13.5" cy="8" rx="2.2" ry="3.3" transform="rotate(30 13.5 8)"/><ellipse cx="7" cy="12.5" rx="2" ry="3" transform="rotate(-30 7 12.5)"/><ellipse cx="13" cy="12.5" rx="2" ry="3" transform="rotate(30 13 12.5)"/></g><path d="M10 6v13" stroke="#b8862a" stroke-width="1.6"/></svg><span id="count">100</span></div>
+    <div class="hud-right">
+      <button class="tool" id="dismiss" title="Send a soldier home (frees the square)">Dismiss</button>
+      <button class="tool helper" id="medicus" hidden title="Tap, then tap a wounded soldier to heal him">✚ Medicus <b id="med-n"></b></button>
+      <button class="tool helper" id="augur" hidden title="Once per battle: good omens make your soldiers fight harder">Augur</button>
+    </div>
+  </div>
   <div class="field-wrap" id="wrap">
     <canvas id="field" aria-label="The battlefield: five lanes in front of the Roman camp. Latin soldiers march down from the top."></canvas>
-    <div class="hud">
-      <div class="rations" id="rations" aria-live="polite"><svg class="wheat" viewBox="0 0 20 20" aria-hidden="true"><g fill="#e0a63a"><ellipse cx="10" cy="4" rx="2.4" ry="3.6"/><ellipse cx="6.5" cy="8" rx="2.2" ry="3.3" transform="rotate(-30 6.5 8)"/><ellipse cx="13.5" cy="8" rx="2.2" ry="3.3" transform="rotate(30 13.5 8)"/><ellipse cx="7" cy="12.5" rx="2" ry="3" transform="rotate(-30 7 12.5)"/><ellipse cx="13" cy="12.5" rx="2" ry="3" transform="rotate(30 13 12.5)"/></g><path d="M10 6v13" stroke="#b8862a" stroke-width="1.6"/></svg><span id="count">100</span></div>
-      <div class="hud-right">
-        <button class="tool" id="dismiss" title="Send a soldier home (frees the square)">Dismiss</button>
-        <button class="tool helper" id="medicus" hidden title="Tap, then tap a wounded soldier to heal him">✚ Medicus <b id="med-n"></b></button>
-        <button class="tool helper" id="augur" hidden title="Once per battle: good omens make your soldiers fight harder">Augur</button>
-      </div>
-    </div>
-    <div class="banner" id="banner" hidden></div>
     <div class="deploy" id="deploy" hidden><p id="deploy-text"></p><button class="primary" id="begin">Begin the battle</button></div>
     <div class="overlay" id="overlay"></div>
   </div>
+  <div class="msg" id="banner" aria-live="polite"></div>
   <div class="controls">
     <div class="progress"><span class="label" id="level">Lake Regillus</span><div class="bar" id="bar"><div class="fill" id="fill"></div></div></div>
     <button class="tool" id="pause">Pause</button>
