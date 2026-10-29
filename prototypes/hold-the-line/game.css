@@ -9,14 +9,18 @@
 [hidden] { display: none !important; }
 :host { display: block; background: var(--rome); color: var(--parch); font-family: var(--body); }
 .game { max-width: 520px; margin: 0 auto; padding-inline: 16px; padding-block: 10px 14px; display: flex; flex-direction: column; gap: 8px; }
-.tray { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 6px; }
-.card { position: relative; display: flex; flex-direction: column; align-items: center; gap: 1px; padding: 4px 2px 3px; border-radius: 10px;
+/* one slim row of cards, however many units the battle has: the field gets the height */
+.tray { display: grid; grid-template-columns: repeat(var(--n, 5), minmax(0, 1fr)); gap: 4px; }
+.card { position: relative; display: flex; flex-direction: column; align-items: center; gap: 0; padding: 3px 1px 2px; border-radius: 9px;
   background: var(--parch); color: var(--ink); border: 2px solid var(--ink); font: 900 13px/1 var(--body); font-variant-numeric: tabular-nums;
   touch-action: none; user-select: none; -webkit-user-select: none; cursor: grab; overflow: hidden; box-shadow: 0 3px 0 var(--ink); }
 .card { -webkit-touch-callout: none; }
-.card canvas { width: 46px; height: 46px; pointer-events: none; }
-.card .name { font: 800 9.5px/1.1 var(--body); color: #5a4636; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; }
-.card .cost { display: flex; align-items: center; gap: 2px; }
+.card canvas { width: 38px; height: 38px; pointer-events: none; }
+.card .name { display: none; font: 800 9.5px/1.1 var(--body); color: #5a4636; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; }
+.card .cost { display: flex; align-items: center; gap: 1px; font-size: 12px; }
+.card .cost .wheat { width: 9px; height: 9px; }
+.tray.many .card .cost { font-size: 10.5px; letter-spacing: -.02em; }   /* eight or nine units: tighter prices */
+.tray.many .card canvas { width: 34px; height: 34px; }
 .card .cool { position: absolute; left: 0; right: 0; top: 0; background: rgba(27, 23, 21, .55); pointer-events: none; }
 .card.poor { filter: grayscale(.7) brightness(.8); }
 .card.poor .cost { color: var(--rome); }

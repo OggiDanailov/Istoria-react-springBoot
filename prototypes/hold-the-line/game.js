@@ -905,7 +905,7 @@ const SAVE_KEY = 'hold-the-line-progress-v1'
 let progress = { stars: {} }
 try { const saved = JSON.parse(localStorage.getItem(SAVE_KEY)); if (saved?.stars) progress = saved } catch {}
 const saveProgress = () => { try { localStorage.setItem(SAVE_KEY, JSON.stringify(progress)) } catch {} }
-const unlocked = i => i === 0 || (progress.stars[i - 1] ?? 0) > 0
+const unlocked = () => true   // a prototype for testing: every battle is open
 function buildQueue() {
   const q = []
   let block = 0
@@ -1413,13 +1413,15 @@ const ghostUnit = type => ({ type, hp: UNITS[type].hp, max: UNITS[type].hp, anim
 let tray
 function renderTray() {
   tray.innerHTML = ''
+  const nCards = Math.max(5, (G?.phase === 'deploy' ? Object.keys(G.vets) : LEVEL.units).length)
+  tray.style.setProperty('--n', nCards); tray.classList.toggle('many', nCards > 7)
   const deploying = G?.phase === 'deploy'
   for (const type of deploying ? Object.keys(G.vets) : LEVEL.units) {
     const U = UNITS[type], b = document.createElement('button')
     b.className = 'card'; b.dataset.type = type
     b.setAttribute('aria-label', `${U.name}, costs ${U.cost} rations`)
     b.innerHTML = deploying
-      ? `<canvas width="92" height="92"></canvas><span class="name">${U.short}</span><span class="cost free">Free ×<span class="n">${G.vets[type]}</span></span><span class="cool"></span>`
+      ? `<canvas width="92" height="92"></canvas><span class="name">${U.short}</span><span class="cost free" title="Free">×<span class="n">${G.vets[type]}</span></span><span class="cool"></span>`
       : `<canvas width="92" height="92"></canvas><span class="name">${U.short}</span><span class="cost"><svg class="wheat" viewBox="0 0 20 20" aria-hidden="true"><use href="#wheat"/></svg>${U.cost}</span><span class="cool"></span>`
     const ic = b.querySelector('canvas').getContext('2d')
     ic.setTransform(2, 0, 0, 2, 0, 0); const sc = { cart: 0.62, caltrops: 1.15, shed: 0.62, pigs: 1 }[type] ?? 0.52
