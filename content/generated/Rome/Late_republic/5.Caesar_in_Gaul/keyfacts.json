@@ -1,0 +1,144 @@
+{
+  "description": "Key facts for this chapter, written by hand from the chapter text. Every entry links to the section that explains it.",
+  "people": [
+    {
+      "name": "Julius Caesar",
+      "text": "Governor of Gaul from 58 BC, conqueror of all of it by 50 BC.",
+      "sec": "caesar-goes-to-gaul"
+    },
+    {
+      "name": "Vercingetorix",
+      "text": "Arvernian war leader who united Gaul against Caesar in 52 BC.",
+      "sec": "vercingetorix"
+    },
+    {
+      "name": "Ambiorix",
+      "text": "Leader of the Eburones who destroyed a Roman camp in 54 BC.",
+      "sec": "ambiorix-revolt"
+    },
+    {
+      "name": "Pompey",
+      "text": "Rome’s most celebrated general, Caesar’s partner.",
+      "sec": "caesar-goes-to-gaul"
+    },
+    {
+      "name": "Crassus",
+      "text": "Rome’s richest man, Caesar’s partner; his son fought in Gaul.",
+      "sec": "caesar-goes-to-gaul"
+    }
+  ],
+  "dates": [
+    {
+      "when": "58 BC",
+      "text": "The Helvetii migrate; Caesar beats them and the Suebi.",
+      "sec": "helvetii-and-suebi"
+    },
+    {
+      "when": "57 BC",
+      "text": "The Belgae; the battle with the Nervii on the Sambre.",
+      "sec": "belgae-nervii-veneti"
+    },
+    {
+      "when": "56 BC",
+      "text": "The Veneti’s fleet is beaten near Quiberon Bay.",
+      "sec": "belgae-nervii-veneti"
+    },
+    {
+      "when": "55 BC",
+      "text": "Caesar bridges the Rhine and lands in Britain.",
+      "sec": "rhine-and-britain"
+    },
+    {
+      "when": "54 BC",
+      "text": "Ambiorix’s winter revolt.",
+      "sec": "ambiorix-revolt"
+    },
+    {
+      "when": "52 BC",
+      "text": "Vercingetorix: Avaricum, Gergovia, then Alesia.",
+      "sec": "vercingetorix"
+    },
+    {
+      "when": "51 BC",
+      "text": "Uxellodunum surrenders.",
+      "sec": "aftermath"
+    },
+    {
+      "when": "49 BC",
+      "text": "Caesar crosses the Rubicon.",
+      "sec": "aftermath"
+    },
+    {
+      "when": "46 BC",
+      "text": "Vercingetorix is paraded in Caesar’s triumph and strangled.",
+      "sec": "aftermath"
+    }
+  ],
+  "terms": [
+    {
+      "latin": "proconsul",
+      "english": "a governor with a consul’s powers",
+      "sec": "caesar-goes-to-gaul"
+    },
+    {
+      "latin": "casus belli",
+      "english": "a justification for war",
+      "sec": "caesar-goes-to-gaul"
+    },
+    {
+      "latin": "legiones",
+      "english": "legions",
+      "sec": "legions-and-warriors"
+    },
+    {
+      "latin": "cohortes",
+      "english": "cohorts",
+      "sec": "legions-and-warriors"
+    },
+    {
+      "latin": "manipulus",
+      "english": "a maniple",
+      "sec": "legions-and-warriors"
+    },
+    {
+      "latin": "impedimenta",
+      "english": "the baggage train",
+      "sec": "legions-and-warriors"
+    },
+    {
+      "latin": "senatus",
+      "english": "the Senate",
+      "sec": "helvetii-and-suebi"
+    },
+    {
+      "latin": "supplicatio",
+      "english": "a public thanksgiving",
+      "sec": "belgae-nervii-veneti"
+    },
+    {
+      "latin": "signifer",
+      "english": "the standard bearer",
+      "sec": "rhine-and-britain"
+    },
+    {
+      "latin": "oppidum",
+      "english": "a fortified town",
+      "sec": "siege-of-alesia"
+    },
+    {
+      "latin": "triumphus",
+      "english": "a victory parade",
+      "sec": "aftermath"
+    },
+    {
+      "latin": "dictator perpetuus",
+      "english": "dictator for life",
+      "sec": "aftermath"
+    },
+    {
+      "latin": "Commentarii de Bello Gallico",
+      "english": "Caesar’s Commentaries on the Gallic War",
+      "sec": "caesars-account"
+    }
+  ]
+}

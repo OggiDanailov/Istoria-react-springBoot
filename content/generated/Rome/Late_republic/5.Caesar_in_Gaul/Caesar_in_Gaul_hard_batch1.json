@@ -1,0 +1,203 @@
+{
+  "batchName": "Late Republic: Caesar in Gaul (58-50 BCE) - Hard Batch 1",
+  "chapterName": "Late Republic: Caesar in Gaul (58-50 BCE)",
+  "difficulty": 3,
+  "batchOrder": 5,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Roughly how far did a single legion's baggage train stretch on the march?",
+      "options": [
+        "About 1 km",
+        "About 20 km",
+        "About 8 km",
+        "About 12 km",
+        "About 2 km",
+        "About 4 km"
+      ],
+      "correctAnswers": [
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#legions-and-warriors",
+      "explanation": "A legion needed around a thousand pack animals, stretching some 4 km (2.5 miles). Supply was Rome's weak point throughout the war.",
+      "sourceQuote": "Even so, a legion needed around a thousand pack animals, its baggage train (*impedimenta*), which stretched some 4 km (2.5 miles) on the march.",
+      "reviewFlags": []
+    },
+    {
+      "question": "When did Gaul finally become formal Roman provinces?",
+      "options": [
+        "46 BC",
+        "14 AD",
+        "27 BC",
+        "50 BC",
+        "44 BC",
+        "31 BC"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 3,
+      "textReference": "#aftermath",
+      "explanation": "Gaul was organised into provinces only in 27 BC, under Rome's first emperor. Its Latin later grew into French.",
+      "sourceQuote": "Gaul became formal provinces only in 27 BC, under Rome's first emperor, and its Latin later grew into French.",
+      "reviewFlags": []
+    },
+    {
+      "question": "After the Nervii were beaten in 57 BC, the Senate voted Caesar a record-length public thanksgiving. How long was it?",
+      "options": [
+        "30 days",
+        "12 days",
+        "20 days",
+        "5 days",
+        "10 days",
+        "15 days"
+      ],
+      "correctAnswers": [
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#belgae-nervii-veneti",
+      "explanation": "The 15-day thanksgiving was the longest yet. It followed a near-disaster in which the Nervii ambushed the legions while they were building camp.",
+      "sourceQuote": "The Senate later voted him a 15-day public thanksgiving (*supplicatio*), the longest yet.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which goods did the prosperous Gallic tribes trade for Roman wine? (select all that apply)",
+      "options": [
+        "Slaves",
+        "Grain",
+        "Iron",
+        "Amber",
+        "Silk",
+        "Olive oil"
+      ],
+      "correctAnswers": [
+        0,
+        1,
+        2
+      ],
+      "difficulty": 3,
+      "textReference": "#caesar-goes-to-gaul",
+      "explanation": "The Gauls traded grain, iron and slaves for Roman wine, and they minted their own coins. Their wealth made Gaul a tempting target for conquest.",
+      "sourceQuote": "They minted coins and traded grain, iron and slaves for Roman wine.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Since when have scholars become markedly sceptical of Caesar's account of the Gallic War?",
+      "options": [
+        "Since the 19th century",
+        "Since the 1990s",
+        "Since the Second World War",
+        "Since the French Revolution",
+        "Since the Renaissance",
+        "Since the First World War"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 3,
+      "textReference": "#caesars-account",
+      "explanation": "Until the 20th century scholars largely trusted Caesar's Commentaries. His claims of over a million Gauls killed and almost no Roman dead have fuelled the doubts.",
+      "sourceQuote": "Since the Second World War they have grown sceptical.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What does archaeology suggest about Caesar's siege lines at Alesia?",
+      "options": [
+        "They lay well away from Mont Auxois",
+        "They were less continuous than Caesar claimed, but held",
+        "They never existed and were invented by Caesar",
+        "They were built of stone rather than earth",
+        "They were breached by the relief army",
+        "They were twice as long as Caesar described"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 3,
+      "textReference": "#siege-of-alesia",
+      "explanation": "The lines had gaps Caesar didn't mention, yet they did their job. They included ditches, ramparts, towers and hidden pits with fire-hardened stakes.",
+      "sourceQuote": "Archaeology suggests the lines were less continuous than Caesar claimed, but they held.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What made Caesar's war against the king of the Suebi politically awkward?",
+      "options": [
+        "He had helped Rome against the Helvetii",
+        "He was married to a daughter of Pompey",
+        "He held Roman citizenship through Crassus",
+        "The Aedui had sworn to defend him",
+        "He had paid tribute to Rome for a decade",
+        "The Senate had named him a friend of Rome the year before"
+      ],
+      "correctAnswers": [
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#helvetii-and-suebi",
+      "explanation": "Only a year earlier the Senate had declared this Germanic king a friend of Rome. Caesar attacked after Gallic allies complained of the king's conquests.",
+      "sourceQuote": "Only the year before, the Senate (*senatus*) had named this king a friend of Rome.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What had happened to Vercingetorix's father?",
+      "options": [
+        "He fell in battle against the Suebi",
+        "He was exiled by the druids",
+        "He was killed by his own people for trying to make himself king",
+        "He died fighting Caesar at Bibracte",
+        "He was poisoned by rival Aeduan nobles",
+        "He was executed by Roman order"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 3,
+      "textReference": "#vercingetorix",
+      "explanation": "His father, a nobleman, was killed for seeking kingship. Vercingetorix himself was later proclaimed king after driving out pro-Roman nobles.",
+      "sourceQuote": "His father, a nobleman, had been killed by his own people for trying to make himself king.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did Caesar's enemies in the Senate react to his massacre of two peoples near the Rhine in 55 BC?",
+      "options": [
+        "They sent envoys to apologise to the Germans",
+        "They wanted to prosecute him",
+        "They praised it as a defensive victory",
+        "They voted him a 20-day thanksgiving",
+        "They ordered him to return to Rome",
+        "They stripped him of two legions"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 3,
+      "textReference": "#rhine-and-britain",
+      "explanation": "Caesar fell on an undefended camp, killing men, women and children. His claim of 430,000 dead is impossible, but the massacre was bad enough to prompt calls for prosecution.",
+      "sourceQuote": "Still, the massacre was bad enough that his enemies in the Senate wanted to prosecute him.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which details describe the siege of the second Roman camp during the winter revolt of 54 BC? (select all that apply)",
+      "options": [
+        "Over 90 per cent of defenders were killed or wounded",
+        "Defenders accepted safe passage and left",
+        "The camp fell before Caesar arrived",
+        "It lasted more than two weeks",
+        "Rebels used siege towers built on Roman models",
+        "Caesar relieved it by landing troops from the sea"
+      ],
+      "correctAnswers": [
+        0,
+        3,
+        4
+      ],
+      "difficulty": 3,
+      "textReference": "#ambiorix-revolt",
+      "explanation": "The rebels copied Roman siege technology and held the camp under attack for over two weeks. Caesar rescued it with forced marches of about 32 km a day, but by then over 90 per cent of its defenders were dead or wounded.",
+      "sourceQuote": "Rebels then besieged a second camp for more than two weeks, using siege towers built on Roman models.",
+      "reviewFlags": []
+    }
+  ]
+}

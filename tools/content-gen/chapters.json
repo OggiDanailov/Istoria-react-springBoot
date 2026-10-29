@@ -441,7 +441,15 @@
       "short": "Caesar in Gaul",
       "era": "late-republic",
       "mapArea": "wide",
-      "plannedBattle": "Alesia (52 BC)"
+      "battle": {
+        "name": "Alesia",
+        "year": "52 BC",
+        "enemy": "Vercingetorix",
+        "sec": "siege-of-alesia",
+        "level": "alesia",
+        "intro": "Caesar holds two rings of walls: Vercingetorix attacks from the town, the relief army from outside."
+      },
+      "locked": true
     },
     {
       "id": "caesars-civil-war",

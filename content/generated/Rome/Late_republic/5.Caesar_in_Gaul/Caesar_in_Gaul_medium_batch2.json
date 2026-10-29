@@ -1,0 +1,190 @@
+{
+  "batchName": "Late Republic: Caesar in Gaul (58-50 BCE) - Medium Batch 2",
+  "chapterName": "Late Republic: Caesar in Gaul (58-50 BCE)",
+  "difficulty": 2,
+  "batchOrder": 4,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "What event of 390 BC left Romans with a lasting fear of the Gauls?",
+      "options": [
+        "Gauls had joined Carthage against Rome",
+        "The Gauls had sacked Rome itself",
+        "Gauls had destroyed a Roman fleet off Ostia",
+        "Gauls had captured the port of Massilia",
+        "Gauls had killed both consuls in one battle"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#caesar-goes-to-gaul",
+      "explanation": "Romans never forgot the Gauls' sack of their own city in 390 BC. Yet by Caesar's day the Gallic tribes were prosperous traders who minted coins.",
+      "sourceQuote": "Yet Romans had never forgotten the Gauls' sack of their own city in 390 BC.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did Ambiorix persuade the commanders of one Roman camp to march out?",
+      "options": [
+        "He claimed all Gaul was rising and Germans were invading",
+        "He forged a letter from Caesar ordering a retreat",
+        "He offered them gold to abandon the camp",
+        "He set fire to their grain stores",
+        "He took their envoys as hostages"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#ambiorix-revolt",
+      "explanation": "Ambiorix spread alarming news and promised safe passage. The Romans believed him and were ambushed in a steep valley.",
+      "sourceQuote": "He told the commanders of one camp that all of Gaul was rising and the Germans were invading.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Caesar claimed a captured census counted 368,000 Helvetii. What do modern estimates suggest for the Helvetii and their allies?",
+      "options": [
+        "About 368,000",
+        "Over 500,000",
+        "5,000 to 10,000",
+        "150,000 to 200,000",
+        "20,000 to 50,000"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#caesars-account",
+      "explanation": "Modern scholars think Caesar hugely inflated the figure. One historian calls him one of history's earliest \"spin doctors\".",
+      "sourceQuote": "Modern estimates for the Helvetii and their allies run from 20,000 to 50,000.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which Gallic weakness did Caesar exploit throughout the war?",
+      "options": [
+        "Their ignorance of horses",
+        "Their lack of iron weapons",
+        "Their dependence on Roman grain",
+        "Their small stature in battle",
+        "The tribes' rivalries and rare unity"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#legions-and-warriors",
+      "explanation": "United, the Gauls could match Rome, but the tribes rarely united. Caesar played on their rivalries again and again.",
+      "sourceQuote": "The trouble was that the tribes rarely united, and Caesar exploited their rivalries throughout the war.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did Caesar present the Gallic War to his Roman readers?",
+      "options": [
+        "As revenge for the sack of Rome",
+        "As a rescue of Roman merchants",
+        "As a Senate-ordered punishment",
+        "As a defence against barbarians",
+        "As a crusade to spread Roman religion"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#caesars-account",
+      "explanation": "Caesar framed it as defence, though historians agree it mainly served his career and debts. Gallic and Germanic raids on Roman land were nonetheless real.",
+      "sourceQuote": "Caesar presented the war as defence against barbarians.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What was Vercingetorix's strategy against Caesar's army?",
+      "options": [
+        "Starve the Romans by raiding foragers and burning towns",
+        "Ally with Germanic tribes from across the Rhine",
+        "Invade the Roman province to draw Caesar south",
+        "Ask Pompey for help against Caesar",
+        "Meet Caesar in one great pitched battle"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#vercingetorix",
+      "explanation": "Vercingetorix targeted Rome's weak point, supply. Even after Caesar stormed Avaricum, his alliance held.",
+      "sourceQuote": "His plan was to starve the Romans by raiding their foragers and burning towns he could not hold.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which honour did the Senate refuse Caesar after his Gallic victories, for political reasons?",
+      "options": [
+        "A seat in the Senate",
+        "A triumph",
+        "A thanksgiving for Alesia",
+        "An extension of his command",
+        "A statue on the Capitol"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#aftermath",
+      "explanation": "The Senate decreed 20 days of thanksgiving for Alesia but refused the triumph, the parade that crowned a general's career.",
+      "sourceQuote": "For political reasons, though, it refused him a triumph (*triumphus*), the parade that crowned a general's career.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Why did Caesar crave spectacular headlines in 55 BC?",
+      "options": [
+        "Ambiorix had just destroyed his camps",
+        "His Gallic command was about to expire",
+        "Pompey and Crassus were consuls and in the spotlight",
+        "He had lost a legion to the Nervii",
+        "The Senate had just recalled him to Rome"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#rhine-and-britain",
+      "explanation": "Renewing their pact in 56 BC gave Caesar five more years in Gaul and his partners the consulship for 55 BC. With his rivals prominent, he needed dramatic feats.",
+      "sourceQuote": "With these rivals in the spotlight, Caesar needed headlines.",
+      "reviewFlags": []
+    },
+    {
+      "question": "According to historians, what did Caesar mainly want from conquering Gaul?",
+      "options": [
+        "Protection for Roman colonists",
+        "Plunder and personal glory",
+        "Revenge for the sack of Rome",
+        "The spread of Roman religion",
+        "Grain for the city of Rome"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#caesar-goes-to-gaul",
+      "explanation": "Historians agree Caesar wanted conquest mainly for plunder and glory; he had ended his consulship deep in debt. The Helvetii migration gave him his excuse for war.",
+      "sourceQuote": "Historians agree that Caesar wanted conquest mainly for plunder and glory.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What helped the Romans defeat the Veneti fleet near Quiberon Bay? (select all that apply)",
+      "options": [
+        "A storm wrecking their oak ships",
+        "Grappling hooks shredding their rigging",
+        "Germanic allies blocking their harbours",
+        "Fire ships sent among their fleet",
+        "The wind dying during the battle"
+      ],
+      "correctAnswers": [
+        1,
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#belgae-nervii-veneti",
+      "explanation": "Grappling hooks wrecked the Veneti rigging, then the wind died, leaving their sailing ships helpless against oared Roman galleys. Caesar then executed their elders and sold the rest into slavery.",
+      "sourceQuote": "There Roman grappling hooks shredded their rigging, and then the wind died, leaving them helpless against oared Roman galleys.",
+      "reviewFlags": []
+    }
+  ]
+}

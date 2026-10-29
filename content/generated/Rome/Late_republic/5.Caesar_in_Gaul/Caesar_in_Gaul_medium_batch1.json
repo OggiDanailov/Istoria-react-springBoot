@@ -1,0 +1,189 @@
+{
+  "batchName": "Late Republic: Caesar in Gaul (58-50 BCE) - Medium Batch 1",
+  "chapterName": "Late Republic: Caesar in Gaul (58-50 BCE)",
+  "difficulty": 2,
+  "batchOrder": 3,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "How did Caesar respond to the revolt in northern Gaul in 53 BC?",
+      "options": [
+        "He withdrew his legions to Italy",
+        "He offered the tribes Roman citizenship",
+        "He executed his own camp commanders",
+        "He paid German tribes to fight the rebels",
+        "He burned villages, seized livestock and took captives"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#ambiorix-revolt",
+      "explanation": "Caesar answered with terror until tribe after tribe surrendered, including the Eburones. Northern Gaul was flattened and Gallic hatred deepened.",
+      "sourceQuote": "He burned villages, seized livestock and took captives until tribe after tribe surrendered, Ambiorix's Eburones among them.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Near which town, chief town of the Aedui, did Caesar defeat the main Helvetii force?",
+      "options": [
+        "Bibracte",
+        "Alesia",
+        "Avaricum",
+        "Gergovia",
+        "Uxellodunum"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#helvetii-and-suebi",
+      "explanation": "At Bibracte, when the Romans were surrounded, Caesar had his rear line turn about and fight on two fronts. The Aedui were a Gallic tribe allied to Rome.",
+      "sourceQuote": "He slaughtered those still crossing the river Saône, then met the main force near Bibracte, chief town of the Aedui, a Gallic tribe allied to Rome.",
+      "reviewFlags": []
+    },
+    {
+      "question": "After raiding across the Rhine for 18 days, what did Caesar do with his timber bridge?",
+      "options": [
+        "Floated it downriver",
+        "Burned it behind him",
+        "Rebuilt it in stone",
+        "Gave it to an allied tribe",
+        "Left a legion to guard it"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#rhine-and-britain",
+      "explanation": "Caesar built the bridge in just ten days, raided for 18, and burned it on his way back. It was a feat no Roman army had managed before.",
+      "sourceQuote": "Next he bridged the Rhine with timber in ten days, raided for 18 days, and burned the bridge behind him.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Who led the cavalry charge that helped Caesar beat the king of the Suebi?",
+      "options": [
+        "The son of Crassus",
+        "Mark Antony",
+        "An Aeduan chieftain",
+        "The son of Pompey",
+        "Caesar's nephew Octavian"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#helvetii-and-suebi",
+      "explanation": "A cavalry charge led by Crassus's son helped win the battle, and the Suebi king was driven back over the Rhine.",
+      "sourceQuote": "Caesar beat him, helped by a cavalry charge led by the son of Crassus, and drove him back over the Rhine.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Caesar claimed the Gallic relief army at Alesia numbered a quarter of a million. What do historians suggest?",
+      "options": [
+        "10,000 to 20,000",
+        "About 300,000",
+        "150,000 to 200,000",
+        "Over 400,000",
+        "50,000 to 100,000"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#siege-of-alesia",
+      "explanation": "Historians put the relief army at 50,000 to 100,000. Its attacks, together with sorties from inside, failed, and Vercingetorix surrendered.",
+      "sourceQuote": "Caesar says it was a quarter of a million strong, but historians suggest 50,000 to 100,000.",
+      "reviewFlags": []
+    },
+    {
+      "question": "In which military area did the Gauls clearly outclass the Romans?",
+      "options": [
+        "A larger standing army",
+        "Stricter battlefield discipline",
+        "Heavier body armour",
+        "Far better cavalry",
+        "Superior siege engineering"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#legions-and-warriors",
+      "explanation": "Gallic warriors were usually taller, carried longer swords and had far better cavalry. United, their armies could match Rome's.",
+      "sourceQuote": "Usually taller than the Romans, they carried longer swords and had far better cavalry.",
+      "reviewFlags": []
+    },
+    {
+      "question": "When the Roman right wing was in trouble during the Nervii ambush on the Sambre, what did Caesar do?",
+      "options": [
+        "Grabbed a shield and joined the front line",
+        "Ordered a full retreat to camp",
+        "Sent his cavalry across the river",
+        "Rode back to fetch the rear legions",
+        "Offered the Nervii surrender terms"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#belgae-nervii-veneti",
+      "explanation": "With men packed too tightly to swing their swords and many officers down, Caesar fought in the front line until reinforcements turned the battle.",
+      "sourceQuote": "Caesar grabbed a shield and joined the front line until reinforcements turned the battle.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What happened to the women, children, old and sick who were sent out of Alesia?",
+      "options": [
+        "They starved between the siege lines",
+        "They joined the relief army outside",
+        "They were let through to safety",
+        "They were sold as slaves",
+        "They were taken to Rome as hostages"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#siege-of-alesia",
+      "explanation": "As food ran out, the defenders sent out those who could not fight. Caesar refused to let them through.",
+      "sourceQuote": "Caesar refused to let them through, and they starved between the lines.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did the Romans force the surrender of the hill fort of Uxellodunum in 51 BC?",
+      "options": [
+        "Tunnels diverted its spring",
+        "They bribed its chieftains",
+        "They burned its granaries",
+        "Siege towers scaled its walls",
+        "A traitor opened the gates"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#aftermath",
+      "explanation": "The defenders believed the gods had dried up their spring and gave in. Caesar cut off their hands as a warning to others.",
+      "sourceQuote": "Roman tunnels diverted its spring, and the defenders, believing the gods had dried it up, surrendered.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What does the name Vercingetorix most likely represent?",
+      "options": [
+        "A title meaning roughly 'supreme king of warriors'",
+        "A Roman nickname meaning 'rebel chief'",
+        "The name of his home town",
+        "His father's family name",
+        "A druidic name meaning 'son of the oak'"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#vercingetorix",
+      "explanation": "The name was probably a title, and his real name is lost. He was proclaimed king after driving out pro-Roman nobles in 52 BC.",
+      "sourceQuote": "The name Vercingetorix means roughly \"supreme king of warriors\" and was probably a title.",
+      "reviewFlags": []
+    }
+  ]
+}

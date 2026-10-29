@@ -1,0 +1,179 @@
+{
+  "batchName": "Late Republic: Caesar in Gaul (58-50 BCE) - Easy Batch 2",
+  "chapterName": "Late Republic: Caesar in Gaul (58-50 BCE)",
+  "difficulty": 1,
+  "batchOrder": 2,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Why is the Gallic side of the war's story lost?",
+      "options": [
+        "The Senate banned Gallic writings",
+        "Romans burned the Gallic libraries",
+        "The Gauls wrote no histories",
+        "Druid texts perished in a fire"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#caesars-account",
+      "explanation": "With no Gallic histories, we depend almost entirely on Caesar's version. Since the Second World War, scholars have grown sceptical of it.",
+      "sourceQuote": "The Gauls wrote no histories, so their side of the story is lost.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Why did Caesar build a second, outer ring of fortifications at Alesia?",
+      "options": [
+        "To mark the new province's border",
+        "To face the Gallic relief army",
+        "To protect his supply ships",
+        "To house captured Gauls"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#siege-of-alesia",
+      "explanation": "The inner ring penned the Gauls in, while the outer ring, about 21 km long, faced outward against the relievers.",
+      "sourceQuote": "An outer ring about 21 km (14 Roman miles) long faced outward against the relievers.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Where does almost all our knowledge of the Gallic War come from?",
+      "options": [
+        "Gallic druid chronicles",
+        "Letters written by Pompey",
+        "Greek histories by Gallic merchants",
+        "Julius Caesar's own Commentaries"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#caesars-account",
+      "explanation": "Caesar's Commentaries on the Gallic War reached Rome in instalments, keeping his exploits before the public. Its plain Latin still makes it a classic school text.",
+      "sourceQuote": "Almost everything known about the war comes from Julius Caesar himself.",
+      "reviewFlags": []
+    },
+    {
+      "question": "At which town did Vercingetorix inflict a clear defeat on Caesar in 52 BC?",
+      "options": [
+        "Avaricum",
+        "Alesia",
+        "Bibracte",
+        "Gergovia"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#vercingetorix",
+      "explanation": "At Gergovia Caesar admitted 700 dead, including 46 centurions. Historians suspect the real losses were much higher.",
+      "sourceQuote": "At Gergovia, Vercingetorix inflicted a clear defeat.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Vercingetorix was a nobleman of which powerful tribe of central Gaul?",
+      "options": [
+        "The Arverni",
+        "The Nervii",
+        "The Aedui",
+        "The Eburones"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#vercingetorix",
+      "explanation": "He was born around 82 BC at Gergovia, chief town of the Arverni. Later, at Gergovia, he would hand Caesar a clear defeat.",
+      "sourceQuote": "Vercingetorix was born around 82 BC at Gergovia, chief town of the Arverni, a powerful tribe of central Gaul.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What was the Roman army's great weak point during the Gallic War?",
+      "options": [
+        "Its supply",
+        "Its cavalry",
+        "Its discipline",
+        "Its swords"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#legions-and-warriors",
+      "explanation": "Each soldier carried only a few days' rations, so food was a constant worry. Again and again, hunger dictated Caesar's moves.",
+      "sourceQuote": "Rome's weak point was supply.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How many cohorts made up a Roman legion in Caesar's day?",
+      "options": [
+        "Six",
+        "Ten",
+        "Four",
+        "Twelve"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#legions-and-warriors",
+      "explanation": "A legion of around 5,000 men was split into ten cohorts of 480 soldiers each. The cohort had replaced the smaller maniple.",
+      "sourceQuote": "Each legion was split into ten cohorts (*cohortes*) of 480 soldiers.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What was Vercingetorix's ultimate fate?",
+      "options": [
+        "Pardoned and made a Roman ally",
+        "Exiled to a Mediterranean island",
+        "Paraded in a triumph and strangled",
+        "Killed in the fighting at Alesia"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#aftermath",
+      "explanation": "After about six years in captivity, he was paraded in Caesar's triumph in 46 BC and strangled in the Tullianum. Since the 19th century he has been a French national hero.",
+      "sourceQuote": "In 46 BC he was paraded in Caesar's triumph and then strangled in the Tullianum, Rome's prison.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which two men shared power with Julius Caesar in the informal pact later called the First Triumvirate?",
+      "options": [
+        "Cicero and Cato",
+        "Mark Antony and Lepidus",
+        "Pompey and Crassus",
+        "Sulla and Marius"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#caesar-goes-to-gaul",
+      "explanation": "Caesar's partners were Pompey, Rome's most celebrated general, and Crassus, its richest man. Their backing won Caesar his governorship in Gaul.",
+      "sourceQuote": "His partners were Pompey, Rome's most celebrated general, and Crassus, its richest man.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Why did Caesar scatter his legions' winter camps across Gaul in 54 BC?",
+      "options": [
+        "To guard every river crossing in Gaul",
+        "To prepare a second invasion of Britain",
+        "To stop the legions mutinying together",
+        "To spread the burden of feeding them after failed harvests"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#ambiorix-revolt",
+      "explanation": "Harvests had failed, yet Caesar made the tribes feed his legions over winter. Scattering the camps spread the burden but left each one isolated.",
+      "sourceQuote": "To spread the burden he scattered their camps, which left each one isolated.",
+      "reviewFlags": []
+    }
+  ]
+}

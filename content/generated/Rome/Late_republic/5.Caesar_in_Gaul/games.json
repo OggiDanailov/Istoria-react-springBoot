@@ -1,0 +1,708 @@
+{
+  "chapterName": "Late Republic: Caesar in Gaul (58-50 BCE)",
+  "model": "claude-opus-5-5",
+  "briefing": {
+    "title": "Gaul, 58 BC",
+    "paragraphs": [
+      "In 58 BC Julius Caesar, fresh from a year as consul and deep in debt, takes up his post as governor of Rome's provinces on the edge of Gaul, roughly modern France, Belgium and Switzerland. Backed by his partners Pompey and Crassus, he has five years and an army of disciplined legions.",
+      "Beyond the frontier live rich, proud Gallic tribes. They are brave warriors with fine cavalry, but they rarely unite. Caesar wants plunder and glory. The Gauls will fight for their freedom, and one man, Vercingetorix, will try to unite them all."
+    ]
+  },
+  "timelines": [
+    {
+      "name": "Level 1: The Big Moments",
+      "blurb": "Four turning points from Caesar's consulship to civil war.",
+      "events": [
+        {
+          "label": "Caesar serves as consul",
+          "when": "59 BC",
+          "year": -59,
+          "fact": "Caesar held the Republic's highest office and finished his year deep in debt.",
+          "sectionId": "caesar-goes-to-gaul",
+          "reviewFlags": []
+        },
+        {
+          "label": "The Helvetii set off westward",
+          "when": "58 BC",
+          "year": -58,
+          "fact": "The migrating Helvetii, tribes from the Swiss plateau, gave Caesar the excuse for war he needed.",
+          "sectionId": "helvetii-and-suebi",
+          "reviewFlags": []
+        },
+        {
+          "label": "Vercingetorix surrenders at Alesia",
+          "when": "52 BC",
+          "year": -52,
+          "fact": "After the relief army failed to break Caesar's siege lines, the Gallic war leader gave himself up.",
+          "sectionId": "siege-of-alesia",
+          "reviewFlags": []
+        },
+        {
+          "label": "Caesar crosses the Rubicon",
+          "when": "49 BC",
+          "year": -49,
+          "fact": "Crossing the river marking Italy's border, Caesar started the civil war that he went on to win.",
+          "sectionId": "aftermath",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Level 2: Gaul at War",
+      "blurb": "From an old Roman fear to the fate of Gaul's greatest leader.",
+      "events": [
+        {
+          "label": "Gauls sack the city of Rome",
+          "when": "390 BC",
+          "year": -390,
+          "fact": "Romans never forgot this sack, which coloured their view of the Gauls for centuries.",
+          "sectionId": "caesar-goes-to-gaul",
+          "reviewFlags": []
+        },
+        {
+          "label": "Nervii ambush the legions on the Sambre",
+          "when": "57 BC",
+          "year": -57,
+          "fact": "Caesar grabbed a shield and fought in the front line until reinforcements turned the battle.",
+          "sectionId": "belgae-nervii-veneti",
+          "reviewFlags": []
+        },
+        {
+          "label": "Caesar's first landing in Britain",
+          "when": "55 BC",
+          "year": -55,
+          "fact": "His men followed the leaping standard bearer of the Tenth Legion into the sea rather than lose their standard.",
+          "sectionId": "rhine-and-britain",
+          "reviewFlags": []
+        },
+        {
+          "label": "Ambiorix lures a Roman camp to ruin",
+          "when": "Winter of 54 BC",
+          "year": -54,
+          "fact": "Ambiorix, leader of the Eburones, promised safe passage, and about a legion and a half died in the ambush.",
+          "sectionId": "ambiorix-revolt",
+          "reviewFlags": []
+        },
+        {
+          "label": "Holdouts surrender at Uxellodunum",
+          "when": "51 BC",
+          "year": -51,
+          "fact": "Roman tunnels diverted the hill fort's spring, and the defenders thought the gods had dried it up.",
+          "sectionId": "aftermath",
+          "reviewFlags": []
+        },
+        {
+          "label": "Vercingetorix paraded and strangled",
+          "when": "46 BC",
+          "year": -46,
+          "fact": "After about six years as a captive, he was shown in Caesar's triumph and killed in the Tullianum, Rome's prison.",
+          "sectionId": "aftermath",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Level 3: From Birth to Province",
+      "blurb": "Eight steps from Vercingetorix's birth to Gaul becoming Roman provinces.",
+      "events": [
+        {
+          "label": "Vercingetorix born at Gergovia",
+          "when": "Around 82 BC",
+          "year": -82,
+          "fact": "He was born in the chief town of the Arverni, a powerful tribe of central Gaul.",
+          "sectionId": "vercingetorix",
+          "reviewFlags": []
+        },
+        {
+          "label": "Caesar's year as consul ends in debt",
+          "when": "59 BC",
+          "year": -59,
+          "fact": "Backed by Pompey and Crassus, Caesar then won an unusual five-year governorship.",
+          "sectionId": "caesar-goes-to-gaul",
+          "reviewFlags": []
+        },
+        {
+          "label": "Caesar beats the Helvetii near Bibracte",
+          "when": "58 BC",
+          "year": -58,
+          "fact": "Surrounded, Caesar had his rear line turn about and fight on two fronts, and he won.",
+          "sectionId": "helvetii-and-suebi",
+          "reviewFlags": []
+        },
+        {
+          "label": "Veneti fleet beaten near Quiberon Bay",
+          "when": "56 BC",
+          "year": -56,
+          "fact": "Roman grappling hooks shredded the Veneti's rigging, then the wind died and left their sailing ships helpless.",
+          "sectionId": "belgae-nervii-veneti",
+          "reviewFlags": []
+        },
+        {
+          "label": "Caesar declares Roman law for Gaul",
+          "when": "53 BC",
+          "year": -53,
+          "fact": "Gauls feared for their sacred heartland, where druids met each year to settle quarrels between tribes.",
+          "sectionId": "vercingetorix",
+          "reviewFlags": []
+        },
+        {
+          "label": "Legions withdrawn for civil war",
+          "when": "50 BC",
+          "year": -50,
+          "fact": "With civil war looming, Caesar pulled his legions out of Gaul.",
+          "sectionId": "aftermath",
+          "reviewFlags": []
+        },
+        {
+          "label": "Caesar named dictator for life",
+          "when": "44 BC",
+          "year": -44,
+          "fact": "After winning the civil war, Caesar was made dictator perpetuus.",
+          "sectionId": "aftermath",
+          "reviewFlags": []
+        },
+        {
+          "label": "Gaul becomes formal provinces",
+          "when": "27 BC",
+          "year": -27,
+          "fact": "This happened only under Rome's first emperor, and Gaul's Latin later grew into French.",
+          "sectionId": "aftermath",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "matchSets": [
+    {
+      "name": "Key Players",
+      "blurb": "Match the Romans and Gauls to their roles in the war.",
+      "pairs": [
+        {
+          "name": "Pompey",
+          "match": "Rome's most celebrated general and Caesar's partner in the pact",
+          "sectionId": "caesar-goes-to-gaul",
+          "reviewFlags": []
+        },
+        {
+          "name": "Crassus",
+          "match": "Rome's richest man, whose son led a charge against the Suebi king",
+          "sectionId": "helvetii-and-suebi",
+          "reviewFlags": []
+        },
+        {
+          "name": "Ambiorix",
+          "match": "Eburones leader who tricked a Roman camp into a deadly ambush",
+          "sectionId": "ambiorix-revolt",
+          "reviewFlags": []
+        },
+        {
+          "name": "Vercingetorix",
+          "match": "Arvernian king who built an alliance of tribes from most of Gaul",
+          "sectionId": "vercingetorix",
+          "reviewFlags": []
+        },
+        {
+          "name": "Helvetii",
+          "match": "Swiss-plateau tribes who burned their villages and migrated west",
+          "sectionId": "helvetii-and-suebi",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Words of War",
+      "blurb": "Match the terms of Rome and Gaul to their meanings.",
+      "pairs": [
+        {
+          "name": "Cohort",
+          "match": "Unit of 480 soldiers; ten of them made up a legion",
+          "sectionId": "legions-and-warriors",
+          "reviewFlags": []
+        },
+        {
+          "name": "Baggage train",
+          "match": "About a thousand pack animals stretching some 4 km (2.5 miles)",
+          "sectionId": "legions-and-warriors",
+          "reviewFlags": []
+        },
+        {
+          "name": "Supplicatio",
+          "match": "Public thanksgiving the Senate voted for Caesar's victories",
+          "sectionId": "belgae-nervii-veneti",
+          "reviewFlags": []
+        },
+        {
+          "name": "Triumph",
+          "match": "Parade crowning a general's career; denied to Caesar after Gaul",
+          "sectionId": "aftermath",
+          "reviewFlags": []
+        },
+        {
+          "name": "Druids",
+          "match": "Gallic priests who met yearly to settle quarrels between tribes",
+          "sectionId": "vercingetorix",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Latin Words",
+      "blurb": "Match each Latin word to its meaning.",
+      "pairs": [
+        {
+          "name": "Proconsul",
+          "match": "A governor with a consul’s powers, as Caesar in Gaul",
+          "sectionId": "caesar-goes-to-gaul",
+          "reviewFlags": []
+        },
+        {
+          "name": "Casus belli",
+          "match": "A justification for war",
+          "sectionId": "caesar-goes-to-gaul",
+          "reviewFlags": []
+        },
+        {
+          "name": "Cohortes",
+          "match": "Units of 480 men, ten to a legion",
+          "sectionId": "legions-and-warriors",
+          "reviewFlags": []
+        },
+        {
+          "name": "Impedimenta",
+          "match": "The baggage train of pack animals",
+          "sectionId": "legions-and-warriors",
+          "reviewFlags": []
+        },
+        {
+          "name": "Signifer",
+          "match": "The standard bearer, who leapt into the sea in Britain",
+          "sectionId": "rhine-and-britain",
+          "reviewFlags": []
+        },
+        {
+          "name": "Oppidum",
+          "match": "A hilltop fortified town, like Alesia",
+          "sectionId": "siege-of-alesia",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "trueFalseDecks": [
+    {
+      "name": "Campaigns in Gaul",
+      "blurb": "From Caesar's command to the last holdouts.",
+      "cards": [
+        {
+          "claim": "Caesar's governorship ran for five years instead of the usual one.",
+          "answer": true,
+          "why": "His backers won him an unusual five-year term, long enough to fight a real war.",
+          "sectionId": "caesar-goes-to-gaul",
+          "reviewFlags": []
+        },
+        {
+          "claim": "The Helvetii burned their own villages before leaving so there could be no turning back.",
+          "answer": true,
+          "why": "They set off westward on 28 March 58 BC with families and herds, burning their villages behind them.",
+          "sectionId": "helvetii-and-suebi",
+          "reviewFlags": []
+        },
+        {
+          "claim": "The Nervii ambushed the Romans on the river Sambre after the legions had finished building their camp.",
+          "answer": false,
+          "why": "The Nervii struck while the legions were still building camp, with two legions about 15 km (9 miles) behind.",
+          "sectionId": "belgae-nervii-veneti",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Caesar first landed in Britain with five legions.",
+          "answer": false,
+          "why": "His first landing in 55 BC used two legions; he came back with five in 54 BC.",
+          "sectionId": "rhine-and-britain",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Caesar bridged the Rhine with timber in ten days.",
+          "answer": true,
+          "why": "He built the bridge in ten days, raided for 18 days, then burned it behind him.",
+          "sectionId": "rhine-and-britain",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Ambiorix was the leader of the Arverni.",
+          "answer": false,
+          "why": "Ambiorix led the Eburones of north-eastern Gaul; the Arverni were Vercingetorix's tribe.",
+          "sectionId": "ambiorix-revolt",
+          "reviewFlags": []
+        },
+        {
+          "claim": "At Gergovia Caesar admitted 700 dead, including 46 centurions.",
+          "answer": true,
+          "why": "Caesar admitted these losses, though historians suspect the real toll was much higher.",
+          "sectionId": "vercingetorix",
+          "reviewFlags": []
+        },
+        {
+          "claim": "The defenders of Uxellodunum surrendered after the Romans set fire to their walls.",
+          "answer": false,
+          "why": "Roman tunnels diverted the fort's spring, and the defenders, believing the gods had dried it up, surrendered.",
+          "sectionId": "aftermath",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Armies, Alesia and the Record",
+      "blurb": "Soldiers, sieges and how far we can trust Caesar.",
+      "cards": [
+        {
+          "claim": "A legion had around 5,000 men split into ten cohorts.",
+          "answer": true,
+          "why": "Each legion was divided into ten cohorts of 480 soldiers.",
+          "sectionId": "legions-and-warriors",
+          "reviewFlags": []
+        },
+        {
+          "claim": "The Gauls usually had worse cavalry than the Romans.",
+          "answer": false,
+          "why": "The Gauls had far better cavalry, as well as longer swords.",
+          "sectionId": "legions-and-warriors",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Caesar rescued a besieged camp after forced marches of about 32 km (20 miles) a day.",
+          "answer": true,
+          "why": "By the time he arrived, more than 90 per cent of its defenders had been killed or wounded.",
+          "sectionId": "ambiorix-revolt",
+          "reviewFlags": []
+        },
+        {
+          "claim": "At Alesia Caesar chose to storm the walls rather than starve the Gauls out.",
+          "answer": false,
+          "why": "Caesar chose to starve out the roughly 80,000 warriors inside rather than storm the walls.",
+          "sectionId": "siege-of-alesia",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Caesar's outer ring at Alesia was about 21 km (14 Roman miles) long.",
+          "answer": true,
+          "why": "The outer ring faced outward against the relief army, while an inner ring of about 16 km penned the Gauls in.",
+          "sectionId": "siege-of-alesia",
+          "reviewFlags": []
+        },
+        {
+          "claim": "The Senate granted Caesar a triumph right after his victory at Alesia.",
+          "answer": false,
+          "why": "The Senate decreed 20 days of thanksgiving but, for political reasons, refused him a triumph.",
+          "sectionId": "aftermath",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Caesar's Commentaries on the Gallic War reached Rome in instalments.",
+          "answer": true,
+          "why": "Sent in instalments, the book kept his exploits before the Roman public.",
+          "sectionId": "caesars-account",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Modern historians accept Caesar's figure of 368,000 Helvetii.",
+          "answer": false,
+          "why": "Modern estimates for the Helvetii and their allies run from only 20,000 to 50,000.",
+          "sectionId": "caesars-account",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "oddOneOut": [
+    {
+      "items": [
+        "Arverni",
+        "Eburones",
+        "Aedui",
+        "Suebi"
+      ],
+      "oddIndex": 3,
+      "why": "The Arverni, Eburones and Aedui were Gallic tribes; the Suebi were a Germanic people from across the Rhine.",
+      "sectionId": "helvetii-and-suebi",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Northern Italy",
+        "Illyricum",
+        "Brittany",
+        "Transalpine Gaul"
+      ],
+      "oddIndex": 2,
+      "why": "Caesar was given the governorship of northern Italy, Illyricum and Transalpine Gaul; Brittany was home of the Veneti, outside his provinces.",
+      "sectionId": "caesar-goes-to-gaul",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "A 15-day thanksgiving",
+        "368,000 Helvetii counted",
+        "A quarter-million relief army",
+        "430,000 killed near the Rhine"
+      ],
+      "oddIndex": 0,
+      "why": "The three numbers are claims by Caesar that historians reject as inflated; the 15-day thanksgiving after the Nervii really was voted by the Senate.",
+      "sectionId": "caesars-account",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Bridging the Rhine",
+        "Landing in Britain",
+        "Besieging Alesia",
+        "Massacring a camp by the Rhine"
+      ],
+      "oddIndex": 2,
+      "why": "Caesar bridged the Rhine, massacred a camp by the Rhine and first landed in Britain in 55 BC; the siege of Alesia came in 52 BC.",
+      "sectionId": "rhine-and-britain",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Hidden pits",
+        "Grappling hooks",
+        "Fire-hardened stakes",
+        "Buried iron hooks"
+      ],
+      "oddIndex": 1,
+      "why": "Pits, stakes and buried hooks were traps in Caesar's siege lines at Alesia; grappling hooks shredded the Veneti's rigging at sea.",
+      "sectionId": "siege-of-alesia",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Prized personal bravery",
+        "Disciplined permanent force",
+        "Supplied their own gear",
+        "Far better cavalry"
+      ],
+      "oddIndex": 1,
+      "why": "Bravery, their own gear and superior cavalry describe the Gallic warriors; a disciplined permanent force describes Rome's army.",
+      "sectionId": "legions-and-warriors",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Siege of Uxellodunum",
+        "Crossing the Rubicon",
+        "Legions withdrawn from Gaul",
+        "Ambiorix's ambush"
+      ],
+      "oddIndex": 3,
+      "why": "Uxellodunum, the withdrawal and the Rubicon all came after Alesia (51-49 BC); Ambiorix's ambush happened in the winter of 54 BC.",
+      "sectionId": "aftermath",
+      "reviewFlags": []
+    }
+  ],
+  "whoAmI": [
+    {
+      "name": "Commanders of the Gallic War",
+      "blurb": "One Roman and two Gauls who shaped the war.",
+      "people": [
+        {
+          "name": "Julius Caesar",
+          "options": [
+            "Julius Caesar",
+            "Vercingetorix",
+            "Ambiorix",
+            "Pompey"
+          ],
+          "clues": [
+            "I finished my year in Rome's highest office deep in debt.",
+            "Against the Nervii I grabbed a shield and joined the front line.",
+            "My account of the war reached Rome in instalments.",
+            "I crossed the Rubicon in 49 BC and was later named dictator for life."
+          ],
+          "sectionId": "caesar-goes-to-gaul",
+          "reviewFlags": []
+        },
+        {
+          "name": "Vercingetorix",
+          "options": [
+            "Julius Caesar",
+            "Vercingetorix",
+            "Ambiorix",
+            "Pompey"
+          ],
+          "clues": [
+            "My name was probably a title, and my real name is lost.",
+            "My father was killed by his own people for trying to make himself king.",
+            "I defeated Caesar at Gergovia, the town where I was born.",
+            "I surrendered at Alesia and was later strangled in the Tullianum, Rome's prison."
+          ],
+          "sectionId": "vercingetorix",
+          "reviewFlags": []
+        },
+        {
+          "name": "Ambiorix",
+          "options": [
+            "Julius Caesar",
+            "Vercingetorix",
+            "Ambiorix",
+            "Pompey"
+          ],
+          "clues": [
+            "My tribe surrendered in 53 BC as Caesar burned villages and seized livestock.",
+            "I told Roman commanders that all of Gaul was rising and the Germans were invading.",
+            "My promise of safe passage led about a legion and a half into a deadly ambush.",
+            "I was the shrewd leader of the Eburones of north-eastern Gaul."
+          ],
+          "sectionId": "ambiorix-revolt",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Peoples of Gaul",
+      "blurb": "Guess the Gallic people speaking.",
+      "people": [
+        {
+          "name": "Helvetii",
+          "options": [
+            "Helvetii",
+            "Nervii",
+            "Veneti",
+            "Arverni"
+          ],
+          "clues": [
+            "Caesar claimed a census in Greek found in our camp counted 368,000 of us.",
+            "Squeezed by Germanic peoples, we set off west on 28 March 58 BC.",
+            "We burned our own villages so there could be no turning back.",
+            "We were related tribes from the Swiss plateau, beaten near Bibracte."
+          ],
+          "sectionId": "helvetii-and-suebi",
+          "reviewFlags": []
+        },
+        {
+          "name": "Nervii",
+          "options": [
+            "Helvetii",
+            "Nervii",
+            "Veneti",
+            "Arverni"
+          ],
+          "clues": [
+            "After our battle the Senate voted Caesar a 15-day thanksgiving, the longest yet.",
+            "We attacked while the legions were still building their camp.",
+            "Caesar himself grabbed a shield to fight our warriors.",
+            "We were a Belgic tribe who ambushed the Romans on the river Sambre."
+          ],
+          "sectionId": "belgae-nervii-veneti",
+          "reviewFlags": []
+        },
+        {
+          "name": "Veneti",
+          "options": [
+            "Helvetii",
+            "Nervii",
+            "Veneti",
+            "Arverni"
+          ],
+          "clues": [
+            "Caesar executed our elders and sold the rest of us into slavery.",
+            "We seized Roman officers sent to collect grain.",
+            "Our sturdy oak sailing ships ruled the Atlantic.",
+            "We were seafaring tribes of Brittany, beaten near Quiberon Bay."
+          ],
+          "sectionId": "belgae-nervii-veneti",
+          "reviewFlags": []
+        },
+        {
+          "name": "Arverni",
+          "options": [
+            "Helvetii",
+            "Nervii",
+            "Veneti",
+            "Arverni"
+          ],
+          "clues": [
+            "One of our noblemen was killed by his own people for trying to make himself king.",
+            "We were a powerful tribe of central Gaul.",
+            "Caesar suffered a clear defeat at our chief town, Gergovia.",
+            "Our most famous son united Gaul and surrendered at Alesia."
+          ],
+          "sectionId": "vercingetorix",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "places": [
+    {
+      "name": "Alesia",
+      "wikipediaTitle": "Alesia (city)",
+      "lat": 47.53916667,
+      "lon": 4.50055556,
+      "why": "Hilltop town of the Mandubii where Caesar's double siege lines forced Vercingetorix to surrender in 52 BC.",
+      "sectionId": "siege-of-alesia",
+      "coordinates": "Wikipedia: Alesia (city)",
+      "reviewFlags": []
+    },
+    {
+      "name": "Gergovia",
+      "wikipediaTitle": "Gergovia",
+      "lat": 45.70833333,
+      "lon": 3.125,
+      "why": "Chief town of the Arverni, birthplace of Vercingetorix and scene of his clear victory over Caesar.",
+      "sectionId": "vercingetorix",
+      "coordinates": "Wikipedia: Gergovia",
+      "reviewFlags": []
+    },
+    {
+      "name": "Avaricum",
+      "wikipediaTitle": "Avaricum",
+      "lat": 47.0844,
+      "lon": 2.3964,
+      "why": "Fortified town of central Gaul that Caesar stormed in 52 BC, claiming 40,000 killed.",
+      "sectionId": "vercingetorix",
+      "coordinates": "Wikipedia: Avaricum",
+      "reviewFlags": []
+    },
+    {
+      "name": "Quiberon Bay",
+      "wikipediaTitle": "Quiberon Bay",
+      "lat": 47.51666667,
+      "lon": -3,
+      "why": "Where Roman galleys defeated the oak sailing ships of the Veneti in 56 BC.",
+      "sectionId": "belgae-nervii-veneti",
+      "coordinates": "Wikipedia: Quiberon Bay",
+      "reviewFlags": []
+    },
+    {
+      "name": "River Sambre",
+      "wikipediaTitle": "Sambre",
+      "lat": 50.46194444,
+      "lon": 4.87083333,
+      "why": "River where the Nervii ambushed the legions in 57 BC while they were building camp.",
+      "sectionId": "belgae-nervii-veneti",
+      "coordinates": "Wikipedia: Sambre",
+      "reviewFlags": []
+    },
+    {
+      "name": "Uxellodunum",
+      "wikipediaTitle": "Uxellodunum",
+      "lat": 44.95,
+      "lon": 1.68,
+      "why": "Hill fort in south-western Gaul where a few holdouts surrendered in 51 BC after Romans diverted its spring.",
+      "sectionId": "aftermath",
+      "coordinates": "Wikipedia: Uxellodunum",
+      "reviewFlags": []
+    },
+    {
+      "name": "Rubicon",
+      "wikipediaTitle": "Rubicon",
+      "lat": 44.1681,
+      "lon": 12.4431,
+      "why": "The river marking Italy's border, which Caesar crossed in 49 BC to start the civil war.",
+      "sectionId": "aftermath",
+      "coordinates": "Wikipedia: Rubicon",
+      "reviewFlags": []
+    }
+  ]
+}

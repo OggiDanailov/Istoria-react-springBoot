@@ -1,0 +1,145 @@
+{
+  "batchName": "Late Republic: Caesar in Gaul (58-50 BCE) - Latin words",
+  "chapterName": "Late Republic: Caesar in Gaul (58-50 BCE)",
+  "difficulty": 1,
+  "batchOrder": 9,
+  "description": "Written by hand from the chapter text: the Latin words it explains",
+  "questions": [
+    {
+      "question": "Alesia was an oppidum. What is that?",
+      "options": [
+        "A hilltop fortified town",
+        "A Roman army camp",
+        "A sacred grove of the druids",
+        "A river crossing"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#siege-of-alesia",
+      "explanation": "It almost certainly stood on Mont Auxois, in eastern France.",
+      "sourceQuote": "a hilltop fortified town (*oppidum*) of the Mandubii tribe.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Who leapt into the sea first when Caesar landed in Britain?",
+      "options": [
+        "The signifer, the standard bearer of the Tenth Legion",
+        "Caesar himself",
+        "A centurion of the Seventh Legion",
+        "A Gallic guide"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#rhine-and-britain",
+      "explanation": "The soldiers followed rather than lose their standard.",
+      "sourceQuote": "the standard bearer (*signifer*) of the Tenth Legion leapt into the sea",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did the Senate refuse Caesar after Gaul, for political reasons?",
+      "options": [
+        "A triumphus, the parade that crowned a career",
+        "A thanksgiving",
+        "Money for his soldiers",
+        "A second consulship"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#aftermath",
+      "explanation": "It did decree 20 days of thanksgiving for Alesia.",
+      "sourceQuote": "it refused him a triumph (*triumphus*), the parade that crowned a general's career.",
+      "reviewFlags": []
+    },
+    {
+      "question": "In 58 BC the Helvetii gave Caesar a casus belli. What is that?",
+      "options": [
+        "A justification for war",
+        "A peace treaty",
+        "A ransom",
+        "A hostage"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#caesar-goes-to-gaul",
+      "explanation": "Historians agree he wanted the war mainly for plunder and glory.",
+      "sourceQuote": "handed him the justification for war (*casus belli*) he needed.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What were the impedimenta of a legion?",
+      "options": [
+        "Its baggage train of about a thousand pack animals",
+        "Its heavy armour",
+        "Its siege engines",
+        "Its reserve soldiers"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#legions-and-warriors",
+      "explanation": "The train stretched some 4 km (2.5 miles) on the march, and hunger often dictated Caesar’s moves.",
+      "sourceQuote": "its baggage train (*impedimenta*), which stretched some 4 km (2.5 miles) on the march.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Into how many cohortes was a legion of Caesar’s time split?",
+      "options": [
+        "Ten, of 480 men each",
+        "Thirty, of 160 men each",
+        "Five, of 1,000 men each",
+        "Two, of 2,500 men each"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#legions-and-warriors",
+      "explanation": "The cohort had replaced the smaller maniple.",
+      "sourceQuote": "Each legion was split into ten cohorts (*cohortes*) of 480 soldiers.",
+      "reviewFlags": []
+    },
+    {
+      "question": "In 44 BC Caesar was named dictator perpetuus. What does it mean?",
+      "options": [
+        "Dictator for life",
+        "Dictator for six months",
+        "Dictator of Gaul",
+        "First among consuls"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#aftermath",
+      "explanation": "He had crossed the Rubicon in 49 BC and won the civil war that followed.",
+      "sourceQuote": "In 44 BC he was named dictator for life (*dictator perpetuus*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "What were Caesar’s Commentarii de Bello Gallico?",
+      "options": [
+        "His own account of the war, sent to Rome in instalments",
+        "The Senate’s records of the war",
+        "A Gallic history of the war",
+        "His letters to Pompey"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#caesars-account",
+      "explanation": "The Gauls wrote no histories, so almost everything known about the war comes from Caesar.",
+      "sourceQuote": "His Commentaries on the Gallic War (*Commentarii de Bello Gallico*) reached Rome in instalments",
+      "reviewFlags": []
+    }
+  ]
+}

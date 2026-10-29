@@ -1,0 +1,179 @@
+{
+  "batchName": "Late Republic: Caesar in Gaul (58-50 BCE) - Easy Batch 1",
+  "chapterName": "Late Republic: Caesar in Gaul (58-50 BCE)",
+  "difficulty": 1,
+  "batchOrder": 1,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Which two barriers did Caesar become the first Roman commander to cross with an army?",
+      "options": [
+        "The Rhine and the English Channel",
+        "The Danube and the Black Sea",
+        "The Alps and the Pyrenees",
+        "The Rhône and the Loire"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#rhine-and-britain",
+      "explanation": "Needing headlines, Caesar chose to do what no Roman army had done before. He bridged the Rhine in ten days and later landed in Britain.",
+      "sourceQuote": "He chose to do what no Roman army had done before: cross both the Rhine and the English Channel.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did Caesar decide to deal with the 80,000 Gallic warriors inside Alesia?",
+      "options": [
+        "Storm the walls at once",
+        "Tunnel under the town",
+        "Negotiate a truce",
+        "Starve the defenders out"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#siege-of-alesia",
+      "explanation": "Caesar chose a blockade over an assault. Vercingetorix responded by sending riders out by night to summon a relief army.",
+      "sourceQuote": "Caesar chose to starve them out rather than storm the walls.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Why did the Helvetii set off from the Swiss plateau in 58 BC?",
+      "options": [
+        "Rome had ordered them to resettle",
+        "A plague had swept through their villages",
+        "Their harvests had failed for years",
+        "They were being squeezed by Germanic peoples"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#helvetii-and-suebi",
+      "explanation": "Pressure from Germanic peoples pushed the Helvetii to migrate westward with their families and herds on 28 March 58 BC.",
+      "sourceQuote": "The Helvetii, a group of related tribes on the Swiss plateau, were being squeezed by Germanic peoples.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What made several Belgic tribes surrender in 57 BC without even fighting?",
+      "options": [
+        "A Roman fleet on their rivers",
+        "The sight of Roman siege works",
+        "News of Caesar's war elephants",
+        "The death of their high king"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#belgae-nervii-veneti",
+      "explanation": "Siege works were unknown in Gaul, and just seeing them was enough to make several tribes give up. The main Belgic army had already broken up for lack of food.",
+      "sourceQuote": "The mere sight of Roman siege works, unknown in Gaul, made several tribes surrender without a fight.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How long was Caesar's unusual term as governor when he took over his provinces in 58 BC?",
+      "options": [
+        "Ten years",
+        "Two years",
+        "One year",
+        "Five years"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#caesar-goes-to-gaul",
+      "explanation": "Governors normally served one year, but Caesar got five, long enough to fight a real war. His provinces were northern Italy, Illyricum and Transalpine Gaul.",
+      "sourceQuote": "His term ran for an unusual five years instead of one.",
+      "reviewFlags": []
+    },
+    {
+      "question": "During Caesar's first landing in Britain, who got the hesitant soldiers off the ships?",
+      "options": [
+        "Crassus's son at the head of the cavalry",
+        "Caesar himself, sword in hand",
+        "A centurion of the Seventh Legion",
+        "The standard bearer of the Tenth Legion"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#rhine-and-britain",
+      "explanation": "The Tenth Legion's standard bearer leapt into the sea, and the men followed rather than lose their standard. Rome later voted Caesar a 20-day thanksgiving.",
+      "sourceQuote": "Then the standard bearer (*signifer*) of the Tenth Legion leapt into the sea, and the soldiers followed rather than lose their standard.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Who were the Veneti, who defied Caesar in 56 BC?",
+      "options": [
+        "Seafaring tribes of Brittany",
+        "Mountain herders of the Alps",
+        "Horse breeders of the Swiss plateau",
+        "Germanic raiders from the Rhine"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#belgae-nervii-veneti",
+      "explanation": "The Veneti were seafaring tribes of Brittany whose sturdy oak sailing ships ruled the Atlantic. They seized Roman officers sent to collect grain.",
+      "sourceQuote": "In 56 BC the Veneti, seafaring tribes of Brittany, seized Roman officers sent to collect grain.",
+      "reviewFlags": []
+    },
+    {
+      "question": "In 49 BC Caesar crossed which river, marking Italy's border, to start a civil war?",
+      "options": [
+        "The Tiber",
+        "The Rubicon",
+        "The Rhône",
+        "The Rhine"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#aftermath",
+      "explanation": "Crossing the Rubicon launched the civil war, which Caesar won. In 44 BC he was named dictator for life.",
+      "sourceQuote": "In 49 BC he crossed the Rubicon, the river marking Italy's border, and won the civil war that followed.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Ambiorix, who led the winter revolt of 54 BC, was the leader of which tribe?",
+      "options": [
+        "The Nervii",
+        "The Arverni",
+        "The Eburones",
+        "The Veneti"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#ambiorix-revolt",
+      "explanation": "Ambiorix led the Eburones, a tribe of north-eastern Gaul. His trickery led to the destruction of about a legion and a half.",
+      "sourceQuote": "Ambiorix, the shrewd leader of the Eburones, a tribe of north-eastern Gaul, saw his chance.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did the Helvetii do to their villages before setting off on their migration?",
+      "options": [
+        "Handed them to Roman settlers",
+        "Sold them to the Aedui",
+        "Burned them down",
+        "Left warriors to guard them"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#helvetii-and-suebi",
+      "explanation": "They burned their villages so there could be no turning back. Caesar refused them passage through his province and attacked them anyway.",
+      "sourceQuote": "They burned their villages so there could be no turning back.",
+      "reviewFlags": []
+    }
+  ]
+}
