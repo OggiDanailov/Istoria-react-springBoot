@@ -12,7 +12,8 @@
 - **Security**: admin-only content edits, secrets moved out of the repo and rotated, database and backend ports closed, SSH key-only (PRs #51, #53; deployed)
 - **Admin fixes**: topic section preselected on edit, Back button on batches (PR #52; deployed)
 - **AI content pilot** (`tools/content-gen`): generates a ~1,500-word sectioned chapter from Wikipedia, 60 quiz questions linked to sections, and a fact-check pass. About $1 per chapter. Kingdom chapter done; hand-written versions archived for comparison.
-- **Game prototype** (`prototypes/age-of-kings`): five chapters (Kingdom + Early Republic), each with a chronicle, a test made of eight mini-games, and a battle. The test score (first answers, weighted) sets the army for the chapter's **Hold the Line** battle (`prototypes/hold-the-line`, a Roman lane-defence game); winning opens the next chapter. Kingdom and Origins chapters reviewed: Latin terms, Latin round and questions, Key facts, chronicle maps.
+- **Game prototype** (`prototypes/age-of-kings`): five chapters (Kingdom + Early Republic), each with a chronicle, a test made of eight mini-games, and a battle. The test score (first answers, weighted) sets the army for the chapter's **Hold the Line** battle (`prototypes/hold-the-line`, a Roman lane-defence game); winning opens the next chapter. All chapters reviewed: Latin terms, Latin round and questions, Key facts, chronicle maps.
+- **Middle Republic** (Oct 28-29): six chapters generated (First Punic War to the Gracchi, ~$10), reviewed and locked; five new battles on a bigger 6×8 field (Agrigentum, Cannae, Zama, Pydna, the Siege of Carthage), each with a new enemy, a new Roman unit and a historical twist. Helpers earned by the test score: a medicus (80%+, one heal) and an augur (90%+, one omen boost). See `GAME_DESIGN.md`.
 
 ---
 
@@ -21,7 +22,7 @@
 | # | Step | Effort |
 |---|------|--------|
 | 1 | **Test the prototype with 5-10 people** (ideally not history fans), using the feedback box after each round. Decide which games to keep. | ~1 week, mostly waiting |
-| 2 | **Generator v2**: produce data for every game type per chapter (timeline, pairs, true/false, odd one out, clues, map places), fact-checked. Generate the 4 Early Republic chapters and compare with the hand-written ones. | 1-2 days, ~$10 API credit |
+| 2 | **Content: the Late Republic, then the Empire.** Generate, review (Latin, key facts, maps, odd-one-out checks) and lock each chapter; build each chapter's battle. | a few days each, ~$10 API credit per era |
 | 3 | **Games in the app**: game data in the database, React versions of the chosen games, a chapter opens as a game run, test scores, battles and progress saved per user. Show the explanation after each answer. **Leaderboard**: all-time "Hall of Legions" (total men, eagles as tie-breaker) plus a weekly board that resets every Monday (what it ranks needs rethinking now that soldiers are gone: e.g. battles won, stars, test scores); players shown by nickname, can opt out. Deploy. | 3-4 weeks part-time |
 | 4 | **Mobile**: installable web app (PWA) first, then App Store / Google Play via Capacitor. Needs a privacy policy and in-app account deletion. | 2-4 weeks |
 
@@ -36,7 +37,9 @@
 
 ## Later
 
-- **More battle twists and eras**: Castor and Pollux, ambushes, the sacred chickens; Punic Wars (Hannibal as a boss, a sea battle), Late Republic (units that level up, Alesia's two fronts)
+- **More battle twists**: Castor and Pollux (Lake Regillus), ambushes (Volscian Raids), the sacred chickens (Aquilonia); units that level up.
+- **Sea battles** (the user's idea): ships in sea lanes, ramming with the *rostrum*, the corvus boarding bridge, fireships, storms. Candidates: Mylae or the Aegates Islands (First Punic War), Pompey against the pirates (67 BC), Actium (31 BC).
+- **Battles from two sides** (the user's idea): the Romans in the middle, attacked from the top and the bottom at once; later from the left and right too. Needs enemies walking both ways and soldiers facing either side. Perfect match: Alesia (52 BC), where Caesar held two rings of walls against Vercingetorix inside and the Gallic relief army outside.
 - **More history**: rest of Rome, then Greece, Europe, Russia, the US (~150-200 chapters, roughly $150-400 of API credit)
 - **Social**: weekly leagues (promotion between Bronze/Silver/Gold groups of ~30 players), challenges between friends, weekly events
 
