@@ -1,0 +1,202 @@
+{
+  "batchName": "Late Republic: Cicero, Catiline and the Triumvirate (63-53 BCE) - Hard Batch 1",
+  "chapterName": "Late Republic: Cicero, Catiline and the Triumvirate (63-53 BCE)",
+  "difficulty": 3,
+  "batchOrder": 5,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "What were the Roman losses at Carrhae?",
+      "options": [
+        "About 35,000 dead and none captured",
+        "About 20,000 dead and 10,000 captured",
+        "About 10,000 dead and 20,000 captured",
+        "About 4,000 dead and 3,000 captured",
+        "About 28,000 dead and 4,000 captured",
+        "About 20,000 dead and 4,000 captured"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 3,
+      "textReference": "#carrhae",
+      "explanation": "About 20,000 Romans died and 10,000 were taken prisoner. The legions' sacred eagles were also lost.",
+      "sourceQuote": "About 20,000 Romans died and 10,000 were captured, along with the legions' sacred eagles (*aquilae*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did the stern young senator swing the Senate toward execution? (select all that apply)",
+      "options": [
+        "He produced the Allobroges as witnesses",
+        "He threatened to veto Caesar's proposal",
+        "He read out Crassus's anonymous letters",
+        "He hinted that Caesar sympathised with the plotters",
+        "He claimed Catiline's army was almost at the gates",
+        "He cited the emergency decree as legal immunity"
+      ],
+      "correctAnswers": [
+        3,
+        4
+      ],
+      "difficulty": 3,
+      "textReference": "#execution-debate",
+      "explanation": "The young senator, famous for old-fashioned morals, cast suspicion on Caesar and claimed Catiline's army was close to Rome. His speech turned the mood after Caesar's milder plan had won many over.",
+      "sourceQuote": "He hinted that Caesar sympathised with the plotters and claimed Catiline's army was almost at the gates.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did Catiline do after he left Rome to join the rebel army?",
+      "options": [
+        "Marched straight on Rome",
+        "Sailed to Greece to raise troops",
+        "Proclaimed the freedom of all slaves",
+        "Offered to surrender to Cicero's colleague",
+        "Sought refuge with the Allobroges",
+        "Put on the trappings of a consul"
+      ],
+      "correctAnswers": [
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#cicero-exposes-plot",
+      "explanation": "Having been denied the consulship by voters, Catiline took on its trappings in the rebel camp. He had tried to answer Cicero's speech by sneering at his humble ancestry, but was shouted down.",
+      "sourceQuote": "He left the city to join the rebel army, where he put on the trappings of a consul.",
+      "reviewFlags": []
+    },
+    {
+      "question": "According to some scholars, the hardship exposed by Catiline's plot soon prompted which measures? (select all that apply)",
+      "options": [
+        "Abolition of the final decree",
+        "Freedom for Italian slaves",
+        "Land reforms",
+        "Cancellation of all debts",
+        "A grain law",
+        "Citizenship for the Allobroges"
+      ],
+      "correctAnswers": [
+        2,
+        4
+      ],
+      "difficulty": 3,
+      "textReference": "#catiline-historians",
+      "explanation": "Defenders of the affair's importance argue it exposed real hardship that led to a grain law and land reforms. One scholar had dismissed it as among the least significant episodes in Roman history.",
+      "sourceQuote": "Others reply that, while it never threatened to topple the government, it exposed real hardship, which soon prompted a grain law and land reforms.",
+      "reviewFlags": []
+    },
+    {
+      "question": "When a leading conservative senator talked endlessly to block Caesar's land law in 59 BC, what did Caesar do?",
+      "options": [
+        "Had him jailed, then released him after protests",
+        "Had him expelled from the Senate",
+        "Prosecuted him for obstruction",
+        "Had him thrown from the speakers' platform",
+        "Ignored him and called the vote",
+        "Had his fasces broken by a mob"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#caesar-consulship",
+      "explanation": "Caesar had the senator dragged off to jail but quickly released him when senators protested. Caesar then took the law directly to the people.",
+      "sourceQuote": "Caesar had him dragged off to jail, then quickly released him when senators protested.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Crassus's business allies had badly overbid for the right to collect taxes in which province?",
+      "options": [
+        "Syria",
+        "Gaul",
+        "Southern Spain",
+        "Asia",
+        "Pontus",
+        "Sicily"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 3,
+      "textReference": "#alliance-formed",
+      "explanation": "The tax companies overbid for Asia, in western Turkey, and wanted their payments cut. Crassus, who had grown rich buying confiscated property, championed their cause.",
+      "sourceQuote": "They had badly overbid for the province of Asia, in western Turkey, and wanted their payments cut.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What happened at the end of Cicero's year as consul?",
+      "options": [
+        "He was exiled to Greece",
+        "Pompey publicly denounced him",
+        "He was elected censor",
+        "The Senate stripped him of his title",
+        "Crassus prosecuted him for murder",
+        "Two tribunes blocked his farewell speech"
+      ],
+      "correctAnswers": [
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#pistoria-and-exile",
+      "explanation": "Two tribunes of the plebs used their power to block Cicero's farewell speech. One tried to prosecute him for killing citizens without trial until the Senate threatened anyone who did so.",
+      "sourceQuote": "At the end of his year in office, two tribunes of the plebs (*tribuni plebis*), officials elected to protect ordinary citizens and armed with a veto, blocked his farewell speech.",
+      "reviewFlags": []
+    },
+    {
+      "question": "In what year is the term \"triumvirate\" for this alliance first recorded?",
+      "options": [
+        "1712",
+        "1881",
+        "1481",
+        "1581",
+        "1681",
+        "1781"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 3,
+      "textReference": "#gang-of-three",
+      "explanation": "The label first appears in 1681, more than seventeen centuries after the alliance. It comes from a Latin word for a board of three officials.",
+      "sourceQuote": "The term is first recorded in 1681 and many modern historians now avoid it as misleading.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which facts show that Catiline was no political outsider? (select all that apply)",
+      "options": [
+        "Cicero once considered running for office alongside him",
+        "The Senate made him governor of Asia",
+        "His family had produced a consul within living memory",
+        "Former consuls spoke in his defence at his trials",
+        "He had already held the consulship once",
+        "Pompey publicly endorsed his candidacy"
+      ],
+      "correctAnswers": [
+        0,
+        3
+      ],
+      "difficulty": 3,
+      "textReference": "#catiline",
+      "explanation": "Former consuls defended Catiline when he was prosecuted in 65 and 64 BC, and he was acquitted. Even Cicero, his future nemesis, once considered running for office with him.",
+      "sourceQuote": "When he was prosecuted in 65 and 64 BC, former consuls spoke in his defence and he was acquitted.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did an allied tribune help Pompey and Crassus win the consulship for 55 BC?",
+      "options": [
+        "He cursed rival candidates at the city gate",
+        "He passed a law banning rival candidates",
+        "He vetoed elections until the year had run out",
+        "He brought Caesar's soldiers into Rome",
+        "He prosecuted rivals for bribery",
+        "He banished the presiding consul"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 3,
+      "textReference": "#luca-renewal",
+      "explanation": "The tribune's vetoes pushed the elections into 55 BC. When they finally took place, Caesar's soldiers were in Rome on leave, rivals were driven off and bribes flowed freely.",
+      "sourceQuote": "An allied tribune vetoed elections until the year had run out.",
+      "reviewFlags": []
+    }
+  ]
+}

@@ -1,0 +1,619 @@
+{
+  "chapterName": "Late Republic: Cicero, Catiline and the Triumvirate (63-53 BCE)",
+  "model": "claude-opus-5-5",
+  "briefing": {
+    "title": "Rome, 63 BC",
+    "paragraphs": [
+      "Rome in 63 BC rules a vast republic run by elected magistrates and a proud Senate. This year's consul is Cicero, a brilliant lawyer from outside the old nobility. His enemy Catiline, an aristocrat rejected by the voters again and again, is plotting to seize power by force.",
+      "Behind them stand three ambitious men: Pompey, Rome's greatest general; Crassus, one of its richest men; and Caesar, a rising politician. Within a decade their secret alliance will bend the republic to their will, until disaster strikes far to the east at Carrhae."
+    ]
+  },
+  "timelines": [
+    {
+      "name": "The Big Picture",
+      "blurb": "Four turning points from Catiline's plot to civil war.",
+      "events": [
+        {
+          "label": "Cicero exposes Catiline's conspiracy",
+          "when": "63 BC",
+          "year": -63,
+          "fact": "As consul, Cicero denounced Catiline to his face in the Senate, and five captured plotters were later executed without trial.",
+          "sectionId": "cicero-exposes-plot",
+          "reviewFlags": []
+        },
+        {
+          "label": "Caesar's stormy consulship",
+          "when": "59 BC",
+          "year": -59,
+          "fact": "Backed by Pompey and Crassus, Caesar forced through a land law after a mob threw his fellow consul off the speakers' platform.",
+          "sectionId": "caesar-consulship",
+          "reviewFlags": []
+        },
+        {
+          "label": "Crassus crushed by the Parthians",
+          "when": "53 BC",
+          "year": -53,
+          "fact": "Near Carrhae, Parthian mounted archers shattered Crassus's army; about 20,000 Romans died and Crassus was killed at truce talks.",
+          "sectionId": "carrhae",
+          "reviewFlags": []
+        },
+        {
+          "label": "Pompey and Caesar go to civil war",
+          "when": "January 49 BC",
+          "year": -49,
+          "fact": "With Crassus dead, trust between Pompey and Caesar collapsed and their rivalry exploded into civil war.",
+          "sectionId": "gang-of-three",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Plotters and Partners",
+      "blurb": "From Catiline's trials to the second consulship of Pompey and Crassus.",
+      "events": [
+        {
+          "label": "Catiline prosecuted and acquitted",
+          "when": "65 BC",
+          "year": -65,
+          "fact": "When Catiline was prosecuted in 65 and 64 BC, former consuls spoke in his defence and he was acquitted.",
+          "sectionId": "catiline",
+          "reviewFlags": []
+        },
+        {
+          "label": "Catiline dies fighting at Pistoria",
+          "when": "January 62 BC",
+          "year": -62,
+          "fact": "Catiline's remaining force of at least 3,000 men was destroyed near Pistoria, modern Pistoia in Tuscany.",
+          "sectionId": "pistoria-and-exile",
+          "reviewFlags": []
+        },
+        {
+          "label": "Cicero flees into exile in Greece",
+          "when": "58 BC",
+          "year": -58,
+          "fact": "A rabble-rousing tribune passed a law banishing anyone who had executed a citizen without trial.",
+          "sectionId": "pistoria-and-exile",
+          "reviewFlags": []
+        },
+        {
+          "label": "The allies meet at Luca",
+          "when": "56 BC",
+          "year": -56,
+          "fact": "Caesar met Pompey at Luca, modern Lucca, and some two hundred senators flocked there to curry favour.",
+          "sectionId": "luca-renewal",
+          "reviewFlags": []
+        },
+        {
+          "label": "Pompey and Crassus consuls again",
+          "when": "55 BC",
+          "year": -55,
+          "fact": "Elected amid force and bribery, they gave themselves five-year commands: Spain for Pompey and Syria for Crassus.",
+          "sectionId": "luca-renewal",
+          "reviewFlags": []
+        },
+        {
+          "label": "The rivalry turns into civil war",
+          "when": "January 49 BC",
+          "year": -49,
+          "fact": "As Pompey sought allies among Caesar's enemies, trust collapsed and civil war broke out.",
+          "sectionId": "gang-of-three",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Details and Aftermath",
+      "blurb": "Eight sharper moments, from lost farms to a modern word.",
+      "events": [
+        {
+          "label": "Farmers lose their land in civil wars",
+          "when": "The 80s BC",
+          "year": -85,
+          "fact": "These dispossessed farmers later gave Catiline's plot its real muscle.",
+          "sectionId": "catiline",
+          "reviewFlags": []
+        },
+        {
+          "label": "Five conspirators strangled",
+          "when": "5 December 63 BC",
+          "year": -63,
+          "fact": "Cicero announced their deaths with a single grim word, vixerunt, 'they have lived'.",
+          "sectionId": "execution-debate",
+          "reviewFlags": []
+        },
+        {
+          "label": "Mob breaks the consul's fasces",
+          "when": "59 BC",
+          "year": -59,
+          "fact": "Caesar's fellow consul was thrown from the speakers' platform as he tried to block the land law, which then passed.",
+          "sectionId": "caesar-consulship",
+          "reviewFlags": []
+        },
+        {
+          "label": "Pompey secures Cicero's recall",
+          "when": "57 BC",
+          "year": -57,
+          "fact": "Cicero came back from Greece the year after his banishment, thanks to Pompey, Rome's greatest general.",
+          "sectionId": "pistoria-and-exile",
+          "reviewFlags": []
+        },
+        {
+          "label": "A tribune curses Crassus at the gate",
+          "when": "14 November 55 BC",
+          "year": -55,
+          "fact": "As Crassus left for his Syrian command, a tribune solemnly cursed him at the city gate.",
+          "sectionId": "luca-renewal",
+          "reviewFlags": []
+        },
+        {
+          "label": "Crassus's son killed after a breakout",
+          "when": "9 June 53 BC, according to a Roman poet",
+          "year": -53,
+          "fact": "Lured away from the Roman square at Carrhae, he was killed and his head was paraded on a spear.",
+          "sectionId": "carrhae",
+          "reviewFlags": []
+        },
+        {
+          "label": "The word 'triumvirate' first recorded",
+          "when": "AD 1681",
+          "year": 1681,
+          "fact": "No ancient writer called the alliance the 'First Triumvirate'; the term is first recorded in 1681.",
+          "sectionId": "gang-of-three",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "matchSets": [
+    {
+      "name": "Latin Words",
+      "blurb": "Match each Latin word to its meaning.",
+      "pairs": [
+        {
+          "name": "Senatus consultum ultimum",
+          "match": "Senate's final decree urging consuls to do whatever it took",
+          "sectionId": "cicero-exposes-plot",
+          "reviewFlags": []
+        },
+        {
+          "name": "Vixerunt",
+          "match": "'They have lived': Cicero's word announcing the executions",
+          "sectionId": "execution-debate",
+          "reviewFlags": []
+        },
+        {
+          "name": "Pater patriae",
+          "match": "'Father of the fatherland', the title senators gave Cicero",
+          "sectionId": "execution-debate",
+          "reviewFlags": []
+        },
+        {
+          "name": "Amicitia",
+          "match": "“Friendship”, the usual Roman word for a political alliance",
+          "sectionId": "alliance-formed",
+          "reviewFlags": []
+        },
+        {
+          "name": "Fasces",
+          "match": "Rods around an axe carried before a consul as a sign of authority",
+          "sectionId": "caesar-consulship",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Places and Powers",
+      "blurb": "Match each place or power to its role in the story.",
+      "pairs": [
+        {
+          "name": "Pistoria",
+          "match": "Where Catiline's army was destroyed and he died fighting",
+          "sectionId": "pistoria-and-exile",
+          "reviewFlags": []
+        },
+        {
+          "name": "Temple of Concord",
+          "match": "Where the Senate debated the fate of the arrested plotters",
+          "sectionId": "execution-debate",
+          "reviewFlags": []
+        },
+        {
+          "name": "Luca",
+          "match": "Town where Caesar met Pompey to renew their pact in 56 BC",
+          "sectionId": "luca-renewal",
+          "reviewFlags": []
+        },
+        {
+          "name": "Parthian Empire",
+          "match": "Power ruling Iran and Mesopotamia that Crassus chose to attack",
+          "sectionId": "carrhae",
+          "reviewFlags": []
+        },
+        {
+          "name": "Carrhae",
+          "match": "Battlefield near modern Harran where Crassus was killed",
+          "sectionId": "carrhae",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "trueFalseDecks": [
+    {
+      "name": "The Catiline Conspiracy",
+      "blurb": "Plot, debate and aftermath, 63-57 BC.",
+      "cards": [
+        {
+          "claim": "When Catiline was prosecuted in 65 and 64 BC, former consuls defended him and he was acquitted.",
+          "answer": true,
+          "why": "Catiline was no outsider: former consuls spoke for him and he was acquitted both times.",
+          "sectionId": "catiline",
+          "reviewFlags": []
+        },
+        {
+          "claim": "The first hard evidence of the plot came from Pompey, who handed over anonymous letters.",
+          "answer": false,
+          "why": "It was Crassus, the richest man in Rome, who handed over the anonymous letters on 18 or 19 October 63 BC.",
+          "sectionId": "cicero-exposes-plot",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Reports said armed men were gathering in Campania, south of Rome.",
+          "answer": false,
+          "why": "The armed men gathered in Etruria, the region north of Rome; an officer took up arms near Faesulae.",
+          "sectionId": "cicero-exposes-plot",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Envoys of the Allobroges, a Gallic tribe, revealed the scheme and served Cicero as double agents.",
+          "answer": true,
+          "why": "A senior magistrate among the plotters tried to recruit them, but their envoys revealed the plan to Cicero.",
+          "sectionId": "execution-debate",
+          "reviewFlags": []
+        },
+        {
+          "claim": "In the Senate debate of 5 December, Caesar demanded the immediate execution of the prisoners.",
+          "answer": false,
+          "why": "Caesar proposed life imprisonment or custody until trial; it was the senior senators who called for death.",
+          "sectionId": "execution-debate",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Catiline died fighting when his army was destroyed near Pistoria in January 62 BC.",
+          "answer": true,
+          "why": "His force of at least 3,000 men met the government army near Pistoria, and Catiline died in the battle.",
+          "sectionId": "pistoria-and-exile",
+          "reviewFlags": []
+        },
+        {
+          "claim": "In 58 BC Cicero fled into exile in Spain.",
+          "answer": false,
+          "why": "Cicero fled to Greece and was recalled the following year thanks to Pompey.",
+          "sectionId": "pistoria-and-exile",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Most scholars today think the plot was real but its danger was exaggerated.",
+          "answer": true,
+          "why": "Two 1970s studies argued Cicero invented or provoked the affair, but most scholars reject that view.",
+          "sectionId": "catiline-historians",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "The Alliance of Three",
+      "blurb": "Pompey, Crassus and Caesar, 60-53 BC.",
+      "cards": [
+        {
+          "claim": "Pompey, Crassus and Caesar struck their pact in secret, sometime between July 60 and January 59 BC.",
+          "answer": true,
+          "why": "The three made a secret pact to back one another, which they simply called friendship (amicitia).",
+          "sectionId": "alliance-formed",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Caesar celebrated a grand triumph before standing for consul.",
+          "answer": false,
+          "why": "Caesar gave up his triumph so that he could stand for the consulship.",
+          "sectionId": "alliance-formed",
+          "reviewFlags": []
+        },
+        {
+          "claim": "As consul, Caesar cut the tax companies' debt by a third to please Crassus.",
+          "answer": true,
+          "why": "After the land law passed, Caesar cut the tax companies' debt by a third and approved Pompey's eastern settlement.",
+          "sectionId": "caesar-consulship",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Pompey married Crassus's daughter to seal the alliance.",
+          "answer": false,
+          "why": "Pompey married Caesar's daughter to seal the bond.",
+          "sectionId": "caesar-consulship",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Some two hundred senators flocked to Luca to curry favour with the allies.",
+          "answer": true,
+          "why": "When Caesar met Pompey at Luca in 56 BC, about two hundred senators came to court them.",
+          "sectionId": "luca-renewal",
+          "reviewFlags": []
+        },
+        {
+          "claim": "In 55 BC Crassus gave himself a five-year command in Spain.",
+          "answer": false,
+          "why": "Crassus took Syria; Spain went to Pompey.",
+          "sectionId": "luca-renewal",
+          "reviewFlags": []
+        },
+        {
+          "claim": "The Parthian army at Carrhae was made up mainly of heavy infantry.",
+          "answer": false,
+          "why": "The Parthians fielded about 10,000 cavalry, including armoured horsemen and mounted archers resupplied by camels.",
+          "sectionId": "carrhae",
+          "reviewFlags": []
+        },
+        {
+          "claim": "No ancient writer called the alliance the 'First Triumvirate'.",
+          "answer": true,
+          "why": "The term is first recorded in 1681, and many modern historians now avoid it as misleading.",
+          "sectionId": "gang-of-three",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "oddOneOut": [
+    {
+      "items": [
+        "Pompey",
+        "Cicero",
+        "Crassus",
+        "Caesar"
+      ],
+      "oddIndex": 1,
+      "why": "Pompey, Crassus and Caesar made a secret pact to back one another. Cicero was not part of it; he complained of 'three men' holding kingly power.",
+      "sectionId": "alliance-formed",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Expelled senators",
+        "Failed candidates",
+        "Tax-collecting businessmen",
+        "Indebted veteran settlers"
+      ],
+      "oddIndex": 2,
+      "why": "Expelled senators, failed candidates and indebted veterans all joined Catiline's coalition. The tax-collecting businessmen were championed by Crassus and wanted their payments for Asia cut.",
+      "sectionId": "catiline",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Thundering drums",
+        "Armoured horsemen",
+        "Mounted archers",
+        "Gallic horsemen"
+      ],
+      "oddIndex": 3,
+      "why": "Drums, armoured horsemen and mounted archers were all on the Parthian side at Carrhae. The Gallic horsemen fought for Rome, brought by Crassus's son.",
+      "sectionId": "carrhae",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Took a five-year command in Spain",
+        "Passed a land law",
+        "Cut tax firms' debt by a third",
+        "Approved Pompey's eastern settlement"
+      ],
+      "oddIndex": 0,
+      "why": "The land law, the debt cut and approval of Pompey's settlement were Caesar's acts as consul in 59 BC. The Spanish command went to Pompey in 55 BC.",
+      "sectionId": "caesar-consulship",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Senate meets in Temple of Concord",
+        "Caesar proposes life imprisonment",
+        "Catiline dies fighting in battle",
+        "Five plotters strangled"
+      ],
+      "oddIndex": 2,
+      "why": "The meeting, Caesar's proposal and the executions all happened in Rome on 5 December 63 BC. Catiline died later, near Pistoria in January 62 BC.",
+      "sectionId": "execution-debate",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Speeches against Catiline",
+        "A short history of the plot",
+        "A memoir of his consulship",
+        "A poem on his own consulship"
+      ],
+      "oddIndex": 1,
+      "why": "Cicero wrote the speeches, the memoir and the poem himself. The short history was written about twenty years later by another Roman politician who had been abroad in 63 BC.",
+      "sectionId": "catiline-historians",
+      "reviewFlags": []
+    }
+  ],
+  "whoAmI": [
+    {
+      "name": "The Conspiracy of 63 BC",
+      "blurb": "Plotter, prosecutor and a voice for mercy.",
+      "people": [
+        {
+          "name": "Catiline",
+          "options": [
+            "Cicero",
+            "Catiline",
+            "Crassus",
+            "Caesar"
+          ],
+          "clues": [
+            "I came from an ancient family, but none of my ancestors had been consul for some four centuries.",
+            "When I was prosecuted in 65 and 64 BC, former consuls spoke in my defence.",
+            "After losing the elections of autumn 63 BC, I decided to seize power by force.",
+            "I died fighting when my army was destroyed near Pistoria."
+          ],
+          "sectionId": "catiline",
+          "reviewFlags": []
+        },
+        {
+          "name": "Cicero",
+          "options": [
+            "Caesar",
+            "Crassus",
+            "Cicero",
+            "Catiline"
+          ],
+          "clues": [
+            "I published my speeches around 60 BC and wrote a poem celebrating my own consulship.",
+            "Two volunteers agreed to murder me, but their attempt failed the next morning.",
+            "I announced the executions of five plotters with a single word: vixerunt.",
+            "As consul in 63 BC, I crushed a conspiracy and was hailed as 'father of the fatherland'."
+          ],
+          "sectionId": "execution-debate",
+          "reviewFlags": []
+        },
+        {
+          "name": "Caesar",
+          "options": [
+            "Catiline",
+            "Caesar",
+            "Cicero",
+            "Crassus"
+          ],
+          "clues": [
+            "A stern young senator hinted that I secretly sympathised with the plotters.",
+            "I was a rising politician due to take high office in the year after the plot.",
+            "In the debate of 5 December 63 BC, I proposed life imprisonment instead of death.",
+            "I later won a five-year command in Gaul and grew rich from my victories there."
+          ],
+          "sectionId": "execution-debate",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "The Three Allies",
+      "blurb": "The men behind the so-called 'First Triumvirate'.",
+      "people": [
+        {
+          "name": "Pompey",
+          "options": [
+            "Pompey",
+            "Crassus",
+            "Caesar",
+            "Cicero"
+          ],
+          "clues": [
+            "I married my ally's daughter to seal our bond.",
+            "I said that if anyone raised a sword against the land law, I would bring a shield.",
+            "I came back from a long war against the king of Pontus wanting land for my veterans.",
+            "As consul in 55 BC, I gave myself a five-year command in Spain."
+          ],
+          "sectionId": "alliance-formed",
+          "reviewFlags": []
+        },
+        {
+          "name": "Crassus",
+          "options": [
+            "Cicero",
+            "Pompey",
+            "Crassus",
+            "Caesar"
+          ],
+          "clues": [
+            "I grew rich buying up confiscated property during the civil wars.",
+            "A tribune solemnly cursed me at the city gate as I left Rome in November 55 BC.",
+            "I twice refused the Armenian king's offer of a safer route through Armenia.",
+            "After my army was defeated at Carrhae, I was killed during truce talks."
+          ],
+          "sectionId": "carrhae",
+          "reviewFlags": []
+        },
+        {
+          "name": "Caesar",
+          "options": [
+            "Crassus",
+            "Caesar",
+            "Pompey",
+            "Cicero"
+          ],
+          "clues": [
+            "In 56 BC I met one ally at Ravenna and the other at Luca.",
+            "I had a conservative senator dragged off to jail for talking endlessly against my land law.",
+            "I gave up a triumph so that I could stand for consul.",
+            "As consul in 59 BC I passed a land law, then received a five-year command in Gaul."
+          ],
+          "sectionId": "caesar-consulship",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "places": [
+    {
+      "name": "Pistoria",
+      "wikipediaTitle": "Pistoia",
+      "lat": 43.93333333,
+      "lon": 10.91666667,
+      "why": "Near Pistoria, modern Pistoia in Tuscany, Catiline's army was destroyed and he died fighting in January 62 BC.",
+      "sectionId": "pistoria-and-exile",
+      "coordinates": "Wikipedia: Pistoia",
+      "reviewFlags": []
+    },
+    {
+      "name": "Carrhae",
+      "wikipediaTitle": "Harran",
+      "lat": 36.87083333,
+      "lon": 39.025,
+      "why": "Near Carrhae, modern Harran, Parthian cavalry destroyed Crassus's army in 53 BC.",
+      "sectionId": "carrhae",
+      "coordinates": "Wikipedia: Harran",
+      "reviewFlags": []
+    },
+    {
+      "name": "Syria",
+      "wikipediaTitle": "Roman Syria",
+      "lat": 36.2,
+      "lon": 36.15,
+      "why": "Crassus took Syria as his five-year command and wintered there before invading Mesopotamia.",
+      "sectionId": "luca-renewal",
+      "coordinates": "Antioch, its capital",
+      "reviewFlags": []
+    },
+    {
+      "name": "Gaul",
+      "wikipediaTitle": "Gaul",
+      "lat": 46.5,
+      "lon": 2.5,
+      "why": "Caesar's command in Gaul brought him conquests, honours and wealth that made him no longer a junior partner.",
+      "sectionId": "caesar-consulship",
+      "coordinates": "model estimate",
+      "reviewFlags": []
+    },
+    {
+      "name": "Spain",
+      "wikipediaTitle": "Hispania",
+      "lat": 40.21,
+      "lon": -4.35,
+      "why": "Caesar returned from governing southern Spain in 60 BC, and in 55 BC Pompey took Spain as his five-year command.",
+      "sectionId": "alliance-formed",
+      "coordinates": "Wikipedia: Hispania",
+      "reviewFlags": []
+    },
+    {
+      "name": "Mesopotamia",
+      "wikipediaTitle": "Mesopotamia",
+      "lat": 33.3,
+      "lon": 44,
+      "why": "Crassus marched into Mesopotamia, part of the Parthian Empire, in spring 53 BC to win military glory.",
+      "sectionId": "carrhae",
+      "coordinates": "model estimate",
+      "reviewFlags": []
+    }
+  ]
+}

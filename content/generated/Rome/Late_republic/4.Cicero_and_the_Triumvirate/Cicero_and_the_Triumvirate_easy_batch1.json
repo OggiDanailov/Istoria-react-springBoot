@@ -1,0 +1,179 @@
+{
+  "batchName": "Late Republic: Cicero, Catiline and the Triumvirate (63-53 BCE) - Easy Batch 1",
+  "chapterName": "Late Republic: Cicero, Catiline and the Triumvirate (63-53 BCE)",
+  "difficulty": 1,
+  "batchOrder": 1,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "What did Pompey want from the Senate after returning from his eastern war?",
+      "options": [
+        "A second consulship and command in Spain",
+        "Approval of his eastern settlement and land for veterans",
+        "Cancellation of the tax companies' debts",
+        "Permission to invade the Parthian Empire"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#alliance-formed",
+      "explanation": "Pompey wanted his peace arrangements in the east approved and land for his veterans. Opponents tied up his proposals in endless review.",
+      "sourceQuote": "He wanted his peace arrangements there approved and land for his veterans, but opponents tied up his proposals in endless review.",
+      "reviewFlags": []
+    },
+    {
+      "question": "When did the rivalry between Pompey and Caesar explode into civil war?",
+      "options": [
+        "January 49 BC",
+        "June 53 BC",
+        "November 55 BC",
+        "January 62 BC"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#gang-of-three",
+      "explanation": "Civil war broke out in January 49 BC. After Crassus died in 53 BC, Pompey sought allies among Caesar's enemies and trust collapsed.",
+      "sourceQuote": "As Pompey sought new allies among Caesar's enemies, trust collapsed, and in January 49 BC the rivalry exploded into civil war.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Cicero announced the fate of the executed conspirators with the word \"vixerunt\". What did it mean?",
+      "options": [
+        "That they had confessed",
+        "That they had fled Rome",
+        "That they had been pardoned",
+        "That they were dead"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#execution-debate",
+      "explanation": "\"Vixerunt\" literally means \"they have lived\", a grim way of saying the men were dead. They had been strangled after the Senate backed execution without trial.",
+      "sourceQuote": "When the men had been strangled, Cicero announced it with a single grim word, \"they have lived\" (*vixerunt*), meaning they were dead.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Whose help secured Cicero's recall after he fled into exile in Greece?",
+      "options": [
+        "Crassus",
+        "Caesar",
+        "Pompey",
+        "Cato"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#pistoria-and-exile",
+      "explanation": "Cicero was recalled the year after his flight thanks to Pompey, Rome's greatest general. He had fled after a tribune's law targeted anyone who executed a citizen without trial.",
+      "sourceQuote": "Cicero fled to Greece and was recalled only the following year, thanks to Pompey, Rome's greatest general.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Who provided the real muscle behind Catiline's conspiracy?",
+      "options": [
+        "Dispossessed farmers and debt-ridden veterans",
+        "Urban craftsmen and members of trade guilds",
+        "Gladiators and runaway slaves from Capua",
+        "Gallic mercenaries hired from beyond the Alps"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#catiline",
+      "explanation": "Farmers who had lost land in the civil wars of the 80s BC and indebted veterans formed the plot's backbone. The leadership was a ragged mix of expelled senators, failed candidates and men from fading noble families.",
+      "sourceQuote": "The plot's real muscle came from farmers who had lost their land in the civil wars of the 80s BC, and from veterans settled on farms who had sunk into debt after bad harvests.",
+      "reviewFlags": []
+    },
+    {
+      "question": "According to legend, what was poured down Crassus's throat after his death?",
+      "options": [
+        "Boiling oil",
+        "Molten gold",
+        "Molten lead",
+        "Molten silver"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#carrhae",
+      "explanation": "Legend says the Parthians poured molten gold down the throat of Rome's famously rich man. He had been killed when a scuffle broke out at truce talks.",
+      "sourceQuote": "Legend says molten gold was poured down his throat.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How was the bond between Pompey and Caesar sealed in 59 BC?",
+      "options": [
+        "Pompey married Caesar's daughter",
+        "Caesar married Pompey's sister",
+        "Caesar adopted Pompey's son",
+        "Pompey's son married Crassus's daughter"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#caesar-consulship",
+      "explanation": "Pompey married Caesar's daughter to cement the alliance. That same year Caesar received a five-year command in Gaul.",
+      "sourceQuote": "Pompey married Caesar's daughter to seal the bond, and Caesar received a five-year command in Gaul.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which five-year commands did Pompey and Crassus give themselves as consuls in 55 BC?",
+      "options": [
+        "Gaul for Pompey, Asia for Crassus",
+        "Asia for Pompey, Gaul for Crassus",
+        "Syria for Pompey, Spain for Crassus",
+        "Spain for Pompey, Syria for Crassus"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#luca-renewal",
+      "explanation": "Pompey took Spain and Crassus took Syria, each for five years. Caesar's command in Gaul was also extended by five years.",
+      "sourceQuote": "As consuls, Pompey and Crassus passed a law giving themselves five-year commands, Spain for Pompey and Syria for Crassus.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which wealthy Roman handed Cicero anonymous letters warning of a planned massacre?",
+      "options": [
+        "Pompey",
+        "Lucullus",
+        "Caesar",
+        "Crassus"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#cicero-exposes-plot",
+      "explanation": "Crassus, the richest man in Rome, supplied the first hard evidence on 18 or 19 October 63 BC. Before that, Cicero had only rumours from a woman informant.",
+      "sourceQuote": "The first hard evidence came on 18 or 19 October from Crassus, the richest man in Rome, who handed over anonymous letters describing plans to massacre leading citizens.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Near which town was Catiline's army destroyed in January 62 BC?",
+      "options": [
+        "Capua",
+        "Faesulae",
+        "Pistoria",
+        "Ravenna"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#pistoria-and-exile",
+      "explanation": "Catiline's remaining force of at least 3,000 men met the government army near Pistoria, modern Pistoia in Tuscany. Catiline himself died fighting.",
+      "sourceQuote": "In early January 62 BC his remaining force, at least 3,000 men, met the government army near Pistoria, modern Pistoia in Tuscany.",
+      "reviewFlags": []
+    }
+  ]
+}

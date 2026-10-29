@@ -1,0 +1,179 @@
+{
+  "batchName": "Late Republic: Cicero, Catiline and the Triumvirate (63-53 BCE) - Easy Batch 2",
+  "chapterName": "Late Republic: Cicero, Catiline and the Triumvirate (63-53 BCE)",
+  "difficulty": 1,
+  "batchOrder": 2,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Almost everything we know about Catiline comes from whom?",
+      "options": [
+        "His enemies",
+        "Gallic envoys in Rome",
+        "His surviving followers",
+        "His own memoirs"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#catiline-historians",
+      "explanation": "Our picture of Catiline comes almost entirely from hostile sources. The first is Cicero, the very consul who crushed the plot.",
+      "sourceQuote": "Almost everything we know about Catiline comes from his enemies.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What is the scholarly consensus on Catiline's conspiracy?",
+      "options": [
+        "It was real but its danger was exaggerated",
+        "It was invented entirely by Cicero",
+        "It came close to overthrowing the government",
+        "It was secretly directed by Caesar"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#catiline-historians",
+      "explanation": "Most scholars accept that the plot was real but believe its danger was overstated. Theories that Cicero invented it, or that Caesar or Crassus pulled the strings, are rejected.",
+      "sourceQuote": "The consensus is that the plot was real, but its danger was exaggerated.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What title did senators give Cicero after the conspirators were executed?",
+      "options": [
+        "Saviour of the city",
+        "Shield of the republic",
+        "First man of the Senate",
+        "Father of the fatherland"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#execution-debate",
+      "explanation": "Senators hailed Cicero as \"pater patriae\", father of the fatherland. The glory soon soured, as enemies later attacked him for killing citizens without trial.",
+      "sourceQuote": "Senators hailed him as \"father of the fatherland\" (*pater patriae*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which power did Crassus attack in search of military glory?",
+      "options": [
+        "The kingdom of Pontus",
+        "The kingdom of Armenia",
+        "The Parthian Empire",
+        "The kingdom of Egypt"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#carrhae",
+      "explanation": "Crassus targeted the Parthian Empire, which ruled Iran and Mesopotamia. Critics objected that Parthia had given Rome no reason for war.",
+      "sourceQuote": "His target was the Parthian Empire, a power ruling Iran and Mesopotamia.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did Caesar give up in 60 BC so he could stand for consul?",
+      "options": [
+        "A triumphal victory parade",
+        "A lucrative priesthood",
+        "His command of legions in Gaul",
+        "A second governorship in Spain"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#alliance-formed",
+      "explanation": "Caesar sacrificed a triumph, the grand parade every general craved, in order to run for the consulship. His enemies then saddled him with a hostile fellow consul.",
+      "sourceQuote": "Caesar, back from governing southern Spain, gave up a triumph (*triumphus*), the grand victory parade every general craved, so he could stand for consul.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which office did Catiline repeatedly stand for, only to be rejected by the voters every time?",
+      "options": [
+        "The censorship",
+        "The dictatorship",
+        "The consulship",
+        "The office of chief priest"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#catiline",
+      "explanation": "Catiline kept losing elections for the consulship, Rome's top office, shared each year by two consuls. After yet another defeat in autumn 63 BC, he turned to force.",
+      "sourceQuote": "Catiline had stood for it repeatedly and been rejected by the voters every time.",
+      "reviewFlags": []
+    },
+    {
+      "question": "After Catiline left Rome to join the rebels, what did the Senate declare him?",
+      "options": [
+        "A client king of Rome",
+        "A tribune of the plebs",
+        "A father of the fatherland",
+        "A public enemy (hostis)"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#cicero-exposes-plot",
+      "explanation": "The Senate branded Catiline a public enemy and sent Cicero's fellow consul to fight him. He had left the city after Cicero denounced him to his face.",
+      "sourceQuote": "The Senate declared him a public enemy (*hostis*) and sent Cicero's fellow consul to fight him.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did Pompey promise if anyone raised a sword against Caesar's land law?",
+      "options": [
+        "He would call up his legions",
+        "He would veto the law",
+        "He would leave Rome",
+        "He would bring a shield"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#caesar-consulship",
+      "explanation": "Pompey's sword-and-shield remark revealed the secret alliance behind Caesar's law. The fellow consul had insisted the people would not get the law that year even if they all wanted it.",
+      "sourceQuote": "Pompey said that if anyone raised a sword against the law, he would bring a shield.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What is true of the name \"First Triumvirate\"?",
+      "options": [
+        "It was the trio's official title",
+        "No ancient writer ever used it",
+        "Cicero coined it in a speech",
+        "The Senate granted it in 59 BC"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#gang-of-three",
+      "explanation": "No ancient writer called the alliance a triumvirate, and it was never an official post. Many modern historians now avoid the term as misleading.",
+      "sourceQuote": "But no ancient writer called it that, and it was never an official post.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Where did Caesar meet Pompey in 56 BC to renew their alliance?",
+      "options": [
+        "Pistoria",
+        "Luca",
+        "Faesulae",
+        "Ravenna"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#luca-renewal",
+      "explanation": "Caesar met Pompey at Luca, modern Lucca, then the southernmost town of his province. He met Crassus separately at Ravenna.",
+      "sourceQuote": "Caesar met Crassus at Ravenna and Pompey at Luca, modern Lucca, then the southernmost town of Caesar's province in northern Italy.",
+      "reviewFlags": []
+    }
+  ]
+}

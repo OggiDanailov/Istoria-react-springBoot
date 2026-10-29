@@ -1,0 +1,189 @@
+{
+  "batchName": "Late Republic: Cicero, Catiline and the Triumvirate (63-53 BCE) - Medium Batch 2",
+  "chapterName": "Late Republic: Cicero, Catiline and the Triumvirate (63-53 BCE)",
+  "difficulty": 2,
+  "batchOrder": 4,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "How were the Parthian mounted archers at Carrhae kept supplied with arrows?",
+      "options": [
+        "By river boats on the Euphrates",
+        "By a train of camels",
+        "By wagons from Carrhae",
+        "By Armenian allies",
+        "By infantry carriers"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#carrhae",
+      "explanation": "A camel train kept the archers resupplied as they rained arrows on the Roman square. The Parthian force numbered about 10,000 cavalry.",
+      "sourceQuote": "Mounted archers rained arrows on the Roman square, resupplied by a train of camels.",
+      "reviewFlags": []
+    },
+    {
+      "question": "By how much did Caesar cut the tax companies' debt to please Crassus?",
+      "options": [
+        "A half",
+        "A third",
+        "A tenth",
+        "A quarter",
+        "Two thirds"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#caesar-consulship",
+      "explanation": "Caesar reduced the tax companies' debt by a third. In the same year he also approved Pompey's eastern settlement.",
+      "sourceQuote": "Caesar then cut the tax companies' debt by a third for Crassus and approved Pompey's eastern settlement.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What happened to Caesar's fellow consul when he tried to block the vote on the land law?",
+      "options": [
+        "He was assassinated in the Forum",
+        "A mob threw him from the platform and broke his fasces",
+        "Caesar had him dragged off to jail",
+        "Tribunes stripped him of his office",
+        "Pompey's veterans forced him into exile"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#caesar-consulship",
+      "explanation": "A mob hurled him from the speakers' platform and broke his fasces, the symbol of consular authority. Afterwards he shut himself at home, declaring bad omens.",
+      "sourceQuote": "When the fellow consul tried to block the vote, a mob threw him from the speakers' platform and broke his fasces, the bundle of rods around an axe carried before a consul as a symbol of his authority.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What role did Caesar play in forming the alliance with Pompey and Crassus?",
+      "options": [
+        "Go-between for two personal rivals",
+        "Leader chosen by the Senate",
+        "Secret enemy of both men",
+        "Junior partner funded by Pompey",
+        "Neutral arbiter appointed by tribunes"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#alliance-formed",
+      "explanation": "Pompey and Crassus were rivals who could cooperate only through an intermediary, and Caesar filled that role. The pact was struck sometime between July 60 and January 59 BC.",
+      "sourceQuote": "Pompey and Crassus were personal rivals who could only cooperate through a go-between, and Caesar was that man.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did Caesar propose for the arrested conspirators on 5 December 63 BC?",
+      "options": [
+        "Life imprisonment or custody until trial",
+        "Exile to Greece",
+        "Sale into slavery",
+        "Immediate execution",
+        "A full pardon"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#execution-debate",
+      "explanation": "Caesar's milder plan of life imprisonment or custody until trial won many over, though it was also illegal. The senior senators had all called for death.",
+      "sourceQuote": "Then Caesar, a rising politician due to take high office the next year, proposed life imprisonment or custody until trial.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did the Roman politician who wrote a short history of the plot about twenty years later portray Catiline?",
+      "options": [
+        "As a villain symbolising the republic's moral decay",
+        "As a wronged reformer championing the poor",
+        "As a heroic general betrayed by the Senate",
+        "As a minor figure in Cicero's career",
+        "As a puppet manipulated by Crassus"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#catiline-historians",
+      "explanation": "This historian, who had been abroad in 63 BC, leaned heavily on Cicero. He made Catiline a villain bent on destroying Rome from the start.",
+      "sourceQuote": "He leaned heavily on Cicero and portrayed Catiline as a villain bent on destroying Rome from the start, a symbol of the moral decay he believed was ruining the republic.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Historians who doubt the trio's power note that the allies won big only when?",
+      "options": [
+        "Only when fully united, as in 59 and 55 BC",
+        "Throughout the 50s without interruption",
+        "Only after Crassus's death",
+        "Whenever Crassus funded their candidates",
+        "Only when Caesar was in Rome"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#gang-of-three",
+      "explanation": "Sceptics note that the allies often lost elections and quarrelled constantly. Others see their pact as the moment the free republic died.",
+      "sourceQuote": "Others point out that the allies often lost elections, quarrelled constantly, and won big only when fully united, as in 59 and 55 BC.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What happened as Crassus left Rome for Syria in November 55 BC?",
+      "options": [
+        "Rioters burned his house",
+        "Pompey escorted him to the coast",
+        "A tribune solemnly cursed him at the city gate",
+        "Caesar sent him Gallic legions",
+        "The Senate voted him a triumph in advance"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#luca-renewal",
+      "explanation": "A tribune cursed Crassus at the city gate on 14 November 55 BC. The allies' naked use of force that year had confirmed critics' warnings of tyranny.",
+      "sourceQuote": "When Crassus left for Syria on 14 November 55 BC, a tribune solemnly cursed him at the city gate.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Whose offer of a safer route into Parthian territory did Crassus twice refuse?",
+      "options": [
+        "Pompey's",
+        "The king of Pontus's",
+        "The governor of Syria's",
+        "The Parthian king's",
+        "The Armenian king's"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#carrhae",
+      "explanation": "Crassus twice turned down the Armenian king's offer of a route through Armenia. Wintering in Syria also cost him the advantage of surprise.",
+      "sourceQuote": "He twice refused the Armenian king's offer of a safer route through Armenia, and after early successes spent the winter in Syria, losing the advantage of surprise.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did the Senate's so-called final decree (senatus consultum ultimum) do?",
+      "options": [
+        "Granted the consuls legal immunity for any action",
+        "Appointed a dictator for six months",
+        "Urged the consuls to do whatever it took to protect the state",
+        "Ordered the immediate arrest of Catiline",
+        "Cancelled that year's consular elections"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#cicero-exposes-plot",
+      "explanation": "The final decree urged the consuls to take whatever action was needed to protect the state. It did not, however, give Cicero legal immunity.",
+      "sourceQuote": "The Senate (*senatus*) declared an emergency and passed its so-called final decree (*senatus consultum ultimum*), urging the consuls to do whatever it took to protect the state.",
+      "reviewFlags": []
+    }
+  ]
+}

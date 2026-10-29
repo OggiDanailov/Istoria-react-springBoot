@@ -1,0 +1,189 @@
+{
+  "batchName": "Late Republic: Cicero, Catiline and the Triumvirate (63-53 BCE) - Medium Batch 1",
+  "chapterName": "Late Republic: Cicero, Catiline and the Triumvirate (63-53 BCE)",
+  "difficulty": 2,
+  "batchOrder": 3,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Beyond crushing debts, what motive do modern historians add for Catiline's plot?",
+      "options": [
+        "Wounded pride at failing to match his ancestors",
+        "Secret orders from Crassus",
+        "A desire to free Italy's slaves",
+        "Revenge for a relative's execution",
+        "Religious zeal against the Senate"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#catiline",
+      "explanation": "Ancient writers blamed debts, while modern historians add wounded pride. The evidence suggests Catiline wanted a coup that would put him in charge, not a social revolution.",
+      "sourceQuote": "Modern historians add wounded pride, the shame of failing to match one's ancestors.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Roughly how many senators flocked to Luca to curry favour in 56 BC?",
+      "options": [
+        "About fifty",
+        "About six hundred",
+        "About one hundred",
+        "About four hundred",
+        "About two hundred"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#luca-renewal",
+      "explanation": "Some two hundred senators turned up at Luca, a sign of how much power the allies held. The deal there gave Pompey and Crassus another shared consulship.",
+      "sourceQuote": "Some two hundred senators flocked there to curry favour.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Why did Cicero flee Rome in 58 BC?",
+      "options": [
+        "Caesar's soldiers threatened his house",
+        "A tribune's law banished anyone who executed a citizen without trial",
+        "He was convicted of bribery in the consular elections",
+        "He feared Catiline's surviving followers",
+        "The Senate stripped him of his honours"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#pistoria-and-exile",
+      "explanation": "A rabble-rousing tribune passed a law aimed squarely at Cicero's execution of the conspirators. Cicero fled to Greece and returned the following year.",
+      "sourceQuote": "In 58 BC a rabble-rousing tribune passed a law banishing anyone who had executed a citizen without trial.",
+      "reviewFlags": []
+    },
+    {
+      "question": "For roughly how long had none of Catiline's ancestors held the consulship?",
+      "options": [
+        "About four centuries",
+        "About fifty years",
+        "About one century",
+        "About two centuries",
+        "About six centuries"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#catiline",
+      "explanation": "Catiline came from an ancient family, but none of his ancestors had been consul for some four centuries. Modern historians see this shame as a key motive.",
+      "sourceQuote": "None of his ancestors had held the consulship, Rome's top office, shared each year by two consuls (*consules*), for some four centuries.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What word would the three allies probably have used for their secret pact?",
+      "options": [
+        "Clientela (patronage)",
+        "Triumviratus (board of three)",
+        "Societas (partnership)",
+        "Amicitia (friendship)",
+        "Imperium (command)"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#alliance-formed",
+      "explanation": "They would probably have called it amicitia, “friendship”, the normal Roman word for a political alliance. The label “triumvirate” came much later.",
+      "sourceQuote": "They would probably have called it simply friendship (*amicitia*), the normal Roman word for a political alliance.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Why, in part, did Cicero publish his speeches against Catiline around 60 BC?",
+      "options": [
+        "To prove Caesar was behind the plot",
+        "To defend himself against charges of killing citizens without trial",
+        "To win votes for a second consulship",
+        "To honour his fellow consul's victory",
+        "To teach rhetoric to young senators"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#catiline-historians",
+      "explanation": "Publishing the speeches helped Cicero justify the executions. He also wrote a memoir and a poem celebrating his own consulship.",
+      "sourceQuote": "He published his speeches against Catiline around 60 BC, partly to defend himself against charges of killing citizens without trial.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did a satirist call the trio of Pompey, Crassus and Caesar?",
+      "options": [
+        "A board of three",
+        "The three tyrants",
+        "The Gang of Three",
+        "The three kings",
+        "A three-headed monster"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#gang-of-three",
+      "explanation": "A satirist dubbed the trio a \"three-headed monster\". Cicero complained of \"three men\" holding kingly power, and one modern popular historian prefers \"Gang of Three\".",
+      "sourceQuote": "A satirist called the trio a \"three-headed monster\".",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which Gallic tribe did the plotters try to recruit, only for its envoys to expose the scheme?",
+      "options": [
+        "The Belgae",
+        "The Arverni",
+        "The Aedui",
+        "The Helvetii",
+        "The Allobroges"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#execution-debate",
+      "explanation": "A senior magistrate among the plotters approached the Allobroges, whose envoys revealed the scheme. Cicero then used them as double agents.",
+      "sourceQuote": "A senior magistrate among the plotters had tried to recruit the Allobroges, a Gallic tribe from what is now south-eastern France.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Who actually commanded the government army that destroyed Catiline at Pistoria?",
+      "options": [
+        "Cicero himself",
+        "A deputy, after the consul claimed to be ill",
+        "Crassus, at his own expense",
+        "Pompey, newly returned from the east",
+        "Caesar, as a senior magistrate"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#pistoria-and-exile",
+      "explanation": "The consul in charge claimed illness and handed command to a deputy. Catiline's army was destroyed and Catiline died fighting.",
+      "sourceQuote": "Their commander, Cicero's former fellow consul, claimed to be ill and left a deputy in command.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Where had a former army officer taken up arms for the conspirators by 27 October 63 BC?",
+      "options": [
+        "Near Ravenna, on the Adriatic",
+        "Near Faesulae, close to modern Florence",
+        "Near Luca, in northern Italy",
+        "Near Ostia, Rome's port",
+        "Near Capua, in Campania"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#cicero-exposes-plot",
+      "explanation": "A former army officer raised forces near Faesulae, a hill town in Etruria. Reports of armed men gathering there helped push the Senate to declare an emergency.",
+      "sourceQuote": "By 27 October a former army officer had taken up arms near Faesulae, a hill town near modern Florence.",
+      "reviewFlags": []
+    }
+  ]
+}

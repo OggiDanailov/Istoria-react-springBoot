@@ -413,7 +413,15 @@
       "short": "The Triumvirate",
       "era": "late-republic",
       "mapArea": "wide",
-      "plannedBattle": "Carrhae (53 BC)"
+      "battle": {
+        "name": "Carrhae",
+        "year": "53 BC",
+        "enemy": "the Parthians",
+        "sec": "carrhae",
+        "level": "carrhae",
+        "intro": "In the dry plain near Carrhae, Parthian horse archers ride out of the dust. Can you save Crassus’s legions?"
+      },
+      "locked": true
     },
     {
       "id": "caesar-in-gaul",

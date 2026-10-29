@@ -1,0 +1,134 @@
+{
+  "description": "Key facts for this chapter, written by hand from the chapter text. Every entry links to the section that explains it.",
+  "people": [
+    {
+      "name": "Catiline",
+      "text": "Aristocrat who, after losing election after election, plotted a coup in 63 BC.",
+      "sec": "catiline"
+    },
+    {
+      "name": "Cicero",
+      "text": "The orator and consul who exposed the plot; exiled in 58 BC.",
+      "sec": "cicero-exposes-plot"
+    },
+    {
+      "name": "Caesar",
+      "text": "Consul in 59 BC, then conqueror of Gaul.",
+      "sec": "caesar-consulship"
+    },
+    {
+      "name": "Pompey",
+      "text": "Rome’s greatest general, ally and later rival of Caesar.",
+      "sec": "alliance-formed"
+    },
+    {
+      "name": "Crassus",
+      "text": "One of the richest men in Rome; killed at Carrhae.",
+      "sec": "carrhae"
+    }
+  ],
+  "dates": [
+    {
+      "when": "5 December 63 BC",
+      "text": "The Senate sends five conspirators to death.",
+      "sec": "execution-debate"
+    },
+    {
+      "when": "January 62 BC",
+      "text": "Catiline dies fighting near Pistoria.",
+      "sec": "pistoria-and-exile"
+    },
+    {
+      "when": "60–59 BC",
+      "text": "Pompey, Crassus and Caesar make their pact.",
+      "sec": "alliance-formed"
+    },
+    {
+      "when": "59 BC",
+      "text": "Caesar’s stormy consulship.",
+      "sec": "caesar-consulship"
+    },
+    {
+      "when": "58 BC",
+      "text": "Cicero is driven into exile.",
+      "sec": "pistoria-and-exile"
+    },
+    {
+      "when": "56 BC",
+      "text": "The three renew their pact at Luca.",
+      "sec": "luca-renewal"
+    },
+    {
+      "when": "55 BC",
+      "text": "Pompey and Crassus consuls again.",
+      "sec": "luca-renewal"
+    },
+    {
+      "when": "9 June 53 BC",
+      "text": "Crassus is defeated and killed at Carrhae.",
+      "sec": "carrhae"
+    },
+    {
+      "when": "January 49 BC",
+      "text": "The rivalry of Caesar and Pompey becomes civil war.",
+      "sec": "gang-of-three"
+    }
+  ],
+  "terms": [
+    {
+      "latin": "consules",
+      "english": "the two consuls",
+      "sec": "catiline"
+    },
+    {
+      "latin": "senatus",
+      "english": "the Senate",
+      "sec": "cicero-exposes-plot"
+    },
+    {
+      "latin": "senatus consultum ultimum",
+      "english": "the Senate’s final decree",
+      "sec": "cicero-exposes-plot"
+    },
+    {
+      "latin": "hostis",
+      "english": "a public enemy",
+      "sec": "cicero-exposes-plot"
+    },
+    {
+      "latin": "vixerunt",
+      "english": "“they have lived”: they are dead",
+      "sec": "execution-debate"
+    },
+    {
+      "latin": "pater patriae",
+      "english": "“father of the fatherland”",
+      "sec": "execution-debate"
+    },
+    {
+      "latin": "tribuni plebis",
+      "english": "tribunes of the plebs",
+      "sec": "pistoria-and-exile"
+    },
+    {
+      "latin": "triumphus",
+      "english": "a victory parade",
+      "sec": "alliance-formed"
+    },
+    {
+      "latin": "amicitia",
+      "english": "“friendship”: a political alliance",
+      "sec": "alliance-formed"
+    },
+    {
+      "latin": "lex agraria",
+      "english": "a land law",
+      "sec": "caesar-consulship"
+    },
+    {
+      "latin": "aquilae",
+      "english": "the legions’ eagles",
+      "sec": "carrhae"
+    }
+  ]
+}

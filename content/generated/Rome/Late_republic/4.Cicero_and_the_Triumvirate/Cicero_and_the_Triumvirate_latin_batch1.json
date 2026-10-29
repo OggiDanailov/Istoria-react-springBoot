@@ -1,0 +1,145 @@
+{
+  "batchName": "Late Republic: Cicero, Catiline and the Triumvirate (63-53 BCE) - Latin words",
+  "chapterName": "Late Republic: Cicero, Catiline and the Triumvirate (63-53 BCE)",
+  "difficulty": 1,
+  "batchOrder": 9,
+  "description": "Written by hand from the chapter text: the Latin words it explains",
+  "questions": [
+    {
+      "question": "After the conspiracy, senators hailed Cicero as pater patriae. What does it mean?",
+      "options": [
+        "Father of the fatherland",
+        "Saviour of the Senate",
+        "First citizen",
+        "Friend of the people"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#execution-debate",
+      "explanation": "He had just announced the executions with a single word: vixerunt.",
+      "sourceQuote": "Senators hailed him as \"father of the fatherland\" (*pater patriae*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "At Carrhae the Parthians captured the legions’ aquilae. What were they?",
+      "options": [
+        "The sacred eagles, the legions’ standards",
+        "The legions’ pay chests",
+        "The generals’ horses",
+        "The siege engines"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#carrhae",
+      "explanation": "About 20,000 Romans died and 10,000 were captured.",
+      "sourceQuote": "along with the legions' sacred eagles (*aquilae*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did Caesar give up in 60 BC so he could stand for consul?",
+      "options": [
+        "A triumphus, the grand victory parade",
+        "His command in Spain",
+        "His seat in the Senate",
+        "His family’s fortune"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#alliance-formed",
+      "explanation": "His enemies then saddled him with a hostile fellow consul.",
+      "sourceQuote": "gave up a triumph (*triumphus*), the grand victory parade every general craved, so he could stand for consul.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did Cicero announce the executions, with the word vixerunt?",
+      "options": [
+        "“They have lived”: they were dead",
+        "“They are guilty”",
+        "“They have fled”",
+        "“Justice is done”"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#execution-debate",
+      "explanation": "The five conspirators had been strangled.",
+      "sourceQuote": "Cicero announced it with a single grim word, \"they have lived\" (*vixerunt*), meaning they were dead.",
+      "reviewFlags": []
+    },
+    {
+      "question": "After Catiline joined the rebel army, the Senate declared him a hostis. What did that mean?",
+      "options": [
+        "A public enemy",
+        "A traitor to be exiled",
+        "A consul in arms",
+        "A hostage"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#cicero-exposes-plot",
+      "explanation": "It then sent Cicero’s fellow consul to fight him.",
+      "sourceQuote": "The Senate declared him a public enemy (*hostis*)",
+      "reviewFlags": []
+    },
+    {
+      "question": "What was Caesar’s lex agraria of 59 BC for?",
+      "options": [
+        "Settling Pompey’s veterans and poor citizens on land",
+        "Cutting the tax companies’ debt",
+        "Giving Caesar a command in Gaul",
+        "Approving Pompey’s eastern settlement"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#caesar-consulship",
+      "explanation": "A conservative senator talked endlessly to block it, and Caesar took it to the people.",
+      "sourceQuote": "He drafted a carefully balanced land law (*lex agraria*) to settle Pompey's veterans and poor citizens",
+      "reviewFlags": []
+    },
+    {
+      "question": "How long had it been since any of Catiline’s ancestors was one of the consules?",
+      "options": [
+        "Some four centuries",
+        "About forty years",
+        "About a century",
+        "Two generations"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#catiline",
+      "explanation": "Catiline stood for the consulship again and again and was rejected every time.",
+      "sourceQuote": "None of his ancestors had held the consulship, Rome's top office, shared each year by two consuls (*consules*), for some four centuries.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Who blocked Cicero’s farewell speech at the end of his consulship?",
+      "options": [
+        "Two tribuni plebis",
+        "The other consul",
+        "The Senate",
+        "Pompey’s veterans"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#pistoria-and-exile",
+      "explanation": "Tribunes were armed with a veto; one tried to prosecute Cicero for killing citizens without trial.",
+      "sourceQuote": "two tribunes of the plebs (*tribuni plebis*), officials elected to protect ordinary citizens and armed with a veto, blocked his farewell speech.",
+      "reviewFlags": []
+    }
+  ]
+}
