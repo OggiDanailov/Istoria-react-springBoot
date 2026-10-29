@@ -1,0 +1,688 @@
+{
+  "chapterName": "Late Republic: The Social War and Sulla (91-78 BCE)",
+  "model": "claude-opus-5-5",
+  "briefing": {
+    "title": "Italy, 91 BC",
+    "paragraphs": [
+      "In 91 BC Rome is master of Italy but not its ruler. Dozens of allied peoples, from the tough Samnite mountaineers to the towns near the Adriatic coast, keep their own land and laws. Yet they must send soldiers to every Roman war, and they now outnumber Romans in the legions.",
+      "When a reforming tribune who might have made them citizens is murdered, the allies rise in revolt. Rome must fight its own comrades in arms. Out of the chaos steps Sulla, the first general to march on Rome."
+    ]
+  },
+  "timelines": [
+    {
+      "name": "Level 1: The Big Turning Points",
+      "blurb": "Four moments from revolt to Sulla's death.",
+      "events": [
+        {
+          "label": "Asculum kills every Roman in town",
+          "when": "Late 91 or early 90 BC",
+          "year": -91,
+          "fact": "Afraid their secret hostage swaps had been discovered, the people of Asculum, a town in Picenum, killed a Roman magistrate and all Romans there, and the allies rose together.",
+          "sectionId": "outbreak-at-asculum",
+          "reviewFlags": []
+        },
+        {
+          "label": "Sulla marches his army on Rome",
+          "when": "88 BC",
+          "year": -88,
+          "fact": "Stripped of his command against Mithridates, Sulla led his army from near Nola against Rome, something no Roman general had ever done.",
+          "sectionId": "march-on-rome",
+          "reviewFlags": []
+        },
+        {
+          "label": "Battle of the Colline Gate",
+          "when": "1 November 82 BC",
+          "year": -82,
+          "fact": "On Rome's north-eastern edge, Sulla's right wing defeated a large Samnite and Lucanian army even though his own wing broke.",
+          "sectionId": "east-and-civil-war",
+          "reviewFlags": []
+        },
+        {
+          "label": "Sulla dies in retirement",
+          "when": "78 BC",
+          "year": -78,
+          "fact": "According to ancient writers, Sulla burst a blood vessel while shouting for a corrupt local official to be strangled.",
+          "sectionId": "death-and-legacy",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Level 2: Sulla's Rise",
+      "blurb": "Follow Sulla from birth to the end of his dictatorship.",
+      "events": [
+        {
+          "label": "Sulla is born",
+          "when": "138 BC",
+          "year": -138,
+          "fact": "Sulla came from one of Rome's oldest noble families, but one that had sunk into poverty.",
+          "sectionId": "sulla-early-career",
+          "reviewFlags": []
+        },
+        {
+          "label": "Sulla serves under Marius in Numidia",
+          "when": "107 BC",
+          "year": -107,
+          "fact": "As a junior officer in this North African kingdom, Sulla persuaded a neighbouring ruler to betray the rebel king, but Marius took the credit.",
+          "sectionId": "sulla-early-career",
+          "reviewFlags": []
+        },
+        {
+          "label": "Drusus is murdered",
+          "when": "91 BC",
+          "year": -91,
+          "fact": "The reforming tribune's package of laws, which at some point included citizenship for the allies, collapsed and he was killed by an unknown assassin.",
+          "sectionId": "outbreak-at-asculum",
+          "reviewFlags": []
+        },
+        {
+          "label": "The Julian Law offers citizenship",
+          "when": "October 90 BC",
+          "year": -90,
+          "fact": "The law let Italian communities that stayed loyal, or quickly laid down their arms, take up Roman citizenship.",
+          "sectionId": "citizenship-laws",
+          "reviewFlags": []
+        },
+        {
+          "label": "Sulla sacks Athens",
+          "when": "1 March 86 BC",
+          "year": -86,
+          "fact": "Athens had sided with Mithridates, king of Pontus, and Sulla stormed and sacked it.",
+          "sectionId": "east-and-civil-war",
+          "reviewFlags": []
+        },
+        {
+          "label": "Sulla lays down the dictatorship",
+          "when": "Around the start of 80 BC",
+          "year": -80,
+          "fact": "Sulla dismissed his guards and walked unprotected through the Forum, offering to answer any citizen.",
+          "sectionId": "dictatorship-and-proscriptions",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Level 3: From Alliance to Civil War",
+      "blurb": "Eight steps from the old bargain to Sulla's return.",
+      "events": [
+        {
+          "label": "Allied troops outnumber Roman ones",
+          "when": "By 218 BC",
+          "year": -218,
+          "fact": "Rome's armies held three allied soldiers for every two Romans, making the allies indispensable.",
+          "sectionId": "rome-and-its-allies",
+          "reviewFlags": []
+        },
+        {
+          "label": "Reformers hand out public land",
+          "when": "133 BC",
+          "year": -133,
+          "fact": "Much of this land had been left in allied hands, and Italian communities complained that their treaties were being broken.",
+          "sectionId": "rome-and-its-allies",
+          "reviewFlags": []
+        },
+        {
+          "label": "Consul killed at the Tolenus River",
+          "when": "11 June 90 BC",
+          "year": -90,
+          "fact": "A Roman consul died leading raw recruits across the river against the Marsi, a mountain people east of Rome.",
+          "sectionId": "fighting-90-89-bc",
+          "reviewFlags": []
+        },
+        {
+          "label": "Asculum falls after a long siege",
+          "when": "89 BC",
+          "year": -89,
+          "fact": "The town where the revolt had begun was finally taken by Rome.",
+          "sectionId": "fighting-90-89-bc",
+          "reviewFlags": []
+        },
+        {
+          "label": "Last organised rebel army crushed",
+          "when": "88 BC",
+          "year": -88,
+          "fact": "Its Marsic commander was killed, though a band of Samnites and Lucanians fought on until 87 BC.",
+          "sectionId": "citizenship-laws",
+          "reviewFlags": []
+        },
+        {
+          "label": "Cinna and Marius seize Rome",
+          "when": "Late 87 BC",
+          "year": -87,
+          "fact": "With Sulla gone to Greece, they killed their opponents and declared Sulla an outlaw.",
+          "sectionId": "east-and-civil-war",
+          "reviewFlags": []
+        },
+        {
+          "label": "Sulla offers Mithridates peace",
+          "when": "85 BC",
+          "year": -85,
+          "fact": "Ancient critics called the generous peace a betrayal, made so Sulla could hurry home for revenge.",
+          "sectionId": "east-and-civil-war",
+          "reviewFlags": []
+        },
+        {
+          "label": "Sulla lands at Brundisium",
+          "when": "Spring 83 BC",
+          "year": -83,
+          "fact": "Sulla arrived at this port in Italy's heel with five legions of veterans, and many aristocrats flocked to him.",
+          "sectionId": "east-and-civil-war",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "matchSets": [
+    {
+      "name": "Key Players",
+      "blurb": "Match each person to what they did.",
+      "pairs": [
+        {
+          "name": "Drusus",
+          "match": "Reforming tribune murdered in 91 BC after his laws collapsed",
+          "sectionId": "outbreak-at-asculum",
+          "reviewFlags": []
+        },
+        {
+          "name": "Marius",
+          "match": "Veteran general who forced the Tolenus River and beat the Marsi",
+          "sectionId": "fighting-90-89-bc",
+          "reviewFlags": []
+        },
+        {
+          "name": "Cinna",
+          "match": "Consul of 87 BC who seized Rome while Sulla was in the East",
+          "sectionId": "east-and-civil-war",
+          "reviewFlags": []
+        },
+        {
+          "name": "Mithridates",
+          "match": "King of Pontus who had some 80,000 Romans and Italians killed",
+          "sectionId": "march-on-rome",
+          "reviewFlags": []
+        },
+        {
+          "name": "Sulla",
+          "match": "First Roman general to lead his own army against Rome",
+          "sectionId": "march-on-rome",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Words of the Age",
+      "blurb": "Match each term to its meaning.",
+      "pairs": [
+        {
+          "name": "Socii",
+          "match": "Italian allies who kept their land but sent soldiers to Rome's wars",
+          "sectionId": "rome-and-its-allies",
+          "reviewFlags": []
+        },
+        {
+          "name": "Italia",
+          "match": "The rebels' rival state, with its capital at Corfinium",
+          "sectionId": "outbreak-at-asculum",
+          "reviewFlags": []
+        },
+        {
+          "name": "Julian Law",
+          "match": "Law of October 90 BC offering citizenship to loyal Italians",
+          "sectionId": "citizenship-laws",
+          "reviewFlags": []
+        },
+        {
+          "name": "Proscription",
+          "match": "Public list of men condemned to death without trial",
+          "sectionId": "dictatorship-and-proscriptions",
+          "reviewFlags": []
+        },
+        {
+          "name": "Grass crown",
+          "match": "Rome's highest military honour, won by Sulla near Nola",
+          "sectionId": "fighting-90-89-bc",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Latin Words",
+      "blurb": "Match each Latin word to its meaning.",
+      "pairs": [
+        {
+          "name": "Civitas",
+          "match": "Roman citizenship, which meant giving up your own",
+          "sectionId": "rome-and-its-allies",
+          "reviewFlags": []
+        },
+        {
+          "name": "Bellum sociale",
+          "match": "“The war of the allies”: the Social War",
+          "sectionId": "outbreak-at-asculum",
+          "reviewFlags": []
+        },
+        {
+          "name": "Corona graminea",
+          "match": "The grass crown, Rome’s highest military honour",
+          "sectionId": "fighting-90-89-bc",
+          "reviewFlags": []
+        },
+        {
+          "name": "Tribus",
+          "match": "A voting tribe; each cast one vote, whatever its size",
+          "sectionId": "citizenship-laws",
+          "reviewFlags": []
+        },
+        {
+          "name": "Hostes",
+          "match": "Public enemies, as Sulla declared Marius and others",
+          "sectionId": "march-on-rome",
+          "reviewFlags": []
+        },
+        {
+          "name": "Maiestas",
+          "match": "Treason, a law Sulla tightened for governors",
+          "sectionId": "dictatorship-and-proscriptions",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "trueFalseDecks": [
+    {
+      "name": "The Social War",
+      "blurb": "Rome against its own allies.",
+      "cards": [
+        {
+          "claim": "By 218 BC, Rome's armies held three allied soldiers for every two Romans.",
+          "answer": true,
+          "why": "The allies were indispensable: they supplied more soldiers than Rome itself.",
+          "sectionId": "rome-and-its-allies",
+          "reviewFlags": []
+        },
+        {
+          "claim": "According to an ancient summary most scholars accept, the rebel state's capital was Corfinium.",
+          "answer": true,
+          "why": "Corfinium, in the central Apennine mountains, had a forum, a senate, two consuls and twelve generals.",
+          "sectionId": "outbreak-at-asculum",
+          "reviewFlags": []
+        },
+        {
+          "claim": "The Latins, Rome's oldest allies, joined the revolt.",
+          "answer": false,
+          "why": "The Latins stayed loyal to Rome throughout the war.",
+          "sectionId": "fighting-90-89-bc",
+          "reviewFlags": []
+        },
+        {
+          "claim": "The Romans themselves called the conflict the Marsic War.",
+          "answer": true,
+          "why": "They named it after the Marsi, a mountain people east of Rome; 'Social War' comes from the later Latin bellum sociale.",
+          "sectionId": "outbreak-at-asculum",
+          "reviewFlags": []
+        },
+        {
+          "claim": "The rebel state Italia had a senate of 300 members.",
+          "answer": false,
+          "why": "Italia's senate had 500 members.",
+          "sectionId": "outbreak-at-asculum",
+          "reviewFlags": []
+        },
+        {
+          "claim": "The Julian Law of 90 BC offered citizenship to Italian communities that had stayed loyal or quickly laid down their arms.",
+          "answer": true,
+          "why": "A second law in 89 BC then extended the offer to almost everyone.",
+          "sectionId": "citizenship-laws",
+          "reviewFlags": []
+        },
+        {
+          "claim": "The law of 89 BC included the Samnites and Lucanians still fighting in the field.",
+          "answer": false,
+          "why": "They were the ones excluded; a band of them fought on until 87 BC and won citizenship by bargaining with one Roman faction.",
+          "sectionId": "citizenship-laws",
+          "reviewFlags": []
+        },
+        {
+          "claim": "The modern historian writing since 1998 argues the allies fought mainly to win Roman citizenship.",
+          "answer": false,
+          "why": "He argues the opposite: angered by land seizures, the allies rose to throw off Roman domination altogether, and the citizenship story was projected back by later writers.",
+          "sectionId": "what-the-allies-wanted",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Sulla's Career",
+      "blurb": "From poor aristocrat to dictator.",
+      "cards": [
+        {
+          "claim": "Sulla was born into a rich family of newcomers to Roman politics.",
+          "answer": false,
+          "why": "He came from one of Rome's oldest noble families, but one that had sunk into poverty.",
+          "sectionId": "sulla-early-career",
+          "reviewFlags": []
+        },
+        {
+          "claim": "While governing a province in Asia Minor, Sulla became the first Roman official to meet an envoy of Parthia.",
+          "answer": true,
+          "why": "Parthia was the great power beyond the Euphrates.",
+          "sectionId": "sulla-early-career",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Sulla's officers loyally followed him when he marched on Rome in 88 BC.",
+          "answer": false,
+          "why": "His officers deserted him, though his soldiers followed and he took the city.",
+          "sectionId": "march-on-rome",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Sulla stormed and sacked Athens on 1 March 86 BC.",
+          "answer": true,
+          "why": "Athens had sided with Mithridates.",
+          "sectionId": "east-and-civil-war",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Sulla landed at Brundisium in 83 BC with ten legions of veterans.",
+          "answer": false,
+          "why": "He landed with five legions of veterans.",
+          "sectionId": "east-and-civil-war",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Sulla's first proscription list held about 80 names.",
+          "answer": true,
+          "why": "Hundreds more names followed, and perhaps 9,000 people died in all.",
+          "sectionId": "dictatorship-and-proscriptions",
+          "reviewFlags": []
+        },
+        {
+          "claim": "As dictator, Sulla cut the Senate from 600 to 300 members.",
+          "answer": false,
+          "why": "He doubled it from 300 to 600 members, and senators alone staffed the jury courts.",
+          "sectionId": "dictatorship-and-proscriptions",
+          "reviewFlags": []
+        },
+        {
+          "claim": "In retirement near Puteoli, Sulla wrote his memoirs and kept company with actors and musicians.",
+          "answer": true,
+          "why": "He retired to his villa near this port on the Bay of Naples and died in 78 BC.",
+          "sectionId": "death-and-legacy",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "oddOneOut": [
+    {
+      "items": [
+        "Samnites",
+        "Marsi",
+        "Lucanians",
+        "Latins"
+      ],
+      "oddIndex": 3,
+      "why": "The Samnites, Marsi and Lucanians fought against Rome; the Latins, Rome's oldest allies, stayed loyal.",
+      "sectionId": "fighting-90-89-bc",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Athens",
+        "Chaeronea",
+        "Orchomenus",
+        "Corfinium"
+      ],
+      "oddIndex": 3,
+      "why": "Sulla fought at Athens, Chaeronea and Orchomenus in Greece in 86 BC; Corfinium was the rebels' capital in the Italian Apennines.",
+      "sectionId": "east-and-civil-war",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "A senate of 500",
+        "Two consuls",
+        "Twelve generals",
+        "Thirty-five voting tribes"
+      ],
+      "oddIndex": 3,
+      "why": "The rebel state Italia had a senate of 500, two consuls and twelve generals; the thirty-five voting tribes belonged to Rome.",
+      "sectionId": "outbreak-at-asculum",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Tribunes lose power to propose laws",
+        "Senate doubled to 600 members",
+        "Senators alone staff the juries",
+        "New citizens spread over all tribes"
+      ],
+      "oddIndex": 3,
+      "why": "The first three were Sulla's reforms favouring the Senate; spreading new citizens over all tribes was a tribune's proposal of 88 BC that Sulla opposed.",
+      "sectionId": "dictatorship-and-proscriptions",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Kept their own land",
+        "Ran their own affairs",
+        "Shared in the plunder",
+        "Voted in Roman assemblies"
+      ],
+      "oddIndex": 3,
+      "why": "Rome's allies kept their land, ran their own affairs and shared plunder, but they were not Roman citizens and so could not vote in Rome.",
+      "sectionId": "rome-and-its-allies",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Sulla",
+        "Cinna",
+        "Marius",
+        "Drusus"
+      ],
+      "oddIndex": 3,
+      "why": "Sulla, Cinna and Marius all held the consulship; Drusus was a tribune of the plebs, an official elected to champion ordinary citizens.",
+      "sectionId": "outbreak-at-asculum",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Freed slaves enlisted in the army",
+        "A general marching on Rome",
+        "A Roman meeting a Parthian envoy",
+        "Sulla's office of dictator"
+      ],
+      "oddIndex": 3,
+      "why": "The first three happened for the first time in this period; the dictatorship was an old office that Sulla revived after more than a century unused.",
+      "sectionId": "dictatorship-and-proscriptions",
+      "reviewFlags": []
+    }
+  ],
+  "whoAmI": [
+    {
+      "name": "Romans in the Storm",
+      "blurb": "Four Romans who shaped the crisis.",
+      "people": [
+        {
+          "name": "Drusus",
+          "options": [
+            "Sulla",
+            "Marius",
+            "Cinna",
+            "Drusus"
+          ],
+          "clues": [
+            "My package of laws was complicated and kept changing.",
+            "At some point my measures included citizenship for the allies.",
+            "I held an office elected to champion ordinary citizens.",
+            "I was a reforming tribune murdered by an unknown assassin in 91 BC."
+          ],
+          "sectionId": "outbreak-at-asculum",
+          "reviewFlags": []
+        },
+        {
+          "name": "Cinna",
+          "options": [
+            "Sulla",
+            "Marius",
+            "Cinna",
+            "Drusus"
+          ],
+          "clues": [
+            "Mutinous troops killed me before I could stop my enemy's return.",
+            "When my ally died soon after a new consulship, I was left in control of Rome.",
+            "I was elected consul for 87 BC, the year Sulla sailed for Greece.",
+            "As Sulla's enemy, I seized Rome with the returning Marius."
+          ],
+          "sectionId": "east-and-civil-war",
+          "reviewFlags": []
+        },
+        {
+          "name": "Marius",
+          "options": [
+            "Sulla",
+            "Marius",
+            "Cinna",
+            "Drusus"
+          ],
+          "clues": [
+            "I saw bodies floating downstream, forced the river and won.",
+            "I struck a secret deal with a tribune to take the war against Mithridates.",
+            "Declared a public enemy in 88 BC, I fled to Africa.",
+            "I was the veteran general who had saved Italy from Germanic invaders."
+          ],
+          "sectionId": "fighting-90-89-bc",
+          "reviewFlags": []
+        },
+        {
+          "name": "Sulla",
+          "options": [
+            "Sulla",
+            "Marius",
+            "Cinna",
+            "Drusus"
+          ],
+          "clues": [
+            "I won the grass crown, Rome's highest military honour, near Nola.",
+            "I crushed the armies of Mithridates at Chaeronea and Orchomenus.",
+            "I was the first Roman general to lead my army on Rome.",
+            "As dictator, I published lists of men condemned to death without trial."
+          ],
+          "sectionId": "march-on-rome",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Deeper Clues",
+      "blurb": "Harder clues about rivals and a king.",
+      "people": [
+        {
+          "name": "Sulla",
+          "options": [
+            "Sulla",
+            "Marius",
+            "Cinna",
+            "Drusus"
+          ],
+          "clues": [
+            "My fortune came from two inheritances: a stepmother and an older mistress.",
+            "I had red-gold hair, blue eyes and a pale face blotched with red.",
+            "I was the first Roman official to meet an envoy of Parthia.",
+            "In Numidia I persuaded a ruler to betray his king, but my commander took the credit."
+          ],
+          "sectionId": "sulla-early-career",
+          "reviewFlags": []
+        },
+        {
+          "name": "Marius",
+          "options": [
+            "Sulla",
+            "Marius",
+            "Cinna",
+            "Drusus"
+          ],
+          "clues": [
+            "In Numidia I fought a rebellious king, and a junior officer of mine got him handed over.",
+            "I took the credit for that success, and my friendship with that officer soured into rivalry.",
+            "Even late in life I craved one more command.",
+            "I died soon after taking up another consulship in Rome."
+          ],
+          "sectionId": "east-and-civil-war",
+          "reviewFlags": []
+        },
+        {
+          "name": "Mithridates",
+          "options": [
+            "Mithridates",
+            "Sulla",
+            "Marius",
+            "Cinna"
+          ],
+          "clues": [
+            "In 85 BC a Roman general offered me a surprisingly generous peace.",
+            "Athens sided with me and was sacked for it.",
+            "I overran Rome's province in Asia and arranged the massacre of some 80,000 Romans and Italians.",
+            "I was king of Pontus on the Black Sea's southern shore."
+          ],
+          "sectionId": "march-on-rome",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "places": [
+    {
+      "name": "Asculum",
+      "wikipediaTitle": "Ascoli Piceno",
+      "lat": 42.85,
+      "lon": 13.58333333,
+      "why": "The massacre of Romans in this town in Picenum sparked the revolt, and it fell to Rome after a long siege in 89 BC.",
+      "sectionId": "outbreak-at-asculum",
+      "coordinates": "Wikipedia: Ascoli Piceno",
+      "reviewFlags": []
+    },
+    {
+      "name": "Nola",
+      "wikipediaTitle": "Nola",
+      "lat": 40.92611111,
+      "lon": 14.5275,
+      "why": "Its captured garrison joined the rebels, Sulla won the grass crown nearby, and his army camped here before marching on Rome.",
+      "sectionId": "fighting-90-89-bc",
+      "coordinates": "Wikipedia: Nola",
+      "reviewFlags": []
+    },
+    {
+      "name": "Brundisium",
+      "wikipediaTitle": "Brindisi",
+      "lat": 40.63333333,
+      "lon": 17.93333333,
+      "why": "Sulla landed at this port in Italy's heel in spring 83 BC with five legions of veterans.",
+      "sectionId": "east-and-civil-war",
+      "coordinates": "Wikipedia: Brindisi",
+      "reviewFlags": []
+    },
+    {
+      "name": "Athens",
+      "wikipediaTitle": "Athens",
+      "lat": 37.98416667,
+      "lon": 23.72805556,
+      "why": "Sulla stormed and sacked the city on 1 March 86 BC because it had sided with Mithridates.",
+      "sectionId": "east-and-civil-war",
+      "coordinates": "Wikipedia: Athens",
+      "reviewFlags": []
+    },
+    {
+      "name": "Pontus",
+      "wikipediaTitle": "Pontus (region)",
+      "lat": 40.65,
+      "lon": 35.83,
+      "why": "Mithridates' kingdom on the Black Sea's southern shore, whose war Sulla and Marius fought over.",
+      "sectionId": "march-on-rome",
+      "coordinates": "Amaseia, the capital of Pontus",
+      "reviewFlags": []
+    }
+  ]
+}

@@ -1,0 +1,134 @@
+{
+  "description": "Key facts for this chapter, written by hand from the chapter text. Every entry links to the section that explains it.",
+  "people": [
+    {
+      "name": "Drusus",
+      "text": "Reforming tribune murdered in 91 BC.",
+      "sec": "outbreak-at-asculum"
+    },
+    {
+      "name": "Marius",
+      "text": "Veteran general, Sulla’s rival; seized Rome with Cinna in 87 BC.",
+      "sec": "fighting-90-89-bc"
+    },
+    {
+      "name": "Sulla",
+      "text": "The first general to march on Rome; dictator, author of the proscriptions.",
+      "sec": "sulla-early-career"
+    },
+    {
+      "name": "Cinna",
+      "text": "Consul who held Rome while Sulla was in the East.",
+      "sec": "east-and-civil-war"
+    },
+    {
+      "name": "Mithridates",
+      "text": "King of Pontus, who had some 80,000 Romans and Italians killed.",
+      "sec": "march-on-rome"
+    }
+  ],
+  "dates": [
+    {
+      "when": "91 BC",
+      "text": "Drusus is murdered; the allies rise at Asculum.",
+      "sec": "outbreak-at-asculum"
+    },
+    {
+      "when": "90 BC",
+      "text": "The Julian Law offers citizenship to loyal Italians.",
+      "sec": "citizenship-laws"
+    },
+    {
+      "when": "89 BC",
+      "text": "Asculum falls; citizenship for almost everyone.",
+      "sec": "fighting-90-89-bc"
+    },
+    {
+      "when": "88 BC",
+      "text": "Sulla marches on Rome.",
+      "sec": "march-on-rome"
+    },
+    {
+      "when": "87 BC",
+      "text": "Cinna and Marius seize Rome.",
+      "sec": "east-and-civil-war"
+    },
+    {
+      "when": "86 BC",
+      "text": "Sulla sacks Athens and beats Mithridates’ armies.",
+      "sec": "east-and-civil-war"
+    },
+    {
+      "when": "1 November 82 BC",
+      "text": "Battle of the Colline Gate.",
+      "sec": "east-and-civil-war"
+    },
+    {
+      "when": "80 BC",
+      "text": "Sulla lays down the dictatorship.",
+      "sec": "dictatorship-and-proscriptions"
+    },
+    {
+      "when": "78 BC",
+      "text": "Sulla dies.",
+      "sec": "death-and-legacy"
+    }
+  ],
+  "terms": [
+    {
+      "latin": "socii",
+      "english": "the allies",
+      "sec": "rome-and-its-allies"
+    },
+    {
+      "latin": "civitas",
+      "english": "citizenship",
+      "sec": "rome-and-its-allies"
+    },
+    {
+      "latin": "tribunus plebis",
+      "english": "a tribune of the plebs",
+      "sec": "outbreak-at-asculum"
+    },
+    {
+      "latin": "bellum sociale",
+      "english": "“the war of the allies”",
+      "sec": "outbreak-at-asculum"
+    },
+    {
+      "latin": "senatus",
+      "english": "the Senate",
+      "sec": "fighting-90-89-bc"
+    },
+    {
+      "latin": "corona graminea",
+      "english": "the grass crown",
+      "sec": "fighting-90-89-bc"
+    },
+    {
+      "latin": "lex Iulia",
+      "english": "the Julian Law of 90 BC",
+      "sec": "citizenship-laws"
+    },
+    {
+      "latin": "tribus",
+      "english": "a voting tribe",
+      "sec": "citizenship-laws"
+    },
+    {
+      "latin": "hostes",
+      "english": "public enemies",
+      "sec": "march-on-rome"
+    },
+    {
+      "latin": "proscriptio",
+      "english": "a list of men condemned without trial",
+      "sec": "dictatorship-and-proscriptions"
+    },
+    {
+      "latin": "maiestas",
+      "english": "treason",
+      "sec": "dictatorship-and-proscriptions"
+    }
+  ]
+}

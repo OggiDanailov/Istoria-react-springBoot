@@ -1,0 +1,177 @@
+{
+  "description": "Maps for the chronicle, written by hand. Coordinates from Wikipedia; each map sits at the start of its section.",
+  "maps": [
+    {
+      "id": "social-war",
+      "sec": "outbreak-at-asculum",
+      "title": "Italy in the Social War, 91–88 BC",
+      "caption": "The revolt began at Asculum in Picenum. The rebels' state, Italia, had its capital at Corfinium in the central mountains, and later at Bovianum. The Latins stayed loyal to Rome.",
+      "bounds": {
+        "latMin": 39.9,
+        "latMax": 43.5,
+        "lonMin": 11.8,
+        "lonMax": 17.0
+      },
+      "places": [
+        {
+          "name": "Rome",
+          "latin": "Roma",
+          "lat": 41.893,
+          "lon": 12.483,
+          "kind": "rome",
+          "side": "r",
+          "dy": -4
+        },
+        {
+          "name": "Asculum",
+          "lat": 42.854,
+          "lon": 13.575,
+          "kind": "battle",
+          "side": "r"
+        },
+        {
+          "name": "Corfinium",
+          "lat": 42.123,
+          "lon": 13.84,
+          "side": "r"
+        },
+        {
+          "name": "Bovianum",
+          "lat": 41.486,
+          "lon": 14.471,
+          "side": "r"
+        },
+        {
+          "name": "Nola",
+          "lat": 40.926,
+          "lon": 14.528,
+          "side": "l"
+        }
+      ],
+      "peoples": [
+        {
+          "name": "Marsi",
+          "lat": 41.95,
+          "lon": 13.6
+        },
+        {
+          "name": "Samnites",
+          "lat": 41.2,
+          "lon": 15.0
+        },
+        {
+          "name": "Lucanians",
+          "lat": 40.35,
+          "lon": 15.9
+        },
+        {
+          "name": "Latins",
+          "latin": "Latini",
+          "lat": 41.55,
+          "lon": 12.9
+        },
+        {
+          "name": "Picentes",
+          "lat": 43.15,
+          "lon": 13.2
+        }
+      ]
+    },
+    {
+      "id": "sulla-east",
+      "sec": "east-and-civil-war",
+      "title": "Sulla’s war in the East, 87–83 BC",
+      "caption": "Sulla sailed to Greece in 87 BC, sacked Athens and beat Mithridates' armies at Chaeronea and Orchomenus. In 83 BC he landed at Brundisium and marched on Rome, winning at the Colline Gate. Routes drawn roughly; Asia is the Roman province Mithridates overran; his kingdom of Pontus lies far to the east.",
+      "bounds": {
+        "latMin": 36.6,
+        "latMax": 42.9,
+        "lonMin": 11.8,
+        "lonMax": 27.0
+      },
+      "places": [
+        {
+          "name": "Rome",
+          "latin": "Roma",
+          "lat": 41.893,
+          "lon": 12.483,
+          "kind": "rome",
+          "side": "r",
+          "dy": -4,
+          "note": "Colline Gate"
+        },
+        {
+          "name": "Brundisium",
+          "lat": 40.633,
+          "lon": 17.94,
+          "side": "l",
+          "dy": 8
+        },
+        {
+          "name": "Athens",
+          "lat": 37.98,
+          "lon": 23.73,
+          "kind": "battle",
+          "side": "r"
+        },
+        {
+          "name": "Chaeronea",
+          "lat": 38.495,
+          "lon": 22.85,
+          "kind": "battle",
+          "side": "l",
+          "dy": -6
+        }
+      ],
+      "peoples": [
+        {
+          "name": "Asia",
+          "lat": 38.8,
+          "lon": 26.0
+        },
+        {
+          "name": "Greece",
+          "lat": 39.6,
+          "lon": 21.8
+        }
+      ],
+      "routes": [
+        {
+          "pts": [
+            [
+              40.55,
+              18.1
+            ],
+            [
+              39.6,
+              19.9
+            ],
+            [
+              38.7,
+              21.3
+            ],
+            [
+              38.15,
+              23.4
+            ]
+          ]
+        },
+        {
+          "pts": [
+            [
+              38.3,
+              21.2
+            ],
+            [
+              39.4,
+              19.3
+            ],
+            [
+              40.5,
+              18.15
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}

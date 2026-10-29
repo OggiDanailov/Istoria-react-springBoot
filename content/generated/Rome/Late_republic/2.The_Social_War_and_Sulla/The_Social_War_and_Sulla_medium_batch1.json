@@ -1,0 +1,189 @@
+{
+  "batchName": "Late Republic: The Social War and Sulla (91-78 BCE) - Medium Batch 1",
+  "chapterName": "Late Republic: The Social War and Sulla (91-78 BCE)",
+  "difficulty": 2,
+  "batchOrder": 3,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Why does the modern challenger distrust the ancient claim that the allies fought for citizenship?",
+      "options": [
+        "The only sources were Sulla's self-serving memoirs",
+        "Writers under the emperors projected their own high value of citizenship onto the past",
+        "The surviving coins openly reject Roman citizenship",
+        "The ancient writers were all Samnites hostile to Rome",
+        "Ancient writers had no access to Roman records"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#what-the-allies-wanted",
+      "explanation": "Under the emperors, citizenship was a prized privilege, so later writers assumed the allies craved it. Yet his view has not won everyone over.",
+      "sourceQuote": "He argues that writers living under the emperors, when citizenship was a prized privilege, projected their own values onto the past.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did Sulla's reforms weaken the tribunes of the plebs?",
+      "options": [
+        "Their number was cut to just two",
+        "Their term was halved to six months",
+        "They lost the power to propose laws",
+        "They were appointed by the Senate",
+        "The office was abolished entirely"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#dictatorship-and-proscriptions",
+      "explanation": "Tribunes could no longer propose laws, and former tribunes could hold no further office. Sulla's aim was to rebuild the state in the Senate's favour.",
+      "sourceQuote": "Tribunes lost the power to propose laws, and former tribunes could hold no further office.",
+      "reviewFlags": []
+    },
+    {
+      "question": "According to ancient writers, how did Sulla die in 78 BC?",
+      "options": [
+        "He was thrown from his horse near Puteoli",
+        "He burst a blood vessel shouting for an official to be strangled",
+        "He was poisoned by surviving supporters of Marius",
+        "He was stabbed by a proscribed man's son",
+        "He was killed by his own mutinous troops"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#death-and-legacy",
+      "explanation": "Ancient writers say Sulla burst a blood vessel in a rage at a corrupt local official. It was Cinna, not Sulla, who was killed by mutinous troops.",
+      "sourceQuote": "According to ancient writers, he burst a blood vessel while shouting for a corrupt local official to be strangled.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What fuelled allied anger after 133 BC?",
+      "options": [
+        "New Roman taxes imposed on allied harvests and livestock",
+        "Roman support for popular uprisings against local elites",
+        "A ban on allied soldiers sharing in the plunder of war",
+        "Roman officials seizing land guaranteed by treaty to give to poor citizens",
+        "Roman demands that the allies build and crew war fleets"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#rome-and-its-allies",
+      "explanation": "Roman reformers began handing out public land to poor citizens, much of it long left in allied hands. Italian communities complained their treaty rights were being violated.",
+      "sourceQuote": "Italian communities now complained that Roman officials were seizing property their treaties guaranteed.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Why was an offer of Roman citizenship less simple for the allies than it might sound?",
+      "options": [
+        "Citizenship required moving permanently to the city of Rome",
+        "New citizens had to pay a heavy entry tax to the Roman treasury",
+        "A person could hold only one citizenship, so becoming Roman meant giving up one's own community",
+        "Only speakers of Latin were allowed to be enrolled as citizens",
+        "New citizens lost the right to own land in their home towns"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#rome-and-its-allies",
+      "explanation": "Because citizenship was exclusive, becoming Roman meant abandoning one's own community. Several proposals to offer the allies citizenship failed before the war.",
+      "sourceQuote": "Even that offer was complicated, because a person could hold only one citizenship.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which groups were excluded from the 89 BC law extending Roman citizenship to almost all Italians?",
+      "options": [
+        "Marsi and Picentes of the Apennines",
+        "Latins and Etruscans of central Italy",
+        "The townspeople of Asculum and Nola",
+        "The Greek cities of southern Italy",
+        "Samnites and Lucanians still in the field"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#citizenship-laws",
+      "explanation": "Only the Samnites and Lucanians still fighting were left out. A stubborn band of them fought on until 87 BC.",
+      "sourceQuote": "Only the Samnites and Lucanians, a people of the far south, still in the field were excluded.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What happened to Drusus, the reforming tribune whose laws at some point included citizenship for the allies?",
+      "options": [
+        "He was exiled to Africa by the Senate",
+        "He became the first consul of Italia",
+        "He was murdered by an unknown assassin",
+        "He was executed after a treason trial",
+        "He was killed by the rebels at Asculum"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#outbreak-at-asculum",
+      "explanation": "Drusus's complicated package of laws collapsed, and he was murdered by an unknown hand in 91 BC. The allies had already been preparing in secret, exchanging hostages.",
+      "sourceQuote": "His measures collapsed, and Drusus was murdered by an unknown assassin.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did Marius gain from his secret deal with the tribune in 88 BC?",
+      "options": [
+        "The command against Mithridates",
+        "Command of the siege of Asculum",
+        "The office of dictator",
+        "The governorship of Africa",
+        "A consulship for the following year"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#march-on-rome",
+      "explanation": "Marius backed the voting law in exchange for Sulla's eastern command. Armed gangs filled the streets, and Sulla even had to shelter in Marius's house.",
+      "sourceQuote": "Marius would back the voting law, and in return the tribune would transfer the war against Mithridates to Marius.",
+      "reviewFlags": []
+    },
+    {
+      "question": "While governing a province in Asia Minor, Sulla became the first Roman official to meet an envoy of which power?",
+      "options": [
+        "Armenia",
+        "Numidia",
+        "Pontus",
+        "Parthia",
+        "Ptolemaic Egypt"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#sulla-early-career",
+      "explanation": "Parthia was the great power beyond the Euphrates. Sulla met its envoy while governing in Asia Minor, modern Turkey.",
+      "sourceQuote": "There he became the first Roman official to meet an envoy of Parthia, the great power beyond the Euphrates.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Why did the Romans call the Social War the \"Marsic War\"?",
+      "options": [
+        "After the Marsic Way, the road the rebels held",
+        "After Mars, the war god the rebels swore by",
+        "After the Samnite word for an allied soldier",
+        "After Marius, the general who led Rome's defence",
+        "After the Marsi, a mountain people east of Rome"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#outbreak-at-asculum",
+      "explanation": "The Romans named the war after the Marsi. The modern name comes from the later Latin bellum sociale, \"war of the allies.\"",
+      "sourceQuote": "Romans called the conflict the Marsic War, after the Marsi, a mountain people east of Rome.",
+      "reviewFlags": []
+    }
+  ]
+}

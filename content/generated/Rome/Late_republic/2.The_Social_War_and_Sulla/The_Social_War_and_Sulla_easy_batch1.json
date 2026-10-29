@@ -1,0 +1,179 @@
+{
+  "batchName": "Late Republic: The Social War and Sulla (91-78 BCE) - Easy Batch 1",
+  "chapterName": "Late Republic: The Social War and Sulla (91-78 BCE)",
+  "difficulty": 1,
+  "batchOrder": 1,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Who were the Samnites?",
+      "options": [
+        "Rome's oldest allies, living just south of the city",
+        "A Greek colony on the Bay of Naples loyal to Rome",
+        "A tough mountain people of south-central Italy long at war with Rome",
+        "A Gallic tribe settled in the Po valley of the north"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#rome-and-its-allies",
+      "explanation": "The Samnites were hardy mountain people who had fought Rome for generations. They were among the last rebels to keep fighting in the Social War.",
+      "sourceQuote": "Among them were the Samnites, a tough mountain people of south-central Italy who had fought Rome for generations.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which Greek city did Sulla storm and sack in 86 BC for siding with Mithridates?",
+      "options": [
+        "Sparta",
+        "Athens",
+        "Thebes",
+        "Corinth"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#east-and-civil-war",
+      "explanation": "Sulla sacked Athens on 1 March 86 BC. That summer he crushed huge armies of Mithridates at Chaeronea and Orchomenus.",
+      "sourceQuote": "On 1 March 86 BC, he stormed and sacked Athens, which had sided with Mithridates.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did Sulla's self-written epitaph boast?",
+      "options": [
+        "He had saved Rome from both the Italians and Mithridates",
+        "He alone had given up supreme power of his own free will",
+        "He never once lost a battle in all his years of command",
+        "No friend served him and no enemy wronged him without full repayment"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#death-and-legacy",
+      "explanation": "The epitaph celebrated Sulla repaying both kindness and injury in full. Rome gave him a funeral grander than any for generations.",
+      "sourceQuote": "His self-written epitaph boasted that no friend had ever served him, and no enemy wronged him, without being repaid in full.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What honour did Sulla win near Nola during the Social War?",
+      "options": [
+        "The civic crown of oak leaves for saving a citizen",
+        "The title of Father of the Fatherland from the Senate",
+        "The grass crown, Rome's highest military honour",
+        "The mural crown for first scaling an enemy wall"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#fighting-90-89-bc",
+      "explanation": "Sulla won the grass crown (corona graminea), Rome's highest military honour, near Nola. In the same campaign he also took Pompeii.",
+      "sourceQuote": "In the south, Sulla took Pompeii and won the grass crown (*corona graminea*), Rome's highest military honour, near Nola.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Where was the decisive battle of Sulla's civil war fought on 1 November 82 BC?",
+      "options": [
+        "The plain of Chaeronea",
+        "The Colline Gate of Rome",
+        "The Tolenus River",
+        "The port of Brundisium"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#east-and-civil-war",
+      "explanation": "The Colline Gate lay on Rome's north-eastern edge. Sulla fought there against a large Samnite and Lucanian army.",
+      "sourceQuote": "The decisive battle came on 1 November 82 BC at the Colline Gate, on Rome's north-eastern edge, against a large Samnite and Lucanian army.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What name did the rebel allies give to the rival state they created?",
+      "options": [
+        "Latium",
+        "Samnium",
+        "Italia",
+        "Etruria"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#outbreak-at-asculum",
+      "explanation": "The rebels called their new state Italia. It had a forum, a senate of 500 members, two consuls and twelve generals.",
+      "sourceQuote": "The rebels built a rival state they called Italia.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What dangerous lesson did Sulla's career teach later Roman generals?",
+      "options": [
+        "Italian allies could never be trusted with arms",
+        "A general with a loyal army could seize Rome",
+        "The Senate could always restrain its commanders",
+        "Peace with eastern kings brought the most glory"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#death-and-legacy",
+      "explanation": "Sulla's example outlasted his laws. A later general reportedly asked, \"If Sulla could, why can't I?\"",
+      "sourceQuote": "He had shown that a general with a loyal army could seize Rome, and a later general reportedly asked, \"If Sulla could, why can't I?\"",
+      "reviewFlags": []
+    },
+    {
+      "question": "As consul in 88 BC, Sulla was given command against which king?",
+      "options": [
+        "Antiochus, king of Syria",
+        "Mithridates, king of Pontus",
+        "Tigranes, king of Armenia",
+        "Jugurtha, king of Numidia"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#march-on-rome",
+      "explanation": "Mithridates ruled Pontus on the Black Sea's southern shore. He had overrun Rome's province in Asia and arranged the massacre of some 80,000 Romans and Italians.",
+      "sourceQuote": "The Senate gave him a rich and glorious prize: command against Mithridates, king of Pontus on the Black Sea's southern shore.",
+      "reviewFlags": []
+    },
+    {
+      "question": "According to the fullest surviving ancient account, why did the allies go to war with Rome?",
+      "options": [
+        "They rose to free the slaves working on Roman estates",
+        "They wanted to restore the old Samnite kingdom in the mountains",
+        "They demanded Roman citizenship, were refused, and fought to win it",
+        "They wanted to stop Rome's war against Mithridates in the East"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#what-the-allies-wanted",
+      "explanation": "The ancient narrative presents a clear story of citizenship refused and then fought for. In its words, the allies wanted to be \"partners in rule rather than subjects.\"",
+      "sourceQuote": "He tells a clear story: the allies demanded Roman citizenship, were refused, and went to war to win it.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What was a proscription under Sulla?",
+      "options": [
+        "A decree confiscating all public land held by allies",
+        "A public list of men condemned to death without trial",
+        "A ban on carrying weapons inside the city of Rome",
+        "A census registering newly enfranchised Italians"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#dictatorship-and-proscriptions",
+      "explanation": "Anyone could kill a proscribed man and claim a reward. The first list held about 80 names, and hundreds more followed.",
+      "sourceQuote": "His most infamous weapon was the proscription (*proscriptio*), a public list of men condemned to death without trial.",
+      "reviewFlags": []
+    }
+  ]
+}

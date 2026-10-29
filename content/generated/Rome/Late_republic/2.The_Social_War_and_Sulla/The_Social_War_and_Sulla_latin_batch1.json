@@ -1,0 +1,145 @@
+{
+  "batchName": "Late Republic: The Social War and Sulla (91-78 BCE) - Latin words",
+  "chapterName": "Late Republic: The Social War and Sulla (91-78 BCE)",
+  "difficulty": 1,
+  "batchOrder": 9,
+  "description": "Written by hand from the chapter text: the Latin words it explains",
+  "questions": [
+    {
+      "question": "Our name “Social War” comes from bellum sociale. What does it mean?",
+      "options": [
+        "The war of the allies",
+        "The war of the citizens",
+        "The civil war",
+        "The war of the Marsi"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#outbreak-at-asculum",
+      "explanation": "Romans themselves called it the Marsic War, after the Marsi.",
+      "sourceQuote": "Our name comes from the later Latin *bellum sociale*, the \"war of the allies.\"",
+      "reviewFlags": []
+    },
+    {
+      "question": "Near Nola, Sulla won the corona graminea. What was it?",
+      "options": [
+        "The grass crown, Rome’s highest military honour",
+        "A golden crown for the first man over a wall",
+        "The crown of the kings of Numidia",
+        "A prize for winning a chariot race"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#fighting-90-89-bc",
+      "explanation": "He then captured the rebels’ new capital at Bovianum.",
+      "sourceQuote": "won the grass crown (*corona graminea*), Rome's highest military honour, near Nola.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What was a proscriptio under Sulla?",
+      "options": [
+        "A public list of men condemned to death without trial",
+        "A tax on the rich",
+        "A list of new senators",
+        "A call-up of soldiers"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#dictatorship-and-proscriptions",
+      "explanation": "Anyone could kill a listed man and claim a reward; his property went to the state.",
+      "sourceQuote": "His most infamous weapon was the proscription (*proscriptio*), a public list of men condemned to death without trial.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Why was Roman civitas a complicated offer for the allies?",
+      "options": [
+        "A person could hold only one citizenship",
+        "It cost a large fee",
+        "It was only for soldiers",
+        "It had to be renewed every year"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#rome-and-its-allies",
+      "explanation": "Becoming Roman meant giving up one’s own community.",
+      "sourceQuote": "Even that offer was complicated, because a person could hold only one citizenship.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Whom did the lex Iulia of October 90 BC offer citizenship to?",
+      "options": [
+        "Italian communities that stayed loyal or quickly laid down arms",
+        "Only the Latins",
+        "Only freed slaves",
+        "Every people in Italy, including the Samnites"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#citizenship-laws",
+      "explanation": "In 89 BC a second law extended the offer to almost everyone.",
+      "sourceQuote": "It let any Italian community that had stayed loyal, or quickly laid down its arms, take up Roman citizenship.",
+      "reviewFlags": []
+    },
+    {
+      "question": "In 88 BC Sulla had Marius and eleven others declared hostes. What did that make them?",
+      "options": [
+        "Public enemies",
+        "Consuls",
+        "Hostages",
+        "Exiles with pensions"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#march-on-rome",
+      "explanation": "Marius fled to Africa.",
+      "sourceQuote": "had Marius and eleven others declared public enemies (*hostes*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did the thirty-five voting tribus work?",
+      "options": [
+        "Each tribe cast one vote, whatever its size",
+        "Each citizen voted alone",
+        "Only the richest tribes voted",
+        "The tribes voted in order of age"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#citizenship-laws",
+      "explanation": "So packing new citizens into a few new tribes limited their influence.",
+      "sourceQuote": "Romans voted in thirty-five voting tribes (*tribus*), and each tribe cast one vote regardless of size.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Why did Sulla tighten the law of maiestas?",
+      "options": [
+        "To keep provincial governors in line",
+        "To punish the Italian rebels",
+        "To protect the tribunes",
+        "To control the price of grain"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#dictatorship-and-proscriptions",
+      "explanation": "His other reforms also strengthened the Senate.",
+      "sourceQuote": "He tightened the treason law (*maiestas*) to keep provincial governors in line.",
+      "reviewFlags": []
+    }
+  ]
+}

@@ -357,7 +357,15 @@
       "short": "Social War and Sulla",
       "era": "late-republic",
       "mapArea": "wide",
-      "plannedBattle": "The Colline Gate (82 BC)"
+      "battle": {
+        "name": "The Colline Gate",
+        "year": "82 BC",
+        "enemy": "the Samnites and Lucanians",
+        "sec": "east-and-civil-war",
+        "level": "colline-gate",
+        "intro": "A great Samnite and Lucanian army stands at Rome’s Colline Gate. Sulla’s veterans must hold the city."
+      },
+      "locked": true
     },
     {
       "id": "spartacus-and-pompey",

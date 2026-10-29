@@ -1,0 +1,191 @@
+{
+  "batchName": "Late Republic: The Social War and Sulla (91-78 BCE) - Medium Batch 2",
+  "chapterName": "Late Republic: The Social War and Sulla (91-78 BCE)",
+  "difficulty": 2,
+  "batchOrder": 4,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Why did ancient critics condemn Sulla's generous peace with Mithridates in 85 BC?",
+      "options": [
+        "They claimed it handed Athens back to Mithridates",
+        "They said he had accepted a huge personal bribe from the king",
+        "They said it abandoned Rome's ally Parthia",
+        "They called it a betrayal made so he could hurry home for revenge",
+        "They believed it broke an oath sworn to the Senate"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#east-and-civil-war",
+      "explanation": "Critics saw the lenient terms as a way to free Sulla for civil war at home. He landed at Brundisium in spring 83 BC with five legions.",
+      "sourceQuote": "Ancient critics called it a betrayal, made so Sulla could hurry home for revenge.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Why would packing the new citizens into a few new voting tribes limit their influence?",
+      "options": [
+        "Votes from new tribes counted only half as much",
+        "Each tribe cast one vote regardless of how many members it had",
+        "New tribes were only allowed to meet outside Italy",
+        "Members of new tribes could not stand for any public office",
+        "New tribes were not permitted to vote on matters of war"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#citizenship-laws",
+      "explanation": "Romans voted in thirty-five tribes, each casting a single vote. Crowding many new citizens into a few tribes would give them few votes overall.",
+      "sourceQuote": "Romans voted in thirty-five voting tribes (*tribus*), and each tribe cast one vote regardless of size.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Why did one historian call Rome's victory in the Social War \"a Pyrrhic one at best\"?",
+      "options": [
+        "It produced both Sulla and an army willing to march on Rome",
+        "The rebel state of Italia survived the war",
+        "Mithridates used it to conquer Greece permanently",
+        "The Samnites were never actually defeated",
+        "Rome lost the loyalty of all its Latin allies"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#death-and-legacy",
+      "explanation": "The war brought large armies back onto Italian soil and taught soldiers to fight fellow Italians. That paved the way for Sulla's march on Rome.",
+      "sourceQuote": "One historian calls Rome's victory \"a Pyrrhic one at best,\" since it produced both Sulla and an army willing to march on Rome.",
+      "reviewFlags": []
+    },
+    {
+      "question": "According to ancient writers, where did the once-penniless Sulla's fortune come from?",
+      "options": [
+        "Plunder taken during the war in Numidia",
+        "Profits from writing and staging comic farces",
+        "A dowry from marrying into Marius's family",
+        "Inheritances from a stepmother and an older mistress",
+        "Bribes taken while governing Asia Minor"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#sulla-early-career",
+      "explanation": "Ancient writers credit two inheritances for Sulla's wealth. In his poor youth he had mixed with actors, musicians and dancers.",
+      "sourceQuote": "His later fortune, according to ancient writers, came from two inheritances: one from a loving stepmother and one from an older mistress.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which consequences fell on a man named in Sulla's proscriptions? (select all that apply)",
+      "options": [
+        "His sons and grandsons were barred from office",
+        "His wife was sold into slavery",
+        "Anyone could kill him and claim a reward",
+        "His family was exiled to an island",
+        "His property went to the state"
+      ],
+      "correctAnswers": [
+        0,
+        2,
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#dictatorship-and-proscriptions",
+      "explanation": "Proscribed men could be killed by anyone for a reward, their estates were seized, and their descendants barred from office. Many were killed simply for their estates, auctioned cheaply to Sulla's friends.",
+      "sourceQuote": "His property went to the state, and his sons and grandsons were barred from office.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Who joined forces to seize Rome late in 87 BC while Sulla was in Greece?",
+      "options": [
+        "Cinna and the returning Marius",
+        "Drusus and the Samnite leaders",
+        "The tribune and the Senate",
+        "The Marsi and the Lucanians",
+        "Agents sent by Mithridates"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#east-and-civil-war",
+      "explanation": "Cinna, consul for 87 BC, allied with Marius. They seized Rome, killed opponents and declared Sulla an outlaw; Marius died soon after.",
+      "sourceQuote": "Behind him, Cinna, an enemy of Sulla elected consul for that year, joined forces with the returning Marius.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What has an influential modern historian argued since 1998 about the allies' aims?",
+      "options": [
+        "They were acting as Drusus's private army in Roman politics",
+        "They were secretly paid and armed by Mithridates of Pontus",
+        "They wanted citizenship even more than ancient writers admitted",
+        "They rose to throw off Roman domination, angered by land seizures",
+        "They were mainly leading a revolt of rural slaves"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#what-the-allies-wanted",
+      "explanation": "He argues there is little sign of Italians clamouring for citizenship before the war. Instead, land seizures drove them to seek independence.",
+      "sourceQuote": "Instead, he suggests, the allies were angered by Roman land seizures and rose to throw off Roman domination altogether.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did a tribune propose in 88 BC that Sulla opposed?",
+      "options": [
+        "Granting full citizenship to all freed slaves",
+        "Abolishing the consulship for ten years",
+        "Spreading the new Italian citizens across all thirty-five tribes",
+        "Handing out more public land to the urban poor",
+        "Recalling Marius from exile in Africa"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#march-on-rome",
+      "explanation": "The tribune wanted the new citizens distributed through all the voting tribes, increasing their power. To pass it, he struck a secret deal with Marius.",
+      "sourceQuote": "Then a tribune proposed spreading the new Italian citizens across all thirty-five voting tribes.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did Rome do for the first time because of severe manpower shortages in the Social War?",
+      "options": [
+        "Conscripted boys under sixteen",
+        "Hired Greek mercenaries from the East",
+        "Enlisted freed slaves as soldiers",
+        "Recruited Gallic tribesmen as auxiliaries",
+        "Made senators serve as common soldiers"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#fighting-90-89-bc",
+      "explanation": "Freed slaves were enlisted because manpower was so short. Rome fielded an estimated 140,000 men in fourteen legions against some 100,000 rebels.",
+      "sourceQuote": "Manpower was so short that freed slaves were enlisted for the first time.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which people, Rome's oldest allies, stayed loyal during the Social War?",
+      "options": [
+        "The Latins",
+        "The Marsi",
+        "The Lucanians",
+        "The Picentes",
+        "The Samnites"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#fighting-90-89-bc",
+      "explanation": "The Latins remained on Rome's side. Even so, Rome was so short of men that it enlisted freed slaves for the first time.",
+      "sourceQuote": "The Latins, Rome's oldest allies, stayed loyal.",
+      "reviewFlags": []
+    }
+  ]
+}

@@ -1,0 +1,205 @@
+{
+  "batchName": "Late Republic: The Social War and Sulla (91-78 BCE) - Hard Batch 1",
+  "chapterName": "Late Republic: The Social War and Sulla (91-78 BCE)",
+  "difficulty": 3,
+  "batchOrder": 5,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Which institutions did the rebel state of Italia have? (select all that apply)",
+      "options": [
+        "Twelve generals",
+        "A senate of 500 members",
+        "A single dictator",
+        "Two consuls",
+        "A king elected for life",
+        "A senate of 300 members"
+      ],
+      "correctAnswers": [
+        0,
+        1,
+        3
+      ],
+      "difficulty": 3,
+      "textReference": "#outbreak-at-asculum",
+      "explanation": "The rebels’ state, Italia, had a senate of 500 members, two consuls and twelve generals, with its capital at Corfinium.",
+      "sourceQuote": "It had a forum, a senate of 500 members, two consuls and twelve generals.",
+      "reviewFlags": []
+    },
+    {
+      "question": "When and under whom did Sulla's military career begin?",
+      "options": [
+        "In 138 BC under his noble father",
+        "In 91 BC under the tribune Drusus",
+        "In 90 BC at the Tolenus River",
+        "In 101 BC against Germanic invaders",
+        "In 133 BC under the land reformers",
+        "In 107 BC under Marius in Numidia"
+      ],
+      "correctAnswers": [
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#sulla-early-career",
+      "explanation": "Sulla started as a junior officer under Marius, who was fighting a rebellious king in Numidia. He later served again in the wars against Germanic invaders.",
+      "sourceQuote": "His career began in 107 BC as a junior officer under Marius, then fighting a rebellious king in Numidia, a kingdom in North Africa.",
+      "reviewFlags": []
+    },
+    {
+      "question": "By 218 BC, what was the ratio of allied soldiers to Roman soldiers in Rome's armies?",
+      "options": [
+        "Two allies for every Roman",
+        "Three allies for every two Romans",
+        "One ally for every three Romans",
+        "One ally for every Roman",
+        "Two allies for every three Romans",
+        "Four allies for every Roman"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 3,
+      "textReference": "#rome-and-its-allies",
+      "explanation": "Allies made up the majority of Rome's armies, which made them indispensable. They shared in the plunder in return.",
+      "sourceQuote": "By 218 BC, Rome's armies held three allied soldiers for every two Romans.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which of these happened during or after Sulla's first march on Rome in 88 BC? (select all that apply)",
+      "options": [
+        "Citizens threw stones from the rooftops",
+        "The Senate greeted him with a triumph",
+        "Marius fled to Greece to join Mithridates",
+        "Marius and eleven others were declared public enemies",
+        "His soldiers mutinied and killed him",
+        "His officers deserted him"
+      ],
+      "correctAnswers": [
+        0,
+        3,
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#march-on-rome",
+      "explanation": "Sulla faced deserting officers and hostile citizens but still took Rome and outlawed Marius and eleven others. Marius fled to Africa, not Greece.",
+      "sourceQuote": "His officers deserted him, and citizens hurled stones from the rooftops.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which statement about the Battle of the Colline Gate in 82 BC is accurate?",
+      "options": [
+        "Marius commanded the army opposing Sulla",
+        "Sulla's own wing broke, but his right wing won",
+        "It was fought the day Sulla landed in Italy",
+        "Sulla's wing won while his right wing collapsed",
+        "It was fought against an army of Mithridates",
+        "Sulla pardoned all his prisoners the next day"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 3,
+      "textReference": "#east-and-civil-war",
+      "explanation": "Sulla's own wing gave way, but his right wing secured victory. The next day, thousands of prisoners were butchered within earshot of the Senate as he addressed it.",
+      "sourceQuote": "Sulla's own wing broke, but his right wing won.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What surviving evidence comes from the Italian side of the Social War?",
+      "options": [
+        "Treaty texts written in Oscan",
+        "A Samnite chronicle of the war",
+        "Letters from Italia's two consuls",
+        "Only a few coins",
+        "Inscriptions listing Italia's senators",
+        "The memoirs of the Marsic commander"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 3,
+      "textReference": "#what-the-allies-wanted",
+      "explanation": "No Italian narrative survives, only a few coins. That gap is one reason historians still argue about what the rebels wanted.",
+      "sourceQuote": "No Italian account survives, apart from a few coins.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which town, the rebels' new capital, did Sulla capture in 89 BC?",
+      "options": [
+        "Asculum",
+        "Corfinium",
+        "Bovianum",
+        "Pompeii",
+        "Puteoli",
+        "Nola"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 3,
+      "textReference": "#fighting-90-89-bc",
+      "explanation": "After taking Pompeii and winning the grass crown near Nola, Sulla captured Bovianum. The same year, Asculum fell after a long siege.",
+      "sourceQuote": "He then captured the rebels' new capital at Bovianum.",
+      "reviewFlags": []
+    },
+    {
+      "question": "When was the registration of the newly enfranchised Italians finally completed?",
+      "options": [
+        "During Sulla's dictatorship",
+        "Immediately after the fall of Asculum",
+        "In 88 BC, before the march on Rome",
+        "It was abandoned and never completed",
+        "Within a year of the Julian Law",
+        "Only under Rome's first emperor"
+      ],
+      "correctAnswers": [
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#citizenship-laws",
+      "explanation": "Registration dragged on for decades. Meanwhile Italy was scarred, with the central mountains devastated.",
+      "sourceQuote": "Registration dragged on for decades and was completed only under Rome's first emperor.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did the last band of Samnite and Lucanian holdouts finally obtain Roman citizenship?",
+      "options": [
+        "By bargaining with one faction during Rome's own civil strife",
+        "Through a revived version of Drusus's laws",
+        "By surrendering under the terms of the Julian Law",
+        "By a special grant from Sulla as dictator",
+        "By winning a decisive victory at the Colline Gate",
+        "By allying with Mithridates against Rome"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#citizenship-laws",
+      "explanation": "After the last organised rebel army was crushed in 88 BC, these holdouts fought on until 87 BC. Rome's internal conflict let them trade support for citizenship.",
+      "sourceQuote": "Then Rome's own civil strife let them win citizenship by bargaining with one faction.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which features applied to the dictatorship Sulla revived? (select all that apply)",
+      "options": [
+        "It carried immunity for past and future acts",
+        "It was shared with a co-dictator",
+        "It had no time limit",
+        "The office had been unused for more than a century",
+        "It was limited to the traditional six months",
+        "It required re-election by the assembly each year"
+      ],
+      "correctAnswers": [
+        0,
+        2,
+        3
+      ],
+      "difficulty": 3,
+      "textReference": "#dictatorship-and-proscriptions",
+      "explanation": "Sulla revived a long-dormant office and gave it almost unlimited power, no time limit and full immunity. He nonetheless laid it down around the start of 80 BC.",
+      "sourceQuote": "This time the office came with no time limit and almost unlimited power.",
+      "reviewFlags": []
+    }
+  ]
+}

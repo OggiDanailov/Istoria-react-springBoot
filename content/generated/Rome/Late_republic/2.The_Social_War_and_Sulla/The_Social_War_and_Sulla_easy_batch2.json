@@ -1,0 +1,179 @@
+{
+  "batchName": "Late Republic: The Social War and Sulla (91-78 BCE) - Easy Batch 2",
+  "chapterName": "Late Republic: The Social War and Sulla (91-78 BCE)",
+  "difficulty": 1,
+  "batchOrder": 2,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "What did the Julian Law (lex Iulia) of October 90 BC offer to Italian communities?",
+      "options": [
+        "Return of all public land seized from them since 133 BC",
+        "Citizenship for those that stayed loyal or quickly laid down arms",
+        "Permanent exemption from sending soldiers to Rome's wars",
+        "A fixed share of plunder from the coming wars in the East"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#citizenship-laws",
+      "explanation": "The Julian Law granted Roman citizenship to loyal communities and those that surrendered quickly. A second law in 89 BC extended the offer to almost everyone, and support for the rebellion drained away.",
+      "sourceQuote": "It let any Italian community that had stayed loyal, or quickly laid down its arms, take up Roman citizenship.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What unprecedented step did Sulla take in 88 BC after a new law stripped him of his command?",
+      "options": [
+        "He resigned and went into voluntary exile",
+        "He fled to Africa to raise new troops",
+        "He defected to the side of Mithridates",
+        "He led his army on Rome itself"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#march-on-rome",
+      "explanation": "Sulla went to his army near Nola and marched it on Rome, something no Roman general had ever done. He took the city and had Marius declared a public enemy.",
+      "sourceQuote": "He went to his army near Nola, warned the soldiers they would lose the plunder of the East, and led them on Rome.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Who wrote the fullest surviving narrative of the Social War?",
+      "options": [
+        "A Greek historian writing more than two centuries later",
+        "A Roman senator writing in the year after the war",
+        "A Samnite officer who fought at the siege of Asculum",
+        "Sulla himself, in the memoirs he wrote in retirement"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#what-the-allies-wanted",
+      "explanation": "The main account comes from a Greek historian writing nearly two hundred years after the events. Most ancient writers agreed with his citizenship-centred story.",
+      "sourceQuote": "The fullest surviving narrative was written by a Greek historian more than two centuries later.",
+      "reviewFlags": []
+    },
+    {
+      "question": "In which town did the killing of a Roman magistrate and every Roman resident set off the allied revolt?",
+      "options": [
+        "Corfinium",
+        "Nola",
+        "Bovianum",
+        "Asculum"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#outbreak-at-asculum",
+      "explanation": "A Roman magistrate heard that Asculum, in Picenum, was swapping hostages and rushed there to threaten the townspeople. Terrified of discovery, they killed him and every Roman in the town.",
+      "sourceQuote": "Late in 91 or early in 90 BC, a Roman magistrate heard that Asculum, a town in Picenum near Italy's Adriatic coast, was swapping hostages.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which veteran general turned the tide in 90 BC after seeing bodies floating downstream and forcing the river crossing?",
+      "options": [
+        "Sulla",
+        "Drusus",
+        "Cinna",
+        "Marius"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#fighting-90-89-bc",
+      "explanation": "Marius, who had earlier saved Italy from Germanic invaders, forced the river and won. With Sulla's help he beat the Marsi again and split the rebels into northern and southern halves.",
+      "sourceQuote": "Marius, the veteran general who had saved Italy from Germanic invaders, saw bodies floating downstream, forced the river and won.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What was unusual about Sulla's family background?",
+      "options": [
+        "He came from a rich merchant family in Asia Minor",
+        "He was the son of a freed slave from Campania",
+        "His ancient noble family had sunk into poverty",
+        "His family were Samnites who had won citizenship"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#sulla-early-career",
+      "explanation": "Sulla was born in 138 BC into one of Rome's oldest noble families, but it had little money. He spent his youth among actors, musicians and dancers.",
+      "sourceQuote": "Sulla was born in 138 BC into one of Rome's oldest noble families, but a family that had sunk into poverty.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did the young Sulla win fame during the war in Numidia?",
+      "options": [
+        "By negotiating a lasting peace treaty with the king",
+        "By persuading a neighbouring ruler to betray the rebel king",
+        "By killing the rebel king in single combat on the field",
+        "By storming the Numidian capital with a small force"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#sulla-early-career",
+      "explanation": "Sulla got a neighbouring ruler to hand the rebellious king over to Rome. Marius took the credit, and their friendship soured into rivalry.",
+      "sourceQuote": "Sulla won fame by persuading a neighbouring ruler to betray the king into Roman hands.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did Sulla do after laying down the dictatorship around the start of 80 BC?",
+      "options": [
+        "Had himself crowned king before the assembled Senate",
+        "Walked unguarded through the Forum, offering to answer any citizen",
+        "Set out at once on a new campaign against Parthia",
+        "Named his chief officer as dictator in his place"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#dictatorship-and-proscriptions",
+      "explanation": "Sulla dismissed his guards and walked unprotected through the Forum. He then held a final consulship in 80 BC before retiring.",
+      "sourceQuote": "He dismissed his guards and walked unprotected through the Forum, offering to answer any citizen.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did Rome's Italian allies (socii) have to provide in return for keeping their land and running their own affairs?",
+      "options": [
+        "Soldiers whenever Rome went to war",
+        "An annual tribute paid in silver",
+        "Grain shipments for the city of Rome",
+        "Hostages from their leading families"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#rome-and-its-allies",
+      "explanation": "The allies' treaties obliged them to send troops for Rome's wars. In exchange they shared in the plunder, and Rome often backed local elites against popular uprisings.",
+      "sourceQuote": "In return, they had to send soldiers whenever Rome went to war.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Where did Sulla spend his retirement, writing his memoirs?",
+      "options": [
+        "A villa near Puteoli on the Bay of Naples",
+        "A country villa outside Brundisium",
+        "A house in Athens among Greek scholars",
+        "An estate in the mountains near Corfinium"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#death-and-legacy",
+      "explanation": "Sulla retired to his villa near Puteoli after a final consulship in 80 BC. There he wrote his memoirs and kept company with actors and musicians.",
+      "sourceQuote": "After a final consulship in 80 BC, Sulla retired to his villa near Puteoli, a port on the Bay of Naples.",
+      "reviewFlags": []
+    }
+  ]
+}
