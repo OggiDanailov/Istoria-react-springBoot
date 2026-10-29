@@ -9,7 +9,7 @@
       "bounds": {
         "latMin": 43.0,
         "latMax": 52.6,
-        "lonMin": -5.2,
+        "lonMin": -6.4,
         "lonMax": 10.6
       },
       "places": [
@@ -41,7 +41,7 @@
           "lat": 47.08,
           "lon": 2.4,
           "kind": "battle",
-          "side": "r",
+          "side": "l",
           "dy": -12
         },
         {
@@ -56,8 +56,8 @@
           "lat": 47.52,
           "lon": -3.0,
           "kind": "battle",
-          "side": "l",
-          "dy": 14
+          "side": "r",
+          "dy": 16
         },
         {
           "name": "Uxellodunum",
