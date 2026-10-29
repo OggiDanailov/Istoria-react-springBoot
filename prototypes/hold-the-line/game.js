@@ -21,6 +21,7 @@ const UNITS = {
   cornicen: { name: 'Trumpeter', short: 'Trumpeter', cost: 75, recharge: 20, hp: 250, horn: { range: 2.6, every: 10 }, about: 'At Zama the Romans blared trumpets and panicked Hannibal’s elephants. He blares at any elephant coming at his lane or the lanes beside it.' },
   maniple:  { name: 'Maniple', short: 'Maniple', cost: 125, recharge: 10, hp: 650, melee: 35, flank: 70, about: 'A small, flexible unit. It fights in its own lane and strikes enemies in the lanes beside it from the side, where shields don’t protect them.' },
   torch:    { name: 'Torch-bearer', short: 'Torch', cost: 50, recharge: 12, hp: 100, burn: 3, about: 'Sets a house on fire. Place him on a house: no more defenders can burst out of it, and the square is free again.' },
+  lilia:    { name: 'Lilia', short: 'Lilia', cost: 50, recharge: 12, hp: 400, pit: { dmg: 110, slow: 0.5 }, about: 'Caesar’s “lilies” at Alesia: hidden pits with a sharpened stake in each. Enemies walk over them, get hurt and slow down. They don’t block the lane, and they last.' },
   pigs:     { name: 'War pigs', short: 'Pigs', cost: 75, recharge: 20, hp: 100, trigger: 1.8, about: 'Ancient writers say squealing pigs panicked Pyrrhus’s elephants. The pigs charge the first enemy that comes near; an elephant they reach runs back through its own army.' },
 }
 const FOES = {
@@ -47,7 +48,7 @@ const FOES = {
   calf:       { name: 'Elephant calf', hp: 300, speed: 0.15, dps: 60, intro: 'An elephant calf walks ahead of its mother. Wound it and the mother panics, as happened at Beneventum.' },
   elephant:   { name: 'War elephant', hp: 2000, speed: 0.15, dps: 250, elephant: true, intro: 'War elephants! They crush whatever stands in their way. Send the pigs!' },
 }
-const UNIT_GUIDE = {"cart": "Makes a sack of grain (25 rations) every 20 seconds. It doesn’t fight. <i>Tip: build several early, at the back.</i>", "slinger": "Shoots a stone down his whole lane every 1.5 seconds. Fragile once an enemy reaches him. <i>Tip: put something sturdy in front of him.</i>", "hastatus": "Throws heavy javelins at enemies within about 2½ squares, more than twice a stone’s damage, then fights with his sword when they reach him. <i>Tip: javelins break shields fast.</i>", "triarius": "Five times a slinger’s health and no attack. He holds enemies in place while your other soldiers hit them. <i>Tip: in front of your shooters.</i>", "caltrops": "Hidden iron spikes. After 10 seconds they are armed, and the first enemy to step on them sets them off: everyone on that spot takes a huge hit. Before that, enemies trample them. <i>Tip: a horseman wastes his leap on unarmed caltrops.</i>", "princeps": "A tough swordsman who cuts down whoever reaches his square. <i>Tip: a strong front line against fast raiders.</i>", "shed": "A wooden shed covered in hides. Arrows do almost nothing to it. <i>Tip: put it in front, so archers shoot the shed instead of your slingers.</i>", "rorarii": "Throw javelins into their own lane and both lanes beside it. <i>Tip: in the middle lanes they cover three lanes at once.</i>", "scorpio": "Shoots a heavy bolt every 3½ seconds that flies through every enemy in its lane, hitting each one. <i>Tip: great against crowded lanes and elephants.</i>", "velites": "Cheap javelin throwers with a short range. When an enemy reaches them they fall back one square (once), so they keep throwing. <i>Tip: a cheap first line.</i>", "cornicen": "Doesn’t fight. When an elephant comes within 2½ squares in his lane or the lanes beside it, he blares his horn and every such elephant panics and runs back. Then he needs 10 seconds to catch his breath. <i>Tip: a little in front of your shooters.</i>", "maniple": "A tough unit that fights in its lane and also hits enemies in the two lanes beside it from the side. Shields don’t stop blows from the side. <i>Tip: between two lanes the phalanx is coming down.</i>", "torch": "Can only be placed on a house. After 3 seconds the house burns down: no more ambushes from it, and you can build on the square. <i>Tip: burn the houses near your lines first.</i>", "pigs": "Charge up the lane when an enemy comes near. An elephant they reach panics and runs back, trampling its own army; other enemies just take a hit. One use. <i>Tip: keep them in front of your line.</i>"}
+const UNIT_GUIDE = {"cart": "Makes a sack of grain (25 rations) every 20 seconds. It doesn’t fight. <i>Tip: build several early, at the back.</i>", "slinger": "Shoots a stone down his whole lane every 1.5 seconds. Fragile once an enemy reaches him. <i>Tip: put something sturdy in front of him.</i>", "hastatus": "Throws heavy javelins at enemies within about 2½ squares, more than twice a stone’s damage, then fights with his sword when they reach him. <i>Tip: javelins break shields fast.</i>", "triarius": "Five times a slinger’s health and no attack. He holds enemies in place while your other soldiers hit them. <i>Tip: in front of your shooters.</i>", "caltrops": "Hidden iron spikes. After 10 seconds they are armed, and the first enemy to step on them sets them off: everyone on that spot takes a huge hit. Before that, enemies trample them. <i>Tip: a horseman wastes his leap on unarmed caltrops.</i>", "princeps": "A tough swordsman who cuts down whoever reaches his square. <i>Tip: a strong front line against fast raiders.</i>", "shed": "A wooden shed covered in hides. Arrows do almost nothing to it. <i>Tip: put it in front, so archers shoot the shed instead of your slingers.</i>", "rorarii": "Throw javelins into their own lane and both lanes beside it. <i>Tip: in the middle lanes they cover three lanes at once.</i>", "scorpio": "Shoots a heavy bolt every 3½ seconds that flies through every enemy in its lane, hitting each one. <i>Tip: great against crowded lanes and elephants.</i>", "velites": "Cheap javelin throwers with a short range. When an enemy reaches them they fall back one square (once), so they keep throwing. <i>Tip: a cheap first line.</i>", "cornicen": "Doesn’t fight. When an elephant comes within 2½ squares in his lane or the lanes beside it, he blares his horn and every such elephant panics and runs back. Then he needs 10 seconds to catch his breath. <i>Tip: a little in front of your shooters.</i>", "maniple": "A tough unit that fights in its lane and also hits enemies in the two lanes beside it from the side. Shields don’t stop blows from the side. <i>Tip: between two lanes the phalanx is coming down.</i>", "torch": "Can only be placed on a house. After 3 seconds the house burns down: no more ambushes from it, and you can build on the square. <i>Tip: burn the houses near your lines first.</i>", "lilia": "Hidden pits with sharp stakes. They don’t stop anyone: every enemy who crosses one takes a hit and slows to half speed while crossing. Enemies don’t attack them, so they last the whole battle. <i>Tip: put them where your shooters can hit the slowed enemy.</i>", "pigs": "Charge up the lane when an enemy comes near. An elephant they reach panics and runs back, trampling its own army; other enemies just take a hit. One use. <i>Tip: keep them in front of your line.</i>"}
 const FOE_GUIDE = {"calf": "Walks ahead of its mother. Wound it badly and the mother panics: both run back, trampling Pyrrhus’s own soldiers. Aim your slingers at the calf.", "warrior": "The basic enemy. One or two slingers in a lane handle him.", "chief": "Carries the standard and walks a little faster.", "shield": "His bronze shield soaks up hits until it breaks (the bronze bar). Javelins break it quickly.", "cavalry": "Fast. He leaps over the first soldier in his way, once, then slows down. Give him something cheap to leap, or armed caltrops.", "raider": "Fast but weak, and comes in bursts. Keep a shooter in every lane.", "archer": "Stops about three squares from your first soldier and shoots it. Put a siege shed in front; your slingers still reach him.", "samnite": "Tougher than a Latin warrior. Two shooters per lane.", "linen": "Very tough elite. Hold him with a triarius and hit him from several soldiers at once.", "phalangite": "A big shield and a long pike. Break the shield with javelins.", "elephant": "Crushes soldiers in seconds and takes a lot of hits. War pigs make him flee; caltrops help.", "balearic": "Stops about four squares from your first soldier and slings stones at it. Your slingers still reach him.", "numidian": "Fast and light. When a soldier blocks him he rides into a free lane beside it, up to twice. Block the lanes beside, or shoot him early.", "gaul": "Fast and hits hard, but has no armour. Shoot him before he reaches your line.", "african": "Comes down the outer lanes, with a shield. Javelins break it.", "charger": "Charges fast, then slows down. If it reaches the camp in a lane with no Roman soldiers, it runs out of the battle (as at Zama). Trumpeters panic it.", "veteran": "Hannibal’s best: very tough, with a shield. Hold him and hit him from several soldiers.", "thracian": "Fast light troops. Keep a shooter in every lane.", "pikeman": "His pike strikes a square ahead of him, so swordsmen can’t reach him. His shield stops missiles from the front, but not from the side lanes (rorarii, maniples). Rough ground breaks his shield.", "bowman": "Stops about three squares from your first soldier and shoots it. Put a siege shed in front.", "militia": "Defends his city. Comes down the street or bursts out of a house.", "volunteer": "Fast and weak, often in groups."}
 // A campaign of five battles, in historical order. Each adds an enemy and a Roman unit.
 const w = (t, foes, big, from) => ({ t, foes, big, from })
@@ -129,6 +130,14 @@ const LEVELS = [
     waves: [w(26, ['militia']), w(40, ['volunteer', 'volunteer']), w(56, ['militia', 'bowman']), w(70, ['militia', 'militia'], null, 'houses'), w(86, ['shield', 'volunteer', 'volunteer']), w(102, ['bowman', 'bowman', 'militia']),
       w(116, ['militia', 'militia', 'volunteer'], null, 'houses'), w(132, ['chief', ...rep(3, 'militia'), ...rep(3, 'volunteer'), 'shield', 'bowman'], 'A great wave approaches!'), w(162, ['militia', 'volunteer', 'volunteer'], null, 'houses'),
       w(178, ['shield', 'shield', 'bowman', 'militia']), w(196, ['chief', ...rep(4, 'militia'), ...rep(4, 'volunteer'), ...rep(2, 'shield'), 'bowman'], 'The last stand at the Byrsa!')] },
+  { id: 'alesia', name: 'Alesia', year: '52 BC', enemy: 'Vercingetorix and the Gallic relief army', theme: 'alesia', start: 300, cols: 6, rows: 8, twoFronts: true,
+    twist: 'Two fronts: Vercingetorix attacks from the town above, and later a Gallic relief army attacks from behind you, from below. Your soldiers fight toward whichever side the enemy comes from, and each side has its own equites.',
+    units: ['cart', 'slinger', 'velites', 'hastatus', 'triarius', 'princeps', 'scorpio', 'maniple', 'lilia'], newUnit: 'lilia',
+    blurb: 'Caesar has trapped Vercingetorix in the hilltop town of Alesia behind a ring of walls. Now a huge Gallic army is coming to rescue him, so Caesar has built a second ring, facing out.',
+    after: 'The relief army broke and Vercingetorix surrendered, laying his arms at Caesar’s feet. The conquest of Gaul was all but complete.',
+    waves: [w(26, ['gaul']), w(42, ['warrior', 'gaul']), w(58, ['shield', 'gaul']), w(74, ['gaul', 'gaul', 'warrior']), w(92, ['gaul', 'gaul'], 'The Gallic relief army attacks from behind!', 'below'),
+      w(108, ['shield', 'gaul']), w(120, ['cavalry', 'gaul'], null, 'below'), w(134, ['chief', ...rep(3, 'gaul'), 'shield', 'warrior'], 'Vercingetorix attacks from the town!'), w(152, ['gaul', 'gaul', 'shield', 'cavalry'], null, 'below'),
+      w(168, ['shield', 'gaul', 'gaul']), w(186, ['chief', ...rep(4, 'gaul'), 'shield', 'cavalry'], 'The relief army’s final assault!', 'below'), w(190, ['chief', ...rep(3, 'gaul'), 'shield', 'shield'])] },
 ]
 let LEVEL = LEVELS[0]
 // What the chapter's quiz score buys for its battle: starting grain and veteran soldiers, placed free before the
@@ -297,6 +306,13 @@ const DRAW_UNIT = {
     c.fillStyle = '#7a5636'; c.beginPath(); c.arc(0, -44, 8.4, Math.PI, 0); c.fill()   // leather cap
   },
   pigs(c, u, T) { drawPig(c, T, false) },
+  lilia(c) {   // three pits, each with a sharpened stake, half hidden under brushwood
+    for (const [x, y] of [[-14, -4], [3, -10], [14, -2]]) {
+      c.fillStyle = '#4a3420'; c.beginPath(); c.ellipse(x, y, 8, 3.6, 0, 0, TAU); c.fill()
+      line(c, x, y + 1, x + 1, y - 9, '#c9a86a', 2.2)
+      c.strokeStyle = 'rgba(122, 140, 70, .9)'; c.lineWidth = 1.2; c.beginPath(); c.moveTo(x - 8, y); c.lineTo(x - 3, y - 2); c.moveTo(x + 8, y); c.lineTo(x + 3, y - 2); c.stroke()
+    }
+  },
   scorpio(c, u) {
     shadow(c, 20, 5)
     for (const x of [-14, 0, 14]) line(c, x, -2, 0, -22, '#5a3a22', 2.6)   // the tripod
@@ -565,7 +581,7 @@ function layout() {
   paintField()
 }
 const LAWN = { lake: ['#94a856', '#8b9e4e'], hills: ['#93a252', '#89984b'], walls: ['#98a95a', '#8fa052'], mountains: ['#8a9d4f', '#819449'], river: ['#97aa58', '#8ea050'],
-  siege: ['#a3a75a', '#999d52'], plain: ['#aea961', '#a39e59'], zama: ['#b6a766', '#ab9c5d'], olympus: ['#8fa354', '#86994d'], carthage: ['#c4b48e', '#b9a982'] }
+  siege: ['#a3a75a', '#999d52'], alesia: ['#93a352', '#8a9a4b'], plain: ['#aea961', '#a39e59'], zama: ['#b6a766', '#ab9c5d'], olympus: ['#8fa354', '#86994d'], carthage: ['#c4b48e', '#b9a982'] }
 function paintField() {
   const c = bctx, theme = LEVEL.theme
   c.setTransform(dpr, 0, 0, dpr, 0, 0)
@@ -600,6 +616,12 @@ function paintField() {
   }
   if (theme === 'river') {   // Pyrrhus's camp beyond the field
     for (let x = cell * 0.4; x < W; x += cell * 1.1) { c.fillStyle = '#8a6a9a'; c.beginPath(); c.moveTo(x - cell * 0.3, top * 0.7); c.lineTo(x, top * 0.12); c.lineTo(x + cell * 0.3, top * 0.7); c.fill(); c.fillStyle = '#6a2f6e'; c.fillRect(x - 1, top * 0.04, 2, top * 0.1) }
+  }
+  if (theme === 'alesia') {   // the hilltop town of Alesia, with its stone-and-timber wall and round huts
+    c.fillStyle = '#7f8f4a'; c.beginPath(); c.moveTo(0, top); c.quadraticCurveTo(W / 2, -top * 0.9, W, top); c.fill()
+    c.fillStyle = '#9a8a6a'; c.fillRect(W * 0.12, top * 0.5, W * 0.76, top * 0.22)
+    c.strokeStyle = '#6b5a3a'; c.lineWidth = 1; for (let x = W * 0.12; x < W * 0.88; x += 10) { c.beginPath(); c.moveTo(x, top * 0.5); c.lineTo(x, top * 0.72); c.stroke() }
+    for (const x of [0.25, 0.42, 0.58, 0.75]) { c.fillStyle = '#c9b48a'; c.fillRect(W * x - 8, top * 0.28, 16, top * 0.22); c.fillStyle = '#8a6a3a'; c.beginPath(); c.moveTo(W * x - 11, top * 0.3); c.lineTo(W * x, top * 0.08); c.lineTo(W * x + 11, top * 0.3); c.fill() }
   }
   if (theme === 'siege') {   // Akragas on its hill, behind golden stone walls
     c.fillStyle = '#a89a6a'; c.beginPath(); c.moveTo(0, top); c.quadraticCurveTo(W / 2, -top * 0.7, W, top); c.fill()
@@ -646,8 +668,17 @@ function paintField() {
     c.fillStyle = 'rgba(120, 110, 90, .45)'; c.fillRect(l * cell + 3, ry(r) + 3, cell - 6, cell - 6)
     for (let i = 0; i < 8; i++) { c.fillStyle = rnd() < 0.5 ? '#8f8a7a' : '#a8a28e'; c.beginPath(); c.ellipse(l * cell + cell * (0.15 + rnd() * 0.7), ry(r) + cell * (0.2 + rnd() * 0.65), cell * (0.05 + rnd() * 0.07), cell * (0.04 + rnd() * 0.04), 0, 0, TAU); c.fill() }
   }
-  // the camp: trodden earth, a palisade, tents
+  // the camp: trodden earth, a palisade, tents (on two fronts: Caesar's outer wall, and the plain beyond)
   const camp = ry(ROWS)
+  if (LEVEL.twoFronts) {
+    c.fillStyle = '#86964a'; c.fillRect(0, camp, W, H - camp)
+    const stake = cell * 0.13
+    for (const y of [camp, top]) for (let x = 0; x < W + stake; x += stake) {   // the outer wall, and the inner wall facing the town
+      c.fillStyle = '#7a5636'; c.fillRect(x, y + 2, stake - 2, cell * 0.12)
+      c.beginPath(); c.moveTo(x, y + 2); c.lineTo(x + (stake - 2) / 2, y - cell * 0.06); c.lineTo(x + stake - 2, y + 2); c.fill()
+    }
+    return
+  }
   c.fillStyle = '#b59a6a'; c.fillRect(0, camp, W, H - camp)
   c.fillStyle = 'rgba(90, 60, 30, .18)'; for (let i = 0; i < 60; i++) c.fillRect(rnd() * W, camp + rnd() * (H - camp), 2, 1)
   for (let x = cell * 0.6; x < W; x += cell * 1.3) {
@@ -765,7 +796,7 @@ function place(type, lane, row) {
   sfx.place(); updateCount(); if (G.phase !== 'deploy') tutorial('placed', type); else syncDeploy()
   return true
 }
-const MOVABLE = t => t !== 'caltrops' && t !== 'pigs' && t !== 'torch'
+const MOVABLE = t => t !== 'caltrops' && t !== 'pigs' && t !== 'torch' && t !== 'lilia'
 function moveUnit(u, lane, row) {
   if (!canStand(lane, row) || (u.lane === lane && u.row === row)) return false
   u.fromLane = u.lane; u.fromRow = u.row; u.lane = lane; u.row = row
@@ -940,8 +971,10 @@ function update(dt) {
     }
     const F = FOES[f.type], reach = F.reach ?? 0   // pikes strike a square ahead
     const u = f.dir < 0
-      ? G.units.find(u => u.lane === f.lane && !u.travel && f.y <= u.row + 1.34 + reach && f.y > u.row + 0.6)
-      : G.units.find(u => u.lane === f.lane && !u.travel && f.y >= u.row + 0.3 - reach && f.y < u.row + 1.0)
+      ? G.units.find(u => u.lane === f.lane && !u.travel && !UNITS[u.type].pit && f.y <= u.row + 1.34 + reach && f.y > u.row + 0.6)
+      : G.units.find(u => u.lane === f.lane && !u.travel && !UNITS[u.type].pit && f.y >= u.row + 0.3 - reach && f.y < u.row + 1.0)
+    const pit = G.units.find(u => u.lane === f.lane && UNITS[u.type].pit && f.y >= u.row + 0.2 && f.y <= u.row + 1.0)
+    if (pit && !(f.pits ??= new Set()).has(pit)) { f.pits.add(pit); hurtFoe(f, UNITS.lilia.pit.dmg); G.fx.push({ kind: 'spark', x: lx(f.lane), y: ry(f.y), t: 0.3 }) }
     const bow = F.bow
     if (u) {
       f.shooting = false
@@ -974,6 +1007,7 @@ function update(dt) {
       let v = f.speed
       const r = Math.floor(f.y)
       if (r === LEVEL.ditch) v *= 0.4   // climbing through the siege ditch
+      if (pit) v *= UNITS.lilia.pit.slow   // picking a way between the pits
       if (isRough(f.lane, r)) {
         v *= 0.75
         if (F.phalanx && f.shield > 0) {   // rough ground opens gaps in the phalanx
@@ -992,7 +1026,7 @@ function update(dt) {
       if (e.state === 'ready') { e.state = 'charge'; G.charges++; G.shake = Math.max(G.shake, 6); sfx.charge(); announce('The equites charge!') }
       else if (e.state === 'used') return lose()
     }
-    if (f.y >= ROWS + 0.3) {
+    if (f.dir > 0 && f.y >= ROWS + 0.3) {
       if (LEVEL.openLanes && F.elephant && !G.units.some(x => x.lane === f.lane)) {   // Scipio's lanes: down an empty lane, an elephant runs out of the battle
         f.hp = 0; G.killed++
         if (!G.tips.lanes) { G.tips.lanes = true; announce('The elephant ran down an empty lane and out of the battle, as at Zama!') }
