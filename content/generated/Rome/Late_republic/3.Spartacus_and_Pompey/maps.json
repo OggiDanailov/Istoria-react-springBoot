@@ -1,0 +1,193 @@
+{
+  "description": "Maps for the chronicle, written by hand. Coordinates from Wikipedia; each map sits at the start of its section.",
+  "maps": [
+    {
+      "id": "spartacus",
+      "sec": "escape-from-capua",
+      "title": "The war of Spartacus, 73–71 BC",
+      "caption": "The gladiators broke out of Capua and held out on Mount Vesuvius. The slave army marched north as far as Mutina, turned back south, was trapped by Crassus near Rhegium, and was destroyed at the Silarius River. The route is drawn roughly.",
+      "bounds": {
+        "latMin": 37.7,
+        "latMax": 45.2,
+        "lonMin": 8.6,
+        "lonMax": 18.8
+      },
+      "places": [
+        {
+          "name": "Rome",
+          "latin": "Roma",
+          "lat": 41.893,
+          "lon": 12.483,
+          "kind": "rome",
+          "side": "l",
+          "dy": -4
+        },
+        {
+          "name": "Capua",
+          "lat": 41.083,
+          "lon": 14.25,
+          "side": "l"
+        },
+        {
+          "name": "Vesuvius",
+          "lat": 40.821,
+          "lon": 14.426,
+          "side": "r",
+          "dy": 0
+        },
+        {
+          "name": "Mount Garganus",
+          "lat": 41.8,
+          "lon": 15.9,
+          "kind": "battle",
+          "side": "r"
+        },
+        {
+          "name": "Mutina",
+          "lat": 44.647,
+          "lon": 10.925,
+          "kind": "battle",
+          "side": "l"
+        },
+        {
+          "name": "Rhegium",
+          "lat": 38.11,
+          "lon": 15.66,
+          "side": "l"
+        },
+        {
+          "name": "Silarius River",
+          "lat": 40.48,
+          "lon": 15.0,
+          "kind": "battle",
+          "side": "l",
+          "dy": 12
+        }
+      ],
+      "routes": [
+        {
+          "pts": [
+            [
+              41.2,
+              14.4
+            ],
+            [
+              42.3,
+              13.6
+            ],
+            [
+              43.4,
+              12.4
+            ],
+            [
+              44.4,
+              11.2
+            ]
+          ]
+        },
+        {
+          "pts": [
+            [
+              44.2,
+              11.6
+            ],
+            [
+              42.6,
+              13.9
+            ],
+            [
+              40.8,
+              16.0
+            ],
+            [
+              39.2,
+              16.4
+            ],
+            [
+              38.4,
+              15.9
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pompey-east",
+      "sec": "pompey-in-the-east",
+      "title": "The war in the East, 73–63 BC",
+      "caption": "Lucullus beat Mithridates at Cyzicus and Cabira and the Armenians at Tigranocerta; Pompey finished the war by the river Lycus, made Syria a province and took Jerusalem. Tigranocerta's exact site is disputed.",
+      "bounds": {
+        "latMin": 30.8,
+        "latMax": 44.2,
+        "lonMin": 25.0,
+        "lonMax": 44.5
+      },
+      "places": [
+        {
+          "name": "Cyzicus",
+          "lat": 40.39,
+          "lon": 27.87,
+          "kind": "battle",
+          "side": "r"
+        },
+        {
+          "name": "Cabira",
+          "lat": 40.59,
+          "lon": 36.95,
+          "kind": "battle",
+          "side": "l",
+          "dy": -6
+        },
+        {
+          "name": "Lycus",
+          "lat": 40.3,
+          "lon": 38.4,
+          "kind": "battle",
+          "side": "r",
+          "dy": 4
+        },
+        {
+          "name": "Tigranocerta",
+          "lat": 38.1,
+          "lon": 40.9,
+          "kind": "battle",
+          "side": "l",
+          "note": "site disputed"
+        },
+        {
+          "name": "Jerusalem",
+          "lat": 31.778,
+          "lon": 35.235,
+          "side": "r"
+        }
+      ],
+      "peoples": [
+        {
+          "name": "Pontus",
+          "lat": 41.3,
+          "lon": 36.0
+        },
+        {
+          "name": "Bithynia",
+          "lat": 39.6,
+          "lon": 31.2
+        },
+        {
+          "name": "Armenia",
+          "lat": 39.6,
+          "lon": 42.4
+        },
+        {
+          "name": "Cilicia",
+          "lat": 36.9,
+          "lon": 33.6
+        },
+        {
+          "name": "Syria",
+          "lat": 34.6,
+          "lon": 37.6
+        }
+      ]
+    }
+  ]
+}

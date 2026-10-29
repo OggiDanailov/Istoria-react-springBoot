@@ -1,0 +1,179 @@
+{
+  "batchName": "Late Republic: Spartacus and Pompey (78-63 BCE) - Easy Batch 1",
+  "chapterName": "Late Republic: Spartacus and Pompey (78-63 BCE)",
+  "difficulty": 1,
+  "batchOrder": 1,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "What was decimation, the ancient punishment Crassus revived?",
+      "options": [
+        "Executing one soldier in ten by lot",
+        "Exiling a whole legion",
+        "Flogging every tenth recruit",
+        "Cutting soldiers' pay by a tenth"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#crassus-takes-command",
+      "explanation": "In decimation, one soldier in every ten was chosen by lot and executed. Crassus' men learned he was more dangerous to them than the enemy.",
+      "sourceQuote": "He revived decimation (*decimatio*), an ancient punishment in which one soldier in every ten was chosen by lot and executed.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Why do we have no record, in their own words, of what Spartacus' rebels wanted?",
+      "options": [
+        "Their records were lost at sea",
+        "No rebel ever wrote their aims down",
+        "The Senate banned their writings",
+        "Their letters burned at Capua"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#spartacus-aims",
+      "explanation": "Because the revolt failed, no rebel recorded its aims. Everything we know comes from Roman and Greek writers, who disagree with each other.",
+      "sourceQuote": "Because the revolt failed, no rebel ever wrote down what Spartacus and his followers hoped to achieve.",
+      "reviewFlags": []
+    },
+    {
+      "question": "The Servile Wars took their name from the Latin word for what?",
+      "options": [
+        "Island",
+        "Slave",
+        "Rebel",
+        "Farm"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#roman-slavery",
+      "explanation": "'Servile' comes from servus, Latin for slave. The first two Servile Wars broke out on Sicily in 135 and 104 BC.",
+      "sourceQuote": "These became known as the First and Second Servile Wars, from the Latin word for slave (*servus*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "By spring 72 BC, where was Spartacus' slave army heading?",
+      "options": [
+        "Campania",
+        "Sicily",
+        "Brundisium",
+        "Cisalpine Gaul"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#consular-defeats",
+      "explanation": "The rebels marched north towards Cisalpine Gaul, the Roman province below the Alps. The alarmed Senate sent both consuls against them.",
+      "sourceQuote": "By spring 72 BC, Spartacus' slave army was heading north towards Cisalpine Gaul, the Roman province in Italy's far north below the Alps.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Films often show Spartacus' rebels fighting to abolish slavery. What do the ancient writers say about this?",
+      "options": [
+        "They say Roman citizenship was the aim",
+        "They say abolishing slavery was the aim",
+        "None says that was their goal",
+        "They say freeing gladiators was the aim"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#spartacus-aims",
+      "explanation": "No ancient writer claims the rebels wanted to end slavery, and nothing their leaders did seems aimed at it. It is not even certain Spartacus was the sole commander.",
+      "sourceQuote": "No ancient writer says this was their goal, and nothing the leaders did seems aimed at ending slavery as such.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What earned the young Pompey the nickname 'teenage butcher'?",
+      "options": [
+        "Massacring Spartacus' followers",
+        "Burning a rebel town in Sicily",
+        "Executing a captured former consul",
+        "Killing his own father's officers"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#young-pompey",
+      "explanation": "While hunting the dictator's enemies in Sicily and North Africa, Pompey executed a captured former consul. The Latin nickname was adulescentulus carnifex.",
+      "sourceQuote": "His execution of a captured former consul earned him the nickname \"teenage butcher\" (*adulescentulus carnifex*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "What animal did the bitter Lucullus compare Pompey to, for feeding on other men's work?",
+      "options": [
+        "A wolf",
+        "A fox",
+        "A jackal",
+        "A vulture"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#pompey-in-the-east",
+      "explanation": "Lucullus called Pompey a vulture, also mocking his claim to have finished off Spartacus, whom Crassus had really beaten.",
+      "sourceQuote": "The bitter Lucullus, the general he replaced, called Pompey a vulture who fed on other men's work, mocking his claim to have finished off Spartacus as well.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Where were about 6,000 captured survivors of Spartacus' army crucified?",
+      "options": [
+        "The banks of the Tiber",
+        "The Flaminian Way",
+        "The Appian Way",
+        "The Roman Forum"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#silarius-and-aftermath",
+      "explanation": "The prisoners were crucified along the Appian Way, the great road linking Rome to Capua, where the revolt had begun.",
+      "sourceQuote": "About 6,000 captured survivors were crucified along the Appian Way (*Via Appia*), the great road from Rome to Capua.",
+      "reviewFlags": []
+    },
+    {
+      "question": "According to the Greek biographer, what did the Senate do with the two consuls of 72 BC?",
+      "options": [
+        "It exiled them to Greece",
+        "It awarded them triumphs",
+        "It made them joint dictators",
+        "It recalled them"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#consular-defeats",
+      "explanation": "The two main ancient accounts tell the campaign differently, but both have the consuls beaten by Spartacus. Only a breakaway rebel band near Mount Garganus had been destroyed.",
+      "sourceQuote": "He adds that the Senate then recalled both consuls.",
+      "reviewFlags": []
+    },
+    {
+      "question": "To whom did the Senate turn in 71 BC to defeat Spartacus' army?",
+      "options": [
+        "Crassus",
+        "Sulla",
+        "Lucullus",
+        "Pompey"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#crassus-takes-command",
+      "explanation": "The desperate Senate gave command to Crassus, an immensely rich politician. He received eight legions, perhaps 32,000 to 48,000 trained soldiers.",
+      "sourceQuote": "By 71 BC the Senate turned in desperation to Crassus, the immensely rich politician who now took on the slave army.",
+      "reviewFlags": []
+    }
+  ]
+}

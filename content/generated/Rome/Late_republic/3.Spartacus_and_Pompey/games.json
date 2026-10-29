@@ -1,0 +1,691 @@
+{
+  "chapterName": "Late Republic: Spartacus and Pompey (78-63 BCE)",
+  "model": "claude-opus-5-5",
+  "briefing": {
+    "title": "Italy, 73 BC",
+    "paragraphs": [
+      "Rome's wars of conquest have flooded Italy with captives, who now toil for life in mines and on vast farming estates. In 73 BC, at a gladiator school in Capua, south of Rome, about 70 men break out armed with kitchen choppers. One of their leaders is a Thracian named Spartacus.",
+      "Within months tens of thousands join him, and Roman armies fall one after another. The rich Crassus and the brash young general Pompey will race to claim the glory. Pompey then turns to the pirates and the East."
+    ]
+  },
+  "timelines": [
+    {
+      "name": "Slaves and Conquests",
+      "blurb": "Four big moments, from the first slave revolts to Pompey in the East.",
+      "events": [
+        {
+          "label": "First Servile War erupts on Sicily",
+          "when": "135 BC",
+          "year": -135,
+          "fact": "A great slave uprising on Sicily, the island off Italy's toe, took Rome years of fighting to crush.",
+          "sectionId": "roman-slavery",
+          "reviewFlags": []
+        },
+        {
+          "label": "Gladiators break out of Capua",
+          "when": "73 BC",
+          "year": -73,
+          "fact": "About 70 gladiators fought their way out with kitchen choppers and roasting spits and seized wagons of weapons.",
+          "sectionId": "escape-from-capua",
+          "reviewFlags": []
+        },
+        {
+          "label": "Crassus and Pompey become consuls",
+          "when": "70 BC",
+          "year": -70,
+          "fact": "Both were elected with their armies camped outside Rome, even though Pompey was legally too young.",
+          "sectionId": "silarius-and-aftermath",
+          "reviewFlags": []
+        },
+        {
+          "label": "Pompey captures Jerusalem",
+          "when": "63 BC",
+          "year": -63,
+          "fact": "After a three-month siege, Pompey entered the Temple's most sacred chamber but left its treasures untouched.",
+          "sectionId": "pompey-in-the-east",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Rise of a Young General",
+      "blurb": "Pompey's career, the slave war and the troubles in the East.",
+      "events": [
+        {
+          "label": "Pompey is born in Picenum",
+          "when": "106 BC",
+          "year": -106,
+          "fact": "Pompey was born in Picenum, a region on Italy's Adriatic coast.",
+          "sectionId": "young-pompey",
+          "reviewFlags": []
+        },
+        {
+          "label": "Mithridates orders a massacre in Asia",
+          "when": "88 BC",
+          "year": -88,
+          "fact": "The king of Pontus had Roman and Italian settlers across Asia Minor killed; ancient writers claim some 80,000 died.",
+          "sectionId": "lucullus-and-mithridates",
+          "reviewFlags": []
+        },
+        {
+          "label": "Pompey raises a private legion",
+          "when": "83 BC",
+          "year": -83,
+          "fact": "Still in his early twenties, Pompey raised a legion from his father's veterans and joined the future dictator.",
+          "sectionId": "young-pompey",
+          "reviewFlags": []
+        },
+        {
+          "label": "Both consuls sent against Spartacus",
+          "when": "Spring 72 BC",
+          "year": -72,
+          "fact": "As the slave army marched north, the alarmed Senate sent both consuls, Rome's two highest officials, with trained legions.",
+          "sectionId": "consular-defeats",
+          "reviewFlags": []
+        },
+        {
+          "label": "Pirates raid Ostia, Rome's port",
+          "when": "68 BC",
+          "year": -68,
+          "fact": "Pirates raided Rome's own port and kidnapped two senators.",
+          "sectionId": "war-on-the-pirates",
+          "reviewFlags": []
+        },
+        {
+          "label": "Manilian Law gives Pompey the East",
+          "when": "66 BC",
+          "year": -66,
+          "fact": "A tribune's law handed Pompey supreme command against Mithridates, replacing the bitter Lucullus.",
+          "sectionId": "pompey-in-the-east",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Fifty Years of Crisis",
+      "blurb": "Eight events from slave wars and civil war to the fall of Mithridates.",
+      "events": [
+        {
+          "label": "Second Servile War on Sicily",
+          "when": "104 BC",
+          "year": -104,
+          "fact": "A second great slave uprising broke out on Sicily, but the Senate never saw it as a real danger to the Republic.",
+          "sectionId": "roman-slavery",
+          "reviewFlags": []
+        },
+        {
+          "label": "A dictator seizes Rome in civil war",
+          "when": "82 BC",
+          "year": -82,
+          "fact": "Crassus commanded troops for this dictator; years later the Senate turned to him against Spartacus.",
+          "sectionId": "crassus-takes-command",
+          "reviewFlags": []
+        },
+        {
+          "label": "Pompey helps crush a rebel consul",
+          "when": "77 BC",
+          "year": -77,
+          "fact": "Pompey helped stop a rebel consul's march on Rome, then was sent to fight a renegade Roman general in Spain.",
+          "sectionId": "young-pompey",
+          "reviewFlags": []
+        },
+        {
+          "label": "Final battle at the Silarius River",
+          "when": "71 BC",
+          "year": -71,
+          "fact": "Crassus' legions routed the rebels in southern Italy, and Spartacus fell fighting, though his body was never found.",
+          "sectionId": "silarius-and-aftermath",
+          "reviewFlags": []
+        },
+        {
+          "label": "Lucullus wins at Tigranocerta",
+          "when": "69 BC",
+          "year": -69,
+          "fact": "Lucullus crushed the Armenian army outside its new capital despite being outnumbered more than two to one.",
+          "sectionId": "lucullus-and-mithridates",
+          "reviewFlags": []
+        },
+        {
+          "label": "Gabinian Law passed against pirates",
+          "when": "67 BC",
+          "year": -67,
+          "fact": "The people voted Pompey a three-year command over every province within about 75 km (50 miles) of the Mediterranean.",
+          "sectionId": "war-on-the-pirates",
+          "reviewFlags": []
+        },
+        {
+          "label": "Syria becomes a Roman province",
+          "when": "64 BC",
+          "year": -64,
+          "fact": "Pompey turned Syria into a Roman province while Mithridates was planning yet another war from the Crimea.",
+          "sectionId": "pompey-in-the-east",
+          "reviewFlags": []
+        },
+        {
+          "label": "Mithridates dies after his son revolts",
+          "when": "63 BC",
+          "year": -63,
+          "fact": "According to tradition, his poison failed, so the king of Pontus had his bodyguard kill him with a sword.",
+          "sectionId": "pompey-in-the-east",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "matchSets": [
+    {
+      "name": "Who's Who",
+      "blurb": "Match each figure to what they did.",
+      "pairs": [
+        {
+          "name": "Spartacus",
+          "match": "Thracian gladiator who led the slave army out of Capua",
+          "sectionId": "escape-from-capua",
+          "reviewFlags": []
+        },
+        {
+          "name": "Crassus",
+          "match": "Immensely rich general who revived decimation",
+          "sectionId": "crassus-takes-command",
+          "reviewFlags": []
+        },
+        {
+          "name": "Pompey",
+          "match": "Young general hailed 'the Great' after Alexander",
+          "sectionId": "young-pompey",
+          "reviewFlags": []
+        },
+        {
+          "name": "Lucullus",
+          "match": "Greek-loving consul whose weary soldiers mutinied in the East",
+          "sectionId": "lucullus-and-mithridates",
+          "reviewFlags": []
+        },
+        {
+          "name": "Mithridates",
+          "match": "King of Pontus, Rome's most stubborn enemy in the East",
+          "sectionId": "lucullus-and-mithridates",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Laws, Wars and Customs",
+      "blurb": "Match each Roman term to its meaning.",
+      "pairs": [
+        {
+          "name": "Decimation",
+          "match": "Executing one soldier in every ten, chosen by lot",
+          "sectionId": "crassus-takes-command",
+          "reviewFlags": []
+        },
+        {
+          "name": "Gabinian Law",
+          "match": "Gave Pompey a three-year command over the Mediterranean coasts",
+          "sectionId": "war-on-the-pirates",
+          "reviewFlags": []
+        },
+        {
+          "name": "Manilian Law",
+          "match": "Gave Pompey supreme command against the king of Pontus",
+          "sectionId": "pompey-in-the-east",
+          "reviewFlags": []
+        },
+        {
+          "name": "Triumph",
+          "match": "Rome's grand victory parade, won by Pompey at an unheard-of young age",
+          "sectionId": "young-pompey",
+          "reviewFlags": []
+        },
+        {
+          "name": "Servile Wars",
+          "match": "Slave revolts, named from the Latin word for slave",
+          "sectionId": "roman-slavery",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Latin Words",
+      "blurb": "Match each Latin word to its meaning.",
+      "pairs": [
+        {
+          "name": "Servus",
+          "match": "A slave, who gave the Servile Wars their name",
+          "sectionId": "roman-slavery",
+          "reviewFlags": []
+        },
+        {
+          "name": "Ludi",
+          "match": "Schools where gladiators were trained",
+          "sectionId": "escape-from-capua",
+          "reviewFlags": []
+        },
+        {
+          "name": "Decimatio",
+          "match": "Executing one soldier in ten, chosen by lot",
+          "sectionId": "crassus-takes-command",
+          "reviewFlags": []
+        },
+        {
+          "name": "Adulescentulus carnifex",
+          "match": "“Teenage butcher”: young Pompey’s nickname",
+          "sectionId": "young-pompey",
+          "reviewFlags": []
+        },
+        {
+          "name": "Magnus",
+          "match": "“The Great”, as Pompey’s soldiers hailed him",
+          "sectionId": "young-pompey",
+          "reviewFlags": []
+        },
+        {
+          "name": "Cursus honorum",
+          "match": "The fixed ladder of elected offices",
+          "sectionId": "young-pompey",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "trueFalseDecks": [
+    {
+      "name": "The Spartacus War",
+      "blurb": "Gladiators, slaves and Roman legions: true or false?",
+      "cards": [
+        {
+          "claim": "Under the law of the Republic, an owner could kill his own slave without legal consequence.",
+          "answer": true,
+          "why": "A slave was property, not a person, so an owner could beat, maim or kill his slaves freely.",
+          "sectionId": "roman-slavery",
+          "reviewFlags": []
+        },
+        {
+          "claim": "The First and Second Servile Wars broke out in Gaul.",
+          "answer": false,
+          "why": "Both great uprisings, in 135 and 104 BC, broke out on Sicily.",
+          "sectionId": "roman-slavery",
+          "reviewFlags": []
+        },
+        {
+          "claim": "The escaping gladiators armed themselves with kitchen choppers and roasting spits.",
+          "answer": true,
+          "why": "Some 70 men grabbed these kitchen tools, fought their way out of the Capua school and seized wagons of weapons.",
+          "sectionId": "escape-from-capua",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Trapped on Mount Vesuvius, the rebels escaped by digging a tunnel through the mountain.",
+          "answer": false,
+          "why": "They wove ropes and ladders from wild vines, climbed down the cliffs on the far side and attacked the praetor's force from behind.",
+          "sectionId": "escape-from-capua",
+          "reviewFlags": []
+        },
+        {
+          "claim": "A consul destroyed a breakaway band of about 30,000 rebels near Mount Garganus.",
+          "answer": true,
+          "why": "Two-thirds of the band died, including its leader, one of the Gallic gladiators who had escaped with Spartacus.",
+          "sectionId": "consular-defeats",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Ancient writers agree that Spartacus fought to abolish slavery.",
+          "answer": false,
+          "why": "No ancient writer says this was the rebels' goal; that idea comes from modern films and novels.",
+          "sectionId": "spartacus-aims",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Cilician pirates ferried 2,000 of Spartacus' men to Sicily as promised.",
+          "answer": false,
+          "why": "According to tradition, the pirates took Spartacus' money and sailed away.",
+          "sectionId": "crassus-takes-command",
+          "reviewFlags": []
+        },
+        {
+          "claim": "About 6,000 captured rebels were crucified along the Appian Way.",
+          "answer": true,
+          "why": "The survivors were crucified along the great road from Rome to Capua.",
+          "sectionId": "silarius-and-aftermath",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Pompey and the East",
+      "blurb": "Pirates, kings and conquests: true or false?",
+      "cards": [
+        {
+          "claim": "Pompey was born in Picenum, on Italy's Adriatic coast.",
+          "answer": true,
+          "why": "Pompey was born there in 106 BC.",
+          "sectionId": "young-pompey",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Pompey climbed every rung of the ladder of elected offices before commanding armies.",
+          "answer": false,
+          "why": "Pompey skipped the cursus honorum, the fixed ladder of offices a Roman normally climbed first.",
+          "sectionId": "young-pompey",
+          "reviewFlags": []
+        },
+        {
+          "claim": "In 68 BC pirates raided Ostia and kidnapped two senators.",
+          "answer": true,
+          "why": "The pirates struck Rome's own port. The next year the Gabinian Law gave Pompey his command against them.",
+          "sectionId": "war-on-the-pirates",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Pompey's war against the pirates dragged on for three years.",
+          "answer": false,
+          "why": "He was given command for three years, but the whole war took just three months.",
+          "sectionId": "war-on-the-pirates",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Lucullus' soldiers mutinied, grumbling that only their general was getting rich.",
+          "answer": true,
+          "why": "They refused to march against Mithridates, who then recovered his kingdom.",
+          "sectionId": "lucullus-and-mithridates",
+          "reviewFlags": []
+        },
+        {
+          "claim": "In 88 BC Mithridates ordered the massacre of Roman and Italian settlers across Asia Minor.",
+          "answer": true,
+          "why": "Ancient writers claim some 80,000 settlers died in the massacre.",
+          "sectionId": "lucullus-and-mithridates",
+          "reviewFlags": []
+        },
+        {
+          "claim": "According to tradition, Mithridates died by drinking poison.",
+          "answer": false,
+          "why": "His poison failed because he had built up immunity, so he had his bodyguard kill him with a sword.",
+          "sectionId": "pompey-in-the-east",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Pompey carried off the treasures of the Temple in Jerusalem.",
+          "answer": false,
+          "why": "He entered the Temple's most sacred chamber, which Jews saw as desecration, but left its treasures untouched.",
+          "sectionId": "pompey-in-the-east",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "oddOneOut": [
+    {
+      "items": [
+        "Gladiator War",
+        "War of Spartacus",
+        "Second Servile War",
+        "Third Servile War"
+      ],
+      "oddIndex": 2,
+      "why": "Three are names for the slave war that began in 73 BC; the Second Servile War was the earlier rising on Sicily in 104 BC.",
+      "sectionId": "roman-slavery",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Kitchen choppers",
+        "Roasting spits",
+        "Ladders of wild vines",
+        "Cilician pirate ships"
+      ],
+      "oddIndex": 3,
+      "why": "The rebels really used kitchen choppers, roasting spits and ladders of wild vines to escape; according to tradition, the Cilician pirates took Spartacus' money and sailed away without carrying anyone.",
+      "sectionId": "escape-from-capua",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Spartacus was a Thracian",
+        "Spartacus aimed to end slavery",
+        "Spartacus fell fighting",
+        "Spartacus meant to march on Rome"
+      ],
+      "oddIndex": 1,
+      "why": "Ancient writers made the other three claims; no ancient writer says the rebels aimed to abolish slavery.",
+      "sectionId": "spartacus-aims",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Captured Jerusalem",
+        "Made Syria a province",
+        "Revived decimation",
+        "Cleared the seas of pirates"
+      ],
+      "oddIndex": 2,
+      "why": "Three are Pompey's achievements; reviving decimation, killing one soldier in ten, was Crassus' way of terrorising his legions.",
+      "sectionId": "crassus-takes-command",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Trapped the king at Cyzicus",
+        "Routed Mithridates at Cabira",
+        "Won at Tigranocerta",
+        "Beat Mithridates at the Lycus"
+      ],
+      "oddIndex": 3,
+      "why": "Lucullus won the first three; the victory at the river Lycus belonged to Pompey, who replaced him.",
+      "sectionId": "pompey-in-the-east",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Pontus",
+        "Picenum",
+        "Bithynia",
+        "Armenia"
+      ],
+      "oddIndex": 1,
+      "why": "Pontus, Bithynia and Armenia were eastern kingdoms in the Mithridatic war; Picenum is Pompey's home region on Italy's Adriatic coast.",
+      "sectionId": "young-pompey",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Based in Cilicia",
+        "Raided Ostia",
+        "Crucified on the Appian Way",
+        "Kidnapped two senators"
+      ],
+      "oddIndex": 2,
+      "why": "Three describe the pirates; it was captured rebel slaves who were crucified, while most pirates were resettled by Pompey in ruined towns.",
+      "sectionId": "war-on-the-pirates",
+      "reviewFlags": []
+    }
+  ],
+  "whoAmI": [
+    {
+      "name": "The Spartacus War",
+      "blurb": "Rebels and generals of the slave revolt in Italy.",
+      "people": [
+        {
+          "name": "Spartacus",
+          "options": [
+            "Spartacus",
+            "Crassus",
+            "Pompey",
+            "Mithridates"
+          ],
+          "clues": [
+            "Some say I served Rome as an auxiliary soldier before I was enslaved.",
+            "After my last battle by the Silarius River, my body was never found.",
+            "My name closely matches those of Thracian kings and means 'renowned by the spear'.",
+            "I escaped a gladiator school in Capua, and the slave war bears my name."
+          ],
+          "sectionId": "escape-from-capua",
+          "reviewFlags": []
+        },
+        {
+          "name": "Crassus",
+          "options": [
+            "Pompey",
+            "Lucullus",
+            "Crassus",
+            "Spartacus"
+          ],
+          "clues": [
+            "I refused to negotiate with the slaves, unwilling to share the glory.",
+            "I built fortifications right across the peninsula near Rhegium.",
+            "I revived decimation, executing one soldier in ten chosen by lot.",
+            "Immensely rich, I was given eight legions to crush the slave army."
+          ],
+          "sectionId": "crassus-takes-command",
+          "reviewFlags": []
+        },
+        {
+          "name": "Pompey",
+          "options": [
+            "Spartacus",
+            "Crassus",
+            "Lucullus",
+            "Pompey"
+          ],
+          "clues": [
+            "I was born in Picenum on Italy's Adriatic coast in 106 BC.",
+            "In my early twenties I raised a private legion from my father's veterans.",
+            "Executing a captured former consul earned me the name 'teenage butcher'.",
+            "My soldiers hailed me 'the Great', after Alexander, and I made it my official name."
+          ],
+          "sectionId": "young-pompey",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "War in the East",
+      "blurb": "Kings and commanders in the struggle for Asia Minor and beyond.",
+      "people": [
+        {
+          "name": "Mithridates",
+          "options": [
+            "Lucullus",
+            "Pompey",
+            "Mithridates",
+            "Crassus"
+          ],
+          "clues": [
+            "In 63 BC my own son led a revolt against me.",
+            "According to tradition, poison failed me because I had built up immunity.",
+            "In 88 BC I ordered the massacre of Roman and Italian settlers in Asia Minor.",
+            "I was king of Pontus, on the southern shore of the Black Sea."
+          ],
+          "sectionId": "pompey-in-the-east",
+          "reviewFlags": []
+        },
+        {
+          "name": "Lucullus",
+          "options": [
+            "Lucullus",
+            "Pompey",
+            "Crassus",
+            "Mithridates"
+          ],
+          "clues": [
+            "I mocked my successor as a vulture who fed on other men's work.",
+            "I won at Tigranocerta though outnumbered more than two to one.",
+            "I trapped the king's huge army as it besieged Cyzicus.",
+            "A lover of Greek culture, I was replaced after my soldiers mutinied."
+          ],
+          "sectionId": "lucullus-and-mithridates",
+          "reviewFlags": []
+        },
+        {
+          "name": "Pompey",
+          "options": [
+            "Spartacus",
+            "Crassus",
+            "Lucullus",
+            "Pompey"
+          ],
+          "clues": [
+            "I persuaded the king of Parthia to attack Armenia.",
+            "I entered the Temple's most sacred chamber in Jerusalem but left its treasures untouched.",
+            "I turned Syria into a Roman province in 64 BC.",
+            "The Gabinian Law let me clear the Mediterranean of pirates in three months."
+          ],
+          "sectionId": "pompey-in-the-east",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "places": [
+    {
+      "name": "Capua",
+      "wikipediaTitle": "Capua",
+      "lat": 41.083,
+      "lon": 14.25,
+      "why": "The gladiators' revolt began when about 70 men broke out of a gladiator school in this wealthy city south of Rome.",
+      "sectionId": "escape-from-capua",
+      "coordinates": "ancient Capua (Santa Maria Capua Vetere)",
+      "reviewFlags": []
+    },
+    {
+      "name": "Mutina",
+      "wikipediaTitle": "Modena",
+      "lat": 44.64694444,
+      "lon": 10.92555556,
+      "why": "According to a Greek biographer, Spartacus defeated a governor's army of 10,000 near this town, modern Modena.",
+      "sectionId": "consular-defeats",
+      "coordinates": "Wikipedia: Modena",
+      "reviewFlags": []
+    },
+    {
+      "name": "Rhegium",
+      "wikipediaTitle": "Reggio Calabria",
+      "lat": 38.11138889,
+      "lon": 15.66194444,
+      "why": "Crassus built fortifications across the peninsula near this city at Italy's toe to trap the rebels.",
+      "sectionId": "crassus-takes-command",
+      "coordinates": "Wikipedia: Reggio Calabria",
+      "reviewFlags": []
+    },
+    {
+      "name": "Brundisium",
+      "wikipediaTitle": "Brindisi",
+      "lat": 40.63333333,
+      "lon": 17.93333333,
+      "why": "Roman troops landing at this port on Italy's heel pressed Spartacus into his last desperate moves.",
+      "sectionId": "silarius-and-aftermath",
+      "coordinates": "Wikipedia: Brindisi",
+      "reviewFlags": []
+    },
+    {
+      "name": "Cilicia",
+      "wikipediaTitle": "Cilicia",
+      "lat": 36.985,
+      "lon": 35.12,
+      "why": "Many pirate fleets were based on this coast of southern Turkey, where Pompey stormed their last strongholds.",
+      "sectionId": "war-on-the-pirates",
+      "coordinates": "Wikipedia: Cilicia",
+      "reviewFlags": []
+    },
+    {
+      "name": "Cyzicus",
+      "wikipediaTitle": "Cyzicus",
+      "lat": 40.3878,
+      "lon": 27.8706,
+      "why": "Lucullus trapped Mithridates' huge army as it besieged this city, and famine, disease and Roman attacks destroyed it.",
+      "sectionId": "lucullus-and-mithridates",
+      "coordinates": "Wikipedia: Cyzicus",
+      "reviewFlags": []
+    },
+    {
+      "name": "Jerusalem",
+      "wikipediaTitle": "Jerusalem",
+      "lat": 31.77888889,
+      "lon": 35.22555556,
+      "why": "Pompey captured the city in 63 BC after a three-month siege and entered the Temple's most sacred chamber.",
+      "sectionId": "pompey-in-the-east",
+      "coordinates": "Wikipedia: Jerusalem",
+      "reviewFlags": []
+    }
+  ]
+}

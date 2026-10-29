@@ -1,0 +1,189 @@
+{
+  "batchName": "Late Republic: Spartacus and Pompey (78-63 BCE) - Medium Batch 1",
+  "chapterName": "Late Republic: Spartacus and Pompey (78-63 BCE)",
+  "difficulty": 2,
+  "batchOrder": 3,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "How did Crassus trap the rebels at the toe of Italy?",
+      "options": [
+        "He poisoned the rebels' wells",
+        "He built fortifications across the peninsula",
+        "He burned the forests around them",
+        "He flooded the coastal plain",
+        "He blockaded the strait with warships"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#crassus-takes-command",
+      "explanation": "Crassus walled off the peninsula near Rhegium, trapping the rebels and cutting off their supplies.",
+      "sourceQuote": "Crassus then built fortifications right across the peninsula near Rhegium, the city at Italy's toe, trapping the rebels and cutting off their supplies.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Why did Crassus refuse Spartacus' offer to negotiate?",
+      "options": [
+        "He wished to avenge the consuls",
+        "The Senate forbade any talks",
+        "He did not want to share the glory",
+        "Spartacus demanded Roman citizenship",
+        "He suspected a trap at Rhegium"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#silarius-and-aftermath",
+      "explanation": "With Pompey marching home from Spain, Crassus was desperate to finish the war alone. The rebels then smashed through his lines and fled north.",
+      "sourceQuote": "Crassus, desperate not to share the glory, refused.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Besides the 'War of Spartacus', what did ancient writers call the third and last Servile War?",
+      "options": [
+        "The Campanian War",
+        "The Gladiator War",
+        "The Vesuvian War",
+        "The Social War",
+        "The Italian War"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#roman-slavery",
+      "explanation": "Because it began with escaped gladiators, the revolt of 73 BC was also called the Gladiator War. It was the first slave rising in Italy itself.",
+      "sourceQuote": "That changed in 73 BC with the third and last of these wars, which ancient writers also called the Gladiator War, or the War of Spartacus.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Why might calling Spartacus a 'Thracian' not tell us where he actually came from?",
+      "options": [
+        "Thracian was also a style of gladiator",
+        "Thrace did not exist until later",
+        "Romans called all Greeks Thracians",
+        "He was born to Gallic parents",
+        "Thracian meant any runaway slave"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#escape-from-capua",
+      "explanation": "'Thracian' was a type of gladiator, so the label might describe his fighting style. Still, his name closely matches those of Thracian kings.",
+      "sourceQuote": "Since \"Thracian\" was also a style of gladiator, the label may describe how he fought rather than where he came from.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Who led the breakaway band of about 30,000 rebels destroyed near Mount Garganus?",
+      "options": [
+        "A Sicilian herdsman",
+        "A Cilician pirate chief",
+        "A Gallic gladiator from Capua",
+        "A Thracian ex-auxiliary",
+        "Spartacus himself"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#consular-defeats",
+      "explanation": "The band was led by one of the Gallic gladiators who had escaped with Spartacus. Two-thirds of his followers died, and so did he.",
+      "sourceQuote": "One consul caught a breakaway band of about 30,000 rebels near Mount Garganus in south-eastern Italy, led by one of the Gallic gladiators who had escaped with Spartacus.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What triggered Rome's third and longest war with Mithridates in 73 BC?",
+      "options": [
+        "Mithridates massacred Roman settlers",
+        "Pirates kidnapped Roman senators",
+        "The king of Bithynia left his realm to Rome",
+        "Armenia invaded Roman Syria",
+        "Lucullus invaded Pontus unprovoked"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#lucullus-and-mithridates",
+      "explanation": "When the king of Bithynia bequeathed his kingdom to Rome, Mithridates invaded at once. The war lasted from 73 to 63 BC.",
+      "sourceQuote": "The third and longest war, lasting from 73 to 63 BC, began when the king of Bithynia, in north-western Asia Minor, left his kingdom to Rome at his death.",
+      "reviewFlags": []
+    },
+    {
+      "question": "According to one ancient historian, how did Spartacus avenge his comrade killed near Mount Garganus?",
+      "options": [
+        "He executed both captured consuls",
+        "He crucified 300 Roman prisoners",
+        "He sacked the port of Brundisium",
+        "He made 300 Romans fight as gladiators",
+        "He burned a Roman town near Capua"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#consular-defeats",
+      "explanation": "Spartacus reportedly forced 300 Roman prisoners to fight to the death as gladiators, turning Rome's own entertainment against it. He then burned his baggage to move faster.",
+      "sourceQuote": "One historian says Spartacus beat both consular armies in turn, then forced 300 Roman prisoners to fight each other to the death as gladiators to avenge his fallen comrade.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Popular tellings describe a split between Spartacus, who wanted freedom beyond the Alps, and a Gallic leader who wanted to plunder Italy. How well supported is this?",
+      "options": [
+        "It is confirmed by both main sources",
+        "It was invented by Roman propaganda",
+        "It rests on surviving rebel letters",
+        "Sources neither confirm nor contradict it",
+        "Sources clearly contradict it"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#spartacus-aims",
+      "explanation": "The ancient sources do not rule out such a split, but they offer no direct evidence for it. Other rebel chiefs may even have been Spartacus' equals.",
+      "sourceQuote": "The ancient sources do not contradict this, but there is no direct evidence for it either.",
+      "reviewFlags": []
+    },
+    {
+      "question": "In which region of Italy was Pompey born in 106 BC?",
+      "options": [
+        "Samnium",
+        "Campania",
+        "Picenum",
+        "Latium",
+        "Etruria"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#young-pompey",
+      "explanation": "Pompey came from Picenum on Italy's Adriatic coast. In 83 BC he raised a private legion from his father's veterans there.",
+      "sourceQuote": "Pompey, the general who stole Crassus' glory in the Spartacus war, was born in 106 BC in Picenum, a region on Italy's Adriatic coast.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did Pompey put pressure on Armenia during his campaign against Mithridates?",
+      "options": [
+        "He bribed its generals to desert",
+        "He besieged Tigranocerta for a year",
+        "He sent Lucullus back to invade it",
+        "He married the Armenian king's daughter",
+        "He persuaded Parthia to attack it"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#pompey-in-the-east",
+      "explanation": "Pompey got the king of Parthia to attack Armenia, then defeated Mithridates at the river Lycus. Armenia's king surrendered and became a dependent ally of Rome.",
+      "sourceQuote": "He persuaded the king of Parthia, the great empire beyond the Euphrates, to attack Armenia, then cornered Mithridates at the river Lycus and defeated him.",
+      "reviewFlags": []
+    }
+  ]
+}

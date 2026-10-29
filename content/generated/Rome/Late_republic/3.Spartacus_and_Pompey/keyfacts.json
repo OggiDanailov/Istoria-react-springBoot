@@ -1,0 +1,149 @@
+{
+  "description": "Key facts for this chapter, written by hand from the chapter text. Every entry links to the section that explains it.",
+  "people": [
+    {
+      "name": "Spartacus",
+      "text": "Gladiator, called a Thracian, who led the great slave revolt of 73–71 BC.",
+      "sec": "escape-from-capua"
+    },
+    {
+      "name": "Crassus",
+      "text": "Immensely rich general who defeated Spartacus.",
+      "sec": "crassus-takes-command"
+    },
+    {
+      "name": "Pompey",
+      "text": "“The Great”: cleared the seas of pirates and conquered the East.",
+      "sec": "young-pompey"
+    },
+    {
+      "name": "Lucullus",
+      "text": "Greek-loving general who beat Mithridates until his army mutinied.",
+      "sec": "lucullus-and-mithridates"
+    },
+    {
+      "name": "Mithridates",
+      "text": "King of Pontus, Rome’s most stubborn enemy in the East.",
+      "sec": "lucullus-and-mithridates"
+    }
+  ],
+  "dates": [
+    {
+      "when": "73 BC",
+      "text": "About 70 gladiators break out of Capua.",
+      "sec": "escape-from-capua"
+    },
+    {
+      "when": "72 BC",
+      "text": "Spartacus beats the consuls’ armies.",
+      "sec": "consular-defeats"
+    },
+    {
+      "when": "71 BC",
+      "text": "Spartacus falls at the Silarius River; 6,000 crucified.",
+      "sec": "silarius-and-aftermath"
+    },
+    {
+      "when": "70 BC",
+      "text": "Crassus and Pompey are consuls.",
+      "sec": "silarius-and-aftermath"
+    },
+    {
+      "when": "69 BC",
+      "text": "Lucullus wins at Tigranocerta.",
+      "sec": "lucullus-and-mithridates"
+    },
+    {
+      "when": "67 BC",
+      "text": "The Gabinian Law: Pompey clears the seas in three months.",
+      "sec": "war-on-the-pirates"
+    },
+    {
+      "when": "66 BC",
+      "text": "The Manilian Law gives Pompey the East.",
+      "sec": "pompey-in-the-east"
+    },
+    {
+      "when": "64 BC",
+      "text": "Syria becomes a Roman province.",
+      "sec": "pompey-in-the-east"
+    },
+    {
+      "when": "63 BC",
+      "text": "Pompey takes Jerusalem; Mithridates dies.",
+      "sec": "pompey-in-the-east"
+    }
+  ],
+  "terms": [
+    {
+      "latin": "servus",
+      "english": "a slave",
+      "sec": "roman-slavery"
+    },
+    {
+      "latin": "senatus",
+      "english": "the Senate",
+      "sec": "roman-slavery"
+    },
+    {
+      "latin": "ludi",
+      "english": "gladiator schools",
+      "sec": "escape-from-capua"
+    },
+    {
+      "latin": "consules",
+      "english": "the two consuls",
+      "sec": "consular-defeats"
+    },
+    {
+      "latin": "legiones",
+      "english": "legions",
+      "sec": "crassus-takes-command"
+    },
+    {
+      "latin": "decimatio",
+      "english": "decimation",
+      "sec": "crassus-takes-command"
+    },
+    {
+      "latin": "Via Appia",
+      "english": "the Appian Way",
+      "sec": "silarius-and-aftermath"
+    },
+    {
+      "latin": "adulescentulus carnifex",
+      "english": "“teenage butcher”",
+      "sec": "young-pompey"
+    },
+    {
+      "latin": "Magnus",
+      "english": "“the Great”",
+      "sec": "young-pompey"
+    },
+    {
+      "latin": "triumphus",
+      "english": "a victory parade",
+      "sec": "young-pompey"
+    },
+    {
+      "latin": "cursus honorum",
+      "english": "the ladder of offices",
+      "sec": "young-pompey"
+    },
+    {
+      "latin": "tribunus plebis",
+      "english": "a tribune of the plebs",
+      "sec": "war-on-the-pirates"
+    },
+    {
+      "latin": "lex Gabinia",
+      "english": "the Gabinian Law",
+      "sec": "war-on-the-pirates"
+    },
+    {
+      "latin": "lex Manilia",
+      "english": "the Manilian Law",
+      "sec": "pompey-in-the-east"
+    }
+  ]
+}

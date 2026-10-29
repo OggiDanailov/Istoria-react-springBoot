@@ -1,0 +1,179 @@
+{
+  "batchName": "Late Republic: Spartacus and Pompey (78-63 BCE) - Easy Batch 2",
+  "chapterName": "Late Republic: Spartacus and Pompey (78-63 BCE)",
+  "difficulty": 1,
+  "batchOrder": 2,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Which mountain did the escaped gladiators retreat to after plundering the countryside?",
+      "options": [
+        "Mount Vesuvius",
+        "Mount Garganus",
+        "The Alban Hills",
+        "Mount Etna"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#escape-from-capua",
+      "explanation": "The runaways took refuge on Mount Vesuvius, the volcano above the Bay of Naples. A praetor tried to starve them out by blocking the only path down.",
+      "sourceQuote": "The runaways beat a small force from Capua, plundered the countryside and retreated to Mount Vesuvius, the volcano above the Bay of Naples.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Why did Lucullus' soldiers mutiny and refuse to march against Mithridates?",
+      "options": [
+        "They grumbled only their general got rich",
+        "They had not been paid for years",
+        "They feared the Parthian cavalry",
+        "Their homes in Italy had been raided"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#lucullus-and-mithridates",
+      "explanation": "The weary troops resented that only Lucullus was growing rich. Their mutiny let Mithridates recover his kingdom, and Rome decided to replace Lucullus.",
+      "sourceQuote": "But his weary soldiers grumbled that only their general was getting rich.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Mithridates, Rome's most stubborn enemy in the East, was king of which realm?",
+      "options": [
+        "Armenia",
+        "Parthia",
+        "Pontus",
+        "Bithynia"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#lucullus-and-mithridates",
+      "explanation": "Mithridates ruled Pontus, on the southern shore of the Black Sea. In 88 BC he had ordered the massacre of Roman and Italian settlers across Asia Minor.",
+      "sourceQuote": "Mithridates, king of Pontus, a realm on the southern shore of the Black Sea, was Rome's most stubborn enemy in the East.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which city did Pompey capture in 63 BC after a three-month siege?",
+      "options": [
+        "Damascus",
+        "Antioch",
+        "Tigranocerta",
+        "Jerusalem"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#pompey-in-the-east",
+      "explanation": "Pompey took Jerusalem in 63 BC, a year after turning Syria into a Roman province.",
+      "sourceQuote": "Meanwhile Pompey turned Syria into a Roman province in 64 BC and in 63 BC captured Jerusalem after a three-month siege.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How long did Pompey's entire war against the pirates take?",
+      "options": [
+        "Three years",
+        "One year",
+        "Ten years",
+        "Three months"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#war-on-the-pirates",
+      "explanation": "The whole campaign lasted just three months, ending with the storming of the pirates' last Cilician strongholds.",
+      "sourceQuote": "The whole war took just three months.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which law of 67 BC gave Pompey his sweeping command against the Mediterranean pirates?",
+      "options": [
+        "Manilian Law",
+        "Gabinian Law",
+        "Sempronian Law",
+        "Licinian Law"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#war-on-the-pirates",
+      "explanation": "A tribune of the plebs proposed the Gabinian Law at Pompey's urging. The Senate feared giving one man such power, but the people voted it through.",
+      "sourceQuote": "In 67 BC a tribune of the plebs (*tribunus plebis*), an official elected to defend ordinary citizens, proposed the Gabinian Law (*lex Gabinia*) at Pompey's urging.",
+      "reviewFlags": []
+    },
+    {
+      "question": "In which city was the gladiator school from which Spartacus and his companions broke out in 73 BC?",
+      "options": [
+        "Brundisium",
+        "Rhegium",
+        "Pompeii",
+        "Capua"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#escape-from-capua",
+      "explanation": "The escape began at a gladiator school in Capua, a wealthy city south of Rome. Around 70 men fought their way out armed with kitchen choppers and roasting spits.",
+      "sourceQuote": "In 73 BC, about 200 gladiators at a school in Capua, a wealthy city south of Rome, plotted to escape.",
+      "reviewFlags": []
+    },
+    {
+      "question": "According to the ancient historians, how did Spartacus meet his end?",
+      "options": [
+        "He fell fighting, body never found",
+        "He escaped by ship to Thrace",
+        "He was captured and crucified",
+        "He was murdered by his own men"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#silarius-and-aftermath",
+      "explanation": "Every ancient historian says Spartacus died fighting in the final battle by the Silarius River, yet his body was never found.",
+      "sourceQuote": "Every ancient historian says Spartacus fell fighting, though his body was never found.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What was a slave's legal status under the law of the Roman Republic?",
+      "options": [
+        "A citizen with limited rights",
+        "Property, not a person",
+        "A dependent client of the family",
+        "A free man bound by debt"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#roman-slavery",
+      "explanation": "Roman law treated a slave as property. An owner could beat, maim or even kill his own slaves without any legal consequence.",
+      "sourceQuote": "Under the law of the Republic, a slave was property, not a person.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Pompey's soldiers hailed him as 'the Great' (Magnus), in imitation of which famous conqueror?",
+      "options": [
+        "Alexander the Great",
+        "Hannibal",
+        "Scipio Africanus",
+        "Cyrus the Great"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#young-pompey",
+      "explanation": "His troops named him Magnus after Alexander the Great, and Pompey made the name officially his. He also forced the dictator to grant him a triumph at an unheard-of young age.",
+      "sourceQuote": "His own soldiers, however, hailed him as \"the Great\" (*Magnus*), after Alexander the Great, and he made the name officially his.",
+      "reviewFlags": []
+    }
+  ]
+}

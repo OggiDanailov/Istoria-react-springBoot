@@ -1,0 +1,190 @@
+{
+  "batchName": "Late Republic: Spartacus and Pompey (78-63 BCE) - Medium Batch 2",
+  "chapterName": "Late Republic: Spartacus and Pompey (78-63 BCE)",
+  "difficulty": 2,
+  "batchOrder": 4,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "According to tradition, how did Mithridates die in 63 BC?",
+      "options": [
+        "He was executed in Pompey's triumph",
+        "His poison failed, so a guard used a sword",
+        "He was poisoned by his own son",
+        "He was killed in battle at the Lycus",
+        "He drowned fleeing across the Black Sea"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#pompey-in-the-east",
+      "explanation": "After his son led a revolt against him, Mithridates tried poison, but years of small doses had made him immune. He had his bodyguard kill him with a sword.",
+      "sourceQuote": "According to tradition, his poison failed because he had long taken small doses to build immunity, so he had his bodyguard kill him with a sword.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which goals do ancient writers attribute to Spartacus? (select all that apply)",
+      "options": [
+        "Crossing the Alps to send his men home",
+        "Being elected consul of Rome",
+        "Marching on the city of Rome",
+        "Abolishing slavery throughout Italy",
+        "Allying with King Mithridates"
+      ],
+      "correctAnswers": [
+        0,
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#spartacus-aims",
+      "explanation": "One biographer thought he wanted to cross the Alps so his men could go home, while two historians said he meant to march on Rome. No ancient writer says he aimed to abolish slavery.",
+      "sourceQuote": "One ancient biographer believed Spartacus simply wanted to cross the Alps and send his men home to their own lands.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did Pompey's early career break with normal Roman practice?",
+      "options": [
+        "He began as a tribune of the plebs",
+        "He served only with the fleet",
+        "He refused every triumph offered him",
+        "He skipped the ladder of elected offices",
+        "He became consul before turning twenty"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#young-pompey",
+      "explanation": "Romans normally climbed the cursus honorum before commanding armies, but Pompey skipped it entirely. He later commanded in Spain against a renegade Roman general.",
+      "sourceQuote": "Normally a Roman climbed a fixed ladder of elected offices (*cursus honorum*) before commanding armies.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Where were most of the captives who flooded into Italy in the 2nd and 1st centuries BC sent to work?",
+      "options": [
+        "Gladiator schools in Campania",
+        "Households and workshops in Rome",
+        "Mines and great farming estates",
+        "Galleys of the Roman fleet",
+        "Road-building gangs in Gaul"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#roman-slavery",
+      "explanation": "Only a few became servants or craftsmen; most toiled for life in mines or on vast estates in Sicily and southern Italy. Tens or even hundreds of thousands could arrive at once.",
+      "sourceQuote": "A few became servants or craftsmen, but most were sent to the mines or to the vast farming estates of Sicily and southern Italy, where they did back-breaking work for life.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Trapped on Mount Vesuvius by a praetor blocking the only path down, how did the rebels escape?",
+      "options": [
+        "They bribed the militia guarding the path",
+        "They tunnelled through the volcano's slope",
+        "They broke through at night in disguise",
+        "They wove vine ropes and climbed down cliffs",
+        "They waited until the militia went home"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#escape-from-capua",
+      "explanation": "The rebels made ropes and ladders from wild vines, descended the cliffs on the far side and destroyed the praetor's 3,000 militiamen from behind.",
+      "sourceQuote": "Instead, the rebels wove ropes and ladders from wild vines, climbed down the cliffs on the far side, and wiped out his force from behind.",
+      "reviewFlags": []
+    },
+    {
+      "question": "According to tradition, what happened when Spartacus paid Cilician pirates to ferry 2,000 men to Sicily?",
+      "options": [
+        "They demanded double the payment",
+        "They sank the ships in a storm",
+        "They landed the men near Syracuse",
+        "They took the money and sailed away",
+        "They betrayed the men to Crassus"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#crassus-takes-command",
+      "explanation": "Spartacus hoped to spark a new slave rising on Sicily, but the pirates simply kept the money. Crassus then trapped the rebels at Italy's toe.",
+      "sourceQuote": "The pirates took the money and sailed away.",
+      "reviewFlags": []
+    },
+    {
+      "question": "By which river was Spartacus' army routed in its final battle?",
+      "options": [
+        "Tiber",
+        "Silarius",
+        "Volturnus",
+        "Rubicon",
+        "Lycus"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#silarius-and-aftermath",
+      "explanation": "Spartacus threw his whole army at the legions by the Silarius River in southern Italy. Most rebels died on the field.",
+      "sourceQuote": "Spartacus turned and threw his whole army at the legions in a final battle by the Silarius River in southern Italy.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What strategy let Pompey clear the pirates from the sea so quickly?",
+      "options": [
+        "He closed every port in Italy",
+        "He attacked Cilicia first with all his ships",
+        "He hired Parthian ships to blockade ports",
+        "He bribed pirate chiefs to change sides",
+        "He split the sea into zones under deputies"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#war-on-the-pirates",
+      "explanation": "Each zone had its own deputy, leaving the pirates nowhere to flee. The western Mediterranean was cleared in 40 days.",
+      "sourceQuote": "Pompey divided the sea into zones, each patrolled by a deputy, so the pirates had nowhere to flee.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did pirates do in 68 BC that shocked Rome?",
+      "options": [
+        "Sacked the city of Capua",
+        "Captured the consul Lucullus at sea",
+        "Burned the Roman fleet at Brundisium",
+        "Raided Ostia and kidnapped two senators",
+        "Blockaded the Tiber for a whole year"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#war-on-the-pirates",
+      "explanation": "The pirates struck Ostia, Rome's own port, and seized two senators. Some historians argue they were closer to an organised hostile power than mere outlaws.",
+      "sourceQuote": "In 68 BC they raided Ostia, Rome's own port, and kidnapped two senators.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Mithridates' huge army was destroyed by famine, disease and Roman attacks while besieging which city?",
+      "options": [
+        "Tigranocerta",
+        "Cyzicus",
+        "Nicomedia",
+        "Sinope",
+        "Cabira"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#lucullus-and-mithridates",
+      "explanation": "Lucullus trapped the besiegers at Cyzicus. Ancient writers claim only 20,000 of perhaps 300,000 men survived.",
+      "sourceQuote": "Lucullus trapped the king's huge army as it besieged the city of Cyzicus, and famine, disease and Roman attacks destroyed it.",
+      "reviewFlags": []
+    }
+  ]
+}

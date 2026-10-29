@@ -1,0 +1,203 @@
+{
+  "batchName": "Late Republic: Spartacus and Pompey (78-63 BCE) - Hard Batch 1",
+  "chapterName": "Late Republic: Spartacus and Pompey (78-63 BCE)",
+  "difficulty": 3,
+  "batchOrder": 5,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "How did the Senate regard the great Sicilian slave uprisings of 135 and 104 BC?",
+      "options": [
+        "As grounds to appoint a dictator",
+        "As a reason to abolish slave estates",
+        "As never a real danger to the Republic",
+        "As the gravest threat since Hannibal",
+        "As a plot backed by Mithridates",
+        "As proof Sicily must be abandoned"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 3,
+      "textReference": "#roman-slavery",
+      "explanation": "Although Rome needed years of fighting to crush them, the Senate never saw these revolts as a real threat. Nobody imagined slaves threatening Rome itself until 73 BC.",
+      "sourceQuote": "Still, the Senate (*senatus*), Rome's governing council, never saw them as a real danger to the Republic.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What made Lucullus' victory outside Tigranocerta in 69 BC remarkable?",
+      "options": [
+        "He won without losing a single man",
+        "He captured Mithridates in the battle",
+        "He fought with only mutinous troops",
+        "He was aided by a Parthian army",
+        "He was outnumbered more than two to one",
+        "He won it in a single night attack"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 3,
+      "textReference": "#lucullus-and-mithridates",
+      "explanation": "Lucullus crushed the Armenian army outside its new capital despite being outnumbered more than two to one. Armenia was ruled by Mithridates' son-in-law.",
+      "sourceQuote": "In 69 BC Lucullus crushed the Armenian army outside its new capital, Tigranocerta, despite being outnumbered more than two to one.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Ancient accounts disagree on how many of his own men Crassus executed by decimation. What range do they give?",
+      "options": [
+        "From 50 men up to perhaps 4,000",
+        "From 50 men up to perhaps 6,000",
+        "From 10 men up to perhaps 400",
+        "From 500 men up to perhaps 40,000",
+        "From 1,000 men up to perhaps 8,000",
+        "From 300 men up to perhaps 3,000"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#crassus-takes-command",
+      "explanation": "One writer says 50 men of a single unit died after an officer disobeyed orders and lost a battle; another suggests up to 4,000. Either way, the terror worked and the tide turned.",
+      "sourceQuote": "One writer says 50 men of a single unit died after an officer disobeyed orders and lost a battle; another suggests up to 4,000 may have been killed.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What does the name Spartacus mean, and whose names does it closely match?",
+      "options": [
+        "'Breaker of chains'; Thracian kings",
+        "'Son of the shield'; Thracian gods",
+        "'Renowned by the spear'; Greek heroes",
+        "'Lord of horses'; Scythian kings",
+        "'Son of the shield'; Gallic chiefs",
+        "'Renowned by the spear'; Thracian kings"
+      ],
+      "correctAnswers": [
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#escape-from-capua",
+      "explanation": "Spartacus means 'renowned by the spear' and resembles the names of Thracian kings. Ancient writers disagreed on whether he had been a Roman auxiliary or a captive.",
+      "sourceQuote": "His name, though, closely matches those of Thracian kings and means \"renowned by the spear\".",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did Pompey do at the Temple in Jerusalem in 63 BC?",
+      "options": [
+        "Rebuilt it as a temple to Jupiter",
+        "Made himself its high priest",
+        "Entered its sacred chamber but left the treasures",
+        "Looted its treasures for his triumph",
+        "Stayed outside out of respect for the priests",
+        "Burned it after the three-month siege"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 3,
+      "textReference": "#pompey-in-the-east",
+      "explanation": "Pompey entered the most sacred chamber, reserved for the high priest, which Jews saw as desecration, yet he did not touch its treasures. He returned to Rome with an enormous fortune.",
+      "sourceQuote": "He entered the Temple's most sacred chamber, which only the high priest could enter, an act Jews saw as desecration, though he left its treasures untouched.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which powers did the Gabinian Law of 67 BC give Pompey? (select all that apply)",
+      "options": [
+        "Command for ten years",
+        "Authority limited to Cilicia",
+        "The right to appoint deputies and spend huge sums",
+        "Command for three years",
+        "The consulship without election",
+        "Authority over provinces within about 75 km of the sea"
+      ],
+      "correctAnswers": [
+        2,
+        3,
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#war-on-the-pirates",
+      "explanation": "The law granted a three-year command over all provinces within about 75 km of the Mediterranean, with deputies and vast funds. The Senate feared such power, but the people passed it.",
+      "sourceQuote": "It gave Pompey sweeping command for three years over every province within about 75 km (50 miles) of the Mediterranean, with the right to appoint deputies and spend huge sums.",
+      "reviewFlags": []
+    },
+    {
+      "question": "In the Greek biographer's version of 72 BC, whom did Spartacus defeat near Mutina after beating one consul?",
+      "options": [
+        "A praetor with 3,000 militiamen",
+        "A force landing at Brundisium",
+        "Crassus' first two legions",
+        "Both consuls together",
+        "A governor's army of 10,000",
+        "Pompey's vanguard from Spain"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 3,
+      "textReference": "#consular-defeats",
+      "explanation": "The Greek biographer has Spartacus beat one consul and then a governor's 10,000 men near Mutina, modern Modena. The other main account has him defeat both consuls.",
+      "sourceQuote": "The other account, by a Greek biographer, says Spartacus defeated one consul and then a governor's army of 10,000 near Mutina, modern Modena.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What unanswered question weakens the idea that Spartacus planned to escape over the Alps?",
+      "options": [
+        "Why he burned the Alpine passes",
+        "Why he never fought the consuls",
+        "Why he turned south after reaching the north",
+        "Why he sent men to Sicily first",
+        "Why the Gauls refused to join him",
+        "Why he marched on Rome instead"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 3,
+      "textReference": "#spartacus-aims",
+      "explanation": "If the Alps were the goal, no source explains why he went back south after reaching northern Italy. Claims that he aimed at Rome may reflect Roman fears.",
+      "sourceQuote": "And if Spartacus really aimed for the Alps, nobody explains why he turned back south after reaching northern Italy.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did Pompey launch his military career in 83 BC, while still in his early twenties?",
+      "options": [
+        "He raised a private legion of his father's veterans",
+        "He led a fleet against Cilician pirates",
+        "He inherited his father's consular army",
+        "He was elected military tribune",
+        "He was sent by the Senate to govern Sicily",
+        "He enlisted as a cavalry officer under Crassus"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#young-pompey",
+      "explanation": "Pompey raised his own legion from his father's veterans and joined the general who went on to become dictator. He then fought in Italy, Sicily and North Africa.",
+      "sourceQuote": "In 83 BC, still in his early twenties, he raised a private legion from his father's veterans and joined the general who went on to make himself dictator of Rome.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which of these followed the defeat of Spartacus' army? (select all that apply)",
+      "options": [
+        "Romans began treating slaves less harshly",
+        "Pompey's troops killed 5,000 fugitives",
+        "The Senate closed the gladiator schools",
+        "Pompey waited until he was old enough to stand",
+        "Both generals were elected consuls for 70 BC",
+        "Crassus and Pompey were soon reconciled"
+      ],
+      "correctAnswers": [
+        0,
+        1,
+        4
+      ],
+      "difficulty": 3,
+      "textReference": "#silarius-and-aftermath",
+      "explanation": "Pompey killed 5,000 fugitives and claimed he had ended the war, which Crassus never forgave. Both were elected consuls for 70 BC though Pompey was legally too young, and fear made Romans treat slaves less harshly.",
+      "sourceQuote": "Some historians think that, out of fear, Romans afterwards began treating their slaves less harshly.",
+      "reviewFlags": []
+    }
+  ]
+}

@@ -385,7 +385,15 @@
       "short": "Spartacus and Pompey",
       "era": "late-republic",
       "mapArea": "wide",
-      "plannedBattle": "Against Spartacus (71 BC)"
+      "battle": {
+        "name": "The Silarius River",
+        "year": "71 BC",
+        "enemy": "Spartacus",
+        "sec": "silarius-and-aftermath",
+        "level": "silarius",
+        "intro": "Spartacus throws his whole army at Crassus’s legions by the Silarius River. Hold the line against the gladiators."
+      },
+      "locked": true
     },
     {
       "id": "cicero-and-the-triumvirate",
