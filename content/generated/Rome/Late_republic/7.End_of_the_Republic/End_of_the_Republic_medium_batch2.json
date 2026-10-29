@@ -1,0 +1,191 @@
+{
+  "batchName": "Late Republic: Antony, Octavian and the End of the Republic (44-27 BCE) - Medium Batch 2",
+  "chapterName": "Late Republic: Antony, Octavian and the End of the Republic (44-27 BCE)",
+  "difficulty": 2,
+  "batchOrder": 4,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Why did Cleopatra decide to kill herself in 30 BC?",
+      "options": [
+        "Antony's will instructed her to",
+        "Her last army deserted to Rome",
+        "Egyptian priests demanded it",
+        "Octavian refused to meet her",
+        "She learned she would be paraded in his triumph"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#alexandria-and-augustus",
+      "explanation": "Cleopatra tried to bargain but learned she was destined to be paraded in Octavian's victory procession. She died on 12 August 30 BC.",
+      "sourceQuote": "Cleopatra tried to bargain, but learned she was destined to be paraded in Octavian's victory procession (*triumphus*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "Where did Antony and Octavian renew the lapsed triumvirate in 37 BC?",
+      "options": [
+        "Athens",
+        "Tarentum",
+        "Brundisium",
+        "Mutina",
+        "Rome"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#parthia-sicily-lepidus",
+      "explanation": "At Tarentum in southern Italy they renewed it for five more years, and Antony lent ships for the Sicilian war in exchange for promised troops.",
+      "sourceQuote": "In 37 BC Antony and Octavian met at Tarentum in southern Italy and renewed the triumvirate, which had quietly lapsed, for five more years.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which provinces did Antony grab for himself with an illegal law in June 44 BC?",
+      "options": [
+        "Spain",
+        "Syria",
+        "Africa",
+        "Gaul",
+        "Macedonia"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#after-caesars-murder",
+      "explanation": "Antony gave himself the provinces of Gaul, roughly modern France and northern Italy, from where he could menace Rome itself.",
+      "sourceQuote": "In June he pushed through an illegal law giving himself the provinces of Gaul, roughly modern France and northern Italy.",
+      "reviewFlags": []
+    },
+    {
+      "question": "After seizing the consulship in August 43 BC, what did Octavian do? (select all that apply)",
+      "options": [
+        "Confirmed his adoption as Caesar's son",
+        "Cancelled Antony's status as a public enemy",
+        "Pardoned the assassins and recalled them",
+        "Declared war on Lepidus",
+        "Set up courts to condemn the assassins"
+      ],
+      "correctAnswers": [
+        0,
+        1,
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#forming-the-triumvirate",
+      "explanation": "Octavian confirmed his adoption, had the assassins condemned in their absence, and quietly cleared Antony, paving the way for their deal.",
+      "sourceQuote": "He confirmed his adoption as Caesar's son, set up courts to condemn the assassins in their absence, and quietly cancelled Antony's status as a public enemy.",
+      "reviewFlags": []
+    },
+    {
+      "question": "When was the label \"Second Triumvirate\" first used?",
+      "options": [
+        "By the triumvirs themselves",
+        "By Augustus's court poets",
+        "In the 19th century",
+        "In the 17th century",
+        "In the Middle Ages"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#forming-the-triumvirate",
+      "explanation": "The term is modern, first used in the 17th century, and many historians now avoid it as misleading. The three called themselves the board of three for restoring the republic.",
+      "sourceQuote": "We call this the Second Triumvirate, but that label is modern, first used in the 17th century, and many historians now avoid it as misleading.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Off which place in Sicily did Octavian's admiral win the decisive sea battle of 36 BC?",
+      "options": [
+        "Brundisium",
+        "Tarentum",
+        "Mylae",
+        "Naulochus",
+        "Actium"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#parthia-sicily-lepidus",
+      "explanation": "Octavian's closest friend and admiral won the decisive battle off Naulochus on 3 September 36 BC.",
+      "sourceQuote": "His closest friend and admiral won the decisive sea battle off Naulochus, in Sicily, on 3 September 36 BC.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which of these was part of the uneasy compromise reached right after Caesar's murder?",
+      "options": [
+        "The Senate was dissolved",
+        "Caesar's decisions were annulled",
+        "Antony was named dictator for a year",
+        "The office of dictator was abolished",
+        "The assassins were exiled from Italy"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#after-caesars-murder",
+      "explanation": "The compromise pardoned the assassins, confirmed Caesar's decisions and abolished the office of dictator. It did not last long.",
+      "sourceQuote": "The assassins were pardoned, Caesar's decisions were confirmed, and the office of dictator was abolished.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which prominent victim of the proscriptions was killed along with his brother, nephew and son?",
+      "options": [
+        "The admiral who ruled the seas from Sicily",
+        "The chief priest of Rome",
+        "The general who had commanded in Spain",
+        "The orator who had attacked Antony in speeches",
+        "The tribune who passed the lex Titia"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#proscriptions",
+      "explanation": "The orator who had attacked Antony in blistering speeches was killed with his brother, nephew and son. The same man had earlier persuaded the Senate to back Octavian.",
+      "sourceQuote": "The orator who had attacked Antony in a series of blistering speeches was killed, along with his brother, nephew and son.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did Octavian treat Perusia after it fell?",
+      "options": [
+        "He massacred its councillors and burned it down",
+        "He handed it intact to his veterans",
+        "He sold all its citizens into slavery",
+        "He pardoned everyone and left it unharmed",
+        "He spared the town but executed Antony's brother"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#perusia-and-brundisium",
+      "explanation": "Octavian let Antony's family go and spared their soldiers, but massacred the town's councillors and burned Perusia to the ground.",
+      "sourceQuote": "When the town fell, he let Antony's family go and spared their soldiers, but massacred the town's councillors and burned it to the ground.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did Antony help Cleopatra secure her throne?",
+      "options": [
+        "By having her sister killed",
+        "By defeating her brother's army",
+        "By marrying her in a Roman ceremony",
+        "By bribing the Senate to recognise her",
+        "By exiling her rival to Cyprus"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#antony-and-cleopatra",
+      "explanation": "Antony had Cleopatra's sister killed to secure her throne. He later gave Cleopatra territory to build a fleet.",
+      "sourceQuote": "They soon began an affair, and Antony helped her secure her throne by having her sister killed.",
+      "reviewFlags": []
+    }
+  ]
+}

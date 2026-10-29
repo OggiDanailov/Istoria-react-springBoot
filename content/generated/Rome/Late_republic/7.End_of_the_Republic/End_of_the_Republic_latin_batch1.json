@@ -1,0 +1,145 @@
+{
+  "batchName": "Late Republic: Antony, Octavian and the End of the Republic (44-27 BCE) - Latin words",
+  "chapterName": "Late Republic: Antony, Octavian and the End of the Republic (44-27 BCE)",
+  "difficulty": 1,
+  "batchOrder": 9,
+  "description": "Written by hand from the chapter text: the Latin words it explains",
+  "questions": [
+    {
+      "question": "What did Romans call the Mediterranean, Mare Nostrum?",
+      "options": [
+        "“Our Sea”",
+        "“The Great Sea”",
+        "“The Middle Sea”",
+        "“Caesar’s Sea”"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#alexandria-and-augustus",
+      "explanation": "After Actium and Alexandria, Octavian controlled all of it.",
+      "sourceQuote": "which Romans called \"Our Sea\" (*Mare Nostrum*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "Augustus’s rule began the Pax Romana. What was it?",
+      "options": [
+        "The long Roman Peace",
+        "A peace treaty with Parthia",
+        "A new calendar",
+        "A law against civil war"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#alexandria-and-augustus",
+      "explanation": "Historians see 27 BC as the end of the Republic and the start of the empire.",
+      "sourceQuote": "and of the long Roman Peace (*Pax Romana*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "Augustus ruled as princeps. What does it mean?",
+      "options": [
+        "First citizen",
+        "King",
+        "Dictator",
+        "High priest"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#alexandria-and-augustus",
+      "explanation": "He kept the outward forms of the republic, much as the triumvirs had.",
+      "sourceQuote": "He ruled as first citizen (*princeps*) while keeping the outward forms of the republic",
+      "reviewFlags": []
+    },
+    {
+      "question": "Who kept Antony’s will in Rome?",
+      "options": [
+        "The virgines Vestales, priestesses of the sacred hearth",
+        "The consuls",
+        "Cleopatra’s envoys",
+        "The Senate’s treasurers"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#propaganda-war",
+      "explanation": "Octavian seized it and read it out; historians suspect he invented some of it.",
+      "sourceQuote": "kept by the Vestal Virgins (*virgines Vestales*), the priestesses of Rome's sacred hearth.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Who were the equites killed in the proscriptions alongside senators?",
+      "options": [
+        "Knights, the wealthy class just below the senators",
+        "Cavalry officers of the legions",
+        "Priests of Jupiter",
+        "Freed slaves"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#proscriptions",
+      "explanation": "One modern study settles on about 300 names, split evenly between senators and knights.",
+      "sourceQuote": "plus many knights (*equites*), the wealthy class just below the senators.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did the lex Titia of 27 November 43 BC do?",
+      "options": [
+        "Gave the three men their power for five years",
+        "Declared Caesar a god",
+        "Abolished the dictatorship",
+        "Pardoned Caesar’s assassins"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#forming-the-triumvirate",
+      "explanation": "It was close to absolute rule: they could even appoint every magistrate.",
+      "sourceQuote": "A friendly tribune passed a law, the *lex Titia*, on 27 November 43 BC, giving them this power for five years.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What was the official name of the three men’s board, the triumviri rei publicae constituendae?",
+      "options": [
+        "The board of three for restoring the republic",
+        "The three kings of Rome",
+        "The three consuls for life",
+        "The board of three for war"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#forming-the-triumvirate",
+      "explanation": "We call it the Second Triumvirate, a modern label first used in the 17th century.",
+      "sourceQuote": "The three men named themselves the board of three for restoring the republic (*triumviri rei publicae constituendae*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did Caesar’s killers call themselves?",
+      "options": [
+        "The liberatores, the liberators",
+        "The optimates, the best men",
+        "The patres, the fathers",
+        "The populares, the people’s men"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#after-caesars-murder",
+      "explanation": "At first an uneasy compromise held: the assassins were pardoned.",
+      "sourceQuote": "His killers called themselves the liberators (*liberatores*).",
+      "reviewFlags": []
+    }
+  ]
+}

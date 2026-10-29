@@ -1,0 +1,625 @@
+{
+  "chapterName": "Late Republic: Antony, Octavian and the End of the Republic (44-27 BCE)",
+  "model": "claude-opus-5-5",
+  "briefing": {
+    "title": "Rome, 44 BC",
+    "paragraphs": [
+      "On 15 March 44 BC, a band of senators stabs Julius Caesar to death in Rome. The dictator who had made himself master of the Roman world is gone, but nobody knows who will inherit his power, his soldiers or his name.",
+      "Two men want it all: Mark Antony, Caesar's leading general and consul, and Octavian, Caesar's young great-nephew and adopted heir. Over the next seventeen years their rivalry will pull in a third partner, Lepidus, and Cleopatra, queen of Egypt. It will also decide whether Rome remains a republic at all."
+    ]
+  },
+  "timelines": [
+    {
+      "name": "From Caesar to Augustus",
+      "blurb": "The big turning points, from one murder to a new kind of ruler.",
+      "events": [
+        {
+          "label": "Caesar stabbed by senators",
+          "when": "15 March 44 BC",
+          "year": -44,
+          "fact": "Caesar's killers called themselves the liberators (liberatores).",
+          "sectionId": "after-caesars-murder",
+          "reviewFlags": []
+        },
+        {
+          "label": "Caesar's assassins crushed at Philippi",
+          "when": "October 42 BC",
+          "year": -42,
+          "fact": "Antony was the real victor, and both leading assassins took their own lives.",
+          "sectionId": "battle-of-philippi",
+          "reviewFlags": []
+        },
+        {
+          "label": "Sea battle of Actium",
+          "when": "2 September 31 BC",
+          "year": -31,
+          "fact": "Cleopatra's squadron broke out to the open sea, Antony followed, and most of his fleet was left behind.",
+          "sectionId": "battle-of-actium",
+          "reviewFlags": []
+        },
+        {
+          "label": "Octavian is named Augustus",
+          "when": "27 BC",
+          "year": -27,
+          "fact": "The name means 'revered', and historians see it as the start of the Roman Empire.",
+          "sectionId": "alexandria-and-augustus",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Rivals and Partners",
+      "blurb": "Battles and bargains between Antony and Octavian.",
+      "events": [
+        {
+          "label": "Senate's forces beat Antony at Mutina",
+          "when": "21 April 43 BC",
+          "year": -43,
+          "fact": "Antony was declared a public enemy, but both consuls died in the fighting.",
+          "sectionId": "after-caesars-murder",
+          "reviewFlags": []
+        },
+        {
+          "label": "Treaty of Brundisium",
+          "when": "40 BC",
+          "year": -40,
+          "fact": "The soldiers refused to fight, and the deal was sealed when Antony married Octavian's sister.",
+          "sectionId": "perusia-and-brundisium",
+          "reviewFlags": []
+        },
+        {
+          "label": "Triumvirate renewed at Tarentum",
+          "when": "37 BC",
+          "year": -37,
+          "fact": "The triumvirate had quietly lapsed and was renewed for five more years.",
+          "sectionId": "parthia-sicily-lepidus",
+          "reviewFlags": []
+        },
+        {
+          "label": "Sea victory off Naulochus",
+          "when": "3 September 36 BC",
+          "year": -36,
+          "fact": "Octavian's closest friend and admiral won this decisive battle off Sicily.",
+          "sectionId": "parthia-sicily-lepidus",
+          "reviewFlags": []
+        },
+        {
+          "label": "Senate declares war on Cleopatra",
+          "when": "32 BC",
+          "year": -32,
+          "fact": "Everyone understood the war was really against Antony.",
+          "sectionId": "propaganda-war",
+          "reviewFlags": []
+        },
+        {
+          "label": "Cleopatra takes her own life",
+          "when": "12 August 30 BC",
+          "year": -30,
+          "fact": "She learned she was to be paraded in Octavian's victory procession (triumphus).",
+          "sectionId": "alexandria-and-augustus",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "The Long Road to War",
+      "blurb": "Harder: the steps in between the famous battles.",
+      "events": [
+        {
+          "label": "Antony grabs Gaul by an illegal law",
+          "when": "June 44 BC",
+          "year": -44,
+          "fact": "From Gaul, roughly modern France and northern Italy, Antony could menace Rome itself.",
+          "sectionId": "after-caesars-murder",
+          "reviewFlags": []
+        },
+        {
+          "label": "Lex Titia creates the board of three",
+          "when": "27 November 43 BC",
+          "year": -43,
+          "fact": "A friendly tribune's law gave Antony, Octavian and Lepidus near-absolute power for five years.",
+          "sectionId": "forming-the-triumvirate",
+          "reviewFlags": []
+        },
+        {
+          "label": "Julius Caesar declared a god",
+          "when": "January 42 BC",
+          "year": -42,
+          "fact": "His avengers then took about forty legions across the Adriatic against his assassins.",
+          "sectionId": "battle-of-philippi",
+          "reviewFlags": []
+        },
+        {
+          "label": "Antony's brother raises an army",
+          "when": "41 BC",
+          "year": -41,
+          "fact": "Antony's brother, consul that year, and Antony's wife stirred up veterans against Octavian.",
+          "sectionId": "perusia-and-brundisium",
+          "reviewFlags": []
+        },
+        {
+          "label": "Peace made with the enemy in Sicily",
+          "when": "39 BC",
+          "year": -39,
+          "fact": "The triumvirs freed his runaway slaves and gave his soldiers veterans' rewards.",
+          "sectionId": "perusia-and-brundisium",
+          "reviewFlags": []
+        },
+        {
+          "label": "Antony invades Parthia",
+          "when": "36 BC",
+          "year": -36,
+          "fact": "He lost about a third of his men in a 27-day retreat harried by Parthian horse archers.",
+          "sectionId": "parthia-sicily-lepidus",
+          "reviewFlags": []
+        },
+        {
+          "label": "Armenian king paraded in Alexandria",
+          "when": "34 BC",
+          "year": -34,
+          "fact": "Antony tricked the king into captivity and paraded him in a procession honouring the god Dionysus.",
+          "sectionId": "propaganda-war",
+          "reviewFlags": []
+        },
+        {
+          "label": "The triumvirate expires",
+          "when": "End of 33 BC",
+          "year": -33,
+          "fact": "Both consuls and hundreds of senators then fled Rome to join Antony.",
+          "sectionId": "propaganda-war",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "matchSets": [
+    {
+      "name": "Latin Words",
+      "blurb": "Match each Latin word to its meaning.",
+      "pairs": [
+        {
+          "name": "Liberatores",
+          "match": "What Caesar's killers called themselves",
+          "sectionId": "after-caesars-murder",
+          "reviewFlags": []
+        },
+        {
+          "name": "Proscriptio",
+          "match": "A list of men who could be killed on sight, their property sold",
+          "sectionId": "proscriptions",
+          "reviewFlags": []
+        },
+        {
+          "name": "Clementia",
+          "match": "Caesar's famous mercy, which the triumvirs called a mistake",
+          "sectionId": "proscriptions",
+          "reviewFlags": []
+        },
+        {
+          "name": "Pontifex maximus",
+          "match": "Chief priest, the title Lepidus kept after his downfall",
+          "sectionId": "parthia-sicily-lepidus",
+          "reviewFlags": []
+        },
+        {
+          "name": "Princeps",
+          "match": "First citizen, the role Augustus took while keeping republican forms",
+          "sectionId": "alexandria-and-augustus",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Where It Happened",
+      "blurb": "Match each place to its moment in the story.",
+      "pairs": [
+        {
+          "name": "Mutina",
+          "match": "Where the Senate's forces beat Antony in 43 BC",
+          "sectionId": "after-caesars-murder",
+          "reviewFlags": []
+        },
+        {
+          "name": "Perusia",
+          "match": "Town Octavian burned after trapping Antony's brother and wife",
+          "sectionId": "perusia-and-brundisium",
+          "reviewFlags": []
+        },
+        {
+          "name": "Brundisium",
+          "match": "Port where soldiers refused to fight and forced a treaty in 40 BC",
+          "sectionId": "perusia-and-brundisium",
+          "reviewFlags": []
+        },
+        {
+          "name": "Naulochus",
+          "match": "Sea battle off Sicily won by Octavian's admiral in 36 BC",
+          "sectionId": "parthia-sicily-lepidus",
+          "reviewFlags": []
+        },
+        {
+          "name": "Nicopolis",
+          "match": "'City of Victory' that Octavian founded near Actium",
+          "sectionId": "battle-of-actium",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "trueFalseDecks": [
+    {
+      "name": "Revenge for Caesar",
+      "blurb": "From the Ides of March to the affair with Cleopatra.",
+      "cards": [
+        {
+          "claim": "Julius Caesar was stabbed to death by a band of senators on 15 March 44 BC.",
+          "answer": true,
+          "why": "His killers called themselves the liberators (liberatores).",
+          "sectionId": "after-caesars-murder",
+          "reviewFlags": []
+        },
+        {
+          "claim": "In the compromise after Caesar's murder, the office of dictator was made permanent.",
+          "answer": false,
+          "why": "The office of dictator was abolished, while the assassins were pardoned and Caesar's decisions confirmed.",
+          "sectionId": "after-caesars-murder",
+          "reviewFlags": []
+        },
+        {
+          "claim": "The lex Titia gave the three men their powers for ten years.",
+          "answer": false,
+          "why": "The lex Titia of 27 November 43 BC gave them power for five years.",
+          "sectionId": "forming-the-triumvirate",
+          "reviewFlags": []
+        },
+        {
+          "claim": "The Romans themselves called the three men's rule the 'Second Triumvirate'.",
+          "answer": false,
+          "why": "That label is modern, first used in the 17th century; they called themselves the board of three for restoring the republic.",
+          "sectionId": "forming-the-triumvirate",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Under a proscription, a named man could be killed on sight and his property was seized and sold.",
+          "answer": true,
+          "why": "Bounty hunters and informers were even paid cash for each death.",
+          "sectionId": "proscriptions",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Short of cash, the triumvirs seized the land of eighteen rich Italian towns for their veterans.",
+          "answer": true,
+          "why": "Even after the proscriptions they still needed money and land for their soldiers.",
+          "sectionId": "proscriptions",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Octavian was the real victor of the battles at Philippi.",
+          "answer": false,
+          "why": "Antony was the real victor; Octavian's camp was stormed, and he was said to have hidden in a marsh.",
+          "sectionId": "battle-of-philippi",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Antony summoned Cleopatra to meet him in Cilicia, on the southern coast of modern Turkey.",
+          "answer": true,
+          "why": "They soon began an affair, and Antony helped her secure her throne.",
+          "sectionId": "antony-and-cleopatra",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "The Last Civil War",
+      "blurb": "From Perusia to the first emperor.",
+      "cards": [
+        {
+          "claim": "When Perusia fell, Octavian spared the soldiers but massacred the town's councillors.",
+          "answer": true,
+          "why": "He also let Antony's family go and burned the town to the ground.",
+          "sectionId": "perusia-and-brundisium",
+          "reviewFlags": []
+        },
+        {
+          "claim": "The treaty of Brundisium was sealed by Antony's marriage to Octavian's sister.",
+          "answer": true,
+          "why": "She was a recent widow, and Italy celebrated the peace wildly.",
+          "sectionId": "perusia-and-brundisium",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Antony lost about half his men on his 27-day retreat from Parthia.",
+          "answer": false,
+          "why": "He lost about a third of his men, and his military reputation never recovered.",
+          "sectionId": "parthia-sicily-lepidus",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Lepidus was executed after he tried to win over Octavian's troops in Sicily.",
+          "answer": false,
+          "why": "He was expelled and exiled but kept his life, his property and his title of chief priest.",
+          "sectionId": "parthia-sicily-lepidus",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Antony's will was kept by the Vestal Virgins, the priestesses of Rome's sacred hearth.",
+          "answer": true,
+          "why": "A defector told Octavian about it, and Octavian seized and read it.",
+          "sectionId": "propaganda-war",
+          "reviewFlags": []
+        },
+        {
+          "claim": "In 32 BC the Senate declared war on Antony by name.",
+          "answer": false,
+          "why": "The Senate declared war on Cleopatra, a war everyone understood to be against Antony.",
+          "sectionId": "propaganda-war",
+          "reviewFlags": []
+        },
+        {
+          "claim": "At Actium, Antony's galleys were small and nimble, while Octavian's were huge and armoured.",
+          "answer": false,
+          "why": "It was the other way round: Antony's galleys were huge and slow, Octavian's smaller and nimble.",
+          "sectionId": "battle-of-actium",
+          "reviewFlags": []
+        },
+        {
+          "claim": "In 27 BC the Senate gave Octavian the name Augustus, meaning 'revered'.",
+          "answer": true,
+          "why": "He then ruled as first citizen (princeps), keeping the outward forms of the republic.",
+          "sectionId": "alexandria-and-augustus",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "oddOneOut": [
+    {
+      "items": [
+        "Assassins pardoned",
+        "Caesar's decisions confirmed",
+        "Assassins condemned in court",
+        "Office of dictator abolished"
+      ],
+      "oddIndex": 2,
+      "why": "Three were part of the uneasy compromise right after the murder. Courts condemning the assassins came later, when Octavian became consul in 43 BC.",
+      "sectionId": "after-caesars-murder",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Make binding decrees",
+        "Overrule any governor",
+        "Hold power for life",
+        "Appoint every magistrate"
+      ],
+      "oddIndex": 2,
+      "why": "Three were powers the triumvirs held under the lex Titia. Their power was granted for five years, not for life.",
+      "sectionId": "forming-the-triumvirate",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "His life",
+        "His property",
+        "His province of Africa",
+        "His title of chief priest"
+      ],
+      "oddIndex": 2,
+      "why": "Lepidus kept his life, property and title of chief priest after his expulsion. He lost his place in the triumvirate, and Africa with it.",
+      "sectionId": "parthia-sicily-lepidus",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Smaller ships",
+        "Nimble ships",
+        "Huge armoured galleys",
+        "Crews of veterans"
+      ],
+      "oddIndex": 2,
+      "why": "Three describe Octavian's fleet at Actium. The huge, armoured but slow galleys were Antony's.",
+      "sectionId": "battle-of-actium",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Took Alexandria",
+        "Made Egypt a province",
+        "Celebrated a triple triumph",
+        "Was buried in Alexandria"
+      ],
+      "oddIndex": 3,
+      "why": "Octavian took Alexandria, made Egypt a province and celebrated a triple triumph. It was Antony whose will allegedly asked for burial in Alexandria.",
+      "sectionId": "alexandria-and-augustus",
+      "reviewFlags": []
+    }
+  ],
+  "whoAmI": [
+    {
+      "name": "The Board of Three",
+      "blurb": "Which triumvir is speaking?",
+      "people": [
+        {
+          "name": "Lepidus",
+          "options": [
+            "Mark Antony",
+            "Octavian",
+            "Lepidus",
+            "Julius Caesar"
+          ],
+          "clues": [
+            "Even in exile, I kept my title of chief priest (pontifex maximus).",
+            "After Philippi, I was left with Africa alone.",
+            "As a Caesarian general commanding in the west, I protected the meeting where the three men made their deal.",
+            "In Sicily I tried to win over Octavian's troops, but they switched sides and I was expelled."
+          ],
+          "sectionId": "parthia-sicily-lepidus",
+          "reviewFlags": []
+        },
+        {
+          "name": "Mark Antony",
+          "options": [
+            "Mark Antony",
+            "Octavian",
+            "Lepidus",
+            "Julius Caesar"
+          ],
+          "clues": [
+            "In June 44 BC I pushed through an illegal law giving myself the provinces of Gaul.",
+            "Parthian horse archers harried my army through a 27-day retreat.",
+            "I was the real victor of Philippi.",
+            "Ancient accounts say I died in the arms of the queen of Egypt."
+          ],
+          "sectionId": "battle-of-philippi",
+          "reviewFlags": []
+        },
+        {
+          "name": "Octavian",
+          "options": [
+            "Mark Antony",
+            "Octavian",
+            "Lepidus",
+            "Julius Caesar"
+          ],
+          "clues": [
+            "It was said I spent the first battle at Philippi hiding in a marsh.",
+            "I trapped my rival's brother and wife in Perusia, then burned the town.",
+            "I lured Caesar's veterans away and raised a private army.",
+            "I was Caesar's great-nephew and adopted heir."
+          ],
+          "sectionId": "after-caesars-murder",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Caesar, Queen and Heir",
+      "blurb": "Three lives that shaped the end of the republic.",
+      "people": [
+        {
+          "name": "Julius Caesar",
+          "options": [
+            "Julius Caesar",
+            "Mark Antony",
+            "Octavian",
+            "Lepidus"
+          ],
+          "clues": [
+            "The triumvirs declared that my famous mercy (clementia) had been a mistake.",
+            "In January 42 BC, after my death, I was officially declared a god.",
+            "I adopted my great-nephew as my heir.",
+            "Senators stabbed me to death on 15 March 44 BC."
+          ],
+          "sectionId": "after-caesars-murder",
+          "reviewFlags": []
+        },
+        {
+          "name": "Cleopatra",
+          "options": [
+            "Cleopatra",
+            "Mark Antony",
+            "Octavian",
+            "Julius Caesar"
+          ],
+          "clues": [
+            "My throne was secured when my sister was killed.",
+            "Antony gave me territory in Cyprus and Cilicia, whose timber could build a fleet.",
+            "In 32 BC the Senate declared war on me, though everyone knew who the real target was.",
+            "Rather than be paraded in a triumph, I took my own life on 12 August 30 BC."
+          ],
+          "sectionId": "alexandria-and-augustus",
+          "reviewFlags": []
+        },
+        {
+          "name": "Octavian",
+          "options": [
+            "Octavian",
+            "Mark Antony",
+            "Julius Caesar",
+            "Lepidus"
+          ],
+          "clues": [
+            "I seized and read my rival's will, kept by the Vestal Virgins.",
+            "My closest friend and admiral won the sea battle off Naulochus for me.",
+            "I founded Nicopolis, the 'City of Victory', near the site of my great sea battle.",
+            "In 27 BC the Senate named me Augustus."
+          ],
+          "sectionId": "alexandria-and-augustus",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "places": [
+    {
+      "name": "Mutina",
+      "wikipediaTitle": "Modena",
+      "lat": 44.64694444,
+      "lon": 10.92555556,
+      "why": "Here the Senate's forces beat Antony on 21 April 43 BC, but both consuls died.",
+      "sectionId": "after-caesars-murder",
+      "coordinates": "Wikipedia: Modena",
+      "reviewFlags": []
+    },
+    {
+      "name": "Perusia",
+      "wikipediaTitle": "Perugia",
+      "lat": 43.11222222,
+      "lon": 12.38888889,
+      "why": "Octavian trapped Antony's brother and wife here, then burned the town.",
+      "sectionId": "perusia-and-brundisium",
+      "coordinates": "Wikipedia: Perugia",
+      "reviewFlags": []
+    },
+    {
+      "name": "Brundisium",
+      "wikipediaTitle": "Brindisi",
+      "lat": 40.63333333,
+      "lon": 17.93333333,
+      "why": "Italy's main port for Greece, where the rivals' soldiers refused to fight and forced a treaty in 40 BC.",
+      "sectionId": "perusia-and-brundisium",
+      "coordinates": "Wikipedia: Brindisi",
+      "reviewFlags": []
+    },
+    {
+      "name": "Philippi",
+      "wikipediaTitle": "Philippi",
+      "lat": 41.01305556,
+      "lon": 24.28638889,
+      "why": "In this town in Macedonia, Antony and Octavian crushed Caesar's two leading assassins in 42 BC.",
+      "sectionId": "battle-of-philippi",
+      "coordinates": "Wikipedia: Philippi",
+      "reviewFlags": []
+    },
+    {
+      "name": "Actium",
+      "wikipediaTitle": "Actium",
+      "lat": 38.953,
+      "lon": 20.768,
+      "why": "Antony's fleet was defeated off this headland on the Ionian coast on 2 September 31 BC.",
+      "sectionId": "battle-of-actium",
+      "coordinates": "Wikipedia: Actium",
+      "reviewFlags": []
+    },
+    {
+      "name": "Alexandria",
+      "wikipediaTitle": "Alexandria",
+      "lat": 31.1975,
+      "lon": 29.8925,
+      "why": "Egypt's capital, scene of the Donations and of Antony's and Cleopatra's deaths in 30 BC.",
+      "sectionId": "alexandria-and-augustus",
+      "coordinates": "Wikipedia: Alexandria",
+      "reviewFlags": []
+    },
+    {
+      "name": "Cilicia",
+      "wikipediaTitle": "Cilicia",
+      "lat": 36.985,
+      "lon": 35.12,
+      "why": "On the southern coast of modern Turkey, where Antony first summoned Cleopatra to meet him.",
+      "sectionId": "antony-and-cleopatra",
+      "coordinates": "Wikipedia: Cilicia",
+      "reviewFlags": []
+    }
+  ]
+}

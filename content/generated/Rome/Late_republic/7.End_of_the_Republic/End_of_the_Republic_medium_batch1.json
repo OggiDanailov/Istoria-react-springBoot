@@ -1,0 +1,189 @@
+{
+  "batchName": "Late Republic: Antony, Octavian and the End of the Republic (44-27 BCE) - Medium Batch 1",
+  "chapterName": "Late Republic: Antony, Octavian and the End of the Republic (44-27 BCE)",
+  "difficulty": 2,
+  "batchOrder": 3,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "In 32 BC, the Senate formally declared war on whom?",
+      "options": [
+        "Lepidus",
+        "Mark Antony",
+        "Parthia",
+        "Cleopatra",
+        "The king of Armenia"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#propaganda-war",
+      "explanation": "The war was formally declared on Cleopatra, though everyone understood it to be against Antony.",
+      "sourceQuote": "In 32 BC the Senate declared war on Cleopatra, a war everyone understood to be against Antony.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What happened when the triumvirate expired at the end of 33 BC?",
+      "options": [
+        "Antony returned to Rome to stand for consul",
+        "Both consuls and hundreds of senators fled to Antony",
+        "Octavian was named dictator",
+        "Lepidus was recalled from exile",
+        "The Senate renewed it for five years"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#propaganda-war",
+      "explanation": "Both consuls and hundreds of senators left Rome to join Antony, showing he still had powerful support in the propaganda war.",
+      "sourceQuote": "When the triumvirate expired at the end of 33 BC, both consuls and hundreds of senators fled Rome to join Antony.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Whom did Octavian have killed, supposedly remarking that \"two Caesars are one too many\"?",
+      "options": [
+        "The admiral who held Sicily",
+        "Antony's younger brother",
+        "The captive king of Armenia",
+        "Cleopatra's son by Julius Caesar",
+        "The exiled Lepidus"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#alexandria-and-augustus",
+      "explanation": "Octavian removed Cleopatra's son by Julius Caesar, a rival claimant to Caesar's legacy. Egypt then became a Roman province.",
+      "sourceQuote": "Octavian had her son by Julius Caesar killed, supposedly remarking that \"two Caesars are one too many\".",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did Antony's warships at Actium compare with Octavian's?",
+      "options": [
+        "Mostly converted Egyptian merchant ships",
+        "Equal in size but far fewer in number",
+        "Huge and armoured, but slow and short of rowers",
+        "Smaller and nimbler, crewed by veterans",
+        "Faster but lightly built and unarmoured"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#battle-of-actium",
+      "explanation": "Antony's galleys were huge and armoured but slow. Octavian's smaller, nimble ships darted in to shower their decks with arrows and stones.",
+      "sourceQuote": "His galleys were huge and armoured, but slow and short of rowers.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Ancient writers claimed Cleopatra manipulated Antony. How do modern historians explain the relationship?",
+      "options": [
+        "He was strengthening a useful client ally",
+        "He was ordered to court her by the Senate",
+        "He needed her treasury to pay off Octavian",
+        "She charmed him with Egyptian magic",
+        "He hoped to become king of Egypt"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#antony-and-cleopatra",
+      "explanation": "Modern historians see the alliance as part of Antony's policy of backing strong client monarchs, not as manipulation.",
+      "sourceQuote": "Modern historians think he was simply strengthening a useful ally, in line with his policy of backing strong client monarchs.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Who were the equites, many of whom died in the proscriptions?",
+      "options": [
+        "The elected tribunes of the people",
+        "Freed slaves employed as informers",
+        "Caesar's veteran cavalry officers",
+        "The wealthy class just below the senators",
+        "The priests of the war god Mars"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#proscriptions",
+      "explanation": "The equites, or knights, were the wealthy class just below the senators. Ancient estimates of proscription victims include many knights alongside senators.",
+      "sourceQuote": "Ancient writers give figures ranging from about 130 senators to 300 men, plus many knights (*equites*), the wealthy class just below the senators.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Why did Antony and Octavian not fight when they faced each other at Brundisium in 40 BC?",
+      "options": [
+        "Parthia had just invaded the east",
+        "Lepidus threatened to attack them both",
+        "Their soldiers refused to fight each other",
+        "A storm wrecked Antony's fleet",
+        "The Senate ordered a truce"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#perusia-and-brundisium",
+      "explanation": "The soldiers refused to fight one another and pushed their leaders to negotiate, producing the Treaty of Brundisium.",
+      "sourceQuote": "Their soldiers refused to fight one another and pushed them to negotiate.",
+      "reviewFlags": []
+    },
+    {
+      "question": "According to a story told about the first battle at Philippi, where did Octavian spend the fight?",
+      "options": [
+        "Sick in bed in Rome",
+        "Aboard a ship offshore",
+        "Guarding the camp gates",
+        "Leading a cavalry charge",
+        "Hiding in a marsh"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#battle-of-philippi",
+      "explanation": "It was said that Octavian hid in a marsh while one of the assassins' armies stormed his camp and destroyed three of his legions.",
+      "sourceQuote": "Octavian, it was said, spent the fight hiding in a marsh.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What do some modern historians argue about Cleopatra's and Antony's escape from the fighting at Actium?",
+      "options": [
+        "It was caused by sudden panic",
+        "A shift in the wind forced it",
+        "Antony was badly wounded",
+        "Cleopatra was betraying Antony",
+        "The breakout was the plan all along"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#battle-of-actium",
+      "explanation": "Ancient writers called it panic or betrayal, but some modern historians think breaking out was the plan. Most of the fleet was left behind.",
+      "sourceQuote": "Some modern historians argue the breakout was the plan all along.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What honour did Julius Caesar officially receive in January 42 BC, before the Philippi campaign?",
+      "options": [
+        "His ashes were moved to Alexandria",
+        "He was officially declared a god",
+        "His statue was placed among the kings",
+        "He was named father of the fatherland",
+        "He was reburied in the Senate house"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#battle-of-philippi",
+      "explanation": "Caesar was officially declared a god in January 42 BC. His avengers then went to war against his assassins.",
+      "sourceQuote": "In January 42 BC Julius Caesar was officially declared a god.",
+      "reviewFlags": []
+    }
+  ]
+}

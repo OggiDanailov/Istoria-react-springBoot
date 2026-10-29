@@ -1,0 +1,202 @@
+{
+  "batchName": "Late Republic: Antony, Octavian and the End of the Republic (44-27 BCE) - Hard Batch 1",
+  "chapterName": "Late Republic: Antony, Octavian and the End of the Republic (44-27 BCE)",
+  "difficulty": 3,
+  "batchOrder": 5,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "According to a writer alive at the time, how did Cleopatra kill herself?",
+      "options": [
+        "By leaping from the top of her tomb",
+        "By drinking a cup of hemlock",
+        "By drowning herself in the Nile",
+        "By falling on a sword as Antony had done",
+        "By a snake's bite or poisoned ointment",
+        "By starving herself in her tomb"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 3,
+      "textReference": "#alexandria-and-augustus",
+      "explanation": "A contemporary writer gave a snake's bite or poisoned ointment as the cause. She died on 12 August 30 BC, rather than be paraded in Octavian's triumph.",
+      "sourceQuote": "On 12 August 30 BC she killed herself, by a snake's bite or poisoned ointment according to a writer alive at the time.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which territories did Antony give Cleopatra so she could build a fleet? (select all that apply)",
+      "options": [
+        "Judaea",
+        "Cyprus",
+        "Sicily",
+        "Cilicia",
+        "Armenia",
+        "Crete"
+      ],
+      "correctAnswers": [
+        1,
+        3
+      ],
+      "difficulty": 3,
+      "textReference": "#antony-and-cleopatra",
+      "explanation": "Antony gave her land in Cyprus and Cilicia. He also acknowledged twins she bore him in 40 BC, and the relationship was deeply unpopular in Italy.",
+      "sourceQuote": "Antony later acknowledged twins she bore him in 40 BC and fathered a son with her, and he gave her territory in Cyprus and Cilicia, whose timber could build a fleet.",
+      "reviewFlags": []
+    },
+    {
+      "question": "In 34 BC Antony paraded the captured king of Armenia through Alexandria in a procession honouring which god?",
+      "options": [
+        "Serapis",
+        "Jupiter",
+        "Hercules",
+        "Isis",
+        "Dionysus",
+        "Apollo"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 3,
+      "textReference": "#propaganda-war",
+      "explanation": "The procession honoured Dionysus. The parade, followed by the Donations of Alexandria, handed Octavian plenty of propaganda ammunition.",
+      "sourceQuote": "In 34 BC he tricked the king of Armenia into captivity and paraded him through Alexandria, Egypt's capital, in a procession honouring the god Dionysus.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What crucial mistake contributed to Antony's failure in Parthia in 36 BC?",
+      "options": [
+        "He left his cavalry behind in Egypt",
+        "He raced ahead of his slow siege engines, which were destroyed",
+        "He trusted a Parthian prince's offer of surrender",
+        "He invaded in winter without supplies",
+        "He kept waiting for Octavian's promised troops",
+        "He split his army between Armenia and Syria"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 3,
+      "textReference": "#parthia-sicily-lepidus",
+      "explanation": "With his siege engines lost and his Armenian ally gone, Antony endured a 27-day retreat under horse-archer attack and lost about a third of his men.",
+      "sourceQuote": "With sixteen legions he raced ahead of his slow siege engines, which the enemy then destroyed.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Why did the surviving assassin offer battle again three weeks after the first clash at Philippi?",
+      "options": [
+        "The Senate ordered him to attack",
+        "Parthian reinforcements had arrived",
+        "Octavian had fallen gravely ill",
+        "A shipment of eastern silver had arrived",
+        "Antony challenged him to single combat",
+        "He feared his troops would desert"
+      ],
+      "correctAnswers": [
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#battle-of-philippi",
+      "explanation": "Fearing desertions, he fought again on 23 October 42 BC and was crushed by the combined Caesarian armies, after which he took his own life.",
+      "sourceQuote": "Three weeks later, on 23 October 42 BC, the surviving assassin offered battle again, fearing desertions.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which powers did the triumvirs hold under their arrangement? (select all that apply)",
+      "options": [
+        "Abolishing the Senate",
+        "Appointing every magistrate",
+        "Naming their own successors",
+        "Holding office for life",
+        "Punishing without right of appeal",
+        "Making binding decrees"
+      ],
+      "correctAnswers": [
+        1,
+        4,
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#forming-the-triumvirate",
+      "explanation": "The triumvirs could decree, overrule governors, punish without appeal and appoint all magistrates, but their power was granted for five years, not for life. Official records even listed them above the consuls.",
+      "sourceQuote": "The three could make binding decrees, overrule any governor, punish without right of appeal, and appoint every magistrate.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What terms did the triumvirs grant their enemy in Sicily when they made peace in 39 BC?",
+      "options": [
+        "A place on the board as a fourth triumvir",
+        "Control of Africa in exchange for Lepidus",
+        "Marriage to Octavian's widowed sister",
+        "Pardon only if he surrendered his fleet",
+        "A consulship and command of Spain",
+        "Freedom for his runaway slaves and veterans' rewards for his men"
+      ],
+      "correctAnswers": [
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#perusia-and-brundisium",
+      "explanation": "The peace freed his runaway slaves and gave his soldiers veterans' rewards. His naval blockade had worsened a famine in Italy.",
+      "sourceQuote": "In 39 BC the triumvirs also made peace with their enemy in Sicily, freeing his runaway slaves and giving his soldiers veterans' rewards.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What was the outcome of the Senate's victory over Antony at Mutina in April 43 BC?",
+      "options": [
+        "Antony fled by sea to Egypt",
+        "Both consuls died and Octavian marched on Rome",
+        "Lepidus took command of the Senate's army",
+        "The assassins returned to Rome in triumph",
+        "Octavian was named dictator by the Senate",
+        "Antony was captured and executed"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 3,
+      "textReference": "#after-caesars-murder",
+      "explanation": "The Senate won and declared Antony a public enemy, but both consuls died in the fighting, leaving Octavian free to march on Rome and claim power.",
+      "sourceQuote": "But both consuls died in the fighting, and Octavian marched on Rome to claim power for himself.",
+      "reviewFlags": []
+    },
+    {
+      "question": "In the dispute over how many died in the proscriptions, which historians tend to favour the higher numbers?",
+      "options": [
+        "Those who believe Octavian opposed the killings",
+        "Those who count only senators as victims",
+        "Those who trust the triumvirs' declaration",
+        "Those who think the triumvirs mainly wanted money",
+        "Those who rely on Antony's own records",
+        "Those who think revenge for Caesar drove the lists"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 3,
+      "textReference": "#proscriptions",
+      "explanation": "Seeing money as the main motive fits a larger toll. One modern study instead settles on about 300 names, split evenly between senators and knights.",
+      "sourceQuote": "Historians who think the triumvirs mainly wanted money tend to favour the higher numbers.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What weakened Antony's trapped army at Actium before the sea battle?",
+      "options": [
+        "Malaria and desertion",
+        "Plague carried from Egypt",
+        "An earthquake that wrecked the camp",
+        "Cleopatra recalling her troops",
+        "Famine caused by a Parthian raid",
+        "A mutiny over unpaid wages"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#battle-of-actium",
+      "explanation": "After Octavian's admiral cut his supply lines, Antony's camp was ravaged by malaria and desertion. A defecting general even handed over his battle plan.",
+      "sourceQuote": "Trapped, Antony's camp was ravaged by malaria and desertion.",
+      "reviewFlags": []
+    }
+  ]
+}

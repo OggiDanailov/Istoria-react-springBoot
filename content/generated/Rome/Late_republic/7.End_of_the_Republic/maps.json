@@ -1,0 +1,286 @@
+{
+  "description": "Maps for the chronicle, written by hand. Coordinates from Wikipedia; each map sits at the start of its section.",
+  "maps": [
+    {
+      "id": "triumvirs",
+      "sec": "battle-of-philippi",
+      "title": "The wars of the triumvirs, 43–30 BC",
+      "caption": "Antony was beaten at Mutina in 43 BC; the triumvirs avenged Caesar at Philippi in 42 BC. Octavian burned Perusia and his admiral won off Naulochus; Antony ruled the East with Cleopatra until Actium in 31 BC and Alexandria in 30 BC.",
+      "bounds": {
+        "latMin": 30.4,
+        "latMax": 46.0,
+        "lonMin": 8.5,
+        "lonMax": 34.0
+      },
+      "places": [
+        {
+          "name": "Rome",
+          "latin": "Roma",
+          "lat": 41.893,
+          "lon": 12.483,
+          "kind": "rome",
+          "side": "l",
+          "dy": 8
+        },
+        {
+          "name": "Mutina",
+          "lat": 44.647,
+          "lon": 10.925,
+          "kind": "battle",
+          "side": "r"
+        },
+        {
+          "name": "Perusia",
+          "lat": 43.11,
+          "lon": 12.39,
+          "side": "r"
+        },
+        {
+          "name": "Brundisium",
+          "lat": 40.633,
+          "lon": 17.94,
+          "side": "r"
+        },
+        {
+          "name": "Naulochus",
+          "lat": 38.24,
+          "lon": 15.4,
+          "kind": "battle",
+          "side": "l",
+          "dy": 8
+        },
+        {
+          "name": "Philippi",
+          "lat": 41.01,
+          "lon": 24.29,
+          "kind": "battle",
+          "side": "r"
+        },
+        {
+          "name": "Actium",
+          "lat": 38.95,
+          "lon": 20.77,
+          "kind": "battle",
+          "side": "l",
+          "dy": 8
+        },
+        {
+          "name": "Alexandria",
+          "lat": 31.2,
+          "lon": 29.9,
+          "side": "l"
+        }
+      ],
+      "peoples": [
+        {
+          "name": "Egypt",
+          "lat": 30.75,
+          "lon": 32.6
+        },
+        {
+          "name": "Greece",
+          "lat": 39.6,
+          "lon": 22.2
+        }
+      ]
+    },
+    {
+      "id": "actium",
+      "sec": "battle-of-actium",
+      "title": "Actium, 2 September 31 BC",
+      "caption": "Antony's fleet rowed out of the gulf to break the blockade. Octavian's nimble ships darted in all afternoon. Then Cleopatra's squadron, waiting behind the line, slipped through a gap to the open sea, and Antony followed. A simplified plan.",
+      "plan": true,
+      "height": 200,
+      "key": {
+        "rome": "Octavian",
+        "enemy": "Antony and Cleopatra"
+      },
+      "units": [
+        {
+          "side": "enemy",
+          "x": 110,
+          "y": 24,
+          "w": 80,
+          "h": 14,
+          "name": "Cleopatra’s squadron",
+          "lx": 150,
+          "ly": 18
+        },
+        {
+          "side": "enemy",
+          "x": 40,
+          "y": 66,
+          "w": 32,
+          "h": 18,
+          "name": "Antony’s big, slow galleys",
+          "lx": 150,
+          "ly": 97
+        },
+        {
+          "side": "enemy",
+          "x": 78,
+          "y": 66,
+          "w": 32,
+          "h": 18
+        },
+        {
+          "side": "enemy",
+          "x": 116,
+          "y": 66,
+          "w": 32,
+          "h": 18
+        },
+        {
+          "side": "enemy",
+          "x": 154,
+          "y": 66,
+          "w": 32,
+          "h": 18
+        },
+        {
+          "side": "enemy",
+          "x": 192,
+          "y": 66,
+          "w": 32,
+          "h": 18
+        },
+        {
+          "side": "enemy",
+          "x": 230,
+          "y": 66,
+          "w": 32,
+          "h": 18
+        },
+        {
+          "side": "rome",
+          "x": 28,
+          "y": 128,
+          "w": 20,
+          "h": 11,
+          "name": "Octavian’s small, nimble ships",
+          "lx": 150,
+          "ly": 158
+        },
+        {
+          "side": "rome",
+          "x": 56,
+          "y": 128,
+          "w": 20,
+          "h": 11
+        },
+        {
+          "side": "rome",
+          "x": 84,
+          "y": 128,
+          "w": 20,
+          "h": 11
+        },
+        {
+          "side": "rome",
+          "x": 112,
+          "y": 128,
+          "w": 20,
+          "h": 11
+        },
+        {
+          "side": "rome",
+          "x": 140,
+          "y": 128,
+          "w": 20,
+          "h": 11
+        },
+        {
+          "side": "rome",
+          "x": 168,
+          "y": 128,
+          "w": 20,
+          "h": 11
+        },
+        {
+          "side": "rome",
+          "x": 196,
+          "y": 128,
+          "w": 20,
+          "h": 11
+        },
+        {
+          "side": "rome",
+          "x": 224,
+          "y": 128,
+          "w": 20,
+          "h": 11
+        },
+        {
+          "side": "rome",
+          "x": 252,
+          "y": 128,
+          "w": 20,
+          "h": 11
+        }
+      ],
+      "moves": [
+        {
+          "side": "enemy",
+          "dashed": true,
+          "pts": [
+            [
+              192,
+              32
+            ],
+            [
+              262,
+              46
+            ],
+            [
+              284,
+              100
+            ],
+            [
+              284,
+              176
+            ]
+          ]
+        },
+        {
+          "side": "rome",
+          "pts": [
+            [
+              66,
+              126
+            ],
+            [
+              66,
+              100
+            ]
+          ]
+        },
+        {
+          "side": "rome",
+          "pts": [
+            [
+              150,
+              126
+            ],
+            [
+              150,
+              100
+            ]
+          ]
+        },
+        {
+          "side": "rome",
+          "pts": [
+            [
+              234,
+              126
+            ],
+            [
+              234,
+              100
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}

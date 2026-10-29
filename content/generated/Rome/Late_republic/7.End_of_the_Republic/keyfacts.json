@@ -1,0 +1,154 @@
+{
+  "description": "Key facts for this chapter, written by hand from the chapter text. Every entry links to the section that explains it.",
+  "people": [
+    {
+      "name": "Mark Antony",
+      "text": "Caesar’s general; triumvir and master of the East; beaten at Actium.",
+      "sec": "after-caesars-murder"
+    },
+    {
+      "name": "Octavian",
+      "text": "Caesar’s adopted heir; won the civil wars and became Augustus.",
+      "sec": "after-caesars-murder"
+    },
+    {
+      "name": "Lepidus",
+      "text": "The third triumvir, expelled in 36 BC.",
+      "sec": "forming-the-triumvirate"
+    },
+    {
+      "name": "Cleopatra",
+      "text": "Queen of Egypt, Antony’s ally and lover.",
+      "sec": "antony-and-cleopatra"
+    },
+    {
+      "name": "Julius Caesar",
+      "text": "Murdered on the Ides of March 44 BC; declared a god in 42 BC.",
+      "sec": "after-caesars-murder"
+    }
+  ],
+  "dates": [
+    {
+      "when": "21 April 43 BC",
+      "text": "Antony is beaten at Mutina.",
+      "sec": "after-caesars-murder"
+    },
+    {
+      "when": "27 November 43 BC",
+      "text": "The lex Titia creates the board of three.",
+      "sec": "forming-the-triumvirate"
+    },
+    {
+      "when": "23 October 42 BC",
+      "text": "The second battle of Philippi.",
+      "sec": "battle-of-philippi"
+    },
+    {
+      "when": "40 BC",
+      "text": "The treaty of Brundisium.",
+      "sec": "perusia-and-brundisium"
+    },
+    {
+      "when": "3 September 36 BC",
+      "text": "Sea victory off Naulochus; Antony’s retreat from Parthia.",
+      "sec": "parthia-sicily-lepidus"
+    },
+    {
+      "when": "32 BC",
+      "text": "The Senate declares war on Cleopatra.",
+      "sec": "propaganda-war"
+    },
+    {
+      "when": "2 September 31 BC",
+      "text": "The battle of Actium.",
+      "sec": "battle-of-actium"
+    },
+    {
+      "when": "August 30 BC",
+      "text": "Antony and Cleopatra die; Egypt becomes a province.",
+      "sec": "alexandria-and-augustus"
+    },
+    {
+      "when": "27 BC",
+      "text": "Octavian is named Augustus.",
+      "sec": "alexandria-and-augustus"
+    }
+  ],
+  "terms": [
+    {
+      "latin": "liberatores",
+      "english": "“the liberators”",
+      "sec": "after-caesars-murder"
+    },
+    {
+      "latin": "consules",
+      "english": "the two consuls",
+      "sec": "after-caesars-murder"
+    },
+    {
+      "latin": "senatus",
+      "english": "the Senate",
+      "sec": "after-caesars-murder"
+    },
+    {
+      "latin": "triumviri rei publicae constituendae",
+      "english": "the board of three for restoring the republic",
+      "sec": "forming-the-triumvirate"
+    },
+    {
+      "latin": "lex Titia",
+      "english": "the law that created the triumvirate",
+      "sec": "forming-the-triumvirate"
+    },
+    {
+      "latin": "clementia",
+      "english": "mercy",
+      "sec": "proscriptions"
+    },
+    {
+      "latin": "proscriptio",
+      "english": "a proscription",
+      "sec": "proscriptions"
+    },
+    {
+      "latin": "equites",
+      "english": "knights",
+      "sec": "proscriptions"
+    },
+    {
+      "latin": "legiones",
+      "english": "legions",
+      "sec": "battle-of-philippi"
+    },
+    {
+      "latin": "pontifex maximus",
+      "english": "the chief priest",
+      "sec": "parthia-sicily-lepidus"
+    },
+    {
+      "latin": "virgines Vestales",
+      "english": "the Vestal Virgins",
+      "sec": "propaganda-war"
+    },
+    {
+      "latin": "triumphus",
+      "english": "a victory procession",
+      "sec": "alexandria-and-augustus"
+    },
+    {
+      "latin": "Mare Nostrum",
+      "english": "“Our Sea”, the Mediterranean",
+      "sec": "alexandria-and-augustus"
+    },
+    {
+      "latin": "princeps",
+      "english": "first citizen",
+      "sec": "alexandria-and-augustus"
+    },
+    {
+      "latin": "Pax Romana",
+      "english": "the Roman Peace",
+      "sec": "alexandria-and-augustus"
+    }
+  ]
+}

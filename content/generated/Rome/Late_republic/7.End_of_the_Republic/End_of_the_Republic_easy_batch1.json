@@ -1,0 +1,179 @@
+{
+  "batchName": "Late Republic: Antony, Octavian and the End of the Republic (44-27 BCE) - Easy Batch 1",
+  "chapterName": "Late Republic: Antony, Octavian and the End of the Republic (44-27 BCE)",
+  "difficulty": 1,
+  "batchOrder": 1,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Who was keeping Antony's will before Octavian seized it?",
+      "options": [
+        "The Vestal Virgins",
+        "Cleopatra's court",
+        "The two consuls",
+        "The Senate's treasury officials"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#propaganda-war",
+      "explanation": "The will was held by the Vestal Virgins, priestesses of Rome's sacred hearth. A defector tipped off Octavian, who seized and read it.",
+      "sourceQuote": "Then a defector told Octavian about Antony's will, kept by the Vestal Virgins (*virgines Vestales*), the priestesses of Rome's sacred hearth.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did Caesar's assassins call themselves?",
+      "options": [
+        "The triumvirs",
+        "The avengers",
+        "The optimates",
+        "The liberators"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#after-caesars-murder",
+      "explanation": "The killers styled themselves liberators (liberatores), freeing Rome from a dictator. At first they were even pardoned.",
+      "sourceQuote": "His killers called themselves the liberators (*liberatores*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "Where did Antony summon Cleopatra to meet him after Philippi?",
+      "options": [
+        "Cilicia",
+        "Antioch",
+        "Athens",
+        "Rome"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#antony-and-cleopatra",
+      "explanation": "Antony summoned the Greek-speaking queen of Egypt to Cilicia, on the southern coast of modern Turkey, and they soon began an affair.",
+      "sourceQuote": "He summoned Cleopatra, the Greek-speaking queen of Egypt, to meet him in Cilicia, on the southern coast of modern Turkey.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Who was the third man who joined Antony and Octavian to form the triumvirate?",
+      "options": [
+        "Crassus",
+        "Pompey",
+        "Agrippa",
+        "Lepidus"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#forming-the-triumvirate",
+      "explanation": "Lepidus, a Caesarian general commanding in the west, hosted the meeting where the three men struck their deal in northern Italy.",
+      "sourceQuote": "Urged on by their soldiers, the two met in northern Italy under the protection of Lepidus, a Caesarian general commanding in the west.",
+      "reviewFlags": []
+    },
+    {
+      "question": "In what year was Julius Caesar assassinated on the Ides of March?",
+      "options": [
+        "31 BC",
+        "42 BC",
+        "49 BC",
+        "44 BC"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#after-caesars-murder",
+      "explanation": "Caesar was stabbed to death by a band of senators on 15 March 44 BC. Afterwards an uneasy compromise briefly held in Rome.",
+      "sourceQuote": "On 15 March 44 BC, Julius Caesar, the dictator who had made himself master of Rome, was stabbed to death by a band of senators.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which famous virtue of Julius Caesar did the triumvirs declare had been a mistake?",
+      "options": [
+        "His mercy (clementia)",
+        "His piety toward the gods",
+        "His respect for the Senate",
+        "His generosity to the poor"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#proscriptions",
+      "explanation": "The triumvirs announced that Caesar's mercy had been a mistake, and attached a list of men to be killed.",
+      "sourceQuote": "They issued a declaration that Caesar's famous mercy (*clementia*) had been a mistake, and attached a list of men to be killed.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Near which headland in western Greece was Antony camped before his decisive sea battle in 31 BC?",
+      "options": [
+        "Actium",
+        "Corinth",
+        "Philippi",
+        "Naulochus"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#battle-of-actium",
+      "explanation": "Antony camped at Actium, a headland at the mouth of a bay on the Ionian coast. Octavian's admiral then cut his supply lines.",
+      "sourceQuote": "Antony gathered a huge force in western Greece, camping at Actium, a headland at the mouth of a bay on the Ionian coast.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What happened to a man named on a proscription list?",
+      "options": [
+        "He lost his right to vote in the assemblies",
+        "He was barred from the Senate for five years",
+        "He could be killed on sight and his property seized",
+        "He was exiled to an island but kept his estates"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#proscriptions",
+      "explanation": "Anyone proscribed could be murdered on sight, and his property was seized and sold. Bounty hunters and informers were paid cash for each death.",
+      "sourceQuote": "This was a proscription (*proscriptio*): anyone named could be murdered on sight, and his property was seized and sold.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How was Octavian related to Julius Caesar?",
+      "options": [
+        "He was his son-in-law",
+        "He was his great-nephew and adopted heir",
+        "He was his younger brother",
+        "He was his nephew by marriage"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#after-caesars-murder",
+      "explanation": "Octavian was Caesar's great-nephew and adopted heir. He used that connection to lure Caesar's veterans away from Antony.",
+      "sourceQuote": "Octavian, Caesar's great-nephew and adopted heir, lured Caesar's veterans away from Antony and raised a private army.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Who was hailed \"King of Kings\" at the Donations of Alexandria?",
+      "options": [
+        "The captive king of Armenia",
+        "Mark Antony himself",
+        "Cleopatra's son by Julius Caesar",
+        "Antony's eldest Roman son"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#propaganda-war",
+      "explanation": "Cleopatra's son by Julius Caesar was hailed King of Kings, a direct challenge to Octavian's claim to be Caesar's only heir.",
+      "sourceQuote": "Her son by Julius Caesar was hailed \"King of Kings\", a direct challenge to Octavian's claim to be Caesar's only heir.",
+      "reviewFlags": []
+    }
+  ]
+}

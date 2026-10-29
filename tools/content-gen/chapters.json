@@ -497,7 +497,15 @@
       "short": "End of the Republic",
       "era": "late-republic",
       "mapArea": "wide",
-      "plannedBattle": "Actium (31 BC)"
+      "battle": {
+        "name": "Actium",
+        "year": "31 BC",
+        "enemy": "Antony and Cleopatra",
+        "sec": "battle-of-actium",
+        "level": "actium",
+        "intro": "Off the headland of Actium, Octavian’s nimble fleet faces the huge galleys of Antony and Cleopatra."
+      },
+      "locked": true
     }
   ]
 }

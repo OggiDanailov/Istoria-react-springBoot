@@ -1,0 +1,179 @@
+{
+  "batchName": "Late Republic: Antony, Octavian and the End of the Republic (44-27 BCE) - Easy Batch 2",
+  "chapterName": "Late Republic: Antony, Octavian and the End of the Republic (44-27 BCE)",
+  "difficulty": 1,
+  "batchOrder": 2,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Where did Antony and Octavian defeat Caesar's leading assassins in 42 BC?",
+      "options": [
+        "Mutina",
+        "Pharsalus",
+        "Philippi",
+        "Actium"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#battle-of-philippi",
+      "explanation": "The armies met at Philippi in Macedonia, northern Greece. Both leading assassins took their own lives after the fighting.",
+      "sourceQuote": "The armies met at Philippi, a town in Macedonia in northern Greece.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did Octavian bring down Lepidus in Sicily in 36 BC?",
+      "options": [
+        "He walked into his camp and won over his troops",
+        "He had him assassinated by an officer",
+        "He defeated him in a sea battle",
+        "He had the Senate declare him a public enemy"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#parthia-sicily-lepidus",
+      "explanation": "Octavian walked into Lepidus's camp almost alone, and the soldiers switched sides. Lepidus was expelled from the triumvirate and exiled.",
+      "sourceQuote": "Octavian walked into his camp almost alone, and the soldiers switched sides.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which great empire on Rome's eastern border did Antony invade in 36 BC?",
+      "options": [
+        "Parthia",
+        "Pontus",
+        "Egypt",
+        "Armenia"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#parthia-sicily-lepidus",
+      "explanation": "Antony invaded Parthia, the great Iranian empire, demanding the return of Roman standards lost seventeen years earlier.",
+      "sourceQuote": "Antony invaded Parthia, the great Iranian empire on Rome's eastern border, demanding the return of Roman standards lost in a catastrophic defeat seventeen years earlier.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Who was considered the real victor of the Battle of Philippi?",
+      "options": [
+        "Lepidus",
+        "Mark Antony",
+        "Octavian",
+        "Agrippa"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#battle-of-philippi",
+      "explanation": "Antony broke into an assassin's camp in the first battle and was the real victor. Lepidus, meanwhile, had stayed behind to guard Italy.",
+      "sourceQuote": "Antony was the real victor of Philippi.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did Octavian name the city he founded near Actium after his victory?",
+      "options": [
+        "Augusta",
+        "Caesarea",
+        "Nicopolis, \"City of Victory\"",
+        "Alexandria"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#battle-of-actium",
+      "explanation": "Octavian founded Nicopolis, City of Victory, and displayed the bronze rams of captured warships in a hilltop memorial.",
+      "sourceQuote": "Octavian later founded Nicopolis, \"City of Victory\", nearby, and displayed the bronze rams of captured warships in a hilltop memorial.",
+      "reviewFlags": []
+    },
+    {
+      "question": "For how long did the lex Titia of 43 BC grant the triumvirs their powers?",
+      "options": [
+        "Ten years",
+        "One year",
+        "Five years",
+        "For life"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#forming-the-triumvirate",
+      "explanation": "The lex Titia, passed by a friendly tribune on 27 November 43 BC, gave the triumvirs power for five years.",
+      "sourceQuote": "A friendly tribune passed a law, the *lex Titia*, on 27 November 43 BC, giving them this power for five years.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What name did the Senate give Octavian in 27 BC?",
+      "options": [
+        "Augustus",
+        "Germanicus",
+        "Africanus",
+        "Magnus"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#alexandria-and-augustus",
+      "explanation": "In 27 BC the Senate named him Augustus, meaning 'revered'. He went on to rule as first citizen (princeps).",
+      "sourceQuote": "He celebrated a triple triumph and, in 27 BC, the Senate gave him the name Augustus, meaning \"revered\".",
+      "reviewFlags": []
+    },
+    {
+      "question": "How was the Treaty of Brundisium in 40 BC sealed?",
+      "options": [
+        "Lepidus formally adopted Octavian",
+        "Antony married Octavian's sister",
+        "The triumvirs swore oaths before the Vestals",
+        "Octavian married Antony's daughter"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#perusia-and-brundisium",
+      "explanation": "Antony wed Octavian's sister, a recent widow, to seal the deal. Italy celebrated the peace wildly.",
+      "sourceQuote": "It was sealed by a marriage: Antony wed Octavian's sister, a recent widow.",
+      "reviewFlags": []
+    },
+    {
+      "question": "In which Italian town did Octavian trap Antony's brother and wife?",
+      "options": [
+        "Mutina",
+        "Perusia",
+        "Brundisium",
+        "Tarentum"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#perusia-and-brundisium",
+      "explanation": "Octavian besieged them in Perusia, modern Perugia. When it fell he let Antony's family go but burned the town.",
+      "sourceQuote": "Octavian trapped them in Perusia, modern Perugia in central Italy.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did Mark Antony die in 30 BC?",
+      "options": [
+        "Stabbed himself after a false report of Cleopatra's death",
+        "Poisoned by Cleopatra to win Octavian's favour",
+        "Killed by Octavian's soldiers as Alexandria fell",
+        "Executed on Octavian's orders after a trial"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#alexandria-and-augustus",
+      "explanation": "Falsely told that Cleopatra was dead, Antony stabbed himself. Ancient accounts say he was carried to her tomb and died in her arms.",
+      "sourceQuote": "Antony, falsely told that Cleopatra was dead, stabbed himself.",
+      "reviewFlags": []
+    }
+  ]
+}
