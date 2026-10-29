@@ -2147,7 +2147,7 @@ const isUnlocked = i => i === 0 || openAll || !!tests[CHAPTERS[i - 1].id]?.won
 const battleOf = i => { const n = battleName(i); return /^The /.test(n) ? 'the ' + n.slice(4) : 'the battle of ' + n }
 const Cap = t => t[0].toUpperCase() + t.slice(1)
 // a chapter's battle: named by id in chapters.json (battle.level), or else the battle in the same position
-const levelOf = i => { const b = CHAPTERS[i]?.battle; return !b ? null : b.level ? HoldTheLine.LEVELS.find(L => L.id === b.level) ?? null : HoldTheLine.LEVELS[i] ?? null }
+const levelOf = i => { const b = CHAPTERS[i]?.battle; return !b ? undefined : b.level ? HoldTheLine.LEVELS.find(L => L.id === b.level) : HoldTheLine.LEVELS[i] }
 const lockedText = i => levelOf(i) ? `Locked: win ${battleOf(i)} first` : `Locked: finish ${CHAPTERS[i].short} first`
 const battleName = i => levelOf(i)?.name ?? CHAPTERS[i].battle?.name ?? 'the battle'
 
