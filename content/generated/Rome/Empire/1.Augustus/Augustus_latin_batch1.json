@@ -1,0 +1,145 @@
+{
+  "batchName": "Empire: Augustus and the Principate (27 BC-AD 14) - Latin words",
+  "chapterName": "Empire: Augustus and the Principate (27 BC-AD 14)",
+  "difficulty": 1,
+  "batchOrder": 9,
+  "description": "Written by hand from the chapter text: the Latin words it explains",
+  "questions": [
+    {
+      "question": "What does the name Augustus mean?",
+      "options": [
+        "“The revered”",
+        "“The great”",
+        "“The first”",
+        "“The victorious”"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#first-settlement",
+      "explanation": "It carried a religious glow, hinting that he stood close to the gods.",
+      "sourceQuote": "Augustus (*augustus*), meaning \"the revered\".",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did the Romans call the disaster in the Teutoburg Forest?",
+      "options": [
+        "The Clades Variana, the Varian Disaster",
+        "The Pax Romana",
+        "The Res Gestae",
+        "The Ara Pacis"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#teutoburg-forest",
+      "explanation": "Three legions were lost, and Rome gave up conquest beyond the Rhine.",
+      "sourceQuote": "The Romans called it the Varian Disaster (*Clades Variana*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "By AD 13 Augustus’s troops had hailed him imperator 21 times. What did it mean?",
+      "options": [
+        "Victorious general",
+        "King",
+        "Father of the Fatherland",
+        "Chief priest"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#expansion-and-peace",
+      "explanation": "The word later gave us “emperor”.",
+      "sourceQuote": "his troops had hailed him as victorious general (*imperator*) 21 times.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did tribunicia potestas, granted to Augustus for life, let him do?",
+      "options": [
+        "Summon the Senate and assemblies, propose laws and veto decisions",
+        "Command every army in person",
+        "Choose the consuls himself",
+        "Collect the taxes of Egypt"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#second-settlement",
+      "explanation": "It was the authority of the ancient tribunes who protected ordinary citizens.",
+      "sourceQuote": "Tribunician power (*tribunicia potestas*), the authority of the ancient tribunes who protected ordinary citizens, was granted for life.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What was the aerarium militare that Augustus set up in AD 6?",
+      "options": [
+        "A military treasury to pay soldiers and fund their retirement",
+        "A school for officers",
+        "A store of weapons",
+        "A fleet of warships"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#running-the-empire",
+      "explanation": "He donated 170 million sesterces to start it.",
+      "sourceQuote": "In AD 6 he set up a military treasury (*aerarium militare*)",
+      "reviewFlags": []
+    },
+    {
+      "question": "In 12 BC Augustus became pontifex maximus. What was that?",
+      "options": [
+        "Chief priest, head of Rome’s state religion",
+        "Commander of the Praetorian Guard",
+        "Leader of the Senate",
+        "Governor of Egypt"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#second-settlement",
+      "explanation": "In 2 BC the Senate also named him Father of the Fatherland.",
+      "sourceQuote": "In 12 BC he became chief priest (*pontifex maximus*), head of Rome's state religion.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did imperium proconsulare maius give Augustus?",
+      "options": [
+        "Power over every governor in the empire",
+        "The right to be consul every year",
+        "Command of the fleet",
+        "A seat for life in the Senate"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#second-settlement",
+      "explanation": "It was part of the second settlement of 23 BC, when he gave up the consulship.",
+      "sourceQuote": "Greater proconsular power (*imperium proconsulare maius*) made him the superior of every governor in the empire.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What were Augustus’s reported last words, Acta est fabula, plaudite?",
+      "options": [
+        "“The play is over; applaud”",
+        "“I found Rome brick and left it marble”",
+        "“Give me back my legions”",
+        "“The die is cast”"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#succession-and-death",
+      "explanation": "He died at Nola, near Naples, on 19 August AD 14, aged 75.",
+      "sourceQuote": "\"The play is over; applaud\" (*Acta est fabula, plaudite*).",
+      "reviewFlags": []
+    }
+  ]
+}

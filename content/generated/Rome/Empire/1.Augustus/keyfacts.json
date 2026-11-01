@@ -1,0 +1,154 @@
+{
+  "description": "Key facts for this chapter, written by hand from the chapter text. Every entry links to the section that explains it.",
+  "people": [
+    {
+      "name": "Augustus (Octavian)",
+      "text": "Caesar’s heir and Rome’s first emperor, 27 BC – AD 14.",
+      "sec": "caesars-heir"
+    },
+    {
+      "name": "Agrippa",
+      "text": "His loyal friend, admiral and builder; victor at Actium.",
+      "sec": "actium"
+    },
+    {
+      "name": "Mark Antony",
+      "text": "Caesar’s right-hand man, later Octavian’s rival; died in 30 BC.",
+      "sec": "caesars-heir"
+    },
+    {
+      "name": "Tiberius",
+      "text": "His stepson, adopted in AD 4; his successor.",
+      "sec": "succession-and-death"
+    },
+    {
+      "name": "Julia",
+      "text": "Augustus’s only child, married to Agrippa.",
+      "sec": "succession-and-death"
+    }
+  ],
+  "dates": [
+    {
+      "when": "44 BC",
+      "text": "Caesar is murdered; his will names Octavian his heir.",
+      "sec": "caesars-heir"
+    },
+    {
+      "when": "31 BC",
+      "text": "Actium: Agrippa’s fleet wins.",
+      "sec": "actium"
+    },
+    {
+      "when": "16 January 27 BC",
+      "text": "Octavian is named Augustus.",
+      "sec": "first-settlement"
+    },
+    {
+      "when": "23 BC",
+      "text": "The second settlement: tribunician power for life.",
+      "sec": "second-settlement"
+    },
+    {
+      "when": "20 BC",
+      "text": "Parthia returns the lost standards.",
+      "sec": "expansion-and-peace"
+    },
+    {
+      "when": "2 BC",
+      "text": "Augustus is named Father of the Fatherland.",
+      "sec": "second-settlement"
+    },
+    {
+      "when": "AD 6",
+      "text": "The military treasury and the vigiles.",
+      "sec": "running-the-empire"
+    },
+    {
+      "when": "September AD 9",
+      "text": "Three legions lost in the Teutoburg Forest.",
+      "sec": "teutoburg-forest"
+    },
+    {
+      "when": "19 August AD 14",
+      "text": "Augustus dies at Nola.",
+      "sec": "succession-and-death"
+    }
+  ],
+  "terms": [
+    {
+      "latin": "senatus",
+      "english": "the Senate",
+      "sec": "first-settlement"
+    },
+    {
+      "latin": "augustus",
+      "english": "“the revered”",
+      "sec": "first-settlement"
+    },
+    {
+      "latin": "princeps",
+      "english": "first citizen",
+      "sec": "first-settlement"
+    },
+    {
+      "latin": "imperium proconsulare maius",
+      "english": "greater proconsular power",
+      "sec": "second-settlement"
+    },
+    {
+      "latin": "tribunicia potestas",
+      "english": "tribunician power",
+      "sec": "second-settlement"
+    },
+    {
+      "latin": "pontifex maximus",
+      "english": "the chief priest",
+      "sec": "second-settlement"
+    },
+    {
+      "latin": "pater patriae",
+      "english": "Father of the Fatherland",
+      "sec": "second-settlement"
+    },
+    {
+      "latin": "auctoritas",
+      "english": "personal prestige",
+      "sec": "second-settlement"
+    },
+    {
+      "latin": "aerarium militare",
+      "english": "the military treasury",
+      "sec": "running-the-empire"
+    },
+    {
+      "latin": "vigiles",
+      "english": "firemen and night police",
+      "sec": "running-the-empire"
+    },
+    {
+      "latin": "Ara Pacis",
+      "english": "the Altar of Peace",
+      "sec": "city-of-marble"
+    },
+    {
+      "latin": "imperator",
+      "english": "victorious general",
+      "sec": "expansion-and-peace"
+    },
+    {
+      "latin": "Pax Romana",
+      "english": "the Roman Peace",
+      "sec": "expansion-and-peace"
+    },
+    {
+      "latin": "Clades Variana",
+      "english": "the Varian Disaster",
+      "sec": "teutoburg-forest"
+    },
+    {
+      "latin": "Res Gestae",
+      "english": "Augustus’s account of his deeds",
+      "sec": "succession-and-death"
+    }
+  ]
+}

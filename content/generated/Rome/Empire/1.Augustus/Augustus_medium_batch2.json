@@ -1,0 +1,189 @@
+{
+  "batchName": "Empire: Augustus and the Principate (27 BC-AD 14) - Medium Batch 2",
+  "chapterName": "Empire: Augustus and the Principate (27 BC-AD 14)",
+  "difficulty": 2,
+  "batchOrder": 4,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "How do most modern historians describe the Principate?",
+      "options": [
+        "As a true partnership with the Senate",
+        "As monarchy in disguise",
+        "As a religious theocracy",
+        "As a restored Republic",
+        "As rule by the army alone"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#verdicts",
+      "explanation": "A 19th-century German scholar called it a genuine partnership between emperor and Senate, but most modern historians reject that view.",
+      "sourceQuote": "Most modern historians reject that, calling it monarchy in disguise.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Who secretly organised the Germanic alliance that destroyed the Roman legions in AD 9?",
+      "options": [
+        "The queen of Kush's envoy",
+        "A Parthian general sent to Germany",
+        "A Cherusci chieftain raised as a hostage in Rome",
+        "A Gallic king from beyond the Alps",
+        "A renegade Roman admiral"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#teutoburg-forest",
+      "explanation": "The chieftain had served as a Roman officer and was the governor's trusted adviser. He fed the governor false reports of a revolt.",
+      "sourceQuote": "His trusted adviser was a Germanic chieftain of the Cherusci tribe who had been raised as a hostage in Rome and served as a Roman officer.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What happened to Egypt after Octavian conquered it?",
+      "options": [
+        "It was split among the legions",
+        "It was given to Antony's children",
+        "It became his personal property",
+        "It was left as an allied kingdom",
+        "It was ruled by the Senate"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#actium",
+      "explanation": "Egypt's treasure paid off Octavian's war debts. Senators were even forbidden to travel there.",
+      "sourceQuote": "Egypt became Octavian's personal property, and its treasure paid off his war debts.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Who built the first Pantheon in Rome?",
+      "options": [
+        "Tiberius",
+        "Augustus",
+        "Julius Caesar",
+        "Agrippa",
+        "Mark Antony"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#city-of-marble",
+      "explanation": "Agrippa, Augustus's old friend and admiral, also took charge of the water supply, drains, public baths and roads.",
+      "sourceQuote": "Agrippa, his old friend and admiral, took charge of the water supply, drains, public baths and roads, and built the first Pantheon.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Roughly how many legions came with the \"troubled\" provinces Augustus agreed to govern in 27 BC?",
+      "options": [
+        "About twenty",
+        "Twenty-eight",
+        "Five or six",
+        "Three",
+        "About sixty"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#first-settlement",
+      "explanation": "The provinces included Spain, Gaul, Syria and Egypt, with about twenty legions. The Senate kept only five or six.",
+      "sourceQuote": "These happened to include Spain, Gaul, Syria and Egypt, and with them about twenty legions.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did Augustus reform tax collection in the provinces?",
+      "options": [
+        "He made the army collect the taxes",
+        "He sold collection rights to private companies",
+        "He used salaried collectors instead of private companies",
+        "He abolished provincial taxes entirely",
+        "He let each governor keep the taxes"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#running-the-empire",
+      "explanation": "Under the Republic, private companies bought the right to collect taxes and squeezed the provinces. Augustus used censuses to fix each province's share.",
+      "sourceQuote": "Augustus replaced them with salaried collectors, using censuses to fix each province's share.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which power, granted for life, let Augustus summon assemblies, propose laws and veto any decision?",
+      "options": [
+        "The censorship",
+        "The chief priesthood",
+        "Greater proconsular power",
+        "The consulship",
+        "Tribunician power"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#second-settlement",
+      "explanation": "Tribunician power was the authority of the ancient tribunes who protected ordinary citizens. Greater proconsular power, by contrast, made him superior to every governor.",
+      "sourceQuote": "It let him summon the Senate and the people's assemblies, propose laws, and veto any decision.",
+      "reviewFlags": []
+    },
+    {
+      "question": "After marching on Rome in 43 BC, at what age did Octavian become consul?",
+      "options": [
+        "30",
+        "22",
+        "25",
+        "19",
+        "18"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#caesars-heir",
+      "explanation": "He used Caesar's money and his own to win over veterans and raise a private army, then became consul at just 19.",
+      "sourceQuote": "He used Caesar's money and his own to win over the dead dictator's veterans, raised a private army, and in 43 BC marched on Rome, becoming consul at just 19.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did the Senate wish each new emperor in later Roman times?",
+      "options": [
+        "To be \"richer than Egypt\"",
+        "To be \"wiser than Romulus\"",
+        "To be \"as revered as Augustus\"",
+        "To be \"braver than Caesar\"",
+        "To be \"more fortunate than Augustus\""
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#verdicts",
+      "explanation": "Later Romans were kinder to Augustus than his contemporaries. A legal scholar of his own day had mourned the lost liberty of the Republic.",
+      "sourceQuote": "Later Romans were kinder: the Senate wished each new emperor to be \"more fortunate than Augustus\".",
+      "reviewFlags": []
+    },
+    {
+      "question": "What service did the vigiles, created by Augustus in AD 6, provide for Rome?",
+      "options": [
+        "Imperial bodyguard",
+        "Fire brigade and night police",
+        "Grain distribution",
+        "Official message relay",
+        "Tax collection"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#running-the-empire",
+      "explanation": "The vigiles had seven units covering fourteen city districts. A permanent official for the grain supply followed in AD 8.",
+      "sourceQuote": "For the capital he created a combined fire brigade and night police (*vigiles*) in AD 6, with seven units covering fourteen city districts.",
+      "reviewFlags": []
+    }
+  ]
+}

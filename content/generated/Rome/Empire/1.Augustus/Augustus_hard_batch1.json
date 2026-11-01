@@ -1,0 +1,204 @@
+{
+  "batchName": "Empire: Augustus and the Principate (27 BC-AD 14) - Hard Batch 1",
+  "chapterName": "Empire: Augustus and the Principate (27 BC-AD 14)",
+  "difficulty": 3,
+  "batchOrder": 5,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Which statement best describes marble's place in Augustan Rome?",
+      "options": [
+        "It was reserved for temples alone",
+        "It was banned in favour of brick",
+        "It was first brought to Rome by Augustus",
+        "It became standard under Julius Caesar",
+        "It was used only for the Senate house",
+        "Used before, it only became standard under Augustus"
+      ],
+      "correctAnswers": [
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#city-of-marble",
+      "explanation": "Marble was not new, but only under Augustus did it become a standard building material, which gave substance to his traditional boast.",
+      "sourceQuote": "Marble had been used before, but only under Augustus did it become a standard building material.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Behind Augustus's claim to rule by personal prestige, which hard facts underpinned his power? (select all that apply)",
+      "options": [
+        "A network of clients and supporters",
+        "Election as dictator for life",
+        "An alliance with the Parthian king",
+        "Legal powers voted by Senate and people",
+        "An enormous private fortune",
+        "A hereditary royal title"
+      ],
+      "correctAnswers": [
+        0,
+        3,
+        4
+      ],
+      "difficulty": 3,
+      "textReference": "#second-settlement",
+      "explanation": "Augustus said he ruled by auctoritas rather than by office, but his power rested on legal powers, his fortune and his network of clients and supporters.",
+      "sourceQuote": "Behind the polite words stood three hard facts: legal powers voted by Senate and people, an enormous private fortune, and a vast network of clients and supporters bound to him by favours.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Writing in 1939, how did a famous British historian portray the young Octavian's faction?",
+      "options": [
+        "As God-sent peacemakers",
+        "As something like a crime gang",
+        "As a genuine partnership with the Senate",
+        "As a band of reluctant rulers",
+        "As defenders of the Republic",
+        "As heirs of Greek philosophy"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 3,
+      "textReference": "#verdicts",
+      "explanation": "Writing as fascist dictators borrowed Roman imagery, he called Octavian \"sickly and sinister\". More recent writers say comparisons with modern tyrants are misleading.",
+      "sourceQuote": "A famous British historian, writing in 1939 as fascist dictators borrowed Roman imagery, painted the young Octavian as \"sickly and sinister\" and his faction as something like a crime gang.",
+      "reviewFlags": []
+    },
+    {
+      "question": "After the civil wars, to how many legions did Augustus reduce the Roman army?",
+      "options": [
+        "20",
+        "60",
+        "15",
+        "28",
+        "35",
+        "21"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 3,
+      "textReference": "#running-the-empire",
+      "explanation": "He cut the army from about 60 legions to 28, some 170,000 professional soldiers backed by non-citizen auxiliaries. In AD 6 he set up a military treasury to pay them.",
+      "sourceQuote": "After the civil wars he cut the army from about 60 legions to 28, some 170,000 professional soldiers, backed by auxiliary units of non-citizens.",
+      "reviewFlags": []
+    },
+    {
+      "question": "In 32 BC, on whom did the Senate formally declare war?",
+      "options": [
+        "Antony and the queen jointly",
+        "The Egyptian queen",
+        "The renegade admiral",
+        "The Parthian king",
+        "Mark Antony personally",
+        "The third triumvir"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 3,
+      "textReference": "#actium",
+      "explanation": "War was declared on the Egyptian queen, not on Antony. A year after Actium, Antony and the queen both took their own lives.",
+      "sourceQuote": "In 32 BC the Senate declared war on the Egyptian queen.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which sequence correctly orders the deaths that disrupted Augustus's plans for an heir?",
+      "options": [
+        "His nephew, then Gaius and Lucius, then Agrippa",
+        "Gaius and Lucius, then his nephew, then Agrippa",
+        "His nephew, then Agrippa, then Gaius and Lucius",
+        "Agrippa, then his nephew, then Gaius and Lucius",
+        "Agrippa, then Gaius and Lucius, then his nephew",
+        "Gaius and Lucius, then Agrippa, then his nephew"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 3,
+      "textReference": "#succession-and-death",
+      "explanation": "His nephew died in 23 BC, Agrippa in 12 BC, and Gaius and Lucius in AD 2 and AD 4. That left Tiberius as heir.",
+      "sourceQuote": "Augustus adopted their sons Gaius and Lucius, but Agrippa died in 12 BC, and both boys died young, in AD 2 and AD 4.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Where and when did Antony and Octavian defeat the armies of Caesar's assassins?",
+      "options": [
+        "Philippi in Macedonia, 44 BC",
+        "Mutina in northern Italy, 43 BC",
+        "Philippi in Macedonia, 42 BC",
+        "Actium in western Greece, 31 BC",
+        "Alexandria in Egypt, 30 BC",
+        "Pharsalus in Thessaly, 48 BC"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 3,
+      "textReference": "#caesars-heir",
+      "explanation": "The assassins were crushed at Philippi in northern Greece in 42 BC. Afterwards the victors carved up the Roman world.",
+      "sourceQuote": "In 42 BC Antony and Octavian crushed the assassins' armies at Philippi in Macedonia, in northern Greece.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which qualities of Augustus did the golden shield in the Senate house praise? (select all that apply)",
+      "options": [
+        "Eloquence",
+        "Courage",
+        "Mercy",
+        "Wealth",
+        "Piety",
+        "Justice"
+      ],
+      "correctAnswers": [
+        1,
+        2,
+        4,
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#first-settlement",
+      "explanation": "Augustus refused a crown or sceptre, but accepted a golden shield praising his courage, piety, mercy and justice.",
+      "sourceQuote": "He refused a crown or sceptre, but a golden shield in the Senate house praised his courage, piety, mercy and justice.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Near Kalkriese, what trapped the Roman survivors of the ambush in AD 9?",
+      "options": [
+        "A narrow gap between a hill and a bog, behind a hidden wall",
+        "A flooded river crossing guarded by archers",
+        "A mountain pass blocked by fallen trees",
+        "A burning forest surrounding their camp",
+        "A Roman fort betrayed from within",
+        "A ravine sealed off by Germanic cavalry"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#teutoburg-forest",
+      "explanation": "The gap was only about 100 metres wide, behind a hidden earthen wall. The Roman column had been strung out over 15 to 20 km.",
+      "sourceQuote": "Near Kalkriese, in northern Germany, the survivors were trapped in a gap only about 100 metres (330 feet) wide between a hill and a bog, behind a hidden earthen wall.",
+      "reviewFlags": []
+    },
+    {
+      "question": "By AD 13, how many times had Augustus's troops hailed him as victorious general (imperator)?",
+      "options": [
+        "30",
+        "21",
+        "15",
+        "28",
+        "7",
+        "12"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 3,
+      "textReference": "#expansion-and-peace",
+      "explanation": "He was hailed imperator 21 times. Augustus called his peace one \"born of victories\".",
+      "sourceQuote": "By AD 13 his troops had hailed him as victorious general (*imperator*) 21 times.",
+      "reviewFlags": []
+    }
+  ]
+}

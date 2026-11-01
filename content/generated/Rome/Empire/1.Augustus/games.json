@@ -1,0 +1,617 @@
+{
+  "chapterName": "Empire: Augustus and the Principate (27 BC-AD 14)",
+  "model": "claude-opus-5-5",
+  "briefing": {
+    "title": "Rome, 27 BC",
+    "paragraphs": [
+      "In January 27 BC, Rome is exhausted by civil war. Julius Caesar was murdered seventeen years ago. His adopted heir, the young Octavian, has since beaten every rival, including Mark Antony and his ally, the queen of Egypt. Octavian now holds the legions, Egypt's treasure and the loyalty of the army.",
+      "But Romans hate kings, and Caesar died for looking like one. Octavian must keep power without wearing a crown. His answer is a careful show of handing power back to the Senate. It will create the Principate and make him Augustus, Rome's first emperor."
+    ]
+  },
+  "timelines": [
+    {
+      "name": "Level 1: The Big Turning Points",
+      "blurb": "Four moments that shaped Augustus's rise and the limits of his empire.",
+      "events": [
+        {
+          "label": "Julius Caesar is stabbed to death",
+          "when": "44 BC",
+          "year": -44,
+          "fact": "Caesar was killed on the Ides of March (15 March), and his will named the 18-year-old Gaius Octavius as his main heir and adopted son.",
+          "sectionId": "caesars-heir",
+          "reviewFlags": []
+        },
+        {
+          "label": "Agrippa's fleet wins at Actium",
+          "when": "31 BC",
+          "year": -31,
+          "fact": "On 2 September 31 BC, at a bay on Greece's western coast, Agrippa's fleet defeated Antony and the Egyptian queen.",
+          "sectionId": "actium",
+          "reviewFlags": []
+        },
+        {
+          "label": "Octavian is named Augustus",
+          "when": "27 BC",
+          "year": -27,
+          "fact": "On 16 January 27 BC the Senate gave him the name Augustus, 'the revered', which carried a religious glow.",
+          "sectionId": "first-settlement",
+          "reviewFlags": []
+        },
+        {
+          "label": "Three legions die in a German forest",
+          "when": "AD 9",
+          "year": 9,
+          "fact": "In the Varian Disaster (Clades Variana), 15,000 to 20,000 Romans died, and Rome gave up conquest beyond the Rhine.",
+          "sectionId": "teutoburg-forest",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Level 2: From Rebel to Emperor",
+      "blurb": "Follow Augustus from teenage consul to his death at Nola.",
+      "events": [
+        {
+          "label": "Octavian becomes consul at 19",
+          "when": "43 BC",
+          "year": -43,
+          "fact": "After raising a private army from Caesar's veterans, Octavian marched on Rome and became consul at just 19.",
+          "sectionId": "caesars-heir",
+          "reviewFlags": []
+        },
+        {
+          "label": "Caesar's assassins crushed at Philippi",
+          "when": "42 BC",
+          "year": -42,
+          "fact": "Antony and Octavian defeated the assassins' armies at Philippi, in Macedonia in northern Greece.",
+          "sectionId": "caesars-heir",
+          "reviewFlags": []
+        },
+        {
+          "label": "Augustus gives up the consulship",
+          "when": "23 BC",
+          "year": -23,
+          "fact": "After a grave illness, he gave up the consulship on 1 July 23 BC and received tribunician power for life instead.",
+          "sectionId": "second-settlement",
+          "reviewFlags": []
+        },
+        {
+          "label": "Parthians hand back lost standards",
+          "when": "20 BC",
+          "year": -20,
+          "fact": "Augustus won back the standards without a fight and housed them in the Temple of Mars the Avenger.",
+          "sectionId": "expansion-and-peace",
+          "reviewFlags": []
+        },
+        {
+          "label": "Rome gets a fire brigade",
+          "when": "AD 6",
+          "year": 6,
+          "fact": "The vigiles, a combined fire brigade and night police, had seven units covering fourteen city districts.",
+          "sectionId": "running-the-empire",
+          "reviewFlags": []
+        },
+        {
+          "label": "Augustus dies at Nola",
+          "when": "AD 14",
+          "year": 14,
+          "fact": "Augustus died near Naples on 19 August AD 14, aged 75, and the Senate declared him a god.",
+          "sectionId": "succession-and-death",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Level 3: A Long Life and Its Legacy",
+      "blurb": "Eight moments from Augustus's birth to modern judgements of his reign.",
+      "events": [
+        {
+          "label": "Gaius Octavius is born",
+          "when": "63 BC",
+          "year": -63,
+          "fact": "He was born into a comfortable but not famous family, and his mother was a niece of Julius Caesar.",
+          "sectionId": "caesars-heir",
+          "reviewFlags": []
+        },
+        {
+          "label": "Agrippa sinks a renegade admiral's fleet",
+          "when": "36 BC",
+          "year": -36,
+          "fact": "The renegade admiral's blockades had starved Italy until Agrippa destroyed his fleet.",
+          "sectionId": "actium",
+          "reviewFlags": []
+        },
+        {
+          "label": "Antony and the queen take their lives",
+          "when": "30 BC, a year after Actium",
+          "year": -30,
+          "fact": "As Octavian's army reached Alexandria, both died by their own hand, and Egypt became Octavian's personal property.",
+          "sectionId": "actium",
+          "reviewFlags": []
+        },
+        {
+          "label": "Augustus becomes chief priest",
+          "when": "12 BC",
+          "year": -12,
+          "fact": "As pontifex maximus, Augustus became head of Rome's state religion.",
+          "sectionId": "second-settlement",
+          "reviewFlags": []
+        },
+        {
+          "label": "Sextilis is renamed August",
+          "when": "8 BC",
+          "year": -8,
+          "fact": "The month was renamed in his honour, matching July, which was named for Julius Caesar.",
+          "sectionId": "running-the-empire",
+          "reviewFlags": []
+        },
+        {
+          "label": "Rome watches a mock naval battle",
+          "when": "2 BC",
+          "year": -2,
+          "fact": "The battle was fought on an artificial lake fed by a new aqueduct more than 30 km (twenty miles) long, and it recreated a Greek sea victory over Persia.",
+          "sectionId": "city-of-marble",
+          "reviewFlags": []
+        },
+        {
+          "label": "Augustus adopts Tiberius",
+          "when": "AD 4",
+          "year": 4,
+          "fact": "After his grandsons Gaius and Lucius died young, Augustus adopted Tiberius, his wife's elder son from her first marriage.",
+          "sectionId": "succession-and-death",
+          "reviewFlags": []
+        },
+        {
+          "label": "A British historian calls him sinister",
+          "when": "1939",
+          "year": 1939,
+          "fact": "Writing as fascist dictators borrowed Roman imagery, the historian painted the young Octavian as 'sickly and sinister' and his faction as something like a crime gang.",
+          "sectionId": "verdicts",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "matchSets": [
+    {
+      "name": "Latin Words",
+      "blurb": "Match each Latin word to its meaning.",
+      "pairs": [
+        {
+          "name": "Princeps",
+          "match": "'First citizen', the title Augustus himself preferred",
+          "sectionId": "first-settlement",
+          "reviewFlags": []
+        },
+        {
+          "name": "Auctoritas",
+          "match": "Personal prestige, which Augustus said was the basis of his rule",
+          "sectionId": "second-settlement",
+          "reviewFlags": []
+        },
+        {
+          "name": "Vigiles",
+          "match": "Rome's combined fire brigade and night police",
+          "sectionId": "running-the-empire",
+          "reviewFlags": []
+        },
+        {
+          "name": "Pax Romana",
+          "match": "About two centuries of calm inside the empire",
+          "sectionId": "expansion-and-peace",
+          "reviewFlags": []
+        },
+        {
+          "name": "Res Gestae",
+          "match": "Augustus's own account of his deeds, inscribed in bronze",
+          "sectionId": "succession-and-death",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Places and Peoples",
+      "blurb": "Match each name to its role in Augustus's story.",
+      "pairs": [
+        {
+          "name": "Philippi",
+          "match": "Where Antony and Octavian crushed Caesar's assassins",
+          "sectionId": "caesars-heir",
+          "reviewFlags": []
+        },
+        {
+          "name": "Actium",
+          "match": "Bay in western Greece where Agrippa's fleet won in 31 BC",
+          "sectionId": "actium",
+          "reviewFlags": []
+        },
+        {
+          "name": "Ara Pacis",
+          "match": "Altar of Peace with carved panels of priests and families",
+          "sectionId": "city-of-marble",
+          "reviewFlags": []
+        },
+        {
+          "name": "Parthians",
+          "match": "Rival eastern empire that returned captured Roman standards",
+          "sectionId": "expansion-and-peace",
+          "reviewFlags": []
+        },
+        {
+          "name": "Kalkriese",
+          "match": "Spot in northern Germany where trapped Roman survivors died",
+          "sectionId": "teutoburg-forest",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "trueFalseDecks": [
+    {
+      "name": "The Road to Power",
+      "blurb": "From Caesar's murder to the new powers of 23 BC.",
+      "cards": [
+        {
+          "claim": "Octavian became consul at just 19.",
+          "answer": true,
+          "why": "In 43 BC he marched on Rome with a private army and became consul at 19.",
+          "sectionId": "caesars-heir",
+          "reviewFlags": []
+        },
+        {
+          "claim": "The triumvirate's purge declared about 3,000 senators and wealthy businessmen outlaws.",
+          "answer": false,
+          "why": "About 300 senators and businessmen were outlawed, though thousands more lost their property.",
+          "sectionId": "caesars-heir",
+          "reviewFlags": []
+        },
+        {
+          "claim": "After Philippi, Mark Antony took the West, including Italy.",
+          "answer": false,
+          "why": "Antony took the rich East. Octavian took the West, including Italy.",
+          "sectionId": "actium",
+          "reviewFlags": []
+        },
+        {
+          "claim": "In 32 BC the Senate declared war on the queen of Egypt.",
+          "answer": true,
+          "why": "After Octavian's propaganda war against Antony, the Senate declared war on the Egyptian queen.",
+          "sectionId": "actium",
+          "reviewFlags": []
+        },
+        {
+          "claim": "After its conquest, senators were forbidden to travel to Egypt.",
+          "answer": true,
+          "why": "Egypt became Octavian's personal property, and its treasure paid off his war debts.",
+          "sectionId": "actium",
+          "reviewFlags": []
+        },
+        {
+          "claim": "In 27 BC Octavian agreed to govern the 'troubled' provinces for twenty years.",
+          "answer": false,
+          "why": "He agreed to govern them for ten years. With them came about twenty legions.",
+          "sectionId": "first-settlement",
+          "reviewFlags": []
+        },
+        {
+          "claim": "A proposal to name Octavian after Romulus was rejected as too royal.",
+          "answer": true,
+          "why": "Romulus was Rome's legendary founder and first king, so the Senate chose the name Augustus instead.",
+          "sectionId": "first-settlement",
+          "reviewFlags": []
+        },
+        {
+          "claim": "In 23 BC Augustus was granted tribunician power for five years.",
+          "answer": false,
+          "why": "He received tribunician power for life. It let him summon assemblies, propose laws and veto any decision.",
+          "sectionId": "second-settlement",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Ruling Rome and Remembering Augustus",
+      "blurb": "Institutions, buildings, disasters and verdicts.",
+      "cards": [
+        {
+          "claim": "Augustus cut the army from about 60 legions to 28.",
+          "answer": true,
+          "why": "The 28 legions held some 170,000 professional soldiers, backed by auxiliary units of non-citizens.",
+          "sectionId": "running-the-empire",
+          "reviewFlags": []
+        },
+        {
+          "claim": "The Praetorian Guard was founded in AD 6.",
+          "answer": false,
+          "why": "The Praetorian Guard was founded in 27 BC. AD 6 saw the military treasury and the vigiles.",
+          "sectionId": "running-the-empire",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Augustus replaced private tax-collecting companies with salaried collectors.",
+          "answer": true,
+          "why": "Under the Republic, private companies had squeezed the provinces. Augustus used censuses to fix each province's share.",
+          "sectionId": "running-the-empire",
+          "reviewFlags": []
+        },
+        {
+          "claim": "The month Sextilis was renamed in honour of Julius Caesar.",
+          "answer": false,
+          "why": "Sextilis became August in honour of Augustus in 8 BC. July was the month named for Julius Caesar.",
+          "sectionId": "running-the-empire",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Agrippa built the first Pantheon.",
+          "answer": true,
+          "why": "Agrippa also took charge of Rome's water supply, drains, public baths and roads.",
+          "sectionId": "city-of-marble",
+          "reviewFlags": []
+        },
+        {
+          "claim": "The governor in Germany marched three legions into the Teutoburg ambush.",
+          "answer": true,
+          "why": "Fed false reports by his Cherusci adviser, he led three legions by an unfamiliar route and died with his army.",
+          "sectionId": "teutoburg-forest",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Augustus died in Rome in AD 14.",
+          "answer": false,
+          "why": "He died at Nola, near Naples, on 19 August AD 14, aged 75.",
+          "sectionId": "succession-and-death",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Most modern historians agree that the Principate was a genuine partnership between emperor and Senate.",
+          "answer": false,
+          "why": "That was the view of a 19th-century German scholar. Most modern historians call the Principate monarchy in disguise.",
+          "sectionId": "verdicts",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "oddOneOut": [
+    {
+      "items": [
+        "Spain",
+        "Gaul",
+        "Sicily",
+        "Syria"
+      ],
+      "oddIndex": 2,
+      "why": "Spain, Gaul and Syria were among the 'troubled' provinces Augustus took in 27 BC. Sicily was where the third triumvir tried and failed to seize power.",
+      "sectionId": "first-settlement",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Legal powers voted to him",
+        "A royal crown",
+        "An enormous private fortune",
+        "A network of loyal clients"
+      ],
+      "oddIndex": 1,
+      "why": "The other three were the hard facts behind Augustus’s power: legal powers, a vast fortune and a network of clients and supporters. He refused a crown, because Romans hated kings.",
+      "sectionId": "second-settlement",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Vigiles",
+        "Private tax-collecting firms",
+        "Military treasury",
+        "Praetorian Guard"
+      ],
+      "oddIndex": 1,
+      "why": "Augustus created the other three. Private tax companies belonged to the old Republic, and he replaced them with salaried collectors.",
+      "sectionId": "running-the-empire",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Water supply",
+        "Drains",
+        "Public baths",
+        "Grain supply"
+      ],
+      "oddIndex": 3,
+      "why": "Agrippa took charge of water, drains and baths. Rome's grain supply was given to a permanent official in AD 8.",
+      "sectionId": "city-of-marble",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Germany beyond the Rhine",
+        "Spain",
+        "The Alps",
+        "Lands up to the Danube"
+      ],
+      "oddIndex": 0,
+      "why": "Augustus's armies conquered Spain, the Alps and lands up to the Danube. After the Teutoburg disaster, Rome abandoned conquest beyond the Rhine.",
+      "sectionId": "expansion-and-peace",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "A legal scholar of his day",
+        "A Roman historian a century later",
+        "Medieval Christians",
+        "A British historian in 1939"
+      ],
+      "oddIndex": 2,
+      "why": "The other three judged Augustus harshly. Medieval Christians saw him as a God-sent peacemaker who prepared the world for Christ.",
+      "sectionId": "verdicts",
+      "reviewFlags": []
+    }
+  ],
+  "whoAmI": [
+    {
+      "name": "Masters of the Civil Wars",
+      "blurb": "The men who fought over Rome after Caesar's dictatorship.",
+      "people": [
+        {
+          "name": "Julius Caesar",
+          "options": [
+            "Julius Caesar",
+            "Mark Antony",
+            "Octavian",
+            "Agrippa"
+          ],
+          "clues": [
+            "I left buildings unfinished, including a new Senate house, for my heir to complete.",
+            "The month of July is named after me.",
+            "My will named a young relative as my main heir and adopted son.",
+            "I was stabbed to death on the Ides of March, 44 BC."
+          ],
+          "sectionId": "caesars-heir",
+          "reviewFlags": []
+        },
+        {
+          "name": "Mark Antony",
+          "options": [
+            "Julius Caesar",
+            "Mark Antony",
+            "Octavian",
+            "Agrippa"
+          ],
+          "clues": [
+            "I was accused of giving away Roman lands to a foreign queen's children.",
+            "My Roman wife was the sister of my great rival.",
+            "After Philippi I took the rich East and became the Egyptian queen's lover.",
+            "I took my own life as Octavian's army reached Alexandria."
+          ],
+          "sectionId": "actium",
+          "reviewFlags": []
+        },
+        {
+          "name": "Octavian",
+          "options": [
+            "Julius Caesar",
+            "Mark Antony",
+            "Octavian",
+            "Agrippa"
+          ],
+          "clues": [
+            "I was no great general, but a gifted friend won my battles.",
+            "My mother was a niece of Julius Caesar.",
+            "I marched on Rome with a private army and became consul at 19.",
+            "In 27 BC the Senate gave me the name Augustus."
+          ],
+          "sectionId": "caesars-heir",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "The Emperor's Circle",
+      "blurb": "The family and friends Augustus relied on.",
+      "people": [
+        {
+          "name": "Agrippa",
+          "options": [
+            "Agrippa",
+            "Tiberius",
+            "Julia",
+            "Augustus"
+          ],
+          "clues": [
+            "I built the first Pantheon and looked after Rome's drains and baths.",
+            "In 36 BC I destroyed a renegade admiral's fleet that had starved Italy.",
+            "I married the emperor's only child and received powers close to his own.",
+            "My fleet won the battle of Actium in 31 BC."
+          ],
+          "sectionId": "actium",
+          "reviewFlags": []
+        },
+        {
+          "name": "Tiberius",
+          "options": [
+            "Agrippa",
+            "Tiberius",
+            "Julia",
+            "Augustus"
+          ],
+          "clues": [
+            "I was a hard-working general who won victories in Germany and the Balkans.",
+            "My mother was Augustus's wife, and I was her elder son from her first marriage.",
+            "Augustus adopted me in AD 4.",
+            "By AD 13 I held powers equal to Augustus's, and I succeeded him."
+          ],
+          "sectionId": "succession-and-death",
+          "reviewFlags": []
+        },
+        {
+          "name": "Julia",
+          "options": [
+            "Agrippa",
+            "Tiberius",
+            "Julia",
+            "Augustus"
+          ],
+          "clues": [
+            "My first husband, my father's nephew, died young in 23 BC.",
+            "My second husband was my father's loyal general.",
+            "My father adopted my sons Gaius and Lucius.",
+            "I was Augustus's only child."
+          ],
+          "sectionId": "succession-and-death",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "places": [
+    {
+      "name": "Philippi",
+      "wikipediaTitle": "Philippi",
+      "lat": 41.01305556,
+      "lon": 24.28638889,
+      "why": "In 42 BC Antony and Octavian crushed the armies of Caesar's assassins here, in Macedonia in northern Greece.",
+      "sectionId": "caesars-heir",
+      "coordinates": "Wikipedia: Philippi",
+      "reviewFlags": []
+    },
+    {
+      "name": "Actium",
+      "wikipediaTitle": "Actium",
+      "lat": 38.953,
+      "lon": 20.768,
+      "why": "At this bay on Greece's western coast, Agrippa's fleet won the decisive battle on 2 September 31 BC.",
+      "sectionId": "actium",
+      "coordinates": "Wikipedia: Actium",
+      "reviewFlags": []
+    },
+    {
+      "name": "Alexandria",
+      "wikipediaTitle": "Alexandria",
+      "lat": 31.1975,
+      "lon": 29.8925,
+      "why": "As Octavian's army reached Alexandria in 30 BC, Antony and the Egyptian queen took their own lives.",
+      "sectionId": "actium",
+      "coordinates": "Wikipedia: Alexandria",
+      "reviewFlags": []
+    },
+    {
+      "name": "Kalkriese",
+      "wikipediaTitle": "Kalkriese",
+      "lat": 52.408,
+      "lon": 8.129,
+      "why": "Near Kalkriese, in northern Germany, the Roman survivors of the Teutoburg ambush were trapped between a hill and a bog in AD 9.",
+      "sectionId": "teutoburg-forest",
+      "coordinates": "Wikipedia: Kalkriese",
+      "reviewFlags": []
+    },
+    {
+      "name": "Nola",
+      "wikipediaTitle": "Nola",
+      "lat": 40.92611111,
+      "lon": 14.5275,
+      "why": "Augustus died at Nola, near Naples, on 19 August AD 14, aged 75.",
+      "sectionId": "succession-and-death",
+      "coordinates": "Wikipedia: Nola",
+      "reviewFlags": []
+    }
+  ]
+}

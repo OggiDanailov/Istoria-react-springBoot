@@ -1,0 +1,179 @@
+{
+  "batchName": "Empire: Augustus and the Principate (27 BC-AD 14) - Easy Batch 2",
+  "chapterName": "Empire: Augustus and the Principate (27 BC-AD 14)",
+  "difficulty": 1,
+  "batchOrder": 2,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Which Augustan monument near the Field of Mars has carved panels of priests and Roman families in procession?",
+      "options": [
+        "The new Senate house",
+        "The Altar of Peace",
+        "The Temple of Mars the Avenger",
+        "The Pantheon"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#city-of-marble",
+      "explanation": "The Altar of Peace (Ara Pacis) rose near the Field of Mars, a riverside district north of the old centre. Its panels show priests, guards and families in procession.",
+      "sourceQuote": "Near the Field of Mars, a riverside district north of the old centre, rose the Altar of Peace (*Ara Pacis*), its carved panels showing priests, guards and Roman families in procession.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How many Roman legions were led into the trap in the Teutoburg Forest in AD 9?",
+      "options": [
+        "Ten",
+        "Three",
+        "Five",
+        "One"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#teutoburg-forest",
+      "explanation": "The governor was persuaded to march three legions home by an unfamiliar route. Between 15,000 and 20,000 Romans died.",
+      "sourceQuote": "He fed the governor false reports of a revolt and persuaded him to march three legions home by an unfamiliar route.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Who was the loyal friend and gifted commander who won Octavian's battles for him?",
+      "options": [
+        "Tiberius",
+        "Agrippa",
+        "Mark Antony",
+        "Brutus"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#actium",
+      "explanation": "Octavian was no great general, but he had Agrippa. In 36 BC Agrippa destroyed the fleet of a renegade admiral whose blockades had starved Italy.",
+      "sourceQuote": "Octavian was no great general, but he had Agrippa, his loyal friend and gifted commander.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What name was given to the long era of calm that began under Augustus?",
+      "options": [
+        "Aerarium militare",
+        "Res Gestae",
+        "Pax Romana",
+        "Clades Variana"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#expansion-and-peace",
+      "explanation": "The Roman Peace, or Pax Romana, lasted with interruptions for about two centuries, as major wars inside the empire largely ceased.",
+      "sourceQuote": "This era of calm became known as the Roman Peace (*Pax Romana*), and it lasted, with interruptions, for about two centuries.",
+      "reviewFlags": []
+    },
+    {
+      "question": "To which river did Augustus's armies push Rome's frontier?",
+      "options": [
+        "The Tigris",
+        "The Euphrates",
+        "The Nile",
+        "The Danube"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#expansion-and-peace",
+      "explanation": "His armies completed the conquest of Spain, took the Alps and pushed the frontier to the Danube.",
+      "sourceQuote": "His armies completed the conquest of Spain, took the Alps and pushed Rome's frontier to the Danube river.",
+      "reviewFlags": []
+    },
+    {
+      "question": "In what year was the decisive Battle of Actium fought?",
+      "options": [
+        "42 BC",
+        "31 BC",
+        "44 BC",
+        "27 BC"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#actium",
+      "explanation": "Actium was fought on 2 September 31 BC in a bay on the western coast of Greece. Agrippa's fleet won the day.",
+      "sourceQuote": "The decisive clash came on 2 September 31 BC at Actium, a bay on the western coast of Greece.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What were Augustus's last words, as reported?",
+      "options": [
+        "\"The play is over; applaud\"",
+        "\"The die is cast\"",
+        "\"I came, I saw, I conquered\"",
+        "\"Give me back my legions\""
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#succession-and-death",
+      "explanation": "His reported last words were \"Acta est fabula, plaudite\". He died at Nola, near Naples, in AD 14.",
+      "sourceQuote": "His last words were reportedly \"The play is over; applaud\" (*Acta est fabula, plaudite*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which man did Augustus adopt in AD 4 and raise to powers equal to his own by AD 13?",
+      "options": [
+        "Lucius",
+        "Gaius",
+        "Tiberius",
+        "Agrippa"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#succession-and-death",
+      "explanation": "Tiberius, his wife's elder son from her first marriage, was a hard-working general with victories in Germany and the Balkans.",
+      "sourceQuote": "In AD 4 Augustus adopted him, and by AD 13 Tiberius held powers equal to his own.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How was the future Augustus related to Julius Caesar by birth?",
+      "options": [
+        "His mother was Caesar's sister",
+        "He was Caesar's grandson",
+        "His father was Caesar's brother",
+        "His mother was Caesar's niece"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#caesars-heir",
+      "explanation": "His great advantage was his mother, a niece of Julius Caesar. Caesar's will later named him main heir and adopted son.",
+      "sourceQuote": "His great advantage was his mother, a niece of Julius Caesar, the general who had made himself master of Rome.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What does the name \"Augustus\", granted by the Senate in 27 BC, mean?",
+      "options": [
+        "The revered",
+        "The first citizen",
+        "The conqueror",
+        "The father"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#first-settlement",
+      "explanation": "Augustus means \"the revered\". The name carried a religious glow, hinting that he stood close to the gods.",
+      "sourceQuote": "The same day the Senate gave him a new name: Augustus (*augustus*), meaning \"the revered\".",
+      "reviewFlags": []
+    }
+  ]
+}

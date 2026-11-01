@@ -530,7 +530,16 @@
       },
       "short": "Augustus",
       "era": "empire",
-      "mapArea": "wide"
+      "mapArea": "wide",
+      "battle": {
+        "name": "The Teutoburg Forest",
+        "year": "AD 9",
+        "enemy": "Arminius’s tribes",
+        "sec": "teutoburg-forest",
+        "level": "teutoburg",
+        "intro": "Three legions march through dark forest in pouring rain. The Germanic tribes are waiting."
+      },
+      "locked": true
     },
     {
       "id": "tiberius-and-caligula",

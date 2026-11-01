@@ -1,0 +1,190 @@
+{
+  "batchName": "Empire: Augustus and the Principate (27 BC-AD 14) - Medium Batch 1",
+  "chapterName": "Empire: Augustus and the Principate (27 BC-AD 14)",
+  "difficulty": 2,
+  "batchOrder": 3,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "What did Octavian's propaganda accuse Mark Antony of? (select all that apply)",
+      "options": [
+        "Abandoning his Roman wife, Octavian's sister",
+        "Deserting his troops at Philippi",
+        "Plotting the murder of Julius Caesar",
+        "Giving Roman lands to the queen's children",
+        "Starving Italy with naval blockades"
+      ],
+      "correctAnswers": [
+        0,
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#actium",
+      "explanation": "Octavian accused Antony of leaving Octavian's own sister for a foreign queen and giving away Roman lands to her children. In 32 BC the Senate declared war on the Egyptian queen.",
+      "sourceQuote": "Octavian waged a fierce propaganda war, accusing Antony of abandoning his Roman wife, Octavian's own sister, for a foreign queen and of giving away Roman lands to her children.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did the conflict with the queen of Kush on Egypt's southern border end?",
+      "options": [
+        "Rome abandoned southern Egypt",
+        "The Parthians mediated a truce",
+        "A treaty fixed a new border and guaranteed trade",
+        "Kush was annexed as a Roman province",
+        "The queen was taken to Rome in chains"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#expansion-and-peace",
+      "explanation": "After her raids and Roman counterattacks, the queen sent envoys and a treaty followed. Kush was a kingdom in modern Sudan.",
+      "sourceQuote": "After Roman counterattacks she sent envoys, and a treaty fixed a new border and guaranteed trade.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did Augustus recover the legionary standards held by the Parthians in 20 BC?",
+      "options": [
+        "By an alliance with Kush",
+        "By capturing the Parthian king",
+        "By a major invasion",
+        "By paying a huge ransom",
+        "By negotiation without a fight"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#expansion-and-peace",
+      "explanation": "Some Romans wanted revenge, but Augustus presented the deal as Parthia bowing to Rome. The standards were housed in the Temple of Mars the Avenger.",
+      "sourceQuote": "In 20 BC Augustus negotiated their return without a fight.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Why was the proposal to name Octavian after Romulus rejected?",
+      "options": [
+        "It had no religious meaning",
+        "Romulus had murdered his brother",
+        "It sounded too royal",
+        "Antony had used the name",
+        "The priests forbade it"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#first-settlement",
+      "explanation": "Romulus was Rome's legendary founder and first king, and Romans hated the idea of a king. The Senate chose Augustus instead.",
+      "sourceQuote": "Another suggestion, to call him after Romulus, Rome's legendary founder and first king, was rejected as too royal.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What claim about Augustus's death do many modern historians dismiss as slander?",
+      "options": [
+        "That he died in battle in Germany",
+        "That he took his own life",
+        "That Tiberius had him stabbed",
+        "That his wife poisoned him, perhaps with a fig",
+        "That the Senate starved him"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#succession-and-death",
+      "explanation": "Two ancient historians made the poisoning claim. Augustus died at Nola, near Naples, on 19 August AD 14, aged 75.",
+      "sourceQuote": "Two ancient historians claimed his wife poisoned him, perhaps with a fig, but many modern historians dismiss this as slander.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What was the first act of the triumvirate formed by Octavian, Mark Antony and a third general?",
+      "options": [
+        "A census of all provinces",
+        "A purge of senators and wealthy businessmen",
+        "A truce with Caesar's assassins",
+        "A grain dole for the poor",
+        "An invasion of Parthia"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#caesars-heir",
+      "explanation": "About 300 senators and wealthy businessmen were declared outlaws, and thousands more lost their property.",
+      "sourceQuote": "About 300 senators and wealthy businessmen were declared outlaws, and thousands more lost their property.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did the mock naval battle Augustus staged in 2 BC recreate?",
+      "options": [
+        "A Greek sea victory over Persia",
+        "The Battle of Actium",
+        "Rome's first war with Carthage",
+        "Antony's flight to Egypt",
+        "Agrippa's defeat of a renegade admiral"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#city-of-marble",
+      "explanation": "The battle was fought on an artificial lake fed by a new aqueduct more than 30 km long. Rome's first stone amphitheatre also opened in his time.",
+      "sourceQuote": "Rome's first stone amphitheatre opened in his time, and in 2 BC he staged a mock naval battle on an artificial lake fed by a new aqueduct more than 30 km (twenty miles) long, recreating a famous Greek sea victory over Persia.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did Augustus reportedly react to news of the Varian Disaster?",
+      "options": [
+        "He ordered a public triumph",
+        "He banged his head on the palace walls",
+        "He marched to Germany himself",
+        "He blamed the Senate",
+        "He retired from public life"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#teutoburg-forest",
+      "explanation": "It was said he cried for the dead commander to give him back his legions. Rome then abandoned conquest beyond the Rhine.",
+      "sourceQuote": "Augustus, it was said, banged his head against the palace walls, crying for the dead commander to give him back his legions.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Why did Augustus avoid openly naming an heir?",
+      "options": [
+        "The Senate had forbidden it",
+        "He hoped to restore the Republic",
+        "Roman law barred adopted heirs",
+        "His wife opposed all candidates",
+        "It would look like founding a monarchy"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#succession-and-death",
+      "explanation": "Augustus had no son, so he quietly promoted relatives instead.",
+      "sourceQuote": "Augustus had no son, and naming an heir openly would have looked like founding a monarchy.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Why had holding the consulship every year become a problem for Augustus by 23 BC?",
+      "options": [
+        "It required him to lead armies abroad",
+        "It made his dominance obvious and blocked rivals",
+        "It cost him his private fortune",
+        "It was banned by an old law",
+        "It forced him to live outside Rome"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#second-settlement",
+      "explanation": "Being elected consul every year made his dominance plain and shut out other ambitious senators. He gave it up on 1 July 23 BC.",
+      "sourceQuote": "Augustus had been elected consul every year, which made his dominance obvious and blocked other ambitious senators.",
+      "reviewFlags": []
+    }
+  ]
+}

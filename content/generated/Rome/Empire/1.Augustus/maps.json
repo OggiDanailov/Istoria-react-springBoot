@@ -1,0 +1,362 @@
+{
+  "description": "Maps for the chronicle, written by hand. Coordinates from Wikipedia; each map sits at the start of its section.",
+  "maps": [
+    {
+      "id": "augustan-empire",
+      "sec": "expansion-and-peace",
+      "title": "The empire of Augustus",
+      "caption": "Augustus pushed the frontier to the Danube and, until the disaster of AD 9, beyond the Rhine. Actium and Alexandria won him Egypt; Philippi had avenged Caesar. Rivers drawn roughly.",
+      "bounds": {
+        "latMin": 27.0,
+        "latMax": 55.0,
+        "lonMin": -10.0,
+        "lonMax": 48.0
+      },
+      "places": [
+        {
+          "name": "Rome",
+          "latin": "Roma",
+          "lat": 41.893,
+          "lon": 12.483,
+          "kind": "rome",
+          "side": "l",
+          "dy": 8
+        },
+        {
+          "name": "Kalkriese",
+          "lat": 52.41,
+          "lon": 8.13,
+          "kind": "battle",
+          "side": "l"
+        },
+        {
+          "name": "Philippi",
+          "lat": 41.01,
+          "lon": 24.29,
+          "kind": "battle",
+          "side": "r"
+        },
+        {
+          "name": "Actium",
+          "lat": 38.95,
+          "lon": 20.77,
+          "kind": "battle",
+          "side": "l",
+          "dy": 8
+        },
+        {
+          "name": "Alexandria",
+          "lat": 31.2,
+          "lon": 29.9,
+          "side": "r"
+        }
+      ],
+      "rivers": [
+        {
+          "name": "Rhine",
+          "pts": [
+            [
+              46.6,
+              9.6
+            ],
+            [
+              47.6,
+              7.6
+            ],
+            [
+              49.0,
+              8.4
+            ],
+            [
+              50.4,
+              7.6
+            ],
+            [
+              51.8,
+              6.2
+            ],
+            [
+              52.0,
+              4.6
+            ]
+          ]
+        },
+        {
+          "name": "Danube",
+          "pts": [
+            [
+              48.0,
+              8.5
+            ],
+            [
+              48.4,
+              10.5
+            ],
+            [
+              48.8,
+              13.4
+            ],
+            [
+              48.2,
+              16.4
+            ],
+            [
+              47.8,
+              18.9
+            ],
+            [
+              46.2,
+              18.9
+            ],
+            [
+              45.3,
+              19.6
+            ],
+            [
+              44.8,
+              20.5
+            ],
+            [
+              44.6,
+              22.5
+            ],
+            [
+              43.8,
+              25.0
+            ],
+            [
+              44.1,
+              27.5
+            ],
+            [
+              45.2,
+              29.6
+            ]
+          ]
+        }
+      ],
+      "peoples": [
+        {
+          "name": "Germania",
+          "lat": 52.3,
+          "lon": 16.5
+        },
+        {
+          "name": "Spain",
+          "latin": "Hispania",
+          "lat": 40.0,
+          "lon": -4.2
+        },
+        {
+          "name": "Gaul",
+          "latin": "Gallia",
+          "lat": 46.8,
+          "lon": 2.4
+        },
+        {
+          "name": "Egypt",
+          "lat": 27.8,
+          "lon": 30.5
+        },
+        {
+          "name": "Parthia",
+          "lat": 34.6,
+          "lon": 40.2
+        }
+      ]
+    },
+    {
+      "id": "teutoburg",
+      "sec": "teutoburg-forest",
+      "title": "Kalkriese, AD 9: the trap",
+      "caption": "Strung out over 15 to 20 km in rain and forest, the Roman column was squeezed into a gap about 100 metres wide between a wooded hill and a bog, with a hidden earthen wall along the hill. The Germanic warriors attacked from above and behind the wall. A simplified plan.",
+      "plan": true,
+      "height": 190,
+      "key": {
+        "rome": "Romans",
+        "enemy": "Germanic warriors"
+      },
+      "rivers": [
+        {
+          "pts": [
+            [
+              0,
+              150
+            ],
+            [
+              80,
+              146
+            ],
+            [
+              160,
+              154
+            ],
+            [
+              240,
+              147
+            ],
+            [
+              300,
+              152
+            ]
+          ],
+          "name": "The bog",
+          "label": [
+            250,
+            170
+          ]
+        }
+      ],
+      "units": [
+        {
+          "side": "enemy",
+          "x": 20,
+          "y": 22,
+          "w": 44,
+          "h": 14,
+          "name": "Warriors on the wooded hill",
+          "lx": 150,
+          "ly": 16
+        },
+        {
+          "side": "enemy",
+          "x": 128,
+          "y": 26,
+          "w": 44,
+          "h": 14
+        },
+        {
+          "side": "enemy",
+          "x": 236,
+          "y": 22,
+          "w": 44,
+          "h": 14
+        },
+        {
+          "side": "enemy",
+          "x": 40,
+          "y": 74,
+          "w": 220,
+          "h": 6,
+          "name": "Hidden earthen wall",
+          "lx": 150,
+          "ly": 68
+        },
+        {
+          "side": "rome",
+          "x": 18,
+          "y": 104,
+          "w": 18,
+          "h": 10,
+          "name": "The Roman column, strung out for 15–20 km",
+          "lx": 150,
+          "ly": 126
+        },
+        {
+          "side": "rome",
+          "x": 47,
+          "y": 104,
+          "w": 18,
+          "h": 10
+        },
+        {
+          "side": "rome",
+          "x": 76,
+          "y": 104,
+          "w": 18,
+          "h": 10
+        },
+        {
+          "side": "rome",
+          "x": 105,
+          "y": 104,
+          "w": 18,
+          "h": 10
+        },
+        {
+          "side": "rome",
+          "x": 134,
+          "y": 104,
+          "w": 18,
+          "h": 10
+        },
+        {
+          "side": "rome",
+          "x": 163,
+          "y": 104,
+          "w": 18,
+          "h": 10
+        },
+        {
+          "side": "rome",
+          "x": 192,
+          "y": 104,
+          "w": 18,
+          "h": 10
+        },
+        {
+          "side": "rome",
+          "x": 221,
+          "y": 104,
+          "w": 18,
+          "h": 10
+        },
+        {
+          "side": "rome",
+          "x": 250,
+          "y": 104,
+          "w": 18,
+          "h": 10
+        },
+        {
+          "side": "rome",
+          "x": 279,
+          "y": 104,
+          "w": 18,
+          "h": 10
+        }
+      ],
+      "moves": [
+        {
+          "side": "enemy",
+          "pts": [
+            [
+              42,
+              38
+            ],
+            [
+              52,
+              98
+            ]
+          ]
+        },
+        {
+          "side": "enemy",
+          "pts": [
+            [
+              150,
+              42
+            ],
+            [
+              152,
+              98
+            ]
+          ]
+        },
+        {
+          "side": "enemy",
+          "pts": [
+            [
+              258,
+              38
+            ],
+            [
+              246,
+              98
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}
