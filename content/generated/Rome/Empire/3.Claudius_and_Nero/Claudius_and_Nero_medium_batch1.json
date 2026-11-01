@@ -1,0 +1,189 @@
+{
+  "batchName": "Empire: Claudius and Nero (AD 41-68) - Medium Batch 1",
+  "chapterName": "Empire: Claudius and Nero (AD 41-68)",
+  "difficulty": 2,
+  "batchOrder": 3,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "How long did Claudius himself spend in Britain?",
+      "options": [
+        "Two years",
+        "Six months",
+        "Two months",
+        "Three days",
+        "Sixteen days"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#conquest-of-britain",
+      "explanation": "Claudius crossed with reinforcements after the first fighting and spent just sixteen days on the island. Ancient writers claimed he brought elephants, a story modern historians doubt.",
+      "sourceQuote": "He spent just sixteen days on the island.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did Claudius's third wife do in AD 48 while he was away at Ostia?",
+      "options": [
+        "Led the guard in a coup",
+        "Freed all the palace slaves",
+        "Publicly married her lover, a senator",
+        "Poisoned his son Britannicus",
+        "Fled to Egypt with his treasury"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#claudius-wives-and-death",
+      "explanation": "She publicly married a senator; whether this was a plot to seize the throne is still debated. She was executed.",
+      "sourceQuote": "In AD 48, while Claudius was away at Ostia, she publicly married her lover, a senator.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Where was Nero when the Great Fire began, according to Tacitus?",
+      "options": [
+        "At the Olympic Games in Greece",
+        "At Antium, on the coast",
+        "At a villa near Naples",
+        "On campaign in Germany",
+        "In his palace on the Palatine"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#great-fire-of-rome",
+      "explanation": "Tacitus noted Nero was at Antium and left the question of his guilt open. Rumours nonetheless claimed he sang of the fall of Troy while Rome burned.",
+      "sourceQuote": "He noted that Nero was at Antium, on the coast, when the fire began.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Why was Britannicus poisoned in AD 55?",
+      "options": [
+        "He claimed the conquest of Britain as his own",
+        "He plotted with the Senate to kill Nero",
+        "The guard proclaimed him emperor",
+        "Agrippina threatened to back him against Nero",
+        "He refused to marry Nero's sister"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#nero-early-reign",
+      "explanation": "Britannicus was poisoned after Agrippina threatened to back him. Four years later Nero had Agrippina herself killed.",
+      "sourceQuote": "In AD 55 Claudius's son Britannicus was poisoned after Agrippina threatened to back him.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Where was the Roman governor campaigning when Boudica's revolt broke out?",
+      "options": [
+        "Anglesey in Wales",
+        "Caledonia in the far north",
+        "The Isle of Wight",
+        "Hibernia across the sea",
+        "Gaul across the Channel"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#boudica-revolt",
+      "explanation": "He hurried back from Anglesey but was too weak to save Londinium, a trading town just twenty years old, which he abandoned to be burned.",
+      "sourceQuote": "The governor hurried back from a campaign on the island of Anglesey in Wales, but he was too weak to save Londinium, a trading town just twenty years old.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Who actually steered government during 'Nero's five good years'?",
+      "options": [
+        "Agrippina alone",
+        "Nero's mistress",
+        "Nero's tutor and the guard commander",
+        "Nero's freedmen secretaries",
+        "The consuls and the Senate"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#nero-early-reign",
+      "explanation": "Though Agrippina meant to rule through her son, his tutor and the commander of the guard steered government. Tax collectors were controlled more strictly, and slaves could complain of mistreatment.",
+      "sourceQuote": "But Nero's tutor and the commander of the guard steered government, and these years were later remembered as \"Nero's five good years\" (*quinquennium Neronis*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "What happened to Nero's old tutor after the conspiracy of AD 65 was betrayed?",
+      "options": [
+        "He was made commander of the guard",
+        "He was exiled to an island",
+        "He fled to Greece",
+        "He was ordered to kill himself",
+        "He was pardoned and retired"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#nero-downfall",
+      "explanation": "The philosopher who had once written Nero's first speech was ordered to kill himself. The conspirators, senators and guard officers, were executed.",
+      "sourceQuote": "Nero's old tutor, a philosopher, was ordered to kill himself.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did the Iceni king's will leave, a will that Rome ignored?",
+      "options": [
+        "His kingdom to a neighbouring tribe",
+        "His treasury to the Roman governor",
+        "His kingdom jointly to his two daughters and Nero",
+        "His kingdom entirely to Boudica",
+        "His lands to the colony at Camulodunum"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#boudica-revolt",
+      "explanation": "He left his kingdom jointly to his two daughters and Nero, but Rome seized it. Tacitus says Boudica was flogged and her daughters raped.",
+      "sourceQuote": "Her husband, the king, ruled as a Roman ally and left his kingdom jointly to their two daughters and the emperor Nero.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did Claudius rule about sick slaves abandoned by their masters on an island in the Tiber?",
+      "options": [
+        "They became free if they recovered",
+        "They were sold to pay public debts",
+        "They were returned to their masters",
+        "They were sent to serve the grain fleet",
+        "They became property of the state"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#claudius-government",
+      "explanation": "His famous ruling freed abandoned sick slaves if they recovered. Claudius loved law and judged many cases himself.",
+      "sourceQuote": "One famous ruling freed sick slaves whom masters had abandoned to die on an island in the Tiber, if they recovered.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Why did Claudius's family stop his early history of Rome's civil wars?",
+      "options": [
+        "It was too frank for them",
+        "It was copied from his tutor",
+        "It was written in Etruscan",
+        "It praised Carthage over Rome",
+        "It mocked the reigning emperor"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#claudius-early-life",
+      "explanation": "His history of the civil wars was too frank for his family, who stopped it and kept him out of public life. He still became a serious scholar, writing twenty books on the Etruscans.",
+      "sourceQuote": "His early history of Rome's civil wars was too frank for his family, who stopped it and kept him out of public life.",
+      "reviewFlags": []
+    }
+  ]
+}

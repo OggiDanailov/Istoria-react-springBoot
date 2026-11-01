@@ -1,0 +1,632 @@
+{
+  "chapterName": "Empire: Claudius and Nero (AD 41-68)",
+  "model": "claude-opus-5-5",
+  "briefing": {
+    "title": "Rome, AD 41",
+    "paragraphs": [
+      "January AD 41. The emperor has just been murdered by officers of his own bodyguard, and the killers seem ready to wipe out his whole family. Behind a palace curtain cowers his uncle Claudius, a limping, stammering scholar whom everyone has dismissed as a fool.",
+      "What follows is 27 years of two very different emperors: Claudius, who conquers Britain and runs the empire with surprising skill, and his stepson Nero, a singing artist-emperor whose reign brings fire, revolt and finally civil war. Can any ruler survive Rome's Senate, soldiers and family?"
+    ]
+  },
+  "timelines": [
+    {
+      "name": "Two Emperors",
+      "blurb": "The big turning points from Claudius's birth to Nero's death.",
+      "events": [
+        {
+          "label": "Claudius born at Lugdunum",
+          "when": "10 BC",
+          "year": -10,
+          "fact": "Born at Lugdunum, modern Lyon, Claudius was the first Roman emperor born outside Italy.",
+          "sectionId": "claudius-early-life",
+          "reviewFlags": []
+        },
+        {
+          "label": "Four legions invade Britain",
+          "when": "AD 43",
+          "year": 43,
+          "fact": "Claudius sent four legions across the Channel after a British ally driven from his lands appealed for help.",
+          "sectionId": "conquest-of-britain",
+          "reviewFlags": []
+        },
+        {
+          "label": "Great Fire breaks out in Rome",
+          "when": "AD 64",
+          "year": 64,
+          "fact": "Starting near the Circus Maximus, the fire destroyed three of Rome's fourteen districts and badly damaged seven more.",
+          "sectionId": "great-fire-of-rome",
+          "reviewFlags": []
+        },
+        {
+          "label": "Nero dies outside Rome",
+          "when": "AD 68",
+          "year": 68,
+          "fact": "Abandoned by his guards and declared a public enemy, Nero stabbed himself at a freedman's villa, and his dynasty died with him.",
+          "sectionId": "nero-downfall",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Power and Family",
+      "blurb": "Offices, heirs and murders across two reigns.",
+      "events": [
+        {
+          "label": "Claudius serves as consul",
+          "when": "AD 37",
+          "year": 37,
+          "fact": "Claudius finally held a top office alongside his nephew, the reigning emperor, who mocked and humiliated him.",
+          "sectionId": "claudius-early-life",
+          "reviewFlags": []
+        },
+        {
+          "label": "Claudius hailed emperor",
+          "when": "24 January AD 41",
+          "year": 41,
+          "fact": "After his nephew's murder, tradition says a guardsman found Claudius behind a curtain and hailed him as emperor.",
+          "sectionId": "claudius-accession",
+          "reviewFlags": []
+        },
+        {
+          "label": "Claudius revives the censorship",
+          "when": "AD 47",
+          "year": 47,
+          "fact": "As censor, keeper of the lists of citizens and senators, Claudius admitted nobles from Gaul into the Senate.",
+          "sectionId": "claudius-government",
+          "reviewFlags": []
+        },
+        {
+          "label": "Claudius adopts Agrippina's son",
+          "when": "AD 50",
+          "year": 50,
+          "fact": "Claudius renamed the boy Nero, married him to his daughter and made him joint heir with Britannicus.",
+          "sectionId": "claudius-wives-and-death",
+          "reviewFlags": []
+        },
+        {
+          "label": "Nero has his mother killed",
+          "when": "AD 59",
+          "year": 59,
+          "fact": "Ancient writers say a freedman arranged a shipwreck, then murdered Agrippina when she swam ashore and called it suicide.",
+          "sectionId": "nero-early-reign",
+          "reviewFlags": []
+        },
+        {
+          "label": "Nero competes at the Olympic Games",
+          "when": "AD 67",
+          "year": 67,
+          "fact": "Nero won every contest in Greece, even a chariot race in which he fell out and never finished.",
+          "sectionId": "nero-downfall",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Year by Year",
+      "blurb": "A tighter sequence of plots, projects and revolts.",
+      "events": [
+        {
+          "label": "Nero born at Antium",
+          "when": "15 December AD 37",
+          "year": 37,
+          "fact": "Nero was born Lucius Domitius Ahenobarbus at Antium, a seaside town south of Rome.",
+          "sectionId": "nero-early-reign",
+          "reviewFlags": []
+        },
+        {
+          "label": "Claudius's third wife weds her lover",
+          "when": "AD 48",
+          "year": 48,
+          "fact": "While Claudius was away at Ostia, his third wife publicly married a senator; she was executed.",
+          "sectionId": "claudius-wives-and-death",
+          "reviewFlags": []
+        },
+        {
+          "label": "Two new aqueducts reach Rome",
+          "when": "AD 52",
+          "year": 52,
+          "fact": "Claudius was a great builder, and two new aqueducts brought water into the city.",
+          "sectionId": "claudius-government",
+          "reviewFlags": []
+        },
+        {
+          "label": "Claudius dies, aged 63",
+          "when": "13 October AD 54",
+          "year": 54,
+          "fact": "Nearly all ancient writers blamed Agrippina and poisoned mushrooms, though some modern historians doubt the murder.",
+          "sectionId": "claudius-wives-and-death",
+          "reviewFlags": []
+        },
+        {
+          "label": "Britannicus is poisoned",
+          "when": "AD 55",
+          "year": 55,
+          "fact": "Claudius's son was poisoned after Agrippina threatened to back him against Nero.",
+          "sectionId": "nero-early-reign",
+          "reviewFlags": []
+        },
+        {
+          "label": "Boudica leads the Iceni in revolt",
+          "when": "AD 60 or 61",
+          "year": 60,
+          "fact": "After Rome seized her late husband's kingdom, Boudica's rebels burned Camulodunum, Londinium and Verulamium.",
+          "sectionId": "boudica-revolt",
+          "reviewFlags": []
+        },
+        {
+          "label": "Senators' plot against Nero betrayed",
+          "when": "AD 65",
+          "year": 65,
+          "fact": "A conspiracy of senators and guard officers was betrayed, and Nero's old tutor was ordered to kill himself.",
+          "sectionId": "nero-downfall",
+          "reviewFlags": []
+        },
+        {
+          "label": "Governor in Gaul rebels against Nero",
+          "when": "March AD 68",
+          "year": 68,
+          "fact": "The governor rebelled against Nero's taxes and urged the governor of Spain to claim the throne.",
+          "sectionId": "nero-downfall",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "matchSets": [
+    {
+      "name": "Places of the Age",
+      "blurb": "Match each place to its role in the story.",
+      "pairs": [
+        {
+          "name": "Lugdunum",
+          "match": "Modern Lyon, where Claudius was born in 10 BC",
+          "sectionId": "claudius-early-life",
+          "reviewFlags": []
+        },
+        {
+          "name": "Camulodunum",
+          "match": "Veterans' colony with Claudius's temple, Boudica's first target",
+          "sectionId": "boudica-revolt",
+          "reviewFlags": []
+        },
+        {
+          "name": "Antium",
+          "match": "Seaside town where Nero was born and stayed as the fire began",
+          "sectionId": "great-fire-of-rome",
+          "reviewFlags": []
+        },
+        {
+          "name": "Ostia",
+          "match": "Rome's port, near which Claudius built a harbour with a lighthouse",
+          "sectionId": "claudius-government",
+          "reviewFlags": []
+        },
+        {
+          "name": "Fucine Lake",
+          "match": "Its drainage tunnel flooded a gladiator show",
+          "sectionId": "claudius-government",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Words of Power",
+      "blurb": "Match each Roman term to its meaning.",
+      "pairs": [
+        {
+          "name": "Praetorian Guard",
+          "match": "Elite bodyguard in Rome that made Claudius emperor",
+          "sectionId": "claudius-accession",
+          "reviewFlags": []
+        },
+        {
+          "name": "Censor",
+          "match": "Revived office that kept the lists of citizens and senators",
+          "sectionId": "claudius-government",
+          "reviewFlags": []
+        },
+        {
+          "name": "Freedmen",
+          "match": "Former slaves who headed Claudius's offices for letters and finance",
+          "sectionId": "claudius-government",
+          "reviewFlags": []
+        },
+        {
+          "name": "Golden House",
+          "match": "Nero's new palace with parks and a 30 m statue of himself",
+          "sectionId": "great-fire-of-rome",
+          "reviewFlags": []
+        },
+        {
+          "name": "Damnatio memoriae",
+          "match": "Condemnation of a ruler's memory; Nero's portraits were defaced",
+          "sectionId": "judging-the-sources",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "trueFalseDecks": [
+    {
+      "name": "Claudius",
+      "blurb": "The scholar who became emperor by accident.",
+      "cards": [
+        {
+          "claim": "Claudius wrote twenty books on Carthage.",
+          "answer": false,
+          "why": "His twenty books were on the Etruscans, who ruled much of Italy before Rome; he wrote eight on Carthage.",
+          "sectionId": "claudius-early-life",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Claudius rewarded each guardsman with 15,000 sesterces.",
+          "answer": true,
+          "why": "Critics called it the first time an emperor bought the army's loyalty, though earlier emperors had left similar gifts in their wills.",
+          "sectionId": "claudius-accession",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Claudius went before the Senate to win its approval before taking power.",
+          "answer": false,
+          "why": "The Senate demanded he appear, but he wisely refused, and the senators were forced to accept him.",
+          "sectionId": "claudius-accession",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Claudius's census of AD 48 counted about a million fewer citizens than a generation before.",
+          "answer": false,
+          "why": "It counted 5,984,072 adult male citizens, about a million more than a generation before.",
+          "sectionId": "claudius-government",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Claudius ruled that sick slaves abandoned on an island in the Tiber were free if they recovered.",
+          "answer": true,
+          "why": "Claudius loved law and judged many cases himself; this was one of his famous rulings.",
+          "sectionId": "claudius-government",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Claudius spent just sixteen days in Britain.",
+          "answer": true,
+          "why": "He crossed over with reinforcements once the first fighting was over and stayed only sixteen days.",
+          "sectionId": "conquest-of-britain",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Claudius proudly took the title \"Britannicus\" for himself.",
+          "answer": false,
+          "why": "He took the title only for his baby son, who became known as Britannicus.",
+          "sectionId": "conquest-of-britain",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Claudius died on 13 October AD 54, aged 63.",
+          "answer": true,
+          "why": "Ancient writers blamed Agrippina for poisoning him, but some modern historians doubt the murder.",
+          "sectionId": "claudius-wives-and-death",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Nero",
+      "blurb": "Artist, emperor and the villain of the sources.",
+      "cards": [
+        {
+          "claim": "Nero became emperor at the age of 16.",
+          "answer": true,
+          "why": "When Claudius died in AD 54, the Praetorian Guard and the Senate backed the 16-year-old.",
+          "sectionId": "nero-early-reign",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Tacitus blamed Nero's first wife for the murder of Agrippina.",
+          "answer": false,
+          "why": "Tacitus blamed Nero's mistress; modern historians doubt this, since Nero married her only three years later.",
+          "sectionId": "nero-early-reign",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Boudica's husband left his kingdom jointly to their two daughters and Nero.",
+          "answer": true,
+          "why": "When he died, Rome ignored his will and seized the kingdom, sparking the revolt.",
+          "sectionId": "boudica-revolt",
+          "reviewFlags": []
+        },
+        {
+          "claim": "The Roman governor crushed Boudica with about 100,000 men.",
+          "answer": false,
+          "why": "He had almost 10,000 men and was heavily outnumbered, but won with javelins and a wedge charge.",
+          "sectionId": "boudica-revolt",
+          "reviewFlags": []
+        },
+        {
+          "claim": "The Great Fire destroyed ten of Rome's fourteen districts outright.",
+          "answer": false,
+          "why": "Three districts were destroyed and seven more badly damaged.",
+          "sectionId": "great-fire-of-rome",
+          "reviewFlags": []
+        },
+        {
+          "claim": "According to Tacitus, Nero blamed the Christians for the fire.",
+          "answer": true,
+          "why": "Many Christians were thrown to wild beasts, crucified or burned alive, out of cruelty rather than justice.",
+          "sectionId": "great-fire-of-rome",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Nero died at a freedman's villa about 6 km (four miles) outside Rome.",
+          "answer": true,
+          "why": "He fled there in disguise and stabbed himself in the throat with his secretary's help as horsemen approached.",
+          "sectionId": "nero-downfall",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Tacitus and the other main writers on Nero wrote within ten years of his death.",
+          "answer": false,
+          "why": "Tacitus and the biographer wrote more than fifty years after Nero's death, the Greek senator more than 150.",
+          "sectionId": "judging-the-sources",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "oddOneOut": [
+    {
+      "items": [
+        "Camulodunum",
+        "Londinium",
+        "Anglesey",
+        "Verulamium"
+      ],
+      "oddIndex": 2,
+      "why": "Boudica's rebels attacked and burned Camulodunum, Londinium and Verulamium; Anglesey is the island in Wales where the governor was campaigning.",
+      "sectionId": "boudica-revolt",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "The Etruscans",
+        "The fall of Troy",
+        "Carthage",
+        "Dice"
+      ],
+      "oddIndex": 1,
+      "why": "Claudius wrote books on the Etruscans, Carthage and dice; the fall of Troy is what Nero was said to sing about while Rome burned.",
+      "sectionId": "claudius-early-life",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Two new aqueducts",
+        "Harbour north of Ostia",
+        "Fucine Lake tunnel",
+        "The Golden House"
+      ],
+      "oddIndex": 3,
+      "why": "The aqueducts, harbour and tunnel were Claudius's projects; the Golden House was Nero's palace built after the fire.",
+      "sectionId": "claudius-government",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "He had been seriously ill",
+        "His food taster kept his job",
+        "AD 54 was an unhealthy year",
+        "Nero wed his mistress years later"
+      ],
+      "oddIndex": 3,
+      "why": "The first three are why some modern historians doubt Claudius was murdered; the late marriage is why they doubt Nero's mistress drove him to kill Agrippina.",
+      "sectionId": "claudius-wives-and-death",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Paid to clear bodies and rubble",
+        "Opened his palaces to the homeless",
+        "Insured winter grain voyages",
+        "Brought in food"
+      ],
+      "oddIndex": 2,
+      "why": "Nero cleared rubble, sheltered the homeless and brought food after the fire; insuring merchants on winter voyages to Egypt was Claudius's policy.",
+      "sectionId": "great-fire-of-rome",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Stricter control of tax collectors",
+        "Return of treason trials",
+        "Slaves could complain of abuse",
+        "Promise to end secret trials"
+      ],
+      "oddIndex": 1,
+      "why": "The others belong to Nero's promising early years; treason trials returned only after his mother's murder.",
+      "sectionId": "nero-early-reign",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Tacitus",
+        "A biographer of the emperors",
+        "A Jewish historian",
+        "A later Greek senator"
+      ],
+      "oddIndex": 2,
+      "why": "Almost everything we know comes from Tacitus, the biographer and the Greek senator; the Jewish historian only complained about flattering and lying writers.",
+      "sectionId": "judging-the-sources",
+      "reviewFlags": []
+    }
+  ],
+  "whoAmI": [
+    {
+      "name": "The Imperial Family",
+      "blurb": "Emperors and heirs of a deadly dynasty.",
+      "people": [
+        {
+          "name": "Claudius",
+          "options": [
+            "Claudius",
+            "Nero",
+            "Britannicus",
+            "Agrippina"
+          ],
+          "clues": [
+            "I wrote twenty books on the Etruscans and even one on dice.",
+            "My own mother called me a monster and her yardstick for stupidity.",
+            "A guardsman found me hiding behind a curtain and hailed me emperor.",
+            "I was born at Lugdunum and sent four legions to conquer Britain."
+          ],
+          "sectionId": "claudius-accession",
+          "reviewFlags": []
+        },
+        {
+          "name": "Nero",
+          "options": [
+            "Claudius",
+            "Nero",
+            "Britannicus",
+            "Agrippina"
+          ],
+          "clues": [
+            "I was born at Antium, a seaside town south of Rome, in AD 37.",
+            "I won every contest at the Olympic Games, even a race I never finished.",
+            "Rumours said I started the Great Fire to make room for my Golden House.",
+            "I became emperor at 16 after my stepfather died in AD 54."
+          ],
+          "sectionId": "nero-early-reign",
+          "reviewFlags": []
+        },
+        {
+          "name": "Britannicus",
+          "options": [
+            "Claudius",
+            "Nero",
+            "Britannicus",
+            "Agrippina"
+          ],
+          "clues": [
+            "I was still a child when my father married his own niece.",
+            "My father had begun talking of my coming of age shortly before he died.",
+            "My name comes from a victory title my father refused for himself.",
+            "Claudius's own son by birth, I was poisoned in AD 55."
+          ],
+          "sectionId": "nero-early-reign",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Queens and Chroniclers",
+      "blurb": "A rebel queen, an empress and the historian who told their stories.",
+      "people": [
+        {
+          "name": "Boudica",
+          "options": [
+            "Boudica",
+            "Agrippina",
+            "Tacitus",
+            "Claudius"
+          ],
+          "clues": [
+            "Later centuries made me a national heroine.",
+            "My husband left his kingdom jointly to our two daughters and the emperor.",
+            "My rebels burned Londinium and Verulamium.",
+            "I was queen of the Iceni, a tribe in what is now Norfolk."
+          ],
+          "sectionId": "boudica-revolt",
+          "reviewFlags": []
+        },
+        {
+          "name": "Agrippina",
+          "options": [
+            "Boudica",
+            "Agrippina",
+            "Tacitus",
+            "Claudius"
+          ],
+          "clues": [
+            "My portrait appeared on my son's coins in the place reserved for the emperor.",
+            "A great-granddaughter of the first emperor, I married my own uncle.",
+            "Ancient writers said I poisoned my husband with mushrooms.",
+            "My son had me killed in AD 59 after a staged shipwreck."
+          ],
+          "sectionId": "claudius-wives-and-death",
+          "reviewFlags": []
+        },
+        {
+          "name": "Tacitus",
+          "options": [
+            "Boudica",
+            "Agrippina",
+            "Tacitus",
+            "Claudius"
+          ],
+          "clues": [
+            "I admitted that histories of these emperors were falsified out of fear while they lived.",
+            "I noted that Nero was at Antium when the Great Fire began.",
+            "I blamed Nero's mistress for the murder of his mother.",
+            "I am the senator-historian whose Annals give the fullest account of Nero."
+          ],
+          "sectionId": "judging-the-sources",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "places": [
+    {
+      "name": "Lugdunum",
+      "wikipediaTitle": "Lugdunum",
+      "lat": 45.75972222,
+      "lon": 4.81944444,
+      "why": "Claudius was born here, modern Lyon, and a bronze plaque found here preserves his speech admitting Gallic nobles to the Senate.",
+      "sectionId": "claudius-early-life",
+      "coordinates": "Wikipedia: Lugdunum",
+      "reviewFlags": []
+    },
+    {
+      "name": "Camulodunum",
+      "wikipediaTitle": "Camulodunum",
+      "lat": 51.89194444,
+      "lon": 0.89805556,
+      "why": "Capital of the new province of Britain with a great temple to Claudius, it was the first target of Boudica's revolt.",
+      "sectionId": "conquest-of-britain",
+      "coordinates": "Wikipedia: Camulodunum",
+      "reviewFlags": []
+    },
+    {
+      "name": "Anglesey",
+      "wikipediaTitle": "Anglesey",
+      "lat": 53.28333333,
+      "lon": -4.33333333,
+      "why": "The governor was campaigning on this Welsh island when Boudica's revolt broke out.",
+      "sectionId": "boudica-revolt",
+      "coordinates": "Wikipedia: Anglesey",
+      "reviewFlags": []
+    },
+    {
+      "name": "Egypt",
+      "wikipediaTitle": "Egypt",
+      "lat": 26,
+      "lon": 30,
+      "why": "Claudius insured merchants who risked winter voyages to Egypt to end Rome's grain shortages.",
+      "sectionId": "claudius-government",
+      "coordinates": "Wikipedia: Egypt",
+      "reviewFlags": [
+        "model's position is 465 km from Wikipedia's \"Egypt\"; check the article is the right place",
+        "outside the map area"
+      ]
+    },
+    {
+      "name": "Greece",
+      "wikipediaTitle": "Olympia, Greece",
+      "lat": 37.63833333,
+      "lon": 21.63,
+      "why": "In AD 67 Nero competed at the Olympic Games in Greece and won every contest.",
+      "sectionId": "nero-downfall",
+      "coordinates": "Wikipedia: Olympia, Greece",
+      "reviewFlags": []
+    }
+  ]
+}

@@ -1,0 +1,193 @@
+{
+  "batchName": "Empire: Claudius and Nero (AD 41-68) - Medium Batch 2",
+  "chapterName": "Empire: Claudius and Nero (AD 41-68)",
+  "difficulty": 2,
+  "batchOrder": 4,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Whom did Claudius's family hire to discipline him, believing his condition came from laziness?",
+      "options": [
+        "A former mule-driver",
+        "A gladiator trainer",
+        "A Greek philosopher",
+        "A strict priestess",
+        "A retired centurion"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#claudius-early-life",
+      "explanation": "A former mule-driver was hired to discipline him. His mother even called him a monster and used him as her yardstick for stupidity.",
+      "sourceQuote": "A former mule-driver was hired to discipline him, on the theory that his condition came from laziness.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Why do modern historians think Claudius married Agrippina?",
+      "options": [
+        "She controlled the Praetorian Guard",
+        "He needed her bloodline's prestige while Britannicus was a child",
+        "She had led armies in Germany",
+        "He was captivated by her charms",
+        "The Senate ordered the match"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#claudius-wives-and-death",
+      "explanation": "Ancient writers said she won him with her charms, but modern historians see politics: her bloodline gave prestige while his son was still young. He later made her son Nero joint heir.",
+      "sourceQuote": "Modern historians see politics: Claudius needed the prestige of her bloodline, and his son Britannicus was still a child.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What sparked the rebellion against Nero in March AD 68?",
+      "options": [
+        "Boudica's daughters raised Britain in revolt",
+        "A governor in Gaul rebelled against Nero's taxes",
+        "The Senate ordered Nero's arrest",
+        "A Parthian invasion of the east",
+        "The Praetorian Guard proclaimed a new emperor"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#nero-downfall",
+      "explanation": "The governor of part of Gaul rebelled over taxes and urged the governor of Spain to claim the throne. Even the guard commander later abandoned Nero.",
+      "sourceQuote": "In March AD 68 the governor of part of Gaul rebelled against Nero's taxes and urged the governor of Spain to claim the throne.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How much did Claudius give each guardsman after his accession?",
+      "options": [
+        "50,000 sesterces",
+        "15,000 sesterces",
+        "150,000 sesterces",
+        "5,000 sesterces",
+        "1,500 sesterces"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#claudius-accession",
+      "explanation": "Each guardsman received 15,000 sesterces. Critics called it the first time an emperor had bought the army's loyalty, though earlier emperors had left similar gifts in their wills.",
+      "sourceQuote": "He rewarded each guardsman with 15,000 sesterces.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did Tacitus admit about histories of these emperors?",
+      "options": [
+        "They were copied from Claudius's books",
+        "They were falsified from fear, then written in fresh hatred",
+        "They exaggerated the emperors' victories",
+        "They were all written by freedmen",
+        "They were lost in the Great Fire"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#judging-the-sources",
+      "explanation": "Tacitus admitted histories were falsified out of fear while the emperors lived and written in fresh hatred after they died. A Jewish historian likewise complained of flattery and lies about Nero.",
+      "sourceQuote": "Tacitus himself admitted that histories of these emperors were falsified out of fear while they lived and written in fresh hatred after they died.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which measures did Claudius take to end Rome's winter grain shortages? (select all that apply)",
+      "options": [
+        "Fixed grain prices throughout Italy",
+        "Built a new harbour north of Ostia",
+        "Insured merchants sailing to Egypt in winter",
+        "Confiscated private grain stores",
+        "Added a lighthouse to the new harbour"
+      ],
+      "correctAnswers": [
+        1,
+        2,
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#claudius-government",
+      "explanation": "Claudius built a new harbour with a lighthouse north of Ostia and insured merchants who risked winter voyages to Egypt. He also brought two new aqueducts into Rome in AD 52.",
+      "sourceQuote": "To end winter grain shortages, he built a new harbour north of Ostia, Rome's port, with a lighthouse, and insured merchants who risked winter voyages to Egypt.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Why were the senators forced to accept Claudius as emperor in AD 41?",
+      "options": [
+        "They voted unanimously for him at once",
+        "The people rioted until the Senate gave way",
+        "He was the named heir in his nephew's will",
+        "His legions marched on the Senate house",
+        "They argued over who should rule, and he refused to appear"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#claudius-accession",
+      "explanation": "The Senate fell to arguing over which senator should rule, then demanded Claudius appear for approval. He wisely refused, and they had to accept him.",
+      "sourceQuote": "Meanwhile the Senate (*senatus*), Rome's council of elder statesmen, debated a change of government but fell to arguing over which of its members should rule.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did Nero pay for rebuilding Rome after the fire?",
+      "options": [
+        "Selling off the Golden House",
+        "Taxing only the Christians",
+        "Borrowing from Egyptian merchants",
+        "Melting down temple treasures",
+        "Raising taxes and debasing the coinage"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#great-fire-of-rome",
+      "explanation": "Nero raised taxes and debased the coinage. The new city had brick houses on wider streets.",
+      "sourceQuote": "To pay for it, Nero raised taxes and debased the coinage.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What made Britain a tempting target for Roman conquest? (select all that apply)",
+      "options": [
+        "Its rich vineyards",
+        "It had sheltered rebels from Gaul",
+        "Its mines",
+        "Its famous silk trade",
+        "Its potential slaves"
+      ],
+      "correctAnswers": [
+        1,
+        2,
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#conquest-of-britain",
+      "explanation": "Britain offered mines and potential slaves and had sheltered rebels from Gaul. The immediate trigger was an appeal from a British ally driven from his lands.",
+      "sourceQuote": "The island tempted Rome with its mines and potential slaves, and it had sheltered rebels from Gaul.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did Claudius use the revived office of censor to do?",
+      "options": [
+        "Expel all freedmen from public office",
+        "Abolish the consulship",
+        "Grant citizenship to every Briton",
+        "Ban gladiator shows in Rome",
+        "Admit nobles from Gaul into the Senate"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#claudius-government",
+      "explanation": "As censor he admitted Gallic nobles to the Senate, and his speech survives on a bronze plaque found at Lyon. The censor kept the lists of citizens and senators.",
+      "sourceQuote": "He used it to admit nobles from Gaul into the Senate, a speech still preserved on a bronze plaque found at Lyon.",
+      "reviewFlags": []
+    }
+  ]
+}

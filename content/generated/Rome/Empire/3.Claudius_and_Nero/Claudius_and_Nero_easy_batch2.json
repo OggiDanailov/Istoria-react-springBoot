@@ -1,0 +1,179 @@
+{
+  "batchName": "Empire: Claudius and Nero (AD 41-68) - Easy Batch 2",
+  "chapterName": "Empire: Claudius and Nero (AD 41-68)",
+  "difficulty": 1,
+  "batchOrder": 2,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Which group did Claudius rely on to run the offices for letters, finance and justice?",
+      "options": [
+        "Greek priests and philosophers",
+        "Senators from old families",
+        "Freedmen, or former slaves",
+        "Equestrian army officers"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#claudius-government",
+      "explanation": "Claudius put freedmen in charge of separate offices for letters, finance and justice. Senators were appalled, whispering that the freedmen ruled their master.",
+      "sourceQuote": "To run the empire day to day, he relied on freedmen (*liberti*), former slaves, who headed separate offices for letters, finance and justice.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What was the first target of Boudica's revolt?",
+      "options": [
+        "Camulodunum (Colchester)",
+        "The island of Anglesey",
+        "Verulamium",
+        "Londinium"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#boudica-revolt",
+      "explanation": "The rebels first attacked Camulodunum, a colony of veterans hated for its expensive temple to Claudius. Survivors held out in that temple for two days.",
+      "sourceQuote": "Their first target was Camulodunum, modern Colchester, a colony of Roman veterans hated for its expensive temple to the god-emperor Claudius.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did a childhood illness leave Claudius with?",
+      "options": [
+        "A limp, a stammer and a shaking head",
+        "Blindness in one eye and deafness",
+        "Frequent fits and memory loss",
+        "A withered arm and a hunched back"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#claudius-early-life",
+      "explanation": "Illness left Claudius with a limp, a stammer and a shaking head. Modern doctors have guessed at polio, cerebral palsy or Tourette syndrome.",
+      "sourceQuote": "He belonged to the very top of Rome's ruling family, but as a child he suffered an illness that left him with a limp, a stammer and a shaking head.",
+      "reviewFlags": []
+    },
+    {
+      "question": "In what year did Claudius send legions to invade Britain?",
+      "options": [
+        "AD 48",
+        "AD 41",
+        "AD 43",
+        "AD 54"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#conquest-of-britain",
+      "explanation": "In AD 43 Claudius sent four legions across the Channel after a British ally driven from his lands appealed for help.",
+      "sourceQuote": "In AD 43, after a British ally driven from his lands appealed for help, Claudius sent four legions (*legiones*), Rome's heavy infantry divisions of several thousand men each, across the Channel.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Where was Claudius born, making him the first Roman emperor born outside Italy?",
+      "options": [
+        "Antium, south of Rome",
+        "Corinth in Greece",
+        "Lugdunum (modern Lyon)",
+        "Massilia (modern Marseille)"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#claudius-early-life",
+      "explanation": "Claudius was born at Lugdunum, modern Lyon, in 10 BC. Fittingly, a speech of his admitting Gallic nobles to the Senate was later found on a bronze plaque at Lyon.",
+      "sourceQuote": "Claudius was born in 10 BC at Lugdunum, modern Lyon in France, the first Roman emperor born outside Italy.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Whom did Nero have killed in AD 59, according to ancient writers after a staged shipwreck?",
+      "options": [
+        "His mother, Agrippina",
+        "His Stoic tutor",
+        "His stepbrother Britannicus",
+        "His first wife"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#nero-early-reign",
+      "explanation": "A freedman arranged a shipwreck; when Agrippina swam ashore, he murdered her and called it suicide. Historians agree Nero's conduct grew far worse afterwards.",
+      "sourceQuote": "In AD 59 Nero had his mother killed: according to ancient writers, a freedman arranged a shipwreck, and when she swam ashore he murdered her and called it suicide.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What happened when Nero competed at the Olympic Games in AD 67?",
+      "options": [
+        "He won every contest, even an unfinished race",
+        "He refused to compete against Greek rivals",
+        "He was badly injured and fled back to Rome",
+        "He lost every event and left in disgrace"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#nero-downfall",
+      "explanation": "Nero won every contest, including a chariot race in which he fell out and never finished. Romans associated such performing with slaves and entertainers.",
+      "sourceQuote": "In AD 67 he competed at the Olympic Games in Greece and won every contest, including a chariot race in which he fell out and never finished.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Almost everything we know about Claudius and Nero comes from how many ancient writers?",
+      "options": [
+        "Two",
+        "Three",
+        "Five",
+        "Seven"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#judging-the-sources",
+      "explanation": "The three are Tacitus, a biographer of the emperors and a later Greek senator. All came from Rome's upper classes and usually took the Senate's side.",
+      "sourceQuote": "Almost everything we know about Claudius and Nero comes from three writers: Tacitus, the senator-historian, a biographer of the emperors and a later Greek senator.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which of Claudius's building projects failed spectacularly, flooding a gladiator show?",
+      "options": [
+        "A bridge across the Tiber",
+        "A new aqueduct into Rome",
+        "A tunnel to drain the Fucine Lake",
+        "The harbour north of Ostia"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#claudius-government",
+      "explanation": "The drainage tunnel for the Fucine Lake was too small, and its flood swamped a gladiator show, sending Claudius running for his life. His two new aqueducts of AD 52, by contrast, succeeded.",
+      "sourceQuote": "One project failed spectacularly: a tunnel to drain the Fucine Lake in central Italy was too small, and when opened its flood swamped a gladiator show, sending the emperor running for his life.",
+      "reviewFlags": []
+    },
+    {
+      "question": "According to tradition, where was Claudius found hiding after his nephew's murder?",
+      "options": [
+        "Inside a temple on the Capitol",
+        "In a boat on the Tiber",
+        "Behind a curtain in the palace",
+        "In a cellar under the Senate house"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#claudius-accession",
+      "explanation": "Tradition says a guardsman found him cowering behind a curtain and hailed him emperor instead of killing him. He was then hurried off to the guards' camp.",
+      "sourceQuote": "According to tradition, a guardsman found him cowering behind a curtain and, instead of killing him, hailed him as emperor.",
+      "reviewFlags": []
+    }
+  ]
+}

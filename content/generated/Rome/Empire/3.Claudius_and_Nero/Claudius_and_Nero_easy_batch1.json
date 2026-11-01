@@ -1,0 +1,179 @@
+{
+  "batchName": "Empire: Claudius and Nero (AD 41-68) - Easy Batch 1",
+  "chapterName": "Empire: Claudius and Nero (AD 41-68)",
+  "difficulty": 1,
+  "batchOrder": 1,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "How do modern historians generally see Claudius today?",
+      "options": [
+        "As an able, hard-working administrator",
+        "As a cruel tyrant like Nero",
+        "As a weak puppet of the army",
+        "As a fool steered by his wives"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#judging-the-sources",
+      "explanation": "Modern historians have revised the ancient picture of a fool and see an able administrator. His reputation suffered partly because his own books are lost.",
+      "sourceQuote": "Modern historians have revised that view and see an able, hard-working administrator.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Who ended up bearing the title 'Britannicus', meaning conqueror of Britain?",
+      "options": [
+        "The governor of Britain",
+        "His adopted son Nero",
+        "Claudius himself",
+        "Claudius's baby son"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#conquest-of-britain",
+      "explanation": "Claudius was offered the title but took it only for his baby son, who became known as Britannicus. The Senate also voted Claudius a triumph.",
+      "sourceQuote": "He was offered the title \"Britannicus\", conqueror of Britain, but took it only for his baby son, who became known by that name.",
+      "reviewFlags": []
+    },
+    {
+      "question": "According to nearly all ancient writers, how did Agrippina supposedly kill Claudius?",
+      "options": [
+        "With poisoned wine at a festival",
+        "With poisoned mushrooms",
+        "With a dagger in his bath",
+        "By smothering him in his sleep"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#claudius-wives-and-death",
+      "explanation": "Ancient writers said she poisoned him with mushrooms, or with a feather pushed down his throat. Some modern historians doubt there was a murder at all.",
+      "sourceQuote": "Nearly all ancient writers blamed Agrippina, saying she poisoned him with mushrooms, or with a feather pushed down his throat to make him vomit.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did Nero reportedly mutter shortly before his death?",
+      "options": [
+        "'Let them hate, so long as they fear'",
+        "'What an artist the world is losing!'",
+        "'I found Rome brick and left it marble'",
+        "'Even you, my son?'"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#nero-downfall",
+      "explanation": "Ancient writers say he muttered this at a freedman's villa outside Rome. As horsemen approached, he stabbed himself in the throat with his secretary's help.",
+      "sourceQuote": "There, ancient writers say, he muttered \"What an artist the world is losing!\"",
+      "reviewFlags": []
+    },
+    {
+      "question": "Boudica was queen of which British tribe?",
+      "options": [
+        "The Brigantes",
+        "The Silures",
+        "The Catuvellauni",
+        "The Iceni"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#boudica-revolt",
+      "explanation": "Boudica ruled the Iceni, a tribe in what is now Norfolk in eastern England. Her husband had ruled as a Roman ally.",
+      "sourceQuote": "Boudica was queen of the Iceni, a British tribe in what is now Norfolk in eastern England.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Whom did Nero blame for the Great Fire, according to Tacitus?",
+      "options": [
+        "The Jews of Rome",
+        "Slaves of the senators",
+        "Agents of Parthia",
+        "The Christians"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#great-fire-of-rome",
+      "explanation": "Tacitus says Nero blamed the Christians to deflect suspicion, and many were thrown to beasts, crucified or burned alive. Later Christians called him the first persecutor of their faith.",
+      "sourceQuote": "To deflect suspicion, Tacitus says, Nero blamed the Christians.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Who murdered Claudius's nephew, the reigning emperor, in AD 41?",
+      "options": [
+        "Claudius's own freedmen and slaves",
+        "Mutinous soldiers from the Rhine legions",
+        "His German bodyguards, acting alone",
+        "Officers of the Praetorian Guard, with senators"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#claudius-accession",
+      "explanation": "Praetorian officers, joined by several senators, killed the emperor on 24 January AD 41. In the chaos, the German bodyguards cut down innocent nobles, including friends of Claudius.",
+      "sourceQuote": "On 24 January AD 41, Claudius's nephew, the emperor, was murdered by officers of the Praetorian Guard (*cohortes praetoriae*), the elite bodyguard stationed in Rome, together with several senators.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Where did the Great Fire of AD 64 break out?",
+      "options": [
+        "In the Forum of Augustus",
+        "On the Palatine Hill",
+        "At the docks of Ostia",
+        "Near the Circus Maximus"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#great-fire-of-rome",
+      "explanation": "The fire began near the Circus Maximus, Rome's chariot-racing stadium, probably in shops full of flammable goods. It burned for more than seven days.",
+      "sourceQuote": "On the night of 18 to 19 July AD 64, a fire broke out near the Circus Maximus, Rome's huge chariot-racing stadium, probably in shops full of flammable goods.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Whom did Claudius marry after his third wife was executed?",
+      "options": [
+        "His own niece, Agrippina",
+        "A senator's young daughter",
+        "The widow of his nephew",
+        "A Gallic noblewoman"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#claudius-wives-and-death",
+      "explanation": "Claudius married his niece Agrippina, a great-granddaughter of the first emperor. In AD 50 he adopted her son, who was renamed Nero.",
+      "sourceQuote": "Claudius then married his own niece, Agrippina, a great-granddaughter of the first emperor.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How old was Nero when he became emperor in AD 54?",
+      "options": [
+        "21",
+        "12",
+        "16",
+        "25"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#nero-early-reign",
+      "explanation": "The Praetorian Guard and the Senate backed the 16-year-old Nero when Claudius died. He had been born at Antium in AD 37.",
+      "sourceQuote": "When his stepfather Claudius died in AD 54, the Praetorian Guard and the Senate backed the 16-year-old as emperor.",
+      "reviewFlags": []
+    }
+  ]
+}

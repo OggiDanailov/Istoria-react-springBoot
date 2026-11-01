@@ -586,7 +586,16 @@
       },
       "short": "Claudius and Nero",
       "era": "empire",
-      "mapArea": "wide"
+      "mapArea": "wide",
+      "battle": {
+        "name": "Boudica’s revolt",
+        "year": "AD 60/61",
+        "enemy": "Boudica and the Iceni",
+        "sec": "boudica-revolt",
+        "level": "boudica",
+        "intro": "Britain is burning. The governor has fewer than 10,000 men and a narrow pass with woods behind it."
+      },
+      "locked": true
     },
     {
       "id": "four-emperors-and-flavians",

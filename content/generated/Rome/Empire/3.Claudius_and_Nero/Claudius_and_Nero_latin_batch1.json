@@ -1,0 +1,145 @@
+{
+  "batchName": "Empire: Claudius and Nero (AD 41-68) - Latin words",
+  "chapterName": "Empire: Claudius and Nero (AD 41-68)",
+  "difficulty": 1,
+  "batchOrder": 9,
+  "description": "Written by hand from the chapter text: the Latin words it explains",
+  "questions": [
+    {
+      "question": "What were the liberti who ran Claudius’s offices?",
+      "options": [
+        "Freedmen, former slaves",
+        "Senators",
+        "Soldiers of the Guard",
+        "Greek philosophers"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#claudius-government",
+      "explanation": "They headed offices for letters, finance and justice, and senators were appalled.",
+      "sourceQuote": "he relied on freedmen (*liberti*), former slaves",
+      "reviewFlags": []
+    },
+    {
+      "question": "What was the Domus Aurea that Nero built after the fire?",
+      "options": [
+        "The Golden House, his new palace",
+        "A temple to Claudius",
+        "A new Senate house",
+        "A chariot-racing stadium"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#great-fire-of-rome",
+      "explanation": "It had landscaped parks and a statue of Nero about 30 m tall.",
+      "sourceQuote": "the Golden House (*Domus Aurea*)",
+      "reviewFlags": []
+    },
+    {
+      "question": "Camulodunum became a colonia. What was that?",
+      "options": [
+        "A settlement of retired soldiers",
+        "A fort for one legion",
+        "A market town of the Britons",
+        "A port for the fleet"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#conquest-of-britain",
+      "explanation": "It was the capital of the new province, with a great temple to Claudius.",
+      "sourceQuote": "Camulodunum, modern Colchester, became a colony (*colonia*), a settlement of retired soldiers",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did the quinquennium Neronis mean?",
+      "options": [
+        "“Nero’s five good years”",
+        "Nero’s five wives",
+        "Nero’s five-year war",
+        "Nero’s five palaces"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#nero-early-reign",
+      "explanation": "His tutor and the commander of the guard steered government in those years.",
+      "sourceQuote": "\"Nero's five good years\" (*quinquennium Neronis*)",
+      "reviewFlags": []
+    },
+    {
+      "question": "In AD 47 Claudius revived the office of censor. What did a censor do?",
+      "options": [
+        "Kept the lists of citizens and senators",
+        "Judged criminal trials",
+        "Commanded the city’s firemen",
+        "Read the omens"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#claudius-government",
+      "explanation": "He used it to admit nobles from Gaul into the Senate.",
+      "sourceQuote": "he revived the old office of censor (*censor*), who kept the lists of citizens and senators.",
+      "reviewFlags": []
+    },
+    {
+      "question": "In AD 68 the Senate declared Nero hostis publicus. What did it mean?",
+      "options": [
+        "A public enemy",
+        "A god",
+        "Father of the Fatherland",
+        "Emperor for life"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#nero-downfall",
+      "explanation": "He fled and took his own life on 9 June AD 68.",
+      "sourceQuote": "The Senate declared Nero a public enemy (*hostis publicus*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "Claudius sent four legiones to Britain. What was a legio?",
+      "options": [
+        "A heavy infantry division of several thousand men",
+        "A warship",
+        "A cavalry troop of 30",
+        "A unit of archers"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#conquest-of-britain",
+      "explanation": "Four legions crossed the Channel in AD 43.",
+      "sourceQuote": "Claudius sent four legions (*legiones*), Rome's heavy infantry divisions of several thousand men each",
+      "reviewFlags": []
+    },
+    {
+      "question": "After Nero’s death, many portraits were defaced as part of damnatio memoriae. What was it?",
+      "options": [
+        "The condemnation of a ruler’s memory",
+        "Making a ruler a god",
+        "A funeral parade",
+        "A tax on statues"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#judging-the-sources",
+      "explanation": "Yet people went on making images of him.",
+      "sourceQuote": "the condemnation of a ruler's memory (*damnatio memoriae*)",
+      "reviewFlags": []
+    }
+  ]
+}

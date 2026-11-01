@@ -1,0 +1,203 @@
+{
+  "batchName": "Empire: Claudius and Nero (AD 41-68) - Hard Batch 1",
+  "chapterName": "Empire: Claudius and Nero (AD 41-68)",
+  "difficulty": 3,
+  "batchOrder": 5,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "What happened to the leading British war chief captured in AD 50?",
+      "options": [
+        "He was made governor of the new province",
+        "He was exiled to an island in the Tiber",
+        "He was sent to fight as a gladiator",
+        "He was paraded in a triumph and strangled",
+        "Claudius spared him, and he lived on land provided by Rome",
+        "He was executed at Camulodunum"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 3,
+      "textReference": "#conquest-of-britain",
+      "explanation": "Claudius spared him, a rare mercy for a defeated enemy. The conquest nonetheless left resentment that exploded under Nero.",
+      "sourceQuote": "When a leading British war chief was captured in AD 50, Claudius spared him, and he lived out his life on land provided by Rome, a rare mercy for a defeated enemy.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Why do some modern historians doubt that Agrippina murdered Claudius? (select all that apply)",
+      "options": [
+        "Agrippina was away at Antium when he died",
+        "His food taster kept his job under Nero",
+        "Britannicus defended Agrippina's innocence",
+        "A doctor's report recorded natural causes",
+        "Claudius had been seriously ill",
+        "AD 54 was an unhealthy year in Rome"
+      ],
+      "correctAnswers": [
+        1,
+        4,
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#claudius-wives-and-death",
+      "explanation": "Claudius's serious illness, the food taster keeping his job and an unhealthy year all cast doubt on the murder story. Ancient writers said her motive was Claudius talking about his own son coming of age.",
+      "sourceQuote": "Claudius had been seriously ill, his food taster kept his job under Nero, and AD 54 was an unhealthy year in Rome.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did the Roman governor defeat Boudica's far larger army?",
+      "options": [
+        "Ambushing them in burning Londinium",
+        "Luring them onto ships off Anglesey",
+        "Waiting for reinforcements from Gaul",
+        "Javelins and a wedge charge from a narrow pass",
+        "Starving the rebels in a long siege",
+        "Bribing neighbouring tribes to desert her"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 3,
+      "textReference": "#boudica-revolt",
+      "explanation": "With almost 10,000 men in a narrow pass backed by woods, the Romans hurled javelins and charged in wedge formation. Boudica died soon after, by poison or illness depending on the source.",
+      "sourceQuote": "Heavily outnumbered, the Romans hurled javelins, charged in wedge formation and crushed the Britons.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Claudius's census of AD 48 counted about how many adult male citizens?",
+      "options": [
+        "Nearly 6 million",
+        "About 4 million",
+        "About 1 million",
+        "About 10 million",
+        "About 20 million",
+        "About 600,000"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#claudius-government",
+      "explanation": "The census counted 5,984,072 adult male citizens, about a million more than a generation before.",
+      "sourceQuote": "His census of AD 48 counted 5,984,072 adult male citizens, about a million more than a generation before.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Why do modern historians doubt Tacitus's claim that Nero's mistress drove him to kill his mother?",
+      "options": [
+        "Nero was in Greece at the time",
+        "Coins show her honouring Agrippina",
+        "He married her only three years later",
+        "She had been dead for two years",
+        "She later accused Nero's tutor instead",
+        "Agrippina had approved of the affair"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 3,
+      "textReference": "#nero-early-reign",
+      "explanation": "If she had pushed him to remove his mother, a quick marriage might be expected; instead he waited three years. Tacitus's Annals give the fullest account of Nero.",
+      "sourceQuote": "Modern historians doubt this, since he married her only three years later.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did Nero do for Rome's people after returning during the Great Fire? (select all that apply)",
+      "options": [
+        "Brought in food",
+        "Gave every family 1,000 sesterces",
+        "Exempted the city from taxes",
+        "Paid to clear bodies and rubble",
+        "Opened his palaces to the homeless",
+        "Cancelled all debts for a year"
+      ],
+      "correctAnswers": [
+        0,
+        3,
+        4
+      ],
+      "difficulty": 3,
+      "textReference": "#great-fire-of-rome",
+      "explanation": "Nero paid for clearing bodies and rubble, opened his palaces to the homeless and brought in food. Far from cutting taxes, he later raised them to pay for rebuilding.",
+      "sourceQuote": "Nero returned, paid to clear bodies and rubble, opened his palaces to the homeless and brought in food.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Roughly how long after Nero's death did the Greek senator, one of the three main sources, write?",
+      "options": [
+        "Within Nero's lifetime",
+        "About 25 years",
+        "More than 300 years",
+        "More than 50 years",
+        "About 10 years",
+        "More than 150 years"
+      ],
+      "correctAnswers": [
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#judging-the-sources",
+      "explanation": "The Greek senator wrote more than 150 years after Nero's death, while Tacitus and the biographer wrote more than fifty years after. All three usually took the Senate's side.",
+      "sourceQuote": "Tacitus and the biographer wrote more than fifty years after Nero's death, the Greek senator more than 150.",
+      "reviewFlags": []
+    },
+    {
+      "question": "At least how many impostors claimed to be Nero after his death?",
+      "options": [
+        "Five",
+        "Twelve",
+        "Seven",
+        "Two",
+        "One",
+        "Three"
+      ],
+      "correctAnswers": [
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#nero-downfall",
+      "explanation": "In the eastern provinces many believed he would return, and at least three impostors appeared. His death ended his dynasty and led to civil war.",
+      "sourceQuote": "In the eastern provinces many believed he would return, and at least three impostors claimed to be Nero.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did Claudius deal with those involved in his nephew's murder?",
+      "options": [
+        "Pardoned everyone, including the assassins",
+        "Pardoned most but executed the actual assassins",
+        "Had the Senate try and acquit the assassins",
+        "Exiled the senators and spared the guards",
+        "Executed every guardsman and senator involved",
+        "Executed the German bodyguards instead"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 3,
+      "textReference": "#claudius-accession",
+      "explanation": "He pardoned most people involved but executed the actual killers, partly for his own safety. The assassins had also murdered his nephew's wife and daughter.",
+      "sourceQuote": "Claudius pardoned most people involved but executed the actual assassins, partly for his own safety.",
+      "reviewFlags": []
+    },
+    {
+      "question": "In AD 37 Claudius finally held a top office for the first time. What was it?",
+      "options": [
+        "Praetor in charge of Rome's courts",
+        "Chief priest of the Etruscan cults",
+        "Governor of Gaul",
+        "Censor, alongside a senior senator",
+        "Consul, alongside his nephew the emperor",
+        "Commander of the Praetorian Guard"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 3,
+      "textReference": "#claudius-early-life",
+      "explanation": "He served as consul with his nephew, the reigning emperor, who mocked and humiliated him. He revived the censorship only later, in AD 47, as emperor.",
+      "sourceQuote": "Only in AD 37 did he hold a top office, serving as consul (*consul*), one of the two highest magistrates, alongside his nephew, the reigning emperor, who mocked and humiliated him.",
+      "reviewFlags": []
+    }
+  ]
+}

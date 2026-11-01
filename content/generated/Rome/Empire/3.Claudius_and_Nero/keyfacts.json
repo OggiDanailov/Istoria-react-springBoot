@@ -1,0 +1,144 @@
+{
+  "description": "Key facts for this chapter, written by hand from the chapter text. Every entry links to the section that explains it.",
+  "people": [
+    {
+      "name": "Claudius",
+      "text": "Rome’s fourth emperor, AD 41–54; a scholar who conquered Britain.",
+      "sec": "claudius-early-life"
+    },
+    {
+      "name": "Agrippina",
+      "text": "Claudius’s niece and fourth wife; Nero’s mother; killed in AD 59.",
+      "sec": "claudius-wives-and-death"
+    },
+    {
+      "name": "Britannicus",
+      "text": "Claudius’s son; poisoned in AD 55.",
+      "sec": "nero-early-reign"
+    },
+    {
+      "name": "Nero",
+      "text": "Rome’s fifth emperor, AD 54–68; the last of Augustus’s family.",
+      "sec": "nero-early-reign"
+    },
+    {
+      "name": "Boudica",
+      "text": "Queen of the Iceni who rose against Rome in AD 60 or 61.",
+      "sec": "boudica-revolt"
+    },
+    {
+      "name": "Tacitus",
+      "text": "The senator-historian whose Annals tell this story most fully.",
+      "sec": "judging-the-sources"
+    }
+  ],
+  "dates": [
+    {
+      "when": "AD 41",
+      "text": "Claudius is found behind a curtain and made emperor.",
+      "sec": "claudius-accession"
+    },
+    {
+      "when": "AD 43",
+      "text": "Four legions invade Britain.",
+      "sec": "conquest-of-britain"
+    },
+    {
+      "when": "13 October AD 54",
+      "text": "Claudius dies; Nero becomes emperor.",
+      "sec": "claudius-wives-and-death"
+    },
+    {
+      "when": "AD 59",
+      "text": "Nero has his mother killed.",
+      "sec": "nero-early-reign"
+    },
+    {
+      "when": "AD 60 or 61",
+      "text": "Boudica’s revolt.",
+      "sec": "boudica-revolt"
+    },
+    {
+      "when": "July AD 64",
+      "text": "The Great Fire of Rome.",
+      "sec": "great-fire-of-rome"
+    },
+    {
+      "when": "AD 67",
+      "text": "Nero competes at the Olympic Games.",
+      "sec": "nero-downfall"
+    },
+    {
+      "when": "9 June AD 68",
+      "text": "Nero takes his own life.",
+      "sec": "nero-downfall"
+    }
+  ],
+  "terms": [
+    {
+      "latin": "consul",
+      "english": "one of the two highest magistrates",
+      "sec": "claudius-early-life"
+    },
+    {
+      "latin": "cohortes praetoriae",
+      "english": "the Praetorian Guard",
+      "sec": "claudius-accession"
+    },
+    {
+      "latin": "senatus",
+      "english": "the Senate",
+      "sec": "claudius-accession"
+    },
+    {
+      "latin": "censor",
+      "english": "keeper of the lists of citizens",
+      "sec": "claudius-government"
+    },
+    {
+      "latin": "liberti",
+      "english": "freedmen, former slaves",
+      "sec": "claudius-government"
+    },
+    {
+      "latin": "legiones",
+      "english": "legions",
+      "sec": "conquest-of-britain"
+    },
+    {
+      "latin": "colonia",
+      "english": "a settlement of veterans",
+      "sec": "conquest-of-britain"
+    },
+    {
+      "latin": "triumphus",
+      "english": "a victory parade",
+      "sec": "conquest-of-britain"
+    },
+    {
+      "latin": "quinquennium Neronis",
+      "english": "Nero’s five good years",
+      "sec": "nero-early-reign"
+    },
+    {
+      "latin": "maiestas",
+      "english": "treason",
+      "sec": "nero-early-reign"
+    },
+    {
+      "latin": "Domus Aurea",
+      "english": "the Golden House",
+      "sec": "great-fire-of-rome"
+    },
+    {
+      "latin": "hostis publicus",
+      "english": "a public enemy",
+      "sec": "nero-downfall"
+    },
+    {
+      "latin": "damnatio memoriae",
+      "english": "condemning a ruler’s memory",
+      "sec": "judging-the-sources"
+    }
+  ]
+}
