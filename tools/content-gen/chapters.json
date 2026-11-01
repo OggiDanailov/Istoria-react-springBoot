@@ -55,9 +55,30 @@
         "year": "c. 496 BC (traditional)",
         "enemy": "The Latin League",
         "sec": "birth-of-the-republic",
-        "intro": "The exiled Tarquin has not given up. An alliance of Latin towns marches on Rome, and the armies meet at Lake Regillus. Win, and the young Republic survives."
+        "intro": "The exiled Tarquin has not given up. An alliance of Latin towns marches on Rome, and the armies meet at Lake Regillus. Win, and the young Republic survives.",
+        "level": "regillus"
       },
       "locked": true
+    },
+    {
+      "id": "roman-religion",
+      "folder": "Rome/Culture/1.Religion_and_Mythology",
+      "chapterName": "Roman Religion and Mythology (753 BC-AD 391)",
+      "period": "753 BC-AD 391",
+      "sources": [
+        "Religion in ancient Rome",
+        "Roman mythology",
+        "Capitoline Triad"
+      ],
+      "counts": {
+        "easy": 20,
+        "medium": 20,
+        "hard": 10
+      },
+      "short": "Gods and Myths",
+      "era": "kingdom",
+      "mapArea": "wide",
+      "maxNames": 8
     },
     {
       "id": "conflict-of-orders-origins",
@@ -82,7 +103,8 @@
         "year": "494 BC",
         "enemy": "Volsci, Aequi and Sabines",
         "sec": "first-secession",
-        "intro": "Rome is at war with three neighbours: the Sabines, and the Aequi and Volsci, hill tribes to the east and south-east. The plebeians are back from the Sacred Mount, with tribunes of their own. Now Rome needs every soldier."
+        "intro": "Rome is at war with three neighbours: the Sabines, and the Aequi and Volsci, hill tribes to the east and south-east. The plebeians are back from the Sacred Mount, with tribunes of their own. Now Rome needs every soldier.",
+        "level": "volsci"
       },
       "locked": true
     },
@@ -108,7 +130,8 @@
         "year": "c. 396 BC",
         "enemy": "Veii",
         "sec": "siege-of-veii",
-        "intro": "Veii, a great Etruscan city just 16 km from Rome, has held out for years. Camillus, named dictator, has a plan: a tunnel through the soft rock beneath the walls."
+        "intro": "Veii, a great Etruscan city just 16 km from Rome, has held out for years. Camillus, named dictator, has a plan: a tunnel through the soft rock beneath the walls.",
+        "level": "veii"
       },
       "locked": true
     },
@@ -133,7 +156,8 @@
         "year": "293 BC",
         "enemy": "The Samnites",
         "sec": "aquilonia-and-the-end",
-        "intro": "Some 40,000 Samnites gather at Aquilonia. Their elite units have sworn a sacred oath never to flee. The consul Papirius Cursor attacks."
+        "intro": "Some 40,000 Samnites gather at Aquilonia. Their elite units have sworn a sacred oath never to flee. The consul Papirius Cursor attacks.",
+        "level": "aquilonia"
       },
       "locked": true
     },
@@ -159,7 +183,8 @@
         "year": "275 BC",
         "enemy": "Pyrrhus of Epirus",
         "sec": "beneventum-and-withdrawal",
-        "intro": "Pyrrhus, the Greek king who has beaten Rome twice at a terrible cost, faces the Romans one last time at Beneventum. Ancient accounts disagree on how it ended. Today, the outcome is up to you."
+        "intro": "Pyrrhus, the Greek king who has beaten Rome twice at a terrible cost, faces the Romans one last time at Beneventum. Ancient accounts disagree on how it ended. Today, the outcome is up to you.",
+        "level": "beneventum"
       },
       "locked": true
     },
@@ -186,7 +211,8 @@
         "year": "261 BC",
         "enemy": "Carthage’s relief army",
         "sec": "siege-of-akragas",
-        "intro": "Rome besieges Akragas, which the Romans call Agrigentum. Carthage sends a relief army of 50,000 infantry, 6,000 cavalry and 60 war elephants. Hold the siege lines."
+        "intro": "Rome besieges Akragas, which the Romans call Agrigentum. Carthage sends a relief army of 50,000 infantry, 6,000 cavalry and 60 war elephants. Hold the siege lines.",
+        "level": "agrigentum"
       },
       "locked": true
     },
@@ -213,7 +239,8 @@
         "year": "216 BC",
         "enemy": "Hannibal",
         "sec": "battle-of-cannae",
-        "intro": "Rome has raised its biggest army ever to crush Hannibal on the plain of Cannae. Hannibal has laid a trap. Can you hold where Rome broke?"
+        "intro": "Rome has raised its biggest army ever to crush Hannibal on the plain of Cannae. Hannibal has laid a trap. Can you hold where Rome broke?",
+        "level": "cannae"
       },
       "locked": true
     },
@@ -240,7 +267,8 @@
         "year": "202 BC",
         "enemy": "Hannibal",
         "sec": "battle-of-zama",
-        "intro": "Hannibal faces Scipio near Zama with 80 war elephants and his veterans from Italy. Open lanes for the elephants and hold your lines."
+        "intro": "Hannibal faces Scipio near Zama with 80 war elephants and his veterans from Italy. Open lanes for the elephants and hold your lines.",
+        "level": "zama"
       },
       "locked": true
     },
@@ -267,7 +295,8 @@
         "year": "168 BC",
         "enemy": "Perseus of Macedon",
         "sec": "pydna",
-        "intro": "King Perseus’s phalanx bristles with long spears that pierce Roman shields. Hold the line until gaps open in its ranks."
+        "intro": "King Perseus’s phalanx bristles with long spears that pierce Roman shields. Hold the line until gaps open in its ranks.",
+        "level": "pydna"
       },
       "locked": true
     },
@@ -294,7 +323,8 @@
         "year": "146 BC",
         "enemy": "Hasdrubal",
         "sec": "fall-of-carthage",
-        "intro": "Hasdrubal’s defenders fight for every street of Carthage. Break through the walls and hold what you take."
+        "intro": "Hasdrubal’s defenders fight for every street of Carthage. Break through the walls and hold what you take.",
+        "level": "carthage"
       },
       "locked": true
     },
@@ -774,6 +804,26 @@
         "intro": "Aetius and his allies, old enemies all, stand against Attila’s Huns."
       },
       "locked": true
+    },
+    {
+      "id": "roman-art",
+      "folder": "Rome/Culture/2.Art_and_Architecture",
+      "chapterName": "Empire: Roman Art and Architecture (c. 500 BC-AD 476)",
+      "period": "c. 500 BC-AD 476",
+      "sources": [
+        "Roman art",
+        "Ancient Roman architecture",
+        "Roman sculpture"
+      ],
+      "counts": {
+        "easy": 20,
+        "medium": 20,
+        "hard": 10
+      },
+      "short": "Art and Architecture",
+      "era": "empire",
+      "mapArea": "wide",
+      "maxNames": 8
     }
   ]
 }
