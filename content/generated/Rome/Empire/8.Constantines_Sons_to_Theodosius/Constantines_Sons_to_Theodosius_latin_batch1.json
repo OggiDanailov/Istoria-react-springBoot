@@ -1,0 +1,145 @@
+{
+  "batchName": "Empire: From Constantine's Sons to Theodosius (AD 337-395) - Latin words",
+  "chapterName": "Empire: From Constantine's Sons to Theodosius (AD 337-395)",
+  "difficulty": 1,
+  "batchOrder": 9,
+  "description": "Written by hand from the chapter text: the Latin words it explains",
+  "questions": [
+    {
+      "question": "Valens let the Goths cross the Danube as foederati. What were they?",
+      "options": [
+        "Allies bound by treaty",
+        "Slaves",
+        "Citizens",
+        "Hostages"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#battle-of-adrianople",
+      "explanation": "He hoped for farmers and soldiers; cheating officials pushed them into revolt.",
+      "sourceQuote": "let them cross the Danube as allies (*foederati*)",
+      "reviewFlags": []
+    },
+    {
+      "question": "What does Vicisti, Galilaee mean?",
+      "options": [
+        "“You have won, Galilean”",
+        "“I have won, Galilean”",
+        "“Rome has fallen”",
+        "“The gods are dead”"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#persian-campaign",
+      "explanation": "The legend of Julian’s last words is considered invented.",
+      "sourceQuote": "\"You have won, Galilean\" (*Vicisti, Galilaee*)",
+      "reviewFlags": []
+    },
+    {
+      "question": "Julian was proclaimed Augustus at Lutetia. Which city is that?",
+      "options": [
+        "Paris",
+        "Lyon",
+        "Strasbourg",
+        "Milan"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#proclaimed-in-paris",
+      "explanation": "His soldiers mutinied rather than march east.",
+      "sourceQuote": "proclaimed Julian Augustus, senior emperor, at Paris (*Lutetia*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "Julian wanted to be primus inter pares. What does it mean?",
+      "options": [
+        "First among equals",
+        "First of the gods",
+        "Lord and master",
+        "Father of the Fatherland"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#julian-pagan-revival",
+      "explanation": "He joined Senate debates as an ordinary member.",
+      "sourceQuote": "Julian wanted to be first among equals (*primus inter pares*)",
+      "reviewFlags": []
+    },
+    {
+      "question": "Arbogast was magister militum in the west. What was that?",
+      "options": [
+        "Master of soldiers, the top general",
+        "Chief priest",
+        "Keeper of the treasury",
+        "Governor of Gaul"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#theodosius-legacy",
+      "explanation": "He put a puppet emperor on the throne in 392.",
+      "sourceQuote": "the western master of soldiers (*magister militum*)",
+      "reviewFlags": []
+    },
+    {
+      "question": "Julian handed power back to the curiae. What were they?",
+      "options": [
+        "City councils",
+        "Army units",
+        "Temples",
+        "Law courts in Rome"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#julian-pagan-revival",
+      "explanation": "He also cancelled unpaid land taxes.",
+      "sourceQuote": "the city councils (*curiae*)",
+      "reviewFlags": []
+    },
+    {
+      "question": "Julian won his great battle at Argentoratum in 357. What is it today?",
+      "options": [
+        "Strasbourg",
+        "Cologne",
+        "Verdun",
+        "Trier"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#julian-in-gaul",
+      "explanation": "Heavily outnumbered, the Romans drove the Alamanni into the Rhine.",
+      "sourceQuote": "at Strasbourg (*Argentoratum*)",
+      "reviewFlags": []
+    },
+    {
+      "question": "Julian’s rival in Gaul was the praefectus praetorio. What was his job by then?",
+      "options": [
+        "Gaul’s top civil official",
+        "Commander of a legion",
+        "Bishop of Paris",
+        "Head of the fleet"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#julian-in-gaul",
+      "explanation": "Julian blocked his tax increase and clashed with him over corruption.",
+      "sourceQuote": "Gaul's top civil official, the praetorian prefect (*praefectus praetorio*)",
+      "reviewFlags": []
+    }
+  ]
+}

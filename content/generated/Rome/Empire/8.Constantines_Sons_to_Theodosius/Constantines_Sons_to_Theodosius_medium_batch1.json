@@ -1,0 +1,190 @@
+{
+  "batchName": "Empire: From Constantine's Sons to Theodosius (AD 337-395) - Medium Batch 1",
+  "chapterName": "Empire: From Constantine's Sons to Theodosius (AD 337-395)",
+  "difficulty": 2,
+  "batchOrder": 3,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "What gave Theodosius victory at the river Frigidus in 394?",
+      "options": [
+        "Gothic allies changing sides",
+        "A surprise night attack",
+        "The enemy general's sudden death",
+        "A fierce wind in the enemy's faces",
+        "A flood sweeping away the enemy camp"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#theodosius-legacy",
+      "explanation": "A fierce wind blew into the enemy's faces and decided the battle, fought in today's Slovenia. The win left Theodosius ruler of the whole empire.",
+      "sourceQuote": "In September 394, at the river Frigidus in today's Slovenia, a fierce wind blew into the enemy's faces and gave Theodosius victory.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What became of Julian's half-brother after Constantius II made him deputy in the east?",
+      "options": [
+        "He was killed by his own troops",
+        "He died fighting the Persians",
+        "He usurped power in the west",
+        "He retired to a monastery",
+        "He ruled by terror and was executed"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#sons-of-constantine",
+      "explanation": "The young man ruled by terror and was executed in 354. That left Julian the last male of his line, and he was held under suspicion at Milan.",
+      "sourceQuote": "The young man ruled by terror and was executed in 354.",
+      "reviewFlags": []
+    },
+    {
+      "question": "According to most historians, why did Julian back rebuilding the Jewish Temple in Jerusalem?",
+      "options": [
+        "To honour his Neoplatonist teachers",
+        "To win Jewish support against Persia",
+        "To disprove a Christian prophecy",
+        "To create a shrine to Helios",
+        "To raise new taxes in Judaea"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#julian-pagan-revival",
+      "explanation": "Most historians think Julian wanted to disprove a Christian prophecy. The work stopped after fires, perhaps caused by an earthquake.",
+      "sourceQuote": "He also backed rebuilding the Jewish Temple in Jerusalem, most historians think to disprove a Christian prophecy.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which city, seized by troops loyal to Constantius, threatened to cut off Julian's march east in 361?",
+      "options": [
+        "Aquileia",
+        "Milan",
+        "Ravenna",
+        "Sirmium",
+        "Thessalonica"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#proclaimed-in-paris",
+      "explanation": "Loyalists seized Aquileia, at the head of the Adriatic, nearly wrecking Julian's gamble. He was left waiting in the Balkans until Constantius died.",
+      "sourceQuote": "The gamble nearly failed when troops loyal to Constantius seized Aquileia, a city at the head of the Adriatic, threatening to cut him off.",
+      "reviewFlags": []
+    },
+    {
+      "question": "According to the most trusted account, what sparked the riot in Thessalonica in 390?",
+      "options": [
+        "A pagan temple was closed",
+        "Bread prices rose sharply",
+        "A bishop was arrested for heresy",
+        "A general jailed a popular charioteer",
+        "Soldiers looted the market"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#massacre-of-thessalonica",
+      "explanation": "The crowd demanded the charioteer's release, and when the general refused, the mob killed him. Soldiers later took a bloody revenge.",
+      "sourceQuote": "According to the most trusted account, a general had jailed a popular charioteer, and the crowd demanded his release.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How do modern scholars regard the story of Ambrose physically barring the cathedral door against Theodosius?",
+      "options": [
+        "As a pagan slander",
+        "As a pious fiction",
+        "As Theodosius' own invention",
+        "As exaggerated but basically true",
+        "As confirmed by eyewitnesses"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#massacre-of-thessalonica",
+      "explanation": "Modern scholars call the famous door-barring scene a pious fiction. In reality Ambrose wrote to the emperor refusing him communion until he did penance.",
+      "sourceQuote": "Modern scholars call this a pious fiction.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Why did Valens not wait for the western emperor before fighting at Adrianople?",
+      "options": [
+        "He wanted a victory of his own",
+        "His supplies were running out",
+        "The western army had turned back",
+        "He distrusted the western generals",
+        "The Goths were about to escape"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#battle-of-adrianople",
+      "explanation": "The young western emperor asked Valens to wait, but Valens wanted the glory for himself. His tired, thirsty troops then marched about 12 km in summer heat.",
+      "sourceQuote": "The young western emperor, Gratian, was marching to help and asked him to wait, but Valens wanted a victory of his own.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which of these were among Julian's government reforms? (select all that apply)",
+      "options": [
+        "Handing power back to city councils",
+        "Doubling the size of the palace staff",
+        "Abolishing the Senate",
+        "Cancelling unpaid land taxes",
+        "Raising taxes to fund temples"
+      ],
+      "correctAnswers": [
+        0,
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#julian-pagan-revival",
+      "explanation": "Julian returned power to the city councils (curiae) and cancelled unpaid land taxes. He also dismissed thousands of palace servants and joined Senate debates as an ordinary member.",
+      "sourceQuote": "He handed power back to the city councils (*curiae*) and cancelled unpaid land taxes.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What order from Constantius II in February 360 set off the mutiny of Julian's troops?",
+      "options": [
+        "To disband the Gallic legions",
+        "To abandon the Rhine forts",
+        "To cut the soldiers' pay",
+        "To arrest Julian for treason",
+        "To send over half the army east"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#proclaimed-in-paris",
+      "explanation": "Constantius ordered more than half of Julian's army to march east against Persia, bypassing Julian himself. The soldiers did not want to leave Gaul and proclaimed Julian Augustus.",
+      "sourceQuote": "In February 360, Constantius II ordered more than half of Julian's army in Gaul to march east.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which confederation of tribes from the upper Rhine attacked Julian at Strasbourg?",
+      "options": [
+        "The Vandals",
+        "The Alamanni",
+        "The Saxons",
+        "The Goths",
+        "The Franks"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#julian-in-gaul",
+      "explanation": "The Alamanni attacked a heavily outnumbered Roman army and were routed. Their king was captured and many were driven into the river.",
+      "sourceQuote": "An army of the Alamanni, a confederation of tribes from the upper Rhine, attacked him.",
+      "reviewFlags": []
+    }
+  ]
+}

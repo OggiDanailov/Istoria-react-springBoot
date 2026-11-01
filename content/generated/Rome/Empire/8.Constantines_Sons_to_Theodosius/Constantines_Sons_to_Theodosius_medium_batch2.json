@@ -1,0 +1,189 @@
+{
+  "batchName": "Empire: From Constantine's Sons to Theodosius (AD 337-395) - Medium Batch 2",
+  "chapterName": "Empire: From Constantine's Sons to Theodosius (AD 337-395)",
+  "difficulty": 2,
+  "batchOrder": 4,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Why were Julian and his half-brother probably spared in the family massacre of 337?",
+      "options": [
+        "Their mother bribed the soldiers",
+        "They were living abroad",
+        "They were so young",
+        "Constantius needed heirs",
+        "They were hidden by a bishop"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#sons-of-constantine",
+      "explanation": "The two boys were probably spared because of their youth; Julian was about six. His father was among those killed.",
+      "sourceQuote": "They were probably spared because they were so young.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What do modern historians stress about the Edict of Thessalonica?",
+      "options": [
+        "It was never actually published",
+        "It was issued by the Pope",
+        "It applied only to the western empire",
+        "It banned all pagan worship",
+        "It was aimed only at Constantinople"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#theodosius-goths-and-faith",
+      "explanation": "Modern historians stress that the edict targeted Constantinople and did not make Christianity the state religion. It defined who could call themselves \"catholic\".",
+      "sourceQuote": "Modern historians stress that the edict was aimed only at Constantinople and did not make Christianity the state religion.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What satire did Julian write in reply to the people of Antioch mocking his philosopher's beard?",
+      "options": [
+        "Letter to the Athenians",
+        "The Beard Hater",
+        "Hymn to King Helios",
+        "The Caesars",
+        "Against the Galileans"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#persian-campaign",
+      "explanation": "After the Antiochenes mocked his beard, Julian answered with the satire \"Beard Hater\". His stay in the city lasted a prickly nine months.",
+      "sourceQuote": "After a prickly nine-month stay in Antioch, the great city of Roman Syria, where citizens mocked his philosopher's beard and he answered with a satire called the \"Beard Hater\", Julian set out against Persia in March AD 363.",
+      "reviewFlags": []
+    },
+    {
+      "question": "A rival philosopher whom Julian took as mentor supposedly made a statue of which goddess smile and laugh?",
+      "options": [
+        "Isis",
+        "Athena",
+        "Demeter",
+        "Hecate",
+        "Cybele"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#julian-the-philosopher",
+      "explanation": "The philosopher practised theurgy, magic meant to call down the gods, and supposedly animated a statue of Hecate. A teacher warned Julian off him, but Julian sought him out anyway.",
+      "sourceQuote": "One teacher warned him about a rival philosopher who practised theurgy, magical rituals meant to call down the gods, and who had supposedly made a statue of the goddess Hecate smile and laugh.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Why did Valens' scouts badly underestimate the Gothic army before Adrianople?",
+      "options": [
+        "They missed cavalry away foraging",
+        "The Goths hid in a forest",
+        "The Huns arrived later as allies",
+        "The scouts were bribed",
+        "Fog covered the battlefield"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#battle-of-adrianople",
+      "explanation": "The scouts counted about 10,000 Goths but missed the cavalry, who were away gathering food. When that cavalry returned, it surrounded the Romans.",
+      "sourceQuote": "His scouts counted about 10,000 Goths, missing the cavalry who were away gathering food.",
+      "reviewFlags": []
+    },
+    {
+      "question": "After his year of detention, who spoke up for Julian so he could go to study in Athens?",
+      "options": [
+        "The praetorian prefect",
+        "The empress",
+        "His Gothic tutor",
+        "The bishop of Milan",
+        "His half-brother"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#julian-the-philosopher",
+      "explanation": "The empress interceded and Julian was allowed to study in Athens. There he was initiated into the Eleusinian Mysteries.",
+      "sourceQuote": "After his year of detention, the empress spoke up for him and he was allowed to study in Athens.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Under Theodosius' treaty of 382, what were the Goths allowed to do?",
+      "options": [
+        "Join Roman legions as ordinary recruits",
+        "Pay tribute in exchange for land in Asia",
+        "Take over the province of Gaul",
+        "Return north of the Danube in peace",
+        "Settle south of the Danube under their own leaders"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#theodosius-goths-and-faith",
+      "explanation": "The Goths settled south of the Danube under their own leaders and fought for Rome as a separate force. It brought peace but created a semi-independent people inside the empire.",
+      "sourceQuote": "A treaty of 3 October 382 let them settle south of the Danube under their own leaders, fighting for Rome as a separate force.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What role did Constantius II originally intend Julian to play in Gaul?",
+      "options": [
+        "A hostage held by the army",
+        "Supreme military commander",
+        "Chief tax collector",
+        "A figurehead for experienced officials",
+        "Governor of the cities"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#julian-in-gaul",
+      "explanation": "Julian was meant to be a figurehead while experienced officials governed. Instead the bookish young man taught himself to command an army.",
+      "sourceQuote": "The idea was that Julian would be a figurehead while experienced officials ran things.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did Julian do after his generals advised against besieging Ctesiphon?",
+      "options": [
+        "Sent for reinforcements from Gaul",
+        "Retreated up the Euphrates",
+        "Burned his fleet and pushed inland",
+        "Built siege towers anyway",
+        "Negotiated peace with Persia"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#persian-campaign",
+      "explanation": "Julian burned his fleet and marched inland, a fatal mistake. The Persians burned crops ahead of him and flooded the land behind, forcing a retreat.",
+      "sourceQuote": "His generals advised against a siege, so Julian burned his fleet and pushed inland.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Of 43 temple destructions reported in written sources, how many have archaeologists confirmed?",
+      "options": [
+        "All 43",
+        "Thirty-one",
+        "Four",
+        "Twelve",
+        "Twenty"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#theodosius-legacy",
+      "explanation": "Archaeologists have confirmed only four of the 43 reported destructions. Modern historians doubt the claim that Theodosius crushed paganism.",
+      "sourceQuote": "Of 43 temple destructions reported in written sources, archaeologists have confirmed only four.",
+      "reviewFlags": []
+    }
+  ]
+}

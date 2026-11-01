@@ -1,0 +1,183 @@
+{
+  "description": "Maps for the chronicle, written by hand. Coordinates from Wikipedia; each map sits at the start of its section.",
+  "maps": [
+    {
+      "id": "julian-theodosius",
+      "sec": "proclaimed-in-paris",
+      "title": "From Paris to Persia",
+      "caption": "Julian won at Strasbourg, was proclaimed at Paris and died beyond Ctesiphon. Valens fell at Adrianople; Theodosius won at the Frigidus.",
+      "bounds": {
+        "latMin": 30.0,
+        "latMax": 52.0,
+        "lonMin": -6.0,
+        "lonMax": 47.0
+      },
+      "places": [
+        {
+          "name": "Rome",
+          "latin": "Roma",
+          "lat": 41.893,
+          "lon": 12.483,
+          "kind": "rome",
+          "side": "l",
+          "dy": 8
+        },
+        {
+          "name": "Paris",
+          "lat": 48.86,
+          "lon": 2.35,
+          "side": "l",
+          "dy": 0
+        },
+        {
+          "name": "Strasbourg",
+          "lat": 48.58,
+          "lon": 7.75,
+          "kind": "battle",
+          "side": "r",
+          "dy": -6
+        },
+        {
+          "name": "Milan",
+          "lat": 45.46,
+          "lon": 9.19,
+          "side": "l",
+          "dy": 6
+        },
+        {
+          "name": "Frigidus",
+          "lat": 45.85,
+          "lon": 13.97,
+          "kind": "battle",
+          "side": "r",
+          "dy": 12
+        },
+        {
+          "name": "Adrianople",
+          "lat": 41.68,
+          "lon": 26.56,
+          "kind": "battle",
+          "side": "r",
+          "dy": -10
+        },
+        {
+          "name": "Constantinople",
+          "lat": 41.01,
+          "lon": 28.98,
+          "side": "r",
+          "dy": 10
+        },
+        {
+          "name": "Antioch",
+          "lat": 36.2,
+          "lon": 36.16,
+          "side": "l"
+        },
+        {
+          "name": "Ctesiphon",
+          "lat": 33.09,
+          "lon": 44.58,
+          "side": "l",
+          "dy": 0
+        }
+      ]
+    },
+    {
+      "id": "adrianople-plan",
+      "sec": "battle-of-adrianople",
+      "title": "Adrianople, 9 August 378",
+      "caption": "Valens’ tired army found the Goths in a ring of wagons on a hilltop. Some Roman units attacked without orders; then the Gothic cavalry came back from foraging and surrounded the Romans. A simplified plan.",
+      "plan": true,
+      "height": 230,
+      "key": {
+        "rome": "Romans",
+        "enemy": "Goths"
+      },
+      "units": [
+        {
+          "side": "enemy",
+          "name": "Ring of wagons on the hill",
+          "lx": 150,
+          "ly": 14,
+          "d": "M110,40 A40,24 0 1,0 190,40 A40,24 0 1,0 110,40 Z"
+        },
+        {
+          "side": "rome",
+          "x": 70,
+          "y": 140,
+          "w": 160,
+          "h": 16,
+          "name": "Valens’ army",
+          "lx": 150,
+          "ly": 176
+        },
+        {
+          "side": "enemy",
+          "x": 4,
+          "y": 96,
+          "w": 30,
+          "h": 12,
+          "name": "Gothic cavalry returns",
+          "lx": 54,
+          "ly": 92
+        },
+        {
+          "side": "enemy",
+          "x": 266,
+          "y": 96,
+          "w": 30,
+          "h": 12
+        }
+      ],
+      "moves": [
+        {
+          "side": "rome",
+          "pts": [
+            [
+              150,
+              138
+            ],
+            [
+              150,
+              72
+            ]
+          ]
+        },
+        {
+          "side": "enemy",
+          "pts": [
+            [
+              19,
+              110
+            ],
+            [
+              30,
+              160
+            ],
+            [
+              66,
+              160
+            ]
+          ]
+        },
+        {
+          "side": "enemy",
+          "pts": [
+            [
+              281,
+              110
+            ],
+            [
+              270,
+              160
+            ],
+            [
+              234,
+              160
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -735,7 +735,16 @@
       "short": "To Theodosius",
       "era": "empire",
       "mapArea": "wide",
-      "maxNames": 8
+      "maxNames": 8,
+      "battle": {
+        "name": "Adrianople",
+        "year": "AD 378",
+        "enemy": "the Goths",
+        "sec": "battle-of-adrianople",
+        "level": "adrianople",
+        "intro": "The Goths wait in a ring of wagons. Somewhere out there, their cavalry is coming back."
+      },
+      "locked": true
     },
     {
       "id": "fall-of-the-west",

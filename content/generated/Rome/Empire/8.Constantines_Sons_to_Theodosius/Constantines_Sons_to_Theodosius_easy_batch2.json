@@ -1,0 +1,179 @@
+{
+  "batchName": "Empire: From Constantine's Sons to Theodosius (AD 337-395) - Easy Batch 2",
+  "chapterName": "Empire: From Constantine's Sons to Theodosius (AD 337-395)",
+  "difficulty": 1,
+  "batchOrder": 2,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "What was Julian's first act after entering Constantinople as sole emperor?",
+      "options": [
+        "Marching against the Persians",
+        "Executing Constantius' ministers",
+        "Reopening the city's pagan temples",
+        "Leading the Christian funeral of Constantius"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#proclaimed-in-paris",
+      "explanation": "Julian led his cousin's Christian funeral to show publicly that he was the lawful successor. Some sources say Constantius had named him heir on his deathbed.",
+      "sourceQuote": "His first act was to lead the Christian funeral of his cousin, a public show that he was the lawful successor.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which son did ancient writers blame for the purge of the imperial family in 337?",
+      "options": [
+        "Constantius II",
+        "Julian",
+        "Theodosius",
+        "Valens"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#sons-of-constantine",
+      "explanation": "Ancient writers blamed the middle son, Constantius II, for the killings. He went on to outlive both of his brothers.",
+      "sourceQuote": "Soldiers murdered most of the old emperor's other male relatives, a purge that ancient writers blamed on the middle son, Constantius II, the brother who would outlast them all.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What nickname did Christians give Julian?",
+      "options": [
+        "The Pious",
+        "The Great",
+        "The Apostate",
+        "The Philosopher"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#julian-pagan-revival",
+      "explanation": "Christians remembered Julian as \"the Apostate\" for abandoning their faith. He was the last non-Christian to rule the Roman Empire.",
+      "sourceQuote": "Julian, remembered by Christians as \"the Apostate\", was the last non-Christian to rule the Roman Empire.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which famous last words does legend attribute to the dying Julian?",
+      "options": [
+        "\"The gods have abandoned me\"",
+        "\"You have won, Galilean\"",
+        "\"Rome will rise again\"",
+        "\"Bury me in Athens\""
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#persian-campaign",
+      "explanation": "Legend gives his last words as \"You have won, Galilean\" (Vicisti, Galilaee). The phrase is considered an invention.",
+      "sourceQuote": "Legend says his last words were \"You have won, Galilean\" (*Vicisti, Galilaee*), \"the Galilean\" being his scornful name for Jesus, but this is considered invented.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which bishop refused Theodosius communion after the massacre at Thessalonica?",
+      "options": [
+        "Ambrose of Milan",
+        "Damasus of Rome",
+        "Athanasius of Alexandria",
+        "Augustine of Hippo"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#massacre-of-thessalonica",
+      "explanation": "Ambrose, the forceful bishop of Milan, demanded that the emperor do penance first. Theodosius agreed and attended church without his imperial robes until Christmas.",
+      "sourceQuote": "Ambrose, the forceful bishop of Milan, wrote to the emperor refusing him communion until he did penance.",
+      "reviewFlags": []
+    },
+    {
+      "question": "After abandoning Christianity, which god did Julian say he had followed for twelve years?",
+      "options": [
+        "Mithras",
+        "Helios",
+        "Apollo",
+        "Jupiter"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#julian-the-philosopher",
+      "explanation": "Julian wrote that he spent twenty years as a Christian and twelve following Helios, the sun god. He quietly abandoned Christianity at around the age of 20.",
+      "sourceQuote": "He later wrote that he had spent twenty years as a Christian and twelve following Helios, the sun god.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which mystical philosophy, built on the ideas of Plato, did the young Julian study?",
+      "options": [
+        "Neoplatonism",
+        "Cynicism",
+        "Epicureanism",
+        "Stoicism"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#julian-the-philosopher",
+      "explanation": "Julian studied Neoplatonism, a mystical philosophy based on Plato's ideas. He even sought out a mentor who practised theurgy, magical rituals meant to call down the gods.",
+      "sourceQuote": "He studied Neoplatonism, a mystical philosophy built on the ideas of Plato.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did Julian's School Edict forbid Christians to do?",
+      "options": [
+        "Sit in the Senate",
+        "Build new churches",
+        "Teach the classics",
+        "Serve in the army"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#julian-pagan-revival",
+      "explanation": "The School Edict stopped Christians from teaching classical literature. It sneered that if they wanted literature, they had Luke and Mark.",
+      "sourceQuote": "His School Edict stopped Christians from teaching the classics: \"If they want to learn literature, they have Luke and Mark,\" it said.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Where in Thessalonica did Roman soldiers kill thousands of civilians in 390?",
+      "options": [
+        "The cathedral",
+        "The forum",
+        "The racetrack",
+        "The harbour"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#massacre-of-thessalonica",
+      "explanation": "Soldiers took revenge for the murder of a general by slaughtering civilians in the city's racetrack. Theodosius was far away in Milan at the time.",
+      "sourceQuote": "Roman soldiers then took revenge in the city's racetrack, killing thousands of civilians.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What happened to the empire after Theodosius died in 395?",
+      "options": [
+        "The Goths took control of the western half",
+        "The Senate chose a single new emperor",
+        "A Frankish general seized the whole of it",
+        "His sons split it into eastern and western courts"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#theodosius-legacy",
+      "explanation": "His two young sons divided the empire into eastern and western courts. That division lasted until the west fell in the late 5th century.",
+      "sourceQuote": "His two young sons, Arcadius and Honorius, split the empire into eastern and western courts, a division that lasted until the west fell in the late 5th century.",
+      "reviewFlags": []
+    }
+  ]
+}

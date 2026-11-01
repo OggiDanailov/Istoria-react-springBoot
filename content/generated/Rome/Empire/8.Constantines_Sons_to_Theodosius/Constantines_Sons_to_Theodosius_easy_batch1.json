@@ -1,0 +1,179 @@
+{
+  "batchName": "Empire: From Constantine's Sons to Theodosius (AD 337-395) - Easy Batch 1",
+  "chapterName": "Empire: From Constantine's Sons to Theodosius (AD 337-395)",
+  "difficulty": 1,
+  "batchOrder": 1,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "How was Julian fatally wounded in Persia?",
+      "options": [
+        "An arrow struck him during a siege",
+        "He fell from his horse in battle",
+        "A spear pierced his liver in a raid",
+        "He was poisoned by a Persian envoy"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#persian-campaign",
+      "explanation": "During a Persian raid Julian rushed into the fight without his armour, and a spear pierced his liver. His doctor could not save him.",
+      "sourceQuote": "A spear pierced his liver, and despite his doctor's efforts he died.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What rank did Constantius II give Julian in November 355?",
+      "options": [
+        "Augustus",
+        "Praetorian prefect",
+        "Caesar",
+        "Master of soldiers"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#julian-in-gaul",
+      "explanation": "Julian was made a Caesar, a junior emperor, and married to Constantius' sister. He was then sent to Gaul with a small staff.",
+      "sourceQuote": "In November AD 355, Constantius II made his young cousin Julian a Caesar, a junior emperor, and married him to his sister.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What distinction did Theodosius hold after his victory in 394?",
+      "options": [
+        "Last emperor to live in Rome itself",
+        "First emperor born in Spain to rule Rome",
+        "First emperor baptised a Christian",
+        "Last man to rule the whole empire"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#theodosius-legacy",
+      "explanation": "After winning at the river Frigidus, Theodosius ruled the entire empire, the last man ever to do so. He died at Milan in January 395.",
+      "sourceQuote": "He now ruled the whole empire, the last man ever to do so.",
+      "reviewFlags": []
+    },
+    {
+      "question": "In which city did mutinous soldiers proclaim Julian Augustus?",
+      "options": [
+        "Constantinople",
+        "Strasbourg",
+        "Milan",
+        "Paris"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#proclaimed-in-paris",
+      "explanation": "The troops, unwilling to leave Gaul, proclaimed Julian senior emperor at Paris, then called Lutetia. By November he was openly using the title on his coins.",
+      "sourceQuote": "They mutinied and proclaimed Julian Augustus, senior emperor, at Paris (*Lutetia*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which emperor died at the Battle of Adrianople, his body never found?",
+      "options": [
+        "Valens",
+        "Constantius II",
+        "Julian",
+        "Theodosius"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#battle-of-adrianople",
+      "explanation": "Valens, emperor of the east, died in the rout and his body was never recovered. One story claims he died in a burning farmhouse.",
+      "sourceQuote": "Valens' body was never found; one story says he died in a burning farmhouse.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which people drove the Goths from their lands, prompting them to seek refuge in the empire in 376?",
+      "options": [
+        "The Persians",
+        "The Franks",
+        "The Huns",
+        "The Alamanni"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#battle-of-adrianople",
+      "explanation": "The Huns, nomadic horsemen from the steppes, pushed the Goths out of their homeland. The Goths then asked to settle inside the Roman Empire.",
+      "sourceQuote": "In AD 376 the Goths, a Germanic people driven from their lands by the Huns, nomadic horsemen from the steppes, asked to settle inside the empire.",
+      "reviewFlags": []
+    },
+    {
+      "question": "When Rome's first Christian emperor died in AD 337, how many of his sons were proclaimed joint emperors?",
+      "options": [
+        "Three",
+        "Four",
+        "Two",
+        "Five"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#sons-of-constantine",
+      "explanation": "Three sons were proclaimed joint emperors and divided the Roman world between them. Before that, most of the old emperor's other male relatives were murdered.",
+      "sourceQuote": "When Rome's first Christian emperor died in AD 337, his three sons were proclaimed joint emperors and divided the Roman world between them.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which group was branded heretical under the Edict of Thessalonica?",
+      "options": [
+        "The Gnostics",
+        "The Donatists",
+        "The Arians",
+        "The Manichaeans"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#theodosius-goths-and-faith",
+      "explanation": "The Arians, who taught that the Son was created by the Father and lesser than him, were branded heretics. A council of bishops at Constantinople confirmed the official belief in 381.",
+      "sourceQuote": "Opponents, notably the Arians, who taught that the Son was created by the Father and lesser than him, were branded heretics.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Where did Theodosius, made emperor in the east in 379, come from?",
+      "options": [
+        "Gaul",
+        "Syria",
+        "Britain",
+        "Spain"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#theodosius-goths-and-faith",
+      "explanation": "Theodosius was a commander from Spain. His father, a famous general, had been executed in murky circumstances.",
+      "sourceQuote": "With Valens dead and Rome's leadership shattered, the generals turned to Theodosius, a commander from Spain whose father, a famous general, had been executed in murky circumstances.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Where did Julian win his great victory over the Alamanni in 357?",
+      "options": [
+        "Verdun",
+        "Cologne",
+        "Strasbourg",
+        "Paris"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#julian-in-gaul",
+      "explanation": "Julian's great moment came at Strasbourg, known to the Romans as Argentoratum. The heavily outnumbered Romans won overwhelmingly and captured the enemy king.",
+      "sourceQuote": "His great moment came in 357 at Strasbourg (*Argentoratum*).",
+      "reviewFlags": []
+    }
+  ]
+}

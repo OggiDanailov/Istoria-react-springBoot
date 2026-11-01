@@ -1,0 +1,642 @@
+{
+  "chapterName": "Empire: From Constantine's Sons to Theodosius (AD 337-395)",
+  "model": "claude-opus-5-5",
+  "briefing": {
+    "title": "Roman Empire, AD 337",
+    "paragraphs": [
+      "The Roman Empire stretches from Gaul to Mesopotamia, and its first Christian emperor has just died. His three sons divide the world between them. First, though, soldiers murder most of their male relatives. A six-year-old boy named Julian is spared.",
+      "Over the next sixty years, emperors will fight Germanic tribes on the Rhine, Persian armies in the east and Goths on the Danube, and they will fight each other for the throne. The empire's faith is at stake too. Will the old gods return, or will Christianity win? And can one man still rule it all?"
+    ]
+  },
+  "timelines": [
+    {
+      "name": "Key Turning Points",
+      "blurb": "Four big moments from the purge of 337 to the disaster against the Goths.",
+      "events": [
+        {
+          "label": "Soldiers purge the imperial family",
+          "when": "AD 337",
+          "year": 337,
+          "fact": "After the first Christian emperor died, soldiers murdered most of his male relatives, a purge ancient writers blamed on Constantius II.",
+          "sectionId": "sons-of-constantine",
+          "reviewFlags": []
+        },
+        {
+          "label": "Julian defeats the Alamanni at Strasbourg",
+          "when": "AD 357",
+          "year": 357,
+          "fact": "Though heavily outnumbered, Julian's army drove the Alamanni, tribes from the upper Rhine, into the river and captured their king.",
+          "sectionId": "julian-in-gaul",
+          "reviewFlags": []
+        },
+        {
+          "label": "Julian dies of a spear wound in Persia",
+          "when": "June AD 363",
+          "year": 363,
+          "fact": "Julian rushed into a fight without his armour during a Persian raid, and a spear pierced his liver.",
+          "sectionId": "persian-campaign",
+          "reviewFlags": []
+        },
+        {
+          "label": "Valens dies in the disaster at Adrianople",
+          "when": "9 August AD 378",
+          "year": 378,
+          "fact": "Only a third of the Roman army escaped the Goths, and the body of Valens, the eastern emperor, was never found.",
+          "sectionId": "battle-of-adrianople",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Julian's Rise and Theodosius' Reign",
+      "blurb": "Follow Julian from birth to the throne, then Theodosius to his final victory.",
+      "events": [
+        {
+          "label": "Julian is born in Constantinople",
+          "when": "Probably AD 331",
+          "year": 331,
+          "fact": "Julian grew up speaking Greek, and his mother died soon after his birth.",
+          "sectionId": "julian-the-philosopher",
+          "reviewFlags": []
+        },
+        {
+          "label": "Julian is made Caesar and sent to Gaul",
+          "when": "November AD 355",
+          "year": 355,
+          "fact": "Constantius II made his cousin a junior emperor and married him to his sister, expecting him to be a mere figurehead.",
+          "sectionId": "julian-in-gaul",
+          "reviewFlags": []
+        },
+        {
+          "label": "Troops proclaim Julian Augustus at Paris",
+          "when": "AD 360",
+          "year": 360,
+          "fact": "Soldiers ordered to march east mutinied and hailed Julian as senior emperor at Paris (Lutetia).",
+          "sectionId": "proclaimed-in-paris",
+          "reviewFlags": []
+        },
+        {
+          "label": "Julian enters Constantinople as emperor",
+          "when": "11 December AD 361",
+          "year": 361,
+          "fact": "Constantius II had died in November, and Julian's first act was to lead his cousin's Christian funeral.",
+          "sectionId": "proclaimed-in-paris",
+          "reviewFlags": []
+        },
+        {
+          "label": "Theodosius issues Edict of Thessalonica",
+          "when": "AD 380",
+          "year": 380,
+          "fact": "The edict let only those who believed Father, Son and Holy Spirit were of one substance call themselves 'catholic'.",
+          "sectionId": "theodosius-goths-and-faith",
+          "reviewFlags": []
+        },
+        {
+          "label": "Theodosius wins at the river Frigidus",
+          "when": "September AD 394",
+          "year": 394,
+          "fact": "A fierce wind blew into the enemy's faces, and the victory made Theodosius ruler of the whole empire.",
+          "sectionId": "theodosius-legacy",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Sixty Years of Crisis",
+      "blurb": "Eight events, from the brothers' feud to the death of the last ruler of a united empire.",
+      "events": [
+        {
+          "label": "Eldest brother dies attacking youngest",
+          "when": "AD 340",
+          "year": 340,
+          "fact": "The three sons of the first Christian emperor soon destroyed one another, starting with the eldest.",
+          "sectionId": "sons-of-constantine",
+          "reviewFlags": []
+        },
+        {
+          "label": "Julian's half-brother is executed",
+          "when": "AD 354",
+          "year": 354,
+          "fact": "Made deputy in the east by Constantius II, he ruled by terror, leaving Julian the last male of his line.",
+          "sectionId": "sons-of-constantine",
+          "reviewFlags": []
+        },
+        {
+          "label": "Julian recovers Cologne from the Franks",
+          "when": "AD 356",
+          "year": 356,
+          "fact": "The Franks, a Germanic people of the lower Rhine, had broken across the frontier into Gaul.",
+          "sectionId": "julian-in-gaul",
+          "reviewFlags": []
+        },
+        {
+          "label": "Persia takes Amida after long siege",
+          "when": "Around AD 359",
+          "year": 359,
+          "fact": "The Persian king captured the fortress city after a 73-day siege, prompting Constantius to demand troops from Gaul.",
+          "sectionId": "proclaimed-in-paris",
+          "reviewFlags": []
+        },
+        {
+          "label": "Goths cross the Danube as allies",
+          "when": "AD 376",
+          "year": 376,
+          "fact": "Driven from their lands by the Huns, the Goths were let in by Valens, who hoped for farmers and soldiers.",
+          "sectionId": "battle-of-adrianople",
+          "reviewFlags": []
+        },
+        {
+          "label": "Treaty lets the Goths settle in empire",
+          "when": "3 October AD 382",
+          "year": 382,
+          "fact": "Theodosius let the Goths live south of the Danube under their own leaders, fighting for Rome as a separate force.",
+          "sectionId": "theodosius-goths-and-faith",
+          "reviewFlags": []
+        },
+        {
+          "label": "Massacre in Thessalonica's racetrack",
+          "when": "About April AD 390",
+          "year": 390,
+          "fact": "After a mob killed a general, Roman soldiers killed thousands of civilians in the city's racetrack.",
+          "sectionId": "massacre-of-thessalonica",
+          "reviewFlags": []
+        },
+        {
+          "label": "Theodosius dies at Milan",
+          "when": "January AD 395",
+          "year": 395,
+          "fact": "Bishop Ambrose praised him at his funeral, and his two young sons split the empire into eastern and western courts.",
+          "sectionId": "theodosius-legacy",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "matchSets": [
+    {
+      "name": "Peoples and Believers",
+      "blurb": "Match each group to what the chapter tells you about it.",
+      "pairs": [
+        {
+          "name": "Alamanni",
+          "match": "Tribal confederation of the upper Rhine, beaten at Strasbourg",
+          "sectionId": "julian-in-gaul",
+          "reviewFlags": []
+        },
+        {
+          "name": "Franks",
+          "match": "Germanic people of the lower Rhine, driven out of Cologne in 356",
+          "sectionId": "julian-in-gaul",
+          "reviewFlags": []
+        },
+        {
+          "name": "Goths",
+          "match": "Germanic people let across the Danube in 376, victors at Adrianople",
+          "sectionId": "battle-of-adrianople",
+          "reviewFlags": []
+        },
+        {
+          "name": "Huns",
+          "match": "Nomadic horsemen from the steppes who drove others from their lands",
+          "sectionId": "battle-of-adrianople",
+          "reviewFlags": []
+        },
+        {
+          "name": "Arians",
+          "match": "Taught that the Son was created by the Father and lesser than him",
+          "sectionId": "theodosius-goths-and-faith",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Words of Power and Faith",
+      "blurb": "Match each term to its meaning.",
+      "pairs": [
+        {
+          "name": "Caesar",
+          "match": "Junior emperor, the rank Julian received in 355",
+          "sectionId": "julian-in-gaul",
+          "reviewFlags": []
+        },
+        {
+          "name": "Augustus",
+          "match": "Senior emperor, the title mutinous troops gave Julian at Paris",
+          "sectionId": "proclaimed-in-paris",
+          "reviewFlags": []
+        },
+        {
+          "name": "Theurgy",
+          "match": "Magical rituals meant to call down the gods",
+          "sectionId": "julian-the-philosopher",
+          "reviewFlags": []
+        },
+        {
+          "name": "Neoplatonism",
+          "match": "Mystical philosophy built on the ideas of Plato",
+          "sectionId": "julian-the-philosopher",
+          "reviewFlags": []
+        },
+        {
+          "name": "School Edict",
+          "match": "Julian's law stopping Christians from teaching the classics",
+          "sectionId": "julian-pagan-revival",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "trueFalseDecks": [
+    {
+      "name": "Julian the Apostate",
+      "blurb": "From the family massacre to the sands of Persia: true or false?",
+      "cards": [
+        {
+          "claim": "Julian was about six years old when most of his male relatives were murdered in 337.",
+          "answer": true,
+          "why": "Julian and his older half-brother were probably spared because they were so young; Julian's father was among the dead.",
+          "sectionId": "sons-of-constantine",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Julian grew up in Rome speaking Latin.",
+          "answer": false,
+          "why": "Julian was born in Constantinople and grew up speaking Greek.",
+          "sectionId": "julian-the-philosopher",
+          "reviewFlags": []
+        },
+        {
+          "claim": "At Strasbourg, 600 Roman horsemen deserted mid-battle, yet the Romans still won overwhelmingly.",
+          "answer": true,
+          "why": "Despite being heavily outnumbered and losing those horsemen, Julian's army routed the Alamanni and captured their king.",
+          "sectionId": "julian-in-gaul",
+          "reviewFlags": []
+        },
+        {
+          "claim": "After Strasbourg, Julian gladly accepted when his soldiers hailed him as Augustus.",
+          "answer": false,
+          "why": "Julian rebuked the soldiers who tried to hail him as senior emperor after the battle.",
+          "sectionId": "julian-in-gaul",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Julian's soldiers proclaimed him Augustus at Paris after being ordered to march east.",
+          "answer": true,
+          "why": "In 360 Constantius II ordered more than half the army in Gaul east, and the unwilling troops mutinied at Paris.",
+          "sectionId": "proclaimed-in-paris",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Julian's first act in Constantinople was to hold a pagan sacrifice for Constantius II.",
+          "answer": false,
+          "why": "Julian led a Christian funeral for his cousin, a public show that he was the lawful successor.",
+          "sectionId": "proclaimed-in-paris",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Julian backed rebuilding the Jewish Temple in Jerusalem.",
+          "answer": true,
+          "why": "Most historians think he wanted to disprove a Christian prophecy; fires, perhaps from an earthquake, stopped the work.",
+          "sectionId": "julian-pagan-revival",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Julian captured Ctesiphon, the Persian capital, after a short siege.",
+          "answer": false,
+          "why": "The Romans won a battle before its gates but did not take the city; his generals advised against a siege.",
+          "sectionId": "persian-campaign",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Valens, Theodosius and Ambrose",
+      "blurb": "The Goths, the Church and the last ruler of a united empire: true or false?",
+      "cards": [
+        {
+          "claim": "Valens let the Goths cross the Danube in 376, hoping for farmers and soldiers.",
+          "answer": true,
+          "why": "He admitted them as allies (foederati), but cheating Roman officials pushed them into revolt.",
+          "sectionId": "battle-of-adrianople",
+          "reviewFlags": []
+        },
+        {
+          "claim": "On the day of the battle, Valens' troops marched about 12 km (eight Roman miles) in summer heat.",
+          "answer": true,
+          "why": "They crossed rough ground and arrived tired and thirsty to find the Goths in a ring of wagons on a hilltop.",
+          "sectionId": "battle-of-adrianople",
+          "reviewFlags": []
+        },
+        {
+          "claim": "About half of Valens' army escaped the battle against the Goths in 378.",
+          "answer": false,
+          "why": "Only a third of the army escaped, and Valens himself died.",
+          "sectionId": "battle-of-adrianople",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Theodosius was a commander from Spain whose father had been a famous general.",
+          "answer": true,
+          "why": "His father had been executed in murky circumstances; Theodosius was made emperor in the east in January 379.",
+          "sectionId": "theodosius-goths-and-faith",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Modern historians agree the Edict of Thessalonica made Christianity the state religion of the whole empire.",
+          "answer": false,
+          "why": "Modern historians stress the edict was aimed only at Constantinople and did not make Christianity the state religion.",
+          "sectionId": "theodosius-goths-and-faith",
+          "reviewFlags": []
+        },
+        {
+          "claim": "According to the most trusted account, the riot in Thessalonica began over a jailed popular charioteer.",
+          "answer": true,
+          "why": "A general refused the crowd's demand to release the charioteer, and the mob killed him.",
+          "sectionId": "massacre-of-thessalonica",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Modern scholars accept that Ambrose physically barred the cathedral door against Theodosius.",
+          "answer": false,
+          "why": "That famous later story is called a pious fiction; Ambrose actually wrote to the emperor refusing him communion.",
+          "sectionId": "massacre-of-thessalonica",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Archaeologists have confirmed all 43 temple destructions reported in written sources.",
+          "answer": false,
+          "why": "Only four of the 43 have been confirmed, so the old gods seem to have faded slowly rather than been overthrown.",
+          "sectionId": "theodosius-legacy",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "oddOneOut": [
+    {
+      "items": [
+        "Recovering Cologne",
+        "Victory at Strasbourg",
+        "Capture of Amida",
+        "Crossing the Rhine"
+      ],
+      "oddIndex": 2,
+      "why": "Julian recovered Cologne, won at Strasbourg and crossed the Rhine; Amida was taken by the king of Persia.",
+      "sectionId": "proclaimed-in-paris",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Reopening temples",
+        "Edict of Thessalonica",
+        "School Edict",
+        "Stripping bishops' privileges"
+      ],
+      "oddIndex": 1,
+      "why": "The others were Julian's pagan measures; the Edict of Thessalonica was issued by the Christian Theodosius in 380.",
+      "sectionId": "theodosius-goths-and-faith",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Battle before Ctesiphon",
+        "Burning his own fleet",
+        "Ring of wagons on a hilltop",
+        "Crops burned by the enemy"
+      ],
+      "oddIndex": 2,
+      "why": "The others happened on Julian's Persian campaign; the Goths waited in a ring of wagons when Valens attacked them.",
+      "sectionId": "battle-of-adrianople",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "'You have won, Galilean'",
+        "Ambrose barring the door",
+        "A saint throwing Julian's spear",
+        "Wind at the Frigidus"
+      ],
+      "oddIndex": 3,
+      "why": "The chapter marks the others as invented or legend; the wind that helped Theodosius at the Frigidus is told as fact.",
+      "sectionId": "theodosius-legacy",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Treaty settling the Goths",
+        "Dismissing palace eunuchs",
+        "Banning animal sacrifice",
+        "Edict of Thessalonica"
+      ],
+      "oddIndex": 1,
+      "why": "Theodosius made the treaty, banned sacrifice and issued the edict; Julian dismissed thousands of palace servants and eunuchs.",
+      "sectionId": "julian-pagan-revival",
+      "reviewFlags": []
+    }
+  ],
+  "whoAmI": [
+    {
+      "name": "Emperors of a Divided Age",
+      "blurb": "Four emperors who fought for the empire and for power.",
+      "people": [
+        {
+          "name": "Constantius II",
+          "options": [
+            "Julian",
+            "Constantius II",
+            "Valens",
+            "Theodosius"
+          ],
+          "clues": [
+            "I crushed a usurper who had seized power in the west in 351.",
+            "Some sources say I named my rival as heir on my deathbed in 361.",
+            "In 360 I ordered more than half the army in Gaul to march east.",
+            "I was the middle son of Rome's first Christian emperor and outlasted my brothers."
+          ],
+          "sectionId": "sons-of-constantine",
+          "reviewFlags": []
+        },
+        {
+          "name": "Julian",
+          "options": [
+            "Valens",
+            "Theodosius",
+            "Julian",
+            "Constantius II"
+          ],
+          "clues": [
+            "One winter, Frankish raiders trapped me for months in a small town near Verdun.",
+            "Citizens of Antioch mocked my beard, so I wrote the 'Beard Hater'.",
+            "I beat the Alamanni at Strasbourg in 357.",
+            "Christians remember me as 'the Apostate', the last pagan emperor."
+          ],
+          "sectionId": "julian-in-gaul",
+          "reviewFlags": []
+        },
+        {
+          "name": "Valens",
+          "options": [
+            "Theodosius",
+            "Valens",
+            "Constantius II",
+            "Julian"
+          ],
+          "clues": [
+            "My scouts counted about 10,000 enemies but missed their cavalry.",
+            "In 376 I let the Goths cross the Danube as allies.",
+            "I would not wait for the young western emperor, wanting a victory of my own.",
+            "I died fighting the Goths in 378, and my body was never found."
+          ],
+          "sectionId": "battle-of-adrianople",
+          "reviewFlags": []
+        },
+        {
+          "name": "Theodosius",
+          "options": [
+            "Constantius II",
+            "Julian",
+            "Theodosius",
+            "Valens"
+          ],
+          "clues": [
+            "My father, a famous general, was executed in murky circumstances.",
+            "I was a commander from Spain, made emperor in the east in 379.",
+            "A fierce wind won me the battle at the river Frigidus.",
+            "I was the last man ever to rule the whole Roman Empire."
+          ],
+          "sectionId": "theodosius-legacy",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Faith and the Throne",
+      "blurb": "Three people who shaped the religion of the empire.",
+      "people": [
+        {
+          "name": "Julian",
+          "options": [
+            "Ambrose",
+            "Julian",
+            "Theodosius",
+            "Constantius II"
+          ],
+          "clues": [
+            "I chose as mentor a philosopher said to have made a statue of Hecate smile.",
+            "I was initiated into the Eleusinian Mysteries near Athens.",
+            "My School Edict stopped Christians from teaching the classics.",
+            "I spent twenty years as a Christian and twelve following Helios, the sun god."
+          ],
+          "sectionId": "julian-the-philosopher",
+          "reviewFlags": []
+        },
+        {
+          "name": "Theodosius",
+          "options": [
+            "Julian",
+            "Constantius II",
+            "Ambrose",
+            "Theodosius"
+          ],
+          "clues": [
+            "I was baptised during a serious illness in 380.",
+            "In 381 a council of bishops at Constantinople confirmed the belief I had decreed.",
+            "As penance, I attended church without my imperial robes until Christmas.",
+            "My Edict of Thessalonica branded the Arians heretics."
+          ],
+          "sectionId": "theodosius-goths-and-faith",
+          "reviewFlags": []
+        },
+        {
+          "name": "Ambrose",
+          "options": [
+            "Theodosius",
+            "Ambrose",
+            "Constantius II",
+            "Julian"
+          ],
+          "clues": [
+            "Historians now see me as one adviser among many, offering the emperor a way to save face.",
+            "A later pious fiction says I barred a cathedral door against the emperor.",
+            "I refused the emperor communion until he did penance for a massacre.",
+            "I was the forceful bishop of Milan and praised Theodosius at his funeral."
+          ],
+          "sectionId": "massacre-of-thessalonica",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "places": [
+    {
+      "name": "Strasbourg",
+      "wikipediaTitle": "Strasbourg",
+      "lat": 48.58333333,
+      "lon": 7.74583333,
+      "why": "Here in 357 Julian's outnumbered army crushed the Alamanni and captured their king.",
+      "sectionId": "julian-in-gaul",
+      "coordinates": "Wikipedia: Strasbourg",
+      "reviewFlags": []
+    },
+    {
+      "name": "Paris",
+      "wikipediaTitle": "Paris",
+      "lat": 48.8567,
+      "lon": 2.3522,
+      "why": "Mutinous soldiers proclaimed Julian Augustus here in 360 rather than march east.",
+      "sectionId": "proclaimed-in-paris",
+      "coordinates": "Wikipedia: Paris",
+      "reviewFlags": []
+    },
+    {
+      "name": "Milan",
+      "wikipediaTitle": "Milan",
+      "lat": 45.46694444,
+      "lon": 9.19,
+      "why": "Imperial court city where Julian was held under suspicion, Ambrose was bishop and Theodosius died in 395.",
+      "sectionId": "theodosius-legacy",
+      "coordinates": "Wikipedia: Milan",
+      "reviewFlags": []
+    },
+    {
+      "name": "Constantinople",
+      "wikipediaTitle": "Constantinople",
+      "lat": 41.0125,
+      "lon": 28.98,
+      "why": "Julian's birthplace, which he entered as sole emperor on 11 December 361.",
+      "sectionId": "proclaimed-in-paris",
+      "coordinates": "Wikipedia: Constantinople",
+      "reviewFlags": []
+    },
+    {
+      "name": "Antioch",
+      "wikipediaTitle": "Antioch",
+      "lat": 36.20472222,
+      "lon": 36.18166667,
+      "why": "The great city of Roman Syria where citizens mocked Julian's beard before his Persian campaign.",
+      "sectionId": "persian-campaign",
+      "coordinates": "Wikipedia: Antioch",
+      "reviewFlags": []
+    },
+    {
+      "name": "Ctesiphon",
+      "wikipediaTitle": "Ctesiphon",
+      "lat": 33.09361111,
+      "lon": 44.58055556,
+      "why": "The Persian capital on the Tigris, where Julian won a battle at the gates but did not take the city.",
+      "sectionId": "persian-campaign",
+      "coordinates": "Wikipedia: Ctesiphon",
+      "reviewFlags": []
+    },
+    {
+      "name": "Thessalonica",
+      "wikipediaTitle": "Thessaloniki",
+      "lat": 40.6403,
+      "lon": 22.9356,
+      "why": "The northern Greek city where soldiers massacred thousands of civilians in the racetrack in 390.",
+      "sectionId": "massacre-of-thessalonica",
+      "coordinates": "Wikipedia: Thessaloniki",
+      "reviewFlags": []
+    }
+  ]
+}

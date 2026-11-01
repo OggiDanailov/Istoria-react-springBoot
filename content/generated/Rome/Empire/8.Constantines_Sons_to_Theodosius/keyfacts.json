@@ -1,0 +1,144 @@
+{
+  "description": "Key facts for this chapter, written by hand from the chapter text. Every entry links to the section that explains it.",
+  "people": [
+    {
+      "name": "Constantius II",
+      "text": "Constantine’s son; sole emperor 351–361.",
+      "sec": "sons-of-constantine"
+    },
+    {
+      "name": "Julian",
+      "text": "The last pagan emperor, 361–363; killed in Persia.",
+      "sec": "julian-pagan-revival"
+    },
+    {
+      "name": "Valens",
+      "text": "Eastern emperor, killed at Adrianople in 378.",
+      "sec": "battle-of-adrianople"
+    },
+    {
+      "name": "Fritigern",
+      "text": "The Gothic leader at Adrianople.",
+      "sec": "battle-of-adrianople"
+    },
+    {
+      "name": "Theodosius",
+      "text": "Emperor 379–395; the last to rule the whole empire.",
+      "sec": "theodosius-legacy"
+    },
+    {
+      "name": "Ambrose",
+      "text": "Bishop of Milan who made Theodosius do penance.",
+      "sec": "massacre-of-thessalonica"
+    }
+  ],
+  "dates": [
+    {
+      "when": "337",
+      "text": "Constantine dies; his sons divide the empire.",
+      "sec": "sons-of-constantine"
+    },
+    {
+      "when": "357",
+      "text": "Julian wins at Strasbourg.",
+      "sec": "julian-in-gaul"
+    },
+    {
+      "when": "360",
+      "text": "Julian’s troops proclaim him Augustus at Paris.",
+      "sec": "proclaimed-in-paris"
+    },
+    {
+      "when": "363",
+      "text": "Julian dies in Persia.",
+      "sec": "persian-campaign"
+    },
+    {
+      "when": "376",
+      "text": "The Goths cross the Danube.",
+      "sec": "battle-of-adrianople"
+    },
+    {
+      "when": "9 August 378",
+      "text": "The Battle of Adrianople; Valens is killed.",
+      "sec": "battle-of-adrianople"
+    },
+    {
+      "when": "380",
+      "text": "The Edict of Thessalonica.",
+      "sec": "theodosius-goths-and-faith"
+    },
+    {
+      "when": "390",
+      "text": "The massacre of Thessalonica.",
+      "sec": "massacre-of-thessalonica"
+    },
+    {
+      "when": "394",
+      "text": "Theodosius wins at the Frigidus.",
+      "sec": "theodosius-legacy"
+    },
+    {
+      "when": "395",
+      "text": "Theodosius dies; the empire is split between his sons.",
+      "sec": "theodosius-legacy"
+    }
+  ],
+  "terms": [
+    {
+      "latin": "Mediolanum",
+      "english": "Milan",
+      "sec": "sons-of-constantine"
+    },
+    {
+      "latin": "Argentoratum",
+      "english": "Strasbourg",
+      "sec": "julian-in-gaul"
+    },
+    {
+      "latin": "praefectus praetorio",
+      "english": "praetorian prefect, a top civil official",
+      "sec": "julian-in-gaul"
+    },
+    {
+      "latin": "Lutetia",
+      "english": "Paris",
+      "sec": "proclaimed-in-paris"
+    },
+    {
+      "latin": "primus inter pares",
+      "english": "first among equals",
+      "sec": "julian-pagan-revival"
+    },
+    {
+      "latin": "senatus",
+      "english": "the Senate",
+      "sec": "julian-pagan-revival"
+    },
+    {
+      "latin": "curiae",
+      "english": "city councils",
+      "sec": "julian-pagan-revival"
+    },
+    {
+      "latin": "Vicisti, Galilaee",
+      "english": "You have won, Galilean",
+      "sec": "persian-campaign"
+    },
+    {
+      "latin": "foederati",
+      "english": "allies bound by treaty",
+      "sec": "battle-of-adrianople"
+    },
+    {
+      "latin": "edictum",
+      "english": "an edict",
+      "sec": "theodosius-goths-and-faith"
+    },
+    {
+      "latin": "magister militum",
+      "english": "master of soldiers",
+      "sec": "theodosius-legacy"
+    }
+  ]
+}

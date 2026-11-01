@@ -1,0 +1,205 @@
+{
+  "batchName": "Empire: From Constantine's Sons to Theodosius (AD 337-395) - Hard Batch 1",
+  "chapterName": "Empire: From Constantine's Sons to Theodosius (AD 337-395)",
+  "difficulty": 3,
+  "batchOrder": 5,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Roughly what share of Valens' army escaped the disaster at Adrianople?",
+      "options": [
+        "Half",
+        "Three-quarters",
+        "Two-thirds",
+        "A quarter",
+        "A tenth",
+        "A third"
+      ],
+      "correctAnswers": [
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#battle-of-adrianople",
+      "explanation": "Only a third of the army escaped the rout, which lasted until nightfall. Historians often see the battle as the beginning of the end for the western empire.",
+      "sourceQuote": "Only a third of the army escaped.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did Julian respond when his soldiers tried to hail him as Augustus after the victory at Strasbourg?",
+      "options": [
+        "He accepted and minted coins",
+        "He rebuked them",
+        "He wrote to Constantius for approval",
+        "He offered the title to his general",
+        "He accepted only the title of Caesar",
+        "He had the ringleaders executed"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 3,
+      "textReference": "#julian-in-gaul",
+      "explanation": "Julian rebuked the soldiers rather than accept the title in 357. He then crossed the Rhine and forced three local kingdoms to submit.",
+      "sourceQuote": "The soldiers tried to hail Julian as Augustus, senior emperor, but he rebuked them.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What happened in the west in 392 that led to Theodosius' final civil war?",
+      "options": [
+        "A usurper killed the western emperor and seized Gaul",
+        "The western emperor converted back to paganism",
+        "Theodosius' son was murdered at Milan",
+        "The western emperor was found hanged and a Frankish general installed a puppet",
+        "The Senate elected a pagan emperor",
+        "The western emperor was killed in battle with the Goths"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 3,
+      "textReference": "#theodosius-legacy",
+      "explanation": "The young western emperor was found hanged, and the Frankish master of soldiers put a puppet on the throne. Theodosius defeated them at the Frigidus in 394; his earlier civil war, in 388, had been against a different usurper.",
+      "sourceQuote": "In 392 the young western emperor he had restored was found hanged, and Arbogast, a powerful Frankish general and the western master of soldiers (*magister militum*), put a puppet emperor on the throne.",
+      "reviewFlags": []
+    },
+    {
+      "question": "In what year was Constantius II's youngest brother killed fighting a usurper in the west?",
+      "options": [
+        "340",
+        "337",
+        "355",
+        "351",
+        "350",
+        "354"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 3,
+      "textReference": "#sons-of-constantine",
+      "explanation": "The youngest brother fell in 350 fighting a general who had seized power in the west. Constantius crushed that usurper in 351, after the eldest brother had died in 340.",
+      "sourceQuote": "The youngest, Constans, fell in 350 fighting a usurper, a general who had seized power in the west.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How do historians now interpret Ambrose's role in Theodosius' penance after Thessalonica?",
+      "options": [
+        "As the man who ordered the massacre",
+        "As a rival plotting to replace the emperor",
+        "As one adviser offering the emperor a way to save face",
+        "As proof that the Church commanded the state",
+        "As a pawn of the eastern bishops",
+        "As a pagan sympathiser shaming the court"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 3,
+      "textReference": "#massacre-of-thessalonica",
+      "explanation": "For centuries the episode was seen as the Church commanding the state, but historians now view Ambrose as one adviser among many. Some think Theodosius took blame to hide his failure to control his troops.",
+      "sourceQuote": "For centuries the episode was held up as proof that the Church could command the state, but historians now see Ambrose as just one adviser among many, offering the emperor a way to save face.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What irony do historians see in Julian's pagan revival?",
+      "options": [
+        "He banned the sacrifices he loved",
+        "It revived Judaism more than paganism",
+        "It relied on Persian priests",
+        "In competing with Christianity, it made paganism resemble it",
+        "It was funded by Christian bishops",
+        "Its temples were built by Christian workers"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 3,
+      "textReference": "#julian-pagan-revival",
+      "explanation": "Julian wanted pagan priests to be moral models running charities, like Christian clergy. In competing with Christianity, he made paganism look more like it, and the revival died with him.",
+      "sourceQuote": "Historians note the irony: in competing with Christianity, he made paganism look more like it.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Where did Julian wait during his march east, writing letters to Greek cities to justify his rebellion?",
+      "options": [
+        "Adrianople",
+        "Sirmium",
+        "Aquileia",
+        "Naissus",
+        "Thessalonica",
+        "Antioch"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 3,
+      "textReference": "#proclaimed-in-paris",
+      "explanation": "With Aquileia held by loyalists, Julian could only wait at Naissus in the Balkans. Constantius' death on 3 November 361 then cleared his way.",
+      "sourceQuote": "Julian could only wait at Naissus in the Balkans, writing letters to Greek cities to justify himself.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Who were put forward as the one who threw the spear that killed Julian? (select all that apply)",
+      "options": [
+        "An Arab fighting for Persia",
+        "A Gothic mercenary",
+        "The Persian king himself",
+        "A saint, in later Christian legend",
+        "A Christian soldier",
+        "Julian's own doctor"
+      ],
+      "correctAnswers": [
+        0,
+        3,
+        4
+      ],
+      "difficulty": 3,
+      "textReference": "#persian-campaign",
+      "explanation": "The thrower's identity was disputed between a Christian soldier, an Arab fighting for Persia and, in later legend, a saint. Julian's successor had to give up territory, including Nisibis, to save the trapped army.",
+      "sourceQuote": "Who threw the spear was disputed: a Christian soldier, an Arab fighting for Persia, or, in later Christian legend, a saint.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which were part of Julian's upbringing before he went to Athens? (select all that apply)",
+      "options": [
+        "Ordination as a priest in Constantinople",
+        "Exile to an imperial estate in Cappadocia",
+        "Instruction from Ambrose of Milan",
+        "Being taught by a bishop",
+        "Lessons from a Gothic tutor",
+        "Training by Latin rhetoricians in Rome"
+      ],
+      "correctAnswers": [
+        1,
+        3,
+        4
+      ],
+      "difficulty": 3,
+      "textReference": "#julian-the-philosopher",
+      "explanation": "Julian was taught by a bishop and a Gothic tutor he remembered fondly, then sent to a remote estate in Cappadocia. There a bishop lent him books of classical Greek literature.",
+      "sourceQuote": "He was taught by a bishop and by a Gothic tutor he later remembered fondly, then sent to a remote imperial estate in Cappadocia, in central Anatolia.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did Theodosius rebuild his depleted army after Adrianople? (select all that apply)",
+      "options": [
+        "Conscripting miners",
+        "Hiring Persian cavalry",
+        "Arming freed slaves from Rome",
+        "Conscripting farmers",
+        "Recruiting Gothic deserters",
+        "Recalling all legions from Britain"
+      ],
+      "correctAnswers": [
+        0,
+        3,
+        4
+      ],
+      "difficulty": 3,
+      "textReference": "#theodosius-goths-and-faith",
+      "explanation": "Theodosius conscripted farmers and miners and recruited barbarians, even Gothic deserters. Even so, he could not drive the Goths out and made a treaty with them in 382.",
+      "sourceQuote": "His army was so depleted that he conscripted farmers and miners and recruited barbarians, even Gothic deserters.",
+      "reviewFlags": []
+    }
+  ]
+}
