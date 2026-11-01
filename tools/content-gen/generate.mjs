@@ -43,6 +43,32 @@ const ONLY = args.includes('--only') ? args[args.indexOf('--only') + 1] : null
 
 const sleep = ms => new Promise(r => setTimeout(r, ms))
 
+// Wikipedia's plain-text extract returns only the introduction of some very long articles (e.g. "Trajan").
+// For those, read the full page as HTML and turn it into plain text with section headings.
+// Drop the reference and bibliography sections at the end, which only add noise. Only near the end: some
+// articles (Trajan, Constantine) open with a real section called "Sources" about the ancient historians.
+function dropBackMatter(text) {
+  const re = /\n==+ (?:See also|Notes|References|Sources|Bibliography|Further reading|External links|Citations) ==+\n/g
+  for (const m of text.matchAll(re)) if (m.index > text.length * 0.6) return text.slice(0, m.index).trim()
+  return text.trim()
+}
+function htmlToText(html) {
+  const entities = { amp: '&', lt: '<', gt: '>', quot: '"', '#39': "'", nbsp: ' ' }
+  return html
+    .replace(/<(style|script|table|figure|sup)\b[\s\S]*?<\/\1>/gi, '')   // styles, tables, images, footnote marks
+    .replace(/<h([2-4])\b[^>]*>([\s\S]*?)<\/h\1>/gi, (_, n, t) => `\n${'='.repeat(+n)} ${t.replace(/<[^>]+>/g, '').trim()} ${'='.repeat(+n)}\n`)
+    .replace(/<\/(p|li|div|section|blockquote)>/gi, '\n')
+    .replace(/<[^>]+>/g, '')
+    .replace(/&(#?\w+);/g, (m, e) => entities[e] ?? (e[0] === '#' ? String.fromCharCode(+e.slice(1)) : m))
+    .replace(/\n{3,}/g, '\n\n').trim()
+}
+async function fullArticle(title) {
+  const res = await fetch(`https://en.wikipedia.org/api/rest_v1/page/html/${encodeURIComponent(title.replace(/ /g, '_'))}`, {
+    headers: { 'User-Agent': 'AveCaesarContentPilot/0.1 (https://avecaesar.org)' },
+  })
+  if (!res.ok) throw new Error(`Wikipedia ${res.status} for the full text of "${title}"`)
+  return htmlToText(await res.text())
+}
 async function fetchWikipedia(title) {
   fs.mkdirSync(CACHE_DIR, { recursive: true })
   const file = path.join(CACHE_DIR, title.replace(/[^\w-]+/g, '_') + '.json')
@@ -60,12 +86,17 @@ async function fetchWikipedia(title) {
     if (!res.ok) throw new Error(`Wikipedia ${res.status} for "${title}"`)
     const page = Object.values((await res.json()).query.pages)[0]
     if (page.missing !== undefined) throw new Error(`Wikipedia article not found: "${title}"`)
+    let text = page.extract
+    if (text.split(/\s+/).length < 1000 || (text.split(/\s+/).length < 2500 && page.length > 60000)) {   // cut down to its introduction
+      console.log(`    "${page.title}": the plain-text extract was cut short; reading the full page`)
+      text = await fullArticle(page.title)
+    }
     const doc = {
       title: page.title,
       url: page.fullurl,
       revision: page.lastrevid,
       // Drop reference/bibliography sections, which only add noise
-      text: page.extract.split(/\n==+ (?:See also|Notes|References|Sources|Bibliography|Further reading|External links|Citations) ==+\n/)[0].trim(),
+      text: dropBackMatter(text),
     }
     fs.writeFileSync(file, JSON.stringify(doc, null, 1))
     await sleep(1500) // be polite to Wikipedia
@@ -164,7 +195,7 @@ Style:
 - When you mention a group with a known size (e.g. "seven kings"), cover every member of it in the chapter.
 - Clearly mark legend, tradition and disputed claims as such ("According to tradition...", "Ancient writers claimed...", "Modern historians doubt...").
 - Give measurements in metric units first, with the source's unit in parentheses: "about 5 km (three miles)", "about 330 kg (a thousand pounds)", "about 120 hectares (300 acres)". Ancient miles and pounds are Roman ones (a Roman mile is about 1.5 km, a Roman pound about 330 g).
-- Mention dates where they matter, written like "753 BC".
+- Mention dates where they matter, written like "753 BC"; years after the birth of Christ like "AD 69" (never "CE" or "BCE"); centuries like "the 3rd century AD".
 - Latin: after the English name of a key Roman institution, office, law, ritual or object, give the Latin term in parentheses and italics at its first mention: "the Senate (*senatus*)", "the two consuls (*consules*)", "unconditional surrender (*deditio*)". About 10 to 15 per chapter, only real Latin you are sure of; skip it where the Latin is the same as the English word. Latin names for places or peoples only when they are well known (e.g. "Carthage (*Carthago*)").`
 
 const QUESTIONS_SYSTEM = `You write quiz questions for Ave Caesar, a history quiz app. People open it for fun, the way they'd open a trivia game, and learn something real along the way.

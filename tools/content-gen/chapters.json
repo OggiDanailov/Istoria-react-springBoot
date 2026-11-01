@@ -24,6 +24,12 @@
       "name": "The Late Republic",
       "period": "121–27 BC",
       "blurb": "Ambitious generals, civil wars and the fall of the Republic"
+    },
+    {
+      "id": "empire",
+      "name": "The Empire",
+      "period": "27 BC – AD 476",
+      "blurb": "Emperors, the Roman Peace and the fall of the West"
     }
   ],
   "chapters": [
@@ -506,6 +512,178 @@
         "intro": "Off the headland of Actium, Octavian’s nimble fleet faces the huge galleys of Antony and Cleopatra."
       },
       "locked": true
+    },
+    {
+      "id": "augustus",
+      "folder": "Rome/Empire/1.Augustus",
+      "chapterName": "Empire: Augustus and the Principate (27 BC-AD 14)",
+      "period": "27 BC-AD 14",
+      "sources": [
+        "Augustus",
+        "Principate",
+        "Battle of the Teutoburg Forest"
+      ],
+      "counts": {
+        "easy": 20,
+        "medium": 20,
+        "hard": 10
+      },
+      "short": "Augustus",
+      "era": "empire",
+      "mapArea": "wide"
+    },
+    {
+      "id": "tiberius-and-caligula",
+      "folder": "Rome/Empire/2.Tiberius_and_Caligula",
+      "chapterName": "Empire: Tiberius and Caligula (AD 14-41)",
+      "period": "AD 14-41",
+      "sources": [
+        "Tiberius",
+        "Caligula",
+        "Germanicus"
+      ],
+      "counts": {
+        "easy": 20,
+        "medium": 20,
+        "hard": 10
+      },
+      "short": "Tiberius and Caligula",
+      "era": "empire",
+      "mapArea": "wide"
+    },
+    {
+      "id": "claudius-and-nero",
+      "folder": "Rome/Empire/3.Claudius_and_Nero",
+      "chapterName": "Empire: Claudius and Nero (AD 41-68)",
+      "period": "AD 41-68",
+      "sources": [
+        "Claudius",
+        "Nero",
+        "Boudica"
+      ],
+      "counts": {
+        "easy": 20,
+        "medium": 20,
+        "hard": 10
+      },
+      "short": "Claudius and Nero",
+      "era": "empire",
+      "mapArea": "wide"
+    },
+    {
+      "id": "four-emperors-and-flavians",
+      "folder": "Rome/Empire/4.Four_Emperors_and_Flavians",
+      "chapterName": "Empire: The Year of Four Emperors and the Flavians (AD 69-96)",
+      "period": "AD 69-96",
+      "sources": [
+        "Year of the Four Emperors",
+        "Flavian dynasty",
+        "Siege of Jerusalem (70 CE)"
+      ],
+      "counts": {
+        "easy": 20,
+        "medium": 20,
+        "hard": 10
+      },
+      "short": "The Flavians",
+      "era": "empire",
+      "mapArea": "wide"
+    },
+    {
+      "id": "five-good-emperors",
+      "folder": "Rome/Empire/5.Five_Good_Emperors",
+      "chapterName": "Empire: The Five Good Emperors (AD 96-192)",
+      "period": "AD 96-192",
+      "sources": [
+        "Trajan",
+        "Hadrian",
+        "Trajan's Dacian Wars",
+        "Marcus Aurelius"
+      ],
+      "counts": {
+        "easy": 20,
+        "medium": 20,
+        "hard": 10
+      },
+      "short": "Five Good Emperors",
+      "era": "empire",
+      "mapArea": "wide"
+    },
+    {
+      "id": "severans-and-crisis",
+      "folder": "Rome/Empire/6.Severans_and_Crisis",
+      "chapterName": "Empire: The Severans and the Crisis of the Third Century (AD 193-284)",
+      "period": "AD 193-284",
+      "sources": [
+        "Severan dynasty",
+        "Crisis of the Third Century",
+        "Zenobia"
+      ],
+      "counts": {
+        "easy": 20,
+        "medium": 20,
+        "hard": 10
+      },
+      "short": "The Third-Century Crisis",
+      "era": "empire",
+      "mapArea": "wide"
+    },
+    {
+      "id": "diocletian-and-constantine",
+      "folder": "Rome/Empire/7.Diocletian_and_Constantine",
+      "chapterName": "Empire: Diocletian and Constantine (AD 284-337)",
+      "period": "AD 284-337",
+      "sources": [
+        "Diocletian",
+        "Constantine the Great",
+        "Battle of the Milvian Bridge"
+      ],
+      "counts": {
+        "easy": 20,
+        "medium": 20,
+        "hard": 10
+      },
+      "short": "Diocletian and Constantine",
+      "era": "empire",
+      "mapArea": "wide"
+    },
+    {
+      "id": "constantines-sons-to-theodosius",
+      "folder": "Rome/Empire/8.Constantines_Sons_to_Theodosius",
+      "chapterName": "Empire: From Constantine's Sons to Theodosius (AD 337-395)",
+      "period": "AD 337-395",
+      "sources": [
+        "Julian (emperor)",
+        "Battle of Adrianople",
+        "Theodosius I"
+      ],
+      "counts": {
+        "easy": 20,
+        "medium": 20,
+        "hard": 10
+      },
+      "short": "To Theodosius",
+      "era": "empire",
+      "mapArea": "wide"
+    },
+    {
+      "id": "fall-of-the-west",
+      "folder": "Rome/Empire/9.Fall_of_the_West",
+      "chapterName": "Empire: The Fall of the West (AD 395-476)",
+      "period": "AD 395-476",
+      "sources": [
+        "Fall of the Western Roman Empire",
+        "Sack of Rome (410)",
+        "Battle of the Catalaunian Plains"
+      ],
+      "counts": {
+        "easy": 20,
+        "medium": 20,
+        "hard": 10
+      },
+      "short": "Fall of the West",
+      "era": "empire",
+      "mapArea": "wide"
     }
   ]
 }

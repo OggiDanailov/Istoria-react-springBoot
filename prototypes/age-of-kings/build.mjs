@@ -53,7 +53,7 @@ for (const c of CONFIG.chapters) {
   const got = sections.reduce((n, x) => n + words(x.body), 0)
   if (got !== expected) throw new Error(`${c.id}: chronicle has ${got} words but chapter.md has ${expected}`)
   const ch = {
-    id: c.id, era: c.era, short: c.short, title: c.chapterName.replace(/\s*\([^)]*\)\s*$/, '').replace(/^(Early|Middle|Late) Republic:\s*/, '').replace(/ - /g, ': '), period: c.period.replace('BCE', 'BC'),
+    id: c.id, era: c.era, short: c.short, title: c.chapterName.replace(/\s*\([^)]*\)\s*$/, '').replace(/^(Early Republic|Middle Republic|Late Republic|Empire):\s*/, '').replace(/ - /g, ': '), period: c.period.replace('BCE', 'BC'),
     sources: c.sources, briefing: g.briefing, sections, battle: c.battle,
     timelines: g.timelines.map(t => ({ name: t.name, blurb: t.blurb, events: t.events.filter(ok).map(e => ({ label: e.label, when: e.when, y: e.year, fact: e.fact, sec: e.sectionId })) }))
       .filter(t => t.events.length >= 3),
