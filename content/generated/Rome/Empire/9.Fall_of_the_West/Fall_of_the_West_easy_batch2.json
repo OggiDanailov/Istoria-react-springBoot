@@ -1,0 +1,179 @@
+{
+  "batchName": "Empire: The Fall of the West (AD 395-476) - Easy Batch 2",
+  "chapterName": "Empire: The Fall of the West (AD 395-476)",
+  "difficulty": 1,
+  "batchOrder": 2,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Which tireless general held the Western Empire together for about two decades before Attila's invasion?",
+      "options": [
+        "Ricimer",
+        "Alaric",
+        "Odoacer",
+        "Aetius"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#aetius-and-attila",
+      "explanation": "Aetius held the West together, fighting Goths, Franks and rebels. He often used Hunnic mercenaries to do it.",
+      "sourceQuote": "For two decades the West was held together by Aetius, the tireless general who fought Goths, Franks and rebels, often with Hunnic mercenaries.",
+      "reviewFlags": []
+    },
+    {
+      "question": "After the Roman world was split in 395, from which city was the eastern half governed?",
+      "options": [
+        "Constantinople",
+        "Alexandria",
+        "Ravenna",
+        "Antioch"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#a-divided-empire",
+      "explanation": "The East was ruled from Constantinople, the great city on the Bosphorus. The West, including Italy, Spain and Gaul, went to the other young son.",
+      "sourceQuote": "One took the East, governed from Constantinople (*Constantinopolis*), the great city on the Bosphorus.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How long did the Vandals plunder Rome in 455?",
+      "options": [
+        "Two weeks",
+        "Six months",
+        "Three days",
+        "One night"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#murder-and-vandal-sack",
+      "explanation": "The Vandals plundered Rome for two weeks, far more thoroughly than the Goths had in 410. They sailed away with huge treasure and an imperial princess.",
+      "sourceQuote": "The Vandals then plundered Rome for two weeks, far more thoroughly than the Goths in 410, and sailed away with huge treasure and an imperial princess.",
+      "reviewFlags": []
+    },
+    {
+      "question": "When Roman envoys asked what he would leave the citizens, what did Alaric reportedly reply?",
+      "options": [
+        "Their lives",
+        "Their gods",
+        "Their walls",
+        "Their temples"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#sieges-of-rome",
+      "explanation": "Alaric reportedly answered 'Their lives.' He also laughed at the Senate's boasts, saying thick grass is easier to cut than thin.",
+      "sourceQuote": "Asked what he would leave the citizens, he replied: “Their lives.”",
+      "reviewFlags": []
+    },
+    {
+      "question": "In the early 400s, the frightened western court moved its capital from Milan to which town?",
+      "options": [
+        "Ravenna",
+        "Verona",
+        "Aquileia",
+        "Naples"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#alaric-and-the-general",
+      "explanation": "The court fled to Ravenna after Alaric invaded Italy. The town was shielded by marshes and had an escape route by sea.",
+      "sourceQuote": "Even so, the frightened court moved its capital from Milan to Ravenna, a town near the Adriatic coast shielded by marshes and with an escape route by sea.",
+      "reviewFlags": []
+    },
+    {
+      "question": "In 418, where did Rome give the Visigoths land to farm?",
+      "options": [
+        "Burgundy",
+        "Aquitaine",
+        "Brittany",
+        "Provence"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#kingdoms-inside-the-empire",
+      "explanation": "Rome settled the Visigoths in Aquitaine, in south-western France: a whole people living inside the empire under its own king.",
+      "sourceQuote": "In 418 Rome gave them land to farm in Aquitaine, in south-western France.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What vast book did a North African bishop write as the most lasting answer to the sack of Rome?",
+      "options": [
+        "The City of God",
+        "The Rule of Saint Benedict",
+        "The Consolation of Philosophy",
+        "The Golden Legend"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#who-was-to-blame",
+      "explanation": "The bishop wrote The City of God. It argued that Christians' true home was a heavenly city, and it became one of the foundations of Christian thought.",
+      "sourceQuote": "The most lasting answer came from Augustine, a bishop in North Africa, who wrote a vast book called The City of God.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Where did Aetius's coalition clash with Attila's army in 451?",
+      "options": [
+        "At Verona",
+        "On the Catalaunian Plains",
+        "At Pollentia",
+        "At Adrianople"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#aetius-and-attila",
+      "explanation": "The armies met on the Catalaunian Plains near Troyes, in north-eastern France. They fought over a ridge until dark.",
+      "sourceQuote": "Around 20 June 451 the armies clashed on the Catalaunian Plains near Troyes, in north-eastern France, fighting over a ridge until dark.",
+      "reviewFlags": []
+    },
+    {
+      "question": "After the sack of 410, what did pagans claim had caused the disaster?",
+      "options": [
+        "The Senate had grown corrupt and lazy",
+        "Rome had abandoned the ancient sacrifices",
+        "Barbarians had been let into the army",
+        "The emperor had left Rome for Ravenna"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#who-was-to-blame",
+      "explanation": "Pagans said Rome had lost divine protection by giving up the old sacrifices. Christians and pagans both used the sack as ammunition.",
+      "sourceQuote": "Pagans argued that Rome had lost divine protection by abandoning the ancient sacrifices.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What made the Gothic leader Alaric revolt in 395?",
+      "options": [
+        "The Huns had seized his lands",
+        "He was denied a high Roman command",
+        "He was refused a Roman bride",
+        "His father was executed by Romans"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#alaric-and-the-general",
+      "explanation": "Alaric revolted because he was denied high Roman command. He then went on to plunder Greece.",
+      "sourceQuote": "Angry at being denied high Roman command, he revolted in 395 and plundered Greece.",
+      "reviewFlags": []
+    }
+  ]
+}

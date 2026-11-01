@@ -1,0 +1,639 @@
+{
+  "chapterName": "Empire: The Fall of the West (AD 395-476)",
+  "model": "claude-opus-5-5",
+  "briefing": {
+    "title": "The Roman Empire, AD 395",
+    "paragraphs": [
+      "In January 395 the last emperor to rule the whole Roman world dies. His two young sons split it: one rules the East from Constantinople, the other the West, from Italy to Spain and Gaul. Neither has real talent, and rival ministers pull the strings.",
+      "Inside the borders live armed Goths, refugees from the Huns who crushed a Roman army at Adrianople. Over the next eighty years Goths, Vandals and Huns will test the West. Can its generals hold it together, or will Rome itself fall?"
+    ]
+  },
+  "timelines": [
+    {
+      "name": "Milestones of the Fall",
+      "blurb": "Four turning points from the Gothic victory to the last western emperor.",
+      "events": [
+        {
+          "label": "Goths destroy an eastern army",
+          "when": "9 August 378",
+          "year": 378,
+          "fact": "At Adrianople, in modern European Turkey, the rebel Goths killed the eastern emperor himself.",
+          "sectionId": "a-divided-empire",
+          "reviewFlags": []
+        },
+        {
+          "label": "Alaric's Goths sack Rome",
+          "when": "24 August 410",
+          "year": 410,
+          "fact": "It was the first time in almost 800 years that Rome had fallen to a foreign enemy.",
+          "sectionId": "sack-of-rome-410",
+          "reviewFlags": []
+        },
+        {
+          "label": "Battle of the Catalaunian Plains",
+          "when": "Around 20 June 451",
+          "year": 451,
+          "fact": "Aetius's coalition fought Attila's Huns over a ridge until dark near Troyes.",
+          "sectionId": "aetius-and-attila",
+          "reviewFlags": []
+        },
+        {
+          "label": "Odoacer deposes Romulus Augustulus",
+          "when": "4 September 476",
+          "year": 476,
+          "fact": "By convention this marks the end of the Western Roman Empire.",
+          "sectionId": "the-last-emperor",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Goths, Vandals and Huns",
+      "blurb": "Six steps in the West's long unravelling.",
+      "events": [
+        {
+          "label": "Empire divided between two sons",
+          "when": "January 395",
+          "year": 395,
+          "fact": "One son took the East from Constantinople, the other the West, and both became puppets of rival ministers.",
+          "sectionId": "a-divided-empire",
+          "reviewFlags": []
+        },
+        {
+          "label": "Alaric invades Italy",
+          "when": "401",
+          "year": 401,
+          "fact": "The frightened court soon moved its capital from Milan to marsh-shielded Ravenna.",
+          "sectionId": "alaric-and-the-general",
+          "reviewFlags": []
+        },
+        {
+          "label": "Half-Vandal general executed",
+          "when": "22 August 408",
+          "year": 408,
+          "fact": "Accused of treason, he was lured out of a church sanctuary and killed, and thousands of barbarian troops fled to Alaric.",
+          "sectionId": "alaric-and-the-general",
+          "reviewFlags": []
+        },
+        {
+          "label": "Visigoths given land in Aquitaine",
+          "when": "418",
+          "year": 418,
+          "fact": "A whole people now lived inside the empire under its own king and army, only loosely obeying Rome.",
+          "sectionId": "kingdoms-inside-the-empire",
+          "reviewFlags": []
+        },
+        {
+          "label": "Vandals capture Carthage",
+          "when": "439",
+          "year": 439,
+          "fact": "Rome lost rich Africa, its main source of grain, to an independent Vandal kingdom with a powerful navy.",
+          "sectionId": "kingdoms-inside-the-empire",
+          "reviewFlags": []
+        },
+        {
+          "label": "Vandals plunder Rome",
+          "when": "455",
+          "year": 455,
+          "fact": "For two weeks they looted the city, far more thoroughly than the Goths had in 410.",
+          "sectionId": "murder-and-vandal-sack",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "From Refugees to Historians",
+      "blurb": "Eight events, from the Gothic crossing to the first great history of the fall.",
+      "events": [
+        {
+          "label": "Goths settle inside the empire",
+          "when": "From 376",
+          "year": 376,
+          "fact": "Fleeing the Huns, nomadic horsemen of the steppe, huge numbers of Goths entered Roman territory.",
+          "sectionId": "a-divided-empire",
+          "reviewFlags": []
+        },
+        {
+          "label": "Draw against Alaric at Pollentia",
+          "when": "402",
+          "year": 402,
+          "fact": "The half-Vandal general fought Alaric to a draw, then beat him at Verona.",
+          "sectionId": "alaric-and-the-general",
+          "reviewFlags": []
+        },
+        {
+          "label": "Alaric sets up a puppet emperor",
+          "when": "409",
+          "year": 409,
+          "fact": "During his second siege of Rome Alaric made his own emperor, then deposed him a few months later.",
+          "sectionId": "sieges-of-rome",
+          "reviewFlags": []
+        },
+        {
+          "label": "Attila unites the Huns",
+          "when": "From 444",
+          "year": 444,
+          "fact": "Attila ruled many Germanic peoples and squeezed vast sums of gold out of the eastern empire.",
+          "sectionId": "aetius-and-attila",
+          "reviewFlags": []
+        },
+        {
+          "label": "Attila razes Aquileia",
+          "when": "452",
+          "year": 452,
+          "fact": "Disease, hunger and perhaps an embassy led by the pope then persuaded him to leave Italy.",
+          "sectionId": "murder-and-vandal-sack",
+          "reviewFlags": []
+        },
+        {
+          "label": "A capable emperor is executed",
+          "when": "461",
+          "year": 461,
+          "fact": "He had rebuilt the army to retake Africa, but traitors burned his fleet and his own general had him killed.",
+          "sectionId": "the-last-emperor",
+          "reviewFlags": []
+        },
+        {
+          "label": "Last Roman enclave in Gaul ends",
+          "when": "486",
+          "year": 486,
+          "fact": "A Roman enclave in northern Gaul outlasted the conventional end of the West by ten years.",
+          "sectionId": "why-the-west-fell",
+          "reviewFlags": []
+        },
+        {
+          "label": "Decline and Fall begins to appear",
+          "when": "1776",
+          "year": 1776,
+          "fact": "Its English author blamed barbarians, Christians and the Romans' own quarrels.",
+          "sectionId": "why-the-west-fell",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "matchSets": [
+    {
+      "name": "Leaders of the Last Century",
+      "blurb": "Match each figure to his role in the West's fall.",
+      "pairs": [
+        {
+          "name": "Alaric",
+          "match": "Gothic chieftain who besieged Rome three times and sacked it",
+          "sectionId": "sack-of-rome-410",
+          "reviewFlags": []
+        },
+        {
+          "name": "Aetius",
+          "match": "General who held the West together for two decades",
+          "sectionId": "aetius-and-attila",
+          "reviewFlags": []
+        },
+        {
+          "name": "Attila",
+          "match": "Hun king who claimed the emperor's sister as his bride",
+          "sectionId": "aetius-and-attila",
+          "reviewFlags": []
+        },
+        {
+          "name": "Odoacer",
+          "match": "Germanic officer who then ruled Italy himself",
+          "sectionId": "the-last-emperor",
+          "reviewFlags": []
+        },
+        {
+          "name": "Romulus Augustulus",
+          "match": "Boy emperor pensioned off to live with relatives in Campania",
+          "sectionId": "the-last-emperor",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Terms and Places",
+      "blurb": "Match each word or place to what it meant in the late empire.",
+      "pairs": [
+        {
+          "name": "foederati",
+          "match": "Allied peoples keeping their own leaders and fighting for Rome",
+          "sectionId": "a-divided-empire",
+          "reviewFlags": []
+        },
+        {
+          "name": "magister militum",
+          "match": "Commander-in-chief of the army in the West",
+          "sectionId": "alaric-and-the-general",
+          "reviewFlags": []
+        },
+        {
+          "name": "Ravenna",
+          "match": "Marsh-shielded town that replaced Milan as capital",
+          "sectionId": "alaric-and-the-general",
+          "reviewFlags": []
+        },
+        {
+          "name": "Carthage",
+          "match": "Port in modern Tunisia made the Vandal capital in 439",
+          "sectionId": "kingdoms-inside-the-empire",
+          "reviewFlags": []
+        },
+        {
+          "name": "The City of God",
+          "match": "Book arguing Christians' true home is a heavenly city",
+          "sectionId": "who-was-to-blame",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "trueFalseDecks": [
+    {
+      "name": "The Gothic Crisis (395-410)",
+      "blurb": "From the divided empire to Alaric's sack of Rome.",
+      "cards": [
+        {
+          "claim": "The Goths entered the empire because they were fleeing the Huns.",
+          "answer": true,
+          "why": "From 376 huge numbers of Goths, fleeing the nomadic Huns, lived inside the empire.",
+          "sectionId": "a-divided-empire",
+          "reviewFlags": []
+        },
+        {
+          "claim": "At Adrianople in 378 the Goths killed the western emperor.",
+          "answer": false,
+          "why": "They destroyed an eastern army and killed the eastern emperor.",
+          "sectionId": "a-divided-empire",
+          "reviewFlags": []
+        },
+        {
+          "claim": "The frightened western court moved its capital from Milan to Ravenna.",
+          "answer": true,
+          "why": "Ravenna, near the Adriatic, was shielded by marshes and had an escape route by sea.",
+          "sectionId": "alaric-and-the-general",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Alaric decisively defeated the half-Vandal general at Pollentia in 402.",
+          "answer": false,
+          "why": "Pollentia was a draw, and the general then beat Alaric at Verona.",
+          "sectionId": "alaric-and-the-general",
+          "reviewFlags": []
+        },
+        {
+          "claim": "In 408 Rome paid Alaric about 1,650 kg (5,000 pounds) of gold.",
+          "answer": true,
+          "why": "It also paid nearly 10 tonnes (30,000 pounds) of silver, melting down pagan statues to make up the sum.",
+          "sectionId": "sieges-of-rome",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Alaric's real demand was to be made emperor himself.",
+          "answer": false,
+          "why": "His real demands were modest: land and grain for his people, which the emperor refused.",
+          "sectionId": "sieges-of-rome",
+          "reviewFlags": []
+        },
+        {
+          "claim": "The Goths entered Rome through the Salarian Gate on 24 August 410.",
+          "answer": true,
+          "why": "Some said traitors had opened the gate, others that hunger had.",
+          "sectionId": "sack-of-rome-410",
+          "reviewFlags": []
+        },
+        {
+          "claim": "The Goths' sack of 410 included a general massacre of the citizens.",
+          "answer": false,
+          "why": "By the standards of the age it was restrained: no general massacre, and the two great basilicas served as sanctuaries.",
+          "sectionId": "sack-of-rome-410",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Huns, Vandals and the End (410-476)",
+      "blurb": "From the debate over the sack to the last emperor.",
+      "cards": [
+        {
+          "claim": "The bishop who wrote The City of God argued that Christians' real home was a heavenly city.",
+          "answer": true,
+          "why": "He rejected the idea that true religion should bring worldly success; no earthly disaster could touch that heavenly city.",
+          "sectionId": "who-was-to-blame",
+          "reviewFlags": []
+        },
+        {
+          "claim": "The taxes lost with Africa could have paid for nearly 4,000 infantry.",
+          "answer": false,
+          "why": "They could have paid for nearly 40,000 infantry.",
+          "sectionId": "kingdoms-inside-the-empire",
+          "reviewFlags": []
+        },
+        {
+          "claim": "The emperor's sister sent Attila her ring and a plea for help.",
+          "answer": true,
+          "why": "Trapped in an engagement she hated, she gave Attila his excuse to claim half the western empire as dowry.",
+          "sectionId": "aetius-and-attila",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Attila was killed in the battle on the Catalaunian Plains.",
+          "answer": false,
+          "why": "It was the Visigothic king who was killed; Attila withdrew to his wagon camp and died suddenly in 453.",
+          "sectionId": "aetius-and-attila",
+          "reviewFlags": []
+        },
+        {
+          "claim": "In 454 the western emperor stabbed Aetius to death with his own hands.",
+          "answer": true,
+          "why": "A year later Aetius's supporters murdered the emperor in revenge.",
+          "sectionId": "murder-and-vandal-sack",
+          "reviewFlags": []
+        },
+        {
+          "claim": "The Vandals plundered Rome in 455 less thoroughly than the Goths had in 410.",
+          "answer": false,
+          "why": "They plundered it for two weeks, far more thoroughly, and left with huge treasure and an imperial princess.",
+          "sectionId": "murder-and-vandal-sack",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Odoacer gave Romulus Augustulus a yearly pension of 6,000 gold coins (solidi).",
+          "answer": true,
+          "why": "Said to have pitied the 16-year-old, he spared him and sent him to relatives in Campania.",
+          "sectionId": "the-last-emperor",
+          "reviewFlags": []
+        },
+        {
+          "claim": "The East survived partly because it had a longer river frontier to guard than the West.",
+          "answer": false,
+          "why": "The West had some 2,000 km of Rhine and Danube frontier; the East's heartland was shielded by Constantinople's walls and the sea.",
+          "sectionId": "why-the-west-fell",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "oddOneOut": [
+    {
+      "items": [
+        "Blocked the grain ships",
+        "Set up a puppet emperor",
+        "Demanded land and grain",
+        "Moved the capital to Ravenna"
+      ],
+      "oddIndex": 3,
+      "why": "Alaric blockaded Rome, made a puppet emperor and asked for land and grain. It was the frightened imperial court that moved to Ravenna.",
+      "sectionId": "sieges-of-rome",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Emperors' tombs ransacked",
+        "Emperor's sister taken hostage",
+        "Fires near the old Senate house",
+        "Imperial princess taken to Africa"
+      ],
+      "oddIndex": 3,
+      "why": "The first three happened in the Gothic sack of 410. The imperial princess was carried off by the Vandals in 455.",
+      "sectionId": "sack-of-rome-410",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Rome sacked by the Goths",
+        "Britain told to defend itself",
+        "Emperor's sister taken hostage",
+        "Visigoths settled in Aquitaine"
+      ],
+      "oddIndex": 3,
+      "why": "Three events belong to the year 410. The Visigoths were given land in Aquitaine in 418.",
+      "sectionId": "kingdoms-inside-the-empire",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Visigoths",
+        "Franks",
+        "Burgundians",
+        "Vandals"
+      ],
+      "oddIndex": 3,
+      "why": "Visigoths, Franks and Burgundians joined Aetius's coalition against Attila. The Vandals were by then ruling their own kingdom from Carthage.",
+      "sectionId": "aetius-and-attila",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Disease in his army",
+        "Hunger in his army",
+        "An embassy led by the pope",
+        "Defeat by Aetius's army"
+      ],
+      "oddIndex": 3,
+      "why": "Disease, hunger and perhaps a papal embassy turned Attila back from Italy in 452. No battle with Aetius is described that year.",
+      "sectionId": "murder-and-vandal-sack",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Plague",
+        "A worsening climate",
+        "Crushing taxes",
+        "God's punishment of a proud city"
+      ],
+      "oddIndex": 3,
+      "why": "Modern historians point to plague, climate and taxes. God's punishment was a Christian explanation offered after the sack of 410.",
+      "sectionId": "why-the-west-fell",
+      "reviewFlags": []
+    }
+  ],
+  "whoAmI": [
+    {
+      "name": "Barbarian Leaders",
+      "blurb": "Kings and officers who shook the Western Empire.",
+      "people": [
+        {
+          "name": "Alaric",
+          "options": [
+            "Alaric",
+            "Attila",
+            "Odoacer",
+            "Aetius"
+          ],
+          "clues": [
+            "I revolted in 395 after being denied high Roman command.",
+            "Twice I was cornered in Greece, and twice I was allowed to escape.",
+            "When senators boasted, I laughed that the thickest grass is easier to cut than the thinnest.",
+            "In 410 I led the Goths into Rome through the Salarian Gate."
+          ],
+          "sectionId": "alaric-and-the-general",
+          "reviewFlags": []
+        },
+        {
+          "name": "Attila",
+          "options": [
+            "Alaric",
+            "Attila",
+            "Odoacer",
+            "Aetius"
+          ],
+          "clues": [
+            "From 444 I squeezed vast sums of gold out of the eastern empire.",
+            "An emperor's sister sent me her ring, and I claimed half the West as her dowry.",
+            "In 452 I razed Aquileia, but disease and hunger turned me back.",
+            "As king of the Huns I fought Aetius on the Catalaunian Plains."
+          ],
+          "sectionId": "aetius-and-attila",
+          "reviewFlags": []
+        },
+        {
+          "name": "Odoacer",
+          "options": [
+            "Alaric",
+            "Attila",
+            "Odoacer",
+            "Aetius"
+          ],
+          "clues": [
+            "I led mercenaries who rebelled when their promised land never came.",
+            "I sent the imperial regalia to the emperor in Constantinople.",
+            "I spared a 16-year-old and gave him 6,000 gold coins a year.",
+            "On 4 September 476 I forced the last western emperor off his throne."
+          ],
+          "sectionId": "the-last-emperor",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Romans of the Falling West",
+      "blurb": "Generals and an emperor of the western court.",
+      "people": [
+        {
+          "name": "The half-Vandal general",
+          "options": [
+            "Aetius",
+            "Romulus Augustulus",
+            "The half-Vandal general",
+            "Odoacer"
+          ],
+          "clues": [
+            "Historians still argue why I twice let my enemy escape in Greece.",
+            "I fought Alaric to a draw at Pollentia, then beat him at Verona.",
+            "I was commander-in-chief of the West and guardian to the boy emperor.",
+            "Accused of treason, I was lured out of a church and executed in 408."
+          ],
+          "sectionId": "alaric-and-the-general",
+          "reviewFlags": [
+            "\"The half-Vandal general\" appears fewer than 2 times in the chapter"
+          ]
+        },
+        {
+          "name": "Aetius",
+          "options": [
+            "Aetius",
+            "Romulus Augustulus",
+            "The half-Vandal general",
+            "Odoacer"
+          ],
+          "clues": [
+            "I often fought Goths, Franks and rebels with Hunnic mercenaries.",
+            "I united Visigoths, Alans, Franks and Burgundians, old enemies, in one coalition.",
+            "In 454 the emperor stabbed me to death with his own hands.",
+            "For two decades I held the West together and stood against Attila in 451."
+          ],
+          "sectionId": "aetius-and-attila",
+          "reviewFlags": []
+        },
+        {
+          "name": "Romulus Augustulus",
+          "options": [
+            "Aetius",
+            "Romulus Augustulus",
+            "The half-Vandal general",
+            "Odoacer"
+          ],
+          "clues": [
+            "I was never recognised as emperor outside Italy.",
+            "My father, once Attila's secretary, crowned me in 475.",
+            "My name honoured Rome's founder and its first emperor, but rivals mocked it as 'little Augustus'.",
+            "Deposed at 16, I was sent to live with relatives in Campania."
+          ],
+          "sectionId": "the-last-emperor",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "places": [
+    {
+      "name": "Constantinople",
+      "wikipediaTitle": "Constantinople",
+      "lat": 41.0125,
+      "lon": 28.98,
+      "why": "The great city on the Bosphorus from which the eastern half of the empire was governed.",
+      "sectionId": "a-divided-empire",
+      "coordinates": "Wikipedia: Constantinople",
+      "reviewFlags": []
+    },
+    {
+      "name": "Adrianople",
+      "wikipediaTitle": "Edirne",
+      "lat": 41.67694444,
+      "lon": 26.55555556,
+      "why": "Here on 9 August 378 the Goths destroyed an eastern army and killed its emperor.",
+      "sectionId": "a-divided-empire",
+      "coordinates": "Wikipedia: Edirne",
+      "reviewFlags": []
+    },
+    {
+      "name": "Ravenna",
+      "wikipediaTitle": "Ravenna",
+      "lat": 44.41611111,
+      "lon": 12.20166667,
+      "why": "Shielded by marshes with an escape route by sea, it replaced Milan as the western capital.",
+      "sectionId": "alaric-and-the-general",
+      "coordinates": "Wikipedia: Ravenna",
+      "reviewFlags": []
+    },
+    {
+      "name": "Carthage",
+      "wikipediaTitle": "Carthage",
+      "lat": 36.85,
+      "lon": 10.32,
+      "why": "Captured by the Vandals in 439, it became the capital of their independent kingdom with a powerful navy.",
+      "sectionId": "kingdoms-inside-the-empire",
+      "coordinates": "model estimate",
+      "reviewFlags": []
+    },
+    {
+      "name": "Orléans",
+      "wikipediaTitle": "Orléans",
+      "lat": 47.9025,
+      "lon": 1.909,
+      "why": "Its Alan defenders held out against Attila's siege, which many historians see as the real turning point of 451.",
+      "sectionId": "aetius-and-attila",
+      "coordinates": "Wikipedia: Orléans",
+      "reviewFlags": []
+    },
+    {
+      "name": "Catalaunian Plains",
+      "wikipediaTitle": "Battle of the Catalaunian Plains",
+      "lat": 48.5,
+      "lon": 4.2,
+      "why": "Near Troyes, Aetius's coalition fought Attila's Huns around 20 June 451.",
+      "sectionId": "aetius-and-attila",
+      "coordinates": "Wikipedia: Battle of the Catalaunian Plains",
+      "reviewFlags": []
+    },
+    {
+      "name": "Aquileia",
+      "wikipediaTitle": "Aquileia",
+      "lat": 45.769725,
+      "lon": 13.37119167,
+      "why": "This city at the head of the Adriatic was razed by Attila when he invaded Italy in 452.",
+      "sectionId": "murder-and-vandal-sack",
+      "coordinates": "Wikipedia: Aquileia",
+      "reviewFlags": []
+    }
+  ]
+}

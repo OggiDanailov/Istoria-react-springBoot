@@ -1,0 +1,145 @@
+{
+  "batchName": "Empire: The Fall of the West (AD 395-476) - Latin words",
+  "chapterName": "Empire: The Fall of the West (AD 395-476)",
+  "difficulty": 1,
+  "batchOrder": 9,
+  "description": "Written by hand from the chapter text: the Latin words it explains",
+  "questions": [
+    {
+      "question": "Rome was still the Urbs Aeterna. What does it mean?",
+      "options": [
+        "The Eternal City",
+        "The Golden City",
+        "The First City",
+        "The Holy City"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#sieges-of-rome",
+      "explanation": "It was no longer the capital, but still the symbolic heart of the empire.",
+      "sourceQuote": "the Eternal City (*Urbs Aeterna*)",
+      "reviewFlags": []
+    },
+    {
+      "question": "The Goths were settled as foederati. What were they?",
+      "options": [
+        "Allies who kept their own leaders and fought for Rome",
+        "Slaves on Roman farms",
+        "Roman citizens",
+        "Hostages"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#a-divided-empire",
+      "explanation": "By 395 they were an armed power that could threaten either half of the empire.",
+      "sourceQuote": "they were settled as allies (*foederati*), peoples who kept their own leaders and fought for Rome in return.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Odoacer gave Romulus Augustulus a pension of 6,000 solidi. What were solidi?",
+      "options": [
+        "Gold coins",
+        "Silver coins",
+        "Acres of land",
+        "Soldiers"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#the-last-emperor",
+      "explanation": "He sent the boy to live with relatives in Campania.",
+      "sourceQuote": "a yearly pension of 6,000 gold coins (*solidi*)",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did Augustulus, the nickname of the last emperor, mean?",
+      "options": [
+        "“Little Augustus”",
+        "“The last Augustus”",
+        "“False Augustus”",
+        "“Boy king”"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#the-last-emperor",
+      "explanation": "His real name, Romulus Augustus, honoured Rome’s founder and its first emperor.",
+      "sourceQuote": "rivals mocked him as Romulus Augustulus, “little Augustus”.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Stilicho was the West’s magister militum. What was that?",
+      "options": [
+        "The commander-in-chief",
+        "The chief priest",
+        "The keeper of the treasury",
+        "The emperor’s secretary"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#alaric-and-the-general",
+      "explanation": "He fought Alaric at Pollentia and Verona.",
+      "sourceQuote": "its commander-in-chief (*magister militum*)",
+      "reviewFlags": []
+    },
+    {
+      "question": "In 439 the Vandals captured Carthago. Where was it?",
+      "options": [
+        "In modern Tunisia",
+        "In modern Spain",
+        "In modern Sicily",
+        "In modern Libya"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#kingdoms-inside-the-empire",
+      "explanation": "They made it the capital of an independent kingdom with a powerful navy.",
+      "sourceQuote": "they captured Carthage (*Carthago*), the great port in modern Tunisia",
+      "reviewFlags": []
+    },
+    {
+      "question": "In 410 the towns of Britannia were told to see to their own defence. What happened next?",
+      "options": [
+        "No Roman government ever ruled there again",
+        "Rome sent new legions",
+        "The Goths took Britain",
+        "Aetius retook Britain"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#kingdoms-inside-the-empire",
+      "explanation": "It was one of many losses as the West shrank.",
+      "sourceQuote": "In 410 the towns of Britain (*Britannia*) were told to see to their own defence, and no Roman government ever ruled there again.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which river was the Rhenus, crossed by Vandals and Alans into Gaul?",
+      "options": [
+        "The Rhine",
+        "The Rhône",
+        "The Danube",
+        "The Po"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#alaric-and-the-general",
+      "explanation": "Perhaps 100,000 people crossed it into Gaul.",
+      "sourceQuote": "crossed the Rhine (*Rhenus*) into Gaul.",
+      "reviewFlags": []
+    }
+  ]
+}

@@ -1,0 +1,189 @@
+{
+  "batchName": "Empire: The Fall of the West (AD 395-476) - Medium Batch 1",
+  "chapterName": "Empire: The Fall of the West (AD 395-476)",
+  "difficulty": 2,
+  "batchOrder": 3,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "What idea, shared by pagans and Christians alike, did the author of The City of God reject?",
+      "options": [
+        "That true religion should bring worldly success",
+        "That the end of the world was far off",
+        "That Rome had been founded by the gods",
+        "That barbarians could never be Christians",
+        "That emperors should be worshipped"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#who-was-to-blame",
+      "explanation": "The bishop rejected the idea that true religion guarantees worldly success. He argued Christians' real home was a heavenly city no earthly disaster could touch.",
+      "sourceQuote": "He rejected the idea, shared by pagans and Christians alike, that true religion should bring worldly success.",
+      "reviewFlags": []
+    },
+    {
+      "question": "The general who crowned his son Romulus Augustus in 475 had once served as what?",
+      "options": [
+        "The pope's treasurer",
+        "Odoacer's tutor",
+        "Attila's secretary",
+        "Alaric's envoy",
+        "A Vandal admiral"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#the-last-emperor",
+      "explanation": "The boy's father had once been Attila's secretary. He was later killed by his rebellious mercenaries after breaking a promise of land.",
+      "sourceQuote": "In 475 Orestes, a general who had once been Attila's secretary, drove out the reigning emperor and crowned his own young son.",
+      "reviewFlags": []
+    },
+    {
+      "question": "To help raise the huge ransom Alaric demanded in 408, what did the Romans melt down?",
+      "options": [
+        "Imperial coins of the East",
+        "Legionary armour",
+        "Pagan statues",
+        "Bronze church bells",
+        "The doors of the Senate house"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#sieges-of-rome",
+      "explanation": "Pagan statues were melted to complete the payment. The city paid about 5,000 pounds of gold and 30,000 pounds of silver.",
+      "sourceQuote": "Pagan statues were melted down to make up the sum.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What advantage helped the Eastern Empire survive weaknesses that also affected the West?",
+      "options": [
+        "No barbarian soldiers in its army",
+        "Freedom from plague and climate change",
+        "A lasting alliance with the Huns",
+        "A far larger and richer Senate",
+        "Geography: Constantinople's walls and the sea"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#why-the-west-fell",
+      "explanation": "Walls and sea protected the eastern heartland. The West, by contrast, had some 2,000 km of Rhine and Danube frontier to guard.",
+      "sourceQuote": "Its advantage was geography: Constantinople's walls and the sea shielded its heartland, while the West had some 2,000 km of Rhine and Danube frontier to guard.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What were Alaric's real demands during his sieges of Rome?",
+      "options": [
+        "Land and grain for his people",
+        "The return of all Gothic slaves",
+        "Control of the city of Constantinople",
+        "The hand of the emperor's sister",
+        "The throne of the Western Empire"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#sieges-of-rome",
+      "explanation": "Alaric mainly wanted land and grain for his people. The emperor in Ravenna refused even that and answered with insults.",
+      "sourceQuote": "Alaric's real demands were modest: land and grain for his people.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What puzzling thing did the West's half-Vandal commander-in-chief do in Greece?",
+      "options": [
+        "He sold the Goths grain at a profit",
+        "He twice cornered Alaric and twice let him escape",
+        "He refused to fight and resigned his command",
+        "He made Alaric his heir and son-in-law",
+        "He handed Greece over to the Huns"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#alaric-and-the-general",
+      "explanation": "He cornered Alaric twice and let him go both times, and historians still argue why. He later fought Alaric in Italy at Pollentia and Verona.",
+      "sourceQuote": "Twice he cornered Alaric in Greece and twice let him escape, and historians still argue why.",
+      "reviewFlags": []
+    },
+    {
+      "question": "One modern scholar has counted how many different theories for the fall of the Western Empire?",
+      "options": [
+        "500",
+        "1,000",
+        "52",
+        "210",
+        "12"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#why-the-west-fell",
+      "explanation": "A scholar counted 210 theories. Today historians point to plague, climate, migration, civil wars, crushing taxes and an elite unwilling to pay for defence.",
+      "sourceQuote": "One modern scholar has counted 210 different theories.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What excuse did Attila use to invade the West in 451?",
+      "options": [
+        "Rome sheltering his rebellious nephew",
+        "A claim to the eastern emperor's throne",
+        "Unpaid wages for his mercenaries",
+        "Revenge for the murder of a Hunnic envoy",
+        "A claim to the emperor's sister and half the West"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#aetius-and-attila",
+      "explanation": "The emperor's sister, trapped in an engagement she hated, sent Attila her ring and a plea for help. He claimed her as his bride, with half the western empire as dowry.",
+      "sourceQuote": "Attila claimed her as his bride, with half the western empire as her dowry, and in 451 crossed the Rhine.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What happened at the Battle of Adrianople on 9 August 378?",
+      "options": [
+        "Goths destroyed an eastern army and killed its emperor",
+        "Alaric was defeated by a half-Vandal general",
+        "The Goths captured Constantinople for a week",
+        "The Huns drove the Goths across the Danube",
+        "Romans crushed the Gothic rebels and expelled them"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#a-divided-empire",
+      "explanation": "At Adrianople, in modern European Turkey, the rebel Goths wiped out an eastern army and killed its emperor. Afterwards Rome had to settle them as allies.",
+      "sourceQuote": "At Adrianople, in modern European Turkey, on 9 August 378 they destroyed an eastern army and killed its emperor.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which notable person did the Goths carry off as a hostage when they sacked Rome in 410?",
+      "options": [
+        "The commander of the city guard",
+        "The emperor's own sister",
+        "The emperor's young son",
+        "The bishop of Rome",
+        "The leader of the Senate"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#sack-of-rome-410",
+      "explanation": "The emperor's sister was taken as a hostage. Citizens were also tortured to reveal hidden valuables.",
+      "sourceQuote": "Citizens were tortured to reveal hidden valuables, and the emperor's own sister was carried off as a hostage.",
+      "reviewFlags": []
+    }
+  ]
+}

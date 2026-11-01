@@ -764,7 +764,16 @@
       "short": "Fall of the West",
       "era": "empire",
       "mapArea": "wide",
-      "maxNames": 8
+      "maxNames": 8,
+      "battle": {
+        "name": "The Catalaunian Plains",
+        "year": "AD 451",
+        "enemy": "Attila and the Huns",
+        "sec": "aetius-and-attila",
+        "level": "catalaunian",
+        "intro": "Aetius and his allies, old enemies all, stand against Attila’s Huns."
+      },
+      "locked": true
     }
   ]
 }

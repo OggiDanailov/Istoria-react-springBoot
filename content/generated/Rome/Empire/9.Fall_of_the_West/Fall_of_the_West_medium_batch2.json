@@ -1,0 +1,191 @@
+{
+  "batchName": "Empire: The Fall of the West (AD 395-476) - Medium Batch 2",
+  "chapterName": "Empire: The Fall of the West (AD 395-476)",
+  "difficulty": 2,
+  "batchOrder": 4,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Which city at the head of the Adriatic did Attila raze when he invaded Italy in 452?",
+      "options": [
+        "Ravenna",
+        "Aquileia",
+        "Milan",
+        "Pollentia",
+        "Verona"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#murder-and-vandal-sack",
+      "explanation": "Attila destroyed Aquileia. Disease, hunger and perhaps a papal embassy then persuaded him to turn back.",
+      "sourceQuote": "Attila returned in 452, invading Italy and razing Aquileia, a city at the head of the Adriatic.",
+      "reviewFlags": []
+    },
+    {
+      "question": "In a mocking story told by a later Greek historian, what did the emperor in Ravenna fear had perished when he heard 'Roma had perished'?",
+      "options": [
+        "His caged peacock",
+        "His favourite chicken",
+        "His favourite warhorse",
+        "His prized falcon",
+        "His pet hound"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#sack-of-rome-410",
+      "explanation": "The 6th-century story claimed the emperor was relieved to learn it was only the city, not his chicken named Roma. It mocked the emperor's indifference to Rome's fall.",
+      "sourceQuote": "He had feared for his favourite chicken, named Roma.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Why was the loss of Africa to the Vandals such a blow to the Western Empire? (select all that apply)",
+      "options": [
+        "It was the main source of Rome's grain",
+        "It supplied most of the army's horses",
+        "It was easy to defend",
+        "It was rich",
+        "It was the emperor's birthplace"
+      ],
+      "correctAnswers": [
+        0,
+        2,
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#kingdoms-inside-the-empire",
+      "explanation": "Africa was rich, easy to defend and Rome's main grain supplier. To make up the loss, the government raised taxes on peasants who could pay no more.",
+      "sourceQuote": "Africa had been rich, easy to defend and the main source of Rome's grain.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Roughly how many Vandals, Alans and others crossed the Rhine into Gaul in the early 400s?",
+      "options": [
+        "1,000,000",
+        "100,000",
+        "10,000",
+        "300,000",
+        "30,000"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#alaric-and-the-general",
+      "explanation": "Perhaps 100,000 people crossed the Rhine into Gaul. This came on top of another Gothic horde ravaging northern Italy in 405 and 406.",
+      "sourceQuote": "Then perhaps 100,000 Vandals, Alans (nomadic horsemen from the steppe) and others crossed the Rhine (*Rhenus*) into Gaul.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which people became the main power in north-eastern Gaul as the empire shrank?",
+      "options": [
+        "Alans",
+        "Sueves",
+        "Saxons",
+        "Franks",
+        "Burgundians"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#kingdoms-inside-the-empire",
+      "explanation": "The Franks took over north-eastern Gaul. Meanwhile Spain slipped into the hands of Sueves, Vandals and local strongmen.",
+      "sourceQuote": "Spain slipped into the hands of the Sueves, another Germanic people, the Vandals and local strongmen, while the Franks became the main power in north-eastern Gaul.",
+      "reviewFlags": []
+    },
+    {
+      "question": "When the Goths were settled as foederati after their rebellion, what did that mean?",
+      "options": [
+        "They were enslaved on imperial estates",
+        "They kept their own leaders and fought for Rome",
+        "They were shipped off to guard Britain",
+        "They were disarmed and scattered among cities",
+        "They became Roman citizens and paid taxes"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#a-divided-empire",
+      "explanation": "Foederati were allied peoples who kept their own leaders and fought for Rome in return. Rome settled the Goths this way because it could neither crush nor expel them.",
+      "sourceQuote": "Instead they were settled as allies (*foederati*), peoples who kept their own leaders and fought for Rome in return.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What happened to the western emperor a year after he killed Aetius?",
+      "options": [
+        "He abdicated in favour of his son",
+        "He died of plague in Ravenna",
+        "He fled to Constantinople",
+        "He was captured by the Vandals",
+        "He was murdered by Aetius's supporters"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#murder-and-vandal-sack",
+      "explanation": "Aetius's supporters killed the emperor in revenge. A rich senator who had encouraged both murders then seized the throne.",
+      "sourceQuote": "A year later Aetius's supporters murdered the emperor in revenge.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What happened to the king of the Visigoths at the Battle of the Catalaunian Plains?",
+      "options": [
+        "He was captured by Attila",
+        "He deserted to the Huns",
+        "He was crowned emperor",
+        "He was killed in the battle",
+        "He fled back to Spain"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#aetius-and-attila",
+      "explanation": "The Visigothic king died in the fighting. Attila withdrew to his camp of wagons, and Aetius let him go home.",
+      "sourceQuote": "The Visigothic king was killed, and Attila withdrew to his camp of wagons.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did one pagan historian blame Christianity for after the sack of Rome?",
+      "options": [
+        "Emptying the treasury on churches",
+        "Inviting the Goths into Italy",
+        "Sapping the empire's old virtues",
+        "Moving the capital to Ravenna",
+        "Dividing the empire in two"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#who-was-to-blame",
+      "explanation": "He argued Christianity had sapped the empire's old virtues. Other pagans said Rome had lost divine protection by abandoning the sacrifices.",
+      "sourceQuote": "One pagan historian blamed Christianity for sapping the empire's old virtues.",
+      "reviewFlags": []
+    },
+    {
+      "question": "After deposing the last western emperor, what did Odoacer do with the imperial regalia?",
+      "options": [
+        "Sent them to the emperor in Constantinople",
+        "Gave them to the pope",
+        "Buried them in Romulus's tomb",
+        "Crowned himself with them",
+        "Melted them down to pay his troops"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#the-last-emperor",
+      "explanation": "Odoacer ruled Italy himself and sent the imperial regalia to the emperor in Constantinople.",
+      "sourceQuote": "Odoacer then ruled Italy himself and sent the imperial regalia to the emperor in Constantinople.",
+      "reviewFlags": []
+    }
+  ]
+}

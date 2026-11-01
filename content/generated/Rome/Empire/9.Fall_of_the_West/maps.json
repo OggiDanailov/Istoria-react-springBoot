@@ -1,0 +1,82 @@
+{
+  "description": "Maps for the chronicle, written by hand. Coordinates from Wikipedia; each map sits at the start of its section.",
+  "maps": [
+    {
+      "id": "fall-of-the-west",
+      "sec": "kingdoms-inside-the-empire",
+      "title": "The West breaks apart",
+      "caption": "The court hid in Ravenna; the Visigoths settled in Aquitaine; the Vandals took Carthage in 439; Aetius stopped Attila on the Catalaunian Plains in 451. Peoples placed roughly.",
+      "bounds": {
+        "latMin": 33.0,
+        "latMax": 54.0,
+        "lonMin": -8.0,
+        "lonMax": 30.0
+      },
+      "places": [
+        {
+          "name": "Rome",
+          "latin": "Roma",
+          "lat": 41.893,
+          "lon": 12.483,
+          "kind": "rome",
+          "side": "l",
+          "dy": 8
+        },
+        {
+          "name": "Ravenna",
+          "lat": 44.42,
+          "lon": 12.2,
+          "side": "r"
+        },
+        {
+          "name": "Carthage",
+          "latin": "Carthago",
+          "lat": 36.85,
+          "lon": 10.32,
+          "side": "l"
+        },
+        {
+          "name": "Catalaunian Plains",
+          "lat": 48.5,
+          "lon": 4.2,
+          "kind": "battle",
+          "side": "r"
+        },
+        {
+          "name": "Orléans",
+          "lat": 47.9,
+          "lon": 1.9,
+          "side": "l"
+        },
+        {
+          "name": "Constantinople",
+          "lat": 41.01,
+          "lon": 28.98,
+          "side": "l"
+        }
+      ],
+      "peoples": [
+        {
+          "name": "Visigoths",
+          "lat": 44.2,
+          "lon": -0.4
+        },
+        {
+          "name": "Vandals",
+          "lat": 34.6,
+          "lon": 7.0
+        },
+        {
+          "name": "Huns",
+          "lat": 47.3,
+          "lon": 20.0
+        },
+        {
+          "name": "Franks",
+          "lat": 51.0,
+          "lon": 4.5
+        }
+      ]
+    }
+  ]
+}

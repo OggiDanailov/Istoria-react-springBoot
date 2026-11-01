@@ -1,0 +1,179 @@
+{
+  "batchName": "Empire: The Fall of the West (AD 395-476) - Easy Batch 1",
+  "chapterName": "Empire: The Fall of the West (AD 395-476)",
+  "difficulty": 1,
+  "batchOrder": 1,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Why had huge numbers of Goths been living inside the Roman Empire since 376?",
+      "options": [
+        "They were fleeing the Huns",
+        "They had been hired as marines",
+        "They had followed Roman traders",
+        "They were invited to farm Gaul"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#a-divided-empire",
+      "explanation": "The Goths were refugees fleeing the Huns, nomadic horsemen from the Eurasian steppe. Corrupt officials exploited them, and they rebelled.",
+      "sourceQuote": "Since 376, huge numbers of Goths, a Germanic people fleeing the Huns, had been living inside the empire.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Through which gate did the Goths enter Rome on 24 August 410?",
+      "options": [
+        "The Appian Gate",
+        "The Ostian Gate",
+        "The Flaminian Gate",
+        "The Salarian Gate"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#sack-of-rome-410",
+      "explanation": "The Goths came in through the Salarian Gate. Some said traitors had opened it, others that hunger had.",
+      "sourceQuote": "On 24 August 410 the Goths entered Rome through the Salarian Gate.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What was the title of the famous work by an English historian that began appearing in 1776?",
+      "options": [
+        "The Lives of the Caesars",
+        "The City of God",
+        "The Annals of Imperial Rome",
+        "Decline and Fall of the Roman Empire"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#why-the-west-fell",
+      "explanation": "Decline and Fall of the Roman Empire began appearing in 1776. Its author blamed barbarians, Christians and the Romans' own quarrels.",
+      "sourceQuote": "Edward Gibbon, an English historian whose Decline and Fall of the Roman Empire began appearing in 1776, blamed barbarians, Christians and the Romans' own quarrels.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What term do many scholars now use for the long transformation in which Roman culture outlived Roman power?",
+      "options": [
+        "The Byzantine era",
+        "Late antiquity",
+        "The Dark Ages",
+        "The Migration Period"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#why-the-west-fell",
+      "explanation": "Many scholars speak of 'late antiquity' to stress continuity rather than sudden collapse. They also question the neat end date of 476.",
+      "sourceQuote": "Many scholars now speak of “late antiquity”, a long transformation in which Roman culture lived on after Roman power ended.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which great port did the Vandals capture in 439 and make their capital?",
+      "options": [
+        "Cyrene",
+        "Alexandria",
+        "Carthage",
+        "Tangier"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#kingdoms-inside-the-empire",
+      "explanation": "The Vandals took Carthage, in modern Tunisia. They made it the capital of an independent kingdom with a powerful navy.",
+      "sourceQuote": "In 439 they captured Carthage (*Carthago*), the great port in modern Tunisia, and made it the capital of an independent kingdom with a powerful navy.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Who forced Romulus Augustulus to give up the throne on 4 September 476?",
+      "options": [
+        "Aetius",
+        "Alaric",
+        "Odoacer",
+        "Attila"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#the-last-emperor",
+      "explanation": "Odoacer, a Germanic officer, deposed the last western emperor. He led mercenaries who had rebelled when promised land was denied them.",
+      "sourceQuote": "On 4 September 476 Odoacer forced Romulus Augustulus to give up the throne.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did the great general Aetius die in 454?",
+      "options": [
+        "He died of fever at sea",
+        "He was stabbed by the emperor himself",
+        "He was lynched by a Roman mob",
+        "He fell fighting the Huns"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#murder-and-vandal-sack",
+      "explanation": "The western emperor killed Aetius with his own hands. Some historians think the emperor wanted to rule for himself rather than through a powerful manager.",
+      "sourceQuote": "In 454 the western emperor, Valentinian III, stabbed his great general Aetius to death with his own hands.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did Alaric bring Rome to the brink of starvation in late 408?",
+      "options": [
+        "He blocked grain ships on the Tiber",
+        "He seized the port of Carthage",
+        "He burned the farms of Campania",
+        "He poisoned the city's aqueducts"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#sieges-of-rome",
+      "explanation": "Alaric cut off the grain ships coming up the Tiber. Rations fell to a third, and corpses lay unburied in the streets.",
+      "sourceQuote": "In late 408 Alaric marched on it unopposed and blocked the grain ships coming up the Tiber.",
+      "reviewFlags": []
+    },
+    {
+      "question": "The sack of 410 was the first time in roughly how long that Rome had fallen to a foreign enemy?",
+      "options": [
+        "About 500 years",
+        "Over 1,000 years",
+        "About 300 years",
+        "Almost 800 years"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#sack-of-rome-410",
+      "explanation": "Rome had not fallen to a foreign enemy for almost 800 years. The Goths plundered the city for three days.",
+      "sourceQuote": "It was the first time in almost 800 years that Rome had fallen to a foreign enemy.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did the mocking nickname 'Augustulus' mean?",
+      "options": [
+        "Boy of Rome",
+        "False Augustus",
+        "Last Augustus",
+        "Little Augustus"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#the-last-emperor",
+      "explanation": "Rivals mocked the boy emperor as 'little Augustus'. His real name, Romulus Augustus, echoed Rome's founder and its first emperor.",
+      "sourceQuote": "The boy was named Romulus Augustus, after Rome's founder and its first emperor, but rivals mocked him as Romulus Augustulus, “little Augustus”.",
+      "reviewFlags": []
+    }
+  ]
+}

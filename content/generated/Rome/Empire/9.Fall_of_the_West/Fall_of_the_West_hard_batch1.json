@@ -1,0 +1,204 @@
+{
+  "batchName": "Empire: The Fall of the West (AD 395-476) - Hard Batch 1",
+  "chapterName": "Empire: The Fall of the West (AD 395-476)",
+  "difficulty": 3,
+  "batchOrder": 5,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "The end of the West in 476 is only a convention. Until what year did a Roman enclave in northern Gaul survive?",
+      "options": [
+        "500",
+        "486",
+        "476",
+        "480",
+        "527",
+        "493"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 3,
+      "textReference": "#why-the-west-fell",
+      "explanation": "The Roman enclave in northern Gaul lasted until 486. A deposed emperor also kept claiming the throne from Dalmatia until 480.",
+      "sourceQuote": "A deposed emperor still claimed the throne from Dalmatia, on the Adriatic coast, until 480, and a Roman enclave in northern Gaul lasted until 486.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did the rich senator who seized the throne in 455 effectively declare war on the Vandals?",
+      "options": [
+        "He refused to pay their annual tribute",
+        "He executed their envoys in Rome",
+        "He sent a fleet to attack Carthage",
+        "He seized Vandal merchant ships at Ostia",
+        "He broke off a planned royal marriage with them",
+        "He allied with the remnants of the Huns"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 3,
+      "textReference": "#murder-and-vandal-sack",
+      "explanation": "Cancelling the planned royal marriage amounted to a declaration of war. When the Vandal fleet arrived, he tried to flee and was torn apart by a Roman mob.",
+      "sourceQuote": "He broke off a planned royal marriage with the Vandals of Carthage, which amounted to declaring war.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did Odoacer reportedly treat the deposed Romulus Augustulus? (select all that apply)",
+      "options": [
+        "He sent him to Constantinople as a hostage",
+        "He sent him to live with relatives in Campania",
+        "He forced him to become a monk",
+        "He spared the boy's life",
+        "He kept him on as a puppet co-ruler",
+        "He granted him a yearly pension of 6,000 solidi"
+      ],
+      "correctAnswers": [
+        1,
+        3,
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#the-last-emperor",
+      "explanation": "Said to have pitied the 16-year-old, Odoacer spared him, paid him a yearly pension and sent him to relatives in Campania, around Naples. Romulus had never been recognised outside Italy.",
+      "sourceQuote": "Said to have pitied the 16-year-old, Odoacer spared his life, granted him a yearly pension of 6,000 gold coins (*solidi*) and sent him to live with relatives in Campania, the region around Naples.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What finally made Alaric abandon negotiations and march on Rome a third time in 410?",
+      "options": [
+        "The emperor executed his Gothic envoys",
+        "A Gothic rival ambushed him during peace talks",
+        "Vandal fleets cut off his grain supply",
+        "Hunnic raiders attacked his camp",
+        "His puppet emperor betrayed him to Ravenna",
+        "The Senate refused to pay a second ransom"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 3,
+      "textReference": "#sieges-of-rome",
+      "explanation": "An ambush by a Gothic rival during peace talks ended Alaric's patience. The year before, he had besieged Rome again and set up, then deposed, a puppet emperor.",
+      "sourceQuote": "When a Gothic rival ambushed him during peace talks in 410, Alaric gave up on negotiating and marched on Rome for the third time.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did different Christians explain the sack of Rome in 410? (select all that apply)",
+      "options": [
+        "As God's punishment of a proud city",
+        "As a sign the end of the world was near",
+        "As proof Rome had abandoned its old gods",
+        "As a victory for the true faith over paganism",
+        "As the result of Christianity sapping old virtues",
+        "As a sign Constantinople should rule the West"
+      ],
+      "correctAnswers": [
+        0,
+        1
+      ],
+      "difficulty": 3,
+      "textReference": "#who-was-to-blame",
+      "explanation": "Some Christians saw God's punishment softened by mercy, while others thought the end of the world was near. The claims about abandoned gods and sapped virtues came from pagans.",
+      "sourceQuote": "Some Christians replied that the disaster was God's punishment of a proud city, softened only by his mercy.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Many modern historians think the real turning point of Attila's 451 campaign was what?",
+      "options": [
+        "The death of the Visigothic king",
+        "Attila's retreat to his camp of wagons",
+        "The razing of Aquileia",
+        "The fight over the ridge on the Catalaunian Plains",
+        "The pope's embassy to Attila",
+        "The defence of Orléans by its Alan garrison"
+      ],
+      "correctAnswers": [
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#aetius-and-attila",
+      "explanation": "Modern historians often point to the Alans' defence of Orléans rather than the famous battle. They also reject ancient death tolls of up to 300,000 as impossible.",
+      "sourceQuote": "Ancient death tolls of up to 300,000 are impossible, the main account is distorted, and many think the real turning point was the defence of Orléans.",
+      "reviewFlags": []
+    },
+    {
+      "question": "The taxes Rome lost with Africa could have paid for roughly how many infantry?",
+      "options": [
+        "About 4,000",
+        "Nearly 40,000",
+        "About 10,000",
+        "About 20,000",
+        "About 100,000",
+        "About 200,000"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 3,
+      "textReference": "#kingdoms-inside-the-empire",
+      "explanation": "Africa's lost revenue could have funded nearly 40,000 foot soldiers. The government made up for it by taxing peasants harder while the wealthy avoided paying.",
+      "sourceQuote": "Its lost taxes could have paid for nearly 40,000 infantry.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which details show that the Gothic sack of 410 was restrained by the standards of the age? (select all that apply)",
+      "options": [
+        "No buildings were damaged by fire",
+        "Most monuments survived",
+        "The city's two great basilicas served as sanctuaries",
+        "The emperors' tombs were left untouched",
+        "No citizens were harmed or tortured",
+        "There was no general massacre"
+      ],
+      "correctAnswers": [
+        1,
+        2,
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#sack-of-rome-410",
+      "explanation": "There was no general massacre, most monuments survived and the two great basilicas served as refuges. Still, imperial tombs were ransacked, citizens tortured and buildings near the old Senate house burned.",
+      "sourceQuote": "There was no general massacre, most monuments survived, and the city's two great basilicas served as sanctuaries.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What happened right after the West's half-Vandal general was executed in 408?",
+      "options": [
+        "An eastern army was sent to occupy Italy",
+        "The Vandals crossed from Spain into Africa",
+        "Alaric surrendered and settled in Aquitaine",
+        "Soldiers massacred barbarian families; thousands joined Alaric",
+        "The court moved its capital back to Milan",
+        "Attila crossed the Rhine to avenge his ally"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 3,
+      "textReference": "#alaric-and-the-general",
+      "explanation": "Roman soldiers massacred the families of barbarian troops, driving thousands into Alaric's arms. The general had been lured out of a church sanctuary and executed on 22 August.",
+      "sourceQuote": "Roman soldiers then massacred the families of barbarian troops, and thousands fled to join Alaric.",
+      "reviewFlags": []
+    },
+    {
+      "question": "By 395, what state was the western Roman army in?",
+      "options": [
+        "Undefeated for half a century",
+        "Freshly rebuilt with Hunnic recruits",
+        "Stationed almost entirely in Britain",
+        "Merged with the eastern army",
+        "Bled white by two civil wars",
+        "Commanded directly by the Goths"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 3,
+      "textReference": "#a-divided-empire",
+      "explanation": "Two civil wars had drained the western army. At the same time the Goths had become an armed power able to threaten either half of the empire.",
+      "sourceQuote": "By 395 the Goths were an armed power that could threaten either half of the empire, while the western army had been bled white by two civil wars.",
+      "reviewFlags": []
+    }
+  ]
+}

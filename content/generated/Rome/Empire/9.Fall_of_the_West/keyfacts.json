@@ -1,0 +1,134 @@
+{
+  "description": "Key facts for this chapter, written by hand from the chapter text. Every entry links to the section that explains it.",
+  "people": [
+    {
+      "name": "Honorius",
+      "text": "Western emperor from 395, ruling from Ravenna.",
+      "sec": "a-divided-empire"
+    },
+    {
+      "name": "Stilicho",
+      "text": "Half-Vandal general who defended the West; executed in 408.",
+      "sec": "alaric-and-the-general"
+    },
+    {
+      "name": "Alaric",
+      "text": "Gothic leader who sacked Rome in 410.",
+      "sec": "alaric-and-the-general"
+    },
+    {
+      "name": "Augustine",
+      "text": "Bishop in North Africa who wrote The City of God.",
+      "sec": "who-was-to-blame"
+    },
+    {
+      "name": "Aetius",
+      "text": "The general who held the West together and stopped Attila.",
+      "sec": "aetius-and-attila"
+    },
+    {
+      "name": "Attila",
+      "text": "King of the Huns, beaten on the Catalaunian Plains in 451.",
+      "sec": "aetius-and-attila"
+    },
+    {
+      "name": "Gaiseric",
+      "text": "King of the Vandals; took Carthage in 439.",
+      "sec": "kingdoms-inside-the-empire"
+    },
+    {
+      "name": "Odoacer",
+      "text": "Germanic officer who deposed the last emperor in 476.",
+      "sec": "the-last-emperor"
+    }
+  ],
+  "dates": [
+    {
+      "when": "395",
+      "text": "The empire is split between Theodosius’s sons.",
+      "sec": "a-divided-empire"
+    },
+    {
+      "when": "24 August 410",
+      "text": "Alaric’s Goths sack Rome.",
+      "sec": "sack-of-rome-410"
+    },
+    {
+      "when": "418",
+      "text": "The Visigoths are settled in Aquitaine.",
+      "sec": "kingdoms-inside-the-empire"
+    },
+    {
+      "when": "439",
+      "text": "The Vandals take Carthage.",
+      "sec": "kingdoms-inside-the-empire"
+    },
+    {
+      "when": "451",
+      "text": "Aetius stops Attila on the Catalaunian Plains.",
+      "sec": "aetius-and-attila"
+    },
+    {
+      "when": "455",
+      "text": "The Vandals sack Rome.",
+      "sec": "murder-and-vandal-sack"
+    },
+    {
+      "when": "4 September 476",
+      "text": "Odoacer deposes Romulus Augustulus.",
+      "sec": "the-last-emperor"
+    }
+  ],
+  "terms": [
+    {
+      "latin": "Constantinopolis",
+      "english": "Constantinople",
+      "sec": "a-divided-empire"
+    },
+    {
+      "latin": "Gallia",
+      "english": "Gaul",
+      "sec": "a-divided-empire"
+    },
+    {
+      "latin": "foederati",
+      "english": "allies bound by treaty",
+      "sec": "a-divided-empire"
+    },
+    {
+      "latin": "magister militum",
+      "english": "commander-in-chief",
+      "sec": "alaric-and-the-general"
+    },
+    {
+      "latin": "Rhenus",
+      "english": "the Rhine",
+      "sec": "alaric-and-the-general"
+    },
+    {
+      "latin": "Urbs Aeterna",
+      "english": "the Eternal City",
+      "sec": "sieges-of-rome"
+    },
+    {
+      "latin": "senatus",
+      "english": "the Senate",
+      "sec": "sieges-of-rome"
+    },
+    {
+      "latin": "Britannia",
+      "english": "Britain",
+      "sec": "kingdoms-inside-the-empire"
+    },
+    {
+      "latin": "Carthago",
+      "english": "Carthage",
+      "sec": "kingdoms-inside-the-empire"
+    },
+    {
+      "latin": "solidi",
+      "english": "gold coins",
+      "sec": "the-last-emperor"
+    }
+  ]
+}
