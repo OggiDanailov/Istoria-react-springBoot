@@ -1,0 +1,190 @@
+{
+  "batchName": "Empire: Diocletian and Constantine (AD 284-337) - Medium Batch 1",
+  "chapterName": "Empire: Diocletian and Constantine (AD 284-337)",
+  "difficulty": 2,
+  "batchOrder": 3,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Maximian took the title 'Herculius' after which figure?",
+      "options": [
+        "Jupiter",
+        "Mars",
+        "Hercules",
+        "Apollo",
+        "Mithras"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#tetrarchy",
+      "explanation": "Maximian took his title from Hercules, Jupiter's heroic helper. The names mirrored the partnership, with Diocletian as Jovian senior and Maximian as his Herculean partner.",
+      "sourceQuote": "Maximian became *Herculius*, after Jupiter's heroic helper Hercules.",
+      "reviewFlags": []
+    },
+    {
+      "question": "According to Constantine's later propaganda, how did he escape from Galerius's court?",
+      "options": [
+        "He climbed the walls during a feast",
+        "He sailed away down the Danube by boat",
+        "He fled at night, laming the post horses behind him",
+        "He slipped out disguised as a travelling merchant",
+        "He bribed the palace guards with gold"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#constantine-rise",
+      "explanation": "Constantine's propaganda said he fled the same night Galerius agreed to release him, laming the post horses so he could not be followed. Galerius had given his consent after an evening of drinking.",
+      "sourceQuote": "According to Constantine's later propaganda, he fled that night, laming the post horses behind him.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Why did the choice of new Caesars in 305 damage the Tetrarchy?",
+      "options": [
+        "The army refused to accept any new Caesars",
+        "The Senate in Rome chose its own candidates",
+        "Constantine and Maxentius were passed over for Galerius's allies",
+        "Maximian refused to resign in Milan",
+        "Diocletian named his own sons over proven generals"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#abdication",
+      "explanation": "The crowd expected Constantine and Maxentius to become Caesars, but two of Galerius's allies were chosen instead. That slight would wreck the system.",
+      "sourceQuote": "The crowd expected Constantine and Maxentius, Maximian's son, to become Caesars, but two of Galerius's allies were chosen instead, a slight that would wreck the system.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which region, long untaxed, had to start paying taxes under Diocletian?",
+      "options": [
+        "Gaul",
+        "Syria",
+        "Africa",
+        "Egypt",
+        "Italy"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#reforms-and-prices",
+      "explanation": "Italy had long been spared regular taxes, but under Diocletian it paid too. The money funded a bigger government and an army of some 580,000 men.",
+      "sourceQuote": "Italy, long untaxed, now paid too.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Diocletian's new regular tax was assessed in which units? (select all that apply)",
+      "options": [
+        "Amphorae of wine from each estate",
+        "Modii, standard measures of grain",
+        "Capita, counting people by heads",
+        "Tithes of a tenth of each harvest",
+        "Iuga, land units varying with soil and crop"
+      ],
+      "correctAnswers": [
+        2,
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#reforms-and-prices",
+      "explanation": "The tax was assessed on people, counted in capita, and on land, measured in iuga that varied with soil and crop. From 296 a census every five years kept the figures current.",
+      "sourceQuote": "It was assessed on people, counted in heads (*capita*), and on land, measured in units (*iuga*) that varied with soil and crop.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did Diocletian publicly shame Galerius after the Persians defeated him in 297?",
+      "options": [
+        "He stripped him of his title of Caesar",
+        "He demoted him to a cavalry officer",
+        "He exiled him to a Danube garrison",
+        "He made him walk a mile ahead of the procession",
+        "He made him pay for the lost army"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#wars-and-persia",
+      "explanation": "Diocletian made Galerius walk about 1.5 km ahead of the imperial procession in his purple robes. Galerius struck back in 298 and won two great battles.",
+      "sourceQuote": "Diocletian publicly blamed him, making him walk about 1.5 km (a mile) ahead of the imperial procession in his purple robes.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did the bishops Constantine summoned to Nicaea in 325 produce?",
+      "options": [
+        "A list of banned pagan temples",
+        "The Nicene Creed",
+        "The Edict of Milan",
+        "The Church of the Holy Sepulchre",
+        "The first Latin Bible"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#constantine-sole-ruler",
+      "explanation": "The bishops gathered at Nicaea in north-western Turkey and produced the Nicene Creed, a statement of Christian belief. Constantine also funded great churches such as the Church of the Holy Sepulchre.",
+      "sourceQuote": "In 325 he summoned bishops to Nicaea, a town in north-western Turkey, where they produced the Nicene Creed, a statement of Christian belief.",
+      "reviewFlags": []
+    },
+    {
+      "question": "By 282, what military post did Diocles hold?",
+      "options": [
+        "Prefect in charge of Egypt",
+        "Admiral of the Adriatic fleet",
+        "Governor of the province of Dalmatia",
+        "Commander of the emperor's household cavalry",
+        "Commander of the Danube frontier forts"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#diocletian-rise",
+      "explanation": "By 282 Diocles commanded the cavalry that guarded the emperor's household. He had risen through the army during the Crisis of the Third Century.",
+      "sourceQuote": "By 282 Diocles commanded the cavalry that guarded the emperor's household.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What was the Chi-Rho on Constantine's battle standard, the labarum?",
+      "options": [
+        "A cross set inside the disc of the sun",
+        "The initials of Constantine and his father",
+        "A Latin abbreviation of 'In this sign, conquer'",
+        "The first two Greek letters of Christ's name",
+        "An eagle holding a laurel wreath"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#constantine-vision",
+      "explanation": "The Chi-Rho combines the first two Greek letters of Christ's name. In the bishop's account, Christ told Constantine in a dream to put it on the labarum.",
+      "sourceQuote": "That night Christ told him in a dream to make a battle standard, the *labarum*, bearing the Chi-Rho, the first two Greek letters of Christ's name.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Why did Maxentius leave the safety of Rome's walls to fight in 312?",
+      "options": [
+        "He trusted a prophecy that Rome's enemy would die",
+        "Constantine had breached the city walls",
+        "His troops mutinied and forced him out",
+        "The Senate ordered him to fight",
+        "His food supplies had run out"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#milvian-bridge",
+      "explanation": "The Sibylline Books said that 'the enemy of the Romans' would die on 28 October, and Maxentius took this as a promise. He had twice beaten invaders before by holding out behind the walls.",
+      "sourceQuote": "The Sibylline Books, ancient prophecies kept in Rome, said that on 28 October “the enemy of the Romans” would die, and he took this as a promise.",
+      "reviewFlags": []
+    }
+  ]
+}

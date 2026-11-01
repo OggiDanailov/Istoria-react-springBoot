@@ -1,0 +1,179 @@
+{
+  "batchName": "Empire: Diocletian and Constantine (AD 284-337) - Easy Batch 1",
+  "chapterName": "Empire: Diocletian and Constantine (AD 284-337)",
+  "difficulty": 1,
+  "batchOrder": 1,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "What did Diocletian's Edict on Maximum Prices of 301 try to do?",
+      "options": [
+        "Replace silver coins with new gold ones",
+        "Fix soldiers' wages for their lifetimes",
+        "Set top prices for over a thousand goods",
+        "Abolish all taxes on Italian land"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#reforms-and-prices",
+      "explanation": "The edict blamed greedy merchants for inflation and capped the prices of more than a thousand goods. It ignored supply and demand, and goods slipped into a black market.",
+      "sourceQuote": "In late 301 his Edict on Maximum Prices (*Edictum de Pretiis Rerum Venalium*) blamed greedy merchants and set top prices for more than a thousand goods.",
+      "reviewFlags": []
+    },
+    {
+      "question": "In which Roman province was Diocletian born?",
+      "options": [
+        "Dalmatia",
+        "Pannonia",
+        "Moesia",
+        "Thrace"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#diocletian-rise",
+      "explanation": "Diocletian was born around AD 243 in Dalmatia, on the Adriatic coast of modern Croatia. His family was humble, and ancient writers called his father either a scribe or a freed slave.",
+      "sourceQuote": "Diocletian, the soldier-emperor who pulled Rome back from the brink, was born around AD 243 in Dalmatia, a Roman province on the Adriatic coast of modern Croatia.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What does the word 'Tetrarchy' mean?",
+      "options": [
+        "Rule by soldiers",
+        "Rule by gods",
+        "Rule by four",
+        "Rule by two"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#tetrarchy",
+      "explanation": "The Tetrarchy comes from a Greek word meaning 'rule by four': two senior emperors and two junior Caesars. When the senior pair retired, the Caesars were supposed to step up.",
+      "sourceQuote": "This arrangement is called the Tetrarchy, from a Greek word meaning “rule by four”.",
+      "reviewFlags": []
+    },
+    {
+      "question": "When begged to return to power, Diocletian said no one would ask if they could see what?",
+      "options": [
+        "The fishponds he had dug",
+        "The vineyards he had pruned",
+        "The cabbages he had planted",
+        "The library he had built"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#abdication",
+      "explanation": "Diocletian said that anyone who saw the cabbages he had grown with his own hands would never ask him to come back. He made the reply at Carnuntum in 308.",
+      "sourceQuote": "If they could see the cabbages he had planted with his own hands, he replied, they would never ask.",
+      "reviewFlags": []
+    },
+    {
+      "question": "In which year did Constantine go to war with Maxentius and fight at the Milvian Bridge?",
+      "options": [
+        "330",
+        "306",
+        "324",
+        "312"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#milvian-bridge",
+      "explanation": "By 312 Constantine and his brother-in-law Maxentius, ruler of Rome, were at war. The decisive battle came on 28 October that year.",
+      "sourceQuote": "By 312 Constantine and his brother-in-law Maxentius, ruler of Rome, were at war.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Where did the troops proclaim Constantine Augustus after his father's death in 306?",
+      "options": [
+        "Milan",
+        "Trier",
+        "York",
+        "London"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#constantine-rise",
+      "explanation": "Constantine's father died at York on 25 July 306, and the army there proclaimed Constantine Augustus. Galerius grudgingly recognised him only as Caesar.",
+      "sourceQuote": "He joined his father, and when his father died at York on 25 July 306, the troops proclaimed Constantine Augustus.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which Greek city did Constantine refound as Constantinople?",
+      "options": [
+        "Nicaea",
+        "Byzantium",
+        "Antioch",
+        "Chalcedon"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#constantine-sole-ruler",
+      "explanation": "Constantine refounded Byzantium on the strait between Europe and Asia and dedicated it in 330 as Constantinople. It remained a capital for more than a thousand years.",
+      "sourceQuote": "He refounded Byzantium, a Greek city on the strait between Europe and Asia, dedicating it in 330 as Constantinople, “Constantine's City”.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Roughly how many provinces did the empire have after Diocletian's reforms?",
+      "options": [
+        "Over two hundred",
+        "About twenty-five",
+        "About fifty",
+        "Almost a hundred"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#reforms-and-prices",
+      "explanation": "Diocletian doubled the provinces from about fifty to almost a hundred. Smaller provinces meant no governor held enough land or soldiers to rebel.",
+      "sourceQuote": "He doubled the provinces, from about fifty to almost a hundred, so that no governor held enough land or soldiers to rebel.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which empire, ruled by the Sasanian kings, was Rome's gravest threat in the East?",
+      "options": [
+        "Armenia",
+        "Palmyra",
+        "Axum",
+        "Persia"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#wars-and-persia",
+      "explanation": "Persia under the Sasanian kings was Rome's great eastern rival. In 297 the Persians crushed Galerius in northern Mesopotamia.",
+      "sourceQuote": "The gravest threat was Persia, ruled by the Sasanian kings, Rome's great eastern rival.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did the Edict of Milan of 313 grant?",
+      "options": [
+        "Pardons to all exiled pagan priests",
+        "Citizenship to all free inhabitants",
+        "Freedom of worship to all religions",
+        "Tax exemption to all Christian clergy"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#constantine-sole-ruler",
+      "explanation": "The Edict of Milan granted freedom of worship to all religions. It also returned property that had been seized from Christians.",
+      "sourceQuote": "In 313 Constantine and his eastern co-emperor, Licinius, agreed the Edict of Milan, granting freedom of worship to all religions and returning property seized from Christians.",
+      "reviewFlags": []
+    }
+  ]
+}

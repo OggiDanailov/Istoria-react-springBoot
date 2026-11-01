@@ -1,0 +1,233 @@
+{
+  "description": "Maps for the chronicle, written by hand. Coordinates from Wikipedia; each map sits at the start of its section.",
+  "maps": [
+    {
+      "id": "tetrarchy-map",
+      "sec": "tetrarchy",
+      "title": "The empire of the four rulers",
+      "caption": "The tetrarchs ruled from cities near the frontiers, such as Nicomedia, Milan and Trier, leaving Rome a ceremonial capital. Constantine was born at Naissus, proclaimed at York, and founded Constantinople; Diocletian retired to Split.",
+      "bounds": {
+        "latMin": 34.0,
+        "latMax": 56.0,
+        "lonMin": -6.0,
+        "lonMax": 38.0
+      },
+      "places": [
+        {
+          "name": "Rome",
+          "latin": "Roma",
+          "lat": 41.893,
+          "lon": 12.483,
+          "kind": "rome",
+          "side": "l",
+          "dy": 8
+        },
+        {
+          "name": "Milan",
+          "latin": "Mediolanum",
+          "lat": 45.46,
+          "lon": 9.19,
+          "side": "l"
+        },
+        {
+          "name": "Trier",
+          "latin": "Augusta Treverorum",
+          "lat": 49.75,
+          "lon": 6.64,
+          "side": "r"
+        },
+        {
+          "name": "York",
+          "latin": "Eboracum",
+          "lat": 53.96,
+          "lon": -1.08,
+          "side": "r"
+        },
+        {
+          "name": "Split",
+          "lat": 43.51,
+          "lon": 16.44,
+          "side": "r",
+          "dy": -14
+        },
+        {
+          "name": "Naissus",
+          "lat": 43.32,
+          "lon": 21.9,
+          "side": "r"
+        },
+        {
+          "name": "Constantinople",
+          "lat": 41.01,
+          "lon": 28.98,
+          "side": "l",
+          "dy": 18
+        },
+        {
+          "name": "Nicomedia",
+          "lat": 40.77,
+          "lon": 29.92,
+          "side": "r",
+          "dy": 10
+        }
+      ]
+    },
+    {
+      "id": "milvian-plan",
+      "sec": "milvian-bridge",
+      "title": "The Milvian Bridge, 28 October 312",
+      "caption": "Maxentius drew up his army north of the Tiber, with the river at its back. Constantine’s cavalry broke his horsemen and the infantry drove the rest toward the river; the bridge of boats collapsed and Maxentius drowned. A simplified plan.",
+      "plan": true,
+      "height": 230,
+      "key": {
+        "rome": "Constantine",
+        "enemy": "Maxentius"
+      },
+      "rivers": [
+        {
+          "pts": [
+            [
+              0,
+              176
+            ],
+            [
+              90,
+              170
+            ],
+            [
+              180,
+              178
+            ],
+            [
+              300,
+              170
+            ]
+          ],
+          "name": "The Tiber",
+          "label": [
+            40,
+            196
+          ]
+        }
+      ],
+      "units": [
+        {
+          "side": "rome",
+          "x": 110,
+          "y": 28,
+          "w": 80,
+          "h": 14,
+          "name": "Constantine’s infantry",
+          "lx": 150,
+          "ly": 20
+        },
+        {
+          "side": "rome",
+          "x": 40,
+          "y": 34,
+          "w": 44,
+          "h": 10,
+          "name": "Cavalry",
+          "lx": 62,
+          "ly": 26
+        },
+        {
+          "side": "rome",
+          "x": 216,
+          "y": 34,
+          "w": 44,
+          "h": 10
+        },
+        {
+          "side": "enemy",
+          "x": 100,
+          "y": 104,
+          "w": 100,
+          "h": 14,
+          "name": "Maxentius’s army",
+          "lx": 150,
+          "ly": 134
+        },
+        {
+          "side": "enemy",
+          "x": 44,
+          "y": 108,
+          "w": 40,
+          "h": 10
+        },
+        {
+          "side": "enemy",
+          "x": 216,
+          "y": 108,
+          "w": 40,
+          "h": 10
+        },
+        {
+          "side": "enemy",
+          "x": 200,
+          "y": 162,
+          "w": 8,
+          "h": 30,
+          "name": "Bridge of boats",
+          "lx": 252,
+          "ly": 158
+        }
+      ],
+      "moves": [
+        {
+          "side": "rome",
+          "pts": [
+            [
+              62,
+              46
+            ],
+            [
+              62,
+              102
+            ]
+          ]
+        },
+        {
+          "side": "rome",
+          "pts": [
+            [
+              238,
+              46
+            ],
+            [
+              238,
+              102
+            ]
+          ]
+        },
+        {
+          "side": "rome",
+          "pts": [
+            [
+              150,
+              44
+            ],
+            [
+              150,
+              98
+            ]
+          ]
+        },
+        {
+          "side": "enemy",
+          "pts": [
+            [
+              160,
+              140
+            ],
+            [
+              202,
+              162
+            ]
+          ],
+          "dashed": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,203 @@
+{
+  "batchName": "Empire: Diocletian and Constantine (AD 284-337) - Hard Batch 1",
+  "chapterName": "Empire: Diocletian and Constantine (AD 284-337)",
+  "difficulty": 3,
+  "batchOrder": 5,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "How did Maximian's career end in 310?",
+      "options": [
+        "He died of illness in retirement at Milan",
+        "He was killed fighting the Franks on the Rhine",
+        "He drowned in the Tiber fleeing Constantine",
+        "He was executed by Galerius at Nicomedia",
+        "He rebelled against Constantine and hanged himself at Marseille",
+        "He was killed by his son Maxentius in Rome"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 3,
+      "textReference": "#constantine-rise",
+      "explanation": "Maximian had married his daughter to Constantine in 307, but in 310 he rebelled against his son-in-law. He was cornered at Marseille and hanged himself.",
+      "sourceQuote": "Maximian married his daughter to Constantine in 307, but in 310 he rebelled against his son-in-law, was cornered at Marseille and hanged himself.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Roughly how much did the Roman army grow under Diocletian?",
+      "options": [
+        "From about 390,000 to some 480,000 men",
+        "From about 390,000 to some 580,000 men",
+        "From about 200,000 to some 400,000 men",
+        "From about 580,000 to some 800,000 men",
+        "From about 290,000 to some 390,000 men",
+        "From about 450,000 to some 650,000 men"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 3,
+      "textReference": "#reforms-and-prices",
+      "explanation": "The army grew from about 390,000 to some 580,000 men. Paying for it required turning the old habit of seizing supplies into a regular tax.",
+      "sourceQuote": "The army grew from about 390,000 to some 580,000 men.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did Galerius gain in his 298 campaign against Persia? (select all that apply)",
+      "options": [
+        "Control of Egypt",
+        "The city of Babylon",
+        "The Persian king's treasury",
+        "The Persian king himself",
+        "The Persian capital, Ctesiphon",
+        "The Persian king's wife"
+      ],
+      "correctAnswers": [
+        2,
+        4,
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#wars-and-persia",
+      "explanation": "Galerius attacked through the mountains of Armenia, won two great battles, seized the Persian king's treasury and wife, and took Ctesiphon on the Tigris. The campaign led to the Peace of Nisibis in 299.",
+      "sourceQuote": "He won two great battles, seized the Persian king's treasury and wife, and took Ctesiphon, the Persian capital on the Tigris.",
+      "reviewFlags": []
+    },
+    {
+      "question": "In 308, where was the retired Diocletian begged to return to power?",
+      "options": [
+        "Carnuntum",
+        "Aquileia",
+        "Sirmium",
+        "Milan",
+        "Serdica",
+        "Nicomedia"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#abdication",
+      "explanation": "At Carnuntum, an army town on the Danube near Vienna, Diocletian was asked to come back. He refused, pointing to the cabbages he had planted.",
+      "sourceQuote": "In 308, at Carnuntum, an army town on the Danube near Vienna, he was begged to return.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What evidence do historians who suggest Constantine saw a halo around the sun point to?",
+      "options": [
+        "Persian astronomers recorded a solar eclipse",
+        "Maxentius's soldiers reported the same sign",
+        "The Sibylline Books foretold a sign in the sky",
+        "His coins honoured the Unconquered Sun for years",
+        "His mother described the sign in her letters",
+        "The Senate's arch shows a cross above the sun"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 3,
+      "textReference": "#constantine-vision",
+      "explanation": "Some historians suggest a natural halo around the sun, noting that his coins honoured the Unconquered Sun for years afterwards. The Senate's arch to his victory shows no Christian symbols.",
+      "sourceQuote": "Some suggest a halo around the sun, noting that his coins honoured the Unconquered Sun for years afterwards.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What was remarkable about Constantine's gold coin, the solidus?",
+      "options": [
+        "It kept its weight and purity for seven centuries",
+        "It kept its weight and purity for seventy years",
+        "It was withdrawn after his death in 337",
+        "It ended inflation within a single year",
+        "It was minted only at Constantinople",
+        "It replaced all silver coins within a decade"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#constantine-sole-ruler",
+      "explanation": "The solidus kept its weight and purity for seven centuries, an unusually stable coin. Diocletian's earlier attempt to curb inflation with a price freeze had failed.",
+      "sourceQuote": "His new gold coin, the *solidus*, kept its weight and purity for seven centuries.",
+      "reviewFlags": []
+    },
+    {
+      "question": "After crossing the Alps in 312, where did Constantine win battles on his way to Rome? (select all that apply)",
+      "options": [
+        "Near Turin",
+        "At Aquileia",
+        "At Genoa",
+        "At Verona",
+        "At Ravenna",
+        "At Milan"
+      ],
+      "correctAnswers": [
+        0,
+        3
+      ],
+      "difficulty": 3,
+      "textReference": "#milvian-bridge",
+      "explanation": "Constantine crossed the Alps against his advisers' warnings with about 40,000 men and won battles near Turin and at Verona. He then marched on Rome and the Milvian Bridge.",
+      "sourceQuote": "Against his advisers' warnings, Constantine crossed the Alps with about 40,000 men and won battles near Turin and at Verona.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which cities near the frontiers did the tetrarchs rule from, leaving Rome a ceremonial capital? (select all that apply)",
+      "options": [
+        "Trier",
+        "Carthage",
+        "Milan",
+        "Ravenna",
+        "Constantinople",
+        "Rome"
+      ],
+      "correctAnswers": [
+        0,
+        2
+      ],
+      "difficulty": 3,
+      "textReference": "#tetrarchy",
+      "explanation": "The four rulers governed from frontier cities such as Milan and Trier in western Germany. Rome kept only a ceremonial role.",
+      "sourceQuote": "The four ruled from cities near the frontiers, such as Milan and Trier in western Germany, leaving Rome a ceremonial capital.",
+      "reviewFlags": []
+    },
+    {
+      "question": "After the troops hailed him emperor in 284, whom did Diocletian kill with his own sword in front of the army?",
+      "options": [
+        "A Persian envoy",
+        "The dead emperor's father-in-law",
+        "The dead emperor's brother",
+        "The western emperor",
+        "The commander of the household guard",
+        "The governor of Nicomedia"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 3,
+      "textReference": "#diocletian-rise",
+      "explanation": "The young eastern emperor had been found dead in his closed coach. Diocletian swore he was innocent, blamed the dead man's father-in-law and killed him on the spot.",
+      "sourceQuote": "He swore he was innocent, blamed the dead man's father-in-law, and killed him with his own sword in front of the army.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What happened in 326 for reasons that have never been explained?",
+      "options": [
+        "Constantine exiled his mother and his brother",
+        "Constantine was baptised in Rome",
+        "Constantine split the empire among his sons",
+        "Constantine had his eldest son and his wife executed",
+        "Constantine burned the Sibylline Books",
+        "Constantine abdicated and then took power back"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 3,
+      "textReference": "#constantine-sole-ruler",
+      "explanation": "In 326 Constantine had his eldest son and his wife put to death, and no reason was ever given. He was baptised only on his deathbed and died near Nicomedia in 337.",
+      "sourceQuote": "In 326 he had his eldest son, Crispus, and his wife, Fausta, executed, for reasons never explained.",
+      "reviewFlags": []
+    }
+  ]
+}

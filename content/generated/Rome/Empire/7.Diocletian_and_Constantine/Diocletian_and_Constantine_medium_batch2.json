@@ -1,0 +1,189 @@
+{
+  "batchName": "Empire: Diocletian and Constantine (AD 284-337) - Medium Batch 2",
+  "chapterName": "Empire: Diocletian and Constantine (AD 284-337)",
+  "difficulty": 2,
+  "batchOrder": 4,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "According to a Christian teacher in Nicomedia, who pushed for harsher measures against Christians than Diocletian wanted?",
+      "options": [
+        "Maxentius",
+        "Constantine's father",
+        "Galerius",
+        "Maximian",
+        "Constantine"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#great-persecution",
+      "explanation": "The Christian teacher blamed Galerius, the junior emperor in the East, for pressing for harsher persecution. In the West, Maximian and Constantine's father ignored the later edicts.",
+      "sourceQuote": "According to a Christian teacher living in Nicomedia, Galerius, the junior emperor in the East, pushed for harsher measures than Diocletian wanted.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What happened at Antioch in 299 that set the persecution of Christians in motion?",
+      "options": [
+        "Christians burned a temple of Jupiter",
+        "A Christian soldier attacked the emperor",
+        "Diviners said the omens failed and blamed Christians",
+        "A bishop publicly insulted the emperor",
+        "Christian merchants refused to pay new taxes"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#great-persecution",
+      "explanation": "Priests who read the future in animals' entrails said the signs had failed and blamed Christians at court. Courtiers and soldiers were then ordered to sacrifice or be dismissed.",
+      "sourceQuote": "In 299 at Antioch, priests who read the future in animals' entrails said the signs had failed and blamed Christians at court.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What was 'adoratio' at Diocletian's court?",
+      "options": [
+        "Senators kissing the emperor's gold crown",
+        "Priests offering sacrifice for the emperor",
+        "Soldiers swearing a yearly oath to Jupiter",
+        "Visitors lying face down before the emperor",
+        "Crowds chanting praise at imperial games"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#tetrarchy",
+      "explanation": "Under adoratio, visitors had to lie face down before the emperor. Diocletian also wore a gold crown and jewels to raise himself above ordinary mortals.",
+      "sourceQuote": "Diocletian wore a gold crown and jewels, and visitors had to lie face down before him (*adoratio*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "In the earliest account of Constantine's vision, written by a Christian teacher, what was Constantine told in a dream?",
+      "options": [
+        "To paint a sign of Christ on his soldiers' shields",
+        "To consult the Sibylline Books",
+        "To spare Maxentius if he surrendered",
+        "To march on Rome before the new moon",
+        "To build a great church in Rome"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#constantine-vision",
+      "explanation": "The Christian teacher wrote that on the night before the battle Constantine dreamed he should paint a heavenly sign of Christ on his soldiers' shields. A bishop's later biography told a grander story of a cross in the sky.",
+      "sourceQuote": "Lactantius, a Christian teacher writing soon afterwards, said that the night before the battle, Constantine was told in a dream to paint a heavenly sign of Christ on his soldiers' shields.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which river did Maxentius have at his back at the Milvian Bridge?",
+      "options": [
+        "Tiber",
+        "Po",
+        "Arno",
+        "Rubicon",
+        "Rhône"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#milvian-bridge",
+      "explanation": "Maxentius drew up his army with the Tiber behind it, beside the bridge that carried the main road from the north into Rome. He also added a temporary bridge of boats.",
+      "sourceQuote": "He drew up his army with the Tiber at its back, beside the Milvian Bridge, which carried the main road from the north into Rome, and added a temporary bridge of boats.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Who ran each of the twelve dioceses created by Diocletian?",
+      "options": [
+        "A consul elected each year",
+        "One of the four tetrarchs",
+        "A deputy called a vicarius",
+        "A frontier general called a dux",
+        "A proconsul named by the Senate"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#reforms-and-prices",
+      "explanation": "Diocletian grouped the provinces into twelve dioceses, each run by a deputy called a vicarius. This added a new layer to the largest government Rome had ever known.",
+      "sourceQuote": "They were grouped into twelve regions called dioceses, each run by a deputy (*vicarius*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "What rank did Galerius grudgingly grant Constantine in 306?",
+      "options": [
+        "Prefect of Gaul",
+        "Consul",
+        "Caesar",
+        "Military tribune",
+        "Augustus"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#constantine-rise",
+      "explanation": "The troops at York had proclaimed Constantine Augustus, but Galerius recognised him only as the junior Caesar. Three months later Maxentius seized Rome.",
+      "sourceQuote": "Galerius grudgingly recognised him only as Caesar.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Who was blamed when fires broke out in the imperial palace at Nicomedia?",
+      "options": [
+        "Persian agents",
+        "Pagan priests",
+        "Galerius's soldiers",
+        "Greedy merchants",
+        "Christians"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#great-persecution",
+      "explanation": "After the palace fires, Christians were blamed, tortured and executed. It became the last, largest and bloodiest attack on Christians by the Roman state.",
+      "sourceQuote": "After fires broke out in the palace, Christians were blamed, tortured and executed.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Near which river did Diocletian defeat the western emperor in 285?",
+      "options": [
+        "Po",
+        "Tiber",
+        "Rhine",
+        "Margus",
+        "Sava"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#diocletian-rise",
+      "explanation": "Diocletian, newly proclaimed in the East, defeated the western emperor in 285 near the river Margus in modern Serbia.",
+      "sourceQuote": "Renamed Diocletian, he defeated the western emperor in 285 near the river Margus in modern Serbia.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What special role did the city of Nisibis gain under the peace of 299?",
+      "options": [
+        "The new capital of the Persian kings",
+        "The only trading point between the empires",
+        "The seat of the restored Armenian king",
+        "A Roman naval base on the Tigris",
+        "Galerius's eastern headquarters"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#wars-and-persia",
+      "explanation": "Nisibis became the only trading point between Rome and Persia. The Peace of Nisibis also brought Armenia back under Roman influence and proved lasting.",
+      "sourceQuote": "The Peace of Nisibis in 299, named after a frontier city that became the only trading point between the empires, brought Armenia back under Roman influence.",
+      "reviewFlags": []
+    }
+  ]
+}

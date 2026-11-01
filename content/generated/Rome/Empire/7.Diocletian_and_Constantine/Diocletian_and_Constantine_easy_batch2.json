@@ -1,0 +1,179 @@
+{
+  "batchName": "Empire: Diocletian and Constantine (AD 284-337) - Easy Batch 2",
+  "chapterName": "Empire: Diocletian and Constantine (AD 284-337)",
+  "difficulty": 1,
+  "batchOrder": 2,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "In what year did soldiers tear down the new church at Nicomedia, launching the Great Persecution?",
+      "options": [
+        "311",
+        "293",
+        "285",
+        "303"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#great-persecution",
+      "explanation": "On 23 February 303 soldiers destroyed the church at Nicomedia and burned its scriptures. The next day an edict ordered churches and holy books destroyed across the empire.",
+      "sourceQuote": "On 23 February 303 soldiers tore down the new church at Nicomedia and burned its scriptures.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What made Diocletian's departure from power in 305 unprecedented?",
+      "options": [
+        "He was the first emperor to step down voluntarily",
+        "He was the first emperor to hand power to his son",
+        "He was the first emperor overthrown by his Caesar",
+        "He was the first emperor exiled by his own army"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#abdication",
+      "explanation": "Diocletian was the first Roman emperor to resign of his own accord. Maximian resigned the same day in Milan.",
+      "sourceQuote": "He became the first Roman emperor to step down voluntarily, and Maximian resigned the same day in Milan.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Where was Constantine born?",
+      "options": [
+        "Trier",
+        "Naissus (modern Niš)",
+        "York",
+        "Nicomedia"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#constantine-rise",
+      "explanation": "Constantine was born around AD 272 at Naissus, now Niš in Serbia. His mother was a woman of humble birth.",
+      "sourceQuote": "Constantine, the emperor who would make Rome Christian, was born around AD 272 at Naissus, now Niš in Serbia.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What was Diocletian's name before he became emperor?",
+      "options": [
+        "Diocles",
+        "Diodorus",
+        "Dioscorus",
+        "Decius"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#diocletian-rise",
+      "explanation": "He was plain Diocles until the army hailed him as emperor in 284. He then took the grander name Diocletian.",
+      "sourceQuote": "His name was then plain Diocles, and his family was humble.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Diocletian's retirement palace forms the old heart of which modern city?",
+      "options": [
+        "Dubrovnik",
+        "Zagreb",
+        "Split",
+        "Belgrade"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#abdication",
+      "explanation": "Diocletian retired to a fortified palace on the Dalmatian coast, which is now the old centre of Split in Croatia. Dalmatia was also the province where he had been born.",
+      "sourceQuote": "Diocletian retired to a fortified palace on the Dalmatian coast, now the old heart of Split in Croatia.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which emperor, near death in 311, called off the Great Persecution?",
+      "options": [
+        "Galerius",
+        "Maximian",
+        "Constantine",
+        "Diocletian"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#great-persecution",
+      "explanation": "Galerius ended the persecution in 311 and admitted it had not worked. Most Christians had escaped punishment, and many pagans disliked it.",
+      "sourceQuote": "In 311 Galerius, near death, called it off, admitting it had not worked.",
+      "reviewFlags": []
+    },
+    {
+      "question": "When Egypt rebelled in 297, which city did Diocletian besiege until it fell?",
+      "options": [
+        "Alexandria",
+        "Pelusium",
+        "Thebes",
+        "Memphis"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#wars-and-persia",
+      "explanation": "Diocletian besieged Alexandria, Egypt's great port, until it fell in 298. The revolt had broken out partly over new taxes.",
+      "sourceQuote": "In 297 Egypt rebelled, partly over new taxes, and he besieged Alexandria, its great port, until it fell in 298.",
+      "reviewFlags": []
+    },
+    {
+      "question": "According to the bishop who wrote Constantine's biography, what words did Constantine see with a cross of light above the sun?",
+      "options": [
+        "“In this sign, conquer”",
+        "“Hail the Unconquered Sun”",
+        "“Rome shall never fall”",
+        "“Go forth and rule the world”"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#constantine-vision",
+      "explanation": "The bishop's account has Constantine seeing the words 'In this sign, conquer', in Latin 'in hoc signo vinces'. He said he heard the story from the emperor himself.",
+      "sourceQuote": "While marching, Constantine saw a cross of light above the sun with the words “In this sign, conquer”, usually given in Latin as *in hoc signo vinces*.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did Maxentius die at the Battle of the Milvian Bridge?",
+      "options": [
+        "He drowned when a bridge collapsed",
+        "He was executed after his capture",
+        "He was killed in single combat",
+        "He took poison as his army fled"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#milvian-bridge",
+      "explanation": "As Constantine's troops drove Maxentius's army toward the river, the temporary bridge of boats collapsed and Maxentius drowned. His head was later paraded through Rome.",
+      "sourceQuote": "The temporary bridge collapsed and Maxentius drowned.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Diocletian styled himself 'Iovius' after which god?",
+      "options": [
+        "Mars",
+        "Apollo",
+        "Hercules",
+        "Jupiter"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#tetrarchy",
+      "explanation": "Diocletian took the title Iovius after Jupiter, king of the gods. His partner Maximian took a name honouring Jupiter's helper Hercules.",
+      "sourceQuote": "Diocletian styled himself *Iovius*, after Jupiter, king of the gods.",
+      "reviewFlags": []
+    }
+  ]
+}

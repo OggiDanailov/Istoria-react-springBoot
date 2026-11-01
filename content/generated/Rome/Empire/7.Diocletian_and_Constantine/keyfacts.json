@@ -1,0 +1,149 @@
+{
+  "description": "Key facts for this chapter, written by hand from the chapter text. Every entry links to the section that explains it.",
+  "people": [
+    {
+      "name": "Diocletian",
+      "text": "Soldier-emperor, 284–305; created the Tetrarchy; retired to Split.",
+      "sec": "diocletian-rise"
+    },
+    {
+      "name": "Maximian",
+      "text": "Diocletian’s co-emperor in the West.",
+      "sec": "tetrarchy"
+    },
+    {
+      "name": "Galerius",
+      "text": "Junior emperor in the East; beat Persia; pushed the persecution.",
+      "sec": "wars-and-persia"
+    },
+    {
+      "name": "Constantine",
+      "text": "Emperor 306–337; won at the Milvian Bridge; the first Christian emperor; founded Constantinople.",
+      "sec": "constantine-rise"
+    },
+    {
+      "name": "Maxentius",
+      "text": "Maximian’s son, ruler of Rome; drowned in 312.",
+      "sec": "milvian-bridge"
+    },
+    {
+      "name": "Licinius",
+      "text": "Constantine’s eastern co-emperor, defeated in 324.",
+      "sec": "constantine-sole-ruler"
+    }
+  ],
+  "dates": [
+    {
+      "when": "284",
+      "text": "Diocletian is hailed emperor at Nicomedia.",
+      "sec": "diocletian-rise"
+    },
+    {
+      "when": "293",
+      "text": "The Tetrarchy: rule by four.",
+      "sec": "tetrarchy"
+    },
+    {
+      "when": "301",
+      "text": "The Edict on Maximum Prices.",
+      "sec": "reforms-and-prices"
+    },
+    {
+      "when": "303",
+      "text": "The Great Persecution.",
+      "sec": "great-persecution"
+    },
+    {
+      "when": "305",
+      "text": "Diocletian retires.",
+      "sec": "abdication"
+    },
+    {
+      "when": "28 October 312",
+      "text": "The Battle of the Milvian Bridge.",
+      "sec": "milvian-bridge"
+    },
+    {
+      "when": "313",
+      "text": "The Edict of Milan: freedom of worship.",
+      "sec": "constantine-sole-ruler"
+    },
+    {
+      "when": "325",
+      "text": "The Council of Nicaea.",
+      "sec": "constantine-sole-ruler"
+    },
+    {
+      "when": "330",
+      "text": "Constantinople is dedicated.",
+      "sec": "constantine-sole-ruler"
+    },
+    {
+      "when": "337",
+      "text": "Constantine dies.",
+      "sec": "constantine-sole-ruler"
+    }
+  ],
+  "terms": [
+    {
+      "latin": "Iovius",
+      "english": "of Jupiter (Diocletian’s title)",
+      "sec": "tetrarchy"
+    },
+    {
+      "latin": "Herculius",
+      "english": "of Hercules (Maximian’s title)",
+      "sec": "tetrarchy"
+    },
+    {
+      "latin": "adoratio",
+      "english": "lying face down before the emperor",
+      "sec": "tetrarchy"
+    },
+    {
+      "latin": "vicarius",
+      "english": "a deputy",
+      "sec": "reforms-and-prices"
+    },
+    {
+      "latin": "capita",
+      "english": "heads",
+      "sec": "reforms-and-prices"
+    },
+    {
+      "latin": "iuga",
+      "english": "units of land",
+      "sec": "reforms-and-prices"
+    },
+    {
+      "latin": "Edictum de Pretiis Rerum Venalium",
+      "english": "the Edict on Maximum Prices",
+      "sec": "reforms-and-prices"
+    },
+    {
+      "latin": "adventus",
+      "english": "a grand entry",
+      "sec": "milvian-bridge"
+    },
+    {
+      "latin": "damnatio memoriae",
+      "english": "condemning someone’s memory",
+      "sec": "milvian-bridge"
+    },
+    {
+      "latin": "in hoc signo vinces",
+      "english": "in this sign, conquer",
+      "sec": "constantine-vision"
+    },
+    {
+      "latin": "labarum",
+      "english": "Constantine’s battle standard",
+      "sec": "constantine-vision"
+    },
+    {
+      "latin": "solidus",
+      "english": "Constantine’s gold coin",
+      "sec": "constantine-sole-ruler"
+    }
+  ]
+}

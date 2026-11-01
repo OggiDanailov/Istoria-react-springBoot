@@ -1,0 +1,649 @@
+{
+  "chapterName": "Empire: Diocletian and Constantine (AD 284-337)",
+  "model": "claude-opus-5-5",
+  "briefing": {
+    "title": "The Roman Empire, AD 284",
+    "paragraphs": [
+      "In AD 284 the Roman Empire stretches from Britain to Syria, but it is falling apart. For half a century invasions, revolts and short-lived emperors have battered it. On a hill near Nicomedia, in north-western Turkey, the army hails a new emperor: Diocletian, a soldier of humble birth from Dalmatia on the Adriatic coast.",
+      "Can one man hold it all together? Diocletian will try sharing power among four rulers, heavy new taxes and a war on Christians. Then a young officer, Constantine, will fight his way to sole rule and make Rome Christian."
+    ]
+  },
+  "timelines": [
+    {
+      "name": "Level 1: The Big Turning Points",
+      "blurb": "Four key moments from Diocletian's rise to Constantine's new capital.",
+      "events": [
+        {
+          "label": "Army hails Diocles as emperor",
+          "when": "AD 284",
+          "year": 284,
+          "fact": "On a hill about 5 km (three miles) outside Nicomedia the troops proclaimed him, and he took the name Diocletian.",
+          "sectionId": "diocletian-rise",
+          "reviewFlags": []
+        },
+        {
+          "label": "Two Caesars join the two Augusti",
+          "when": "AD 293",
+          "year": 293,
+          "fact": "Galerius took the East and Constantine's father took Gaul and Britain, creating the Tetrarchy, or 'rule by four'.",
+          "sectionId": "tetrarchy",
+          "reviewFlags": []
+        },
+        {
+          "label": "Maxentius drowns at the Milvian Bridge",
+          "when": "28 October 312",
+          "year": 312,
+          "fact": "His temporary bridge of boats collapsed as Constantine's troops drove his army into the Tiber.",
+          "sectionId": "milvian-bridge",
+          "reviewFlags": []
+        },
+        {
+          "label": "Constantinople is dedicated",
+          "when": "AD 330",
+          "year": 330,
+          "fact": "Constantine refounded the Greek city of Byzantium as 'Constantine's City', a capital for more than a thousand years.",
+          "sectionId": "constantine-sole-ruler",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Level 2: Building and Breaking a System",
+      "blurb": "Six events from the crisis to the Edict of Milan.",
+      "events": [
+        {
+          "label": "Crisis of the Third Century begins",
+          "when": "AD 235",
+          "year": 235,
+          "fact": "An age of invasions, revolts and short-lived emperors began long before Diocletian took power.",
+          "sectionId": "diocletian-rise",
+          "reviewFlags": []
+        },
+        {
+          "label": "Maximian becomes Augustus of the West",
+          "when": "1 April 286",
+          "year": 286,
+          "fact": "Diocletian's fellow officer became a full co-emperor, while Diocletian stayed senior partner in the East.",
+          "sectionId": "tetrarchy",
+          "reviewFlags": []
+        },
+        {
+          "label": "Peace of Nisibis with Persia",
+          "when": "AD 299",
+          "year": 299,
+          "fact": "After Galerius's victories, this lasting peace brought Armenia back under Roman influence.",
+          "sectionId": "wars-and-persia",
+          "reviewFlags": []
+        },
+        {
+          "label": "Edict on Maximum Prices issued",
+          "when": "Late 301",
+          "year": 301,
+          "fact": "It set top prices for more than a thousand goods but drove trade into a black market.",
+          "sectionId": "reforms-and-prices",
+          "reviewFlags": []
+        },
+        {
+          "label": "Diocletian steps down",
+          "when": "1 May 305",
+          "year": 305,
+          "fact": "He became the first Roman emperor to retire voluntarily, and Maximian resigned the same day in Milan.",
+          "sectionId": "abdication",
+          "reviewFlags": []
+        },
+        {
+          "label": "Edict of Milan agreed",
+          "when": "AD 313",
+          "year": 313,
+          "fact": "Constantine and his eastern co-emperor granted freedom of worship to all religions.",
+          "sectionId": "constantine-sole-ruler",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Level 3: Fifty Years of Upheaval",
+      "blurb": "Eight events from Diocletian's first victory to Constantine's death.",
+      "events": [
+        {
+          "label": "Diocletian wins near the river Margus",
+          "when": "AD 285",
+          "year": 285,
+          "fact": "He defeated the western emperor near the Margus, in modern Serbia.",
+          "sectionId": "diocletian-rise",
+          "reviewFlags": []
+        },
+        {
+          "label": "Galerius takes Ctesiphon",
+          "when": "AD 298",
+          "year": 298,
+          "fact": "Striking through Armenia, Galerius seized the Persian capital on the Tigris along with the king's treasury and wife.",
+          "sectionId": "wars-and-persia",
+          "reviewFlags": []
+        },
+        {
+          "label": "Soldiers tear down Nicomedia's church",
+          "when": "23 February 303",
+          "year": 303,
+          "fact": "This opened the Great Persecution; the next day an edict ordered churches and holy books destroyed empire-wide.",
+          "sectionId": "great-persecution",
+          "reviewFlags": []
+        },
+        {
+          "label": "Troops at York proclaim Constantine",
+          "when": "25 July 306",
+          "year": 306,
+          "fact": "When his father died at York, the soldiers hailed Constantine Augustus, though Galerius recognised him only as Caesar.",
+          "sectionId": "constantine-rise",
+          "reviewFlags": []
+        },
+        {
+          "label": "Diocletian refuses a comeback",
+          "when": "AD 308",
+          "year": 308,
+          "fact": "Begged to return at Carnuntum, an army town on the Danube, he said they would never ask if they saw his cabbages.",
+          "sectionId": "abdication",
+          "reviewFlags": []
+        },
+        {
+          "label": "Maximian dies at Marseille",
+          "when": "AD 310",
+          "year": 310,
+          "fact": "After rebelling against his son-in-law Constantine, he was cornered at Marseille and hanged himself.",
+          "sectionId": "constantine-rise",
+          "reviewFlags": []
+        },
+        {
+          "label": "Bishops meet at Nicaea",
+          "when": "AD 325",
+          "year": 325,
+          "fact": "Summoned by Constantine, the bishops produced the Nicene Creed, a statement of Christian belief.",
+          "sectionId": "constantine-sole-ruler",
+          "reviewFlags": []
+        },
+        {
+          "label": "Constantine dies near Nicomedia",
+          "when": "22 May 337",
+          "year": 337,
+          "fact": "Baptised only on his deathbed, he left the empire to his sons, replacing rule by four with rule by family.",
+          "sectionId": "constantine-sole-ruler",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "matchSets": [
+    {
+      "name": "Titles of the Tetrarchy",
+      "blurb": "Match each term to its meaning in Diocletian's new style of rule.",
+      "pairs": [
+        {
+          "name": "Tetrarchy",
+          "match": "From a Greek word meaning 'rule by four'",
+          "sectionId": "tetrarchy",
+          "reviewFlags": []
+        },
+        {
+          "name": "Caesar",
+          "match": "Junior emperor, meant to step up when the senior pair retired",
+          "sectionId": "tetrarchy",
+          "reviewFlags": []
+        },
+        {
+          "name": "adoratio",
+          "match": "Lying face down before the emperor",
+          "sectionId": "tetrarchy",
+          "reviewFlags": []
+        },
+        {
+          "name": "Iovius",
+          "match": "Diocletian's title, after Jupiter, king of the gods",
+          "sectionId": "tetrarchy",
+          "reviewFlags": []
+        },
+        {
+          "name": "Herculius",
+          "match": "Maximian's title, after Jupiter's heroic helper",
+          "sectionId": "tetrarchy",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Edicts, Treaties and Symbols",
+      "blurb": "Match each name to what it did or meant.",
+      "pairs": [
+        {
+          "name": "Edict on Maximum Prices",
+          "match": "Set top prices for more than a thousand goods in 301",
+          "sectionId": "reforms-and-prices",
+          "reviewFlags": []
+        },
+        {
+          "name": "Edict of Milan",
+          "match": "Granted freedom of worship to all religions in 313",
+          "sectionId": "constantine-sole-ruler",
+          "reviewFlags": []
+        },
+        {
+          "name": "Peace of Nisibis",
+          "match": "Lasting peace with Persia that returned Armenia to Roman influence",
+          "sectionId": "wars-and-persia",
+          "reviewFlags": []
+        },
+        {
+          "name": "labarum",
+          "match": "Battle standard bearing the Chi-Rho",
+          "sectionId": "constantine-vision",
+          "reviewFlags": []
+        },
+        {
+          "name": "solidus",
+          "match": "Gold coin that kept its weight and purity for seven centuries",
+          "sectionId": "constantine-sole-ruler",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "trueFalseDecks": [
+    {
+      "name": "Diocletian's Empire",
+      "blurb": "True or false: the soldier-emperor and his rule by four.",
+      "cards": [
+        {
+          "claim": "Diocletian was born in Dalmatia with the name Diocles.",
+          "answer": true,
+          "why": "He was born around AD 243 in Dalmatia, on the Adriatic coast, and was plain Diocles until he became emperor.",
+          "sectionId": "diocletian-rise",
+          "reviewFlags": []
+        },
+        {
+          "claim": "In 285 Diocletian defeated the western emperor near the river Rhine.",
+          "answer": false,
+          "why": "The battle was near the river Margus in modern Serbia.",
+          "sectionId": "diocletian-rise",
+          "reviewFlags": []
+        },
+        {
+          "claim": "The word Tetrarchy comes from a Greek word meaning 'rule by four'.",
+          "answer": true,
+          "why": "From 293 two senior emperors (Augusti) and two junior emperors (Caesars) shared power.",
+          "sectionId": "tetrarchy",
+          "reviewFlags": []
+        },
+        {
+          "claim": "In 297 Galerius won a crushing victory over the Persians in northern Mesopotamia.",
+          "answer": false,
+          "why": "In 297 the Persians crushed Galerius; he only struck back successfully in 298 through Armenia.",
+          "sectionId": "wars-and-persia",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Diocletian cut the number of provinces to about fifty.",
+          "answer": false,
+          "why": "He doubled them, from about fifty to almost a hundred, so no governor could easily rebel.",
+          "sectionId": "reforms-and-prices",
+          "reviewFlags": []
+        },
+        {
+          "claim": "The Edict on Maximum Prices stayed in force for decades.",
+          "answer": false,
+          "why": "Goods slipped into a black market and the edict was dropped, perhaps within a year.",
+          "sectionId": "reforms-and-prices",
+          "reviewFlags": []
+        },
+        {
+          "claim": "In 303 soldiers tore down the new church at Nicomedia and burned its scriptures.",
+          "answer": true,
+          "why": "On 23 February 303 they destroyed the new church and burned its scriptures; an empire-wide edict followed the next day.",
+          "sectionId": "great-persecution",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Diocletian retired to a fortified palace that is now the old heart of Split.",
+          "answer": true,
+          "why": "His palace on the Dalmatian coast forms the old centre of Split in Croatia.",
+          "sectionId": "abdication",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Constantine's Road to Power",
+      "blurb": "True or false: from Naissus to Constantinople.",
+      "cards": [
+        {
+          "claim": "Constantine was born at Naissus, now Niš in Serbia.",
+          "answer": true,
+          "why": "He was born there around AD 272; his mother was a woman of humble birth.",
+          "sectionId": "constantine-rise",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Constantine's father died at Milan, where the troops proclaimed Constantine Augustus.",
+          "answer": false,
+          "why": "His father died at York on 25 July 306, and the troops there proclaimed him.",
+          "sectionId": "constantine-rise",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Constantine crossed the Alps with about 40,000 men in 312.",
+          "answer": true,
+          "why": "Against his advisers' warnings he invaded Italy and won battles near Turin and at Verona.",
+          "sectionId": "milvian-bridge",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Maxentius drowned when a temporary bridge of boats collapsed.",
+          "answer": true,
+          "why": "His army was driven toward the Tiber by the Milvian Bridge, and the bridge of boats gave way.",
+          "sectionId": "milvian-bridge",
+          "reviewFlags": []
+        },
+        {
+          "claim": "The two Christian writers who knew Constantine told the same story of his vision.",
+          "answer": false,
+          "why": "They told different stories: a dream about shields, or a cross of light above the sun followed by a dream.",
+          "sectionId": "constantine-vision",
+          "reviewFlags": []
+        },
+        {
+          "claim": "The Senate's arch to Constantine's victory is covered in Christian symbols.",
+          "answer": false,
+          "why": "The arch shows no Christian symbols at all.",
+          "sectionId": "constantine-vision",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Constantine dedicated Constantinople in 330 on the site of Byzantium.",
+          "answer": true,
+          "why": "He refounded the Greek city on the strait between Europe and Asia as 'Constantine's City'.",
+          "sectionId": "constantine-sole-ruler",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Constantine was baptised as a young man at Diocletian's court.",
+          "answer": false,
+          "why": "He was baptised only on his deathbed, in 337.",
+          "sectionId": "constantine-sole-ruler",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "oddOneOut": [
+    {
+      "items": [
+        "Diocletian",
+        "Maximian",
+        "Maxentius",
+        "Galerius"
+      ],
+      "oddIndex": 2,
+      "why": "Diocletian, Maximian and Galerius were among the four tetrarchs of 293. Maxentius, Maximian's son, was passed over and later seized Rome.",
+      "sectionId": "tetrarchy",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "The Persian king's treasury",
+        "Alexandria",
+        "The Persian king's wife",
+        "Ctesiphon"
+      ],
+      "oddIndex": 1,
+      "why": "Galerius seized the treasury, the king's wife and the capital Ctesiphon in 298. Alexandria in Egypt was besieged and taken by Diocletian.",
+      "sectionId": "wars-and-persia",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Doubling the provinces",
+        "A census every five years",
+        "Taxing Italy",
+        "The Edict of Milan"
+      ],
+      "oddIndex": 3,
+      "why": "Doubling the provinces, the five-yearly census and taxing Italy were Diocletian's reforms. The Edict of Milan was agreed by Constantine in 313.",
+      "sectionId": "reforms-and-prices",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Churches destroyed",
+        "Holy books burned",
+        "Property returned to Christians",
+        "Christian worship banned"
+      ],
+      "oddIndex": 2,
+      "why": "Destroying churches, burning scriptures and banning worship were measures of the Great Persecution. Returning property came with the Edict of Milan.",
+      "sectionId": "great-persecution",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Margus",
+        "Turin",
+        "Verona",
+        "Milvian Bridge"
+      ],
+      "oddIndex": 0,
+      "why": "Constantine fought near Turin, at Verona and at the Milvian Bridge in 312. The Margus was where Diocletian won in 285.",
+      "sectionId": "milvian-bridge",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Dream before battle to paint shields",
+        "Cross of light above the sun",
+        "Words 'In this sign, conquer'",
+        "Labarum with the Chi-Rho"
+      ],
+      "oddIndex": 0,
+      "why": "The cross of light, the words and the labarum come from the bishop's grander tale. The dream about painting shields is the Christian teacher's version.",
+      "sectionId": "constantine-vision",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Refounded Byzantium",
+        "Summoned bishops to Nicaea",
+        "Besieged Alexandria",
+        "Introduced the solidus"
+      ],
+      "oddIndex": 2,
+      "why": "Refounding Byzantium, calling the bishops to Nicaea and creating the solidus were Constantine's acts. Diocletian besieged Alexandria in 297-298.",
+      "sectionId": "constantine-sole-ruler",
+      "reviewFlags": []
+    }
+  ],
+  "whoAmI": [
+    {
+      "name": "Rulers of the Tetrarchy",
+      "blurb": "Which emperor of the rule by four am I?",
+      "people": [
+        {
+          "name": "Diocletian",
+          "options": [
+            "Diocletian",
+            "Maximian",
+            "Galerius",
+            "Constantine"
+          ],
+          "clues": [
+            "Ancient writers called my father either a scribe or a freed slave.",
+            "I besieged Alexandria until it fell in 298.",
+            "I styled myself Iovius, after Jupiter, king of the gods.",
+            "Begged to return to power in 308, I pointed to the cabbages I had planted."
+          ],
+          "sectionId": "diocletian-rise",
+          "reviewFlags": []
+        },
+        {
+          "name": "Maximian",
+          "options": [
+            "Maximian",
+            "Diocletian",
+            "Galerius",
+            "Maxentius"
+          ],
+          "clues": [
+            "I resigned in Milan on the same day my senior partner stepped down.",
+            "In the West I ignored the later edicts against Christians.",
+            "On 1 April 286 I became Augustus, ruling the West.",
+            "I took the name Herculius, after Jupiter's heroic helper."
+          ],
+          "sectionId": "tetrarchy",
+          "reviewFlags": []
+        },
+        {
+          "name": "Galerius",
+          "options": [
+            "Galerius",
+            "Diocletian",
+            "Maximian",
+            "Constantine"
+          ],
+          "clues": [
+            "Near death in 311, I called off the persecution of Christians, admitting it had failed.",
+            "In 298 I struck through Armenia and took Ctesiphon, the Persian capital.",
+            "After the Persians crushed me in 297, I had to walk ahead of the imperial procession in purple.",
+            "I became Caesar of the East in 293 as Diocletian's son-in-law."
+          ],
+          "sectionId": "wars-and-persia",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "The Struggle for the West",
+      "blurb": "Who fought over Rome after 305?",
+      "people": [
+        {
+          "name": "Constantine",
+          "options": [
+            "Constantine",
+            "Maxentius",
+            "Galerius",
+            "Maximian"
+          ],
+          "clues": [
+            "I was born around AD 272 at Naissus, now Niš in Serbia.",
+            "My troops proclaimed me Augustus at York after my father died.",
+            "In 330 I dedicated a refounded Byzantium as my own city.",
+            "I won at the Milvian Bridge, where my rival drowned in the Tiber."
+          ],
+          "sectionId": "constantine-rise",
+          "reviewFlags": []
+        },
+        {
+          "name": "Maxentius",
+          "options": [
+            "Maxentius",
+            "Constantine",
+            "Maximian",
+            "Galerius"
+          ],
+          "clues": [
+            "Twice I beat invaders by holding out behind Rome's walls.",
+            "I took the Sibylline Books' prophecy about 'the enemy of the Romans' as a promise.",
+            "I seized Rome in 306, and my memory was later officially condemned.",
+            "I drowned in the Tiber when my bridge of boats collapsed."
+          ],
+          "sectionId": "milvian-bridge",
+          "reviewFlags": []
+        },
+        {
+          "name": "Maximian",
+          "options": [
+            "Maximian",
+            "Constantine",
+            "Maxentius",
+            "Diocletian"
+          ],
+          "clues": [
+            "In 307 I married my daughter to the young emperor proclaimed at York.",
+            "My son seized Rome three months after his rival was proclaimed.",
+            "In 310 I rebelled against my own son-in-law.",
+            "Cornered at Marseille, I hanged myself."
+          ],
+          "sectionId": "constantine-rise",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "places": [
+    {
+      "name": "Nicomedia",
+      "wikipediaTitle": "Nicomedia",
+      "lat": 40.7625,
+      "lon": 29.9175,
+      "why": "On a hill outside this city Diocletian was proclaimed emperor in 284 and stepped down in 305, and the Great Persecution began here.",
+      "sectionId": "abdication",
+      "coordinates": "Wikipedia: Nicomedia",
+      "reviewFlags": []
+    },
+    {
+      "name": "Split",
+      "wikipediaTitle": "Diocletian's Palace",
+      "lat": 43.50833333,
+      "lon": 16.44,
+      "why": "Diocletian retired to a fortified palace on the Dalmatian coast that is now the old heart of Split.",
+      "sectionId": "abdication",
+      "coordinates": "Wikipedia: Diocletian's Palace",
+      "reviewFlags": []
+    },
+    {
+      "name": "Alexandria",
+      "wikipediaTitle": "Alexandria",
+      "lat": 31.1975,
+      "lon": 29.8925,
+      "why": "Egypt's great port, besieged by Diocletian after the revolt of 297 until it fell in 298.",
+      "sectionId": "wars-and-persia",
+      "coordinates": "Wikipedia: Alexandria",
+      "reviewFlags": []
+    },
+    {
+      "name": "Ctesiphon",
+      "wikipediaTitle": "Ctesiphon",
+      "lat": 33.09361111,
+      "lon": 44.58055556,
+      "why": "The Persian capital on the Tigris, taken by Galerius in 298.",
+      "sectionId": "wars-and-persia",
+      "coordinates": "Wikipedia: Ctesiphon",
+      "reviewFlags": []
+    },
+    {
+      "name": "York",
+      "wikipediaTitle": "York",
+      "lat": 53.96,
+      "lon": -1.08,
+      "why": "Constantine's father died here in 306 and the troops proclaimed Constantine Augustus.",
+      "sectionId": "constantine-rise",
+      "coordinates": "Wikipedia: York",
+      "reviewFlags": []
+    },
+    {
+      "name": "Carnuntum",
+      "wikipediaTitle": "Carnuntum",
+      "lat": 48.1133,
+      "lon": 16.8614,
+      "why": "At this army town on the Danube Diocletian was begged to return to power in 308 and refused.",
+      "sectionId": "abdication",
+      "coordinates": "Wikipedia: Carnuntum",
+      "reviewFlags": []
+    },
+    {
+      "name": "Naissus",
+      "wikipediaTitle": "Niš",
+      "lat": 43.32083333,
+      "lon": 21.89583333,
+      "why": "Constantine was born here around AD 272.",
+      "sectionId": "constantine-rise",
+      "coordinates": "Wikipedia: Niš",
+      "reviewFlags": []
+    }
+  ]
+}

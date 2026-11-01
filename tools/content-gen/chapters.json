@@ -706,7 +706,16 @@
       "short": "Diocletian and Constantine",
       "era": "empire",
       "mapArea": "wide",
-      "maxNames": 8
+      "maxNames": 8,
+      "battle": {
+        "name": "The Milvian Bridge",
+        "year": "AD 312",
+        "enemy": "Maxentius",
+        "sec": "milvian-bridge",
+        "level": "milvian-bridge",
+        "intro": "Maxentius stands with the Tiber at his back. Drive his army into the river."
+      },
+      "locked": true
     },
     {
       "id": "constantines-sons-to-theodosius",

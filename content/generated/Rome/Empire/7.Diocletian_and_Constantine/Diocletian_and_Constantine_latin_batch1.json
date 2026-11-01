@@ -1,0 +1,145 @@
+{
+  "batchName": "Empire: Diocletian and Constantine (AD 284-337) - Latin words",
+  "chapterName": "Empire: Diocletian and Constantine (AD 284-337)",
+  "difficulty": 1,
+  "batchOrder": 9,
+  "description": "Written by hand from the chapter text: the Latin words it explains",
+  "questions": [
+    {
+      "question": "What was adoratio, which Diocletian demanded?",
+      "options": [
+        "Lying face down before the emperor",
+        "Kissing the emperor’s ring",
+        "A sacrifice to Jupiter",
+        "An oath of loyalty"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#tetrarchy",
+      "explanation": "He also wore a gold crown and jewels.",
+      "sourceQuote": "visitors had to lie face down before him (*adoratio*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "What does in hoc signo vinces mean?",
+      "options": [
+        "“In this sign, conquer”",
+        "“By this cross, rule”",
+        "“God is with us”",
+        "“Under one God, one empire”"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#constantine-vision",
+      "explanation": "Eusebius said Constantine saw the words with a cross of light above the sun.",
+      "sourceQuote": "“In this sign, conquer”, usually given in Latin as *in hoc signo vinces*.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What was Constantine’s solidus?",
+      "options": [
+        "A gold coin that kept its value for seven centuries",
+        "A shield with the Chi-Rho",
+        "A new legion",
+        "A church in Constantinople"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#constantine-sole-ruler",
+      "explanation": "It kept its weight and purity for seven centuries.",
+      "sourceQuote": "His new gold coin, the *solidus*, kept its weight and purity for seven centuries.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Each diocese was run by a vicarius. What was a vicarius?",
+      "options": [
+        "A deputy",
+        "A bishop",
+        "A general",
+        "A tax collector"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#reforms-and-prices",
+      "explanation": "Diocletian grouped nearly a hundred provinces into twelve dioceses.",
+      "sourceQuote": "each run by a deputy (*vicarius*)",
+      "reviewFlags": []
+    },
+    {
+      "question": "Diocletian taxed land in iuga and people in capita. What were capita?",
+      "options": [
+        "Heads, a count of people",
+        "Fields",
+        "Oxen",
+        "Gold coins"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#reforms-and-prices",
+      "explanation": "A census every five years kept the figures current from 296.",
+      "sourceQuote": "counted in heads (*capita*)",
+      "reviewFlags": []
+    },
+    {
+      "question": "What was the labarum?",
+      "options": [
+        "A battle standard bearing the Chi-Rho",
+        "A cross of light",
+        "A crown of gold",
+        "A bridge of boats"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#constantine-vision",
+      "explanation": "Eusebius said Christ told Constantine in a dream to make it.",
+      "sourceQuote": "make a battle standard, the *labarum*, bearing the Chi-Rho",
+      "reviewFlags": []
+    },
+    {
+      "question": "What was the adventus that Constantine made on 29 October 312?",
+      "options": [
+        "A grand entry into Rome",
+        "A sacrifice to the gods",
+        "A speech to the Senate",
+        "A baptism"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#milvian-bridge",
+      "explanation": "Maxentius’s head was paraded through the streets.",
+      "sourceQuote": "Constantine made a grand entry (*adventus*) into Rome.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What was the Edictum de Pretiis Rerum Venalium of 301?",
+      "options": [
+        "The Edict on Maximum Prices",
+        "The edict against Christians",
+        "The Edict of Milan",
+        "A law on new provinces"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#reforms-and-prices",
+      "explanation": "It set top prices for more than a thousand goods and soon failed.",
+      "sourceQuote": "his Edict on Maximum Prices (*Edictum de Pretiis Rerum Venalium*)",
+      "reviewFlags": []
+    }
+  ]
+}
