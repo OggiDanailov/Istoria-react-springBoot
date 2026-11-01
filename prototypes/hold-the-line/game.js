@@ -1557,7 +1557,7 @@ function showPanel(html, handlers) {
 function paintIcons(root) {
   for (const cv of root.querySelectorAll('canvas.ic')) {
     const c = cv.getContext('2d'), unit = cv.dataset.unit, foe = cv.dataset.foe
-    c.setTransform(2, 0, 0, 2, 0, 0)
+    const k = cv.width / 44; c.setTransform(k, 0, 0, k, 0, 0)   // drawn on a 44-point square, sharp at any canvas size
     if (unit) { const sc = { cart: 0.6, caltrops: 1.1, shed: 0.6, pigs: 0.95 }[unit] ?? 0.5; c.translate(22, { cart: 36, caltrops: 28, shed: 38, pigs: 34 }[unit] ?? 41); c.scale(sc, sc); DRAW_UNIT[unit](c, ghostUnit(unit), 0) }
     if (foe) { const sc = { elephant: 0.29, cavalry: 0.42, phalangite: 0.38 }[foe] ?? 0.46; c.translate(22, 42); c.scale(sc, sc); drawFoe(c, { type: foe, phase: 0, eating: null, shield: FOES[foe].shield ?? 0, shieldMax: FOES[foe].shield ?? 0 }, 0) }
   }
@@ -1793,5 +1793,5 @@ function unmount() {
   clearTimeout(bannerTimer); window.removeEventListener('resize', layout)
   sroot.innerHTML = ''
 }
-return { mount, unmount, armyFor, LEVELS, debug: { get G() { return G }, place, collect, update, startLevel, beginBattle, armyFor, showMap, LEVELS, UNITS, FOES, progress } }
+return { mount, unmount, armyFor, LEVELS, debug: { get G() { return G }, paintIcons, foeTypes, place, collect, update, startLevel, beginBattle, armyFor, showMap, LEVELS, UNITS, FOES, progress } }
 })()
