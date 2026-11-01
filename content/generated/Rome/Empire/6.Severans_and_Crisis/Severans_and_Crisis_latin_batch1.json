@@ -1,0 +1,145 @@
+{
+  "batchName": "Empire: The Severans and the Crisis of the Third Century (AD 193-284) - Latin words",
+  "chapterName": "Empire: The Severans and the Crisis of the Third Century (AD 193-284)",
+  "difficulty": 1,
+  "batchOrder": 9,
+  "description": "Written by hand from the chapter text: the Latin words it explains",
+  "questions": [
+    {
+      "question": "What was the title Augusta that Julia Domna carried?",
+      "options": [
+        "Empress",
+        "Priestess",
+        "Queen of Syria",
+        "Mother of the army"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#julia-domna",
+      "explanation": "She handled much of Caracalla’s official correspondence.",
+      "sourceQuote": "carried the title of empress (*Augusta*)",
+      "reviewFlags": []
+    },
+    {
+      "question": "Caracalla gave civitas to every free person in the empire. What is civitas?",
+      "options": [
+        "Roman citizenship",
+        "Freedom from taxes",
+        "A plot of land",
+        "A place in the army"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#caracalla",
+      "explanation": "Why he did it is still unclear.",
+      "sourceQuote": "he granted Roman citizenship (*civitas*) to every free person in the empire.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What was a donativum, which every new emperor needed?",
+      "options": [
+        "A cash bonus for the troops",
+        "A gift to the Senate",
+        "A temple offering",
+        "A tax on land"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#money-plague-trade",
+      "explanation": "Paying it pushed emperors to mix ever more bronze and copper into the coins.",
+      "sourceQuote": "each needing a quick bonus (*donativum*) for the troops",
+      "reviewFlags": []
+    },
+    {
+      "question": "Who were the coloni of the late empire?",
+      "options": [
+        "Tenant farmers bound to the soil",
+        "Retired soldiers",
+        "Colonists sent to new lands",
+        "Free traders"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#money-plague-trade",
+      "explanation": "They were an early model for medieval serfdom.",
+      "sourceQuote": "becoming tenant farmers bound to the soil (*coloni*)",
+      "reviewFlags": []
+    },
+    {
+      "question": "Elagabalus married a virgo Vestalis. Who was she?",
+      "options": [
+        "A Vestal Virgin, a priestess sworn to chastity",
+        "A Syrian princess",
+        "A senator’s daughter",
+        "A priestess of the sun god"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#last-severans",
+      "explanation": "Coins and inscriptions confirm it.",
+      "sourceQuote": "he married a Vestal Virgin (*virgo Vestalis*), a priestess sworn to chastity.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Macrinus was praefectus praetorio. What was that?",
+      "options": [
+        "Commander of the Praetorian Guard",
+        "Governor of Syria",
+        "Admiral of the fleet",
+        "Chief priest"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#praetorian-emperor",
+      "explanation": "He was behind Caracalla’s murder in 217.",
+      "sourceQuote": "his praetorian prefect (*praefectus praetorio*)",
+      "reviewFlags": []
+    },
+    {
+      "question": "Later rulers called themselves domini instead of princeps. What does domini mean?",
+      "options": [
+        "Lords",
+        "First citizens",
+        "Generals",
+        "Fathers"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#sources-and-legacy",
+      "explanation": "The change showed open monarchy replacing the old pretence.",
+      "sourceQuote": "rulers now called themselves 'lords' (*domini*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "Zenobia was probably paraded in Aurelian’s triumphus. What was it?",
+      "options": [
+        "A victory parade through Rome",
+        "A gladiator show",
+        "A trial in the Senate",
+        "A funeral procession"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#aurelian",
+      "explanation": "Later writers said she retired to a villa at Tibur.",
+      "sourceQuote": "his triumph (*triumphus*), the victory parade through Rome",
+      "reviewFlags": []
+    }
+  ]
+}

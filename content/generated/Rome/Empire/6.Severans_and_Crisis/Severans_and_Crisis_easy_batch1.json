@@ -1,0 +1,179 @@
+{
+  "batchName": "Empire: The Severans and the Crisis of the Third Century (AD 193-284) - Easy Batch 1",
+  "chapterName": "Empire: The Severans and the Crisis of the Third Century (AD 193-284)",
+  "difficulty": 1,
+  "batchOrder": 1,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "What was the Tetrarchy, set up in 293?",
+      "options": [
+        "A council of four senators",
+        "A four-legion frontier army",
+        "A team of four co-emperors",
+        "A tax on four kinds of goods"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#sources-and-legacy",
+      "explanation": "The Tetrarchy was a team of four co-emperors created by a soldier-emperor who seized power in 284. Its creation marked the end of the crisis.",
+      "sourceQuote": "The crisis ended with Diocletian, a soldier-emperor who seized power in 284 and in 293 set up the Tetrarchy, a team of four co-emperors.",
+      "reviewFlags": []
+    },
+    {
+      "question": "In which city was Septimius Severus, founder of the Severan dynasty, born?",
+      "options": [
+        "Carthage",
+        "Leptis Magna",
+        "Alexandria",
+        "Antioch"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#septimius-severus",
+      "explanation": "Severus was born in 145 at Leptis Magna, a rich port on the coast of modern Libya. His family had Libyan, Punic and Italian roots.",
+      "sourceQuote": "Severus was born in 145 at Leptis Magna, a rich port on the coast of modern Libya.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Who was behind the murder of Caracalla in 217?",
+      "options": [
+        "The governor of Syria",
+        "The Parthian king",
+        "His praetorian prefect",
+        "A consul of the Senate"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#praetorian-emperor",
+      "explanation": "Caracalla's own praetorian prefect, commander of the emperor's elite bodyguard, organised his murder. Under the Severans this post became a powerful and dangerous office.",
+      "sourceQuote": "The man behind Caracalla's murder in 217 was his praetorian prefect (*praefectus praetorio*), commander of the Praetorian Guard (*cohortes praetoriae*), the emperor's elite bodyguard.",
+      "reviewFlags": []
+    },
+    {
+      "question": "The teenage emperor remembered as Elagabalus was a priest of which deity?",
+      "options": [
+        "The Roman god Jupiter",
+        "The Syrian sun god Elagabal",
+        "The Persian god Mithras",
+        "The Egyptian goddess Isis"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#last-severans",
+      "explanation": "He was a 14-year-old priest of the Syrian sun god Elagabal and is remembered by his god's name, as Elagabalus. In 220 he even placed his god above Jupiter.",
+      "sourceQuote": "The first, a 14-year-old priest of the Syrian sun god Elagabal, is remembered by his god's name, as Elagabalus.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which frontier fortification did Septimius Severus rebuild during his British campaigns?",
+      "options": [
+        "Hadrian's Wall",
+        "The Aurelian Walls",
+        "The Antonine Wall",
+        "The Servian Wall"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#septimius-severus",
+      "explanation": "Severus campaigned in Britain from 208 to 210 and rebuilt Hadrian's Wall. Before that he had beaten the Parthians in the east.",
+      "sourceQuote": "Severus then beat the Parthians, the rulers of Persia and Mesopotamia, and from 208 to 210 he campaigned in Britain and rebuilt Hadrian's Wall.",
+      "reviewFlags": []
+    },
+    {
+      "question": "By the end of the third century, what had become of the denarius, Rome's standard coin?",
+      "options": [
+        "It was worth twice as much",
+        "It was made of pure gold",
+        "It was replaced by Persian coins",
+        "It was nearly worthless"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#money-plague-trade",
+      "explanation": "Emperors kept adding bronze and copper to the coin, so prices spiralled and the denarius became nearly worthless. The debasement began with Septimius Severus.",
+      "sourceQuote": "Prices spiralled, and by the century's end the denarius was nearly worthless.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What were the 'barracks emperors'?",
+      "options": [
+        "Men raised by soldiers without political experience or noble birth",
+        "Generals who refused the throne out of loyalty",
+        "Senators who governed from military camps",
+        "Emperors who built new forts along the frontiers"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#barracks-emperors",
+      "explanation": "Barracks emperors were raised by soldiers and had no political experience, noble ancestors or hereditary claim. The first was a legion commander of peasant origin.",
+      "sourceQuote": "The army's new emperor, Maximinus Thrax, a legion commander of peasant origin, was the first of the barracks emperors: men raised by soldiers without political experience, noble ancestors or hereditary claim.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did Caracalla grant to every free person in the Roman Empire?",
+      "options": [
+        "Free monthly grain rations",
+        "The right to bear arms",
+        "Exemption from all taxes",
+        "Roman citizenship"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#caracalla",
+      "explanation": "Caracalla extended Roman citizenship to every free person in the empire, for reasons that are still unclear. His great public baths in Rome also still stand.",
+      "sourceQuote": "For reasons still unclear, he granted Roman citizenship (*civitas*) to every free person in the empire.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did Septimius Severus die in 211?",
+      "options": [
+        "Murdered by his Praetorian Guard",
+        "Killed in battle against the Parthians",
+        "Poisoned by his son in Rome",
+        "Of natural causes while in Britain"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#septimius-severus",
+      "explanation": "He died of natural causes in Britain in 211, after campaigning there and rebuilding Hadrian’s Wall.",
+      "sourceQuote": "He died of natural causes in Britain in 211.",
+      "reviewFlags": []
+    },
+    {
+      "question": "By 268, Gaul, Britain and briefly Spain had formed which breakaway state?",
+      "options": [
+        "The Kingdom of Soissons",
+        "The Gallic Empire",
+        "The Frankish Empire",
+        "The Visigothic Kingdom"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#zenobia",
+      "explanation": "The Gallic Empire was one of three pieces the Roman Empire had split into by 268. In the east, Palmyra held power.",
+      "sourceQuote": "Gaul, Britain and briefly Spain formed a breakaway Gallic Empire.",
+      "reviewFlags": []
+    }
+  ]
+}

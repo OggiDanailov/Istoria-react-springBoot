@@ -1,0 +1,74 @@
+{
+  "description": "Maps for the chronicle, written by hand. Coordinates from Wikipedia; each map sits at the start of its section.",
+  "maps": [
+    {
+      "id": "three-empires",
+      "sec": "zenobia",
+      "title": "The empire split in three, about 271",
+      "caption": "The Gallic Empire held Gaul and Britain; Zenobia’s Palmyra ruled from Ankara to Egypt; Rome kept the centre. Aurelian beat Zenobia at Immae and Emesa in 272 and reunited the empire by 274. Borders not shown.",
+      "bounds": {
+        "latMin": 27.0,
+        "latMax": 55.0,
+        "lonMin": -8.0,
+        "lonMax": 44.0
+      },
+      "places": [
+        {
+          "name": "Rome",
+          "latin": "Roma",
+          "lat": 41.893,
+          "lon": 12.483,
+          "kind": "rome",
+          "side": "l",
+          "dy": 8
+        },
+        {
+          "name": "Palmyra",
+          "lat": 34.55,
+          "lon": 38.27,
+          "side": "l",
+          "dy": -16
+        },
+        {
+          "name": "Emesa",
+          "lat": 34.73,
+          "lon": 36.71,
+          "kind": "battle",
+          "side": "l",
+          "dy": 8
+        },
+        {
+          "name": "Ancyra",
+          "lat": 39.93,
+          "lon": 32.86,
+          "side": "r"
+        },
+        {
+          "name": "Leptis Magna",
+          "lat": 32.64,
+          "lon": 14.29,
+          "side": "r"
+        },
+        {
+          "name": "Naissus",
+          "lat": 43.32,
+          "lon": 21.9,
+          "kind": "battle",
+          "side": "r"
+        }
+      ],
+      "peoples": [
+        {
+          "name": "Gallic Empire",
+          "lat": 47.5,
+          "lon": 2.0
+        },
+        {
+          "name": "Palmyrene Empire",
+          "lat": 30.0,
+          "lon": 33.0
+        }
+      ]
+    }
+  ]
+}

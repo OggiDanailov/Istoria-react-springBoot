@@ -677,7 +677,16 @@
       "short": "The Third-Century Crisis",
       "era": "empire",
       "mapArea": "wide",
-      "maxNames": 8
+      "maxNames": 8,
+      "battle": {
+        "name": "Zenobia of Palmyra",
+        "year": "AD 272",
+        "enemy": "Zenobia’s armoured horsemen",
+        "sec": "aurelian",
+        "level": "zenobia",
+        "intro": "Aurelian marches east to win back half the empire from the queen of Palmyra."
+      },
+      "locked": true
     },
     {
       "id": "diocletian-and-constantine",

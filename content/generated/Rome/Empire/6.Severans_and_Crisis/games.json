@@ -1,0 +1,649 @@
+{
+  "chapterName": "Empire: The Severans and the Crisis of the Third Century (AD 193-284)",
+  "model": "claude-opus-5-5",
+  "briefing": {
+    "title": "Rome, AD 193",
+    "paragraphs": [
+      "In AD 193 the Roman Empire stretches from Britain to Syria, but its throne is up for grabs. Emperors are being murdered, and generals with loyal legions fight to replace them. The winner is Septimius Severus, a tough general born in Africa. His dynasty, backed by powerful Syrian women, will rule until 235.",
+      "Yet the army's loyalty grows ever more expensive. After 235, soldiers make and unmake emperors almost yearly, coins lose their silver, plague spreads, and the empire splits in three. Can anyone hold Rome together?"
+    ]
+  },
+  "timelines": [
+    {
+      "name": "Level 1: Rise and Fall",
+      "blurb": "Four turning points from Severus to Aurelian.",
+      "events": [
+        {
+          "label": "Severus proclaimed emperor in Noricum",
+          "when": "AD 193",
+          "year": 193,
+          "fact": "His legions in Noricum, a frontier province roughly in modern Austria, hailed him during the Year of the Five Emperors.",
+          "sectionId": "septimius-severus",
+          "reviewFlags": []
+        },
+        {
+          "label": "Caracalla murdered near Carrhae",
+          "when": "April 217",
+          "year": 217,
+          "fact": "He was killed on his way to fight the Parthians, on the orders of one of his own guard commanders.",
+          "sectionId": "caracalla",
+          "reviewFlags": []
+        },
+        {
+          "label": "Last Severan murdered on the Rhine",
+          "when": "AD 235",
+          "year": 235,
+          "fact": "His soldiers killed him and his mother after he paid off German raiders, opening the Crisis of the Third Century.",
+          "sectionId": "last-severans",
+          "reviewFlags": []
+        },
+        {
+          "label": "Palmyra surrenders to Aurelian",
+          "when": "August 272",
+          "year": 272,
+          "fact": "After his victories at Immae and near Emesa, Aurelian captured Zenobia and her city gave in.",
+          "sectionId": "aurelian",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Level 2: Severans and Crisis",
+      "blurb": "Six events from Leptis Magna to a captured emperor.",
+      "events": [
+        {
+          "label": "Severus born at Leptis Magna",
+          "when": "AD 145",
+          "year": 145,
+          "fact": "Septimius Severus was born in this rich port on the coast of modern Libya.",
+          "sectionId": "septimius-severus",
+          "reviewFlags": []
+        },
+        {
+          "label": "Julia Domna marries Severus",
+          "when": "AD 187",
+          "year": 187,
+          "fact": "The Syrian noblewoman bore him two sons and later carried the title Augusta (empress).",
+          "sectionId": "julia-domna",
+          "reviewFlags": []
+        },
+        {
+          "label": "Severus's last rival falls at Lugdunum",
+          "when": "AD 197",
+          "year": 197,
+          "fact": "The defeat at Lugdunum, modern Lyon, ended the civil wars that began in 193.",
+          "sectionId": "septimius-severus",
+          "reviewFlags": []
+        },
+        {
+          "label": "Severus dies in Britain",
+          "when": "AD 211",
+          "year": 211,
+          "fact": "Unlike most emperors of the century, he died of natural causes.",
+          "sectionId": "septimius-severus",
+          "reviewFlags": []
+        },
+        {
+          "label": "Elagabal placed above Jupiter",
+          "when": "AD 220",
+          "year": 220,
+          "fact": "Coins and inscriptions confirm the teenage priest-emperor raised his Syrian sun god above Rome's chief god.",
+          "sectionId": "last-severans",
+          "reviewFlags": []
+        },
+        {
+          "label": "Sasanians capture a Roman emperor",
+          "when": "AD 260",
+          "year": 260,
+          "fact": "The Sasanians, a new Persian dynasty, took an emperor prisoner, and he died in captivity.",
+          "sectionId": "barracks-emperors",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Level 3: A Century of Turmoil",
+      "blurb": "Eight events from Caracalla's birth to the Tetrarchy.",
+      "events": [
+        {
+          "label": "Caracalla is born",
+          "when": "AD 188",
+          "year": 188,
+          "fact": "The elder son of Septimius Severus and Julia Domna was named after a hooded Gallic tunic he liked to wear.",
+          "sectionId": "caracalla",
+          "reviewFlags": []
+        },
+        {
+          "label": "Severus campaigns in Britain",
+          "when": "AD 208",
+          "year": 208,
+          "fact": "From 208 to 210 he fought in Britain and rebuilt Hadrian's Wall.",
+          "sectionId": "septimius-severus",
+          "reviewFlags": []
+        },
+        {
+          "label": "Usurper defeated near Antioch",
+          "when": "AD 218",
+          "year": 218,
+          "fact": "Macrinus, Caracalla's former guard commander, lost to troops backing Julia Domna's family was caught as he fled and killed by his guards.",
+          "sectionId": "praetorian-emperor",
+          "reviewFlags": []
+        },
+        {
+          "label": "Boy emperor's body thrown in a sewer",
+          "when": "AD 222",
+          "year": 222,
+          "fact": "The troops turned on the priest-emperor after he tried to kill his cousin and heir.",
+          "sectionId": "last-severans",
+          "reviewFlags": []
+        },
+        {
+          "label": "Year of the Six Emperors",
+          "when": "AD 238",
+          "year": 238,
+          "fact": "The first barracks emperor was killed by his own troops amid revolts backed by the Senate.",
+          "sectionId": "barracks-emperors",
+          "reviewFlags": []
+        },
+        {
+          "label": "Palmyra's lord is assassinated",
+          "when": "AD 267",
+          "year": 267,
+          "fact": "His widow Zenobia took power as regent for their ten-year-old son.",
+          "sectionId": "zenobia",
+          "reviewFlags": []
+        },
+        {
+          "label": "Aurelian takes the throne",
+          "when": "AD 270",
+          "year": 270,
+          "fact": "He had been cavalry commander at the great victory over the Goths at Naissus, modern Niš.",
+          "sectionId": "aurelian",
+          "reviewFlags": []
+        },
+        {
+          "label": "Tetrarchy of four co-emperors set up",
+          "when": "AD 293",
+          "year": 293,
+          "fact": "A soldier-emperor who seized power in 284 created this team of four, ending the crisis.",
+          "sectionId": "sources-and-legacy",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "matchSets": [
+    {
+      "name": "Latin Words of the Age",
+      "blurb": "Match each Latin term to its meaning.",
+      "pairs": [
+        {
+          "name": "Augusta",
+          "match": "Title of empress carried by Julia Domna",
+          "sectionId": "julia-domna",
+          "reviewFlags": []
+        },
+        {
+          "name": "civitas",
+          "match": "Roman citizenship, granted by Caracalla to every free person",
+          "sectionId": "caracalla",
+          "reviewFlags": []
+        },
+        {
+          "name": "donativum",
+          "match": "A quick cash bonus emperors paid to the troops",
+          "sectionId": "money-plague-trade",
+          "reviewFlags": []
+        },
+        {
+          "name": "coloni",
+          "match": "Tenant farmers bound to the soil, a model for medieval serfdom",
+          "sectionId": "money-plague-trade",
+          "reviewFlags": []
+        },
+        {
+          "name": "domini",
+          "match": "'Lords', what rulers called themselves after the crisis",
+          "sectionId": "sources-and-legacy",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Places, Peoples and Books",
+      "blurb": "Match each name to its role in the story.",
+      "pairs": [
+        {
+          "name": "Leptis Magna",
+          "match": "Rich Libyan port where Septimius Severus was born",
+          "sectionId": "septimius-severus",
+          "reviewFlags": []
+        },
+        {
+          "name": "Palmyra",
+          "match": "Caravan city in the Syrian desert ruled by Zenobia",
+          "sectionId": "zenobia",
+          "reviewFlags": []
+        },
+        {
+          "name": "Naissus",
+          "match": "Where a Gothic invasion was crushed in 268 or 269",
+          "sectionId": "aurelian",
+          "reviewFlags": []
+        },
+        {
+          "name": "Sasanians",
+          "match": "New Persian dynasty that captured a Roman emperor in 260",
+          "sectionId": "barracks-emperors",
+          "reviewFlags": []
+        },
+        {
+          "name": "Historia Augusta",
+          "match": "Late Roman imperial biographies that invented events and letters",
+          "sectionId": "sources-and-legacy",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "trueFalseDecks": [
+    {
+      "name": "The Severan Dynasty",
+      "blurb": "Severus, his family and the men who seized the throne.",
+      "cards": [
+        {
+          "claim": "Septimius Severus was born at Leptis Magna, a port in modern Libya.",
+          "answer": true,
+          "why": "He was born there in 145, into an equestrian family with Libyan, Punic and Italian roots.",
+          "sectionId": "septimius-severus",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Severus's legions in Britain proclaimed him emperor in 193.",
+          "answer": false,
+          "why": "It was his legions in Noricum, a frontier province roughly in modern Austria. He campaigned in Britain later, from 208 to 210.",
+          "sectionId": "septimius-severus",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Severus raised soldiers' pay, which helped win him the army's love.",
+          "answer": true,
+          "why": "The Senate disliked him, but ordinary Romans and the army loved him, not least because of the pay rise.",
+          "sectionId": "septimius-severus",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Julia Domna was an Egyptian noblewoman.",
+          "answer": false,
+          "why": "Julia Domna was a Syrian noblewoman who married Septimius Severus in 187.",
+          "sectionId": "julia-domna",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Caracalla got his nickname from a hooded Gallic tunic he liked to wear.",
+          "answer": true,
+          "why": "The name 'Caracalla' comes from this hooded Gallic garment.",
+          "sectionId": "caracalla",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Caracalla granted Roman citizenship only to his soldiers.",
+          "answer": false,
+          "why": "For reasons still unclear, he granted Roman citizenship to every free person in the empire.",
+          "sectionId": "caracalla",
+          "reviewFlags": []
+        },
+        {
+          "claim": "The guard commander who became emperor in 217 ruled from Rome.",
+          "answer": false,
+          "why": "He never set foot in Rome during his short reign, which ended after his defeat near Antioch in 218.",
+          "sectionId": "praetorian-emperor",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Coins and inscriptions confirm the teenage priest-emperor married a Vestal Virgin.",
+          "answer": true,
+          "why": "They confirm he married a Vestal Virgin, a priestess sworn to chastity, and placed his god above Jupiter in 220.",
+          "sectionId": "last-severans",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Crisis and Recovery",
+      "blurb": "Barracks emperors, bad money, Zenobia and Aurelian.",
+      "cards": [
+        {
+          "claim": "The Crisis of the Third Century began with the murder of the last Severan emperor in 235.",
+          "answer": true,
+          "why": "His murder opened half a century in which the empire nearly collapsed.",
+          "sectionId": "barracks-emperors",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Rome had strict, fixed rules of succession for its emperors.",
+          "answer": false,
+          "why": "Rome never fixed rules of succession, so any general with a big army could try his luck.",
+          "sectionId": "barracks-emperors",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Septimius Severus cut the silver in the denarius from 81.5% to 78.5%.",
+          "answer": true,
+          "why": "Later emperors mixed in ever more bronze and copper, until the denarius was nearly worthless.",
+          "sectionId": "money-plague-trade",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Historians stress that Egypt, Africa and Spain were ruined by the crisis.",
+          "answer": false,
+          "why": "Historians stress that Egypt, Africa and Spain seem to have prospered despite the crisis.",
+          "sectionId": "money-plague-trade",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Zenobia took power as regent for her ten-year-old son.",
+          "answer": true,
+          "why": "After her husband, Palmyra's lord, was assassinated in 267, she ruled for their son.",
+          "sectionId": "zenobia",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Zenobia declared herself empress in 270.",
+          "answer": false,
+          "why": "She declared herself empress in 272, as a Roman army approached. In 270 her general was seizing Arabia and Egypt.",
+          "sectionId": "zenobia",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Near Emesa, Zenobia's 70,000 men nearly won before breaking ranks.",
+          "answer": true,
+          "why": "Aurelian beat her army at Immae and then near Emesa, modern Homs, where her army almost won.",
+          "sectionId": "aurelian",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Aurelian died peacefully of old age in a villa at Tibur.",
+          "answer": false,
+          "why": "Aurelian was assassinated in 275. Later writers said it was Zenobia who retired to a villa at Tibur.",
+          "sectionId": "aurelian",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "oddOneOut": [
+    {
+      "items": [
+        "Julia Domna",
+        "Julia Domna's sister",
+        "Her sister's daughters",
+        "Zenobia"
+      ],
+      "oddIndex": 3,
+      "why": "Three were mighty Severan empresses. Zenobia, a Syrian queen decades later, only modelled her coin portraits on them.",
+      "sectionId": "julia-domna",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Formed a Macedonian-style phalanx",
+        "Gave citizenship to all free people",
+        "Built great public baths in Rome",
+        "Rebuilt Hadrian's Wall"
+      ],
+      "oddIndex": 3,
+      "why": "Three were done by Caracalla. Rebuilding Hadrian's Wall was the work of his father, Septimius Severus.",
+      "sectionId": "caracalla",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Caracalla",
+        "Aurelian",
+        "Septimius Severus",
+        "Macrinus"
+      ],
+      "oddIndex": 2,
+      "why": "Three emperors died violently. Septimius Severus died of natural causes in Britain in 211.",
+      "sectionId": "septimius-severus",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Gaul",
+        "Britain",
+        "Spain",
+        "Egypt"
+      ],
+      "oddIndex": 3,
+      "why": "Gaul, Britain and briefly Spain formed the breakaway Gallic Empire. Egypt was seized by Zenobia's Palmyra in the east.",
+      "sectionId": "zenobia",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Battle of Immae",
+        "Battle near Emesa",
+        "Defeat of the Gallic Empire",
+        "Victory at Naissus"
+      ],
+      "oddIndex": 3,
+      "why": "Aurelian won three as emperor. At Naissus another emperor crushed the Goths, with Aurelian only his cavalry commander.",
+      "sectionId": "aurelian",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Army enlarged by a quarter",
+        "Legionaries' pay doubled",
+        "Bonuses paid to the troops",
+        "New walls built around Rome"
+      ],
+      "oddIndex": 3,
+      "why": "Three were costs of keeping soldiers loyal, which drove the debasing of coins. Rome's new walls answered the unsafe times instead.",
+      "sectionId": "money-plague-trade",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "No political experience",
+        "No noble ancestors",
+        "No hereditary claim",
+        "Raised by the Senate"
+      ],
+      "oddIndex": 3,
+      "why": "Three describe the barracks emperors. They were raised by soldiers, not the Senate, which even backed revolts against the first one.",
+      "sectionId": "barracks-emperors",
+      "reviewFlags": []
+    }
+  ],
+  "whoAmI": [
+    {
+      "name": "The Severan Family",
+      "blurb": "Guess the founder, the empress and the heir.",
+      "people": [
+        {
+          "name": "Septimius Severus",
+          "options": [
+            "Septimius Severus",
+            "Caracalla",
+            "Aurelian",
+            "Julia Domna"
+          ],
+          "clues": [
+            "My family belonged to the equestrian order, with Libyan, Punic and Italian roots.",
+            "I beat the Parthians and later rebuilt Hadrian's Wall in Britain.",
+            "My legions in Noricum, a frontier province, proclaimed me emperor in 193.",
+            "I was born at Leptis Magna in Africa and founded a new dynasty."
+          ],
+          "sectionId": "septimius-severus",
+          "reviewFlags": []
+        },
+        {
+          "name": "Julia Domna",
+          "options": [
+            "Julia Domna",
+            "Zenobia",
+            "Caracalla",
+            "Septimius Severus"
+          ],
+          "clues": [
+            "Decades after me, a Syrian queen modelled her coin portraits on the women of my family.",
+            "While my elder son was on campaign, I handled much of the official correspondence.",
+            "My younger son was killed in my own apartments, clinging to me.",
+            "I was a Syrian noblewoman who married the emperor in 187 and carried the title Augusta."
+          ],
+          "sectionId": "julia-domna",
+          "reviewFlags": []
+        },
+        {
+          "name": "Caracalla",
+          "options": [
+            "Caracalla",
+            "Septimius Severus",
+            "Aurelian",
+            "Zenobia"
+          ],
+          "clues": [
+            "Obsessed with Alexander, I formed a phalanx of spearmen in the old Macedonian style.",
+            "I granted Roman citizenship to every free person in the empire.",
+            "I had my brother killed soon after our father died in 211.",
+            "I was named after a hooded Gallic tunic, and my great baths in Rome still stand."
+          ],
+          "sectionId": "caracalla",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Rome and the East",
+      "blurb": "Two rulers of the 270s and a Syrian empress.",
+      "people": [
+        {
+          "name": "Zenobia",
+          "options": [
+            "Zenobia",
+            "Julia Domna",
+            "Aurelian",
+            "Caracalla"
+          ],
+          "clues": [
+            "I kept a cultured court of philosophers and tolerated Christians, Jews and other faiths.",
+            "In 270 my general seized Arabia and then Egypt.",
+            "In 272 I declared myself empress, an open break with Rome.",
+            "I ruled Palmyra as regent for my ten-year-old son after my husband's murder."
+          ],
+          "sectionId": "zenobia",
+          "reviewFlags": []
+        },
+        {
+          "name": "Aurelian",
+          "options": [
+            "Aurelian",
+            "Caracalla",
+            "Septimius Severus",
+            "Zenobia"
+          ],
+          "clues": [
+            "I commanded the cavalry at Naissus before taking the throne in 270.",
+            "I beat an enemy army at Immae, about 40 km (25 miles) from Antioch.",
+            "By late 274 I had made the empire whole again and reformed the coinage.",
+            "I captured the queen of Palmyra and destroyed the Gallic Empire."
+          ],
+          "sectionId": "aurelian",
+          "reviewFlags": []
+        },
+        {
+          "name": "Julia Domna",
+          "options": [
+            "Julia Domna",
+            "Zenobia",
+            "Aurelian",
+            "Caracalla"
+          ],
+          "clues": [
+            "My wealthy sister and her two daughters were also mighty empresses.",
+            "After 217, women of my family won over troops to put my great-nephews on the throne.",
+            "I tried to keep the peace between my two quarrelling sons.",
+            "I was a Syrian noblewoman who married Septimius Severus in 187."
+          ],
+          "sectionId": "julia-domna",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "places": [
+    {
+      "name": "Leptis Magna",
+      "wikipediaTitle": "Leptis Magna",
+      "lat": 32.63916667,
+      "lon": 14.29055556,
+      "why": "This rich port on the coast of modern Libya was the birthplace of Septimius Severus in 145.",
+      "sectionId": "septimius-severus",
+      "coordinates": "Wikipedia: Leptis Magna",
+      "reviewFlags": []
+    },
+    {
+      "name": "Lugdunum",
+      "wikipediaTitle": "Lugdunum",
+      "lat": 45.75972222,
+      "lon": 4.81944444,
+      "why": "At Lugdunum, modern Lyon, Severus's last rival fell in 197, ending the civil wars.",
+      "sectionId": "septimius-severus",
+      "coordinates": "Wikipedia: Lugdunum",
+      "reviewFlags": []
+    },
+    {
+      "name": "Carrhae",
+      "wikipediaTitle": "Harran",
+      "lat": 36.87083333,
+      "lon": 39.025,
+      "why": "Caracalla was murdered near this town in April 217 on the orders of his own guard commander.",
+      "sectionId": "caracalla",
+      "coordinates": "Wikipedia: Harran",
+      "reviewFlags": []
+    },
+    {
+      "name": "Antioch",
+      "wikipediaTitle": "Antioch",
+      "lat": 36.20472222,
+      "lon": 36.18166667,
+      "why": "Near the great city of Roman Syria the guard commander-emperor was defeated in 218.",
+      "sectionId": "praetorian-emperor",
+      "coordinates": "Wikipedia: Antioch",
+      "reviewFlags": []
+    },
+    {
+      "name": "Palmyra",
+      "wikipediaTitle": "Palmyra",
+      "lat": 34.55138889,
+      "lon": 38.26805556,
+      "why": "Zenobia ruled from this rich caravan city in the Syrian desert until it surrendered in August 272.",
+      "sectionId": "zenobia",
+      "coordinates": "Wikipedia: Palmyra",
+      "reviewFlags": []
+    },
+    {
+      "name": "Naissus",
+      "wikipediaTitle": "Niš",
+      "lat": 43.32083333,
+      "lon": 21.89583333,
+      "why": "A Gothic invasion was crushed here in 268 or 269, with Aurelian commanding the cavalry.",
+      "sectionId": "aurelian",
+      "coordinates": "Wikipedia: Niš",
+      "reviewFlags": []
+    },
+    {
+      "name": "Emesa",
+      "wikipediaTitle": "Homs",
+      "lat": 34.73083333,
+      "lon": 36.70944444,
+      "why": "Near Emesa, modern Homs, Aurelian defeated Zenobia's 70,000 men in 272.",
+      "sectionId": "aurelian",
+      "coordinates": "Wikipedia: Homs",
+      "reviewFlags": []
+    }
+  ]
+}

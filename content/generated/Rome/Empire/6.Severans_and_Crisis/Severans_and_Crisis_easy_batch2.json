@@ -1,0 +1,179 @@
+{
+  "batchName": "Empire: The Severans and the Crisis of the Third Century (AD 193-284) - Easy Batch 2",
+  "chapterName": "Empire: The Severans and the Crisis of the Third Century (AD 193-284)",
+  "difficulty": 1,
+  "batchOrder": 2,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Queen Zenobia ruled from which rich caravan city?",
+      "options": [
+        "Palmyra",
+        "Damascus",
+        "Petra",
+        "Edessa"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#zenobia",
+      "explanation": "Palmyra was a rich caravan city in the Syrian desert that took over power in the Roman east. Zenobia ruled there after her husband's assassination in 267.",
+      "sourceQuote": "In the east, power passed to Palmyra, a rich caravan city in the Syrian desert.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What is Zenobia today in modern Syria?",
+      "options": [
+        "A symbol of Roman rule",
+        "A forgotten minor figure",
+        "A villain in folk tales",
+        "A patriotic symbol"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#sources-and-legacy",
+      "explanation": "Zenobia became a legend and is now a patriotic symbol in Syria. Ancient sources about her, however, were often biased.",
+      "sourceQuote": "Zenobia, meanwhile, became a legend and is today a patriotic symbol in Syria.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Julia Domna, the wife of Septimius Severus, was a noblewoman from which land?",
+      "options": [
+        "Egypt",
+        "Greece",
+        "Syria",
+        "Gaul"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#julia-domna",
+      "explanation": "Julia Domna was a Syrian noblewoman who married Severus in 187. She bore him two sons and held the title of empress (Augusta).",
+      "sourceQuote": "The first was Julia Domna, a Syrian noblewoman who married Septimius Severus in 187 and bore him two sons.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which emperor marched east and defeated Zenobia in 272?",
+      "options": [
+        "Gallienus",
+        "Aurelian",
+        "Claudius",
+        "Diocletian"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#aurelian",
+      "explanation": "Aurelian, a tough soldier-emperor, marched against Zenobia in 272 and went on to reunite the empire. Palmyra surrendered in August 272.",
+      "sourceQuote": "Aurelian, the tough soldier-emperor who reunited Rome, marched east against Zenobia in 272.",
+      "reviewFlags": []
+    },
+    {
+      "question": "In 260 a Roman emperor was captured and died a prisoner. Who captured him?",
+      "options": [
+        "The Goths",
+        "The Sasanians",
+        "The Palmyrenes",
+        "The Vandals"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#barracks-emperors",
+      "explanation": "The Sasanians, a new Persian dynasty, captured a Roman emperor in 260, and he died in captivity. Meanwhile Goths and others raided across the Rhine and Danube.",
+      "sourceQuote": "Goths and other peoples raided across the Rhine and Danube, and in 260 the emperor Valerian was captured by the Sasanians, a new Persian dynasty, and died a prisoner.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Why did soldiers murder the last Severan emperor and his mother in 235?",
+      "options": [
+        "He paid off German raiders instead of punishing them",
+        "He made peace with the Parthians at great cost",
+        "He tried to cut the legions' pay in half",
+        "He converted to the worship of a Syrian god"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#last-severans",
+      "explanation": "While wintering on the Rhine, he paid off German raiders rather than fighting them, and his soldiers killed him and his mother. He had ruled from about age 14 under her guidance.",
+      "sourceQuote": "In 235, wintering on the Rhine, he paid off German raiders instead of punishing them, and his soldiers murdered him and his mother.",
+      "reviewFlags": []
+    },
+    {
+      "question": "According to later writers, where did Zenobia spend her retirement?",
+      "options": [
+        "On the island of Capri",
+        "At a villa at Tibur",
+        "Back in Palmyra",
+        "At the court in Ravenna"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#aurelian",
+      "explanation": "Later writers said Zenobia retired to a villa at Tibur, modern Tivoli. She was most likely first paraded in Aurelian's triumph through Rome.",
+      "sourceQuote": "Zenobia was most likely paraded in his triumph (*triumphus*), the victory parade through Rome, and later writers said she retired to a villa at Tibur, modern Tivoli.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Historians see the Crisis of the Third Century as the hinge between which two eras?",
+      "options": [
+        "The Bronze Age and the Iron Age",
+        "Classical antiquity and late antiquity",
+        "The Republic and the Empire",
+        "The Middle Ages and the Renaissance"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#sources-and-legacy",
+      "explanation": "The crisis is seen as the turning point from classical antiquity to late antiquity. Afterwards rulers called themselves 'lords' rather than 'leading citizen'.",
+      "sourceQuote": "Historians see the crisis as the hinge between classical antiquity and late antiquity.",
+      "reviewFlags": []
+    },
+    {
+      "question": "The murder of the last Severan emperor in 235 opened which period?",
+      "options": [
+        "The Tetrarchy",
+        "The Crisis of the Third Century",
+        "The Pax Romana",
+        "The Year of the Four Emperors"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#barracks-emperors",
+      "explanation": "The Crisis of the Third Century was a half-century in which the empire nearly collapsed. It began with the killing of the last Severan in 235.",
+      "sourceQuote": "The murder of the last Severan emperor in 235 opened the Crisis of the Third Century, half a century in which the empire nearly collapsed.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Where did the emperor Caracalla get his nickname?",
+      "options": [
+        "From the Syrian city of his birth",
+        "From a Germanic tribe he defeated",
+        "From a hooded Gallic tunic he wore",
+        "From a sword his guards carried"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#caracalla",
+      "explanation": "Caracalla was named after the hooded Gallic tunic he liked to wear. He was the elder son of Septimius Severus and Julia Domna, born in 188.",
+      "sourceQuote": "Caracalla, the elder son of Septimius Severus and Julia Domna, was born in 188 and named after the hooded Gallic tunic he liked to wear.",
+      "reviewFlags": []
+    }
+  ]
+}

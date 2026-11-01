@@ -1,0 +1,191 @@
+{
+  "batchName": "Empire: The Severans and the Crisis of the Third Century (AD 193-284) - Medium Batch 2",
+  "chapterName": "Empire: The Severans and the Crisis of the Third Century (AD 193-284)",
+  "difficulty": 2,
+  "batchOrder": 4,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "What did Julia Domna do when her son Caracalla went on campaign?",
+      "options": [
+        "She served as high priestess in Syria",
+        "She governed Rome alone as regent",
+        "She commanded a legion in the field",
+        "She travelled with him and handled official letters",
+        "She retired to her family estates"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#julia-domna",
+      "explanation": "Julia Domna accompanied Caracalla and handled much of the official correspondence herself, passing only major questions to him. She held the title of Augusta.",
+      "sourceQuote": "When her elder son Caracalla ruled and went on campaign, Julia Domna travelled with him and handled much of the official correspondence herself, passing only major questions to the emperor.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which territories did Zenobia's general seize in 270 while Rome fought the Goths? (select all that apply)",
+      "options": [
+        "Egypt",
+        "Arabia",
+        "Dacia",
+        "Britain",
+        "Gaul"
+      ],
+      "correctAnswers": [
+        0,
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#zenobia",
+      "explanation": "Her general took Arabia and then Egypt in 270. By mid-271 her realm stretched from Ancyra to Upper Egypt.",
+      "sourceQuote": "In 270, while Rome fought the Goths, her general seized Arabia and then Egypt.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Why did later third-century emperors keep mixing more bronze and copper into the coinage?",
+      "options": [
+        "To fund new city walls",
+        "To replace silver lost to the Persians",
+        "To pay tribute to the Goths",
+        "To each pay a quick bonus to the troops",
+        "To build public baths in Rome"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#money-plague-trade",
+      "explanation": "Each new emperor needed a quick bonus (donativum) for his soldiers, so they debased the coins. Loyal soldiers were expensive.",
+      "sourceQuote": "Later emperors, each needing a quick bonus (*donativum*) for the troops, mixed in ever more bronze and copper.",
+      "reviewFlags": []
+    },
+    {
+      "question": "According to one account, how did the grandmother of the emperor known as Elagabalus persuade a legion to rebel?",
+      "options": [
+        "By marrying him to the legion commander's daughter",
+        "By displaying an omen from the sun god",
+        "By promising each soldier a plot of land",
+        "By claiming he was Caracalla's illegitimate son",
+        "By forging a will of Septimius Severus"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#last-severans",
+      "explanation": "One account says she claimed the boy was Caracalla's illegitimate son. He was actually a great-nephew of Julia Domna.",
+      "sourceQuote": "According to one account, his grandmother persuaded a legion to rebel by claiming he was Caracalla's illegitimate son.",
+      "reviewFlags": []
+    },
+    {
+      "question": "After the Severans briefly lost the throne in 217, how did Julia Domna's female relatives win it back?",
+      "options": [
+        "They hired Parthian mercenaries to invade",
+        "They persuaded the Senate to depose the usurper",
+        "They married the usurper to a Severan princess",
+        "They poisoned the new emperor at a banquet",
+        "They used money and family claims to win over the troops"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#julia-domna",
+      "explanation": "Julia Domna's sister and nieces used wealth and family claims to sway the soldiers. They placed two of Julia Domna's great-nephews on the throne in turn.",
+      "sourceQuote": "After the dynasty briefly lost the throne in 217, these women used money and family claims to win over the troops and place two of Julia Domna's great-nephews on the throne in turn.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What made the praetorian prefect who succeeded Caracalla a 'first' among Roman emperors?",
+      "options": [
+        "First emperor elected by the Senate",
+        "First emperor not from a senatorial family",
+        "First emperor to rule from Antioch",
+        "First emperor to be a Christian",
+        "First emperor born in Syria"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#praetorian-emperor",
+      "explanation": "Born into a Moorish family in North Africa, he was the first emperor without a senatorial background. He never set foot in Rome.",
+      "sourceQuote": "The conspirator, Macrinus, born into a Moorish family in North Africa, became the first emperor not from a senatorial family.",
+      "reviewFlags": []
+    },
+    {
+      "question": "The Plague of Cyprian, which raged from 249 to 262, was possibly which disease?",
+      "options": [
+        "Measles",
+        "Typhus",
+        "Malaria",
+        "Smallpox",
+        "Bubonic plague"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#money-plague-trade",
+      "explanation": "The Plague of Cyprian was possibly smallpox. It may have cut the population of Alexandria by 62%.",
+      "sourceQuote": "The Plague of Cyprian, possibly smallpox, raged from 249 to 262 and may have cut Alexandria's population by 62%.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which actions of Caracalla's successor angered his soldiers? (select all that apply)",
+      "options": [
+        "Paying new recruits less than veterans",
+        "Cancelling veterans' land grants",
+        "Refusing to march east against Persia",
+        "Disbanding the Praetorian Guard",
+        "Making peace with the Parthians by paying compensation"
+      ],
+      "correctAnswers": [
+        0,
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#praetorian-emperor",
+      "explanation": "The soldiers found his compensation payment to the Parthians humiliating, and his lower pay for new recruits angered them further. Troops in Syria soon backed a Severan rival.",
+      "sourceQuote": "He made peace with the Parthians by paying compensation, terms his soldiers found humiliating, and angered them further by paying new recruits less than veterans.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Who were the coloni that emerged during the third-century crisis?",
+      "options": [
+        "Slaves freed to serve in the legions",
+        "Tenant farmers bound to the soil for protection",
+        "Veterans settled in new frontier colonies",
+        "Tax collectors appointed by the emperor",
+        "Merchants licensed to trade with Persia"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#money-plague-trade",
+      "explanation": "Townspeople and small farmers traded their freedom for a landowner's protection, becoming coloni bound to the soil. This was an early model for medieval serfdom.",
+      "sourceQuote": "Many townspeople and small farmers traded their freedom for a landowner's protection, becoming tenant farmers bound to the soil (*coloni*), an early model for medieval serfdom.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did the first barracks emperor die in 238, the Year of the Six Emperors?",
+      "options": [
+        "Killed fighting the Goths",
+        "Died of plague in Rome",
+        "Killed by his own troops amid Senate-backed revolts",
+        "Captured by the Sasanians",
+        "Executed on the Senate's orders"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#barracks-emperors",
+      "explanation": "He was killed by his own soldiers while revolts backed by the Senate raged. 238 saw six emperors in a single year.",
+      "sourceQuote": "In 238, the Year of the Six Emperors, he was killed by his own troops amid revolts backed by the Senate.",
+      "reviewFlags": []
+    }
+  ]
+}

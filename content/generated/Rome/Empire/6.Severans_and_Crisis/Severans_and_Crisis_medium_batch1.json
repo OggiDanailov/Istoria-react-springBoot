@@ -1,0 +1,190 @@
+{
+  "batchName": "Empire: The Severans and the Crisis of the Third Century (AD 193-284) - Medium Batch 1",
+  "chapterName": "Empire: The Severans and the Crisis of the Third Century (AD 193-284)",
+  "difficulty": 2,
+  "batchOrder": 3,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "In 193, legions in which frontier province proclaimed Septimius Severus emperor?",
+      "options": [
+        "Africa",
+        "Noricum",
+        "Syria",
+        "Britain",
+        "Hispania"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#septimius-severus",
+      "explanation": "His legions in Noricum, roughly modern Austria, hailed him emperor in 193, the Year of the Five Emperors. Four years of civil war followed.",
+      "sourceQuote": "In 193 his legions in Noricum, a frontier province roughly in modern Austria, proclaimed him emperor.",
+      "reviewFlags": []
+    },
+    {
+      "question": "To which social class did Septimius Severus's family belong?",
+      "options": [
+        "The senatorial order",
+        "The patrician nobility",
+        "The equestrian order",
+        "The Punic priesthood",
+        "The plebeian freedmen"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#septimius-severus",
+      "explanation": "His family was equestrian, the propertied class just below senators. They had Libyan, Punic and Italian roots.",
+      "sourceQuote": "His family belonged to the equestrian order, the propertied class just below senators, and had Libyan, Punic and Italian roots.",
+      "reviewFlags": []
+    },
+    {
+      "question": "In what capacity did Zenobia first take power in Palmyra in 267?",
+      "options": [
+        "As regent for her ten-year-old son",
+        "As a governor appointed by Rome",
+        "As a general elected by the army",
+        "As high priestess of Palmyra's gods",
+        "As queen by right of her own birth"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#zenobia",
+      "explanation": "After her husband was assassinated in 267, Zenobia, then in her late twenties, ruled as regent for their young son. Her court was known for philosophers and religious tolerance.",
+      "sourceQuote": "When he was assassinated in 267, his widow Zenobia, then in her late twenties, took power as regent for their ten-year-old son.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What role did Aurelian play at the battle of Naissus before becoming emperor?",
+      "options": [
+        "Chief engineer of the siege",
+        "Cavalry commander",
+        "Leader of the Gothic invaders",
+        "Governor of the province",
+        "Commander of the Praetorian Guard"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#aurelian",
+      "explanation": "Aurelian was the cavalry commander at Naissus, where a Gothic invasion was crushed in 268 or 269. He took the throne in 270.",
+      "sourceQuote": "His cavalry commander there, Aurelian, took the throne in 270.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How do modern historians view ancient tales that Elagabalus was depraved and bloodthirsty?",
+      "options": [
+        "As mostly invented",
+        "As drawn from his own memoirs",
+        "As describing his cousin instead",
+        "As fully confirmed by coins",
+        "As understated by his enemies"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#last-severans",
+      "explanation": "Modern historians think most of the lurid stories about him are invented. What coins and inscriptions do confirm is his religious change of 220 and his marriage to a Vestal Virgin.",
+      "sourceQuote": "Ancient writers called him depraved and bloodthirsty, but modern historians think most such tales are invented.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Where was Caracalla's younger brother killed on his orders in 211?",
+      "options": [
+        "In the Senate house",
+        "On a battlefield in Britain",
+        "At their father's funeral",
+        "In a temple of Jupiter",
+        "In their mother's apartments"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#caracalla",
+      "explanation": "Caracalla had his brother, Geta, killed in their mother's apartments, and the young man died clinging to Julia Domna. Caracalla then bought the army's goodwill with pay rises.",
+      "sourceQuote": "Soon after their father died in 211, Caracalla had his brother, Geta, killed in their mother's apartments; the young man died clinging to Julia Domna.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Caracalla's obsession with Alexander the Great led him to do what?",
+      "options": [
+        "Move the capital to Alexandria",
+        "Invade India along Alexander's route",
+        "Found a new city named after himself",
+        "Adopt the Greek language at court",
+        "Form a phalanx of spearmen in Macedonian style"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#caracalla",
+      "explanation": "Caracalla formed a phalanx, a block of spearmen in the old Macedonian style. He also executed people who mocked him.",
+      "sourceQuote": "Obsessed with the Macedonian conqueror Alexander, he formed a phalanx, a block of spearmen in the old Macedonian style, and executed people who mocked him.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Why is the Historia Augusta an unreliable source for this period?",
+      "options": [
+        "It covers only the Republic",
+        "It was censored by Aurelian",
+        "It survives only as a short list of names",
+        "It invented events and letters",
+        "It was written in Persian"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#sources-and-legacy",
+      "explanation": "The Historia Augusta, a late Roman collection of imperial biographies, invented events and letters. It also reshaped Zenobia to flatter whichever emperor it praised.",
+      "sourceQuote": "The Historia Augusta, a late Roman collection of imperial biographies, invented events and letters, and reshaped Zenobia to suit whichever emperor it praised.",
+      "reviewFlags": []
+    },
+    {
+      "question": "At which places did Aurelian defeat Zenobia's army in 272? (select all that apply)",
+      "options": [
+        "Immae",
+        "Carrhae",
+        "Naissus",
+        "Lugdunum",
+        "Emesa"
+      ],
+      "correctAnswers": [
+        0,
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#aurelian",
+      "explanation": "Aurelian won at Immae, about 40 km from Antioch, and then near Emesa (Homs). At Emesa her 70,000 men nearly won before breaking ranks.",
+      "sourceQuote": "He beat her army at Immae, about 40 km (25 miles) from Antioch, then near Emesa, modern Homs, where her 70,000 men nearly won before breaking ranks.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Why could so many generals seize the throne during the Crisis of the Third Century?",
+      "options": [
+        "Persia appointed Rome's emperors",
+        "Emperors were chosen by lot each year",
+        "Rome had never fixed rules of succession",
+        "The Praetorian Guard elected every ruler",
+        "The Senate had been abolished"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#barracks-emperors",
+      "explanation": "With no fixed succession rules, any general with a big army could try his luck. Over 50 men claimed the imperial title.",
+      "sourceQuote": "Rome had never fixed rules of succession, so any general with a big army could try his luck.",
+      "reviewFlags": []
+    }
+  ]
+}

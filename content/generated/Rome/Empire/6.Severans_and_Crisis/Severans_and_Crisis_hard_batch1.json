@@ -1,0 +1,201 @@
+{
+  "batchName": "Empire: The Severans and the Crisis of the Third Century (AD 193-284) - Hard Batch 1",
+  "chapterName": "Empire: The Severans and the Crisis of the Third Century (AD 193-284)",
+  "difficulty": 3,
+  "batchOrder": 5,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Where did Septimius Severus's last rival in the civil wars fall in 197?",
+      "options": [
+        "Byzantium",
+        "Leptis Magna",
+        "Noricum",
+        "Lugdunum",
+        "Carnuntum",
+        "Antioch"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 3,
+      "textReference": "#septimius-severus",
+      "explanation": "Severus's last rival fell at Lugdunum, modern Lyon, in 197, ending four years of civil war. Severus then turned against the Parthians.",
+      "sourceQuote": "His last rival fell at Lugdunum, modern Lyon, in 197.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which later ruler modelled her coin portraits on the Severan empresses?",
+      "options": [
+        "Cleopatra VII",
+        "Helena",
+        "Zenobia",
+        "Theodora",
+        "Galla Placidia",
+        "Boudica"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 3,
+      "textReference": "#julia-domna",
+      "explanation": "Decades later, the Syrian queen Zenobia copied the Severan empresses on her coins. Julia Domna's family power had outlived her through her sister and nieces.",
+      "sourceQuote": "Decades later, the Syrian queen Zenobia would model her coin portraits on these Severan empresses.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Septimius Severus cut the silver content of the denarius from 81.5% to what?",
+      "options": [
+        "5%",
+        "50%",
+        "78.5%",
+        "62%",
+        "70%",
+        "75.5%"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 3,
+      "textReference": "#money-plague-trade",
+      "explanation": "Severus reduced the silver from 81.5% to 78.5%. The Severans also enlarged the army by a quarter and doubled legionaries' pay.",
+      "sourceQuote": "The Severans enlarged the army by a quarter and doubled legionaries' pay; Septimius Severus cut the silver in the denarius, Rome's standard coin, from 81.5% to 78.5%.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Roughly how many men won the Senate's recognition as emperor during the Crisis of the Third Century?",
+      "options": [
+        "About 6",
+        "About 12",
+        "About 50",
+        "About 18",
+        "About 40",
+        "About 26"
+      ],
+      "correctAnswers": [
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#barracks-emperors",
+      "explanation": "About 26 men were recognised by the Senate, while over 50 claimed the title. All but one recognised emperor died violently.",
+      "sourceQuote": "About 26 men won the Senate's recognition as emperor, and over 50 claimed the title.",
+      "reviewFlags": []
+    },
+    {
+      "question": "By when had Aurelian made the Roman Empire whole again by destroying the Gallic Empire?",
+      "options": [
+        "Early 275",
+        "Spring 268",
+        "August 272",
+        "Late 284",
+        "Late 274",
+        "Late 270"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 3,
+      "textReference": "#aurelian",
+      "explanation": "After Palmyra surrendered in August 272, Aurelian destroyed the Gallic Empire, so by late 274 the empire was reunited. He also reformed the coinage before being assassinated in 275.",
+      "sourceQuote": "Aurelian then destroyed the Gallic Empire, so by late 274 the empire was whole, and he reformed the coinage.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Stories of Zenobia's cowardice in defeat were most likely the product of what?",
+      "options": [
+        "Aurelian's propaganda",
+        "Gallic Empire historians",
+        "Palmyrene rivals of her family",
+        "Zenobia's own memoirs",
+        "Early Christian writers",
+        "Persian court chroniclers"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#sources-and-legacy",
+      "explanation": "Tales of her cowardice were probably Aurelian's propaganda. Sources like the Historia Augusta also reshaped her image to flatter favoured emperors.",
+      "sourceQuote": "Tales of her cowardice in defeat were probably Aurelian's propaganda.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which acts of the emperor known as Elagabalus are confirmed by coins and inscriptions? (select all that apply)",
+      "options": [
+        "He was Caracalla's illegitimate son",
+        "He married a Vestal Virgin",
+        "He executed his cousin and heir",
+        "He paid off German raiders",
+        "He placed his god above Jupiter",
+        "He moved the capital to Emesa"
+      ],
+      "correctAnswers": [
+        1,
+        4
+      ],
+      "difficulty": 3,
+      "textReference": "#last-severans",
+      "explanation": "Coins and inscriptions confirm that in 220 he ranked his god above Jupiter and that he married a Vestal Virgin. The claim that he was Caracalla's son comes only from one account, and he merely tried to kill his cousin.",
+      "sourceQuote": "Coins and inscriptions confirm that in 220 he placed his god above Jupiter, and that he married a Vestal Virgin (*virgo Vestalis*), a priestess sworn to chastity.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did Zenobia do in 272 that marked an open break with Rome?",
+      "options": [
+        "Declared herself empress",
+        "Moved her court to Antioch",
+        "Married a Persian prince",
+        "Allied herself with the Sasanians",
+        "Minted coins of the emperor beside her son",
+        "Seized the province of Egypt"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#zenobia",
+      "explanation": "With a Roman army approaching in 272, Zenobia declared herself empress. Earlier she had minted coins showing the Roman emperor beside her son.",
+      "sourceQuote": "But in 272, with a Roman army approaching, she declared herself empress, an open break with Rome.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What happened to Caracalla's praetorian-prefect successor in 218? (select all that apply)",
+      "options": [
+        "He was executed by the Senate in Rome",
+        "He was defeated near Antioch",
+        "He was killed by his guards while fleeing",
+        "He was captured by the Parthians",
+        "He died of natural causes in Syria",
+        "He was killed in battle at Emesa"
+      ],
+      "correctAnswers": [
+        1,
+        2
+      ],
+      "difficulty": 3,
+      "textReference": "#praetorian-emperor",
+      "explanation": "After troops in Syria hailed a teenage Severan in May 218, Macrinus was defeated near Antioch, caught as he fled and killed by his guards. He had never set foot in Rome.",
+      "sourceQuote": "The usurper was defeated near Antioch, the great city of Roman Syria, caught as he fled, and killed by his guards.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Where and when was Caracalla murdered?",
+      "options": [
+        "On the Rhine, March 235",
+        "At Lugdunum, June 197",
+        "Near Carrhae, April 217",
+        "In Britain, February 211",
+        "Near Antioch, May 218",
+        "In Rome, April 211"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 3,
+      "textReference": "#caracalla",
+      "explanation": "Caracalla was murdered near Carrhae, in modern south-eastern Turkey, in April 217 while heading to fight the Parthians. The killing was ordered by one of his own guard commanders.",
+      "sourceQuote": "In April 217, heading to fight the Parthians, he was murdered near Carrhae, a town in modern south-eastern Turkey, on the orders of one of his own guard commanders.",
+      "reviewFlags": []
+    }
+  ]
+}

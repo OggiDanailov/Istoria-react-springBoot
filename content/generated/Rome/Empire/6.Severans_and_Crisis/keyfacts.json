@@ -1,0 +1,139 @@
+{
+  "description": "Key facts for this chapter, written by hand from the chapter text. Every entry links to the section that explains it.",
+  "people": [
+    {
+      "name": "Septimius Severus",
+      "text": "General from Africa; emperor 193–211; founded the Severan dynasty.",
+      "sec": "septimius-severus"
+    },
+    {
+      "name": "Julia Domna",
+      "text": "Syrian wife of Severus; empress and power behind her son.",
+      "sec": "julia-domna"
+    },
+    {
+      "name": "Caracalla",
+      "text": "Emperor 211–217; killed his brother; made all free people citizens.",
+      "sec": "caracalla"
+    },
+    {
+      "name": "Elagabalus",
+      "text": "Teenage priest-emperor, 218–222.",
+      "sec": "last-severans"
+    },
+    {
+      "name": "Zenobia",
+      "text": "Queen of Palmyra who ruled the east and declared herself empress.",
+      "sec": "zenobia"
+    },
+    {
+      "name": "Aurelian",
+      "text": "Soldier-emperor, 270–275; reunited the empire.",
+      "sec": "aurelian"
+    }
+  ],
+  "dates": [
+    {
+      "when": "193",
+      "text": "The Year of the Five Emperors; Severus is proclaimed.",
+      "sec": "septimius-severus"
+    },
+    {
+      "when": "211",
+      "text": "Severus dies in Britain; Caracalla kills Geta.",
+      "sec": "caracalla"
+    },
+    {
+      "when": "217",
+      "text": "Caracalla is murdered near Carrhae.",
+      "sec": "caracalla"
+    },
+    {
+      "when": "235",
+      "text": "The last Severan is murdered: the crisis begins.",
+      "sec": "barracks-emperors"
+    },
+    {
+      "when": "249–262",
+      "text": "The Plague of Cyprian.",
+      "sec": "money-plague-trade"
+    },
+    {
+      "when": "260",
+      "text": "Valerian is captured by the Persians.",
+      "sec": "barracks-emperors"
+    },
+    {
+      "when": "272",
+      "text": "Aurelian defeats Zenobia; Palmyra surrenders.",
+      "sec": "aurelian"
+    },
+    {
+      "when": "274",
+      "text": "The empire is whole again.",
+      "sec": "aurelian"
+    },
+    {
+      "when": "284",
+      "text": "Diocletian takes power; the crisis ends.",
+      "sec": "sources-and-legacy"
+    }
+  ],
+  "terms": [
+    {
+      "latin": "senatus",
+      "english": "the Senate",
+      "sec": "septimius-severus"
+    },
+    {
+      "latin": "Augusta",
+      "english": "empress",
+      "sec": "julia-domna"
+    },
+    {
+      "latin": "civitas",
+      "english": "citizenship",
+      "sec": "caracalla"
+    },
+    {
+      "latin": "praefectus praetorio",
+      "english": "praetorian prefect",
+      "sec": "praetorian-emperor"
+    },
+    {
+      "latin": "cohortes praetoriae",
+      "english": "the Praetorian Guard",
+      "sec": "praetorian-emperor"
+    },
+    {
+      "latin": "virgo Vestalis",
+      "english": "a Vestal Virgin",
+      "sec": "last-severans"
+    },
+    {
+      "latin": "donativum",
+      "english": "a cash bonus for the troops",
+      "sec": "money-plague-trade"
+    },
+    {
+      "latin": "coloni",
+      "english": "tenant farmers bound to the soil",
+      "sec": "money-plague-trade"
+    },
+    {
+      "latin": "triumphus",
+      "english": "a victory parade",
+      "sec": "aurelian"
+    },
+    {
+      "latin": "princeps",
+      "english": "first citizen",
+      "sec": "sources-and-legacy"
+    },
+    {
+      "latin": "domini",
+      "english": "lords",
+      "sec": "sources-and-legacy"
+    }
+  ]
+}
