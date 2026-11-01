@@ -1,0 +1,189 @@
+{
+  "batchName": "Empire: The Year of Four Emperors and the Flavians (AD 69-96) - Medium Batch 1",
+  "chapterName": "Empire: The Year of Four Emperors and the Flavians (AD 69-96)",
+  "difficulty": 2,
+  "batchOrder": 3,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "What persuaded the Praetorian Guard to desert the last Julio-Claudian emperor in 68?",
+      "options": [
+        "A Senate decree releasing them from their oath",
+        "A promise of 30,000 sesterces each in Galba's name",
+        "News that the Rhine legions had joined Galba",
+        "Galba's promise to double their yearly pay",
+        "Threats from the Gallic army camped near Rome"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#fall-of-nero",
+      "explanation": "One of the Guard's own commanders promised each man 30,000 sesterces in Galba's name, roughly ten years' pay. Days later the Senate declared the emperor a public enemy.",
+      "sourceQuote": "But in Rome the emperor's bodyguard, the Praetorian Guard (*cohortes praetoriae*), deserted him after one of its commanders promised each man 30,000 sesterces in Galba's name, roughly ten years' pay.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which object from the Temple was displayed in Titus and Vespasian's triumph of 71?",
+      "options": [
+        "The altar of burnt offerings",
+        "The seven-branched lampstand",
+        "The high priest's golden crown",
+        "The Temple's great bronze doors",
+        "The Ark of the Covenant"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#siege-of-jerusalem",
+      "explanation": "The triumphal parade through Rome displayed the Temple's seven-branched lampstand. A triumph was a formal victory parade.",
+      "sourceQuote": "In 71 Titus and Vespasian celebrated a triumph (*triumphus*), a victory parade through Rome, displaying the Temple's seven-branched lampstand.",
+      "reviewFlags": []
+    },
+    {
+      "question": "According to an ancient biographer, what set Galba apart from other officials when the Gallic revolt began in 68?",
+      "options": [
+        "He alone had served as consul three times",
+        "He alone refused the rebel's offer of the throne",
+        "He alone was related to the ruling family",
+        "He alone sent troops to crush the Gallic rising",
+        "He alone did not forward the rebel's letters to the emperor"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#fall-of-nero",
+      "explanation": "An ancient biographer says Galba was the only official who did not pass the rebel's letters on to the emperor. Within weeks his troops proclaimed him emperor.",
+      "sourceQuote": "According to an ancient biographer, Galba was the only official who did not forward the rebel's letters to the emperor.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did Vespasian's younger son Domitian escape the fighting in Rome in 69?",
+      "options": [
+        "Smuggled out with the Praetorian Guard",
+        "Hidden inside a grain cart bound for Ostia",
+        "Disguised as a worshipper of the goddess Isis",
+        "Dressed as a slave in the Senate's service",
+        "Disguised as a priest of Jupiter"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#vespasian-wins",
+      "explanation": "Domitian slipped away disguised as a worshipper of Isis. His uncle, besieged on the Capitoline Hill, was not so lucky and was executed.",
+      "sourceQuote": "Vespasian's younger son Domitian escaped disguised as a worshipper of the goddess Isis.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What was Domitian's approach on the Rhine frontier?",
+      "options": [
+        "Paying yearly tribute to the Germanic tribes",
+        "Defence, lining it with roads, forts and watchtowers",
+        "Settling defeated Dacians along its banks",
+        "Withdrawal of the legions back to Italy",
+        "Conquest of all lands as far as the Elbe"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#domitian",
+      "explanation": "Domitian preferred defence, fortifying the Rhine with roads, forts and watchtowers. Against the Dacians he lost a legion and made a peace critics called disgraceful.",
+      "sourceQuote": "On the frontiers he preferred defence, lining the Rhine with roads, forts and watchtowers.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What change did Domitian make to the denarius, Rome's standard silver coin?",
+      "options": [
+        "He stopped minting it for five years",
+        "He replaced it with a gold coin",
+        "He had it minted only in Alexandria",
+        "He raised its silver content by 12%",
+        "He cut its silver content by 12%"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#domitian",
+      "explanation": "Domitian raised the silver content of the denarius by 12%. He also built or restored around fifty structures.",
+      "sourceQuote": "He raised the silver content of the denarius, Rome's standard silver coin, by 12%, and built or restored around fifty structures, including a vast palace on the Palatine Hill.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What happened to the Gallic rising that started the revolt of 68?",
+      "options": [
+        "The Rhine legions crushed it and its leader killed himself",
+        "It marched on Rome and forced the emperor to flee",
+        "Galba's troops absorbed it and its leader became consul",
+        "The Praetorian Guard crushed it outside Rome",
+        "Its leader was executed after Galba took power"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#fall-of-nero",
+      "explanation": "The legions of the Rhine crushed the Gallic rising, and its leader took his own life. The emperor fell anyway, once the Guard deserted him.",
+      "sourceQuote": "The Gallic rising was crushed by the legions (*legiones*) of the Rhine, and its leader killed himself.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What had weakened Jerusalem's defenders before Titus's siege began?",
+      "options": [
+        "An earthquake had brought down most of the city walls",
+        "Three rival rebel factions had fought and burned their own food stores",
+        "Roman agents had poisoned the city's water supply",
+        "The city's leaders had already surrendered to Vespasian",
+        "A plague had killed most of the city's defenders"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#siege-of-jerusalem",
+      "explanation": "Three rival rebel factions had fought each other and burned their own food stores. The city was also crowded with refugees and Passover pilgrims.",
+      "sourceQuote": "He led at least 48,200 soldiers against a city crowded with refugees and Passover pilgrims, where three rival rebel factions had fought each other and burned their own food stores.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which member of Vespasian's family held seven consulships and commanded the Praetorian Guard during his reign?",
+      "options": [
+        "His brother, commander of the city garrison",
+        "His grandfather, a former centurion",
+        "His younger son Domitian",
+        "His son-in-law, a Rhine governor",
+        "His elder son Titus"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#vespasian-reign",
+      "explanation": "Titus held seven consulships and commanded the Guard, effectively ruling beside his father. Vespasian made sure power stayed in the family.",
+      "sourceQuote": "Power stayed in the family: his elder son Titus held seven consulships and commanded the Praetorian Guard, effectively ruling beside him.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which decision by Galba alienated the Praetorian Guard?",
+      "options": [
+        "Disbanding the Guard and replacing it with Spaniards",
+        "Appointing Vitellius as the Guard's commander",
+        "Moving the Guard to the Rhine frontier",
+        "Refusing to pay the reward promised in his name",
+        "Ordering the decimation of the Guard"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#galba",
+      "explanation": "Galba refused to pay the Guard the reward promised in his name. He also trusted only a small circle of greedy favourites from Spain.",
+      "sourceQuote": "Galba also refused to pay the Praetorian Guard the reward promised in his name, and he trusted only a small circle of greedy favourites from Spain.",
+      "reviewFlags": []
+    }
+  ]
+}

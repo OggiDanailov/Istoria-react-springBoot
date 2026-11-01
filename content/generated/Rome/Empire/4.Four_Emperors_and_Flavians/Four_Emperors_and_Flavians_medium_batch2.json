@@ -1,0 +1,193 @@
+{
+  "batchName": "Empire: The Year of Four Emperors and the Flavians (AD 69-96) - Medium Batch 2",
+  "chapterName": "Empire: The Year of Four Emperors and the Flavians (AD 69-96)",
+  "difficulty": 2,
+  "batchOrder": 4,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Which misdeeds do ancient sources attribute to Vitellius? (select all that apply)",
+      "options": [
+        "Introducing a tax on urine collected from public toilets",
+        "Luring rivals to the palace with promises of power and murdering them",
+        "Having moneylenders who sought repayment tortured and killed",
+        "Driving the treasury close to bankruptcy with feasts and parades",
+        "Ordering the decimation of a legion of former sailors"
+      ],
+      "correctAnswers": [
+        1,
+        2,
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#vitellius",
+      "explanation": "Vitellius's feasts and parades nearly bankrupted the treasury. He reportedly had moneylenders tortured and killed, and lured rivals to their deaths. The urine tax was Vespasian's, and the decimation was Galba's.",
+      "sourceQuote": "Feasts and parades drove the treasury close to bankruptcy, and he reportedly had moneylenders who asked for repayment tortured and killed.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Whom did Galba's troops charge outside Rome, killing thousands?",
+      "options": [
+        "Gallic warriors still loyal to the rebel governor",
+        "A new legion of former sailors seeking confirmation of status",
+        "Rhine legionaries who had refused their oath to him",
+        "Citizens rioting over grain shortages in the city",
+        "Praetorians demanding the reward promised to them"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#galba",
+      "explanation": "Galba's troops charged a new legion of former sailors who demanded he confirm their status. It was one reason a historian called his journey \"a long and bloody march\".",
+      "sourceQuote": "He killed officials who had opposed him, and outside the city his troops charged a new legion of former sailors who demanded he confirm their status, killing thousands.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Why did Vespasian launch a propaganda campaign presenting his rule as willed by the gods?",
+      "options": [
+        "He was blamed for burning the temple of Jupiter",
+        "He had been declared a public enemy by the Senate",
+        "He could not claim descent from the first emperors",
+        "He had lost the Second Battle of Bedriacum",
+        "He was not a Roman citizen by birth"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#vespasian-reign",
+      "explanation": "Unable to claim descent from the first emperors, Vespasian presented himself as divinely backed and as a bringer of peace. He even built a Temple of Peace.",
+      "sourceQuote": "Unable to claim descent from the first emperors, Vespasian launched a propaganda campaign presenting his rule as willed by the gods and himself as a bringer of peace.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What rank had Vespasian's grandfather held?",
+      "options": [
+        "Senator",
+        "Centurion",
+        "Praetorian commander",
+        "Consul",
+        "Provincial governor"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#vespasian-wins",
+      "explanation": "Vespasian's grandfather was a centurion, an officer commanding about eighty men. The family climbed from obscurity in four generations.",
+      "sourceQuote": "His grandfather had been a centurion, an officer commanding about eighty men.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How does Jewish tradition remember Titus?",
+      "options": [
+        "As the saviour of the Temple",
+        "As one of the best emperors",
+        "As \"Titus the Builder\"",
+        "As \"Titus the Wicked\"",
+        "As \"Titus the Merciful\""
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#titus",
+      "explanation": "Jewish tradition calls him \"Titus the Wicked\". Roman writers, by contrast, remembered him as one of the best emperors.",
+      "sourceQuote": "Despite earlier worries about his character, Roman writers remembered him as one of the best emperors, while Jewish tradition calls him \"Titus the Wicked\".",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did Galba respond when the Rhine legions proclaimed Vitellius emperor?",
+      "options": [
+        "He named the governor of Lusitania his heir",
+        "He offered to share power with Vitellius",
+        "He finally paid the Guard its promised reward",
+        "He adopted a young senator as his heir",
+        "He marched north to face the Rhine legions"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#galba",
+      "explanation": "In a panic, Galba adopted a young senator as his heir. This fatally offended an ambitious nobleman who had expected the honour.",
+      "sourceQuote": "Panicking, Galba adopted a young senator as his heir.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did Titus respond to the eruption of Vesuvius? (select all that apply)",
+      "options": [
+        "He visited the stricken area twice",
+        "He resettled the survivors in new towns in Gaul",
+        "He imposed a new tax on Campania to pay for repairs",
+        "He gave large sums from the treasury",
+        "He appointed two former consuls to lead relief"
+      ],
+      "correctAnswers": [
+        0,
+        3,
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#titus",
+      "explanation": "Titus put two former consuls in charge of relief, gave large sums from the treasury and visited twice. He paid for repairs again after the great fire in Rome in 80.",
+      "sourceQuote": "Titus appointed two former consuls to lead the relief effort, gave large sums from the treasury and visited twice.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did Otho offer Vitellius in an attempt to make peace?",
+      "options": [
+        "To share the consulship with him",
+        "To marry Vitellius's daughter",
+        "To give him the province of Egypt",
+        "To hand over the Praetorian Guard",
+        "To adopt Vitellius as his heir"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#the-nobleman-emperor",
+      "explanation": "He offered peace, even proposing to marry Vitellius's daughter. It came too late, because half of the Rhine army was already marching on Italy.",
+      "sourceQuote": "Otho offered peace, even offering to marry Vitellius's daughter, but it was too late.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Why did senators greet Otho's accession in January 69 with relief?",
+      "options": [
+        "He had beaten the Rhine legions in battle",
+        "He promised to restore the old Republic",
+        "He was a famous general from Judaea",
+        "He was greedy but had no record of cruelty",
+        "He came from the old Julio-Claudian family"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#the-nobleman-emperor",
+      "explanation": "He was greedy but had no record of cruelty, which reassured the Senate. He quickly won popularity by handing out favours.",
+      "sourceQuote": "He was greedy but had no record of cruelty, and he quickly won popularity by handing out favours.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Why was the date on which Vitellius took the office of chief priest considered ill-omened?",
+      "options": [
+        "It was the anniversary of the disastrous Battle of the Allia",
+        "It took place during a solar eclipse",
+        "It was the anniversary of Caesar's murder",
+        "It was the day the temple of Jupiter burned",
+        "It coincided with the First Battle of Bedriacum"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#vitellius",
+      "explanation": "He became Pontifex Maximus on the anniversary of the Battle of the Allia, a disaster of 390 BC. Romans considered that an unlucky day.",
+      "sourceQuote": "He took the office of chief priest (*Pontifex Maximus*) on the anniversary of the Battle of the Allia, a disaster of 390 BC that Romans considered an unlucky day.",
+      "reviewFlags": []
+    }
+  ]
+}

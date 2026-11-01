@@ -1,0 +1,203 @@
+{
+  "batchName": "Empire: The Year of Four Emperors and the Flavians (AD 69-96) - Hard Batch 1",
+  "chapterName": "Empire: The Year of Four Emperors and the Flavians (AD 69-96)",
+  "difficulty": 3,
+  "batchOrder": 5,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Josephus, a Jewish commander turned historian, claimed that Titus tried to save the Second Temple. What do most modern scholars think of this claim?",
+      "options": [
+        "They think the Temple survived and was razed years later",
+        "They accept it, since he watched from the Roman side",
+        "They think Vespasian ordered the burning from Rome",
+        "They accept it but believe the soldiers disobeyed orders",
+        "They think rebel factions burned the Temple to deny it to Rome",
+        "They doubt it"
+      ],
+      "correctAnswers": [
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#siege-of-jerusalem",
+      "explanation": "Most modern scholars doubt Josephus's claim; some suspect he was protecting Titus's reputation.",
+      "sourceQuote": "Most modern scholars doubt this. Some suspect he was protecting Titus's reputation; several see the destruction as deliberate.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which troops moved first on Vespasian's behalf, invading Italy in 69?",
+      "options": [
+        "The legions of the Danube",
+        "The Praetorian Guard",
+        "The garrison of Egypt",
+        "The legions of Spain",
+        "The legions of the lower Rhine",
+        "The legions of Judaea"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#vespasian-wins",
+      "explanation": "The Danube legions invaded Italy for Vespasian and crushed Vitellius's army at the Second Battle of Bedriacum on 24 October 69.",
+      "sourceQuote": "The legions of the Danube moved first on his behalf, invading Italy and crushing Vitellius's army at the Second Battle of Bedriacum on 24 October.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which buildings did the three-day fire that swept Rome in AD 80 destroy? (select all that apply)",
+      "options": [
+        "The Colosseum",
+        "The Temple of Peace",
+        "The Pantheon",
+        "The rebuilt temple of Jupiter",
+        "The Senate house",
+        "Domitian's Palatine palace"
+      ],
+      "correctAnswers": [
+        2,
+        3
+      ],
+      "difficulty": 3,
+      "textReference": "#titus",
+      "explanation": "The fire destroyed the rebuilt temple of Jupiter and the Pantheon. According to one ancient biographer, a plague struck at the same time.",
+      "sourceQuote": "In 80 a three-day fire swept Rome, destroying the rebuilt temple of Jupiter and the Pantheon, and according to one ancient biographer a plague struck at the same time.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What made Vespasian a formidable contender for the throne in 69? (select all that apply)",
+      "options": [
+        "Command of four legions, nearly 80,000 men",
+        "The loyalty of the Rhine legions",
+        "Descent from the first emperors",
+        "A promise of 30,000 sesterces to each Praetorian",
+        "Having Egypt, the source of Rome's grain, within reach",
+        "Backing from the Senate from the start"
+      ],
+      "correctAnswers": [
+        0,
+        4
+      ],
+      "difficulty": 3,
+      "textReference": "#vespasian-wins",
+      "explanation": "Vespasian had four legions, nearly 80,000 men, and Egypt, Rome's grain source, within reach. He could not claim descent from the first emperors, and the Rhine legions backed Vitellius.",
+      "sourceQuote": "With four legions, nearly 80,000 men, and Egypt, the source of Rome's grain, within reach, he was a formidable contender.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which statements about the fall of Vitellius are true? (select all that apply)",
+      "options": [
+        "Beyond his veterans from Germany he had little support",
+        "He was killed in the Forum and his head put on a pole",
+        "He fled to Gaul and died in exile there",
+        "He was caught in the palace and killed on 20 December 69",
+        "He took his own life after losing at Bedriacum",
+        "His position collapsed when the eastern armies declared for Vespasian"
+      ],
+      "correctAnswers": [
+        0,
+        3,
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#vitellius",
+      "explanation": "With little support beyond his German veterans, Vitellius collapsed once the eastern armies backed Vespasian, and he was killed in the palace on 20 December 69. Suicide after Bedriacum was the fate of his predecessor.",
+      "sourceQuote": "When the eastern armies declared for Vespasian, his position collapsed.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What was unusual about the governor in Gaul who launched the revolt of 68?",
+      "options": [
+        "He belonged to the ruling family and sought the throne",
+        "He commanded the Rhine legions that later backed Vitellius",
+        "He was a centurion's grandson who later founded a dynasty",
+        "He was of humble origins and did not want the throne himself",
+        "He was an elderly, childless senator from Spain",
+        "He was a former Praetorian commander bribed by Galba"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 3,
+      "textReference": "#fall-of-nero",
+      "explanation": "The rebel governor was a man of humble origins who did not want the throne and went looking for a candidate instead. He found one in Galba.",
+      "sourceQuote": "In March of that year a governor in Gaul, a man of humble origins who did not want the throne himself, raised an army of Gallic warriors and went looking for a candidate.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How quickly was the Rhine governor's revolt against Domitian in 89 crushed?",
+      "options": [
+        "Within 24 days",
+        "Within 100 days",
+        "In about three months",
+        "In nearly a year",
+        "In about two years",
+        "Within 8 days"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#domitian",
+      "explanation": "The revolt was crushed within 24 days. Executions of senators followed, and Domitian was eventually assassinated in 96.",
+      "sourceQuote": "In 89 a Rhine governor rebelled; the revolt was crushed within 24 days.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did a Roman historian describe Galba's journey from Spain to Rome?",
+      "options": [
+        "\"a journey paid for in silver\"",
+        "\"the slow road of an old man\"",
+        "\"a long and bloody march\"",
+        "\"a march of beggars and favourites\"",
+        "\"a funeral procession for the Republic\"",
+        "\"a triumph without a war\""
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 3,
+      "textReference": "#galba",
+      "explanation": "The historian called it \"a long and bloody march\". Galba took months to reach Rome and killed officials who had opposed him along the way.",
+      "sourceQuote": "A Roman historian called his journey \"a long and bloody march\".",
+      "reviewFlags": []
+    },
+    {
+      "question": "Where and when was the army of Otho defeated?",
+      "options": [
+        "Near Cremona, 14 April 69",
+        "Near Cremona, 24 October 69",
+        "Near Rome, 15 January 69",
+        "On the Rhine, 2 January 69",
+        "Near Alexandria, 1 July 69",
+        "At Lugdunum in Gaul, March 69"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#the-nobleman-emperor",
+      "explanation": "His army lost the First Battle of Bedriacum, near Cremona in northern Italy, on 14 April 69. A second battle was fought there in October.",
+      "sourceQuote": "On 14 April 69 his army was beaten at the First Battle of Bedriacum, near Cremona in northern Italy.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Roughly what share of the coins minted in Rome under Vespasian celebrated victory or peace?",
+      "options": [
+        "About half",
+        "Nearly two-thirds",
+        "Nearly all",
+        "About a tenth",
+        "About a fifth",
+        "Nearly a third"
+      ],
+      "correctAnswers": [
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#vespasian-reign",
+      "explanation": "Nearly a third of Rome's coins celebrated victory or peace. They were part of Vespasian's campaign to present himself as a bringer of peace.",
+      "sourceQuote": "Nearly a third of the coins minted in Rome celebrated victory or peace.",
+      "reviewFlags": []
+    }
+  ]
+}

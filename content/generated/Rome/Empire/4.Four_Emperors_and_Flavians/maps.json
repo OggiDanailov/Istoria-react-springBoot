@@ -1,0 +1,91 @@
+{
+  "description": "Maps for the chronicle, written by hand. Coordinates from Wikipedia; each map sits at the start of its section.",
+  "maps": [
+    {
+      "id": "year-of-four",
+      "sec": "galba",
+      "title": "AD 69: four emperors",
+      "caption": "Galba came from Spain, Vitellius from the Rhine, and Vespasian was proclaimed at Alexandria. Both battles of Bedriacum, near Cremona, were fought in northern Italy.",
+      "bounds": {
+        "latMin": 29.5,
+        "latMax": 53.0,
+        "lonMin": -10.0,
+        "lonMax": 43.0
+      },
+      "places": [
+        {
+          "name": "Rome",
+          "latin": "Roma",
+          "lat": 41.893,
+          "lon": 12.483,
+          "kind": "rome",
+          "side": "l",
+          "dy": 8
+        },
+        {
+          "name": "Bedriacum",
+          "lat": 45.13,
+          "lon": 10.43,
+          "kind": "battle",
+          "side": "r"
+        },
+        {
+          "name": "Alexandria",
+          "lat": 31.2,
+          "lon": 29.9,
+          "side": "l"
+        },
+        {
+          "name": "Jerusalem",
+          "lat": 31.78,
+          "lon": 35.23,
+          "side": "l",
+          "dy": -16
+        }
+      ],
+      "rivers": [
+        {
+          "name": "Rhine",
+          "pts": [
+            [
+              46.6,
+              9.6
+            ],
+            [
+              47.6,
+              7.6
+            ],
+            [
+              49.0,
+              8.4
+            ],
+            [
+              50.4,
+              7.6
+            ],
+            [
+              51.8,
+              6.2
+            ],
+            [
+              52.0,
+              4.6
+            ]
+          ]
+        }
+      ],
+      "peoples": [
+        {
+          "name": "Hispania",
+          "lat": 40.0,
+          "lon": -3.5
+        },
+        {
+          "name": "Judaea",
+          "lat": 30.2,
+          "lon": 36.5
+        }
+      ]
+    }
+  ]
+}

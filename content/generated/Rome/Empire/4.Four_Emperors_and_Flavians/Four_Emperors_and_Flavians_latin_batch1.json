@@ -1,0 +1,145 @@
+{
+  "batchName": "Empire: The Year of Four Emperors and the Flavians (AD 69-96) - Latin words",
+  "chapterName": "Empire: The Year of Four Emperors and the Flavians (AD 69-96)",
+  "difficulty": 1,
+  "batchOrder": 9,
+  "description": "Written by hand from the chapter text: the Latin words it explains",
+  "questions": [
+    {
+      "question": "What did the Romans mean by decimatio, the punishment Galba used?",
+      "options": [
+        "Putting to death one soldier in ten",
+        "Cutting pay by a tenth",
+        "Sending a tenth of the army home",
+        "Flogging ten officers"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#galba",
+      "explanation": "Galba used it on the survivors of a legion of former sailors.",
+      "sourceQuote": "decimation (*decimatio*), the ancient punishment in which one soldier in ten was put to death.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What does pecunia non olet mean?",
+      "options": [
+        "“Money does not smell”",
+        "“Money is power”",
+        "“Taxes never sleep”",
+        "“Gold buys loyalty”"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#vespasian-reign",
+      "explanation": "Tradition links it to Vespasian’s tax on urine from public toilets.",
+      "sourceQuote": "\"money does not smell\" (*pecunia non olet*)",
+      "reviewFlags": []
+    },
+    {
+      "question": "What is the Amphitheatrum Flavium better known as?",
+      "options": [
+        "The Colosseum",
+        "The Circus Maximus",
+        "The Pantheon",
+        "The Forum"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#vespasian-reign",
+      "explanation": "Vespasian began it and Titus opened it in AD 80.",
+      "sourceQuote": "the Flavian Amphitheatre (*Amphitheatrum Flavium*), better known as the Colosseum.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Titus made his dead father a divus. What was that?",
+      "options": [
+        "A god",
+        "A hero of the Senate",
+        "A Father of the Fatherland",
+        "A saint"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#titus",
+      "explanation": "Vespasian, like Augustus and Claudius before him, was declared a god.",
+      "sourceQuote": "He made his dead father a god (*divus*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "What was the Templum Pacis that Vespasian built?",
+      "options": [
+        "The Temple of Peace",
+        "The Temple of Jupiter",
+        "A temple to the Flavian family",
+        "A temple of Isis"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#vespasian-reign",
+      "explanation": "It was part of his campaign presenting himself as a bringer of peace.",
+      "sourceQuote": "He built a Temple of Peace (*Templum Pacis*)",
+      "reviewFlags": []
+    },
+    {
+      "question": "Vitellius took the office of Pontifex Maximus. What was it?",
+      "options": [
+        "Chief priest",
+        "Commander of the fleet",
+        "Governor of Rome",
+        "Head of the Senate"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#vitellius",
+      "explanation": "He took it on the anniversary of the Battle of the Allia, an unlucky day.",
+      "sourceQuote": "He took the office of chief priest (*Pontifex Maximus*)",
+      "reviewFlags": []
+    },
+    {
+      "question": "In AD 68 the Senate declared Nero a hostis. What is a hostis?",
+      "options": [
+        "A public enemy",
+        "A god",
+        "A traitor’s son",
+        "A guest of the state"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#fall-of-nero",
+      "explanation": "The next day Nero took his own life.",
+      "sourceQuote": "declared Nero a public enemy (*hostis*)",
+      "reviewFlags": []
+    },
+    {
+      "question": "After Domitian’s murder the Senate imposed damnatio memoriae. What was it?",
+      "options": [
+        "The condemnation of his memory",
+        "A state funeral",
+        "Making him a god",
+        "A ban on his family"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#domitian",
+      "explanation": "Senatorial historians then portrayed him as a cruel tyrant.",
+      "sourceQuote": "The Senate condemned his memory (*damnatio memoriae*)",
+      "reviewFlags": []
+    }
+  ]
+}

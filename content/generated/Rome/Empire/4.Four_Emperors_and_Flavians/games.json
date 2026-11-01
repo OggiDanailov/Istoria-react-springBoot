@@ -1,0 +1,617 @@
+{
+  "chapterName": "Empire: The Year of Four Emperors and the Flavians (AD 69-96)",
+  "model": "claude-opus-5-5",
+  "briefing": {
+    "title": "Rome, AD 69",
+    "paragraphs": [
+      "For almost a century one family, the Julio-Claudians, has ruled the Roman Empire. In AD 68 the last of them falls, abandoned by his own bodyguard and condemned by the Senate. No heir is waiting. Any governor with an army can now dream of the throne.",
+      "In a single year four men will claim it: old Galba from Spain, the nobleman Otho, the glutton Vitellius from the Rhine, and the tough general Vespasian, fighting a Jewish revolt in the East. The winner must rebuild a bankrupt, bloodied Rome and found a new dynasty."
+    ]
+  },
+  "timelines": [
+    {
+      "name": "Level 1: From Britain to the Last Flavian",
+      "blurb": "Four turning points in the life of the Flavian family.",
+      "events": [
+        {
+          "label": "Vespasian joins the invasion of Britain",
+          "when": "AD 43",
+          "year": 43,
+          "fact": "Vespasian, whose grandfather had been a centurion, fought in the invasion of Britain before rising to consul.",
+          "sectionId": "vespasian-wins",
+          "reviewFlags": []
+        },
+        {
+          "label": "Titus destroys Jerusalem",
+          "when": "AD 70",
+          "year": 70,
+          "fact": "Titus, Vespasian's elder son, besieged Jerusalem, and the Second Temple burned before the city was razed.",
+          "sectionId": "siege-of-jerusalem",
+          "reviewFlags": []
+        },
+        {
+          "label": "Vesuvius buries Pompeii",
+          "when": "24 August 79",
+          "year": 79,
+          "fact": "The volcano above the Bay of Naples buried Pompeii and Herculaneum barely two months into Titus's reign.",
+          "sectionId": "titus",
+          "reviewFlags": []
+        },
+        {
+          "label": "Domitian is assassinated",
+          "when": "18 September 96",
+          "year": 96,
+          "fact": "Court officials killed Domitian, ending the Flavian dynasty, and the Senate condemned his memory.",
+          "sectionId": "domitian",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Level 2: Revolts, Rulers and Games",
+      "blurb": "Six events from the Jewish revolt to a rebellion on the Rhine.",
+      "events": [
+        {
+          "label": "Jewish revolt breaks out in Judaea",
+          "when": "AD 66",
+          "year": 66,
+          "fact": "The revolt in Judaea, the Roman province around Jerusalem, would take Vespasian and then Titus years to crush.",
+          "sectionId": "siege-of-jerusalem",
+          "reviewFlags": []
+        },
+        {
+          "label": "Spanish troops proclaim Galba emperor",
+          "when": "Early April 68",
+          "year": 68,
+          "fact": "Galba, the elderly, childless governor of Hispania Tarraconensis, was hailed emperor by his troops.",
+          "sectionId": "fall-of-nero",
+          "reviewFlags": []
+        },
+        {
+          "label": "Rhine legions proclaim Vitellius",
+          "when": "2 January 69",
+          "year": 69,
+          "fact": "The legions of the lower Rhine, who hated Galba, proclaimed their own governor Vitellius emperor.",
+          "sectionId": "vitellius",
+          "reviewFlags": []
+        },
+        {
+          "label": "Triumph displays the Temple lampstand",
+          "when": "AD 71",
+          "year": 71,
+          "fact": "Titus and Vespasian held a victory parade through Rome, showing off the Temple's seven-branched lampstand.",
+          "sectionId": "siege-of-jerusalem",
+          "reviewFlags": []
+        },
+        {
+          "label": "Titus opens the Colosseum",
+          "when": "AD 80",
+          "year": 80,
+          "fact": "Titus completed the Colosseum and opened it with a hundred days of games, including mock sea battles.",
+          "sectionId": "titus",
+          "reviewFlags": []
+        },
+        {
+          "label": "A Rhine governor rebels against Domitian",
+          "when": "AD 89",
+          "year": 89,
+          "fact": "The revolt was crushed within 24 days, and executions of senators followed.",
+          "sectionId": "domitian",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Level 3: Omens, Wars and Rediscovery",
+      "blurb": "Eight events spanning nearly two thousand years.",
+      "events": [
+        {
+          "label": "Romans suffer disaster at the Allia",
+          "when": "390 BC",
+          "year": -390,
+          "fact": "Romans considered the anniversary of this defeat unlucky, and Vitellius chose it to become chief priest.",
+          "sectionId": "vitellius",
+          "reviewFlags": []
+        },
+        {
+          "label": "Vespasian sent to fight in Judaea",
+          "when": "AD 67",
+          "year": 67,
+          "fact": "Vespasian was sent to crush the Jewish revolt, giving him four legions of nearly 80,000 men.",
+          "sectionId": "vespasian-wins",
+          "reviewFlags": []
+        },
+        {
+          "label": "Senate names Nero a public enemy",
+          "when": "8 June 68",
+          "year": 68,
+          "fact": "Deserted by the Praetorian Guard, the last Julio-Claudian emperor took his own life the next day.",
+          "sectionId": "fall-of-nero",
+          "reviewFlags": []
+        },
+        {
+          "label": "Second Battle of Bedriacum",
+          "when": "24 October 69",
+          "year": 69,
+          "fact": "The legions of the Danube, fighting for Vespasian, crushed Vitellius's army near Cremona.",
+          "sectionId": "vespasian-wins",
+          "reviewFlags": []
+        },
+        {
+          "label": "Vespasian finds an empty treasury",
+          "when": "AD 70",
+          "year": 70,
+          "fact": "Arriving in Rome, Vespasian raised provincial tribute and invented new taxes, including one on urine.",
+          "sectionId": "vespasian-reign",
+          "reviewFlags": []
+        },
+        {
+          "label": "Vespasian dies of natural causes",
+          "when": "23 June 79",
+          "year": 79,
+          "fact": "Remembered for his mildness, Vespasian was succeeded by his elder son Titus.",
+          "sectionId": "vespasian-reign",
+          "reviewFlags": []
+        },
+        {
+          "label": "Titus dies of fever",
+          "when": "13 September 81",
+          "year": 81,
+          "fact": "After barely two years of rule, Titus died, and his brother Domitian became emperor the next day.",
+          "sectionId": "titus",
+          "reviewFlags": []
+        },
+        {
+          "label": "Pompeii is rediscovered",
+          "when": "1748",
+          "year": 1748,
+          "fact": "Buried by Vesuvius in 79, Pompeii stayed lost for nearly 1,700 years.",
+          "sectionId": "titus",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "matchSets": [
+    {
+      "name": "Roman Words of Power",
+      "blurb": "Match each Latin term to its meaning in this chapter.",
+      "pairs": [
+        {
+          "name": "Decimatio",
+          "match": "Killing one soldier in ten, inflicted on Galba's sailor legion",
+          "sectionId": "galba",
+          "reviewFlags": []
+        },
+        {
+          "name": "Hostis",
+          "match": "Public enemy, as the Senate declared the last Julio-Claudian",
+          "sectionId": "fall-of-nero",
+          "reviewFlags": []
+        },
+        {
+          "name": "Divus",
+          "match": "God: the status Titus gave his dead father",
+          "sectionId": "titus",
+          "reviewFlags": []
+        },
+        {
+          "name": "Triumphus",
+          "match": "Victory parade through Rome, held by Titus and Vespasian in 71",
+          "sectionId": "siege-of-jerusalem",
+          "reviewFlags": []
+        },
+        {
+          "name": "Damnatio memoriae",
+          "match": "Condemnation of memory the Senate imposed on Domitian",
+          "sectionId": "domitian",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Places of the Flavian Age",
+      "blurb": "Match each place to its role in the story.",
+      "pairs": [
+        {
+          "name": "Bedriacum",
+          "match": "Site near Cremona of two decisive battles in 69",
+          "sectionId": "the-nobleman-emperor",
+          "reviewFlags": []
+        },
+        {
+          "name": "Alexandria",
+          "match": "Egypt's great port, where Vespasian was proclaimed emperor",
+          "sectionId": "vespasian-wins",
+          "reviewFlags": []
+        },
+        {
+          "name": "Jerusalem",
+          "match": "City besieged and razed by Titus in AD 70",
+          "sectionId": "siege-of-jerusalem",
+          "reviewFlags": []
+        },
+        {
+          "name": "Pompeii",
+          "match": "Town buried by Vesuvius in 79, rediscovered in 1748",
+          "sectionId": "titus",
+          "reviewFlags": []
+        },
+        {
+          "name": "Colosseum",
+          "match": "Amphitheatre begun by Vespasian and opened by Titus",
+          "sectionId": "vespasian-reign",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "trueFalseDecks": [
+    {
+      "name": "The Year of Four Emperors",
+      "blurb": "How the throne changed hands four times.",
+      "cards": [
+        {
+          "claim": "Galba's troops proclaimed him emperor in early April 68.",
+          "answer": true,
+          "why": "Galba, governor of Hispania Tarraconensis, was proclaimed emperor by his troops in early April 68.",
+          "sectionId": "fall-of-nero",
+          "reviewFlags": []
+        },
+        {
+          "claim": "The Praetorian Guard were promised 30,000 sesterces each in Galba's name, about one year's pay.",
+          "answer": false,
+          "why": "The 30,000 sesterces were roughly ten years' pay, which is why the Guard deserted Nero.",
+          "sectionId": "fall-of-nero",
+          "reviewFlags": []
+        },
+        {
+          "claim": "The Gallic rising of 68 was crushed by the legions of the Rhine.",
+          "answer": true,
+          "why": "The Rhine legions crushed the rising, and its leader killed himself.",
+          "sectionId": "fall-of-nero",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Galba paid the Praetorian Guard the reward promised in his name.",
+          "answer": false,
+          "why": "Galba refused to pay it, and the Guard was later bribed to murder him.",
+          "sectionId": "galba",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Vitellius was proclaimed emperor by the legions of the Danube.",
+          "answer": false,
+          "why": "It was the legions of the lower Rhine, which he governed, that proclaimed him on 2 January 69.",
+          "sectionId": "vitellius",
+          "reviewFlags": []
+        },
+        {
+          "claim": "After losing the First Battle of Bedriacum, Otho took his own life.",
+          "answer": true,
+          "why": "Rather than drag out the war, he killed himself soon after the defeat near Cremona in April 69.",
+          "sectionId": "the-nobleman-emperor",
+          "reviewFlags": []
+        },
+        {
+          "claim": "At the Second Battle of Bedriacum the legions of the Rhine crushed Vitellius's army.",
+          "answer": false,
+          "why": "It was the legions of the Danube, fighting for Vespasian, who won on 24 October 69.",
+          "sectionId": "vespasian-wins",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Vespasian was proclaimed emperor in Alexandria on 1 July 69.",
+          "answer": true,
+          "why": "Vespasian was hailed in Alexandria, Egypt's great port, on 1 July 69.",
+          "sectionId": "vespasian-wins",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "The Flavian Dynasty",
+      "blurb": "Vespasian and his sons, from Jerusalem to the Colosseum.",
+      "cards": [
+        {
+          "claim": "Vespasian introduced a tax on urine collected from public toilets.",
+          "answer": true,
+          "why": "Tradition links this tax to the saying \"money does not smell\" (pecunia non olet).",
+          "sectionId": "vespasian-reign",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Titus opened the Colosseum in 80 with games lasting a hundred days.",
+          "answer": true,
+          "why": "The games included gladiators, animal fights and mock sea battles in the flooded arena.",
+          "sectionId": "titus",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Vesuvius erupted about two years into Titus's reign.",
+          "answer": false,
+          "why": "It erupted barely two months into his reign, on 24 August 79.",
+          "sectionId": "titus",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Pompeii was rediscovered in 1748.",
+          "answer": true,
+          "why": "Pompeii stayed lost for nearly 1,700 years until its rediscovery in 1748.",
+          "sectionId": "titus",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Most modern scholars accept that Titus tried to save the Temple in Jerusalem.",
+          "answer": false,
+          "why": "Most modern scholars doubt the claim, suspecting the Jewish historian was protecting Titus's reputation.",
+          "sectionId": "siege-of-jerusalem",
+          "reviewFlags": []
+        },
+        {
+          "claim": "The Temple's seven-branched lampstand was displayed in the triumph of 71.",
+          "answer": true,
+          "why": "Titus and Vespasian paraded it through Rome in their victory procession.",
+          "sectionId": "siege-of-jerusalem",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Domitian lowered the silver content of the denarius.",
+          "answer": false,
+          "why": "Domitian raised the silver content of the denarius, Rome's standard silver coin, by 12%.",
+          "sectionId": "domitian",
+          "reviewFlags": []
+        },
+        {
+          "claim": "On the frontiers Domitian preferred conquest, pushing far beyond the Rhine.",
+          "answer": false,
+          "why": "Domitian preferred defence, lining the Rhine with roads, forts and watchtowers.",
+          "sectionId": "domitian",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "oddOneOut": [
+    {
+      "items": [
+        "Galba",
+        "Vitellius",
+        "Titus",
+        "Domitian"
+      ],
+      "oddIndex": 2,
+      "why": "Galba, Vitellius and Domitian were all killed by soldiers or court officials; Titus died of fever.",
+      "sectionId": "titus",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Pompeii",
+        "Colosseum",
+        "Herculaneum",
+        "Pantheon"
+      ],
+      "oddIndex": 1,
+      "why": "Pompeii, Herculaneum and the Pantheon were destroyed under Titus by Vesuvius or the fire of 80; the Colosseum was completed then.",
+      "sectionId": "titus",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Raised provincial tribute",
+        "Revived old taxes",
+        "Tax on urine",
+        "More silver in the denarius"
+      ],
+      "oddIndex": 3,
+      "why": "Vespasian raised tribute, revived old taxes and taxed urine to refill the treasury; raising the denarius's silver was Domitian's measure.",
+      "sectionId": "vespasian-reign",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Three banquets a day",
+        "Torturing moneylenders",
+        "Decimating a sailor legion",
+        "Luring rivals to the palace"
+      ],
+      "oddIndex": 2,
+      "why": "Ancient writers accuse Vitellius of feasting, torturing moneylenders and murdering lured rivals; decimating the sailor legion was Galba's doing.",
+      "sectionId": "galba",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Conquered Jerusalem",
+        "Commanded the Praetorian Guard",
+        "Escaped disguised as Isis worshipper",
+        "Held seven consulships"
+      ],
+      "oddIndex": 2,
+      "why": "Titus conquered Jerusalem, commanded the Guard and held seven consulships; it was his brother Domitian who escaped disguised as a worshipper of Isis.",
+      "sectionId": "vespasian-wins",
+      "reviewFlags": []
+    }
+  ],
+  "whoAmI": [
+    {
+      "name": "Contenders of 69",
+      "blurb": "Three men who fought for the throne in the civil war.",
+      "people": [
+        {
+          "name": "Galba",
+          "options": [
+            "Galba",
+            "Vitellius",
+            "Vespasian",
+            "Domitian"
+          ],
+          "clues": [
+            "My troops charged a new legion of former sailors, and the survivors were decimated.",
+            "I refused to pay the Praetorian Guard the reward promised in my name.",
+            "Panicking, I adopted a young senator as my heir, a fatal choice.",
+            "As the elderly, childless governor of Hispania Tarraconensis, I was proclaimed emperor in 68."
+          ],
+          "sectionId": "galba",
+          "reviewFlags": []
+        },
+        {
+          "name": "Vitellius",
+          "options": [
+            "Vitellius",
+            "Galba",
+            "Titus",
+            "Vespasian"
+          ],
+          "clues": [
+            "I became chief priest on the unlucky anniversary of the Battle of the Allia.",
+            "One biographer claims I held three banquets a day.",
+            "Before I took power, I was best known as a penniless glutton.",
+            "The legions of the lower Rhine proclaimed me emperor on 2 January 69."
+          ],
+          "sectionId": "vitellius",
+          "reviewFlags": []
+        },
+        {
+          "name": "Vespasian",
+          "options": [
+            "Vespasian",
+            "Galba",
+            "Vitellius",
+            "Titus"
+          ],
+          "clues": [
+            "My grandfather was a centurion, an officer commanding about eighty men.",
+            "I fought in the invasion of Britain in AD 43.",
+            "My brother, commander of the city garrison, was executed after a siege on the Capitoline Hill.",
+            "I was proclaimed emperor in Alexandria on 1 July 69."
+          ],
+          "sectionId": "vespasian-wins",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "The Flavian Family",
+      "blurb": "A father and two sons who ruled Rome from 69 to 96.",
+      "people": [
+        {
+          "name": "Vespasian",
+          "options": [
+            "Vespasian",
+            "Titus",
+            "Domitian",
+            "Galba"
+          ],
+          "clues": [
+            "Nearly a third of the coins minted in Rome under me celebrated victory or peace.",
+            "I reportedly said I would not kill a dog that barks at me.",
+            "I taxed urine collected from public toilets.",
+            "I began the Colosseum but died of natural causes in 79."
+          ],
+          "sectionId": "vespasian-reign",
+          "reviewFlags": []
+        },
+        {
+          "name": "Titus",
+          "options": [
+            "Titus",
+            "Domitian",
+            "Vespasian",
+            "Vitellius"
+          ],
+          "clues": [
+            "Jewish tradition remembers me as \"the Wicked\".",
+            "Under my father I held seven consulships and commanded the Praetorian Guard.",
+            "Barely two months into my reign, Vesuvius erupted, and I visited the disaster twice.",
+            "I took over the war in Judaea and destroyed Jerusalem in AD 70."
+          ],
+          "sectionId": "titus",
+          "reviewFlags": []
+        },
+        {
+          "name": "Domitian",
+          "options": [
+            "Domitian",
+            "Titus",
+            "Vespasian",
+            "Galba"
+          ],
+          "clues": [
+            "I raised the silver content of the denarius by 12%.",
+            "I added a fourth level to the Colosseum and built a vast palace on the Palatine.",
+            "In 69 I escaped Rome disguised as a worshipper of Isis.",
+            "Court officials assassinated me in 96, and the Senate condemned my memory."
+          ],
+          "sectionId": "domitian",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "places": [
+    {
+      "name": "Hispania Tarraconensis",
+      "wikipediaTitle": "Hispania Tarraconensis",
+      "lat": 41.1165,
+      "lon": 1.2552,
+      "why": "Galba governed this largest province of Spain when his troops proclaimed him emperor in 68.",
+      "sectionId": "fall-of-nero",
+      "coordinates": "Wikipedia: Hispania Tarraconensis",
+      "reviewFlags": []
+    },
+    {
+      "name": "Rhine",
+      "wikipediaTitle": "Rhine",
+      "lat": 51.98166667,
+      "lon": 4.08055556,
+      "why": "The Rhine legions crushed the Gallic rising and proclaimed Vitellius emperor in 69.",
+      "sectionId": "vitellius",
+      "coordinates": "Wikipedia: Rhine",
+      "reviewFlags": [
+        "model's position is 218 km from Wikipedia's \"Rhine\"; check the article is the right place"
+      ]
+    },
+    {
+      "name": "Bedriacum",
+      "wikipediaTitle": "Bedriacum",
+      "lat": 45.12861111,
+      "lon": 10.44166667,
+      "why": "Two battles here near Cremona in 69 decided the fates of Otho and of Vitellius.",
+      "sectionId": "the-nobleman-emperor",
+      "coordinates": "Wikipedia: Calvatone",
+      "reviewFlags": []
+    },
+    {
+      "name": "Alexandria",
+      "wikipediaTitle": "Alexandria",
+      "lat": 31.1975,
+      "lon": 29.8925,
+      "why": "Vespasian was proclaimed emperor in Egypt's great port on 1 July 69.",
+      "sectionId": "vespasian-wins",
+      "coordinates": "Wikipedia: Alexandria",
+      "reviewFlags": []
+    },
+    {
+      "name": "Jerusalem",
+      "wikipediaTitle": "Jerusalem",
+      "lat": 31.77888889,
+      "lon": 35.22555556,
+      "why": "Titus besieged and razed the city in AD 70, burning the Second Temple.",
+      "sectionId": "siege-of-jerusalem",
+      "coordinates": "Wikipedia: Jerusalem",
+      "reviewFlags": []
+    },
+    {
+      "name": "Pompeii",
+      "wikipediaTitle": "Pompeii",
+      "lat": 40.75,
+      "lon": 14.48611111,
+      "why": "Vesuvius buried the town in 79, and it stayed lost until 1748.",
+      "sectionId": "titus",
+      "coordinates": "Wikipedia: Pompeii",
+      "reviewFlags": []
+    }
+  ]
+}

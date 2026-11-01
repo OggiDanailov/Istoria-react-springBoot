@@ -1,0 +1,149 @@
+{
+  "description": "Key facts for this chapter, written by hand from the chapter text. Every entry links to the section that explains it.",
+  "people": [
+    {
+      "name": "Galba",
+      "text": "Elderly governor in Spain; emperor June 68 – January 69.",
+      "sec": "galba"
+    },
+    {
+      "name": "Otho",
+      "text": "Ambitious nobleman; emperor for three months in 69.",
+      "sec": "the-nobleman-emperor"
+    },
+    {
+      "name": "Vitellius",
+      "text": "Governor of the lower Rhine; emperor in 69; killed in December.",
+      "sec": "vitellius"
+    },
+    {
+      "name": "Vespasian",
+      "text": "The general who won the civil war; emperor 69–79; founder of the Flavian dynasty.",
+      "sec": "vespasian-wins"
+    },
+    {
+      "name": "Titus",
+      "text": "Vespasian’s elder son; took Jerusalem; emperor 79–81.",
+      "sec": "titus"
+    },
+    {
+      "name": "Domitian",
+      "text": "Vespasian’s younger son; emperor 81–96; the last Flavian.",
+      "sec": "domitian"
+    },
+    {
+      "name": "Josephus",
+      "text": "Jewish commander turned historian who watched the siege of Jerusalem.",
+      "sec": "siege-of-jerusalem"
+    }
+  ],
+  "dates": [
+    {
+      "when": "9 June AD 68",
+      "text": "Nero takes his own life.",
+      "sec": "fall-of-nero"
+    },
+    {
+      "when": "15 January 69",
+      "text": "Galba is murdered in the Forum.",
+      "sec": "galba"
+    },
+    {
+      "when": "14 April 69",
+      "text": "The First Battle of Bedriacum; Otho takes his life.",
+      "sec": "the-nobleman-emperor"
+    },
+    {
+      "when": "24 October 69",
+      "text": "The Second Battle of Bedriacum.",
+      "sec": "vespasian-wins"
+    },
+    {
+      "when": "20 December 69",
+      "text": "Vitellius is killed; Vespasian is emperor.",
+      "sec": "vespasian-wins"
+    },
+    {
+      "when": "AD 70",
+      "text": "Titus destroys Jerusalem and its Temple.",
+      "sec": "siege-of-jerusalem"
+    },
+    {
+      "when": "24 August 79",
+      "text": "Vesuvius buries Pompeii and Herculaneum.",
+      "sec": "titus"
+    },
+    {
+      "when": "AD 80",
+      "text": "The Colosseum opens with a hundred days of games.",
+      "sec": "titus"
+    },
+    {
+      "when": "18 September 96",
+      "text": "Domitian is murdered; the Flavian dynasty ends.",
+      "sec": "domitian"
+    }
+  ],
+  "terms": [
+    {
+      "latin": "legiones",
+      "english": "legions",
+      "sec": "fall-of-nero"
+    },
+    {
+      "latin": "cohortes praetoriae",
+      "english": "the Praetorian Guard",
+      "sec": "fall-of-nero"
+    },
+    {
+      "latin": "senatus",
+      "english": "the Senate",
+      "sec": "fall-of-nero"
+    },
+    {
+      "latin": "hostis",
+      "english": "a public enemy",
+      "sec": "fall-of-nero"
+    },
+    {
+      "latin": "decimatio",
+      "english": "killing one soldier in ten",
+      "sec": "galba"
+    },
+    {
+      "latin": "Pontifex Maximus",
+      "english": "the chief priest",
+      "sec": "vitellius"
+    },
+    {
+      "latin": "pecunia non olet",
+      "english": "money does not smell",
+      "sec": "vespasian-reign"
+    },
+    {
+      "latin": "Templum Pacis",
+      "english": "the Temple of Peace",
+      "sec": "vespasian-reign"
+    },
+    {
+      "latin": "Amphitheatrum Flavium",
+      "english": "the Colosseum",
+      "sec": "vespasian-reign"
+    },
+    {
+      "latin": "triumphus",
+      "english": "a victory parade",
+      "sec": "siege-of-jerusalem"
+    },
+    {
+      "latin": "divus",
+      "english": "a god (a dead emperor)",
+      "sec": "titus"
+    },
+    {
+      "latin": "damnatio memoriae",
+      "english": "condemning someone’s memory",
+      "sec": "domitian"
+    }
+  ]
+}

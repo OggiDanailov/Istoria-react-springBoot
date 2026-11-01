@@ -614,7 +614,16 @@
       },
       "short": "The Flavians",
       "era": "empire",
-      "mapArea": "wide"
+      "mapArea": "wide",
+      "battle": {
+        "name": "The siege of Jerusalem",
+        "year": "AD 70",
+        "enemy": "the Jewish rebels",
+        "sec": "siege-of-jerusalem",
+        "level": "jerusalem",
+        "intro": "Titus must break through Jerusalem’s walls, one after another."
+      },
+      "locked": true
     },
     {
       "id": "five-good-emperors",

@@ -1,0 +1,179 @@
+{
+  "batchName": "Empire: The Year of Four Emperors and the Flavians (AD 69-96) - Easy Batch 2",
+  "chapterName": "Empire: The Year of Four Emperors and the Flavians (AD 69-96)",
+  "difficulty": 1,
+  "batchOrder": 2,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Which famous building, officially called the Flavian Amphitheatre, did Vespasian begin?",
+      "options": [
+        "The Circus Maximus",
+        "The Colosseum",
+        "The Pantheon",
+        "The Temple of Jupiter"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#vespasian-reign",
+      "explanation": "Vespasian began the Flavian Amphitheatre, better known as the Colosseum. He also built a Temple of Peace.",
+      "sourceQuote": "He built a Temple of Peace (*Templum Pacis*) and began the Flavian Amphitheatre (*Amphitheatrum Flavium*), better known as the Colosseum.",
+      "reviewFlags": []
+    },
+    {
+      "question": "In 67, what task was Vespasian sent to carry out?",
+      "options": [
+        "Lead the invasion of Britain",
+        "Defend the Danube against the Dacians",
+        "Put down a rising in Gaul",
+        "Crush the Jewish revolt in Judaea"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#vespasian-wins",
+      "explanation": "In 67 Vespasian was sent to crush the Jewish revolt in Judaea. Earlier he had fought in the invasion of Britain in AD 43.",
+      "sourceQuote": "Vespasian fought in the invasion of Britain in AD 43, rose to consul, Rome's highest regular office, and in 67 was sent to crush the Jewish revolt in Judaea, the Roman province around Jerusalem.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which province had Otho, Galba's successor, governed?",
+      "options": [
+        "Egypt, Rome's grain supplier",
+        "Lusitania, roughly modern Portugal",
+        "Gaul, roughly modern France",
+        "Hispania Tarraconensis in Spain"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#the-nobleman-emperor",
+      "explanation": "The second of the four emperors of 69 governed Lusitania, roughly modern Portugal. He had been one of Galba's first supporters.",
+      "sourceQuote": "The second of the four emperors of AD 69 was Otho, an ambitious nobleman and governor of Lusitania, roughly modern Portugal.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did Domitian's reign end in 96?",
+      "options": [
+        "He fell in battle against the Dacians",
+        "Court officials assassinated him",
+        "He died of fever",
+        "He took his own life"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#domitian",
+      "explanation": "Court officials assassinated Domitian on 18 September 96, ending the Flavian dynasty. The Senate then condemned his memory.",
+      "sourceQuote": "Executions of senators followed, and on 18 September 96 court officials assassinated him, ending the dynasty.",
+      "reviewFlags": []
+    },
+    {
+      "question": "In which year did the Romans destroy Jerusalem?",
+      "options": [
+        "AD 43",
+        "AD 70",
+        "AD 66",
+        "AD 79"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#siege-of-jerusalem",
+      "explanation": "Jerusalem was destroyed in AD 70, the most dramatic campaign of the Flavian era. The Jewish revolt had broken out in 66.",
+      "sourceQuote": "The most dramatic campaign of the Flavian era was the destruction of Jerusalem in AD 70.",
+      "reviewFlags": []
+    },
+    {
+      "question": "According to one ancient biographer, how many banquets a day did Vitellius hold?",
+      "options": [
+        "Five",
+        "One",
+        "Three",
+        "Seven"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#vitellius",
+      "explanation": "One biographer claims Vitellius held three banquets a day. Ancient writers describe his reign as an orgy of feasting.",
+      "sourceQuote": "Ancient writers describe what followed as an orgy of feasting: one biographer claims he held three banquets a day.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which family ruled Rome for almost a century before the crisis of AD 68?",
+      "options": [
+        "The Flavians",
+        "The Julio-Claudians",
+        "The Severans",
+        "The Antonines"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#fall-of-nero",
+      "explanation": "The Julio-Claudians, heirs of the first emperor, ruled for almost a century. By 68 their last emperor had exhausted the elite's patience with treason trials and plots.",
+      "sourceQuote": "For almost a century Rome had been ruled by one family, the Julio-Claudians, heirs of the first emperor.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What was decimation, the punishment Galba inflicted on the survivors of a legion of former sailors?",
+      "options": [
+        "Executing one soldier in ten",
+        "Exiling the legion for ten years",
+        "Cutting every soldier's pay by a tenth",
+        "Flogging the legion's ten senior officers"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#galba",
+      "explanation": "Decimation was an ancient punishment in which one soldier in ten was put to death. Galba's troops had already killed thousands of these sailors-turned-legionaries outside Rome.",
+      "sourceQuote": "The survivors suffered decimation (*decimatio*), the ancient punishment in which one soldier in ten was put to death.",
+      "reviewFlags": []
+    },
+    {
+      "question": "In which city was Vespasian proclaimed emperor on 1 July 69?",
+      "options": [
+        "Antioch",
+        "Alexandria",
+        "Rome",
+        "Jerusalem"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#vespasian-wins",
+      "explanation": "Vespasian was proclaimed emperor in Alexandria, Egypt's great port. Egypt mattered because it was the source of Rome's grain.",
+      "sourceQuote": "On 1 July 69 he was proclaimed emperor in Alexandria, Egypt's great port.",
+      "reviewFlags": []
+    },
+    {
+      "question": "In AD 68, where was Galba serving as governor when his troops proclaimed him emperor?",
+      "options": [
+        "Lusitania, roughly modern Portugal",
+        "Hispania Tarraconensis in Spain",
+        "Judaea, around Jerusalem",
+        "The province of the lower Rhine"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#fall-of-nero",
+      "explanation": "Galba governed Hispania Tarraconensis, the largest province in Spain. His troops proclaimed him emperor in early April 68.",
+      "sourceQuote": "He found one in Galba, the elderly and childless governor of Hispania Tarraconensis, the largest province in Spain.",
+      "reviewFlags": []
+    }
+  ]
+}

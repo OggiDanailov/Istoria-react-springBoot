@@ -1,0 +1,179 @@
+{
+  "batchName": "Empire: The Year of Four Emperors and the Flavians (AD 69-96) - Easy Batch 1",
+  "chapterName": "Empire: The Year of Four Emperors and the Flavians (AD 69-96)",
+  "difficulty": 1,
+  "batchOrder": 1,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "How did Vespasian die in 79?",
+      "options": [
+        "Assassinated by court officials",
+        "Of natural causes",
+        "By suicide after a lost battle",
+        "Killed by the Praetorian Guard"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#vespasian-reign",
+      "explanation": "Vespasian died of natural causes on 23 June 79. After the violent deaths of three emperors in 69, that was a striking end.",
+      "sourceQuote": "He died of natural causes on 23 June 79.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Where in Rome was Galba killed in January 69?",
+      "options": [
+        "On the Palatine Hill",
+        "On the Capitoline Hill",
+        "In the Forum",
+        "In the Praetorian camp"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#galba",
+      "explanation": "Soldiers killed Galba and his heir in the Forum, Rome's great public square, on 15 January 69. Their heads were stuck on poles.",
+      "sourceQuote": "Otho, an ambitious nobleman who had expected the honour, bribed the Guard, and on 15 January 69 soldiers killed Galba and his heir in the Forum, Rome's great public square, and stuck their heads on poles.",
+      "reviewFlags": []
+    },
+    {
+      "question": "On which annual fast do Jews still mourn the destruction of Jerusalem by Titus's army?",
+      "options": [
+        "Passover",
+        "Yom Kippur",
+        "Purim",
+        "Tisha B'Av"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#siege-of-jerusalem",
+      "explanation": "The destruction is mourned each year on the fast of Tisha B'Av. The city had been crowded with Passover pilgrims when the siege began.",
+      "sourceQuote": "Jews still mourn the destruction each year on the fast of Tisha B'Av.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which of Vespasian's taxes is traditionally linked to the saying \"money does not smell\"?",
+      "options": [
+        "A tax on perfume sellers",
+        "A tax on tanneries",
+        "A tax on Egyptian grain",
+        "A tax on urine from public toilets"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#vespasian-reign",
+      "explanation": "Vespasian taxed urine collected from public toilets, and tradition links this to \"pecunia non olet\". He found an empty treasury when he reached Rome in 70.",
+      "sourceQuote": "Tradition links this tax to the famous saying \"money does not smell\" (*pecunia non olet*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "How long did the games that opened the completed Colosseum in 80 last?",
+      "options": [
+        "A hundred days",
+        "Three days",
+        "A full year",
+        "Seven days"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#titus",
+      "explanation": "Titus opened the Colosseum with games lasting a hundred days. They included mock sea battles in the flooded arena.",
+      "sourceQuote": "That year he completed the Colosseum, opening it with games lasting a hundred days, with gladiators, animal fights and mock sea battles in the flooded arena.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What was Domitian's relationship to Vespasian?",
+      "options": [
+        "His elder son",
+        "His adopted heir",
+        "His younger son",
+        "His brother"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#domitian",
+      "explanation": "Domitian was Vespasian's younger son. He became emperor the day after his brother Titus died in 81.",
+      "sourceQuote": "Domitian, Vespasian's younger son, who had escaped Rome disguised as a worshipper of Isis in 69, became emperor the day after his brother Titus died in 81.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How long did Otho, who succeeded Galba in 69, reign?",
+      "options": [
+        "Nearly fifteen years",
+        "Barely three weeks",
+        "About two years",
+        "Little more than three months"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#the-nobleman-emperor",
+      "explanation": "He reigned for little more than three months. After his army lost at the First Battle of Bedriacum, he took his own life rather than drag out the war.",
+      "sourceQuote": "He had reigned for little more than three months.",
+      "reviewFlags": []
+    },
+    {
+      "question": "When was Pompeii, buried by the eruption of 79, rediscovered?",
+      "options": [
+        "1748",
+        "1348",
+        "1598",
+        "1848"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#titus",
+      "explanation": "Pompeii was rediscovered in 1748, after lying lost for nearly 1,700 years. It had been buried under metres of stone and ash.",
+      "sourceQuote": "Pompeii stayed lost for nearly 1,700 years until it was rediscovered in 1748.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Before the Rhine legions made him emperor, what was Vitellius best known as?",
+      "options": [
+        "A famous chariot racer",
+        "A ruthless tax collector",
+        "A penniless glutton",
+        "A hero of the invasion of Britain"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#vitellius",
+      "explanation": "When Galba sent him to the lower Rhine in late 68, Vitellius was best known as a penniless glutton. His soldiers, who hated Galba, still proclaimed him emperor on 2 January 69.",
+      "sourceQuote": "When Galba sent him to govern the lower Rhine in late 68, he was best known as a penniless glutton.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which volcano erupted on 24 August 79, early in Titus's reign?",
+      "options": [
+        "Vesuvius",
+        "Stromboli",
+        "Vulcano",
+        "Etna"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#titus",
+      "explanation": "Vesuvius, above the Bay of Naples, erupted barely two months into Titus's reign. It buried Pompeii and Herculaneum.",
+      "sourceQuote": "Barely two months into his reign, on 24 August 79, Vesuvius, the volcano above the Bay of Naples, erupted.",
+      "reviewFlags": []
+    }
+  ]
+}
