@@ -539,7 +539,8 @@
         "level": "teutoburg",
         "intro": "Three legions march through dark forest in pouring rain. The Germanic tribes are waiting."
       },
-      "locked": true
+      "locked": true,
+      "maxNames": 8
     },
     {
       "id": "tiberius-and-caligula",
@@ -567,7 +568,8 @@
         "level": "idistaviso",
         "intro": "Germanicus leads eight legions across the Rhine to avenge the Teutoburg Forest."
       },
-      "locked": true
+      "locked": true,
+      "maxNames": 8
     },
     {
       "id": "claudius-and-nero",
@@ -595,7 +597,8 @@
         "level": "boudica",
         "intro": "Britain is burning. The governor has fewer than 10,000 men and a narrow pass with woods behind it."
       },
-      "locked": true
+      "locked": true,
+      "maxNames": 8
     },
     {
       "id": "four-emperors-and-flavians",
@@ -623,7 +626,8 @@
         "level": "jerusalem",
         "intro": "Titus must break through Jerusalem’s walls, one after another."
       },
-      "locked": true
+      "locked": true,
+      "maxNames": 8
     },
     {
       "id": "five-good-emperors",
@@ -643,7 +647,8 @@
       },
       "short": "Five Good Emperors",
       "era": "empire",
-      "mapArea": "wide"
+      "mapArea": "wide",
+      "maxNames": 8
     },
     {
       "id": "severans-and-crisis",
@@ -662,7 +667,8 @@
       },
       "short": "The Third-Century Crisis",
       "era": "empire",
-      "mapArea": "wide"
+      "mapArea": "wide",
+      "maxNames": 8
     },
     {
       "id": "diocletian-and-constantine",
@@ -681,7 +687,8 @@
       },
       "short": "Diocletian and Constantine",
       "era": "empire",
-      "mapArea": "wide"
+      "mapArea": "wide",
+      "maxNames": 8
     },
     {
       "id": "constantines-sons-to-theodosius",
@@ -700,7 +707,8 @@
       },
       "short": "To Theodosius",
       "era": "empire",
-      "mapArea": "wide"
+      "mapArea": "wide",
+      "maxNames": 8
     },
     {
       "id": "fall-of-the-west",
@@ -719,7 +727,8 @@
       },
       "short": "Fall of the West",
       "era": "empire",
-      "mapArea": "wide"
+      "mapArea": "wide",
+      "maxNames": 8
     }
   ]
 }

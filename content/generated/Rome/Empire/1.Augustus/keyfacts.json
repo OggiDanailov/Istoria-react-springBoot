@@ -25,6 +25,21 @@
       "name": "Julia",
       "text": "Augustus’s only child, married to Agrippa.",
       "sec": "succession-and-death"
+    },
+    {
+      "name": "Cleopatra",
+      "text": "Queen of Egypt, Antony’s ally and lover; died in 30 BC.",
+      "sec": "actium"
+    },
+    {
+      "name": "Arminius",
+      "text": "Cherusci chieftain who destroyed three legions in AD 9.",
+      "sec": "teutoburg-forest"
+    },
+    {
+      "name": "Varus",
+      "text": "The governor who led the legions into the trap.",
+      "sec": "teutoburg-forest"
     }
   ],
   "dates": [

@@ -30,6 +30,16 @@
       "name": "Tacitus",
       "text": "The senator-historian whose Annals tell this story most fully.",
       "sec": "judging-the-sources"
+    },
+    {
+      "name": "Seneca",
+      "text": "Stoic philosopher, Nero’s tutor and adviser; forced to kill himself in AD 65.",
+      "sec": "nero-early-reign"
+    },
+    {
+      "name": "Messalina",
+      "text": "Claudius’s third wife; executed in AD 48.",
+      "sec": "claudius-wives-and-death"
     }
   ],
   "dates": [

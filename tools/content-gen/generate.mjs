@@ -188,7 +188,7 @@ Structure:
 Style:
 - Write for the general public, in the style of good popular history (a well-written magazine feature or popular history book), not academic writing. Clear, vivid, concrete prose for curious adults with no background in the period. Short paragraphs. No bullet lists, no headings inside sections.
 - Use at most one or two unfamiliar terms per sentence, and never pack lists of technical items into one sentence.
-- Name at most 5 people in the whole chapter: only those a reader should remember. Describe everyone else by role ("a tribune", "a senator", "the consuls of that year"), never by name.
+- Name at most __MAX_NAMES__ people in the whole chapter: only those a reader should remember. Describe everyone else by role ("a tribune", "a senator", "the consuls of that year"), never by name.
 - Use the short form of Roman names that a reader can hold on to ("Appius Claudius", "Menenius Agrippa", "Camillus"), not the full three-part name. Introduce each named person with what makes them memorable ("Menenius Agrippa, the senator who ended the strike with a fable"), and mention them again where they matter rather than only once.
 - Keep a specialist term (Latin titles, objects, offices, rituals) only if it is iconic or important to understanding the period, and then explain it. Otherwise describe in plain words what the thing was or did. E.g. instead of "insignia were twelve lictors carrying the fasces, a curule seat, red shoes, a white diadem and the toga picta", write that twelve attendants walked ahead of the king carrying the fasces, a bundle of rods around an axe that symbolised his power to punish, and that he sat on a special ivory chair and wore a purple robe embroidered with gold.
 - Explain every name a newcomer wouldn't know the first time it appears in the chapter: places, peoples and tribes, institutions, offices, Latin or Greek terms. Use 3-10 words woven into the sentence, not brackets or footnotes (e.g. "Alba Longa, a Latin town in the hills south-east of Rome"; "the Sabines, a hill people living north-east of Rome"). Such basic, uncontroversial identifications may go slightly beyond the sources, but must be accurate. Don't re-explain a term later in the chapter, and don't explain everyday words like "king" or "Rome".
@@ -569,7 +569,8 @@ async function processChapter(client, chapter) {
 
   // 1. Chapter text
   const { sections } = ChapterText.parse(await timed('chapter text written', () => callClaude(client, {
-    system: TEXT_SYSTEM,
+    // later eras are crowded with famous people, so a chapter can allow more names (chapters.json maxNames)
+    system: TEXT_SYSTEM.replace('__MAX_NAMES__', chapter.maxNames ?? 5),
     content: [...sourceBlocks(docs), { type: 'text', text: `Chapter: ${chapter.chapterName}\nPeriod: ${chapter.period}` }],
     schema: chapterTextSchema,
     effort: 'high',

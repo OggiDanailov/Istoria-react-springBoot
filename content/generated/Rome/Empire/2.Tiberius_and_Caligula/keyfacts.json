@@ -25,6 +25,11 @@
       "name": "Incitatus",
       "text": "Caligula’s racehorse, “Speedy”.",
       "sec": "horse-bridge-god"
+    },
+    {
+      "name": "Arminius",
+      "text": "The Cherusci war leader Germanicus fought for three years.",
+      "sec": "germanicus"
     }
   ],
   "dates": [

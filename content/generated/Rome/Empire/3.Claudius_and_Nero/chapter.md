@@ -6,7 +6,7 @@ Claudius was born in 10 BC at Lugdunum, modern Lyon in France, the first Roman e
 
 His family treated him with contempt. His mother called him a monster and used him as her yardstick for stupidity. A former mule-driver was hired to discipline him, on the theory that his condition came from laziness.
 
-Yet Claudius had a sharp mind. Rome's most famous historian tutored him, and he became a serious scholar. He wrote twenty books on the Etruscans, the people who had ruled much of Italy before Rome, eight on Carthage and even one on dice. His early history of Rome's civil wars was too frank for his family, who stopped it and kept him out of public life.
+Yet Claudius had a sharp mind. Livy, Rome's most famous historian, tutored him, and he became a serious scholar. He wrote twenty books on the Etruscans, the people who had ruled much of Italy before Rome, eight on Carthage and even one on dice. His early history of Rome's civil wars was too frank for his family, who stopped it and kept him out of public life.
 
 Only in AD 37 did he hold a top office, serving as consul (*consul*), one of the two highest magistrates, alongside his nephew, the reigning emperor, who mocked and humiliated him. Claudius later claimed he had exaggerated his ailments to stay alive. It may have worked: in an age of purges, nobody saw him as a threat. Modern doctors have guessed at polio, cerebral palsy or Tourette syndrome.
 
@@ -36,23 +36,23 @@ Under Claudius the empire made its first major conquests in decades, and the gre
 
 Once the first fighting was over, Claudius crossed over himself with reinforcements. Ancient writers claimed he brought elephants, a story modern historians doubt. He spent just sixteen days on the island. Camulodunum, modern Colchester, became a colony (*colonia*), a settlement of retired soldiers, and the capital of the new province, with a great temple dedicated to Claudius.
 
-Back in Rome, the Senate voted him a triumph (*triumphus*), the grand victory parade through the city. He was offered the title "Britannicus", conqueror of Britain, but took it only for his baby son, who became known by that name. When a leading British war chief was captured in AD 50, Claudius spared him, and he lived out his life on land provided by Rome, a rare mercy for a defeated enemy. The conquest also left a legacy of resentment that would explode under Claudius's successor.
+Back in Rome, the Senate voted him a triumph (*triumphus*), the grand victory parade through the city. He was offered the title "Britannicus", conqueror of Britain, but took it only for his baby son, who became known by that name. When Caratacus, a leading British war chief, was captured in AD 50, Claudius spared him, and he lived out his life on land provided by Rome, a rare mercy for a defeated enemy. The conquest also left a legacy of resentment that would explode under Claudius's successor.
 
 ## Wives, Heirs and a Poisoned Dish {#claudius-wives-and-death}
 
-Claudius married four times, and ancient writers mocked him as a man ruled by women. His third wife, a young cousin, was portrayed by later historians as wildly unfaithful. In AD 48, while Claudius was away at Ostia, she publicly married her lover, a senator. Whether this was a plot to seize the throne is still debated. She was executed.
+Claudius married four times, and ancient writers mocked him as a man ruled by women. His third wife, Messalina, a young cousin, was portrayed by later historians as wildly unfaithful. In AD 48, while Claudius was away at Ostia, she publicly married her lover, a senator. Whether this was a plot to seize the throne is still debated. She was executed.
 
 Claudius then married his own niece, Agrippina, a great-granddaughter of the first emperor. Ancient writers said she won him with her charms. Modern historians see politics: Claudius needed the prestige of her bloodline, and his son Britannicus was still a child. In AD 50 he adopted Agrippina's son, renamed him Nero, married him to his daughter and made him joint heir.
 
 Claudius died on 13 October AD 54, aged 63. Nearly all ancient writers blamed Agrippina, saying she poisoned him with mushrooms, or with a feather pushed down his throat to make him vomit. Her motive, they said, was that Claudius had begun talking about his own son coming of age. Some modern historians doubt the murder. Claudius had been seriously ill, his food taster kept his job under Nero, and AD 54 was an unhealthy year in Rome.
 
-Nero and the Senate declared Claudius a god. Yet Nero's tutor, a philosopher, soon wrote a cruel satire turning him into a figure of fun.
+Nero and the Senate declared Claudius a god. Yet Nero's tutor, the philosopher Seneca, soon wrote a cruel satire turning him into a figure of fun.
 
 ## Nero's Promising Start and His Mother's Murder {#nero-early-reign}
 
 Nero was born Lucius Domitius Ahenobarbus on 15 December AD 37 at Antium, a seaside town south of Rome. Through his mother, Agrippina, he descended from the first emperor. When his stepfather Claudius died in AD 54, the Praetorian Guard and the Senate backed the 16-year-old as emperor.
 
-His first speech, written by his tutor, a Stoic philosopher, promised respect for the Senate and an end to secret trials and powerful palace favourites. Agrippina meant to rule through her son, and her portrait even appeared on his coins in the place normally reserved for the emperor. But Nero's tutor and the commander of the guard steered government, and these years were later remembered as "Nero's five good years" (*quinquennium Neronis*). Tax collectors were placed under stricter control, and slaves were allowed to complain about mistreatment.
+His first speech, written by his tutor Seneca, a Stoic philosopher, promised respect for the Senate and an end to secret trials and powerful palace favourites. Agrippina meant to rule through her son, and her portrait even appeared on his coins in the place normally reserved for the emperor. But Nero's tutor and the commander of the guard steered government, and these years were later remembered as "Nero's five good years" (*quinquennium Neronis*). Tax collectors were placed under stricter control, and slaves were allowed to complain about mistreatment.
 
 The family was deadly. In AD 55 Claudius's son Britannicus was poisoned after Agrippina threatened to back him. In AD 59 Nero had his mother killed: according to ancient writers, a freedman arranged a shipwreck, and when she swam ashore he murdered her and called it suicide. Tacitus, the senator-historian whose Annals give the fullest account of Nero, blamed Nero's mistress. Modern historians doubt this, since he married her only three years later.
 
@@ -84,7 +84,7 @@ Rome was rebuilt with brick houses on wider streets. To pay for it, Nero raised 
 
 Nero loved the arts. He sang, played the cithara, a kind of large lyre, acted in tragedies and drove chariots, all activities Romans associated with slaves and entertainers. The aristocracy was scandalised, but ordinary people loved his shows. In AD 67 he competed at the Olympic Games in Greece and won every contest, including a chariot race in which he fell out and never finished.
 
-At home, plots multiplied. In AD 65 a conspiracy of senators and guard officers was betrayed, and its members were executed. Nero's old tutor, a philosopher, was ordered to kill himself.
+At home, plots multiplied. In AD 65 a conspiracy of senators and guard officers was betrayed, and its members were executed. Nero's old tutor Seneca was ordered to kill himself.
 
 In March AD 68 the governor of part of Gaul rebelled against Nero's taxes and urged the governor of Spain to claim the throne. The rebellion in Gaul was crushed, but support for the governor of Spain grew, and even the commander of the Praetorian Guard, the emperor's bodyguard, abandoned Nero. The Senate declared Nero a public enemy (*hostis publicus*).
 

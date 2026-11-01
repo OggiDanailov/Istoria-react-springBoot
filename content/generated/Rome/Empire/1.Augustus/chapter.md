@@ -6,15 +6,15 @@ The man who became Rome's first emperor was born Gaius Octavius in 63 BC, into a
 
 He moved with startling boldness. He used Caesar's money and his own to win over the dead dictator's veterans, raised a private army, and in 43 BC marched on Rome, becoming consul at just 19.
 
-He then joined forces with Mark Antony, Caesar's former right-hand man, and a third Caesarian general. The three formed a triumvirate, a three-man board with legal power to rule and to hunt down Caesar's assassins. Their first act was a purge. About 300 senators and wealthy businessmen were declared outlaws, and thousands more lost their property. In 42 BC Antony and Octavian crushed the assassins' armies at Philippi in Macedonia, in northern Greece.
+He then joined forces with Mark Antony, Caesar's former right-hand man, and a third Caesarian general, Lepidus. The three formed a triumvirate, a three-man board with legal power to rule and to hunt down Caesar's assassins. Their first act was a purge. About 300 senators and wealthy businessmen were declared outlaws, and thousands more lost their property. In 42 BC Antony and Octavian crushed the assassins' armies at Philippi in Macedonia, in northern Greece.
 
 ## Actium and the Conquest of Egypt {#actium}
 
-After Philippi the victors carved up the Roman world. Mark Antony took the rich East, where he became the ally and lover of the queen of Egypt. Octavian took the West, including Italy itself.
+After Philippi the victors carved up the Roman world. Mark Antony took the rich East, where he became the ally and lover of Cleopatra, the queen of Egypt. Octavian took the West, including Italy itself.
 
 Octavian was no great general, but he had Agrippa, his loyal friend and gifted commander. In 36 BC Agrippa destroyed the fleet of a renegade admiral whose blockades had starved Italy. The third member of the triumvirate tried to seize Sicily, but his troops deserted him and he was forced into retirement.
 
-That left two men. Octavian waged a fierce propaganda war, accusing Antony of abandoning his Roman wife, Octavian's own sister, for a foreign queen and of giving away Roman lands to her children. In 32 BC the Senate declared war on the Egyptian queen.
+That left two men. Octavian waged a fierce propaganda war, accusing Antony of abandoning his Roman wife, Octavian's own sister, for a foreign queen and of giving away Roman lands to her children. In 32 BC the Senate declared war on Cleopatra.
 
 The decisive clash came on 2 September 31 BC at Actium, a bay on the western coast of Greece. Agrippa's fleet won, and the queen and then Antony fled. A year later, as Octavian's army reached Alexandria, Antony and the queen both took their own lives. Egypt became Octavian's personal property, and its treasure paid off his war debts. Senators were even forbidden to travel there.
 
@@ -68,9 +68,9 @@ Inside the empire, major wars largely ceased. This era of calm became known as t
 
 ## Disaster in the Teutoburg Forest {#teutoburg-forest}
 
-Augustus's expansion met its limit in Germany, the lands beyond the Rhine. By AD 9 Roman control seemed secure, and the governor there was a politician rather than a soldier.
+Augustus's expansion met its limit in Germany, the lands beyond the Rhine. By AD 9 Roman control seemed secure, and the governor there, Varus, was a politician rather than a soldier.
 
-His trusted adviser was a Germanic chieftain of the Cherusci tribe who had been raised as a hostage in Rome and served as a Roman officer. Secretly he built an alliance of tribes. He fed the governor false reports of a revolt and persuaded him to march three legions home by an unfamiliar route.
+His trusted adviser was Arminius, a Germanic chieftain of the Cherusci tribe who had been raised as a hostage in Rome and served as a Roman officer. Secretly he built an alliance of tribes. He fed the governor false reports of a revolt and persuaded him to march three legions home by an unfamiliar route.
 
 Between 8 and 11 September AD 9, in thick forest and pouring rain, the Germanic warriors struck. The Roman column, strung out over 15 to 20 km (9 to 12 miles), was attacked again and again. Near Kalkriese, in northern Germany, the survivors were trapped in a gap only about 100 metres (330 feet) wide between a hill and a bog, behind a hidden earthen wall. Between 15,000 and 20,000 Romans died; the governor killed himself.
 
@@ -84,7 +84,7 @@ His nephew, married to Augustus's only child Julia, died young in 23 BC. Julia w
 
 That left Tiberius, the elder son of Augustus's wife from her first marriage, a hard-working general who had won victories in Germany and the Balkans. In AD 4 Augustus adopted him, and by AD 13 Tiberius held powers equal to his own.
 
-Augustus died at Nola, near Naples, on 19 August AD 14, aged 75. Two ancient historians claimed his wife poisoned him, perhaps with a fig, but many modern historians dismiss this as slander. His last words were reportedly "The play is over; applaud" (*Acta est fabula, plaudite*). The Senate declared him a god, and his own account of his deeds (*Res Gestae*) was inscribed in bronze before his tomb.
+Augustus died at Nola, near Naples, on 19 August AD 14, aged 75. Two ancient historians claimed his wife, Livia, poisoned him, perhaps with a fig, but many modern historians dismiss this as slander. His last words were reportedly "The play is over; applaud" (*Acta est fabula, plaudite*). The Senate declared him a god, and his own account of his deeds (*Res Gestae*) was inscribed in bronze before his tomb.
 
 ## Hero or Tyrant? The Historians' Verdict {#verdicts}
 

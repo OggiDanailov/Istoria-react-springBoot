@@ -20,7 +20,7 @@ Still, he was an efficient administrator. He avoided costly conquests, strengthe
 
 Germanicus, nephew and adopted son of the emperor Tiberius, was the most admired Roman of his generation: charming, popular and a gifted general. In AD 13 he took command of the eight legions on the Rhine, Rome's frontier river with Germany, about a third of the whole army.
 
-When Augustus died in AD 14, those legions mutinied over unpaid bonuses and tried to proclaim Germanicus emperor. He refused, paid them out of his own pocket, and led them into Germany. For three years he fought the war leader who in AD 9 had wiped out three Roman legions in the Teutoburg Forest. Germanicus visited the battlefield, began burying the soldiers' remains, and recovered two of the three lost eagles (*aquilae*), the sacred standards of the legions.
+When Augustus died in AD 14, those legions mutinied over unpaid bonuses and tried to proclaim Germanicus emperor. He refused, paid them out of his own pocket, and led them into Germany. For three years he fought Arminius, the war leader who in AD 9 had wiped out three Roman legions in the Teutoburg Forest. Germanicus visited the battlefield, began burying the soldiers' remains, and recovered two of the three lost eagles (*aquilae*), the sacred standards of the legions.
 
 On 26 May AD 17 he celebrated a triumph (*triumphus*), a victory parade through Rome. Sent east as Tiberius's expected successor, he quarrelled bitterly with the governor of Syria. In October AD 19 he fell ill at Antioch, Syria's chief city, and died convinced he had been poisoned. The governor killed himself before his trial ended, and rumours that Tiberius was behind it all never faded.
 
@@ -76,7 +76,7 @@ Ordinary Romans, with whom Caligula had been popular, were shocked. The new empe
 
 ## Gloomy Tyrant, Mad Emperor? What Historians Think {#what-historians-think}
 
-Nearly everything we know about Tiberius and Caligula comes from senators and officials writing long afterwards, men with little love for emperors. The fullest account of Tiberius, by a senator-historian born in AD 56, paints him as a hypocrite whose character darkened by stages after his son's death in AD 23. A later biographer delights in scandal. An officer who served under Tiberius praised him lavishly, though whether from admiration or prudence is unclear.
+Nearly everything we know about Tiberius and Caligula comes from senators and officials writing long afterwards, men with little love for emperors. The fullest account of Tiberius, by Tacitus, a senator-historian born in AD 56, paints him as a hypocrite whose character darkened by stages after his son's death in AD 23. A later biographer delights in scandal. An officer who served under Tiberius praised him lavishly, though whether from admiration or prudence is unclear.
 
 Modern scholars push back. One counted no more than 52 people accused of treason in Tiberius's 22-year reign, nearly half of whom escaped conviction.
 
