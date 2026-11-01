@@ -1,0 +1,145 @@
+{
+  "batchName": "Empire: Tiberius and Caligula (AD 14-41) - Latin words",
+  "chapterName": "Empire: Tiberius and Caligula (AD 14-41)",
+  "difficulty": 1,
+  "batchOrder": 9,
+  "description": "Written by hand from the chapter text: the Latin words it explains",
+  "questions": [
+    {
+      "question": "What did the soldiers’ nickname Caligula mean?",
+      "options": [
+        "“Little boot”",
+        "“Little soldier”",
+        "“Little eagle”",
+        "“Little king”"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#caligula-rise",
+      "explanation": "As a toddler he wore a miniature uniform with little army boots (caligae).",
+      "sourceQuote": "the soldiers nicknamed him Caligula, \"little boot\".",
+      "reviewFlags": []
+    },
+    {
+      "question": "What were the aquilae that Germanicus recovered?",
+      "options": [
+        "The eagles, the sacred standards of the legions",
+        "Treasure chests",
+        "Captured German chiefs",
+        "Roman prisoners"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#germanicus",
+      "explanation": "Two of the three eagles lost in the Teutoburg Forest came home.",
+      "sourceQuote": "recovered two of the three lost eagles (*aquilae*), the sacred standards of the legions.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What was a triumphus, like the one Germanicus celebrated in AD 17?",
+      "options": [
+        "A victory parade through Rome",
+        "A chariot race",
+        "A temple to a general",
+        "A gift of land to soldiers"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#germanicus",
+      "explanation": "Germanicus celebrated his on 26 May AD 17.",
+      "sourceQuote": "he celebrated a triumph (*triumphus*), a victory parade through Rome.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Sejanus was praefectus praetorio. What was that?",
+      "options": [
+        "Commander of the Praetorian Guard",
+        "Governor of Syria",
+        "Chief priest",
+        "Admiral of the fleet"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#sejanus",
+      "explanation": "The Guard was the emperor’s bodyguard, and Tiberius moved it into Rome itself.",
+      "sourceQuote": "Sejanus became praetorian prefect (*praefectus praetorio*) in AD 15",
+      "reviewFlags": []
+    },
+    {
+      "question": "What was the corona civica that Tiberius refused?",
+      "options": [
+        "An oak-leaf wreath of honour",
+        "A golden crown",
+        "A laurel wreath for victory",
+        "A purple robe"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#reluctant-emperor",
+      "explanation": "He also refused the title Father of the Fatherland.",
+      "sourceQuote": "the Civic Crown (*corona civica*), an oak-leaf wreath of honour.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Caligula reopened old maiestas trials in AD 39. What was the charge?",
+      "options": [
+        "Treason",
+        "Murder",
+        "Theft",
+        "Bribery"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#caligula-turn",
+      "explanation": "He had claimed he had burned Tiberius’s files without reading them.",
+      "sourceQuote": "Tiberius's files on treason (*maiestas*) trials",
+      "reviewFlags": []
+    },
+    {
+      "question": "What would damnatio memoriae have done to Caligula?",
+      "options": [
+        "Condemned his memory",
+        "Made him a god",
+        "Buried him with Augustus",
+        "Freed his slaves"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#assassination",
+      "explanation": "His uncle, the new emperor, refused, though many statues were quietly recarved.",
+      "sourceQuote": "condemn his memory (*damnatio memoriae*)",
+      "reviewFlags": []
+    },
+    {
+      "question": "The new emperor refused to declare Caligula a hostis. What is a hostis?",
+      "options": [
+        "A public enemy",
+        "A god",
+        "A traitor’s heir",
+        "A foreign king"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#assassination",
+      "explanation": "He executed the assassins instead.",
+      "sourceQuote": "refused to declare his nephew a public enemy (*hostis*)",
+      "reviewFlags": []
+    }
+  ]
+}

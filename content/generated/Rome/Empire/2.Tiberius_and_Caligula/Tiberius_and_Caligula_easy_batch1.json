@@ -1,0 +1,179 @@
+{
+  "batchName": "Empire: Tiberius and Caligula (AD 14-41) - Easy Batch 1",
+  "chapterName": "Empire: Tiberius and Caligula (AD 14-41)",
+  "difficulty": 1,
+  "batchOrder": 1,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "In 6 BC, on the verge of becoming Rome's second most powerful man, where did Tiberius abruptly retire?",
+      "options": [
+        "Sicily",
+        "Crete",
+        "Rhodes",
+        "Capri"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#tiberius-before-power",
+      "explanation": "Tiberius withdrew to Rhodes, a Greek island off the coast of modern Turkey. Historians still debate why he walked away at that moment.",
+      "sourceQuote": "In 6 BC, on the verge of becoming the second most powerful man in Rome, he abruptly retired to Rhodes, a Greek island off the coast of modern Turkey.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What unprecedented honour did Caligula give his beloved sister after her death in AD 38?",
+      "options": [
+        "He named a province after her",
+        "He made her a goddess",
+        "He put her face on every coin",
+        "He buried her in Augustus's mausoleum"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#caligula-turn",
+      "explanation": "Caligula declared his sister a goddess. She was the first Roman woman to receive that honour.",
+      "sourceQuote": "That year his beloved sister died, and he made her a goddess, the first Roman woman so honoured.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Who wrote nearly all the surviving accounts of Tiberius and Caligula?",
+      "options": [
+        "Senators and officials writing long afterwards",
+        "Palace servants writing at the time",
+        "Christian monks of the Middle Ages",
+        "The emperors themselves in memoirs"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#what-historians-think",
+      "explanation": "Most of our information comes from senators and officials writing long after the events, men with little love for emperors. That bias shapes the image of both rulers.",
+      "sourceQuote": "Nearly everything we know about Tiberius and Caligula comes from senators and officials writing long afterwards, men with little love for emperors.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Ancient writers agree on when and where Tiberius died. What do they disagree about?",
+      "options": [
+        "Who succeeded him",
+        "Where he was buried",
+        "How he died",
+        "Which year he died"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#death-of-tiberius",
+      "explanation": "He died on 16 March AD 37 at Misenum, but accounts of how vary. Some say he was smothered, some blame Caligula, and some contemporaries describe a natural death.",
+      "sourceQuote": "Ancient writers agree on when and where, but not how.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did Tiberius mainly protect the empire's borders as emperor?",
+      "options": [
+        "Abandoning the northern provinces",
+        "New frontier bases and diplomacy",
+        "Costly wars of conquest",
+        "Paying tribute to German tribes"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#reluctant-emperor",
+      "explanation": "Tiberius avoided expensive conquests and strengthened the frontiers with bases and diplomacy instead. Whatever senators thought of him, he was an efficient administrator.",
+      "sourceQuote": "He avoided costly conquests, strengthening the frontiers with new bases and diplomacy instead.",
+      "reviewFlags": []
+    },
+    {
+      "question": "When Augustus died in AD 14, what did the mutinous Rhine legions try to do?",
+      "options": [
+        "Desert to the German tribes",
+        "Proclaim Tiberius dictator",
+        "Proclaim Germanicus emperor",
+        "March on Rome to restore the Republic"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#germanicus",
+      "explanation": "The Rhine legions, angry over unpaid bonuses, tried to make their commander Germanicus emperor. He refused.",
+      "sourceQuote": "When Augustus died in AD 14, those legions mutinied over unpaid bonuses and tried to proclaim Germanicus emperor.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Who murdered Caligula in AD 41?",
+      "options": [
+        "Soldiers of the Rhine legions",
+        "Agents of the governor of Syria",
+        "Officers of his own Praetorian Guard",
+        "His German bodyguards"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#assassination",
+      "explanation": "Caligula was stabbed by officers of his own Praetorian Guard. His German bodyguards arrived too late and killed several bystanders in their fury.",
+      "sourceQuote": "The killers were officers of his own Praetorian Guard.",
+      "reviewFlags": []
+    },
+    {
+      "question": "According to tradition, where was Caligula's uncle found before the Praetorians proclaimed him emperor?",
+      "options": [
+        "Hiding behind a palace curtain",
+        "Waiting at the Guard's camp",
+        "Praying in the Temple of Jupiter",
+        "Sitting in the Senate house"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#assassination",
+      "explanation": "Tradition says a guardsman found Caligula's uncle hiding behind a curtain in the palace. The Praetorians made him emperor and the Senate gave way.",
+      "sourceQuote": "According to tradition, a guardsman found Caligula's uncle hiding behind a palace curtain; the Praetorians proclaimed him emperor and the Senate gave way.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Why did Roman crowds chant \"To the Tiber with Tiberius!\" after his death?",
+      "options": [
+        "He had drowned in the Tiber",
+        "Criminals' bodies were thrown into the river",
+        "His villa stood on the Tiber's banks",
+        "He had ordered the river dredged"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#death-of-tiberius",
+      "explanation": "The crowds wanted his body treated like a criminal's and dumped in the river. The Senate also refused him the divine honours Augustus had received.",
+      "sourceQuote": "The Senate refused him the divine honours given to Augustus, and crowds chanted \"To the Tiber with Tiberius!\", because criminals' bodies were thrown into the river.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Where did Caligula order a statue of himself to be set up, a blasphemy for Jews?",
+      "options": [
+        "The great library of Alexandria",
+        "The temple at Smyrna",
+        "The Senate house in Rome",
+        "The Temple in Jerusalem"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#horse-bridge-god",
+      "explanation": "Caligula ordered his statue placed in the Temple in Jerusalem. He also enjoyed dressing up as gods, including Jupiter.",
+      "sourceQuote": "More dangerously, he ordered his statue set up in the Temple in Jerusalem, a blasphemy for Jews.",
+      "reviewFlags": []
+    }
+  ]
+}

@@ -558,7 +558,16 @@
       },
       "short": "Tiberius and Caligula",
       "era": "empire",
-      "mapArea": "wide"
+      "mapArea": "wide",
+      "battle": {
+        "name": "Germanicus in Germany",
+        "year": "AD 16",
+        "enemy": "the Cherusci",
+        "sec": "germanicus",
+        "level": "idistaviso",
+        "intro": "Germanicus leads eight legions across the Rhine to avenge the Teutoburg Forest."
+      },
+      "locked": true
     },
     {
       "id": "claudius-and-nero",

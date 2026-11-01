@@ -1,0 +1,189 @@
+{
+  "batchName": "Empire: Tiberius and Caligula (AD 14-41) - Medium Batch 2",
+  "chapterName": "Empire: Tiberius and Caligula (AD 14-41)",
+  "difficulty": 2,
+  "batchOrder": 4,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Caligula was murdered the day before he was due to leave for which city?",
+      "options": [
+        "Alexandria",
+        "Antioch",
+        "Jerusalem",
+        "Carthage",
+        "Athens"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#assassination",
+      "explanation": "On 24 January AD 41, the day before he was to set out for Alexandria, Caligula was stabbed in a passage beneath his palace during a festival of games.",
+      "sourceQuote": "On 24 January AD 41, the day before he was due to leave for Alexandria, Egypt's great city, the emperor Caligula was stabbed in a narrow passage beneath his palace during a festival of games.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Where did Germanicus fall ill and die in AD 19, convinced he had been poisoned?",
+      "options": [
+        "Jerusalem",
+        "Alexandria",
+        "Damascus",
+        "Antioch",
+        "Tarsus"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#germanicus",
+      "explanation": "Germanicus died at Antioch, Syria's chief city, after a bitter quarrel with the governor of Syria. Rumours that Tiberius was behind his death never faded.",
+      "sourceQuote": "In October AD 19 he fell ill at Antioch, Syria's chief city, and died convinced he had been poisoned.",
+      "reviewFlags": []
+    },
+    {
+      "question": "One modern scholar counted how many people accused of treason during Tiberius's 22-year reign?",
+      "options": [
+        "Exactly 22",
+        "Around 300",
+        "Over 1,000",
+        "About 5,000",
+        "No more than 52"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#what-historians-think",
+      "explanation": "The count was no more than 52, and nearly half escaped conviction. That challenges the ancient picture of a reign of terror.",
+      "sourceQuote": "One counted no more than 52 people accused of treason in Tiberius's 22-year reign, nearly half of whom escaped conviction.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did Germanicus end the mutiny of the Rhine legions in AD 14?",
+      "options": [
+        "He paid them out of his own pocket",
+        "He disbanded the legions",
+        "He asked Tiberius to send the Guard",
+        "He let them proclaim him emperor",
+        "He executed the ringleaders"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#germanicus",
+      "explanation": "Germanicus covered the troops' unpaid bonuses himself and then led them into Germany. He spent three years fighting the war leader behind the Teutoburg disaster.",
+      "sourceQuote": "He refused, paid them out of his own pocket, and led them into Germany.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Tiberius discouraged worship of himself, allowing only one temple in his honour. Where was it?",
+      "options": [
+        "Smyrna",
+        "Athens",
+        "Antioch",
+        "Ephesus",
+        "Pergamum"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#reluctant-emperor",
+      "explanation": "The single temple Tiberius allowed stood at Smyrna, a Greek city in western Turkey. This fits his general dislike of grand honours.",
+      "sourceQuote": "He also discouraged worship of himself, allowing just one temple in his honour, at Smyrna, a Greek city in western Turkey.",
+      "reviewFlags": []
+    },
+    {
+      "question": "A Jewish writer who visited Caligula's court called which period a \"Golden Age\"?",
+      "options": [
+        "The months after his illness",
+        "His childhood in the army camps",
+        "The final year before his murder",
+        "His years living on Capri",
+        "The first seven months of his reign"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#caligula-rise",
+      "explanation": "The writer praised the first seven months of Caligula's rule. That opening was marked by cash gifts, lavish games and a doubled Guard bonus.",
+      "sourceQuote": "A Jewish writer who later visited his court called the first seven months a \"Golden Age\".",
+      "reviewFlags": []
+    },
+    {
+      "question": "Why did moving the Praetorian Guard into Rome itself make Sejanus so powerful?",
+      "options": [
+        "It placed the imperial treasury in his barracks",
+        "It let him sit in the Senate as a consul",
+        "It gave him command of the Rhine legions",
+        "It put 6,000-9,000 soldiers under him inside the capital",
+        "It made him head of the city's grain supply"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#sejanus",
+      "explanation": "Once Tiberius moved the Guard from camps outside Rome into the city, Sejanus had thousands of soldiers in the capital. Tiberius came to call him \"partner of my labours\".",
+      "sourceQuote": "When the emperor Tiberius moved the Guard from camps outside Rome into the city itself, Sejanus gained between 6,000 and 9,000 soldiers inside the capital.",
+      "reviewFlags": []
+    },
+    {
+      "question": "After Caligula's murder, what did some senators talk of doing?",
+      "options": [
+        "Making Caligula's daughter empress",
+        "Restoring the Republic without emperors",
+        "Choosing a new emperor by public vote",
+        "Moving the capital to Alexandria",
+        "Recalling Germanicus's family from exile"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#assassination",
+      "explanation": "Some senators spoke of bringing back the Republic, but the Praetorians had other plans. They proclaimed Caligula's uncle emperor.",
+      "sourceQuote": "In the Senate, some spoke of restoring the Republic, government without emperors.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did senators interpret Tiberius's refusal of honours such as the Civic Crown?",
+      "options": [
+        "As an insult to Augustus's memory",
+        "As a sign he planned to restore the Republic",
+        "As hypocrisy rather than humility",
+        "As proof he was in poor health",
+        "As genuine modesty worth copying"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#reluctant-emperor",
+      "explanation": "Senators saw his refusals as hypocrisy, and relations soured. His vague instructions to the Senate made things worse.",
+      "sourceQuote": "Senators read this as hypocrisy, not humility, and relations soured.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Caligula's floating bridge of ships, over 3 km long, linked the resort of Baiae to which nearby port?",
+      "options": [
+        "Neapolis",
+        "Puteoli",
+        "Misenum",
+        "Ostia",
+        "Brundisium"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#horse-bridge-god",
+      "explanation": "The bridge ran from Baiae to Puteoli, and Caligula rode Incitatus across it. Its pointlessness may have been the point: a display of total power.",
+      "sourceQuote": "In AD 39 or 40 he built a floating bridge of ships more than 3 km (two miles) long, from Baiae, a seaside resort near Naples, to the nearby port of Puteoli.",
+      "reviewFlags": []
+    }
+  ]
+}

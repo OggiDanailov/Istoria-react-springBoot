@@ -1,0 +1,179 @@
+{
+  "batchName": "Empire: Tiberius and Caligula (AD 14-41) - Easy Batch 2",
+  "chapterName": "Empire: Tiberius and Caligula (AD 14-41)",
+  "difficulty": 1,
+  "batchOrder": 2,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "What did Germanicus recover from the Germans who had destroyed three legions in the Teutoburg Forest?",
+      "options": [
+        "All the captured Roman prisoners",
+        "The body of the fallen Roman general",
+        "The pay chests of the three legions",
+        "Two of the three lost eagle standards"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#germanicus",
+      "explanation": "Germanicus won back two of the three lost eagles, the legions' sacred standards. He also visited the battlefield and began burying the dead soldiers' remains.",
+      "sourceQuote": "Germanicus visited the battlefield, began burying the soldiers' remains, and recovered two of the three lost eagles (*aquilae*), the sacred standards of the legions.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What does the nickname \"Caligula\" mean?",
+      "options": [
+        "Little boot",
+        "Little soldier",
+        "Little Caesar",
+        "Little general"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#caligula-rise",
+      "explanation": "As a toddler in Germany, Gaius wore a miniature uniform with little army boots (caligae), so the soldiers called him Caligula. He was the son of the general Germanicus.",
+      "sourceQuote": "As a toddler on campaign in Germany he wore a miniature uniform with little army boots (*caligae*), and the soldiers nicknamed him Caligula, \"little boot\".",
+      "reviewFlags": []
+    },
+    {
+      "question": "What happened to Caligula in the autumn of AD 37, only months into his reign?",
+      "options": [
+        "He fell gravely ill for about a month",
+        "He was briefly deposed by the Senate",
+        "He led an army across the Rhine",
+        "He survived a Praetorian assassination plot"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#caligula-turn",
+      "explanation": "Caligula hovered near death for about a month. After he recovered, the killings began.",
+      "sourceQuote": "In the autumn of AD 37, only months into his reign, the emperor Caligula fell gravely ill and hovered near death for about a month.",
+      "reviewFlags": []
+    },
+    {
+      "question": "According to ancient writers, what office did Caligula plan to give his racehorse Incitatus?",
+      "options": [
+        "Praetorian prefect",
+        "Senator",
+        "Governor of Syria",
+        "Consul"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#horse-bridge-god",
+      "explanation": "Ancient writers say Caligula planned to make Incitatus (\"Speedy\") a consul, one of Rome's two highest annual officials. Most modern historians see this as a joke at the expense of senators who craved the honour.",
+      "sourceQuote": "Ancient writers say he planned to make it a consul, one of Rome's two highest annual officials.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did Sejanus command as praetorian prefect?",
+      "options": [
+        "The Praetorian Guard",
+        "The Rhine legions",
+        "The legions of Syria",
+        "The fleet at Misenum"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#sejanus",
+      "explanation": "From AD 15 Sejanus commanded the Praetorian Guard, the emperor's bodyguard. That post became the base of his enormous power.",
+      "sourceQuote": "Sejanus became praetorian prefect (*praefectus praetorio*) in AD 15, commanding the Praetorian Guard (*cohortes praetoriae*), the emperor's bodyguard.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How do many modern historians now view Caligula?",
+      "options": [
+        "As a puppet controlled by his praetorian prefect",
+        "As a young man with near-limitless power and a cruel wit",
+        "As a wise reformer slandered by his enemies",
+        "As a genuine lunatic driven mad by his illness"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#what-historians-think",
+      "explanation": "Many historians see a young man given near-limitless power, with a cruel sense of humour and open contempt for the Senate, rather than a madman. There is no reliable evidence of his mental state.",
+      "sourceQuote": "Many historians now see not a lunatic but a young man handed near-limitless power, with a cruel sense of humour and open contempt for the Senate.",
+      "reviewFlags": []
+    },
+    {
+      "question": "In AD 26, Tiberius left Rome for good. Where did he go?",
+      "options": [
+        "Capri",
+        "Rhodes",
+        "Sardinia",
+        "Sicily"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#sejanus",
+      "explanation": "Tiberius retired to his villas on Capri, an island in the Bay of Naples. With the emperor away, Sejanus ran the state.",
+      "sourceQuote": "In AD 26 Tiberius left Rome for good, retiring to his villas on Capri, an island in the Bay of Naples.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which honour did Tiberius refuse on becoming emperor?",
+      "options": [
+        "A seat in the Senate",
+        "Command of the Rhine legions",
+        "The title Father of the Fatherland",
+        "The title first citizen (princeps)"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#reluctant-emperor",
+      "explanation": "Tiberius turned down the title Father of the Fatherland and the Civic Crown, an oak-leaf wreath. He did accept the modest title of princeps, which the Senate confirmed in September AD 14.",
+      "sourceQuote": "He refused the title Father of the Fatherland (*pater patriae*) and the Civic Crown (*corona civica*), an oak-leaf wreath of honour.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did Caligula begin his reign in AD 37?",
+      "options": [
+        "Exiled the senators who had served Tiberius",
+        "Invaded Britain and annexed its southern tribes",
+        "Cut the Guard's pay to refill the treasury",
+        "Gave cash to every citizen and staged lavish games"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#caligula-rise",
+      "explanation": "Caligula's start was dazzling: cash handouts, lavish games and a doubled bonus for the Guard. A Jewish writer later called his first seven months a \"Golden Age\".",
+      "sourceQuote": "He doubled the Guard's bonus, gave cash to every citizen and staged lavish games.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did Tiberius become the stepson of Augustus?",
+      "options": [
+        "His mother divorced his father and married Augustus",
+        "Augustus adopted him after his father died in battle",
+        "Augustus raised him as a hostage from the Claudii",
+        "His father married Augustus's widowed sister"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#tiberius-before-power",
+      "explanation": "When Tiberius was a small child, his mother left his father and married Augustus. Tiberius himself came from the Claudii, one of Rome's oldest aristocratic families.",
+      "sourceQuote": "When he was a small child, his mother divorced his father and married Augustus, the man who would become Rome's first emperor.",
+      "reviewFlags": []
+    }
+  ]
+}

@@ -1,0 +1,627 @@
+{
+  "chapterName": "Empire: Tiberius and Caligula (AD 14-41)",
+  "model": "claude-opus-5-5",
+  "briefing": {
+    "title": "Rome, AD 14",
+    "paragraphs": [
+      "Augustus, Rome's first emperor, has just died. Power passes to his stepson Tiberius, a 55-year-old general from the ancient Claudii family who seems not to want the job. The senators distrust him, the legions on the Rhine are mutinying, and the whole city adores his dashing nephew and heir, Germanicus.",
+      "Over the next 27 years Rome will learn what an emperor can really do. A guard commander rules from the shadows, an old man hides away on Capri, and a young heir called Caligula is handed near-limitless power. Who will survive?"
+    ]
+  },
+  "timelines": [
+    {
+      "name": "Level 1: Rise and Fall",
+      "blurb": "Four turning points from Augustus's death to Caligula's murder.",
+      "events": [
+        {
+          "label": "Augustus dies; Tiberius takes over",
+          "when": "AD 14",
+          "year": 14,
+          "fact": "Augustus died on 19 August AD 14, and in September the Senate confirmed Tiberius as princeps, or first citizen.",
+          "sectionId": "reluctant-emperor",
+          "reviewFlags": []
+        },
+        {
+          "label": "Sejanus denounced and executed",
+          "when": "AD 31",
+          "year": 31,
+          "fact": "A letter from Tiberius denouncing Sejanus, commander of the Praetorian Guard, was read in the Senate, and he was executed within the week.",
+          "sectionId": "sejanus",
+          "reviewFlags": []
+        },
+        {
+          "label": "Tiberius dies at Misenum",
+          "when": "AD 37",
+          "year": 37,
+          "fact": "Tiberius died aged 77 at Misenum, a naval base on the Bay of Naples, though ancient writers disagree about how.",
+          "sectionId": "death-of-tiberius",
+          "reviewFlags": []
+        },
+        {
+          "label": "Caligula stabbed beneath his palace",
+          "when": "AD 41",
+          "year": 41,
+          "fact": "Officers of his own Praetorian Guard killed Caligula on 24 January AD 41, the day before he was due to leave for Alexandria.",
+          "sectionId": "assassination",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Level 2: Islands, Eagles and Madness",
+      "blurb": "Six events from Tiberius's retreat to Caligula's break with the Senate.",
+      "events": [
+        {
+          "label": "Tiberius retires to Rhodes",
+          "when": "6 BC",
+          "year": -6,
+          "fact": "On the verge of becoming Rome's second most powerful man, Tiberius abruptly withdrew to the Greek island of Rhodes; his motives are still debated.",
+          "sectionId": "tiberius-before-power",
+          "reviewFlags": []
+        },
+        {
+          "label": "Three legions lost in Teutoburg Forest",
+          "when": "AD 9",
+          "year": 9,
+          "fact": "A German war leader wiped out three Roman legions in the Teutoburg Forest, and Germanicus later fought him for three years.",
+          "sectionId": "germanicus",
+          "reviewFlags": []
+        },
+        {
+          "label": "Germanicus celebrates a triumph",
+          "when": "AD 17",
+          "year": 17,
+          "fact": "On 26 May AD 17 Germanicus held a triumph, a victory parade through Rome, after recovering two of the three lost eagles.",
+          "sectionId": "germanicus",
+          "reviewFlags": []
+        },
+        {
+          "label": "Tiberius leaves Rome for Capri",
+          "when": "AD 26",
+          "year": 26,
+          "fact": "Tiberius retired for good to his villas on Capri, leaving Sejanus to run the state and control messages to the capital.",
+          "sectionId": "sejanus",
+          "reviewFlags": []
+        },
+        {
+          "label": "Caligula falls gravely ill",
+          "when": "Autumn AD 37",
+          "year": 37,
+          "fact": "Only months into his reign Caligula hovered near death for about a month; after he recovered, the killings began.",
+          "sectionId": "caligula-turn",
+          "reviewFlags": []
+        },
+        {
+          "label": "Caligula's break with the Senate",
+          "when": "AD 39",
+          "year": 39,
+          "fact": "Caligula reopened old treason cases and told senators that since they hated him, it was better they feared him.",
+          "sectionId": "caligula-turn",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Level 3: The Family Saga",
+      "blurb": "Eight steps in the lives of Tiberius, Germanicus, Sejanus and Caligula.",
+      "events": [
+        {
+          "label": "Tiberius born into the Claudii",
+          "when": "42 BC",
+          "year": -42,
+          "fact": "Tiberius was born into the Claudii, one of Rome's oldest aristocratic families.",
+          "sectionId": "tiberius-before-power",
+          "reviewFlags": []
+        },
+        {
+          "label": "Augustus adopts Tiberius as heir",
+          "when": "AD 4",
+          "year": 4,
+          "fact": "After his two grandsons died, Augustus adopted Tiberius on condition that Tiberius adopt his nephew Germanicus.",
+          "sectionId": "tiberius-before-power",
+          "reviewFlags": []
+        },
+        {
+          "label": "Caligula is born as Gaius",
+          "when": "AD 12",
+          "year": 12,
+          "fact": "Caligula, born Gaius, was the son of the beloved general Germanicus.",
+          "sectionId": "caligula-rise",
+          "reviewFlags": []
+        },
+        {
+          "label": "Germanicus takes the Rhine command",
+          "when": "AD 13",
+          "year": 13,
+          "fact": "Germanicus took command of the eight legions on the Rhine, about a third of the whole Roman army.",
+          "sectionId": "germanicus",
+          "reviewFlags": []
+        },
+        {
+          "label": "Sejanus becomes praetorian prefect",
+          "when": "AD 15",
+          "year": 15,
+          "fact": "As praetorian prefect, Sejanus commanded the Praetorian Guard, the emperor's bodyguard.",
+          "sectionId": "sejanus",
+          "reviewFlags": []
+        },
+        {
+          "label": "Germanicus dies at Antioch",
+          "when": "AD 19",
+          "year": 19,
+          "fact": "Germanicus fell ill at Antioch, Syria's chief city, and died convinced he had been poisoned.",
+          "sectionId": "germanicus",
+          "reviewFlags": []
+        },
+        {
+          "label": "Tiberius's own son dies",
+          "when": "AD 23",
+          "year": 23,
+          "fact": "After his son's mysterious death, Tiberius leaned ever harder on Sejanus, calling him 'partner of my labours'.",
+          "sectionId": "sejanus",
+          "reviewFlags": []
+        },
+        {
+          "label": "Caligula's protector forced to suicide",
+          "when": "Early AD 38",
+          "year": 38,
+          "fact": "The praetorian prefect who had protected Caligula on Capri was forced to kill himself early in AD 38.",
+          "sectionId": "caligula-turn",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "matchSets": [
+    {
+      "name": "Words of Power",
+      "blurb": "Match each Latin term to its meaning in Tiberius's and Caligula's Rome.",
+      "pairs": [
+        {
+          "name": "Princeps",
+          "match": "First citizen, the modest title Augustus used for his position",
+          "sectionId": "reluctant-emperor",
+          "reviewFlags": []
+        },
+        {
+          "name": "Corona civica",
+          "match": "Oak-leaf wreath of honour that Tiberius refused",
+          "sectionId": "reluctant-emperor",
+          "reviewFlags": []
+        },
+        {
+          "name": "Aquilae",
+          "match": "Sacred legion standards; Germanicus recovered two lost ones",
+          "sectionId": "germanicus",
+          "reviewFlags": []
+        },
+        {
+          "name": "Maiestas",
+          "match": "Treason, the charge in old trials Caligula reopened in AD 39",
+          "sectionId": "caligula-turn",
+          "reviewFlags": []
+        },
+        {
+          "name": "Triumphus",
+          "match": "Victory parade through Rome, held by Germanicus in AD 17",
+          "sectionId": "germanicus",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Where It Happened",
+      "blurb": "Match each place to its role in the story.",
+      "pairs": [
+        {
+          "name": "Rhodes",
+          "match": "Greek island where Tiberius abruptly retired in 6 BC",
+          "sectionId": "tiberius-before-power",
+          "reviewFlags": []
+        },
+        {
+          "name": "Smyrna",
+          "match": "Greek city with the only temple allowed in Tiberius's honour",
+          "sectionId": "reluctant-emperor",
+          "reviewFlags": []
+        },
+        {
+          "name": "Antioch",
+          "match": "Syria's chief city, where Germanicus died in AD 19",
+          "sectionId": "germanicus",
+          "reviewFlags": []
+        },
+        {
+          "name": "Capri",
+          "match": "Island in the Bay of Naples where Tiberius lived from AD 26",
+          "sectionId": "sejanus",
+          "reviewFlags": []
+        },
+        {
+          "name": "Mauretania",
+          "match": "North-west African kingdom annexed after its king was executed",
+          "sectionId": "horse-bridge-god",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "trueFalseDecks": [
+    {
+      "name": "The Gloomy Emperor",
+      "blurb": "Tiberius, Germanicus and Sejanus: true or false?",
+      "cards": [
+        {
+          "claim": "Tiberius was born into the Claudii, one of Rome's oldest aristocratic families.",
+          "answer": true,
+          "why": "Tiberius was born in 42 BC into the Claudii, and his mother later married Augustus.",
+          "sectionId": "tiberius-before-power",
+          "reviewFlags": []
+        },
+        {
+          "claim": "When Augustus adopted Tiberius in AD 4, Tiberius had to adopt his nephew Germanicus.",
+          "answer": true,
+          "why": "Augustus made Tiberius his son and heir on condition that Tiberius adopt his popular nephew Germanicus.",
+          "sectionId": "tiberius-before-power",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Tiberius proudly accepted the title Father of the Fatherland.",
+          "answer": false,
+          "why": "Tiberius refused the title Father of the Fatherland (pater patriae), as well as the Civic Crown.",
+          "sectionId": "reluctant-emperor",
+          "reviewFlags": []
+        },
+        {
+          "claim": "In AD 13 Germanicus took command of the eight legions on the Danube.",
+          "answer": false,
+          "why": "Germanicus commanded the eight legions on the Rhine, Rome's frontier river with Germany.",
+          "sectionId": "germanicus",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Tiberius moved the Praetorian Guard from camps outside Rome into the city itself.",
+          "answer": true,
+          "why": "The move gave Sejanus, the Guard's commander, between 6,000 and 9,000 soldiers inside the capital.",
+          "sectionId": "sejanus",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Tiberius left the treasury nearly 3 million sesterces.",
+          "answer": false,
+          "why": "He left nearly 3 billion sesterces, along with a stable, consolidated empire.",
+          "sectionId": "death-of-tiberius",
+          "reviewFlags": []
+        },
+        {
+          "claim": "The Senate gave Tiberius the same divine honours as Augustus.",
+          "answer": false,
+          "why": "The Senate refused him divine honours, and crowds chanted 'To the Tiber with Tiberius!'",
+          "sectionId": "death-of-tiberius",
+          "reviewFlags": []
+        },
+        {
+          "claim": "One modern scholar counted no more than 52 people accused of treason in Tiberius's reign.",
+          "answer": true,
+          "why": "Across his 22-year reign, nearly half of those 52 accused escaped conviction.",
+          "sectionId": "what-historians-think",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Little Boot",
+      "blurb": "Caligula's reign: true or false?",
+      "cards": [
+        {
+          "claim": "Caligula's nickname means 'little boot'.",
+          "answer": true,
+          "why": "As a toddler on campaign in Germany he wore little army boots (caligae), and the soldiers named him for them.",
+          "sectionId": "caligula-rise",
+          "reviewFlags": []
+        },
+        {
+          "claim": "A Jewish writer called the first seven months of Caligula's reign a 'Golden Age'.",
+          "answer": true,
+          "why": "Caligula began dazzlingly, doubling the Guard's bonus, giving cash to every citizen and staging lavish games.",
+          "sectionId": "caligula-rise",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Caligula's sister was the first Roman woman to be made a goddess.",
+          "answer": true,
+          "why": "After his beloved sister died in AD 38, Caligula made her a goddess.",
+          "sectionId": "caligula-turn",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Caligula's successor inherited an empty treasury.",
+          "answer": false,
+          "why": "Despite tales of squandering, his successor seems to have inherited a solvent treasury.",
+          "sectionId": "caligula-turn",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Caligula's bridge of ships ran from Baiae to Ostia.",
+          "answer": false,
+          "why": "The bridge, more than 3 km (two miles) long, ran from Baiae to the nearby port of Puteoli.",
+          "sectionId": "horse-bridge-god",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Caligula's statue was set up in the Temple in Jerusalem.",
+          "answer": false,
+          "why": "He ordered it, but the governor of Syria stalled and it was never installed.",
+          "sectionId": "horse-bridge-god",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Caligula was killed by his German bodyguards.",
+          "answer": false,
+          "why": "Officers of his own Praetorian Guard killed him; the German bodyguards arrived too late and killed bystanders in their fury.",
+          "sectionId": "assassination",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Caligula's main biographer wrote about 80 years after his death.",
+          "answer": true,
+          "why": "Another historian wrote over 180 years after, and no surviving source is friendly to him.",
+          "sectionId": "what-historians-think",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "oddOneOut": [
+    {
+      "items": [
+        "Capri",
+        "Misenum",
+        "Baiae",
+        "Antioch"
+      ],
+      "oddIndex": 3,
+      "why": "Capri, Misenum and Baiae all lie on or near the Bay of Naples; Antioch was Syria's chief city, where Germanicus died.",
+      "sectionId": "horse-bridge-god",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Caligula's former father-in-law",
+        "Tiberius's teenage grandson",
+        "Caligula's protector prefect",
+        "Sejanus"
+      ],
+      "oddIndex": 3,
+      "why": "The first three were forced to kill themselves under Caligula; Sejanus was executed in AD 31 under Tiberius.",
+      "sectionId": "caligula-turn",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Doubled the Guard's bonus",
+        "Gave cash to every citizen",
+        "Staged lavish games",
+        "Refused the Civic Crown"
+      ],
+      "oddIndex": 3,
+      "why": "The first three made Caligula's dazzling start; it was Tiberius who refused the Civic Crown, an oak-leaf wreath of honour.",
+      "sectionId": "caligula-rise",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "The Alps",
+        "The Danube",
+        "Germany",
+        "Britain"
+      ],
+      "oddIndex": 3,
+      "why": "Tiberius campaigned in the Alps, along the Danube and in Germany; Britain was Caligula's planned invasion, which was abandoned.",
+      "sectionId": "tiberius-before-power",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Smothered by the prefect",
+        "Killed by Caligula",
+        "Died a natural death",
+        "Poisoned by Syria's governor"
+      ],
+      "oddIndex": 3,
+      "why": "The first three are ancient versions of Tiberius's death; poisoning by the governor of Syria was suspected in Germanicus's death.",
+      "sectionId": "death-of-tiberius",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Caligula",
+        "Caligula's wife",
+        "Caligula's young daughter",
+        "Caligula's uncle"
+      ],
+      "oddIndex": 3,
+      "why": "The conspirators murdered Caligula, his wife and his daughter; his uncle, found behind a curtain, was proclaimed emperor.",
+      "sectionId": "assassination",
+      "reviewFlags": []
+    }
+  ],
+  "whoAmI": [
+    {
+      "name": "Three Emperors",
+      "blurb": "Which ruler of Rome is speaking?",
+      "people": [
+        {
+          "name": "Augustus",
+          "options": [
+            "Augustus",
+            "Tiberius",
+            "Caligula",
+            "Claudius"
+          ],
+          "clues": [
+            "After my death the Senate gave me divine honours it later refused my successor.",
+            "I died on 19 August AD 14.",
+            "After my two young grandsons died, I adopted my stepson in AD 4.",
+            "I was Rome's first emperor and called myself princeps, first citizen."
+          ],
+          "sectionId": "reluctant-emperor",
+          "reviewFlags": []
+        },
+        {
+          "name": "Tiberius",
+          "options": [
+            "Augustus",
+            "Tiberius",
+            "Caligula",
+            "Claudius"
+          ],
+          "clues": [
+            "I allowed only one temple in my honour, at Smyrna.",
+            "In 6 BC I abruptly retired to the Greek island of Rhodes.",
+            "I spent my last years on Capri and died at Misenum aged 77.",
+            "I was Rome's second emperor, stepson of the first."
+          ],
+          "sectionId": "tiberius-before-power",
+          "reviewFlags": []
+        },
+        {
+          "name": "Caligula",
+          "options": [
+            "Augustus",
+            "Tiberius",
+            "Caligula",
+            "Claudius"
+          ],
+          "clues": [
+            "I made my dead sister a goddess, the first Roman woman so honoured.",
+            "I rode my horse across a bridge of ships from Baiae to Puteoli.",
+            "Officers of my own Guard stabbed me beneath my palace in AD 41.",
+            "I was Rome's third emperor, and my racehorse Incitatus was said to be meant for a consulship."
+          ],
+          "sectionId": "horse-bridge-god",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Heirs and Favourites",
+      "blurb": "Who stood close to the throne?",
+      "people": [
+        {
+          "name": "Germanicus",
+          "options": [
+            "Germanicus",
+            "Sejanus",
+            "Caligula",
+            "Tiberius"
+          ],
+          "clues": [
+            "I celebrated a triumph through Rome on 26 May AD 17.",
+            "I recovered two of the three eagles lost in the Teutoburg Forest.",
+            "In AD 14 my mutinous Rhine legions tried to make me emperor, and I refused.",
+            "I died at Antioch in AD 19, convinced I had been poisoned."
+          ],
+          "sectionId": "germanicus",
+          "reviewFlags": []
+        },
+        {
+          "name": "Sejanus",
+          "options": [
+            "Germanicus",
+            "Sejanus",
+            "Caligula",
+            "Tiberius"
+          ],
+          "clues": [
+            "I became praetorian prefect in AD 15.",
+            "When the Guard moved into the city, I gained thousands of soldiers inside the capital.",
+            "The emperor called me 'partner of my labours' and left me to run the state.",
+            "In AD 31 a letter from the emperor was read in the Senate denouncing me, and I was executed within the week."
+          ],
+          "sectionId": "sejanus",
+          "reviewFlags": []
+        },
+        {
+          "name": "Caligula",
+          "options": [
+            "Germanicus",
+            "Sejanus",
+            "Caligula",
+            "Tiberius"
+          ],
+          "clues": [
+            "From AD 31 I lived on Capri under the old emperor's eye.",
+            "It was said there had never been 'a better slave or a worse master'.",
+            "My mother and my two older brothers died after being exiled.",
+            "As a toddler in Germany I wore little army boots, which gave me my nickname."
+          ],
+          "sectionId": "caligula-rise",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "places": [
+    {
+      "name": "Rhodes",
+      "wikipediaTitle": "Rhodes (city)",
+      "lat": 36.43333333,
+      "lon": 28.21666667,
+      "why": "Tiberius abruptly retired to this Greek island in 6 BC, just as he was about to become the second most powerful man in Rome.",
+      "sectionId": "tiberius-before-power",
+      "coordinates": "Wikipedia: Rhodes (city)",
+      "reviewFlags": []
+    },
+    {
+      "name": "Smyrna",
+      "wikipediaTitle": "Smyrna",
+      "lat": 38.41861111,
+      "lon": 27.13916667,
+      "why": "The only temple Tiberius allowed in his honour stood in this Greek city in western Turkey.",
+      "sectionId": "reluctant-emperor",
+      "coordinates": "Wikipedia: Smyrna",
+      "reviewFlags": []
+    },
+    {
+      "name": "Teutoburg Forest",
+      "wikipediaTitle": "Battle of the Teutoburg Forest",
+      "lat": 52.408,
+      "lon": 8.129,
+      "why": "Three Roman legions were wiped out here in AD 9, and Germanicus later visited the battlefield to bury the dead.",
+      "sectionId": "germanicus",
+      "coordinates": "Wikipedia: Battle of the Teutoburg Forest",
+      "reviewFlags": []
+    },
+    {
+      "name": "Antioch",
+      "wikipediaTitle": "Antioch",
+      "lat": 36.20472222,
+      "lon": 36.18166667,
+      "why": "Germanicus fell ill and died in Syria's chief city in AD 19, convinced he had been poisoned.",
+      "sectionId": "germanicus",
+      "coordinates": "Wikipedia: Antioch",
+      "reviewFlags": []
+    },
+    {
+      "name": "Capri",
+      "wikipediaTitle": "Capri",
+      "lat": 40.55,
+      "lon": 14.23333333,
+      "why": "Tiberius retired to his villas on this island in the Bay of Naples in AD 26, leaving Sejanus to run Rome.",
+      "sectionId": "sejanus",
+      "coordinates": "Wikipedia: Capri",
+      "reviewFlags": []
+    },
+    {
+      "name": "Jerusalem",
+      "wikipediaTitle": "Jerusalem",
+      "lat": 31.77888889,
+      "lon": 35.22555556,
+      "why": "Caligula ordered his statue set up in the Temple here, but the governor of Syria stalled and it was never installed.",
+      "sectionId": "horse-bridge-god",
+      "coordinates": "Wikipedia: Jerusalem",
+      "reviewFlags": []
+    }
+  ]
+}

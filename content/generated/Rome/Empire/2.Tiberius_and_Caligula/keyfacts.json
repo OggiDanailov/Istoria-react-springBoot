@@ -1,0 +1,139 @@
+{
+  "description": "Key facts for this chapter, written by hand from the chapter text. Every entry links to the section that explains it.",
+  "people": [
+    {
+      "name": "Tiberius",
+      "text": "Rome’s second emperor, AD 14–37; a fine general, a gloomy ruler.",
+      "sec": "tiberius-before-power"
+    },
+    {
+      "name": "Germanicus",
+      "text": "Tiberius’s popular nephew and heir; recovered two lost eagles; died in AD 19.",
+      "sec": "germanicus"
+    },
+    {
+      "name": "Sejanus",
+      "text": "Praetorian prefect who ran Rome for Tiberius; executed in AD 31.",
+      "sec": "sejanus"
+    },
+    {
+      "name": "Caligula",
+      "text": "Rome’s third emperor, AD 37–41; son of Germanicus.",
+      "sec": "caligula-rise"
+    },
+    {
+      "name": "Incitatus",
+      "text": "Caligula’s racehorse, “Speedy”.",
+      "sec": "horse-bridge-god"
+    }
+  ],
+  "dates": [
+    {
+      "when": "6 BC",
+      "text": "Tiberius retires to Rhodes.",
+      "sec": "tiberius-before-power"
+    },
+    {
+      "when": "AD 14",
+      "text": "Augustus dies; Tiberius becomes princeps.",
+      "sec": "reluctant-emperor"
+    },
+    {
+      "when": "AD 17",
+      "text": "Germanicus’s triumph.",
+      "sec": "germanicus"
+    },
+    {
+      "when": "AD 19",
+      "text": "Germanicus dies at Antioch.",
+      "sec": "germanicus"
+    },
+    {
+      "when": "AD 26",
+      "text": "Tiberius leaves Rome for Capri.",
+      "sec": "sejanus"
+    },
+    {
+      "when": "AD 31",
+      "text": "The fall of Sejanus.",
+      "sec": "sejanus"
+    },
+    {
+      "when": "16 March AD 37",
+      "text": "Tiberius dies; Caligula becomes emperor.",
+      "sec": "death-of-tiberius"
+    },
+    {
+      "when": "AD 39",
+      "text": "Caligula turns on the Senate.",
+      "sec": "caligula-turn"
+    },
+    {
+      "when": "24 January AD 41",
+      "text": "Caligula is murdered.",
+      "sec": "assassination"
+    }
+  ],
+  "terms": [
+    {
+      "latin": "senatus",
+      "english": "the Senate",
+      "sec": "reluctant-emperor"
+    },
+    {
+      "latin": "princeps",
+      "english": "first citizen",
+      "sec": "reluctant-emperor"
+    },
+    {
+      "latin": "pater patriae",
+      "english": "Father of the Fatherland",
+      "sec": "reluctant-emperor"
+    },
+    {
+      "latin": "corona civica",
+      "english": "the Civic Crown",
+      "sec": "reluctant-emperor"
+    },
+    {
+      "latin": "aquilae",
+      "english": "the eagles, the legions’ standards",
+      "sec": "germanicus"
+    },
+    {
+      "latin": "triumphus",
+      "english": "a victory parade",
+      "sec": "germanicus"
+    },
+    {
+      "latin": "praefectus praetorio",
+      "english": "praetorian prefect",
+      "sec": "sejanus"
+    },
+    {
+      "latin": "cohortes praetoriae",
+      "english": "the Praetorian Guard",
+      "sec": "sejanus"
+    },
+    {
+      "latin": "caligae",
+      "english": "army boots",
+      "sec": "caligula-rise"
+    },
+    {
+      "latin": "maiestas",
+      "english": "treason",
+      "sec": "caligula-turn"
+    },
+    {
+      "latin": "hostis",
+      "english": "a public enemy",
+      "sec": "assassination"
+    },
+    {
+      "latin": "damnatio memoriae",
+      "english": "condemning someone’s memory",
+      "sec": "assassination"
+    }
+  ]
+}

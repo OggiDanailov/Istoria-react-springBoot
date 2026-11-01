@@ -1,0 +1,194 @@
+{
+  "batchName": "Empire: Tiberius and Caligula (AD 14-41) - Medium Batch 1",
+  "chapterName": "Empire: Tiberius and Caligula (AD 14-41)",
+  "difficulty": 2,
+  "batchOrder": 3,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "The saying that there had never been \"a better slave or a worse master\" referred to Caligula's skill at what during his years on Capri?",
+      "options": [
+        "Flattering the senators in Rome",
+        "Managing the imperial finances",
+        "Fighting as a common soldier",
+        "Hiding his true feelings from Tiberius",
+        "Commanding the Praetorian Guard"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#caligula-rise",
+      "explanation": "Living under Tiberius's eye on Capri from AD 31, Caligula concealed his feelings completely. Tiberius's praetorian prefect also protected him.",
+      "sourceQuote": "He hid his feelings so well that it was said there had never been \"a better slave or a worse master\", and Tiberius's praetorian prefect, commander of the imperial bodyguard, protected him.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which north-west African kingdom did Rome annex after Caligula executed its king?",
+      "options": [
+        "Numidia",
+        "Thrace",
+        "Commagene",
+        "Mauretania",
+        "Armenia"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#horse-bridge-god",
+      "explanation": "Mauretania was annexed after Caligula had its king killed. A planned invasion of Britain, by contrast, was abandoned.",
+      "sourceQuote": "Abroad, a planned invasion of Britain was abandoned, while Mauretania, a kingdom in north-west Africa, was annexed after Caligula executed its king.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Ancient accounts disagree about how Tiberius died. Whom did some of them blame? (select all that apply)",
+      "options": [
+        "Caligula",
+        "The governor of Syria",
+        "Germanicus's widow",
+        "Sejanus",
+        "The new praetorian prefect"
+      ],
+      "correctAnswers": [
+        0,
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#death-of-tiberius",
+      "explanation": "One account says the new praetorian prefect smothered Tiberius with his bedclothes after he stirred, and others blame Caligula. Some writers of the time describe a natural death.",
+      "sourceQuote": "Others blame Caligula himself.",
+      "reviewFlags": []
+    },
+    {
+      "question": "On what condition did Augustus adopt Tiberius as his son and heir in AD 4?",
+      "options": [
+        "That Tiberius divorce Augustus's daughter",
+        "That Tiberius stay in retirement on Rhodes",
+        "That Tiberius share power with Sejanus",
+        "That Tiberius give up his army commands",
+        "That Tiberius adopt his nephew Germanicus"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#tiberius-before-power",
+      "explanation": "Augustus made Tiberius adopt his popular nephew Germanicus, who thus entered the line of succession. Augustus had turned back to Tiberius only after his own two young grandsons died.",
+      "sourceQuote": "In AD 4 Augustus adopted Tiberius as son and heir, on condition that Tiberius in turn adopt his popular nephew, Germanicus.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Where did Tiberius campaign as a general, laying the foundations of the empire's northern frontier? (select all that apply)",
+      "options": [
+        "Germany",
+        "The Danube",
+        "Britain",
+        "Mauretania",
+        "The Alps"
+      ],
+      "correctAnswers": [
+        0,
+        1,
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#tiberius-before-power",
+      "explanation": "Tiberius fought in the Alps, along the Danube and in Germany, and proved one of Rome's finest generals. Britain and Mauretania were matters for Caligula's reign.",
+      "sourceQuote": "His campaigns in the Alps, along the Danube and in Germany laid the foundations of the empire's northern frontier.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did Tiberius leave in the treasury at his death?",
+      "options": [
+        "An empty treasury after lavish games",
+        "Barely enough to pay the Guard",
+        "Huge debts from foreign wars",
+        "Nearly 300 million sesterces",
+        "Nearly 3 billion sesterces"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#death-of-tiberius",
+      "explanation": "Tiberius left nearly 3 billion sesterces and a stable empire, though one Roman writer called him \"the gloomiest of men\". His record was better than his reputation.",
+      "sourceQuote": "A Roman writer called him \"the gloomiest of men\", yet he left the treasury nearly 3 billion sesterces, a common Roman coin, and a stable, consolidated empire.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Who were forced to kill themselves in the months after Caligula recovered from his illness? (select all that apply)",
+      "options": [
+        "Tiberius's teenage grandson",
+        "The praetorian prefect who had protected him",
+        "His former father-in-law",
+        "His beloved sister",
+        "The governor of Syria"
+      ],
+      "correctAnswers": [
+        0,
+        1,
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#caligula-turn",
+      "explanation": "His former father-in-law and Tiberius's teenage grandson, his co-heir, died first, and the prefect followed in early AD 38. His sister died the same year but was not killed; he made her a goddess.",
+      "sourceQuote": "His former father-in-law, an eminent senator, and Tiberius's teenage grandson, Caligula's co-heir, were forced to kill themselves.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Why is the lavish praise of Tiberius by an officer who served under him hard to trust?",
+      "options": [
+        "He wrote it 180 years later",
+        "He never actually met Tiberius",
+        "He was Sejanus's brother",
+        "Caligula paid him to write it",
+        "It may reflect prudence rather than admiration"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#what-historians-think",
+      "explanation": "Writing under the emperor he praised, the officer may have been careful rather than sincere. Other sources lean the opposite way, such as a later biographer who delights in scandal.",
+      "sourceQuote": "An officer who served under Tiberius praised him lavishly, though whether from admiration or prudence is unclear.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How was Sejanus brought down in AD 31?",
+      "options": [
+        "The Rhine legions marched on Rome against him",
+        "He was poisoned at a banquet on Capri",
+        "Germanicus's sons exposed his plot in court",
+        "His own guardsmen stabbed him beneath the palace",
+        "A letter from Tiberius denouncing him was read in the Senate"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#sejanus",
+      "explanation": "Sejanus, apparently plotting to seize power, was summoned to the Senate and denounced in a letter from Tiberius. He was executed within the week, and trials swept up anyone linked to him.",
+      "sourceQuote": "In AD 31, apparently plotting to seize power himself, Sejanus was summoned to the Senate, where a letter from Tiberius was read out denouncing him.",
+      "reviewFlags": []
+    },
+    {
+      "question": "In AD 39, how did Caligula reveal that his earlier claim about Tiberius's treason files was false?",
+      "options": [
+        "He reopened old treason cases",
+        "He read them aloud to the Senate",
+        "He published the files in the Forum",
+        "He sent copies to the provinces",
+        "He handed them to the Praetorian Guard"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#caligula-turn",
+      "explanation": "Caligula had publicly burned the files, claiming he had not read them, but in AD 39 he revived old cases. He told the senators that since they hated him, it was better they feared him.",
+      "sourceQuote": "Caligula had publicly burned Tiberius's files on treason (*maiestas*) trials, claiming he had not read them.",
+      "reviewFlags": []
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "description": "Maps for the chronicle, written by hand. Coordinates from Wikipedia; each map sits at the start of its section.",
+  "maps": [
+    {
+      "id": "tiberius-world",
+      "sec": "tiberius-before-power",
+      "title": "Where it happened, AD 14–41",
+      "caption": "Tiberius retired to Rhodes; Germanicus fought beyond the Rhine and died at Antioch; Smyrna had Tiberius’s only temple; Caligula annexed Mauretania and wanted his statue in Jerusalem.",
+      "bounds": {
+        "latMin": 29.0,
+        "latMax": 55.0,
+        "lonMin": -12.0,
+        "lonMax": 40.0
+      },
+      "places": [
+        {
+          "name": "Rome",
+          "latin": "Roma",
+          "lat": 41.893,
+          "lon": 12.483,
+          "kind": "rome",
+          "side": "l",
+          "dy": 8
+        },
+        {
+          "name": "Capri",
+          "lat": 40.55,
+          "lon": 14.24,
+          "side": "r",
+          "dy": 6
+        },
+        {
+          "name": "Rhodes",
+          "lat": 36.43,
+          "lon": 28.22,
+          "side": "l",
+          "dy": 8
+        },
+        {
+          "name": "Smyrna",
+          "lat": 38.42,
+          "lon": 27.14,
+          "side": "r"
+        },
+        {
+          "name": "Antioch",
+          "lat": 36.2,
+          "lon": 36.16,
+          "side": "l",
+          "dy": 16
+        },
+        {
+          "name": "Jerusalem",
+          "lat": 31.78,
+          "lon": 35.23,
+          "side": "l"
+        }
+      ],
+      "rivers": [
+        {
+          "name": "Rhine",
+          "pts": [
+            [
+              46.6,
+              9.6
+            ],
+            [
+              47.6,
+              7.6
+            ],
+            [
+              49.0,
+              8.4
+            ],
+            [
+              50.4,
+              7.6
+            ],
+            [
+              51.8,
+              6.2
+            ],
+            [
+              52.0,
+              4.6
+            ]
+          ]
+        }
+      ],
+      "peoples": [
+        {
+          "name": "Germania",
+          "lat": 52.3,
+          "lon": 12.0
+        },
+        {
+          "name": "Mauretania",
+          "lat": 33.6,
+          "lon": -3.5
+        }
+      ]
+    }
+  ]
+}

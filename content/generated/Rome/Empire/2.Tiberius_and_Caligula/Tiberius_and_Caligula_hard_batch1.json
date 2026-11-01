@@ -1,0 +1,203 @@
+{
+  "batchName": "Empire: Tiberius and Caligula (AD 14-41) - Hard Batch 1",
+  "chapterName": "Empire: Tiberius and Caligula (AD 14-41)",
+  "difficulty": 3,
+  "batchOrder": 5,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "When a shoemaker from Gaul called Caligula \"a complete idiot\", how did the emperor react?",
+      "options": [
+        "He had the man executed on the spot",
+        "He fined him a year's earnings",
+        "He exiled him back to Gaul",
+        "He made him a senator as a joke",
+        "He had him thrown into the Tiber",
+        "He seemed to appreciate the honesty"
+      ],
+      "correctAnswers": [
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#horse-bridge-god",
+      "explanation": "Caligula apparently enjoyed the shoemaker's frankness. The same emperor liked to dress as gods, including Jupiter.",
+      "sourceQuote": "When a shoemaker from Gaul called him \"a complete idiot\", Caligula seemed to appreciate the honesty.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How long after Caligula's death did his main ancient biographer write?",
+      "options": [
+        "120 years",
+        "250 years",
+        "80 years",
+        "20 years",
+        "180 years",
+        "40 years"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 3,
+      "textReference": "#what-historians-think",
+      "explanation": "Caligula's main biographer wrote about 80 years after his death, and another historian more than 180 years after. No surviving source is friendly to him.",
+      "sourceQuote": "His main biographer wrote 80 years after his death, another historian over 180 years after, and no surviving source is friendly.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What finally led Augustus to turn back to Tiberius after his retirement to Rhodes?",
+      "options": [
+        "The deaths of Augustus's two young grandsons and heirs",
+        "The death of Germanicus at Antioch",
+        "A mutiny of the Rhine legions",
+        "Tiberius's divorce from Augustus's daughter",
+        "The Senate's demand for a proven general",
+        "The disaster in the Teutoburg Forest"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#tiberius-before-power",
+      "explanation": "Only when Augustus's two young grandsons, his chosen heirs, had died did he return to Tiberius. He adopted him in AD 4.",
+      "sourceQuote": "Only after Augustus's two young grandsons and heirs died did the old emperor turn back to him.",
+      "reviewFlags": []
+    },
+    {
+      "question": "One modern view holds that Tiberius might be remembered as a model ruler if he had died before which year?",
+      "options": [
+        "AD 26",
+        "AD 14",
+        "AD 37",
+        "AD 19",
+        "AD 23",
+        "AD 31"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 3,
+      "textReference": "#death-of-tiberius",
+      "explanation": "AD 23 is the turning point because that year Tiberius's son died and he came to rely heavily on Sejanus. His overall record was better than his reputation.",
+      "sourceQuote": "Had he died before AD 23, one modern view holds, he might be remembered as a model ruler.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What was unusual about Caligula's accession in AD 37?",
+      "options": [
+        "At 19, he ruled under the praetorian prefect as regent",
+        "At 36, the Guard proclaimed him against the Senate's will",
+        "At 24, he shared power with Tiberius's grandson for years",
+        "At 30, he took power after years commanding the Rhine legions",
+        "At 24, he was chosen by the Senate after a month of debate",
+        "At 24, with no experience, he got all imperial powers in one day"
+      ],
+      "correctAnswers": [
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#caligula-rise",
+      "explanation": "Caligula was only 24, had no political or military experience, and received all of an emperor's powers in a single day. He was born in AD 12, the son of Germanicus.",
+      "sourceQuote": "When Tiberius died in AD 37, Caligula, aged 24 and without political or military experience, received all of an emperor's powers in a single day.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What happened to the governor of Syria with whom Germanicus had quarrelled before his death?",
+      "options": [
+        "He was lynched by a mob in Rome",
+        "He fled to the Parthians",
+        "He was executed on Tiberius's orders",
+        "He was acquitted and returned to Syria",
+        "He was exiled to Rhodes",
+        "He killed himself before his trial ended"
+      ],
+      "correctAnswers": [
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#germanicus",
+      "explanation": "The governor took his own life before his trial was over. Rumours that Tiberius was behind Germanicus's death never went away.",
+      "sourceQuote": "The governor killed himself before his trial ended, and rumours that Tiberius was behind it all never faded.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How was Caligula's memory treated after his murder? (select all that apply)",
+      "options": [
+        "The new emperor refused to condemn his memory",
+        "His ashes were thrown into the Tiber",
+        "The Senate declared him a god",
+        "His assassins were rewarded with high office",
+        "Many of his statues were recarved with other faces",
+        "He was declared a public enemy"
+      ],
+      "correctAnswers": [
+        0,
+        4
+      ],
+      "difficulty": 3,
+      "textReference": "#assassination",
+      "explanation": "His uncle, the new emperor, executed the assassins and would not declare Caligula a public enemy or condemn his memory. Even so, many of Caligula's statues were quietly recarved with other emperors' faces.",
+      "sourceQuote": "The new emperor executed the assassins and refused to declare his nephew a public enemy (*hostis*) or condemn his memory (*damnatio memoriae*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "What was Tiberius's situation when Augustus died on 19 August AD 14?",
+      "options": [
+        "He was 55 and living in retirement on Rhodes",
+        "He was 48 and campaigning on the Danube",
+        "He was 55 and already shared the emperor's powers",
+        "He was 77 and serving as sole consul",
+        "He was 42 and commanding the Rhine legions",
+        "He was 35 and newly adopted as heir"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 3,
+      "textReference": "#reluctant-emperor",
+      "explanation": "Tiberius was 55 and already held a share of the emperor's powers. The Senate confirmed him as princeps the following month.",
+      "sourceQuote": "When Augustus died on 19 August AD 14, Tiberius was 55 and already shared the emperor's powers.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did Sejanus do after Tiberius retired to Capri? (select all that apply)",
+      "options": [
+        "Persuaded the Senate to deify Tiberius",
+        "Recovered a lost legionary eagle",
+        "Commanded the Rhine legions in Germany",
+        "Controlled messages between emperor and capital",
+        "Ran the state",
+        "Used treason trials to destroy rivals"
+      ],
+      "correctAnswers": [
+        3,
+        4,
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#sejanus",
+      "explanation": "With Tiberius away, Sejanus governed, filtered communications and used treason trials against rivals. Germanicus's widow and her two eldest sons were exiled and later died in suspicious circumstances.",
+      "sourceQuote": "Sejanus ran the state and controlled the messages passing between emperor and capital.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which details suggest that ancient tales of Caligula's financial ruin may be exaggerated? (select all that apply)",
+      "options": [
+        "He refused to use the Guard as tax collectors",
+        "Many of his taxes outlived him",
+        "He left nearly 3 billion sesterces",
+        "He returned estates seized from rich men",
+        "His successor seems to have inherited a solvent treasury",
+        "He abolished the tax on weddings"
+      ],
+      "correctAnswers": [
+        1,
+        4
+      ],
+      "difficulty": 3,
+      "textReference": "#caligula-turn",
+      "explanation": "Ancient writers say he squandered a fortune and then taxed everything from weddings to prostitutes. Yet his successor seems to have found a solvent treasury, and many of his taxes stayed in place. The 3 billion sesterces figure belongs to Tiberius.",
+      "sourceQuote": "Yet his successor seems to have inherited a solvent treasury, and many of the taxes outlived him.",
+      "reviewFlags": []
+    }
+  ]
+}
