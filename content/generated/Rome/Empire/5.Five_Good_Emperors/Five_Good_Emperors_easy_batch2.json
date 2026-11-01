@@ -1,0 +1,179 @@
+{
+  "batchName": "Empire: The Five Good Emperors (AD 96-192) - Easy Batch 2",
+  "chapterName": "Empire: The Five Good Emperors (AD 96-192)",
+  "difficulty": 1,
+  "batchOrder": 2,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "What do the spiral carvings on Trajan's Column depict?",
+      "options": [
+        "Trajan's war against Parthia",
+        "Trajan's wars in Dacia",
+        "Hadrian's travels in Greece",
+        "The founding of Rome"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#dacian-wars",
+      "explanation": "Raised in 113, Trajan's Column tells the story of the Dacian wars in spiral carvings. Tradition holds that Trajan's ashes lie in a chamber at its base.",
+      "sourceQuote": "In 113 he raised Trajan's Column, whose spiral carvings tell the story of the wars.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which city did Trajan's forces capture in 106 to end the Dacian wars?",
+      "options": [
+        "Beitar",
+        "Sarmizegetusa",
+        "Ctesiphon",
+        "Hatra"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#dacian-wars",
+      "explanation": "Sarmizegetusa, the Dacian capital, fell in 106. The Dacian king fled and killed himself when Roman cavalry cornered him.",
+      "sourceQuote": "In 106 the Romans cut the water pipes of the Dacian capital, Sarmizegetusa, and the city fell.",
+      "reviewFlags": []
+    },
+    {
+      "question": "In which year did the great uprising in Judaea break out under Hadrian?",
+      "options": [
+        "132",
+        "117",
+        "161",
+        "70"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#jewish-revolt",
+      "explanation": "The revolt began in 132 under Bar Kokhba, a leader with messianic claims. At first the Romans were overwhelmed and lost heavily.",
+      "sourceQuote": "In 132 a massive uprising broke out in Judaea under Bar Kokhba, a leader with messianic claims.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which title did the Senate give Trajan, an honour no other emperor officially received?",
+      "options": [
+        "'The philosopher king'",
+        "'Father of the fatherland'",
+        "'The best ruler' (optimus princeps)",
+        "'The dutiful' (Pius)"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#trajan-best-ruler",
+      "explanation": "The senators called Trajan 'the best ruler', and the title appears on his coins from 105. He was the only emperor officially given it.",
+      "sourceQuote": "The senators rewarded him with the title 'the best ruler' (*optimus princeps*), which appears on coins from 105.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Why did the elderly emperor Nerva adopt Trajan as his son and heir in 97?",
+      "options": [
+        "He needed the army on his side",
+        "Trajan was his nephew and only relative",
+        "Trajan had saved him from an assassin",
+        "The Senate voted to impose Trajan on him"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#nerva-adopts-trajan",
+      "explanation": "Nerva had little standing with the soldiers, so he adopted a popular general. Trajan had won fame fighting Germanic tribes on the Rhine.",
+      "sourceQuote": "Nerva needed the army on his side.",
+      "reviewFlags": []
+    },
+    {
+      "question": "In 122 Hadrian ordered a famous wall built in which province?",
+      "options": [
+        "Dacia",
+        "Gaul",
+        "Germania",
+        "Britain"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#hadrian-the-traveller",
+      "explanation": "Hadrian's Wall in Britain was built by ordinary soldiers 'to separate Romans from barbarians'. Hadrian never saw it finished.",
+      "sourceQuote": "In Britain in 122 he ordered the wall that bears his name, built by ordinary soldiers 'to separate Romans from barbarians'.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What fashion did Hadrian start, later copied by most emperors after him?",
+      "options": [
+        "Shaving his head",
+        "Wearing a full beard",
+        "Wearing a gold laurel crown",
+        "Wearing a purple toga daily"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#hadrian-the-traveller",
+      "explanation": "Hadrian was the first emperor shown with a full beard. His love of Greece had earned him the nickname 'Greekling' in his youth.",
+      "sourceQuote": "Teased in his youth as the 'Greekling', he became the first emperor shown with a full beard, a style most later emperors copied.",
+      "reviewFlags": []
+    },
+    {
+      "question": "The 'Five Good Emperors' ruled Rome during which period?",
+      "options": [
+        "AD 180 to 235",
+        "AD 96 to 180",
+        "AD 14 to 68",
+        "AD 69 to 96"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#five-good-emperors-debate",
+      "explanation": "The five emperors from Nerva to Marcus Aurelius ruled from 96 to 180. An 18th-century English historian counted their age among the happiest in human history.",
+      "sourceQuote": "The label 'Five Good Emperors' covers Nerva, Trajan, Hadrian, Antoninus Pius and Marcus Aurelius, who ruled from 96 to 180.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Against which empire did Trajan launch his last war in 113?",
+      "options": [
+        "Pontus",
+        "Parthia",
+        "Dacia",
+        "Nabataea"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#parthian-war",
+      "explanation": "Trajan's final war was against Parthia, the great Iranian empire beyond the Euphrates. By then he had already conquered Dacia.",
+      "sourceQuote": "In 113 Trajan, the emperor who had already conquered Dacia, launched his last war, against Parthia, the great Iranian empire beyond the river Euphrates.",
+      "reviewFlags": []
+    },
+    {
+      "question": "A Renaissance Florentine political thinker praised the five emperors as proof of what?",
+      "options": [
+        "That Christianity had strengthened Rome",
+        "That adopting the best man beat heredity",
+        "That the Republic ought to be restored",
+        "That soldiers should choose emperors"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#five-good-emperors-debate",
+      "explanation": "The 'Five Good Emperors' idea goes back to a Florentine thinker who argued that adoption beat hereditary succession. An English historian later popularised the phrase.",
+      "sourceQuote": "It goes back to a Renaissance Florentine political thinker who praised the five from Nerva to Marcus as proof that adopting the best man beat hereditary succession.",
+      "reviewFlags": []
+    }
+  ]
+}

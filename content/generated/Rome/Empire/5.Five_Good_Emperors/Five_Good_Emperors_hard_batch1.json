@@ -1,0 +1,204 @@
+{
+  "batchName": "Empire: The Five Good Emperors (AD 96-192) - Hard Batch 1",
+  "chapterName": "Empire: The Five Good Emperors (AD 96-192)",
+  "difficulty": 3,
+  "batchOrder": 5,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "When Trajan entered Rome in 99, how did he handle the customary cash gifts?",
+      "options": [
+        "Gave equal sums to the people and the troops",
+        "Doubled the troops' gift and gave nothing to the people",
+        "Gave gifts to senators and no one else",
+        "Paid the troops entirely in Dacian gold",
+        "Cancelled all gifts to save money for war",
+        "Gave cash to the people but halved the troops' gift"
+      ],
+      "correctAnswers": [
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#trajan-best-ruler",
+      "explanation": "Trajan entered Rome with notable modesty, giving cash to the common people while halving the gift to the troops. He made a show of respecting the Senate.",
+      "sourceQuote": "He gave cash to the common people, though he halved the customary gift to the troops.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Once Trajan held power, what happened to the Praetorian commander who had defied Nerva?",
+      "options": [
+        "He was exiled to a small Aegean island",
+        "He was pardoned and kept his command",
+        "He killed himself before he could be seized",
+        "He was promoted to govern the new Dacia",
+        "Trajan summoned him and had him executed",
+        "He was made consul alongside Trajan"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 3,
+      "textReference": "#nerva-adopts-trajan",
+      "explanation": "Trajan summoned the Guard commander and had him put to death. Some historians see Trajan's accession as less an orderly succession than a successful coup.",
+      "sourceQuote": "He first summoned the Guard commander who had defied Nerva and had him put to death.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did the Romans locate the Dacian royal treasure?",
+      "options": [
+        "Engineers found it while building the Danube bridge",
+        "Cavalry seized it alongside the fleeing king",
+        "A captured nobleman revealed it lay under a diverted river",
+        "It was dug up beneath the battlefield of Tapae",
+        "Miners found it in a shaft near Sarmizegetusa",
+        "The king's widow handed it over to save her life"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 3,
+      "textReference": "#dacian-wars",
+      "explanation": "A captured nobleman revealed the treasure buried beneath a temporarily diverted river. One modern estimate puts it at about 165,500 kg of gold and 330,000 kg of silver.",
+      "sourceQuote": "A captured nobleman revealed that the royal treasure had been buried beneath a temporarily diverted river.",
+      "reviewFlags": []
+    },
+    {
+      "question": "When Marcus Aurelius's own son succeeded him in 180, how did a historian who lived through it describe the change?",
+      "options": [
+        "From the bright noon of empire to its long dusk",
+        "From the rule of the best to the rule of the worst",
+        "From a reign of virtue to a tyranny of vice",
+        "From a kingdom of gold to one of iron and rust",
+        "From an age of philosophers to one of soldiers",
+        "From a city of marble to a city of mud"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 3,
+      "textReference": "#marcus-aurelius",
+      "explanation": "The son's succession broke the run of adopted heirs, and a contemporary saw it as a fall from gold to iron and rust. Commodus ruled until 192.",
+      "sourceQuote": "A historian who lived through it wrote that Rome now fell 'from a kingdom of gold to one of iron and rust'.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which desert fortress city did Trajan fail to capture as his Parthian campaign unravelled?",
+      "options": [
+        "Petra",
+        "Edessa",
+        "Palmyra",
+        "Hatra",
+        "Dura-Europos",
+        "Nisibis"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 3,
+      "textReference": "#parthian-war",
+      "explanation": "Trajan's failure at Hatra came amid revolts across Mesopotamia and Jewish uprisings in Egypt, Cyprus and Cyrene. His health then collapsed.",
+      "sourceQuote": "Trajan failed to take Hatra, a desert fortress city, and his health collapsed.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Besides respecting their privileges, how did Antoninus win over the resentful senators?",
+      "options": [
+        "By granting the Senate the right to elect emperors",
+        "By doubling senators' payments from the treasury",
+        "By promising to retake Trajan's eastern lands",
+        "By executing Hadrian's Praetorian commander",
+        "By moving the court from Tivoli back to Rome",
+        "By cancelling death sentences from Hadrian's last days"
+      ],
+      "correctAnswers": [
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#antoninus-pius",
+      "explanation": "Antoninus cancelled death sentences passed at the end of Hadrian's reign and respected senatorial privileges. Hadrian had died at Baiae on 10 July 138.",
+      "sourceQuote": "He won them over by respecting their privileges and cancelling death sentences passed in Hadrian's last days.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which of Trajan's newest conquests did Hadrian give up? (select all that apply)",
+      "options": [
+        "Parts of Dacia, handed to a neighbouring people",
+        "Armenia, left to Parthian influence",
+        "Mesopotamia, abandoned as too costly to defend",
+        "The province of Britain, south of the Wall",
+        "Judaea, returned to a client king",
+        "The Rhine lands, ceded to Germanic tribes"
+      ],
+      "correctAnswers": [
+        0,
+        1,
+        2
+      ],
+      "difficulty": 3,
+      "textReference": "#hadrian-succession",
+      "explanation": "Hadrian abandoned Mesopotamia, let Armenia return to Parthian influence and handed parts of Dacia to a neighbouring people. Ancient writers blamed jealousy of Trajan; modern historians see a realistic retreat.",
+      "sourceQuote": "Mesopotamia was abandoned as too costly and distant to defend, Armenia returned to Parthian influence, and parts of Dacia were handed to a neighbouring people.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which factors do modern scholars think probably did most to provoke the Jewish revolt under Hadrian? (select all that apply)",
+      "options": [
+        "A new tax to pay for Hadrian's Wall",
+        "Plague brought back from Parthia",
+        "Hopes of a messiah to rebuild the Temple",
+        "A Roman ban on circumcision",
+        "Heavy-handed Roman government",
+        "Quarrels over land"
+      ],
+      "correctAnswers": [
+        2,
+        4,
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#jewish-revolt",
+      "explanation": "A later tradition blamed a ban on circumcision, but modern scholars doubt it. Harsh government, land disputes and messianic hopes probably mattered more.",
+      "sourceQuote": "Heavy-handed government, quarrels over land and hopes of a messiah who would rebuild the Temple probably mattered more.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which emperor did a great 19th-century German scholar accuse of an 'insatiable lust for conquest'?",
+      "options": [
+        "Nerva",
+        "Antoninus Pius",
+        "Trajan",
+        "Lucius Verus",
+        "Marcus Aurelius",
+        "Hadrian"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 3,
+      "textReference": "#five-good-emperors-debate",
+      "explanation": "Though ancient writers adored Trajan, the German scholar condemned his conquests. The 18th-century English historian also doubted Trajan's warlike reign.",
+      "sourceQuote": "The same English historian doubted Trajan's warlike reign, and a great 19th-century German scholar spoke of his 'insatiable lust for conquest'.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which of these projects in or near Rome did Hadrian carry out? (select all that apply)",
+      "options": [
+        "Raised a spiral victory column",
+        "Finished the domed Pantheon",
+        "Added libraries and a market to a forum",
+        "Built Rome's largest forum",
+        "Built a sprawling villa at Tivoli",
+        "Rebuilt the Circus Maximus in stone"
+      ],
+      "correctAnswers": [
+        1,
+        4
+      ],
+      "difficulty": 3,
+      "textReference": "#hadrian-the-traveller",
+      "explanation": "Hadrian finished the Pantheon in its familiar domed form and built a villa at Tivoli, east of Rome. The Circus Maximus, the great forum and the Column were all Trajan's work.",
+      "sourceQuote": "In Rome he finished the Pantheon in its familiar domed form and built a sprawling villa at Tivoli, in the hills east of the city.",
+      "reviewFlags": []
+    }
+  ]
+}

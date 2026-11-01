@@ -1,0 +1,625 @@
+{
+  "chapterName": "Empire: The Five Good Emperors (AD 96-192)",
+  "model": "claude-opus-5-5",
+  "briefing": {
+    "title": "Rome, AD 96",
+    "paragraphs": [
+      "September AD 96. Rome's emperor has just been murdered, and power has passed to Nerva, an elderly, childless senator the soldiers barely respect. The Praetorian Guard, the emperor's own bodyguard in the city, is about to turn against him. He needs the army, and fast.",
+      "Over the next eighty-four years five men will rule an empire stretching from Britain to Mesopotamia. A soldier from Spain will push its borders to their widest. His successors will pull back, build walls and face plague and invaders. Can choosing the best man as heir keep the peace?"
+    ]
+  },
+  "timelines": [
+    {
+      "name": "Level 1: The Big Picture",
+      "blurb": "Four milestones from Nerva to Marcus Aurelius.",
+      "events": [
+        {
+          "label": "Nerva becomes emperor",
+          "when": "September AD 96",
+          "year": 96,
+          "fact": "The elderly, childless senator Nerva took power after his predecessor was murdered.",
+          "sectionId": "nerva-adopts-trajan",
+          "reviewFlags": []
+        },
+        {
+          "label": "Dacian capital Sarmizegetusa falls",
+          "when": "AD 106",
+          "year": 106,
+          "fact": "After the Romans cut its water pipes, the Dacian capital fell and Dacia became a Roman province.",
+          "sectionId": "dacian-wars",
+          "reviewFlags": []
+        },
+        {
+          "label": "Hadrian orders his wall in Britain",
+          "when": "AD 122",
+          "year": 122,
+          "fact": "Built by ordinary soldiers 'to separate Romans from barbarians', the wall was never seen finished by Hadrian.",
+          "sectionId": "hadrian-the-traveller",
+          "reviewFlags": []
+        },
+        {
+          "label": "Marcus Aurelius dies near the Danube",
+          "when": "AD 180",
+          "year": 180,
+          "fact": "Marcus died on 17 March 180, and his own son succeeded him, breaking the run of adopted heirs.",
+          "sectionId": "marcus-aurelius",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Level 2: Rise and Reach",
+      "blurb": "Six events from Trajan's adoption to Marcus's marriage.",
+      "events": [
+        {
+          "label": "Nerva adopts Trajan",
+          "when": "Summer of AD 97",
+          "year": 97,
+          "fact": "Nerva claimed he chose Trajan purely for military merit, though hints suggest the adoption was forced on him.",
+          "sectionId": "nerva-adopts-trajan",
+          "reviewFlags": []
+        },
+        {
+          "label": "Trajan finally enters Rome",
+          "when": "AD 99",
+          "year": 99,
+          "fact": "He entered with notable modesty, gave cash to the people and halved the customary gift to the troops.",
+          "sectionId": "trajan-best-ruler",
+          "reviewFlags": []
+        },
+        {
+          "label": "Forum of Trajan dedicated",
+          "when": "1 January AD 112",
+          "year": 112,
+          "fact": "Rome's largest forum, paid for with war loot, had a square about 120 m by 90 m (roughly 390 by 300 feet).",
+          "sectionId": "trajan-best-ruler",
+          "reviewFlags": []
+        },
+        {
+          "label": "Trajan captures Ctesiphon",
+          "when": "AD 116",
+          "year": 116,
+          "fact": "Trajan dragged his fleet overland to the Tigris and took the Parthian capital.",
+          "sectionId": "parthian-war",
+          "reviewFlags": []
+        },
+        {
+          "label": "Great Jewish revolt breaks out",
+          "when": "AD 132",
+          "year": 132,
+          "fact": "A massive uprising in Judaea under a leader with messianic claims at first overwhelmed the Romans.",
+          "sectionId": "jewish-revolt",
+          "reviewFlags": []
+        },
+        {
+          "label": "Marcus marries Antoninus's daughter",
+          "when": "AD 145",
+          "year": 145,
+          "fact": "Antoninus Pius kept Marcus at his side in Rome and made him his son-in-law.",
+          "sectionId": "antoninus-pius",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Level 3: Wars, Plots and Plague",
+      "blurb": "Eight events across the whole period.",
+      "events": [
+        {
+          "label": "Hadrian born in Italica",
+          "when": "AD 76",
+          "year": 76,
+          "fact": "Hadrian was born in the same Spanish town as Trajan, whose cousin was Hadrian's father.",
+          "sectionId": "hadrian-succession",
+          "reviewFlags": []
+        },
+        {
+          "label": "Costly Roman victory at Tapae",
+          "when": "AD 101",
+          "year": 101,
+          "fact": "Tapae was a pass into the Dacian heartland, won at heavy cost in Trajan's first Dacian campaign.",
+          "sectionId": "dacian-wars",
+          "reviewFlags": []
+        },
+        {
+          "label": "Trajan's Column raised",
+          "when": "AD 113",
+          "year": 113,
+          "fact": "Its spiral carvings tell the story of the Dacian Wars, and tradition places Trajan's ashes at its base.",
+          "sectionId": "dacian-wars",
+          "reviewFlags": []
+        },
+        {
+          "label": "Four former consuls executed",
+          "when": "AD 118",
+          "year": 118,
+          "fact": "Accused of conspiracy and killed without a public trial, these friends of Trajan cost Hadrian the Senate's goodwill.",
+          "sectionId": "hadrian-succession",
+          "reviewFlags": []
+        },
+        {
+          "label": "Hadrian's companion drowns in the Nile",
+          "when": "AD 130",
+          "year": 130,
+          "fact": "The grieving emperor founded a city in honour of the young Greek from Bithynia and promoted his cult.",
+          "sectionId": "hadrian-the-traveller",
+          "reviewFlags": []
+        },
+        {
+          "label": "Fall of Beitar ends Jewish revolt",
+          "when": "AD 135",
+          "year": 135,
+          "fact": "Afterwards Judaea was renamed Syria Palaestina and Jerusalem rebuilt as Aelia Capitolina.",
+          "sectionId": "jewish-revolt",
+          "reviewFlags": []
+        },
+        {
+          "label": "Romans burn palace at Ctesiphon",
+          "when": "AD 165",
+          "year": 165,
+          "fact": "Striking back after Parthia invaded Armenia, Roman troops burned the palace, then brought plague home.",
+          "sectionId": "marcus-aurelius",
+          "reviewFlags": []
+        },
+        {
+          "label": "Marcus's co-emperor dies",
+          "when": "AD 169",
+          "year": 169,
+          "fact": "Marcus's adoptive brother, who had ruled beside him with equal titles, probably died of the plague.",
+          "sectionId": "marcus-aurelius",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "matchSets": [
+    {
+      "name": "Latin Words of Power",
+      "blurb": "Match each Latin term to its meaning.",
+      "pairs": [
+        {
+          "name": "optimus princeps",
+          "match": "'The best ruler', a title officially given only to Trajan",
+          "sectionId": "trajan-best-ruler",
+          "reviewFlags": []
+        },
+        {
+          "name": "alimenta",
+          "match": "Welfare scheme giving cash, food and schooling to poor children",
+          "sectionId": "trajan-best-ruler",
+          "reviewFlags": []
+        },
+        {
+          "name": "limes",
+          "match": "Frontier Hadrian strengthened with forts and watchtowers",
+          "sectionId": "hadrian-the-traveller",
+          "reviewFlags": []
+        },
+        {
+          "name": "aequanimitas",
+          "match": "'Equanimity', the dying Antoninus Pius's last password",
+          "sectionId": "antoninus-pius",
+          "reviewFlags": []
+        },
+        {
+          "name": "horror imperii",
+          "match": "'Fear of imperial power', perhaps felt by Marcus Aurelius",
+          "sectionId": "marcus-aurelius",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Places of the Age",
+      "blurb": "Match each place to its role in the story.",
+      "pairs": [
+        {
+          "name": "Italica",
+          "match": "Spanish town where both Trajan and Hadrian were born",
+          "sectionId": "hadrian-succession",
+          "reviewFlags": []
+        },
+        {
+          "name": "Sarmizegetusa",
+          "match": "Dacian capital that fell in 106 after its water pipes were cut",
+          "sectionId": "dacian-wars",
+          "reviewFlags": []
+        },
+        {
+          "name": "Ctesiphon",
+          "match": "Parthian capital taken by Trajan in 116, its palace burned in 165",
+          "sectionId": "parthian-war",
+          "reviewFlags": []
+        },
+        {
+          "name": "Beitar",
+          "match": "Fortress whose fall in 135 ended the Jewish revolt",
+          "sectionId": "jewish-revolt",
+          "reviewFlags": []
+        },
+        {
+          "name": "Aelia Capitolina",
+          "match": "Greek-style city built where Jerusalem had lain in ruins",
+          "sectionId": "jewish-revolt",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "trueFalseDecks": [
+    {
+      "name": "Nerva and Trajan",
+      "blurb": "From a shaky succession to the empire's greatest size.",
+      "cards": [
+        {
+          "claim": "Nerva adopted Trajan as his son and heir in the summer of 97.",
+          "answer": true,
+          "why": "Nerva needed the army's support and adopted the popular general Trajan in summer 97.",
+          "sectionId": "nerva-adopts-trajan",
+          "reviewFlags": []
+        },
+        {
+          "claim": "When Trajan entered Rome in 99, he doubled the customary gift to the troops.",
+          "answer": false,
+          "why": "He halved the customary gift to the troops, while giving cash to the common people.",
+          "sectionId": "trajan-best-ruler",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Trajan was the only emperor officially given the title 'the best ruler'.",
+          "answer": true,
+          "why": "The Senate gave him the title optimus princeps, which appears on coins from 105.",
+          "sectionId": "trajan-best-ruler",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Trajan ordered that Christians be actively hunted down.",
+          "answer": false,
+          "why": "He said Christians should not be hunted down or condemned on anonymous accusations, though those who confessed and refused to give up their faith should be punished.",
+          "sectionId": "trajan-best-ruler",
+          "reviewFlags": []
+        },
+        {
+          "claim": "In 106 the Romans cut the water pipes of the Dacian capital, Sarmizegetusa.",
+          "answer": true,
+          "why": "Once the water pipes were cut, the city fell and the Dacian king fled.",
+          "sectionId": "dacian-wars",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Trajan celebrated his Dacian victory with 123 days of games and 10,000 gladiators.",
+          "answer": true,
+          "why": "After conquering Dacia, Trajan celebrated a triumph and 123 days of games with 10,000 gladiators.",
+          "sectionId": "dacian-wars",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Trajan captured the desert fortress city of Hatra.",
+          "answer": false,
+          "why": "Trajan failed to take Hatra, and soon afterwards his health collapsed.",
+          "sectionId": "parthian-war",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Trajan died in Rome at the end of his Parthian War.",
+          "answer": false,
+          "why": "He died of a stroke at Selinus, on the southern coast of modern Turkey, in August 117 while sailing home.",
+          "sectionId": "parthian-war",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Hadrian to Marcus Aurelius",
+      "blurb": "Retreat, revolt, peace and plague, and how we know.",
+      "cards": [
+        {
+          "claim": "Hadrian was born in Italica, the same Spanish town as Trajan.",
+          "answer": true,
+          "why": "Hadrian was born there in 76; his father was Trajan's cousin.",
+          "sectionId": "hadrian-succession",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Hadrian kept Mesopotamia as a Roman province.",
+          "answer": false,
+          "why": "Hadrian abandoned Mesopotamia as too costly and distant to defend.",
+          "sectionId": "hadrian-succession",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Hadrian spent more than half his reign outside Italy.",
+          "answer": true,
+          "why": "He preferred to see the provinces for himself and travelled widely.",
+          "sectionId": "hadrian-the-traveller",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Hadrian was the first emperor shown with a full beard.",
+          "answer": true,
+          "why": "Hadrian, once teased as the 'Greekling', set a style most later emperors copied.",
+          "sectionId": "hadrian-the-traveller",
+          "reviewFlags": []
+        },
+        {
+          "claim": "After the Jewish revolt, Judaea was renamed Syria Palaestina.",
+          "answer": true,
+          "why": "After Beitar fell in 135, Judaea was renamed and Jerusalem rebuilt as Aelia Capitolina.",
+          "sectionId": "jewish-revolt",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Antoninus Pius ruled for twelve years.",
+          "answer": false,
+          "why": "His peaceful reign lasted twenty-three years, the longest since the first emperor.",
+          "sectionId": "antoninus-pius",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Marcus Aurelius wrote his Meditations in Latin.",
+          "answer": false,
+          "why": "He wrote these private notes in Greek, in camp between 170 and 180.",
+          "sectionId": "marcus-aurelius",
+          "reviewFlags": []
+        },
+        {
+          "claim": "The Historia Augusta is a trustworthy 2nd-century collection of imperial biographies.",
+          "answer": false,
+          "why": "It dates from the late 4th century and is notorious for invention, though its life of Hadrian is thought fairly reliable.",
+          "sectionId": "five-good-emperors-debate",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "oddOneOut": [
+    {
+      "items": [
+        "Pantheon in its domed form",
+        "Villa at Tivoli",
+        "Stone seats in Circus Maximus",
+        "Temple of Olympian Zeus"
+      ],
+      "oddIndex": 2,
+      "why": "Hadrian finished the Pantheon and the Temple of Olympian Zeus and built the Tivoli villa; it was Trajan who rebuilt the Circus Maximus in stone.",
+      "sectionId": "hadrian-the-traveller",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Mesopotamia",
+        "Armenia",
+        "Britain",
+        "Parts of Dacia"
+      ],
+      "oddIndex": 2,
+      "why": "Hadrian gave up Mesopotamia, Armenia and parts of Dacia; in Britain he strengthened the frontier with his wall.",
+      "sectionId": "hadrian-succession",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Parthian invasion of Armenia",
+        "Plague brought by returning troops",
+        "Marcomanni crossing the Danube",
+        "Uprising in Judaea under a messiah"
+      ],
+      "oddIndex": 3,
+      "why": "Parthian invasion, plague and the Marcomanni troubled Marcus Aurelius; the messianic revolt in Judaea happened under Hadrian in 132-135.",
+      "sectionId": "marcus-aurelius",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Cancelled late death sentences",
+        "Founded a city for a drowned youth",
+        "Insisted Hadrian be declared a god",
+        "Married his daughter to Marcus"
+      ],
+      "oddIndex": 1,
+      "why": "Antoninus Pius cancelled Hadrian's last death sentences, defended his deification and married his daughter to Marcus; Hadrian founded a city for his drowned companion.",
+      "sectionId": "antoninus-pius",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Organised state",
+        "Rich in iron and gold",
+        "Loose tribal society",
+        "King recognised as client king"
+      ],
+      "oddIndex": 2,
+      "why": "Dacia was an organised state rich in iron and gold whose king was a Roman client king; loose tribes describe the Germanic peoples, unlike Dacia.",
+      "sectionId": "dacian-wars",
+      "reviewFlags": []
+    }
+  ],
+  "whoAmI": [
+    {
+      "name": "Paths to the Throne",
+      "blurb": "How each man came to power, or chose who came next.",
+      "people": [
+        {
+          "name": "Nerva",
+          "options": [
+            "Nerva",
+            "Trajan",
+            "Hadrian",
+            "Antoninus Pius"
+          ],
+          "clues": [
+            "The commander of my bodyguard forced me to execute the men who killed my predecessor.",
+            "I had little standing with the soldiers, and the Praetorian Guard rose against me.",
+            "I was an elderly, childless senator who took power in September AD 96.",
+            "In 97 I adopted a popular general from Spain as my son and heir."
+          ],
+          "sectionId": "nerva-adopts-trajan",
+          "reviewFlags": []
+        },
+        {
+          "name": "Trajan",
+          "options": [
+            "Nerva",
+            "Trajan",
+            "Hadrian",
+            "Antoninus Pius"
+          ],
+          "clues": [
+            "Once in power, I had the Guard commander who defied my adoptive father put to death.",
+            "When my adoptive father died in 98, I inspected the Rhine and Danube frontiers before going to Rome.",
+            "My father was a senator and commander, and I won fame fighting Germanic tribes on the Rhine.",
+            "An elderly emperor adopted me in 97, claiming he chose me purely for my military merit."
+          ],
+          "sectionId": "nerva-adopts-trajan",
+          "reviewFlags": []
+        },
+        {
+          "name": "Hadrian",
+          "options": [
+            "Nerva",
+            "Trajan",
+            "Hadrian",
+            "Antoninus Pius"
+          ],
+          "clues": [
+            "Roman law expected both parties at an adoption, yet I was far away in Syria when mine appeared.",
+            "My adoption document was signed not by the dying emperor but by his wife.",
+            "Orphaned at ten, I became the ward of the emperor who was my father's cousin.",
+            "In 122 I ordered a wall across Britain 'to separate Romans from barbarians'."
+          ],
+          "sectionId": "hadrian-succession",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Rulers in War and Peace",
+      "blurb": "Conquest, calm and duty on the frontier.",
+      "people": [
+        {
+          "name": "Trajan",
+          "options": [
+            "Trajan",
+            "Hadrian",
+            "Antoninus Pius",
+            "Marcus Aurelius"
+          ],
+          "clues": [
+            "At the Persian Gulf I regretted being too old to repeat the conquests of the Macedonian king who reached India.",
+            "I died of a stroke at Selinus while sailing home in 117.",
+            "Romanians still honour me as a founder of their nation.",
+            "My Column in Rome tells the story of my wars in Dacia with spiral carvings."
+          ],
+          "sectionId": "dacian-wars",
+          "reviewFlags": []
+        },
+        {
+          "name": "Antoninus Pius",
+          "options": [
+            "Trajan",
+            "Hadrian",
+            "Antoninus Pius",
+            "Marcus Aurelius"
+          ],
+          "clues": [
+            "Before becoming heir I governed the province of Asia.",
+            "My final password to the officer of the night watch was 'equanimity'.",
+            "I threatened to refuse the throne unless the Senate declared my predecessor a god.",
+            "For that loyalty the senators gave me the name 'the dutiful'."
+          ],
+          "sectionId": "antoninus-pius",
+          "reviewFlags": []
+        },
+        {
+          "name": "Marcus Aurelius",
+          "options": [
+            "Trajan",
+            "Hadrian",
+            "Antoninus Pius",
+            "Marcus Aurelius"
+          ],
+          "clues": [
+            "I alone held the office of chief priest, which made me the senior of two emperors.",
+            "I spent much of my reign fighting the Marcomanni and their allies on the Danube.",
+            "A Stoic, I insisted that my adoptive brother rule beside me with equal titles.",
+            "In camp I wrote private notes in Greek, now called the Meditations."
+          ],
+          "sectionId": "marcus-aurelius",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "places": [
+    {
+      "name": "Italica",
+      "wikipediaTitle": "Italica",
+      "lat": 37.44388889,
+      "lon": -6.04666667,
+      "why": "This Roman town near modern Seville, settled by Italian veterans, was the birthplace of both Trajan and Hadrian.",
+      "sectionId": "nerva-adopts-trajan",
+      "coordinates": "Wikipedia: Italica",
+      "reviewFlags": []
+    },
+    {
+      "name": "Sarmizegetusa",
+      "wikipediaTitle": "Sarmizegetusa Regia",
+      "lat": 45.6219,
+      "lon": 23.3093,
+      "why": "The Dacian capital fell in 106 after the Romans cut its water pipes, ending the Dacian kingdom.",
+      "sectionId": "dacian-wars",
+      "coordinates": "Wikipedia: Sarmizegetusa Regia",
+      "reviewFlags": []
+    },
+    {
+      "name": "Ctesiphon",
+      "wikipediaTitle": "Ctesiphon",
+      "lat": 33.09361111,
+      "lon": 44.58055556,
+      "why": "Trajan captured the Parthian capital in 116, and Roman troops burned its palace again in 165.",
+      "sectionId": "parthian-war",
+      "coordinates": "Wikipedia: Ctesiphon",
+      "reviewFlags": []
+    },
+    {
+      "name": "Hatra",
+      "wikipediaTitle": "Hatra",
+      "lat": 35.58805556,
+      "lon": 42.71833333,
+      "why": "Trajan failed to take this desert fortress city as revolts spread through Mesopotamia.",
+      "sectionId": "parthian-war",
+      "coordinates": "Wikipedia: Hatra",
+      "reviewFlags": []
+    },
+    {
+      "name": "Selinus",
+      "wikipediaTitle": "Selinus (Cilicia)",
+      "lat": 36.25827,
+      "lon": 32.28296,
+      "why": "Trajan died of a stroke here, on the southern coast of modern Turkey, in August 117.",
+      "sectionId": "parthian-war",
+      "coordinates": "Wikipedia: Selinus (Cilicia)",
+      "reviewFlags": []
+    },
+    {
+      "name": "Beitar",
+      "wikipediaTitle": "Betar (fortress)",
+      "lat": 31.73,
+      "lon": 35.13555556,
+      "why": "The fall of this fortress south-west of Jerusalem in 135 ended the great Jewish revolt.",
+      "sectionId": "jewish-revolt",
+      "coordinates": "Wikipedia: Betar (ancient city)",
+      "reviewFlags": []
+    },
+    {
+      "name": "Baiae",
+      "wikipediaTitle": "Baiae",
+      "lat": 40.82,
+      "lon": 14.07,
+      "why": "Hadrian died at this seaside resort near Naples on 10 July 138.",
+      "sectionId": "antoninus-pius",
+      "coordinates": "model estimate",
+      "reviewFlags": []
+    }
+  ]
+}

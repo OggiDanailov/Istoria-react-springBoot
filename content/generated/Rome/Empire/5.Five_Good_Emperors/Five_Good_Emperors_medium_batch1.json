@@ -1,0 +1,189 @@
+{
+  "batchName": "Empire: The Five Good Emperors (AD 96-192) - Medium Batch 1",
+  "chapterName": "Empire: The Five Good Emperors (AD 96-192)",
+  "difficulty": 2,
+  "batchOrder": 3,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Why is the adoption 'system' of these emperors considered partly a matter of chance?",
+      "options": [
+        "Each heir was named by the dead emperor's widow",
+        "Three of them had no children, and Marcus chose his own son",
+        "The Senate drew lots to select each emperor's heir",
+        "Heirs were chosen by consulting the oracles",
+        "The Guard picked each heir by acclamation in camp"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#five-good-emperors-debate",
+      "explanation": "Nerva, Trajan and Hadrian had no children, so adoption was a necessity. When Marcus had a son, he chose him instead.",
+      "sourceQuote": "The adoption 'system' was also partly chance: Nerva, Trajan and Hadrian had no children, and when Marcus had a son, he chose him.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How and where did Trajan die in 117?",
+      "options": [
+        "Murdered by his own Guard at Antioch",
+        "Of a stroke at Selinus while sailing home",
+        "In battle outside the walls of Hatra",
+        "Of fever at the resort of Baiae near Naples",
+        "Of plague in the captured city of Ctesiphon"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#parthian-war",
+      "explanation": "After failing to take Hatra, Trajan's health collapsed and he died of a stroke at Selinus on the southern Turkish coast. Tradition holds his ashes lie at the base of his Column.",
+      "sourceQuote": "Sailing home, he died of a stroke at Selinus, on the southern coast of modern Turkey, in August 117.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which territory triggered Trajan's war with Parthia?",
+      "options": [
+        "Judaea",
+        "Cappadocia",
+        "Mesopotamia",
+        "Syria",
+        "Armenia"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#parthian-war",
+      "explanation": "Parthia had installed a king in Armenia whom Rome would not accept. Trajan deposed him and made Armenia a Roman province in 114.",
+      "sourceQuote": "The trigger was Armenia, a mountain kingdom long shared between the two powers, where Parthia had installed a king Rome would not accept.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Rome had two emperors for the first time under Marcus Aurelius. What marked Marcus as the senior?",
+      "options": [
+        "He alone was chief priest (pontifex maximus)",
+        "He alone held the title of Augustus",
+        "He alone had the right to mint coins",
+        "He was older than his partner by twenty years",
+        "He alone commanded the Praetorian Guard"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#marcus-aurelius",
+      "explanation": "Marcus insisted his adoptive brother rule with equal titles, but only Marcus was chief priest. His reluctance to rule may reflect a genuine 'fear of imperial power'.",
+      "sourceQuote": "For the first time Rome had two emperors, though Marcus, who alone was chief priest (*pontifex maximus*), was clearly the senior.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What disaster did Roman troops returning from the Parthian war bring back in the 160s?",
+      "options": [
+        "A famine across Italy",
+        "A collapse of the coinage",
+        "A mutiny against the emperors",
+        "A plague, probably smallpox",
+        "A Parthian army in pursuit"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#marcus-aurelius",
+      "explanation": "The returning troops brought a plague that killed five to ten million people. Marcus's co-emperor probably died of it in 169.",
+      "sourceQuote": "Returning troops brought a plague, probably smallpox, that killed five to ten million people.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did Hadrian respond when his young Greek companion drowned in the Nile in 130?",
+      "options": [
+        "Withdrew from public life for a year",
+        "Had the boat's crew put to death",
+        "Founded a city for him and promoted his cult",
+        "Banned all travel on the Nile for a year",
+        "Buried him beneath the Pantheon's dome"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#hadrian-the-traveller",
+      "explanation": "The grieving emperor founded a city in the youth's honour and promoted a cult that spread across the empire. How the young man from Bithynia drowned is still unknown.",
+      "sourceQuote": "When the youth drowned in the Nile in 130, in circumstances still unknown, the grieving emperor founded a city in his honour and promoted a cult of him that spread across the empire.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What was notable about Antoninus Pius's reign of twenty-three years?",
+      "options": [
+        "It brought Rome its largest conquests",
+        "It was shared equally with a co-emperor",
+        "It ended in a Praetorian Guard coup",
+        "It was spent mostly touring the provinces",
+        "It was the longest since the first emperor"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#antoninus-pius",
+      "explanation": "Antoninus's peaceful 23-year reign was the longest since the first emperor. He kept Marcus at his side in Rome and married him to his daughter in 145.",
+      "sourceQuote": "His peaceful reign of twenty-three years was the longest since the first emperor.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What is the Historia Augusta, a major source for Hadrian?",
+      "options": [
+        "A late 4th-century set of imperial biographies notorious for invention",
+        "Hadrian's own autobiography, written at Tivoli",
+        "A Byzantine summary of a lost Greek history of Rome",
+        "A collection of inscriptions gathered in Athens",
+        "A senator's formal speech of praise addressed to Trajan"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#five-good-emperors-debate",
+      "explanation": "The Historia Augusta is notorious for invention, though its life of Hadrian is thought fairly reliable. Coins, inscriptions and archaeology fill many gaps in the evidence.",
+      "sourceQuote": "Much of what we know about Hadrian comes from the Historia Augusta, a late 4th-century collection of imperial biographies notorious for invention, though its life of Hadrian is thought fairly reliable.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did Trajan instruct a governor in north-west Turkey to treat Christians?",
+      "options": [
+        "Expel them all from the province at once",
+        "Don't hunt them, but punish those who confess and won't recant",
+        "Force all of them to serve in the legions",
+        "Leave them entirely alone whatever they confess",
+        "Arrest them all on any accusation, signed or anonymous"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#trajan-best-ruler",
+      "explanation": "Trajan ruled that Christians should not be sought out or condemned on anonymous accusations. Only those who confessed and refused to give up their faith were to be punished.",
+      "sourceQuote": "When a governor in north-west Turkey asked how to treat Christians, Trajan replied that they should not be hunted down or condemned on anonymous accusations, but those who confessed and refused to give up their faith should be punished.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did mutinous Praetorian Guards and their commander force Nerva to do?",
+      "options": [
+        "Leave Rome for the Danube frontier",
+        "Abdicate in favour of a Rhine general",
+        "Adopt the Guard commander as his heir",
+        "Execute the killers of the previous emperor",
+        "Double the Guard's pay and bonuses"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#nerva-adopts-trajan",
+      "explanation": "The Guard rose against Nerva, and its commander forced him to execute the previous emperor's murderers. This weakness pushed Nerva to adopt a popular general.",
+      "sourceQuote": "Members of the Praetorian Guard (*cohortes praetoriae*), the elite bodyguard stationed in Rome, rose against him, and their commander forced him to execute the men who had killed the previous emperor.",
+      "reviewFlags": []
+    }
+  ]
+}

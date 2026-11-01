@@ -1,0 +1,144 @@
+{
+  "description": "Key facts for this chapter, written by hand from the chapter text. Every entry links to the section that explains it.",
+  "people": [
+    {
+      "name": "Nerva",
+      "text": "Elderly senator, emperor 96–98; adopted Trajan.",
+      "sec": "nerva-adopts-trajan"
+    },
+    {
+      "name": "Trajan",
+      "text": "Soldier-emperor from Spain, 98–117; conquered Dacia; the empire at its largest.",
+      "sec": "trajan-best-ruler"
+    },
+    {
+      "name": "Decebalus",
+      "text": "King of Dacia, defeated by Trajan in 106.",
+      "sec": "dacian-wars"
+    },
+    {
+      "name": "Hadrian",
+      "text": "Emperor 117–138; traveller, builder of the wall in Britain.",
+      "sec": "hadrian-the-traveller"
+    },
+    {
+      "name": "Antoninus Pius",
+      "text": "Emperor 138–161; the longest peaceful reign since Augustus.",
+      "sec": "antoninus-pius"
+    },
+    {
+      "name": "Marcus Aurelius",
+      "text": "Philosopher-emperor, 161–180; wrote the Meditations.",
+      "sec": "marcus-aurelius"
+    },
+    {
+      "name": "Commodus",
+      "text": "Marcus’s son, who ruled until 192.",
+      "sec": "marcus-aurelius"
+    }
+  ],
+  "dates": [
+    {
+      "when": "AD 97",
+      "text": "Nerva adopts Trajan.",
+      "sec": "nerva-adopts-trajan"
+    },
+    {
+      "when": "101–106",
+      "text": "The Dacian Wars; Dacia becomes a province.",
+      "sec": "dacian-wars"
+    },
+    {
+      "when": "113",
+      "text": "Trajan’s Column; the Parthian war begins.",
+      "sec": "dacian-wars"
+    },
+    {
+      "when": "117",
+      "text": "Trajan dies; Hadrian becomes emperor.",
+      "sec": "parthian-war"
+    },
+    {
+      "when": "122",
+      "text": "Hadrian orders his wall in Britain.",
+      "sec": "hadrian-the-traveller"
+    },
+    {
+      "when": "132–135",
+      "text": "The Jewish revolt under Bar Kokhba.",
+      "sec": "jewish-revolt"
+    },
+    {
+      "when": "138",
+      "text": "Hadrian dies; Antoninus Pius succeeds.",
+      "sec": "antoninus-pius"
+    },
+    {
+      "when": "161",
+      "text": "Marcus Aurelius and Lucius Verus become emperors.",
+      "sec": "marcus-aurelius"
+    },
+    {
+      "when": "180",
+      "text": "Marcus Aurelius dies near the Danube.",
+      "sec": "marcus-aurelius"
+    }
+  ],
+  "terms": [
+    {
+      "latin": "cohortes praetoriae",
+      "english": "the Praetorian Guard",
+      "sec": "nerva-adopts-trajan"
+    },
+    {
+      "latin": "optimus princeps",
+      "english": "the best ruler",
+      "sec": "trajan-best-ruler"
+    },
+    {
+      "latin": "alimenta",
+      "english": "welfare for poor children",
+      "sec": "trajan-best-ruler"
+    },
+    {
+      "latin": "Forum Traiani",
+      "english": "the Forum of Trajan",
+      "sec": "trajan-best-ruler"
+    },
+    {
+      "latin": "rex amicus",
+      "english": "a client king",
+      "sec": "dacian-wars"
+    },
+    {
+      "latin": "triumphus",
+      "english": "a victory parade",
+      "sec": "dacian-wars"
+    },
+    {
+      "latin": "limes",
+      "english": "the frontier",
+      "sec": "hadrian-the-traveller"
+    },
+    {
+      "latin": "divus",
+      "english": "a god (a dead emperor)",
+      "sec": "antoninus-pius"
+    },
+    {
+      "latin": "aequanimitas",
+      "english": "equanimity, a calm mind",
+      "sec": "antoninus-pius"
+    },
+    {
+      "latin": "horror imperii",
+      "english": "fear of imperial power",
+      "sec": "marcus-aurelius"
+    },
+    {
+      "latin": "pontifex maximus",
+      "english": "the chief priest",
+      "sec": "marcus-aurelius"
+    }
+  ]
+}

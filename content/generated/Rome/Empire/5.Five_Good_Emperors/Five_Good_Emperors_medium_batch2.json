@@ -1,0 +1,189 @@
+{
+  "batchName": "Empire: The Five Good Emperors (AD 96-192) - Medium Batch 2",
+  "chapterName": "Empire: The Five Good Emperors (AD 96-192)",
+  "difficulty": 2,
+  "batchOrder": 4,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "After Nerva died in January 98, what did Trajan do before travelling to Rome?",
+      "options": [
+        "Returned to his hometown in Spain",
+        "Toured the cities of Greece",
+        "Campaigned in Armenia",
+        "Inspected the Rhine and Danube frontiers",
+        "Invaded Dacia across the Danube"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#nerva-adopts-trajan",
+      "explanation": "Trajan took power smoothly but lingered on the frontiers, not entering Rome until 99. Some historians see his accession as more of a successful coup.",
+      "sourceQuote": "When Nerva died on 28 January 98, Trajan took power without trouble, but he lingered to inspect the Rhine and Danube frontiers before going to Rome.",
+      "reviewFlags": []
+    },
+    {
+      "question": "The Jewish revolt under Hadrian ended in 135 with the fall of which fortress?",
+      "options": [
+        "Machaerus",
+        "Beitar",
+        "Hatra",
+        "Masada",
+        "Jotapata"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#jewish-revolt",
+      "explanation": "Beitar, about 10 km south-west of Jerusalem, fell in 135. An ancient historian put Jewish deaths at 580,000.",
+      "sourceQuote": "The revolt ended in 135 with the fall of Beitar, a fortress about 10 km (six miles) south-west of Jerusalem.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What condition did Hadrian attach to adopting Antoninus as heir?",
+      "options": [
+        "He must restore Trajan's lost eastern conquests",
+        "He must marry the widow of Hadrian's first heir",
+        "He must rule jointly with the Guard commander",
+        "He must finish building Hadrian's Wall in Britain",
+        "He must adopt Marcus Aurelius and the dead heir's son"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#antoninus-pius",
+      "explanation": "Antoninus had to adopt the young Marcus Aurelius and the son of Hadrian's first heir, who had died on 1 January 138. This set up the next succession in advance.",
+      "sourceQuote": "Hadrian then chose Antoninus, a respected senator who had governed the province of Asia, on condition that Antoninus in turn adopt two boys: the young Marcus Aurelius and the dead heir's son.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Who signed the document adopting Hadrian as Trajan lay dying in 117?",
+      "options": [
+        "The Guard commander",
+        "Trajan himself",
+        "Trajan's wife",
+        "Hadrian's guardian",
+        "The senior consul"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#hadrian-succession",
+      "explanation": "The adoption document was signed by Trajan's wife, who favoured Hadrian, not by the emperor. A Greek senator writing a century later called the adoption fake.",
+      "sourceQuote": "As Trajan lay dying in 117, an adoption document appeared, signed not by the emperor but by his wife, who favoured Hadrian.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Why did Roman senators resent the peace deal Rome had earlier made with Dacia?",
+      "options": [
+        "It allowed Dacians to settle freely in Italy",
+        "Rome sent the Dacian king money and experts, like tribute",
+        "It made the Dacian king a Roman senator",
+        "It banned Roman ships from the lower Danube",
+        "It gave Dacia's gold mines to Germanic tribes"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#dacian-wars",
+      "explanation": "The Dacian king was a client king receiving Roman money and technical experts, which senators saw as shameful tribute. Dacia was an organised state rich in iron and gold.",
+      "sourceQuote": "Under an earlier peace deal its king was recognised as a client king (*rex amicus*) and received Roman money and technical experts, an arrangement senators saw as shameful tribute.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What happened in 118 that the Senate never forgave Hadrian for?",
+      "options": [
+        "He moved the seat of government to Athens",
+        "Four former consuls were killed without public trial",
+        "He dissolved the Senate for a whole year",
+        "He seized senators' estates to fund the frontier",
+        "He enrolled his Guard commander in the Senate"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#hadrian-succession",
+      "explanation": "Four senior former consuls, friends of Trajan and possible rivals, were condemned for conspiracy and killed. Hadrian blamed his Guard commander.",
+      "sourceQuote": "In 118 four senior former consuls, close friends of Trajan and possible rivals, were accused of conspiracy, condemned without a public trial and killed.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did the Romans bring about the fall of the Dacian capital Sarmizegetusa in 106?",
+      "options": [
+        "They set it ablaze with catapults",
+        "They tunnelled under its walls",
+        "They starved it over two years",
+        "They cut the city's water pipes",
+        "They bribed the gate guards"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#dacian-wars",
+      "explanation": "Cutting Sarmizegetusa's water supply brought the city down in 106. Its king fled and later killed himself, and his head was displayed in Rome.",
+      "sourceQuote": "In 106 the Romans cut the water pipes of the Dacian capital, Sarmizegetusa, and the city fell.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What was unusual about Hadrian's report to the Senate during the Jewish revolt?",
+      "options": [
+        "It named his adopted son as successor",
+        "It asked the Senate to declare war formally",
+        "It was written in Greek rather than in Latin",
+        "It announced his intention to abdicate",
+        "It omitted the line that he and the legions were well"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#jewish-revolt",
+      "explanation": "Roman losses were so heavy that Hadrian pointedly left out the customary reassurance. He summoned his best general from Britain to deal with the revolt.",
+      "sourceQuote": "Hadrian summoned his best general from Britain, and his report to the Senate pointedly left out the customary line that he and the legions were well.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which long-unfinished monument in Athens did Hadrian complete?",
+      "options": [
+        "The Erechtheion",
+        "The Parthenon",
+        "Temple of Hephaestus",
+        "Theatre of Dionysus",
+        "Temple of Olympian Zeus"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#hadrian-the-traveller",
+      "explanation": "The Temple of Olympian Zeus had been under construction for more than five centuries before Hadrian finished it. He also created a league of Greek cities centred on Athens.",
+      "sourceQuote": "He completed the vast Temple of Olympian Zeus in Athens, under construction for more than five centuries, and created a league of Greek cities centred there.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did Trajan transform the Circus Maximus, Rome's chariot-racing stadium?",
+      "options": [
+        "Moved it to a new site on the Field of Mars",
+        "Replaced wooden seats with stone, adding 5,000 places",
+        "Added libraries and a market along its sides",
+        "Roofed the whole stadium with a timber awning",
+        "Converted it into an arena for gladiators"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#trajan-best-ruler",
+      "explanation": "Trajan rebuilt the Circus Maximus in stone and added about 5,000 places. He also built Rome's largest forum using loot from his wars.",
+      "sourceQuote": "He also rebuilt the Circus Maximus, Rome's chariot-racing stadium, replacing wooden seats with stone and adding about 5,000 places.",
+      "reviewFlags": []
+    }
+  ]
+}

@@ -648,7 +648,16 @@
       "short": "Five Good Emperors",
       "era": "empire",
       "mapArea": "wide",
-      "maxNames": 8
+      "maxNames": 8,
+      "battle": {
+        "name": "The Dacian Wars",
+        "year": "AD 101–106",
+        "enemy": "Decebalus and the Dacians",
+        "sec": "dacian-wars",
+        "level": "dacia",
+        "intro": "Trajan crosses the Danube to break Dacia, a real kingdom, rich in iron and gold."
+      },
+      "locked": true
     },
     {
       "id": "severans-and-crisis",

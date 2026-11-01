@@ -1,0 +1,145 @@
+{
+  "batchName": "Empire: The Five Good Emperors (AD 96-192) - Latin words",
+  "chapterName": "Empire: The Five Good Emperors (AD 96-192)",
+  "difficulty": 1,
+  "batchOrder": 9,
+  "description": "Written by hand from the chapter text: the Latin words it explains",
+  "questions": [
+    {
+      "question": "The Senate gave Trajan the title optimus princeps. What does it mean?",
+      "options": [
+        "“The best ruler”",
+        "“The first citizen”",
+        "“The great conqueror”",
+        "“Father of the Fatherland”"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#trajan-best-ruler",
+      "explanation": "He was the only emperor officially given it; it appears on coins from 105.",
+      "sourceQuote": "the title 'the best ruler' (*optimus princeps*)",
+      "reviewFlags": []
+    },
+    {
+      "question": "What was the limes that Hadrian strengthened?",
+      "options": [
+        "The frontier, with forts and watchtowers",
+        "The army’s pay chest",
+        "A road across Italy",
+        "The emperor’s bodyguard"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#hadrian-the-traveller",
+      "explanation": "Hadrian’s Wall in Britain was part of it.",
+      "sourceQuote": "he strengthened the frontier (*limes*) with forts, watchtowers and constant drill for the troops.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What were the alimenta that Trajan formalised?",
+      "options": [
+        "Welfare for orphans and poor children",
+        "Grain for the army",
+        "Gifts to senators",
+        "Food for gladiators"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#trajan-best-ruler",
+      "explanation": "They gave cash, food and schooling across Italy.",
+      "sourceQuote": "He formalised the *alimenta*, a welfare scheme giving cash, food and schooling to orphans and poor children across Italy.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Antoninus Pius gave a last password: aequanimitas. What does it mean?",
+      "options": [
+        "Equanimity, a calm mind",
+        "Victory",
+        "Duty",
+        "Peace"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#antoninus-pius",
+      "explanation": "He gave it to the officer of the night watch as he lay dying in 161.",
+      "sourceQuote": "his final password: 'equanimity' (*aequanimitas*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "What was horror imperii, which Marcus Aurelius may have felt?",
+      "options": [
+        "Fear of imperial power",
+        "Horror at the plague",
+        "Fear of the Germanic tribes",
+        "Dread of the Senate"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#marcus-aurelius",
+      "explanation": "He took power in 161 with reluctance and shared it with Lucius Verus.",
+      "sourceQuote": "a genuine 'fear of imperial power' (*horror imperii*)",
+      "reviewFlags": []
+    },
+    {
+      "question": "Under an earlier deal, the king of Dacia was a rex amicus. What was that?",
+      "options": [
+        "A client king, a “friendly king” of Rome",
+        "An enemy of Rome",
+        "A Roman governor",
+        "A king made a god"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#dacian-wars",
+      "explanation": "He received Roman money and experts, which senators saw as shameful tribute.",
+      "sourceQuote": "its king was recognised as a client king (*rex amicus*)",
+      "reviewFlags": []
+    },
+    {
+      "question": "What was the Forum Traiani?",
+      "options": [
+        "The Forum of Trajan, Rome’s largest forum",
+        "Trajan’s Column",
+        "Trajan’s bridge over the Danube",
+        "Trajan’s villa"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#trajan-best-ruler",
+      "explanation": "Built with loot from his wars, it was dedicated on 1 January 112.",
+      "sourceQuote": "the Forum of Trajan (*Forum Traiani*)",
+      "reviewFlags": []
+    },
+    {
+      "question": "The Senate hesitated to make Hadrian a divus. What was a divus?",
+      "options": [
+        "A god, a dead emperor honoured in worship",
+        "A traitor",
+        "A king",
+        "A senator for life"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#antoninus-pius",
+      "explanation": "Antoninus insisted, and was named Pius, “the dutiful”.",
+      "sourceQuote": "hesitated to declare Hadrian a god (*divus*)",
+      "reviewFlags": []
+    }
+  ]
+}

@@ -1,0 +1,210 @@
+{
+  "description": "Maps for the chronicle, written by hand. Coordinates from Wikipedia; each map sits at the start of its section.",
+  "maps": [
+    {
+      "id": "greatest-extent",
+      "sec": "parthian-war",
+      "title": "The empire at its greatest, AD 117",
+      "caption": "Trajan took Dacia and, for a few years, Mesopotamia down to the Persian Gulf. Hadrian gave up Mesopotamia and built his wall in Britain. The Danube, Euphrates and Tigris are drawn roughly.",
+      "bounds": {
+        "latMin": 29.0,
+        "latMax": 56.0,
+        "lonMin": -10.0,
+        "lonMax": 53.0
+      },
+      "places": [
+        {
+          "name": "Rome",
+          "latin": "Roma",
+          "lat": 41.893,
+          "lon": 12.483,
+          "kind": "rome",
+          "side": "l",
+          "dy": 8
+        },
+        {
+          "name": "Italica",
+          "lat": 37.44,
+          "lon": -6.05,
+          "side": "r"
+        },
+        {
+          "name": "Hadrian’s Wall",
+          "lat": 55.0,
+          "lon": -2.3,
+          "side": "r"
+        },
+        {
+          "name": "Sarmizegetusa",
+          "lat": 45.62,
+          "lon": 23.31,
+          "kind": "battle",
+          "side": "r",
+          "dy": 12
+        },
+        {
+          "name": "Ctesiphon",
+          "lat": 33.09,
+          "lon": 44.58,
+          "kind": "battle",
+          "side": "l",
+          "dy": -14
+        },
+        {
+          "name": "Athens",
+          "lat": 37.98,
+          "lon": 23.73,
+          "side": "l"
+        },
+        {
+          "name": "Jerusalem",
+          "lat": 31.78,
+          "lon": 35.23,
+          "side": "l"
+        }
+      ],
+      "rivers": [
+        {
+          "name": "Danube",
+          "pts": [
+            [
+              48.0,
+              8.5
+            ],
+            [
+              48.4,
+              10.5
+            ],
+            [
+              48.8,
+              13.4
+            ],
+            [
+              48.2,
+              16.4
+            ],
+            [
+              47.8,
+              18.9
+            ],
+            [
+              46.2,
+              18.9
+            ],
+            [
+              45.3,
+              19.6
+            ],
+            [
+              44.8,
+              20.5
+            ],
+            [
+              44.6,
+              22.5
+            ],
+            [
+              43.8,
+              25.0
+            ],
+            [
+              44.1,
+              27.5
+            ],
+            [
+              45.2,
+              29.6
+            ]
+          ]
+        },
+        {
+          "name": "",
+          "pts": [
+            [
+              39.0,
+              38.5
+            ],
+            [
+              37.0,
+              38.0
+            ],
+            [
+              36.0,
+              38.2
+            ],
+            [
+              35.0,
+              40.5
+            ],
+            [
+              34.4,
+              41.0
+            ],
+            [
+              33.4,
+              43.6
+            ],
+            [
+              32.0,
+              45.0
+            ],
+            [
+              31.0,
+              47.4
+            ]
+          ]
+        },
+        {
+          "name": "",
+          "pts": [
+            [
+              38.0,
+              40.2
+            ],
+            [
+              37.0,
+              42.5
+            ],
+            [
+              36.3,
+              43.1
+            ],
+            [
+              35.0,
+              43.5
+            ],
+            [
+              33.3,
+              44.4
+            ],
+            [
+              32.5,
+              45.8
+            ],
+            [
+              31.0,
+              47.4
+            ]
+          ]
+        }
+      ],
+      "peoples": [
+        {
+          "name": "Dacia",
+          "lat": 47.6,
+          "lon": 25.5
+        },
+        {
+          "name": "Mesopotamia",
+          "lat": 37.4,
+          "lon": 40.0
+        },
+        {
+          "name": "Armenia",
+          "lat": 40.6,
+          "lon": 45.5
+        }
+      ]
+    }
+  ]
+}
