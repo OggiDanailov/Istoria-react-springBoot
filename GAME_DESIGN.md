@@ -169,6 +169,10 @@ Starting grain in these battles is 250–400 at 80% (Carrhae has the most, since
 average scripted player wins most of them at 80%; Pharsalus and the Colline Gate are the hardest. Twists still planned: Castor and Pollux (Lake Regillus),
 ambushes (Volscian Raids), mountain rocks and the sacred chickens (Aquilonia).
 
+The Empire's nine battles are chosen but not built yet: the Teutoburg Forest (AD 9), Germanicus in Germany (16),
+Boudica (60/61), the siege of Jerusalem (70), the Dacian Wars (101–106), Zenobia (272), the Milvian Bridge (312),
+Adrianople (378) and the Catalaunian Plains (451). Until then the chapter shows a "coming soon" card.
+
 ## 7. Content rules (every chapter)
 
 - **Chronicle**: about 1,500–2,500 words in sections; each game item links to the section that explains it.
@@ -185,6 +189,8 @@ ambushes (Volscian Raids), mountain rocks and the sacred chickens (Aquilonia).
   are Roman (a mile is about 1.5 km, a pound about 330 g).
 - **Sources count as history**: ancient writers (Livy, Fabius Pictor…) and modern historians may be in the games when
   the chapter explains who they are and what they argued; not when the chapter only names them in passing.
+- **Names**: the writer may name at most 5 people per chapter (`maxNames` in `chapters.json`; 8 for the Empire), so it
+  describes the rest by role. At review, name anyone a reader would expect to meet (Cleopatra, Arminius, Seneca…).
 - **Odd One Out**: exactly one defensible answer (check other ways of grouping the four items).
 - **Reviewed chapters are locked** (`"locked": true` in `tools/content-gen/chapters.json`) so a regeneration can't
   overwrite them.

@@ -1,6 +1,6 @@
 # ROADMAP - Ave Caesar
 
-**Last updated**: October 27, 2026
+**Last updated**: November 1, 2026
 **How the game works**: [GAME_DESIGN.md](GAME_DESIGN.md)
 **Live site**: https://avecaesar.org
 **Direction**: turn the quiz app into a game that teaches history. Short mini-games first, the chapter text as a "learn more" layer, AI-generated content so we can cover world history.
@@ -15,6 +15,8 @@
 - **Game prototype** (`prototypes/age-of-kings`): five chapters (Kingdom + Early Republic), each with a chronicle, a test made of eight mini-games, and a battle. The test score (first answers, weighted) sets the army for the chapter's **Hold the Line** battle (`prototypes/hold-the-line`, a Roman lane-defence game); winning opens the next chapter. All chapters reviewed: Latin terms, Latin round and questions, Key facts, chronicle maps.
 - **Middle Republic** (Oct 28-29): six chapters generated (First Punic War to the Gracchi, ~$10), reviewed and locked; five new battles on a bigger 6×8 field (Agrigentum, Cannae, Zama, Pydna, the Siege of Carthage), each with a new enemy, a new Roman unit and a historical twist. Helpers earned by the test score: a medicus (80%+, one heal) and an augur (90%+, one omen boost). See `GAME_DESIGN.md`.
 - **Late Republic** (Oct 29): seven chapters (Marius to Augustus, ~$11), reviewed and locked; seven battles, including the first battle on two fronts (Alesia) and the first at sea (Actium).
+- **Hold the Line on phones and wide screens** (Oct 30-31): faster drawing, nothing over the field, one slim row of cards; on a computer, tablet or a phone turned sideways the cards sit on the left and the controls on the right.
+- **The Empire: content** (Nov 1): nine chapters, Augustus to the fall of the West ($15.67), reviewed and locked, with Latin, key facts and maps. Each has a battle chosen but not built yet (they show "coming soon"). The writer's limit of 5 named people per chapter hid famous people (Cleopatra, Arminius, Seneca, even Otho); they were named by hand, and the limit is now set per chapter (`maxNames`, 8 for the Empire).
 
 ---
 
@@ -23,7 +25,7 @@
 | # | Step | Effort |
 |---|------|--------|
 | 1 | **Test the prototype with 5-10 people** (ideally not history fans), using the feedback box after each round. Decide which games to keep. | ~1 week, mostly waiting |
-| 2 | **Content: the Empire** (the Late Republic is done). Generate, review (Latin, key facts, maps, odd-one-out checks) and lock each chapter; build each chapter's battle. | a few days each, ~$10 API credit per era |
+| 2 | **Battles for the Empire**: the Teutoburg Forest, Germanicus in Germany, Boudica, the siege of Jerusalem, the Dacian Wars, Zenobia, the Milvian Bridge, Adrianople, the Catalaunian Plains (`battle.level` in `chapters.json`). | a few days |
 | 3 | **Games in the app**: game data in the database, React versions of the chosen games, a chapter opens as a game run, test scores, battles and progress saved per user. Show the explanation after each answer. **Leaderboard**: all-time "Hall of Legions" (total men, eagles as tie-breaker) plus a weekly board that resets every Monday (what it ranks needs rethinking now that soldiers are gone: e.g. battles won, stars, test scores); players shown by nickname, can opt out. Deploy. | 3-4 weeks part-time |
 | 4 | **Mobile**: installable web app (PWA) first, then App Store / Google Play via Capacitor. Needs a privacy policy and in-app account deletion. | 2-4 weeks |
 

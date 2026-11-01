@@ -2661,7 +2661,7 @@ function openEra(era) {
 function renderRome() {
   app.innerHTML = `
     ${header('Ave Caesar · History', 'Ancient Rome', false)}
-    <p class="task">From a village of shepherds to the master of Italy and the Mediterranean. Pick an era.</p>
+    <p class="task">From a village of shepherds to the master of the Mediterranean, and the fall of the West. Pick an era.</p>
     <div class="eras">${ERAS.map(era => {
       const chs = eraChapters(era)
       const total = chs.reduce((t, { c }) => { const s = chapterStars(c); return { earned: t.earned + s.earned, max: t.max + s.max } }, { earned: 0, max: 0 })
