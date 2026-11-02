@@ -1,0 +1,203 @@
+{
+  "batchName": "Empire: Roman Art and Architecture (c. 500 BC-AD 476) - Hard Batch 1",
+  "chapterName": "Empire: Roman Art and Architecture (c. 500 BC-AD 476)",
+  "difficulty": 3,
+  "batchOrder": 5,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "How did Roman portrait style shift from the Republic to the reign of Augustus?",
+      "options": [
+        "From Egyptian-style profiles to frontal faces",
+        "From idealised Greek images to rugged, wrinkled realism",
+        "From full-length statues to coin portraits only",
+        "From painted panels to carved marble busts",
+        "From clay masks to bronze heads",
+        "From rugged, flaw-showing realism to idealised, Greek-flavoured images"
+      ],
+      "correctAnswers": [
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#portraits-and-ancestors",
+      "explanation": "Under the Republic, showing physical flaws was a mark of good character. Augustus preferred highly idealised portraits in a Greek manner.",
+      "sourceQuote": "Augustus, Rome's first emperor, preferred portraits that were Greek in flavour and highly idealised.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which kind of Roman wall painting was later imitated by Renaissance artists?",
+      "options": [
+        "Views of city buildings",
+        "Jungle scenes in cramped apartments",
+        "Scenes from the Odyssey",
+        "Painted fake windows",
+        "Still lifes of fruit, seafood and glass jars of water",
+        "Erotic scenes"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 3,
+      "textReference": "#painted-walls",
+      "explanation": "Roman walls showed everyday life, animals, myths and still lifes. The still lifes caught the eye of Renaissance artists.",
+      "sourceQuote": "The walls show everyday life, animals, myths, erotic scenes and still lifes of fruit, seafood and glass jars of water, later imitated by Renaissance artists.",
+      "reviewFlags": []
+    },
+    {
+      "question": "By which routes did Greek art flood into Rome as its armies conquered the Greek world? (select all that apply)",
+      "options": [
+        "War booty",
+        "Prizes from the Olympic Games",
+        "Gifts from Egyptian pharaohs",
+        "Tribute from Carthage",
+        "Trade",
+        "Extortion"
+      ],
+      "correctAnswers": [
+        0,
+        4,
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#greek-roots",
+      "explanation": "Greek art arrived as booty, extortion or trade. Roman temples were often decorated with secondhand Greek statues.",
+      "sourceQuote": "As Rome's armies conquered the Greek world, Greek art flooded into the city as war booty, extortion or trade.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which features marked the new style of Roman sculpture that emerged in the 3rd century AD? (select all that apply)",
+      "options": [
+        "Idealised Greek beauty",
+        "Large eyes",
+        "Flowing, naturalistic movement",
+        "Rigidly frontal poses",
+        "Graceful, lifelike proportions",
+        "Stumpy figures"
+      ],
+      "correctAnswers": [
+        1,
+        3,
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#late-roman-style",
+      "explanation": "Late Roman figures stressed power over beauty. Historians still debate why artists abandoned the classical style.",
+      "sourceQuote": "Figures became stumpy, large-eyed and rigidly frontal, stressing power over beauty.",
+      "reviewFlags": []
+    },
+    {
+      "question": "In the early 4th century AD, how did Rome's private houses compare in number with its apartment blocks?",
+      "options": [
+        "About 45,000 town houses against 1,800 apartment blocks",
+        "About 1,800 town houses against nearly 45,000 apartment blocks",
+        "About 500 town houses against 10,000 apartment blocks",
+        "Roughly equal numbers of each",
+        "About 18,000 town houses against 4,500 apartment blocks",
+        "About 1,800 town houses against 4,500 apartment blocks"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 3,
+      "textReference": "#arenas-baths-apartments",
+      "explanation": "Rome had 1,781 domus versus 44,850 insulae. Most city dwellers lived in these crowded blocks up to five storeys high.",
+      "sourceQuote": "In the early 4th century AD, Rome had 1,781 private town houses (*domus*) against 44,850 apartment blocks.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What record did Trajan's bridge over the Danube hold?",
+      "options": [
+        "First bridge built entirely of concrete",
+        "Tallest bridge of the ancient world",
+        "Longest arch bridge for a thousand years",
+        "Longest arch bridge for five centuries",
+        "First bridge to cross the Rhine",
+        "Longest arch bridge for a century"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 3,
+      "textReference": "#aqueducts-roads-bridges",
+      "explanation": "Trajan's Danube bridge stayed the longest arch bridge for a thousand years. Until the Industrial Revolution, only Romans built bridges with concrete.",
+      "sourceQuote": "The bridge of Trajan, the soldier-emperor, over the Danube was the longest arch bridge for a thousand years.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Why is Trajan's Column especially valuable to historians?",
+      "options": [
+        "It names every sculptor who carved it",
+        "It records the founding of Constantinople",
+        "It shows the earliest known map of Rome",
+        "It lists the emperor's laws in carved inscriptions",
+        "It records real campaigns, a priceless source on Roman armour",
+        "It retells Greek myths of the Trojan War"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 3,
+      "textReference": "#trajan-and-hadrian",
+      "explanation": "Where Greek sculptors told of war through myth, Romans preferred record. More than 2,500 figures march, build and fight on the column, like an ancient documentary film.",
+      "sourceQuote": "Where Greek sculptors told of war through myth, Romans preferred record, and the column is a priceless source on Roman armour.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Where is the earliest known Roman use of concrete, dating to some time after 273 BC?",
+      "options": [
+        "Ostia",
+        "Capua",
+        "Tarquinia",
+        "Paestum",
+        "Cosa",
+        "Pompeii"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 3,
+      "textReference": "#concrete-revolution",
+      "explanation": "Cosa was a Roman colony on the coast north of Rome. Concrete there was poured into reusable wooden frames and then faced.",
+      "sourceQuote": "The earliest known Roman use was at Cosa, a colony on the coast north of Rome, some time after 273 BC.",
+      "reviewFlags": []
+    },
+    {
+      "question": "When were domes the size of the Pantheon's finally surpassed?",
+      "options": [
+        "When steel frames arrived in the late 19th century",
+        "When Gothic cathedrals rose in the Middle Ages",
+        "Within a century, under Constantine",
+        "In the Byzantine era at Constantinople",
+        "In the 20th century with reinforced concrete",
+        "During the Renaissance, with brick domes"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#trajan-and-hadrian",
+      "explanation": "The Pantheon's concrete dome held its record until steel frames arrived in the late 19th century. It remains the best-preserved temple of the ancient world.",
+      "sourceQuote": "Domes of this size were not surpassed until steel frames arrived in the late 19th century.",
+      "reviewFlags": []
+    },
+    {
+      "question": "When was the oldest known Roman basilica built?",
+      "options": [
+        "273 BC",
+        "212 BC",
+        "146 BC",
+        "184 BC",
+        "509 BC",
+        "27 BC"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 3,
+      "textReference": "#city-of-marble",
+      "explanation": "The oldest known basilica dates to 184 BC. Basilicas were halls where business was done and magistrates heard cases.",
+      "sourceQuote": "The oldest known was built in 184 BC; centuries later, Christians adopted the shape for their first great churches.",
+      "reviewFlags": []
+    }
+  ]
+}

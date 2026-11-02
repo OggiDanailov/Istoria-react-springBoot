@@ -1,0 +1,129 @@
+{
+  "description": "Key facts for this chapter, written by hand from the chapter text. Every entry links to the section that explains it.",
+  "people": [
+    {
+      "name": "Augustus",
+      "text": "First emperor; said he left Rome a city of marble.",
+      "sec": "city-of-marble"
+    },
+    {
+      "name": "Vitruvius",
+      "text": "Architect of the 1st century BC; his handbook is the only Roman book on architecture to survive.",
+      "sec": "concrete-revolution"
+    },
+    {
+      "name": "Pliny the Elder",
+      "text": "1st-century AD writer whose encyclopedia is our main ancient source on art.",
+      "sec": "painted-walls"
+    },
+    {
+      "name": "Trajan",
+      "text": "Soldier-emperor; his column tells the Dacian wars.",
+      "sec": "trajan-and-hadrian"
+    },
+    {
+      "name": "Hadrian",
+      "text": "Builder-emperor who rebuilt the Pantheon.",
+      "sec": "trajan-and-hadrian"
+    },
+    {
+      "name": "Constantine",
+      "text": "His arch shows the new late-Roman style.",
+      "sec": "late-roman-style"
+    }
+  ],
+  "dates": [
+    {
+      "when": "146 BC",
+      "text": "Corinth is sacked; Greek artists are brought to Rome.",
+      "sec": "greek-roots"
+    },
+    {
+      "when": "after 273 BC",
+      "text": "The earliest known Roman concrete, at Cosa.",
+      "sec": "concrete-revolution"
+    },
+    {
+      "when": "184 BC",
+      "text": "The oldest known basilica.",
+      "sec": "city-of-marble"
+    },
+    {
+      "when": "AD 79",
+      "text": "Vesuvius buries Pompeii and Herculaneum.",
+      "sec": "painted-walls"
+    },
+    {
+      "when": "about AD 80",
+      "text": "The Colosseum is completed.",
+      "sec": "arenas-baths-apartments"
+    },
+    {
+      "when": "AD 113",
+      "text": "Trajan’s Column is dedicated.",
+      "sec": "trajan-and-hadrian"
+    },
+    {
+      "when": "about AD 305",
+      "text": "The statue group of the four Tetrarchs.",
+      "sec": "late-roman-style"
+    },
+    {
+      "when": "about AD 315",
+      "text": "The Arch of Constantine.",
+      "sec": "late-roman-style"
+    }
+  ],
+  "terms": [
+    {
+      "latin": "atrium",
+      "english": "the entrance hall",
+      "sec": "portraits-and-ancestors"
+    },
+    {
+      "latin": "imagines",
+      "english": "ancestor masks",
+      "sec": "portraits-and-ancestors"
+    },
+    {
+      "latin": "res publica",
+      "english": "the Republic",
+      "sec": "portraits-and-ancestors"
+    },
+    {
+      "latin": "opus caementicium",
+      "english": "Roman concrete",
+      "sec": "concrete-revolution"
+    },
+    {
+      "latin": "cella",
+      "english": "a temple’s main room",
+      "sec": "city-of-marble"
+    },
+    {
+      "latin": "arcus triumphalis",
+      "english": "a triumphal arch",
+      "sec": "arenas-baths-apartments"
+    },
+    {
+      "latin": "thermae",
+      "english": "public baths",
+      "sec": "arenas-baths-apartments"
+    },
+    {
+      "latin": "hypocaustum",
+      "english": "underfloor heating",
+      "sec": "arenas-baths-apartments"
+    },
+    {
+      "latin": "insulae",
+      "english": "apartment blocks",
+      "sec": "arenas-baths-apartments"
+    },
+    {
+      "latin": "domus",
+      "english": "a private town house",
+      "sec": "arenas-baths-apartments"
+    }
+  ]
+}

@@ -1,0 +1,190 @@
+{
+  "batchName": "Empire: Roman Art and Architecture (c. 500 BC-AD 476) - Medium Batch 1",
+  "chapterName": "Empire: Roman Art and Architecture (c. 500 BC-AD 476)",
+  "difficulty": 2,
+  "batchOrder": 3,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Older historians dismissed Roman art as mere imitation. How do modern scholars see it?",
+      "options": [
+        "As a purely native Italian tradition",
+        "As the work of a few famous signed masters",
+        "As a decline from earlier Etruscan originality",
+        "As a straight copy of Egyptian temple art",
+        "As a creative blend of Greek, Etruscan, Italian and Egyptian ideas"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#greek-roots",
+      "explanation": "Scholars now see Roman art as mixing Greek models with other traditions. Roman artists themselves were mostly anonymous tradesmen.",
+      "sourceQuote": "Modern scholars see a creative blend instead, mixing Greek models with Etruscan, native Italian and even Egyptian ideas.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Why did coins become one of the main tools of imperial propaganda?",
+      "options": [
+        "They carried long written speeches",
+        "They were buried with the dead",
+        "They reached even remote villages",
+        "They were made of pure gold",
+        "Only senators were allowed to use them"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#portraits-and-ancestors",
+      "explanation": "The emperor's face on coins travelled wherever money did. Busts of the ruler were also sent to stand in provincial town halls.",
+      "sourceQuote": "Because coins reached even remote villages, they became one of the main tools of imperial propaganda.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did Roman aqueducts cross valleys? (select all that apply)",
+      "options": [
+        "On arched bridges",
+        "By boats ferrying water across",
+        "By ox-drawn water carts",
+        "Through pressurised pipes",
+        "With steam-driven pumps"
+      ],
+      "correctAnswers": [
+        0,
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#aqueducts-roads-bridges",
+      "explanation": "Most channels ran underground, but valleys required arched bridges or pressurised pipes. The flow itself relied on gravity.",
+      "sourceQuote": "Most channels ran underground; where valleys intervened, they crossed on arched bridges or through pressurised pipes.",
+      "reviewFlags": []
+    },
+    {
+      "question": "From which neighbours did the Romans borrow the arch?",
+      "options": [
+        "The Etruscans",
+        "The Carthaginians",
+        "The Egyptians",
+        "The Greeks",
+        "The Persians"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#concrete-revolution",
+      "explanation": "Combined with concrete, vaults and domes, the arch let Romans build vast covered spaces.",
+      "sourceQuote": "Combined with the arch, borrowed from Rome's Etruscan neighbours, and with vaults and domes, concrete made possible vast covered spaces.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Where in a Roman apartment block were the cheapest rooms, and why?",
+      "options": [
+        "In the basement, damp and dark",
+        "In the middle, squeezed between neighbours",
+        "At street level, exposed to noise and thieves",
+        "At the back, with no windows at all",
+        "At the top, furthest from water and escape"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#arenas-baths-apartments",
+      "explanation": "Upper floors were hardest to reach with water and hardest to flee in a fire. Insulae were notoriously prone to fire.",
+      "sourceQuote": "These were cramped, unhealthy and prone to fire, and the cheapest rooms were at the top, furthest from water and escape.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Why is the architect Vitruvius so important to historians?",
+      "options": [
+        "He invented pozzolana concrete",
+        "He designed the Colosseum",
+        "He built the first aqueduct",
+        "He rebuilt the Pantheon for Hadrian",
+        "His handbook is the only surviving Roman book on architecture"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#concrete-revolution",
+      "explanation": "Vitruvius wrote in the 1st century BC. He describes most of the techniques behind Roman concrete building.",
+      "sourceQuote": "Most of these techniques are described by Vitruvius, an architect of the 1st century BC whose handbook is the only Roman book on architecture to survive.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What is the soldier-emperor Trajan remembered for achieving?",
+      "options": [
+        "Expanding the empire to its greatest size",
+        "Building the first Roman aqueduct",
+        "Ending the Roman Republic",
+        "Converting the empire to Christianity",
+        "Moving the capital to the east"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#trajan-and-hadrian",
+      "explanation": "Under Trajan and his successor Hadrian, Rome reached its artistic peak. Both launched huge programmes of baths, aqueducts, palaces and temples.",
+      "sourceQuote": "Rome reached its artistic peak under two emperors: Trajan (AD 98–117), the soldier-emperor who expanded the empire to its greatest size, and Hadrian (AD 117–138), his successor and a passionate builder.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Roman basilicas were halls for business and law cases. Why did their shape prove so influential later?",
+      "options": [
+        "They became the model for amphitheatres",
+        "They became the plan for public baths",
+        "They inspired the layout of Greek theatres",
+        "They were copied for imperial palaces",
+        "Christians adopted the shape for their first great churches"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#city-of-marble",
+      "explanation": "Basilicas stood near the forum, where magistrates heard cases. Centuries later, Christians reused the shape for churches.",
+      "sourceQuote": "The oldest known was built in 184 BC; centuries later, Christians adopted the shape for their first great churches.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What makes the Pantheon's dome a perfect half-sphere?",
+      "options": [
+        "It is twice as wide as it is tall",
+        "It was cast in a single day",
+        "It rests on exactly eight columns",
+        "Its open eye equals its wall thickness",
+        "Its ceiling height exactly equals its interior radius"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#trajan-and-hadrian",
+      "explanation": "The matching height and radius give the interior perfect proportions. The concrete dome is crowned by an open 'eye' at its centre.",
+      "sourceQuote": "The ceiling's height exactly equals the interior radius, creating a perfect half-sphere.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What kind of funerary art were the Etruscans especially known for?",
+      "options": [
+        "Gold death masks pressed over the face",
+        "Painted wooden panels tied to mummies",
+        "Marble busts placed in household shrines",
+        "Bronze statues standing beside tomb doors",
+        "Near life-size clay figures reclining on coffin lids"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#greek-roots",
+      "explanation": "Etruscan clay figures of the dead reclined like guests at a dinner party. The Etruscans had learned much from their Greek trading partners.",
+      "sourceQuote": "One of their specialities was near life-size clay figures of the dead, reclining on their coffin lids like guests at a dinner party.",
+      "reviewFlags": []
+    }
+  ]
+}

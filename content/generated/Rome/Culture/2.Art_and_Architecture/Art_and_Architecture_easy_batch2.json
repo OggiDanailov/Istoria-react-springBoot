@@ -1,0 +1,179 @@
+{
+  "batchName": "Empire: Roman Art and Architecture (c. 500 BC-AD 476) - Easy Batch 2",
+  "chapterName": "Empire: Roman Art and Architecture (c. 500 BC-AD 476)",
+  "difficulty": 1,
+  "batchOrder": 2,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "What was the great Roman innovation in wall painting?",
+      "options": [
+        "Abstract geometric patterns",
+        "Battle maps",
+        "Landscape scenes",
+        "Religious icons"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#painted-walls",
+      "explanation": "Romans painted gardens in flower, city views and scenes from the Odyssey. They even used an early form of perspective.",
+      "sourceQuote": "The great Roman innovation was landscape: gardens in flower, views of city buildings and scenes from the Odyssey, the Greek epic of a hero's voyage home, using an early form of perspective.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What made water flow through Roman aqueducts?",
+      "options": [
+        "Slaves working hand pumps",
+        "Gravity alone",
+        "Ox-driven treadmills",
+        "Rows of water wheels"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#aqueducts-roads-bridges",
+      "explanation": "Aqueducts followed gentle downward slopes all the way to the city. Most of their channels ran underground.",
+      "sourceQuote": "Aqueducts carried water to cities by gravity alone, along gentle downward slopes.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Roughly how many spectators could the Colosseum hold?",
+      "options": [
+        "About 20,000",
+        "About 5,000",
+        "Over 50,000",
+        "Over 250,000"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#arenas-baths-apartments",
+      "explanation": "Completed around AD 80, the Colosseum had retractable awnings for shade. It staged gladiator fights and even mock sea battles.",
+      "sourceQuote": "It held over 50,000 spectators, had retractable awnings for shade, and staged gladiator fights and even mock sea battles.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What volcanic ash made Roman concrete unusually strong?",
+      "options": [
+        "Tufa",
+        "Pozzolana",
+        "Gypsum",
+        "Travertine"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#concrete-revolution",
+      "explanation": "Pozzolana was mixed with lime mortar, water and rubble. The resulting opus caementicium was poured into reusable wooden frames.",
+      "sourceQuote": "Roman concrete (*opus caementicium*) mixed lime mortar, water and rubble with pozzolana, a volcanic ash that made it unusually strong.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which powerful people of central Italy, living just north of Rome, were among the earliest influences on Roman art?",
+      "options": [
+        "The Samnites",
+        "The Carthaginians",
+        "The Gauls",
+        "The Etruscans"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#greek-roots",
+      "explanation": "Roman art began as a borrower, drawing first on the Etruscans and on the Greek colonies of southern Italy. The Etruscans had themselves learned much from their Greek trading partners.",
+      "sourceQuote": "Its earliest influences came from the Etruscans, a powerful people of central Italy north of Rome, and from the Greek colonies of southern Italy.",
+      "reviewFlags": []
+    },
+    {
+      "question": "The Arch of Constantine honours the emperor under whom which religion triumphed?",
+      "options": [
+        "Judaism",
+        "Mithraism",
+        "The cult of Isis",
+        "Christianity"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#late-roman-style",
+      "explanation": "The arch was completed around AD 315 near the Colosseum. It mixes older classical roundels with new, squat-figured panels.",
+      "sourceQuote": "It was built for Constantine, the emperor under whom Christianity triumphed, and it combines older carved roundels in the full classical style with new panels of squat, hard-edged figures.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What was the forum, the heart of every Roman town?",
+      "options": [
+        "A walled hilltop citadel",
+        "A racetrack for chariots",
+        "A covered bathhouse",
+        "An open square for market, meetings and debate"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#city-of-marble",
+      "explanation": "The forum served as market, meeting place and political stage. In Rome, the original Forum was later joined by grander imperial forums.",
+      "sourceQuote": "The heart of every Roman town was its forum, an open square serving as market, meeting place and stage for political debate.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What was the hypocaustum in a Roman bathhouse?",
+      "options": [
+        "A cold plunge pool",
+        "A wrestling ground",
+        "A changing room",
+        "An underfloor heating system"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#arenas-baths-apartments",
+      "explanation": "Hot air from a furnace flowed beneath raised floors and through gaps in the walls. It was a forerunner of central heating.",
+      "sourceQuote": "Rooms were warmed by underfloor heating (*hypocaustum*), which sent hot air from a furnace beneath raised floors and through gaps in the walls, a forerunner of central heating.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which volcano's eruption in AD 79 preserved the painted rooms of Pompeii and Herculaneum?",
+      "options": [
+        "Etna",
+        "Vulcano",
+        "Stromboli",
+        "Vesuvius"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#painted-walls",
+      "explanation": "Ash from Vesuvius buried these wealthy towns on the Bay of Naples. That disaster is why most surviving Roman painting is wall painting.",
+      "sourceQuote": "When Mount Vesuvius erupted in AD 79, ash buried Pompeii and Herculaneum, wealthy towns on the Bay of Naples, preserving their decorated rooms.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Why has almost all of the most prestigious Roman painting been lost?",
+      "options": [
+        "It was painted on cloth that was reused",
+        "It was destroyed by order of Christian emperors",
+        "It was melted down for its gold pigments",
+        "It was painted on wooden panels, which rot"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#painted-walls",
+      "explanation": "Romans prized panel painting most, but wood decays over time. What survives is mostly wall painting.",
+      "sourceQuote": "The most prestigious kind was painted on wooden panels, and wood rots.",
+      "reviewFlags": []
+    }
+  ]
+}

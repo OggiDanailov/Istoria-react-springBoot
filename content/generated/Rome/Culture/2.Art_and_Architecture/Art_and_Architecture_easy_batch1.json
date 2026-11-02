@@ -1,0 +1,179 @@
+{
+  "batchName": "Empire: Roman Art and Architecture (c. 500 BC-AD 476) - Easy Batch 1",
+  "chapterName": "Empire: Roman Art and Architecture (c. 500 BC-AD 476)",
+  "difficulty": 1,
+  "batchOrder": 1,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Which emperor rebuilt the Pantheon in its present form?",
+      "options": [
+        "Constantine",
+        "Hadrian",
+        "Augustus",
+        "Trajan"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#trajan-and-hadrian",
+      "explanation": "Hadrian was a passionate builder. His Pantheon, a temple to all the gods, is the best-preserved temple of the ancient world.",
+      "sourceQuote": "Hadrian rebuilt the Pantheon, a temple to all the gods, in its present form.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Where in an aristocratic Roman house were ancestral busts put on display?",
+      "options": [
+        "The entrance hall, or atrium",
+        "The private bedroom",
+        "The dining room, or triclinium",
+        "The kitchen hearth"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#portraits-and-ancestors",
+      "explanation": "Busts of ancestors stood in the atrium, the entrance hall that visitors saw first. At funerals, masks of forebears were even worn in procession.",
+      "sourceQuote": "Ancestral busts were displayed in the entrance hall (*atrium*) of an aristocratic house, and at the funerals of great families, masks of the forebears (*imagines*) were worn in procession.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which art form was the Romans' one great artistic strength of their own?",
+      "options": [
+        "The portrait",
+        "The mosaic floor",
+        "The painted vase",
+        "The bronze tripod"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#portraits-and-ancestors",
+      "explanation": "The Roman portrait grew out of a deep reverence for family. Ancestral busts were proudly displayed in aristocratic homes.",
+      "sourceQuote": "If the Romans had one great artistic strength of their own, it was the portrait.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Where did most Roman city dwellers live?",
+      "options": [
+        "In country villas",
+        "In apartment blocks called insulae",
+        "In private town houses",
+        "In huts outside the walls"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#arenas-baths-apartments",
+      "explanation": "Insulae could rise up to five storeys. They were cramped, unhealthy and prone to fire.",
+      "sourceQuote": "Most city dwellers lived not in houses but in apartment blocks (*insulae*), up to five storeys high.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which famous Roman aqueduct bridge still stands in southern France?",
+      "options": [
+        "The Pont Neuf",
+        "The Pont du Gard",
+        "The bridge of Trajan",
+        "The aqueduct of Segovia"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#aqueducts-roads-bridges",
+      "explanation": "The Pont du Gard survives in southern France. The aqueduct of Segovia also still stands, but in Spain.",
+      "sourceQuote": "The Pont du Gard in southern France and the aqueduct of Segovia in Spain still stand.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Constantine moved the capital to Constantinople. What was that city once called?",
+      "options": [
+        "Byzantium",
+        "Antioch",
+        "Alexandria",
+        "Nicomedia"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#late-roman-style",
+      "explanation": "The city on the Bosporus had been Byzantium. There Roman art absorbed eastern influences and grew into the Byzantine style.",
+      "sourceQuote": "When Constantine moved the capital to Constantinople, the city on the Bosporus once called Byzantium, Roman art absorbed eastern influences and grew into the Byzantine style.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which material is credited with a 'revolution' in Roman architecture?",
+      "options": [
+        "Iron",
+        "Concrete",
+        "Marble",
+        "Fired brick"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#concrete-revolution",
+      "explanation": "Concrete existed earlier in the Near East, but the Romans perfected it and made it the backbone of their grandest buildings. It was cheap and easy to transport.",
+      "sourceQuote": "Historians call the result the \"concrete revolution\".",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did Augustus famously boast about the city of Rome?",
+      "options": [
+        "He found it small and left it the largest city",
+        "He found it in ruins and rebuilt it in a decade",
+        "He found it wooden and left it bronze",
+        "He found it brick and left it marble"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#city-of-marble",
+      "explanation": "It was an exaggeration, since marble was mostly a facing over brick or concrete. Still, his reign opened the Carrara quarries for the capital.",
+      "sourceQuote": "Augustus, Rome's first emperor (27 BC–AD 14), famously boasted that he had found Rome a city of brick and left it a city of marble.",
+      "reviewFlags": []
+    },
+    {
+      "question": "The sack of which wealthy Greek city in 146 BC sent many Greek artists to Rome as slaves?",
+      "options": [
+        "Corinth",
+        "Sparta",
+        "Athens",
+        "Syracuse"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#greek-roots",
+      "explanation": "After Corinth fell in 146 BC, many of its artists were carried off as slaves. By the 2nd century BC most sculptors working in Rome were Greek.",
+      "sourceQuote": "After the sack of Corinth, a wealthy Greek city, in 146 BC, many Greek artists were carried off as slaves.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Trajan's Column tells the story of his wars in which region, now modern Romania?",
+      "options": [
+        "Britannia",
+        "Dacia",
+        "Gaul",
+        "Parthia"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#trajan-and-hadrian",
+      "explanation": "The campaigns unfold in a carved band spiralling about 200 m around the shaft. The column was dedicated in AD 113.",
+      "sourceQuote": "Trajan's Column, dedicated in AD 113, tells the story of his wars in Dacia, modern Romania, in a carved band spiralling about 200 m (650 feet) around the shaft.",
+      "reviewFlags": []
+    }
+  ]
+}

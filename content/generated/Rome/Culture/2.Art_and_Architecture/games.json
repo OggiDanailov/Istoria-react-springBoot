@@ -1,0 +1,642 @@
+{
+  "chapterName": "Empire: Roman Art and Architecture (c. 500 BC-AD 476)",
+  "model": "claude-opus-5-5",
+  "briefing": {
+    "title": "Rome, AD 113",
+    "paragraphs": [
+      "It is AD 113, and Rome rules the Mediterranean world. In the capital, the emperor Trajan dedicates a towering column carved with his wars in Dacia, while concrete domes, marble-faced forums, steaming public baths and the vast Colosseum crowd the skyline.",
+      "Roman art began by borrowing from the Etruscans and the Greeks, but the Romans made it their own: honest portraits of ancestors, painted walls, and engineering that carried water and roads across an empire. Yet tastes keep shifting, and within two centuries a new style will rise."
+    ]
+  },
+  "timelines": [
+    {
+      "name": "Level 1: Milestones of Roman Art",
+      "blurb": "Four big moments, from the Republic to Constantine.",
+      "events": [
+        {
+          "label": "The Roman Republic begins",
+          "when": "509 BC",
+          "year": -509,
+          "fact": "The Republic (res publica), the era of elected government, prized portraits that showed men wrinkled and rugged.",
+          "sectionId": "portraits-and-ancestors",
+          "reviewFlags": []
+        },
+        {
+          "label": "Romans sack Corinth",
+          "when": "146 BC",
+          "year": -146,
+          "fact": "After the sack of this wealthy Greek city, many Greek artists were carried off to Rome as slaves.",
+          "sectionId": "greek-roots",
+          "reviewFlags": []
+        },
+        {
+          "label": "Vesuvius buries Pompeii",
+          "when": "AD 79",
+          "year": 79,
+          "fact": "The eruption's ash preserved the decorated rooms of Pompeii and Herculaneum on the Bay of Naples.",
+          "sectionId": "painted-walls",
+          "reviewFlags": []
+        },
+        {
+          "label": "Arch of Constantine completed",
+          "when": "Around AD 315",
+          "year": 315,
+          "fact": "The arch mixes older classical roundels with new panels of squat, hard-edged figures.",
+          "sectionId": "late-roman-style",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Level 2: Building an Empire",
+      "blurb": "From the first aqueduct to a new style of sculpture.",
+      "events": [
+        {
+          "label": "Rome's first aqueduct feeds a fountain",
+          "when": "4th century BC",
+          "year": -350,
+          "fact": "Rome's first aqueduct supplied a fountain at the cattle market; by the 3rd century AD the city had eleven.",
+          "sectionId": "aqueducts-roads-bridges",
+          "reviewFlags": []
+        },
+        {
+          "label": "Earliest known Roman concrete at Cosa",
+          "when": "Some time after 273 BC",
+          "year": -270,
+          "fact": "Cosa, a colony on the coast north of Rome, has the earliest known Roman use of concrete.",
+          "sectionId": "concrete-revolution",
+          "reviewFlags": []
+        },
+        {
+          "label": "Colosseum completed",
+          "when": "Around AD 80",
+          "year": 80,
+          "fact": "The Colosseum held over 50,000 spectators and even staged mock sea battles.",
+          "sectionId": "arenas-baths-apartments",
+          "reviewFlags": []
+        },
+        {
+          "label": "Trajan becomes emperor",
+          "when": "AD 98",
+          "year": 98,
+          "fact": "Trajan, the soldier-emperor, expanded the empire to its greatest size.",
+          "sectionId": "trajan-and-hadrian",
+          "reviewFlags": []
+        },
+        {
+          "label": "Hadrian succeeds Trajan",
+          "when": "AD 117",
+          "year": 117,
+          "fact": "Hadrian, a passionate builder, rebuilt the Pantheon in its present form.",
+          "sectionId": "trajan-and-hadrian",
+          "reviewFlags": []
+        },
+        {
+          "label": "Sculpture turns stumpy and large-eyed",
+          "when": "3rd century AD",
+          "year": 250,
+          "fact": "Artists abandoned the graceful classical style for rigidly frontal figures, and historians still debate why.",
+          "sectionId": "late-roman-style",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Level 3: Five Centuries of Building",
+      "blurb": "Roads, basilicas, emperors and statues in order.",
+      "events": [
+        {
+          "label": "Romans begin building roads",
+          "when": "About 500 BC",
+          "year": -500,
+          "fact": "Roads moved armies, officials and trade; at their peak 29 great highways radiated from Rome.",
+          "sectionId": "aqueducts-roads-bridges",
+          "reviewFlags": []
+        },
+        {
+          "label": "Oldest known basilica built",
+          "when": "184 BC",
+          "year": -184,
+          "fact": "Basilicas were large halls for business and law cases; Christians later adopted the shape for churches.",
+          "sectionId": "city-of-marble",
+          "reviewFlags": []
+        },
+        {
+          "label": "Greek artists enslaved after Corinth",
+          "when": "146 BC",
+          "year": -146,
+          "fact": "By this time most sculptors working in Rome were Greek, and their names were rarely recorded.",
+          "sectionId": "greek-roots",
+          "reviewFlags": []
+        },
+        {
+          "label": "Augustus becomes first emperor",
+          "when": "27 BC",
+          "year": -27,
+          "fact": "Augustus boasted he had found Rome a city of brick and left it a city of marble.",
+          "sectionId": "city-of-marble",
+          "reviewFlags": []
+        },
+        {
+          "label": "Ash buries Herculaneum",
+          "when": "AD 79",
+          "year": 79,
+          "fact": "Mount Vesuvius preserved wall paintings in Herculaneum and Pompeii, wealthy towns on the Bay of Naples.",
+          "sectionId": "painted-walls",
+          "reviewFlags": []
+        },
+        {
+          "label": "Trajan's Column dedicated",
+          "when": "AD 113",
+          "year": 113,
+          "fact": "Its spiralling band of carvings shows more than 2,500 figures from Trajan's wars in Dacia, modern Romania.",
+          "sectionId": "trajan-and-hadrian",
+          "reviewFlags": []
+        },
+        {
+          "label": "Tetrarchs statue group carved",
+          "when": "Around AD 305",
+          "year": 305,
+          "fact": "This group of four co-ruling emperors, now in Venice, shows the blocky late Roman look.",
+          "sectionId": "late-roman-style",
+          "reviewFlags": []
+        },
+        {
+          "label": "Arch of Constantine completed",
+          "when": "Around AD 315",
+          "year": 315,
+          "fact": "Built near the Colosseum for Constantine, it sets classical carvings beside squat new figures.",
+          "sectionId": "late-roman-style",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "matchSets": [
+    {
+      "name": "Latin Words of Roman Life",
+      "blurb": "Match each Latin term to what it means.",
+      "pairs": [
+        {
+          "name": "imagines",
+          "match": "Masks of ancestors worn in procession at aristocratic funerals",
+          "sectionId": "portraits-and-ancestors",
+          "reviewFlags": []
+        },
+        {
+          "name": "opus caementicium",
+          "match": "Roman concrete of lime mortar, water, rubble and volcanic ash",
+          "sectionId": "concrete-revolution",
+          "reviewFlags": []
+        },
+        {
+          "name": "hypocaustum",
+          "match": "Underfloor heating that sent furnace air beneath raised floors",
+          "sectionId": "arenas-baths-apartments",
+          "reviewFlags": []
+        },
+        {
+          "name": "insulae",
+          "match": "Apartment blocks up to five storeys, cramped and prone to fire",
+          "sectionId": "arenas-baths-apartments",
+          "reviewFlags": []
+        },
+        {
+          "name": "cella",
+          "match": "The main room of a temple, housing the god's statue",
+          "sectionId": "city-of-marble",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Writers and Places",
+      "blurb": "Match each writer or place to its role in Roman art.",
+      "pairs": [
+        {
+          "name": "Vitruvius",
+          "match": "Architect of the only surviving Roman handbook on architecture",
+          "sectionId": "concrete-revolution",
+          "reviewFlags": []
+        },
+        {
+          "name": "Pliny the Elder",
+          "match": "Encyclopedia writer, our main ancient source on art",
+          "sectionId": "painted-walls",
+          "reviewFlags": []
+        },
+        {
+          "name": "Fayum",
+          "match": "Region of Roman Egypt where painted portraits were put on mummies",
+          "sectionId": "painted-walls",
+          "reviewFlags": []
+        },
+        {
+          "name": "Carrara",
+          "match": "Quarries in northern Italy opened for Rome under Augustus",
+          "sectionId": "city-of-marble",
+          "reviewFlags": []
+        },
+        {
+          "name": "Cosa",
+          "match": "Coastal colony with the earliest known Roman use of concrete",
+          "sectionId": "concrete-revolution",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "trueFalseDecks": [
+    {
+      "name": "Borrowers and Builders",
+      "blurb": "From Greek roots to the city of marble.",
+      "cards": [
+        {
+          "claim": "After the sack of Corinth in 146 BC, many Greek artists were carried off as slaves.",
+          "answer": true,
+          "why": "Corinth was a wealthy Greek city, and by the 2nd century BC most sculptors working in Rome were Greek.",
+          "sectionId": "greek-roots",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Roman artists were celebrated masters who usually signed their works.",
+          "answer": false,
+          "why": "Roman artists were mostly anonymous tradesmen, and almost no signed works survive.",
+          "sectionId": "greek-roots",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Under the Republic, it was a mark of good character for portraits to show physical flaws.",
+          "answer": true,
+          "why": "Republican men were shown wrinkled and rugged, unconcerned with vanity.",
+          "sectionId": "portraits-and-ancestors",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Augustus preferred rugged portraits that showed every wrinkle.",
+          "answer": false,
+          "why": "Augustus preferred portraits that were Greek in flavour and highly idealised.",
+          "sectionId": "portraits-and-ancestors",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Most surviving Roman painting was done on wooden panels.",
+          "answer": false,
+          "why": "Panel painting was the most prestigious, but wood rots; what survives is mostly wall painting.",
+          "sectionId": "painted-walls",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Pozzolana, a volcanic ash, made Roman concrete unusually strong.",
+          "answer": true,
+          "why": "Roman concrete mixed lime mortar, water and rubble with pozzolana.",
+          "sectionId": "concrete-revolution",
+          "reviewFlags": []
+        },
+        {
+          "claim": "The Romans borrowed the arch from the Egyptians.",
+          "answer": false,
+          "why": "The arch was borrowed from Rome's Etruscan neighbours.",
+          "sectionId": "concrete-revolution",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Christians adopted the shape of the basilica for their first great churches.",
+          "answer": true,
+          "why": "Basilicas were large halls for business and law cases; the oldest known was built in 184 BC.",
+          "sectionId": "city-of-marble",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Arenas, Domes and Aqueducts",
+      "blurb": "The empire at its grandest, and how its style changed.",
+      "cards": [
+        {
+          "claim": "The Colosseum held over 50,000 spectators.",
+          "answer": true,
+          "why": "Completed around AD 80, it also had retractable awnings for shade.",
+          "sectionId": "arenas-baths-apartments",
+          "reviewFlags": []
+        },
+        {
+          "claim": "In Roman apartment blocks, the cheapest rooms were on the ground floor.",
+          "answer": false,
+          "why": "The cheapest rooms were at the top, furthest from water and escape.",
+          "sectionId": "arenas-baths-apartments",
+          "reviewFlags": []
+        },
+        {
+          "claim": "In the early 4th century AD, Rome had far more apartment blocks than private town houses.",
+          "answer": true,
+          "why": "Rome had 44,850 apartment blocks (insulae) against 1,781 town houses (domus).",
+          "sectionId": "arenas-baths-apartments",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Trajan's Column tells the story of his wars in Gaul.",
+          "answer": false,
+          "why": "The column tells of Trajan's wars in Dacia, modern Romania.",
+          "sectionId": "trajan-and-hadrian",
+          "reviewFlags": []
+        },
+        {
+          "claim": "The height of the Pantheon's ceiling exactly equals its interior radius.",
+          "answer": true,
+          "why": "This makes the dome a perfect half-sphere, a size not surpassed until steel frames arrived in the late 19th century.",
+          "sectionId": "trajan-and-hadrian",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Most of the water carried by Rome's aqueducts went to private homes.",
+          "answer": false,
+          "why": "Most of the water went to the public baths.",
+          "sectionId": "aqueducts-roads-bridges",
+          "reviewFlags": []
+        },
+        {
+          "claim": "Trajan's bridge over the Danube was the longest arch bridge for a thousand years.",
+          "answer": true,
+          "why": "Roman bridges were the first large, lasting bridges ever built.",
+          "sectionId": "aqueducts-roads-bridges",
+          "reviewFlags": []
+        },
+        {
+          "claim": "The statue group of the four Tetrarchs is now in Rome.",
+          "answer": false,
+          "why": "The Tetrarchs group, carved around AD 305, is now in Venice.",
+          "sectionId": "late-roman-style",
+          "reviewFlags": []
+        }
+      ]
+    }
+  ],
+  "oddOneOut": [
+    {
+      "items": [
+        "Amphitheatre",
+        "Basilica",
+        "Temple",
+        "Triumphal arch"
+      ],
+      "oddIndex": 2,
+      "why": "The amphitheatre, basilica and triumphal arch were building types the Romans invented; temples followed an Etruscan layout with Greek column styles.",
+      "sectionId": "arenas-baths-apartments",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Trajan's Column",
+        "Bridge over the Danube",
+        "Wars in Dacia",
+        "Rebuilt Pantheon"
+      ],
+      "oddIndex": 3,
+      "why": "Three belong to Trajan; the Pantheon was rebuilt by his successor Hadrian.",
+      "sectionId": "trajan-and-hadrian",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Lime mortar",
+        "Rubble",
+        "Pozzolana",
+        "Coloured marble"
+      ],
+      "oddIndex": 3,
+      "why": "Lime mortar, rubble and pozzolana went into Roman concrete; thin marble slabs were only a facing on the finished wall.",
+      "sectionId": "concrete-revolution",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Stumpy figures",
+        "Large eyes",
+        "Rigidly frontal poses",
+        "Graceful, lifelike bodies"
+      ],
+      "oddIndex": 3,
+      "why": "Stumpy, large-eyed, frontal figures mark 3rd-century AD sculpture; graceful lifelike bodies belong to the classical style it abandoned.",
+      "sectionId": "late-roman-style",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Garden landscapes",
+        "Fruit and seafood still lifes",
+        "Scenes from the Odyssey",
+        "Portraits on mummies"
+      ],
+      "oddIndex": 3,
+      "why": "Landscapes, still lifes and Odyssey scenes appear on the walls of Pompeii; mummy portraits are panel paintings from the Fayum in Egypt.",
+      "sectionId": "painted-walls",
+      "reviewFlags": []
+    },
+    {
+      "items": [
+        "Pont du Gard",
+        "Aqueduct of Segovia",
+        "Pantheon",
+        "Funeral masks (imagines)"
+      ],
+      "oddIndex": 3,
+      "why": "The Pont du Gard, the Segovia aqueduct and the Pantheon still stand; none of the ancestral funeral masks survives.",
+      "sectionId": "portraits-and-ancestors",
+      "reviewFlags": []
+    }
+  ],
+  "whoAmI": [
+    {
+      "name": "Emperors Who Built Rome",
+      "blurb": "Three emperors who left their mark in stone.",
+      "people": [
+        {
+          "name": "Augustus",
+          "options": [
+            "Augustus",
+            "Trajan",
+            "Hadrian",
+            "Constantine"
+          ],
+          "clues": [
+            "Under me the quarries at Carrara were opened up for the capital.",
+            "I added my own grand forum beside Rome's original Forum.",
+            "My portraits were Greek in flavour and highly idealised, and my face spread on coins.",
+            "As Rome's first emperor, I boasted I found Rome brick and left it marble."
+          ],
+          "sectionId": "city-of-marble",
+          "reviewFlags": []
+        },
+        {
+          "name": "Trajan",
+          "options": [
+            "Trajan",
+            "Hadrian",
+            "Augustus",
+            "Constantine"
+          ],
+          "clues": [
+            "My bridge over the Danube was the longest arch bridge for a thousand years.",
+            "I reigned from AD 98 to 117.",
+            "A column dedicated in AD 113 shows my wars in Dacia with over 2,500 figures.",
+            "I was the soldier-emperor who expanded the empire to its greatest size."
+          ],
+          "sectionId": "trajan-and-hadrian",
+          "reviewFlags": []
+        },
+        {
+          "name": "Hadrian",
+          "options": [
+            "Hadrian",
+            "Trajan",
+            "Augustus",
+            "Constantine"
+          ],
+          "clues": [
+            "I reigned from AD 117 to 138.",
+            "I succeeded the soldier-emperor and was a passionate builder.",
+            "My temple to all the gods is crowned by a concrete dome with an open 'eye'.",
+            "I rebuilt the Pantheon in its present form."
+          ],
+          "sectionId": "trajan-and-hadrian",
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "name": "Rulers and Writers",
+      "blurb": "An emperor of a new age and two writers who explained Roman art.",
+      "people": [
+        {
+          "name": "Constantine",
+          "options": [
+            "Constantine",
+            "Augustus",
+            "Hadrian",
+            "Trajan"
+          ],
+          "clues": [
+            "A colossal statue of me now survives only in giant fragments.",
+            "My arch near the Colosseum mixes classical roundels with squat new figures.",
+            "I moved the capital to the city on the Bosporus once called Byzantium.",
+            "Christianity triumphed under my rule."
+          ],
+          "sectionId": "late-roman-style",
+          "reviewFlags": []
+        },
+        {
+          "name": "Vitruvius",
+          "options": [
+            "Vitruvius",
+            "Pliny the Elder",
+            "Livy",
+            "Cicero"
+          ],
+          "clues": [
+            "My subject included concrete, the arch, vaults and domes.",
+            "I was a working architect of the 1st century BC.",
+            "My handbook describes most Roman building techniques.",
+            "Mine is the only Roman book on architecture to survive."
+          ],
+          "sectionId": "concrete-revolution",
+          "reviewFlags": [
+            "\"Vitruvius\" appears fewer than 2 times in the chapter"
+          ]
+        },
+        {
+          "name": "Pliny the Elder",
+          "options": [
+            "Pliny the Elder",
+            "Vitruvius",
+            "Livy",
+            "Cicero"
+          ],
+          "clues": [
+            "I believed painting in my day had declined through laziness.",
+            "I grumbled that true portrait painting had died out.",
+            "I compiled an encyclopedia rather than a building manual.",
+            "My encyclopedia is our main ancient source on Roman art."
+          ],
+          "sectionId": "painted-walls",
+          "reviewFlags": [
+            "\"Pliny the Elder\" appears fewer than 2 times in the chapter",
+            "fact-check: The first clue overgeneralizes: the chapter says Pliny thought true portrait painting had died out through laziness, not that painting in general had declined."
+          ]
+        }
+      ]
+    }
+  ],
+  "places": [
+    {
+      "name": "Corinth",
+      "wikipediaTitle": "Ancient Corinth",
+      "lat": 37.9053455,
+      "lon": 22.8801924,
+      "why": "After Rome sacked this wealthy Greek city in 146 BC, many Greek artists were carried off as slaves.",
+      "sectionId": "greek-roots",
+      "coordinates": "Wikipedia: Ancient Corinth",
+      "reviewFlags": []
+    },
+    {
+      "name": "Pompeii",
+      "wikipediaTitle": "Pompeii",
+      "lat": 40.75,
+      "lon": 14.48611111,
+      "why": "Ash from Vesuvius in AD 79 preserved its painted walls, our main surviving Roman paintings.",
+      "sectionId": "painted-walls",
+      "coordinates": "Wikipedia: Pompeii",
+      "reviewFlags": []
+    },
+    {
+      "name": "Fayum",
+      "wikipediaTitle": "Faiyum Oasis",
+      "lat": 29.45361111,
+      "lon": 30.58083333,
+      "why": "This farming region of Roman Egypt preserved rare realistic panel portraits attached to mummies.",
+      "sectionId": "painted-walls",
+      "coordinates": "Wikipedia: Faiyum Oasis",
+      "reviewFlags": []
+    },
+    {
+      "name": "Cosa",
+      "wikipediaTitle": "Cosa",
+      "lat": 42.410919,
+      "lon": 11.286503,
+      "why": "This coastal colony north of Rome has the earliest known Roman use of concrete, some time after 273 BC.",
+      "sectionId": "concrete-revolution",
+      "coordinates": "Wikipedia: Cosa",
+      "reviewFlags": []
+    },
+    {
+      "name": "Carrara",
+      "wikipediaTitle": "Carrara",
+      "lat": 44.07916667,
+      "lon": 10.1,
+      "why": "Its marble quarries in northern Italy were opened up for the capital under Augustus.",
+      "sectionId": "city-of-marble",
+      "coordinates": "Wikipedia: Carrara",
+      "reviewFlags": []
+    },
+    {
+      "name": "Pont du Gard",
+      "wikipediaTitle": "Pont du Gard",
+      "lat": 43.94722222,
+      "lon": 4.53555556,
+      "why": "This aqueduct bridge in southern France still stands as proof of Roman engineering.",
+      "sectionId": "aqueducts-roads-bridges",
+      "coordinates": "Wikipedia: Pont du Gard",
+      "reviewFlags": []
+    },
+    {
+      "name": "Constantinople",
+      "wikipediaTitle": "Constantinople",
+      "lat": 41.0125,
+      "lon": 28.98,
+      "why": "Constantine moved the capital to this city on the Bosporus, where Roman art grew into the Byzantine style.",
+      "sectionId": "late-roman-style",
+      "coordinates": "Wikipedia: Constantinople",
+      "reviewFlags": []
+    }
+  ]
+}

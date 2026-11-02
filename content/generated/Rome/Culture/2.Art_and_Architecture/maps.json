@@ -1,0 +1,108 @@
+{
+  "description": "Maps for the chronicle, written by hand. Coordinates from Wikipedia; each map sits at the start of its section.",
+  "maps": [
+    {
+      "id": "roman-art-places",
+      "sec": "aqueducts-roads-bridges",
+      "title": "Where Roman art and building survive",
+      "caption": "Pompeii’s painted walls, the first Roman concrete at Cosa, Carrara’s marble, the Pont du Gard and Segovia’s aqueducts, the Fayum mummy portraits, and Constantinople, where Roman art became Byzantine.",
+      "bounds": {
+        "latMin": 28.0,
+        "latMax": 48.0,
+        "lonMin": -10.0,
+        "lonMax": 33.0
+      },
+      "places": [
+        {
+          "name": "Rome",
+          "latin": "Roma",
+          "lat": 41.893,
+          "lon": 12.483,
+          "kind": "rome",
+          "side": "l",
+          "dy": 10
+        },
+        {
+          "name": "Pompeii",
+          "lat": 40.75,
+          "lon": 14.49,
+          "side": "r"
+        },
+        {
+          "name": "Cosa",
+          "lat": 42.41,
+          "lon": 11.29,
+          "side": "l",
+          "dy": -6
+        },
+        {
+          "name": "Carrara",
+          "lat": 44.08,
+          "lon": 10.1,
+          "side": "r",
+          "dy": -6
+        },
+        {
+          "name": "Pont du Gard",
+          "lat": 43.95,
+          "lon": 4.54,
+          "side": "l"
+        },
+        {
+          "name": "Segovia",
+          "lat": 40.95,
+          "lon": -4.12,
+          "side": "r"
+        },
+        {
+          "name": "Corinth",
+          "lat": 37.91,
+          "lon": 22.88,
+          "side": "l"
+        },
+        {
+          "name": "Constantinople",
+          "lat": 41.01,
+          "lon": 28.98,
+          "side": "l",
+          "dy": -12
+        },
+        {
+          "name": "Fayum",
+          "lat": 29.45,
+          "lon": 30.58,
+          "side": "l"
+        }
+      ]
+    },
+    {
+      "id": "pantheon",
+      "sec": "trajan-and-hadrian",
+      "title": "The Pantheon’s dome",
+      "caption": "The height of the ceiling exactly equals the interior radius, making the dome a perfect half-sphere: a whole sphere would fit inside. The open “eye” at the top lets in the light. A simplified cross-section.",
+      "plan": true,
+      "height": 210,
+      "key": {
+        "rome": "Concrete",
+        "enemy": "The sphere that fits inside"
+      },
+      "units": [
+        {
+          "side": "rome",
+          "d": "M60,180 L60,100 A90,90 0 0,1 136,11 L136,24 A78,78 0 0,0 72,100 L72,180 Z"
+        },
+        {
+          "side": "rome",
+          "d": "M240,180 L240,100 A90,90 0 0,0 164,11 L164,24 A78,78 0 0,1 228,100 L228,180 Z"
+        },
+        {
+          "side": "enemy",
+          "d": "M150,22 A78,78 0 1,1 149.9,22 Z",
+          "name": "The “eye”",
+          "lx": 150,
+          "ly": 8
+        }
+      ]
+    }
+  ]
+}

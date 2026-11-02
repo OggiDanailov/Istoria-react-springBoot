@@ -1,0 +1,191 @@
+{
+  "batchName": "Empire: Roman Art and Architecture (c. 500 BC-AD 476) - Medium Batch 2",
+  "chapterName": "Empire: Roman Art and Architecture (c. 500 BC-AD 476)",
+  "difficulty": 2,
+  "batchOrder": 4,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "By the 3rd century AD, where did most of the water from Rome's aqueducts go?",
+      "options": [
+        "Mock sea battles in arenas",
+        "Street fountains",
+        "Farms outside the city",
+        "Private homes of the rich",
+        "The public baths"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#aqueducts-roads-bridges",
+      "explanation": "By then Rome had eleven aqueducts supporting over a million people. The baths consumed most of their flow.",
+      "sourceQuote": "By the 3rd century AD the city had eleven, supporting over a million people, and most of the water went to the public baths.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which combination did Roman temples typically follow?",
+      "options": [
+        "A Greek layout with steps on every side",
+        "An Etruscan layout with Greek column styles",
+        "An Egyptian layout with Greek columns",
+        "A Greek layout with Etruscan columns",
+        "An Etruscan layout with no columns at all"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#city-of-marble",
+      "explanation": "Temples sat on a high platform with steps only at the front, but used Doric, Ionic or Corinthian columns. The main room, the cella, housed the god's statue.",
+      "sourceQuote": "Temples followed an Etruscan layout, with a high platform and steps only at the front, but used Greek column styles: the plain Doric, the scroll-topped Ionic and the leafy Corinthian.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which of these building types were Roman inventions? (select all that apply)",
+      "options": [
+        "The arch itself",
+        "The Doric column",
+        "The basilica",
+        "The triumphal arch",
+        "The amphitheatre"
+      ],
+      "correctAnswers": [
+        2,
+        3,
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#arenas-baths-apartments",
+      "explanation": "The amphitheatre, basilica and triumphal arch were among the few building types Romans invented. The arch was borrowed from the Etruscans and the Doric column from the Greeks.",
+      "sourceQuote": "The amphitheatre, an oval arena ringed by tiered seats, was one of the few building types the Romans invented, along with the basilica and the triumphal arch (*arcus triumphalis*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "What does the famous statue group of the Tetrarchs, now in Venice, depict?",
+      "options": [
+        "Four sons of Constantine",
+        "Four co-ruling emperors",
+        "The four seasons",
+        "Four Christian evangelists",
+        "Four guardian gods of Rome"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#late-roman-style",
+      "explanation": "Carved around AD 305, the Tetrarchs show the blocky late Roman style. The same look appears on the Arch of Constantine.",
+      "sourceQuote": "A famous statue group of four co-ruling emperors, the Tetrarchs, carved around AD 305 and now in Venice, shows the same blocky look.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Once concrete walls carried the weight of a building, what role did columns often play?",
+      "options": [
+        "They held up the roof alone",
+        "They were used only underground",
+        "They became mere decoration",
+        "They channelled water through their cores",
+        "They were removed entirely"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#concrete-revolution",
+      "explanation": "Columns had once been essential supports. With load-bearing concrete walls, they often became decorative.",
+      "sourceQuote": "Columns, once essential supports, often became mere decoration in front of load-bearing walls.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did Pliny the Elder complain had happened to true portrait painting?",
+      "options": [
+        "It had become too costly to commission",
+        "It had been replaced by mosaics",
+        "It had been banned by the emperor",
+        "It had been ruined by Greek slaves",
+        "It had died out through laziness"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#painted-walls",
+      "explanation": "Pliny's encyclopedia is the main ancient source on Roman art. He grumbled that the craft of true portrait painting had faded.",
+      "sourceQuote": "Pliny the Elder, the 1st-century AD writer whose encyclopedia is our main ancient source on art, grumbled that true portrait painting had died out through laziness.",
+      "reviewFlags": []
+    },
+    {
+      "question": "In the Fayum region of Roman Egypt, what were realistic painted portraits attached to?",
+      "options": [
+        "Mummies",
+        "Ships' prows",
+        "Household altars",
+        "Military standards",
+        "Tomb doors"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#painted-walls",
+      "explanation": "These rare panel portraits survive from a farming region of Roman Egypt. They are a precious exception, since most panel painting has rotted away.",
+      "sourceQuote": "Rare panel portraits survive from the Fayum, a farming region of Roman Egypt, where realistic painted faces were attached to mummies.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Under Augustus, quarries at which place in northern Italy were opened to supply marble to the capital?",
+      "options": [
+        "Paros",
+        "Aquileia",
+        "Ravenna",
+        "Verona",
+        "Carrara"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#city-of-marble",
+      "explanation": "Carrara marble began flowing to Rome from Augustus's reign. Fine coloured marbles were also imported from Greece.",
+      "sourceQuote": "But from his reign the quarries at Carrara in northern Italy were opened up for the capital, and fine coloured marbles were imported from Greece.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What were the imagines carried at the funerals of great Roman families?",
+      "options": [
+        "Scrolls listing the family's offices",
+        "Bronze statues of household gods",
+        "Masks of the family's forebears",
+        "Laurel wreaths for the deceased",
+        "Painted shields of past victories"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#portraits-and-ancestors",
+      "explanation": "Masks of ancestors were worn in funeral processions. None of them survives, but many surviving busts probably depict such ancestors.",
+      "sourceQuote": "Ancestral busts were displayed in the entrance hall (*atrium*) of an aristocratic house, and at the funerals of great families, masks of the forebears (*imagines*) were worn in procession.",
+      "reviewFlags": []
+    },
+    {
+      "question": "After Christianity took hold, who were the only subjects of big statues?",
+      "options": [
+        "Emperors",
+        "Ancestors of noble families",
+        "Saints",
+        "Bishops",
+        "Gladiators"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#late-roman-style",
+      "explanation": "Christianity ended large religious statues, so only emperors got colossal figures. Giant fragments of a colossal Constantine survive.",
+      "sourceQuote": "Christianity soon ended large religious statues; big figures were made only of emperors, like a colossal Constantine whose giant fragments survive.",
+      "reviewFlags": []
+    }
+  ]
+}

@@ -1,0 +1,145 @@
+{
+  "batchName": "Empire: Roman Art and Architecture (c. 500 BC-AD 476) - Latin words",
+  "chapterName": "Empire: Roman Art and Architecture (c. 500 BC-AD 476)",
+  "difficulty": 1,
+  "batchOrder": 9,
+  "description": "Written by hand from the chapter text: the Latin words it explains",
+  "questions": [
+    {
+      "question": "What was the atrium of a Roman house?",
+      "options": [
+        "The entrance hall",
+        "The kitchen",
+        "The garden",
+        "The bath"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#portraits-and-ancestors",
+      "explanation": "Aristocrats displayed their ancestors’ busts there.",
+      "sourceQuote": "the entrance hall (*atrium*)",
+      "reviewFlags": []
+    },
+    {
+      "question": "Most city dwellers lived in insulae. What were they?",
+      "options": [
+        "Apartment blocks up to five storeys high",
+        "Islands",
+        "Country villas",
+        "Army camps"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#arenas-baths-apartments",
+      "explanation": "The cheapest rooms were at the top, furthest from water and escape.",
+      "sourceQuote": "apartment blocks (*insulae*), up to five storeys high.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What were thermae?",
+      "options": [
+        "Public baths",
+        "Hot springs for the sick",
+        "Heated temples",
+        "Bakeries"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#arenas-baths-apartments",
+      "explanation": "People spent hours bathing, swimming and chatting for a tiny fee.",
+      "sourceQuote": "public baths (*thermae*)",
+      "reviewFlags": []
+    },
+    {
+      "question": "What is opus caementicium?",
+      "options": [
+        "Roman concrete",
+        "A marble facing",
+        "A mosaic floor",
+        "A painted wall"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#concrete-revolution",
+      "explanation": "It mixed lime mortar, water and rubble with volcanic ash.",
+      "sourceQuote": "Roman concrete (*opus caementicium*)",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did a hypocaustum do?",
+      "options": [
+        "Heated rooms with hot air under the floor",
+        "Carried water into the city",
+        "Lifted animals into the arena",
+        "Drained marshes"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#arenas-baths-apartments",
+      "explanation": "It was a forerunner of central heating.",
+      "sourceQuote": "underfloor heating (*hypocaustum*)",
+      "reviewFlags": []
+    },
+    {
+      "question": "What were imagines in a great Roman family?",
+      "options": [
+        "Masks of the ancestors worn at funerals",
+        "Paintings of the gods",
+        "Coins with the emperor’s face",
+        "Statues of victory"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#portraits-and-ancestors",
+      "explanation": "None survives, but many busts probably show such ancestors.",
+      "sourceQuote": "masks of the forebears (*imagines*) were worn in procession.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What was the cella of a temple?",
+      "options": [
+        "The main room, which housed the god’s statue",
+        "The front steps",
+        "The roof",
+        "The altar outside"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#city-of-marble",
+      "explanation": "Temples had a high platform with steps only at the front.",
+      "sourceQuote": "The main room (*cella*) housed the god's statue.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What is an arcus triumphalis?",
+      "options": [
+        "A triumphal arch",
+        "A curved road",
+        "A victory parade",
+        "A bridge over a river"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#arenas-baths-apartments",
+      "explanation": "It was one of the few building types the Romans invented.",
+      "sourceQuote": "the triumphal arch (*arcus triumphalis*)",
+      "reviewFlags": []
+    }
+  ]
+}
