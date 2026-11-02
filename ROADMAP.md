@@ -17,6 +17,7 @@
 - **Late Republic** (Oct 29): seven chapters (Marius to Augustus, ~$11), reviewed and locked; seven battles, including the first battle on two fronts (Alesia) and the first at sea (Actium).
 - **Hold the Line on phones and wide screens** (Oct 30-31): faster drawing, nothing over the field, one slim row of cards; on a computer, tablet or a phone turned sideways the cards sit on the left and the controls on the right.
 - **The Empire: content** (Nov 1): nine chapters, Augustus to the fall of the West ($15.67), reviewed and locked, with Latin, key facts and maps. Each has a battle chosen but not built yet (they show "coming soon"). The writer's limit of 5 named people per chapter hid famous people (Cleopatra, Arminius, Seneca, even Otho); they were named by hand, and the limit is now set per chapter (`maxNames`, 8 for the Empire).
+- **Two culture chapters** (Nov 1): Roman Religion and Mythology (chapter 2, after the Kingdom) and Roman Art and Architecture (the last chapter), ~$2; no battles. Every chapter now names its battle (`battle.level`), so chapters can be inserted anywhere. 29 chapters in all.
 
 ---
 
