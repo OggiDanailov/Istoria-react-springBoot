@@ -1,0 +1,179 @@
+{
+  "batchName": "Roman Religion and Mythology (753 BC-AD 391) - Easy Batch 1",
+  "chapterName": "Roman Religion and Mythology (753 BC-AD 391)",
+  "difficulty": 1,
+  "batchOrder": 1,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "To what quality did the Romans credit their rise to world power?",
+      "options": [
+        "Gravitas",
+        "Fortuna",
+        "Virtus",
+        "Pietas"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#roman-piety",
+      "explanation": "Pietas was the dutiful care Romans took to keep good relations with the gods. They saw their victories as proof of divine favour.",
+      "sourceQuote": "They credited their rise to world power to their piety (*pietas*), the dutiful care with which they kept good relations with the gods.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did Rome usually treat the gods of other peoples?",
+      "options": [
+        "It ignored them entirely",
+        "It destroyed their temples",
+        "It absorbed them into its own religion",
+        "It banned their worship"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#foreign-gods",
+      "explanation": "Rome rarely stamped out foreign gods, believing that preserving tradition kept society stable. Gods from conquered Italian towns even gained temples in Rome.",
+      "sourceQuote": "It absorbed them instead, believing that preserving tradition kept society stable.",
+      "reviewFlags": []
+    },
+    {
+      "question": "The mystery god Mithras became a particular favourite of which group?",
+      "options": [
+        "Sailors",
+        "Merchants",
+        "Senators",
+        "Soldiers"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#foreign-gods",
+      "explanation": "Mithras was popular with soldiers, and his shrines reached as far as Britain. Isis, another mystery cult deity, came from Egypt.",
+      "sourceQuote": "Isis came from Egypt, and Mithras became a favourite of soldiers, with shrines as far away as Britain.",
+      "reviewFlags": []
+    },
+    {
+      "question": "In 249 BC, what did a Roman consul do when the sacred chickens refused to eat before a sea battle?",
+      "options": [
+        "Force-fed them",
+        "Released them on shore",
+        "Threw them overboard",
+        "Sacrificed them to Neptune"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#priests-and-augurs",
+      "explanation": "He threw them into the sea, joking that they could drink instead. He lost the battle, and his career with it.",
+      "sourceQuote": "He threw them overboard, joking that if they would not eat, they could drink.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did the Edict of Milan of 313 proclaim?",
+      "options": [
+        "Renewed persecution",
+        "Closure of all pagan temples",
+        "Religious toleration",
+        "Christianity as sole state religion"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#christian-triumph",
+      "explanation": "Under Constantine the Edict of Milan proclaimed toleration. Constantine also paid for churches, including St Peter's Basilica.",
+      "sourceQuote": "In 313 the Edict of Milan proclaimed toleration, and Constantine paid for churches, including St Peter's Basilica.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What was the punishment for a Vestal found to have broken her vow of chastity?",
+      "options": [
+        "Being thrown from a cliff",
+        "Exile to an island",
+        "Burial alive",
+        "Sale into slavery"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#vestals",
+      "explanation": "The Vestals' extraordinary status came at the price of a strictly enforced vow of chastity. Breaking it meant being buried alive.",
+      "sourceQuote": "A Vestal found to have broken it was buried alive.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did the Roman religious formula *do ut des* mean?",
+      "options": [
+        "Let the buyer beware",
+        "Fortune favours the bold",
+        "I give, that you might give",
+        "Pray and work"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#roman-piety",
+      "explanation": "Roman religion worked almost like a business contract: a sacrifice, prayer or vow was offered in return for protection, victory or a good harvest.",
+      "sourceQuote": "It was practical, almost a business contract, summed up in the phrase *do ut des*: \"I give, that you might give.\"",
+      "reviewFlags": []
+    },
+    {
+      "question": "According to legend, how did the quarrel between Romulus and Remus end?",
+      "options": [
+        "Remus left to found Alba Longa",
+        "Romulus killed Remus",
+        "The twins agreed to rule together",
+        "Remus killed Romulus"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#aeneas-and-romulus",
+      "explanation": "The brothers quarrelled while the walls of the new city were rising, and Romulus killed Remus. The founding is traditionally dated to 753 BC.",
+      "sourceQuote": "While the walls were rising, the brothers quarrelled and Romulus killed Remus.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which god stood at the top of the Roman heaven as god of sky, rain and lightning?",
+      "options": [
+        "Quirinus",
+        "Jupiter",
+        "Mars",
+        "Janus"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#gods-of-rome",
+      "explanation": "Jupiter ruled the sky and was also protector of the state. He was the central figure of both the Archaic and the Capitoline Triads.",
+      "sourceQuote": "At the top stood Jupiter, god of sky, rain and lightning, and protector of the state.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did Roman augurs mainly read the will of the gods?",
+      "options": [
+        "Entrails of animals",
+        "The stars",
+        "Dreams",
+        "The flight of birds"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#priests-and-augurs",
+      "explanation": "Augurs watched the flight of birds, and magistrates had to consult them before official acts. A bad sign could halt public business for the day.",
+      "sourceQuote": "The augurs (*augures*) read the will of the gods, above all through the flight of birds.",
+      "reviewFlags": []
+    }
+  ]
+}

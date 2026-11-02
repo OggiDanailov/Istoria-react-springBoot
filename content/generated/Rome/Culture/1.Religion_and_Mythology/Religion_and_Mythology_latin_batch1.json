@@ -1,0 +1,145 @@
+{
+  "batchName": "Roman Religion and Mythology (753 BC-AD 391) - Latin words",
+  "chapterName": "Roman Religion and Mythology (753 BC-AD 391)",
+  "difficulty": 1,
+  "batchOrder": 9,
+  "description": "Written by hand from the chapter text: the Latin words it explains",
+  "questions": [
+    {
+      "question": "What does do ut des mean?",
+      "options": [
+        "“I give, that you might give”",
+        "“Give to the gods first”",
+        "“The gods give, Rome takes”",
+        "“Pray and obey”"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#roman-piety",
+      "explanation": "Roman religion worked almost like a business contract with the gods.",
+      "sourceQuote": "summed up in the phrase *do ut des*: \"I give, that you might give.\"",
+      "reviewFlags": []
+    },
+    {
+      "question": "Who were the Vestals, the virgines Vestales?",
+      "options": [
+        "Six priestesses who tended Vesta’s sacred flame",
+        "Priests who read the flight of birds",
+        "Goddesses of the hearth",
+        "Women who sang at funerals"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#vestals",
+      "explanation": "A Vestal who broke her vow of chastity was buried alive.",
+      "sourceQuote": "The Vestals (*virgines Vestales*) were Rome's most famous priesthood",
+      "reviewFlags": []
+    },
+    {
+      "question": "Who was the paterfamilias in a Roman home?",
+      "options": [
+        "The father of the family, who acted as its priest",
+        "The household god",
+        "The oldest slave",
+        "The family’s patron"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#home-and-festivals",
+      "explanation": "He made daily offerings; his wife looked after the worship of Vesta at the hearth.",
+      "sourceQuote": "The father of the family (*paterfamilias*) acted as its priest",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did the Romans mean by pietas?",
+      "options": [
+        "Dutiful care in keeping good relations with the gods",
+        "Pity for the poor",
+        "Fear of the gods",
+        "Love of one’s country"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#roman-piety",
+      "explanation": "Romans credited their rise to world power to it.",
+      "sourceQuote": "their piety (*pietas*), the dutiful care with which they kept good relations with the gods.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What was a templum to an augur?",
+      "options": [
+        "A sacred space marked out by ritual",
+        "A temple building",
+        "A sacred chicken",
+        "A priest’s robe"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#priests-and-augurs",
+      "explanation": "Only later did the word come to mean a temple building.",
+      "sourceQuote": "called a *templum*, a word that only later came to mean a temple building.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What was evocatio?",
+      "options": [
+        "Inviting an enemy’s god to change sides",
+        "Calling up the spirits of the dead",
+        "A prayer for rain",
+        "Choosing a new Vestal"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#foreign-gods",
+      "explanation": "At Veii a Roman commander promised the city’s goddess Juno a new home in Rome.",
+      "sourceQuote": "a ritual called *evocatio*",
+      "reviewFlags": []
+    },
+    {
+      "question": "What was the mola salsa that the Vestals prepared?",
+      "options": [
+        "Salted flour sprinkled on sacrificial animals",
+        "Holy water",
+        "A honey cake for the Lares",
+        "Incense for the hearth"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#vestals",
+      "explanation": "It was used in every official sacrifice.",
+      "sourceQuote": "They prepared the *mola salsa*, a salted flour sprinkled on each animal before it was killed",
+      "reviewFlags": []
+    },
+    {
+      "question": "What does Dis Manibus, written on Roman tombstones, mean?",
+      "options": [
+        "“To the spirit-gods”",
+        "“Rest in peace”",
+        "“To the household gods”",
+        "“Here lies”"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#home-and-festivals",
+      "explanation": "The dead were believed to join the spirits of the underworld.",
+      "sourceQuote": "tombstones were commonly dedicated \"to the spirit-gods\" (*Dis Manibus*).",
+      "reviewFlags": []
+    }
+  ]
+}

@@ -1,0 +1,189 @@
+{
+  "batchName": "Roman Religion and Mythology (753 BC-AD 391) - Medium Batch 2",
+  "chapterName": "Roman Religion and Mythology (753 BC-AD 391)",
+  "difficulty": 2,
+  "batchOrder": 4,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Which people did King Numa come from?",
+      "options": [
+        "The Trojans",
+        "The Greeks of southern Italy",
+        "The Etruscans",
+        "The Latins of Alba Longa",
+        "The Sabines"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#numa-pompilius",
+      "explanation": "Numa was a Sabine, from a hill people north-east of Rome. Tradition credits him with Rome's first calendar and several priesthoods.",
+      "sourceQuote": "He was a Sabine, from a hill people living north-east of Rome.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which organ did a haruspex especially examine in sacrificed animals?",
+      "options": [
+        "Kidneys",
+        "Spleen",
+        "Liver",
+        "Lungs",
+        "Heart"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#priests-and-augurs",
+      "explanation": "The haruspex read the entrails, above all the liver. The art came from the Etruscans and was seen as essential but slightly foreign.",
+      "sourceQuote": "Another kind of specialist, the haruspex, inspected the entrails of sacrificed animals, especially the liver.",
+      "reviewFlags": []
+    },
+    {
+      "question": "A Roman general could invite an enemy city's god to change sides, as happened at the siege of Veii. What was this ritual called?",
+      "options": [
+        "Evocatio",
+        "Supplicatio",
+        "Devotio",
+        "Lustratio",
+        "Auspicium"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#foreign-gods",
+      "explanation": "At Veii a Roman commander promised the city's goddess Juno a new home in Rome. After Veii fell, her statue was carried to Rome.",
+      "sourceQuote": "A general at war might even invite the enemy's god to change sides, a ritual called *evocatio*.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which three gods made up what modern scholars call the Archaic Triad?",
+      "options": [
+        "Jupiter, Neptune and Pluto",
+        "Jupiter, Juno and Minerva",
+        "Mars, Venus and Vulcan",
+        "Jupiter, Mars and Quirinus",
+        "Janus, Vesta and Ceres"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#gods-of-rome",
+      "explanation": "In the earliest era Jupiter shared worship with Mars and Quirinus, patron of citizens in peacetime. This trio was later replaced by the Capitoline Triad.",
+      "sourceQuote": "In the earliest era he shared worship with Mars, god of war and farming, and Quirinus, patron of the citizens in peacetime.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Where did the Great Mother (Magna Mater), brought to Rome in 206 BC, come from?",
+      "options": [
+        "North Africa",
+        "Persia",
+        "Egypt",
+        "Greece",
+        "Asia Minor"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#foreign-gods",
+      "explanation": "Rome's prophecy books advised bringing her in during the desperate second war with Carthage. Her eunuch priests unsettled Romans, and citizens were forbidden to join that priesthood.",
+      "sourceQuote": "In 206 BC, during Rome's desperate second war against Carthage, the North African power that had invaded Italy, Rome's sacred prophecy books advised bringing in the Great Mother (*Magna Mater*), a goddess from Asia Minor.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Who was Egeria, the legendary adviser of King Numa?",
+      "options": [
+        "Numa's Sabine wife",
+        "The first Vestal",
+        "Goddess of the state hearth",
+        "A nymph of springs and prophecy",
+        "An Etruscan seer"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#numa-pompilius",
+      "explanation": "Legend made Egeria Numa's divine companion, and through her he dealt directly with the gods.",
+      "sourceQuote": "Legend says he dealt directly with the gods and took advice from Egeria, a nymph of springs and prophecy who was his divine companion.",
+      "reviewFlags": []
+    },
+    {
+      "question": "According to legend, which god fathered Romulus and Remus?",
+      "options": [
+        "Faunus",
+        "Quirinus",
+        "Mars",
+        "Neptune",
+        "Jupiter"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#aeneas-and-romulus",
+      "explanation": "Their usurping great-uncle had forced their mother to stay a virgin, but she became pregnant by Mars, god of war. The king ordered the babies abandoned, yet they survived.",
+      "sourceQuote": "Their mother had been forced by her usurping uncle to stay a virgin, but she became pregnant by Mars, the god of war.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Why did Christianity alarm Roman officials?",
+      "options": [
+        "It refused to pay temple taxes",
+        "It relied on reading animal livers",
+        "Its priests were eunuchs",
+        "Its rejection of all other gods looked like atheism",
+        "It worshipped Egyptian gods"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#christian-triumph",
+      "explanation": "A faith that rejected every other god clashed with the expectation that everyone take part in the imperial cult. Officials saw it as atheism and dangerous superstition.",
+      "sourceQuote": "To Roman officials, a faith that rejected every other god looked like atheism and dangerous superstition.",
+      "reviewFlags": []
+    },
+    {
+      "question": "In Rome itself, through what was a living emperor honoured?",
+      "options": [
+        "His household Penates",
+        "The sacred flame of Vesta",
+        "His genius, the divine spirit in every person",
+        "A flamen devoted to him",
+        "His personal Lares"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#emperors-as-gods",
+      "explanation": "A living emperor was honoured through his genius. Only after death could the Senate vote him a full god.",
+      "sourceQuote": "In Rome, a living emperor was honoured through his genius, the divine spirit believed to live in every person.",
+      "reviewFlags": []
+    },
+    {
+      "question": "The Capitoline Triad of one god and two goddesses was an unusual grouping. From which people may it have come?",
+      "options": [
+        "The Greeks",
+        "The Carthaginians",
+        "The Sabines",
+        "The Etruscans",
+        "The Egyptians"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#gods-of-rome",
+      "explanation": "The Etruscans, who lived in Etruria north of Rome, worshipped a similar trio. Rome's version was Jupiter, Juno and Minerva.",
+      "sourceQuote": "One god with two goddesses was an unusual grouping, and it may come from the Etruscans, the powerful people of Etruria north of Rome, who worshipped a similar trio.",
+      "reviewFlags": []
+    }
+  ]
+}

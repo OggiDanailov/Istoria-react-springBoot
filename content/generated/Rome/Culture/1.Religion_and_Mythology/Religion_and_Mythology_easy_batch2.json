@@ -1,0 +1,179 @@
+{
+  "batchName": "Roman Religion and Mythology (753 BC-AD 391) - Easy Batch 2",
+  "chapterName": "Roman Religion and Mythology (753 BC-AD 391)",
+  "difficulty": 1,
+  "batchOrder": 2,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "What did the Roman goddess Ceres watch over?",
+      "options": [
+        "The doorway",
+        "The hearth",
+        "The fruit",
+        "The growing grain"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#gods-of-rome",
+      "explanation": "Roman gods had practical jobs: Ceres guarded the growing grain, while Pomona looked after the fruit.",
+      "sourceQuote": "Janus guarded the door and Vesta the hearth, Ceres watched over the growing grain and Pomona the fruit.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Who acted as the priest of a Roman household?",
+      "options": [
+        "A hired haruspex",
+        "The father of the family",
+        "A local pontiff",
+        "The eldest son"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#home-and-festivals",
+      "explanation": "The paterfamilias made the daily offerings, while his wife looked after the worship of Vesta at the hearth.",
+      "sourceQuote": "The father of the family (*paterfamilias*) acted as its priest, making daily offerings, while his wife looked after the worship of Vesta at the hearth.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How many Vestal Virgins tended the sacred flame of Vesta?",
+      "options": [
+        "Four",
+        "Six",
+        "Nine",
+        "Twelve"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#vestals",
+      "explanation": "Six Vestals kept the flame of Vesta, goddess of the state hearth. Any household could rekindle its own fire from theirs.",
+      "sourceQuote": "The Vestals (*virgines Vestales*) were Rome's most famous priesthood: six women who tended the sacred flame of Vesta, goddess of the hearth of the Roman state.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Whom did the emperor blame for the Great Fire of Rome in AD 64?",
+      "options": [
+        "The Gauls",
+        "The Jews",
+        "Foreign slaves",
+        "The Christians"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#christian-triumph",
+      "explanation": "The emperor blamed the Christians for the fire, and persecution followed. Roman officials saw their faith as atheism and dangerous superstition.",
+      "sourceQuote": "After the Great Fire of Rome in AD 64, the emperor Nero blamed the Christians, and persecution followed.",
+      "reviewFlags": []
+    },
+    {
+      "question": "The doors of the Temple of Janus were closed when Rome was...",
+      "options": [
+        "At war",
+        "Mourning a king",
+        "At peace",
+        "In famine"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#numa-pompilius",
+      "explanation": "Janus was the two-faced god of doorways. His temple's doors stood open in wartime and stayed shut throughout Numa's peaceful reign.",
+      "sourceQuote": "Its doors stood open in wartime and closed in peace.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Who were the Lares, honoured at every Roman home shrine?",
+      "options": [
+        "Spirits of the underworld",
+        "Gods of the household stores",
+        "Gods of the growing grain",
+        "Guardian spirits of house and fields"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#home-and-festivals",
+      "explanation": "The Lares guarded house and fields. They shared the home shrine with the Penates, who were gods of the household stores.",
+      "sourceQuote": "Every home had a shrine to the Lares, guardian spirits of house and fields, and the Penates, gods of the household stores.",
+      "reviewFlags": []
+    },
+    {
+      "question": "According to legend, which goddess was the mother of the Trojan prince Aeneas?",
+      "options": [
+        "Diana",
+        "Minerva",
+        "Juno",
+        "Venus"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#aeneas-and-romulus",
+      "explanation": "Aeneas, son of Venus, escaped the fall of Troy and sailed to Italy. He brought sacred objects with him, including the Palladium.",
+      "sourceQuote": "The Trojan prince Aeneas, son of the goddess Venus, escaped and sailed to Italy carrying sacred objects, including the household gods of Troy and the Palladium, a holy statue said to protect a city.",
+      "reviewFlags": []
+    },
+    {
+      "question": "After a Roman emperor died, which body could vote to make him a god (divus)?",
+      "options": [
+        "The Senate",
+        "The Vestals",
+        "The people's assembly",
+        "The college of pontiffs"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#emperors-as-gods",
+      "explanation": "The Senate could deify a dead emperor. The resulting imperial cult gave the empire a shared loyalty and made refusing to take part look like treason.",
+      "sourceQuote": "After his death, the Senate could vote him a god (*divus*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "Who is the only Roman known to have been treated as a god while still alive?",
+      "options": [
+        "Julius Caesar",
+        "Pompey",
+        "Augustus",
+        "Sulla"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#emperors-as-gods",
+      "explanation": "Julius Caesar was treated as a living god and was murdered soon after. He also claimed descent from Venus through Aeneas.",
+      "sourceQuote": "He is the only Roman known to have been treated as a god while still alive, and he was murdered soon after.",
+      "reviewFlags": []
+    },
+    {
+      "question": "In the traditional list of Rome's kings, where did the priest-king Numa come?",
+      "options": [
+        "The first",
+        "The third",
+        "The last",
+        "The second"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#numa-pompilius",
+      "explanation": "Numa was the peaceful second king, and Romans traced most of their religious institutions back to him.",
+      "sourceQuote": "Romans believed that most of their religious institutions went back to Numa, the peaceful second king of Rome.",
+      "reviewFlags": []
+    }
+  ]
+}

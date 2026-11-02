@@ -1,0 +1,120 @@
+{
+  "description": "Maps for the chronicle, written by hand. Coordinates from Wikipedia; each map sits at the start of its section.",
+  "maps": [
+    {
+      "id": "gods-from-abroad",
+      "sec": "foreign-gods",
+      "title": "Gods from abroad",
+      "caption": "Aeneas came from Troy; the Great Mother came from Pessinus in Asia Minor in 206 BC; Isis came from Egypt; Mithras was worshipped by soldiers as far away as Britain. Constantine called the bishops together at Nicaea.",
+      "bounds": {
+        "latMin": 29.0,
+        "latMax": 55.0,
+        "lonMin": -8.0,
+        "lonMax": 36.0
+      },
+      "places": [
+        {
+          "name": "Rome",
+          "latin": "Roma",
+          "lat": 41.893,
+          "lon": 12.483,
+          "kind": "rome",
+          "side": "l",
+          "dy": 8
+        },
+        {
+          "name": "Troy",
+          "lat": 39.96,
+          "lon": 26.24,
+          "side": "l"
+        },
+        {
+          "name": "Pessinus",
+          "lat": 39.33,
+          "lon": 31.58,
+          "side": "l",
+          "dy": 18
+        },
+        {
+          "name": "Nicaea",
+          "lat": 40.43,
+          "lon": 29.72,
+          "side": "r",
+          "dy": -8
+        },
+        {
+          "name": "Alexandria",
+          "lat": 31.2,
+          "lon": 29.9,
+          "side": "l"
+        }
+      ],
+      "peoples": [
+        {
+          "name": "Egypt",
+          "lat": 29.8,
+          "lon": 27.5
+        },
+        {
+          "name": "Britain",
+          "lat": 52.5,
+          "lon": -1.5
+        }
+      ]
+    },
+    {
+      "id": "capitoline-temple",
+      "sec": "gods-of-rome",
+      "title": "The temple of the Capitoline Triad",
+      "caption": "The great temple on the Capitoline Hill had three chambers side by side: Juno on the left, Jupiter in the middle, Minerva on the right. A simplified plan.",
+      "plan": true,
+      "height": 190,
+      "units": [
+        {
+          "side": "enemy",
+          "x": 40,
+          "y": 30,
+          "w": 64,
+          "h": 80,
+          "name": "Juno",
+          "lx": 72,
+          "ly": 124
+        },
+        {
+          "side": "rome",
+          "x": 116,
+          "y": 30,
+          "w": 68,
+          "h": 80,
+          "name": "Jupiter",
+          "lx": 150,
+          "ly": 124
+        },
+        {
+          "side": "enemy",
+          "x": 196,
+          "y": 30,
+          "w": 64,
+          "h": 80,
+          "name": "Minerva",
+          "lx": 228,
+          "ly": 124
+        },
+        {
+          "side": "enemy",
+          "x": 40,
+          "y": 140,
+          "w": 220,
+          "h": 10,
+          "name": "Steps and columns at the front",
+          "lx": 150,
+          "ly": 168
+        }
+      ],
+      "key": {
+        "rome": "Jupiter",
+        "enemy": "Juno, Minerva and the front"
+      }
+    }
+  ]
+}

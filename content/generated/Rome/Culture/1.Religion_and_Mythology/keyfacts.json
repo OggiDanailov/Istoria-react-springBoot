@@ -1,0 +1,164 @@
+{
+  "description": "Key facts for this chapter, written by hand from the chapter text. Every entry links to the section that explains it.",
+  "people": [
+    {
+      "name": "Aeneas",
+      "text": "Trojan prince, son of Venus; legendary ancestor of the Romans.",
+      "sec": "aeneas-and-romulus"
+    },
+    {
+      "name": "Romulus",
+      "text": "Legendary founder of Rome, son of Mars; made a god.",
+      "sec": "aeneas-and-romulus"
+    },
+    {
+      "name": "Numa",
+      "text": "Rome’s second king, founder of its priesthoods and calendar.",
+      "sec": "numa-pompilius"
+    },
+    {
+      "name": "Julius Caesar",
+      "text": "Chief priest from 63 BC; treated as a god while alive.",
+      "sec": "emperors-as-gods"
+    },
+    {
+      "name": "Augustus",
+      "text": "First emperor; revived the old religion.",
+      "sec": "emperors-as-gods"
+    },
+    {
+      "name": "Constantine",
+      "text": "The first Christian emperor; Edict of Milan, 313.",
+      "sec": "christian-triumph"
+    },
+    {
+      "name": "Theodosius",
+      "text": "Made Christianity the state religion; put out Vesta’s fire in 391.",
+      "sec": "christian-triumph"
+    }
+  ],
+  "dates": [
+    {
+      "when": "753 BC",
+      "text": "The traditional founding of Rome.",
+      "sec": "aeneas-and-romulus"
+    },
+    {
+      "when": "249 BC",
+      "text": "The sacred chickens refuse to eat; the consul loses at sea.",
+      "sec": "priests-and-augurs"
+    },
+    {
+      "when": "206 BC",
+      "text": "The Great Mother is brought to Rome.",
+      "sec": "foreign-gods"
+    },
+    {
+      "when": "186 BC",
+      "text": "The Senate cracks down on the Bacchanalia.",
+      "sec": "foreign-gods"
+    },
+    {
+      "when": "63 BC",
+      "text": "Julius Caesar becomes chief priest.",
+      "sec": "emperors-as-gods"
+    },
+    {
+      "when": "AD 64",
+      "text": "After the Great Fire, Nero blames the Christians.",
+      "sec": "christian-triumph"
+    },
+    {
+      "when": "AD 313",
+      "text": "The Edict of Milan: toleration.",
+      "sec": "christian-triumph"
+    },
+    {
+      "when": "AD 380",
+      "text": "Christianity becomes the official religion.",
+      "sec": "christian-triumph"
+    },
+    {
+      "when": "AD 391",
+      "text": "State support for the old cults ends.",
+      "sec": "christian-triumph"
+    }
+  ],
+  "terms": [
+    {
+      "latin": "pietas",
+      "english": "piety, duty to the gods",
+      "sec": "roman-piety"
+    },
+    {
+      "latin": "do ut des",
+      "english": "I give, that you might give",
+      "sec": "roman-piety"
+    },
+    {
+      "latin": "superstitio",
+      "english": "superstition",
+      "sec": "roman-piety"
+    },
+    {
+      "latin": "flamines",
+      "english": "priests of a single god",
+      "sec": "numa-pompilius"
+    },
+    {
+      "latin": "pontifex maximus",
+      "english": "the chief priest",
+      "sec": "priests-and-augurs"
+    },
+    {
+      "latin": "pontifices",
+      "english": "the pontiffs",
+      "sec": "priests-and-augurs"
+    },
+    {
+      "latin": "augures",
+      "english": "augurs, readers of signs",
+      "sec": "priests-and-augurs"
+    },
+    {
+      "latin": "templum",
+      "english": "a sacred space",
+      "sec": "priests-and-augurs"
+    },
+    {
+      "latin": "virgines Vestales",
+      "english": "the Vestal Virgins",
+      "sec": "vestals"
+    },
+    {
+      "latin": "mola salsa",
+      "english": "salted flour for sacrifices",
+      "sec": "vestals"
+    },
+    {
+      "latin": "paterfamilias",
+      "english": "the father of the family",
+      "sec": "home-and-festivals"
+    },
+    {
+      "latin": "Dis Manibus",
+      "english": "to the spirit-gods",
+      "sec": "home-and-festivals"
+    },
+    {
+      "latin": "evocatio",
+      "english": "calling an enemy’s god over",
+      "sec": "foreign-gods"
+    },
+    {
+      "latin": "Magna Mater",
+      "english": "the Great Mother",
+      "sec": "foreign-gods"
+    },
+    {
+      "latin": "divus",
+      "english": "a god (a dead emperor)",
+      "sec": "emperors-as-gods"
+    }
+  ]
+}

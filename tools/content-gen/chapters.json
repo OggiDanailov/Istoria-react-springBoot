@@ -78,7 +78,8 @@
       "short": "Gods and Myths",
       "era": "kingdom",
       "mapArea": "wide",
-      "maxNames": 8
+      "maxNames": 8,
+      "locked": true
     },
     {
       "id": "conflict-of-orders-origins",

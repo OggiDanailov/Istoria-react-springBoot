@@ -1,0 +1,203 @@
+{
+  "batchName": "Roman Religion and Mythology (753 BC-AD 391) - Hard Batch 1",
+  "chapterName": "Roman Religion and Mythology (753 BC-AD 391)",
+  "difficulty": 3,
+  "batchOrder": 5,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "For the augurs, what did the word *templum* originally mean?",
+      "options": [
+        "The residence of the chief priest",
+        "A sacred space marked out by ritual",
+        "The college of pontiffs",
+        "A calendar of festival days",
+        "A temple building",
+        "An altar for animal sacrifice"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 3,
+      "textReference": "#priests-and-augurs",
+      "explanation": "The augurs worked inside a ritually marked sacred space, the templum. The word only later came to mean a temple building.",
+      "sourceQuote": "They worked within a sacred space marked out by ritual, called a *templum*, a word that only later came to mean a temple building.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did Augustus do for the Vestal Virgins? (select all that apply)",
+      "options": [
+        "Boosted their funding",
+        "Raised their number to twelve",
+        "Gave them seats of honour at the games",
+        "Freed them from their vow of chastity",
+        "Placed them under the Senate's authority",
+        "Allowed them to marry after ten years"
+      ],
+      "correctAnswers": [
+        0,
+        2
+      ],
+      "difficulty": 3,
+      "textReference": "#vestals",
+      "explanation": "Augustus raised the Vestals' funding and their public profile. The order survived well into the Christian era, until Theodosius put out Vesta's fire.",
+      "sourceQuote": "Augustus, the first emperor, boosted their funding and gave them seats of honour at the games.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which of these events took place in AD 391?",
+      "options": [
+        "Constantine's death as a deified emperor",
+        "Edicts ordering churches destroyed",
+        "Theodosius ending state support for other cults",
+        "Constantine's Edict of Milan",
+        "The Council of Nicaea",
+        "Christianity becoming the official religion"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 3,
+      "textReference": "#christian-triumph",
+      "explanation": "In 391 Theodosius ended state support for all other cults and put out the Vestals' fire. He had already made Christianity the official religion in 380.",
+      "sourceQuote": "In 391 he ended state support for all other cults and extinguished the Vestals' sacred fire.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Christians kept attending the February ancestor festival of the Parentalia for centuries. In which year did a church council finally forbid it?",
+      "options": [
+        "AD 567",
+        "AD 391",
+        "AD 313",
+        "AD 476",
+        "AD 337",
+        "AD 380"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#home-and-festivals",
+      "explanation": "The Parentalia lasted several days each February and honoured family ancestors. It was popular enough to outlive the official end of the old cults by well over a century.",
+      "sourceQuote": "It was so popular that Christians were still attending it centuries later, until a church council forbade it in AD 567.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What did Romans require of the spoken prayer that accompanied every sacrifice?",
+      "options": [
+        "It had to be sung in Greek",
+        "It had to be whispered so no one else heard",
+        "It could be skipped if the offering was large",
+        "Any sincere words were acceptable",
+        "Only the god's name needed to be spoken",
+        "Its words had to be exact, down to the god's proper title"
+      ],
+      "correctAnswers": [
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#roman-piety",
+      "explanation": "Correct form was everything in Roman religion. Public prayers were recited loudly by a priest on behalf of the whole community, and a single slip could spoil the ritual.",
+      "sourceQuote": "Every sacrifice needed a spoken prayer, and the words had to be exact, down to the god's proper title.",
+      "reviewFlags": []
+    },
+    {
+      "question": "The Capitoline temple had three chambers. Which deity occupied the right-hand one?",
+      "options": [
+        "Vesta",
+        "Quirinus",
+        "Juno",
+        "Jupiter",
+        "Mars",
+        "Minerva"
+      ],
+      "correctAnswers": [
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#gods-of-rome",
+      "explanation": "Minerva was on the right, Juno on the left and Jupiter in the middle. Copies of the temple sprang up across Italy and the provinces.",
+      "sourceQuote": "The triad's great temple stood on the Capitoline Hill above the Forum, with three separate chambers: Juno on the left, Minerva on the right, Jupiter in the middle.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Why could the flamen of Jupiter, a priesthood credited to Numa, barely pursue a political or military career?",
+      "options": [
+        "He was forbidden ever to leave the temple",
+        "He was required to be a eunuch",
+        "He answered to the Vestals",
+        "He had to be born a Sabine",
+        "Strict rules of ritual purity bound him",
+        "He served for only one year"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 3,
+      "textReference": "#numa-pompilius",
+      "explanation": "Each flamen was devoted to a single god. Jupiter's flamen was hemmed in by such strict purity rules that a normal public career was almost impossible.",
+      "sourceQuote": "Jupiter's own flamen was bound by such strict rules of ritual purity that he could barely pursue a political or military career.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which measures did Augustus take as part of his religious revival? (select all that apply)",
+      "options": [
+        "He restored old priesthoods",
+        "He ordered all subjects to sacrifice",
+        "He extinguished Vesta's fire",
+        "He became chief priest",
+        "He banned the Bacchanalia",
+        "He redirected vows for the Republic's safety to the emperor's wellbeing"
+      ],
+      "correctAnswers": [
+        0,
+        3,
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#emperors-as-gods",
+      "explanation": "Augustus used religion to justify one-man rule. He restored priesthoods and took the title of chief priest, which later emperors kept, and vows once made for the Republic were now made for the emperor.",
+      "sourceQuote": "He restored old priesthoods, raised up the Vestals and became chief priest himself; later emperors kept the title.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which achievements did Roman tradition credit to Romulus? (select all that apply)",
+      "options": [
+        "The order of flamens",
+        "Rome's first victory parade",
+        "The Temple of Janus",
+        "A temple to Diana",
+        "Rome's first calendar",
+        "Rome's first temple to Jupiter"
+      ],
+      "correctAnswers": [
+        1,
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#aeneas-and-romulus",
+      "explanation": "Romulus was credited with the first temple to Jupiter and the first victory parade. The calendar, the Temple of Janus and the flamens were credited to Numa, and a later king built the temple to Diana.",
+      "sourceQuote": "Romulus was credited with Rome's first temple to Jupiter and its first victory parade.",
+      "reviewFlags": []
+    },
+    {
+      "question": "In 186 BC the Senate cracked down on a wildly popular cult and placed it under strict state control. Which god's rites were these?",
+      "options": [
+        "Mithras",
+        "Isis",
+        "Bacchus",
+        "The Great Mother",
+        "Ceres",
+        "The Good Goddess"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 3,
+      "textReference": "#foreign-gods",
+      "explanation": "The Bacchanalia honoured the wine god Bacchus. Romans distrusted secret rites, even as mystery cults offering hope for the afterlife won growing followings.",
+      "sourceQuote": "In 186 BC the Senate cracked down on the Bacchanalia, the wildly popular rites of the wine god Bacchus, and placed them under strict state control.",
+      "reviewFlags": []
+    }
+  ]
+}

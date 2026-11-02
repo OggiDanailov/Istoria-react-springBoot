@@ -1,0 +1,193 @@
+{
+  "batchName": "Roman Religion and Mythology (753 BC-AD 391) - Medium Batch 1",
+  "chapterName": "Roman Religion and Mythology (753 BC-AD 391)",
+  "difficulty": 2,
+  "batchOrder": 3,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Constantine's nephew became emperor in 361 and tried to revive the old cults. Where did he die two years later?",
+      "options": [
+        "Persia",
+        "Britain",
+        "Gaul",
+        "Dacia",
+        "Egypt"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#christian-triumph",
+      "explanation": "His death in Persia ended the attempted pagan revival. In 380, under Theodosius, Christianity became the official religion.",
+      "sourceQuote": "His nephew Julian, emperor from 361, tried to revive the old cults, but died in Persia two years later.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Roman tombstones were commonly dedicated *Dis Manibus*. What does that mean?",
+      "options": [
+        "Rest in peace",
+        "To the spirit-gods",
+        "To the gods of the hearth",
+        "To the founders of Rome",
+        "To the household gods"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#home-and-festivals",
+      "explanation": "Romans believed the dead joined the spirits of the underworld. Wealthier families sacrificed a sow at the funeral pyre.",
+      "sourceQuote": "Afterwards the dead were believed to join the spirits of the underworld, and tombstones were commonly dedicated \"to the spirit-gods\" (*Dis Manibus*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "A Roman magistrate once forgot to mention \"the Roman people\" in a festival prayer. What happened as a result?",
+      "options": [
+        "A second priest finished the prayer",
+        "The festival was cancelled for a year",
+        "The magistrate was stripped of office",
+        "The magistrate paid for an extra sacrifice",
+        "The entire festival started again from the beginning"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#roman-piety",
+      "explanation": "Prayers had to be word-perfect, and a single slip could spoil a ritual. So the whole festival had to be repeated from the start.",
+      "sourceQuote": "The entire festival had to start again from the beginning.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which statements describe Roman priesthoods? (select all that apply)",
+      "options": [
+        "Priests formed a separate hereditary class",
+        "Priests had to remain unmarried",
+        "They were held by the same aristocrats who held political office",
+        "They were held for life",
+        "They were unpaid"
+      ],
+      "correctAnswers": [
+        2,
+        3,
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#priests-and-augurs",
+      "explanation": "Rome had no separate priestly class: politicians served as priests, married and led busy public lives. A priesthood was often sought as an honourable retirement.",
+      "sourceQuote": "Priesthoods were unpaid and held for life, and were often sought as an honourable retirement after a career in war and politics.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What sign after Julius Caesar's death was taken as proof that he had joined the gods?",
+      "options": [
+        "An eagle rising from his pyre",
+        "A comet seen during games",
+        "A statue of Venus weeping",
+        "Lightning striking the Capitol",
+        "An eclipse at his funeral"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#emperors-as-gods",
+      "explanation": "A comet appeared during games held after his murder. Caesar had become chief priest in 63 BC, a sign of his rise.",
+      "sourceQuote": "A comet seen during games after his death was taken as proof that he had joined the gods.",
+      "reviewFlags": []
+    },
+    {
+      "question": "What was the mola salsa prepared by the Vestals?",
+      "options": [
+        "Wine poured over the altar",
+        "A honey cake offered to the Lares",
+        "Grain left at tombs for the dead",
+        "Ash taken from Vesta's fire",
+        "Salted flour sprinkled on animals before sacrifice"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#vestals",
+      "explanation": "Because the mola salsa was sprinkled on every sacrificial animal, the Vestals' work touched every official sacrifice.",
+      "sourceQuote": "They prepared the *mola salsa*, a salted flour sprinkled on each animal before it was killed, and took part in festivals honouring the dead and the harvest.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which practices did Romans condemn as superstition (superstitio)? (select all that apply)",
+      "options": [
+        "Exact public prayers by a priest",
+        "Fearful grovelling before the gods",
+        "Prying into divine knowledge",
+        "Excessive devotion",
+        "Vows made for victory in war"
+      ],
+      "correctAnswers": [
+        1,
+        2,
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#roman-piety",
+      "explanation": "Too much zeal was as dangerous as neglect. Grovelling, excessive devotion and prying into divine knowledge could anger the gods.",
+      "sourceQuote": "Fearful grovelling, excessive devotion and prying into divine knowledge were condemned as superstition (*superstitio*). Secret rites were suspect too, as possible magic or conspiracy.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Once chosen, to whom did a Vestal Virgin answer?",
+      "options": [
+        "The flamen of Jupiter",
+        "The chief priest",
+        "Her father",
+        "The emperor",
+        "The Senate"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#vestals",
+      "explanation": "A Vestal was freed from her father's authority and, unusually for a Roman woman, needed no male guardian. She answered only to the chief priest.",
+      "sourceQuote": "She was freed from her father's authority and, unlike other Roman women, needed no male guardian, answering only to the chief priest.",
+      "reviewFlags": []
+    },
+    {
+      "question": "According to legend, through the kings of which town did Aeneas's bloodline lead to Rome's founders?",
+      "options": [
+        "Tusculum",
+        "Lavinium",
+        "Alba Longa",
+        "Veii",
+        "Gabii"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#aeneas-and-romulus",
+      "explanation": "Aeneas married a local king's daughter, and his descendants ruled at Alba Longa, a Latin town in the hills south-east of Rome.",
+      "sourceQuote": "Aeneas married a local king's daughter, and through a long line of kings at Alba Longa, a Latin town in the hills south-east of Rome, his bloodline led to Rome's founders.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Men were completely barred from which Roman religious rites?",
+      "options": [
+        "The rites of the Good Goddess",
+        "The rites of the Great Mother",
+        "The Parentalia",
+        "The Bacchanalia",
+        "The mysteries of Mithras"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#home-and-festivals",
+      "explanation": "Some of Rome's roughly forty annual festivals belonged to particular groups. The Good Goddess's rites were closed to men entirely.",
+      "sourceQuote": "Others belonged to particular groups, like the rites of the Good Goddess, from which men were completely barred.",
+      "reviewFlags": []
+    }
+  ]
+}
