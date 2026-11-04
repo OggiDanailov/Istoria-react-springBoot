@@ -87,40 +87,41 @@ const LEVELS = [
     waves: [w(30, ['warrior']), w(52, ['warrior']), w(70, ['warrior']), w(85, ['warrior', 'warrior']), w(100, ['shield']), w(114, ['warrior', 'warrior']), w(128, ['shield', 'warrior']),
       w(144, ['chief', 'warrior', 'warrior', 'shield', 'warrior', 'warrior'], 'A great wave approaches!'), w(168, ['warrior', 'shield']), w(180, ['cavalry']), w(192, ['warrior', 'cavalry', 'shield']),
       w(210, ['chief', 'warrior', 'warrior', 'shield', 'warrior', 'cavalry', 'shield', 'warrior', 'warrior', 'cavalry'], 'The final wave!')] },
-  { id: 'volsci', name: 'The Volscian Raids', year: '5th century BC', enemy: 'the Volsci', theme: 'hills', start: 175, units: [...BASE, 'princeps'], newUnit: 'princeps',
+  { id: 'volsci', name: 'The Volscian Raids', year: '5th century BC', enemy: 'the Volsci', theme: 'hills', start: 200, cols: 6, rows: 8, more: 1.2, units: [...BASE, 'princeps'], newUnit: 'princeps',
     blurb: 'From the hills south of Rome, the Volsci raid Roman farms year after year.',
+    twist: 'A bigger field: six lanes and eight rows, so there is more ground to hold.',
     after: 'The wars with the Volsci and their allies the Aequi went on for generations. In one of them, the story goes, Cincinnatus left his plough to lead Rome, won, and went back to his farm.',
     waves: [w(28, ['raider']), w(46, ['warrior']), w(60, ['raider', 'raider']), w(76, ['warrior', 'warrior']), w(90, ['shield']), w(104, rep(3, 'raider')), w(120, ['warrior', 'shield']),
       w(136, ['chief', ...rep(4, 'raider'), 'warrior', 'warrior', 'shield'], 'A great wave approaches!'), w(165, ['raider', 'raider', 'warrior']), w(180, ['shield', 'warrior', 'raider']),
       w(198, ['chief', ...rep(5, 'raider'), ...rep(3, 'warrior'), 'shield', 'shield', 'cavalry'], 'The final wave!')] },
-  { id: 'veii', name: 'The Siege of Veii', year: '396 BC', enemy: 'the Etruscans of Veii', theme: 'walls', start: 150, gates: [1, 3],
+  { id: 'veii', name: 'The Siege of Veii', year: '396 BC', enemy: 'the Etruscans of Veii', theme: 'walls', start: 175, cols: 6, rows: 8, more: 1.2, gates: [1, 4],
     twist: 'The Etruscans can only come out of the city’s two gates. Most fight in the gate lanes, a few fan out to the lanes beside them, so build your defence around the gates.', units: [...BASE, 'princeps', 'shed'], newUnit: 'shed',
     blurb: 'Veii, a rich Etruscan city a day’s march from Rome. Its archers shoot from a distance while its warriors sally out.',
     after: 'After a ten-year siege, Camillus took Veii, by tradition through a tunnel dug under its walls. Rome’s land almost doubled.',
     waves: [w(28, ['warrior']), w(46, ['archer']), w(62, ['warrior', 'warrior']), w(78, ['shield']), w(92, ['archer', 'warrior']), w(108, ['shield', 'archer']), w(124, ['warrior', 'warrior', 'archer']),
       w(140, ['chief', 'shield', 'shield', 'archer', 'archer', 'warrior', 'warrior', 'warrior'], 'A great wave approaches!'), w(170, ['archer', 'shield']), w(185, ['warrior', 'warrior', 'archer']),
       w(205, ['chief', ...rep(3, 'shield'), ...rep(3, 'archer'), ...rep(4, 'warrior')], 'The final wave!')] },
-  { id: 'aquilonia', name: 'Aquilonia', year: '293 BC', enemy: 'the Samnites', theme: 'mountains', start: 200, units: [...BASE, 'princeps', 'shed', 'rorarii'], newUnit: 'rorarii',
+  { id: 'aquilonia', name: 'Aquilonia', year: '293 BC', enemy: 'the Samnites', theme: 'mountains', start: 225, cols: 6, rows: 8, more: 1.2, units: [...BASE, 'princeps', 'shed', 'rorarii'], newUnit: 'rorarii',
     blurb: 'The Samnites gather all their strength, including the Linen Legion, warriors sworn to fight to the death.',
     after: 'Aquilonia broke the Samnites’ power. Within a few years Rome controlled central Italy.',
     waves: [w(28, ['samnite']), w(46, ['samnite']), w(62, ['samnite']), w(80, ['linen']), w(92, ['samnite', 'samnite']), w(106, ['cavalry', 'samnite']), w(120, ['linen', 'samnite']),
       w(136, ['chief', ...rep(4, 'samnite'), 'linen', 'cavalry'], 'A great wave approaches!'), w(166, ['samnite', 'linen']), w(180, ['cavalry', 'cavalry', 'samnite']),
       w(196, ['chief', ...rep(4, 'samnite'), ...rep(2, 'linen'), 'cavalry', 'cavalry'], 'The final wave!')] },
-  { id: 'beneventum', name: 'Beneventum', year: '275 BC', enemy: 'King Pyrrhus', theme: 'river', start: 250, tired: 80,
+  { id: 'beneventum', name: 'Beneventum', year: '275 BC', enemy: 'King Pyrrhus', theme: 'river', start: 275, cols: 6, rows: 8, more: 1.2, tired: 80,
     twist: 'Pyrrhus got lost on a night march: his first troops arrive exhausted and slow. Some elephants bring a calf; wound the calf and its mother panics.', units: [...BASE, 'princeps', 'shed', 'rorarii', 'pigs'], newUnit: 'pigs',
     blurb: 'King Pyrrhus of Epirus brings a professional army and war elephants, beasts the Romans first met only five years before.',
     after: 'Pyrrhus sailed home. His earlier victories had cost him so many men that a “Pyrrhic victory” still means a win not worth its price.',
     waves: [w(28, ['warrior']), w(46, ['phalangite']), w(62, ['warrior', 'warrior']), w(78, ['cavalry']), w(92, ['phalangite', 'warrior']), w(108, ['elephant+calf']), w(126, ['phalangite', 'phalangite']),
       w(140, ['chief', ...rep(3, 'phalangite'), 'warrior', 'warrior', 'cavalry'], 'A great wave approaches!'), w(170, ['elephant+calf', 'warrior']), w(188, ['phalangite', 'cavalry']),
       w(205, ['chief', 'elephant+calf', ...rep(3, 'phalangite'), ...rep(2, 'warrior'), 'elephant', 'cavalry', 'cavalry'], 'The final wave!')] },
-  { id: 'agrigentum', name: 'Agrigentum', year: '261 BC', enemy: 'Carthage’s relief army', theme: 'siege', start: 225, cols: 6, rows: 8, ditch: 1,
-    twist: 'A bigger field: six lanes and eight rows. The Romans dug a ditch around their siege lines: enemies crossing it slow right down, and you can’t build in it.', units: ['cart', 'slinger', 'hastatus', 'triarius', 'caltrops', 'princeps', 'rorarii', 'scorpio'], newUnit: 'scorpio',
+  { id: 'agrigentum', name: 'Agrigentum', year: '261 BC', enemy: 'Carthage’s relief army', theme: 'siege', start: 275, cols: 7, rows: 9, more: 1.17, ditch: 1,
+    twist: 'A bigger field: seven lanes and nine rows. The Romans dug a ditch around their siege lines: enemies crossing it slow right down, and you can’t build in it.', units: ['cart', 'slinger', 'hastatus', 'triarius', 'caltrops', 'princeps', 'rorarii', 'scorpio'], newUnit: 'scorpio',
     blurb: 'Rome besieges Akragas, which the Romans call Agrigentum. Carthage sends a relief army of hired soldiers, slingers and 60 war elephants.',
     after: 'The relief army was heavily defeated and the garrison slipped away. The Romans sold 25,000 of the city’s people into slavery, but Sicily was far from won.',
     waves: [w(28, ['warrior']), w(44, ['balearic']), w(58, ['warrior', 'warrior']), w(72, ['shield', 'warrior']), w(88, ['balearic', 'warrior', 'warrior']), w(104, ['elephant']), w(118, ['shield', 'shield', 'warrior']),
       w(134, ['chief', ...rep(3, 'warrior'), 'shield', 'shield', 'balearic', 'elephant'], 'A great wave approaches!'), w(166, ['balearic', 'balearic', 'shield', 'warrior']), w(182, ['elephant', 'warrior', 'warrior']),
       w(200, ['chief', 'elephant', 'elephant', ...rep(3, 'shield'), ...rep(4, 'warrior'), ...rep(2, 'balearic')], 'The final wave!')] },
-  { id: 'cannae', name: 'Cannae', year: '216 BC', enemy: 'Hannibal', theme: 'plain', start: 300, cols: 6, rows: 8,
+  { id: 'cannae', name: 'Cannae', year: '216 BC', enemy: 'Hannibal', theme: 'plain', start: 350, cols: 7, rows: 9, more: 1.05,
     twist: 'Hannibal’s trap: his African infantry close in on the outer lanes, and late in the battle his cavalry routs the Roman horse on the left wing, so the left lane loses its equites.',
     events: [{ t: 160, text: 'Hannibal’s horsemen are closing in on the Roman left wing!' }, { t: 175, wings: [0], text: 'Hannibal’s cavalry has routed the Roman horse on the left wing! No equites on the left lane now.' }],
     units: ['cart', 'slinger', 'velites', 'hastatus', 'triarius', 'caltrops', 'princeps', 'rorarii', 'scorpio'], newUnit: 'velites',
@@ -129,7 +130,7 @@ const LEVELS = [
     waves: [w(26, ['gaul']), w(40, ['numidian']), w(54, ['gaul', 'warrior']), w(70, ['numidian', 'gaul']), w(86, ['shield', 'gaul', 'gaul']), w(100, ['numidian', 'numidian']), w(116, ['gaul', 'gaul', 'shield']),
       w(132, ['chief', ...rep(4, 'gaul'), 'numidian', 'numidian', 'shield'], 'A great wave approaches!'), w(160, ['african', 'african', 'african'], 'The Africans close in from the sides!'), w(176, ['numidian', 'gaul', 'gaul', 'african']),
       w(196, ['chief', ...rep(4, 'gaul'), ...rep(3, 'african'), ...rep(3, 'numidian')], 'The final wave!')] },
-  { id: 'zama', name: 'Zama', year: '202 BC', enemy: 'Hannibal', theme: 'zama', start: 300, cols: 6, rows: 8, openLanes: true,
+  { id: 'zama', name: 'Zama', year: '202 BC', enemy: 'Hannibal', theme: 'zama', start: 325, cols: 7, rows: 9, more: 1.17, openLanes: true,
     twist: 'Scipio’s lanes: an elephant that reaches the camp down a lane with no Roman soldiers in it runs out of the battle without harm. At the end, Masinissa’s cavalry comes back and your equites can charge again.',
     events: [{ t: 194, masinissa: true, text: 'Masinissa’s cavalry is back! Your equites can charge again.' }],
     units: ['cart', 'slinger', 'velites', 'hastatus', 'triarius', 'caltrops', 'princeps', 'scorpio', 'cornicen'], newUnit: 'cornicen',
@@ -138,8 +139,8 @@ const LEVELS = [
     waves: [w(26, ['warrior']), w(40, ['charger']), w(56, ['warrior', 'warrior']), w(72, ['shield', 'warrior']), w(88, ['charger', 'warrior']), w(104, ['gaul', 'gaul', 'shield']), w(120, ['veteran']),
       w(136, ['chief', 'charger', 'charger', ...rep(3, 'warrior'), 'shield'], 'Hannibal’s first line advances!'), w(164, ['shield', 'shield', 'gaul', 'gaul', 'warrior'], 'The second line!'),
       w(188, ['chief', ...rep(4, 'veteran'), 'shield', 'shield', 'gaul'], 'Hannibal’s veterans: the final wave!')] },
-  { id: 'pydna', name: 'Pydna', year: '168 BC', enemy: 'King Perseus of Macedon', theme: 'olympus', start: 275, cols: 6, rows: 8,
-    rough: [[1, 3], [4, 3], [0, 4], [3, 4], [2, 5], [5, 5]],
+  { id: 'pydna', name: 'Pydna', year: '168 BC', enemy: 'King Perseus of Macedon', theme: 'olympus', start: 300, cols: 7, rows: 9, more: 1.17,
+    rough: [[1, 4], [5, 4], [0, 5], [3, 5], [6, 5], [2, 6], [4, 6]],
     twist: 'The phalanx comes in blocks, three lanes wide. Its long pikes strike a square ahead. On the rough ground (the stony squares) its shields break, as gaps opened in its ranks at Pydna.',
     units: ['cart', 'slinger', 'velites', 'hastatus', 'triarius', 'caltrops', 'rorarii', 'scorpio', 'maniple'], newUnit: 'maniple',
     blurb: 'At Pydna, by the sea below Mount Olympus, King Perseus’s phalanx bristles with long pikes that pierce Roman shields.',
@@ -147,8 +148,8 @@ const LEVELS = [
     waves: [w(26, ['pikeman']), w(42, ['thracian']), w(56, ['pikeman', 'thracian']), w(72, ['phalanx3']), w(90, ['cavalry', 'thracian']), w(106, ['phalanx3', 'thracian']), w(122, ['thracian', 'thracian', 'thracian']),
       w(138, ['chief', 'phalanx3', 'phalanx3', 'thracian', 'thracian'], 'A great wave approaches!'), w(170, ['cavalry', 'pikeman', 'pikeman', 'thracian']),
       w(190, ['chief', 'phalanx3', 'phalanx3', 'phalanx3', ...rep(3, 'thracian'), 'cavalry'], 'The final wave!')] },
-  { id: 'carthage', name: 'The Siege of Carthage', year: '146 BC', enemy: 'the Carthaginians', theme: 'carthage', start: 275, cols: 6, rows: 8,
-    houses: [[0, 1], [2, 1], [5, 1], [3, 2], [1, 3], [4, 3]],
+  { id: 'carthage', name: 'The Siege of Carthage', year: '146 BC', enemy: 'the Carthaginians', theme: 'carthage', start: 300, cols: 7, rows: 9, more: 1.17,
+    houses: [[0, 1], [2, 1], [6, 1], [4, 2], [1, 3], [5, 3], [3, 4]],
     twist: 'Street fighting: houses fill some squares. You can’t build on them, and defenders burst out of them. A torch-bearer burns a house down.',
     units: ['cart', 'slinger', 'hastatus', 'triarius', 'princeps', 'shed', 'scorpio', 'maniple', 'torch'], newUnit: 'torch',
     blurb: 'Spring 146 BC: the Romans have broken through Carthage’s walls. For six days they fight street by street toward the citadel, the Byrsa.',
@@ -156,8 +157,8 @@ const LEVELS = [
     waves: [w(26, ['militia']), w(40, ['volunteer', 'volunteer']), w(56, ['militia', 'bowman']), w(70, ['militia', 'militia'], null, 'houses'), w(86, ['shield', 'volunteer', 'volunteer']), w(102, ['bowman', 'bowman', 'militia']),
       w(116, ['militia', 'militia', 'volunteer'], null, 'houses'), w(132, ['chief', ...rep(3, 'militia'), ...rep(3, 'volunteer'), 'shield', 'bowman'], 'A great wave approaches!'), w(162, ['militia', 'volunteer', 'volunteer'], null, 'houses'),
       w(178, ['shield', 'shield', 'bowman', 'militia']), w(196, ['chief', ...rep(4, 'militia'), ...rep(4, 'volunteer'), ...rep(2, 'shield'), 'bowman'], 'The last stand at the Byrsa!')] },
-  { id: 'aquae-sextiae', name: 'Aquae Sextiae', year: '102 BC', enemy: 'the Teutones and Ambrones', theme: 'hill', start: 250, cols: 6, rows: 8, uphill: 3,
-    twist: 'The Teutones charge uphill at Marius’s position, so they slow down on the last three rows. Late in the battle Marius’s 3,000 hidden men strike them from behind.',
+  { id: 'aquae-sextiae', name: 'Aquae Sextiae', year: '102 BC', enemy: 'the Teutones and Ambrones', theme: 'hill', start: 300, cols: 8, rows: 10, more: 1.33, uphill: 4,
+    twist: 'A bigger field: eight lanes and ten rows. The Teutones charge uphill at Marius’s position, so they slow down on the last four rows. Late in the battle Marius’s 3,000 hidden men strike them from behind.',
     events: [{ t: 178, ambush: 250, text: 'Marius’s 3,000 hidden men strike the Teutones from behind!' }],
     units: ['cart', 'slinger', 'velites', 'hastatus', 'triarius', 'caltrops', 'princeps', 'scorpio', 'legionary'], newUnit: 'legionary',
     blurb: 'In 102 BC the Teutones and Ambrones march on Italy. Near Aquae Sextiae, in southern Gaul, Marius waits for them on high ground.',
@@ -165,16 +166,16 @@ const LEVELS = [
     waves: [w(26, ['ambron']), w(40, ['teuton']), w(54, ['ambron', 'ambron']), w(70, ['teuton', 'warrior']), w(86, ['shield', 'teuton']), w(100, ['ambron', 'ambron', 'ambron']), w(116, ['teuton', 'teuton', 'shield']),
       w(132, ['chief', ...rep(3, 'teuton'), 'ambron', 'ambron', 'shield'], 'A great wave approaches!'), w(160, ['teuton', 'teuton', 'ambron', 'cavalry']), w(178, ['shield', 'teuton', 'teuton']),
       w(194, ['chief', ...rep(4, 'teuton'), ...rep(3, 'ambron'), 'shield', 'cavalry'], 'The final wave!')] },
-  { id: 'colline-gate', name: 'The Colline Gate', year: '82 BC', enemy: 'the Samnites and Lucanians', theme: 'rome', start: 300, cols: 6, rows: 8,
+  { id: 'colline-gate', name: 'The Colline Gate', year: '82 BC', enemy: 'the Samnites and Lucanians', theme: 'rome', start: 375, cols: 8, rows: 10, more: 1.33,
     twist: 'Sulla’s own wing, on the left, breaks: the left lane loses its equites. Hold on: Crassus is winning on the right, and in time his wing routs the enemy there.',
-    events: [{ t: 150, text: 'Sulla’s left wing is wavering!' }, { t: 165, wings: [0], text: 'Sulla’s wing breaks! No equites on the left lane.' }, { t: 170, rout: [3, 4, 5], text: 'Crassus has won on the right! The enemy there flees.' }],
+    events: [{ t: 150, text: 'Sulla’s left wing is wavering!' }, { t: 165, wings: [0], text: 'Sulla’s wing breaks! No equites on the left lane.' }, { t: 170, rout: [4, 5, 6, 7], text: 'Crassus has won on the right! The enemy there flees.' }],
     units: ['cart', 'slinger', 'velites', 'legionary', 'triarius', 'caltrops', 'maniple', 'scorpio', 'centurion'], newUnit: 'centurion',
     blurb: '1 November 82 BC: a great Samnite and Lucanian army stands at Rome’s Colline Gate. Sulla races back to save the city.',
     after: 'Sulla won. The next day thousands of prisoners were killed, and he made himself dictator.',
     waves: [w(26, ['samnite']), w(40, ['lucanian']), w(54, ['samnite', 'samnite']), w(70, ['lucanian', 'samnite']), w(86, ['linen', 'samnite']), w(100, ['lucanian', 'lucanian', 'cavalry']), w(114, ['samnite', 'samnite', 'lucanian']),
       w(130, ['chief', ...rep(3, 'samnite'), 'lucanian', 'lucanian', 'linen'], 'A great wave approaches!'), w(156, ['samnite', 'lucanian', 'cavalry']), w(176, ['linen', 'samnite', 'samnite']),
       w(194, ['chief', ...rep(4, 'samnite'), ...rep(2, 'lucanian'), 'linen', 'cavalry'], 'The final wave!')] },
-  { id: 'silarius', name: 'The Silarius River', year: '71 BC', enemy: 'Spartacus', theme: 'silarius', start: 275, cols: 6, rows: 8, ditch: 2, river: true,
+  { id: 'silarius', name: 'The Silarius River', year: '71 BC', enemy: 'Spartacus', theme: 'silarius', start: 325, cols: 8, rows: 10, more: 1.33, ditch: 2, river: true,
     twist: 'The slave army must wade the river, which slows it (you can’t build in it). Gladiators lead the charge: watch for the retiarius’s net. In the final wave Spartacus himself attacks.',
     units: ['cart', 'slinger', 'velites', 'legionary', 'triarius', 'caltrops', 'maniple', 'scorpio', 'centurion'],
     blurb: 'Trapped by Crassus, Spartacus turns and throws his whole army at the legions by the Silarius River.',
@@ -182,7 +183,7 @@ const LEVELS = [
     waves: [w(26, ['slave']), w(38, ['slave', 'slave']), w(52, ['murmillo']), w(66, ['slave', 'slave', 'retiarius']), w(82, ['murmillo', 'slave', 'slave']), w(98, ['retiarius', 'retiarius', 'slave']), w(114, ['murmillo', 'murmillo', 'slave', 'slave']),
       w(130, ['chief', ...rep(4, 'slave'), 'murmillo', 'retiarius', 'cavalry'], 'A great wave approaches!'), w(158, [...rep(3, 'slave'), 'retiarius', 'murmillo']), w(176, ['murmillo', 'murmillo', 'retiarius', 'slave']),
       w(194, ['spartacus', ...rep(4, 'slave'), 'murmillo', 'murmillo', 'retiarius', 'retiarius'], 'Spartacus leads the final charge!')] },
-  { id: 'carrhae', name: 'Carrhae', year: '53 BC', enemy: 'the Parthians', theme: 'desert', start: 400, cols: 6, rows: 8, noSky: true,
+  { id: 'carrhae', name: 'Carrhae', year: '53 BC', enemy: 'the Parthians', theme: 'desert', start: 450, cols: 8, rows: 10, more: 1.33, noSky: true,
     twist: 'In the desert no grain falls from the sky: build supply carts. Parthian horse archers keep their distance and shoot, riding back if you come close, and their camels bring them endless arrows. Form a testudo.',
     units: ['cart', 'slinger', 'velites', 'legionary', 'triarius', 'caltrops', 'centurion', 'scorpio', 'testudo'], newUnit: 'testudo',
     blurb: 'Crassus leads seven legions into the dry plains of Mesopotamia. Near Carrhae, Parthian horsemen ride out of the dust to the sound of drums.',
@@ -190,7 +191,7 @@ const LEVELS = [
     waves: [w(26, ['horsearcher']), w(42, ['horsearcher', 'horsearcher']), w(58, ['cataphract']), w(72, ['horsearcher', 'horsearcher', 'horsearcher']), w(88, ['cataphract', 'horsearcher']), w(104, ['horsearcher', 'horsearcher', 'cataphract']), w(120, ['cataphract', 'cataphract']),
       w(136, [...rep(5, 'horsearcher'), 'cataphract', 'cataphract'], 'The drums thunder: a great attack!'), w(166, ['horsearcher', 'horsearcher', 'cataphract', 'horsearcher']),
       w(190, [...rep(5, 'horsearcher'), ...rep(2, 'cataphract')], 'The final attack!')] },
-  { id: 'alesia', name: 'Alesia', year: '52 BC', enemy: 'Vercingetorix and the Gallic relief army', theme: 'alesia', start: 325, cols: 6, rows: 8, twoFronts: true,
+  { id: 'alesia', name: 'Alesia', year: '52 BC', enemy: 'Vercingetorix and the Gallic relief army', theme: 'alesia', start: 475, cols: 8, rows: 10, more: 1.2, twoFronts: true,
     twist: 'Two fronts: Vercingetorix attacks from the town above, and later a Gallic relief army attacks from behind you, from below. Your soldiers fight toward whichever side the enemy comes from, and each side has its own equites.',
     units: ['cart', 'slinger', 'velites', 'hastatus', 'triarius', 'princeps', 'scorpio', 'maniple', 'lilia'], newUnit: 'lilia',
     blurb: 'Caesar has trapped Vercingetorix in the hilltop town of Alesia behind a ring of walls. Now a huge Gallic army is coming to rescue him, so Caesar has built a second ring, facing out.',
@@ -198,16 +199,16 @@ const LEVELS = [
     waves: [w(26, ['gaul']), w(42, ['warrior', 'gaul']), w(58, ['shield', 'gaul']), w(74, ['gaul', 'gaul', 'warrior']), w(92, ['gaul', 'gaul'], 'The Gallic relief army attacks from behind!', 'below'),
       w(108, ['shield', 'gaul']), w(120, ['cavalry', 'gaul'], null, 'below'), w(134, ['chief', ...rep(3, 'gaul'), 'shield', 'warrior'], 'Vercingetorix attacks from the town!'), w(152, ['gaul', 'gaul', 'shield', 'cavalry'], null, 'below'),
       w(168, ['shield', 'gaul', 'gaul']), w(186, ['chief', ...rep(4, 'gaul'), 'shield', 'cavalry'], 'The relief army’s final assault!', 'below'), w(190, ['chief', ...rep(3, 'gaul'), 'shield', 'shield'])] },
-  { id: 'pharsalus', name: 'Pharsalus', year: '48 BC', enemy: 'Pompey', theme: 'pharsalus', start: 375, cols: 6, rows: 8,
+  { id: 'pharsalus', name: 'Pharsalus', year: '48 BC', enemy: 'Pompey', theme: 'pharsalus', start: 525, cols: 8, rows: 10, more: 1.0, delay: 20,
     twist: 'Romans against Romans. Pompey’s 7,000 horsemen charge your left wing. Caesar’s answer was a hidden fourth line of picked men who thrust their pila at the riders.',
     units: ['cart', 'slinger', 'velites', 'legionary', 'triarius', 'maniple', 'scorpio', 'centurion', 'fourthline'], newUnit: 'fourthline',
     blurb: 'On the plain of Pharsalus, in Thessaly, Caesar’s veterans face Pompey’s far larger army. Pompey is sure his cavalry will win the day.',
     after: 'Pompey’s cavalry broke and fled, his legions followed, and Pompey escaped to Egypt, where he was murdered. Caesar was master of Rome.',
     waves: [w(26, ['pompeian']), w(42, ['pompeian', 'slingarcher']), w(58, ['pompeian', 'pompeian']), w(74, ['cavalry', 'pompeian']), w(90, ['slingarcher', 'pompeian', 'pompeian']), w(106, ['cavalry', 'cavalry', 'pompeian']),
-      w(122, rep(5, 'cavalry'), 'Pompey’s 7,000 horsemen charge your left wing!', [0, 1, 2]),
+      w(122, rep(4, 'cavalry'), 'Pompey’s 7,000 horsemen charge your left wing!', [0, 1, 2]),
       w(140, ['chief', ...rep(3, 'pompeian'), 'slingarcher', 'slingarcher'], 'A great wave approaches!'), w(166, ['pompeian', 'pompeian', 'cavalry', 'slingarcher']),
       w(190, ['chief', ...rep(4, 'pompeian'), 'cavalry', 'cavalry', 'slingarcher'], 'The final wave!')] },
-  { id: 'actium', name: 'Actium', year: '31 BC', enemy: 'Antony and Cleopatra', theme: 'sea', sea: true, start: 350, cols: 6, rows: 8,
+  { id: 'actium', name: 'Actium', year: '31 BC', enemy: 'Antony and Cleopatra', theme: 'sea', sea: true, start: 425, cols: 8, rows: 10, more: 1.2,
     twist: 'A battle at sea: every unit is a ship. Watch Cleopatra’s squadron: halfway through, her ships hoist their sails and flee, and Antony follows her.',
     events: [{ t: 150, cleopatra: true, text: 'Cleopatra’s squadron hoists its sails and flees!' }, { t: 172, antony: true, text: 'Antony abandons his fleet and follows Cleopatra!' }],
     units: ['supplyboat', 'archership', 'quinquereme', 'rammer', 'ballista', 'fireship', 'harpax'], newUnit: 'harpax',
@@ -919,11 +920,15 @@ const unlocked = () => true   // a prototype for testing: every battle is open
 function buildQueue() {
   const q = []
   let block = 0
+  const LEADERS = ['chief', 'spartacus', 'flagship']
   for (const w of LEVEL.waves) {
-    const gap = w.big ? 0.7 : 1.6
-    w.foes.forEach((type, i) => {
-      if (type === 'phalanx3') { block++; for (const off of [-1, 0, 1]) q.push({ t: w.t + i * gap, type: 'pikeman', wave: w, block, off }) }   // a block of the phalanx, three lanes wide
-      else q.push({ t: w.t + i * gap, type, wave: w })
+    const gap = w.big ? 0.7 : 1.6, troops = w.foes.filter(t => !LEADERS.includes(t))
+    const extra = Math.round(troops.length * ((LEVEL.more ?? 1) - 1))   // a wider field needs more men to fill it
+    const foes = [...w.foes, ...Array.from({ length: extra }, (_, i) => troops[i % troops.length])]
+    const t0 = w.t + (LEVEL.delay ?? 0)   // a later start: more time to build before the first waves
+    foes.forEach((type, i) => {
+      if (type === 'phalanx3') { block++; for (const off of [-1, 0, 1]) q.push({ t: t0 + i * gap, type: 'pikeman', wave: w, block, off }) }   // a block of the phalanx, three lanes wide
+      else q.push({ t: t0 + i * gap, type, wave: w })
     })
   }
   return q.sort((a, b) => a.t - b.t)
@@ -1484,7 +1489,8 @@ function renderBar(reset) {
   if (reset) bar.querySelectorAll('.flag').forEach(f => f.remove())
   if (!bar.querySelector('.flag')) {
     let i = 0
-    for (const w of LEVEL.waves) { if (w.big) { const f = document.createElement('span'); f.className = 'flag'; f.style.left = (i / buildQueue().length * 100) + '%'; bar.append(f) } i += w.foes.length }
+    const q = buildQueue()   // a flag where each big wave starts, counted in the real queue (extra troops included)
+    q.forEach((e, n) => { if (e.wave.big && (n === 0 || q[n - 1].wave !== e.wave)) { const f = document.createElement('span'); f.className = 'flag'; f.style.left = (n / q.length * 100) + '%'; bar.append(f) } })
   }
   $('fill').style.width = (G.spawned / G.total * 100) + '%'
 }
@@ -1700,7 +1706,7 @@ function frame(now) {
 const MARKUP = `<main class="game">
   <div class="tray" id="tray" aria-label="Your units. Drag one onto the field, or tap it and then tap a square."></div>
   <div class="field-wrap" id="wrap">
-    <canvas id="field" aria-label="The battlefield: five lanes in front of the Roman camp. Latin soldiers march down from the top."></canvas>
+    <canvas id="field" aria-label="The battlefield: lanes in front of the Roman camp. The enemy marches down from the top."></canvas>
     <div class="deploy" id="deploy" hidden><p id="deploy-text"></p><button class="primary" id="begin">Begin the battle</button></div>
     <div class="overlay" id="overlay"></div>
   </div>
