@@ -21,6 +21,7 @@ async function run(level, strategy, score) {
       shield: LV.units.find(t => U[t].arrowMul),
       fighter: LV.units.find(t => t === 'legionary') ?? LV.units.find(t => t === 'princeps') ?? LV.units.find(t => t === 'rammer') ?? LV.units.find(t => t === 'maniple'),
       anticav: LV.units.find(t => U[t].antiCav), flank: LV.units.find(t => U[t].flank), aura: LV.units.find(t => U[t].aura),
+      group: LV.units.find(t => U[t].group),
       trap: LV.units.find(t => U[t].trap), pit: LV.units.find(t => U[t].pit), horn: LV.units.find(t => U[t].horn), torch: LV.units.find(t => t === 'torch'),
     }
     for (const [t, n] of Object.entries(G0.vets)) for (let k = 0; k < n; k++) {
@@ -49,6 +50,7 @@ async function run(level, strategy, score) {
         if (G.foes.some(f => f.lane === l && f.type === 'pikeman') && (put(role.flank, l + 1, front) || put(role.flank, l - 1, front))) return
         if (put(role.blocker, l, front) || (G.rations >= 200 && (put(role.fighter, l, front) || put(role.flank, l, front)))) return
       }
+      if (role.group && G.rations >= U[role.group].cost + 75) for (const l of L) if (shooters(l) && foes(l).length > 1 && !at(l, front) && put(role.group, l, front)) return   // a cohort where the enemy crowds
       if (grains < 3) { for (const l of [L[0], L[1], L[2]]) if (put(role.grain, l, R - 1)) return }
       for (const l of L) if (!shooters(l)) { if (put(role.shooter, l, back)) return }
       if (grains < 5 && strategy !== 'casual') { for (const l of L) if (put(role.grain, l, R - 1)) return }
