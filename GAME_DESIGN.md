@@ -181,9 +181,22 @@ and each is hurt only by its Roman twin: any other god's light passes through th
 who is needed. The test score's veterans arrive as free Ceres. Checked with scripted players: one who knows the pairs
 wins with 2–3 stars; one who guesses a quarter of the time usually wins with 1 star and sometimes loses.
 
-The Empire's nine battles are chosen but not built yet: the Teutoburg Forest (AD 9), Germanicus in Germany (16),
-Boudica (60/61), the siege of Jerusalem (70), the Dacian Wars (101–106), Zenobia (272), the Milvian Bridge (312),
-Adrianople (378) and the Catalaunian Plains (451). Until then the chapter shows a "coming soon" card.
+The Empire's nine battles are fought on the biggest field, **8 lanes × 11 rows**, and bring the **cohort**: one card
+that places three legionaries side by side (the middle one carries the standard).
+
+| Battle | New enemy | New Roman unit | Twist |
+|---|---|---|---|
+| The Teutoburg Forest (AD 9) | Germanic warriors | Cohort | ambush: warriors burst out of the woods at the sides, mid-field |
+| Germanicus in Germany (AD 16) | the Cherusci, Arminius | Auxiliary archer | Arminius leads the last wave |
+| Boudica's Revolt (AD 60/61) | Britons, war chariots (race over the first soldier) | Pilum volley (one use, the nine squares around it) | the narrow pass: woods close the outer lanes |
+| The Siege of Jerusalem (AD 70) | Zealots, archers | Onager (its stone also hits the lanes beside) | sallies from the two gates |
+| The Dacian Wars (101–106) | Dacians with the falx (double damage), draco bearers | Armoured legionary (no extra harm from the falx) | the Danube to cross |
+| Zenobia of Palmyra (272) | armoured horsemen (clibanarii) | Club-man (triple damage to riders) | the heat: armoured horses tire after a while |
+| The Milvian Bridge (312) | Maxentius's Praetorians | The labarum (its lane fights 25% harder) | the bridge of boats collapses: everyone on the river drowns |
+| Adrianople (378) | Goths, Gothic horsemen | Dart-thrower (plumbatae, three lanes, short range) | the wagon ring; the cavalry attacks from behind |
+| The Catalaunian Plains (451) | Hunnic horse archers, Ostrogoths, Attila | Visigothic allies (foederati) | the ridge: slower on the last four rows |
+
+Checked with the scripted players: at 80% the average player wins about 60% of runs across the nine.
 
 ## 7. Content rules (every chapter)
 

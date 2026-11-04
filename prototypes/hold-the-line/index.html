@@ -33,6 +33,14 @@ const UNITS = {
   maniple:  { name: 'Maniple', short: 'Maniple', cost: 125, recharge: 10, hp: 650, melee: 35, flank: 70, about: 'A small, flexible unit. It fights in its own lane and strikes enemies in the lanes beside it from the side, where shields don’t protect them.' },
   torch:    { name: 'Torch-bearer', short: 'Torch', cost: 50, recharge: 12, hp: 100, burn: 3, about: 'Sets a house on fire. Place him on a house: no more defenders can burst out of it, and the square is free again.' },
   legionary:  { name: 'Legionary', short: 'Legionary', cost: 125, recharge: 8, hp: 450, reload: 3, dmg: 50, range: 2.7, melee: 40, breaks: true, about: 'Marius’s legionary. His pilum bends when it strikes, so an enemy shield it hits is useless.' },
+  sagittarius:{ name: 'Auxiliary archer', short: 'Archer', cost: 125, recharge: 7.5, hp: 300, reload: 1.3, dmg: 26, range: 99, kind: 'arrow', about: 'Archers from the eastern provinces fought beside the legions as auxiliaries. Faster and stronger than a slinger.' },
+  volley:     { name: 'Pilum volley', short: 'Volley', cost: 75, recharge: 14, hp: 200, blast: { delay: 1, dmg: 170 }, about: 'At Boudica’s last battle the legions threw their pila in two volleys before charging. One use: a second after it is placed, every enemy in the nine squares around it is hit hard.' },
+  onager:     { name: 'Onager', short: 'Onager', cost: 175, recharge: 15, hp: 300, reload: 4, dmg: 90, range: 99, kind: 'boulder', splash: 0.6, about: 'A stone-throwing catapult named after the wild ass, for its kick. Its stone also hurts enemies in the lanes beside the one it hits.' },
+  lorica:     { name: 'Armoured legionary', short: 'Armoured', cost: 150, recharge: 9, hp: 650, reload: 3, dmg: 50, range: 2.7, melee: 40, breaks: true, armour: true, about: 'Against the Dacian falx, Trajan’s legionaries wore a guard on the sword arm and crossbars on the helmet. The falx does him no extra harm.' },
+  clubman:    { name: 'Club-man', short: 'Club-man', cost: 100, recharge: 10, hp: 550, melee: 30, antiCav: 3, about: 'At Emesa, Aurelian’s club-men from Palestine beat Zenobia’s armoured horsemen with clubs and maces. Triple damage to anyone on horseback.' },
+  labarum:    { name: 'The labarum', short: 'Labarum', cost: 125, recharge: 20, hp: 500, laneAura: 1.25, about: 'Constantine’s standard, marked with the Chi-Rho, the first letters of Christ’s name in Greek. Every soldier in its lane fights 25% harder.' },
+  plumbata:   { name: 'Dart-thrower', short: 'Darts', cost: 150, recharge: 8, hp: 300, reload: 2, dmg: 30, range: 3.5, spread: true, about: 'Late Roman soldiers carried plumbatae, lead-weighted darts thrown over the shields. They strike his own lane and the lanes beside it, at short range.' },
+  foederati:  { name: 'Visigothic allies', short: 'Allies', cost: 100, recharge: 9, hp: 800, melee: 32, about: 'At the Catalaunian Plains half of Aetius’s army were Visigoths and other allies (foederati). Cheap and tough.' },
   cohort:     { name: 'Cohort', short: 'Cohort', cost: 325, recharge: 18, hp: 450, group: 'legionary', about: 'From Augustus on, the cohort of about 480 men was the legion’s fighting block. One card places three legionaries side by side.' },
   centurion:  { name: 'Centurion', short: 'Centurion', cost: 100, recharge: 15, hp: 600, melee: 30, aura: 1.3, about: 'An officer with a vine-wood stick. The soldiers in the eight squares around him fight 30% harder.' },
   testudo:    { name: 'Testudo', short: 'Testudo', cost: 75, recharge: 15, hp: 1200, melee: 15, arrowMul: 0.1, about: '“The tortoise”: soldiers lock their shields in front and over their heads. Arrows and stones barely hurt it.' },
@@ -89,6 +97,20 @@ const FOES = {
   aphrodite: { name: 'Aphrodite', hp: 270, speed: 0.2, dps: 40, deity: 'aphrodite', twin: 'venus', intro: 'Aphrodite, the Greek god of love and beauty. Only her Roman twin can stop her: Venus.' },
   artemis: { name: 'Artemis', hp: 270, speed: 0.2, dps: 40, deity: 'artemis', twin: 'diana', intro: 'Artemis, the Greek god of hunting and the moon. Only her Roman twin can stop her: Diana.' },
   hermes: { name: 'Hermes', hp: 270, speed: 0.2, dps: 40, deity: 'hermes', twin: 'mercury', intro: 'Hermes, the Greek god of messages and trade. Only his Roman twin can stop him: Mercury.' },
+  cheruscan:  { name: 'Cheruscan warrior', hp: 280, shield: 100, speed: 0.25, dps: 50, intro: 'The Cherusci, Arminius’s own tribe, with big wooden shields.' },
+  arminius:   { name: 'Arminius', hp: 1600, speed: 0.22, dps: 110, intro: 'Arminius himself, the victor of the Teutoburg Forest, leads the attack!' },
+  briton:     { name: 'British warrior', hp: 200, speed: 0.32, dps: 45, intro: 'The Britons of Boudica, painted blue with woad, by the tens of thousands.' },
+  chariot:    { name: 'War chariot', hp: 380, speed: 0.7, after: 0.3, dps: 50, jumps: true, mounted: true, chariot: true, intro: 'British war chariots! They race over the first soldier in their way, once, then slow down.' },
+  zealot:     { name: 'Zealot', hp: 240, speed: 0.34, dps: 55, intro: 'The Zealots of Jerusalem: fast and fierce, ready to die for their city.' },
+  dacian:     { name: 'Dacian warrior', hp: 280, speed: 0.27, dps: 45, cleave: 2, intro: 'Dacians with the falx, a two-handed curved blade: it does double damage to soldiers without extra armour.' },
+  draco:      { name: 'Draco bearer', hp: 340, speed: 0.3, dps: 45, intro: 'The draco, the Dacian dragon standard, howls in the wind.' },
+  clibanarius:{ name: 'Armoured horseman', hp: 650, shield: 220, speed: 0.36, dps: 75, mounted: true, intro: 'Zenobia’s clibanarii: horse and rider in heavy armour. In the heat they tire.' },
+  praetorian: { name: 'Praetorian', hp: 360, shield: 260, speed: 0.22, dps: 55, intro: 'Maxentius’s Praetorian Guard, the best soldiers in Rome, fighting for their emperor.' },
+  goth:       { name: 'Gothic warrior', hp: 280, shield: 120, speed: 0.26, dps: 50, intro: 'The Goths, driven from their lands by the Huns, fight for a new home.' },
+  gothrider:  { name: 'Gothic horseman', hp: 340, speed: 0.6, after: 0.3, dps: 45, jumps: true, mounted: true, intro: 'The Gothic cavalry is back from foraging!' },
+  hun:        { name: 'Hunnic horse archer', hp: 190, speed: 0.45, dps: 25, mounted: true, kites: true, bow: { range: 3.4, reload: 2, dmg: 18 }, intro: 'The Huns: horse archers who shoot as they ride, then ride away.' },
+  ostrogoth:  { name: 'Ostrogoth', hp: 300, shield: 150, speed: 0.25, dps: 50, intro: 'Ostrogoths, one of the many peoples Attila brought with him.' },
+  attila:     { name: 'Attila', hp: 2200, speed: 0.24, dps: 110, mounted: true, intro: 'Attila, king of the Huns, “the scourge of God”, rides into battle!' },
   german:     { name: 'Germanic warrior', hp: 260, speed: 0.26, dps: 45, intro: 'Germanic warriors of the Cherusci and their allies, with spears and wooden shields.' },
   ambusher:   { name: 'Warrior from the woods', hp: 200, speed: 0.3, dps: 40, intro: 'Warriors burst out of the forest beside the column!' },
   teuton:     { name: 'Teuton warrior', hp: 300, speed: 0.24, dps: 50, intro: 'The Teutones! Huge warriors from the north, charging uphill at your lines.' },
@@ -105,8 +127,8 @@ const FOES = {
   calf:       { name: 'Elephant calf', hp: 300, speed: 0.15, dps: 60, intro: 'An elephant calf walks ahead of its mother. Wound it and the mother panics, as happened at Beneventum.' },
   elephant:   { name: 'War elephant', hp: 2000, speed: 0.15, dps: 250, elephant: true, intro: 'War elephants! They crush whatever stands in their way. Send the pigs!' },
 }
-const UNIT_GUIDE = {"cohort": "One card, three legionaries side by side in the row you choose (the middle one carries the standard). Each throws his pilum and then fights. <i>Tip: across the lanes the enemy crowds into.</i>", "ceres": "Makes a sack of grain (25 rations) every 20 seconds. She doesn’t fight. <i>Tip: two or three early, at the back.</i>", "jupiter": "Throws divine light down the whole lane. It hurts only Zeus: anyone else it barely touches. <i>Tip: put Jupiter in the lane Zeus is coming down.</i>", "juno": "Throws divine light down the whole lane. It hurts only Hera: anyone else it barely touches. <i>Tip: put Juno in the lane Hera is coming down.</i>", "neptune": "Throws divine light down the whole lane. It hurts only Poseidon: anyone else it barely touches. <i>Tip: put Neptune in the lane Poseidon is coming down.</i>", "minerva": "Throws divine light down the whole lane. It hurts only Athena: anyone else it barely touches. <i>Tip: put Minerva in the lane Athena is coming down.</i>", "mars": "Throws divine light down the whole lane. It hurts only Ares: anyone else it barely touches. <i>Tip: put Mars in the lane Ares is coming down.</i>", "venus": "Throws divine light down the whole lane. It hurts only Aphrodite: anyone else it barely touches. <i>Tip: put Venus in the lane Aphrodite is coming down.</i>", "diana": "Throws divine light down the whole lane. It hurts only Artemis: anyone else it barely touches. <i>Tip: put Diana in the lane Artemis is coming down.</i>", "mercury": "Throws divine light down the whole lane. It hurts only Hermes: anyone else it barely touches. <i>Tip: put Mercury in the lane Hermes is coming down.</i>", "cart": "Makes a sack of grain (25 rations) every 20 seconds. It doesn’t fight. <i>Tip: build several early, at the back.</i>", "slinger": "Shoots a stone down his whole lane every 1.5 seconds. Fragile once an enemy reaches him. <i>Tip: put something sturdy in front of him.</i>", "hastatus": "Throws heavy javelins at enemies within about 2½ squares, more than twice a stone’s damage, then fights with his sword when they reach him. <i>Tip: javelins break shields fast.</i>", "triarius": "Five times a slinger’s health and no attack. He holds enemies in place while your other soldiers hit them. <i>Tip: in front of your shooters.</i>", "caltrops": "Hidden iron spikes. After 10 seconds they are armed, and the first enemy to step on them sets them off: everyone on that spot takes a huge hit. Before that, enemies trample them. <i>Tip: a horseman wastes his leap on unarmed caltrops.</i>", "princeps": "A tough swordsman who cuts down whoever reaches his square. <i>Tip: a strong front line against fast raiders.</i>", "shed": "A wooden shed covered in hides. Arrows do almost nothing to it. <i>Tip: put it in front, so archers shoot the shed instead of your slingers.</i>", "rorarii": "Throw javelins into their own lane and both lanes beside it. <i>Tip: in the middle lanes they cover three lanes at once.</i>", "scorpio": "Shoots a heavy bolt every 3½ seconds that flies through every enemy in its lane, hitting each one. <i>Tip: great against crowded lanes and elephants.</i>", "velites": "Cheap javelin throwers with a short range. When an enemy reaches them they fall back one square (once), so they keep throwing. <i>Tip: a cheap first line.</i>", "cornicen": "Doesn’t fight. When an elephant comes within 2½ squares in his lane or the lanes beside it, he blares his horn and every such elephant panics and runs back. Then he needs 10 seconds to catch his breath. <i>Tip: a little in front of your shooters.</i>", "maniple": "A tough unit that fights in its lane and also hits enemies in the two lanes beside it from the side. Shields don’t stop blows from the side. <i>Tip: between two lanes the phalanx is coming down.</i>", "torch": "Can only be placed on a house. After 3 seconds the house burns down: no more ambushes from it, and you can build on the square. <i>Tip: burn the houses near your lines first.</i>", "legionary": "Throws a heavy pilum at enemies within about 2½ squares, then fights with his sword. A pilum that hits a shield ruins it at once. <i>Tip: put him where the shields come.</i>", "centurion": "Fights a little himself, but above all makes every soldier in the eight squares around him 30% stronger. <i>Tip: in the middle of a group of shooters.</i>", "testudo": "Very tough, fights a little, and takes only a tenth of the damage from arrows and stones. <i>Tip: in front of your line against archers.</i>", "fourthline": "A tough swordsman who deals triple damage to anyone on horseback. <i>Tip: in the lanes the cavalry is coming down.</i>", "lilia": "Hidden pits with sharp stakes. They don’t stop anyone: every enemy who crosses one takes a hit and slows to half speed while crossing. Enemies don’t attack them, so they last the whole battle. <i>Tip: put them where your shooters can hit the slowed enemy.</i>", "supplyboat": "Makes a sack of grain (25 rations) every 20 seconds. It doesn’t fight. <i>Tip: several early, at the back.</i>", "archership": "Shoots an arrow down its whole lane every 1.5 seconds. Fragile once an enemy ship reaches it.", "quinquereme": "Five times an archer ship’s strength and no attack. Holds enemy ships while the others shoot.", "rammer": "Rams any ship that reaches its square, hard.", "ballista": "A heavy bolt every 3½ seconds that flies through every ship in its lane.", "fireship": "Lit after 10 seconds; then the first enemy ship to touch it burns, and everything on that spot takes a huge hit. One use.", "harpax": "Fires a grappling hook that catches the first ship in its lane and holds it still for 4 seconds, so your other ships can hit it. <i>Tip: behind your archers, on the busiest lanes.</i>", "pigs": "Charge up the lane when an enemy comes near. An elephant they reach panics and runs back, trampling its own army; other enemies just take a hit. One use. <i>Tip: keep them in front of your line.</i>"}
-const FOE_GUIDE = {"german": "Tough and quick, with a spear and a wooden shield. Two shooters per lane.", "ambusher": "Bursts out of the woods at the sides, in the middle of the field. Keep something in the outer lanes.", "zeus": "The Greek god of the sky and thunder, king of the gods. Only Jupiter can hurt him; everyone else’s blows bounce off.", "hera": "The Greek god of marriage, queen of the gods. Only Juno can hurt her; everyone else’s blows bounce off.", "poseidon": "The Greek god of the sea. Only Neptune can hurt him; everyone else’s blows bounce off.", "athena": "The Greek god of wisdom and crafts. Only Minerva can hurt her; everyone else’s blows bounce off.", "ares": "The Greek god of war. Only Mars can hurt him; everyone else’s blows bounce off.", "aphrodite": "The Greek god of love and beauty. Only Venus can hurt her; everyone else’s blows bounce off.", "artemis": "The Greek god of hunting and the moon. Only Diana can hurt her; everyone else’s blows bounce off.", "hermes": "The Greek god of messages and trade. Only Mercury can hurt him; everyone else’s blows bounce off.", "calf": "Walks ahead of its mother. Wound it badly and the mother panics: both run back, trampling Pyrrhus’s own soldiers. Aim your slingers at the calf.", "warrior": "The basic enemy. One or two slingers in a lane handle him.", "chief": "Carries the standard and walks a little faster.", "shield": "His bronze shield soaks up hits until it breaks (the bronze bar). Javelins break it quickly.", "cavalry": "Fast. He leaps over the first soldier in his way, once, then slows down. Give him something cheap to leap, or armed caltrops.", "raider": "Fast but weak, and comes in bursts. Keep a shooter in every lane.", "archer": "Stops about three squares from your first soldier and shoots it. Put a siege shed in front; your slingers still reach him.", "samnite": "Tougher than a Latin warrior. Two shooters per lane.", "linen": "Very tough elite. Hold him with a triarius and hit him from several soldiers at once.", "phalangite": "A big shield and a long pike. Break the shield with javelins.", "elephant": "Crushes soldiers in seconds and takes a lot of hits. War pigs make him flee; caltrops help.", "balearic": "Stops about four squares from your first soldier and slings stones at it. Your slingers still reach him.", "numidian": "Fast and light. When a soldier blocks him he rides into a free lane beside it, up to twice. Block the lanes beside, or shoot him early.", "gaul": "Fast and hits hard, but has no armour. Shoot him before he reaches your line.", "african": "Comes down the outer lanes, with a shield. Javelins break it.", "charger": "Charges fast, then slows down. If it reaches the camp in a lane with no Roman soldiers, it runs out of the battle (as at Zama). Trumpeters panic it.", "veteran": "Hannibal’s best: very tough, with a shield. Hold him and hit him from several soldiers.", "thracian": "Fast light troops. Keep a shooter in every lane.", "pikeman": "His pike strikes a square ahead of him, so swordsmen can’t reach him. His shield stops missiles from the front, but not from the side lanes (rorarii, maniples). Rough ground breaks his shield.", "bowman": "Stops about three squares from your first soldier and shoots it. Put a siege shed in front.", "galley": "A warship with thick timbers (the brown bar) that soak up hits before the hull is damaged.", "deceres": "A huge ship with archer towers: it stops out of reach and shoots, and takes a lot to sink.", "egyptian": "Fast but light. Cleopatra’s ships may not stay for the whole battle…", "flagship": "Antony’s own ship: the biggest of all, with archers. Watch what happens when Cleopatra sails away.", "teuton": "A huge, tough warrior. Hold him and hit him from several soldiers.", "ambron": "Fast and hits hard. Shoot him early.", "lucanian": "A spearman with a shield. Javelins and pila break it.", "murmillo": "A gladiator with a big shield (the bronze bar). Pila ruin it at once.", "retiarius": "Throws a net over the first soldier he reaches: that soldier can’t fight for 3 seconds.", "slave": "Weak, fast and many. Keep shooters in every lane.", "spartacus": "The rebel leader: very tough and deadly up close. Slow him and hit him from everywhere.", "horsearcher": "Shoots from about three squares away, and rides back up the lane when a soldier is close. A testudo shrugs off his arrows.", "cataphract": "Armoured horse and rider: slow for cavalry, very tough. The fourth line and pila deal with him.", "pompeian": "A Roman legionary on the other side, with a shield. Pila break it.", "slingarcher": "Stops out of reach and shoots your front soldier. A testudo shrugs it off.", "militia": "Defends his city. Comes down the street or bursts out of a house.", "volunteer": "Fast and weak, often in groups."}
+const UNIT_GUIDE = {"sagittarius": "Shoots an arrow down his whole lane every 1.3 seconds, harder than a stone. <i>Tip: behind a sturdy soldier.</i>", "volley": "One use. A second after you place it, every enemy in the nine squares around it takes a heavy hit. <i>Tip: where a crowd is about to reach your line.</i>", "onager": "Throws a heavy stone every 4 seconds down its lane; enemies in the lanes beside the one it hits are hurt too. <i>Tip: in the middle of the field.</i>", "lorica": "A tough legionary with a pilum and a sword, in extra armour: the Dacian falx does him no extra harm. <i>Tip: in front, where the falxmen come.</i>", "clubman": "Triple damage to anyone on horseback. <i>Tip: in the lanes the armoured horsemen come down.</i>", "labarum": "Doesn’t fight. Every soldier in its lane fights 25% harder. <i>Tip: in your busiest lane.</i>", "plumbata": "Throws darts at short range into his own lane and both lanes beside it. <i>Tip: just behind your front line.</i>", "foederati": "Very tough and cheap, with a sword. <i>Tip: a wall in front of your archers.</i>", "cohort": "One card, three legionaries side by side in the row you choose (the middle one carries the standard). Each throws his pilum and then fights. <i>Tip: across the lanes the enemy crowds into.</i>", "ceres": "Makes a sack of grain (25 rations) every 20 seconds. She doesn’t fight. <i>Tip: two or three early, at the back.</i>", "jupiter": "Throws divine light down the whole lane. It hurts only Zeus: anyone else it barely touches. <i>Tip: put Jupiter in the lane Zeus is coming down.</i>", "juno": "Throws divine light down the whole lane. It hurts only Hera: anyone else it barely touches. <i>Tip: put Juno in the lane Hera is coming down.</i>", "neptune": "Throws divine light down the whole lane. It hurts only Poseidon: anyone else it barely touches. <i>Tip: put Neptune in the lane Poseidon is coming down.</i>", "minerva": "Throws divine light down the whole lane. It hurts only Athena: anyone else it barely touches. <i>Tip: put Minerva in the lane Athena is coming down.</i>", "mars": "Throws divine light down the whole lane. It hurts only Ares: anyone else it barely touches. <i>Tip: put Mars in the lane Ares is coming down.</i>", "venus": "Throws divine light down the whole lane. It hurts only Aphrodite: anyone else it barely touches. <i>Tip: put Venus in the lane Aphrodite is coming down.</i>", "diana": "Throws divine light down the whole lane. It hurts only Artemis: anyone else it barely touches. <i>Tip: put Diana in the lane Artemis is coming down.</i>", "mercury": "Throws divine light down the whole lane. It hurts only Hermes: anyone else it barely touches. <i>Tip: put Mercury in the lane Hermes is coming down.</i>", "cart": "Makes a sack of grain (25 rations) every 20 seconds. It doesn’t fight. <i>Tip: build several early, at the back.</i>", "slinger": "Shoots a stone down his whole lane every 1.5 seconds. Fragile once an enemy reaches him. <i>Tip: put something sturdy in front of him.</i>", "hastatus": "Throws heavy javelins at enemies within about 2½ squares, more than twice a stone’s damage, then fights with his sword when they reach him. <i>Tip: javelins break shields fast.</i>", "triarius": "Five times a slinger’s health and no attack. He holds enemies in place while your other soldiers hit them. <i>Tip: in front of your shooters.</i>", "caltrops": "Hidden iron spikes. After 10 seconds they are armed, and the first enemy to step on them sets them off: everyone on that spot takes a huge hit. Before that, enemies trample them. <i>Tip: a horseman wastes his leap on unarmed caltrops.</i>", "princeps": "A tough swordsman who cuts down whoever reaches his square. <i>Tip: a strong front line against fast raiders.</i>", "shed": "A wooden shed covered in hides. Arrows do almost nothing to it. <i>Tip: put it in front, so archers shoot the shed instead of your slingers.</i>", "rorarii": "Throw javelins into their own lane and both lanes beside it. <i>Tip: in the middle lanes they cover three lanes at once.</i>", "scorpio": "Shoots a heavy bolt every 3½ seconds that flies through every enemy in its lane, hitting each one. <i>Tip: great against crowded lanes and elephants.</i>", "velites": "Cheap javelin throwers with a short range. When an enemy reaches them they fall back one square (once), so they keep throwing. <i>Tip: a cheap first line.</i>", "cornicen": "Doesn’t fight. When an elephant comes within 2½ squares in his lane or the lanes beside it, he blares his horn and every such elephant panics and runs back. Then he needs 10 seconds to catch his breath. <i>Tip: a little in front of your shooters.</i>", "maniple": "A tough unit that fights in its lane and also hits enemies in the two lanes beside it from the side. Shields don’t stop blows from the side. <i>Tip: between two lanes the phalanx is coming down.</i>", "torch": "Can only be placed on a house. After 3 seconds the house burns down: no more ambushes from it, and you can build on the square. <i>Tip: burn the houses near your lines first.</i>", "legionary": "Throws a heavy pilum at enemies within about 2½ squares, then fights with his sword. A pilum that hits a shield ruins it at once. <i>Tip: put him where the shields come.</i>", "centurion": "Fights a little himself, but above all makes every soldier in the eight squares around him 30% stronger. <i>Tip: in the middle of a group of shooters.</i>", "testudo": "Very tough, fights a little, and takes only a tenth of the damage from arrows and stones. <i>Tip: in front of your line against archers.</i>", "fourthline": "A tough swordsman who deals triple damage to anyone on horseback. <i>Tip: in the lanes the cavalry is coming down.</i>", "lilia": "Hidden pits with sharp stakes. They don’t stop anyone: every enemy who crosses one takes a hit and slows to half speed while crossing. Enemies don’t attack them, so they last the whole battle. <i>Tip: put them where your shooters can hit the slowed enemy.</i>", "supplyboat": "Makes a sack of grain (25 rations) every 20 seconds. It doesn’t fight. <i>Tip: several early, at the back.</i>", "archership": "Shoots an arrow down its whole lane every 1.5 seconds. Fragile once an enemy ship reaches it.", "quinquereme": "Five times an archer ship’s strength and no attack. Holds enemy ships while the others shoot.", "rammer": "Rams any ship that reaches its square, hard.", "ballista": "A heavy bolt every 3½ seconds that flies through every ship in its lane.", "fireship": "Lit after 10 seconds; then the first enemy ship to touch it burns, and everything on that spot takes a huge hit. One use.", "harpax": "Fires a grappling hook that catches the first ship in its lane and holds it still for 4 seconds, so your other ships can hit it. <i>Tip: behind your archers, on the busiest lanes.</i>", "pigs": "Charge up the lane when an enemy comes near. An elephant they reach panics and runs back, trampling its own army; other enemies just take a hit. One use. <i>Tip: keep them in front of your line.</i>"}
+const FOE_GUIDE = {"cheruscan": "Tough, with a big shield. Pila break it.", "arminius": "The leader: very tough and deadly up close. Slow him and hit him from everywhere.", "briton": "Fast and fierce, without armour. Shoot early.", "chariot": "Very fast. Races over the first soldier in its way, once, then slows down. Give it something cheap to pass.", "zealot": "Fast and hits hard. Keep shooters in every lane.", "dacian": "His falx does double damage to soldiers without extra armour. Armoured legionaries hold him.", "draco": "Carries the dragon standard. Tougher than a warrior.", "clibanarius": "Heavy armoured cavalry, very tough. Club-men beat it; in the heat it slows down.", "praetorian": "A Roman guardsman with a big shield. Pila break it.", "goth": "Tough, with a shield.", "gothrider": "Fast; leaps over the first soldier in his way, once.", "hun": "Shoots from about three squares away and rides back if you come close. A testudo shrugs off his arrows.", "ostrogoth": "Tough, with a shield and an axe.", "attila": "The king of the Huns: very tough and deadly. Hit him from everywhere.", "german": "Tough and quick, with a spear and a wooden shield. Two shooters per lane.", "ambusher": "Bursts out of the woods at the sides, in the middle of the field. Keep something in the outer lanes.", "zeus": "The Greek god of the sky and thunder, king of the gods. Only Jupiter can hurt him; everyone else’s blows bounce off.", "hera": "The Greek god of marriage, queen of the gods. Only Juno can hurt her; everyone else’s blows bounce off.", "poseidon": "The Greek god of the sea. Only Neptune can hurt him; everyone else’s blows bounce off.", "athena": "The Greek god of wisdom and crafts. Only Minerva can hurt her; everyone else’s blows bounce off.", "ares": "The Greek god of war. Only Mars can hurt him; everyone else’s blows bounce off.", "aphrodite": "The Greek god of love and beauty. Only Venus can hurt her; everyone else’s blows bounce off.", "artemis": "The Greek god of hunting and the moon. Only Diana can hurt her; everyone else’s blows bounce off.", "hermes": "The Greek god of messages and trade. Only Mercury can hurt him; everyone else’s blows bounce off.", "calf": "Walks ahead of its mother. Wound it badly and the mother panics: both run back, trampling Pyrrhus’s own soldiers. Aim your slingers at the calf.", "warrior": "The basic enemy. One or two slingers in a lane handle him.", "chief": "Carries the standard and walks a little faster.", "shield": "His bronze shield soaks up hits until it breaks (the bronze bar). Javelins break it quickly.", "cavalry": "Fast. He leaps over the first soldier in his way, once, then slows down. Give him something cheap to leap, or armed caltrops.", "raider": "Fast but weak, and comes in bursts. Keep a shooter in every lane.", "archer": "Stops about three squares from your first soldier and shoots it. Put a siege shed in front; your slingers still reach him.", "samnite": "Tougher than a Latin warrior. Two shooters per lane.", "linen": "Very tough elite. Hold him with a triarius and hit him from several soldiers at once.", "phalangite": "A big shield and a long pike. Break the shield with javelins.", "elephant": "Crushes soldiers in seconds and takes a lot of hits. War pigs make him flee; caltrops help.", "balearic": "Stops about four squares from your first soldier and slings stones at it. Your slingers still reach him.", "numidian": "Fast and light. When a soldier blocks him he rides into a free lane beside it, up to twice. Block the lanes beside, or shoot him early.", "gaul": "Fast and hits hard, but has no armour. Shoot him before he reaches your line.", "african": "Comes down the outer lanes, with a shield. Javelins break it.", "charger": "Charges fast, then slows down. If it reaches the camp in a lane with no Roman soldiers, it runs out of the battle (as at Zama). Trumpeters panic it.", "veteran": "Hannibal’s best: very tough, with a shield. Hold him and hit him from several soldiers.", "thracian": "Fast light troops. Keep a shooter in every lane.", "pikeman": "His pike strikes a square ahead of him, so swordsmen can’t reach him. His shield stops missiles from the front, but not from the side lanes (rorarii, maniples). Rough ground breaks his shield.", "bowman": "Stops about three squares from your first soldier and shoots it. Put a siege shed in front.", "galley": "A warship with thick timbers (the brown bar) that soak up hits before the hull is damaged.", "deceres": "A huge ship with archer towers: it stops out of reach and shoots, and takes a lot to sink.", "egyptian": "Fast but light. Cleopatra’s ships may not stay for the whole battle…", "flagship": "Antony’s own ship: the biggest of all, with archers. Watch what happens when Cleopatra sails away.", "teuton": "A huge, tough warrior. Hold him and hit him from several soldiers.", "ambron": "Fast and hits hard. Shoot him early.", "lucanian": "A spearman with a shield. Javelins and pila break it.", "murmillo": "A gladiator with a big shield (the bronze bar). Pila ruin it at once.", "retiarius": "Throws a net over the first soldier he reaches: that soldier can’t fight for 3 seconds.", "slave": "Weak, fast and many. Keep shooters in every lane.", "spartacus": "The rebel leader: very tough and deadly up close. Slow him and hit him from everywhere.", "horsearcher": "Shoots from about three squares away, and rides back up the lane when a soldier is close. A testudo shrugs off his arrows.", "cataphract": "Armoured horse and rider: slow for cavalry, very tough. The fourth line and pila deal with him.", "pompeian": "A Roman legionary on the other side, with a shield. Pila break it.", "slingarcher": "Stops out of reach and shoots your front soldier. A testudo shrugs it off.", "militia": "Defends his city. Comes down the street or bursts out of a house.", "volunteer": "Fast and weak, often in groups."}
 // A campaign of five battles, in historical order. Each adds an enemy and a Roman unit.
 const w = (t, foes, big, from) => ({ t, foes, big, from })
 const rep = (n, t) => Array(n).fill(t)
@@ -257,6 +279,72 @@ const LEVELS = [
       w(104, ['ambusher', 'ambusher', 'ambusher'], 'Another ambush from the trees!', 'woods'), w(118, ['german', 'german', 'shield', 'warrior']),
       w(134, ['chief', ...rep(4, 'german'), 'shield', 'shield', 'warrior'], 'Arminius’s warriors charge!'), w(156, rep(4, 'ambusher'), 'They pour out of the forest!', 'woods'), w(170, ['german', 'german', 'shield', 'warrior', 'german']),
       w(188, ['chief', ...rep(5, 'german'), ...rep(2, 'shield'), 'warrior', 'warrior'], 'The final attack!'), w(194, rep(4, 'ambusher'), null, 'woods')] },
+  { id: 'idistaviso', name: 'Germanicus in Germany', year: 'AD 16', enemy: 'Arminius and the Cherusci', theme: 'forest', start: 525, cols: 8, rows: 11,
+    twist: 'Germanicus has come to avenge Varus. The Cherusci fight behind big wooden shields; in the last wave Arminius himself attacks.',
+    units: ['cart', 'sagittarius', 'velites', 'legionary', 'cohort', 'triarius', 'caltrops', 'centurion', 'scorpio'], newUnit: 'sagittarius',
+    blurb: 'AD 16. Germanicus, Tiberius’s heir, leads eight legions across the Rhine against Arminius, on a plain by the river Weser.',
+    after: 'Germanicus won, and recovered two of the three eagles lost with Varus. But Tiberius called him home, and Rome never conquered Germany.',
+    waves: [w(26, ['german']), w(42, ['cheruscan', 'german']), w(58, ['german', 'german', 'warrior']), w(74, ['cheruscan', 'cheruscan']), w(90, ['ambusher', 'ambusher'], 'Warriors from the woods!', 'woods'),
+      w(106, ['cheruscan', 'german', 'german', 'shield']), w(122, ['german', 'german', 'cheruscan', 'warrior']), w(138, ['chief', ...rep(3, 'cheruscan'), ...rep(3, 'german')], 'The Cherusci charge!'),
+      w(164, ['cheruscan', 'cheruscan', 'german', 'german']), w(178, rep(3, 'ambusher'), null, 'woods'), w(192, ['arminius', ...rep(3, 'cheruscan'), ...rep(3, 'german')], 'Arminius leads the final attack!')] },
+  { id: 'boudica', name: 'Boudica’s Revolt', year: 'AD 60/61', enemy: 'Boudica and the Britons', theme: 'pass', start: 575, cols: 8, rows: 11, closed: [0, 7],
+    twist: 'The governor chose a narrow pass with woods on both sides: the outer lanes are forest, so the huge British army can only come at you down the middle. Watch for the war chariots.',
+    units: ['cart', 'sagittarius', 'velites', 'legionary', 'cohort', 'volley', 'triarius', 'centurion', 'scorpio'], newUnit: 'volley',
+    blurb: 'Boudica, queen of the Iceni, has burned three Roman towns. Fewer than 10,000 Romans wait for her huge army in a narrow pass.',
+    after: 'The Romans threw their pila, charged in wedges and crushed the Britons. Boudica died soon after. Later centuries made her a national heroine.',
+    waves: [w(24, ['briton']), w(38, ['briton', 'briton']), w(52, ['chariot']), w(66, ['briton', 'briton', 'briton']), w(80, ['chariot', 'briton', 'briton']), w(96, ['briton', 'briton', 'warrior', 'briton']),
+      w(112, ['chariot', 'chariot', 'briton', 'briton']), w(128, ['chief', ...rep(6, 'briton'), 'chariot'], 'The British host charges!'), w(156, ['chariot', 'briton', 'briton', 'briton']), w(172, rep(5, 'briton')),
+      w(188, ['chief', ...rep(7, 'briton'), 'chariot', 'chariot'], 'Boudica’s final charge!')] },
+  { id: 'jerusalem', name: 'The Siege of Jerusalem', year: 'AD 70', enemy: 'the defenders of Jerusalem', theme: 'walls', start: 450, cols: 8, rows: 11, gates: [2, 5],
+    twist: 'The defenders sally out of the city’s two gates, with archers on the walls behind them. Build your siege lines around the gates.',
+    units: ['cart', 'sagittarius', 'legionary', 'cohort', 'testudo', 'triarius', 'centurion', 'scorpio', 'onager'], newUnit: 'onager',
+    blurb: 'AD 70. Titus besieges Jerusalem with four legions. Inside, the rebel factions have stopped fighting each other to fight Rome.',
+    after: 'The Romans broke the walls one by one. The Temple burned and the city was destroyed. Titus’s triumph showed the Temple’s lampstand, carved on his arch in Rome.',
+    waves: [w(26, ['zealot']), w(42, ['archer', 'zealot']), w(56, ['zealot', 'zealot', 'shield']), w(72, ['archer', 'archer', 'zealot']), w(88, ['shield', 'zealot', 'zealot']), w(104, ['zealot', 'zealot', 'archer', 'shield']),
+      w(120, ['archer', 'zealot', 'zealot', 'zealot']), w(136, ['chief', ...rep(5, 'zealot'), 'shield', 'archer', 'archer'], 'The defenders sally out in force!'), w(164, ['zealot', 'zealot', 'archer', 'shield']),
+      w(180, ['zealot', 'zealot', 'zealot', 'archer']), w(196, ['chief', ...rep(6, 'zealot'), ...rep(2, 'shield'), 'archer', 'archer'], 'The last great sally!')] },
+  { id: 'dacia', name: 'The Dacian Wars', year: 'AD 101–106', enemy: 'Decebalus and the Dacians', theme: 'dacia', start: 450, cols: 8, rows: 11, ditch: 2, river: true,
+    twist: 'The Dacians must cross the Danube (it slows them; you can’t build in it). Their falx, a two-handed curved blade, does double damage to soldiers without extra armour.',
+    units: ['cart', 'sagittarius', 'legionary', 'lorica', 'cohort', 'triarius', 'centurion', 'scorpio', 'onager'], newUnit: 'lorica',
+    blurb: 'Trajan crosses the Danube to break Dacia, a rich kingdom in modern Romania, and its king Decebalus.',
+    after: 'Decebalus killed himself rather than be captured, and Dacia became a province. Trajan’s Column in Rome still tells the story, in carvings spiralling round it.',
+    waves: [w(26, ['dacian']), w(42, ['dacian', 'warrior']), w(58, ['dacian', 'dacian']), w(74, ['draco', 'dacian', 'dacian']), w(90, ['cataphract', 'dacian']), w(106, ['dacian', 'dacian', 'dacian', 'shield']),
+      w(122, ['draco', 'dacian', 'cataphract', 'dacian']), w(138, ['chief', 'draco', ...rep(5, 'dacian'), 'cataphract'], 'The dragon standards howl: a great attack!'), w(166, ['dacian', 'dacian', 'draco', 'dacian']),
+      w(182, ['cataphract', 'dacian', 'dacian', 'dacian']), w(198, ['chief', 'draco', 'draco', ...rep(6, 'dacian'), 'cataphract'], 'Decebalus’s final attack!')] },
+  { id: 'zenobia', name: 'Zenobia of Palmyra', year: 'AD 272', enemy: 'Zenobia’s army', theme: 'desert', start: 450, cols: 8, rows: 11, heat: 26,
+    twist: 'Zenobia’s armoured horsemen are fearsome, but heavy: after a while on the field in the Syrian heat, they tire and slow right down. Hold them, then strike.',
+    units: ['cart', 'sagittarius', 'legionary', 'cohort', 'clubman', 'triarius', 'caltrops', 'centurion', 'scorpio'], newUnit: 'clubman',
+    blurb: 'Zenobia, queen of Palmyra, rules half the Roman East. Near Emesa, in Syria, the emperor Aurelian meets her army.',
+    after: 'Aurelian won at Immae and Emesa. Zenobia fled on a camel, was captured and was probably paraded in his triumph. By 274 the empire was whole again.',
+    waves: [w(26, ['horsearcher']), w(42, ['clibanarius']), w(58, ['horsearcher', 'archer']), w(74, ['clibanarius', 'horsearcher']), w(90, ['archer', 'archer', 'shield']), w(106, ['clibanarius', 'clibanarius']),
+      w(122, ['horsearcher', 'horsearcher', 'archer', 'shield']), w(138, ['chief', ...rep(3, 'clibanarius'), 'horsearcher', 'horsearcher', 'archer'], 'Zenobia’s armoured horse charges!'), w(166, ['clibanarius', 'horsearcher', 'archer']),
+      w(182, ['shield', 'shield', 'clibanarius', 'horsearcher']), w(198, ['chief', ...rep(4, 'clibanarius'), ...rep(3, 'horsearcher'), 'archer'], 'The final charge!')] },
+  { id: 'milvian-bridge', name: 'The Milvian Bridge', year: 'AD 312', enemy: 'Maxentius', theme: 'milvian', start: 425, cols: 8, rows: 11, more: 1.22, ditch: 1, river: true,
+    twist: 'Maxentius has drawn up his army with the Tiber behind it. Hold out: late in the battle his bridge of boats collapses, and everyone still crossing the river is swept away.',
+    events: [{ t: 168, text: 'Maxentius’s army is being pushed back toward the river!' }, { t: 184, drown: 2.2, text: 'The bridge of boats collapses! Maxentius and the men on it are swept away by the Tiber.' }],
+    units: ['cart', 'sagittarius', 'legionary', 'cohort', 'labarum', 'triarius', 'caltrops', 'centurion', 'scorpio'], newUnit: 'labarum',
+    blurb: 'October 312. Constantine marches on Rome against Maxentius. Before the battle, it was said, he saw a sign in the sky.',
+    after: 'Maxentius drowned in the Tiber. Constantine entered Rome and soon gave the Christians freedom of worship. He was the first Christian emperor.',
+    waves: [w(26, ['pompeian']), w(42, ['praetorian', 'pompeian']), w(58, ['pompeian', 'pompeian', 'slingarcher']), w(74, ['cavalry', 'praetorian']), w(90, ['pompeian', 'pompeian', 'praetorian']), w(106, ['cataphract', 'pompeian', 'slingarcher']),
+      w(122, ['praetorian', 'praetorian', 'pompeian', 'pompeian']), w(138, ['chief', ...rep(3, 'praetorian'), ...rep(3, 'pompeian'), 'cavalry'], 'The Praetorians attack!'), w(160, ['pompeian', 'pompeian', 'cataphract', 'slingarcher']),
+      w(176, ['praetorian', 'pompeian', 'pompeian', 'pompeian']), w(196, ['chief', ...rep(3, 'praetorian'), ...rep(3, 'pompeian'), 'cavalry'], 'Maxentius’s last stand!')] },
+  { id: 'adrianople', name: 'Adrianople', year: 'AD 378', enemy: 'the Goths', theme: 'adrianople', start: 475, cols: 8, rows: 11, twoFronts: true,
+    houses: [[1, 1], [3, 1], [4, 1], [6, 1], [2, 2], [5, 2]],
+    twist: 'The Goths fight from a ring of wagons on a hill, and burst out of it. Then their cavalry comes back from foraging and attacks you from behind, from below. Your soldiers face whichever side the enemy comes from.',
+    units: ['cart', 'sagittarius', 'legionary', 'cohort', 'plumbata', 'triarius', 'caltrops', 'centurion', 'scorpio'], newUnit: 'plumbata',
+    blurb: '9 August 378. The eastern emperor Valens marches his tired, thirsty army against the Goths camped in a ring of wagons near Adrianople.',
+    after: 'The Gothic cavalry surrounded Valens’s army; two thirds of it died, and so did Valens. Many historians see it as the beginning of the end for the West.',
+    waves: [w(26, ['goth']), w(42, ['goth', 'goth'], null, 'houses'), w(58, ['goth', 'warrior', 'goth']), w(74, ['goth', 'goth', 'shield'], null, 'houses'), w(90, ['goth', 'goth', 'warrior']),
+      w(106, ['gothrider', 'gothrider'], 'The Gothic cavalry is back! It attacks from behind!', 'below'), w(122, ['goth', 'goth', 'goth', 'shield'], null, 'houses'), w(138, ['chief', ...rep(4, 'goth'), 'shield', 'warrior'], 'The Goths charge from their wagons!'),
+      w(156, rep(3, 'gothrider'), null, 'below'), w(172, ['goth', 'goth', 'goth', 'warrior'], null, 'houses'), w(190, ['chief', ...rep(5, 'goth'), 'shield', 'shield'], 'The final attack!'), w(194, rep(3, 'gothrider'), 'The cavalry closes the ring!', 'below')] },
+  { id: 'catalaunian', name: 'The Catalaunian Plains', year: 'AD 451', enemy: 'Attila and the Huns', theme: 'catalaunian', start: 475, cols: 8, rows: 11, uphill: 4,
+    twist: 'The armies fight over a ridge: the enemy slows on the last four rows. Hunnic horse archers shoot and ride away; in the last wave Attila himself attacks.',
+    units: ['cart', 'sagittarius', 'legionary', 'cohort', 'foederati', 'testudo', 'triarius', 'centurion', 'scorpio'], newUnit: 'foederati',
+    blurb: '451. Attila and his Huns have crossed the Rhine. Aetius, the last great Roman general, has gathered Romans, Visigoths, Franks and Alans to stop him.',
+    after: 'Attila withdrew to his ring of wagons, and Aetius let him go home. An English historian called it the last victory won in the name of the Western Roman Empire.',
+    waves: [w(26, ['hun']), w(42, ['ostrogoth', 'hun']), w(58, ['hun', 'hun', 'ostrogoth']), w(74, ['ostrogoth', 'ostrogoth', 'warrior']), w(90, ['hun', 'hun', 'hun']), w(106, ['ostrogoth', 'ostrogoth', 'hun', 'shield']),
+      w(122, ['hun', 'ostrogoth', 'ostrogoth', 'hun']), w(138, ['chief', ...rep(3, 'ostrogoth'), ...rep(3, 'hun'), 'shield'], 'Attila’s army attacks the ridge!'), w(166, ['hun', 'hun', 'ostrogoth', 'ostrogoth']),
+      w(182, ['ostrogoth', 'hun', 'hun', 'warrior']), w(198, ['attila', ...rep(3, 'ostrogoth'), ...rep(4, 'hun')], 'Attila himself rides into battle!')] },
   { id: 'gods', name: 'The Clash of the Gods', year: 'a game of myth', enemy: 'the gods of Olympus', theme: 'gods', start: 200, more: 1.1, bonus: true, vetsAs: 'ceres',
     units: ['ceres', 'jupiter', 'juno', 'neptune', 'minerva', 'mars', 'venus', 'diana', 'mercury'],
     twist: 'Not a real battle but a contest of knowledge. The Greek gods march down from Olympus, and each can be stopped only by its Roman twin: Jupiter for Zeus, Minerva for Athena. The light of any other god passes straight through. Read the name tags and send the right god to each lane.',
@@ -486,6 +574,69 @@ const DRAW_UNIT = {
     c.fillStyle = '#7a5636'; c.beginPath(); c.arc(0, -44, 8.4, Math.PI, 0); c.fill()   // leather cap
   },
   pigs(c, u, T) { drawPig(c, T, false) },
+  sagittarius(c, u, T) {   // an eastern archer: conical helmet, long robe, bow
+    shadow(c, 13, 4); romanLegs(c)
+    c.fillStyle = '#7a3a2e'; rr(c, -9.5, -34, 19, 26, 5); c.fill()
+    c.strokeStyle = '#5a3a22'; c.lineWidth = 2; c.beginPath(); c.arc(-9, -30, 13, -1.3, 1.3); c.stroke()
+    line(c, -9 + 13 * Math.cos(-1.3), -30 + 13 * Math.sin(-1.3), -9 + 13 * Math.cos(1.3), -30 + 13 * Math.sin(1.3), '#d9ccb0', 1)
+    line(c, 8, -30, u.anim > 0 ? 2 : 6, -32, SKIN, 4)
+    c.fillStyle = SKIN; c.beginPath(); c.arc(0, -42, 7, 0, TAU); c.fill(); c.fillStyle = INK; c.fillRect(-3, -43, 1.8, 1.8); c.fillRect(1.4, -43, 1.8, 1.8)
+    c.fillStyle = '#9aa3aa'; c.beginPath(); c.moveTo(-8, -45); c.lineTo(0, -58); c.lineTo(8, -45); c.fill()
+  },
+  volley(c, u, T) {   // a bundle of pila, about to fly
+    shadow(c, 12, 4)
+    for (const [dx, a] of [[-6, -0.25], [0, 0], [6, 0.25]]) { line(c, dx, -2, dx + Math.sin(a) * 40, -2 - Math.cos(a) * 40, '#6b4a2b', 2.2); line(c, dx + Math.sin(a) * 36, -2 - Math.cos(a) * 36, dx + Math.sin(a) * 48, -2 - Math.cos(a) * 48, '#cfd4d8', 1.8) }
+    c.fillStyle = '#8e2b22'; rr(c, -9, -14, 18, 6, 2); c.fill()
+  },
+  onager(c, u, T) {   // the catapult: a frame and a throwing arm with a sling
+    shadow(c, 18, 5)
+    c.fillStyle = '#6b4a2b'; c.fillRect(-18, -10, 36, 5); c.fillRect(-16, -14, 4, 8); c.fillRect(12, -14, 4, 8)
+    c.fillStyle = '#5a3a22'; c.fillRect(-3, -26, 6, 16)
+    const a = u.anim > 0 ? -0.2 : -1.2
+    line(c, 0, -14, Math.cos(a) * 26, -14 + Math.sin(a) * 26, '#7a5636', 3.4)
+    c.fillStyle = '#8a8a80'; c.beginPath(); c.arc(Math.cos(a) * 28, -14 + Math.sin(a) * 28, 4, 0, TAU); c.fill()
+  },
+  lorica(c, u, T) {   // a legionary in segmented armour, with an arm guard (manica)
+    DRAW_UNIT.legionary(c, u, T)
+    c.fillStyle = '#b8bec4'; for (let y = -33; y < -14; y += 4) rr(c, -10.5, y, 21, 3, 1), c.fill()
+    c.fillStyle = '#9aa3aa'; for (let i = 0; i < 4; i++) c.fillRect(8 + i * 0.6, -31 + i * 3, 4, 2.4)
+    line(c, -8, -46, 8, -46, '#8a6a2a', 1.6); line(c, 0, -51, 0, -41, '#8a6a2a', 1.6)   // crossbars on the helmet
+  },
+  clubman(c, u, T) {   // an auxiliary from Palestine with a heavy club
+    shadow(c, 13, 4); romanLegs(c)
+    c.fillStyle = '#c9a24a'; rr(c, -9.5, -34, 19, 22, 5); c.fill()
+    const a = u.fighting ? -0.9 + Math.max(0, Math.sin(T * 8)) * 1.8 : -0.3
+    line(c, 9, -30, 13, -36, SKIN, 4.2); line(c, 13, -36, 13 + Math.sin(a) * 16, -36 - Math.cos(a) * 16, '#5a3a22', 4.6)
+    c.fillStyle = SKIN; c.beginPath(); c.arc(0, -42, 7, 0, TAU); c.fill(); c.fillStyle = INK; c.fillRect(-3, -43, 1.8, 1.8); c.fillRect(1.4, -43, 1.8, 1.8)
+    c.fillStyle = '#e9e1cf'; c.beginPath(); c.arc(0, -45, 7.6, Math.PI, 0); c.fill()
+  },
+  labarum(c, u, T) {   // Constantine's standard: a cross-bar banner topped by the Chi-Rho
+    shadow(c, 12, 4); romanLegs(c)
+    c.fillStyle = '#a8392f'; rr(c, -9.5, -34, 19, 22, 5); c.fill()
+    line(c, 12, -4, 12, -86, '#6b4a2b', 2.2); line(c, 4, -70, 20, -70, '#6b4a2b', 2)
+    c.fillStyle = '#6a2f6e'; c.fillRect(5, -69, 14, 14); c.strokeStyle = '#e0b84a'; c.lineWidth = 1; c.strokeRect(5, -69, 14, 14)
+    c.strokeStyle = '#e0b84a'; c.lineWidth = 1.6; c.beginPath(); c.moveTo(8, -84); c.lineTo(16, -76); c.moveTo(16, -84); c.lineTo(8, -76); c.moveTo(12, -86); c.lineTo(12, -74); c.stroke()
+    c.beginPath(); c.arc(13.5, -83.5, 2, -Math.PI / 2, Math.PI * 0.6); c.stroke()
+    line(c, 8, -30, 12, -38, SKIN, 4)
+    romanHelmet(c, -42)
+  },
+  plumbata(c, u, T) {   // a late Roman soldier with darts tucked behind his round shield
+    shadow(c, 13, 4); romanLegs(c)
+    c.fillStyle = '#d9ccb0'; rr(c, -9.5, -34, 19, 22, 5); c.fill()
+    c.fillStyle = '#3f6b8f'; c.strokeStyle = '#e0b84a'; c.lineWidth = 1.6; c.beginPath(); c.arc(-12, -24, 9, 0, TAU); c.fill(); c.stroke()
+    for (const dx of [-15, -12, -9]) { line(c, dx, -30, dx, -44, '#6b4a2b', 1.4); c.fillStyle = '#5f5f58'; c.beginPath(); c.arc(dx, -38, 1.6, 0, TAU); c.fill() }
+    line(c, 8, -30, u.anim > 0 ? 14 : 11, u.anim > 0 ? -46 : -38, SKIN, 4)
+    romanHelmet(c, -42)
+  },
+  foederati(c, u, T) {   // a Visigothic ally: trousers, round shield, long hair
+    shadow(c, 14, 4.5)
+    line(c, -4, -14, -4, -1, '#6a5a3a', 4.6); line(c, 4, -14, 4, -1, '#6a5a3a', 4.6)
+    c.fillStyle = '#7a8a5a'; rr(c, -10, -34, 20, 22, 5); c.fill()
+    c.fillStyle = '#8a6a3a'; c.strokeStyle = '#4a3420'; c.lineWidth = 1.6; c.beginPath(); c.arc(-13, -24, 9.5, 0, TAU); c.fill(); c.stroke()
+    if (u.fighting) swordArm(c, T); else line(c, 9, -30, 12, -36, SKIN, 4.2)
+    c.fillStyle = SKIN; c.beginPath(); c.arc(0, -42, 7, 0, TAU); c.fill(); c.fillStyle = INK; c.fillRect(-3, -43, 1.8, 1.8); c.fillRect(1.4, -43, 1.8, 1.8)
+    c.fillStyle = '#b08a3e'; c.beginPath(); c.arc(0, -45, 7.8, Math.PI, 0); c.fill(); c.fillRect(-7.8, -45, 3, 9); c.fillRect(4.8, -45, 3, 9)
+  },
   cohort(c, u, T) {   // the card: a legionary with the cohort's standard
     c.save(); c.translate(-9, 0); c.scale(0.8, 0.8); DRAW_UNIT.legionary(c, u, T); c.restore()
     c.save(); c.translate(10, 0); c.scale(0.8, 0.8); DRAW_UNIT.legionary(c, { ...u, cohort: 'standard' }, T); c.restore()
@@ -633,6 +784,15 @@ const FOE_LOOK = {
   thracian:   { tunic: '#5f7f8f', head: 'thracian', weapon: 'javelin', fast: true },
   bowman:     { tunic: '#6a2f6e', head: 'hair', weapon: 'bow' },
   slingarcher:{ tunic: '#c9a24a', head: 'hair', weapon: 'bow' },
+  cheruscan:  { tunic: '#4a5a32', head: 'hair', weapon: 'spear', shield: 'long' },
+  arminius:   { tunic: '#6a2f2e', head: 'chief', weapon: 'sword', shield: 'oval', banner: true, big: 1.35 },
+  briton:     { tunic: '#3f5f9a', head: 'gaul', weapon: 'sword', shield: 'oval', fast: true },
+  zealot:     { tunic: '#e9e1cf', head: 'hair', weapon: 'sica', fast: true },
+  dacian:     { tunic: '#7a6a8a', head: 'hair', weapon: 'sica' },
+  draco:      { tunic: '#5a4a6a', head: 'chief', weapon: 'sica', banner: true },
+  praetorian: { tunic: '#5a2a5a', head: 'roman', weapon: 'sword', shield: 'scutum' },
+  goth:       { tunic: '#8a6a4a', head: 'hair', weapon: 'spear', shield: 'round' },
+  ostrogoth:  { tunic: '#6a5a3a', head: 'helmet', weapon: 'axe', shield: 'round' },
   german:     { tunic: '#5a6a3a', head: 'hair', weapon: 'spear', shield: 'oval' },
   ambusher:   { tunic: '#4a5a32', head: 'hair', weapon: 'axe', fast: true },
   teuton:     { tunic: '#7a6a4a', head: 'gaul', weapon: 'axe', shield: 'oval' },
@@ -738,8 +898,21 @@ function drawFoe(c, f, T) {
   if (L.shield === 'oval') { c.fillStyle = '#6b4a2b'; c.strokeStyle = '#3f2a16'; c.lineWidth = 1.4; c.beginPath(); c.ellipse(10, -25 + bob, 6, 9, 0, 0, TAU); c.fill(); c.stroke() }
   if (L.shield === 'long') { c.fillStyle = L.white ? '#e9e1cf' : '#c9a86a'; c.strokeStyle = '#5a3a22'; c.lineWidth = 1.4; rr(c, 4, -40 + bob, 13, 30, [7, 7, 3, 3]); c.fill(); c.stroke(); line(c, 10.5, -37 + bob, 10.5, -13 + bob, '#8a6a44', 1.2) }
 }
+function drawChariot(c, f) {   // a British war chariot: two ponies, a light car, a warrior with spears
+  const g = f.jump ? 0 : Math.sin(f.phase * 13)
+  shadow(c, 18, 5)
+  if (f.jump) c.translate(0, -Math.sin(f.jump.t * Math.PI) * 22)
+  for (const dx of [-7, 7]) { c.fillStyle = '#6a4a2a'; c.beginPath(); c.ellipse(dx, 8 + g, 5, 9, 0, 0, TAU); c.fill(); c.fillStyle = '#4a3420'; c.beginPath(); c.ellipse(dx, 1 + g, 3.5, 4, 0, 0, TAU); c.fill() }   // the ponies, running ahead
+  c.strokeStyle = '#3f2a16'; c.lineWidth = 2.4; for (const dx of [-15, 15]) { c.beginPath(); c.arc(dx, -12, 7.5, 0, TAU); c.stroke(); line(c, dx, -19.5, dx, -4.5, '#3f2a16', 1.2) }   // the wheels
+  c.fillStyle = '#8a6a3a'; rr(c, -14, -24, 28, 10, 3); c.fill()
+  c.fillStyle = '#3f5f9a'; rr(c, -7, -42, 14, 18, 4); c.fill()
+  c.fillStyle = SKIN; c.beginPath(); c.arc(0, -48, 6.5, 0, TAU); c.fill(); c.fillStyle = '#c9783a'; c.beginPath(); c.arc(0, -50, 7, Math.PI, 0); c.fill()
+  line(c, 8, -40, 10, -66, '#6b4a2b', 2); line(c, 9.8, -62, 10.2, -71, '#cfd4d8', 1.6)
+}
 function drawRider(c, f, kind = 'cavalry') {
-  const numidian = kind === 'numidian', parthian = kind === 'horsearcher', armoured = kind === 'cataphract'
+  if (FOES[kind]?.chariot) return drawChariot(c, f)
+  if (kind === 'attila') c.scale(1.3, 1.3)   // the king stands out
+  const numidian = kind === 'numidian', parthian = kind === 'horsearcher' || kind === 'hun', armoured = kind === 'cataphract' || kind === 'clibanarius'
   const g = f.jump ? 0 : Math.sin(f.phase * (f.jumped ? 8 : 13)), sh = f.jump ? 0.6 : 1, tunic = numidian ? '#d9c89a' : parthian ? '#c9a24a' : armoured ? '#8d939a' : '#4d5a6a'
   shadow(c, 14 * sh, 5 * sh)
   if (f.jump) c.translate(0, -Math.sin(f.jump.t * Math.PI) * 26)
@@ -868,7 +1041,7 @@ function layout() {
   for (const el of [sroot.querySelector('.status'), $('banner')]) el.style.width = WIDE.matches ? '' : (W + 6) + 'px'
   paintField()
 }
-const LAWN = { forest: ['#6f8a45', '#67813f'], gods: ['#e6e0d0', '#dcd5c3'], lake: ['#94a856', '#8b9e4e'], hills: ['#93a252', '#89984b'], walls: ['#98a95a', '#8fa052'], mountains: ['#8a9d4f', '#819449'], river: ['#97aa58', '#8ea050'],
+const LAWN = { pass: ['#7d9448', '#748b42'], adrianople: ['#b4a86a', '#aa9e61'], catalaunian: ['#a4ab5e', '#9aa157'], milvian: ['#94a856', '#8b9e4e'], dacia: ['#8a9d4f', '#819449'], forest: ['#6f8a45', '#67813f'], gods: ['#e6e0d0', '#dcd5c3'], lake: ['#94a856', '#8b9e4e'], hills: ['#93a252', '#89984b'], walls: ['#98a95a', '#8fa052'], mountains: ['#8a9d4f', '#819449'], river: ['#97aa58', '#8ea050'],
   sea: ['#4f87ab', '#4a81a4'], hill: ['#8fa24f', '#86994a'], rome: ['#99a95a', '#90a052'], silarius: ['#97aa58', '#8ea050'], desert: ['#d4bf8a', '#cbb57f'], pharsalus: ['#a4ab5e', '#9aa157'], siege: ['#a3a75a', '#999d52'], alesia: ['#93a352', '#8a9a4b'], plain: ['#aea961', '#a39e59'], zama: ['#b6a766', '#ab9c5d'], olympus: ['#8fa354', '#86994d'], carthage: ['#c4b48e', '#b9a982'] }
 function paintField() {
   const c = bctx, theme = LEVEL.theme
@@ -877,7 +1050,7 @@ function paintField() {
   // the approach, different for each battle
   const top = ry(0)
   c.fillStyle = '#74853f'; c.fillRect(0, 0, W, top)
-  if (theme === 'forest') {   // the Teutoburg Forest: dark trees above, in the rain
+  if (theme === 'forest' || theme === 'pass') {   // dark trees above
     c.fillStyle = '#3f5a2c'; c.fillRect(0, 0, W, top)
     for (let x = cell * 0.2; x < W; x += cell * 0.55) { const h = top * (0.7 + rnd() * 0.5); c.fillStyle = rnd() < 0.5 ? '#2f4a22' : '#35522a'; c.beginPath(); c.moveTo(x - cell * 0.3, top); c.lineTo(x, top - h); c.lineTo(x + cell * 0.3, top); c.fill() }
   }
@@ -973,6 +1146,10 @@ function paintField() {
   for (let r = 0; r < ROWS; r++) for (let col = 0; col < COLS; col++) {
     c.fillStyle = LAWN[theme][(r + col) % 2]
     c.fillRect(col * cell, ry(r), cell, cell)
+  }
+  if (LEVEL.closed) for (const l of LEVEL.closed) {   // woods close these lanes
+    c.fillStyle = '#3f5a2c'; c.fillRect(l * cell, top, cell, ry(ROWS) - top)
+    for (let y = top; y < ry(ROWS); y += cell * 0.5) { c.fillStyle = rnd() < 0.5 ? '#2f4a22' : '#35522a'; c.beginPath(); c.arc(l * cell + cell * (0.3 + rnd() * 0.4), y + cell * 0.25, cell * 0.32, 0, TAU); c.fill() }
   }
   if (LEVEL.sea) for (let i = 0; i < 160; i++) {   // little waves
     const x = rnd() * W, y = top + rnd() * (ry(ROWS) - top)
@@ -1089,10 +1266,11 @@ function spawn(type, lane = null, y = -0.75, dir = 1) {
     lane = Math.random() < 0.55 ? from : Math.max(0, Math.min(COLS - 1, from + (Math.random() < 0.5 ? -1 : 1)))
   }
   if (lane == null && F.flanks) lane = [0, 1, COLS - 2, COLS - 1][Math.floor(Math.random() * 4)]   // they close in from the sides
-  if (lane == null) { do lane = Math.floor(Math.random() * COLS); while (lane === G.lastLane && Math.random() < 0.7) }
+  if (lane == null) { do lane = Math.floor(Math.random() * COLS); while ((lane === G.lastLane && Math.random() < 0.7) || LEVEL.closed?.includes(lane)) }
+  if (LEVEL.closed?.includes(lane)) lane = lane < COLS / 2 ? lane + 1 : lane - 1   // the woods close the outer lanes
   G.lastLane = lane
   const hp = Math.round(F.hp * EASE), tired = LEVEL.tired && G.t < LEVEL.tired
-  const f = { id: ++G.ids, type, lane, fromLane: from, y, dir, hp, max: hp, shield: F.shield ?? 0, shieldMax: F.shield ?? 0, tired,
+  const f = { id: ++G.ids, born: G.t, type, lane, fromLane: from, y, dir, hp, max: hp, shield: F.shield ?? 0, shieldMax: F.shield ?? 0, tired,
     speed: F.speed * (0.92 + Math.random() * 0.16) * (tired ? 0.55 : 1), jumped: false, jump: null, eating: null, flash: 0, cd: 1, anim: 0, shooting: false, fleeing: false, phase: Math.random() * TAU, dx: (Math.random() - 0.5) * 0.12 }
   G.foes.push(f)
   G.spawned++
@@ -1124,7 +1302,7 @@ const houseAt = (lane, row) => G.houses.find(h => h.lane === lane && h.row === r
 const isRough = (lane, row) => !!LEVEL.rough?.some(([l, r]) => l === lane && r === row)
 // not in the siege ditch, not on a house (a torch-bearer goes only on a house)
 function canPlace(type, lane, row) {
-  if (lane < 0 || lane >= COLS || row < 0 || row >= ROWS || unitAt(lane, row) || row === LEVEL.ditch) return false
+  if (lane < 0 || lane >= COLS || row < 0 || row >= ROWS || unitAt(lane, row) || row === LEVEL.ditch || LEVEL.closed?.includes(lane)) return false
   return type === 'torch' ? !!houseAt(lane, row) : !houseAt(lane, row)
 }
 const canStand = (lane, row) => canPlace('slinger', lane, row)
@@ -1234,6 +1412,7 @@ function update(dt) {
     }
     if (ev.cleopatra) leave(F => F.egyptian)
     if (ev.ambush) for (const f of G.foes) if (f.hp > 0 && f.y < ROWS / 2) { hurtFoe(f, ev.ambush); G.fx.push({ kind: 'ring', x: lx(f.lane), y: ry(f.y), t: 0.45 }) }   // struck from behind
+    if (ev.drown) for (const f of G.foes) if (f.hp > 0 && f.dir > 0 && f.y < ev.drown) { hurtFoe(f, 9999, true); G.fx.push({ kind: 'ring', x: lx(f.lane), y: ry(f.y), t: 0.5 }) }   // swept away
     if (ev.rout) for (const f of G.foes) if (f.hp > 0 && ev.rout.includes(f.lane)) { f.fleeing = true; f.eating = null }
     if (ev.antony) leave(F => F.flagship)
   }
@@ -1252,7 +1431,7 @@ function update(dt) {
     u.cd -= dt; u.anim = Math.max(0, u.anim - dt); u.hurt = Math.max(0, u.hurt - dt)
     if (u.travel) { u.travelT += dt; if (u.travelT >= u.travel) u.travel = 0; continue }
     if (u.netted > 0) { u.netted -= dt; continue }   // caught in a retiarius's net
-    const pow = (blessed ? AUGUR.damage : 1) * (G.units.some(c => UNITS[c.type].aura && c !== u && Math.abs(c.lane - u.lane) <= 1 && Math.abs(c.row - u.row) <= 1) ? 1.3 : 1)
+    const pow = (blessed ? AUGUR.damage : 1) * (G.units.some(c => UNITS[c.type].aura && c !== u && Math.abs(c.lane - u.lane) <= 1 && Math.abs(c.row - u.row) <= 1) ? 1.3 : 1) * (G.units.some(c => UNITS[c.type].laneAura && c !== u && c.lane === u.lane) ? 1.25 : 1)
     if (U.grain && u.cd <= 0) {
       u.cd = 20; u.anim = 0.7
       G.drops.push({ x: lx(u.lane) + (Math.random() - 0.5) * cell * 0.4, y: ry(u.row + 0.2), ty: ry(u.row + 0.55), v: 25, life: 10, falling: true })
@@ -1285,6 +1464,10 @@ function update(dt) {
       for (const f of side) { hurtFoe(f, U.flank * dt * pow, true, true); if (Math.random() < dt * 2) G.fx.push({ kind: 'spark', x: (lx(u.lane) + lx(f.lane)) / 2, y: ry(u.row + 0.4), t: 0.2 }) }
       if (side.length) u.fighting = true
     }
+    if (U.blast && (u.arm += dt) >= U.blast.delay) {   // the volley lands on the nine squares around it
+      for (const f of G.foes) if (f.hp > 0 && Math.abs(f.lane - u.lane) <= 1 && Math.abs(f.y - (u.row + 0.5)) <= 1.5) hurtFoe(f, U.blast.dmg)
+      G.fx.push({ kind: 'ring', x: lx(u.lane), y: ry(u.row + 0.5), t: 0.5 }); sfx.throw(); removeUnit(u, false); continue
+    }
     if (u.type === 'pigs' && G.foes.some(f => f.lane === u.lane && f.hp > 0 && !f.fleeing && f.y >= u.row - U.trigger && f.y <= u.row + 1)) {
       removeUnit(u, false); G.runners.push({ lane: u.lane, y: u.row + 0.82 }); sfx.squeal()
     }
@@ -1299,7 +1482,7 @@ function update(dt) {
         // shoot at the closest threat, up the field or (on two fronts) down it
         const target = inReach.sort((a, b) => Math.abs(a.y - u.row - 0.5) - Math.abs(b.y - u.row - 0.5))[0], down = below(target) && !above(target)
         u.cd = U.reload * (blessed ? AUGUR.reload : 1); u.anim = 0.35
-        for (const l of lanes) G.shots.push({ src: u.type, lane: l, from: u.lane, dir: down ? 1 : -1, y: u.row + (down ? 0.8 : 0.45), y0: u.row + (down ? 0.8 : 0.45), kind: U.kind ?? (U.pierce ? 'bolt' : u.type === 'slinger' ? 'stone' : 'pilum'), pierce: !!U.pierce, grapple: U.grapple, dmg: U.dmg * pow, breaks: U.breaks, speed: U.pierce ? 9 : u.type === 'slinger' ? 7 : 6, end: down ? u.row + 0.5 + U.range + 0.3 : u.row + 0.5 - U.range - 0.3, x0: (Math.random() - 0.5) * 0.1 })
+        for (const l of lanes) G.shots.push({ src: u.type, splash: U.splash, lane: l, from: u.lane, dir: down ? 1 : -1, y: u.row + (down ? 0.8 : 0.45), y0: u.row + (down ? 0.8 : 0.45), kind: U.kind ?? (U.pierce ? 'bolt' : u.type === 'slinger' ? 'stone' : 'pilum'), pierce: !!U.pierce, grapple: U.grapple, dmg: U.dmg * pow, breaks: U.breaks, speed: U.pierce ? 9 : u.type === 'slinger' ? 7 : 6, end: down ? u.row + 0.5 + U.range + 0.3 : u.row + 0.5 - U.range - 0.3, x0: (Math.random() - 0.5) * 0.1 })
         U.kind === 'arrow' ? sfx.bow() : u.type === 'slinger' ? sfx.sling() : sfx.throw()
       }
     }
@@ -1312,6 +1495,7 @@ function update(dt) {
     if (hit) {
       hurtFoe(hit, s.dmg * twinMul(hit, s.src), s.kind, s.from != null && s.from !== s.lane)   // a javelin from the next lane hits the side
       if (s.breaks && hit.shield > 0) { hit.shield = 0; sfx.crack() }   // the pilum bends: the shield is useless
+      if (s.splash) for (const f of G.foes) if (f !== hit && f.hp > 0 && Math.abs(f.lane - hit.lane) === 1 && Math.abs(f.y - hit.y) < 0.8) hurtFoe(f, s.dmg * s.splash, true)
       if (s.grapple) { hit.pinned = s.grapple; G.fx.push({ kind: 'ring', x: lx(s.lane), y: ry(hit.y), t: 0.4 }) }
       if (s.pierce) (s.hits ??= new Set()).add(hit); else s.done = true   // a scorpion bolt flies on through
       G.fx.push({ kind: 'spark', x: lx(s.lane), y: ry(s.y), t: 0.25 })
@@ -1375,7 +1559,7 @@ function update(dt) {
       if (u.type === 'velites' && !u.fell && canStand(u.lane, u.row + f.dir)) { u.fell = true; moveUnit(u, u.lane, u.row + f.dir); continue }   // velites fall back, once
       if (UNITS[u.type].trap && u.armed) { explode(u); continue }
       if (FOES[f.type].jumps && !f.jumped) { f.jumped = true; f.jump = { from: f.y, to: f.dir < 0 ? u.row - 0.35 : u.row + 1.35, t: 0 }; f.eating = null; continue }
-      f.eating = u; u.hp -= FOES[f.type].dps * dt; u.hurt = 0.12; sfx.chop()
+      f.eating = u; u.hp -= FOES[f.type].dps * dt * (FOES[f.type].cleave && !UNITS[u.type].armour ? FOES[f.type].cleave : 1); u.hurt = 0.12; sfx.chop()
       if (u.hp < u.max * 0.5 && u.type !== 'triarius') tutorial('hurt')
       if (u.hp <= 0) removeUnit(u)
     } else {
@@ -1399,6 +1583,7 @@ function update(dt) {
       if (f.pinned > 0) { f.pinned -= dt; v = 0 }   // held by a grappling hook
       if (LEVEL.uphill && f.dir > 0 && r >= ROWS - LEVEL.uphill) v *= 0.7   // charging uphill
       if (r === LEVEL.ditch) v *= 0.4   // climbing through the siege ditch
+      if (LEVEL.heat && FOES[f.type].mounted && G.t - f.born > LEVEL.heat) { v *= 0.5; if (!G.tips.heat) { G.tips.heat = true; announce('The heat tires Zenobia’s armoured horses: they slow right down!') } }
       if (pit) v *= UNITS.lilia.pit.slow   // picking a way between the pits
       if (isRough(f.lane, r)) {
         v *= 0.75
@@ -1520,6 +1705,7 @@ function draw() {
     if (s.kind === 'stone') { ctx.fillStyle = '#5f5f58'; ctx.beginPath(); ctx.arc(x, y, 3 * k + 1, 0, TAU); ctx.fill() }
     else if (s.kind === 'arrow') { const d = s.dir > 0 ? -1 : 1; line(ctx, x, y + 8 * k * d, x, y - 6 * k * d, '#3f2a16', 1.5); line(ctx, x, y - 4 * k * d, x, y - 8 * k * d, '#9aa3aa', 1.8) }
     else if (s.kind === 'hook') { line(ctx, x, y + 10 * k, x, y - 4 * k, '#4a3420', 2); ctx.strokeStyle = '#9aa3aa'; ctx.lineWidth = 2; ctx.beginPath(); ctx.arc(x, y - 6 * k, 4 * k, Math.PI + 0.3, -0.3); ctx.stroke() }
+    else if (s.kind === 'boulder') { ctx.fillStyle = '#7a7a70'; ctx.beginPath(); ctx.arc(x, y, 5 * k + 1.5, 0, TAU); ctx.fill() }
     else if (s.kind === 'ray') { ctx.globalAlpha = 0.9; ctx.drawImage(glow('255, 225, 120'), x - 7 * k, y - 7 * k, 14 * k, 14 * k); ctx.globalAlpha = 1; ctx.fillStyle = '#fff6d0'; ctx.beginPath(); ctx.arc(x, y, 2.4 * k + 0.8, 0, TAU); ctx.fill() }   // divine light
     else if (s.kind === 'bolt') { line(ctx, x, y + 14 * k, x, y - 8 * k, '#4a3420', 3); line(ctx, x, y - 6 * k, x, y - 13 * k, '#cfd4d8', 2.6) }
     else if (s.dir > 0) { line(ctx, x, y - 12 * k, x, y + 4 * k, '#6b4a2b', 2); line(ctx, x, y + 2 * k, x, y + 9 * k, '#cfd4d8', 1.8) }   // a javelin thrown down the field
@@ -1549,6 +1735,13 @@ function draw() {
 // a house of Carthage: whitewashed walls and a flat roof; it burns when a torch-bearer stands on it
 function drawHouse(h, T) {
   const x = h.lane * cell, y = ry(h.row), s = cell
+  if (LEVEL.theme === 'adrianople') {   // a Gothic wagon of the laager
+    ctx.fillStyle = 'rgba(25, 35, 10, .25)'; ctx.fillRect(x + s * 0.08, y + s * 0.8, s * 0.84, s * 0.1)
+    ctx.fillStyle = '#8a6a3a'; ctx.fillRect(x + s * 0.1, y + s * 0.42, s * 0.8, s * 0.3)
+    ctx.fillStyle = '#d9ccb0'; ctx.beginPath(); ctx.ellipse(x + s * 0.5, y + s * 0.44, s * 0.38, s * 0.26, 0, Math.PI, 0); ctx.fill()
+    ctx.strokeStyle = '#3f2a16'; ctx.lineWidth = Math.max(1.5, s * 0.05); for (const dx of [0.25, 0.75]) { ctx.beginPath(); ctx.arc(x + s * dx, y + s * 0.74, s * 0.13, 0, TAU); ctx.stroke() }
+    return
+  }
   ctx.fillStyle = 'rgba(25, 35, 10, .25)'; ctx.fillRect(x + s * 0.1, y + s * 0.82, s * 0.86, s * 0.1)
   ctx.fillStyle = '#ede2c8'; ctx.fillRect(x + s * 0.08, y + s * 0.2, s * 0.84, s * 0.64)
   ctx.fillStyle = '#c9b48a'; ctx.fillRect(x + s * 0.05, y + s * 0.12, s * 0.9, s * 0.1)
@@ -1735,7 +1928,7 @@ function showMap() {
       ${open ? `<span class="stars" aria-label="${s} of 3 stars">${starText(s)}</span>` : ''}</button></li>`
   }).join('')
   showPanel(`<span class="eyebrow">Campaign · the rise of Rome</span><h1>Hold the Line</h1>
-    <p>${LEVELS.filter(x => !x.bonus).length} battles, from the Latin League to Actium, and a bonus contest of the gods. Each battle brings a new enemy and a new Roman unit.</p>
+    <p>${LEVELS.filter(x => !x.bonus).length} battles, from the Latin League to Attila, and a bonus contest of the gods. Each battle brings a new enemy and a new Roman unit.</p>
     <ol class="road">${stops}</ol>`,
     Object.fromEntries(LEVELS.map((L, i) => [`lvl${i}`, () => showBriefing(i)])))
 }
@@ -1826,7 +2019,7 @@ function win() {
     <p class="big-stars" aria-label="${stars} of 3 stars">${starText(stars)}</p>
     <p>${G.killed} enemies fell and you lost ${G.lost === 1 ? 'one soldier' : G.lost + ' soldiers'}. ${stars === 3 ? 'The equites never had to ride.' : 'Win without the equites charging for three stars.'}</p>
     <p class="history">${LEVEL.after}</p>
-    ${next || opts.mode === 'chapter' ? '' : '<p><b>You have won the whole campaign: Rome rules the Mediterranean.</b></p>'}
+    ${next || opts.mode === 'chapter' ? '' : '<p><b>You have won the whole campaign, from Romulus to Attila.</b></p>'}
     ${opts.mode === 'chapter' ? `<div class="row"><button class="primary" id="continue">Continue</button><button class="tool" id="again">Play again</button></div>`
       : `<div class="row">${next ? `<button class="primary" id="next">Next: ${next.name}</button>` : ''}<button class="tool" id="again">Play again</button><button class="tool" id="map">Map</button></div>`}`,
     { next: () => showBriefing(i + 1), again: () => startLevel(i), map: showMap, continue: () => exit({ won: true, stars }) }), 1200)
@@ -1838,7 +2031,29 @@ function lose() {
     volsci: 'Raiders are fast: have a slinger in every lane before the bursts, and principes to cut down those who arrive.',
     veii: 'Archers stop out of reach and shoot your front soldier. Put siege sheds in front and slingers behind them.',
     aquilonia: 'The Linen Legion is hard to kill. Rorarii in the middle lanes hit three lanes at once.',
-    beneventum: 'Keep war pigs ready in front of your line: an elephant they reach runs back and tramples its own army.' }[LEVEL.id]
+    beneventum: 'Keep war pigs ready in front of your line: an elephant they reach runs back and tramples its own army.',
+    agrigentum: 'Balearic slingers stop out of reach: scorpions and slingers behind a sturdy front line deal with them.',
+    cannae: 'Numidians ride round a blocker into the next lane, and late on the left wing collapses: keep the outer lanes strong.',
+    zama: 'Trumpeters panic the elephants; an elephant down an empty lane runs off the field harmlessly.',
+    pydna: 'The phalanx is shielded from the front: maniples and rorarii strike it from the side lanes.',
+    carthage: 'Burn the houses near your lines with torch-bearers before the defenders burst out of them.',
+    'aquae-sextiae': 'The Teutones are tough: hold them with triarii and break their shields with pila.',
+    'colline-gate': 'The left wing breaks halfway: build up the left lanes before it does.',
+    silarius: 'Keep shooters in every lane against the slaves, and save your strongest soldiers for Spartacus.',
+    carrhae: 'Testudos shrug off the arrows; build supply carts, since no grain falls in the desert.',
+    alesia: 'Enemies come from both sides: keep tough soldiers at the back as well as the front.',
+    pharsalus: 'Pompey’s cavalry charges the left wing: fourth-line men there triple their damage against riders.',
+    actium: 'Harpax ships hold the big ships still while the others hit them.',
+    teutoburg: 'Warriors burst out of the woods at the sides: keep shooters in the outer lanes too.',
+    idistaviso: 'The Cherusci have big shields: pila break them. Save a cohort for Arminius.',
+    boudica: 'Only the middle lanes are open: crowd them with shooters and throw a pilum volley at the biggest crowds.',
+    jerusalem: 'The defenders come out of the two gates: build your strongest lines in those lanes.',
+    dacia: 'The falx does double damage to ordinary soldiers: armoured legionaries hold it.',
+    zenobia: 'Club-men beat the armoured horse; hold them long enough and the heat slows them down.',
+    'milvian-bridge': 'Hold out until the bridge collapses: the labarum makes a whole lane fight harder.',
+    adrianople: 'The cavalry comes from behind late in the battle: keep tough soldiers at the back.',
+    catalaunian: 'The Huns shoot from a distance: testudos and allies in front, archers behind.',
+    gods: 'Read the name tags: only Jupiter stops Zeus, only Minerva stops Athena, and so on.' }[LEVEL.id] ?? ''
   setTimeout(() => showPanel(`<span class="eyebrow">Defeat · ${LEVEL.year}</span><h2>${LEVEL.enemy[0].toUpperCase() + LEVEL.enemy.slice(1)} broke into the camp</h2>
     <p>${G.killed} enemies fell before the line broke. ${hint}</p>
     ${opts.mode === 'chapter' ? `<p>Go back to the chapter: re-read the sections you missed and retake the test for a stronger army. Or fight again with the same army.</p>
