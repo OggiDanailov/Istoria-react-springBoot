@@ -174,6 +174,13 @@ Starting grain in these battles is 250–400 at 80% (Carrhae has the most, since
 average scripted player wins most of them at 80%; Pharsalus and the Colline Gate are the hardest. Twists still planned: Castor and Pollux (Lake Regillus),
 ambushes (Volscian Raids), mountain rocks and the sacred chickens (Aquilonia).
 
+**The Clash of the Gods** (the Gods and Myths chapter; a bonus battle in the standalone game): not history but a contest
+of knowledge, on the Kingdom's 5 × 7 field over Olympus's marble. Your cards are eight Roman gods (Jupiter, Juno,
+Neptune, Minerva, Mars, Venus, Diana, Mercury) and Ceres, who brings grain. The Greek gods march down with name tags,
+and each is hurt only by its Roman twin: any other god's light passes through them, and the first time the game says
+who is needed. The test score's veterans arrive as free Ceres. Checked with scripted players: one who knows the pairs
+wins with 2–3 stars; one who guesses a quarter of the time usually wins with 1 star and sometimes loses.
+
 The Empire's nine battles are chosen but not built yet: the Teutoburg Forest (AD 9), Germanicus in Germany (16),
 Boudica (60/61), the siege of Jerusalem (70), the Dacian Wars (101–106), Zenobia (272), the Milvian Bridge (312),
 Adrianople (378) and the Catalaunian Plains (451). Until then the chapter shows a "coming soon" card.

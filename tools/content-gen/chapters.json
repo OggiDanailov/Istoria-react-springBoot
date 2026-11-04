@@ -80,7 +80,15 @@
       "era": "kingdom",
       "mapArea": "wide",
       "maxNames": 8,
-      "locked": true
+      "locked": true,
+      "battle": {
+        "name": "The Clash of the Gods",
+        "year": "a game of myth",
+        "enemy": "the gods of Olympus",
+        "sec": "roman-and-greek-gods",
+        "level": "gods",
+        "intro": "The Greek gods come down from Olympus. Only the right Roman god can stop each one."
+      }
     },
     {
       "id": "conflict-of-orders-origins",
