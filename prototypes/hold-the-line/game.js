@@ -166,7 +166,7 @@ const LEVELS = [
     waves: [w(26, ['ambron']), w(40, ['teuton']), w(54, ['ambron', 'ambron']), w(70, ['teuton', 'warrior']), w(86, ['shield', 'teuton']), w(100, ['ambron', 'ambron', 'ambron']), w(116, ['teuton', 'teuton', 'shield']),
       w(132, ['chief', ...rep(3, 'teuton'), 'ambron', 'ambron', 'shield'], 'A great wave approaches!'), w(160, ['teuton', 'teuton', 'ambron', 'cavalry']), w(178, ['shield', 'teuton', 'teuton']),
       w(194, ['chief', ...rep(4, 'teuton'), ...rep(3, 'ambron'), 'shield', 'cavalry'], 'The final wave!')] },
-  { id: 'colline-gate', name: 'The Colline Gate', year: '82 BC', enemy: 'the Samnites and Lucanians', theme: 'rome', start: 375, cols: 8, rows: 10, more: 1.33,
+  { id: 'colline-gate', name: 'The Colline Gate', year: '82 BC', enemy: 'the Samnites and Lucanians', theme: 'rome', start: 400, cols: 8, rows: 10, more: 1.22,
     twist: 'Sulla’s own wing, on the left, breaks: the left lane loses its equites. Hold on: Crassus is winning on the right, and in time his wing routs the enemy there.',
     events: [{ t: 150, text: 'Sulla’s left wing is wavering!' }, { t: 165, wings: [0], text: 'Sulla’s wing breaks! No equites on the left lane.' }, { t: 170, rout: [4, 5, 6, 7], text: 'Crassus has won on the right! The enemy there flees.' }],
     units: ['cart', 'slinger', 'velites', 'legionary', 'triarius', 'caltrops', 'maniple', 'scorpio', 'centurion'], newUnit: 'centurion',

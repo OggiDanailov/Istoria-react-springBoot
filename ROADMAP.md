@@ -18,6 +18,7 @@
 - **Hold the Line on phones and wide screens** (Oct 30-31): faster drawing, nothing over the field, one slim row of cards; on a computer, tablet or a phone turned sideways the cards sit on the left and the controls on the right.
 - **The Empire: content** (Nov 1): nine chapters, Augustus to the fall of the West ($15.67), reviewed and locked, with Latin, key facts and maps. Each has a battle chosen but not built yet (they show "coming soon"). The writer's limit of 5 named people per chapter hid famous people (Cleopatra, Arminius, Seneca, even Otho); they were named by hand, and the limit is now set per chapter (`maxNames`, 8 for the Empire).
 - **Two culture chapters** (Nov 1): Roman Religion and Mythology (chapter 2, after the Kingdom) and Roman Art and Architecture (the last chapter), ~$2; no battles. Every chapter now names its battle (`battle.level`), so chapters can be inserted anywhere. 29 chapters in all.
+- **A bigger field each era** (Nov 3): 6 lanes in the Early Republic, 7 in the Middle, 8 in the Late Republic (the Kingdom keeps 5), re-balanced with the scripted players. Next: a Clash of the Gods for the religion chapter (Greek gods stopped only by their Roman twins), then the Empire battles with a cohort card.
 
 ---
 

@@ -140,8 +140,12 @@ once; a second break loses the battle. Stars: 3 if the equites never charged, 2 
 Each battle adds a new enemy and a new Roman unit, and some have a twist from their history: the gates of Veii, Pyrrhus's
 exhausted night march and the elephant calf at Beneventum.
 
-From the Middle Republic on, battles are fought on a **bigger field: 6 lanes × 8 rows** (5 × 7 before), and each has a
-twist built into the field or the timeline:
+**The field grows each era** (the user's idea, Nov 2026): the Kingdom 5 lanes × 7 rows, the Early Republic 6 × 8,
+the Middle Republic 7 × 9, the Late Republic 8 × 10. The extra row keeps the field filling an upright phone; squares
+shrink from 68 to 42 px there (8 lanes is about the smallest a finger taps reliably). Each wave gains extra ordinary
+troops to fill the wider field (`more` per battle), and Pharsalus starts a little later (`delay`), as Pompey waited.
+
+From the Middle Republic on, each battle has a twist built into the field or the timeline:
 
 | Battle | New enemy | New Roman unit | Twist |
 |---|---|---|---|
@@ -151,9 +155,10 @@ twist built into the field or the timeline:
 | Pydna | the phalanx: blocks three lanes wide, pikes reach a square ahead, shields stop missiles from the front only | Maniple: strikes the lanes beside it from the side | rough ground breaks the phalanx's shields |
 | Siege of Carthage | citizens, freed slaves, Carthaginian archers | Torch-bearer: burns a house | houses block squares, and defenders burst out of them |
 
-Checked with the scripted players: at 80% the average player wins each of them (Cannae, the hardest, only just).
+Checked with the scripted players on the new fields: at 80% the average player wins about half to most of the runs;
+Veii, Cannae, Alesia and Pharsalus are the hardest.
 
-The Late Republic adds two new kinds of battle and keeps the 6 × 8 field:
+The Late Republic adds two new kinds of battle, on the 8 × 10 field:
 
 | Battle | New enemy | New Roman unit | Twist |
 |---|---|---|---|
