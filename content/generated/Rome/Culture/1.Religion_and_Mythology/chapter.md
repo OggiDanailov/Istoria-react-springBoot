@@ -38,6 +38,32 @@ The triad's great temple stood on the Capitoline Hill above the Forum, with thre
 
 Through contact with Greek settlers in southern Italy, Romans matched their gods with Greek ones and borrowed Greek myths, so that many Roman stories were reworked from Greek models.
 
+## Roman and Greek Gods {#roman-and-greek-gods}
+
+Rome's twelve great gods, six gods and six goddesses, were called the Harmonious Gods (*Dii Consentes*). The poet Ennius listed them in the late 3rd century BC, and their gilded statues stood in the Forum. Each was matched with a Greek god, and over time the Romans took over that god's myths: Jupiter inherited the stories of Zeus, and Venus those of Aphrodite.
+
+A pair was never quite the same god. Mars, father of Romulus and guardian of the fields as well as god of war, was one of the most honoured gods in Rome, while the Greeks thought Ares brutal and liked him little. Apollo, god of light, music and prophecy, is the one great god who kept his Greek name.
+
+| Roman | Greek | God or goddess of |
+|---|---|---|
+| Jupiter | Zeus | the sky and thunder; king of the gods |
+| Juno | Hera | marriage and women; queen of the gods |
+| Neptune | Poseidon | the sea |
+| Minerva | Athena | wisdom and crafts |
+| Mars | Ares | war (and, in Rome, farming) |
+| Venus | Aphrodite | love and beauty |
+| Apollo | Apollo | light, music and prophecy |
+| Diana | Artemis | hunting and the moon |
+| Vulcan | Hephaestus | fire and the forge |
+| Vesta | Hestia | the hearth |
+| Mercury | Hermes | messages, travellers and trade |
+| Ceres | Demeter | grain and the harvest |
+| Bacchus | Dionysus | wine |
+| Pluto | Hades | the underworld |
+| Saturn | Cronus | sowing and a lost golden age |
+
+The first twelve are the Harmonious Gods. Some Roman gods had no Greek twin at all. Janus, the two-faced god of doorways and beginnings, and Quirinus, patron of the citizens, were purely Roman.
+
 ## Priests, Augurs and Sacred Chickens {#priests-and-augurs}
 
 Rome had no separate priestly class. The same aristocrats who were elected to political office also served as priests, married, and led busy public lives. Priesthoods were unpaid and held for life, and were often sought as an honourable retirement after a career in war and politics. At the head stood the chief priest (*pontifex maximus*), who led the college of pontiffs (*pontifices*), Rome's experts in religious law.
@@ -94,4 +120,5 @@ In 380, under Theodosius, Christianity as defined at Nicaea became the official 
 Based on Wikipedia:
 - [Religion in ancient Rome](https://en.wikipedia.org/wiki/Religion_in_ancient_Rome) (revision 1380673129), CC BY-SA 4.0
 - [Roman mythology](https://en.wikipedia.org/wiki/Roman_mythology) (revision 1380219851), CC BY-SA 4.0
+- [Dii Consentes](https://en.wikipedia.org/wiki/Dii_Consentes), CC BY-SA 4.0
 - [Capitoline Triad](https://en.wikipedia.org/wiki/Capitoline_Triad) (revision 1373261413), CC BY-SA 4.0

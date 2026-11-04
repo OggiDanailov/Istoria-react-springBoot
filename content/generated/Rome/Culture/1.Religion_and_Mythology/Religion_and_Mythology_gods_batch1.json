@@ -1,0 +1,128 @@
+{
+  "batchName": "Roman Religion and Mythology (753 BC-AD 391) - Roman and Greek gods",
+  "chapterName": "Roman Religion and Mythology (753 BC-AD 391)",
+  "difficulty": 1,
+  "batchOrder": 10,
+  "description": "Written by hand from the chapter text: the Roman gods and their Greek counterparts",
+  "questions": [
+    {
+      "question": "Which Greek god was matched with Jupiter?",
+      "options": [
+        "Zeus",
+        "Poseidon",
+        "Apollo",
+        "Hades"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#roman-and-greek-gods",
+      "explanation": "Jupiter inherited the stories of Zeus, king of the Greek gods.",
+      "sourceQuote": "Jupiter inherited the stories of Zeus",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which Roman goddess was matched with the Greek Aphrodite?",
+      "options": [
+        "Venus",
+        "Juno",
+        "Minerva",
+        "Diana"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#roman-and-greek-gods",
+      "explanation": "Venus, goddess of love and beauty, took over the myths of Aphrodite.",
+      "sourceQuote": "and Venus those of Aphrodite.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which great god kept his Greek name in Rome?",
+      "options": [
+        "Apollo",
+        "Mars",
+        "Mercury",
+        "Neptune"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#roman-and-greek-gods",
+      "explanation": "Apollo was god of light, music and prophecy in both Greece and Rome.",
+      "sourceQuote": "Apollo, god of light, music and prophecy, is the one great god who kept his Greek name.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Who were the Dii Consentes?",
+      "options": [
+        "Rome’s twelve great gods, six gods and six goddesses",
+        "The gods of the household",
+        "Three gods of the Capitol",
+        "The spirits of the dead"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#roman-and-greek-gods",
+      "explanation": "Their gilded statues stood in the Forum.",
+      "sourceQuote": "Rome's twelve great gods, six gods and six goddesses, were called the Harmonious Gods (*Dii Consentes*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which god had no Greek twin at all?",
+      "options": [
+        "Janus",
+        "Vulcan",
+        "Ceres",
+        "Diana"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#roman-and-greek-gods",
+      "explanation": "Janus, the two-faced god of doorways and beginnings, was purely Roman, like Quirinus.",
+      "sourceQuote": "Janus, the two-faced god of doorways and beginnings, and Quirinus, patron of the citizens, were purely Roman.",
+      "reviewFlags": []
+    },
+    {
+      "question": "How did the Roman Mars differ from the Greek Ares?",
+      "options": [
+        "Mars was one of Rome’s most honoured gods; the Greeks liked Ares little",
+        "Mars was a sea god; Ares a war god",
+        "Mars was a goddess",
+        "There was no difference"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#roman-and-greek-gods",
+      "explanation": "Mars was father of Romulus and guardian of the fields as well as god of war.",
+      "sourceQuote": "Mars, father of Romulus and guardian of the fields as well as god of war, was one of the most honoured gods in Rome, while the Greeks thought Ares brutal and liked him little.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Which poet listed Rome’s twelve great gods in the late 3rd century BC?",
+      "options": [
+        "Ennius",
+        "Virgil",
+        "Ovid",
+        "Homer"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#roman-and-greek-gods",
+      "explanation": "Their gilded statues stood in the Forum.",
+      "sourceQuote": "The poet Ennius listed them in the late 3rd century BC",
+      "reviewFlags": []
+    }
+  ]
+}

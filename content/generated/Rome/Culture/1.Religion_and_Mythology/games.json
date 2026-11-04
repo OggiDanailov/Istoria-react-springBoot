@@ -244,6 +244,68 @@
           "reviewFlags": []
         }
       ]
+    },
+    {
+      "name": "Roman and Greek Gods I",
+      "blurb": "Match each Roman god to its Greek twin.",
+      "pairs": [
+        {
+          "name": "Jupiter",
+          "match": "Zeus, king of the gods",
+          "sectionId": "roman-and-greek-gods"
+        },
+        {
+          "name": "Juno",
+          "match": "Hera, queen of the gods",
+          "sectionId": "roman-and-greek-gods"
+        },
+        {
+          "name": "Neptune",
+          "match": "Poseidon, god of the sea",
+          "sectionId": "roman-and-greek-gods"
+        },
+        {
+          "name": "Minerva",
+          "match": "Athena, goddess of wisdom",
+          "sectionId": "roman-and-greek-gods"
+        },
+        {
+          "name": "Mars",
+          "match": "Ares, god of war",
+          "sectionId": "roman-and-greek-gods"
+        }
+      ]
+    },
+    {
+      "name": "Roman and Greek Gods II",
+      "blurb": "Match each Roman god to its Greek twin.",
+      "pairs": [
+        {
+          "name": "Venus",
+          "match": "Aphrodite, goddess of love",
+          "sectionId": "roman-and-greek-gods"
+        },
+        {
+          "name": "Diana",
+          "match": "Artemis, goddess of hunting",
+          "sectionId": "roman-and-greek-gods"
+        },
+        {
+          "name": "Vulcan",
+          "match": "Hephaestus, god of the forge",
+          "sectionId": "roman-and-greek-gods"
+        },
+        {
+          "name": "Mercury",
+          "match": "Hermes, the messenger",
+          "sectionId": "roman-and-greek-gods"
+        },
+        {
+          "name": "Ceres",
+          "match": "Demeter, goddess of grain",
+          "sectionId": "roman-and-greek-gods"
+        }
+      ]
     }
   ],
   "trueFalseDecks": [
