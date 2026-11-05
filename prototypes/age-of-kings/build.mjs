@@ -41,6 +41,15 @@ function quizPool(dir) {
 }
 
 const chapters = []
+// Bulgarian: the chapters' short names (from the translation run) and their periods ("27 BC-AD 14" -> "27 г. пр.н.е. – 14 г. сл.н.е.")
+const BG_SHORTS = (() => { try { return JSON.parse(fs.readFileSync(path.join(HERE, '../../tools/content-gen/glossary.bg.json'), 'utf8')).shorts ?? {} } catch { return {} } })()
+BG_SHORTS.kingdom ??= 'Царството'
+function bgPeriod(p) {
+  const m = p.replace(/–/g, '-').match(/^(c\. )?(AD )?(\d+)( BC| BCE)?\s*-\s*(AD )?(\d+)( BC| BCE)?$/)
+  if (!m) return p
+  const [, c, ad1, a, bc1, ad2, b, bc2] = m, era2 = bc2 ? 'пр.н.е.' : 'сл.н.е.', era1 = bc1 || (!ad1 && bc2) ? 'пр.н.е.' : 'сл.н.е.'
+  return (c ? 'ок. ' : '') + (era1 === era2 ? `${a}–${b} г. ${era2}` : `${a} г. ${era1} – ${b} г. ${era2}`)
+}
 for (const c of CONFIG.chapters) {
   const dir = path.join(GENERATED, c.folder)
   if (!fs.existsSync(path.join(dir, 'games.json'))) { console.log(`- ${c.id}: no games.json yet, skipped`); continue }
@@ -72,6 +81,16 @@ for (const c of CONFIG.chapters) {
     // optional, written by hand: small maps shown at the start of chronicle sections
     chronicleMaps: fs.existsSync(path.join(dir, 'maps.json')) ? JSON.parse(fs.readFileSync(path.join(dir, 'maps.json'), 'utf8')).maps : [],
     keyFacts: fs.existsSync(path.join(dir, 'keyfacts.json')) ? JSON.parse(fs.readFileSync(path.join(dir, 'keyfacts.json'), 'utf8')) : null,
+  }
+  // the Bulgarian version, where it exists: the chronicle, Key facts and the chapter's names (from content-gen)
+  const bgFile = path.join(dir, 'chapter.bg.md')
+  if (fs.existsSync(bgFile)) {
+    const md = fs.readFileSync(bgFile, 'utf8'), bgSections = sectionsFrom(md)
+    if (bgSections.map(x => x.id).join() !== sections.map(x => x.id).join()) throw new Error(`${c.id}: chapter.bg.md has different sections`)
+    const h1 = (md.match(/^# (.+)$/m) ?? [])[1] ?? ch.title
+    const kfFile = path.join(dir, 'keyfacts.bg.json'), kf = fs.existsSync(kfFile) ? JSON.parse(fs.readFileSync(kfFile, 'utf8')) : null
+    if (kf) kf.terms = kf.terms.map(t => ({ ...t, english: t.bulgarian ?? t.english }))
+    ch.bg = { title: h1.replace(/\s*\([^)]*\)\s*$/, '').replace(/^[^:]{3,30}:\s+(?=\S)/, m => /република|империя|царство/i.test(m) ? '' : m), short: BG_SHORTS[c.id] ?? null, period: bgPeriod(ch.period), sections: bgSections, keyFacts: kf }
   }
   // Every link must point at a real section
   const ids = new Set(sections.map(s => s.id))
