@@ -51,6 +51,10 @@ public class SecurityConfig {
                 .requestMatchers(HttpMethod.PUT, CONTENT_PATHS).hasRole("ADMIN")
                 .requestMatchers(HttpMethod.DELETE, CONTENT_PATHS).hasRole("ADMIN")
 
+                // Feedback from the test version of the game (/play, behind nginx's password): anyone may send, admins read
+                .requestMatchers(HttpMethod.POST, "/api/play-feedback").permitAll()
+                .requestMatchers(HttpMethod.GET, "/api/play-feedback").hasRole("ADMIN")
+
                 .requestMatchers("/api/user-progress/**").authenticated()
                 .requestMatchers("/api/quiz-attempts/**").authenticated()
                 .anyRequest().authenticated()

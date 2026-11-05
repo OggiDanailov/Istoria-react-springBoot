@@ -48,6 +48,8 @@ services:
       - "443:443"
     volumes:
       - /etc/letsencrypt:/etc/letsencrypt:ro
+      - /root/ave-play/site:/usr/share/nginx/play:ro      # the test game (index.html), copied there by hand
+      - /root/ave-play/secret:/etc/nginx/play:ro          # its password file (htpasswd), made on the server
     depends_on:
       - backend
     networks:
