@@ -3161,9 +3161,13 @@ document.getElementById('app').addEventListener('click', e => {
 })
 
 // ---------- feedback (saved for the page owner) ----------
+// On the test site (avecaesar.org/play) it goes to the server; inside the claude.ai page, to the page's database.
+const FEEDBACK_API = /^\/play(\/|$)/.test(location.pathname) ? '/play/api/feedback' : null
+const TESTER = (() => { try { let id = localStorage.getItem('ave-tester'); if (!id) { id = Math.random().toString(36).slice(2, 10); localStorage.setItem('ave-tester', id) } return id } catch { return null } })()
 const fb = { db: null, uid: null }
 ;(async () => {
   try {
+    if (FEEDBACK_API) return
     if (!window.claude?.use) return
     const [db, user] = await Promise.all([window.claude.use('db'), window.claude.use('user')])
     if (!db || !user?.id) return
@@ -4098,8 +4102,8 @@ function renderResult() {
           ${['Fun', 'Too easy', 'Too hard', 'Confusing', 'Boring', 'Learned something'].map(c => `<button type="button" aria-pressed="false" data-chip="${c}">${c}</button>`).join('')}
         </div>
         <textarea id="fb-text" placeholder="Anything else? (optional)" maxlength="1000"></textarea>
-        <div><button class="ghost" id="fb-send">${fb.db ? 'Send feedback' : 'Copy feedback'}</button></div>
-        <p class="task" id="fb-help" ${fb.db ? 'hidden' : ''}>This copies your answers so you can paste them in a message to whoever sent you this game.</p>`}
+        <div><button class="ghost" id="fb-send">${fb.db || FEEDBACK_API ? 'Send feedback' : 'Copy feedback'}</button></div>
+        <p class="task" id="fb-help" ${fb.db || FEEDBACK_API ? 'hidden' : ''}>This copies your answers so you can paste them in a message to whoever sent you this game.</p>`}
       </div>
     </section>`
   bindBack()
@@ -4111,6 +4115,14 @@ function renderResult() {
     const comment = app.querySelector('#fb-text').value.trim()
     if (!tags.length && !comment) return toast('Pick a word or write a comment first.')
     const entry = { game: GAMES[r.type].title, set: GAMES[r.type].sets[r.set].name, stars: r.earned, mistakes: r.mistakes, tags, comment, inTest: TEST_TYPES.includes(r.type), at: new Date().toISOString() }
+    if (FEEDBACK_API) {
+      e.target.disabled = true
+      try {
+        const res = await fetch(FEEDBACK_API, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ ...entry, tester: TESTER, chapter: CH.id, lang: LANG }) })
+        if (res.ok) { r.feedbackSent = true; return renderResult() }
+      } catch {}
+      e.target.disabled = false   // the server didn't take it: copy instead
+    }
     if (fb.db) {
       e.target.disabled = true
       try {

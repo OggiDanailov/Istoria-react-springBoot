@@ -132,4 +132,13 @@ const HTL = path.resolve(HERE, '../hold-the-line')
 const htl = `<script>const HTL_CSS = ${json(fs.readFileSync(path.join(HTL, 'game.css'), 'utf8'))}; window.HTL_BG = ${json(JSON.parse(fs.readFileSync(path.join(HTL, 'strings.bg.json'), 'utf8')))}</script>\n<script>\n${fs.readFileSync(path.join(HTL, 'game.js'), 'utf8')}\n</script>`
 const html = template.replace('__HTL__', () => htl).replace('__ERAS__', () => json(CONFIG.eras)).replace('__CHAPTERS__', () => json(chapters)).replace('__LAND__', () => land)
 fs.writeFileSync(path.join(HERE, 'index.html'), html)
+// the same app as a complete page, for the password-protected test site (avecaesar.org/play): dist/play.html
+fs.mkdirSync(path.join(HERE, 'dist'), { recursive: true })
+fs.writeFileSync(path.join(HERE, 'dist', 'play.html'), `<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow"><title>Ave Caesar · test</title></head>
+<body>
+${html}
+</body></html>
+`)
 console.log(`index.html: ${chapters.length} chapters, ${Math.round(html.length / 1024)} KB`)
