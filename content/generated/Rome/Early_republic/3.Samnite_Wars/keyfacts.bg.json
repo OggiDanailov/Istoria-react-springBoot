@@ -1,0 +1,179 @@
+{
+  "description": "Key facts for this chapter, written by hand from the chapter text. Every entry links to the section that explains it.",
+  "people": [
+    {
+      "name": "Марк Валерий Корв",
+      "text": "Консул, който побеждава при планината Гаур и при Суесула през 343 г. пр.н.е.",
+      "sec": "first-war-campaigns"
+    },
+    {
+      "name": "Публий Деций Муз (бащата)",
+      "text": "Младши офицер, който спасява обкръжена армия, като завзема хълм през 343 г. пр.н.е.",
+      "sec": "first-war-campaigns"
+    },
+    {
+      "name": "Квинт Публилий Филон",
+      "text": "Пълководец при Неапол, чието командване е продължено – един от първите проконсули.",
+      "sec": "second-war-outbreak"
+    },
+    {
+      "name": "Гай Понтий",
+      "text": "Самнитски пълководец, който хваща римляните в капан при Кавдинските проходи.",
+      "sec": "caudine-forks"
+    },
+    {
+      "name": "Херений",
+      "text": "Бащата на Понтий, който съветва или да пуснат всички римляни, или да ги избият до един.",
+      "sec": "caudine-forks"
+    },
+    {
+      "name": "Фабий Максим Рулиан",
+      "text": "Най-изтъкнатият пълководец на Рим, който преминава през Циминийската гора и побеждава при Сентинум.",
+      "sec": "second-war-turning"
+    },
+    {
+      "name": "Гелий Егнаций",
+      "text": "Самнитски пълководец, който обединява етруските и други народи срещу Рим.",
+      "sec": "third-war-sentinum"
+    },
+    {
+      "name": "Публий Деций Муз (синът)",
+      "text": "Консул, който жертва живота си (devotio) при Сентинум.",
+      "sec": "third-war-sentinum"
+    },
+    {
+      "name": "Луций Папирий Курсор",
+      "text": "Консул, който превзема Аквилония през 293 г. пр.н.е.",
+      "sec": "aquilonia-and-the-end"
+    },
+    {
+      "name": "Ливий",
+      "text": "Римският историк, който е главният ни пътеводител за тези войни.",
+      "sec": "first-war-outbreak"
+    }
+  ],
+  "dates": [
+    {
+      "when": "354 г. пр.н.е.",
+      "text": "Рим и самнитите сключват договор.",
+      "sec": "samnites-and-rome"
+    },
+    {
+      "when": "343 г. пр.н.е.",
+      "text": "Започва Първата самнитска война.",
+      "sec": "first-war-outbreak"
+    },
+    {
+      "when": "326 г. пр.н.е.",
+      "text": "Започва Голямата (Втората) самнитска война.",
+      "sec": "second-war-outbreak"
+    },
+    {
+      "when": "321 г. пр.н.е.",
+      "text": "Кавдинските проходи: римска армия минава под ярема.",
+      "sec": "caudine-forks"
+    },
+    {
+      "when": "310 г. пр.н.е.",
+      "text": "Победа над етруските при Вадимонското езеро.",
+      "sec": "second-war-turning"
+    },
+    {
+      "when": "304 г. пр.н.е.",
+      "text": "Мир слага край на Голямата самнитска война.",
+      "sec": "second-war-turning"
+    },
+    {
+      "when": "295 г. пр.н.е.",
+      "text": "Сентинум: Рим побеждава самнити, етруски, умбри и гали.",
+      "sec": "third-war-sentinum"
+    },
+    {
+      "when": "293 г. пр.н.е.",
+      "text": "Рим превзема Аквилония.",
+      "sec": "aquilonia-and-the-end"
+    },
+    {
+      "when": "290 г. пр.н.е.",
+      "text": "Последната самнитска съпротива е смазана.",
+      "sec": "aquilonia-and-the-end"
+    }
+  ],
+  "terms": [
+    {
+      "latin": "deditio",
+      "bulgarian": "безусловна капитулация",
+      "sec": "first-war-outbreak"
+    },
+    {
+      "latin": "fetiales",
+      "bulgarian": "жреци, които искат обезщетение и обявяват война",
+      "sec": "first-war-outbreak"
+    },
+    {
+      "latin": "consules",
+      "bulgarian": "двамата консули",
+      "sec": "first-war-campaigns"
+    },
+    {
+      "latin": "triumphi",
+      "bulgarian": "триумфални шествия",
+      "sec": "first-war-campaigns"
+    },
+    {
+      "latin": "coloni, colonia",
+      "bulgarian": "колонисти и колония",
+      "sec": "second-war-outbreak"
+    },
+    {
+      "latin": "imperium",
+      "bulgarian": "властта на военното командване",
+      "sec": "second-war-outbreak"
+    },
+    {
+      "latin": "pro consule",
+      "bulgarian": "„на мястото на консул“: проконсул",
+      "sec": "second-war-outbreak"
+    },
+    {
+      "latin": "Furculae Caudinae",
+      "bulgarian": "Кавдинските проходи",
+      "sec": "caudine-forks"
+    },
+    {
+      "latin": "iugum",
+      "bulgarian": "яремът от копия",
+      "sec": "caudine-forks"
+    },
+    {
+      "latin": "silva Ciminia",
+      "bulgarian": "Циминийската гора",
+      "sec": "second-war-turning"
+    },
+    {
+      "latin": "devotio",
+      "bulgarian": "да дадеш живота си на боговете в замяна на победа",
+      "sec": "third-war-sentinum"
+    },
+    {
+      "latin": "legio linteata",
+      "bulgarian": "Лененият легион, заклел се никога да не бяга",
+      "sec": "aquilonia-and-the-end"
+    },
+    {
+      "latin": "foedus iniquum",
+      "bulgarian": "неравноправен договор",
+      "sec": "roman-alliance-system"
+    },
+    {
+      "latin": "socii",
+      "bulgarian": "съюзниците на Рим",
+      "sec": "roman-alliance-system"
+    },
+    {
+      "latin": "praeda",
+      "bulgarian": "военна плячка",
+      "sec": "roman-alliance-system"
+    }
+  ]
+}

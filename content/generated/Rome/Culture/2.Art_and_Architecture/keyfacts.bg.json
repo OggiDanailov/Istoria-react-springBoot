@@ -1,0 +1,129 @@
+{
+  "description": "Key facts for this chapter, written by hand from the chapter text. Every entry links to the section that explains it.",
+  "people": [
+    {
+      "name": "Август",
+      "text": "Първият император; казвал, че оставил Рим град от мрамор.",
+      "sec": "city-of-marble"
+    },
+    {
+      "name": "Витрувий",
+      "text": "Архитект от I в. пр.н.е.; неговото ръководство е единствената оцеляла римска книга за архитектурата.",
+      "sec": "concrete-revolution"
+    },
+    {
+      "name": "Плиний Стари",
+      "text": "Писател от I в. сл.н.е., чиято енциклопедия е главният ни античен източник за изкуството.",
+      "sec": "painted-walls"
+    },
+    {
+      "name": "Траян",
+      "text": "Император воин; колоната му разказва за войните с даките.",
+      "sec": "trajan-and-hadrian"
+    },
+    {
+      "name": "Адриан",
+      "text": "Император строител, който построил наново Пантеона.",
+      "sec": "trajan-and-hadrian"
+    },
+    {
+      "name": "Константин",
+      "text": "Арката му показва новия късноримски стил.",
+      "sec": "late-roman-style"
+    }
+  ],
+  "dates": [
+    {
+      "when": "146 г. пр.н.е.",
+      "text": "Коринт е разграбен; гръцки художници са доведени в Рим.",
+      "sec": "greek-roots"
+    },
+    {
+      "when": "след 273 г. пр.н.е.",
+      "text": "Най-ранният известен римски бетон – в Коза.",
+      "sec": "concrete-revolution"
+    },
+    {
+      "when": "184 г. пр.н.е.",
+      "text": "Най-старата известна базилика.",
+      "sec": "city-of-marble"
+    },
+    {
+      "when": "79 г. сл.н.е.",
+      "text": "Везувий погребва Помпей и Херкулан.",
+      "sec": "painted-walls"
+    },
+    {
+      "when": "около 80 г. сл.н.е.",
+      "text": "Колизеумът е завършен.",
+      "sec": "arenas-baths-apartments"
+    },
+    {
+      "when": "113 г. сл.н.е.",
+      "text": "Освещаване на Траяновата колона.",
+      "sec": "trajan-and-hadrian"
+    },
+    {
+      "when": "около 305 г. сл.н.е.",
+      "text": "Скулптурната група на четиримата тетрарси.",
+      "sec": "late-roman-style"
+    },
+    {
+      "when": "около 315 г. сл.н.е.",
+      "text": "Арката на Константин.",
+      "sec": "late-roman-style"
+    }
+  ],
+  "terms": [
+    {
+      "latin": "atrium",
+      "bulgarian": "входната зала",
+      "sec": "portraits-and-ancestors"
+    },
+    {
+      "latin": "imagines",
+      "bulgarian": "маски на предците",
+      "sec": "portraits-and-ancestors"
+    },
+    {
+      "latin": "res publica",
+      "bulgarian": "Републиката",
+      "sec": "portraits-and-ancestors"
+    },
+    {
+      "latin": "opus caementicium",
+      "bulgarian": "римският бетон",
+      "sec": "concrete-revolution"
+    },
+    {
+      "latin": "cella",
+      "bulgarian": "главното помещение на храма",
+      "sec": "city-of-marble"
+    },
+    {
+      "latin": "arcus triumphalis",
+      "bulgarian": "триумфална арка",
+      "sec": "arenas-baths-apartments"
+    },
+    {
+      "latin": "thermae",
+      "bulgarian": "обществени бани",
+      "sec": "arenas-baths-apartments"
+    },
+    {
+      "latin": "hypocaustum",
+      "bulgarian": "подово отопление",
+      "sec": "arenas-baths-apartments"
+    },
+    {
+      "latin": "insulae",
+      "bulgarian": "жилищни блокове",
+      "sec": "arenas-baths-apartments"
+    },
+    {
+      "latin": "domus",
+      "bulgarian": "частна градска къща",
+      "sec": "arenas-baths-apartments"
+    }
+  ]
+}

@@ -1,0 +1,149 @@
+{
+  "description": "Key facts for this chapter, written by hand from the chapter text. Every entry links to the section that explains it.",
+  "people": [
+    {
+      "name": "Спартак",
+      "text": "Гладиатор, наричан тракиец, който предвожда голямото робско въстание от 73 – 71 г. пр.н.е.",
+      "sec": "escape-from-capua"
+    },
+    {
+      "name": "Крас",
+      "text": "Несметно богат пълководец, който разгромява Спартак.",
+      "sec": "crassus-takes-command"
+    },
+    {
+      "name": "Помпей",
+      "text": "„Великия“: прочиства моретата от пирати и завладява Изтока.",
+      "sec": "young-pompey"
+    },
+    {
+      "name": "Лукул",
+      "text": "Пълководец, влюбен в гръцката култура, който бие Митридат, докато войската му не се разбунтува.",
+      "sec": "lucullus-and-mithridates"
+    },
+    {
+      "name": "Митридат",
+      "text": "Цар на Понт, най-упоритият враг на Рим на Изток.",
+      "sec": "lucullus-and-mithridates"
+    }
+  ],
+  "dates": [
+    {
+      "when": "73 г. пр.н.е.",
+      "text": "Около 70 гладиатори избягват от Капуа.",
+      "sec": "escape-from-capua"
+    },
+    {
+      "when": "72 г. пр.н.е.",
+      "text": "Спартак разбива армиите на консулите.",
+      "sec": "consular-defeats"
+    },
+    {
+      "when": "71 г. пр.н.е.",
+      "text": "Спартак загива при река Силарий; 6 000 души са разпънати на кръст.",
+      "sec": "silarius-and-aftermath"
+    },
+    {
+      "when": "70 г. пр.н.е.",
+      "text": "Крас и Помпей са консули.",
+      "sec": "silarius-and-aftermath"
+    },
+    {
+      "when": "69 г. пр.н.е.",
+      "text": "Лукул побеждава при Тигранакерт.",
+      "sec": "lucullus-and-mithridates"
+    },
+    {
+      "when": "67 г. пр.н.е.",
+      "text": "Габиниевият закон: Помпей прочиства моретата за три месеца.",
+      "sec": "war-on-the-pirates"
+    },
+    {
+      "when": "66 г. пр.н.е.",
+      "text": "Манилиевият закон дава Изтока на Помпей.",
+      "sec": "pompey-in-the-east"
+    },
+    {
+      "when": "64 г. пр.н.е.",
+      "text": "Сирия става римска провинция.",
+      "sec": "pompey-in-the-east"
+    },
+    {
+      "when": "63 г. пр.н.е.",
+      "text": "Помпей превзема Йерусалим; Митридат умира.",
+      "sec": "pompey-in-the-east"
+    }
+  ],
+  "terms": [
+    {
+      "latin": "servus",
+      "bulgarian": "роб",
+      "sec": "roman-slavery"
+    },
+    {
+      "latin": "senatus",
+      "bulgarian": "Сенатът",
+      "sec": "roman-slavery"
+    },
+    {
+      "latin": "ludi",
+      "bulgarian": "гладиаторски школи",
+      "sec": "escape-from-capua"
+    },
+    {
+      "latin": "consules",
+      "bulgarian": "двамата консули",
+      "sec": "consular-defeats"
+    },
+    {
+      "latin": "legiones",
+      "bulgarian": "легиони",
+      "sec": "crassus-takes-command"
+    },
+    {
+      "latin": "decimatio",
+      "bulgarian": "децимация",
+      "sec": "crassus-takes-command"
+    },
+    {
+      "latin": "Via Appia",
+      "bulgarian": "Апиевият път",
+      "sec": "silarius-and-aftermath"
+    },
+    {
+      "latin": "adulescentulus carnifex",
+      "bulgarian": "„юношата касапин“",
+      "sec": "young-pompey"
+    },
+    {
+      "latin": "Magnus",
+      "bulgarian": "„Великия“",
+      "sec": "young-pompey"
+    },
+    {
+      "latin": "triumphus",
+      "bulgarian": "победен парад",
+      "sec": "young-pompey"
+    },
+    {
+      "latin": "cursus honorum",
+      "bulgarian": "стълбицата на длъжностите",
+      "sec": "young-pompey"
+    },
+    {
+      "latin": "tribunus plebis",
+      "bulgarian": "народен трибун",
+      "sec": "war-on-the-pirates"
+    },
+    {
+      "latin": "lex Gabinia",
+      "bulgarian": "Габиниевият закон",
+      "sec": "war-on-the-pirates"
+    },
+    {
+      "latin": "lex Manilia",
+      "bulgarian": "Манилиевият закон",
+      "sec": "pompey-in-the-east"
+    }
+  ]
+}

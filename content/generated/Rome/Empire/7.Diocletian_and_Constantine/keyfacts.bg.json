@@ -1,0 +1,149 @@
+{
+  "description": "Key facts for this chapter, written by hand from the chapter text. Every entry links to the section that explains it.",
+  "people": [
+    {
+      "name": "Диоклециан",
+      "text": "Войник император, 284–305 г.; създава Тетрархията; оттегля се в Сплит.",
+      "sec": "diocletian-rise"
+    },
+    {
+      "name": "Максимиан",
+      "text": "Съимператор на Диоклециан на Запад.",
+      "sec": "tetrarchy"
+    },
+    {
+      "name": "Галерий",
+      "text": "Младши император на Изток; побеждава Персия; насърчава гоненията.",
+      "sec": "wars-and-persia"
+    },
+    {
+      "name": "Константин",
+      "text": "Император 306–337 г.; побеждава при Милвийския мост; първият християнски император; основава Константинопол.",
+      "sec": "constantine-rise"
+    },
+    {
+      "name": "Максенций",
+      "text": "Син на Максимиан, владетел на Рим; удавя се през 312 г.",
+      "sec": "milvian-bridge"
+    },
+    {
+      "name": "Лициний",
+      "text": "Източен съимператор на Константин, победен през 324 г.",
+      "sec": "constantine-sole-ruler"
+    }
+  ],
+  "dates": [
+    {
+      "when": "284",
+      "text": "Диоклециан е провъзгласен за император в Никомедия.",
+      "sec": "diocletian-rise"
+    },
+    {
+      "when": "293",
+      "text": "Тетрархията: управление на четирима.",
+      "sec": "tetrarchy"
+    },
+    {
+      "when": "301",
+      "text": "Едиктът за максималните цени.",
+      "sec": "reforms-and-prices"
+    },
+    {
+      "when": "303",
+      "text": "Великото гонение.",
+      "sec": "great-persecution"
+    },
+    {
+      "when": "305",
+      "text": "Диоклециан се оттегля.",
+      "sec": "abdication"
+    },
+    {
+      "when": "28 октомври 312 г.",
+      "text": "Битката при Милвийския мост.",
+      "sec": "milvian-bridge"
+    },
+    {
+      "when": "313",
+      "text": "Миланският едикт: свобода на вероизповеданието.",
+      "sec": "constantine-sole-ruler"
+    },
+    {
+      "when": "325",
+      "text": "Съборът в Никея.",
+      "sec": "constantine-sole-ruler"
+    },
+    {
+      "when": "330",
+      "text": "Константинопол е осветен.",
+      "sec": "constantine-sole-ruler"
+    },
+    {
+      "when": "337",
+      "text": "Константин умира.",
+      "sec": "constantine-sole-ruler"
+    }
+  ],
+  "terms": [
+    {
+      "latin": "Iovius",
+      "bulgarian": "на Юпитер (титлата на Диоклециан)",
+      "sec": "tetrarchy"
+    },
+    {
+      "latin": "Herculius",
+      "bulgarian": "на Херкулес (титлата на Максимиан)",
+      "sec": "tetrarchy"
+    },
+    {
+      "latin": "adoratio",
+      "bulgarian": "проснат по лице пред императора",
+      "sec": "tetrarchy"
+    },
+    {
+      "latin": "vicarius",
+      "bulgarian": "заместник",
+      "sec": "reforms-and-prices"
+    },
+    {
+      "latin": "capita",
+      "bulgarian": "глави",
+      "sec": "reforms-and-prices"
+    },
+    {
+      "latin": "iuga",
+      "bulgarian": "единици земя",
+      "sec": "reforms-and-prices"
+    },
+    {
+      "latin": "Edictum de Pretiis Rerum Venalium",
+      "bulgarian": "Едиктът за максималните цени",
+      "sec": "reforms-and-prices"
+    },
+    {
+      "latin": "adventus",
+      "bulgarian": "тържествено влизане",
+      "sec": "milvian-bridge"
+    },
+    {
+      "latin": "damnatio memoriae",
+      "bulgarian": "осъждане на нечия памет",
+      "sec": "milvian-bridge"
+    },
+    {
+      "latin": "in hoc signo vinces",
+      "bulgarian": "с този знак ще победиш",
+      "sec": "constantine-vision"
+    },
+    {
+      "latin": "labarum",
+      "bulgarian": "бойното знаме на Константин",
+      "sec": "constantine-vision"
+    },
+    {
+      "latin": "solidus",
+      "bulgarian": "златната монета на Константин",
+      "sec": "constantine-sole-ruler"
+    }
+  ]
+}

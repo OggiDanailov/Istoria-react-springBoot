@@ -1,0 +1,129 @@
+{
+  "description": "Key facts for this chapter, written by hand from the chapter text. Every entry links to the section that explains it.",
+  "people": [
+    {
+      "name": "Филип V",
+      "text": "Цар на Македония, победен при Киноскефале през 197 г. пр.н.е.",
+      "sec": "rome-looks-east"
+    },
+    {
+      "name": "Фламинин",
+      "text": "Млад консул, който победил Филип и обявил свободата на гърците.",
+      "sec": "flamininus-takes-command"
+    },
+    {
+      "name": "Антиох III",
+      "text": "„Велик цар“ от династията на Селевкидите, победен при Термопилите и Магнезия.",
+      "sec": "cold-war-with-antiochus"
+    },
+    {
+      "name": "Персей",
+      "text": "Синът на Филип, последният цар на Македония.",
+      "sec": "perseus-road-to-war"
+    },
+    {
+      "name": "Емилий Павел",
+      "text": "Консул, който победил при Пидна през 168 г. пр.н.е.",
+      "sec": "pydna"
+    }
+  ],
+  "dates": [
+    {
+      "when": "200 г. пр.н.е.",
+      "text": "Рим обявява война на Филип V при второто гласуване.",
+      "sec": "rome-looks-east"
+    },
+    {
+      "when": "197 г. пр.н.е.",
+      "text": "Киноскефале: легионите побеждават фалангата.",
+      "sec": "cynoscephalae"
+    },
+    {
+      "when": "196 г. пр.н.е.",
+      "text": "Фламинин обявява свободата на гърците.",
+      "sec": "freedom-of-the-greeks"
+    },
+    {
+      "when": "192 г. пр.н.е.",
+      "text": "Антиох слиза на брега в Гърция при Деметриада.",
+      "sec": "cold-war-with-antiochus"
+    },
+    {
+      "when": "191 г. пр.н.е.",
+      "text": "Антиох е разгромен при Термопилите.",
+      "sec": "thermopylae-and-magnesia"
+    },
+    {
+      "when": "190 г. пр.н.е.",
+      "text": "Битката при Магнезия.",
+      "sec": "thermopylae-and-magnesia"
+    },
+    {
+      "when": "188 г. пр.н.е.",
+      "text": "Мирът от Апамея.",
+      "sec": "peace-of-apamea"
+    },
+    {
+      "when": "171 г. пр.н.е.",
+      "text": "Започва войната с Персей.",
+      "sec": "perseus-road-to-war"
+    },
+    {
+      "when": "168 г. пр.н.е.",
+      "text": "Битката при Пидна; краят на Македонското царство.",
+      "sec": "pydna"
+    }
+  ],
+  "terms": [
+    {
+      "latin": "comitia centuriata",
+      "bulgarian": "центуриатното събрание, което обявяваше война",
+      "sec": "rome-looks-east"
+    },
+    {
+      "latin": "prorogatio",
+      "bulgarian": "продължаването на командването",
+      "sec": "cynoscephalae"
+    },
+    {
+      "latin": "legiones",
+      "bulgarian": "легиони",
+      "sec": "cynoscephalae"
+    },
+    {
+      "latin": "comitia tributa",
+      "bulgarian": "Трибутното събрание",
+      "sec": "freedom-of-the-greeks"
+    },
+    {
+      "latin": "senatus",
+      "bulgarian": "Сенатът",
+      "sec": "freedom-of-the-greeks"
+    },
+    {
+      "latin": "libertas",
+      "bulgarian": "свобода",
+      "sec": "freedom-of-the-greeks"
+    },
+    {
+      "latin": "obsides",
+      "bulgarian": "заложници",
+      "sec": "peace-of-apamea"
+    },
+    {
+      "latin": "hostis",
+      "bulgarian": "враг на държавата",
+      "sec": "perseus-road-to-war"
+    },
+    {
+      "latin": "triumphus",
+      "bulgarian": "победно шествие",
+      "sec": "end-of-macedon"
+    },
+    {
+      "latin": "tributum",
+      "bulgarian": "данък, плащан на Рим",
+      "sec": "end-of-macedon"
+    }
+  ]
+}

@@ -1,0 +1,144 @@
+{
+  "description": "Key facts for this chapter, written by hand from the chapter text. Every entry links to the section that explains it.",
+  "people": [
+    {
+      "name": "Юлий Цезар",
+      "text": "Преминал Рубикон, спечелил гражданската война, бил обявен за пожизнен диктатор и бил убит на мартенските иди.",
+      "sec": "crossing-the-rubicon"
+    },
+    {
+      "name": "Помпей",
+      "text": "Защитникът на Сената; разбит при Фарсала, убит в Египет.",
+      "sec": "battle-of-pharsalus"
+    },
+    {
+      "name": "Марк Антоний",
+      "text": "Верният помощник на Цезар и негов колега консул през 44 г. пр.н.е.",
+      "sec": "three-last-straws"
+    },
+    {
+      "name": "Брут",
+      "text": "Аристократ, помилван от Цезар, а после един от водачите на заговора срещу него.",
+      "sec": "ides-of-march"
+    },
+    {
+      "name": "Клеопатра",
+      "text": "Царица на Египет, любовница на Цезар, майка на сина му.",
+      "sec": "pompey-and-cleopatra"
+    }
+  ],
+  "dates": [
+    {
+      "when": "10 или 11 януари 49 г. пр.н.е.",
+      "text": "Цезар преминава Рубикон.",
+      "sec": "crossing-the-rubicon"
+    },
+    {
+      "when": "49 г. пр.н.е.",
+      "text": "Победа при Илерда в Испания.",
+      "sec": "spain-and-the-treasury"
+    },
+    {
+      "when": "9 август 48 г. пр.н.е.",
+      "text": "Фарсала: Помпей е разбит.",
+      "sec": "battle-of-pharsalus"
+    },
+    {
+      "when": "48 г. пр.н.е.",
+      "text": "Помпей е убит в Египет.",
+      "sec": "pompey-and-cleopatra"
+    },
+    {
+      "when": "47 г. пр.н.е.",
+      "text": "Зела: „Дойдох, видях, победих.“",
+      "sec": "zela-and-thapsus"
+    },
+    {
+      "when": "46 г. пр.н.е.",
+      "text": "Тапс; четири триумфа в Рим.",
+      "sec": "zela-and-thapsus"
+    },
+    {
+      "when": "45 г. пр.н.е.",
+      "text": "Мунда: последната битка срещу синовете на Помпей.",
+      "sec": "munda-and-honours"
+    },
+    {
+      "when": "февруари 44 г. пр.н.е.",
+      "text": "Диадемата на Луперкалиите.",
+      "sec": "three-last-straws"
+    },
+    {
+      "when": "15 март 44 г. пр.н.е.",
+      "text": "Цезар е убит на мартенските иди.",
+      "sec": "ides-of-march"
+    }
+  ],
+  "terms": [
+    {
+      "latin": "senatus",
+      "bulgarian": "Сенатът",
+      "sec": "road-to-war"
+    },
+    {
+      "latin": "senatus consultum ultimum",
+      "bulgarian": "крайното решение",
+      "sec": "road-to-war"
+    },
+    {
+      "latin": "tribuni plebis",
+      "bulgarian": "народни трибуни",
+      "sec": "road-to-war"
+    },
+    {
+      "latin": "dignitas",
+      "bulgarian": "лична чест",
+      "sec": "road-to-war"
+    },
+    {
+      "latin": "alea iacta est",
+      "bulgarian": "„жребият е хвърлен“",
+      "sec": "crossing-the-rubicon"
+    },
+    {
+      "latin": "clementia",
+      "bulgarian": "милост",
+      "sec": "crossing-the-rubicon"
+    },
+    {
+      "latin": "veni, vidi, vici",
+      "bulgarian": "„Дойдох, видях, победих“",
+      "sec": "zela-and-thapsus"
+    },
+    {
+      "latin": "triumphi",
+      "bulgarian": "победни шествия",
+      "sec": "munda-and-honours"
+    },
+    {
+      "latin": "lictores",
+      "bulgarian": "ликтори с фасции",
+      "sec": "munda-and-honours"
+    },
+    {
+      "latin": "parens patriae",
+      "bulgarian": "„Баща на отечеството“",
+      "sec": "munda-and-honours"
+    },
+    {
+      "latin": "dictator perpetuo",
+      "bulgarian": "пожизнен диктатор",
+      "sec": "munda-and-honours"
+    },
+    {
+      "latin": "rex",
+      "bulgarian": "цар",
+      "sec": "three-last-straws"
+    },
+    {
+      "latin": "Idus Martiae",
+      "bulgarian": "мартенските иди",
+      "sec": "ides-of-march"
+    }
+  ]
+}

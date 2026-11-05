@@ -1,0 +1,154 @@
+{
+  "description": "Key facts for this chapter, written by hand from the chapter text. Every entry links to the section that explains it.",
+  "people": [
+    {
+      "name": "Клавдий",
+      "text": "Четвъртият император на Рим, 41–54 г. сл.н.е.; учен, който завладял Британия.",
+      "sec": "claudius-early-life"
+    },
+    {
+      "name": "Агрипина",
+      "text": "Племенница и четвърта съпруга на Клавдий; майка на Нерон; убита през 59 г. сл.н.е.",
+      "sec": "claudius-wives-and-death"
+    },
+    {
+      "name": "Британик",
+      "text": "Синът на Клавдий; отровен през 55 г. сл.н.е.",
+      "sec": "nero-early-reign"
+    },
+    {
+      "name": "Нерон",
+      "text": "Петият император на Рим, 54–68 г. сл.н.е.; последният от рода на Август.",
+      "sec": "nero-early-reign"
+    },
+    {
+      "name": "Боудика",
+      "text": "Царица на ицените, която въстанала срещу Рим през 60 или 61 г. сл.н.е.",
+      "sec": "boudica-revolt"
+    },
+    {
+      "name": "Тацит",
+      "text": "Сенаторът историк, чиито „Анали“ разказват тази история най-подробно.",
+      "sec": "judging-the-sources"
+    },
+    {
+      "name": "Сенека",
+      "text": "Философ стоик, учител и съветник на Нерон; принуден да се самоубие през 65 г. сл.н.е.",
+      "sec": "nero-early-reign"
+    },
+    {
+      "name": "Месалина",
+      "text": "Третата съпруга на Клавдий; екзекутирана през 48 г. сл.н.е.",
+      "sec": "claudius-wives-and-death"
+    }
+  ],
+  "dates": [
+    {
+      "when": "41 г. сл.н.е.",
+      "text": "Намират Клавдий зад една завеса и го провъзгласяват за император.",
+      "sec": "claudius-accession"
+    },
+    {
+      "when": "43 г. сл.н.е.",
+      "text": "Четири легиона нахлуват в Британия.",
+      "sec": "conquest-of-britain"
+    },
+    {
+      "when": "13 октомври 54 г. сл.н.е.",
+      "text": "Клавдий умира; Нерон става император.",
+      "sec": "claudius-wives-and-death"
+    },
+    {
+      "when": "59 г. сл.н.е.",
+      "text": "Нерон нарежда да убият майка му.",
+      "sec": "nero-early-reign"
+    },
+    {
+      "when": "60 или 61 г. сл.н.е.",
+      "text": "Въстанието на Боудика.",
+      "sec": "boudica-revolt"
+    },
+    {
+      "when": "Юли 64 г. сл.н.е.",
+      "text": "Големият пожар в Рим.",
+      "sec": "great-fire-of-rome"
+    },
+    {
+      "when": "67 г. сл.н.е.",
+      "text": "Нерон се състезава на Олимпийските игри.",
+      "sec": "nero-downfall"
+    },
+    {
+      "when": "9 юни 68 г. сл.н.е.",
+      "text": "Нерон слага край на живота си.",
+      "sec": "nero-downfall"
+    }
+  ],
+  "terms": [
+    {
+      "latin": "consul",
+      "bulgarian": "един от двамата най-висши магистрати",
+      "sec": "claudius-early-life"
+    },
+    {
+      "latin": "cohortes praetoriae",
+      "bulgarian": "преторианската гвардия",
+      "sec": "claudius-accession"
+    },
+    {
+      "latin": "senatus",
+      "bulgarian": "Сенатът",
+      "sec": "claudius-accession"
+    },
+    {
+      "latin": "censor",
+      "bulgarian": "пазител на списъците на гражданите",
+      "sec": "claudius-government"
+    },
+    {
+      "latin": "liberti",
+      "bulgarian": "освободени роби, бивши роби",
+      "sec": "claudius-government"
+    },
+    {
+      "latin": "legiones",
+      "bulgarian": "легиони",
+      "sec": "conquest-of-britain"
+    },
+    {
+      "latin": "colonia",
+      "bulgarian": "селище на ветерани",
+      "sec": "conquest-of-britain"
+    },
+    {
+      "latin": "triumphus",
+      "bulgarian": "победно шествие",
+      "sec": "conquest-of-britain"
+    },
+    {
+      "latin": "quinquennium Neronis",
+      "bulgarian": "петте добри години на Нерон",
+      "sec": "nero-early-reign"
+    },
+    {
+      "latin": "maiestas",
+      "bulgarian": "държавна измяна",
+      "sec": "nero-early-reign"
+    },
+    {
+      "latin": "Domus Aurea",
+      "bulgarian": "Златният дом",
+      "sec": "great-fire-of-rome"
+    },
+    {
+      "latin": "hostis publicus",
+      "bulgarian": "враг на държавата",
+      "sec": "nero-downfall"
+    },
+    {
+      "latin": "damnatio memoriae",
+      "bulgarian": "осъждане на паметта на владетел",
+      "sec": "judging-the-sources"
+    }
+  ]
+}

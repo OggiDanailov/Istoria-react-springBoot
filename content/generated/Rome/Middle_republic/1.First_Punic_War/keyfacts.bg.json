@@ -1,0 +1,139 @@
+{
+  "description": "Key facts for this chapter, written by hand from the chapter text. Every entry links to the section that explains it.",
+  "people": [
+    {
+      "name": "Гай Дуилий",
+      "text": "Консул, извоювал първата морска победа на Рим – при Миле през 260 г. пр.н.е.",
+      "sec": "corvus-and-mylae"
+    },
+    {
+      "name": "Регул",
+      "text": "Консул, който нахлул в Африка през 256 г. пр.н.е. и бил пленен през 255 г. пр.н.е.",
+      "sec": "regulus-in-africa"
+    },
+    {
+      "name": "Хамилкар Барка",
+      "text": "Картагенски пълководец в Сицилия от 247 г. пр.н.е.; по-късно повел ветераните си към Испания.",
+      "sec": "drepana-and-stalemate"
+    },
+    {
+      "name": "Катул",
+      "text": "Консул, чийто флот спечелил решителната битка при Егатските острови през 241 г. пр.н.е.",
+      "sec": "battle-of-the-aegates"
+    },
+    {
+      "name": "Полибий",
+      "text": "Гръцки историк, нашият основен извор за войната.",
+      "sec": "sources-and-debates"
+    }
+  ],
+  "dates": [
+    {
+      "when": "264 г. пр.н.е.",
+      "text": "Римските легиони преминават в Сицилия: войната започва.",
+      "sec": "messana"
+    },
+    {
+      "when": "261 г. пр.н.е.",
+      "text": "Картагенската армия, изпратена на помощ, е разбита при Акрагас.",
+      "sec": "siege-of-akragas"
+    },
+    {
+      "when": "260 г. пр.н.е.",
+      "text": "Рим построява флот; Дуилий побеждава при Миле.",
+      "sec": "corvus-and-mylae"
+    },
+    {
+      "when": "256 г. пр.н.е.",
+      "text": "Нос Екном – може би най-голямата морска битка в историята; Регул стъпва в Африка.",
+      "sec": "regulus-in-africa"
+    },
+    {
+      "when": "255 г. пр.н.е.",
+      "text": "Регул е пленен; буря потопява по-голямата част от римския флот.",
+      "sec": "regulus-in-africa"
+    },
+    {
+      "when": "249 г. пр.н.е.",
+      "text": "Най-голямата морска победа на Картаген – при Дрепана.",
+      "sec": "drepana-and-stalemate"
+    },
+    {
+      "when": "247 г. пр.н.е.",
+      "text": "Хамилкар Барка поема командването в Сицилия.",
+      "sec": "drepana-and-stalemate"
+    },
+    {
+      "when": "241 г. пр.н.е.",
+      "text": "Битката при Егатските острови; мир; Сицилия става първата римска провинция.",
+      "sec": "battle-of-the-aegates"
+    },
+    {
+      "when": "237 г. пр.н.е.",
+      "text": "Рим принуждава Картаген да отстъпи Сардиния и Корсика.",
+      "sec": "peace-and-aftermath"
+    }
+  ],
+  "terms": [
+    {
+      "latin": "Carthago",
+      "bulgarian": "Картаген",
+      "sec": "rome-and-carthage"
+    },
+    {
+      "latin": "Punici",
+      "bulgarian": "картагенците („финикийци“), оттук и „пунически“",
+      "sec": "rome-and-carthage"
+    },
+    {
+      "latin": "senatus",
+      "bulgarian": "Сенатът",
+      "sec": "messana"
+    },
+    {
+      "latin": "comitia",
+      "bulgarian": "народното събрание",
+      "sec": "messana"
+    },
+    {
+      "latin": "consules",
+      "bulgarian": "двамата консули",
+      "sec": "messana"
+    },
+    {
+      "latin": "praeda",
+      "bulgarian": "плячка",
+      "sec": "messana"
+    },
+    {
+      "latin": "legiones",
+      "bulgarian": "легиони от около 4 500 души",
+      "sec": "messana"
+    },
+    {
+      "latin": "socii",
+      "bulgarian": "съюзниците на Рим",
+      "sec": "rome-builds-a-fleet"
+    },
+    {
+      "latin": "rostrum",
+      "bulgarian": "бронзовият таран на военен кораб",
+      "sec": "rome-builds-a-fleet"
+    },
+    {
+      "latin": "corvus",
+      "bulgarian": "„гарванът“: мостът за абордаж",
+      "sec": "corvus-and-mylae"
+    },
+    {
+      "latin": "triumphus",
+      "bulgarian": "победно шествие",
+      "sec": "peace-and-aftermath"
+    },
+    {
+      "latin": "provincia",
+      "bulgarian": "отвъдморска територия под управлението на римски наместник",
+      "sec": "peace-and-aftermath"
+    }
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "description": "Key facts for this chapter, written by hand from the chapter text. Every entry links to the section that explains it.",
+  "people": [
+    {
+      "name": "Септимий Север",
+      "text": "Пълководец от Африка; император 193–211 г.; основател на династията на Северите.",
+      "sec": "septimius-severus"
+    },
+    {
+      "name": "Юлия Домна",
+      "text": "Сирийската съпруга на Север; императрица и истинската сила зад сина си.",
+      "sec": "julia-domna"
+    },
+    {
+      "name": "Каракала",
+      "text": "Император 211–217 г.; уби брат си; направи всички свободни хора граждани.",
+      "sec": "caracalla"
+    },
+    {
+      "name": "Елагабал",
+      "text": "Император-жрец, още юноша, 218–222 г.",
+      "sec": "last-severans"
+    },
+    {
+      "name": "Зенобия",
+      "text": "Царица на Палмира, която владееше Изтока и се обяви за императрица.",
+      "sec": "zenobia"
+    },
+    {
+      "name": "Аврелиан",
+      "text": "Войник-император, 270–275 г.; обедини отново империята.",
+      "sec": "aurelian"
+    }
+  ],
+  "dates": [
+    {
+      "when": "193",
+      "text": "Годината на петимата императори; Север е провъзгласен за император.",
+      "sec": "septimius-severus"
+    },
+    {
+      "when": "211",
+      "text": "Север умира в Британия; Каракала убива Гета.",
+      "sec": "caracalla"
+    },
+    {
+      "when": "217",
+      "text": "Каракала е убит край Каре.",
+      "sec": "caracalla"
+    },
+    {
+      "when": "235",
+      "text": "Последният от Северите е убит: започва кризата.",
+      "sec": "barracks-emperors"
+    },
+    {
+      "when": "249–262",
+      "text": "Чумата на Киприан.",
+      "sec": "money-plague-trade"
+    },
+    {
+      "when": "260",
+      "text": "Валериан е пленен от персите.",
+      "sec": "barracks-emperors"
+    },
+    {
+      "when": "272",
+      "text": "Аврелиан побеждава Зенобия; Палмира се предава.",
+      "sec": "aurelian"
+    },
+    {
+      "when": "274",
+      "text": "Империята отново е цяла.",
+      "sec": "aurelian"
+    },
+    {
+      "when": "284",
+      "text": "Диоклециан взема властта; кризата приключва.",
+      "sec": "sources-and-legacy"
+    }
+  ],
+  "terms": [
+    {
+      "latin": "senatus",
+      "bulgarian": "Сенатът",
+      "sec": "septimius-severus"
+    },
+    {
+      "latin": "Augusta",
+      "bulgarian": "императрица",
+      "sec": "julia-domna"
+    },
+    {
+      "latin": "civitas",
+      "bulgarian": "гражданство",
+      "sec": "caracalla"
+    },
+    {
+      "latin": "praefectus praetorio",
+      "bulgarian": "преториански префект",
+      "sec": "praetorian-emperor"
+    },
+    {
+      "latin": "cohortes praetoriae",
+      "bulgarian": "преторианската гвардия",
+      "sec": "praetorian-emperor"
+    },
+    {
+      "latin": "virgo Vestalis",
+      "bulgarian": "весталка",
+      "sec": "last-severans"
+    },
+    {
+      "latin": "donativum",
+      "bulgarian": "парична награда за войниците",
+      "sec": "money-plague-trade"
+    },
+    {
+      "latin": "coloni",
+      "bulgarian": "арендатори, прикрепени към земята",
+      "sec": "money-plague-trade"
+    },
+    {
+      "latin": "triumphus",
+      "bulgarian": "победно шествие",
+      "sec": "aurelian"
+    },
+    {
+      "latin": "princeps",
+      "bulgarian": "първи гражданин",
+      "sec": "sources-and-legacy"
+    },
+    {
+      "latin": "domini",
+      "bulgarian": "господари",
+      "sec": "sources-and-legacy"
+    }
+  ]
+}

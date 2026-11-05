@@ -1,0 +1,144 @@
+{
+  "description": "Key facts for this chapter, written by hand from the chapter text. Every entry links to the section that explains it.",
+  "people": [
+    {
+      "name": "Тиберий",
+      "text": "Вторият римски император, 14 – 37 г. сл.н.е.; отличен пълководец, мрачен владетел.",
+      "sec": "tiberius-before-power"
+    },
+    {
+      "name": "Германик",
+      "text": "Обичаният от народа племенник и наследник на Тиберий; върнал два изгубени орела; починал през 19 г. сл.н.е.",
+      "sec": "germanicus"
+    },
+    {
+      "name": "Сеян",
+      "text": "Преториански префект, който управлявал Рим вместо Тиберий; екзекутиран през 31 г. сл.н.е.",
+      "sec": "sejanus"
+    },
+    {
+      "name": "Калигула",
+      "text": "Третият римски император, 37 – 41 г. сл.н.е.; син на Германик.",
+      "sec": "caligula-rise"
+    },
+    {
+      "name": "Инцитат",
+      "text": "Състезателният кон на Калигула, „Бързия“.",
+      "sec": "horse-bridge-god"
+    },
+    {
+      "name": "Арминий",
+      "text": "Военният вожд на херуските, с когото Германик воювал три години.",
+      "sec": "germanicus"
+    }
+  ],
+  "dates": [
+    {
+      "when": "6 г. пр.н.е.",
+      "text": "Тиберий се оттегля на Родос.",
+      "sec": "tiberius-before-power"
+    },
+    {
+      "when": "14 г. сл.н.е.",
+      "text": "Август умира; Тиберий става принцепс.",
+      "sec": "reluctant-emperor"
+    },
+    {
+      "when": "17 г. сл.н.е.",
+      "text": "Триумфът на Германик.",
+      "sec": "germanicus"
+    },
+    {
+      "when": "19 г. сл.н.е.",
+      "text": "Германик умира в Антиохия.",
+      "sec": "germanicus"
+    },
+    {
+      "when": "26 г. сл.н.е.",
+      "text": "Тиберий напуска Рим и се оттегля на Капри.",
+      "sec": "sejanus"
+    },
+    {
+      "when": "31 г. сл.н.е.",
+      "text": "Падението на Сеян.",
+      "sec": "sejanus"
+    },
+    {
+      "when": "16 март 37 г. сл.н.е.",
+      "text": "Тиберий умира; Калигула става император.",
+      "sec": "death-of-tiberius"
+    },
+    {
+      "when": "39 г. сл.н.е.",
+      "text": "Калигула се обръща срещу Сената.",
+      "sec": "caligula-turn"
+    },
+    {
+      "when": "24 януари 41 г. сл.н.е.",
+      "text": "Калигула е убит.",
+      "sec": "assassination"
+    }
+  ],
+  "terms": [
+    {
+      "latin": "senatus",
+      "bulgarian": "Сенатът",
+      "sec": "reluctant-emperor"
+    },
+    {
+      "latin": "princeps",
+      "bulgarian": "първи гражданин",
+      "sec": "reluctant-emperor"
+    },
+    {
+      "latin": "pater patriae",
+      "bulgarian": "Баща на отечеството",
+      "sec": "reluctant-emperor"
+    },
+    {
+      "latin": "corona civica",
+      "bulgarian": "Гражданският венец",
+      "sec": "reluctant-emperor"
+    },
+    {
+      "latin": "aquilae",
+      "bulgarian": "орлите – знамената на легионите",
+      "sec": "germanicus"
+    },
+    {
+      "latin": "triumphus",
+      "bulgarian": "победно шествие",
+      "sec": "germanicus"
+    },
+    {
+      "latin": "praefectus praetorio",
+      "bulgarian": "преториански префект",
+      "sec": "sejanus"
+    },
+    {
+      "latin": "cohortes praetoriae",
+      "bulgarian": "преторианската гвардия",
+      "sec": "sejanus"
+    },
+    {
+      "latin": "caligae",
+      "bulgarian": "войнишки ботуши",
+      "sec": "caligula-rise"
+    },
+    {
+      "latin": "maiestas",
+      "bulgarian": "държавна измяна",
+      "sec": "caligula-turn"
+    },
+    {
+      "latin": "hostis",
+      "bulgarian": "враг на държавата",
+      "sec": "assassination"
+    },
+    {
+      "latin": "damnatio memoriae",
+      "bulgarian": "заклеймяване на нечия памет",
+      "sec": "assassination"
+    }
+  ]
+}

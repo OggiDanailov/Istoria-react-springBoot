@@ -1,0 +1,144 @@
+{
+  "description": "Key facts for this chapter, written by hand from the chapter text. Every entry links to the section that explains it.",
+  "people": [
+    {
+      "name": "Констанций II",
+      "text": "Син на Константин; едноличен император през 351–361 г.",
+      "sec": "sons-of-constantine"
+    },
+    {
+      "name": "Юлиан",
+      "text": "Последният езически император, 361–363 г.; загинал в Персия.",
+      "sec": "julian-pagan-revival"
+    },
+    {
+      "name": "Валент",
+      "text": "Император на Изтока, убит при Адрианопол през 378 г.",
+      "sec": "battle-of-adrianople"
+    },
+    {
+      "name": "Фритигерн",
+      "text": "Готският предводител при Адрианопол.",
+      "sec": "battle-of-adrianople"
+    },
+    {
+      "name": "Теодосий",
+      "text": "Император през 379–395 г.; последният, управлявал цялата империя.",
+      "sec": "theodosius-legacy"
+    },
+    {
+      "name": "Амвросий",
+      "text": "Епископ на Милано, който накарал Теодосий да се покае.",
+      "sec": "massacre-of-thessalonica"
+    }
+  ],
+  "dates": [
+    {
+      "when": "337",
+      "text": "Константин умира; синовете му си поделят империята.",
+      "sec": "sons-of-constantine"
+    },
+    {
+      "when": "357",
+      "text": "Юлиан побеждава при Страсбург.",
+      "sec": "julian-in-gaul"
+    },
+    {
+      "when": "360",
+      "text": "Войниците на Юлиан го провъзгласяват за Август в Париж.",
+      "sec": "proclaimed-in-paris"
+    },
+    {
+      "when": "363",
+      "text": "Юлиан умира в Персия.",
+      "sec": "persian-campaign"
+    },
+    {
+      "when": "376",
+      "text": "Готите преминават Дунав.",
+      "sec": "battle-of-adrianople"
+    },
+    {
+      "when": "9 август 378 г.",
+      "text": "Битката при Адрианопол; Валент е убит.",
+      "sec": "battle-of-adrianople"
+    },
+    {
+      "when": "380",
+      "text": "Едиктът от Тесалоника.",
+      "sec": "theodosius-goths-and-faith"
+    },
+    {
+      "when": "390",
+      "text": "Кланетото в Тесалоника.",
+      "sec": "massacre-of-thessalonica"
+    },
+    {
+      "when": "394",
+      "text": "Теодосий побеждава при Фригид.",
+      "sec": "theodosius-legacy"
+    },
+    {
+      "when": "395",
+      "text": "Теодосий умира; империята е разделена между синовете му.",
+      "sec": "theodosius-legacy"
+    }
+  ],
+  "terms": [
+    {
+      "latin": "Mediolanum",
+      "bulgarian": "Милано",
+      "sec": "sons-of-constantine"
+    },
+    {
+      "latin": "Argentoratum",
+      "bulgarian": "Страсбург",
+      "sec": "julian-in-gaul"
+    },
+    {
+      "latin": "praefectus praetorio",
+      "bulgarian": "преториански префект – висш граждански чиновник",
+      "sec": "julian-in-gaul"
+    },
+    {
+      "latin": "Lutetia",
+      "bulgarian": "Париж",
+      "sec": "proclaimed-in-paris"
+    },
+    {
+      "latin": "primus inter pares",
+      "bulgarian": "пръв сред равни",
+      "sec": "julian-pagan-revival"
+    },
+    {
+      "latin": "senatus",
+      "bulgarian": "Сенатът",
+      "sec": "julian-pagan-revival"
+    },
+    {
+      "latin": "curiae",
+      "bulgarian": "градски съвети",
+      "sec": "julian-pagan-revival"
+    },
+    {
+      "latin": "Vicisti, Galilaee",
+      "bulgarian": "Ти победи, Галилеецо",
+      "sec": "persian-campaign"
+    },
+    {
+      "latin": "foederati",
+      "bulgarian": "съюзници, обвързани с договор",
+      "sec": "battle-of-adrianople"
+    },
+    {
+      "latin": "edictum",
+      "bulgarian": "едикт",
+      "sec": "theodosius-goths-and-faith"
+    },
+    {
+      "latin": "magister militum",
+      "bulgarian": "главнокомандващ",
+      "sec": "theodosius-legacy"
+    }
+  ]
+}

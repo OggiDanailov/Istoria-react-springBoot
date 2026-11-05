@@ -1,0 +1,149 @@
+{
+  "description": "Key facts for this chapter, written by hand from the chapter text. Every entry links to the section that explains it.",
+  "people": [
+    {
+      "name": "Галба",
+      "text": "Възрастен управител в Испания; император от юни 68 г. до януари 69 г.",
+      "sec": "galba"
+    },
+    {
+      "name": "Отон",
+      "text": "Амбициозен благородник; император за три месеца през 69 г.",
+      "sec": "the-nobleman-emperor"
+    },
+    {
+      "name": "Вителий",
+      "text": "Управител на Долен Рейн; император през 69 г.; убит през декември.",
+      "sec": "vitellius"
+    },
+    {
+      "name": "Веспасиан",
+      "text": "Пълководецът, спечелил гражданската война; император 69–79 г.; основател на Флавиевата династия.",
+      "sec": "vespasian-wins"
+    },
+    {
+      "name": "Тит",
+      "text": "По-големият син на Веспасиан; превзел Йерусалим; император 79–81 г.",
+      "sec": "titus"
+    },
+    {
+      "name": "Домициан",
+      "text": "По-малкият син на Веспасиан; император 81–96 г.; последният от Флавиите.",
+      "sec": "domitian"
+    },
+    {
+      "name": "Йосиф Флавий",
+      "text": "Юдейски военачалник, станал историк, който наблюдавал обсадата на Йерусалим.",
+      "sec": "siege-of-jerusalem"
+    }
+  ],
+  "dates": [
+    {
+      "when": "9 юни 68 г. сл.н.е.",
+      "text": "Нерон слага край на живота си.",
+      "sec": "fall-of-nero"
+    },
+    {
+      "when": "15 януари 69 г.",
+      "text": "Галба е убит във Форума.",
+      "sec": "galba"
+    },
+    {
+      "when": "14 април 69 г.",
+      "text": "Първата битка при Бедриакум; Отон слага край на живота си.",
+      "sec": "the-nobleman-emperor"
+    },
+    {
+      "when": "24 октомври 69 г.",
+      "text": "Втората битка при Бедриакум.",
+      "sec": "vespasian-wins"
+    },
+    {
+      "when": "20 декември 69 г.",
+      "text": "Вителий е убит; Веспасиан става император.",
+      "sec": "vespasian-wins"
+    },
+    {
+      "when": "70 г. сл.н.е.",
+      "text": "Тит разрушава Йерусалим и неговия Храм.",
+      "sec": "siege-of-jerusalem"
+    },
+    {
+      "when": "24 август 79 г.",
+      "text": "Везувий погребва Помпей и Херкулан.",
+      "sec": "titus"
+    },
+    {
+      "when": "80 г. сл.н.е.",
+      "text": "Колизеумът е открит със сто дни игри.",
+      "sec": "titus"
+    },
+    {
+      "when": "18 септември 96 г.",
+      "text": "Домициан е убит; Флавиевата династия свършва.",
+      "sec": "domitian"
+    }
+  ],
+  "terms": [
+    {
+      "latin": "legiones",
+      "bulgarian": "легиони",
+      "sec": "fall-of-nero"
+    },
+    {
+      "latin": "cohortes praetoriae",
+      "bulgarian": "преторианската гвардия",
+      "sec": "fall-of-nero"
+    },
+    {
+      "latin": "senatus",
+      "bulgarian": "Сенатът",
+      "sec": "fall-of-nero"
+    },
+    {
+      "latin": "hostis",
+      "bulgarian": "враг на държавата",
+      "sec": "fall-of-nero"
+    },
+    {
+      "latin": "decimatio",
+      "bulgarian": "децимация – убиване на всеки десети войник",
+      "sec": "galba"
+    },
+    {
+      "latin": "Pontifex Maximus",
+      "bulgarian": "върховният жрец",
+      "sec": "vitellius"
+    },
+    {
+      "latin": "pecunia non olet",
+      "bulgarian": "парите не миришат",
+      "sec": "vespasian-reign"
+    },
+    {
+      "latin": "Templum Pacis",
+      "bulgarian": "Храмът на мира",
+      "sec": "vespasian-reign"
+    },
+    {
+      "latin": "Amphitheatrum Flavium",
+      "bulgarian": "Колизеумът",
+      "sec": "vespasian-reign"
+    },
+    {
+      "latin": "triumphus",
+      "bulgarian": "триумф – победно шествие",
+      "sec": "siege-of-jerusalem"
+    },
+    {
+      "latin": "divus",
+      "bulgarian": "бог (починал император)",
+      "sec": "titus"
+    },
+    {
+      "latin": "damnatio memoriae",
+      "bulgarian": "заклеймяване на нечия памет",
+      "sec": "domitian"
+    }
+  ]
+}

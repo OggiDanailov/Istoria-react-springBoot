@@ -1,0 +1,139 @@
+{
+  "description": "Key facts for this chapter, written by hand from the chapter text. Every entry links to the section that explains it.",
+  "people": [
+    {
+      "name": "Сципион (Африкански)",
+      "text": "Римски пълководец, който завладял Испания и победил Ханибал при Зама.",
+      "sec": "command-in-spain"
+    },
+    {
+      "name": "Ханибал",
+      "text": "Картагенски пълководец, отзован от Италия и разбит при Зама.",
+      "sec": "battle-of-zama"
+    },
+    {
+      "name": "Масиниса",
+      "text": "Нумидийски принц, който минал на страната на Рим и довел конницата си при Зама.",
+      "sec": "conquest-of-spain"
+    },
+    {
+      "name": "Клавдий Нерон",
+      "text": "Консул, чийто таен поход на север донесе победата при Метавър през 207 г. пр.н.е.",
+      "sec": "battle-of-the-metaurus"
+    },
+    {
+      "name": "Полибий",
+      "text": "Гръцки историк, нашият основен и като цяло надежден извор.",
+      "sec": "sources-and-legend"
+    }
+  ],
+  "dates": [
+    {
+      "when": "216 г. пр.н.е.",
+      "text": "Сципион оцелява при Кана като военен трибун.",
+      "sec": "survivor-of-cannae"
+    },
+    {
+      "when": "211 г. пр.н.е.",
+      "text": "Бащата и чичото на Сципион загиват в Испания.",
+      "sec": "command-in-spain"
+    },
+    {
+      "when": "210 г. пр.н.е.",
+      "text": "Сципион, едва около 25-годишен, получава командването в Испания.",
+      "sec": "command-in-spain"
+    },
+    {
+      "when": "209 г. пр.н.е.",
+      "text": "Сципион щурмува Нови Картаген.",
+      "sec": "new-carthage"
+    },
+    {
+      "when": "207 г. пр.н.е.",
+      "text": "Братът на Ханибал загива при Метавър.",
+      "sec": "battle-of-the-metaurus"
+    },
+    {
+      "when": "206 г. пр.н.е.",
+      "text": "Победа при Илипа: Картаген губи Испания.",
+      "sec": "conquest-of-spain"
+    },
+    {
+      "when": "204 г. пр.н.е.",
+      "text": "Сципион слиза в Африка близо до Утика.",
+      "sec": "invasion-of-africa"
+    },
+    {
+      "when": "202 г. пр.н.е.",
+      "text": "Битката при Зама.",
+      "sec": "battle-of-zama"
+    },
+    {
+      "when": "201 г. пр.н.е.",
+      "text": "Мир: Картаген става подчинен на Рим.",
+      "sec": "peace-and-africanus"
+    }
+  ],
+  "terms": [
+    {
+      "latin": "Carthago",
+      "bulgarian": "Картаген",
+      "sec": "survivor-of-cannae"
+    },
+    {
+      "latin": "consules",
+      "bulgarian": "двамата консули",
+      "sec": "survivor-of-cannae"
+    },
+    {
+      "latin": "tribunus militum",
+      "bulgarian": "военен трибун, младши офицер",
+      "sec": "survivor-of-cannae"
+    },
+    {
+      "latin": "aedilis",
+      "bulgarian": "длъжностно лице, отговарящо за улиците и празниците",
+      "sec": "survivor-of-cannae"
+    },
+    {
+      "latin": "imperium pro consule",
+      "bulgarian": "пълната военна власт на консул",
+      "sec": "command-in-spain"
+    },
+    {
+      "latin": "senatus",
+      "bulgarian": "Сенатът",
+      "sec": "command-in-spain"
+    },
+    {
+      "latin": "princeps senatus",
+      "bulgarian": "първенецът на Сената",
+      "sec": "consul-at-thirty-one"
+    },
+    {
+      "latin": "legiones",
+      "bulgarian": "легиони",
+      "sec": "consul-at-thirty-one"
+    },
+    {
+      "latin": "manipuli",
+      "bulgarian": "манипули, пехотни роти",
+      "sec": "battle-of-zama"
+    },
+    {
+      "latin": "velites",
+      "bulgarian": "леки застрелници",
+      "sec": "battle-of-zama"
+    },
+    {
+      "latin": "triumphus",
+      "bulgarian": "победно шествие",
+      "sec": "peace-and-africanus"
+    },
+    {
+      "latin": "agnomen",
+      "bulgarian": "почетно прозвище",
+      "sec": "peace-and-africanus"
+    }
+  ]
+}

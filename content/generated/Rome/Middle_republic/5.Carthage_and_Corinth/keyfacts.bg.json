@@ -1,0 +1,139 @@
+{
+  "description": "Key facts for this chapter, written by hand from the chapter text. Every entry links to the section that explains it.",
+  "people": [
+    {
+      "name": "Катон",
+      "text": "Възрастен сенатор, чиято омраза към Картаген става легендарна.",
+      "sec": "carthago-delenda-est"
+    },
+    {
+      "name": "Хасдрубал",
+      "text": "Картагенски пълководец, който управлява града по време на последната му съпротива, а после се предава.",
+      "sec": "carthage-under-rome"
+    },
+    {
+      "name": "Сципион Емилиан",
+      "text": "Превзема Картаген през 146 г. пр.н.е. и Нуманция през 133 г. пр.н.е.",
+      "sec": "a-faltering-siege"
+    },
+    {
+      "name": "Мумий",
+      "text": "Консул, който разрушава Коринт през 146 г. пр.н.е.",
+      "sec": "sack-of-corinth"
+    },
+    {
+      "name": "Полибий",
+      "text": "Гръцки историк, приятел на Сципион и очевидец на събитията в Картаген.",
+      "sec": "polybius-and-the-sources"
+    }
+  ],
+  "dates": [
+    {
+      "when": "151 г. пр.н.е.",
+      "text": "Картаген воюва с нумидийците и губи битката при Ороскопа.",
+      "sec": "carthage-under-rome"
+    },
+    {
+      "when": "149 г. пр.н.е.",
+      "text": "Утика минава на страната на Рим; Рим обявява война.",
+      "sec": "carthago-delenda-est"
+    },
+    {
+      "when": "147 г. пр.н.е.",
+      "text": "Сципион Емилиан става консул, макар да не е навършил законната възраст.",
+      "sec": "scipio-takes-command"
+    },
+    {
+      "when": "146 г. пр.н.е.",
+      "text": "Картаген е разрушен след шест дни улични боеве.",
+      "sec": "fall-of-carthage"
+    },
+    {
+      "when": "146 г. пр.н.е.",
+      "text": "Мумий разграбва Коринт.",
+      "sec": "sack-of-corinth"
+    },
+    {
+      "when": "134 г. пр.н.е.",
+      "text": "Сципион е изпратен да довърши Нуманция.",
+      "sec": "numantine-war"
+    },
+    {
+      "when": "133 г. пр.н.е.",
+      "text": "Нуманция пада.",
+      "sec": "numantine-war"
+    },
+    {
+      "when": "123 г. пр.н.е.",
+      "text": "Планът за колония в Картаген се проваля.",
+      "sec": "after-carthage"
+    },
+    {
+      "when": "29 г. пр.н.е.",
+      "text": "Нов, римски Картаген е завършен.",
+      "sec": "after-carthage"
+    }
+  ],
+  "terms": [
+    {
+      "latin": "Carthago",
+      "bulgarian": "Картаген",
+      "sec": "carthage-under-rome"
+    },
+    {
+      "latin": "senatus",
+      "bulgarian": "Сенатът",
+      "sec": "carthago-delenda-est"
+    },
+    {
+      "latin": "Carthago delenda est",
+      "bulgarian": "„Картаген трябва да бъде разрушен“",
+      "sec": "carthago-delenda-est"
+    },
+    {
+      "latin": "tribunus militum",
+      "bulgarian": "военен трибун",
+      "sec": "a-faltering-siege"
+    },
+    {
+      "latin": "aedilis",
+      "bulgarian": "едил, младши градски magistrат",
+      "sec": "scipio-takes-command"
+    },
+    {
+      "latin": "lex Villia annalis",
+      "bulgarian": "законът за минималната възраст за заемане на длъжност",
+      "sec": "scipio-takes-command"
+    },
+    {
+      "latin": "moles",
+      "bulgarian": "мол – каменна преграда в морето",
+      "sec": "scipio-takes-command"
+    },
+    {
+      "latin": "ager publicus",
+      "bulgarian": "обществена земя",
+      "sec": "after-carthage"
+    },
+    {
+      "latin": "triumphus",
+      "bulgarian": "победен парад",
+      "sec": "after-carthage"
+    },
+    {
+      "latin": "agnomen",
+      "bulgarian": "почетно прозвище",
+      "sec": "after-carthage"
+    },
+    {
+      "latin": "provincia",
+      "bulgarian": "провинция",
+      "sec": "after-carthage"
+    },
+    {
+      "latin": "Hispania",
+      "bulgarian": "Испания",
+      "sec": "numantine-war"
+    }
+  ]
+}

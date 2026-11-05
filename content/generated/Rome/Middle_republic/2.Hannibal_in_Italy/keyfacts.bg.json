@@ -1,0 +1,129 @@
+{
+  "description": "Key facts for this chapter, written by hand from the chapter text. Every entry links to the section that explains it.",
+  "people": [
+    {
+      "name": "Барка",
+      "text": "Бащата на Ханибал, „мълнията“, който създаде за Картаген опорна база в Испания.",
+      "sec": "barcas-in-spain"
+    },
+    {
+      "name": "Ханибал",
+      "text": "Картагенски пълководец, който прекоси Алпите и победи при Требия, Тразименското езеро и Кана.",
+      "sec": "barcas-in-spain"
+    },
+    {
+      "name": "Фабий Максим",
+      "text": "Диктатор, който избягваше битките и изтощаваше Ханибал – Протакащия.",
+      "sec": "fabius-the-delayer"
+    },
+    {
+      "name": "Варон",
+      "text": "Консул със скромен произход, когото Ливий обвинява за Кана.",
+      "sec": "fabius-the-delayer"
+    },
+    {
+      "name": "Полибий",
+      "text": "Гръцки историк, най-надеждният античен източник за тези години.",
+      "sec": "sources-and-blame"
+    },
+    {
+      "name": "Ливий",
+      "text": "Римски историк патриот, писал по времето на Август.",
+      "sec": "sources-and-blame"
+    }
+  ],
+  "dates": [
+    {
+      "when": "238 г. пр.н.е.",
+      "text": "Рим завзема Сардиния и Корсика.",
+      "sec": "after-the-first-war"
+    },
+    {
+      "when": "237 г. пр.н.е.",
+      "text": "Барка повежда армията си към Испания.",
+      "sec": "barcas-in-spain"
+    },
+    {
+      "when": "226 г. пр.н.е.",
+      "text": "Договорът за Ебро.",
+      "sec": "barcas-in-spain"
+    },
+    {
+      "when": "221 г. пр.н.е.",
+      "text": "Армията избира 26-годишния Ханибал за командир.",
+      "sec": "barcas-in-spain"
+    },
+    {
+      "when": "219 г. пр.н.е.",
+      "text": "Ханибал обсажда и превзема Сагунт.",
+      "sec": "saguntum"
+    },
+    {
+      "when": "218 г. пр.н.е.",
+      "text": "Рим обявява война; Ханибал прекосява Алпите; битката при Требия.",
+      "sec": "crossing-the-alps"
+    },
+    {
+      "when": "217 г. пр.н.е.",
+      "text": "Засадата при Тразименското езеро; Фабий става диктатор.",
+      "sec": "trebia-and-trasimene"
+    },
+    {
+      "when": "2 август 216 г. пр.н.е.",
+      "text": "Битката при Кана.",
+      "sec": "battle-of-cannae"
+    }
+  ],
+  "terms": [
+    {
+      "latin": "Carthago",
+      "bulgarian": "Картаген",
+      "sec": "after-the-first-war"
+    },
+    {
+      "latin": "Hispania",
+      "bulgarian": "Иберия: Испания и Португалия",
+      "sec": "barcas-in-spain"
+    },
+    {
+      "latin": "Gallia Cisalpina",
+      "bulgarian": "Цизалпийска Галия, долината на По",
+      "sec": "saguntum"
+    },
+    {
+      "latin": "coloniae",
+      "bulgarian": "колонии от заселници",
+      "sec": "saguntum"
+    },
+    {
+      "latin": "consules",
+      "bulgarian": "двамата консули",
+      "sec": "trebia-and-trasimene"
+    },
+    {
+      "latin": "socii",
+      "bulgarian": "италийските съюзници на Рим",
+      "sec": "trebia-and-trasimene"
+    },
+    {
+      "latin": "Cunctator",
+      "bulgarian": "„Протакащия“",
+      "sec": "fabius-the-delayer"
+    },
+    {
+      "latin": "senatus",
+      "bulgarian": "Сенатът",
+      "sec": "battle-of-cannae"
+    },
+    {
+      "latin": "legiones",
+      "bulgarian": "легиони",
+      "sec": "battle-of-cannae"
+    },
+    {
+      "latin": "Libri Sibyllini",
+      "bulgarian": "пророческите Сибилински книги",
+      "sec": "after-cannae"
+    }
+  ]
+}

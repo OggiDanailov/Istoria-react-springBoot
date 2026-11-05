@@ -1,0 +1,144 @@
+{
+  "description": "Key facts for this chapter, written by hand from the chapter text. Every entry links to the section that explains it.",
+  "people": [
+    {
+      "name": "Нерва",
+      "text": "Възрастен сенатор, император в 96–98 г.; осиновил Траян.",
+      "sec": "nerva-adopts-trajan"
+    },
+    {
+      "name": "Траян",
+      "text": "Император войник от Испания, 98–117 г.; завладял Дакия; империята в най-големия си обхват.",
+      "sec": "trajan-best-ruler"
+    },
+    {
+      "name": "Децебал",
+      "text": "Цар на Дакия, победен от Траян през 106 г.",
+      "sec": "dacian-wars"
+    },
+    {
+      "name": "Адриан",
+      "text": "Император в 117–138 г.; пътешественик, строител на вала в Британия.",
+      "sec": "hadrian-the-traveller"
+    },
+    {
+      "name": "Антонин Пий",
+      "text": "Император в 138–161 г.; най-дългото мирно управление след Август.",
+      "sec": "antoninus-pius"
+    },
+    {
+      "name": "Марк Аврелий",
+      "text": "Император философ, 161–180 г.; написал „Размисли“.",
+      "sec": "marcus-aurelius"
+    },
+    {
+      "name": "Комод",
+      "text": "Синът на Марк, управлявал до 192 г.",
+      "sec": "marcus-aurelius"
+    }
+  ],
+  "dates": [
+    {
+      "when": "97 г. сл.н.е.",
+      "text": "Нерва осиновява Траян.",
+      "sec": "nerva-adopts-trajan"
+    },
+    {
+      "when": "101–106",
+      "text": "Дакийските войни; Дакия става провинция.",
+      "sec": "dacian-wars"
+    },
+    {
+      "when": "113",
+      "text": "Траяновата колона; започва войната с партите.",
+      "sec": "dacian-wars"
+    },
+    {
+      "when": "117",
+      "text": "Траян умира; Адриан става император.",
+      "sec": "parthian-war"
+    },
+    {
+      "when": "122",
+      "text": "Адриан нарежда да се построи вал в Британия.",
+      "sec": "hadrian-the-traveller"
+    },
+    {
+      "when": "132–135",
+      "text": "Еврейското въстание под водачеството на Бар Кохба.",
+      "sec": "jewish-revolt"
+    },
+    {
+      "when": "138",
+      "text": "Адриан умира; наследява го Антонин Пий.",
+      "sec": "antoninus-pius"
+    },
+    {
+      "when": "161",
+      "text": "Марк Аврелий и Луций Вер стават императори.",
+      "sec": "marcus-aurelius"
+    },
+    {
+      "when": "180",
+      "text": "Марк Аврелий умира край Дунав.",
+      "sec": "marcus-aurelius"
+    }
+  ],
+  "terms": [
+    {
+      "latin": "cohortes praetoriae",
+      "bulgarian": "преторианската гвардия",
+      "sec": "nerva-adopts-trajan"
+    },
+    {
+      "latin": "optimus princeps",
+      "bulgarian": "най-добрият владетел",
+      "sec": "trajan-best-ruler"
+    },
+    {
+      "latin": "alimenta",
+      "bulgarian": "помощи за бедни деца",
+      "sec": "trajan-best-ruler"
+    },
+    {
+      "latin": "Forum Traiani",
+      "bulgarian": "Траяновият форум",
+      "sec": "trajan-best-ruler"
+    },
+    {
+      "latin": "rex amicus",
+      "bulgarian": "васален цар",
+      "sec": "dacian-wars"
+    },
+    {
+      "latin": "triumphus",
+      "bulgarian": "победно шествие",
+      "sec": "dacian-wars"
+    },
+    {
+      "latin": "limes",
+      "bulgarian": "границата",
+      "sec": "hadrian-the-traveller"
+    },
+    {
+      "latin": "divus",
+      "bulgarian": "бог (починал император)",
+      "sec": "antoninus-pius"
+    },
+    {
+      "latin": "aequanimitas",
+      "bulgarian": "невъзмутимост, спокоен дух",
+      "sec": "antoninus-pius"
+    },
+    {
+      "latin": "horror imperii",
+      "bulgarian": "страх от императорската власт",
+      "sec": "marcus-aurelius"
+    },
+    {
+      "latin": "pontifex maximus",
+      "bulgarian": "върховният жрец",
+      "sec": "marcus-aurelius"
+    }
+  ]
+}

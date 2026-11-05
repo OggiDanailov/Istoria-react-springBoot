@@ -1,0 +1,139 @@
+{
+  "description": "Key facts for this chapter, written by hand from the chapter text. Every entry links to the section that explains it.",
+  "people": [
+    {
+      "name": "Квинт Хортензий",
+      "text": "Плебейски диктатор, чийто закон от 287 г. пр.н.е. сложил край на Борбата между съсловията.",
+      "sec": "lex-hortensia"
+    },
+    {
+      "name": "Пир",
+      "text": "Цар на Епир, който спечелил скъпо платени победи над Рим, а след Беневент се върнал у дома.",
+      "sec": "heraclea-and-asculum"
+    },
+    {
+      "name": "Ливий",
+      "text": "Римският историк, според чиято традиция последната сецесия била предизвикана от дълговете.",
+      "sec": "why-the-plebs-seceded"
+    }
+  ],
+  "dates": [
+    {
+      "when": "295 г. пр.н.е.",
+      "text": "Сентинум: Рим побеждава самнитите, галите, етруските и умбрите.",
+      "sec": "rome-after-the-samnite-wars"
+    },
+    {
+      "when": "287 г. пр.н.е.",
+      "text": "Последната сецесия и Законът на Хортензий.",
+      "sec": "lex-hortensia"
+    },
+    {
+      "when": "282 г. пр.н.е.",
+      "text": "Битката при Популония слага край на етруската мощ.",
+      "sec": "rome-after-the-samnite-wars"
+    },
+    {
+      "when": "281 г. пр.н.е.",
+      "text": "Тарент отхвърля ултиматума на Рим и призовава Пир на помощ.",
+      "sec": "tarentum-calls-for-help"
+    },
+    {
+      "when": "280 г. пр.н.е.",
+      "text": "Пир побеждава при Хераклея.",
+      "sec": "heraclea-and-asculum"
+    },
+    {
+      "when": "279 г. пр.н.е.",
+      "text": "Пир побеждава отново при Аускулум – „Пирова победа“.",
+      "sec": "heraclea-and-asculum"
+    },
+    {
+      "when": "275 г. пр.н.е.",
+      "text": "Беневент: Пир е принуден да мине в отбрана и отплава у дома.",
+      "sec": "beneventum-and-withdrawal"
+    },
+    {
+      "when": "272 г. пр.н.е.",
+      "text": "Тарент пада под властта на Рим; Пир загива в Аргос.",
+      "sec": "beneventum-and-withdrawal"
+    },
+    {
+      "when": "264 г. пр.н.е.",
+      "text": "Последната етруска съпротива е смазана; започва Първата пуническа война.",
+      "sec": "italy-united-264-bc"
+    }
+  ],
+  "terms": [
+    {
+      "latin": "coloniae",
+      "bulgarian": "колонии на римски граждани",
+      "sec": "rome-after-the-samnite-wars"
+    },
+    {
+      "latin": "Via Appia",
+      "bulgarian": "Апиевият път",
+      "sec": "rome-after-the-samnite-wars"
+    },
+    {
+      "latin": "secessio",
+      "bulgarian": "масово напускане на града от плебса",
+      "sec": "lex-hortensia"
+    },
+    {
+      "latin": "lex Hortensia",
+      "bulgarian": "Законът на Хортензий от 287 г. пр.н.е.",
+      "sec": "lex-hortensia"
+    },
+    {
+      "latin": "plebiscitum",
+      "bulgarian": "решение на Плебейското събрание",
+      "sec": "lex-hortensia"
+    },
+    {
+      "latin": "concilium plebis",
+      "bulgarian": "Плебейското събрание",
+      "sec": "lex-hortensia"
+    },
+    {
+      "latin": "tribus",
+      "bulgarian": "избирателни триби",
+      "sec": "why-the-plebs-seceded"
+    },
+    {
+      "latin": "ager publicus",
+      "bulgarian": "обществена земя",
+      "sec": "why-the-plebs-seceded"
+    },
+    {
+      "latin": "nundinae",
+      "bulgarian": "пазарни дни",
+      "sec": "why-the-plebs-seceded"
+    },
+    {
+      "latin": "Magna Graecia",
+      "bulgarian": "„Велика Гърция“: гръцкият юг",
+      "sec": "tarentum-calls-for-help"
+    },
+    {
+      "latin": "praesidium",
+      "bulgarian": "гарнизон",
+      "sec": "beneventum-and-withdrawal"
+    },
+    {
+      "latin": "civitas sine suffragio",
+      "bulgarian": "гражданство без право на глас",
+      "sec": "how-rome-ruled-italy"
+    },
+    {
+      "latin": "socii",
+      "bulgarian": "съюзниците на Рим",
+      "sec": "how-rome-ruled-italy"
+    },
+    {
+      "latin": "Punici",
+      "bulgarian": "картагенците, оттук и „пунически“",
+      "sec": "italy-united-264-bc"
+    }
+  ]
+}

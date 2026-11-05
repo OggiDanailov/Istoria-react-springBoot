@@ -1,0 +1,169 @@
+{
+  "description": "Key facts for this chapter, written by hand from the chapter text. Every entry links to the section that explains it.",
+  "people": [
+    {
+      "name": "Еней",
+      "text": "Троянски принц, син на Венера; легендарен прародител на римляните.",
+      "sec": "aeneas-and-romulus"
+    },
+    {
+      "name": "Ромул",
+      "text": "Легендарен основател на Рим, син на Марс; обожествен.",
+      "sec": "aeneas-and-romulus"
+    },
+    {
+      "name": "Нума",
+      "text": "Вторият цар на Рим, основател на жреческите колегии и календара.",
+      "sec": "numa-pompilius"
+    },
+    {
+      "name": "Юлий Цезар",
+      "text": "Върховен жрец от 63 г. пр.н.е.; почитан като бог още приживе.",
+      "sec": "emperors-as-gods"
+    },
+    {
+      "name": "Август",
+      "text": "Първият император; възродил старата религия.",
+      "sec": "emperors-as-gods"
+    },
+    {
+      "name": "Константин",
+      "text": "Първият християнски император; Миланският едикт, 313 г.",
+      "sec": "christian-triumph"
+    },
+    {
+      "name": "Теодосий",
+      "text": "Превърнал християнството в държавна религия; угасил огъня на Веста през 391 г.",
+      "sec": "christian-triumph"
+    }
+  ],
+  "dates": [
+    {
+      "when": "753 г. пр.н.е.",
+      "text": "Традиционната дата на основаването на Рим.",
+      "sec": "aeneas-and-romulus"
+    },
+    {
+      "when": "249 г. пр.н.е.",
+      "text": "Свещените кокошки отказват да кълват; консулът губи битка по море.",
+      "sec": "priests-and-augurs"
+    },
+    {
+      "when": "206 г. пр.н.е.",
+      "text": "Великата майка е доведена в Рим.",
+      "sec": "foreign-gods"
+    },
+    {
+      "when": "186 г. пр.н.е.",
+      "text": "Сенатът се разправя с вакханалиите.",
+      "sec": "foreign-gods"
+    },
+    {
+      "when": "63 г. пр.н.е.",
+      "text": "Юлий Цезар става върховен жрец.",
+      "sec": "emperors-as-gods"
+    },
+    {
+      "when": "64 г. сл.н.е.",
+      "text": "След Големия пожар в Рим Нерон обвинява християните.",
+      "sec": "christian-triumph"
+    },
+    {
+      "when": "313 г. сл.н.е.",
+      "text": "Миланският едикт: веротърпимост.",
+      "sec": "christian-triumph"
+    },
+    {
+      "when": "380 г. сл.н.е.",
+      "text": "Християнството става официална религия.",
+      "sec": "christian-triumph"
+    },
+    {
+      "when": "391 г. сл.н.е.",
+      "text": "Краят на държавната подкрепа за старите култове.",
+      "sec": "christian-triumph"
+    }
+  ],
+  "terms": [
+    {
+      "latin": "pietas",
+      "bulgarian": "благочестие, дълг към боговете",
+      "sec": "roman-piety"
+    },
+    {
+      "latin": "do ut des",
+      "bulgarian": "давам, за да дадеш",
+      "sec": "roman-piety"
+    },
+    {
+      "latin": "superstitio",
+      "bulgarian": "суеверие",
+      "sec": "roman-piety"
+    },
+    {
+      "latin": "flamines",
+      "bulgarian": "жреци на един-единствен бог",
+      "sec": "numa-pompilius"
+    },
+    {
+      "latin": "Dii Consentes",
+      "bulgarian": "дванадесетте велики богове",
+      "sec": "roman-and-greek-gods"
+    },
+    {
+      "latin": "pontifex maximus",
+      "bulgarian": "върховният жрец",
+      "sec": "priests-and-augurs"
+    },
+    {
+      "latin": "pontifices",
+      "bulgarian": "понтификите",
+      "sec": "priests-and-augurs"
+    },
+    {
+      "latin": "augures",
+      "bulgarian": "авгури, тълкуватели на знаци",
+      "sec": "priests-and-augurs"
+    },
+    {
+      "latin": "templum",
+      "bulgarian": "свещено пространство",
+      "sec": "priests-and-augurs"
+    },
+    {
+      "latin": "virgines Vestales",
+      "bulgarian": "весталките",
+      "sec": "vestals"
+    },
+    {
+      "latin": "mola salsa",
+      "bulgarian": "осолено брашно за жертвоприношения",
+      "sec": "vestals"
+    },
+    {
+      "latin": "paterfamilias",
+      "bulgarian": "бащата на семейството",
+      "sec": "home-and-festivals"
+    },
+    {
+      "latin": "Dis Manibus",
+      "bulgarian": "на боговете на духовете",
+      "sec": "home-and-festivals"
+    },
+    {
+      "latin": "evocatio",
+      "bulgarian": "призоваване на вражеския бог да премине на римска страна",
+      "sec": "foreign-gods"
+    },
+    {
+      "latin": "Magna Mater",
+      "bulgarian": "Великата майка",
+      "sec": "foreign-gods"
+    },
+    {
+      "latin": "divus",
+      "bulgarian": "бог (покойен император)",
+      "sec": "emperors-as-gods"
+    }
+  ]
+}

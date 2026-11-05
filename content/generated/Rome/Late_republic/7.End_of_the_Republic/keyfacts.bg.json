@@ -1,0 +1,154 @@
+{
+  "description": "Key facts for this chapter, written by hand from the chapter text. Every entry links to the section that explains it.",
+  "people": [
+    {
+      "name": "Марк Антоний",
+      "text": "Военачалник на Цезар; триумвир и господар на Изтока; разбит при Акциум.",
+      "sec": "after-caesars-murder"
+    },
+    {
+      "name": "Октавиан",
+      "text": "Осиновен наследник на Цезар; спечелил гражданските войни и станал Август.",
+      "sec": "after-caesars-murder"
+    },
+    {
+      "name": "Лепид",
+      "text": "Третият триумвир, отстранен през 36 г. пр.н.е.",
+      "sec": "forming-the-triumvirate"
+    },
+    {
+      "name": "Клеопатра",
+      "text": "Царица на Египет, съюзничка и любима на Антоний.",
+      "sec": "antony-and-cleopatra"
+    },
+    {
+      "name": "Юлий Цезар",
+      "text": "Убит на мартенските иди през 44 г. пр.н.е.; обявен за бог през 42 г. пр.н.е.",
+      "sec": "after-caesars-murder"
+    }
+  ],
+  "dates": [
+    {
+      "when": "21 април 43 г. пр.н.е.",
+      "text": "Антоний е разбит при Мутина.",
+      "sec": "after-caesars-murder"
+    },
+    {
+      "when": "27 ноември 43 г. пр.н.е.",
+      "text": "Законът *lex Titia* създава съвета на тримата.",
+      "sec": "forming-the-triumvirate"
+    },
+    {
+      "when": "23 октомври 42 г. пр.н.е.",
+      "text": "Втората битка при Филипи.",
+      "sec": "battle-of-philippi"
+    },
+    {
+      "when": "40 г. пр.н.е.",
+      "text": "Договорът от Брундизий.",
+      "sec": "perusia-and-brundisium"
+    },
+    {
+      "when": "3 септември 36 г. пр.н.е.",
+      "text": "Морска победа при Навлох; отстъплението на Антоний от Партия.",
+      "sec": "parthia-sicily-lepidus"
+    },
+    {
+      "when": "32 г. пр.н.е.",
+      "text": "Сенатът обявява война на Клеопатра.",
+      "sec": "propaganda-war"
+    },
+    {
+      "when": "2 септември 31 г. пр.н.е.",
+      "text": "Битката при Акциум.",
+      "sec": "battle-of-actium"
+    },
+    {
+      "when": "Август 30 г. пр.н.е.",
+      "text": "Антоний и Клеопатра умират; Египет става провинция.",
+      "sec": "alexandria-and-augustus"
+    },
+    {
+      "when": "27 г. пр.н.е.",
+      "text": "Октавиан получава името Август.",
+      "sec": "alexandria-and-augustus"
+    }
+  ],
+  "terms": [
+    {
+      "latin": "liberatores",
+      "bulgarian": "„освободителите“",
+      "sec": "after-caesars-murder"
+    },
+    {
+      "latin": "consules",
+      "bulgarian": "двамата консули",
+      "sec": "after-caesars-murder"
+    },
+    {
+      "latin": "senatus",
+      "bulgarian": "Сенатът",
+      "sec": "after-caesars-murder"
+    },
+    {
+      "latin": "triumviri rei publicae constituendae",
+      "bulgarian": "съветът на тримата за възстановяване на Републиката",
+      "sec": "forming-the-triumvirate"
+    },
+    {
+      "latin": "lex Titia",
+      "bulgarian": "законът, който създал триумвирата",
+      "sec": "forming-the-triumvirate"
+    },
+    {
+      "latin": "clementia",
+      "bulgarian": "милост",
+      "sec": "proscriptions"
+    },
+    {
+      "latin": "proscriptio",
+      "bulgarian": "проскрипция",
+      "sec": "proscriptions"
+    },
+    {
+      "latin": "equites",
+      "bulgarian": "конници",
+      "sec": "proscriptions"
+    },
+    {
+      "latin": "legiones",
+      "bulgarian": "легиони",
+      "sec": "battle-of-philippi"
+    },
+    {
+      "latin": "pontifex maximus",
+      "bulgarian": "върховният жрец",
+      "sec": "parthia-sicily-lepidus"
+    },
+    {
+      "latin": "virgines Vestales",
+      "bulgarian": "весталките",
+      "sec": "propaganda-war"
+    },
+    {
+      "latin": "triumphus",
+      "bulgarian": "победно шествие",
+      "sec": "alexandria-and-augustus"
+    },
+    {
+      "latin": "Mare Nostrum",
+      "bulgarian": "„Нашето море“ – Средиземно море",
+      "sec": "alexandria-and-augustus"
+    },
+    {
+      "latin": "princeps",
+      "bulgarian": "първи гражданин",
+      "sec": "alexandria-and-augustus"
+    },
+    {
+      "latin": "Pax Romana",
+      "bulgarian": "Римският мир",
+      "sec": "alexandria-and-augustus"
+    }
+  ]
+}

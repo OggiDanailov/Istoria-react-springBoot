@@ -1,0 +1,169 @@
+{
+  "description": "Key facts for this chapter, written by hand from the chapter text. Every entry links to the section that explains it.",
+  "people": [
+    {
+      "name": "Август (Октавиан)",
+      "text": "Наследникът на Цезар и първият римски император, 27 г. пр.н.е. – 14 г. сл.н.е.",
+      "sec": "caesars-heir"
+    },
+    {
+      "name": "Агрипа",
+      "text": "Негов верен приятел, адмирал и строител; победител при Акциум.",
+      "sec": "actium"
+    },
+    {
+      "name": "Марк Антоний",
+      "text": "Дясната ръка на Цезар, по-късно съперник на Октавиан; умира през 30 г. пр.н.е.",
+      "sec": "caesars-heir"
+    },
+    {
+      "name": "Тиберий",
+      "text": "Негов доведен син, осиновен през 4 г. сл.н.е.; негов наследник.",
+      "sec": "succession-and-death"
+    },
+    {
+      "name": "Юлия",
+      "text": "Единственото дете на Август, омъжена за Агрипа.",
+      "sec": "succession-and-death"
+    },
+    {
+      "name": "Клеопатра",
+      "text": "Царица на Египет, съюзница и любима на Антоний; умира през 30 г. пр.н.е.",
+      "sec": "actium"
+    },
+    {
+      "name": "Арминий",
+      "text": "Вожд на херуските, унищожил три легиона през 9 г. сл.н.е.",
+      "sec": "teutoburg-forest"
+    },
+    {
+      "name": "Вар",
+      "text": "Управителят, който повел легионите в капана.",
+      "sec": "teutoburg-forest"
+    }
+  ],
+  "dates": [
+    {
+      "when": "44 г. пр.н.е.",
+      "text": "Цезар е убит; в завещанието си той посочва Октавиан за свой наследник.",
+      "sec": "caesars-heir"
+    },
+    {
+      "when": "31 г. пр.н.е.",
+      "text": "Акциум: флотът на Агрипа побеждава.",
+      "sec": "actium"
+    },
+    {
+      "when": "16 януари 27 г. пр.н.е.",
+      "text": "Октавиан получава името Август.",
+      "sec": "first-settlement"
+    },
+    {
+      "when": "23 г. пр.н.е.",
+      "text": "Второто уреждане: пожизнена трибунска власт.",
+      "sec": "second-settlement"
+    },
+    {
+      "when": "20 г. пр.н.е.",
+      "text": "Партия връща изгубените знамена.",
+      "sec": "expansion-and-peace"
+    },
+    {
+      "when": "2 г. пр.н.е.",
+      "text": "Август е провъзгласен за Баща на отечеството.",
+      "sec": "second-settlement"
+    },
+    {
+      "when": "6 г. сл.н.е.",
+      "text": "Военната хазна и вигилите.",
+      "sec": "running-the-empire"
+    },
+    {
+      "when": "Септември 9 г. сл.н.е.",
+      "text": "Три легиона загиват в Тевтобургската гора.",
+      "sec": "teutoburg-forest"
+    },
+    {
+      "when": "19 август 14 г. сл.н.е.",
+      "text": "Август умира в Нола.",
+      "sec": "succession-and-death"
+    }
+  ],
+  "terms": [
+    {
+      "latin": "senatus",
+      "bulgarian": "Сенатът",
+      "sec": "first-settlement"
+    },
+    {
+      "latin": "augustus",
+      "bulgarian": "„почитаният“",
+      "sec": "first-settlement"
+    },
+    {
+      "latin": "princeps",
+      "bulgarian": "първи гражданин",
+      "sec": "first-settlement"
+    },
+    {
+      "latin": "imperium proconsulare maius",
+      "bulgarian": "по-голяма проконсулска власт",
+      "sec": "second-settlement"
+    },
+    {
+      "latin": "tribunicia potestas",
+      "bulgarian": "трибунска власт",
+      "sec": "second-settlement"
+    },
+    {
+      "latin": "pontifex maximus",
+      "bulgarian": "върховният жрец",
+      "sec": "second-settlement"
+    },
+    {
+      "latin": "pater patriae",
+      "bulgarian": "Баща на отечеството",
+      "sec": "second-settlement"
+    },
+    {
+      "latin": "auctoritas",
+      "bulgarian": "личен авторитет",
+      "sec": "second-settlement"
+    },
+    {
+      "latin": "aerarium militare",
+      "bulgarian": "военната хазна",
+      "sec": "running-the-empire"
+    },
+    {
+      "latin": "vigiles",
+      "bulgarian": "пожарникари и нощна стража",
+      "sec": "running-the-empire"
+    },
+    {
+      "latin": "Ara Pacis",
+      "bulgarian": "Олтарът на мира",
+      "sec": "city-of-marble"
+    },
+    {
+      "latin": "imperator",
+      "bulgarian": "победоносен пълководец",
+      "sec": "expansion-and-peace"
+    },
+    {
+      "latin": "Pax Romana",
+      "bulgarian": "Римският мир",
+      "sec": "expansion-and-peace"
+    },
+    {
+      "latin": "Clades Variana",
+      "bulgarian": "Варовото поражение",
+      "sec": "teutoburg-forest"
+    },
+    {
+      "latin": "Res Gestae",
+      "bulgarian": "Разказът на Август за неговите дела",
+      "sec": "succession-and-death"
+    }
+  ]
+}

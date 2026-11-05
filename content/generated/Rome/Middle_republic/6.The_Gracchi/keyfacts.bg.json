@@ -1,0 +1,139 @@
+{
+  "description": "Key facts for this chapter, written by hand from the chapter text. Every entry links to the section that explains it.",
+  "people": [
+    {
+      "name": "Тиберий Гракх",
+      "text": "Народен трибун през 133 г. пр.н.е., чийто поземлен закон разделя Рим; убит на Капитолийския хълм.",
+      "sec": "the-land-law"
+    },
+    {
+      "name": "Гай Гракх",
+      "text": "По-малкият му брат, народен трибун през 123–122 г. пр.н.е.; загива през 121 г. пр.н.е.",
+      "sec": "gaius-gracchus-rises"
+    },
+    {
+      "name": "Корнелия",
+      "text": "Тяхната майка, дъщеря на прочут пълководец, която ги отглежда и възпитава.",
+      "sec": "family-of-the-gracchi"
+    },
+    {
+      "name": "Сципион Назика",
+      "text": "Върховен жрец, който повежда тълпата, убила Тиберий.",
+      "sec": "death-of-tiberius"
+    },
+    {
+      "name": "Опимий",
+      "text": "Консул, който смазва Гай и построява храм на Конкордия.",
+      "sec": "fall-of-gaius"
+    }
+  ],
+  "dates": [
+    {
+      "when": "137 г. пр.н.е.",
+      "text": "Тиберий като квестор спасява римска армия при Нуманция.",
+      "sec": "tiberius-at-war"
+    },
+    {
+      "when": "133 г. пр.н.е.",
+      "text": "Поземленият закон на Тиберий; убийството му на Капитолийския хълм.",
+      "sec": "the-land-law"
+    },
+    {
+      "when": "129 г. пр.н.е.",
+      "text": "Работата на поземлената комисия се забавя след протестите на съюзниците.",
+      "sec": "land-commission"
+    },
+    {
+      "when": "126 г. пр.н.е.",
+      "text": "Гай заминава за Сардиния като квестор.",
+      "sec": "gaius-gracchus-rises"
+    },
+    {
+      "when": "123 г. пр.н.е.",
+      "text": "Първата година на Гай като народен трибун: закон за зърното, колонии, съдилища.",
+      "sec": "laws-of-gaius"
+    },
+    {
+      "when": "122 г. пр.н.е.",
+      "text": "Гай предлага гражданство за латините; предложението се проваля.",
+      "sec": "fall-of-gaius"
+    },
+    {
+      "when": "121 г. пр.н.е.",
+      "text": "Първото крайно решение на Сената; Гай загива.",
+      "sec": "fall-of-gaius"
+    },
+    {
+      "when": "111 г. пр.н.е.",
+      "text": "Поземлената комисия е закрита – работата ѝ е свършена.",
+      "sec": "turning-point"
+    }
+  ],
+  "terms": [
+    {
+      "latin": "quaestor",
+      "bulgarian": "младши финансов служител",
+      "sec": "tiberius-at-war"
+    },
+    {
+      "latin": "tribunus plebis",
+      "bulgarian": "народен трибун",
+      "sec": "the-land-law"
+    },
+    {
+      "latin": "ager publicus",
+      "bulgarian": "обществена земя",
+      "sec": "the-land-law"
+    },
+    {
+      "latin": "lex Sempronia agraria",
+      "bulgarian": "поземленият закон на Тиберий",
+      "sec": "the-land-law"
+    },
+    {
+      "latin": "concilium plebis",
+      "bulgarian": "Плебейското събрание",
+      "sec": "breaking-the-rules"
+    },
+    {
+      "latin": "senatus",
+      "bulgarian": "Сенатът",
+      "sec": "breaking-the-rules"
+    },
+    {
+      "latin": "intercessio",
+      "bulgarian": "вето на народен трибун",
+      "sec": "breaking-the-rules"
+    },
+    {
+      "latin": "pontifex maximus",
+      "bulgarian": "върховният жрец",
+      "sec": "death-of-tiberius"
+    },
+    {
+      "latin": "cippi",
+      "bulgarian": "гранични камъни",
+      "sec": "land-commission"
+    },
+    {
+      "latin": "coloniae",
+      "bulgarian": "колонии на граждани",
+      "sec": "laws-of-gaius"
+    },
+    {
+      "latin": "equites",
+      "bulgarian": "конници – богаташи извън Сената",
+      "sec": "laws-of-gaius"
+    },
+    {
+      "latin": "senatus consultum ultimum",
+      "bulgarian": "„крайното решение“ на Сената",
+      "sec": "fall-of-gaius"
+    },
+    {
+      "latin": "Concordia",
+      "bulgarian": "Конкордия, богиня на гражданското съгласие",
+      "sec": "turning-point"
+    }
+  ]
+}

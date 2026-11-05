@@ -1,0 +1,144 @@
+{
+  "description": "Key facts for this chapter, written by hand from the chapter text. Every entry links to the section that explains it.",
+  "people": [
+    {
+      "name": "Гай Марий",
+      "text": "„Новият човек“ от Арпинум: седем пъти консул, победител на Югурта и на северните племена.",
+      "sec": "marius-origins"
+    },
+    {
+      "name": "Югурта",
+      "text": "Нумидийски цар, който вярвал, че всеки римлянин може да бъде купен.",
+      "sec": "jugurtha"
+    },
+    {
+      "name": "Метел",
+      "text": "Честен аристократ, който командвал в Африка преди Марий.",
+      "sec": "metellus-and-the-muthul"
+    },
+    {
+      "name": "Сула",
+      "text": "Офицер на Марий, който пленил Югурта, а по-късно станал най-опасният му съперник.",
+      "sec": "capture-of-jugurtha"
+    },
+    {
+      "name": "Сатурнин",
+      "text": "Радикален народен трибун, убит през 100 г. пр.н.е.",
+      "sec": "saturninus-and-the-sixth-consulship"
+    }
+  ],
+  "dates": [
+    {
+      "when": "157 г. пр.н.е.",
+      "text": "Марий се ражда край Арпинум.",
+      "sec": "marius-origins"
+    },
+    {
+      "when": "111 г. пр.н.е.",
+      "text": "Рим обявява война на Югурта.",
+      "sec": "jugurtha"
+    },
+    {
+      "when": "109 г. пр.н.е.",
+      "text": "Битката при река Мутул.",
+      "sec": "metellus-and-the-muthul"
+    },
+    {
+      "when": "107 г. пр.н.е.",
+      "text": "Първото консулство на Марий; той набира войници от най-бедните, „преброяваните по глави“.",
+      "sec": "marius-becomes-consul"
+    },
+    {
+      "when": "105 г. пр.н.е.",
+      "text": "Катастрофата при Араузио.",
+      "sec": "cimbri-and-arausio"
+    },
+    {
+      "when": "104 г. пр.н.е.",
+      "text": "Югурта е преведен в триумфа на Марий; започва поредицата от консулства на Марий.",
+      "sec": "capture-of-jugurtha"
+    },
+    {
+      "when": "102 г. пр.н.е.",
+      "text": "Победа над тевтоните при Акве Секстие.",
+      "sec": "aquae-sextiae-and-vercellae"
+    },
+    {
+      "when": "101 г. пр.н.е.",
+      "text": "Победа над кимврите при Верцеле.",
+      "sec": "aquae-sextiae-and-vercellae"
+    },
+    {
+      "when": "100 г. пр.н.е.",
+      "text": "Сатурнин и привържениците му са избити.",
+      "sec": "saturninus-and-the-sixth-consulship"
+    }
+  ],
+  "terms": [
+    {
+      "latin": "novus homo",
+      "bulgarian": "„нов човек“ – първият от рода си, заел висока длъжност",
+      "sec": "marius-origins"
+    },
+    {
+      "latin": "tribunus plebis",
+      "bulgarian": "народен трибун",
+      "sec": "marius-origins"
+    },
+    {
+      "latin": "ambitus",
+      "bulgarian": "подкупване на избиратели",
+      "sec": "marius-origins"
+    },
+    {
+      "latin": "senatus",
+      "bulgarian": "Сенатът",
+      "sec": "jugurtha"
+    },
+    {
+      "latin": "consules",
+      "bulgarian": "двамата консули",
+      "sec": "jugurtha"
+    },
+    {
+      "latin": "iugum",
+      "bulgarian": "игото от копия",
+      "sec": "jugurtha"
+    },
+    {
+      "latin": "concilium plebis",
+      "bulgarian": "Плебейското събрание",
+      "sec": "marius-becomes-consul"
+    },
+    {
+      "latin": "capite censi",
+      "bulgarian": "„преброяваните по глави“ – мъже без имот",
+      "sec": "capture-of-jugurtha"
+    },
+    {
+      "latin": "triumphus",
+      "bulgarian": "победно шествие",
+      "sec": "capture-of-jugurtha"
+    },
+    {
+      "latin": "terror cimbricus",
+      "bulgarian": "„кимврийският ужас“",
+      "sec": "cimbri-and-arausio"
+    },
+    {
+      "latin": "senatus consultum ultimum",
+      "bulgarian": "крайното решение на Сената",
+      "sec": "saturninus-and-the-sixth-consulship"
+    },
+    {
+      "latin": "proletarii",
+      "bulgarian": "най-бедната класа",
+      "sec": "marian-reforms-debate"
+    },
+    {
+      "latin": "muli Mariani",
+      "bulgarian": "„Мариевите мулета“: войници, които носят снаряжението си",
+      "sec": "marian-reforms-debate"
+    }
+  ]
+}

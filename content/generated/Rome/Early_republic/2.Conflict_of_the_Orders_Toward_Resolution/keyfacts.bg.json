@@ -1,0 +1,199 @@
+{
+  "description": "Key facts for this chapter, written by hand from the chapter text. Every entry links to the section that explains it.",
+  "people": [
+    {
+      "name": "Марк Фурий Камил",
+      "text": "Диктатор, който превзел Вейи през подземен тунел; според разказа на Ливий той прогонил и галите от Рим.",
+      "sec": "siege-of-veii"
+    },
+    {
+      "name": "Брен",
+      "text": "Галският вожд, който победил при Алия и казал: „Горко на победените!“",
+      "sec": "sack-of-rome"
+    },
+    {
+      "name": "Марк Манлий",
+      "text": "Бивш консул, събуден от свещените гъски, който хвърлил първия гал от Капитолийския хълм.",
+      "sec": "sack-of-rome"
+    },
+    {
+      "name": "Луций Албиний",
+      "text": "Гражданин, който откарал весталките и свещените предмети в Цере със своята каруца.",
+      "sec": "sack-of-rome"
+    },
+    {
+      "name": "Марк Папирий",
+      "text": "Стар бивш магистрат, който ударил един гал с жезъла си от слонова кост и така поставил началото на клането.",
+      "sec": "sack-of-rome"
+    },
+    {
+      "name": "Арунс",
+      "text": "Човекът, който според Ливий довел галите в Клузий, за да си отмъсти.",
+      "sec": "battle-of-the-allia"
+    },
+    {
+      "name": "Гай Лициний Столон",
+      "text": "Народен трибун, който десет години водил борбата за новите закони; по-късно бил глобен, защото нарушил собствената си граница за притежание на земя.",
+      "sec": "licinius-and-sextius"
+    },
+    {
+      "name": "Луций Секстий Латеран",
+      "text": "Колега на Лициний като трибун, първият плебейски консул на Рим през 366 г. пр.н.е.",
+      "sec": "first-plebeian-consul"
+    },
+    {
+      "name": "Луций Генуций",
+      "text": "Трибун, чийто закон от 342 г. пр.н.е. превърнал поделянето на консулството в правило.",
+      "sec": "modern-verdict"
+    }
+  ],
+  "dates": [
+    {
+      "when": "444 г. пр.н.е.",
+      "text": "В много години консулските трибуни започват да заместват консулите.",
+      "sec": "conflict-of-the-orders"
+    },
+    {
+      "when": "ок. 396 г. пр.н.е.",
+      "text": "Камил превзема Вейи.",
+      "sec": "siege-of-veii"
+    },
+    {
+      "when": "390 г. пр.н.е.",
+      "text": "Галите побеждават при Алия и разграбват Рим (традиционна дата; историците предпочитат ок. 387 г. пр.н.е.).",
+      "sec": "battle-of-the-allia"
+    },
+    {
+      "when": "375 г. пр.н.е.",
+      "text": "Лициний и Секстий започват своята борба.",
+      "sec": "licinius-and-sextius"
+    },
+    {
+      "when": "367 г. пр.н.е.",
+      "text": "Сенатът приема законите на Лициний и Секстий.",
+      "sec": "licinius-and-sextius"
+    },
+    {
+      "when": "366 г. пр.н.е.",
+      "text": "Луций Секстий става първият плебейски консул.",
+      "sec": "first-plebeian-consul"
+    },
+    {
+      "when": "342 г. пр.н.е.",
+      "text": "Законът на Генуций: единият консул по правило е плебей.",
+      "sec": "modern-verdict"
+    },
+    {
+      "when": "337 г. пр.н.е.",
+      "text": "Първият плебейски претор.",
+      "sec": "first-plebeian-consul"
+    },
+    {
+      "when": "295 г. пр.н.е.",
+      "text": "Рим смазва сенонците.",
+      "sec": "rome-after-the-sack"
+    }
+  ],
+  "terms": [
+    {
+      "latin": "patricii, plebeii",
+      "bulgarian": "патриции и плебеи",
+      "sec": "conflict-of-the-orders"
+    },
+    {
+      "latin": "tribuni militum consulari potestate",
+      "bulgarian": "„военни трибуни с консулска власт“: консулски трибуни",
+      "sec": "conflict-of-the-orders"
+    },
+    {
+      "latin": "cuniculus",
+      "bulgarian": "тунелът към Вейи",
+      "sec": "siege-of-veii"
+    },
+    {
+      "latin": "praeda",
+      "bulgarian": "военна плячка",
+      "sec": "siege-of-veii"
+    },
+    {
+      "latin": "Iuno Regina",
+      "bulgarian": "„Царица Юнона“, богинята на Вейи, поканена в Рим",
+      "sec": "siege-of-veii"
+    },
+    {
+      "latin": "Galli",
+      "bulgarian": "галите",
+      "sec": "battle-of-the-allia"
+    },
+    {
+      "latin": "dies Alliensis",
+      "bulgarian": "„денят на Алия“ – злополучен ден",
+      "sec": "battle-of-the-allia"
+    },
+    {
+      "latin": "arx",
+      "bulgarian": "цитаделата на Капитолийския хълм",
+      "sec": "sack-of-rome"
+    },
+    {
+      "latin": "sellae curules",
+      "bulgarian": "креслата от слонова кост на висшите магистрати",
+      "sec": "sack-of-rome"
+    },
+    {
+      "latin": "anseres",
+      "bulgarian": "свещените гъски на Юнона",
+      "sec": "sack-of-rome"
+    },
+    {
+      "latin": "Vae victis!",
+      "bulgarian": "„Горко на победените!“",
+      "sec": "sack-of-rome"
+    },
+    {
+      "latin": "civitas sine suffragio",
+      "bulgarian": "гражданство без право на глас",
+      "sec": "rome-after-the-sack"
+    },
+    {
+      "latin": "dies religiosus",
+      "bulgarian": "ден, в който обществените дела спирали",
+      "sec": "rome-after-the-sack"
+    },
+    {
+      "latin": "tribuni plebis",
+      "bulgarian": "народни трибуни",
+      "sec": "licinius-and-sextius"
+    },
+    {
+      "latin": "rogationes",
+      "bulgarian": "законопроекти, внесени в събрание",
+      "sec": "licinius-and-sextius"
+    },
+    {
+      "latin": "magister equitum",
+      "bulgarian": "„началник на конницата“ – заместник на диктатора",
+      "sec": "licinius-and-sextius"
+    },
+    {
+      "latin": "ager publicus",
+      "bulgarian": "обществената земя на римската държава",
+      "sec": "licinian-laws"
+    },
+    {
+      "latin": "Libri Sibyllini",
+      "bulgarian": "пророческите Сибилински книги",
+      "sec": "licinian-laws"
+    },
+    {
+      "latin": "decemviri sacris faciundis",
+      "bulgarian": "десетимата жреци, които пазели Сибилинските книги",
+      "sec": "licinian-laws"
+    },
+    {
+      "latin": "nobilitas",
+      "bulgarian": "новият нобилитет от патриции и богати плебеи",
+      "sec": "modern-verdict"
+    }
+  ]
+}

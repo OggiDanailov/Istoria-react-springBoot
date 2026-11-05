@@ -1,0 +1,134 @@
+{
+  "description": "Key facts for this chapter, written by hand from the chapter text. Every entry links to the section that explains it.",
+  "people": [
+    {
+      "name": "Катилина",
+      "text": "Аристократ, който след загуба на избор след избор замислил преврат през 63 г. пр.н.е.",
+      "sec": "catiline"
+    },
+    {
+      "name": "Цицерон",
+      "text": "Ораторът и консул, който разкрил заговора; изгонен в изгнание през 58 г. пр.н.е.",
+      "sec": "cicero-exposes-plot"
+    },
+    {
+      "name": "Цезар",
+      "text": "Консул през 59 г. пр.н.е., после завоевател на Галия.",
+      "sec": "caesar-consulship"
+    },
+    {
+      "name": "Помпей",
+      "text": "Най-великият пълководец на Рим, съюзник, а по-късно съперник на Цезар.",
+      "sec": "alliance-formed"
+    },
+    {
+      "name": "Крас",
+      "text": "Един от най-богатите хора в Рим; загинал при Каре.",
+      "sec": "carrhae"
+    }
+  ],
+  "dates": [
+    {
+      "when": "5 декември 63 г. пр.н.е.",
+      "text": "Сенатът осъжда петима заговорници на смърт.",
+      "sec": "execution-debate"
+    },
+    {
+      "when": "Януари 62 г. пр.н.е.",
+      "text": "Катилина загива в бой край Пистория.",
+      "sec": "pistoria-and-exile"
+    },
+    {
+      "when": "60–59 г. пр.н.е.",
+      "text": "Помпей, Крас и Цезар сключват своя съюз.",
+      "sec": "alliance-formed"
+    },
+    {
+      "when": "59 г. пр.н.е.",
+      "text": "Бурното консулство на Цезар.",
+      "sec": "caesar-consulship"
+    },
+    {
+      "when": "58 г. пр.н.е.",
+      "text": "Цицерон е прогонен в изгнание.",
+      "sec": "pistoria-and-exile"
+    },
+    {
+      "when": "56 г. пр.н.е.",
+      "text": "Тримата подновяват съюза си в Лука.",
+      "sec": "luca-renewal"
+    },
+    {
+      "when": "55 г. пр.н.е.",
+      "text": "Помпей и Крас отново са консули.",
+      "sec": "luca-renewal"
+    },
+    {
+      "when": "9 юни 53 г. пр.н.е.",
+      "text": "Крас е разбит и убит при Каре.",
+      "sec": "carrhae"
+    },
+    {
+      "when": "Януари 49 г. пр.н.е.",
+      "text": "Съперничеството между Цезар и Помпей прераства в гражданска война.",
+      "sec": "gang-of-three"
+    }
+  ],
+  "terms": [
+    {
+      "latin": "consules",
+      "bulgarian": "двамата консули",
+      "sec": "catiline"
+    },
+    {
+      "latin": "senatus",
+      "bulgarian": "Сенатът",
+      "sec": "cicero-exposes-plot"
+    },
+    {
+      "latin": "senatus consultum ultimum",
+      "bulgarian": "крайното решение на Сената",
+      "sec": "cicero-exposes-plot"
+    },
+    {
+      "latin": "hostis",
+      "bulgarian": "враг на държавата",
+      "sec": "cicero-exposes-plot"
+    },
+    {
+      "latin": "vixerunt",
+      "bulgarian": "„живели са“: мъртви са",
+      "sec": "execution-debate"
+    },
+    {
+      "latin": "pater patriae",
+      "bulgarian": "„баща на отечеството“",
+      "sec": "execution-debate"
+    },
+    {
+      "latin": "tribuni plebis",
+      "bulgarian": "народни трибуни",
+      "sec": "pistoria-and-exile"
+    },
+    {
+      "latin": "triumphus",
+      "bulgarian": "победно шествие",
+      "sec": "alliance-formed"
+    },
+    {
+      "latin": "amicitia",
+      "bulgarian": "„приятелство“: политически съюз",
+      "sec": "alliance-formed"
+    },
+    {
+      "latin": "lex agraria",
+      "bulgarian": "поземлен закон",
+      "sec": "caesar-consulship"
+    },
+    {
+      "latin": "aquilae",
+      "bulgarian": "орлите на легионите",
+      "sec": "carrhae"
+    }
+  ]
+}

@@ -1,0 +1,179 @@
+{
+  "description": "Key facts for this chapter, written by hand from the chapter text. Every entry links to the section that explains it.",
+  "people": [
+    {
+      "name": "Сициний",
+      "text": "Плебейският водач, който организира първото напускане на града; по-късно един от първите трибуни.",
+      "sec": "first-secession"
+    },
+    {
+      "name": "Менений Агрипа",
+      "text": "Бивш консул, който върнал стачкуващите с баснята за корема.",
+      "sec": "menenius-agrippa"
+    },
+    {
+      "name": "Апий Клавдий",
+      "text": "Най-прочутият с лоша слава децемвир, чиято тирания довежда до втората сецесия.",
+      "sec": "appius-claudius-and-verginia"
+    },
+    {
+      "name": "Вергиния",
+      "text": "Плебейско момиче, убито от собствения си баща, за да я спаси от Апий Клавдий.",
+      "sec": "appius-claudius-and-verginia"
+    },
+    {
+      "name": "Ливий",
+      "text": "Римският историк, оставил най-подробния разказ за тези години – около пет века по-късно.",
+      "sec": "debt-crisis"
+    }
+  ],
+  "dates": [
+    {
+      "when": "509 г. пр.н.е.",
+      "text": "Последният цар е прогонен; новата Република се управлява от двама консули.",
+      "sec": "patricians-and-plebeians"
+    },
+    {
+      "when": "495 г. пр.н.е.",
+      "text": "Дълговата криза: дрипав бивш войник вдига на крак Форума.",
+      "sec": "debt-crisis"
+    },
+    {
+      "when": "494 г. пр.н.е.",
+      "text": "Първата сецесия на Свещения хълм.",
+      "sec": "first-secession"
+    },
+    {
+      "when": "493 г. пр.н.е.",
+      "text": "Първите народни трибуни встъпват в длъжност.",
+      "sec": "tribunes-of-the-plebs"
+    },
+    {
+      "when": "471 г. пр.н.е.",
+      "text": "*Lex Publilia*: плебсът гласува по триби.",
+      "sec": "plebeian-council"
+    },
+    {
+      "when": "457 г. пр.н.е.",
+      "text": "Броят на трибуните нараства на десет.",
+      "sec": "demand-for-written-law"
+    },
+    {
+      "when": "ок. 450 г. пр.н.е.",
+      "text": "Назначени са децемвирите, за да запишат законите.",
+      "sec": "demand-for-written-law"
+    },
+    {
+      "when": "449 г. пр.н.е.",
+      "text": "Законите на дванадесетте таблици са обнародвани; втората сецесия слага край на властта на децемвирите.",
+      "sec": "twelve-tables"
+    },
+    {
+      "when": "287 г. пр.н.е.",
+      "text": "Борбата между съсловията приключва.",
+      "sec": "patricians-and-plebeians"
+    }
+  ],
+  "terms": [
+    {
+      "latin": "res publica",
+      "bulgarian": "„общото дело“: Републиката",
+      "sec": "patricians-and-plebeians"
+    },
+    {
+      "latin": "consules",
+      "bulgarian": "двамата консули, избирани всяка година",
+      "sec": "patricians-and-plebeians"
+    },
+    {
+      "latin": "patricii",
+      "bulgarian": "патриции – аристократичните родове, които държат властта",
+      "sec": "patricians-and-plebeians"
+    },
+    {
+      "latin": "plebs",
+      "bulgarian": "простолюдието – повечето граждани и повечето войници",
+      "sec": "patricians-and-plebeians"
+    },
+    {
+      "latin": "ordo, ordines",
+      "bulgarian": "съсловие в обществото, оттам „Борбата между съсловията“",
+      "sec": "patricians-and-plebeians"
+    },
+    {
+      "latin": "nexum",
+      "bulgarian": "дългово робство",
+      "sec": "patricians-and-plebeians"
+    },
+    {
+      "latin": "aes alienum",
+      "bulgarian": "дълг: буквално „чужда мед“",
+      "sec": "debt-crisis"
+    },
+    {
+      "latin": "secessio plebis",
+      "bulgarian": "„оттеглянето на плебса“ – масово напускане на града",
+      "sec": "first-secession"
+    },
+    {
+      "latin": "Mons Sacer",
+      "bulgarian": "Свещеният хълм, където плебсът се разположил на лагер",
+      "sec": "first-secession"
+    },
+    {
+      "latin": "tribunus plebis",
+      "bulgarian": "народен трибун – закрилникът на простолюдието",
+      "sec": "tribunes-of-the-plebs"
+    },
+    {
+      "latin": "veto",
+      "bulgarian": "„Забранявам“: правото на трибуна да спре решение",
+      "sec": "tribunes-of-the-plebs"
+    },
+    {
+      "latin": "appello tribunos",
+      "bulgarian": "„Призовавам трибуните!“",
+      "sec": "tribunes-of-the-plebs"
+    },
+    {
+      "latin": "concilium plebis",
+      "bulgarian": "Плебейското събрание",
+      "sec": "plebeian-council"
+    },
+    {
+      "latin": "plebiscita",
+      "bulgarian": "„решения на плебса“: плебисцити",
+      "sec": "plebeian-council"
+    },
+    {
+      "latin": "clientes, patroni",
+      "bulgarian": "клиенти и техните покровители",
+      "sec": "plebeian-council"
+    },
+    {
+      "latin": "pontifices",
+      "bulgarian": "жреците, които тълкували неписания закон",
+      "sec": "demand-for-written-law"
+    },
+    {
+      "latin": "decemviri",
+      "bulgarian": "„десет мъже“, които записали законите",
+      "sec": "demand-for-written-law"
+    },
+    {
+      "latin": "patria potestas",
+      "bulgarian": "„властта на бащата“",
+      "sec": "twelve-tables"
+    },
+    {
+      "latin": "conubium",
+      "bulgarian": "правото на брак",
+      "sec": "twelve-tables"
+    },
+    {
+      "latin": "provocatio",
+      "bulgarian": "правото на обжалване",
+      "sec": "appius-claudius-and-verginia"
+    }
+  ]
+}

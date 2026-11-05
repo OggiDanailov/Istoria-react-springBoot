@@ -1,0 +1,134 @@
+{
+  "description": "Key facts for this chapter, written by hand from the chapter text. Every entry links to the section that explains it.",
+  "people": [
+    {
+      "name": "Хонорий",
+      "text": "Западен император от 395 г., управлявал от Равена.",
+      "sec": "a-divided-empire"
+    },
+    {
+      "name": "Стилихон",
+      "text": "Наполовина вандалски пълководец, който защитавал Запада; екзекутиран през 408 г.",
+      "sec": "alaric-and-the-general"
+    },
+    {
+      "name": "Аларих",
+      "text": "Готски вожд, който разграбил Рим през 410 г.",
+      "sec": "alaric-and-the-general"
+    },
+    {
+      "name": "Августин",
+      "text": "Епископ в Северна Африка, автор на „За Божия град“.",
+      "sec": "who-was-to-blame"
+    },
+    {
+      "name": "Аеций",
+      "text": "Пълководецът, който удържал Запада и спрял Атила.",
+      "sec": "aetius-and-attila"
+    },
+    {
+      "name": "Атила",
+      "text": "Цар на хуните, разбит на Каталаунските полета през 451 г.",
+      "sec": "aetius-and-attila"
+    },
+    {
+      "name": "Гейзерих",
+      "text": "Цар на вандалите; превзел Картаген през 439 г.",
+      "sec": "kingdoms-inside-the-empire"
+    },
+    {
+      "name": "Одоакър",
+      "text": "Германски военачалник, който свалил последния император през 476 г.",
+      "sec": "the-last-emperor"
+    }
+  ],
+  "dates": [
+    {
+      "when": "395",
+      "text": "Империята е разделена между синовете на Теодосий.",
+      "sec": "a-divided-empire"
+    },
+    {
+      "when": "24 август 410 г.",
+      "text": "Готите на Аларих разграбват Рим.",
+      "sec": "sack-of-rome-410"
+    },
+    {
+      "when": "418",
+      "text": "Вестготите са заселени в Аквитания.",
+      "sec": "kingdoms-inside-the-empire"
+    },
+    {
+      "when": "439",
+      "text": "Вандалите превземат Картаген.",
+      "sec": "kingdoms-inside-the-empire"
+    },
+    {
+      "when": "451",
+      "text": "Аеций спира Атила на Каталаунските полета.",
+      "sec": "aetius-and-attila"
+    },
+    {
+      "when": "455",
+      "text": "Вандалите разграбват Рим.",
+      "sec": "murder-and-vandal-sack"
+    },
+    {
+      "when": "4 септември 476 г.",
+      "text": "Одоакър сваля Ромул Августул.",
+      "sec": "the-last-emperor"
+    }
+  ],
+  "terms": [
+    {
+      "latin": "Constantinopolis",
+      "bulgarian": "Константинопол",
+      "sec": "a-divided-empire"
+    },
+    {
+      "latin": "Gallia",
+      "bulgarian": "Галия",
+      "sec": "a-divided-empire"
+    },
+    {
+      "latin": "foederati",
+      "bulgarian": "съюзници, обвързани с договор",
+      "sec": "a-divided-empire"
+    },
+    {
+      "latin": "magister militum",
+      "bulgarian": "главнокомандващ",
+      "sec": "alaric-and-the-general"
+    },
+    {
+      "latin": "Rhenus",
+      "bulgarian": "Рейн",
+      "sec": "alaric-and-the-general"
+    },
+    {
+      "latin": "Urbs Aeterna",
+      "bulgarian": "Вечният град",
+      "sec": "sieges-of-rome"
+    },
+    {
+      "latin": "senatus",
+      "bulgarian": "Сенатът",
+      "sec": "sieges-of-rome"
+    },
+    {
+      "latin": "Britannia",
+      "bulgarian": "Британия",
+      "sec": "kingdoms-inside-the-empire"
+    },
+    {
+      "latin": "Carthago",
+      "bulgarian": "Картаген",
+      "sec": "kingdoms-inside-the-empire"
+    },
+    {
+      "latin": "solidi",
+      "bulgarian": "златни монети",
+      "sec": "the-last-emperor"
+    }
+  ]
+}

@@ -1,0 +1,144 @@
+{
+  "description": "Key facts for this chapter, written by hand from the chapter text. Every entry links to the section that explains it.",
+  "people": [
+    {
+      "name": "Юлий Цезар",
+      "text": "Управител на Галия от 58 г. пр.н.е., завладял цялата страна до 50 г. пр.н.е.",
+      "sec": "caesar-goes-to-gaul"
+    },
+    {
+      "name": "Верцингеториг",
+      "text": "Военен вожд на арверните, който през 52 г. пр.н.е. обединил Галия срещу Цезар.",
+      "sec": "vercingetorix"
+    },
+    {
+      "name": "Амбиорикс",
+      "text": "Вожд на ебуроните, който през 54 г. пр.н.е. унищожил римски лагер.",
+      "sec": "ambiorix-revolt"
+    },
+    {
+      "name": "Помпей",
+      "text": "Най-прославеният пълководец на Рим, съюзник на Цезар.",
+      "sec": "caesar-goes-to-gaul"
+    },
+    {
+      "name": "Крас",
+      "text": "Най-богатият човек в Рим, съюзник на Цезар; синът му воювал в Галия.",
+      "sec": "caesar-goes-to-gaul"
+    }
+  ],
+  "dates": [
+    {
+      "when": "58 г. пр.н.е.",
+      "text": "Хелветите се преселват; Цезар разбива тях и свевите.",
+      "sec": "helvetii-and-suebi"
+    },
+    {
+      "when": "57 г. пр.н.е.",
+      "text": "Белгите; битката с нервиите на река Самбра.",
+      "sec": "belgae-nervii-veneti"
+    },
+    {
+      "when": "56 г. пр.н.е.",
+      "text": "Флотът на венетите е разбит край залива Киберон.",
+      "sec": "belgae-nervii-veneti"
+    },
+    {
+      "when": "55 г. пр.н.е.",
+      "text": "Цезар строи мост над Рейн и стъпва в Британия.",
+      "sec": "rhine-and-britain"
+    },
+    {
+      "when": "54 г. пр.н.е.",
+      "text": "Зимното въстание на Амбиорикс.",
+      "sec": "ambiorix-revolt"
+    },
+    {
+      "when": "52 г. пр.н.е.",
+      "text": "Верцингеториг: Аварик, Герговия, после Алезия.",
+      "sec": "vercingetorix"
+    },
+    {
+      "when": "51 г. пр.н.е.",
+      "text": "Укселодун се предава.",
+      "sec": "aftermath"
+    },
+    {
+      "when": "49 г. пр.н.е.",
+      "text": "Цезар преминава Рубикон.",
+      "sec": "aftermath"
+    },
+    {
+      "when": "46 г. пр.н.е.",
+      "text": "Верцингеториг е преведен в триумфа на Цезар и удушен.",
+      "sec": "aftermath"
+    }
+  ],
+  "terms": [
+    {
+      "latin": "proconsul",
+      "bulgarian": "управител с правомощията на консул",
+      "sec": "caesar-goes-to-gaul"
+    },
+    {
+      "latin": "casus belli",
+      "bulgarian": "повод за война",
+      "sec": "caesar-goes-to-gaul"
+    },
+    {
+      "latin": "legiones",
+      "bulgarian": "легиони",
+      "sec": "legions-and-warriors"
+    },
+    {
+      "latin": "cohortes",
+      "bulgarian": "кохорти",
+      "sec": "legions-and-warriors"
+    },
+    {
+      "latin": "manipulus",
+      "bulgarian": "манипула",
+      "sec": "legions-and-warriors"
+    },
+    {
+      "latin": "impedimenta",
+      "bulgarian": "обозът",
+      "sec": "legions-and-warriors"
+    },
+    {
+      "latin": "senatus",
+      "bulgarian": "Сенатът",
+      "sec": "helvetii-and-suebi"
+    },
+    {
+      "latin": "supplicatio",
+      "bulgarian": "всенародно благодарствено празненство",
+      "sec": "belgae-nervii-veneti"
+    },
+    {
+      "latin": "signifer",
+      "bulgarian": "знаменосецът",
+      "sec": "rhine-and-britain"
+    },
+    {
+      "latin": "oppidum",
+      "bulgarian": "укрепен град",
+      "sec": "siege-of-alesia"
+    },
+    {
+      "latin": "triumphus",
+      "bulgarian": "победно шествие",
+      "sec": "aftermath"
+    },
+    {
+      "latin": "dictator perpetuus",
+      "bulgarian": "пожизнен диктатор",
+      "sec": "aftermath"
+    },
+    {
+      "latin": "Commentarii de Bello Gallico",
+      "bulgarian": "„Записки за Галската война“ на Цезар",
+      "sec": "caesars-account"
+    }
+  ]
+}

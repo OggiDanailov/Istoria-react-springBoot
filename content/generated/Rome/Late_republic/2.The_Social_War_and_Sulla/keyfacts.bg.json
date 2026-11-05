@@ -1,0 +1,134 @@
+{
+  "description": "Key facts for this chapter, written by hand from the chapter text. Every entry links to the section that explains it.",
+  "people": [
+    {
+      "name": "Друз",
+      "text": "Народен трибун реформатор, убит през 91 г. пр.н.е.",
+      "sec": "outbreak-at-asculum"
+    },
+    {
+      "name": "Марий",
+      "text": "Опитен пълководец, съперник на Сула; превзел Рим заедно с Цина през 87 г. пр.н.е.",
+      "sec": "fighting-90-89-bc"
+    },
+    {
+      "name": "Сула",
+      "text": "Първият пълководец, тръгнал с войска срещу Рим; диктатор, автор на проскрипциите.",
+      "sec": "sulla-early-career"
+    },
+    {
+      "name": "Цина",
+      "text": "Консул, който държал Рим, докато Сула бил на Изток.",
+      "sec": "east-and-civil-war"
+    },
+    {
+      "name": "Митридат",
+      "text": "Цар на Понт, по чиято заповед били избити около 80 000 римляни и италийци.",
+      "sec": "march-on-rome"
+    }
+  ],
+  "dates": [
+    {
+      "when": "91 г. пр.н.е.",
+      "text": "Друз е убит; съюзниците въстават в Аускулум.",
+      "sec": "outbreak-at-asculum"
+    },
+    {
+      "when": "90 г. пр.н.е.",
+      "text": "Юлиевият закон дава гражданство на верните италийци.",
+      "sec": "citizenship-laws"
+    },
+    {
+      "when": "89 г. пр.н.е.",
+      "text": "Аускулум пада; гражданство за почти всички.",
+      "sec": "fighting-90-89-bc"
+    },
+    {
+      "when": "88 г. пр.н.е.",
+      "text": "Сула тръгва с войска срещу Рим.",
+      "sec": "march-on-rome"
+    },
+    {
+      "when": "87 г. пр.н.е.",
+      "text": "Цина и Марий превземат Рим.",
+      "sec": "east-and-civil-war"
+    },
+    {
+      "when": "86 г. пр.н.е.",
+      "text": "Сула опустошава Атина и разбива армиите на Митридат.",
+      "sec": "east-and-civil-war"
+    },
+    {
+      "when": "1 ноември 82 г. пр.н.е.",
+      "text": "Битката при Колинската порта.",
+      "sec": "east-and-civil-war"
+    },
+    {
+      "when": "80 г. пр.н.е.",
+      "text": "Сула се отказва от диктатурата.",
+      "sec": "dictatorship-and-proscriptions"
+    },
+    {
+      "when": "78 г. пр.н.е.",
+      "text": "Сула умира.",
+      "sec": "death-and-legacy"
+    }
+  ],
+  "terms": [
+    {
+      "latin": "socii",
+      "bulgarian": "съюзниците",
+      "sec": "rome-and-its-allies"
+    },
+    {
+      "latin": "civitas",
+      "bulgarian": "гражданство",
+      "sec": "rome-and-its-allies"
+    },
+    {
+      "latin": "tribunus plebis",
+      "bulgarian": "народен трибун",
+      "sec": "outbreak-at-asculum"
+    },
+    {
+      "latin": "bellum sociale",
+      "bulgarian": "„войната на съюзниците“",
+      "sec": "outbreak-at-asculum"
+    },
+    {
+      "latin": "senatus",
+      "bulgarian": "Сенатът",
+      "sec": "fighting-90-89-bc"
+    },
+    {
+      "latin": "corona graminea",
+      "bulgarian": "тревният венец",
+      "sec": "fighting-90-89-bc"
+    },
+    {
+      "latin": "lex Iulia",
+      "bulgarian": "Юлиевият закон от 90 г. пр.н.е.",
+      "sec": "citizenship-laws"
+    },
+    {
+      "latin": "tribus",
+      "bulgarian": "избирателна триба",
+      "sec": "citizenship-laws"
+    },
+    {
+      "latin": "hostes",
+      "bulgarian": "врагове на държавата",
+      "sec": "march-on-rome"
+    },
+    {
+      "latin": "proscriptio",
+      "bulgarian": "списък на хора, осъдени без съд",
+      "sec": "dictatorship-and-proscriptions"
+    },
+    {
+      "latin": "maiestas",
+      "bulgarian": "държавна измяна",
+      "sec": "dictatorship-and-proscriptions"
+    }
+  ]
+}
