@@ -90,7 +90,7 @@ for (const c of CONFIG.chapters) {
     const h1 = (md.match(/^# (.+)$/m) ?? [])[1] ?? ch.title
     const kfFile = path.join(dir, 'keyfacts.bg.json'), kf = fs.existsSync(kfFile) ? JSON.parse(fs.readFileSync(kfFile, 'utf8')) : null
     if (kf) kf.terms = kf.terms.map(t => ({ ...t, english: t.bulgarian ?? t.english }))
-    ch.bg = { title: h1.replace(/\s*\([^)]*\)\s*$/, '').replace(/^[^:]{3,30}:\s+(?=\S)/, m => /република|империя|царство/i.test(m) ? '' : m), short: BG_SHORTS[c.id] ?? null, period: bgPeriod(ch.period), sections: bgSections, keyFacts: kf }
+    ch.bg = { title: h1.replace(/\s*\([^)]*\)\s*$/, '').replace(/^[^:]{3,30}:\s+(?=\S)/, m => /република|империя|царство/i.test(m) ? '' : m), short: BG_SHORTS[c.id] ?? null, period: bgPeriod(ch.period), sections: bgSections, keyFacts: kf, chronicleMaps: fs.existsSync(path.join(dir, 'maps.bg.json')) ? JSON.parse(fs.readFileSync(path.join(dir, 'maps.bg.json'), 'utf8')).maps : null }
   }
   // Every link must point at a real section
   const ids = new Set(sections.map(s => s.id))

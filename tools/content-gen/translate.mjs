@@ -22,6 +22,7 @@ const GLOSSARY = path.join(HERE, 'glossary.bg.json')
 const args = process.argv.slice(2)
 const ONLY = args.includes('--only') ? args[args.indexOf('--only') + 1] : null
 const CHECK = args.includes('--check')
+const EXTRAS = args.includes('--extras')   // Key facts and the chronicle maps, instead of the chapter text
 const usage = { input: 0, output: 0 }
 const sleep = ms => new Promise(r => setTimeout(r, ms))
 
@@ -111,6 +112,61 @@ async function ask(client, system, text, note) {
 }
 
 const cost = () => (usage.input * 5 + usage.output * 25) / 1e6
+
+// ---------- Key facts and maps: every short text, translated together in one request per chapter
+// the strings to translate, as [path, text] pairs (paths like "maps.0.places.2.name")
+function strings(obj, pathTo = '', out = []) {
+  if (typeof obj === 'string') { if (/[A-Za-z]/.test(obj)) out.push([pathTo, obj]); return out }
+  if (Array.isArray(obj)) obj.forEach((x, i) => strings(x, `${pathTo}.${i}`, out))
+  else if (obj && typeof obj === 'object') for (const [k, v] of Object.entries(obj)) {
+    if (['sec', 'id', 'kind', 'side', 'dir', 'latin', 'd', 'description', 'wikipediaTitle', 'anchor', 'type', 'theme'].includes(k)) continue   // ids, Latin and drawing data stay as they are
+    strings(v, `${pathTo}.${k}`, out)
+  }
+  return out
+}
+function put(obj, p, value) { const keys = p.split('.').filter(Boolean); let o = obj; for (const k of keys.slice(0, -1)) o = o[k]; o[keys.at(-1)] = value }
+const EXTRA_SCHEMA = { type: 'object', additionalProperties: false, required: ['texts'], properties: { texts: { type: 'array', items: { type: 'string' } } } }
+async function askExtras(client, system, list) {
+  const request = { system, list }
+  const key = createHash('sha256').update(JSON.stringify({ MODEL, extras: 1, ...request })).digest('hex').slice(0, 32)
+  const file = path.join(RESPONSES_DIR, `${key}.json`)
+  if (fs.existsSync(file)) return JSON.parse(fs.readFileSync(file, 'utf8'))
+  const message = await client.beta.messages.stream({
+    model: MODEL, max_tokens: 32000, system,
+    messages: [{ role: 'user', content: [{ type: 'text', text: `Translate each of these ${list.length} short texts (labels for the "Key facts" sheet and the maps of one chapter). Return exactly ${list.length} translations, in the same order. Place names and peoples on maps: their usual Bulgarian names. Keep *Latin* exactly as it is.\n\n${JSON.stringify(list, null, 1)}` }] }],
+    output_config: { effort: 'low', format: { type: 'json_schema', schema: EXTRA_SCHEMA } },
+    betas: ['server-side-fallback-2026-07-01'], fallbacks: 'default',
+  }).finalMessage()
+  usage.input += message.usage.input_tokens; usage.output += message.usage.output_tokens
+  const result = JSON.parse(message.content.find(b => b.type === 'text').text)
+  fs.mkdirSync(RESPONSES_DIR, { recursive: true }); fs.writeFileSync(file, JSON.stringify(result))
+  return result
+}
+if (EXTRAS) {
+  const client = new Anthropic({ timeout: 10 * 60 * 1000, maxRetries: 2 })
+  for (const c of chapters.filter(c => !ONLY || c.id === ONLY)) {
+    const dir = dirOf(c), glossary = JSON.parse(fs.readFileSync(GLOSSARY, 'utf8'))
+    const kfFile = path.join(dir, 'keyfacts.json'), mapsFile = path.join(dir, 'maps.json')
+    const doKf = fs.existsSync(kfFile) && !fs.existsSync(path.join(dir, 'keyfacts.bg.json')), doMaps = fs.existsSync(mapsFile) && !fs.existsSync(path.join(dir, 'maps.bg.json'))
+    if (!doKf && !doMaps) continue
+    const data = { keyfacts: doKf ? JSON.parse(fs.readFileSync(kfFile, 'utf8')) : null, maps: doMaps ? JSON.parse(fs.readFileSync(mapsFile, 'utf8')).maps : null }
+    const list = strings(data)
+    const system = SYSTEM(glossary).split('Style example:')[0] + 'Glossary (English → Bulgarian):\n' + Object.entries({ ...glossary.terms, ...glossary.names }).map(([en, bg]) => `${en} → ${bg}`).join('\n')
+    let r = await askExtras(client, system, list.map(([, t]) => t))
+    if (r.texts.length !== list.length) throw new Error(`${c.id}: got ${r.texts.length} texts back for ${list.length}`)
+    const latin = t => [...t.matchAll(/\*([^*\n]+)\*/g)].map(m => m[1]).join('|')
+    const lost = list.filter(([, t], i) => latin(t) !== latin(r.texts[i])).length
+    list.forEach(([p], i) => put(data, p, r.texts[i]))
+    if (data.keyfacts) {   // the Bulgarian Key facts keep their Latin words; the explanation goes in "bulgarian"
+      data.keyfacts.terms = data.keyfacts.terms.map(t => ({ latin: t.latin, bulgarian: t.english, sec: t.sec }))
+      fs.writeFileSync(path.join(dir, 'keyfacts.bg.json'), JSON.stringify({ description: 'Ключови факти (превод на keyfacts.json).', ...data.keyfacts }, null, 2) + '\n')
+    }
+    if (data.maps) fs.writeFileSync(path.join(dir, 'maps.bg.json'), JSON.stringify({ description: 'Картите в хрониката (превод на maps.json).', maps: data.maps }, null, 2) + '\n')
+    console.log(`${c.id}: ${list.length} texts${lost ? `, ${lost} with changed Latin` : ''}   (so far ~$${cost().toFixed(2)})`)
+  }
+  console.log(`\nTokens: ${usage.input} in, ${usage.output} out. Approximate cost: $${cost().toFixed(2)}`)
+  process.exit(0)
+}
 const todo = chapters.filter(c => c.id !== 'kingdom' && (ONLY ? c.id === ONLY : CHECK || !fs.existsSync(path.join(dirOf(c), 'chapter.bg.md'))))
 if (CHECK) {
   for (const c of chapters) {

@@ -461,7 +461,7 @@ new MutationObserver(ms => {
 function applyLang() {
   document.documentElement.lang = LANG
   for (const c of CHAPTERS) {
-    c.en ??= { title: c.title, short: c.short, period: c.period, sections: c.sections, keyFacts: c.keyFacts }
+    c.en ??= { title: c.title, short: c.short, period: c.period, sections: c.sections, keyFacts: c.keyFacts, chronicleMaps: c.chronicleMaps }
     const bg = LANG === 'bg' && c.bg ? c.bg : {}
     for (const k of Object.keys(c.en)) c[k] = bg[k] ?? c.en[k]
   }
@@ -767,8 +767,13 @@ function chronicleMap(m) {
   const P = (lat, lon) => [(lon - b.lonMin) / (b.lonMax - b.lonMin) * W, (b.latMax - lat) / (b.latMax - b.latMin) * H]
   const path = pts => pts.map(([la, lo], i) => `${i ? 'L' : 'M'}${P(la, lo).map(v => v.toFixed(1)).join(',')}`).join(' ')
   const label = (x, y, p, gap = 7) => {
-    const r = p.side !== 'l', tx = (x + (r ? gap : -gap)).toFixed(1), ty = y + 3.2 + (p.dy ?? 0)
-    return `<text x="${tx}" y="${ty.toFixed(1)}" text-anchor="${r ? 'start' : 'end'}">${esc(p.name)}${p.note ? ` <tspan class="note">(${esc(p.note)})</tspan>` : ''}${p.latin ? `<tspan class="la" x="${tx}" dy="9.5">${esc(p.latin)}</tspan>` : ''}</text>`
+    // a label that would run off the map goes to the other side of its dot (translated names are often longer)
+    const w = Math.max(p.name.length, (p.latin ?? '').length * 0.9) * 5.4
+    let r = p.side !== 'l', room = r ? W - 2 - x - gap : x - gap - 2
+    if (room < w * 0.75) { const other = r ? x - gap - 2 : W - 2 - x - gap; if (other > room) { r = !r; room = other } }   // flip only if squeezing is not enough
+    const squeeze = room < w ? ` textLength="${Math.max(10, room).toFixed(0)}" lengthAdjust="spacingAndGlyphs"` : ''
+    const tx = (x + (r ? gap : -gap)).toFixed(1), ty = y + 3.2 + (p.dy ?? 0)
+    return `<text x="${tx}" y="${ty.toFixed(1)}" text-anchor="${r ? 'start' : 'end'}"><tspan${squeeze}>${esc(p.name)}</tspan>${p.note ? ` <tspan class="note">(${esc(p.note)})</tspan>` : ''}${p.latin ? `<tspan class="la" x="${tx}" dy="9.5">${esc(p.latin)}</tspan>` : ''}</text>`
   }
   let art = ''
   // a battle plan: unit blocks and arrows in a 300-wide grid (Rome red, the enemy blue)
