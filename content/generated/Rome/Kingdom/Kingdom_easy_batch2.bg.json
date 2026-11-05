@@ -1,0 +1,179 @@
+{
+  "batchName": "Early Rome & the Kingdom: The Foundation of an Empire (753-509 BCE) - Easy Batch 2",
+  "chapterName": "Early Rome & the Kingdom: The Foundation of an Empire (753-509 BCE)",
+  "difficulty": 1,
+  "batchOrder": 2,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Според разказа девойките на кой народ отвлекли хората на Ромул по време на празненство?",
+      "options": [
+        "Латините от Алба Лонга",
+        "Етруските",
+        "Волските",
+        "Сабините"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#romulus-the-king",
+      "explanation": "В Рим имало твърде малко жени, затова Ромул поканил сабините на религиозен празник и хората му отвлекли техните девойки. Сабините били планински народ, живеещ североизточно от Рим.",
+      "sourceQuote": "So, the story goes, Romulus invited the Sabines, a hill people living north-east of Rome, to a religious festival, and his men carried off their young women.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой подготвил убийството на цар Сервий Тулий след 44-годишното му царуване?",
+      "options": [
+        "Син на Анк Марций",
+        "Сабинските благородници",
+        "Дъщеря му Тулия и съпругът ѝ",
+        "Луций Юний Брут"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#servius-tullius",
+      "explanation": "Сервий бил убит при заговор на собствената си дъщеря Тулия и съпруга ѝ. Този съпруг станал Тарквиний Горди – последният цар на Рим.",
+      "sourceQuote": "After 44 years he was killed in a plot by his own daughter, Tullia, and her husband, the future king Tarquin the Proud.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво била Cloaca Maxima, изградена при Тарквиний Приск?",
+      "options": [
+        "Покрит пазар край Тибър",
+        "Каменна стена около седемте хълма",
+        "Голям канал, отводняващ блатиста земя",
+        "Храм на Юпитер на Капитолия"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#tarquinius-priscus",
+      "explanation": "Cloaca Maxima, или „Големият канал“, отводнила блатистата земя между хълмовете на Рим. На спечелената земя Тарквиний поставил началото на Римския форум.",
+      "sourceQuote": "The Cloaca Maxima, or \"Great Sewer\", drained the marshy ground between Rome's hills, and on the reclaimed land he began the Roman Forum.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как според археолозите всъщност е възникнал Рим?",
+      "options": [
+        "Чрез постепенно сливане на селища по хълмовете",
+        "Основан за един ден от един водач",
+        "Като етруска военна крепост",
+        "Построен от гръцки колонисти от Куми"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#origins",
+      "explanation": "Рим израснал бавно чрез сливането на няколко селища по хълмовете. Процесът вероятно бил вдъхновен от идеята за град-държава, която тогава се разпространявала от Гърция.",
+      "sourceQuote": "It grew from the gradual merging of several hilltop villages, probably inspired by the idea of the city-state then spreading from Greece.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кои нашественици, разграбили Рим през 390 г. пр.н.е., били обвинявани за унищожаването на много записи за ранния град?",
+      "options": [
+        "Картагенците",
+        "Етруските",
+        "Галите",
+        "Самнитите"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#how-reliable",
+      "explanation": "Античните автори обвинявали галите, нашественици от север, за унищожаването на много записи. Затова от епохата на царете не е оцеляло почти нищо писмено.",
+      "sourceQuote": "Ancient writers blamed the Gauls, invaders from the north who sacked Rome in 390 BC, for destroying many records.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как римляните помнели Тарквиний Горди?",
+      "options": [
+        "Като слаб цар, управляван от Сената",
+        "Като реформатор, облагодетелстващ бедните",
+        "Като благочестив цар, обичащ мира",
+        "Като тиранин, управляващ с насилие и страх"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#tarquin-the-proud",
+      "explanation": "Римляните помнели Тарквиний като тиранин, пренебрегвал обичаите и Сената. Той дори решавал дела със смъртно наказание без съветници.",
+      "sourceQuote": "But Romans remembered him as a tyrant who ruled through violence and fear, ignored custom and the Senate, and even judged death-penalty cases without advisers.",
+      "reviewFlags": []
+    },
+    {
+      "question": "За какво бил построен Циркус Максимус, разплануван от Тарквиний Приск?",
+      "options": [
+        "Надбягвания с колесници",
+        "Гладиаторски боеве",
+        "Военни упражнения",
+        "Народни събрания"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#tarquinius-priscus",
+      "explanation": "Циркус Максимус бил огромен стадион за надбягвания с колесници. Тарквиний основал и Римските игри.",
+      "sourceQuote": "He also laid out the Circus Maximus, a giant stadium for chariot races, and founded the Roman games.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Според преданието колко дълго римският цар след Ромул заемал трона, след като бъде избран?",
+      "options": [
+        "Пожизнено",
+        "Пет години",
+        "Докато най-големият му син навърши пълнолетие",
+        "Една година"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#how-kings-ruled",
+      "explanation": "Следващите римски царе не наследявали трона, а били избирани пожизнено. Когато царят умрял, Сенатът поемал управлението, докато бъде намерен нов.",
+      "sourceQuote": "According to tradition, they were chosen for life.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво било imperium – властта, която събранието давало на новия цар?",
+      "options": [
+        "Правото да посочи наследника си",
+        "Изключителен контрол над весталките",
+        "Върховната власт да командва армии, да управлява и да съди",
+        "Правото да облага завладените градове"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#how-kings-ruled",
+      "explanation": "Imperium била върховната власт да командва армии, да управлява и да съди. Царят бил и върховен жрец на Рим и отговарял за календара.",
+      "sourceQuote": "Then the assembly granted him imperium, the supreme power to command armies, govern and judge.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Вратите на храма на кой бог затворил цар Нума Помпилий в знак, че Рим е в мир?",
+      "options": [
+        "Юпитер",
+        "Янус",
+        "Марс",
+        "Веста"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#numa-tullus-ancus",
+      "explanation": "Нума затворил вратите на храма на Янус, бог на началата, за да покаже, че Рим е в мир. 43-годишното му царуване се запомнило с мир и благочестие.",
+      "sourceQuote": "He closed the doors of the temple of Janus, a god of beginnings, as a sign that Rome was at peace.",
+      "reviewFlags": []
+    }
+  ]
+}

@@ -1,0 +1,179 @@
+{
+  "batchName": "Early Rome & the Kingdom: The Foundation of an Empire (753-509 BCE) - Easy Batch 3",
+  "chapterName": "Early Rome & the Kingdom: The Foundation of an Empire (753-509 BCE)",
+  "difficulty": 1,
+  "batchOrder": 3,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Кое пристанище в устието на Тибър основал цар Анк Марций?",
+      "options": [
+        "Анциум",
+        "Куми",
+        "Ардея",
+        "Остия"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#numa-tullus-ancus",
+      "explanation": "Анк Марций основал Остия в устието на реката. Той заселил и покорени латини на Авентинския хълм, поставяйки началото на плебеите.",
+      "sourceQuote": "He founded Ostia, a port at the river's mouth, and settled conquered Latins on the Aventine Hill, forming the origins of the plebeians, Rome's common people.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Според традиционния разказ чие престъпление срещу благородничката Лукреция предизвикало въстанието срещу последния римски цар?",
+      "options": [
+        "На авгура от Капитолия",
+        "На етруския цар Ларс Порсена",
+        "На царския син Секст Тарквиний",
+        "На царския племенник Брут"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#tarquin-the-proud",
+      "explanation": "Царският син Секст Тарквиний изнасилил Лукреция. Тя разказала на съпруга и баща си, след което се самоубила, а смъртта ѝ разпалила въстанието.",
+      "sourceQuote": "According to the traditional story, the crisis came when the king's son Sextus Tarquinius raped Lucretia, a virtuous noblewoman.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой написал първата история на Рим около 200 г. пр.н.е.?",
+      "options": [
+        "Тацит",
+        "Плиний",
+        "Фабий Пиктор",
+        "Ливий"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#how-reliable",
+      "explanation": "Фабий Пиктор написал първата история на Рим около 200 г. пр.н.е., около три века след падането на царете. По-късни автори като Ливий разчитали главно на устното предание.",
+      "sourceQuote": "The first history of Rome was written by Fabius Pictor around 200 BC, about three centuries after the kings fell.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Според разказа как завършила войната след отвличането на сабинянките?",
+      "options": [
+        "Ромул убил сабинския цар в двубой",
+        "Етруските принудили двете страни да сключат мир",
+        "Буря разпръснала двете армии",
+        "Жените се хвърлили между армиите"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#romulus-the-king",
+      "explanation": "Отвлечените жени спрели боя, като се хвърлили между армиите. След това римляните и сабините се обединили в един народ.",
+      "sourceQuote": "It ended only when the captured women threw themselves between the armies.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво заменило царя начело на Рим след въстанието?",
+      "options": [
+        "Двама консули, избирани всяка година",
+        "Съвет от дванадесет сенатори",
+        "Етруски управител",
+        "Един диктатор, избран пожизнено"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#birth-of-the-republic",
+      "explanation": "Вместо цар Рим започнал всяка година да избира двама консули. Първите били Брут и Колатин, съпругът на Лукреция.",
+      "sourceQuote": "In place of a king, Rome now elected two consuls each year, starting with Brutus and Collatinus.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Според преданието кой оглавил въстанието срещу Тарквиний Горди?",
+      "options": [
+        "Луций Юний Брут",
+        "Тит Таций",
+        "Секст Тарквиний",
+        "Ларс Порсена"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#birth-of-the-republic",
+      "explanation": "Въстанието било водено от Луций Юний Брут, собственият племенник на царя. Преданието го датира в 509 г. пр.н.е.",
+      "sourceQuote": "It was led by Lucius Junius Brutus, the king's nephew.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Според легендата кой бог бил баща на Ромул и Рем?",
+      "options": [
+        "Аполон",
+        "Нептун",
+        "Марс",
+        "Юпитер"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#romulus-and-remus",
+      "explanation": "Смятало се, че близнаците са синове на Марс, бога на войната. Майка им Рея Силвия била принудена да стане весталка – жрица, заклела се в целомъдрие.",
+      "sourceQuote": "She nevertheless bore twins, Romulus and Remus, supposedly fathered by Mars, the god of war.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Според преданието петият римски цар Тарквиний Приск бил преселник от кой народ?",
+      "options": [
+        "Гърците",
+        "Сабините",
+        "Етруските",
+        "Волските"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#tarquinius-priscus",
+      "explanation": "Според преданието Тарквиний Приск бил роден етруск – от богатите народи, живеещи северно от Рим в днешна Тоскана. Той станал първият етруски цар на Рим.",
+      "sourceQuote": "According to tradition he was born an Etruscan, one of the wealthy, powerful peoples living north of Rome in what is now Tuscany.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Според легендата кое животно откърмило изоставените близнаци Ромул и Рем?",
+      "options": [
+        "Коза",
+        "Свиня",
+        "Мечка",
+        "Вълчица"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#romulus-and-remus",
+      "explanation": "Вълчица откърмила близнаците в пещера, наречена Луперкал. После ги отгледал пастирът Фаустул.",
+      "sourceQuote": "Instead a she-wolf suckled them in a cave called the Lupercal, and a shepherd named Faustulus raised them.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Поемата „Лукреция“ на кой писател е вдъхновена от историята на Лукреция?",
+      "options": [
+        "Милтън",
+        "Чосър",
+        "Байрон",
+        "Шекспир"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#tarquin-the-proud",
+      "explanation": "Историята на Лукреция вдъхновила поемата на Шекспир „Лукреция“. Тя вдъхновила и много картини през XVIII и XIX в.",
+      "sourceQuote": "The tale later inspired Shakespeare's poem Lucrece and many paintings in the 18th and 19th centuries.",
+      "reviewFlags": []
+    }
+  ]
+}

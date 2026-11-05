@@ -29,18 +29,35 @@ function sectionsFrom(markdown) {
 
 // Every usable single-answer quiz question, by difficulty: the page draws two rounds of ten (4 easy, 3 medium,
 // 3 hard) from it for each attempt of the chapter test, so a retake gets new questions
-function quizPool(dir) {
+function quizPool(dir, bg = false) {
   const byLevel = { 1: [], 2: [], 3: [] }
   for (const file of fs.readdirSync(dir).filter(f => /_batch\d+\.json$/.test(f)).sort()) {
-    for (const q of JSON.parse(fs.readFileSync(path.join(dir, file), 'utf8')).questions) {
-      if (ok(q) && q.correctAnswers.length === 1 && q.options.every(o => o.length <= 80)) byLevel[q.difficulty].push(q)
-    }
+    const bgFile = path.join(dir, file.replace(/\.json$/, '.bg.json'))
+    const en = JSON.parse(fs.readFileSync(path.join(dir, file), 'utf8')).questions
+    const tr = bg && fs.existsSync(bgFile) ? JSON.parse(fs.readFileSync(bgFile, 'utf8')).questions : en
+    en.forEach((q, i) => {
+      if (ok(q) && q.correctAnswers.length === 1 && q.options.every(o => o.length <= 80)) byLevel[q.difficulty].push({ ...q, question: tr[i].question, options: tr[i].options, explanation: tr[i].explanation })
+    })
   }
   return Object.fromEntries(Object.entries(byLevel).map(([lvl, qs]) => [lvl,
     qs.map(q => ({ q: q.question, options: q.options, a: q.correctAnswers[0], level: q.difficulty, why: q.explanation, sec: q.textReference.replace(/^#/, '') }))]))
 }
 
 const chapters = []
+const gameSets = (g, c) => ({
+    timelines: g.timelines.map(t => ({ name: t.name, blurb: t.blurb, events: t.events.filter(ok).map(e => ({ label: e.label, when: e.when, y: e.year, fact: e.fact, sec: e.sectionId })) }))
+    .filter(t => t.events.length >= 3),
+  matches: g.matchSets.map(m => { const pairs = m.pairs.filter(ok); return { name: m.name, blurb: m.blurb, pairs: pairs.map(p => [p.name, p.match]), secs: pairs.map(p => p.sectionId) } })
+    .filter(m => m.pairs.length >= 3),
+  decks: g.trueFalseDecks.map(d => ({ name: d.name, blurb: d.blurb, cards: d.cards.filter(ok).map(x => ({ claim: x.claim, answer: x.answer, why: x.why, sec: x.sectionId })) }))
+    .filter(d => d.cards.length >= 4),
+  odds: [{ name: 'Who Doesn’t Belong?', blurb: 'Spot the odd one out', rounds: g.oddOneOut.filter(ok).map(o => ({ items: o.items, odd: o.oddIndex, why: o.why, sec: o.sectionId })) }]
+    .filter(o => o.rounds.length >= 3),
+  whos: g.whoAmI.map(w => ({ name: w.name, blurb: w.blurb, people: w.people.filter(ok).map(p => ({ name: p.name, options: p.options, clues: p.clues, sec: p.sectionId })) }))
+    .filter(w => w.people.length >= 2),
+  maps: [{ name: 'Where It Happened', blurb: 'Place the towns on the map', places: g.places.filter(p => ok(p) && inArea(p, c.mapArea)).map(p => ({ name: p.name, lat: p.lat, lon: p.lon, why: p.why, sec: p.sectionId })) }]
+    .filter(m => m.places.length >= 3),
+})
 // Bulgarian: the chapters' short names (from the translation run) and their periods ("27 BC-AD 14" -> "27 г. пр.н.е. – 14 г. сл.н.е.")
 const BG_SHORTS = (() => { try { return JSON.parse(fs.readFileSync(path.join(HERE, '../../tools/content-gen/glossary.bg.json'), 'utf8')).shorts ?? {} } catch { return {} } })()
 BG_SHORTS.kingdom ??= 'Царството'
@@ -64,18 +81,7 @@ for (const c of CONFIG.chapters) {
   const ch = {
     id: c.id, era: c.era, short: c.short, title: c.chapterName.replace(/\s*\([^)]*\)\s*$/, '').replace(/^(Early Republic|Middle Republic|Late Republic|Empire):\s*/, '').replace(/ - /g, ': '), period: c.period.replace('BCE', 'BC'),
     sources: c.sources, briefing: g.briefing, sections, battle: c.battle,
-    timelines: g.timelines.map(t => ({ name: t.name, blurb: t.blurb, events: t.events.filter(ok).map(e => ({ label: e.label, when: e.when, y: e.year, fact: e.fact, sec: e.sectionId })) }))
-      .filter(t => t.events.length >= 3),
-    matches: g.matchSets.map(m => { const pairs = m.pairs.filter(ok); return { name: m.name, blurb: m.blurb, pairs: pairs.map(p => [p.name, p.match]), secs: pairs.map(p => p.sectionId) } })
-      .filter(m => m.pairs.length >= 3),
-    decks: g.trueFalseDecks.map(d => ({ name: d.name, blurb: d.blurb, cards: d.cards.filter(ok).map(x => ({ claim: x.claim, answer: x.answer, why: x.why, sec: x.sectionId })) }))
-      .filter(d => d.cards.length >= 4),
-    odds: [{ name: 'Who Doesn’t Belong?', blurb: 'Spot the odd one out', rounds: g.oddOneOut.filter(ok).map(o => ({ items: o.items, odd: o.oddIndex, why: o.why, sec: o.sectionId })) }]
-      .filter(o => o.rounds.length >= 3),
-    whos: g.whoAmI.map(w => ({ name: w.name, blurb: w.blurb, people: w.people.filter(ok).map(p => ({ name: p.name, options: p.options, clues: p.clues, sec: p.sectionId })) }))
-      .filter(w => w.people.length >= 2),
-    maps: [{ name: 'Where It Happened', blurb: 'Place the towns on the map', places: g.places.filter(p => ok(p) && inArea(p, c.mapArea)).map(p => ({ name: p.name, lat: p.lat, lon: p.lon, why: p.why, sec: p.sectionId })) }]
-      .filter(m => m.places.length >= 3),
+    ...gameSets(g, c),
     quizPool: quizPool(dir),
     // optional, written by hand: people, dates and Latin words, each linked to its section
     // optional, written by hand: small maps shown at the start of chronicle sections
@@ -91,6 +97,8 @@ for (const c of CONFIG.chapters) {
     const kfFile = path.join(dir, 'keyfacts.bg.json'), kf = fs.existsSync(kfFile) ? JSON.parse(fs.readFileSync(kfFile, 'utf8')) : null
     if (kf) kf.terms = kf.terms.map(t => ({ ...t, english: t.bulgarian ?? t.english }))
     ch.bg = { title: h1.replace(/\s*\([^)]*\)\s*$/, '').replace(/^[^:]{3,30}:\s+(?=\S)/, m => /република|империя|царство/i.test(m) ? '' : m), short: BG_SHORTS[c.id] ?? null, period: bgPeriod(ch.period), sections: bgSections, keyFacts: kf, chronicleMaps: fs.existsSync(path.join(dir, 'maps.bg.json')) ? JSON.parse(fs.readFileSync(path.join(dir, 'maps.bg.json'), 'utf8')).maps : null }
+    const gbgFile = path.join(dir, 'games.bg.json')
+    if (fs.existsSync(gbgFile)) { const gb = JSON.parse(fs.readFileSync(gbgFile, 'utf8')); Object.assign(ch.bg, gameSets(gb, c), { briefing: gb.briefing, quizPool: quizPool(dir, true) }) }
   }
   // Every link must point at a real section
   const ids = new Set(sections.map(s => s.id))

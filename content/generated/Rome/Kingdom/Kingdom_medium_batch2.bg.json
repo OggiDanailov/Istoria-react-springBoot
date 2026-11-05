@@ -1,0 +1,190 @@
+{
+  "batchName": "Early Rome & the Kingdom: The Foundation of an Empire (753-509 BCE) - Medium Batch 2",
+  "chapterName": "Early Rome & the Kingdom: The Foundation of an Empire (753-509 BCE)",
+  "difficulty": 2,
+  "batchOrder": 5,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Какво направил Брут, когато собствените му синове били хванати в заговор за връщането на Тарквиний?",
+      "options": [
+        "Помилвал ги пред събранието",
+        "Изпратил ги в изгнание в Куми",
+        "Оттеглил се засрамен от консулството",
+        "Лишил ги от гражданство",
+        "Наредил да ги екзекутират"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#birth-of-the-republic",
+      "explanation": "Брут наредил собствените му синове да бъдат екзекутирани заради заговора за връщане на царя. Той бил заклел народа никога вече да не приема цар.",
+      "sourceQuote": "When his own sons were caught plotting to bring Tarquin back, he ordered their execution.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой император отъждествил Сервий Тулий с Мастарна, етруски авантюрист, станал цар на Рим?",
+      "options": [
+        "Клавдий",
+        "Адриан",
+        "Тиберий",
+        "Август",
+        "Нерон"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#servius-tullius",
+      "explanation": "Император Клавдий направил това отъждествяване през I в. сл.н.е. Историкът Момилиано предупреждава, че Мастарна толкова се различава от традиционния Сервий, че е по-добре двамата да се разглеждат поотделно.",
+      "sourceQuote": "The emperor Claudius, in the first century AD, identified Servius with Mastarna, an Etruscan adventurer who became king of Rome.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой сабински цар делял трона с Ромул, след като римляни и сабини се обединили?",
+      "options": [
+        "Нума Помпилий",
+        "Тит Таций",
+        "Ларс Порсена",
+        "Амулий",
+        "Анк Марций"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#romulus-the-king",
+      "explanation": "След като двата народа се обединили, сабинският цар Тит Таций управлявал заедно с Ромул. Съюзът последвал войната заради отвлечените сабинки.",
+      "sourceQuote": "The two peoples then united, and the Sabine king Titus Tatius shared the throne with Romulus.",
+      "reviewFlags": []
+    },
+    {
+      "question": "До кой герой, избягал от падането на Троя, по-късните римляни проследявали рода на Ромул и Рем?",
+      "options": [
+        "Одисей",
+        "Ахил",
+        "Еней",
+        "Хектор",
+        "Приам"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#romulus-and-remus",
+      "explanation": "По-късните римляни свързвали рода на близнаците с Еней, бежанец от падналата Троя. Повечето съвременни историци смятат целия този разказ за основаването за мит.",
+      "sourceQuote": "Later Romans also traced the twins' family back to Aeneas, a hero who fled the fall of Troy.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кои религиозни институции се приписват на Нума Помпилий? (изберете всички верни)",
+      "options": [
+        "Римските игри",
+        "Длъжността върховен жрец",
+        "Първия триумф",
+        "Храма на Диана на Авентина",
+        "Весталките"
+      ],
+      "correctAnswers": [
+        1,
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#numa-tullus-ancus",
+      "explanation": "Нума учредил весталките и създал длъжността върховен жрец. Той бил сабин, избран заради справедливостта и благочестието си.",
+      "sourceQuote": "He also founded the Vestal Virgins and created the office of chief priest.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво правел interrex, или „междуцарят“, когато царят умрял?",
+      "options": [
+        "Командвал войската до началото на нова война",
+        "Устройвал погребалните игри за покойния цар",
+        "Пазел царската хазна за наследника",
+        "Управлявал цяла година до гласуване в Сената",
+        "Пет дни търсел кандидат за трона"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#how-kings-ruled",
+      "explanation": "Един сенатор служел като interrex пет дни, за да намери кандидат, а ако не успеел, предавал на друг сенатор. Избраникът после бил представян на Куриатното събрание.",
+      "sourceQuote": "One senator became the interrex, or \"between-king\", serving for five days to find a candidate, then handing over to another if he failed.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как било устроено новото събрание за гласуване, основано на имуществените класове на Сервий Тулий?",
+      "options": [
+        "Така че плебеите да надделяват над знатните",
+        "Така че всеки гражданин да има равен глас",
+        "Така че всеки район да гласува поравно",
+        "Така че богатите да имат най-голямо влияние",
+        "Така че да гласуват само патриции"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#servius-tullius",
+      "explanation": "Петте имуществени класа на Сервий образували събрание, в което тежестта била на страната на богатите. По-късно обаче се говорело, че той облагодетелствал бедните за сметка на знатните.",
+      "sourceQuote": "These classes became the basis of a new voting assembly, organised so that the rich had the most influence.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Историята на Лукреция силно напомня гръцки разказ за кое събитие?",
+      "options": [
+        "Персийското нашествие в Гърция",
+        "Реформите на Солон",
+        "Разграбването на Троя",
+        "Падането на тираните в Атина",
+        "Основаването на Куми"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#how-reliable",
+      "explanation": "Историята на Лукреция повтаря гръцки разказ за падането на атинските тирани около 510 г. пр.н.е., което прави римската версия съмнителна. Някои историци смятат, че царската власт в Рим е отмирала постепенно, а не е приключила в една драматична нощ.",
+      "sourceQuote": "Lucretia's story closely resembles a Greek tale about the fall of the tyrants of Athens, around 510 BC.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Син на кой по-ранен цар бил Тарквиний Горди?",
+      "options": [
+        "Тул Хостилий",
+        "Тарквиний Приск",
+        "Сервий Тулий",
+        "Нума Помпилий",
+        "Анк Марций"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#tarquin-the-proud",
+      "explanation": "Тарквиний Горди бил син на Тарквиний Приск, а Сервий Тулий му бил тъст. Според традицията той управлявал 25 години.",
+      "sourceQuote": "He was the son of the earlier king Tarquinius Priscus, and according to tradition he ruled for 25 years.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Тарквиний Приск добавил 100 нови членове в Сената. Колко станали те?",
+      "options": [
+        "250",
+        "100",
+        "150",
+        "300",
+        "200"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#tarquinius-priscus",
+      "explanation": "Допълнителните 100 членове увеличили Сената до 200. Според преданието Тарквиний удвоил и размера на Рим с войни срещу сабините и етруските.",
+      "sourceQuote": "He added 100 new members to the Senate, raising it to 200.",
+      "reviewFlags": []
+    }
+  ]
+}

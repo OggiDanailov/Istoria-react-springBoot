@@ -1,0 +1,191 @@
+{
+  "batchName": "Early Rome & the Kingdom: The Foundation of an Empire (753-509 BCE) - Medium Batch 1",
+  "chapterName": "Early Rome & the Kingdom: The Foundation of an Empire (753-509 BCE)",
+  "difficulty": 2,
+  "batchOrder": 4,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Защо историчката Мери Биърд нарича Ромул „господин Рим“?",
+      "options": [
+        "Бил единственият цар, роден в града",
+        "Лично проектирал всеки римски храм",
+        "Римските монети винаги носели неговия образ",
+        "Бил първият избран консул на Рим",
+        "Името му вероятно е измислено от името на града"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#romulus-and-remus",
+      "explanation": "Името Ромул вероятно е създадено от самото име на Рим – оттук и „господин Рим“. Повечето съвременни историци смятат легендата за основаването за мит.",
+      "sourceQuote": "Even the name Romulus was probably invented from the city's name, making him, as the classicist Mary Beard put it, \"Mr Rome\".",
+      "reviewFlags": []
+    },
+    {
+      "question": "Каква била ролята на авгура при избора на нов цар?",
+      "options": [
+        "Търсел знаци, че боговете одобряват",
+        "Давал на царя imperium",
+        "Коронясвал царя на Форума",
+        "Представял царя пред Сената",
+        "Броял гласовете на събранието"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#how-kings-ruled",
+      "explanation": "Авгурът, жрец, отвеждал избрания цар на цитаделата, за да търси знаци за божие одобрение. Едва след това събранието давало на царя imperium.",
+      "sourceQuote": "A priest called an augur took the king-elect up to the citadel and looked for signs that the gods approved.",
+      "reviewFlags": []
+    },
+    {
+      "question": "След като Ромул изчезнал в буря, уважаван благородник твърдял, че Ромул му се явил във видение като кой бог?",
+      "options": [
+        "Янус",
+        "Сатурн",
+        "Марс",
+        "Юпитер",
+        "Квирин"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#romulus-the-king",
+      "explanation": "Благородникът казал, че Ромул му се явил като бог Квирин. Други шепнели, че благородниците убили царя и скрили частите от тялото му.",
+      "sourceQuote": "But one respected nobleman claimed Romulus had appeared to him in a vision as the god Quirinus.",
+      "reviewFlags": []
+    },
+    {
+      "question": "На кой хълм археолозите са открили следи от селище от бронзовата епоха, може би още от 1700 г. пр.н.е.?",
+      "options": [
+        "Палатинският",
+        "Авентинският",
+        "Капитолийският",
+        "Квириналът",
+        "Есквилинът"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#origins",
+      "explanation": "Най-ранните следи от селище са от Капитолийския хълм, може би още от 1700 г. пр.н.е. Колибите на Палатинския хълм се появили много по-късно, към IX или VIII в. пр.н.е.",
+      "sourceQuote": "Archaeologists have found traces of Bronze Age settlement on the Capitoline Hill, possibly from as early as 1700 BC.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Защо на историците им е трудно да повярват в традиционните 243 години на седемте римски царе?",
+      "options": [
+        "Археологията показва, че царете са само трима",
+        "Не остава време за основаването от Ромул",
+        "Датите противоречат на галското нашествие",
+        "Това означава средно управление от почти 35 години",
+        "Нито един гръцки автор не споменава цар"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#how-reliable",
+      "explanation": "Седем царе за 243 години дават средно управление от почти 35 години, което изглежда твърде дълго. Това е една от причините съвременните историци да се отнасят предпазливо към традиционния разказ.",
+      "sourceQuote": "Seven kings ruling for 243 years means an average reign of almost 35 years, which seems far too long.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Според Ливий как загинал войнственият цар Тул Хостилий?",
+      "options": [
+        "Паднал в битка срещу Алба Лонга",
+        "Изчезнал в буря по време на преглед на войската",
+        "Юпитер изгорил него и дома му с мълния",
+        "Удавил се, докато пресичал Тибър",
+        "Убил го син на Анк"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#numa-tullus-ancus",
+      "explanation": "Тул презирал боговете. Когато най-сетне на смъртния си одър помолил Юпитер за помощ, богът го поразил с мълния след 32-годишно управление.",
+      "sourceQuote": "According to Livy, when the dying king finally begged Jupiter for help, the god burned him and his house with lightning.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой цар осиновил преселника Тарквиний Приск?",
+      "options": [
+        "Тул Хостилий",
+        "Ромул",
+        "Анк Марций",
+        "Нума Помпилий",
+        "Сервий Тулий"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#tarquinius-priscus",
+      "explanation": "След като се заселил в Рим, Тарквиний спечелил благоразположението на цар Анк Марций, който го осиновил. По-късно той станал петият цар на Рим.",
+      "sourceQuote": "After settling in Rome he won the favour of King Ancus Marcius, who adopted him as a son.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой голям строителен проект завършил Тарквиний Горди?",
+      "options": [
+        "Циркус Максимус",
+        "Храма на Юпитер на Капитолия",
+        "Cloaca Maxima",
+        "Първия мост на Рим над Тибър",
+        "Храма на Диана на Авентина"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#tarquin-the-proud",
+      "explanation": "Тарквиний Горди довършил големия храм на Юпитер на Капитолийския хълм. Той бил енергичен владетел, превърнал Рим във водещата сила сред латинските градове.",
+      "sourceQuote": "He finished the great temple of Jupiter on the Capitoline Hill.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Авторите на американските „Записки на федералиста“ взели псевдонима си от кой ранен римлянин?",
+      "options": [
+        "Попликола",
+        "Брут",
+        "Хораций",
+        "Колатин",
+        "Сервий Тулий"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#birth-of-the-republic",
+      "explanation": "Авторите на „Записки на федералиста“ се подписвали „Публий“ на името на Публий Валерий Попликола, един от водачите на въстанието. Френските революционери пък кръщавали момчета и градове на Брут.",
+      "sourceQuote": "French revolutionaries named boys and towns after Brutus, and the authors of the American Federalist Papers signed themselves \"Publius\" after Poplicola.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какви природни предимства предлагало мястото на Рим на първите заселници? (изберете всички верни)",
+      "options": [
+        "Дълбоко естествено морско пристанище",
+        "Стръмни, лесни за отбрана хълмове",
+        "Широка плодородна равнина",
+        "Богати сребърни мини в хълмовете",
+        "Брод през река Тибър"
+      ],
+      "correctAnswers": [
+        1,
+        2,
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#origins",
+      "explanation": "Бродът позволявал на пътниците да пресекат Тибър, а стръмните, лесни за отбрана хълмове се издигали над плодородна равнина. Тези предимства съществували много преди Рим да има цар.",
+      "sourceQuote": "A ford let travellers cross the Tiber River in central Italy, and a cluster of steep, easily defended hills rose from a wide, fertile plain.",
+      "reviewFlags": []
+    }
+  ]
+}

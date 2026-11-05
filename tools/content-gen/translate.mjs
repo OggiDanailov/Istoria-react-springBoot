@@ -22,7 +22,8 @@ const GLOSSARY = path.join(HERE, 'glossary.bg.json')
 const args = process.argv.slice(2)
 const ONLY = args.includes('--only') ? args[args.indexOf('--only') + 1] : null
 const CHECK = args.includes('--check')
-const EXTRAS = args.includes('--extras')   // Key facts and the chronicle maps, instead of the chapter text
+const EXTRAS = args.includes('--extras')
+const GAMES = args.includes('--games')   // the quiz questions and the mini-games   // Key facts and the chronicle maps, instead of the chapter text
 const usage = { input: 0, output: 0 }
 const sleep = ms => new Promise(r => setTimeout(r, ms))
 
@@ -141,6 +142,46 @@ async function askExtras(client, system, list) {
   const result = JSON.parse(message.content.find(b => b.type === 'text').text)
   fs.mkdirSync(RESPONSES_DIR, { recursive: true }); fs.writeFileSync(file, JSON.stringify(result))
   return result
+}
+if (GAMES) {
+  // questions (*_batchN.json) and games.json, as *.bg.json beside them. Identical English strings are translated once,
+  // so a Who Am I answer still matches its option. The Latin side of "Latin Words" pairs stays Latin.
+  const client = new Anthropic({ timeout: 10 * 60 * 1000, maxRetries: 2 })
+  const SKIP = ['sectionId', 'textReference', 'sourceQuote', 'reviewFlags', 'wikipediaTitle', 'chapterName', 'batchName', 'description', 'difficulty', 'batchOrder']
+  function collect(obj, p = '', out = [], latinSet = false) {
+    if (typeof obj === 'string') { if (/[A-Za-z]/.test(obj)) out.push([p, obj]); return out }
+    if (Array.isArray(obj)) obj.forEach((x, i) => collect(x, `${p}.${i}`, out, latinSet))
+    else if (obj && typeof obj === 'object') {
+      const isLatinSet = latinSet || (typeof obj.name === 'string' && /latin/i.test(obj.name) && Array.isArray(obj.pairs))
+      for (const [k, v] of Object.entries(obj)) {
+        if (SKIP.includes(k)) continue
+        if (isLatinSet && /\.pairs\.\d+$/.test(p) && k === 'name') continue   // the Latin word itself
+        collect(v, `${p}.${k}`, out, isLatinSet)
+      }
+    }
+    return out
+  }
+  for (const c of chapters.filter(c => !ONLY || c.id === ONLY)) {
+    const dir = dirOf(c), glossary = JSON.parse(fs.readFileSync(GLOSSARY, 'utf8'))
+    const files = fs.readdirSync(dir).filter(f => /(_batch\d+|^games)\.json$/.test(f) && !fs.existsSync(path.join(dir, f.replace(/\.json$/, '.bg.json')))).sort()
+    if (!files.length) continue
+    const t0 = Date.now(), data = Object.fromEntries(files.map(f => [f, JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8'))]))
+    const list = files.flatMap(f => collect(data[f], f.replace(/\./g, '~')))
+    const unique = [...new Set(list.map(([, t]) => t))]
+    const system = SYSTEM(glossary).split('Style example:')[0] + `The texts are quiz questions, answer options, explanations and mini-game items of one chapter ("${c.short}"). Latin words and phrases stay Latin even when they are not in asterisks (for example "Princeps", "Res Gestae", "Pax Romana"). Keep each answer option short, like the English.\n\nGlossary (English → Bulgarian):\n` + Object.entries({ ...glossary.terms, ...glossary.names }).map(([en, bg]) => `${en} → ${bg}`).join('\n')
+    const out = new Map()
+    for (let i = 0; i < unique.length; i += 220) {   // in parts, so each answer stays well within the limits
+      const part = unique.slice(i, i + 220)
+      const r = await askExtras(client, system, part)
+      if (r.texts.length !== part.length) throw new Error(`${c.id}: got ${r.texts.length} texts back for ${part.length}`)
+      part.forEach((t, j) => out.set(t, r.texts[j]))
+    }
+    for (const [p, t] of list) { const [f, ...rest] = p.split('.'); put(data[f.replace(/~/g, '.')], '.' + rest.join('.'), out.get(t)) }
+    for (const f of files) fs.writeFileSync(path.join(dir, f.replace(/\.json$/, '.bg.json')), JSON.stringify(data[f], null, 2) + '\n')
+    console.log(`${c.id}: ${files.length} files, ${unique.length} texts, ${Math.round((Date.now() - t0) / 1000)}s   (so far ~$${cost().toFixed(2)})`)
+  }
+  console.log(`\nTokens: ${usage.input} in, ${usage.output} out. Approximate cost: $${cost().toFixed(2)}`)
+  process.exit(0)
 }
 if (EXTRAS) {
   const client = new Anthropic({ timeout: 10 * 60 * 1000, maxRetries: 2 })

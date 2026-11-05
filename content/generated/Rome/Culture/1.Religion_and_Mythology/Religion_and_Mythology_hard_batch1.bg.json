@@ -1,0 +1,203 @@
+{
+  "batchName": "Roman Religion and Mythology (753 BC-AD 391) - Hard Batch 1",
+  "chapterName": "Roman Religion and Mythology (753 BC-AD 391)",
+  "difficulty": 3,
+  "batchOrder": 5,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Какво първоначално означавала за авгурите думата *templum*?",
+      "options": [
+        "Жилището на върховния жрец",
+        "Свещено пространство, очертано с ритуал",
+        "Колегията на понтификите",
+        "Календар на празничните дни",
+        "Храмова сграда",
+        "Олтар за жертвоприношения на животни"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 3,
+      "textReference": "#priests-and-augurs",
+      "explanation": "Авгурите работели в ритуално очертано свещено пространство – templum. Едва по-късно думата започнала да означава храмова сграда.",
+      "sourceQuote": "They worked within a sacred space marked out by ritual, called a *templum*, a word that only later came to mean a temple building.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво направил Август за весталките? (изберете всички верни отговори)",
+      "options": [
+        "Увеличил средствата им",
+        "Увеличил броя им на дванадесет",
+        "Дал им почетни места на игрите",
+        "Освободил ги от обета за целомъдрие",
+        "Поставил ги под властта на Сената",
+        "Позволил им да се омъжват след десет години"
+      ],
+      "correctAnswers": [
+        0,
+        2
+      ],
+      "difficulty": 3,
+      "textReference": "#vestals",
+      "explanation": "Август увеличил средствата и общественото значение на весталките. Орденът оцелял дълго в християнската епоха, докато Теодосий не угасил огъня на Веста.",
+      "sourceQuote": "Augustus, the first emperor, boosted their funding and gave them seats of honour at the games.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кое от тези събития станало през 391 г. сл.н.е.?",
+      "options": [
+        "Смъртта на Константин като обожествен император",
+        "Едикти, нареждащи разрушаване на църкви",
+        "Теодосий спрял държавната подкрепа за другите култове",
+        "Миланският едикт на Константин",
+        "Съборът в Никея",
+        "Християнството станало официална религия"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 3,
+      "textReference": "#christian-triumph",
+      "explanation": "През 391 г. Теодосий спрял държавната подкрепа за всички други култове и угасил огъня на весталките. Още през 380 г. той бил направил християнството официална религия.",
+      "sourceQuote": "In 391 he ended state support for all other cults and extinguished the Vestals' sacred fire.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Векове наред християните продължавали да празнуват февруарския празник на предците – Паренталиите. През коя година църковен събор най-сетне го забранил?",
+      "options": [
+        "567 г. сл.н.е.",
+        "391 г. сл.н.е.",
+        "313 г. сл.н.е.",
+        "476 г. сл.н.е.",
+        "337 г. сл.н.е.",
+        "380 г. сл.н.е."
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#home-and-festivals",
+      "explanation": "Паренталиите траели няколко дни всеки февруари и почитали предците на рода. Празникът бил толкова обичан, че надживял официалния край на старите култове с доста повече от век.",
+      "sourceQuote": "It was so popular that Christians were still attending it centuries later, until a church council forbade it in AD 567.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво изисквали римляните от изговорената молитва, придружаваща всяко жертвоприношение?",
+      "options": [
+        "Да бъде изпята на гръцки",
+        "Да бъде прошепната, за да не я чуе никой друг",
+        "Да може да се пропусне при голям дар",
+        "Всякакви искрени думи били приемливи",
+        "Достатъчно било да се изрече името на бога",
+        "Думите ѝ трябвало да са точни, чак до правилното име на бога"
+      ],
+      "correctAnswers": [
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#roman-piety",
+      "explanation": "Правилната форма била всичко в римската религия. Обществените молитви се рецитирали на висок глас от жрец от името на цялата общност и една-единствена грешка можела да развали ритуала.",
+      "sourceQuote": "Every sacrifice needed a spoken prayer, and the words had to be exact, down to the god's proper title.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Капитолийският храм имал три помещения. Кое божество заемало дясното?",
+      "options": [
+        "Веста",
+        "Квирин",
+        "Юнона",
+        "Юпитер",
+        "Марс",
+        "Минерва"
+      ],
+      "correctAnswers": [
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#gods-of-rome",
+      "explanation": "Минерва била вдясно, Юнона – вляво, а Юпитер – в средата. Копия на храма изникнали из цяла Италия и провинциите.",
+      "sourceQuote": "The triad's great temple stood on the Capitoline Hill above the Forum, with three separate chambers: Juno on the left, Minerva on the right, Jupiter in the middle.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Защо фламинът на Юпитер, жречество, приписвано на Нума, почти не можел да прави политическа или военна кариера?",
+      "options": [
+        "Било му забранено изобщо да напуска храма",
+        "Трябвало да бъде евнух",
+        "Подчинявал се на весталките",
+        "Трябвало да е роден сабин",
+        "Обвързвали го строги правила за ритуална чистота",
+        "Служел само една година"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 3,
+      "textReference": "#numa-pompilius",
+      "explanation": "Всеки фламин бил посветен на един-единствен бог. Фламинът на Юпитер бил толкова ограничен от строги правила за чистота, че нормалната обществена кариера била почти невъзможна.",
+      "sourceQuote": "Jupiter's own flamen was bound by such strict rules of ritual purity that he could barely pursue a political or military career.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какви мерки взел Август в рамките на религиозното си възраждане? (изберете всички верни отговори)",
+      "options": [
+        "Възстановил стари жречества",
+        "Наредил на всички поданици да принасят жертви",
+        "Угасил огъня на Веста",
+        "Станал върховен жрец",
+        "Забранил вакханалиите",
+        "Пренасочил обетите за благото на Републиката към здравето на императора"
+      ],
+      "correctAnswers": [
+        0,
+        3,
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#emperors-as-gods",
+      "explanation": "Август използвал религията, за да оправдае едноличното управление. Възстановил жречествата и приел титлата върховен жрец, която по-късните императори запазили, а обетите, някога давани за Републиката, вече се давали за императора.",
+      "sourceQuote": "He restored old priesthoods, raised up the Vestals and became chief priest himself; later emperors kept the title.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какви постижения римската традиция приписвала на Ромул? (изберете всички верни отговори)",
+      "options": [
+        "Ордена на фламините",
+        "Първото победно шествие в Рим",
+        "Храма на Янус",
+        "Храм на Диана",
+        "Първия римски календар",
+        "Първия храм на Юпитер в Рим"
+      ],
+      "correctAnswers": [
+        1,
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#aeneas-and-romulus",
+      "explanation": "На Ромул приписвали първия храм на Юпитер и първото победно шествие. Календарът, храмът на Янус и фламините се приписвали на Нума, а храма на Диана построил по-късен цар.",
+      "sourceQuote": "Romulus was credited with Rome's first temple to Jupiter and its first victory parade.",
+      "reviewFlags": []
+    },
+    {
+      "question": "През 186 г. пр.н.е. Сенатът се нахвърлил върху изключително популярен култ и го поставил под строг държавен контрол. Обредите на кой бог били това?",
+      "options": [
+        "Митра",
+        "Изида",
+        "Бакхус",
+        "Великата майка",
+        "Церера",
+        "Добрата богиня"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 3,
+      "textReference": "#foreign-gods",
+      "explanation": "Вакханалиите почитали бога на виното Бакхус. Римляните не вярвали на тайните обреди, макар че мистериалните култове, които обещавали надежда за отвъдния живот, печелели все повече последователи.",
+      "sourceQuote": "In 186 BC the Senate cracked down on the Bacchanalia, the wildly popular rites of the wine god Bacchus, and placed them under strict state control.",
+      "reviewFlags": []
+    }
+  ]
+}

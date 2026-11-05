@@ -1,0 +1,189 @@
+{
+  "batchName": "Roman Religion and Mythology (753 BC-AD 391) - Medium Batch 2",
+  "chapterName": "Roman Religion and Mythology (753 BC-AD 391)",
+  "difficulty": 2,
+  "batchOrder": 4,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "От кой народ произхождал цар Нума?",
+      "options": [
+        "Троянците",
+        "Гърците от Южна Италия",
+        "Етруските",
+        "Латините от Алба Лонга",
+        "Сабините"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#numa-pompilius",
+      "explanation": "Нума бил сабин – от планински народ североизточно от Рим. Традицията му приписва първия римски календар и няколко жречески длъжности.",
+      "sourceQuote": "He was a Sabine, from a hill people living north-east of Rome.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой орган особено изследвал харуспексът у жертвените животни?",
+      "options": [
+        "Бъбреците",
+        "Далака",
+        "Черния дроб",
+        "Белите дробове",
+        "Сърцето"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#priests-and-augurs",
+      "explanation": "Харуспексът тълкувал вътрешностите, преди всичко черния дроб. Изкуството идвало от етруските и се смятало за необходимо, но малко чуждо.",
+      "sourceQuote": "Another kind of specialist, the haruspex, inspected the entrails of sacrificed animals, especially the liver.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Римски пълководец можел да покани бога на вражески град да премине на римска страна, както станало при обсадата на Вейи. Как се наричал този обред?",
+      "options": [
+        "Evocatio",
+        "Supplicatio",
+        "Devotio",
+        "Lustratio",
+        "Auspicium"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#foreign-gods",
+      "explanation": "При Вейи римски пълководец обещал на богинята на града Юнона нов дом в Рим. След падането на Вейи статуята ѝ била пренесена в Рим.",
+      "sourceQuote": "A general at war might even invite the enemy's god to change sides, a ritual called *evocatio*.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кои три бога съставяли т.нар. от съвременните учени Архаична триада?",
+      "options": [
+        "Юпитер, Нептун и Плутон",
+        "Юпитер, Юнона и Минерва",
+        "Марс, Венера и Вулкан",
+        "Юпитер, Марс и Квирин",
+        "Янус, Веста и Церера"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#gods-of-rome",
+      "explanation": "В най-ранната епоха Юпитер бил почитан заедно с Марс и Квирин, покровител на гражданите в мирно време. По-късно тази тройка била заменена от Капитолийската триада.",
+      "sourceQuote": "In the earliest era he shared worship with Mars, god of war and farming, and Quirinus, patron of the citizens in peacetime.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Откъде дошла Великата майка (Magna Mater), пренесена в Рим през 206 г. пр.н.е.?",
+      "options": [
+        "Северна Африка",
+        "Персия",
+        "Египет",
+        "Гърция",
+        "Мала Азия"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#foreign-gods",
+      "explanation": "Пророческите книги на Рим посъветвали да бъде доведена по време на отчаяната втора война с Картаген. Жреците ѝ скопци смущавали римляните и на гражданите било забранено да влизат в това жречество.",
+      "sourceQuote": "In 206 BC, during Rome's desperate second war against Carthage, the North African power that had invaded Italy, Rome's sacred prophecy books advised bringing in the Great Mother (*Magna Mater*), a goddess from Asia Minor.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Коя била Егерия, легендарната съветничка на цар Нума?",
+      "options": [
+        "Съпругата сабинка на Нума",
+        "Първата весталка",
+        "Богинята на държавното огнище",
+        "Нимфа на изворите и пророчествата",
+        "Етруски гадател"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#numa-pompilius",
+      "explanation": "Според легендата Егерия била божествената спътница на Нума и чрез нея той общувал пряко с боговете.",
+      "sourceQuote": "Legend says he dealt directly with the gods and took advice from Egeria, a nymph of springs and prophecy who was his divine companion.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Според легендата кой бог бил баща на Ромул и Рем?",
+      "options": [
+        "Фавн",
+        "Квирин",
+        "Марс",
+        "Нептун",
+        "Юпитер"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#aeneas-and-romulus",
+      "explanation": "Узурпаторът, техен прачичо, принудил майка им да остане девица, но тя забременяла от Марс, бога на войната. Царят заповядал бебетата да бъдат изоставени, но те оцелели.",
+      "sourceQuote": "Their mother had been forced by her usurping uncle to stay a virgin, but she became pregnant by Mars, the god of war.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Защо християнството тревожело римските власти?",
+      "options": [
+        "Отказвало да плаща храмови данъци",
+        "Разчитало на гадаене по черен дроб на животни",
+        "Жреците му били скопци",
+        "Отхвърлянето на всички други богове изглеждало като безбожие",
+        "Почитало египетски богове"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#christian-triumph",
+      "explanation": "Вяра, която отхвърляла всички други богове, влизала в сблъсък с очакването всички да участват в императорския култ. Властите я виждали като безбожие и опасно суеверие.",
+      "sourceQuote": "To Roman officials, a faith that rejected every other god looked like atheism and dangerous superstition.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Чрез какво бил почитан жив император в самия Рим?",
+      "options": [
+        "Чрез домашните му пенати",
+        "Чрез свещения огън на Веста",
+        "Чрез неговия genius – божествения дух във всеки човек",
+        "Чрез посветен на него фламин",
+        "Чрез личните му лари"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#emperors-as-gods",
+      "explanation": "Живият император бил почитан чрез своя genius. Едва след смъртта му Сенатът можел да гласува да бъде обявен за истински бог.",
+      "sourceQuote": "In Rome, a living emperor was honoured through his genius, the divine spirit believed to live in every person.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Капитолийската триада от един бог и две богини била необичайно съчетание. От кой народ може да е дошла?",
+      "options": [
+        "Гърците",
+        "Картагенците",
+        "Сабините",
+        "Етруските",
+        "Египтяните"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#gods-of-rome",
+      "explanation": "Етруските, които живеели в Етрурия северно от Рим, почитали подобна тройка. Римската версия била Юпитер, Юнона и Минерва.",
+      "sourceQuote": "One god with two goddesses was an unusual grouping, and it may come from the Etruscans, the powerful people of Etruria north of Rome, who worshipped a similar trio.",
+      "reviewFlags": []
+    }
+  ]
+}

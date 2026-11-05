@@ -1,0 +1,128 @@
+{
+  "batchName": "Roman Religion and Mythology (753 BC-AD 391) - Roman and Greek gods",
+  "chapterName": "Roman Religion and Mythology (753 BC-AD 391)",
+  "difficulty": 1,
+  "batchOrder": 10,
+  "description": "Written by hand from the chapter text: the Roman gods and their Greek counterparts",
+  "questions": [
+    {
+      "question": "Кой гръцки бог съответствал на Юпитер?",
+      "options": [
+        "Зевс",
+        "Посейдон",
+        "Аполон",
+        "Хадес"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#roman-and-greek-gods",
+      "explanation": "Юпитер наследил митовете за Зевс, царя на гръцките богове.",
+      "sourceQuote": "Jupiter inherited the stories of Zeus",
+      "reviewFlags": []
+    },
+    {
+      "question": "Коя римска богиня съответствала на гръцката Афродита?",
+      "options": [
+        "Венера",
+        "Юнона",
+        "Минерва",
+        "Диана"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#roman-and-greek-gods",
+      "explanation": "Венера, богинята на любовта и красотата, поела митовете за Афродита.",
+      "sourceQuote": "and Venus those of Aphrodite.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой велик бог запазил гръцкото си име в Рим?",
+      "options": [
+        "Аполон",
+        "Марс",
+        "Меркурий",
+        "Нептун"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#roman-and-greek-gods",
+      "explanation": "Аполон бил бог на светлината, музиката и пророчествата както в Гърция, така и в Рим.",
+      "sourceQuote": "Apollo, god of light, music and prophecy, is the one great god who kept his Greek name.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кои били Dii Consentes?",
+      "options": [
+        "Дванадесетте велики богове на Рим – шест богове и шест богини",
+        "Боговете на дома",
+        "Тримата богове на Капитолия",
+        "Духовете на мъртвите"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#roman-and-greek-gods",
+      "explanation": "Позлатените им статуи стояли на Форума.",
+      "sourceQuote": "Rome's twelve great gods, six gods and six goddesses, were called the Harmonious Gods (*Dii Consentes*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой бог изобщо нямал гръцки двойник?",
+      "options": [
+        "Янус",
+        "Вулкан",
+        "Церера",
+        "Диана"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#roman-and-greek-gods",
+      "explanation": "Янус, двуликият бог на вратите и началата, бил чисто римски, също като Квирин.",
+      "sourceQuote": "Janus, the two-faced god of doorways and beginnings, and Quirinus, patron of the citizens, were purely Roman.",
+      "reviewFlags": []
+    },
+    {
+      "question": "С какво римският Марс се различавал от гръцкия Арес?",
+      "options": [
+        "Марс бил сред най-почитаните богове на Рим, а гърците не обичали особено Арес",
+        "Марс бил морски бог, а Арес – бог на войната",
+        "Марс бил богиня",
+        "Нямало разлика"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#roman-and-greek-gods",
+      "explanation": "Марс бил баща на Ромул и пазител на нивите, а не само бог на войната.",
+      "sourceQuote": "Mars, father of Romulus and guardian of the fields as well as god of war, was one of the most honoured gods in Rome, while the Greeks thought Ares brutal and liked him little.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой поет изброил дванадесетте велики богове на Рим в края на III в. пр.н.е.?",
+      "options": [
+        "Ений",
+        "Вергилий",
+        "Овидий",
+        "Омир"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#roman-and-greek-gods",
+      "explanation": "Позлатените им статуи стояли на Форума.",
+      "sourceQuote": "The poet Ennius listed them in the late 3rd century BC",
+      "reviewFlags": []
+    }
+  ]
+}

@@ -1,0 +1,179 @@
+{
+  "batchName": "Early Rome & the Kingdom: The Foundation of an Empire (753-509 BCE) - Easy Batch 1",
+  "chapterName": "Early Rome & the Kingdom: The Foundation of an Empire (753-509 BCE)",
+  "difficulty": 1,
+  "batchOrder": 1,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Какво според преданието е било необичайно в произхода на цар Сервий Тулий?",
+      "options": [
+        "Бил картагенски търговец",
+        "Отгледала го вълчица",
+        "Бил гръцки бежанец от Троя",
+        "Бил син на робиня"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#servius-tullius",
+      "explanation": "Според преданието Сервий бил син на робиня. Той се издигнал дотам, че се оженил за дъщерята на предишния цар Тарквиний Приск.",
+      "sourceQuote": "According to tradition, Rome's sixth king, Servius Tullius, was the son of a slave who married the daughter of the previous king, Tarquinius Priscus.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво подсказва археологията за римските царе?",
+      "options": [
+        "Царете всъщност били гръцки управители от Куми",
+        "И седемте царе са потвърдени от царски надписи",
+        "Рим никога не е имал царе – измислил ги е Ливий",
+        "Рим наистина е имал царе, макар разказите за тях да са съмнителни"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#how-reliable",
+      "explanation": "Археологията потвърждава, че Рим е имал царе, но повечето учени се съмняват в традиционните разкази за тях. Съвременните историци са предпазливи, защото са оцелели толкова малко писмени извори.",
+      "sourceQuote": "Archaeology shows that Rome did have kings, but most scholars doubt the traditional stories about them.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой латински град, смятан за родно място на Ромул, бил разрушен от цар Тул Хостилий?",
+      "options": [
+        "Ардея",
+        "Вейи",
+        "Алба Лонга",
+        "Остия"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#numa-tullus-ancus",
+      "explanation": "Войнственият Тул Хостилий разрушил Алба Лонга и преселил жителите ѝ в Рим. Той построил и сграда на Сената, която просъществувала векове.",
+      "sourceQuote": "He fought Rome's neighbours and destroyed Alba Longa, the Latin town said to be Romulus's birthplace, moving its people to Rome.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Според легендата кой герой сам удържал един мост срещу армията на Ларс Порсена?",
+      "options": [
+        "Брут",
+        "Колатин",
+        "Попликола",
+        "Хораций"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#birth-of-the-republic",
+      "explanation": "Хораций удържал моста сам, докато го съборят. Порсена, етруски цар от Клузий, тръгнал срещу Рим, за да помогне на Тарквиний да се върне.",
+      "sourceQuote": "An Etruscan king, Lars Porsenna of Clusium, marched on Rome, but legend says the hero Horatius held a bridge alone until it could be torn down.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво представлявали фасциите, носени пред римските царе от придружителите им?",
+      "options": [
+        "Сноп пръчки около брадва",
+        "Бронзов щит и копие",
+        "Позлатен орел на висок прът",
+        "Свещени ключове от храм"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#how-kings-ruled",
+      "explanation": "Фасциите били сноп пръчки около брадва, символ на властта на царя да наказва. Дванадесет придружители ги носели пред него.",
+      "sourceQuote": "Twelve attendants walked ahead of him carrying the fasces, a bundle of rods around an axe that symbolised his power to punish.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Към коя година приблизително Рим вече бил истински град с централен форум, монументални сгради и обществени храмове?",
+      "options": [
+        "600 г. пр.н.е.",
+        "1000 г. пр.н.е.",
+        "400 г. пр.н.е.",
+        "800 г. пр.н.е."
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#origins",
+      "explanation": "Към 600 г. пр.н.е. селата напълно се слели в един град. Рим вече имал централен форум, монументални сгради и обществени храмове.",
+      "sourceQuote": "By 600 BC the process was complete.",
+      "reviewFlags": []
+    },
+    {
+      "question": "На Сервий Тулий се приписва провеждането на първото римско…",
+      "options": [
+        "Триумф – победно шествие",
+        "Избиране на консули",
+        "Надбягване с колесници",
+        "Преброяване (census) на гражданите"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#servius-tullius",
+      "explanation": "Сервий провел първото преброяване (census) в Рим и разделил гражданите на пет класи според богатството им. Трайната му слава се дължи на това преустройство на римското общество.",
+      "sourceQuote": "He held Rome's first census, a count of citizens, and sorted people into five classes by wealth.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Коя година римляните официално приемали за основаването на своя град?",
+      "options": [
+        "776 г. пр.н.е.",
+        "509 г. пр.н.е.",
+        "753 г. пр.н.е.",
+        "814 г. пр.н.е."
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#romulus-and-remus",
+      "explanation": "Ученият Варон изчислил официалната дата на основаването – 753 г. пр.н.е. Римляните я празнували всяка година на 21 април.",
+      "sourceQuote": "The official founding date, worked out by the scholar Varro, was 753 BC, celebrated on 21 April.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Ромул избрал 100 видни мъже за съветници, наречени „бащи“. Какви станали техните потомци?",
+      "options": [
+        "Плебеи",
+        "Патриции",
+        "Конници",
+        "Ликтори"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#romulus-the-king",
+      "explanation": "Потомците на стоте „бащи“ на Ромул станали патриции – наследствената аристокрация на Рим. Ромул бил придружаван и от дванадесет служители, наречени ликтори.",
+      "sourceQuote": "They were called the \"fathers\", and their descendants became the patricians, Rome's hereditary aristocracy.",
+      "reviewFlags": []
+    },
+    {
+      "question": "За какво се използвала около 1000 г. пр.н.е. долината, превърнала се по-късно в Римския форум?",
+      "options": [
+        "Царски дворцов комплекс",
+        "Пазар за добитък",
+        "Гробище",
+        "Писта за колесници"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#origins",
+      "explanation": "Дълго преди да стане големият площад на Рим, долината на Форума била гробище. На близкия Палатински хълм още през IX или VIII в. пр.н.е. имало колиби.",
+      "sourceQuote": "By 1000 BC the valley that later became the Roman Forum, the city's great public square, was a cemetery.",
+      "reviewFlags": []
+    }
+  ]
+}

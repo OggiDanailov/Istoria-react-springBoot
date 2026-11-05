@@ -1,0 +1,145 @@
+{
+  "batchName": "The Roman Kingdom - Latin words",
+  "chapterName": "Early Rome & the Kingdom: The Foundation of an Empire (753-509 BCE)",
+  "difficulty": 1,
+  "batchOrder": 9,
+  "description": "Written by hand from the reviewed chapter text: the Latin words it explains",
+  "questions": [
+    {
+      "question": "Какво означава латинската дума rex?",
+      "options": [
+        "Цар",
+        "Сенатор",
+        "Жрец",
+        "Войник"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#origins",
+      "explanation": "Rex означава цар; преди Републиката римляните имали седем царе.",
+      "sourceQuote": "Long before any king (*rex*), the site of Rome (*Roma*) had real advantages.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Според легендата една lupa хранила близнаците Ромул и Рем. Какво е lupa?",
+      "options": [
+        "Вълчица",
+        "Мечка",
+        "Коза",
+        "Овчарка"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#romulus-and-remus",
+      "explanation": "Вълчица (lupa) кърмила близнаците в пещера, наречена Луперкал.",
+      "sourceQuote": "Instead a she-wolf (*lupa*) suckled them in a cave called the Lupercal",
+      "reviewFlags": []
+    },
+    {
+      "question": "Анк Марций основал Остия. Какво означава латинският ѝ корен ostium?",
+      "options": [
+        "Устие на река",
+        "Сол",
+        "Пристанищна стена",
+        "Кораб"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#numa-tullus-ancus",
+      "explanation": "Остия се намирала при устието на Тибър, а ostium означава устие на река.",
+      "sourceQuote": "He founded Ostia (from *ostium*, \"river mouth\"), a port at the river's mouth",
+      "reviewFlags": []
+    },
+    {
+      "question": "От коя латинска дума идва името на Сената (senatus)?",
+      "options": [
+        "senex – „старец“",
+        "sanctus – „свещен“",
+        "signum – „знак“",
+        "sella – „стол“"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#romulus-the-king",
+      "explanation": "Сенатът бил съвет на старейшините: senatus идва от senex – „старец“.",
+      "sourceQuote": "together they formed the Senate (*senatus*, from *senex*, \"old man\")",
+      "reviewFlags": []
+    },
+    {
+      "question": "Думата „република“ идва от латинското res publica. Какво означавало то?",
+      "options": [
+        "„Общото дело“",
+        "„Власт на народа“",
+        "„Градът на бащите“",
+        "„Законът на консулите“"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#birth-of-the-republic",
+      "explanation": "Res publica означавало „общото дело“: държавата принадлежала на народа, а не на цар.",
+      "sourceQuote": "This marked the birth of the Republic (*res publica*, \"the public thing\").",
+      "reviewFlags": []
+    },
+    {
+      "question": "Последният римски цар бил наречен Superbus. Какво означава това?",
+      "options": [
+        "Горди",
+        "Стари",
+        "Велики",
+        "Жестоки"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#tarquin-the-proud",
+      "explanation": "Луций Тарквиний Superbus бил „Тарквиний Горди“; по-ранният Тарквиний бил Priscus – „Стари“.",
+      "sourceQuote": "Lucius Tarquinius Superbus (*Superbus*, \"the Proud\")",
+      "reviewFlags": []
+    },
+    {
+      "question": "Римляните броели годините ab urbe condita. Какво означава това?",
+      "options": [
+        "От основаването на града",
+        "По времето на царете",
+        "В годината на консулите",
+        "След войната със сабините"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#romulus-and-remus",
+      "explanation": "Годините се броели от традиционното основаване на Рим през 753 г. пр.н.е., съкратено AUC.",
+      "sourceQuote": "the year from which Romans counted *ab urbe condita* (\"from the founding of the city\", abbreviated AUC)",
+      "reviewFlags": []
+    },
+    {
+      "question": "Твърдели, че Тарквиний Горди пренебрегвал mos maiorum. Какво е това?",
+      "options": [
+        "Обичаите на предците",
+        "Законите на дванадесетте таблици",
+        "Съветите на авгурите",
+        "Правата на плебса"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#tarquin-the-proud",
+      "explanation": "Mos maiorum – „обичаите на предците“ – било неписаното право, което римляните очаквали владетелите им да спазват.",
+      "sourceQuote": "ignored custom (*mos maiorum*, \"the ways of the ancestors\") and the Senate",
+      "reviewFlags": []
+    }
+  ]
+}

@@ -1,0 +1,193 @@
+{
+  "batchName": "Roman Religion and Mythology (753 BC-AD 391) - Medium Batch 1",
+  "chapterName": "Roman Religion and Mythology (753 BC-AD 391)",
+  "difficulty": 2,
+  "batchOrder": 3,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Племенникът на Константин станал император през 361 г. и се опитал да възроди старите култове. Къде загинал две години по-късно?",
+      "options": [
+        "Персия",
+        "Британия",
+        "Галия",
+        "Дакия",
+        "Египет"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#christian-triumph",
+      "explanation": "Смъртта му в Персия сложила край на опита за езическо възраждане. През 380 г., при Теодосий, християнството станало официална религия.",
+      "sourceQuote": "His nephew Julian, emperor from 361, tried to revive the old cults, but died in Persia two years later.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Римските надгробни плочи обикновено били посвещавани *Dis Manibus*. Какво означава това?",
+      "options": [
+        "Почивай в мир",
+        "На духовете-богове",
+        "На боговете на огнището",
+        "На основателите на Рим",
+        "На домашните богове"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#home-and-festivals",
+      "explanation": "Римляните вярвали, че мъртвите се присъединяват към духовете на подземния свят. По-заможните семейства принасяли в жертва свиня при погребалната клада.",
+      "sourceQuote": "Afterwards the dead were believed to join the spirits of the underworld, and tombstones were commonly dedicated \"to the spirit-gods\" (*Dis Manibus*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "Веднъж римски магистрат забравил да спомене „римския народ“ в празнична молитва. Какво последвало?",
+      "options": [
+        "Друг жрец довършил молитвата",
+        "Празникът бил отменен за година",
+        "Магистратът бил лишен от длъжността си",
+        "Магистратът платил допълнително жертвоприношение",
+        "Целият празник започнал отначало"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#roman-piety",
+      "explanation": "Молитвите трябвало да са безупречни дума по дума и една-единствена грешка можела да развали обреда. Затова целият празник бил повторен отначало.",
+      "sourceQuote": "The entire festival had to start again from the beginning.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кои твърдения описват римските жречески длъжности? (изберете всички верни)",
+      "options": [
+        "Жреците били отделно наследствено съсловие",
+        "Жреците трябвало да не се женят",
+        "Заемали ги същите аристократи, които заемали и политически длъжности",
+        "Заемали се пожизнено",
+        "Не били платени"
+      ],
+      "correctAnswers": [
+        2,
+        3,
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#priests-and-augurs",
+      "explanation": "В Рим нямало отделно жреческо съсловие: политиците служели като жреци, имали семейства и водели натоварен обществен живот. Жреческата длъжност често била желана като почетно оттегляне.",
+      "sourceQuote": "Priesthoods were unpaid and held for life, and were often sought as an honourable retirement after a career in war and politics.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какъв знак след смъртта на Юлий Цезар бил приет като доказателство, че той е станал бог?",
+      "options": [
+        "Орел, издигнал се от кладата му",
+        "Комета, видяна по време на игри",
+        "Статуя на Венера, която плачела",
+        "Мълния, ударила Капитолия",
+        "Затъмнение при погребението му"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#emperors-as-gods",
+      "explanation": "По време на игрите след убийството му се появила комета. Цезар станал върховен жрец през 63 г. пр.н.е., знак за възхода му.",
+      "sourceQuote": "A comet seen during games after his death was taken as proof that he had joined the gods.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво била mola salsa, приготвяна от весталките?",
+      "options": [
+        "Вино, изливано върху олтара",
+        "Медена питка, принасяна на ларите",
+        "Зърно, оставяно на гробовете за мъртвите",
+        "Пепел от огъня на Веста",
+        "Осолено брашно, поръсвано върху животните преди жертвоприношение"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#vestals",
+      "explanation": "Понеже mola salsa се поръсвала върху всяко жертвено животно, трудът на весталките докосвал всяко официално жертвоприношение.",
+      "sourceQuote": "They prepared the *mola salsa*, a salted flour sprinkled on each animal before it was killed, and took part in festivals honouring the dead and the harvest.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кои практики римляните осъждали като суеверие (superstitio)? (изберете всички верни)",
+      "options": [
+        "Точни обществени молитви от жрец",
+        "Боязливо раболепие пред боговете",
+        "Надничане в божественото знание",
+        "Прекомерна набожност",
+        "Обети за победа във война"
+      ],
+      "correctAnswers": [
+        1,
+        2,
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#roman-piety",
+      "explanation": "Прекаленото усърдие било също толкова опасно, колкото и пренебрежението. Раболепието, прекомерната набожност и надничането в божественото знание можели да разгневят боговете.",
+      "sourceQuote": "Fearful grovelling, excessive devotion and prying into divine knowledge were condemned as superstition (*superstitio*). Secret rites were suspect too, as possible magic or conspiracy.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Пред кого отговаряла весталката, след като била избрана?",
+      "options": [
+        "Фламина на Юпитер",
+        "Върховния жрец",
+        "Баща си",
+        "Императора",
+        "Сенатът"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#vestals",
+      "explanation": "Весталката била освобождавана от властта на баща си и – необичайно за римлянка – нямала нужда от мъжки настойник. Отговаряла единствено пред върховния жрец.",
+      "sourceQuote": "She was freed from her father's authority and, unlike other Roman women, needed no male guardian, answering only to the chief priest.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Според легендата през царете на кой град родът на Еней стигнал до основателите на Рим?",
+      "options": [
+        "Тускулум",
+        "Лавиний",
+        "Алба Лонга",
+        "Вейи",
+        "Габии"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#aeneas-and-romulus",
+      "explanation": "Еней се оженил за дъщерята на местен цар, а потомците му управлявали в Алба Лонга – латински град в хълмовете югоизточно от Рим.",
+      "sourceQuote": "Aeneas married a local king's daughter, and through a long line of kings at Alba Longa, a Latin town in the hills south-east of Rome, his bloodline led to Rome's founders.",
+      "reviewFlags": []
+    },
+    {
+      "question": "От кои римски обреди мъжете били напълно изключени?",
+      "options": [
+        "Обредите на Добрата богиня",
+        "Обредите на Великата майка",
+        "Паренталиите",
+        "Вакханалиите",
+        "Мистериите на Митра"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#home-and-festivals",
+      "explanation": "Някои от около четиридесетте ежегодни празника на Рим принадлежали на определени групи. Обредите на Добрата богиня били изцяло забранени за мъже.",
+      "sourceQuote": "Others belonged to particular groups, like the rites of the Good Goddess, from which men were completely barred.",
+      "reviewFlags": []
+    }
+  ]
+}

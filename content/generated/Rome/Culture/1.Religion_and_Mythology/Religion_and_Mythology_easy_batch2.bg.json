@@ -1,0 +1,179 @@
+{
+  "batchName": "Roman Religion and Mythology (753 BC-AD 391) - Easy Batch 2",
+  "chapterName": "Roman Religion and Mythology (753 BC-AD 391)",
+  "difficulty": 1,
+  "batchOrder": 2,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Над какво бдяла римската богиня Церера?",
+      "options": [
+        "Над входната врата",
+        "Над огнището",
+        "Над плодовете",
+        "Над растящото жито"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#gods-of-rome",
+      "explanation": "Римските богове имали практични задачи: Церера пазела растящото жито, а Помона се грижела за плодовете.",
+      "sourceQuote": "Janus guarded the door and Vesta the hearth, Ceres watched over the growing grain and Pomona the fruit.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой изпълнявал ролята на жрец в римското домакинство?",
+      "options": [
+        "Нает харуспекс",
+        "Бащата на семейството",
+        "Местен понтифик",
+        "Най-големият син"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#home-and-festivals",
+      "explanation": "Paterfamilias принасял ежедневните дарове, а съпругата му се грижела за почитането на Веста при огнището.",
+      "sourceQuote": "The father of the family (*paterfamilias*) acted as its priest, making daily offerings, while his wife looked after the worship of Vesta at the hearth.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Колко весталки поддържали свещения огън на Веста?",
+      "options": [
+        "Четири",
+        "Шест",
+        "Девет",
+        "Дванадесет"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#vestals",
+      "explanation": "Шест весталки пазели огъня на Веста, богинята на държавното огнище. Всяко домакинство можело да запали отново своя огън от техния.",
+      "sourceQuote": "The Vestals (*virgines Vestales*) were Rome's most famous priesthood: six women who tended the sacred flame of Vesta, goddess of the hearth of the Roman state.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кого обвинил императорът за Големия пожар в Рим през 64 г. сл.н.е.?",
+      "options": [
+        "Галите",
+        "Евреите",
+        "Чуждите роби",
+        "Християните"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#christian-triumph",
+      "explanation": "Императорът обвинил християните за пожара и последвали гонения. Римските власти смятали вярата им за безбожие и опасно суеверие.",
+      "sourceQuote": "After the Great Fire of Rome in AD 64, the emperor Nero blamed the Christians, and persecution followed.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Вратите на храма на Янус се затваряли, когато Рим бил...",
+      "options": [
+        "Във война",
+        "В траур за цар",
+        "В мир",
+        "В глад"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#numa-pompilius",
+      "explanation": "Янус бил двуликият бог на вратите. Вратите на храма му стояли отворени по време на война и останали затворени през цялото мирно управление на Нума.",
+      "sourceQuote": "Its doors stood open in wartime and closed in peace.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кои били ларите, почитани във всяко домашно светилище в Рим?",
+      "options": [
+        "Духове на подземния свят",
+        "Богове на домашните запаси",
+        "Богове на растящото жито",
+        "Духове пазители на дома и нивите"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#home-and-festivals",
+      "explanation": "Ларите пазели дома и нивите. Те делели домашното светилище с пенатите – боговете на домашните запаси.",
+      "sourceQuote": "Every home had a shrine to the Lares, guardian spirits of house and fields, and the Penates, gods of the household stores.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Според легендата коя богиня била майка на троянския принц Еней?",
+      "options": [
+        "Диана",
+        "Минерва",
+        "Юнона",
+        "Венера"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#aeneas-and-romulus",
+      "explanation": "Еней, синът на Венера, се спасил при падането на Троя и отплавал за Италия. Донесъл със себе си свещени предмети, сред които и Паладия.",
+      "sourceQuote": "The Trojan prince Aeneas, son of the goddess Venus, escaped and sailed to Italy carrying sacred objects, including the household gods of Troy and the Palladium, a holy statue said to protect a city.",
+      "reviewFlags": []
+    },
+    {
+      "question": "След смъртта на римски император кой орган можел да гласува да го обяви за бог (divus)?",
+      "options": [
+        "Сенатът",
+        "Весталките",
+        "Народното събрание",
+        "Колегията на понтификите"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#emperors-as-gods",
+      "explanation": "Сенатът можел да обожестви починал император. Възникналият императорски култ давал на империята обща лоялност и превръщал отказа от участие в нещо като държавна измяна.",
+      "sourceQuote": "After his death, the Senate could vote him a god (*divus*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой е единственият известен римлянин, почитан като бог още приживе?",
+      "options": [
+        "Юлий Цезар",
+        "Помпей",
+        "Август",
+        "Сула"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#emperors-as-gods",
+      "explanation": "Юлий Цезар бил почитан като жив бог и скоро след това бил убит. Той също твърдял, че произхожда от Венера чрез Еней.",
+      "sourceQuote": "He is the only Roman known to have been treated as a god while still alive, and he was murdered soon after.",
+      "reviewFlags": []
+    },
+    {
+      "question": "На кое място в традиционния списък на римските царе стои царят жрец Нума?",
+      "options": [
+        "Първи",
+        "Трети",
+        "Последен",
+        "Втори"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#numa-pompilius",
+      "explanation": "Нума бил миролюбивият втори цар и римляните свързвали с него повечето свои религиозни институции.",
+      "sourceQuote": "Romans believed that most of their religious institutions went back to Numa, the peaceful second king of Rome.",
+      "reviewFlags": []
+    }
+  ]
+}

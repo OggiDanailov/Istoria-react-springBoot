@@ -1,0 +1,179 @@
+{
+  "batchName": "Roman Religion and Mythology (753 BC-AD 391) - Easy Batch 1",
+  "chapterName": "Roman Religion and Mythology (753 BC-AD 391)",
+  "difficulty": 1,
+  "batchOrder": 1,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "На кое качество римляните приписвали издигането си до световна сила?",
+      "options": [
+        "Gravitas",
+        "Fortuna",
+        "Virtus",
+        "Pietas"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#roman-piety",
+      "explanation": "Pietas била грижливото старание, с което римляните поддържали добри отношения с боговете. Те виждали в победите си доказателство за божествена благосклонност.",
+      "sourceQuote": "They credited their rise to world power to their piety (*pietas*), the dutiful care with which they kept good relations with the gods.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как Рим обикновено се отнасял към боговете на другите народи?",
+      "options": [
+        "Изобщо не им обръщал внимание",
+        "Разрушавал храмовете им",
+        "Приобщавал ги към своята религия",
+        "Забранявал почитането им"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#foreign-gods",
+      "explanation": "Рим рядко изкоренявал чужди богове, тъй като вярвал, че опазването на традицията крепи обществото. Боговете на завладени италийски градове дори получавали храмове в Рим.",
+      "sourceQuote": "It absorbed them instead, believing that preserving tradition kept society stable.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Мистериалният бог Митра станал особено любим на коя група?",
+      "options": [
+        "Моряците",
+        "Търговците",
+        "Сенаторите",
+        "Войниците"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#foreign-gods",
+      "explanation": "Митра бил популярен сред войниците и светилищата му стигали чак до Британия. Изида, друго божество на мистериален култ, дошла от Египет.",
+      "sourceQuote": "Isis came from Egypt, and Mithras became a favourite of soldiers, with shrines as far away as Britain.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво направил през 249 г. пр.н.е. един римски консул, когато свещените кокошки отказали да ядат преди морска битка?",
+      "options": [
+        "Нахранил ги насила",
+        "Пуснал ги на брега",
+        "Хвърлил ги зад борда",
+        "Принесъл ги в жертва на Нептун"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#priests-and-augurs",
+      "explanation": "Хвърлил ги в морето с шегата, че щом не ядат, нека пият. Загубил битката, а заедно с нея и кариерата си.",
+      "sourceQuote": "He threw them overboard, joking that if they would not eat, they could drink.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво провъзгласил Миланският едикт от 313 г.?",
+      "options": [
+        "Нови гонения",
+        "Затваряне на всички езически храмове",
+        "Верска търпимост",
+        "Християнството като единствена държавна религия"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#christian-triumph",
+      "explanation": "При Константин Миланският едикт провъзгласил верска търпимост. Константин също така финансирал строежа на църкви, сред които и базиликата „Свети Петър“.",
+      "sourceQuote": "In 313 the Edict of Milan proclaimed toleration, and Constantine paid for churches, including St Peter's Basilica.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво било наказанието за весталка, нарушила обета си за целомъдрие?",
+      "options": [
+        "Хвърляне от скала",
+        "Заточение на остров",
+        "Погребване жива",
+        "Продаване в робство"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#vestals",
+      "explanation": "Изключителното положение на весталките имало своята цена – строго спазван обет за целомъдрие. Нарушаването му означавало да бъдат погребани живи.",
+      "sourceQuote": "A Vestal found to have broken it was buried alive.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво означавала римската религиозна формула *do ut des*?",
+      "options": [
+        "Купувачът да внимава",
+        "Съдбата закриля смелите",
+        "Давам, за да дадеш",
+        "Моли се и работи"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#roman-piety",
+      "explanation": "Римската религия действала почти като търговски договор: жертва, молитва или обет се принасяли в замяна на закрила, победа или добра реколта.",
+      "sourceQuote": "It was practical, almost a business contract, summed up in the phrase *do ut des*: \"I give, that you might give.\"",
+      "reviewFlags": []
+    },
+    {
+      "question": "Според легендата как завършила разправията между Ромул и Рем?",
+      "options": [
+        "Рем заминал да основе Алба Лонга",
+        "Ромул убил Рем",
+        "Близнаците се съгласили да управляват заедно",
+        "Рем убил Ромул"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#aeneas-and-romulus",
+      "explanation": "Братята се скарали, докато се издигали стените на новия град, и Ромул убил Рем. По традиция основаването се датира към 753 г. пр.н.е.",
+      "sourceQuote": "While the walls were rising, the brothers quarrelled and Romulus killed Remus.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой бог стоял начело на римското небе като бог на небето, дъжда и мълнията?",
+      "options": [
+        "Квирин",
+        "Юпитер",
+        "Марс",
+        "Янус"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#gods-of-rome",
+      "explanation": "Юпитер властвал над небето и бил също закрилник на държавата. Той бил централната фигура както на Архаичната, така и на Капитолийската триада.",
+      "sourceQuote": "At the top stood Jupiter, god of sky, rain and lightning, and protector of the state.",
+      "reviewFlags": []
+    },
+    {
+      "question": "По какво главно разчитали волята на боговете римските авгури?",
+      "options": [
+        "По вътрешностите на животни",
+        "По звездите",
+        "По сънищата",
+        "По полета на птиците"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#priests-and-augurs",
+      "explanation": "Авгурите наблюдавали полета на птиците, а магистратите трябвало да се допитват до тях преди всяко официално действие. Лошото знамение можело да спре обществените дела за целия ден.",
+      "sourceQuote": "The augurs (*augures*) read the will of the gods, above all through the flight of birds.",
+      "reviewFlags": []
+    }
+  ]
+}
