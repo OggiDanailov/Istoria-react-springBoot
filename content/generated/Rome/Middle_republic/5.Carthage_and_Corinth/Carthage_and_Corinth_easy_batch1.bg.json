@@ -1,0 +1,179 @@
+{
+  "batchName": "Middle Republic: The Fall of Carthage and Corinth (167-133 BCE) - Easy Batch 1",
+  "chapterName": "Middle Republic: The Fall of Carthage and Corinth (167-133 BCE)",
+  "difficulty": 1,
+  "batchOrder": 1,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "След като пробили стените на Картаген през 146 г. пр.н.е., колко дни римляните се сражавали улица по улица?",
+      "options": [
+        "Два дни",
+        "Тридесет дни",
+        "Шест дни",
+        "Десет дни"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#fall-of-carthage",
+      "explanation": "Шест дни римляните си пробивали път през жилищните квартали, като избивали всеки срещнат и палели сградите. Едва в последния ден Сципион се съгласил да взема пленници.",
+      "sourceQuote": "For six days the Romans fought street by street through the residential districts, killing everyone they met and burning the buildings behind them.",
+      "reviewFlags": []
+    },
+    {
+      "question": "В коя земя се намирала Нуманция – градът на хълма, който години наред се противопоставял на Рим?",
+      "options": [
+        "Северна Африка",
+        "Галия",
+        "Испания",
+        "Гърция"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#numantine-war",
+      "explanation": "Нуманция се издигала на река Дуеро в Испания. Жителите ѝ били келтибери – говорещи келтски език племена от вътрешността на Испания.",
+      "sourceQuote": "Its enemy was the Celtiberians, Celtic-speaking tribes of the Spanish interior, and above all the hilltop town of Numantia on the Douro river.",
+      "reviewFlags": []
+    },
+    {
+      "question": "От коя укрепена база Хасдрубал нападал римските линии за снабдяване по време на обсадата на Картаген?",
+      "options": [
+        "Утика",
+        "Неферис",
+        "Нуманция",
+        "Ороскопа"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#a-faltering-siege",
+      "explanation": "Хасдрубал командвал армия от поне 20 000 души от укрепена база при Неферис, на 25 км южно от Картаген. Оттам той нападал римските линии за снабдяване.",
+      "sourceQuote": "It settled down to a siege, while Hasdrubal, the Carthaginian general leading an army of at least 20,000 from a fortified base at Nepheris, 25 km (16 miles) south of the city, harassed Roman supply lines.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой е главният ни античен пътеводител за войните на Рим с Картаген?",
+      "options": [
+        "Катон",
+        "Полибий",
+        "Ливий",
+        "Плутарх"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#polybius-and-the-sources",
+      "explanation": "Главният извор е Полибий – гръцки историк, живял приблизително от 200 до 118 г. пр.н.е. По време на последната война той бил със Сципион в Африка.",
+      "sourceQuote": "Our main guide to Rome's wars with Carthage is Polybius, a Greek historian who lived from about 200 to about 118 BC.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво построил Сципион, за да попречи на корабите със запаси да се промъкват в Картаген?",
+      "options": [
+        "Пръстен от седем крепости",
+        "Верига през пристанището",
+        "Линия от брандери",
+        "Огромен каменен вълнолом"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#scipio-takes-command",
+      "explanation": "Сципион построил огромен вълнолом – каменна преграда през входа на пристанището. Картагенците отвърнали, като тайно прокопали нов канал към морето.",
+      "sourceQuote": "Supply ships kept slipping into Carthage, so Scipio built a huge mole (*moles*), a stone barrier across the harbour approach.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво събитие през 149 г. пр.н.е. дало на Рим пристанище в Африка и го подтикнало да обяви война на Картаген?",
+      "options": [
+        "Нумидийският цар умрял",
+        "Коринт се присъединил към Рим",
+        "Утика минала на страната на Рим",
+        "Сицилия се разбунтувала"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#carthago-delenda-est",
+      "explanation": "Утика, голямо пристанище на 55 км северно от Картаген, минала на страната на Рим през 149 г. пр.н.е. Сега, когато разполагал с пристанище, Рим обявил война.",
+      "sourceQuote": "In 149 BC Utica, a large port 55 km (34 miles) north of Carthage, defected to Rome.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво било „истинското искане“ на Рим, заради което Картаген прекъснал преговорите и се подготвил за бой?",
+      "options": [
+        "Да плати ново обезщетение в зърно",
+        "Да приеме римски управител",
+        "Да напусне града и да се засели навътре в сушата",
+        "Да предаде водещите си родове"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#the-ultimatum",
+      "explanation": "На картагенците наредили да напуснат града си и да се заселят на 16 км от морето, докато Картаген бъде разрушен. За народ, който живеел от морска търговия, това било смъртна присъда.",
+      "sourceQuote": "The Carthaginians must abandon their city and resettle 16 km (10 miles) from the sea, and Carthage itself would be destroyed.",
+      "reviewFlags": []
+    },
+    {
+      "question": "За какво предупредил Мумий, прочут с невежеството си в изкуството, предприемачите, които превозвали съкровищата на Коринт до Италия?",
+      "options": [
+        "Картините трябва да се разпродадат в Гърция",
+        "Всички повредени статуи ще бъдат претопени",
+        "Само бронзовите статуи си струва да се пращат",
+        "Всяка изгубена творба трябва да бъде заменена с нова"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#sack-of-corinth",
+      "explanation": "Мумий предупредил, че ако предприемачите изгубят някоя безценна статуя или картина, ще трябва да доставят нова. Репликата станала прочута като доказателство за невежеството му в изкуството.",
+      "sourceQuote": "Shipping priceless statues and paintings to Italy, he warned the contractors that if they lost any, they would have to supply new ones.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво станало със земите на Картаген след войната?",
+      "options": [
+        "Станали свободен съюзен град-държава",
+        "Присъединили се към провинция Македония",
+        "Станали римската провинция Африка",
+        "Били дадени на нумидийския цар"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#after-carthage",
+      "explanation": "Земите на Картаген станали римската провинция Африка, управлявана от Утика. Провинцията се превърнала във важен източник на зърно.",
+      "sourceQuote": "Carthage's lands became the Roman province (*provincia*) of Africa, governed from Utica, a nearby port that had sided with Rome.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Каква е истината зад прочутата история, че римляните посипали земята на Картаген със сол?",
+      "options": [
+        "Записана е от Полибий",
+        "Доказана е с проби от почвата",
+        "Вероятно е измислица от XIX век",
+        "Било е предложение на самия Катон"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#fall-of-carthage",
+      "explanation": "Историята със солта почти сигурно е невярна и вероятно е измислица от XIX век. Съвременни данни като археологията помагат на историците да отхвърлят подобни разкази.",
+      "sourceQuote": "The story that the Romans sowed the ground with salt so nothing would grow is probably a 19th-century invention.",
+      "reviewFlags": []
+    }
+  ]
+}

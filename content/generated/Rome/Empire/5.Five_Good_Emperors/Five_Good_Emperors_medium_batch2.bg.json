@@ -1,0 +1,189 @@
+{
+  "batchName": "Empire: The Five Good Emperors (AD 96-192) - Medium Batch 2",
+  "chapterName": "Empire: The Five Good Emperors (AD 96-192)",
+  "difficulty": 2,
+  "batchOrder": 4,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Какво прави Траян, след като Нерва умира през януари 98 г., преди да тръгне за Рим?",
+      "options": [
+        "Върнал се в родния си град в Испания",
+        "Обиколил градовете на Гърция",
+        "Воювал в Армения",
+        "Инспектирал границите по Рейн и Дунав",
+        "Нахлул в Дакия отвъд Дунав"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#nerva-adopts-trajan",
+      "explanation": "Траян поел властта гладко, но се бавил по границите и влязъл в Рим едва през 99 г. Според някои историци възкачването му е по-скоро успешен преврат.",
+      "sourceQuote": "When Nerva died on 28 January 98, Trajan took power without trouble, but he lingered to inspect the Rhine and Danube frontiers before going to Rome.",
+      "reviewFlags": []
+    },
+    {
+      "question": "С падането на коя крепост завършва еврейското въстание при Адриан през 135 г.?",
+      "options": [
+        "Махерон",
+        "Бейтар",
+        "Хатра",
+        "Масада",
+        "Йотапата"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#jewish-revolt",
+      "explanation": "Бейтар, на около 10 км югозападно от Йерусалим, паднал през 135 г. Античен историк оценява загиналите евреи на 580 000.",
+      "sourceQuote": "The revolt ended in 135 with the fall of Beitar, a fortress about 10 km (six miles) south-west of Jerusalem.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво условие поставя Адриан при осиновяването на Антонин за наследник?",
+      "options": [
+        "Да възвърне изгубените източни завоевания на Траян",
+        "Да се ожени за вдовицата на първия наследник на Адриан",
+        "Да управлява заедно с командира на гвардията",
+        "Да довърши Адриановия вал в Британия",
+        "Да осинови Марк Аврелий и сина на починалия наследник"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#antoninus-pius",
+      "explanation": "Антонин трябвало да осинови младия Марк Аврелий и сина на първия наследник на Адриан, починал на 1 януари 138 г. Така следващото наследяване било уредено предварително.",
+      "sourceQuote": "Hadrian then chose Antoninus, a respected senator who had governed the province of Asia, on condition that Antoninus in turn adopt two boys: the young Marcus Aurelius and the dead heir's son.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой подписва документа за осиновяването на Адриан, докато Траян умира през 117 г.?",
+      "options": [
+        "Командирът на гвардията",
+        "Самият Траян",
+        "Съпругата на Траян",
+        "Настойникът на Адриан",
+        "Старшият консул"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#hadrian-succession",
+      "explanation": "Документът бил подписан от съпругата на Траян, която благоволяла на Адриан, а не от императора. Гръцки сенатор, писал век по-късно, нарича осиновяването фалшиво.",
+      "sourceQuote": "As Trajan lay dying in 117, an adoption document appeared, signed not by the emperor but by his wife, who favoured Hadrian.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Защо римските сенатори негодуват срещу по-ранния мирен договор с Дакия?",
+      "options": [
+        "Позволявал на даките да се заселват свободно в Италия",
+        "Рим пращал на дакийския цар пари и специалисти – като данък",
+        "Правел дакийския цар римски сенатор",
+        "Забранявал римски кораби по долното течение на Дунав",
+        "Давал дакийските златни мини на германски племена"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#dacian-wars",
+      "explanation": "Дакийският цар бил зависим владетел, получаващ римски пари и технически специалисти, което сенаторите смятали за позорен данък. Дакия била организирана държава, богата на желязо и злато.",
+      "sourceQuote": "Under an earlier peace deal its king was recognised as a client king (*rex amicus*) and received Roman money and technical experts, an arrangement senators saw as shameful tribute.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво се случва през 118 г., което Сенатът никога не прощава на Адриан?",
+      "options": [
+        "Преместил седалището на управлението в Атина",
+        "Четирима бивши консули били убити без публичен съд",
+        "Разпуснал Сената за цяла година",
+        "Конфискувал имоти на сенатори, за да финансира границата",
+        "Включил командира на гвардията си в Сената"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#hadrian-succession",
+      "explanation": "Четирима високопоставени бивши консули, приятели на Траян и възможни съперници, били осъдени за заговор и убити. Адриан прехвърлил вината на командира на гвардията си.",
+      "sourceQuote": "In 118 four senior former consuls, close friends of Trajan and possible rivals, were accused of conspiracy, condemned without a public trial and killed.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как римляните предизвикват падането на дакийската столица Сармизегетуза през 106 г.?",
+      "options": [
+        "Подпалили я с катапулти",
+        "Прокопали тунели под стените ѝ",
+        "Обсаждали я с глад две години",
+        "Прекъснали водопровода на града",
+        "Подкупили стражите на портите"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#dacian-wars",
+      "explanation": "Прекъсването на водоснабдяването довело до падането на Сармизегетуза през 106 г. Царят ѝ избягал и по-късно се самоубил, а главата му била изложена в Рим.",
+      "sourceQuote": "In 106 the Romans cut the water pipes of the Dacian capital, Sarmizegetusa, and the city fell.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво е необичайно в доклада на Адриан до Сената по време на еврейското въстание?",
+      "options": [
+        "В него наследник бил обявен осиновеният му син",
+        "В него искал от Сената официално да обяви война",
+        "Бил написан на гръцки, а не на латински",
+        "В него обявявал намерението си да абдикира",
+        "Липсвал редът, че той и легионите са добре"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#jewish-revolt",
+      "explanation": "Римските загуби били толкова тежки, че Адриан нарочно пропуснал обичайното успокоение. Той повикал най-добрия си генерал от Британия да се справи с въстанието.",
+      "sourceQuote": "Hadrian summoned his best general from Britain, and his report to the Senate pointedly left out the customary line that he and the legions were well.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой дълго недовършен паметник в Атина завършва Адриан?",
+      "options": [
+        "Ерехтейонът",
+        "Партенонът",
+        "Храмът на Хефест",
+        "Театърът на Дионис",
+        "Храмът на Зевс Олимпийски"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#hadrian-the-traveller",
+      "explanation": "Храмът на Зевс Олимпийски се строял повече от пет века, преди Адриан да го завърши. Той създал и съюз на гръцки градове с център Атина.",
+      "sourceQuote": "He completed the vast Temple of Olympian Zeus in Athens, under construction for more than five centuries, and created a league of Greek cities centred there.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как Траян преобразява Циркус Максимус – стадиона на Рим за надбягвания с колесници?",
+      "options": [
+        "Преместил го на ново място на Марсовото поле",
+        "Заменил дървените седалки с каменни и добавил 5000 места",
+        "Добавил библиотеки и пазар покрай страните му",
+        "Покрил целия стадион с дървен навес",
+        "Превърнал го в арена за гладиатори"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#trajan-best-ruler",
+      "explanation": "Траян преустроил Циркус Максимус в камък и добавил около 5000 места. Той построил и най-големия форум в Рим с плячка от войните си.",
+      "sourceQuote": "He also rebuilt the Circus Maximus, Rome's chariot-racing stadium, replacing wooden seats with stone and adding about 5,000 places.",
+      "reviewFlags": []
+    }
+  ]
+}

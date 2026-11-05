@@ -1,0 +1,179 @@
+{
+  "batchName": "Empire: From Constantine's Sons to Theodosius (AD 337-395) - Easy Batch 2",
+  "chapterName": "Empire: From Constantine's Sons to Theodosius (AD 337-395)",
+  "difficulty": 1,
+  "batchOrder": 2,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Какво било първото действие на Юлиан, след като влязъл в Константинопол като едноличен император?",
+      "options": [
+        "Поход срещу персите",
+        "Екзекуция на министрите на Констанций",
+        "Повторно отваряне на езическите храмове в града",
+        "Водене на християнското погребение на Констанций"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#proclaimed-in-paris",
+      "explanation": "Юлиан повел християнското погребение на братовчед си, за да покаже публично, че е законният наследник. Според някои извори Констанций го посочил за наследник на смъртния си одър.",
+      "sourceQuote": "His first act was to lead the Christian funeral of his cousin, a public show that he was the lawful successor.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой син обвинявали античните автори за чистката в императорския род през 337 г.?",
+      "options": [
+        "Констанций II",
+        "Юлиан",
+        "Теодосий",
+        "Валент"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#sons-of-constantine",
+      "explanation": "Античните автори обвинявали за убийствата средния син, Констанций II. Той надживял и двамата си братя.",
+      "sourceQuote": "Soldiers murdered most of the old emperor's other male relatives, a purge that ancient writers blamed on the middle son, Constantius II, the brother who would outlast them all.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какъв прякор дали християните на Юлиан?",
+      "options": [
+        "Благочестиви",
+        "Велики",
+        "Отстъпник",
+        "Философ"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#julian-pagan-revival",
+      "explanation": "Християните запомнили Юлиан като „Отстъпника“, защото изоставил вярата им. Той бил последният нехристиянин, управлявал Римската империя.",
+      "sourceQuote": "Julian, remembered by Christians as \"the Apostate\", was the last non-Christian to rule the Roman Empire.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кои прочути последни думи легендата приписва на умиращия Юлиан?",
+      "options": [
+        "„Боговете ме изоставиха“",
+        "„Ти победи, Галилеецо“",
+        "„Рим ще се издигне отново“",
+        "„Погребете ме в Атина“"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#persian-campaign",
+      "explanation": "Според легендата последните му думи били „Ти победи, Галилеецо“ (Vicisti, Galilaee). Смята се, че фразата е измислица.",
+      "sourceQuote": "Legend says his last words were \"You have won, Galilean\" (*Vicisti, Galilaee*), \"the Galilean\" being his scornful name for Jesus, but this is considered invented.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой епископ отказал причастие на Теодосий след клането в Тесалоника?",
+      "options": [
+        "Амвросий Милански",
+        "Дамас Римски",
+        "Атанасий Александрийски",
+        "Августин Хипонски"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#massacre-of-thessalonica",
+      "explanation": "Амвросий, властният епископ на Милано, поискал императорът първо да се покае. Теодосий се съгласил и до Коледа ходел на църква без императорските си одежди.",
+      "sourceQuote": "Ambrose, the forceful bishop of Milan, wrote to the emperor refusing him communion until he did penance.",
+      "reviewFlags": []
+    },
+    {
+      "question": "След като изоставил християнството, на кой бог според Юлиан бил служил дванадесет години?",
+      "options": [
+        "Митра",
+        "Хелиос",
+        "Аполон",
+        "Юпитер"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#julian-the-philosopher",
+      "explanation": "Юлиан писал, че прекарал двадесет години като християнин и дванадесет в служба на Хелиос, бога на слънцето. Той тихомълком изоставил християнството на около 20 години.",
+      "sourceQuote": "He later wrote that he had spent twenty years as a Christian and twelve following Helios, the sun god.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Коя мистична философия, изградена върху идеите на Платон, изучавал младият Юлиан?",
+      "options": [
+        "Неоплатонизъм",
+        "Кинизъм",
+        "Епикурейство",
+        "Стоицизъм"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#julian-the-philosopher",
+      "explanation": "Юлиан изучавал неоплатонизма – мистична философия, основана на идеите на Платон. Дори потърсил наставник, който практикувал теургия – магически ритуали за призоваване на боговете.",
+      "sourceQuote": "He studied Neoplatonism, a mystical philosophy built on the ideas of Plato.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво забранявал на християните Училищният едикт на Юлиан?",
+      "options": [
+        "Да заседават в Сената",
+        "Да строят нови църкви",
+        "Да преподават класиците",
+        "Да служат в армията"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#julian-pagan-revival",
+      "explanation": "Училищният едикт забранил на християните да преподават класическа литература. Той подигравателно заявявал, че ако искат литература, имат Лука и Марко.",
+      "sourceQuote": "His School Edict stopped Christians from teaching the classics: \"If they want to learn literature, they have Luke and Mark,\" it said.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Къде в Тесалоника римски войници избили хиляди граждани през 390 г.?",
+      "options": [
+        "В катедралата",
+        "На форума",
+        "На хиподрума",
+        "В пристанището"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#massacre-of-thessalonica",
+      "explanation": "Войниците отмъстили за убийството на един пълководец, като изклали граждани на градския хиподрум. По това време Теодосий бил далеч, в Милано.",
+      "sourceQuote": "Roman soldiers then took revenge in the city's racetrack, killing thousands of civilians.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво станало с империята след смъртта на Теодосий през 395 г.?",
+      "options": [
+        "Готите завладели западната ѝ половина",
+        "Сенатът избрал един нов император",
+        "Франкски пълководец заграбил цялата империя",
+        "Синовете му я разделили на източен и западен двор"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#theodosius-legacy",
+      "explanation": "Двамата му малки сина разделили империята на източен и западен двор. Това разделение траяло до падането на Запада в края на V в.",
+      "sourceQuote": "His two young sons, Arcadius and Honorius, split the empire into eastern and western courts, a division that lasted until the west fell in the late 5th century.",
+      "reviewFlags": []
+    }
+  ]
+}

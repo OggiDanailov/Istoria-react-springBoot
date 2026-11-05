@@ -1,0 +1,202 @@
+{
+  "batchName": "Late Republic: Antony, Octavian and the End of the Republic (44-27 BCE) - Hard Batch 1",
+  "chapterName": "Late Republic: Antony, Octavian and the End of the Republic (44-27 BCE)",
+  "difficulty": 3,
+  "batchOrder": 5,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Според писател, живял по онова време, как се самоубила Клеопатра?",
+      "options": [
+        "Скочила от върха на гробницата си",
+        "Изпила чаша бучиниш",
+        "Удавила се в Нил",
+        "Хвърлила се върху меч като Антоний",
+        "С ухапване от змия или с отровен мехлем",
+        "Уморила се от глад в гробницата си"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 3,
+      "textReference": "#alexandria-and-augustus",
+      "explanation": "Съвременен на събитията писател посочва като причина ухапване от змия или отровен мехлем. Тя умряла на 12 август 30 г. пр.н.е., за да не бъде показвана в триумфа на Октавиан.",
+      "sourceQuote": "On 12 August 30 BC she killed herself, by a snake's bite or poisoned ointment according to a writer alive at the time.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кои територии дал Антоний на Клеопатра, за да построи флот? (изберете всички верни)",
+      "options": [
+        "Юдея",
+        "Кипър",
+        "Сицилия",
+        "Киликия",
+        "Армения",
+        "Крит"
+      ],
+      "correctAnswers": [
+        1,
+        3
+      ],
+      "difficulty": 3,
+      "textReference": "#antony-and-cleopatra",
+      "explanation": "Антоний ѝ дал земи в Кипър и Киликия. Признал и близнаците, които тя му родила през 40 г. пр.н.е., а връзката им била крайно непопулярна в Италия.",
+      "sourceQuote": "Antony later acknowledged twins she bore him in 40 BC and fathered a son with her, and he gave her territory in Cyprus and Cilicia, whose timber could build a fleet.",
+      "reviewFlags": []
+    },
+    {
+      "question": "През 34 г. пр.н.е. Антоний развел пленения арменски цар из Александрия в шествие в чест на кой бог?",
+      "options": [
+        "Серапис",
+        "Юпитер",
+        "Херкулес",
+        "Изида",
+        "Дионис",
+        "Аполон"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 3,
+      "textReference": "#propaganda-war",
+      "explanation": "Шествието било в чест на Дионис. То и последвалите Александрийски дарения дали на Октавиан изобилие от материал за пропаганда.",
+      "sourceQuote": "In 34 BC he tricked the king of Armenia into captivity and paraded him through Alexandria, Egypt's capital, in a procession honouring the god Dionysus.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Каква решаваща грешка допринесла за провала на Антоний в Партия през 36 г. пр.н.е.?",
+      "options": [
+        "Оставил конницата си в Египет",
+        "Избързал пред бавните си обсадни машини, които били унищожени",
+        "Повярвал на предложение за капитулация от партски принц",
+        "Нахлул през зимата без провизии",
+        "Чакал обещаните войски на Октавиан",
+        "Разделил армията си между Армения и Сирия"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 3,
+      "textReference": "#parthia-sicily-lepidus",
+      "explanation": "Без обсадните си машини и изоставен от арменския си съюзник, Антоний издържал 27-дневно отстъпление под атаките на конни стрелци и изгубил около една трета от хората си.",
+      "sourceQuote": "With sixteen legions he raced ahead of his slow siege engines, which the enemy then destroyed.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Защо оцелелият убиец отново предложил битка три седмици след първия сблъсък при Филипи?",
+      "options": [
+        "Сенатът му заповядал да атакува",
+        "Пристигнали партски подкрепления",
+        "Октавиан тежко се разболял",
+        "Пристигнала пратка източно сребро",
+        "Антоний го предизвикал на двубой",
+        "Страхувал се, че войниците му ще дезертират"
+      ],
+      "correctAnswers": [
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#battle-of-philippi",
+      "explanation": "От страх от дезертьорство той отново влязъл в бой на 23 октомври 42 г. пр.н.е., бил разгромен от обединените Цезарови армии и се самоубил.",
+      "sourceQuote": "Three weeks later, on 23 October 42 BC, the surviving assassin offered battle again, fearing desertions.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какви правомощия имали триумвирите по споразумението си? (изберете всички верни)",
+      "options": [
+        "Да премахнат Сената",
+        "Да назначават всички магистрати",
+        "Да определят наследниците си",
+        "Да заемат поста пожизнено",
+        "Да наказват без право на обжалване",
+        "Да издават задължителни укази"
+      ],
+      "correctAnswers": [
+        1,
+        4,
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#forming-the-triumvirate",
+      "explanation": "Триумвирите можели да издават укази, да отменят решения на управителите, да наказват без обжалване и да назначават всички магистрати, но властта им била дадена за пет години, а не пожизнено. В официалните списъци дори ги вписвали над консулите.",
+      "sourceQuote": "The three could make binding decrees, overrule any governor, punish without right of appeal, and appoint every magistrate.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какви условия дали триумвирите на врага си в Сицилия, когато сключили мир през 39 г. пр.н.е.?",
+      "options": [
+        "Място като четвърти триумвир",
+        "Власт над Африка в замяна на Лепид",
+        "Брак с овдовялата сестра на Октавиан",
+        "Помилване само ако предаде флота си",
+        "Консулство и командване в Испания",
+        "Свобода за избягалите му роби и ветерански награди за войниците му"
+      ],
+      "correctAnswers": [
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#perusia-and-brundisium",
+      "explanation": "Мирът освободил избягалите му роби и дал на войниците му ветерански награди. Морската му блокада била изострила глада в Италия.",
+      "sourceQuote": "In 39 BC the triumvirs also made peace with their enemy in Sicily, freeing his runaway slaves and giving his soldiers veterans' rewards.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какъв бил резултатът от победата на Сената над Антоний при Мутина през април 43 г. пр.н.е.?",
+      "options": [
+        "Антоний избягал по море в Египет",
+        "И двамата консули загинали, а Октавиан тръгнал срещу Рим",
+        "Лепид поел командването на армията на Сената",
+        "Убийците се върнали триумфално в Рим",
+        "Сенатът обявил Октавиан за диктатор",
+        "Антоний бил пленен и екзекутиран"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 3,
+      "textReference": "#after-caesars-murder",
+      "explanation": "Сенатът победил и обявил Антоний за враг на държавата, но и двамата консули загинали в боевете и Октавиан можел свободно да тръгне срещу Рим и да поиска властта.",
+      "sourceQuote": "But both consuls died in the fighting, and Octavian marched on Rome to claim power for himself.",
+      "reviewFlags": []
+    },
+    {
+      "question": "В спора колко души загинали при проскрипциите кои историци клонят към по-високите числа?",
+      "options": [
+        "Тези, които смятат, че Октавиан бил против убийствата",
+        "Тези, които броят за жертви само сенатори",
+        "Тези, които вярват на декларацията на триумвирите",
+        "Тези, които смятат, че триумвирите искали главно пари",
+        "Тези, които разчитат на записките на Антоний",
+        "Тези, които смятат, че списъците били отмъщение за Цезар"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 3,
+      "textReference": "#proscriptions",
+      "explanation": "Ако главният мотив са парите, жертвите трябва да са повече. Едно съвременно изследване обаче стига до около 300 имена, поравно сенатори и конници.",
+      "sourceQuote": "Historians who think the triumvirs mainly wanted money tend to favour the higher numbers.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво отслабило обкръжената армия на Антоний при Акциум преди морската битка?",
+      "options": [
+        "Малария и дезертьорство",
+        "Чума, донесена от Египет",
+        "Земетресение, разрушило лагера",
+        "Клеопатра изтеглила войските си",
+        "Глад след партско нападение",
+        "Бунт заради неизплатени заплати"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#battle-of-actium",
+      "explanation": "След като адмиралът на Октавиан прекъснал снабдяването му, лагерът на Антоний бил опустошен от малария и дезертьорство. Един преминал на другата страна пълководец дори издал бойния му план.",
+      "sourceQuote": "Trapped, Antony's camp was ravaged by malaria and desertion.",
+      "reviewFlags": []
+    }
+  ]
+}

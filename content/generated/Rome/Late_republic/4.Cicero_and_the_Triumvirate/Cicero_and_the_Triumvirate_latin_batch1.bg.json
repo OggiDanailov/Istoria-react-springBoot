@@ -1,0 +1,145 @@
+{
+  "batchName": "Late Republic: Cicero, Catiline and the Triumvirate (63-53 BCE) - Latin words",
+  "chapterName": "Late Republic: Cicero, Catiline and the Triumvirate (63-53 BCE)",
+  "difficulty": 1,
+  "batchOrder": 9,
+  "description": "Written by hand from the chapter text: the Latin words it explains",
+  "questions": [
+    {
+      "question": "След заговора сенаторите обявиха Цицерон за pater patriae. Какво означава това?",
+      "options": [
+        "Баща на отечеството",
+        "Спасител на Сената",
+        "Първи гражданин",
+        "Приятел на народа"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#execution-debate",
+      "explanation": "Той току-що беше съобщил за екзекуциите с една-единствена дума: vixerunt.",
+      "sourceQuote": "Senators hailed him as \"father of the fatherland\" (*pater patriae*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "При Каре партите пленили aquilae на легионите. Какво били те?",
+      "options": [
+        "Свещените орли – знамената на легионите",
+        "Касите със заплатите на легионите",
+        "Конете на пълководците",
+        "Обсадните машини"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#carrhae",
+      "explanation": "Около 20 000 римляни загинаха, а 10 000 бяха пленени.",
+      "sourceQuote": "along with the legions' sacred eagles (*aquilae*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "От какво се отказа Цезар през 60 г. пр.н.е., за да се кандидатира за консул?",
+      "options": [
+        "Триумф (triumphus) – великото победно шествие",
+        "Командването си в Испания",
+        "Мястото си в Сената",
+        "Богатството на рода си"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#alliance-formed",
+      "explanation": "Враговете му тогава му натрапиха враждебен колега консул.",
+      "sourceQuote": "gave up a triumph (*triumphus*), the grand victory parade every general craved, so he could stand for consul.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как Цицерон съобщи за екзекуциите с думата vixerunt?",
+      "options": [
+        "„Те са живели“: значи са мъртви",
+        "„Те са виновни“",
+        "„Те избягаха“",
+        "„Справедливостта възтържествува“"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#execution-debate",
+      "explanation": "Петимата заговорници бяха удушени.",
+      "sourceQuote": "Cicero announced it with a single grim word, \"they have lived\" (*vixerunt*), meaning they were dead.",
+      "reviewFlags": []
+    },
+    {
+      "question": "След като Катилина се присъедини към бунтовниците, Сенатът го обяви за hostis. Какво означаваше това?",
+      "options": [
+        "Враг на държавата",
+        "Предател, който да бъде изгонен",
+        "Консул с оръжие",
+        "Заложник"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#cicero-exposes-plot",
+      "explanation": "После Сенатът изпрати колегата на Цицерон да воюва срещу него.",
+      "sourceQuote": "The Senate declared him a public enemy (*hostis*)",
+      "reviewFlags": []
+    },
+    {
+      "question": "За какво служеше lex agraria на Цезар от 59 г. пр.н.е.?",
+      "options": [
+        "Да настани на земя ветераните на Помпей и бедните граждани",
+        "Да намали дълга на данъчните компании",
+        "Да даде на Цезар командване в Галия",
+        "Одобряването на източното уреждане на Помпей"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#caesar-consulship",
+      "explanation": "Един консервативен сенатор говори безкрай, за да го блокира, и Цезар отнесе въпроса до народа.",
+      "sourceQuote": "He drafted a carefully balanced land law (*lex agraria*) to settle Pompey's veterans and poor citizens",
+      "reviewFlags": []
+    },
+    {
+      "question": "Колко време беше минало, откакто някой от предците на Катилина е бил сред консулите (consules)?",
+      "options": [
+        "Около четири века",
+        "Около четиридесет години",
+        "Около век",
+        "Две поколения"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#catiline",
+      "explanation": "Катилина се кандидатира за консул отново и отново и всеки път беше отхвърлен.",
+      "sourceQuote": "None of his ancestors had held the consulship, Rome's top office, shared each year by two consuls (*consules*), for some four centuries.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой попречи на прощалната реч на Цицерон в края на консулството му?",
+      "options": [
+        "Двама народни трибуни",
+        "Другият консул",
+        "Сенатът",
+        "Ветераните на Помпей"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#pistoria-and-exile",
+      "explanation": "Трибуните разполагаха с право на вето; един от тях се опита да съди Цицерон за убийство на граждани без съд.",
+      "sourceQuote": "two tribunes of the plebs (*tribuni plebis*), officials elected to protect ordinary citizens and armed with a veto, blocked his farewell speech.",
+      "reviewFlags": []
+    }
+  ]
+}

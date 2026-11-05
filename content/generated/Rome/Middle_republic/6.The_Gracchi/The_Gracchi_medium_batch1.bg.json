@@ -1,0 +1,189 @@
+{
+  "batchName": "Middle Republic: The Gracchi (133-121 BCE) - Medium Batch 1",
+  "chapterName": "Middle Republic: The Gracchi (133-121 BCE)",
+  "difficulty": 2,
+  "batchOrder": 3,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Защо римският консул при Нуманция изпратил Тиберий Гракх да преговаря с врага?",
+      "options": [
+        "Нумантийците имали доверие на името на баща му",
+        "Говорел местния келтиберски език",
+        "Сенатът го бил назначил за пратеник",
+        "Бил най-старшият офицер на място",
+        "Някога бил заложник в Нуманция"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#tiberius-at-war",
+      "explanation": "Бащата на Тиберий управлявал областта десетилетия по-рано, затова нумантийците се доверявали на рода. Тиберий успял да спаси обкръжената армия.",
+      "sourceQuote": "The commanding consul sent Tiberius to negotiate, because the Numantines trusted his family name: his father had governed the region decades earlier.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как Тиберий се справил с колегата си трибун, който наложил вето на поземления му закон?",
+      "options": [
+        "Съдил го за държавна измяна",
+        "Изчакал мандатът му да изтече",
+        "Подкупил го да оттегли ветото",
+        "Накарал народа да го свали от длъжност",
+        "Помолил Сената да го изпрати в изгнание"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#breaking-the-rules",
+      "explanation": "Свалянето на трибун било безпрецедентно и противоконституционно. Без ветото законът бил приет.",
+      "sourceQuote": "Tiberius had him physically removed and voted out of office, something without precedent and against the constitution.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Къде Гай Гракх и съюзникът му направили въоръжената си съпротива през 121 г. пр.н.е.?",
+      "options": [
+        "Храмът на Кастор на Форума",
+        "Вила на Палатинския хълм",
+        "Храмът на Диана на Авентинския хълм",
+        "Укрепленията на Яникулума",
+        "Главният храм на Капитолия"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#fall-of-gaius",
+      "explanation": "Гай и съюзникът му въоръжили привържениците си и заели храма на Авентина. Опимий ги нападнал с въоръжени граждани и критски стрелци.",
+      "sourceQuote": "Gaius and his close ally armed their followers and seized the temple of Diana on the Aventine Hill, in the south of Rome.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво накарало един сенатор да обвини Тиберий Гракх, че иска да стане цар?",
+      "options": [
+        "Събирането на частна армия",
+        "Планът му да използва пергамското завещание",
+        "Намерението му да се ожени за египетска принцеса",
+        "Корона, предложена му от тълпата",
+        "Носенето на пурпурна царска мантия"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#breaking-the-rules",
+      "explanation": "Посягайки на пергамското наследство, Тиберий навлязъл във финансите и външната политика, които били владение на Сената.",
+      "sourceQuote": "Finance and foreign affairs belonged to the Senate, and a senator accused Tiberius of wanting to make himself king.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво постигнал Гай Гракх като квестор в Сардиния през една сурова зима?",
+      "options": [
+        "Построил ново пристанище за флота",
+        "Събрал неплащани с години данъци",
+        "Потушил робско въстание",
+        "Основал там римска колония",
+        "Осигурил от островитяните провизии за войската"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#gaius-gracchus-rises",
+      "explanation": "Гай набавил провизии за изнемогващите римски войници. Когато командването на началника му било удължено, той се прибрал без разрешение.",
+      "sourceQuote": "During a harsh winter he managed to obtain supplies from the islanders for the struggling Roman troops.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Освен че спасил армията, какво още Тиберий убедил нумантийците да върнат?",
+      "options": [
+        "Изгубените знамена на войската",
+        "Пленници от по-ранна война",
+        "Стария меч на баща му",
+        "Пленения римски консул",
+        "Пленените му счетоводни книги"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#tiberius-at-war",
+      "explanation": "Като квестор Тиберий водел сметките на войската и дори си върнал пленените книги. Въпреки това Рим отхвърлил договора му като унизителен.",
+      "sourceQuote": "Tiberius saved the army, and even persuaded the enemy to hand back his captured account books.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой кървав инцидент по време на жертвоприношение през 121 г. пр.н.е. отключил последната криза за Гай Гракх?",
+      "options": [
+        "Подпалили къщата на Гай",
+        "Консулът Опимий бил ранен с кама",
+        "Един прислужник бил намушкан до смърт с писала",
+        "Трибун бил хвърлен от Тарпейската скала",
+        "Жрец бил убит пред олтара"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#fall-of-gaius",
+      "explanation": "Прислужник, който се подиграл на гракхианците, бил убит с писала. Тогава Опимий свикал Сената.",
+      "sourceQuote": "During a sacrifice, an attendant jeered at the Gracchans and was stabbed to death with writing styluses.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Приблизително колко обществена земя позволявал на един човек старият закон, който Тиберий искал да наложи?",
+      "options": [
+        "Около 50 хектара (125 акра)",
+        "Около 1 200 хектара (3 000 акра)",
+        "Около 120 хектара (300 акра)",
+        "Около 500 хектара (1 250 акра)",
+        "Около 12 хектара (30 акра)"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#the-land-law",
+      "explanation": "Тиберий смятал, че този стар и масово пренебрегван лимит е в сила. Законът му щял да го наложи и да раздаде излишъка на бедни граждани.",
+      "sourceQuote": "Tiberius believed that an old, widely ignored law limited how much public land anyone could hold to about 120 hectares (300 acres).",
+      "reviewFlags": []
+    },
+    {
+      "question": "Гневът на италийците срещу поземлената комисия допринесъл за кой по-късен конфликт?",
+      "options": [
+        "Югуртинската война",
+        "Съюзническата война",
+        "Робската война",
+        "Нумантийската война",
+        "Третата пуническа война"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#land-commission",
+      "explanation": "Съюзническата война била по-късно въстание на италийските съюзници на Рим. Част от недоволството им започнало със земите, отнети от комисията на Гракх.",
+      "sourceQuote": "Italian anger over the land helped lead to the Social War, a later revolt of the allies against Rome.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как отговорил консулът, когато Сципион Назика поискал сила, за да спре преизбирането на Тиберий?",
+      "options": [
+        "Пратил войски на Капитолия",
+        "Арестувал Тиберий",
+        "Отказал",
+        "Назначил диктатор",
+        "Избягал от града"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#death-of-tiberius",
+      "explanation": "След отказа на консула Назика извикал старата формула за свикване на войска при опасност и сам повел тълпата.",
+      "sourceQuote": "When the consul refused, Scipio Nasica shouted the old formula for raising troops in an emergency: \"Let those who want the state to be safe follow me.\"",
+      "reviewFlags": []
+    }
+  ]
+}

@@ -1,0 +1,203 @@
+{
+  "batchName": "Empire: Claudius and Nero (AD 41-68) - Hard Batch 1",
+  "chapterName": "Empire: Claudius and Nero (AD 41-68)",
+  "difficulty": 3,
+  "batchOrder": 5,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Какво станало с главния британски вожд, пленен през 50 г. сл.н.е.?",
+      "options": [
+        "Станал управител на новата провинция",
+        "Бил заточен на остров в Тибър",
+        "Бил пратен да се бие като гладиатор",
+        "Бил разведен в триумф и удушен",
+        "Клавдий го пощадил и той живял на земя, дадена от Рим",
+        "Бил екзекутиран в Камулодунум"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 3,
+      "textReference": "#conquest-of-britain",
+      "explanation": "Клавдий го пощадил – рядка милост към победен враг. Завоеванието все пак оставило недоволство, което избухнало при Нерон.",
+      "sourceQuote": "When Caratacus, a leading British war chief, was captured in AD 50, Claudius spared him, and he lived out his life on land provided by Rome, a rare mercy for a defeated enemy.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Защо някои съвременни историци се съмняват, че Агрипина е убила Клавдий? (изберете всички верни)",
+      "options": [
+        "Агрипина била в Анциум, когато той умрял",
+        "Дегустаторът му запазил службата си при Нерон",
+        "Британик защитил невинността на Агрипина",
+        "Доклад на лекар отбелязал естествена смърт",
+        "Клавдий бил тежко болен",
+        "54 г. сл.н.е. била нездравословна година в Рим"
+      ],
+      "correctAnswers": [
+        1,
+        4,
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#claudius-wives-and-death",
+      "explanation": "Тежката болест на Клавдий, запазената служба на дегустатора и нездравословната година поставят под съмнение разказа за убийство. Античните автори твърдели, че мотивът ѝ бил, че Клавдий говорел за пълнолетието на собствения си син.",
+      "sourceQuote": "Claudius had been seriously ill, his food taster kept his job under Nero, and AD 54 was an unhealthy year in Rome.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как римският управител победил далеч по-голямата армия на Боудика?",
+      "options": [
+        "Като ги причакал в горящия Лондиниум",
+        "Като ги примамил на кораби край Ангълси",
+        "Като изчакал подкрепления от Галия",
+        "С копия и клиновидна атака от тесен проход",
+        "Като изморил бунтовниците с глад при дълга обсада",
+        "Като подкупил съседни племена да я изоставят"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 3,
+      "textReference": "#boudica-revolt",
+      "explanation": "С почти 10 000 души в тесен проход, опрян в гора, римляните хвърлили копията си и атакували в клин. Скоро след това Боудика умряла – от отрова или от болест според различните извори.",
+      "sourceQuote": "Heavily outnumbered, the Romans hurled javelins, charged in wedge formation and crushed the Britons.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Около колко възрастни мъже граждани отчело преброяването (census) на Клавдий през 48 г. сл.н.е.?",
+      "options": [
+        "Близо 6 милиона",
+        "Около 4 милиона",
+        "Около 1 милион",
+        "Около 10 милиона",
+        "Около 20 милиона",
+        "Около 600 000"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#claudius-government",
+      "explanation": "Преброяването отчело 5 984 072 възрастни мъже граждани – с около милион повече от едно поколение по-рано.",
+      "sourceQuote": "His census of AD 48 counted 5,984,072 adult male citizens, about a million more than a generation before.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Защо съвременните историци се съмняват в твърдението на Тацит, че любовницата на Нерон го подтикнала да убие майка си?",
+      "options": [
+        "Нерон бил в Гърция по това време",
+        "Монети показват, че тя почитала Агрипина",
+        "Той се оженил за нея едва три години по-късно",
+        "Тя била мъртва от две години",
+        "По-късно тя обвинила учителя на Нерон",
+        "Агрипина одобрявала връзката"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 3,
+      "textReference": "#nero-early-reign",
+      "explanation": "Ако тя го била тласнала да се отърве от майка си, би могло да се очаква бърз брак; вместо това той чакал три години. „Анали“ на Тацит дават най-пълния разказ за Нерон.",
+      "sourceQuote": "Modern historians doubt this, since he married her only three years later.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво направил Нерон за жителите на Рим, след като се върнал по време на Големия пожар? (изберете всички верни)",
+      "options": [
+        "Доставил храна",
+        "Дал на всяко семейство по 1000 сестерции",
+        "Освободил града от данъци",
+        "Платил за разчистването на телата и отломките",
+        "Отворил дворците си за бездомните",
+        "Опростил всички дългове за година"
+      ],
+      "correctAnswers": [
+        0,
+        3,
+        4
+      ],
+      "difficulty": 3,
+      "textReference": "#great-fire-of-rome",
+      "explanation": "Нерон платил за разчистването на телата и отломките, отворил дворците си за бездомните и доставил храна. Вместо да намали данъците, по-късно ги вдигнал, за да плати възстановяването.",
+      "sourceQuote": "Nero returned, paid to clear bodies and rubble, opened his palaces to the homeless and brought in food.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Приблизително колко време след смъртта на Нерон писал гръцкият сенатор, един от трите главни извора?",
+      "options": [
+        "Още приживе на Нерон",
+        "Около 25 години",
+        "Повече от 300 години",
+        "Повече от 50 години",
+        "Около 10 години",
+        "Повече от 150 години"
+      ],
+      "correctAnswers": [
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#judging-the-sources",
+      "explanation": "Гръцкият сенатор писал повече от 150 години след смъртта на Нерон, а Тацит и биографът – повече от петдесет години след нея. И тримата обикновено заставали на страната на Сената.",
+      "sourceQuote": "Tacitus and the biographer wrote more than fifty years after Nero's death, the Greek senator more than 150.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Поне колко самозванци се обявили за Нерон след смъртта му?",
+      "options": [
+        "Петима",
+        "Дванадесет",
+        "Седем",
+        "Двама",
+        "Един",
+        "Трима"
+      ],
+      "correctAnswers": [
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#nero-downfall",
+      "explanation": "В източните провинции мнозина вярвали, че той ще се върне, и се появили поне трима самозванци. Смъртта му сложила край на династията му и довела до гражданска война.",
+      "sourceQuote": "In the eastern provinces many believed he would return, and at least three impostors claimed to be Nero.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как постъпил Клавдий с участниците в убийството на племенника си?",
+      "options": [
+        "Помилвал всички, включително убийците",
+        "Помилвал повечето, но екзекутирал самите убийци",
+        "Накарал Сената да съди и оправдае убийците",
+        "Заточил сенаторите и пощадил гвардейците",
+        "Екзекутирал всички замесени гвардейци и сенатори",
+        "Екзекутирал вместо тях германските телохранители"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 3,
+      "textReference": "#claudius-accession",
+      "explanation": "Той помилвал повечето замесени, но екзекутирал самите убийци, отчасти заради собствената си сигурност. Убийците били избили и съпругата и дъщерята на племенника му.",
+      "sourceQuote": "Claudius pardoned most people involved but executed the actual assassins, partly for his own safety.",
+      "reviewFlags": []
+    },
+    {
+      "question": "През 37 г. сл.н.е. Клавдий най-сетне за първи път заел висша длъжност. Каква била тя?",
+      "options": [
+        "Претор, отговарящ за съдилищата в Рим",
+        "Върховен жрец на етруските култове",
+        "Управител на Галия",
+        "Цензор заедно с виден сенатор",
+        "Консул заедно с племенника си, императора",
+        "Командир на преторианската гвардия"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 3,
+      "textReference": "#claudius-early-life",
+      "explanation": "Той бил консул заедно с племенника си, управляващия император, който му се подигравал и го унижавал. Цензорството възродил едва по-късно, през 47 г. сл.н.е., вече като император.",
+      "sourceQuote": "Only in AD 37 did he hold a top office, serving as consul (*consul*), one of the two highest magistrates, alongside his nephew, the reigning emperor, who mocked and humiliated him.",
+      "reviewFlags": []
+    }
+  ]
+}

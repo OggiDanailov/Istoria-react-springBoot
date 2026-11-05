@@ -1,0 +1,179 @@
+{
+  "batchName": "Late Republic: Marius and the Northern Invaders (121-100 BCE) - Easy Batch 2",
+  "chapterName": "Late Republic: Marius and the Northern Invaders (121-100 BCE)",
+  "difficulty": 1,
+  "batchOrder": 2,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "За какво се отнасял известният прякор „Мариевите мулета“?",
+      "options": [
+        "Товарни животни, отглеждани за легионите",
+        "Пленени коне на нумидийската конница",
+        "Роби, теглещи обсадни машини",
+        "Войници, носещи сами снаряжението си"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#marian-reforms-debate",
+      "explanation": "„Мариевите мулета“ били войниците, които сами носели снаряжението си. Всъщност това било обичайна практика у римските пълководци, а не нововъведение на Марий.",
+      "sourceQuote": "Making soldiers carry their own gear, the famous \"Marius's mules\" (*muli Mariani*), was routine for Roman generals.",
+      "reviewFlags": []
+    },
+    {
+      "question": "От кой регион идвали кимврите, които заплашвали Рим от север?",
+      "options": [
+        "Черноморското крайбрежие",
+        "Иберийския полуостров",
+        "Балканските планини",
+        "Полуостров Ютландия"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#cimbri-and-arausio",
+      "explanation": "Кимврите били германски народ от полуостров Ютландия в днешна Дания. Те се преселвали заедно със съседите си тевтоните.",
+      "sourceQuote": "The Cimbri, a Germanic people from the Jutland peninsula in modern Denmark, were on the move with their neighbours the Teutones.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Защо отчасти Марий избрал да служи като дясна ръка на Метел в Африка?",
+      "options": [
+        "За да избегне процес за подкуп в Рим",
+        "За да отмъсти за брат, убит от Югурта",
+        "За да увеличи шансовете си да стане консул",
+        "За да придобие нумидийски земи за рода си"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#metellus-and-the-muthul",
+      "explanation": "Марий се присъединил към Метел отчасти за да увеличи шансовете си да стане консул. Той служил като старши офицер на Метел.",
+      "sourceQuote": "His senior officer and right-hand man was Gaius Marius, the ambitious newcomer from Arpinum, who joined partly to boost his own chances of becoming consul.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Когато Марий поискал разрешение да се кандидатира за консул, Метел уж презрително казал, че трябва да почака и да се кандидатира заедно с кого?",
+      "options": [
+        "Нумидийски принц",
+        "Сула",
+        "Собствения син на Метел",
+        "Брата на Метел"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#marius-becomes-consul",
+      "explanation": "Метел уж казал на Марий да почака и да се кандидатира заедно със сина на Метел, който тогава бил едва на около двадесет години. Марий въпреки това водил кампанията си от лагера.",
+      "sourceQuote": "Allegedly he sneered that Marius should wait and stand alongside Metellus's own son, who was then about twenty.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой орган отменил решението на Сената и дал на Марий командването във войната срещу Югурта?",
+      "options": [
+        "Нумидийският царски двор",
+        "Колегията на авгурите",
+        "Плебейското събрание",
+        "Съветът на преторите"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#marius-becomes-consul",
+      "explanation": "Съюзен на Марий трибун внесъл въпроса в Плебейското събрание и то му поверило войната. Сенатът се опитвал да запази командването за Метел.",
+      "sourceQuote": "The Senate tried to keep Metellus in charge by extending his command, but a tribune allied to Marius took the question to the Assembly of the plebs (*concilium plebis*), the popular voting body.",
+      "reviewFlags": []
+    },
+    {
+      "question": "През 107 г. пр.н.е. Марий набрал „преброените по глава“ (capite censi). Кои били те?",
+      "options": [
+        "Италийски наемници",
+        "Освободени роби",
+        "Мъже без никакво имущество",
+        "Заможни конници"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#capture-of-jugurtha",
+      "explanation": "„Преброените по глава“ били мъже без никакво имущество. Обикновено само собственици можели да служат в легионите.",
+      "sourceQuote": "Marius instead appealed for volunteers, including veterans and men with no property at all, the so-called \"head count\" (*capite censi*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как Югурта получил по-богатата половина на Нумидия, когато римска комисия разделила царството?",
+      "options": [
+        "Заплашил да нахлуе в Сицилия",
+        "Сродил се чрез брак с римския нобилитет",
+        "Спечелил я в двубой",
+        "Подкупил членовете на комисията"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#jugurtha",
+      "explanation": "Югурта подкупил римските комисари да му дадат по-богатата западна половина. Подобни случаи убедили много римляни, че аристократичните им водачи просто могат да бъдат купени.",
+      "sourceQuote": "A Roman commission divided the kingdom, but Jugurtha bribed its members into giving him the richer western half.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Къде Марий и колегата му разгромили кимврите през 101 г. пр.н.е.?",
+      "options": [
+        "Норея",
+        "Нуманция",
+        "Верцеле",
+        "Араузио"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#aquae-sextiae-and-vercellae",
+      "explanation": "Кимврите били унищожени при Верцеле, на Раудийското поле. Според сведенията загинали над 120 000 души.",
+      "sourceQuote": "In 101 BC Marius joined his colleague at Vercellae, on the Raudine Plain.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой римски офицер влязъл в лагера на мавретанския цар и получил Югурта в окови?",
+      "options": [
+        "Метел",
+        "Сула",
+        "Самият Марий",
+        "Сатурнин"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#capture-of-jugurtha",
+      "explanation": "Сула смело влязъл в лагера на мавретанския цар и царят му предал Югурта. Само с битки неуловимият цар не можел да бъде заловен.",
+      "sourceQuote": "Sulla bravely entered the Mauretanian king's camp, and the king handed over Jugurtha in chains.",
+      "reviewFlags": []
+    },
+    {
+      "question": "През 102 г. пр.н.е. Марий тръгнал на запад срещу кои северни народи?",
+      "options": [
+        "Хелветите и свевите",
+        "Кимврите и тигурините",
+        "Белгите и арверните",
+        "Тевтоните и амброните"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#aquae-sextiae-and-vercellae",
+      "explanation": "Марий тръгнал на запад срещу тевтоните и съюзниците им амброните, докато колегата му консул пазел Алпите. Той разгромил и двата народа край Акве Секстие.",
+      "sourceQuote": "Gaius Marius, Rome's repeatedly elected consul, went west to meet the Teutones and their allies the Ambrones, while his fellow consul guarded the Alps.",
+      "reviewFlags": []
+    }
+  ]
+}

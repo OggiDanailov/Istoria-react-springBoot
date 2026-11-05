@@ -1,0 +1,145 @@
+{
+  "batchName": "Empire: Augustus and the Principate (27 BC-AD 14) - Latin words",
+  "chapterName": "Empire: Augustus and the Principate (27 BC-AD 14)",
+  "difficulty": 1,
+  "batchOrder": 9,
+  "description": "Written by hand from the chapter text: the Latin words it explains",
+  "questions": [
+    {
+      "question": "Какво означава името Август?",
+      "options": [
+        "„Почитаният“",
+        "„Великият“",
+        "„Първият“",
+        "„Победоносният“"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#first-settlement",
+      "explanation": "Името имало религиозен ореол и намеквало, че той стои близо до боговете.",
+      "sourceQuote": "Augustus (*augustus*), meaning \"the revered\".",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как нарекли римляните катастрофата в Тевтобургската гора?",
+      "options": [
+        "Clades Variana, Варовото поражение",
+        "Pax Romana",
+        "Res Gestae",
+        "Ara Pacis"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#teutoburg-forest",
+      "explanation": "Били загубени три легиона и Рим се отказал от завоевания отвъд Рейн.",
+      "sourceQuote": "The Romans called it the Varian Disaster (*Clades Variana*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "До 13 г. сл.н.е. войските на Август го провъзгласили за imperator 21 пъти. Какво означавало това?",
+      "options": [
+        "Победоносен пълководец",
+        "Цар",
+        "Баща на отечеството",
+        "Върховен жрец"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#expansion-and-peace",
+      "explanation": "По-късно от тази дума произлиза „император“.",
+      "sourceQuote": "his troops had hailed him as victorious general (*imperator*) 21 times.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво позволявала на Август tribunicia potestas, дадена му пожизнено?",
+      "options": [
+        "Да свиква Сената и събранията, да предлага закони и да налага вето",
+        "Лично да командва всяка армия",
+        "Сам да избира консулите",
+        "Да събира данъците на Египет"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#second-settlement",
+      "explanation": "Това била властта на древните трибуни, които закриляли обикновените граждани.",
+      "sourceQuote": "Tribunician power (*tribunicia potestas*), the authority of the ancient tribunes who protected ordinary citizens, was granted for life.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво било aerarium militare, създадено от Август през 6 г. сл.н.е.?",
+      "options": [
+        "Военна хазна за заплатите и пенсиите на войниците",
+        "Школа за офицери",
+        "Склад за оръжие",
+        "Флот от бойни кораби"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#running-the-empire",
+      "explanation": "За начало той дарил 170 милиона сестерции.",
+      "sourceQuote": "In AD 6 he set up a military treasury (*aerarium militare*)",
+      "reviewFlags": []
+    },
+    {
+      "question": "През 12 г. пр.н.е. Август станал pontifex maximus. Какво било това?",
+      "options": [
+        "Върховен жрец, глава на държавната религия на Рим",
+        "Командир на преторианската гвардия",
+        "Първенец на Сената",
+        "Управител на Египет"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#second-settlement",
+      "explanation": "През 2 г. пр.н.е. Сенатът го обявява и за Баща на отечеството.",
+      "sourceQuote": "In 12 BC he became chief priest (*pontifex maximus*), head of Rome's state religion.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво дава на Август *imperium proconsulare maius*?",
+      "options": [
+        "Власт над всеки управител в империята",
+        "Правото да бъде консул всяка година",
+        "Командването на флота",
+        "Пожизнено място в Сената"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#second-settlement",
+      "explanation": "Тя е част от второто уреждане от 23 г. пр.н.е., когато той се отказва от консулството.",
+      "sourceQuote": "Greater proconsular power (*imperium proconsulare maius*) made him the superior of every governor in the empire.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какви са според преданието последните думи на Август, *Acta est fabula, plaudite*?",
+      "options": [
+        "„Пиесата свърши; ръкопляскайте“",
+        "„Заварих Рим тухлен, оставих го мраморен“",
+        "„Върни ми легионите“",
+        "„Жребият е хвърлен“"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#succession-and-death",
+      "explanation": "Той умира в Нола, близо до Неапол, на 19 август 14 г. сл.н.е., на 75 години.",
+      "sourceQuote": "\"The play is over; applaud\" (*Acta est fabula, plaudite*).",
+      "reviewFlags": []
+    }
+  ]
+}

@@ -1,0 +1,145 @@
+{
+  "batchName": "Middle Republic: Hannibal in Italy (241-216 BCE) - Latin words",
+  "chapterName": "Middle Republic: Hannibal in Italy (241-216 BCE)",
+  "difficulty": 1,
+  "batchOrder": 9,
+  "description": "Written by hand from the chapter text: the Latin words it explains",
+  "questions": [
+    {
+      "question": "Подигравали Фабий Максим като Cunctator. Какво означава това?",
+      "options": [
+        "Протакащия",
+        "Страхливеца",
+        "Стареца",
+        "Щита"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#fabius-the-delayer",
+      "explanation": "Той отказвал да влезе в решителната битка, която Ханибал искал; събитията след Кана доказали правотата му.",
+      "sourceQuote": "Soldiers, senators and ordinary citizens mocked him as the Delayer (*Cunctator*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "През 237 г. пр.н.е. Барка повел армията си към Hispania. Какво била Hispania?",
+      "options": [
+        "Иберия: днешните Испания и Португалия",
+        "Северна Африка на запад от Картаген",
+        "Южна Галия",
+        "Остров Сардиния"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#barcas-in-spain",
+      "explanation": "Там той си извоювал владение, богато на сребърни мини, обработваема земя и новобранци.",
+      "sourceQuote": "That same year he led his army to Iberia (*Hispania*), the peninsula that is now Spain and Portugal.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как постъпил Ханибал с италийските съюзници на Рим (socii), пленени при Тразименското езеро?",
+      "options": [
+        "Освободил ги и ги пратил по домовете им",
+        "Продал ги в робство",
+        "Насила ги включил в армията си",
+        "Държал ги за откуп"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#trebia-and-trasimene",
+      "explanation": "Надявал се да разбие римския съюз; с римските пленници се отнасял сурово.",
+      "sourceQuote": "but Rome's Italian allies (*socii*) were freed and sent home to praise Carthage.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво била Gallia Cisalpina?",
+      "options": [
+        "Земите на келтските племена в долината на По в Северна Италия",
+        "Гръцкият юг на Италия",
+        "Римската провинция Сицилия",
+        "Крайбрежието на Южна Франция"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#saguntum",
+      "explanation": "Рим основавал там колонии и разгневените гали се вслушали в пратениците на Ханибал.",
+      "sourceQuote": "in Cisalpine Gaul (*Gallia Cisalpina*), the Po valley lands of Celtic tribes in northern Italy",
+      "reviewFlags": []
+    },
+    {
+      "question": "Защо галите от долината на По били ядосани на Рим преди 218 г. пр.н.е.?",
+      "options": [
+        "Рим основавал coloniae със заселници на най-добрите им земи",
+        "Рим бил забранил търговията им с Картаген",
+        "Рим бил взел децата им за заложници",
+        "Рим бил разрушил храмовете им"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#saguntum",
+      "explanation": "Пратениците на Ханибал вече ги ухажваха и след Требия повечето галски племена минаха на негова страна.",
+      "sourceQuote": "Rome was founding new colonies (*coloniae*) of settlers on the best land.",
+      "reviewFlags": []
+    },
+    {
+      "question": "След Кана римските жреци се допитаха до *Libri Sibyllini*. Какво представляваха те?",
+      "options": [
+        "Свещени пророчества, пазени за беди",
+        "Протоколите на Сената",
+        "Законите на дванадесетте таблици",
+        "Писма от боговете на Картаген"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#after-cannae",
+      "explanation": "В паниката в Рим дори погребаха живи хора на говеждия пазар като жертвоприношение.",
+      "sourceQuote": "Priests consulted the Sibylline Books (*Libri Sibyllini*), sacred prophecies kept for emergencies",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как двамата *consules* делели командването на армията при Кана?",
+      "options": [
+        "Редували се ден след ден",
+        "Единият водел пехотата, другият – конницата",
+        "Винаги командвал по-възрастният консул",
+        "Теглили жребий преди битката"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#battle-of-cannae",
+      "explanation": "Според преданието на 2 август 216 г. пр.н.е., деня на битката, командвал Варон.",
+      "sourceQuote": "The two consuls took turns in command day by day",
+      "reviewFlags": []
+    },
+    {
+      "question": "Колко голяма армия събра Сенатът през 216 г. пр.н.е.?",
+      "options": [
+        "Осем *legiones* и толкова съюзници: около 86 000 души",
+        "Четири *legiones*: около 20 000 души",
+        "Два *legiones* и флот: около 40 000 души",
+        "Двадесет *legiones*: около 200 000 души"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#battle-of-cannae",
+      "explanation": "Това беше най-голямата армия, която Рим някога бе събирал, строена необичайно дълбоко, за да смаже центъра на Ханибал.",
+      "sourceQuote": "eight Roman legions (*legiones*) plus as many allies, about 86,000 men.",
+      "reviewFlags": []
+    }
+  ]
+}

@@ -1,0 +1,179 @@
+{
+  "batchName": "Late Republic: Cicero, Catiline and the Triumvirate (63-53 BCE) - Easy Batch 2",
+  "chapterName": "Late Republic: Cicero, Catiline and the Triumvirate (63-53 BCE)",
+  "difficulty": 1,
+  "batchOrder": 2,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "От кого идва почти всичко, което знаем за Катилина?",
+      "options": [
+        "От враговете му",
+        "От галски пратеници в Рим",
+        "От оцелелите му привърженици",
+        "От собствените му мемоари"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#catiline-historians",
+      "explanation": "Представата ни за Катилина идва почти изцяло от враждебни източници. Първият е Цицерон – същият консул, който смаза заговора.",
+      "sourceQuote": "Almost everything we know about Catiline comes from his enemies.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво е общото мнение на учените за заговора на Катилина?",
+      "options": [
+        "Бил е истински, но опасността е преувеличена",
+        "Изцяло е измислен от Цицерон",
+        "Едва не е свалил властта",
+        "Тайно е ръководен от Цезар"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#catiline-historians",
+      "explanation": "Повечето учени приемат, че заговорът е бил истински, но смятат, че опасността от него е преувеличена. Теориите, че Цицерон го е измислил или че Цезар или Крас са дърпали конците, се отхвърлят.",
+      "sourceQuote": "The consensus is that the plot was real, but its danger was exaggerated.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Каква титла дадоха сенаторите на Цицерон след екзекуцията на заговорниците?",
+      "options": [
+        "Спасител на града",
+        "Щит на републиката",
+        "Първенец на Сената",
+        "Баща на отечеството"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#execution-debate",
+      "explanation": "Сенаторите обявиха Цицерон за „pater patriae“ – баща на отечеството. Славата скоро помръкна, защото враговете му по-късно го нападнаха, че е убил граждани без съд.",
+      "sourceQuote": "Senators hailed him as \"father of the fatherland\" (*pater patriae*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "Срещу коя сила тръгна Крас в търсене на военна слава?",
+      "options": [
+        "Царство Понт",
+        "Царство Армения",
+        "Партското царство",
+        "Царство Египет"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#carrhae",
+      "explanation": "Крас се насочи срещу Партското царство, което владееше Иран и Месопотамия. Критиците възразяваха, че Партия не е дала на Рим повод за война.",
+      "sourceQuote": "His target was the Parthian Empire, a power ruling Iran and Mesopotamia.",
+      "reviewFlags": []
+    },
+    {
+      "question": "От какво се отказа Цезар през 60 г. пр.н.е., за да се кандидатира за консул?",
+      "options": [
+        "От триумфално шествие",
+        "От доходна жреческа длъжност",
+        "От командването на легиони в Галия",
+        "От второ управление на Испания"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#alliance-formed",
+      "explanation": "Цезар пожертва триумфа – великолепното шествие, за което мечтаеше всеки пълководец, – за да се кандидатира за консул. Враговете му тогава му натрапиха враждебен колега.",
+      "sourceQuote": "Caesar, back from governing southern Spain, gave up a triumph (*triumphus*), the grand victory parade every general craved, so he could stand for consul.",
+      "reviewFlags": []
+    },
+    {
+      "question": "За коя длъжност Катилина се кандидатираше многократно, но избирателите всеки път го отхвърляха?",
+      "options": [
+        "Цензорството",
+        "Диктатурата",
+        "Консулството",
+        "Длъжността на върховен жрец"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#catiline",
+      "explanation": "Катилина губеше изборите за консул – най-високата длъжност в Рим, заемана всяка година от двама консули. След поредната загуба през есента на 63 г. пр.н.е. той прибягна до сила.",
+      "sourceQuote": "Catiline had stood for it repeatedly and been rejected by the voters every time.",
+      "reviewFlags": []
+    },
+    {
+      "question": "След като Катилина напусна Рим, за да се присъедини към бунтовниците, за какъв го обяви Сенатът?",
+      "options": [
+        "За зависим цар на Рим",
+        "За народен трибун",
+        "За баща на отечеството",
+        "За враг на държавата (hostis)"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#cicero-exposes-plot",
+      "explanation": "Сенатът обяви Катилина за враг на държавата и изпрати колегата на Цицерон да воюва срещу него. Той беше напуснал града, след като Цицерон го заклейми в лицето.",
+      "sourceQuote": "The Senate declared him a public enemy (*hostis*) and sent Cicero's fellow consul to fight him.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво обеща Помпей, ако някой вдигне меч срещу поземления закон на Цезар?",
+      "options": [
+        "Ще повика легионите си",
+        "Ще наложи вето на закона",
+        "Ще напусне Рим",
+        "Ще донесе щит"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#caesar-consulship",
+      "explanation": "Репликата на Помпей за меча и щита разкри тайния съюз зад закона на Цезар. Колегата консул беше заявил, че народът няма да получи закона тази година, дори всички да го искат.",
+      "sourceQuote": "Pompey said that if anyone raised a sword against the law, he would bring a shield.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кое е вярно за името „Първият триумвират“?",
+      "options": [
+        "Това е официалната титла на тримата",
+        "Нито един античен автор не го е използвал",
+        "Цицерон го измислил в реч",
+        "Сенатът го дал през 59 г. пр.н.е."
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#gang-of-three",
+      "explanation": "Нито един античен автор не нарича съюза триумвират, а и той никога не е бил официална длъжност. Много съвременни историци днес избягват термина като подвеждащ.",
+      "sourceQuote": "But no ancient writer called it that, and it was never an official post.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Къде се срещна Цезар с Помпей през 56 г. пр.н.е., за да подновят съюза си?",
+      "options": [
+        "Пистория",
+        "Лука",
+        "Фезуле",
+        "Равена"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#luca-renewal",
+      "explanation": "Цезар се срещна с Помпей в Лука, днешна Лука, тогава най-южния град в неговата провинция. С Крас се срещна отделно в Равена.",
+      "sourceQuote": "Caesar met Crassus at Ravenna and Pompey at Luca, modern Lucca, then the southernmost town of Caesar's province in northern Italy.",
+      "reviewFlags": []
+    }
+  ]
+}

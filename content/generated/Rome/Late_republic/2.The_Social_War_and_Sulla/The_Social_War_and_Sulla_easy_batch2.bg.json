@@ -1,0 +1,179 @@
+{
+  "batchName": "Late Republic: The Social War and Sulla (91-78 BCE) - Easy Batch 2",
+  "chapterName": "Late Republic: The Social War and Sulla (91-78 BCE)",
+  "difficulty": 1,
+  "batchOrder": 2,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Какво предлагал на италийските общности Юлиевият закон (lex Iulia) от октомври 90 г. пр.н.е.?",
+      "options": [
+        "Връщане на цялата обществена земя, отнета им след 133 г. пр.н.е.",
+        "Гражданство за останалите верни или бързо сложилите оръжие",
+        "Постоянно освобождаване от пращане на войници за войните на Рим",
+        "Определен дял от плячката от предстоящите войни на Изток"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#citizenship-laws",
+      "explanation": "Юлиевият закон давал римско гражданство на верните общности и на бързо капитулиралите. Втори закон през 89 г. пр.н.е. разширил предложението почти за всички и подкрепата за бунта стопила.",
+      "sourceQuote": "It let any Italian community that had stayed loyal, or quickly laid down its arms, take up Roman citizenship.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Каква безпрецедентна стъпка предприел Сула през 88 г. пр.н.е., след като нов закон му отнел командването?",
+      "options": [
+        "Подал оставка и заминал доброволно в изгнание",
+        "Избягал в Африка, за да събере нови войски",
+        "Преминал на страната на Митридат",
+        "Повел армията си срещу самия Рим"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#march-on-rome",
+      "explanation": "Сула отишъл при армията си край Нола и я повел срещу Рим – нещо, което никой римски пълководец не бил правил. Той превзел града и обявил Марий за враг на държавата.",
+      "sourceQuote": "He went to his army near Nola, warned the soldiers they would lose the plunder of the East, and led them on Rome.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой е написал най-пълния запазен разказ за Съюзническата война?",
+      "options": [
+        "Гръцки историк, писал повече от два века по-късно",
+        "Римски сенатор, писал година след войната",
+        "Самнитски офицер, участвал в обсадата на Аускулум",
+        "Самият Сула в мемоарите, писани след оттеглянето му"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#what-the-allies-wanted",
+      "explanation": "Основният разказ идва от гръцки историк, писал почти двеста години след събитията. Повечето античен автори приемали неговата версия, съсредоточена върху гражданството.",
+      "sourceQuote": "The fullest surviving narrative was written by a Greek historian more than two centuries later.",
+      "reviewFlags": []
+    },
+    {
+      "question": "В кой град убийството на римски магистрат и на всички живеещи там римляни дало начало на съюзническото въстание?",
+      "options": [
+        "Корфиниум",
+        "Нола",
+        "Бовиан",
+        "Аускулум"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#outbreak-at-asculum",
+      "explanation": "Римски магистрат научил, че Аускулум в Пицен разменя заложници, и побързал да отиде там, за да заплаши жителите. Ужасени, че са разкрити, те убили него и всички римляни в града.",
+      "sourceQuote": "Late in 91 or early in 90 BC, a Roman magistrate heard that Asculum, a town in Picenum near Italy's Adriatic coast, was swapping hostages.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой опитен пълководец обърнал хода на войната през 90 г. пр.н.е., след като видял трупове, носени от реката, и форсирал преправата?",
+      "options": [
+        "Сула",
+        "Друз",
+        "Цина",
+        "Марий"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#fighting-90-89-bc",
+      "explanation": "Марий, който по-рано спасил Италия от германските нашественици, форсирал реката и победил. С помощта на Сула той отново разбил марсите и разделил бунтовниците на северна и южна част.",
+      "sourceQuote": "Marius, the veteran general who had saved Italy from Germanic invaders, saw bodies floating downstream, forced the river and won.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво било необичайното в произхода на Сула?",
+      "options": [
+        "Произлизал от богато търговско семейство от Мала Азия",
+        "Бил син на освободен роб от Кампания",
+        "Древният му знатен род бил обеднял",
+        "Семейството му били самнити, получили гражданство"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#sulla-early-career",
+      "explanation": "Сула се родил през 138 г. пр.н.е. в един от най-старите знатни родове на Рим, но той имал малко пари. Младостта си прекарал сред актьори, музиканти и танцьори.",
+      "sourceQuote": "Sulla was born in 138 BC into one of Rome's oldest noble families, but a family that had sunk into poverty.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как младият Сула се прославил във войната в Нумидия?",
+      "options": [
+        "Като сключил траен мирен договор с царя",
+        "Като убедил съседен владетел да предаде бунтовния цар",
+        "Като убил бунтовния цар в двубой на бойното поле",
+        "Като превзел нумидийската столица с малък отряд"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#sulla-early-career",
+      "explanation": "Сула склонил съседен владетел да предаде бунтовния цар на Рим. Марий си приписал заслугата и приятелството им прераснало в съперничество.",
+      "sourceQuote": "Sulla won fame by persuading a neighbouring ruler to betray the king into Roman hands.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво направил Сула, след като сложил диктатурата около началото на 80 г. пр.н.е.?",
+      "options": [
+        "Коронясал се за цар пред събрания Сенат",
+        "Разходил се без охрана из Форума, готов да отговаря на всеки гражданин",
+        "Веднага тръгнал на нов поход срещу Партия",
+        "Назначил главния си офицер за диктатор на свое място"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#dictatorship-and-proscriptions",
+      "explanation": "Сула разпуснал охраната си и се разхождал незащитен из Форума. После заемал за последен път консулството през 80 г. пр.н.е., преди да се оттегли.",
+      "sourceQuote": "He dismissed his guards and walked unprotected through the Forum, offering to answer any citizen.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво трябвало да осигуряват италийските съюзници на Рим (socii) срещу правото да запазят земята си и да управляват сами делата си?",
+      "options": [
+        "Войници всеки път, когато Рим воювал",
+        "Годишен данък, плащан в сребро",
+        "Доставки на зърно за град Рим",
+        "Заложници от водещите си родове"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#rome-and-its-allies",
+      "explanation": "Договорите задължавали съюзниците да пращат войски за войните на Рим. В замяна те получавали дял от плячката, а Рим често подкрепял местните елити срещу народни бунтове.",
+      "sourceQuote": "In return, they had to send soldiers whenever Rome went to war.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Къде Сула прекарал старините си, пишейки мемоарите си?",
+      "options": [
+        "Във вила край Путеоли на Неаполитанския залив",
+        "В селска вила край Брундизий",
+        "В къща в Атина сред гръцки учени",
+        "В имение в планините край Корфиниум"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#death-and-legacy",
+      "explanation": "След последното си консулство през 80 г. пр.н.е. Сула се оттеглил във вилата си край Путеоли. Там писал мемоарите си и прекарвал времето с актьори и музиканти.",
+      "sourceQuote": "After a final consulship in 80 BC, Sulla retired to his villa near Puteoli, a port on the Bay of Naples.",
+      "reviewFlags": []
+    }
+  ]
+}

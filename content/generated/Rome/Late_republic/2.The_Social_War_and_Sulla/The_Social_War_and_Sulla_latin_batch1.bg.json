@@ -1,0 +1,145 @@
+{
+  "batchName": "Late Republic: The Social War and Sulla (91-78 BCE) - Latin words",
+  "chapterName": "Late Republic: The Social War and Sulla (91-78 BCE)",
+  "difficulty": 1,
+  "batchOrder": 9,
+  "description": "Written by hand from the chapter text: the Latin words it explains",
+  "questions": [
+    {
+      "question": "Нашето название „Съюзническа война“ идва от bellum sociale. Какво означава то?",
+      "options": [
+        "Войната на съюзниците",
+        "Войната на гражданите",
+        "Гражданската война",
+        "Войната на марсите"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#outbreak-at-asculum",
+      "explanation": "Самите римляни я наричали Марсийската война – по името на марсите.",
+      "sourceQuote": "Our name comes from the later Latin *bellum sociale*, the \"war of the allies.\"",
+      "reviewFlags": []
+    },
+    {
+      "question": "Край Нола Сула спечелил corona graminea. Какво било това?",
+      "options": [
+        "Тревният венец, най-високото военно отличие на Рим",
+        "Златен венец за първия, изкачил стената",
+        "Короната на нумидийските царе",
+        "Награда за победа в надбягване с колесници"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#fighting-90-89-bc",
+      "explanation": "След това той превзел новата столица на бунтовниците – Бовиан.",
+      "sourceQuote": "won the grass crown (*corona graminea*), Rome's highest military honour, near Nola.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво била proscriptio при Сула?",
+      "options": [
+        "Публичен списък на хора, осъдени на смърт без съд",
+        "Данък върху богатите",
+        "Списък на нови сенатори",
+        "Свикване на войници"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#dictatorship-and-proscriptions",
+      "explanation": "Всеки можел да убие човек от списъка и да поиска награда; имуществото му отивало в държавата.",
+      "sourceQuote": "His most infamous weapon was the proscription (*proscriptio*), a public list of men condemned to death without trial.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Защо римското civitas било сложно предложение за съюзниците?",
+      "options": [
+        "Човек можел да има само едно гражданство",
+        "Струвало голяма такса",
+        "Било само за войници",
+        "Трябвало да се подновява всяка година"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#rome-and-its-allies",
+      "explanation": "Да станеш римлянин означавало да се откажеш от собствената си общност.",
+      "sourceQuote": "Even that offer was complicated, because a person could hold only one citizenship.",
+      "reviewFlags": []
+    },
+    {
+      "question": "На кого предлагал гражданство lex Iulia от октомври 90 г. пр.н.е.?",
+      "options": [
+        "Италийските общности, които останали верни или бързо сложили оръжие",
+        "Само латините",
+        "Само освободените роби",
+        "Всички народи в Италия, включително самнитите"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#citizenship-laws",
+      "explanation": "През 89 г. пр.н.е. втори закон разширил предложението почти за всички.",
+      "sourceQuote": "It let any Italian community that had stayed loyal, or quickly laid down its arms, take up Roman citizenship.",
+      "reviewFlags": []
+    },
+    {
+      "question": "През 88 г. пр.н.е. Сула обявил Марий и още единадесет души за *hostes*. Какво ги правело това?",
+      "options": [
+        "Врагове на държавата",
+        "Консули",
+        "Заложници",
+        "Изгнаници с пенсии"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#march-on-rome",
+      "explanation": "Марий избягал в Африка.",
+      "sourceQuote": "had Marius and eleven others declared public enemies (*hostes*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как действали тридесет и петте гласуващи *tribus*?",
+      "options": [
+        "Всяка триба давала един глас, независимо от размера си",
+        "Всеки гражданин гласувал поотделно",
+        "Гласували само най-богатите триби",
+        "Трибите гласували по старшинство"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#citizenship-laws",
+      "explanation": "Затова натъпкването на новите граждани в няколко нови триби ограничавало влиянието им.",
+      "sourceQuote": "Romans voted in thirty-five voting tribes (*tribus*), and each tribe cast one vote regardless of size.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Защо Сула затегнал закона за *maiestas*?",
+      "options": [
+        "За да държи в подчинение провинциалните управители",
+        "За да накаже италийските бунтовници",
+        "За да защити трибуните",
+        "За да контролира цената на зърното"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#dictatorship-and-proscriptions",
+      "explanation": "Другите му реформи също укрепили Сената.",
+      "sourceQuote": "He tightened the treason law (*maiestas*) to keep provincial governors in line.",
+      "reviewFlags": []
+    }
+  ]
+}

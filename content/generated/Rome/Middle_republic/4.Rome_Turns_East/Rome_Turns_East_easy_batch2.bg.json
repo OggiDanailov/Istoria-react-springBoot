@@ -1,0 +1,179 @@
+{
+  "batchName": "Middle Republic: Rome Turns East (200-167 BCE) - Easy Batch 2",
+  "chapterName": "Middle Republic: Rome Turns East (200-167 BCE)",
+  "difficulty": 1,
+  "batchOrder": 2,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Около колко сребро бил един талант – мярката за военното обезщетение на Филип V към Рим?",
+      "options": [
+        "260 кг",
+        "6 кг",
+        "26 кг",
+        "2,6 кг"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#freedom-of-the-greeks",
+      "explanation": "Един талант бил около 26 кг сребро. След поражението си Филип трябвало да плати 1 000 таланта.",
+      "sourceQuote": "Philip had to withdraw every garrison from the Greek cities of Europe and Asia and pay 1,000 talents, a talent being roughly 26 kg of silver.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Каква титла получил Антиох III, след като си върнал Армения и Иран и завзел Сирия и Юдея?",
+      "options": [
+        "Цар на царете",
+        "Спасител",
+        "Господар на Азия",
+        "Велик цар"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#cold-war-with-antiochus",
+      "explanation": "Мащабните завоевания донесли на Антиох III титлата „Велик цар“. След като Филип бил победен, той навлязъл в западна Мала Азия и после преминал в Тракия.",
+      "sourceQuote": "He had brought Armenia and Iran back under his control and taken Syria and Judea from Egypt, earning the title \"Great King\".",
+      "reviewFlags": []
+    },
+    {
+      "question": "Защо римските войници не се уплашили от лунното затъмнение в нощта преди битката при Пидна?",
+      "options": [
+        "Един офицер го бил предсказал",
+        "Станало, докато спели",
+        "Жреците го обявили за добро знамение",
+        "Вече били виждали такова при Киноскефале"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#pydna",
+      "explanation": "Понеже един офицер бил предсказал затъмнението, римските войници запазили спокойствие. Въпреки това Емилий принасял жертва след жертва, докато знаменията не станали благоприятни.",
+      "sourceQuote": "An officer had predicted it, so the Roman soldiers were not frightened.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво означава името Киноскефале – хълмовете, където Рим се сражавал с Филип V през 197 г. пр.н.е.?",
+      "options": [
+        "Вълчи зъби",
+        "Орлово гнездо",
+        "Конски гръб",
+        "Кучешки глави"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#cynoscephalae",
+      "explanation": "Киноскефале означава „Кучешки глави“. Хълмовете се намират в Тесалия, където двете армии лагерували близо една до друга през юни 197 г. пр.н.е.",
+      "sourceQuote": "In June 197 BC the two armies were camped near each other among the Cynoscephalae hills, whose name means \"Dog's Heads\", in Thessaly.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как Фламинин победил Филип V в клисурата на река Аоос?",
+      "options": [
+        "Блокирал клисурата и изморил македонците с глад",
+        "Подмамил Филип на открито с престорено отстъпление",
+        "Изпратил войски по скрита планинска пътека, за да ударят в гръб",
+        "Стоварил войски от морето зад македонския лагер"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#flamininus-takes-command",
+      "explanation": "Теренът бил в полза на македонците, но на Фламинин показали скрита пътека през планините. Филип избягал в Тесалия, като оставил около 2 000 убити или ранени.",
+      "sourceQuote": "He sent troops round to strike from behind, and Philip fled into Thessaly, leaving about 2,000 men dead or wounded.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой римски консул бил изпратен през 168 г. пр.н.е. да сложи край на войната с Персей?",
+      "options": [
+        "Фламинин",
+        "Емилий Павел",
+        "Мумий",
+        "Сципион Африкански"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#pydna",
+      "explanation": "Емилий Павел, опитен консул, заемащ поста за втори път, бил изпратен да приключи войната. Той победил при Пидна и отпразнувал триумф.",
+      "sourceQuote": "In 168 BC Rome sent Aemilius Paullus, an experienced consul serving for the second time, to finish the war against Perseus, king of Macedon.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво провъзгласил Фламинин на Истмийските игри през 196 г. пр.н.е.?",
+      "options": [
+        "Свобода за гръцките общности, управлявани от Филип",
+        "Нова война срещу Антиох III",
+        "Превръщане на Македония в римска провинция",
+        "Връщане на Тесалия под македонска власт"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#freedom-of-the-greeks",
+      "explanation": "На големия празник край Коринт Фламинин провъзгласил свобода (libertas) за гърците и тълпата избухнала в ликуване. Тази свобода обаче имала граници: римски войски останали в ключовите крепости.",
+      "sourceQuote": "At the Isthmian Games of May 196 BC, a great festival near Corinth, the Roman commander Flamininus proclaimed freedom (*libertas*) for the Greek communities Philip had ruled.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой поел командването на римската война срещу Филип V през 198 г. пр.н.е.?",
+      "options": [
+        "Емилий Павел",
+        "Фламинин",
+        "Катон Стари",
+        "Сципион Африкански"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#flamininus-takes-command",
+      "explanation": "Фламинин поел командването през 198 г. пр.н.е., когато още нямал тридесет години. Той ожесточил исканията на Рим и скоро разбил Филип при река Аоос.",
+      "sourceQuote": "In 198 BC command passed to Flamininus, a consul not yet thirty who proudly called himself a lover of Greek culture.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво представлявала македонската фаланга?",
+      "options": [
+        "Гъвкав строй от малки самостоятелни части",
+        "Завеса от леки войски, въоръжени с копия за хвърляне",
+        "Плътен блок от мъже с много дълги копия",
+        "Клин от тежка конница, воден от царя"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#cynoscephalae",
+      "explanation": "Фалангата била плътна маса от копиеносци с много дълги копия. При Киноскефале по-гъвкавите римски легиони я победили.",
+      "sourceQuote": "Macedon relied on the phalanx, a dense block of men armed with very long spears.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой получил земите, от които Антиох III се отказал след Апамейския мир?",
+      "options": [
+        "Съюзниците на Рим Пергам и Родос",
+        "Етолийският съюз",
+        "Рим, като първа своя източна провинция",
+        "Египет, който си върнал загубените земи"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#peace-of-apamea",
+      "explanation": "Рим не взел нищо за себе си и предал територията на верните си съюзници. Етолийците, напротив, били сведени до зависима държава.",
+      "sourceQuote": "The territory went to its loyal allies, Pergamon and Rhodes.",
+      "reviewFlags": []
+    }
+  ]
+}

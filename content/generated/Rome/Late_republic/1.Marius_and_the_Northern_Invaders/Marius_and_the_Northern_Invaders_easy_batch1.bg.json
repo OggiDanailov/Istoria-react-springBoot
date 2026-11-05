@@ -1,0 +1,179 @@
+{
+  "batchName": "Late Republic: Marius and the Northern Invaders (121-100 BCE) - Easy Batch 1",
+  "chapterName": "Late Republic: Marius and the Northern Invaders (121-100 BCE)",
+  "difficulty": 1,
+  "batchOrder": 1,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Защо отчасти Рим преизбирал Марий за консул отново и отново по време на заплахата от север?",
+      "options": [
+        "За да го награди за превземането на Картаген",
+        "За да избегне нов сблъсък между съперничещи си пълководци",
+        "Защото Сенатът бил разпуснат",
+        "Защото нямало други законно допустими кандидати"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#consul-again-and-again",
+      "explanation": "Римляните не искали да се повтори Араузио, където враждуващите пълководци обрекли армията. Възстановената армия на Марий била подложена на сурова подготовка край Акве Секстие.",
+      "sourceQuote": "Rome kept re-electing him, partly to avoid another clash between rival commanders like the one that had doomed Arausio.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Нумидия, царството в центъра на войната срещу Югурта, се намирала приблизително в коя днешна държава?",
+      "options": [
+        "Египет",
+        "Алжир",
+        "Либия",
+        "Мароко"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#jugurtha",
+      "explanation": "Нумидия лежала на северноафриканския бряг, приблизително в днешен Алжир. Тя била верен съюзник на Рим още от войните срещу Картаген.",
+      "sourceQuote": "Numidia was a kingdom on the north African coast, roughly modern Algeria, and a loyal ally of Rome since the wars against Carthage (*Carthago*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво станало със Сатурнин и другите затворници, заключени в сградата на Сената?",
+      "options": [
+        "Били заточени в Африка",
+        "Избягали, преоблечени като роби",
+        "Тълпа ги убила с камъни с керемиди",
+        "Марий ги помилвал"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#saturninus-and-the-sixth-consulship",
+      "explanation": "Тълпа се качила на покрива, изкъртила керемидите и с тях пребила затворниците до смърт. Възможно е това да е станало с мълчаливото съгласие на Марий.",
+      "sourceQuote": "He locked them in the Senate house to await trial, but a mob climbed onto the roof, tore off the tiles and stoned the prisoners to death, possibly with Marius's tacit approval.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой аристократ, известен с честността и смелостта си, изпратил Сенатът през 109 г. пр.н.е. да поеме войната срещу Югурта?",
+      "options": [
+        "Сула",
+        "Метел",
+        "Сатурнин",
+        "Сципион"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#metellus-and-the-muthul",
+      "explanation": "След години на позор във войната Сенатът изпратил Метел. Той превъзпитал отпуснатата армия и избирал офицерите си по способности, а не по произход.",
+      "sourceQuote": "After years of disgrace, the Senate sent Metellus, an aristocrat with a reputation for honesty and courage, to take over the war against Jugurtha, the defiant king of Numidia in north Africa.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво означавало в римската политика Марий да бъде наречен „нов човек“ (novus homo)?",
+      "options": [
+        "Бил най-младият избран консул в историята",
+        "Едва наскоро бил получил гражданство",
+        "Бил първият от рода си, достигнал висша длъжност",
+        "Бил осиновен в патрицианско семейство"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#marius-origins",
+      "explanation": "Novus homo бил първият от рода си, достигнал висша длъжност. Старата аристокрация никога не позволила на Марий да забрави, че е външен човек.",
+      "sourceQuote": "In Rome, though, Marius was a \"new man\" (*novus homo*), the first of his family to reach high office, and the old aristocracy never let him forget it.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Колко поредни консулства заемал Марий от 104 до 100 г. пр.н.е.?",
+      "options": [
+        "Три",
+        "Четири",
+        "Шест",
+        "Пет"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#consul-again-and-again",
+      "explanation": "От 104 до 100 г. пр.н.е. Марий бил консул пет поредни пъти, освен първото си консулство през 107 г. пр.н.е. Така в ръцете на един човек се събрала невиждана власт.",
+      "sourceQuote": "In the end Marius held five consulships in a row, from 104 to 100 BC, on top of his first in 107 BC.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Араузио през 105 г. пр.н.е. било най-тежкото поражение на Рим след кое по-ранно бедствие?",
+      "options": [
+        "Кана",
+        "Каре",
+        "Алия",
+        "Кавдинските проходи"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#cimbri-and-arausio",
+      "explanation": "Араузио било най-тежкото поражение на Рим след победата на Ханибал при Кана повече от век по-рано. Градът бил обзет от паника, а хората говорели за „кимврийския ужас“.",
+      "sourceQuote": "Arausio was Rome's worst defeat since Hannibal's victory at Cannae over a century earlier.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Край кое хълмисто градче югоизточно от Рим се родил Гай Марий около 157 г. пр.н.е.?",
+      "options": [
+        "Капуа",
+        "Тускулум",
+        "Пренесте",
+        "Арпинум"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#marius-origins",
+      "explanation": "Марий се родил край Арпинум, хълмисто градче югоизточно от Рим. Семейството му било видно и заможно в местен мащаб, вероятно благодарение на големи земевладения.",
+      "sourceQuote": "Gaius Marius, the outsider who would be elected to Rome's highest office more often than any man before him, was born around 157 BC near Arpinum, a hill town south-east of Rome.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как Марий принудил Сатурнин и бунтовниците му на Капитолийския хълм да се предадат през 100 г. пр.н.е.?",
+      "options": [
+        "Подпалил храма",
+        "Вкарал легион в града",
+        "Прекъснал водоснабдяването им",
+        "Подкупил телохранителите им"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#saturninus-and-the-sixth-consulship",
+      "explanation": "Марий събрал доброволци и ветерани и прекъснал водата към Капитолийския хълм. Той отказал да доближи армия до града.",
+      "sourceQuote": "Instead he rallied volunteers and veterans, cut off the water supply to the Capitoline Hill where the rebels held out, and forced their surrender.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Къде и кога се е зародила идеята за „Мариевите реформи“ в римската армия?",
+      "options": [
+        "Сред френски учени през XVIII в.",
+        "Сред германски учени през 40-те години на XIX в.",
+        "Сред римски историци при Август",
+        "Сред византийски летописци"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#marian-reforms-debate",
+      "explanation": "Идеята се зародила сред германски учени през 40-те години на XIX в. Повечето специалисти днес я смятат за конструкция на съвременната наука.",
+      "sourceQuote": "The idea began with German scholars in the 1840s.",
+      "reviewFlags": []
+    }
+  ]
+}

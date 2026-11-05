@@ -1,0 +1,179 @@
+{
+  "batchName": "Middle Republic: The First Punic War (264-241 BCE) - Easy Batch 1",
+  "chapterName": "Middle Republic: The First Punic War (264-241 BCE)",
+  "difficulty": 1,
+  "batchOrder": 1,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Колко време продължила Първата пуническа война?",
+      "options": [
+        "17 години",
+        "10 години",
+        "23 години",
+        "30 години"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#rome-and-carthage",
+      "explanation": "Войната продължила 23 години – от 264 до 241 г. пр.н.е. Тя била най-дългият непрекъснат конфликт и най-голямата морска война на Древния свят.",
+      "sourceQuote": "The war that ended this friendship lasted 23 years, from 264 to 241 BC.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво станала Сицилия след Първата пуническа война?",
+      "options": [
+        "Независимо гръцко царство",
+        "Първата провинция на Рим",
+        "Част от царството на Сиракуза",
+        "Обща римско-картагенска зона"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#peace-and-aftermath",
+      "explanation": "Сицилия станала първата провинция на Рим – отвъдморска територия, управлявана от римски управител. Тя била и жизненоважен източник на зърно.",
+      "sourceQuote": "Sicily became Rome's first province (*provincia*), an overseas territory run by a Roman governor, and a vital source of grain.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво се случило с Регул, римския консул, който нахлул в Африка?",
+      "options": [
+        "Превзел град Картаген",
+        "Удавил се в буря в морето",
+        "Бил пленен от картагенците",
+        "Отпразнувал триумф в Рим"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#regulus-in-africa",
+      "explanation": "През 255 г. пр.н.е. преобучената армия на Картаген разгромила войската му и Регул бил пленен. Преди това, след като превзел Тунис, той стигнал на 16 км от Картаген.",
+      "sourceQuote": "In 255 BC the retrained army crushed the Romans, and Regulus was captured.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Колко се съгласил да плати Картаген на Рим според Лутациевия договор?",
+      "options": [
+        "10 000 таланта за петдесет години",
+        "3200 таланта за десет години",
+        "1200 таланта наведнъж",
+        "500 таланта за пет години"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#peace-and-aftermath",
+      "explanation": "Картаген се съгласил да плати 3200 таланта сребро за десет години. Освен това трябвало да напусне Сицилия и да освободи всички пленници.",
+      "sourceQuote": "Under the Treaty of Lutatius in 241 BC, Carthage left Sicily, freed all prisoners and agreed to pay 3,200 talents of silver over ten years.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как наричали римляните Акрагас, главната база на Картаген в Сицилия?",
+      "options": [
+        "Лилибей",
+        "Агригент",
+        "Панорм",
+        "Месана"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#siege-of-akragas",
+      "explanation": "Римляните наричали южносицилийското пристанище Акрагас „Агригент“. През 262 г. пр.н.е. римска армия от около 40 000 души го обсадила.",
+      "sourceQuote": "Carthage made Akragas, a port halfway along Sicily's south coast that the Romans called Agrigentum, its main base on the island.",
+      "reviewFlags": []
+    },
+    {
+      "question": "През коя година започнала Втората пуническа война?",
+      "options": [
+        "202 г. пр.н.е.",
+        "218 г. пр.н.е.",
+        "241 г. пр.н.е.",
+        "237 г. пр.н.е."
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#peace-and-aftermath",
+      "explanation": "Негодуванието от суровото отношение на Рим тлеело, докато през 218 г. пр.н.е. не избухнала Втората пуническа война. Междувременно Хамилкар изградил нова опора на властта си в Испания.",
+      "sourceQuote": "Resentment smouldered, and in 218 BC the Second Punic War began.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой консул донесъл на Рим първата му морска победа – при Миле през 260 г. пр.н.е.?",
+      "options": [
+        "Гай Дуилий",
+        "Регул",
+        "Катул",
+        "Сципион"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#corvus-and-mylae",
+      "explanation": "Гай Дуилий победил при Миле срещу около 130 картагенски кораба. Неговите „гарвани“ се впили в първите 30 кораба, сред които и вражеския флагман.",
+      "sourceQuote": "Gaius Duilius, the consul who gave Rome its first naval victory, faced about 130 Carthaginian ships.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой картагенски пълководец поел командването в Сицилия през 247 г. пр.н.е. и водил партизанска война от планината Ерикс?",
+      "options": [
+        "Ханон",
+        "Хасдрубал",
+        "Ханибал",
+        "Хамилкар Барка"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#drepana-and-stalemate",
+      "explanation": "Хамилкар Барка поел командването през 247 г. пр.н.е. и приковал римските легиони от планината Ерикс, близо до Дрепана.",
+      "sourceQuote": "In 247 BC Hamilcar Barca, the Carthaginian general who kept up the fight in western Sicily, took command.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кои били мамертинците, чийто зов за помощ въвлякъл Рим в Сицилия?",
+      "options": [
+        "Картагенски гарнизон",
+        "Италийски наемници, завзели Месана",
+        "Гръцки колонисти от Сиракуза",
+        "Моряци от южните съюзници на Рим"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#messana",
+      "explanation": "Мамертинците били италийски наемници, които завзели Месана през 289 г. пр.н.е. На много римляни не им харесвала идеята да помагат на войници, откраднали цял град.",
+      "sourceQuote": "In 289 BC Italian mercenaries called the Mamertines had seized it.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой е главният античен извор за Първата пуническа война?",
+      "options": [
+        "Полибий",
+        "Херодот",
+        "Тукидид",
+        "Ливий"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#sources-and-debates",
+      "explanation": "Почти всичко, което знаем за войната, идва от Полибий – грък, отведен в Рим като заложник през 167 г. пр.н.е. Той писал около век след боевете.",
+      "sourceQuote": "Almost everything we know about this war comes from Polybius, a Greek taken to Rome as a hostage in 167 BC.",
+      "reviewFlags": []
+    }
+  ]
+}

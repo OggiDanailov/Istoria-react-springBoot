@@ -1,0 +1,189 @@
+{
+  "batchName": "Empire: Diocletian and Constantine (AD 284-337) - Medium Batch 2",
+  "chapterName": "Empire: Diocletian and Constantine (AD 284-337)",
+  "difficulty": 2,
+  "batchOrder": 4,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Според християнски учител в Никомедия кой настоявал за по-сурови мерки срещу християните, отколкото искал Диоклециан?",
+      "options": [
+        "Максенций",
+        "Бащата на Константин",
+        "Галерий",
+        "Максимиан",
+        "Константин"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#great-persecution",
+      "explanation": "Християнският учител обвинявал Галерий, младшия император на Изток, че настоявал за по-жестоко гонение. На Запад Максимиан и бащата на Константин пренебрегнали по-късните едикти.",
+      "sourceQuote": "According to a Christian teacher living in Nicomedia, Galerius, the junior emperor in the East, pushed for harsher measures than Diocletian wanted.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво станало в Антиохия през 299 г., което поставило началото на гоненията срещу християните?",
+      "options": [
+        "Християни изгорили храм на Юпитер",
+        "Християнски войник нападнал императора",
+        "Гадатели заявили, че знаменията не се получават, и обвинили християните",
+        "Епископ публично обидил императора",
+        "Християнски търговци отказали да плащат новите данъци"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#great-persecution",
+      "explanation": "Жреци, които гадаели бъдещето по вътрешностите на животни, заявили, че знаците не се явяват, и обвинили християните в двора. Тогава на придворните и войниците било заповядано да принесат жертва или да бъдат уволнени.",
+      "sourceQuote": "In 299 at Antioch, priests who read the future in animals' entrails said the signs had failed and blamed Christians at court.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво било *adoratio* в двора на Диоклециан?",
+      "options": [
+        "Сенатори целуват златната корона на императора",
+        "Жреци принасят жертва за императора",
+        "Войници полагат ежегодна клетва пред Юпитер",
+        "Посетители лягат по очи пред императора",
+        "Тълпи скандират хвалби на императорските игри"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#tetrarchy",
+      "explanation": "При *adoratio* посетителите трябвало да лягат по очи пред императора. Диоклециан носел и златна корона и скъпоценности, за да се издигне над обикновените смъртни.",
+      "sourceQuote": "Diocletian wore a gold crown and jewels, and visitors had to lie face down before him (*adoratio*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "В най-ранния разказ за видението на Константин, написан от християнски учител, какво му било казано насън?",
+      "options": [
+        "Да нарисува знак на Христос върху щитовете на войниците си",
+        "Да се допита до Сибилинските книги",
+        "Да пощади Максенций, ако се предаде",
+        "Да тръгне към Рим преди новолунието",
+        "Да построи голяма църква в Рим"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#constantine-vision",
+      "explanation": "Християнският учител пише, че в нощта преди битката Константин сънувал, че трябва да нарисува небесен знак на Христос върху щитовете на войниците си. По-късната биография от един епископ разказва по-грандиозна история за кръст в небето.",
+      "sourceQuote": "Lactantius, a Christian teacher writing soon afterwards, said that the night before the battle, Constantine was told in a dream to paint a heavenly sign of Christ on his soldiers' shields.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Коя река имал зад гърба си Максенций при Милвийския мост?",
+      "options": [
+        "Тибър",
+        "По",
+        "Арно",
+        "Рубикон",
+        "Рона"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#milvian-bridge",
+      "explanation": "Максенций строил войската си с Тибър зад гърба ѝ, до моста, по който главният път от север влизал в Рим. Добавил и временен мост от лодки.",
+      "sourceQuote": "He drew up his army with the Tiber at its back, beside the Milvian Bridge, which carried the main road from the north into Rome, and added a temporary bridge of boats.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой управлявал всеки от дванадесетте диоцеза, създадени от Диоклециан?",
+      "options": [
+        "Консул, избиран всяка година",
+        "Един от четиримата тетрарси",
+        "Заместник, наричан *vicarius*",
+        "Граничен пълководец, наричан *dux*",
+        "Проконсул, назначен от Сената"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#reforms-and-prices",
+      "explanation": "Диоклециан групирал провинциите в дванадесет диоцеза, всеки управляван от заместник, наричан *vicarius*. Така се добавило ново ниво към най-голямата администрация, която Рим някога бил имал.",
+      "sourceQuote": "They were grouped into twelve regions called dioceses, each run by a deputy (*vicarius*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какъв ранг неохотно дал Галерий на Константин през 306 г.?",
+      "options": [
+        "Префект на Галия",
+        "Консул",
+        "Цезар",
+        "Военен трибун",
+        "Август"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#constantine-rise",
+      "explanation": "Войските в Йорк провъзгласили Константин за Август, но Галерий го признал само за младши цезар. Три месеца по-късно Максенций завзел Рим.",
+      "sourceQuote": "Galerius grudgingly recognised him only as Caesar.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кого обвинили, когато в императорския дворец в Никомедия избухнали пожари?",
+      "options": [
+        "Персийски агенти",
+        "Езически жреци",
+        "Войниците на Галерий",
+        "Алчни търговци",
+        "Християните"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#great-persecution",
+      "explanation": "След пожарите в двореца християните били обвинени, измъчвани и екзекутирани. Това било последното, най-мащабно и най-кърваво нападение на римската държава срещу християните.",
+      "sourceQuote": "After fires broke out in the palace, Christians were blamed, tortured and executed.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Близо до коя река Диоклециан разбил западния император през 285 г.?",
+      "options": [
+        "По",
+        "Тибър",
+        "Рейн",
+        "Маргус",
+        "Сава"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#diocletian-rise",
+      "explanation": "Наскоро провъзгласен на Изток, Диоклециан разбил западния император през 285 г. край река Маргус в днешна Сърбия.",
+      "sourceQuote": "Renamed Diocletian, he defeated the western emperor in 285 near the river Margus in modern Serbia.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Каква особена роля получил град Нисибис според мира от 299 г.?",
+      "options": [
+        "Нова столица на персийските царе",
+        "Единственото търговско място между двете империи",
+        "Седалище на възстановения арменски цар",
+        "Римска военноморска база на Тигър",
+        "Източният щаб на Галерий"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#wars-and-persia",
+      "explanation": "Нисибис станал единственото търговско място между Рим и Персия. Нисибиският мир върнал и Армения под римско влияние и се оказал траен.",
+      "sourceQuote": "The Peace of Nisibis in 299, named after a frontier city that became the only trading point between the empires, brought Armenia back under Roman influence.",
+      "reviewFlags": []
+    }
+  ]
+}

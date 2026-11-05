@@ -1,0 +1,189 @@
+{
+  "batchName": "Middle Republic: The Fall of Carthage and Corinth (167-133 BCE) - Medium Batch 2",
+  "chapterName": "Middle Republic: The Fall of Carthage and Corinth (167-133 BCE)",
+  "difficulty": 2,
+  "batchOrder": 4,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Какво твърдял един виден сенатор, противник на разрушаването на Картаген?",
+      "options": [
+        "Картаген вече бил наказан достатъчно",
+        "Страхът от силен враг държи Рим единен",
+        "Армиите на Рим са нужни в Испания",
+        "Търговията с Картаген обогатява Рим",
+        "Войната ще разгневи нумидийския цар"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#carthago-delenda-est",
+      "explanation": "Той твърдял, че страхът от силен враг държи простолюдието в подчинение и Рим – единен. Не всички сенатори споделяли омразата на Катон към Картаген.",
+      "sourceQuote": "A leading opponent argued that fear of a strong enemy kept the common people in check and Rome united.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой половин век нападал и заграбвал картагенски земи, винаги с подкрепата на Рим?",
+      "options": [
+        "Ахейският съюз",
+        "Царят на Македония",
+        "Царят на нумидийците",
+        "Град Утика",
+        "Келтиберските племена"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#carthage-under-rome",
+      "explanation": "Нумидийският цар бил съюзник на Рим и Рим го подкрепял всеки път, когато Картаген се оплаквал. Тъй като Картаген не можел да воюва без разрешение от Рим, той бил беззащитен.",
+      "sourceQuote": "The king of the Numidians, the native people who controlled much of modern Algeria and Tunisia, was Rome's ally.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Защо историците трябва да подхождат с известна предпазливост към разказа на Полибий за Третата пуническа война?",
+      "options": [
+        "Мразел римляните",
+        "Никога не напуснал Гърция",
+        "Склонен е да ласкае покровителя си Сципион",
+        "Разчитал само на Ливий",
+        "Писал векове след войната"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#polybius-and-the-sources",
+      "explanation": "Макар обикновено да е внимателен и надежден, Полибий е склонен да представя приятеля и покровителя си Сципион в ласкава светлина. Големи части от разказа му за войната освен това са изгубени.",
+      "sourceQuote": "Normally a careful and reliable historian, Polybius tends to show his patron in a flattering light.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как завършил опитът на Картаген да отвърне на удара на нумидийците през 151 г. пр.н.е.?",
+      "options": [
+        "С катастрофа в битката при Ороскопа",
+        "С малка победа, която разтревожила Рим",
+        "С патова ситуация, уредена от римски пратеници",
+        "С отстъпление на нумидийците в пустинята",
+        "С пленяването на нумидийския цар"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#carthage-under-rome",
+      "explanation": "При Ороскопа картагенската армия се предала и много войници били избити от нумидийците. Походът дал на Рим и повод за война.",
+      "sourceQuote": "The campaign ended in disaster at the Battle of Oroscopa: the army surrendered, and many soldiers were massacred by the Numidians.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво почетно прозвище приел консулът Мумий след разрушаването на Коринт?",
+      "options": [
+        "Ахейски",
+        "Африкански",
+        "Macedonicus",
+        "Corinthius",
+        "Numantinus"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#sack-of-corinth",
+      "explanation": "Мумий приел прозвището „Ахейски“ (Achaicus) по името на победения от него Ахейски съюз. С падането на Коринт гръцката независимост приключила.",
+      "sourceQuote": "Mummius took the honorary surname \"Achaicus\".",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой водел 12-те бойни слона в армията на Сципион при Нуманция?",
+      "options": [
+        "Келтиберски вожд, минал на страната на Рим",
+        "Картагенски изгнаник",
+        "Македонски претендент",
+        "Нумидийски принц, по-късно враг на Рим",
+        "Хасдрубал, освободен от плен"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#numantine-war",
+      "explanation": "Слоновете били водени от нумидийски принц, който по-късно станал опасен враг на Рим. За похода Сципион събрал 20 000 души и 40 000 съюзници.",
+      "sourceQuote": "He raised 20,000 men and 40,000 allies, including Numidian cavalry and 12 war elephants led by a Numidian prince who would later become a dangerous enemy of Rome.",
+      "reviewFlags": []
+    },
+    {
+      "question": "В какво положение бил Картаген към 151 г. пр.н.е., когато военната партия в Рим настоявала за унищожаването му?",
+      "options": [
+        "Управляван пряко от нумидийския цар",
+        "Без дългове и процъфтяващ, но без военна заплаха",
+        "Превъоръжаващ се с голям нов флот",
+        "В съюз с Македония срещу Рим",
+        "Фалирал и неспособен да плаща дълга си"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#carthago-delenda-est",
+      "explanation": "Картаген бил изплатил военния си дълг и процъфтявал, но не представлявал военна заплаха за Рим. Въпреки това една сенатска групировка отдавна искала да го довърши.",
+      "sourceQuote": "By 151 BC Carthage had paid off its war debt and was prospering, but it posed no military threat to Rome.",
+      "reviewFlags": []
+    },
+    {
+      "question": "С кого се съюзил Картаген по време на обсадата – някой, който също воювал с Рим?",
+      "options": [
+        "Царят на нумидийците",
+        "Ахейският съюз",
+        "Град Утика",
+        "Нумантийските келтибери",
+        "Претендент за македонския трон"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#a-faltering-siege",
+      "explanation": "Картаген се съюзил с претендент, който бил завзел трона на Македония – царството на север от Гърция – и воювал там с Рим. Рим се изправял срещу врагове на няколко фронта.",
+      "sourceQuote": "Carthage even allied with a pretender who had seized the throne of Macedonia, the kingdom north of Greece, and was fighting Rome there.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Преди да стане консул, за коя по-нисша длъжност възнамерявал да се кандидатира Сципион Емилиан през 147 г. пр.н.е.?",
+      "options": [
+        "Претор",
+        "Квестор",
+        "Цензор",
+        "Едил",
+        "Народен трибун"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#scipio-takes-command",
+      "explanation": "Сципион възнамерявал да се кандидатира за едил – по-нисша длъжност, свързана с надзора над град Рим. На 36 или 37 години той бил под минималната възраст от 41 г. за консул, определена от lex Villia annalis.",
+      "sourceQuote": "He planned to stand for aedile (*aedilis*), a junior office overseeing the city of Rome.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как е известен днес разказът на римския историк Ливий за този период?",
+      "options": [
+        "Само чрез списък на съдържанието",
+        "Чрез цитати у Полибий",
+        "Само чрез надписи",
+        "Изцяло, от средновековни преписи",
+        "Чрез гръцки превод"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#polybius-and-the-sources",
+      "explanation": "Ливий, който до голяма степен разчитал на Полибий, е известен за този период само чрез списък на съдържанието. Други античните истории са оцелели само във фрагменти.",
+      "sourceQuote": "The great Roman historian Livy, who relied heavily on Polybius, is known for this period only through a list of contents.",
+      "reviewFlags": []
+    }
+  ]
+}

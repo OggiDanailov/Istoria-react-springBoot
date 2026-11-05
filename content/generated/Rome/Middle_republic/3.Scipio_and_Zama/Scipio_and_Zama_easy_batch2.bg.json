@@ -1,0 +1,179 @@
+{
+  "batchName": "Middle Republic: Scipio and the Road to Zama (216-201 BCE) - Easy Batch 2",
+  "chapterName": "Middle Republic: Scipio and the Road to Zama (216-201 BCE)",
+  "difficulty": 1,
+  "batchOrder": 2,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "През коя година Рим окончателно разрушил град Картаген?",
+      "options": [
+        "146 г. пр.н.е.",
+        "202 г. пр.н.е.",
+        "201 г. пр.н.е.",
+        "218 г. пр.н.е."
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#peace-and-africanus",
+      "explanation": "След мира от 201 г. пр.н.е. Картаген явно бил подчинен на Рим, а през 146 г. пр.н.е. Рим изцяло разрушил града.",
+      "sourceQuote": "Carthage was now plainly subordinate to Rome, and in 146 BC Rome destroyed the city altogether.",
+      "reviewFlags": []
+    },
+    {
+      "question": "На около колко години бил Сципион, когато получил командването в Испания през 210 г. пр.н.е.?",
+      "options": [
+        "Около 31",
+        "Около 25",
+        "Около 42",
+        "Около 18"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#command-in-spain",
+      "explanation": "Народното събрание дало командването в Испания на Сципион, когато бил на около 25 години. Обикновено само човек, заемал висша длъжност, можел да води армия от свое име.",
+      "sourceQuote": "In 210 BC the people's assembly gave the Spanish command to the younger Scipio, then about 25.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Край коя река армията на брата на Ханибал била обкръжена и унищожена през 207 г. пр.н.е.?",
+      "options": [
+        "По",
+        "Тицин",
+        "Тибър",
+        "Метавър"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#battle-of-the-metaurus",
+      "explanation": "След нощно отстъпление картагенската армия била притисната край Метавър в Североизточна Италия. Братът на Ханибал загинал в последвалата битка.",
+      "sourceQuote": "His guides deserted him, and dawn found his weary army trapped beside the Metaurus, a river in north-east Italy.",
+      "reviewFlags": []
+    },
+    {
+      "question": "В коя битка през 206 г. пр.н.е. Сципион нанесъл решителния удар на картагенците в Испания?",
+      "options": [
+        "Кана",
+        "Зама",
+        "Илипа",
+        "Бекула"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#conquest-of-spain",
+      "explanation": "При Илипа, северно от днешна Севиля, Сципион разгромил останалите картагенски сили и ги прогонил от полуострова.",
+      "sourceQuote": "The decisive blow fell in 206 BC at Ilipa, north of modern Seville.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как Сципион унищожил двете вражески армии, разположени край Утика през 203 г. пр.н.е.?",
+      "options": [
+        "Изморил ги с глад чрез дълга блокада",
+        "Наводнил лагерите им, отклонявайки река",
+        "Подпалил лагерите им при нощна атака",
+        "Пуснал бойни слонове през редиците им"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#invasion-of-africa",
+      "explanation": "Една вечер Сципион разделил армията си и подпалил нумидийския лагер. В хаоса войниците му нападнали и картагенския лагер и хиляди загинали в тъмнината.",
+      "sourceQuote": "One evening in 203 BC he marched out, split his army, and set the Numidian camp ablaze.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво се случило с бащата и чичото на Сципион в Испания през 211 г. пр.н.е.?",
+      "options": [
+        "Били пленени и по-късно откупени",
+        "Превзели Нови Картаген и били прославени",
+        "Разделили силите си, били разбити поотделно и убити",
+        "Били позорно отзовани в Рим"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#command-in-spain",
+      "explanation": "Братята разделили силите си, за да нападнат три вражески армии едновременно, и всеки бил разбит и убит. Двама от победилите картагенски командири били братя на самия Ханибал.",
+      "sourceQuote": "Each was beaten separately, and both men were killed.",
+      "reviewFlags": []
+    },
+    {
+      "question": "В кой род войска Сципион превъзхождал Ханибал при Зама, макар като цяло да имал по-малко хора?",
+      "options": [
+        "Конница",
+        "Бойни слонове",
+        "Тежка пехота",
+        "Бойни кораби"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#battle-of-zama",
+      "explanation": "Сципион имал над 6 000 конници, много от тях доведени от Масиниса, срещу само 4 000 на Ханибал. Ханибал все пак имал повече войници общо – около 40 000.",
+      "sourceQuote": "Scipio had around 29,000 to 30,000 men but more than 6,000 cavalry, many of them brought by Masinissa, the Numidian king allied to Rome.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой нумидийски принц, воювал някога за Картаген в Испания, станал най-ценният съюзник на Рим?",
+      "options": [
+        "Масиниса",
+        "Хиерон",
+        "Югурта",
+        "Юба"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#conquest-of-spain",
+      "explanation": "Масиниса минал на страната на Рим, след като съперникът му го прогонил от царството му. Той станал най-ценният съюзник на Рим.",
+      "sourceQuote": "When his rival drove him from his kingdom, Masinissa joined Rome and became its most valuable ally.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой бог, според думите на Сципион към войниците, му обещал помощ във видение при Нови Картаген?",
+      "options": [
+        "Аполон",
+        "Нептун",
+        "Марс",
+        "Юпитер"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#new-carthage",
+      "explanation": "Сципион твърдял, че морският бог Нептун му е обещал помощ. Историята подхранвала растящата легенда, че Сципион е любимец на боговете.",
+      "sourceQuote": "He told his troops that the sea god Neptune had promised him help in a vision.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Според по-късни версии на легендата Сципион бил син на кой бог?",
+      "options": [
+        "Херкулес",
+        "Марс",
+        "Нептун",
+        "Юпитер"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#sources-and-legend",
+      "explanation": "По-късна легенда изкарала Сципион син на Юпитер, главния бог на Рим. Още приживе се разказвали истории за божествени видения и пророчески сънища.",
+      "sourceQuote": "Later versions even made him a son of Jupiter, Rome's chief god.",
+      "reviewFlags": []
+    }
+  ]
+}

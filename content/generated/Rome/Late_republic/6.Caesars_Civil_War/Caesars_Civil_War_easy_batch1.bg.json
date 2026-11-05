@@ -1,0 +1,179 @@
+{
+  "batchName": "Late Republic: Caesar's Civil War and the Ides of March (49-44 BCE) - Easy Batch 1",
+  "chapterName": "Late Republic: Caesar's Civil War and the Ides of March (49-44 BCE)",
+  "difficulty": 1,
+  "batchOrder": 1,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Защо отговорът на Цезар „Не съм Рекс, а Цезар“ е игра на думи?",
+      "options": [
+        "Цезар означавало „цар“ и на гръцки",
+        "Рекс било и римско родово име",
+        "Цезар било името на римски бог",
+        "Рекс бил прякор на Помпей"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#three-last-straws",
+      "explanation": "Рекс означавало „цар“, но било и римско родово име, затова Цезар се пошегувал, че тълпата е объркала името му.",
+      "sourceQuote": "He punned, \"I am not Rex, but Caesar,\" since Rex was also a Roman family name.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво отбелязвала река Рубикон, когато Цезар я прекосил през януари 49 г. пр.н.е.?",
+      "options": [
+        "Границата между провинцията му и същинска Италия",
+        "Свещената граница на град Рим",
+        "Границата между Италия и Гърция",
+        "Границата между Испания и Галия"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#crossing-the-rubicon",
+      "explanation": "Малката река Рубикон отделяла провинцията на Цезар от същинска Италия, затова, като превел войски през нея, той станал бунтовник.",
+      "sourceQuote": "On 10 or 11 January 49 BC, Julius Caesar led his troops across the Rubicon, a small river marking the boundary between his province and Italy proper.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Коя земя завладявал Юлий Цезар почти десет години до края на 50 г. пр.н.е.?",
+      "options": [
+        "Испания",
+        "Галия",
+        "Британия",
+        "Германия"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#road-to-war",
+      "explanation": "Цезар завладявал Галия, горе-долу днешна Франция, почти десетилетие. До края на 50 г. пр.н.е. той бил богат, прочут и подкрепян от предани легиони.",
+      "sourceQuote": "For almost ten years Julius Caesar had been conquering Gaul, the vast land roughly matching modern France.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво направил Цезар, когато Марк Антоний положил диадема на главата му на Луперкалиите?",
+      "options": [
+        "Отложил я, казвайки, че само Юпитер е цар",
+        "Носил я до края на празника",
+        "Хвърлил я гневно в тълпата",
+        "Поставил я на статуята на Помпей"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#three-last-straws",
+      "explanation": "При диадемата тълпата замлъкнала, но заликувала, когато Цезар я отложил. Мнозина подозирали, че той проверява дали ще бъде подкрепен за корона.",
+      "sourceQuote": "Caesar set it aside, declaring that Jupiter alone was king of the Romans, and the crowd cheered.",
+      "reviewFlags": []
+    },
+    {
+      "question": "За какво гласувал Сенатът с 370 на 22 гласа на 1 декември 50 г. пр.н.е.?",
+      "options": [
+        "Помпей да поеме сам командването на Италия",
+        "Само Цезар да се откаже от армията си",
+        "Цезар да се кандидатира за консул, без да се разоръжава",
+        "И Цезар, и Помпей да се откажат от командването си"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#road-to-war",
+      "explanation": "Сенатът решително подкрепил двамата да сложат командването си. Помпей и един консул въпреки това отхвърлили решението.",
+      "sourceQuote": "On 1 December 50 BC the Senate voted 370 to 22 that both men should lay down their commands, but Pompey and a consul rejected the vote.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво довел царят на Нумидия в подкрепа на последната Помпеева армия в Северна Африка?",
+      "options": [
+        "Около 120 бойни слона",
+        "Сандък египетско злато",
+        "Хиляди стрелци",
+        "Флота от бойни кораби"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#zela-and-thapsus",
+      "explanation": "Нумидийският цар, който управлявал горе-долу днешен Алжир, подкрепил помпеянците с около 120 бойни слона.",
+      "sourceQuote": "A new Pompeian army had gathered in North Africa, backed by the king of Numidia, roughly modern Algeria, with some 120 war elephants.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Къде избягал Помпей след поражението си при Фарсала?",
+      "options": [
+        "Понт",
+        "Северна Африка",
+        "Испания",
+        "Египет"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#pompey-and-cleopatra",
+      "explanation": "Помпей избягал в Египет, където по заповед на младия египетски цар бил наръган до смърт пред очите на жена си.",
+      "sourceQuote": "After his defeat at Pharsalus, Pompey, once Rome's greatest general, fled to Egypt.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как Клеопатра стигнала до Цезар, докато той бил обсаден в дворцовия квартал на Александрия?",
+      "options": [
+        "Срещнала го при пътуване по Нил",
+        "Тайно се промъкнала в двореца",
+        "Предал я регентът на брат ѝ",
+        "Пристигнала по море с подкрепленията му"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#pompey-and-cleopatra",
+      "explanation": "Клеопатра, която враждувала с брат си – младия цар, тайно влязла в двореца и станала любовница на Цезар.",
+      "sourceQuote": "Cleopatra slipped secretly into the palace and became Caesar's lover.",
+      "reviewFlags": []
+    },
+    {
+      "question": "В коя битка бил разбит Марк Антоний през 31 г. пр.н.е.?",
+      "options": [
+        "Акциум",
+        "Мунда",
+        "Филипи",
+        "Фарсала"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#aftermath-and-debate",
+      "explanation": "Антоний, женен за Клеопатра, бил разбит при Акциум край Западна Гърция и двамата сложили край на живота си.",
+      "sourceQuote": "Antony, who had married Cleopatra, queen of Egypt and Caesar's former lover, was beaten at Actium, off western Greece, in 31 BC, and both took their own lives.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Според един античен биограф какво заявил Цезар, когато прекосявал Рубикон?",
+      "options": [
+        "„Жребият е хвърлен“",
+        "„Не съм Рекс, а Цезар“",
+        "„Дойдох, видях, победих“",
+        "„Хванах те, Африка“"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#crossing-the-rubicon",
+      "explanation": "Един античен биограф съобщава „жребият е хвърлен“ (alea iacta est). Друг античен автор казва, че Цезар цитирал гръцки поет.",
+      "sourceQuote": "According to one ancient biographer, he declared \"the die is cast\" (*alea iacta est*).",
+      "reviewFlags": []
+    }
+  ]
+}

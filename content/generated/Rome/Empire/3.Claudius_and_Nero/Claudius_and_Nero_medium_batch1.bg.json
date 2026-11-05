@@ -1,0 +1,189 @@
+{
+  "batchName": "Empire: Claudius and Nero (AD 41-68) - Medium Batch 1",
+  "chapterName": "Empire: Claudius and Nero (AD 41-68)",
+  "difficulty": 2,
+  "batchOrder": 3,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Колко време прекарал самият Клавдий в Британия?",
+      "options": [
+        "Две години",
+        "Шест месеца",
+        "Два месеца",
+        "Три дни",
+        "Шестнадесет дни"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#conquest-of-britain",
+      "explanation": "Клавдий пристигнал с подкрепления след първите сражения и прекарал на острова само шестнадесет дни. Античните автори твърдят, че довел слонове – история, в която днешните историци се съмняват.",
+      "sourceQuote": "He spent just sixteen days on the island.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво направила третата съпруга на Клавдий през 48 г. сл.н.е., докато той бил в Остия?",
+      "options": [
+        "Повела гвардията в преврат",
+        "Освободила всички дворцови роби",
+        "Публично се омъжила за любовника си, сенатор",
+        "Отровила сина му Британик",
+        "Избягала в Египет със съкровищницата му"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#claudius-wives-and-death",
+      "explanation": "Тя публично се омъжила за сенатор; дали това е било заговор за завземане на трона, още се спори. Била екзекутирана.",
+      "sourceQuote": "In AD 48, while Claudius was away at Ostia, she publicly married her lover, a senator.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Къде бил Нерон, когато избухнал Големият пожар в Рим, според Тацит?",
+      "options": [
+        "На Олимпийските игри в Гърция",
+        "В Анциум, на брега",
+        "Във вила край Неапол",
+        "На поход в Германия",
+        "В двореца си на Палатинския хълм"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#great-fire-of-rome",
+      "explanation": "Тацит отбелязва, че Нерон бил в Анциум, и оставя въпроса за вината му открит. Въпреки това се носели слухове, че пеел за падането на Троя, докато Рим горял.",
+      "sourceQuote": "He noted that Nero was at Antium, on the coast, when the fire began.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Защо Британик бил отровен през 55 г. сл.н.е.?",
+      "options": [
+        "Приписвал си завладяването на Британия",
+        "Заговорничел със Сената да убие Нерон",
+        "Гвардията го провъзгласила за император",
+        "Агрипина заплашила да го подкрепи срещу Нерон",
+        "Отказал да се ожени за сестрата на Нерон"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#nero-early-reign",
+      "explanation": "Британик бил отровен, след като Агрипина заплашила да го подкрепи. Четири години по-късно Нерон наредил да убият самата Агрипина.",
+      "sourceQuote": "In AD 55 Claudius's son Britannicus was poisoned after Agrippina threatened to back him.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Къде воювал римският управител, когато избухнало въстанието на Боудика?",
+      "options": [
+        "Ангълси в Уелс",
+        "Каледония в далечния север",
+        "Остров Уайт",
+        "Хиберния отвъд морето",
+        "Галия отвъд Ламанш"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#boudica-revolt",
+      "explanation": "Той побързал да се върне от Ангълси, но бил твърде слаб, за да спаси Лондиниум – търговски град, едва на двадесет години, който изоставил на огъня.",
+      "sourceQuote": "The governor hurried back from a campaign on the island of Anglesey in Wales, but he was too weak to save Londinium, a trading town just twenty years old.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой всъщност управлявал през „петте добри години на Нерон“?",
+      "options": [
+        "Само Агрипина",
+        "Любовницата на Нерон",
+        "Учителят на Нерон и командирът на гвардията",
+        "Секретарите на Нерон – освободени роби",
+        "Консулите и Сенатът"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#nero-early-reign",
+      "explanation": "Макар Агрипина да искала да управлява чрез сина си, управлението било в ръцете на неговия учител и на командира на гвардията. Бирниците били контролирани по-строго, а робите можели да се оплакват от лошо отношение.",
+      "sourceQuote": "But Nero's tutor and the commander of the guard steered government, and these years were later remembered as \"Nero's five good years\" (*quinquennium Neronis*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво станало със стария учител на Нерон, след като заговорът от 65 г. сл.н.е. бил разкрит?",
+      "options": [
+        "Станал командир на гвардията",
+        "Бил заточен на остров",
+        "Избягал в Гърция",
+        "Наредили му да се самоубие",
+        "Бил помилван и се оттеглил"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#nero-downfall",
+      "explanation": "На философа, който навремето написал първата реч на Нерон, било наредено да се самоубие. Заговорниците – сенатори и офицери от гвардията – били екзекутирани.",
+      "sourceQuote": "Nero's old tutor Seneca was ordered to kill himself.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво завещал царят на ицените – завещание, което Рим пренебрегнал?",
+      "options": [
+        "Царството си на съседно племе",
+        "Съкровищницата си на римския управител",
+        "Царството си общо на двете си дъщери и на Нерон",
+        "Царството си изцяло на Боудика",
+        "Земите си на колонията в Камулодунум"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#boudica-revolt",
+      "explanation": "Той оставил царството си общо на двете си дъщери и на Нерон, но Рим го заграбил. Според Тацит Боудика била бичувана, а дъщерите ѝ – изнасилени.",
+      "sourceQuote": "Her husband, the king, ruled as a Roman ally and left his kingdom jointly to their two daughters and the emperor Nero.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво постановил Клавдий за болните роби, изоставени от господарите си на остров в Тибър?",
+      "options": [
+        "Ставали свободни, ако оздравеят",
+        "Продавали ги за обществени дългове",
+        "Връщали ги на господарите им",
+        "Пращали ги да служат в зърнената флота",
+        "Ставали собственост на държавата"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#claudius-government",
+      "explanation": "Прочутото му решение освобождавало изоставените болни роби, ако оздравеят. Клавдий обичал правото и сам съдел много дела.",
+      "sourceQuote": "One famous ruling freed sick slaves whom masters had abandoned to die on an island in the Tiber, if they recovered.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Защо семейството на Клавдий спряло ранната му история на гражданските войни в Рим?",
+      "options": [
+        "Била твърде откровена за тях",
+        "Била преписана от учителя му",
+        "Била написана на етруски",
+        "Възхвалявала Картаген пред Рим",
+        "Осмивала управляващия император"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#claudius-early-life",
+      "explanation": "Историята му на гражданските войни била твърде откровена за семейството му, което я спряло и го държало далеч от обществения живот. Той все пак станал сериозен учен и написал двадесет книги за етруските.",
+      "sourceQuote": "His early history of Rome's civil wars was too frank for his family, who stopped it and kept him out of public life.",
+      "reviewFlags": []
+    }
+  ]
+}

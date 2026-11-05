@@ -1,0 +1,145 @@
+{
+  "batchName": "Empire: Claudius and Nero (AD 41-68) - Latin words",
+  "chapterName": "Empire: Claudius and Nero (AD 41-68)",
+  "difficulty": 1,
+  "batchOrder": 9,
+  "description": "Written by hand from the chapter text: the Latin words it explains",
+  "questions": [
+    {
+      "question": "Кои били liberti, които ръководели службите на Клавдий?",
+      "options": [
+        "Освободени роби",
+        "Сенатори",
+        "Войници от гвардията",
+        "Гръцки философи"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#claudius-government",
+      "explanation": "Те оглавявали службите за писма, финанси и правосъдие, а сенаторите били възмутени.",
+      "sourceQuote": "he relied on freedmen (*liberti*), former slaves",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво бил Domus Aurea, построен от Нерон след пожара?",
+      "options": [
+        "Златният дом, новият му дворец",
+        "Храм на Клавдий",
+        "Нова сграда на Сената",
+        "Стадион за надбягвания с колесници"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#great-fire-of-rome",
+      "explanation": "Имал оформени паркове и статуя на Нерон, висока около 30 m.",
+      "sourceQuote": "the Golden House (*Domus Aurea*)",
+      "reviewFlags": []
+    },
+    {
+      "question": "Камулодунум станал colonia. Какво означава това?",
+      "options": [
+        "Селище на ветерани",
+        "Крепост за един легион",
+        "Пазарен град на британците",
+        "Пристанище за флота"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#conquest-of-britain",
+      "explanation": "Бил столица на новата провинция, с голям храм на Клавдий.",
+      "sourceQuote": "Camulodunum, modern Colchester, became a colony (*colonia*), a settlement of retired soldiers",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво означавало quinquennium Neronis?",
+      "options": [
+        "„Петте добри години на Нерон“",
+        "Петте съпруги на Нерон",
+        "Петгодишната война на Нерон",
+        "Петте дворци на Нерон"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#nero-early-reign",
+      "explanation": "През тези години управлението било насочвано от учителя му и командира на гвардията.",
+      "sourceQuote": "\"Nero's five good years\" (*quinquennium Neronis*)",
+      "reviewFlags": []
+    },
+    {
+      "question": "През 47 г. сл.н.е. Клавдий възродил длъжността цензор. С какво се занимавал цензорът?",
+      "options": [
+        "Водел списъците на гражданите и сенаторите",
+        "Съдел наказателни дела",
+        "Командвал градските пожарникари",
+        "Тълкувал поличбите"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#claudius-government",
+      "explanation": "Използвал я, за да приеме знатни хора от Галия в Сената.",
+      "sourceQuote": "he revived the old office of censor (*censor*), who kept the lists of citizens and senators.",
+      "reviewFlags": []
+    },
+    {
+      "question": "През 68 г. сл.н.е. Сенатът обявил Нерон за *hostis publicus*. Какво означавало това?",
+      "options": [
+        "Враг на държавата",
+        "Бог",
+        "Баща на отечеството",
+        "Пожизнен император"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#nero-downfall",
+      "explanation": "Той избягал и сложил край на живота си на 9 юни 68 г. сл.н.е.",
+      "sourceQuote": "The Senate declared Nero a public enemy (*hostis publicus*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "Клавдий изпратил четири *legiones* в Британия. Какво бил *legio*?",
+      "options": [
+        "Тежкопехотно подразделение от няколко хиляди души",
+        "Боен кораб",
+        "Конен отряд от 30 души",
+        "Отряд стрелци"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#conquest-of-britain",
+      "explanation": "Четири легиона прекосили Ламанш през 43 г. сл.н.е.",
+      "sourceQuote": "Claudius sent four legions (*legiones*), Rome's heavy infantry divisions of several thousand men each",
+      "reviewFlags": []
+    },
+    {
+      "question": "След смъртта на Нерон много негови портрети били обезобразени като част от *damnatio memoriae*. Какво било това?",
+      "options": [
+        "Осъждане на паметта на владетеля",
+        "Обожествяване на владетеля",
+        "Погребално шествие",
+        "Данък върху статуите"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#judging-the-sources",
+      "explanation": "Въпреки това хората продължили да правят негови изображения.",
+      "sourceQuote": "the condemnation of a ruler's memory (*damnatio memoriae*)",
+      "reviewFlags": []
+    }
+  ]
+}

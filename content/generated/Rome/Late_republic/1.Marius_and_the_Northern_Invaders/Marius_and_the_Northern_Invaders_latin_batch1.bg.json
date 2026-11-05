@@ -1,0 +1,145 @@
+{
+  "batchName": "Late Republic: Marius and the Northern Invaders (121-100 BCE) - Latin words",
+  "chapterName": "Late Republic: Marius and the Northern Invaders (121-100 BCE)",
+  "difficulty": 1,
+  "batchOrder": 9,
+  "description": "Written by hand from the chapter text: the Latin words it explains",
+  "questions": [
+    {
+      "question": "Марий бил novus homo. Какво означавало това?",
+      "options": [
+        "Първият от рода си, достигнал висша длъжност",
+        "Наскоро освободен роб",
+        "Новодошъл в Рим от Африка",
+        "Млад мъж под тридесет години"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#marius-origins",
+      "explanation": "Старата аристокрация никога не му позволила да го забрави.",
+      "sourceQuote": "In Rome, though, Marius was a \"new man\" (*novus homo*), the first of his family to reach high office",
+      "reviewFlags": []
+    },
+    {
+      "question": "През 104 г. пр.н.е. Югурта бил прекаран в triumphus на Марий. Какво било това?",
+      "options": [
+        "Тържественото победно шествие през Рим",
+        "Публичен процес на Форума",
+        "Гладиаторско зрелище",
+        "Жертвоприношение на Капитолия"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#capture-of-jugurtha",
+      "explanation": "По-късно Югурта умрял в подземен затвор.",
+      "sourceQuote": "In 104 BC Jugurtha was paraded in Marius's triumph (*triumphus*), the grand victory procession through Rome",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво бил terror cimbricus?",
+      "options": [
+        "Паниката в Рим след бедствието при Араузио",
+        "Германски боен вик",
+        "Римски закон срещу кимврите",
+        "Името на царя на кимврите"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#cimbri-and-arausio",
+      "explanation": "Римляните очаквали варварите пред портите всеки миг.",
+      "sourceQuote": "Romans spoke of the \"Cimbrian terror\" (*terror cimbricus*)",
+      "reviewFlags": []
+    },
+    {
+      "question": "След едни избори Марий бил обвинен в ambitus. Какво било това?",
+      "options": [
+        "Подкуп на избори",
+        "Държавна измяна",
+        "Страхливост в битка",
+        "Кражба на обществени пари"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#marius-origins",
+      "explanation": "Той бил оправдан, а по-късно управлението на провинция в Испания го направило богат.",
+      "sourceQuote": "He was then charged with electoral bribery (*ambitus*), though he was acquitted.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кои са били *capite censi*, които Марий набира през 107 г. пр.н.е.?",
+      "options": [
+        "Мъже без никакво имущество, „преброените по глави“",
+        "Ветерани от Нумидийската война",
+        "Италийските съюзници",
+        "Освободени роби"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#capture-of-jugurtha",
+      "explanation": "Обикновено в легионите можели да служат само мъже с имущество.",
+      "sourceQuote": "men with no property at all, the so-called \"head count\" (*capite censi*)",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой орган възлага войната срещу Югурта на Марий въпреки волята на Сената?",
+      "options": [
+        "Плебейското събрание (*concilium plebis*)",
+        "Жреческата колегия",
+        "Консулите",
+        "Центуриатното събрание (comitia centuriata)"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#marius-becomes-consul",
+      "explanation": "Историците виждат в това повратна точка: генералите след Марий го копират.",
+      "sourceQuote": "took the question to the Assembly of the plebs (*concilium plebis*), the popular voting body.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Според старата представа за „Мариевите реформи“ Марий превръща в войници *proletarii*. Кои са те?",
+      "options": [
+        "Най-бедната класа",
+        "Италийските съюзници",
+        "Конницата",
+        "Синовете на сенатори"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#marian-reforms-debate",
+      "explanation": "Повечето специалисти днес наричат тази картина „конструкция на модерната наука“.",
+      "sourceQuote": "drawn from the poorest class (*proletarii*)",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво е новото в *senatus consultum ultimum* от 100 г. пр.н.е.?",
+      "options": [
+        "За първи път е насочено срещу действащи магистрати",
+        "Това е първото заседание на Сената",
+        "Дава на Марий седмо консулство",
+        "Изпраща Метел в изгнание"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#saturninus-and-the-sixth-consulship",
+      "explanation": "То нарежда на магистратите да направят всичко необходимо, за да възстановят реда.",
+      "sourceQuote": "For the first time, such a decree targeted serving officials rather than private citizens.",
+      "reviewFlags": []
+    }
+  ]
+}

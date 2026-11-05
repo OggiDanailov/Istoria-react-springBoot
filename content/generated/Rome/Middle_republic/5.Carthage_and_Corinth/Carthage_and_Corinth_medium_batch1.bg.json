@@ -1,0 +1,189 @@
+{
+  "batchName": "Middle Republic: The Fall of Carthage and Corinth (167-133 BCE) - Medium Batch 1",
+  "chapterName": "Middle Republic: The Fall of Carthage and Corinth (167-133 BCE)",
+  "difficulty": 2,
+  "batchOrder": 3,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Какво направила съпругата на Хасдрубал, когато той се предал на Сципион?",
+      "options": [
+        "Избягала от града по море",
+        "Отведена в Рим като заложница",
+        "Молила Сципион да го пощади",
+        "Проклела го и влязла в горящия храм",
+        "Предала се заедно с него"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#fall-of-carthage",
+      "explanation": "От една крепостна стена тя благословила Сципион, проклела мъжа си за страхливостта му и влязла с децата им в горящия храм. Хасдрубал се бил предал срещу живота и свободата си.",
+      "sourceQuote": "His wife, watching from a rampart, blessed Scipio, cursed her husband for his cowardice, and walked into the burning temple with their children.",
+      "reviewFlags": []
+    },
+    {
+      "question": "След като Картаген се съгласил да се разоръжи през 149 г. пр.н.е., какво станало с бойните му кораби?",
+      "options": [
+        "Отведени в Рим като трофеи",
+        "Продадени на гръцки търговци",
+        "Изгорени в пристанището на Утика",
+        "Потопени при входа на пристанището",
+        "Предадени на нумидийците"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#the-ultimatum",
+      "explanation": "Бойните кораби на Картаген отплавали за Утика и били изгорени в пристанището. Едва след това Рим разкрил истинското си искане – градът да бъде изоставен.",
+      "sourceQuote": "Carthage's warships sailed to Utica and were burned in the harbour.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво направил Хасдрубал в Картаген през 148 г. пр.н.е.?",
+      "options": [
+        "Избягал в Македония",
+        "Свалил гражданските водачи и поел командването",
+        "Започнал тайни преговори със Сципион",
+        "Предал пристанището на Рим",
+        "Екзекутиран от градския съвет"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#a-faltering-siege",
+      "explanation": "Хасдрубал свалил гражданските водачи на Картаген и сам поел командването. Същата година нов римски пълководец не успял да превземе няколко верни на Картаген града.",
+      "sourceQuote": "Inside the city, Hasdrubal overthrew the civilian leaders and took command himself.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какъв символичен акт между Рим и Картаген се състоял през 1985 г.?",
+      "options": [
+        "ЮНЕСКО възстановило пристанището на Картаген",
+        "Италия върнала картагенски статуи",
+        "Кметовете на Рим и Картаген подписали мирен договор",
+        "Рим снел древното проклятие от мястото",
+        "Речите на Катон били публично изгорени"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#after-carthage",
+      "explanation": "През 1985 г. кметовете на Рим и на днешния Картаген подписали символичен мирен договор. След 146 г. пр.н.е. Рим проклел всеки, който се опита да засели отново мястото.",
+      "sourceQuote": "In 1985 the mayors of Rome and modern Carthage signed a symbolic peace treaty.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как реагирал Сенатът на мирните договори, сключени с Нуманция от победени римски пълководци?",
+      "options": [
+        "Изпратил двамата пълководци в изгнание в Гърция",
+        "Утвърдил ги след дълъг дебат",
+        "Приел единия и отхвърлил другия",
+        "Удвоил данъка на Нуманция",
+        "Отхвърлил ги и предал пълководец на нумантийците"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#numantine-war",
+      "explanation": "Сенатът отказал да признае който и да е от договорите и предал победения пълководец на нумантийците като пленник. Единият договор бил договорен от млад офицер, на чийто род нумантийците имали доверие.",
+      "sourceQuote": "The Senate refused to honour either deal, and simply handed the beaten general over to the Numantines as a prisoner.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой издържал до края в храма на Ешмун и го подпалил около себе си?",
+      "options": [
+        "Македонски съюзници",
+        "Около 900 римски дезертьори",
+        "Картагенски жреци",
+        "Нумидийски наемници",
+        "Охраната на Хасдрубал"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#fall-of-carthage",
+      "explanation": "Около 900 римски дезертьори, сражавали се за Картаген, знаели, че не могат да очакват милост. Те се барикадирали в храма на Ешмун, картагенски бог на изцелението, и го подпалили.",
+      "sourceQuote": "About 900 Roman deserters who had fought for Carthage knew they could expect no mercy.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Докога се говорел пуническият език на Картаген в Северна Африка?",
+      "options": [
+        "До III в. сл.н.е.",
+        "До VII в. сл.н.е.",
+        "Изчезнал за едно поколение",
+        "До XIX в.",
+        "До I в. пр.н.е."
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#after-carthage",
+      "explanation": "Пуническият език се говорел в Северна Африка до VII в. сл.н.е. Местните градове в провинция Африка запазили и голяма част от своето управление и култура.",
+      "sourceQuote": "Local towns kept much of their own government and culture, and the Punic language of Carthage was still spoken in North Africa until the 7th century AD.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой стремеж на Ахейския съюз Рим непрекъснато осуетявал, влошавайки отношенията преди войната от 146 г. пр.н.е.?",
+      "options": [
+        "Изграждане на флот",
+        "Завладяване на Атина",
+        "Присъединяване на Спарта",
+        "Освобождаване на Македония",
+        "Съюз с Картаген"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#sack-of-corinth",
+      "explanation": "Рим осуетявал желанието на съюза да присъедини Спарта и бил взел хиляди ахейски заложници. През 148 г. пр.н.е. съюзът все пак завладял Спарта.",
+      "sourceQuote": "Rome had taken thousands of Achaean hostages during its war with Macedonia, and it kept blocking the League's ambitions, above all its wish to absorb Sparta.",
+      "reviewFlags": []
+    },
+    {
+      "question": "След като нощната атака на Сципион пробила в Картаген, как Хасдрубал направил капитулацията немислима?",
+      "options": [
+        "Изпратил на Сципион обявление за война без пощада",
+        "Изгорил житниците на града",
+        "Измъчвал до смърт римски пленници по стените",
+        "Екзекутирал всички римски дезертьори",
+        "Потопил кораби при входа на пристанището"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#scipio-takes-command",
+      "explanation": "Хасдрубал измъчвал до смърт римски пленници по стените пред очите на другарите им. Картагенските съветници, които протестирали, също били екзекутирани.",
+      "sourceQuote": "Hasdrubal, the general now ruling Carthage, answered by torturing Roman prisoners to death on the walls in full view of their comrades.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой водел голямата римска армия, която дебаркирала при Утика през 149 г. пр.н.е.?",
+      "options": [
+        "Двамата консули за годината",
+        "Мумий като проконсул",
+        "Сципион Емилиан като консул",
+        "Един-единствен претор",
+        "Катон като главен пратеник"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#the-ultimatum",
+      "explanation": "Армията била водена от двамата консули – двамата висши магистрати, избирани в Рим всяка година. Един античен източник я определя на 84 000 души; днешните историци я оценяват на 40 000 до 50 000.",
+      "sourceQuote": "It was led by both of that year's consuls, the two chief magistrates Rome elected annually to command its armies.",
+      "reviewFlags": []
+    }
+  ]
+}

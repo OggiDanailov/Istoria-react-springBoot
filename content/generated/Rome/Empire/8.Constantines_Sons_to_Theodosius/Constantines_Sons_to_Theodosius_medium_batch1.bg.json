@@ -1,0 +1,190 @@
+{
+  "batchName": "Empire: From Constantine's Sons to Theodosius (AD 337-395) - Medium Batch 1",
+  "chapterName": "Empire: From Constantine's Sons to Theodosius (AD 337-395)",
+  "difficulty": 2,
+  "batchOrder": 3,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Какво донесло победата на Теодосий при река Фригид през 394 г.?",
+      "options": [
+        "Готските съюзници сменили страната",
+        "Изненадваща нощна атака",
+        "Внезапната смърт на вражеския пълководец",
+        "Силен вятър в лицата на врага",
+        "Наводнение, отнесло вражеския лагер"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#theodosius-legacy",
+      "explanation": "Силен вятър, духащ в лицата на противника, решил изхода на битката, водена в днешна Словения. Победата направила Теодосий владетел на цялата империя.",
+      "sourceQuote": "In September 394, at the river Frigidus in today's Slovenia, a fierce wind blew into the enemy's faces and gave Theodosius victory.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво станало с полубрата на Юлиан, след като Констанций II го направил свой заместник на Изток?",
+      "options": [
+        "Убили го собствените му войници",
+        "Загинал в битка с персите",
+        "Узурпирал властта на Запад",
+        "Оттеглил се в манастир",
+        "Управлявал с терор и бил екзекутиран"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#sons-of-constantine",
+      "explanation": "Младежът управлявал с терор и бил екзекутиран през 354 г. Така Юлиан останал последният мъж от рода си и бил държан под подозрение в Милано.",
+      "sourceQuote": "The young man ruled by terror and was executed in 354.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Според повечето историци защо Юлиан подкрепил възстановяването на Йерусалимския храм?",
+      "options": [
+        "За да почете учителите си неоплатоници",
+        "За да спечели евреите срещу Персия",
+        "За да опровергае християнско пророчество",
+        "За да издигне светилище на Хелиос",
+        "За да събира нови данъци в Юдея"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#julian-pagan-revival",
+      "explanation": "Повечето историци смятат, че Юлиан искал да опровергае християнско пророчество. Работата спряла след пожари, предизвикани може би от земетресение.",
+      "sourceQuote": "He also backed rebuilding the Jewish Temple in Jerusalem, most historians think to disprove a Christian prophecy.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой град, превзет от верни на Констанций войски, заплашил да прекъсне похода на Юлиан на изток през 361 г.?",
+      "options": [
+        "Аквилея",
+        "Милано",
+        "Равена",
+        "Сирмиум",
+        "Тесалоника"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#proclaimed-in-paris",
+      "explanation": "Привърженици на Констанций завзели Аквилея в северния край на Адриатическо море и едва не провалили рискования ход на Юлиан. Той трябвало да чака на Балканите до смъртта на Констанций.",
+      "sourceQuote": "The gamble nearly failed when troops loyal to Constantius seized Aquileia, a city at the head of the Adriatic, threatening to cut him off.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Според най-достоверния разказ какво предизвикало бунта в Тесалоника през 390 г.?",
+      "options": [
+        "Затворили езически храм",
+        "Цената на хляба рязко скочила",
+        "Арестували епископ за ерес",
+        "Пълководец хвърлил в затвора любим колесничар",
+        "Войници разграбили пазара"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#massacre-of-thessalonica",
+      "explanation": "Тълпата поискала колесничарят да бъде освободен, а когато пълководецът отказал, го убила. По-късно войниците си отмъстили кърваво.",
+      "sourceQuote": "According to the most trusted account, a general had jailed a popular charioteer, and the crowd demanded his release.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как гледат съвременните учени на разказа, че Амвросий лично препречил вратата на катедралата пред Теодосий?",
+      "options": [
+        "Като езическа клевета",
+        "Като благочестива измислица",
+        "Като измислица на самия Теодосий",
+        "Като преувеличен, но по същество верен",
+        "Като потвърден от очевидци"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#massacre-of-thessalonica",
+      "explanation": "Съвременните учени смятат прочутата сцена с вратата за благочестива измислица. В действителност Амвросий писал на императора, че му отказва причастие, докато не се покае.",
+      "sourceQuote": "Modern scholars call this a pious fiction.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Защо Валент не изчакал западния император, преди да влезе в битка при Адрианопол?",
+      "options": [
+        "Искал победата само за себе си",
+        "Припасите му свършвали",
+        "Западната армия се била върнала",
+        "Не вярвал на западните пълководци",
+        "Готите щели да избягат"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#battle-of-adrianople",
+      "explanation": "Младият западен император помолил Валент да го изчака, но Валент искал славата само за себе си. Уморените му, жадни войници след това изминали около 12 км в лятната жега.",
+      "sourceQuote": "The young western emperor, Gratian, was marching to help and asked him to wait, but Valens wanted a victory of his own.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кои от тези реформи провел Юлиан в управлението? (изберете всички верни отговори)",
+      "options": [
+        "Върнал властта на градските съвети",
+        "Удвоил дворцовата прислуга",
+        "Премахнал Сената",
+        "Опростил неплатените поземлени данъци",
+        "Вдигнал данъците, за да финансира храмове"
+      ],
+      "correctAnswers": [
+        0,
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#julian-pagan-revival",
+      "explanation": "Юлиан върнал властта на градските съвети (*curiae*) и опростил неплатените поземлени данъци. Освен това уволнил хиляди дворцови служители и участвал в заседанията на Сената като обикновен член.",
+      "sourceQuote": "He handed power back to the city councils (*curiae*) and cancelled unpaid land taxes.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Каква заповед на Констанций II от февруари 360 г. предизвикала бунта на войските на Юлиан?",
+      "options": [
+        "Да разпусне галските легиони",
+        "Да изостави крепостите по Рейн",
+        "Да намали заплатите на войниците",
+        "Да арестува Юлиан за измяна",
+        "Да прати над половината армия на изток"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#proclaimed-in-paris",
+      "explanation": "Констанций заповядал повече от половината армия на Юлиан да тръгне на изток срещу Персия, като заобиколил самия Юлиан. Войниците не искали да напускат Галия и провъзгласили Юлиан за Август.",
+      "sourceQuote": "In February 360, Constantius II ordered more than half of Julian's army in Gaul to march east.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой съюз от племена от горното течение на Рейн нападнал Юлиан при Страсбург?",
+      "options": [
+        "Вандалите",
+        "Алеманите",
+        "Саксите",
+        "Готите",
+        "Франките"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#julian-in-gaul",
+      "explanation": "Алеманите нападнали силно превъзхожданата по численост римска армия и били разбити. Царят им бил пленен, а мнозина били изтласкани в реката.",
+      "sourceQuote": "An army of the Alamanni, a confederation of tribes from the upper Rhine, attacked him.",
+      "reviewFlags": []
+    }
+  ]
+}

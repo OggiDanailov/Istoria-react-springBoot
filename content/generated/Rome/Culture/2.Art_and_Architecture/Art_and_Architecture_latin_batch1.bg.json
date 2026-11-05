@@ -1,0 +1,145 @@
+{
+  "batchName": "Empire: Roman Art and Architecture (c. 500 BC-AD 476) - Latin words",
+  "chapterName": "Empire: Roman Art and Architecture (c. 500 BC-AD 476)",
+  "difficulty": 1,
+  "batchOrder": 9,
+  "description": "Written by hand from the chapter text: the Latin words it explains",
+  "questions": [
+    {
+      "question": "Какво бил атриумът на римския дом?",
+      "options": [
+        "Входната зала",
+        "Кухнята",
+        "Градината",
+        "Банята"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#portraits-and-ancestors",
+      "explanation": "Аристократите излагали там бюстовете на предците си.",
+      "sourceQuote": "the entrance hall (*atrium*)",
+      "reviewFlags": []
+    },
+    {
+      "question": "Повечето граждани живеели в insulae. Какво били те?",
+      "options": [
+        "Жилищни блокове до пет етажа",
+        "Острови",
+        "Селски вили",
+        "Военни лагери"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#arenas-baths-apartments",
+      "explanation": "Най-евтините стаи били най-горе – най-далеч от водата и от спасението.",
+      "sourceQuote": "apartment blocks (*insulae*), up to five storeys high.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво били thermae?",
+      "options": [
+        "Обществени бани",
+        "Горещи извори за болни",
+        "Отоплявани храмове",
+        "Пекарни"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#arenas-baths-apartments",
+      "explanation": "Хората прекарвали часове в къпане, плуване и разговори срещу нищожна такса.",
+      "sourceQuote": "public baths (*thermae*)",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво е opus caementicium?",
+      "options": [
+        "Римски бетон",
+        "Мраморна облицовка",
+        "Мозаечен под",
+        "Изрисувана стена"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#concrete-revolution",
+      "explanation": "Той смесвал варов хоросан, вода и трошен камък с вулканична пепел.",
+      "sourceQuote": "Roman concrete (*opus caementicium*)",
+      "reviewFlags": []
+    },
+    {
+      "question": "За какво служел *hypocaustum*?",
+      "options": [
+        "Отоплявал помещенията с горещ въздух под пода",
+        "Докарвал вода в града",
+        "Вдигал животните до арената",
+        "Пресушавал блата"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#arenas-baths-apartments",
+      "explanation": "Това бил предшественик на централното отопление.",
+      "sourceQuote": "underfloor heating (*hypocaustum*)",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво били imagines в един знатен римски род?",
+      "options": [
+        "Маски на предците, носени на погребения",
+        "Изображения на боговете",
+        "Монети с лика на императора",
+        "Статуи на победата"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#portraits-and-ancestors",
+      "explanation": "Нито една не е оцеляла, но много бюстове вероятно изобразяват такива предци.",
+      "sourceQuote": "masks of the forebears (*imagines*) were worn in procession.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво била cella на един храм?",
+      "options": [
+        "Главното помещение със статуята на бога",
+        "Предните стъпала",
+        "Покривът",
+        "Олтарът отвън"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#city-of-marble",
+      "explanation": "Храмовете стояли на висок подиум със стъпала само отпред.",
+      "sourceQuote": "The main room (*cella*) housed the god's statue.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво е arcus triumphalis?",
+      "options": [
+        "Триумфална арка",
+        "Извит път",
+        "Победен парад",
+        "Мост над река"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#arenas-baths-apartments",
+      "explanation": "Това бил един от малкото видове сгради, измислени от римляните.",
+      "sourceQuote": "the triumphal arch (*arcus triumphalis*)",
+      "reviewFlags": []
+    }
+  ]
+}

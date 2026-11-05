@@ -1,0 +1,179 @@
+{
+  "batchName": "Late Republic: Cicero, Catiline and the Triumvirate (63-53 BCE) - Easy Batch 1",
+  "chapterName": "Late Republic: Cicero, Catiline and the Triumvirate (63-53 BCE)",
+  "difficulty": 1,
+  "batchOrder": 1,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Какво искаше Помпей от Сената след завръщането си от войната на Изток?",
+      "options": [
+        "Второ консулство и командване в Испания",
+        "Одобрение на уредбата му на Изток и земя за ветераните",
+        "Опрощаване на дълговете на данъчните компании",
+        "Разрешение да нападне Партското царство"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#alliance-formed",
+      "explanation": "Помпей искаше одобрение на мирните си уредби на Изток и земя за своите ветерани. Противниците му протакаха предложенията му в безкрайни проверки.",
+      "sourceQuote": "He wanted his peace arrangements there approved and land for his veterans, but opponents tied up his proposals in endless review.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кога съперничеството между Помпей и Цезар избухна в гражданска война?",
+      "options": [
+        "януари 49 г. пр.н.е.",
+        "юни 53 г. пр.н.е.",
+        "ноември 55 г. пр.н.е.",
+        "януари 62 г. пр.н.е."
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#gang-of-three",
+      "explanation": "Гражданската война избухна през януари 49 г. пр.н.е. След смъртта на Крас през 53 г. пр.н.е. Помпей потърси съюзници сред враговете на Цезар и доверието между тях рухна.",
+      "sourceQuote": "As Pompey sought new allies among Caesar's enemies, trust collapsed, and in January 49 BC the rivalry exploded into civil war.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Цицерон съобщи съдбата на екзекутираните заговорници с думата „vixerunt“. Какво означаваше тя?",
+      "options": [
+        "Че са си признали",
+        "Че са избягали от Рим",
+        "Че са помилвани",
+        "Че са мъртви"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#execution-debate",
+      "explanation": "„Vixerunt“ буквално означава „те са живели“ – мрачен начин да се каже, че са мъртви. Те бяха удушени, след като Сенатът одобри екзекуция без съд.",
+      "sourceQuote": "When the men had been strangled, Cicero announced it with a single grim word, \"they have lived\" (*vixerunt*), meaning they were dead.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Чия помощ осигури завръщането на Цицерон, след като той избяга в изгнание в Гърция?",
+      "options": [
+        "Крас",
+        "Цезар",
+        "Помпей",
+        "Катон"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#pistoria-and-exile",
+      "explanation": "Цицерон беше върнат година след бягството си благодарение на Помпей, най-великия пълководец на Рим. Беше избягал, след като закон на един трибун се насочи срещу всеки, екзекутирал гражданин без съд.",
+      "sourceQuote": "Cicero fled to Greece and was recalled only the following year, thanks to Pompey, Rome's greatest general.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кои бяха истинската сила зад заговора на Катилина?",
+      "options": [
+        "Обезземлени селяни и задлъжнели ветерани",
+        "Градски занаятчии и членове на гилдии",
+        "Гладиатори и избягали роби от Капуа",
+        "Галски наемници от отвъд Алпите"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#catiline",
+      "explanation": "Гръбнакът на заговора бяха селяни, загубили земята си в гражданските войни през 80-те години пр.н.е., и задлъжнели ветерани. Водачите бяха пъстра сбирщина от изгонени сенатори, провалени кандидати и потомци на западащи знатни родове.",
+      "sourceQuote": "The plot's real muscle came from farmers who had lost their land in the civil wars of the 80s BC, and from veterans settled on farms who had sunk into debt after bad harvests.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Според легендата какво било изляно в гърлото на Крас след смъртта му?",
+      "options": [
+        "Вряло масло",
+        "Разтопено злато",
+        "Разтопено олово",
+        "Разтопено сребро"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#carrhae",
+      "explanation": "Според легендата партите изляли разтопено злато в гърлото на прочутия римски богаташ. Той загинал при сбиване по време на преговори за примирие.",
+      "sourceQuote": "Legend says molten gold was poured down his throat.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как беше скрепен съюзът между Помпей и Цезар през 59 г. пр.н.е.?",
+      "options": [
+        "Помпей се ожени за дъщерята на Цезар",
+        "Цезар се ожени за сестрата на Помпей",
+        "Цезар осинови сина на Помпей",
+        "Синът на Помпей се ожени за дъщерята на Крас"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#caesar-consulship",
+      "explanation": "Помпей се ожени за дъщерята на Цезар, за да затвърди съюза. Същата година Цезар получи петгодишно командване в Галия.",
+      "sourceQuote": "Pompey married Caesar's daughter to seal the bond, and Caesar received a five-year command in Gaul.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какви петгодишни командвания си дадоха Помпей и Крас като консули през 55 г. пр.н.е.?",
+      "options": [
+        "Галия за Помпей, Азия за Крас",
+        "Азия за Помпей, Галия за Крас",
+        "Сирия за Помпей, Испания за Крас",
+        "Испания за Помпей, Сирия за Крас"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#luca-renewal",
+      "explanation": "Помпей получи Испания, а Крас – Сирия, всеки за пет години. Командването на Цезар в Галия също беше удължено с пет години.",
+      "sourceQuote": "As consuls, Pompey and Crassus passed a law giving themselves five-year commands, Spain for Pompey and Syria for Crassus.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой богат римлянин предаде на Цицерон анонимни писма, предупреждаващи за готвено клане?",
+      "options": [
+        "Помпей",
+        "Лукул",
+        "Цезар",
+        "Крас"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#cicero-exposes-plot",
+      "explanation": "Крас, най-богатият човек в Рим, представи първите сигурни доказателства на 18 или 19 октомври 63 г. пр.н.е. Дотогава Цицерон разполагаше само със слухове от една жена информаторка.",
+      "sourceQuote": "The first hard evidence came on 18 or 19 October from Crassus, the richest man in Rome, who handed over anonymous letters describing plans to massacre leading citizens.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Край кой град беше разбита армията на Катилина през януари 62 г. пр.н.е.?",
+      "options": [
+        "Капуа",
+        "Фезуле",
+        "Пистория",
+        "Равена"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#pistoria-and-exile",
+      "explanation": "Останалите сили на Катилина, поне 3 000 души, се сблъскаха с правителствената армия край Пистория, днешна Пистоя в Тоскана. Самият Катилина загина в боя.",
+      "sourceQuote": "In early January 62 BC his remaining force, at least 3,000 men, met the government army near Pistoria, modern Pistoia in Tuscany.",
+      "reviewFlags": []
+    }
+  ]
+}

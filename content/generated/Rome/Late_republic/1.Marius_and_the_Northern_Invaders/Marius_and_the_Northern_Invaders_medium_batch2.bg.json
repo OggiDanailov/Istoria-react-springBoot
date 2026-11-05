@@ -1,0 +1,191 @@
+{
+  "batchName": "Late Republic: Marius and the Northern Invaders (121-100 BCE) - Medium Batch 2",
+  "chapterName": "Late Republic: Marius and the Northern Invaders (121-100 BCE)",
+  "difficulty": 2,
+  "batchOrder": 4,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Какви мерки прокарва трибунът Сатурнин през 100 г. пр.н.е.? (изберете всички верни)",
+      "options": [
+        "Земя за ветераните, включително италийските съюзници",
+        "Опрощаване на всички дългове",
+        "По-евтино държавно зърно",
+        "Изгнание за Метел",
+        "Премахване на Сената"
+      ],
+      "correctAnswers": [
+        0,
+        2,
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#saturninus-and-the-sixth-consulship",
+      "explanation": "Сатурнин прокарва по-евтино зърно, земя за ветераните, включително италийските съюзници, и изгнание за Метел. Марий помага за приемането на поземления закон и прогонването на Метел, преди да започне да се безпокои.",
+      "sourceQuote": "His partner was Saturninus, a radical tribune serving his second term, who pushed laws offering cheaper state grain, farmland for veterans, including Italian allies, and exile for Marius's old enemy Metellus, his former commander in Africa.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво деяние по време на изборите през 100 г. пр.н.е. кара Сената да приеме извънредното си решение?",
+      "options": [
+        "Марий вкарва войски във Форума",
+        "Метел се връща от изгнание с армия",
+        "Италийските съюзници щурмуват сградата на Сената",
+        "Сатурнин завзема хазната",
+        "Сатурнин и негов съюзник поръчват убийството на съперник кандидат за консул"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#saturninus-and-the-sixth-consulship",
+      "explanation": "Убийството на съперник кандидат за консул предизвиква *senatus consultum ultimum*. То нарежда на магистратите да направят всичко необходимо, за да възстановят реда.",
+      "sourceQuote": "When Saturninus and an ally had a rival candidate for consul murdered during the elections, the Senate passed its emergency decree (*senatus consultum ultimum*), telling the magistrates to do whatever was needed to restore order.",
+      "reviewFlags": []
+    },
+    {
+      "question": "При коя обсада младият Марий се прославя за първи път през 134 г. пр.н.е.?",
+      "options": [
+        "Картаген",
+        "Коринт",
+        "Нуманция",
+        "Капса",
+        "Цирта"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#marius-origins",
+      "explanation": "Марий се прославя при обсадата на Нуманция, келтска крепост в Испания. По-късен разказ твърди, че командирът го потупал по рамото и казал: „Може би това е човекът.“",
+      "sourceQuote": "He first made his name as a young officer in 134 BC at the siege of Numantia, a Celtic stronghold in Spain.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво прави Марий с град Капса, след като той се предава?",
+      "options": [
+        "Дава го на мавретанския цар",
+        "Заселва го с римски ветерани",
+        "Избива възрастните мъже, а останалите продава в робство",
+        "Държи водачите му като заложници за откуп",
+        "Пощадява го и го прави своя база"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#capture-of-jugurtha",
+      "explanation": "След опасен поход през пустинята Марий избива възрастните мъже на Капса, а останалите продава в робство. Победата се оказва по-трудна, отколкото се е хвалил.",
+      "sourceQuote": "He made a dangerous desert march to the town of Capsa in the far south and, after it surrendered, killed its adult men and enslaved the rest.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво прави Югурта, след като се измъква от битката при Мутул?",
+      "options": [
+        "Разпуска по-слабите си войски и преминава към партизанска война",
+        "Отплава за Рим, за да подкупи Сената",
+        "Предава се на Метел",
+        "Наема галски наемници за открита битка",
+        "Бяга в Египет"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#metellus-and-the-muthul",
+      "explanation": "Югурта разпуска по-слабите си войски и преминава към партизанска война. Метел превзема град след град, но царят всеки път се изплъзва.",
+      "sourceQuote": "Jugurtha escaped, dismissed his weaker troops and switched to guerrilla warfare.",
+      "reviewFlags": []
+    },
+    {
+      "question": "След предаването на Цирта през 113 г. пр.н.е. кого убива Югурта заедно с братовчед си?",
+      "options": [
+        "Мавретански пратеници",
+        "Италийските търговци, които са помагали в отбраната ѝ",
+        "Картагенски изгнаници",
+        "Жреците на града",
+        "Римските пратеници"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#jugurtha",
+      "explanation": "Югурта убива братовчед си заедно с италийските търговци, помагали в отбраната на Цирта. Народното възмущение тласка Рим към война.",
+      "sourceQuote": "When it surrendered, he killed his cousin along with the Italian traders who had helped defend it.",
+      "reviewFlags": []
+    },
+    {
+      "question": "В Югуртинската война римска армия е принудена да „мине под ярем“. Какво означава това?",
+      "options": [
+        "Да носи железни нашийници на шествие",
+        "Да предаде орлите си",
+        "Да се приведе под рамка от копия",
+        "Да бъде продадена в робство",
+        "Да тегли рало по нумидийските поля"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#jugurtha",
+      "explanation": "Яремът е рамка от копия, под която победените войници трябва да се приведат – дълбоко унижение. Последва снизходителен мир, който мирише на подкуп.",
+      "sourceQuote": "Then another Roman army was trapped and forced to pass under the yoke (*iugum*), a frame of spears that beaten soldiers had to stoop beneath.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво почетно име получава Метел, след като е сменен и отплава за дома?",
+      "options": [
+        "Македонски",
+        "Африкански",
+        "Велики",
+        "Нумидийски",
+        "Германик"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#marius-becomes-consul",
+      "explanation": "Метел отплава вбесен, но получава триумф и името Нумидийски. Командването на войната преминава към Марий с народно гласуване.",
+      "sourceQuote": "Metellus sailed home in fury and received a victory parade and the honorary name Numidicus.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Защо кимврите унищожават римска армия при Норея?",
+      "options": [
+        "Югурта им е платил да нападнат",
+        "Римски пратеник е обидил царя им",
+        "Откриват, че консулът им е устроил засада, докато се изтеглят",
+        "Римляните им отказват земя в Италия",
+        "Римляните са заграбили добитъка им"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#cimbri-and-arausio",
+      "explanation": "Получили заповед да напуснат Норик, кимврите започват да се подчиняват, докато не откриват, че консулът им е устроил засада. Разярени, те унищожават армията му.",
+      "sourceQuote": "A Roman consul ordered them to leave and they began to comply, until they discovered he had laid an ambush.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво разпалва битката край Акве Секстие, в която са разбити амброните?",
+      "options": [
+        "Амброни крадат римски коне",
+        "Убит е римски вестител",
+        "Нощно нападение срещу римския обоз",
+        "Сбиване между римски водоносци и къпещи се амброни",
+        "Двубой между съперничещи вождове"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#aquae-sextiae-and-vercellae",
+      "explanation": "Сбиване между римски слуги, отишли за вода, и къпещи се амброни прераства в битка. Дни по-късно са разбити и тевтоните.",
+      "sourceQuote": "Near Aquae Sextiae a scuffle between Roman servants fetching water and bathing Ambrones exploded into battle, and the Ambrones were crushed.",
+      "reviewFlags": []
+    }
+  ]
+}

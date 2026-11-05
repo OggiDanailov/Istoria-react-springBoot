@@ -1,0 +1,179 @@
+{
+  "batchName": "Late Republic: Caesar's Civil War and the Ides of March (49-44 BCE) - Easy Batch 2",
+  "chapterName": "Late Republic: Caesar's Civil War and the Ides of March (49-44 BCE)",
+  "difficulty": 1,
+  "batchOrder": 2,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "До чия статуя паднал Цезар, след като бил наръган?",
+      "options": [
+        "Тази на Юпитер",
+        "Тази на Ромул",
+        "Тази на Помпей",
+        "Своята собствена"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#ides-of-march",
+      "explanation": "Убит бил в зала на Театъра на Помпей и паднал с 23 рани до статуята на стария си съперник.",
+      "sourceQuote": "Stabbed 23 times, he fell near Pompey's statue.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Приблизително колко мъже се присъединили към Брут и неговия зет в заговора срещу Цезар?",
+      "options": [
+        "Около двеста",
+        "Около дванадесет",
+        "Около двадесет",
+        "Около шестдесет"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#ides-of-march",
+      "explanation": "Около шестдесет мъже се включили в заговора, много от тях – офицери на самия Цезар.",
+      "sourceQuote": "About sixty men joined them, many of them Caesar's own officers.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой месец бил преименуван в чест на Цезар?",
+      "options": [
+        "Март",
+        "Юни",
+        "Август",
+        "Юли"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#munda-and-honours",
+      "explanation": "Месецът на раждането му, квинтилис, станал юли. Сенатът гласувал и петдесет дни благодарствени празненства и титлата „Баща на отечеството“.",
+      "sourceQuote": "A flattering Senate heaped on honours: fifty days of thanksgiving, the title \"Father of his Country\" (*parens patriae*), and the renaming of his birth month, Quinctilis, which became July.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Край кое място се срещнали армиите на Цезар и Помпей на 9 август 48 г. пр.н.е.?",
+      "options": [
+        "Фарсала",
+        "Мунда",
+        "Филипи",
+        "Акциум"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#battle-of-pharsalus",
+      "explanation": "Решителната битка станала край Фарсала в Тесалия. По собствената сметка на Цезар пехотата му била около два пъти по-малобройна.",
+      "sourceQuote": "On 9 August 48 BC the armies met near Pharsalus.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Каква длъжност получил Цезар в началото на 44 г. пр.н.е.?",
+      "options": [
+        "Пожизнен диктатор",
+        "Пожизнен консул",
+        "Първи император на Рим",
+        "Цар на римляните"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#munda-and-honours",
+      "explanation": "В началото на 44 г. пр.н.е. Цезар станал пожизнен диктатор (dictator perpetuo) – връхната точка на почестите, отрупани върху него след Мунда.",
+      "sourceQuote": "Early in 44 BC he was made dictator for life (*dictator perpetuo*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "Коя кампания Цезар обобщил с думите „Дойдох, видях, победих“?",
+      "options": [
+        "Прекосяването на Рубикон",
+        "Бързата си победа край Зела",
+        "Победата си при Тапс",
+        "Завладяването на Галия"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#zela-and-thapsus",
+      "explanation": "Цезар използвал фразата в писмо за краткия си поход срещу царя на Понт край Зела, където хората му се съвзели, докато копаели лагера.",
+      "sourceQuote": "Caesar summed up the brief campaign in a letter: \"I came, I saw, I conquered\" (*veni, vidi, vici*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "Каква изненада подготвил Цезар срещу атаката на Помпеевата конница при Фарсала?",
+      "options": [
+        "Резерв от бойни слонове вляво",
+        "Скрита четвърта пехотна линия зад десния си фланг",
+        "Конна засада в близката гора",
+        "Ров, обкован с наострени колове"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#battle-of-pharsalus",
+      "explanation": "Когато конниците на Помпей атакували, скритата четвърта линия на Цезар скочила и ги замушкала с копия. Конницата побягнала и лявото крило на Помпей рухнало.",
+      "sourceQuote": "But Caesar had hidden a fourth line behind his right.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой станал първият император на Рим през 27 г. пр.н.е.?",
+      "options": [
+        "Синът на Клеопатра от Цезар",
+        "Марк Антоний",
+        "Внукът на сестрата на Цезар и негов наследник",
+        "Брут"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#aftermath-and-debate",
+      "explanation": "В завещанието си Цезар посочил за наследник 18-годишния внук на сестра си, който приел името Цезар. През 27 г. пр.н.е. той станал първият император на Рим.",
+      "sourceQuote": "In 27 BC the heir became Rome's first emperor.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кого оставил Цезар да управлява Италия, когато потеглил към Испания през 49 г. пр.н.е.?",
+      "options": [
+        "Катон",
+        "Брут",
+        "Марк Антоний",
+        "Цицерон"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#spain-and-the-treasury",
+      "explanation": "Цезар поверил Италия на своя помощник Марк Антоний, докато сам потеглил на запад. През юни разбил пълководците на Помпей при Илерда.",
+      "sourceQuote": "Leaving Mark Antony, his trusted lieutenant, in charge of Italy, Caesar marched to Spain.",
+      "reviewFlags": []
+    },
+    {
+      "question": "На коя дата се падали мартенските иди?",
+      "options": [
+        "22 февруари",
+        "1 март",
+        "13 март",
+        "15 март"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#ides-of-march",
+      "explanation": "Мартенските иди били на 15 март – датата на последното заседание на Сената, преди Цезар да тръгне срещу партите.",
+      "sourceQuote": "The last one before he left to fight the Parthians, a great eastern empire, fell on the Ides of March (*Idus Martiae*), 15 March.",
+      "reviewFlags": []
+    }
+  ]
+}

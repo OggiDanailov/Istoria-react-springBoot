@@ -1,0 +1,145 @@
+{
+  "batchName": "Late Republic: Spartacus and Pompey (78-63 BCE) - Latin words",
+  "chapterName": "Late Republic: Spartacus and Pompey (78-63 BCE)",
+  "difficulty": 1,
+  "batchOrder": 9,
+  "description": "Written by hand from the chapter text: the Latin words it explains",
+  "questions": [
+    {
+      "question": "Войниците на Помпей го провъзгласили за Magnus. Какво означава това?",
+      "options": [
+        "Великия",
+        "Младия",
+        "Щастливеца",
+        "Касапина"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#young-pompey",
+      "explanation": "Нарекли го на Александър Велики и той официално приел името.",
+      "sourceQuote": "His own soldiers, however, hailed him as \"the Great\" (*Magnus*), after Alexander the Great",
+      "reviewFlags": []
+    },
+    {
+      "question": "Къде били разпънати на кръст около 6 000 пленени въстаници?",
+      "options": [
+        "По Via Appia – пътя от Рим до Капуа",
+        "На Форума",
+        "Пред портите на Капуа",
+        "На Везувий"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#silarius-and-aftermath",
+      "explanation": "Войниците на Помпей заловили и избили още 5 000 бегълци.",
+      "sourceQuote": "About 6,000 captured survivors were crucified along the Appian Way (*Via Appia*), the great road from Rome to Capua.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Спартак избягал от едно от ludi в Капуа. Какво са били те?",
+      "options": [
+        "Школи, в които обучавали гладиатори",
+        "Затвори за длъжници",
+        "Храмове на Марс",
+        "Робски пазари"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#escape-from-capua",
+      "explanation": "Там обучавали военнопленници и осъдени престъпници.",
+      "sourceQuote": "trained to fight in special schools (*ludi*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво била decimatio, която Крас възродил?",
+      "options": [
+        "Екзекуция на всеки десети войник, избран по жребий",
+        "Данък от една десета върху плячката",
+        "Връщане вкъщи на един от всеки десет легиона",
+        "Десетдневен поход без храна"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#crassus-takes-command",
+      "explanation": "Войниците му разбраха, че Крас е по-опасен за тях от врага.",
+      "sourceQuote": "He revived decimation (*decimatio*), an ancient punishment in which one soldier in every ten was chosen by lot and executed.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Помпей прескочи *cursus honorum*. Какво представляваше то?",
+      "options": [
+        "Утвърдената стълбица от изборни длъжности",
+        "Офицерското обучение в легионите",
+        "Маршрутът на триумфа",
+        "Списъкът на сенаторите"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#young-pompey",
+      "explanation": "Обикновено римлянинът я изкачваше, преди да командва армии.",
+      "sourceQuote": "Normally a Roman climbed a fixed ladder of elected offices (*cursus honorum*) before commanding armies.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво даде на Помпей lex Gabinia от 67 г. пр.н.е.?",
+      "options": [
+        "Тригодишно командване над провинциите край Средиземно море",
+        "Командването срещу Спартак",
+        "Второ консулство",
+        "Провинция Сирия"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#war-on-the-pirates",
+      "explanation": "Сенатът се боеше да даде такава власт на един човек, но народът я гласува.",
+      "sourceQuote": "proposed the Gabinian Law (*lex Gabinia*) at Pompey's urging.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Защо младият Помпей бил наричан adulescentulus carnifex?",
+      "options": [
+        "Заради екзекуцията на пленен бивш консул",
+        "Заради убийството на собствените му войници",
+        "Заради разпъването на роби",
+        "Заради опожаряването на Йерусалим"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#young-pompey",
+      "explanation": "Собствените му войници пък го приветствали като „Великия“.",
+      "sourceQuote": "His execution of a captured former consul earned him the nickname \"teenage butcher\" (*adulescentulus carnifex*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой закон от 66 г. пр.н.е. връчи на Помпей войната срещу Митридат?",
+      "options": [
+        "Lex Manilia",
+        "Lex Gabinia",
+        "Lex Hortensia",
+        "Lex Iulia"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#pompey-in-the-east",
+      "explanation": "Лукул, когото той смени, нарекъл Помпей лешояд, който се храни с чуждия труд.",
+      "sourceQuote": "In 66 BC a tribune passed the Manilian Law (*lex Manilia*)",
+      "reviewFlags": []
+    }
+  ]
+}

@@ -1,0 +1,145 @@
+{
+  "batchName": "Middle Republic: The First Punic War (264-241 BCE) - Latin words",
+  "chapterName": "Middle Republic: The First Punic War (264-241 BCE)",
+  "difficulty": 1,
+  "batchOrder": 9,
+  "description": "Written by hand from the chapter text: the Latin words it explains",
+  "questions": [
+    {
+      "question": "Какво бил rostrum на римския боен кораб?",
+      "options": [
+        "Бронзов таран на водолинията",
+        "Абордажен мост",
+        "Капитанската палуба",
+        "Ленено платно"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#rome-builds-a-fleet",
+      "explanation": "С него разбивали вражеските корпуси; можел да тежи до 270 кг (600 фунта).",
+      "sourceQuote": "At the waterline sat a bronze ram (*rostrum*) weighing up to 270 kg (600 lb), used for smashing enemy hulls.",
+      "reviewFlags": []
+    },
+    {
+      "question": "След войната Сицилия станала първата provincia на Рим. Какво било това?",
+      "options": [
+        "Отвъдморска територия, управлявана от римски управител",
+        "Съюзен град със собствен цар",
+        "Римска колония на ветерани",
+        "Свободен гръцки град"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#peace-and-aftermath",
+      "explanation": "Сицилия станала и жизненоважен източник на зърно за Рим.",
+      "sourceQuote": "Sicily became Rome's first province (*provincia*), an overseas territory run by a Roman governor",
+      "reviewFlags": []
+    },
+    {
+      "question": "Защо войната се нарича „пуническа“?",
+      "options": [
+        "От Punici – римското име на картагенците",
+        "От сицилийски град на име Пуникум",
+        "От латинското за „морска война“",
+        "От името на картагенски цар"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#rome-and-carthage",
+      "explanation": "Punici означава финикийци – предците на картагенците.",
+      "sourceQuote": "Romans called the Carthaginians *Punici*, meaning Phoenicians, after their ancestors.",
+      "reviewFlags": []
+    },
+    {
+      "question": "През 264 г. пр.н.е. разделеният Сенат предал въпроса за войната на comitia. Какво било то?",
+      "options": [
+        "Народното събрание",
+        "Съветът на жреците",
+        "Двамата консули",
+        "Съюзните градове"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#messana",
+      "explanation": "Единият от консулите призовал за война и обещал богата плячка; народът гласувал „за“.",
+      "sourceQuote": "so the question went to the popular assembly (*comitia*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво обещал един консул на гласоподавателите, за да спечели подкрепа за войната през 264 г. пр.н.е.?",
+      "options": [
+        "Praeda: богата плячка",
+        "Земя в Сицилия за всеки гласоподавател",
+        "Опрощаване на дълговете",
+        "Триумф за всеки войник"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#messana",
+      "explanation": "Много римляни не искали да помагат на мамертинците, но обещанието за плячка помогнало гласуването да мине.",
+      "sourceQuote": "promised rich plunder (*praeda*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как Рим се сдобивал с бойни кораби преди 260 г. пр.н.е.?",
+      "options": [
+        "Взимал назаем малки ескадри от съюзниците си (socii)",
+        "Наемал картагенския флот",
+        "Купувал кораби от Египет",
+        "Имал е собствен голям флот"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#rome-builds-a-fleet",
+      "explanation": "През 260 г. пр.н.е. Рим започнал да строи свой флот, като копирал корабокрушенец картагенски боен кораб.",
+      "sourceQuote": "having always borrowed small squadrons from its allies (*socii*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "Около колко души имало във всеки от двата *legiones*, преминали в Сицилия през 264 г. пр.н.е.?",
+      "options": [
+        "Около 4 500",
+        "Около 1 000",
+        "Около 10 000",
+        "Около 40 000"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#messana",
+      "explanation": "До 263 г. пр.н.е. на острова вече имало 40 000 римляни.",
+      "sourceQuote": "two legions (*legiones*), Roman army units of about 4,500 men each",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво представлявал *triumphus*, който отпразнувал Катул?",
+      "options": [
+        "Победно шествие през Рим",
+        "Преглед на флота на брега",
+        "Пир за цялата армия",
+        "Жертвоприношение в Картаген"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#peace-and-aftermath",
+      "explanation": "Флотът на Катул спечелил последната битка на войната при Егатските острови.",
+      "sourceQuote": "celebrated a triumph (*triumphus*), a victory parade through Rome.",
+      "reviewFlags": []
+    }
+  ]
+}

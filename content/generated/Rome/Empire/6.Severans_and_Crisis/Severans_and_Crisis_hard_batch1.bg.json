@@ -1,0 +1,201 @@
+{
+  "batchName": "Empire: The Severans and the Crisis of the Third Century (AD 193-284) - Hard Batch 1",
+  "chapterName": "Empire: The Severans and the Crisis of the Third Century (AD 193-284)",
+  "difficulty": 3,
+  "batchOrder": 5,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Къде паднал последният съперник на Септимий Север в гражданските войни през 197 г.?",
+      "options": [
+        "Византион",
+        "Лептис Магна",
+        "Норик",
+        "Лугдунум",
+        "Карнунтум",
+        "Антиохия"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 3,
+      "textReference": "#septimius-severus",
+      "explanation": "Последният съперник на Север паднал при Лугдунум, днешен Лион, през 197 г., с което завършили четири години гражданска война. След това Север се обърнал срещу партите.",
+      "sourceQuote": "His last rival fell at Lugdunum, modern Lyon, in 197.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Коя по-късна владетелка подражавала на императриците от рода на Северите в портретите на монетите си?",
+      "options": [
+        "Клеопатра VII",
+        "Елена",
+        "Зенобия",
+        "Теодора",
+        "Гала Плацидия",
+        "Боудика"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 3,
+      "textReference": "#julia-domna",
+      "explanation": "Десетилетия по-късно сирийската царица Зенобия подражавала на императриците от рода на Северите в монетите си. Властта на рода на Юлия Домна я надживяла чрез сестра ѝ и племенничките ѝ.",
+      "sourceQuote": "Decades later, the Syrian queen Zenobia would model her coin portraits on these Severan empresses.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Септимий Север намалил съдържанието на сребро в денария от 81,5% на колко?",
+      "options": [
+        "5%",
+        "50%",
+        "78.5%",
+        "62%",
+        "70%",
+        "75.5%"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 3,
+      "textReference": "#money-plague-trade",
+      "explanation": "Север намалил среброто от 81,5% на 78,5%. Северите също увеличили армията с една четвърт и удвоили заплатата на легионерите.",
+      "sourceQuote": "The Severans enlarged the army by a quarter and doubled legionaries' pay; Septimius Severus cut the silver in the denarius, Rome's standard coin, from 81.5% to 78.5%.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Приблизително колко мъже получили признанието на Сената като императори по време на кризата на III век?",
+      "options": [
+        "Около 6",
+        "Около 12",
+        "Около 50",
+        "Около 18",
+        "Около 40",
+        "Около 26"
+      ],
+      "correctAnswers": [
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#barracks-emperors",
+      "explanation": "Около 26 души били признати от Сената, а над 50 претендирали за титлата. Всички признати императори освен един загинали насилствено.",
+      "sourceQuote": "About 26 men won the Senate's recognition as emperor, and over 50 claimed the title.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кога Аврелиан възстановил целостта на Римската империя, като унищожил Галската империя?",
+      "options": [
+        "Началото на 275 г.",
+        "Пролетта на 268 г.",
+        "Август 272 г.",
+        "Края на 284 г.",
+        "Края на 274 г.",
+        "Края на 270 г."
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 3,
+      "textReference": "#aurelian",
+      "explanation": "След като Палмира се предала през август 272 г., Аврелиан унищожил Галската империя и към края на 274 г. империята отново била цяла. Той реформирал и монетите, преди да бъде убит през 275 г.",
+      "sourceQuote": "Aurelian then destroyed the Gallic Empire, so by late 274 the empire was whole, and he reformed the coinage.",
+      "reviewFlags": []
+    },
+    {
+      "question": "На какво най-вероятно се дължат разказите за страхливостта на Зенобия при поражението ѝ?",
+      "options": [
+        "На пропагандата на Аврелиан",
+        "На историци от Галската империя",
+        "На палмирски съперници на рода ѝ",
+        "На собствените мемоари на Зенобия",
+        "На ранни християнски автори",
+        "На персийски дворцови летописци"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#sources-and-legacy",
+      "explanation": "Разказите за страхливостта ѝ вероятно са пропаганда на Аврелиан. Извори като „Historia Augusta“ също преправяли образа ѝ, за да ласкаят предпочитани императори.",
+      "sourceQuote": "Tales of her cowardice in defeat were probably Aurelian's propaganda.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кои дела на императора, известен като Елагабал, се потвърждават от монети и надписи? (изберете всички верни)",
+      "options": [
+        "Бил незаконен син на Каракала",
+        "Оженил се за весталка",
+        "Екзекутирал братовчед си и наследник",
+        "Откупил се от германските нашественици",
+        "Поставил бога си над Юпитер",
+        "Преместил столицата в Емеса"
+      ],
+      "correctAnswers": [
+        1,
+        4
+      ],
+      "difficulty": 3,
+      "textReference": "#last-severans",
+      "explanation": "Монети и надписи потвърждават, че през 220 г. той поставил бога си над Юпитер и че се оженил за весталка. Твърдението, че бил син на Каракала, идва само от един разказ, а братовчед си той само опитал да убие.",
+      "sourceQuote": "Coins and inscriptions confirm that in 220 he placed his god above Jupiter, and that he married a Vestal Virgin (*virgo Vestalis*), a priestess sworn to chastity.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво направила Зенобия през 272 г., което означавало открит разрив с Рим?",
+      "options": [
+        "Обявила се за императрица",
+        "Преместила двора си в Антиохия",
+        "Омъжила се за персийски принц",
+        "Съюзила се със Сасанидите",
+        "Сякла монети с императора до сина си",
+        "Завзела провинция Египет"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#zenobia",
+      "explanation": "Когато през 272 г. римска армия наближила, Зенобия се обявила за императрица. Преди това сякла монети с римския император до сина си.",
+      "sourceQuote": "But in 272, with a Roman army approaching, she declared herself empress, an open break with Rome.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво станало през 218 г. с преторианския префект, наследил Каракала? (изберете всички верни)",
+      "options": [
+        "Екзекутиран от Сената в Рим",
+        "Разбит край Антиохия",
+        "Убит от охраната си при бягство",
+        "Пленен от партите",
+        "Умрял от естествена смърт в Сирия",
+        "Загинал в битка при Емеса"
+      ],
+      "correctAnswers": [
+        1,
+        2
+      ],
+      "difficulty": 3,
+      "textReference": "#praetorian-emperor",
+      "explanation": "След като войските в Сирия провъзгласили млад представител на Северите през май 218 г., Макрин бил разбит край Антиохия, заловен при бягство и убит от охраната си. Той така и не стъпил в Рим.",
+      "sourceQuote": "The usurper was defeated near Antioch, the great city of Roman Syria, caught as he fled, and killed by his guards.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Къде и кога бил убит Каракала?",
+      "options": [
+        "На Рейн, март 235 г.",
+        "При Лугдунум, юни 197 г.",
+        "Край Каре, април 217 г.",
+        "В Британия, февруари 211 г.",
+        "Край Антиохия, май 218 г.",
+        "В Рим, април 211 г."
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 3,
+      "textReference": "#caracalla",
+      "explanation": "Каракала бил убит край Каре, в днешна Югоизточна Турция, през април 217 г., на път за война с партите. Убийството било поръчано от един от командирите на собствената му охрана.",
+      "sourceQuote": "In April 217, heading to fight the Parthians, he was murdered near Carrhae, a town in modern south-eastern Turkey, on the orders of one of his own guard commanders.",
+      "reviewFlags": []
+    }
+  ]
+}

@@ -1,0 +1,189 @@
+{
+  "batchName": "Late Republic: Marius and the Northern Invaders (121-100 BCE) - Medium Batch 1",
+  "chapterName": "Late Republic: Marius and the Northern Invaders (121-100 BCE)",
+  "difficulty": 2,
+  "batchOrder": 3,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Какъв закон прокарва Марий като народен трибун през 119 г. пр.н.е.?",
+      "options": [
+        "Ограничава консулите до един мандат",
+        "Стеснява пътеките за гласуване, за да не надничат богатите в бюлетините",
+        "Забранява на сенаторите да търгуват отвъд морето",
+        "Дава гражданство на всички латински съюзници",
+        "Удвоява държавната дажба зърно"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#marius-origins",
+      "explanation": "Марий стеснява пътеките, по които гласоподавателите пускат бюлетините, така че богатите вече не могат да шпионират избора им. По-нататъшната му кариера е неравна – включително обвинение в подкуп, завършило с оправдание.",
+      "sourceQuote": "He passed a law narrowing the walkways where voters cast their ballots, so that the rich could no longer peer at their choices.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Според античните автори какво съветва Марий една гадателка в Утика?",
+      "options": [
+        "Да принесе жертва на Нептун преди отплаване",
+        "Да се пази от мартенските иди",
+        "Да се ожени в рода на Метел",
+        "Да се довери на боговете и да изпитва късмета си колкото може по-често",
+        "Да се върне в Арпинум и да стои далеч от политиката"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#marius-becomes-consul",
+      "explanation": "Античните автори разказват, че гадателката от Утика казала на Марий да се довери на боговете и често да изпитва късмета си. След това той води кампания за консулството направо от лагера.",
+      "sourceQuote": "Ancient writers say a fortune-teller in the African city of Utica urged Marius to trust the gods and test his luck as often as he could.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как армията на Марий обръща положението след засадата край Сериф през 106 г. пр.н.е.?",
+      "options": [
+        "Удържа два хълма до мрака, а на зазоряване напада вражеския лагер",
+        "Престорва се, че се предава, и удря по време на преговорите",
+        "Отстъпва към брега и е спасена от флота",
+        "Строява се в каре и марширува до Цирта",
+        "Подкупва мавретанския цар да смени страната по време на битката"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#capture-of-jugurtha",
+      "explanation": "Римляните удържат два хълма до падането на нощта, а после разгромяват врага с внезапна атака срещу лагера му на зазоряване. Засадата е дело на Югурта и тъста му, царя на Мавретания.",
+      "sourceQuote": "The Romans held two hills until nightfall, then routed the enemy with a surprise attack on their camp at dawn.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой фатален проблем обрича огромната римска войска при Араузио през 105 г. пр.н.е.?",
+      "options": [
+        "Двамата командири се мразят и лагеруват на противоположни брегове",
+        "Чума опустошава лагера",
+        "Армията е заварена да прехожда Алпите през зимата",
+        "Флотът с припасите потъва в буря",
+        "Съюзните гали дезертират насред битката"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#cimbri-and-arausio",
+      "explanation": "Командирите лагеруват на противоположните брегове на Рона; единият напада сам и е унищожен, после е разбита и армията на другия. Спасяват се само няколкостотин римляни.",
+      "sourceQuote": "The two commanders loathed each other and camped on opposite banks of the Rhône.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво решава битката с тевтоните край Акве Секстие?",
+      "options": [
+        "Атака надолу по склона на римските легиони",
+        "Наводнение, което отнася колите им",
+        "Смяната на страната от съюзниците им",
+        "Около 3000 скрити мъже, които ги удрят в гръб",
+        "Атака на римската конница, водена от Сула"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#aquae-sextiae-and-vercellae",
+      "explanation": "Докато тевтоните атакуват нагоре по склона, около 3000 римляни, скрити наблизо, ги удрят в гръб. Античните оценки за убитите и пленените варират от 100 000 до 200 000.",
+      "sourceQuote": "Days later the Teutones charged uphill at the Roman position, only to be hit from behind by about 3,000 men hidden nearby.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какъв късмет дава на Марий време да възстанови римската армия след Араузио?",
+      "options": [
+        "Сурова зима избива повечето тевтони",
+        "Кимврите се отклоняват към Испания, вместо да нахлуят в Италия",
+        "Кимврите приемат примирие",
+        "Царят на кимврите внезапно умира",
+        "Галите преграждат алпийските проходи"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#consul-again-and-again",
+      "explanation": "Вместо да нахлуят в Италия, кимврите се отклоняват към Испания и дават на Марий безценно време. Той го използва, за да обучи войските си и да изгради мрежа от шпиони.",
+      "sourceQuote": "Instead of marching on Italy, the Cimbri wandered into Spain, giving Marius precious time.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво става според съвременните специалисти с безимотните доброволци, набрани от Марий през 107 г. пр.н.е.?",
+      "options": [
+        "Записани са като гражданска конница",
+        "Стават първата постоянна армия на Рим",
+        "Заселват се завинаги в Нумидия",
+        "Освободени са след Африканската война",
+        "Образуват ядрото на армията при Верцеле"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#marian-reforms-debate",
+      "explanation": "Новобранците от 107 г. пр.н.е. са освободени след Африка, а армията, с която Марий тръгва срещу кимврите, е набрана по традиционния начин. Рим продължава да разчита главно на задължителната служба.",
+      "sourceQuote": "Those men were discharged after Africa, and the army Marius took over against the Cimbri had been raised in the traditional way.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как Югурта залага капана си за римляните край река Мутул?",
+      "options": [
+        "Подкупва разузнавачите им да ги заблудят",
+        "Примамва ги в тесен планински проход",
+        "Отрязва ги от водата и ги заварва в открита пустиня",
+        "Напада нощем с бойни слонове",
+        "Наводнява лагера им, като преграждá реката"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#metellus-and-the-muthul",
+      "explanation": "Югурта отрязва римляните от водата и ги заварва в открита пустиня, където леката му конница има всички предимства. Нумидийските конници разбиват армията на откъснати групи.",
+      "sourceQuote": "He cut the Romans off from the water they needed and caught them on open desert, where his nimble light cavalry had every advantage.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Чия публична подкрепа помага за несигурното преизбиране на Марий за 102 г. пр.н.е.?",
+      "options": [
+        "Сула",
+        "Катул",
+        "Сатурнин",
+        "Югурта",
+        "Метел"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#consul-again-and-again",
+      "explanation": "Сатурнин – млад трибун и подстрекател, защитник на бедните – открито подкрепя Марий. По-късно двамата стават съюзници в кървавата 100 г. пр.н.е.",
+      "sourceQuote": "Re-election for 102 BC was not certain, but a public appeal from Saturninus, a young tribune and rabble-rousing champion of the poor, helped carry him.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Според някои съвременни историци какво, а не Марий, научава римските войници да се обръщат срещу други римляни?",
+      "options": [
+        "Жестоките междуособни боеве с италийските съюзници",
+        "Службата в елинистически наемнически армии",
+        "Досегът с галските обичаи",
+        "Войните срещу Картаген",
+        "Робските въстания в Сицилия"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#marian-reforms-debate",
+      "explanation": "Някои историци посочват вместо това жестоките междуособни боеве с италийските съюзници. Голяма част от старата картина на Марий почива на двама морализаторстващи античнни критици.",
+      "sourceQuote": "Some modern historians argue instead that brutal civil fighting with Italian allies, not Marius, taught Roman soldiers to turn their swords on fellow Romans.",
+      "reviewFlags": []
+    }
+  ]
+}

@@ -1,0 +1,190 @@
+{
+  "batchName": "Empire: The Severans and the Crisis of the Third Century (AD 193-284) - Medium Batch 1",
+  "chapterName": "Empire: The Severans and the Crisis of the Third Century (AD 193-284)",
+  "difficulty": 2,
+  "batchOrder": 3,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "През 193 г. легионите в коя гранична провинция провъзгласили Септимий Север за император?",
+      "options": [
+        "Африка",
+        "Норик",
+        "Сирия",
+        "Британия",
+        "Испания"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#septimius-severus",
+      "explanation": "Легионите му в Норик, приблизително днешна Австрия, го провъзгласили за император през 193 г. – Годината на петимата императори. Последвали четири години гражданска война.",
+      "sourceQuote": "In 193 his legions in Noricum, a frontier province roughly in modern Austria, proclaimed him emperor.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Към коя социална класа принадлежало семейството на Септимий Север?",
+      "options": [
+        "Сенаторското съсловие",
+        "Патрицианската аристокрация",
+        "Конническото съсловие",
+        "Пуническото жречество",
+        "Плебейските освободени роби"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#septimius-severus",
+      "explanation": "Семейството му било от конническото съсловие – заможната класа точно под сенаторите. Корените му били либийски, пунически и италийски.",
+      "sourceQuote": "His family belonged to the equestrian order, the propertied class just below senators, and had Libyan, Punic and Italian roots.",
+      "reviewFlags": []
+    },
+    {
+      "question": "В качеството на какво Зенобия първоначално взела властта в Палмира през 267 г.?",
+      "options": [
+        "Като регентка на десетгодишния си син",
+        "Като управител, назначен от Рим",
+        "Като пълководец, избран от армията",
+        "Като върховна жрица на боговете на Палмира",
+        "Като царица по право на рождение"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#zenobia",
+      "explanation": "След като съпругът ѝ бил убит през 267 г., Зенобия, тогава около трийсетгодишна, управлявала като регентка на малкия им син. Дворът ѝ бил известен с философите си и с религиозната си търпимост.",
+      "sourceQuote": "When he was assassinated in 267, his widow Zenobia, then in her late twenties, took power as regent for their ten-year-old son.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Каква роля имал Аврелиан в битката при Наис, преди да стане император?",
+      "options": [
+        "Главен инженер на обсадата",
+        "Командир на конницата",
+        "Водач на готските нашественици",
+        "Управител на провинцията",
+        "Командир на преторианската гвардия"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#aurelian",
+      "explanation": "Аврелиан командвал конницата при Наис, където през 268 или 269 г. било смазано готско нашествие. Той се възкачил на трона през 270 г.",
+      "sourceQuote": "His cavalry commander there, Aurelian, took the throne in 270.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как гледат днешните историци на древните разкази, че Елагабал бил развратен и кръвожаден?",
+      "options": [
+        "Смятат ги предимно за измислици",
+        "Смятат, че идват от собствените му мемоари",
+        "Смятат, че описват братовчед му",
+        "Смятат ги за напълно потвърдени от монетите",
+        "Смятат, че враговете му са ги смекчили"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#last-severans",
+      "explanation": "Днешните историци смятат, че повечето скандални истории за него са измислени. Монетите и надписите потвърждават религиозната му промяна от 220 г. и брака му с весталка.",
+      "sourceQuote": "Ancient writers called him depraved and bloodthirsty, but modern historians think most such tales are invented.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Къде бил убит по заповед на Каракала по-малкият му брат през 211 г.?",
+      "options": [
+        "В сградата на Сената",
+        "На бойно поле в Британия",
+        "На погребението на баща им",
+        "В храм на Юпитер",
+        "В покоите на майка им"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#caracalla",
+      "explanation": "Каракала заповядал да убият брат му Гета в покоите на майка им и младежът умрял, вкопчен в Юлия Домна. След това Каракала купил благоволението на армията с увеличения на заплатите.",
+      "sourceQuote": "Soon after their father died in 211, Caracalla had his brother, Geta, killed in their mother's apartments; the young man died clinging to Julia Domna.",
+      "reviewFlags": []
+    },
+    {
+      "question": "До какво довела манията на Каракала по Александър Велики?",
+      "options": [
+        "Преместил столицата в Александрия",
+        "Нахлул в Индия по пътя на Александър",
+        "Основал нов град на свое име",
+        "Въвел гръцкия език в двора",
+        "Създал фаланга от копиеносци по македонски образец"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#caracalla",
+      "explanation": "Каракала създал фаланга – строй от копиеносци в стария македонски стил. Той също екзекутирал хора, които му се подигравали.",
+      "sourceQuote": "Obsessed with the Macedonian conqueror Alexander, he formed a phalanx, a block of spearmen in the old Macedonian style, and executed people who mocked him.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Защо „Historia Augusta“ е ненадежден извор за този период?",
+      "options": [
+        "Обхваща само Републиката",
+        "Била цензурирана от Аврелиан",
+        "Запазена е само като кратък списък с имена",
+        "Измисля събития и писма",
+        "Написана е на персийски"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#sources-and-legacy",
+      "explanation": "„Historia Augusta“, къснoримски сборник с императорски биографии, измисля събития и писма. Тя също преиначава образа на Зенобия, за да ласкае императора, когото възхвалява.",
+      "sourceQuote": "The Historia Augusta, a late Roman collection of imperial biographies, invented events and letters, and reshaped Zenobia to suit whichever emperor it praised.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Къде Аврелиан разбил армията на Зенобия през 272 г.? (изберете всички верни отговори)",
+      "options": [
+        "Име",
+        "Каре",
+        "Наис",
+        "Лугдунум",
+        "Емеса"
+      ],
+      "correctAnswers": [
+        0,
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#aurelian",
+      "explanation": "Аврелиан победил при Име, на около 40 km от Антиохия, а после край Емеса (Хомс). При Емеса нейните 70 000 души почти победили, преди редиците им да се разпаднат.",
+      "sourceQuote": "He beat her army at Immae, about 40 km (25 miles) from Antioch, then near Emesa, modern Homs, where her 70,000 men nearly won before breaking ranks.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Защо толкова много пълководци успявали да заграбят трона по време на кризата на III век?",
+      "options": [
+        "Персия назначавала римските императори",
+        "Императорите се избирали ежегодно с жребий",
+        "Рим никога не бил установил правила за наследяване",
+        "Преторианската гвардия избирала всеки владетел",
+        "Сенатът бил премахнат"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#barracks-emperors",
+      "explanation": "Без твърди правила за наследяване всеки пълководец с голяма армия можел да опита късмета си. Над 50 души претендирали за императорската титла.",
+      "sourceQuote": "Rome had never fixed rules of succession, so any general with a big army could try his luck.",
+      "reviewFlags": []
+    }
+  ]
+}

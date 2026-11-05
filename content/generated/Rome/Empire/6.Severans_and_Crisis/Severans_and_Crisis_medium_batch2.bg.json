@@ -1,0 +1,191 @@
+{
+  "batchName": "Empire: The Severans and the Crisis of the Third Century (AD 193-284) - Medium Batch 2",
+  "chapterName": "Empire: The Severans and the Crisis of the Third Century (AD 193-284)",
+  "difficulty": 2,
+  "batchOrder": 4,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Какво правела Юлия Домна, когато синът ѝ Каракала тръгвал на поход?",
+      "options": [
+        "Служела като върховна жрица в Сирия",
+        "Управлявала Рим сама като регентка",
+        "Командвала легион на бойното поле",
+        "Пътувала с него и водела официалната кореспонденция",
+        "Оттегляла се в семейните си имения"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#julia-domna",
+      "explanation": "Юлия Домна придружавала Каракала и сама водела голяма част от официалната кореспонденция, като предавала на него само важните въпроси. Тя носела титлата Августа.",
+      "sourceQuote": "When her elder son Caracalla ruled and went on campaign, Julia Domna travelled with him and handled much of the official correspondence herself, passing only major questions to the emperor.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кои територии завзел пълководецът на Зенобия през 270 г., докато Рим воювал с готите? (изберете всички верни отговори)",
+      "options": [
+        "Египет",
+        "Арабия",
+        "Дакия",
+        "Британия",
+        "Галия"
+      ],
+      "correctAnswers": [
+        0,
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#zenobia",
+      "explanation": "Пълководецът ѝ завзел Арабия, а след това и Египет през 270 г. До средата на 271 г. царството ѝ се простирало от Анкира до Горен Египет.",
+      "sourceQuote": "In 270, while Rome fought the Goths, her general seized Arabia and then Egypt.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Защо императорите от втората половина на III век примесвали все повече бронз и мед в монетите?",
+      "options": [
+        "За да финансират нови градски стени",
+        "За да заменят среброто, загубено от персите",
+        "За да плащат данък на готите",
+        "За да плащат всеки бърза премия на войските",
+        "За да строят обществени бани в Рим"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#money-plague-trade",
+      "explanation": "Всеки нов император трябвало да даде бърза премия (*donativum*) на войниците си, затова влошавали монетите. Верните войници излизали скъпо.",
+      "sourceQuote": "Later emperors, each needing a quick bonus (*donativum*) for the troops, mixed in ever more bronze and copper.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Според един разказ как бабата на императора, известен като Елагабал, убедила един легион да се разбунтува?",
+      "options": [
+        "Като го оженила за дъщерята на командира на легиона",
+        "Като показала знамение от бога на слънцето",
+        "Като обещала на всеки войник парцел земя",
+        "Като твърдяла, че той е незаконен син на Каракала",
+        "Като подправила завещание на Септимий Север"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#last-severans",
+      "explanation": "Според един разказ тя твърдяла, че момчето е незаконен син на Каракала. Всъщност той бил внук на сестрата на Юлия Домна.",
+      "sourceQuote": "According to one account, his grandmother persuaded a legion to rebel by claiming he was Caracalla's illegitimate son.",
+      "reviewFlags": []
+    },
+    {
+      "question": "След като Северите за кратко изгубили трона през 217 г., как роднините на Юлия Домна си го върнали?",
+      "options": [
+        "Наели партски наемници да нахлуят",
+        "Убедили Сената да свали узурпатора",
+        "Оженили узурпатора за принцеса от рода на Северите",
+        "Отровили новия император на пир",
+        "С пари и семейни претенции спечелили войските"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#julia-domna",
+      "explanation": "Сестрата и племенничките на Юлия Домна използвали богатството си и семейните претенции, за да спечелят войниците. Те поставили на трона един след друг двама от внуците на сестра ѝ.",
+      "sourceQuote": "After the dynasty briefly lost the throne in 217, these women used money and family claims to win over the troops and place two of Julia Domna's great-nephews on the throne in turn.",
+      "reviewFlags": []
+    },
+    {
+      "question": "С какво преторианският префект, наследил Каракала, бил „пръв“ сред римските императори?",
+      "options": [
+        "Първият император, избран от Сената",
+        "Първият император не от сенаторски род",
+        "Първият император, управлявал от Антиохия",
+        "Първият император християнин",
+        "Първият император, роден в Сирия"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#praetorian-emperor",
+      "explanation": "Роден в мавърско семейство в Северна Африка, той бил първият император без сенаторски произход. Така и не стъпил в Рим.",
+      "sourceQuote": "The conspirator, Macrinus, born into a Moorish family in North Africa, became the first emperor not from a senatorial family.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Коя болест вероятно е била Чумата на Киприан, вилняла от 249 до 262 г.?",
+      "options": [
+        "Морбили",
+        "Тиф",
+        "Малария",
+        "Едра шарка",
+        "Бубонна чума"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#money-plague-trade",
+      "explanation": "Чумата на Киприан вероятно е била едра шарка. Възможно е да е намалила населението на Александрия с 62%.",
+      "sourceQuote": "The Plague of Cyprian, possibly smallpox, raged from 249 to 262 and may have cut Alexandria's population by 62%.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кои действия на наследника на Каракала разгневили войниците му? (изберете всички верни отговори)",
+      "options": [
+        "Плащал на новобранците по-малко, отколкото на ветераните",
+        "Отменил земите за ветераните",
+        "Отказал да тръгне на изток срещу Персия",
+        "Разпуснал преторианската гвардия",
+        "Сключил мир с партите срещу обезщетение"
+      ],
+      "correctAnswers": [
+        0,
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#praetorian-emperor",
+      "explanation": "Войниците смятали обезщетението за партите за унизително, а по-ниското заплащане на новобранците ги ядосало още повече. Скоро войските в Сирия подкрепили съперник от рода на Северите.",
+      "sourceQuote": "He made peace with the Parthians by paying compensation, terms his soldiers found humiliating, and angered them further by paying new recruits less than veterans.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кои били колоните (coloni), появили се по време на кризата на III век?",
+      "options": [
+        "Роби, освободени да служат в легионите",
+        "Арендатори, обвързани със земята срещу закрила",
+        "Ветерани, заселени в нови гранични колонии",
+        "Бирници, назначени от императора",
+        "Търговци с разрешение да търгуват с Персия"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#money-plague-trade",
+      "explanation": "Гражданите и дребните земеделци заменяли свободата си срещу закрилата на някой земевладелец и ставали колони, обвързани със земята. Това бил ранен модел на средновековното крепостничество.",
+      "sourceQuote": "Many townspeople and small farmers traded their freedom for a landowner's protection, becoming tenant farmers bound to the soil (*coloni*), an early model for medieval serfdom.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как загинал първият войнишки император през 238 г., Годината на шестимата императори?",
+      "options": [
+        "Убит в бой с готите",
+        "Починал от чума в Рим",
+        "Убит от собствените си войници сред бунтове, подкрепени от Сената",
+        "Пленен от Сасанидите",
+        "Екзекутиран по заповед на Сената"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#barracks-emperors",
+      "explanation": "Той бил убит от собствените си войници, докато бушували бунтове, подкрепени от Сената. През 238 г. имало шестима императори само за една година.",
+      "sourceQuote": "In 238, the Year of the Six Emperors, he was killed by his own troops amid revolts backed by the Senate.",
+      "reviewFlags": []
+    }
+  ]
+}

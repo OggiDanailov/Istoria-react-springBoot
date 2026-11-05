@@ -1,0 +1,145 @@
+{
+  "batchName": "Empire: Tiberius and Caligula (AD 14-41) - Latin words",
+  "chapterName": "Empire: Tiberius and Caligula (AD 14-41)",
+  "difficulty": 1,
+  "batchOrder": 9,
+  "description": "Written by hand from the chapter text: the Latin words it explains",
+  "questions": [
+    {
+      "question": "Какво означаваше войнишкото прозвище Калигула?",
+      "options": [
+        "„Ботушче“",
+        "„Войниче“",
+        "„Орленце“",
+        "„Царче“"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#caligula-rise",
+      "explanation": "Като малко дете той носел миниатюрна униформа с малки войнишки ботуши (caligae).",
+      "sourceQuote": "the soldiers nicknamed him Caligula, \"little boot\".",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво бяха aquilae, които Германик си върна?",
+      "options": [
+        "Орлите, свещените знамена на легионите",
+        "Сандъци със съкровища",
+        "Пленени германски вождове",
+        "Римски пленници"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#germanicus",
+      "explanation": "Два от трите орела, изгубени в Тевтобургската гора, се върнаха у дома.",
+      "sourceQuote": "recovered two of the three lost eagles (*aquilae*), the sacred standards of the legions.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво беше triumphus като този, който Германик отпразнува през 17 г. сл.н.е.?",
+      "options": [
+        "Победно шествие през Рим",
+        "Надбягване с колесници",
+        "Храм в чест на пълководец",
+        "Земя, дарена на войниците"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#germanicus",
+      "explanation": "Германик отпразнува своя на 26 май 17 г. сл.н.е.",
+      "sourceQuote": "he celebrated a triumph (*triumphus*), a victory parade through Rome.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Сеян беше praefectus praetorio. Какво означаваше това?",
+      "options": [
+        "Командир на преторианската гвардия",
+        "Управител на Сирия",
+        "Върховен жрец",
+        "Командир на флота"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#sejanus",
+      "explanation": "Гвардията беше личната охрана на императора, а Тиберий я премести в самия Рим.",
+      "sourceQuote": "Sejanus became praetorian prefect (*praefectus praetorio*) in AD 15",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво представлявал *corona civica*, от който Тиберий се отказал?",
+      "options": [
+        "Почетен венец от дъбови листа",
+        "Златна корона",
+        "Лавров венец за победа",
+        "Пурпурна мантия"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#reluctant-emperor",
+      "explanation": "Той отказал и титлата Баща на отечеството.",
+      "sourceQuote": "the Civic Crown (*corona civica*), an oak-leaf wreath of honour.",
+      "reviewFlags": []
+    },
+    {
+      "question": "През 39 г. сл.н.е. Калигула възобновил старите процеси за *maiestas*. В какво било обвинението?",
+      "options": [
+        "Държавна измяна",
+        "Убийство",
+        "Кражба",
+        "Подкуп"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#caligula-turn",
+      "explanation": "Преди това твърдял, че е изгорил архива на Тиберий, без да го прочете.",
+      "sourceQuote": "Tiberius's files on treason (*maiestas*) trials",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво би означавало *damnatio memoriae* за Калигула?",
+      "options": [
+        "Прокълнат спомен за него",
+        "Обявяване за бог",
+        "Погребение до Август",
+        "Освобождаване на робите му"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#assassination",
+      "explanation": "Чичо му, новият император, отказал, макар че много статуи били тихомълком преиздялани.",
+      "sourceQuote": "condemn his memory (*damnatio memoriae*)",
+      "reviewFlags": []
+    },
+    {
+      "question": "Новият император отказал да обяви Калигула за *hostis*. Какво е *hostis*?",
+      "options": [
+        "Враг на държавата",
+        "Бог",
+        "Наследник на предател",
+        "Чужд цар"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#assassination",
+      "explanation": "Вместо това той екзекутирал убийците.",
+      "sourceQuote": "refused to declare his nephew a public enemy (*hostis*)",
+      "reviewFlags": []
+    }
+  ]
+}

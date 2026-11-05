@@ -1,0 +1,145 @@
+{
+  "batchName": "Late Republic: Caesar in Gaul (58-50 BCE) - Latin words",
+  "chapterName": "Late Republic: Caesar in Gaul (58-50 BCE)",
+  "difficulty": 1,
+  "batchOrder": 9,
+  "description": "Written by hand from the chapter text: the Latin words it explains",
+  "questions": [
+    {
+      "question": "Алезия била oppidum. Какво е това?",
+      "options": [
+        "Укрепен град на хълм",
+        "Римски военен лагер",
+        "Свещена горичка на друидите",
+        "Речен брод"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#siege-of-alesia",
+      "explanation": "Почти сигурно се е намирал на Мон Оксоа в Източна Франция.",
+      "sourceQuote": "a hilltop fortified town (*oppidum*) of the Mandubii tribe.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой пръв скочил в морето, когато Цезар стъпил в Британия?",
+      "options": [
+        "Signifer – знаменосецът на Десети легион",
+        "Самият Цезар",
+        "Центурион от Седми легион",
+        "Галски водач"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#rhine-and-britain",
+      "explanation": "Войниците го последвали, за да не изгубят знамето си.",
+      "sourceQuote": "the standard bearer (*signifer*) of the Tenth Legion leapt into the sea",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво отказал Сенатът на Цезар след Галия по политически причини?",
+      "options": [
+        "Triumphus – шествието, което увенчавало кариерата",
+        "Благодарствено честване",
+        "Пари за войниците му",
+        "Второ консулство"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#aftermath",
+      "explanation": "Все пак постановил 20 дни благодарствени чествания за Алезия.",
+      "sourceQuote": "it refused him a triumph (*triumphus*), the parade that crowned a general's career.",
+      "reviewFlags": []
+    },
+    {
+      "question": "През 58 г. пр.н.е. хелветите дали на Цезар casus belli. Какво е това?",
+      "options": [
+        "Повод за война",
+        "Мирен договор",
+        "Откуп",
+        "Заложник"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#caesar-goes-to-gaul",
+      "explanation": "Историците са единодушни, че той е искал войната най-вече заради плячката и славата.",
+      "sourceQuote": "handed him the justification for war (*casus belli*) he needed.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво представлявали *impedimenta* на един легион?",
+      "options": [
+        "Обозът му от около хиляда товарни животни",
+        "Тежкото му въоръжение",
+        "Обсадните му машини",
+        "Резервните му войници"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#legions-and-warriors",
+      "explanation": "По време на поход обозът се проточвал на около 4 км (2,5 мили), а гладът често диктувал ходовете на Цезар.",
+      "sourceQuote": "its baggage train (*impedimenta*), which stretched some 4 km (2.5 miles) on the march.",
+      "reviewFlags": []
+    },
+    {
+      "question": "На колко кохорти (cohortes) бил разделен легионът по времето на Цезар?",
+      "options": [
+        "На десет, по 480 души",
+        "На тридесет, по 160 души",
+        "На пет, по 1000 души",
+        "На две, по 2500 души"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#legions-and-warriors",
+      "explanation": "Кохортата заменила по-малката манипула.",
+      "sourceQuote": "Each legion was split into ten cohorts (*cohortes*) of 480 soldiers.",
+      "reviewFlags": []
+    },
+    {
+      "question": "През 44 г. пр.н.е. Цезар бил обявен за *dictator perpetuus*. Какво означава това?",
+      "options": [
+        "Пожизнен диктатор",
+        "Диктатор за шест месеца",
+        "Диктатор на Галия",
+        "Пръв сред консулите"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#aftermath",
+      "explanation": "През 49 г. пр.н.е. той преминал Рубикон и спечелил последвалата гражданска война.",
+      "sourceQuote": "In 44 BC he was named dictator for life (*dictator perpetuus*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво представляват „Commentarii de Bello Gallico“ на Цезар?",
+      "options": [
+        "Собственият му разказ за войната, изпращан в Рим на части",
+        "Записите на Сената за войната",
+        "Галска история на войната",
+        "Писмата му до Помпей"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#caesars-account",
+      "explanation": "Галите не са писали история, затова почти всичко, което знаем за войната, идва от Цезар.",
+      "sourceQuote": "His Commentaries on the Gallic War (*Commentarii de Bello Gallico*) reached Rome in instalments",
+      "reviewFlags": []
+    }
+  ]
+}

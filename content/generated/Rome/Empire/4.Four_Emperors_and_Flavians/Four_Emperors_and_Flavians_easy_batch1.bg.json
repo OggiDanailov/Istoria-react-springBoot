@@ -1,0 +1,179 @@
+{
+  "batchName": "Empire: The Year of Four Emperors and the Flavians (AD 69-96) - Easy Batch 1",
+  "chapterName": "Empire: The Year of Four Emperors and the Flavians (AD 69-96)",
+  "difficulty": 1,
+  "batchOrder": 1,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Как умира Веспасиан през 79 г.?",
+      "options": [
+        "Убит от придворни",
+        "От естествена смърт",
+        "Самоубива се след загубена битка",
+        "Убит от преторианската гвардия"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#vespasian-reign",
+      "explanation": "Веспасиан умира от естествена смърт на 23 юни 79 г. След насилствената смърт на трима императори през 69 г. това е забележителен край.",
+      "sourceQuote": "He died of natural causes on 23 June 79.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Къде в Рим е убит Галба през януари 69 г.?",
+      "options": [
+        "На Палатинския хълм",
+        "На Капитолийския хълм",
+        "На Форума",
+        "В лагера на преторианците"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#galba",
+      "explanation": "Войници убиват Галба и неговия наследник на Форума, големия публичен площад на Рим, на 15 януари 69 г. Главите им са набучени на колове.",
+      "sourceQuote": "Otho, an ambitious nobleman who had expected the honour, bribed the Guard, and on 15 January 69 soldiers killed Galba and his heir in the Forum, Rome's great public square, and stuck their heads on poles.",
+      "reviewFlags": []
+    },
+    {
+      "question": "В кой ежегоден пост евреите и днес оплакват разрушаването на Йерусалим от армията на Тит?",
+      "options": [
+        "Пасха",
+        "Йом Кипур",
+        "Пурим",
+        "Тиша бе-Ав"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#siege-of-jerusalem",
+      "explanation": "Разрушението се оплаква всяка година в поста Тиша бе-Ав. Когато започва обсадата, градът е препълнен с поклонници за Пасха.",
+      "sourceQuote": "Jews still mourn the destruction each year on the fast of Tisha B'Av.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой данък на Веспасиан традиционно се свързва с поговорката „парите не миришат“?",
+      "options": [
+        "Данък върху продавачите на парфюми",
+        "Данък върху кожарниците",
+        "Данък върху египетското зърно",
+        "Данък върху урината от обществените тоалетни"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#vespasian-reign",
+      "explanation": "Веспасиан облага урината, събирана от обществените тоалетни, и преданието свързва това с „pecunia non olet“. Когато пристига в Рим през 70 г., той заварва празна хазна.",
+      "sourceQuote": "Tradition links this tax to the famous saying \"money does not smell\" (*pecunia non olet*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "Колко дълго продължават игрите, с които през 80 г. е открит завършеният Колизеум?",
+      "options": [
+        "Сто дни",
+        "Три дни",
+        "Цяла година",
+        "Седем дни"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#titus",
+      "explanation": "Тит открива Колизеума с игри, продължили сто дни. Сред тях има и инсценирани морски битки в наводнената арена.",
+      "sourceQuote": "That year he completed the Colosseum, opening it with games lasting a hundred days, with gladiators, animal fights and mock sea battles in the flooded arena.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какъв е Домициан на Веспасиан?",
+      "options": [
+        "По-големият му син",
+        "Осиновеният му наследник",
+        "По-малкият му син",
+        "Брат му"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#domitian",
+      "explanation": "Домициан е по-малкият син на Веспасиан. Той става император на следващия ден след смъртта на брат си Тит през 81 г.",
+      "sourceQuote": "Domitian, Vespasian's younger son, who had escaped Rome disguised as a worshipper of Isis in 69, became emperor the day after his brother Titus died in 81.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Колко време управлява Отон, наследникът на Галба през 69 г.?",
+      "options": [
+        "Почти петнадесет години",
+        "Едва три седмици",
+        "Около две години",
+        "Малко повече от три месеца"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#the-nobleman-emperor",
+      "explanation": "Той управлява малко повече от три месеца. След като армията му губи Първата битка при Бедриакум, той слага край на живота си, вместо да проточва войната.",
+      "sourceQuote": "He had reigned for little more than three months.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кога е преоткрит Помпей, погребан при изригването през 79 г.?",
+      "options": [
+        "1748",
+        "1348",
+        "1598",
+        "1848"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#titus",
+      "explanation": "Помпей е преоткрит през 1748 г., след като е стоял забравен почти 1700 години. Той е бил погребан под метри камъни и пепел.",
+      "sourceQuote": "Pompeii stayed lost for nearly 1,700 years until it was rediscovered in 1748.",
+      "reviewFlags": []
+    },
+    {
+      "question": "С какво е най-известен Вителий, преди рейнските легиони да го провъзгласят за император?",
+      "options": [
+        "Прочут колесничар",
+        "Безмилостен бирник",
+        "Безпаричен лакомник",
+        "Герой от нахлуването в Британия"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#vitellius",
+      "explanation": "Когато Галба го изпраща на долния Рейн в края на 68 г., Вителий е известен най-вече като безпаричен лакомник. Въпреки това войниците му, които мразят Галба, го провъзгласяват за император на 2 януари 69 г.",
+      "sourceQuote": "When Galba sent him to govern the lower Rhine in late 68, he was best known as a penniless glutton.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой вулкан изригва на 24 август 79 г., в началото на управлението на Тит?",
+      "options": [
+        "Везувий",
+        "Стромболи",
+        "Вулкано",
+        "Етна"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#titus",
+      "explanation": "Везувий, над Неаполитанския залив, изригва едва два месеца след възцаряването на Тит. Той погребва Помпей и Херкулан.",
+      "sourceQuote": "Barely two months into his reign, on 24 August 79, Vesuvius, the volcano above the Bay of Naples, erupted.",
+      "reviewFlags": []
+    }
+  ]
+}

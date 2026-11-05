@@ -1,0 +1,189 @@
+{
+  "batchName": "Late Republic: Caesar's Civil War and the Ides of March (49-44 BCE) - Medium Batch 1",
+  "chapterName": "Late Republic: Caesar's Civil War and the Ides of March (49-44 BCE)",
+  "difficulty": 2,
+  "batchOrder": 3,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "От кое пристанище отплава Помпей, за да събере армия на изток?",
+      "options": [
+        "Остия",
+        "Дирахиум",
+        "Корфиниум",
+        "Александрия",
+        "Брундизий"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#crossing-the-rubicon",
+      "explanation": "Помпей отплавал от Брундизий в „петата“ на Италия. Цезар пристигнал на 9 март – твърде късно, за да го спре.",
+      "sourceQuote": "Pompey sailed from Brundisium, a port on the heel of Italy, to raise an army in the east.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой води въстанието в Испания, завършило при Мунда през 45 г. пр.н.е.?",
+      "options": [
+        "Царят на Понт",
+        "Брут и неговият зет",
+        "По-малкият брат на Клеопатра",
+        "Синовете на Помпей",
+        "Царят на Нумидия"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#munda-and-honours",
+      "explanation": "Синовете на Помпей вдигнали въстание в Испания. При Мунда войниците на Цезар се разколебали и той сам се втурнал на първата линия.",
+      "sourceQuote": "Then came rebellion in Spain, led by the sons of his dead rival Pompey.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какъв компромис постига Марк Антоний след убийството?",
+      "options": [
+        "Убийците помилвани, завещанието на Цезар отменено",
+        "Цезар обявен за тиранин, актовете му анулирани",
+        "Убийците ненаказани, назначенията на Цезар запазени",
+        "Убийците изгонени, имуществото им конфискувано",
+        "Брут става консул на мястото на Цезар"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#aftermath-and-debate",
+      "explanation": "Убийците избегнали наказание, но назначенията на Цезар останали в сила. Междувременно гражданите се криели по домовете си, а по-късно разгневени тълпи опожарили залата, в която бил убит.",
+      "sourceQuote": "Mark Antony, Caesar's fellow consul, brokered a compromise: the assassins would go unpunished, but Caesar's appointments would stand.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Защо е впечатляващо, че 72 ликтори са вървели пред Цезар при триумфите му?",
+      "options": [
+        "Три пъти повече от обичайното за диктатор",
+        "По един за всяка негова победа",
+        "Колкото помилваните от него сенатори",
+        "Толкова, колкото били дадени на Помпей",
+        "Броят, запазен за царете"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#munda-and-honours",
+      "explanation": "Ликторите носели фасциите – символ на властта да наказва, а 72 било трикратно повече от нормалния ескорт на диктатор.",
+      "sourceQuote": "That was three times a dictator's usual number.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Къде Цезар побеждава пълководците на Помпей през юни 49 г. пр.н.е.?",
+      "options": [
+        "Зела",
+        "Утика",
+        "Тапс",
+        "Мунда",
+        "Илерда"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#spain-and-the-treasury",
+      "explanation": "Цезар победил при Илерда в Североизточна Испания и скоро целият полуостров минал в неговите ръце.",
+      "sourceQuote": "In June he defeated Pompey's commanders at Ilerda, in north-east Spain, and the peninsula soon fell to him.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как Цезар се справя с трибун, наложил вето срещу завземането на държавната хазна?",
+      "options": [
+        "Изчакал мандатът му да изтече",
+        "Заплашил живота му",
+        "Подкупил го със сребърни слитъци",
+        "Изпратил го в изгнание в Галия",
+        "Накарал Сената да го отхвърли"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#spain-and-the-treasury",
+      "explanation": "Цезар заплашвал трибуна, докато той не отстъпил, а после взел около 15 000 златни и 30 000 сребърни слитъка. В собствения си разказ пропуснал този епизод.",
+      "sourceQuote": "When a tribune vetoed his plan to seize the state treasury, Caesar threatened the man's life until he gave way.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Каква лична връзка с Цезар има Брут, който търси помилване след Фарсала?",
+      "options": [
+        "Бил зет на Помпей",
+        "Майка му била любовница на Цезар",
+        "Бил трибун при Цезар",
+        "Бил внук на сестрата на Цезар",
+        "Бил женен за дъщерята на Цезар"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#battle-of-pharsalus",
+      "explanation": "Брут бил млад аристократ, чиято майка била любовница на Цезар, и Цезар го приел топло.",
+      "sourceQuote": "Among those who sought pardon was Brutus, a young aristocrat whose mother had been Caesar's lover.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво се опитва да направи Цезар с армията на Помпей при Дирахиум?",
+      "options": [
+        "Да я нападне нощем откъм морето",
+        "Да подкупи офицерите ѝ да дезертират",
+        "Да я умори от глад, като изгори флота ѝ",
+        "Да я обгради със стена",
+        "Да я примами към речен брод"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#battle-of-pharsalus",
+      "explanation": "Цезар се опитал да обгради Помпей със стена при Дирахиум, но след месеци схватки Помпей пробил и го принудил да отстъпи в Тесалия.",
+      "sourceQuote": "At Dyrrachium, a port in modern Albania, he tried to wall in the army of his rival Pompey.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво става с момчето цар на Египет, след като пристигат подкрепленията на Цезар?",
+      "options": [
+        "Сключил мир и споделил трона",
+        "Изпратен в изгнание в Кипър",
+        "Обезглавен по заповед на Цезар",
+        "Удавил се при бягство",
+        "Отведен в Рим в окови"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#pompey-and-cleopatra",
+      "explanation": "Цезар разгромил египтяните, а царят се удавил при бягството. Преди това регентът на царя бил обсадил Цезар в двореца.",
+      "sourceQuote": "When reinforcements arrived, Caesar crushed the Egyptians, and the king drowned in flight.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как реагира Цезар, когато най-непримиримият му враг в Сената се самоубива в Утика?",
+      "options": [
+        "Съжалил, че е изпуснал шанса да го помилва",
+        "Наредил семейството му да бъде изгонено",
+        "Наказал лекаря, зашил раната",
+        "Отпразнувал с публичен празник",
+        "Наредил тялото да бъде изложено в Рим"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#zela-and-thapsus",
+      "explanation": "Мъжът се пробол и разкъсал шевовете на лекаря. Цезар, който ценял милосърдието, съжалил, че не е могъл да го помилва.",
+      "sourceQuote": "Caesar regretted losing the chance to pardon him.",
+      "reviewFlags": []
+    }
+  ]
+}

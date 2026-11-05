@@ -1,0 +1,179 @@
+{
+  "batchName": "Middle Republic: Hannibal in Italy (241-216 BCE) - Easy Batch 2",
+  "chapterName": "Middle Republic: Hannibal in Italy (241-216 BCE)",
+  "difficulty": 1,
+  "batchOrder": 2,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Каква дума измислили френски учени за безкрайното търсене на алпийския път на Ханибал?",
+      "options": [
+        "Ханибализъм",
+        "Пуникология",
+        "Баркомания",
+        "Алпиномания"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#which-pass",
+      "explanation": "„Ханибализъм“ означава преследване на въпрос, който може и да няма отговор. Полибий дава само три названия на места, а не са открити нито оръжия, нито лагери.",
+      "sourceQuote": "French scholars coined a word, 'Hannibalism', for chasing a question that may have no answer.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как се нарича прочутата маневра на Ханибал при Кана?",
+      "options": [
+        "Строй „костенурка“",
+        "Двойно обхващане",
+        "Кос строй",
+        "Престорено отстъпление"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#battle-of-cannae",
+      "explanation": "Африканската пехота на Ханибал се затворила от двата фланга, а конницата му ударила римския тил. Тази маневра „клещи“ се изучава от пълководците и до днес.",
+      "sourceQuote": "This 'double envelopment', or pincer movement, has been studied by generals ever since.",
+      "reviewFlags": []
+    },
+    {
+      "question": "След победата на конницата на Ханибал при Тицин през 218 г. пр.н.е. кой застанал на негова страна?",
+      "options": [
+        "Сицилийските съюзници на Рим",
+        "Гръцкият град Масалия",
+        "Повечето галски племена",
+        "Град Капуа"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#trebia-and-trasimene",
+      "explanation": "След конната победа при Тицин повечето галски племена застанали на страната на Ханибал. След Требия към него се стекли още гали и армията му нараснала до около 60 000 души.",
+      "sourceQuote": "In late November 218 BC his cavalry routed Roman horsemen at the Ticinus, a river in the Po valley, and most Gallic tribes declared for him.",
+      "reviewFlags": []
+    },
+    {
+      "question": "На колко години бил Ханибал, когато офицерите на армията го избрали за командир през 221 г. пр.н.е.?",
+      "options": [
+        "26",
+        "19",
+        "35",
+        "42"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#barcas-in-spain",
+      "explanation": "Ханибал бил едва на 26, когато офицерите го избрали. Той поел командването, след като предишният командир, неговият зет, бил убит.",
+      "sourceQuote": "When the son-in-law was murdered in 221 BC, the army's officers chose Hannibal, then just 26, as their commander.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Къде Ханибал устроил засада на римска армия през 217 г. пр.н.е. и убил консула, който я водел?",
+      "options": [
+        "Тразименското езеро",
+        "Тицин",
+        "Кана",
+        "Сагунт"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#trebia-and-trasimene",
+      "explanation": "При Тразименското езеро в Средна Италия загинали около 15 000 римляни, сред тях и консулът. Други 10 000 били пленени.",
+      "sourceQuote": "At Lake Trasimene in central Italy he sprang an ambush.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как Ханибал прехвърлил слоновете си през Рона?",
+      "options": [
+        "Повел ги нагоре по течението до извора на реката",
+        "Накарал ги да преплуват плитък брод",
+        "По каменен мост, построен от инженерите му",
+        "На салове, покрити с пръст, за да мислят, че са на суша"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#crossing-the-alps",
+      "explanation": "Саловете били покрити с пръст, за да мислят слоновете, че са още на суша. Междувременно отряд преминал реката по-нагоре, за да нападне враждебните гали в гръб.",
+      "sourceQuote": "His elephants were coaxed onto rafts covered with earth, so they believed they were still on land.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Каква извънредна длъжност дали римските избиратели на Фабий след поражението при Тразименското езеро?",
+      "options": [
+        "Претор",
+        "Диктатор",
+        "Народен трибун",
+        "Цензор"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#fabius-the-delayer",
+      "explanation": "Диктаторът държал върховното командване за ограничен срок. Фабий бил същият сенатор, който занесъл римския ултиматум в Картаген.",
+      "sourceQuote": "The voters turned to Fabius Maximus, the senator who had carried Rome's ultimatum to Carthage, and made him dictator, an emergency office giving one man supreme command for a limited term.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой според преданието казал на Ханибал: „Ти умееш да побеждаваш, Ханибале, но не умееш да се възползваш от победата“?",
+      "options": [
+        "Фабий Максим",
+        "Началникът на конницата му",
+        "Галски вожд",
+        "Консулът Варон"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#after-cannae",
+      "explanation": "Твърди се, че началникът на конницата му настоявал за поход срещу Рим след Кана. Съвременните историци отбелязват, че изтощената армия на Ханибал не била в състояние да щурмува града.",
+      "sourceQuote": "His cavalry commander urged a march on Rome and, it is said, cried: 'You know how to win a victory, Hannibal; you do not know how to use it.'",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой испански град, свързан със споразумение с Рим, обсадил Ханибал през 219 г. пр.н.е.?",
+      "options": [
+        "Гадес",
+        "Сагунт",
+        "Нови Картаген",
+        "Масалия"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#saguntum",
+      "explanation": "Ханибал обсадил Сагунт, след като покорил останалите племена на юг от Ебро. Градът издържал осем месеца, а Рим не изпратил помощ.",
+      "sourceQuote": "When that failed, he besieged the city in 219 BC.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как гръцкият историк Полибий се озовал в Рим?",
+      "options": [
+        "Бил отведен там като заложник",
+        "Избягал там от Картаген",
+        "Служил там като посланик",
+        "Сенатът го наел за учител"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#sources-and-blame",
+      "explanation": "Полибий бил отведен в Рим като заложник през 167 г. пр.н.е. Той разпитвал участници от двете страни и съвременните историци като цяло му се доверяват.",
+      "sourceQuote": "Polybius was a Greek taken to Rome as a hostage in 167 BC, who wrote after 146 BC.",
+      "reviewFlags": []
+    }
+  ]
+}

@@ -1,0 +1,190 @@
+{
+  "batchName": "Late Republic: Spartacus and Pompey (78-63 BCE) - Medium Batch 2",
+  "chapterName": "Late Republic: Spartacus and Pompey (78-63 BCE)",
+  "difficulty": 2,
+  "batchOrder": 4,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Според преданието как загинал Митридат през 63 г. пр.н.е.?",
+      "options": [
+        "Екзекутиран бил по време на триумфа на Помпей",
+        "Отровата не подействала и страж го пронизал с меч",
+        "Отровил го собственият му син",
+        "Загинал в битката при Ликос",
+        "Удавил се, бягайки през Черно море"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#pompey-in-the-east",
+      "explanation": "След като синът му вдигнал бунт срещу него, Митридат опитал с отрова, но години наред малки дози го били направили имунен. Накарал телохранителя си да го убие с меч.",
+      "sourceQuote": "According to tradition, his poison failed because he had long taken small doses to build immunity, so he had his bodyguard kill him with a sword.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какви цели приписват античните автори на Спартак? (изберете всички верни)",
+      "options": [
+        "Да премине Алпите, за да прати хората си у дома",
+        "Да бъде избран за римски консул",
+        "Да тръгне срещу град Рим",
+        "Да премахне робството в цяла Италия",
+        "Да се съюзи с цар Митридат"
+      ],
+      "correctAnswers": [
+        0,
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#spartacus-aims",
+      "explanation": "Един биограф смятал, че искал да премине Алпите, за да се приберат хората му, а двама историци твърдели, че смятал да тръгне срещу Рим. Никой античен автор не казва, че е искал да премахне робството.",
+      "sourceQuote": "One ancient biographer believed Spartacus simply wanted to cross the Alps and send his men home to their own lands.",
+      "reviewFlags": []
+    },
+    {
+      "question": "С какво ранната кариера на Помпей нарушаваше обичайната римска практика?",
+      "options": [
+        "Започна като народен трибун",
+        "Служеше само във флота",
+        "Отказваше всеки предложен триумф",
+        "Прескочи стълбицата от изборни длъжности",
+        "Стана консул преди двайсетата си година"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#young-pompey",
+      "explanation": "Римляните обикновено изкачвали *cursus honorum*, преди да командват армии, но Помпей изцяло го прескочил. По-късно командвал в Испания срещу римски пълководец отстъпник.",
+      "sourceQuote": "Normally a Roman climbed a fixed ladder of elected offices (*cursus honorum*) before commanding armies.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Къде пращали на работа повечето пленници, наводнили Италия през II и I в. пр.н.е.?",
+      "options": [
+        "В гладиаторски школи в Кампания",
+        "В домакинства и работилници в Рим",
+        "В мини и големи земеделски имения",
+        "На галерите на римския флот",
+        "В пътностроителни отряди в Галия"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#roman-slavery",
+      "explanation": "Само малцина ставали прислужници или занаятчии; повечето се трудели до живот в мини или в огромни имения в Сицилия и Южна Италия. Наведнъж можели да пристигнат десетки, дори стотици хиляди.",
+      "sourceQuote": "A few became servants or craftsmen, but most were sent to the mines or to the vast farming estates of Sicily and southern Italy, where they did back-breaking work for life.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Хванати в капан на Везувий от претор, блокирал единствената пътека надолу, как се спасили бунтовниците?",
+      "options": [
+        "Подкупили опълчението, пазещо пътеката",
+        "Прокопали тунел през склона на вулкана",
+        "Пробили нощем, преоблечени",
+        "Изплели въжета от лози и се спуснали по скалите",
+        "Изчакали опълчението да се прибере"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#escape-from-capua",
+      "explanation": "Бунтовниците направили въжета и стълби от диви лози, спуснали се по скалите от другата страна и унищожили в гръб 3000-те опълченци на претора.",
+      "sourceQuote": "Instead, the rebels wove ropes and ladders from wild vines, climbed down the cliffs on the far side, and wiped out his force from behind.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Според преданието какво станало, когато Спартак платил на киликийски пирати да прехвърлят 2000 души в Сицилия?",
+      "options": [
+        "Поискали двойно заплащане",
+        "Корабите потънали в буря",
+        "Стоварили хората край Сиракуза",
+        "Взели парите и отплавали",
+        "Предали хората на Крас"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#crassus-takes-command",
+      "explanation": "Спартак се надявал да разпали ново робско въстание в Сицилия, но пиратите просто задържали парите. После Крас хванал бунтовниците в капан на върха на Италия.",
+      "sourceQuote": "The pirates took the money and sailed away.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Край коя река била разгромена армията на Спартак в последната ѝ битка?",
+      "options": [
+        "Тибър",
+        "Силарий",
+        "Волтурн",
+        "Рубикон",
+        "Ликос"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#silarius-and-aftermath",
+      "explanation": "Спартак хвърлил цялата си армия срещу легионите край река Силарий в Южна Италия. Повечето бунтовници загинали на бойното поле.",
+      "sourceQuote": "Spartacus turned and threw his whole army at the legions in a final battle by the Silarius River in southern Italy.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Каква стратегия позволи на Помпей да прочисти морето от пирати толкова бързо?",
+      "options": [
+        "Затвори всички пристанища в Италия",
+        "Нападна първо Киликия с всичките си кораби",
+        "Нае партски кораби да блокират пристанищата",
+        "Подкупи пиратски вождове да минат на негова страна",
+        "Раздели морето на зони под командата на заместници"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#war-on-the-pirates",
+      "explanation": "Всяка зона имала свой заместник и пиратите нямали къде да бягат. Западното Средиземноморие било прочистено за 40 дни.",
+      "sourceQuote": "Pompey divided the sea into zones, each patrolled by a deputy, so the pirates had nowhere to flee.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво направиха пиратите през 68 г. пр.н.е., което шокира Рим?",
+      "options": [
+        "Разграбиха град Капуа",
+        "Заловиха в морето консула Лукул",
+        "Изгориха римския флот при Брундизий",
+        "Нападнаха Остия и отвлякоха двама сенатори",
+        "Блокираха Тибър цяла година"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#war-on-the-pirates",
+      "explanation": "Пиратите ударили Остия, собственото пристанище на Рим, и заловили двама сенатори. Някои историци смятат, че те са били по-скоро организирана враждебна сила, отколкото обикновени разбойници.",
+      "sourceQuote": "In 68 BC they raided Ostia, Rome's own port, and kidnapped two senators.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Огромната армия на Митридат била унищожена от глад, болести и римски атаки, докато обсаждала кой град?",
+      "options": [
+        "Тигранакерт",
+        "Кизик",
+        "Никомедия",
+        "Синопа",
+        "Кабира"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#lucullus-and-mithridates",
+      "explanation": "Лукул хванал обсаждащите в капан при Кизик. Според античните автори от може би 300 000 души оцелели само 20 000.",
+      "sourceQuote": "Lucullus trapped the king's huge army as it besieged the city of Cyzicus, and famine, disease and Roman attacks destroyed it.",
+      "reviewFlags": []
+    }
+  ]
+}

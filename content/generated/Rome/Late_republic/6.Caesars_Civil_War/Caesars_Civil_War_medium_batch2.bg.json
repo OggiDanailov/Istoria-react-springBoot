@@ -1,0 +1,190 @@
+{
+  "batchName": "Late Republic: Caesar's Civil War and the Ides of March (49-44 BCE) - Medium Batch 2",
+  "chapterName": "Late Republic: Caesar's Civil War and the Ides of March (49-44 BCE)",
+  "difficulty": 2,
+  "batchOrder": 4,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Защо Брут отказва Марк Антоний да бъде убит заедно с Цезар?",
+      "options": [
+        "Антоний тайно се бил присъединил към заговора",
+        "Страхувал се от легионите на Антоний в Галия",
+        "Антоний воювал далеч с партите",
+        "Антоний бил негов зет",
+        "Убийството само на Цезар изглеждало като премахване на тиранин"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#ides-of-march",
+      "explanation": "Брут смятал, че убийството само на Цезар ще изглежда като премахване на тиранин, а не като чистка. По-късно Антоний постигнал компромиса след убийството.",
+      "sourceQuote": "Brutus refused, arguing that killing only Caesar would look like removing a tyrant rather than a purge.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Според една история как Цезар се справя със спъването си при слизането в Африка?",
+      "options": [
+        "Принесъл бик в жертва, за да отмени знамението",
+        "Отплавал обратно и слязъл по-нататък",
+        "Наредил на офицерите си да го пазят в тайна",
+        "Грабнал пясък и заявил, че държи Африка",
+        "Отложил нахлуването с три дни"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#zela-and-thapsus",
+      "explanation": "Цезар обърнал лошото знамение на шега, като грабнал пясък и извикал: „Държа те, Африка!“",
+      "sourceQuote": "According to an anecdote, Caesar tripped on landing and laughed off the bad omen by grabbing sand and crying, \"I have hold of you, Africa!\"",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво поднасят на Цезар, когато пристига в Александрия след смъртта на Помпей? (изберете всички верни)",
+      "options": [
+        "Последното писмо на Помпей",
+        "Мечът на Помпей",
+        "Главата на Помпей",
+        "Печатният пръстен на Помпей",
+        "Военната каса на Помпей"
+      ],
+      "correctAnswers": [
+        2,
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#pompey-and-cleopatra",
+      "explanation": "На Цезар дали главата и печатния пръстен на Помпей. Той се разплакал над пръстена и се отдръпнал от главата, но историците спорят дали скръбта му е била искрена.",
+      "sourceQuote": "Julius Caesar reached Alexandria, Egypt's capital, three days later and was presented with Pompey's head and signet ring.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Защо заговорниците избират заседание на Сената за убийството?",
+      "options": [
+        "Приятелите на Цезар не можели да го защитят там",
+        "Трибуните обещали да помогнат",
+        "Заседанието щяло да е през нощта",
+        "Марк Антоний със сигурност щял да отсъства",
+        "Провеждало се в храм на Юпитер"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#ides-of-march",
+      "explanation": "На заседание на Сената приятелите на Цезар не можели да го защитят. Заседанието на мартенските иди било последното преди заминаването му на война срещу партите.",
+      "sourceQuote": "They chose a Senate meeting, where Caesar's friends could not protect him.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Защо сенаторите се обиждат, когато делегация носи на Цезар нови почести?",
+      "options": [
+        "Отказал почестите направо",
+        "Поискал вместо тях царска диадема",
+        "Наредил делегацията да бъде арестувана",
+        "Останал седнал, когато етикетът изисквал да стане",
+        "Оставил ги да чакат с часове отвън"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#three-last-straws",
+      "explanation": "Цезар останал седнал и пошегувал, че почестите му трябва да се намалят. Изглеждало, че вече не го е грижа за Сената.",
+      "sourceQuote": "Etiquette demanded he stand; he stayed seated and joked that his honours should be cut back.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво прави Цезар, след като гарнизонът в Корфиниум се предава?",
+      "options": [
+        "Оставил легионите си да плячкосват града",
+        "Освободил сенаторите и върнал заплатите на войниците",
+        "Продал войниците от гарнизона в робство",
+        "Изпратил пленниците на изток в окови",
+        "Екзекутирал сенаторите от гарнизона"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#crossing-the-rubicon",
+      "explanation": "Цезар освободил около петдесет сенатори и благородници и дори върнал заплатите на войниците. Това хитро милосърдие попречило Италия да се обърне срещу него.",
+      "sourceQuote": "Caesar freed some fifty senators and noblemen and even returned the soldiers' pay.",
+      "reviewFlags": []
+    },
+    {
+      "question": "С какво Цезар разгневява обикновените римляни, след като някои от тълпата го приветстват като цар?",
+      "options": [
+        "Лишил от длъжност трибуните, извършили ареста",
+        "Приел титлата *rex*",
+        "Забранил събиранията във Форума",
+        "Наредил крещящият да бъде екзекутиран",
+        "Вдигнал данъците на бедните в града"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#three-last-straws",
+      "explanation": "Трибуните арестували първия, извикал „цар“, а Цезар в отговор ги отстранил от длъжност, което разгневило обикновените римляни.",
+      "sourceQuote": "When the tribunes arrested the first man to shout, Caesar had them stripped of office, angering ordinary Romans.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво иска да си осигури Цезар, преди да се откаже от армията си?",
+      "options": [
+        "Втори мандат като консул",
+        "Командване на война срещу Партия",
+        "Изгнание на Помпей от Рим",
+        "Триумф за галските си войни",
+        "Контрол над държавната хазна"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#road-to-war",
+      "explanation": "Цезар искал второ консулство, преди да се разоръжи, а Помпей и непримиримите настоявали първо да се разоръжи.",
+      "sourceQuote": "Caesar wanted a second term as consul, Rome's highest office, before giving up his army.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво според Цезар защитава той, като започва войната?",
+      "options": [
+        "Безопасността на Помпей в Рим",
+        "Снабдяването на Рим със зърно",
+        "Извънредната власт на Сената",
+        "Личната си чест, или *dignitas*",
+        "Правата на галските съюзници на Рим"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#road-to-war",
+      "explanation": "Цезар представил войната като защита на своята *dignitas*. Изглежда гордостта и от двете страни тласнала Рим към война.",
+      "sourceQuote": "Caesar said he was defending his personal honour (*dignitas*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "Къде Вторият триумвират побеждава Брут през 42 г. пр.н.е.?",
+      "options": [
+        "Акциум",
+        "Дирахиум",
+        "Филипи",
+        "Мунда",
+        "Фарсала"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#aftermath-and-debate",
+      "explanation": "Триумвирите разбили Брут при Филипи в Северна Гърция. Те обявили Цезар за бог и възобновили кървавите чистки.",
+      "sourceQuote": "They declared Caesar a god, revived murderous purges of their enemies, and defeated Brutus at Philippi, in northern Greece, in 42 BC.",
+      "reviewFlags": []
+    }
+  ]
+}

@@ -1,0 +1,145 @@
+{
+  "batchName": "Empire: Diocletian and Constantine (AD 284-337) - Latin words",
+  "chapterName": "Empire: Diocletian and Constantine (AD 284-337)",
+  "difficulty": 1,
+  "batchOrder": 9,
+  "description": "Written by hand from the chapter text: the Latin words it explains",
+  "questions": [
+    {
+      "question": "Какво било adoratio, което Диоклециан изисквал?",
+      "options": [
+        "Лягане по очи пред императора",
+        "Целуване на пръстена на императора",
+        "Жертвоприношение на Юпитер",
+        "Клетва за вярност"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#tetrarchy",
+      "explanation": "Той носел също златна корона и скъпоценности.",
+      "sourceQuote": "visitors had to lie face down before him (*adoratio*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво означава in hoc signo vinces?",
+      "options": [
+        "„С този знак ще победиш“",
+        "„С този кръст властвай“",
+        "„Бог е с нас“",
+        "„Под един Бог – една империя“"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#constantine-vision",
+      "explanation": "Според Евсевий Константин видял думите заедно с кръст от светлина над слънцето.",
+      "sourceQuote": "“In this sign, conquer”, usually given in Latin as *in hoc signo vinces*.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво бил солидът на Константин?",
+      "options": [
+        "Златна монета, запазила стойността си седем века",
+        "Щит с Хи-Ро",
+        "Нов легион",
+        "Църква в Константинопол"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#constantine-sole-ruler",
+      "explanation": "Той запазил теглото и чистотата си седем века.",
+      "sourceQuote": "His new gold coin, the *solidus*, kept its weight and purity for seven centuries.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Всеки диоцез се управлявал от vicarius. Какво бил vicarius?",
+      "options": [
+        "Заместник",
+        "Епископ",
+        "Пълководец",
+        "Бирник"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#reforms-and-prices",
+      "explanation": "Диоклециан обединил близо сто провинции в дванадесет диоцеза.",
+      "sourceQuote": "each run by a deputy (*vicarius*)",
+      "reviewFlags": []
+    },
+    {
+      "question": "Диоклециан облагал земята в iuga, а хората – в capita. Какво били capita?",
+      "options": [
+        "Глави – преброяване на хората",
+        "Ниви",
+        "Волове",
+        "Златни монети"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#reforms-and-prices",
+      "explanation": "От 296 г. преброяване на всеки пет години поддържало данните актуални.",
+      "sourceQuote": "counted in heads (*capita*)",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво бил labarum?",
+      "options": [
+        "Боен знамен с Хи-Ро",
+        "Кръст от светлина",
+        "Златна корона",
+        "Мост от лодки"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#constantine-vision",
+      "explanation": "Евсевий твърди, че Христос казал на Константин насън да го направи.",
+      "sourceQuote": "make a battle standard, the *labarum*, bearing the Chi-Rho",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво било *adventus*, което Константин направил на 29 октомври 312 г.?",
+      "options": [
+        "Тържествено влизане в Рим",
+        "Жертвоприношение на боговете",
+        "Реч пред Сената",
+        "Кръщение"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#milvian-bridge",
+      "explanation": "Главата на Максенций била развеждана по улиците.",
+      "sourceQuote": "Constantine made a grand entry (*adventus*) into Rome.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво бил *Edictum de Pretiis Rerum Venalium* от 301 г.?",
+      "options": [
+        "Едиктът за максималните цени",
+        "Едиктът срещу християните",
+        "Миланският едикт",
+        "Закон за нови провинции"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#reforms-and-prices",
+      "explanation": "Определял най-високи цени за над хиляда стоки и скоро се провалил.",
+      "sourceQuote": "his Edict on Maximum Prices (*Edictum de Pretiis Rerum Venalium*)",
+      "reviewFlags": []
+    }
+  ]
+}

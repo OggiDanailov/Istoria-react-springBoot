@@ -1,0 +1,189 @@
+{
+  "batchName": "Empire: Augustus and the Principate (27 BC-AD 14) - Medium Batch 2",
+  "chapterName": "Empire: Augustus and the Principate (27 BC-AD 14)",
+  "difficulty": 2,
+  "batchOrder": 4,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Как описват Принципата повечето съвременни историци?",
+      "options": [
+        "Като истинско партньорство със Сената",
+        "Като прикрита монархия",
+        "Като религиозна теокрация",
+        "Като възстановена Република",
+        "Като власт само на армията"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#verdicts",
+      "explanation": "Германски учен от XIX в. го нарича истинско партньорство между императора и Сената, но повечето съвременни историци отхвърлят това мнение.",
+      "sourceQuote": "Most modern historians reject that, calling it monarchy in disguise.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой тайно организира германския съюз, който унищожава римските легиони през 9 г. сл.н.е.?",
+      "options": [
+        "Пратеникът на царицата на Куш",
+        "Партски пълководец, изпратен в Германия",
+        "Вожд на херуските, отгледан като заложник в Рим",
+        "Галски цар от отвъд Алпите",
+        "Римски адмирал бунтовник"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#teutoburg-forest",
+      "explanation": "Вождът е служил като римски офицер и е доверен съветник на управителя. Той му подава лъжливи сведения за бунт.",
+      "sourceQuote": "His trusted adviser was Arminius, a Germanic chieftain of the Cherusci tribe who had been raised as a hostage in Rome and served as a Roman officer.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво става с Египет, след като Октавиан го завладява?",
+      "options": [
+        "Разделен е между легионите",
+        "Даден е на децата на Антоний",
+        "Става негова лична собственост",
+        "Оставен е като съюзно царство",
+        "Управляван е от Сената"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#actium",
+      "explanation": "Съкровището на Египет покрива военните дългове на Октавиан. На сенаторите дори е забранено да пътуват там.",
+      "sourceQuote": "Egypt became Octavian's personal property, and its treasure paid off his war debts.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой построява първия Пантеон в Рим?",
+      "options": [
+        "Тиберий",
+        "Август",
+        "Юлий Цезар",
+        "Агрипа",
+        "Марк Антоний"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#city-of-marble",
+      "explanation": "Агрипа, старият приятел и адмирал на Август, поема също водоснабдяването, канализацията, обществените бани и пътищата.",
+      "sourceQuote": "Agrippa, his old friend and admiral, took charge of the water supply, drains, public baths and roads, and built the first Pantheon.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Около колко легиона идват с „неспокойните“ провинции, които Август се съгласява да управлява през 27 г. пр.н.е.?",
+      "options": [
+        "Около двадесет",
+        "Двадесет и осем",
+        "Пет или шест",
+        "Три",
+        "Около шестдесет"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#first-settlement",
+      "explanation": "Сред провинциите са Испания, Галия, Сирия и Египет, с около двадесет легиона. На Сената остават само пет или шест.",
+      "sourceQuote": "These happened to include Spain, Gaul, Syria and Egypt, and with them about twenty legions.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как Август реформира събирането на данъци в провинциите?",
+      "options": [
+        "Възлага събирането на армията",
+        "Продава правото на събиране на частни компании",
+        "Използва платени събирачи вместо частни компании",
+        "Изцяло премахва провинциалните данъци",
+        "Оставя всеки управител да задържа данъците"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#running-the-empire",
+      "explanation": "При Републиката частни компании купуват правото да събират данъци и изстискват провинциите. Август използва преброявания, за да определи дела на всяка провинция.",
+      "sourceQuote": "Augustus replaced them with salaried collectors, using censuses to fix each province's share.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Коя власт, дадена пожизнено, позволява на Август да свиква събрания, да предлага закони и да налага вето на всяко решение?",
+      "options": [
+        "Цензорството",
+        "Върховното жречество",
+        "Висшата проконсулска власт",
+        "Консулството",
+        "Трибунската власт"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#second-settlement",
+      "explanation": "Трибунската власт е правомощието на древните трибуни, които закрилят обикновените граждани. Висшата проконсулска власт пък го поставя над всеки управител.",
+      "sourceQuote": "It let him summon the Senate and the people's assemblies, propose laws, and veto any decision.",
+      "reviewFlags": []
+    },
+    {
+      "question": "След похода към Рим през 43 г. пр.н.е. на каква възраст Октавиан става консул?",
+      "options": [
+        "30",
+        "22",
+        "25",
+        "19",
+        "18"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#caesars-heir",
+      "explanation": "С парите на Цезар и своите собствени той печели ветераните и събира частна армия, а после става консул едва на 19 години.",
+      "sourceQuote": "He used Caesar's money and his own to win over the dead dictator's veterans, raised a private army, and in 43 BC marched on Rome, becoming consul at just 19.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво пожелава Сенатът на всеки нов император в по-късните римски времена?",
+      "options": [
+        "Да бъде „по-богат от Египет“",
+        "Да бъде „по-мъдър от Ромул“",
+        "Да бъде „почитан като Август“",
+        "Да бъде „по-храбър от Цезар“",
+        "Да бъде „по-щастлив от Август“"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#verdicts",
+      "explanation": "По-късните римляни са по-благосклонни към Август от съвременниците му. Един правовед от неговото време оплаква изгубената свобода на Републиката.",
+      "sourceQuote": "Later Romans were kinder: the Senate wished each new emperor to be \"more fortunate than Augustus\".",
+      "reviewFlags": []
+    },
+    {
+      "question": "Каква служба осигуряват за Рим *vigiles*, създадени от Август през 6 г. сл.н.е.?",
+      "options": [
+        "Императорска охрана",
+        "Пожарна команда и нощна полиция",
+        "Раздаване на зърно",
+        "Предаване на официални вести",
+        "Събиране на данъци"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#running-the-empire",
+      "explanation": "*Vigiles* имат седем отряда, покриващи четиринадесет градски района. През 8 г. сл.н.е. следва и постоянен служител за снабдяването със зърно.",
+      "sourceQuote": "For the capital he created a combined fire brigade and night police (*vigiles*) in AD 6, with seven units covering fourteen city districts.",
+      "reviewFlags": []
+    }
+  ]
+}

@@ -1,0 +1,203 @@
+{
+  "batchName": "Middle Republic: The First Punic War (264-241 BCE) - Hard Batch 1",
+  "chapterName": "Middle Republic: The First Punic War (264-241 BCE)",
+  "difficulty": 3,
+  "batchOrder": 5,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Кои фактори помогнали на Рим да спечели битката при Егатските острови? (изберете всички верни)",
+      "options": [
+        "Силен попътен вятър издул римските платна",
+        "Римските екипажи били безмилостно обучени",
+        "Мостовете corvus позволили абордаж на легионерите",
+        "Катул лично водил боя невредим",
+        "Картагенските кораби били натоварени със зърно",
+        "На Картаген не му стигали обучени гребци"
+      ],
+      "correctAnswers": [
+        1,
+        4,
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#battle-of-the-aegates",
+      "explanation": "Картагенският флот бил натоварен със зърно и нямал достатъчно обучени гребци, а Катул здраво обучил екипажите си. Раненият Катул оставил боя на заместника си, а римляните гребли срещу насрещен вятър.",
+      "sourceQuote": "Carthage took nine months to gather 250 warships, short of trained rowers and loaded with grain for its starving garrisons.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Приблизително колко галери построил Рим по време на Първата пуническа война?",
+      "options": [
+        "Около 200",
+        "Около 464",
+        "Около 330",
+        "Над 1000",
+        "Над 3000",
+        "Около 120"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 3,
+      "textReference": "#peace-and-aftermath",
+      "explanation": "По време на войната Рим построил над 1000 галери. Така били положени основите на 600-годишното римско господство по море.",
+      "sourceQuote": "Rome had built over 1,000 galleys during the war, laying the foundation for 600 years of mastery at sea.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво станало при Миле, когато, след като „гарваните“ се впили в първите 30 картагенски кораба, останалите завили, за да ударят отстрани?",
+      "options": [
+        "Спасили всичките 30 закачени кораба",
+        "Римляните се оттеглили в пристанището",
+        "Пробили и потопили флагмана на Дуилий",
+        "Буря разпиляла двата флота",
+        "Хората на Дуилий пленили още 20",
+        "Дуилий бил пленен"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 3,
+      "textReference": "#corvus-and-mylae",
+      "explanation": "Corvus можел да се завърта настрани и хората на Дуилий пленили още 20 кораба. По-бързите оцелели избягали.",
+      "sourceQuote": "When the rest swung round to strike from the side, Duilius's men captured 20 more.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво подсказват находките от морското дъно от битката при Егатските острови? (изберете всички верни)",
+      "options": [
+        "Разкриват кораби, по-големи от квинкверемите",
+        "Доказват, че corvus е използван при Егатските острови",
+        "Делвите потвърждават, че картагенските кораби превозвали провизии",
+        "Показват, че Полибий е сбъркал мястото на битката",
+        "Тараните подсказват по-малки кораби от квинкверемите",
+        "Мястото им потвърждава разказа на Полибий"
+      ],
+      "correctAnswers": [
+        2,
+        4,
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#sources-and-debates",
+      "explanation": "Мястото на находките подкрепя Полибий, а делвите потвърждават, че картагенските кораби превозвали провизии. Но размерът на тараните подсказва по-малки кораби от описаните от него квинкверемите.",
+      "sourceQuote": "Their location supports Polybius, and the jars confirm Carthage's ships carried supplies.",
+      "reviewFlags": []
+    },
+    {
+      "question": "След катастрофата при Дрепана кое второ поражение почти пометело Рим от морето за седем години?",
+      "options": [
+        "Лилибей",
+        "Финтия",
+        "Миле",
+        "Екном",
+        "Липари",
+        "Панорм"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 3,
+      "textReference": "#drepana-and-stalemate",
+      "explanation": "Поражението край Финтия, на южния бряг на Сицилия, оставило Рим почти без флот за седем години. По това време Картаген държал в Сицилия само Лилибей и Дрепана.",
+      "sourceQuote": "A second defeat off Phintias, on Sicily's south coast, all but swept Rome from the sea for seven years.",
+      "reviewFlags": []
+    },
+    {
+      "question": "След като спасил оцелелите от Африка през 255 г. пр.н.е., римският флот попаднал в буря на връщане. Колко тежки били загубите?",
+      "options": [
+        "Изгубени 24 от 330 кораба",
+        "Потънали всичките 464 кораба без оцелели",
+        "Потънали 150 кораба, удавени около 30 000",
+        "Изгубени 94 от 350 кораба",
+        "Потънали 384 от 464 кораба, удавени около 100 000",
+        "Потънали 220 от 330 кораба, удавени около 50 000"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 3,
+      "textReference": "#regulus-in-africa",
+      "explanation": "Бурята потопила 384 от 464 кораба и удавила около 100 000 души. През 253 г. пр.н.е. друга буря потопила 150 римски кораба.",
+      "sourceQuote": "A rescue fleet beat Carthage's navy, but a storm on the way home sank 384 of 464 ships, drowning about 100,000 men.",
+      "reviewFlags": []
+    },
+    {
+      "question": "До 272 г. пр.н.е. Рим контролирал Апенинския полуостров на юг от коя река?",
+      "options": [
+        "Адидже",
+        "Рубикон",
+        "Тибър",
+        "Арно",
+        "Волтурно",
+        "По"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 3,
+      "textReference": "#rome-and-carthage",
+      "explanation": "Рим контролирал Италия на юг от река Арно, която тече покрай Пиза. Цял век той завладявал съседите си.",
+      "sourceQuote": "By 272 BC it controlled the Italian peninsula south of the River Arno, which flows past Pisa.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Колко гребци движели една стандартна квинкверема?",
+      "options": [
+        "200",
+        "500",
+        "280",
+        "120",
+        "300",
+        "170"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 3,
+      "textReference": "#rome-builds-a-fleet",
+      "explanation": "Квинкверемата била дълга около 45 м и се движела от 280 гребци. Носела също 20 души палубен екипаж и обикновено 40 морски пехотинци.",
+      "sourceQuote": "It was a galley about 45 m (150 ft) long, rowed by 280 oarsmen.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво заварили двата римски легиона, преминали в Месана през 264 г. пр.н.е.?",
+      "options": [
+        "Картагенският флот блокирал пристанището",
+        "Картагенски гарнизон държал цитаделата",
+        "Градът бил изоставен",
+        "Мамертинците вече били прогонили картагенците",
+        "Сиракуза била превзела града",
+        "Мамертинците се били предали на Сиракуза"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 3,
+      "textReference": "#messana",
+      "explanation": "Картаген действал пръв и разположил гарнизон в Месана, но докато римляните пристигнат, мамертинците вече били изгонили картагенците. Всеки легион наброявал около 4500 души.",
+      "sourceQuote": "The Mamertines had already expelled the Carthaginians.",
+      "reviewFlags": []
+    },
+    {
+      "question": "С какво се отличавала битката край Акрагас през пролетта на 261 г. пр.н.е.?",
+      "options": [
+        "Била единственото поражение на Хамилкар Барка",
+        "Водила се през нощта",
+        "Била една от само двете големи битки в открито поле в Сицилия през войната",
+        "Спечелили я слоновете на Картаген",
+        "Завършила с пленяването на Регул",
+        "За първи път бил използван corvus"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 3,
+      "textReference": "#siege-of-akragas",
+      "explanation": "Картагенската армия за подкрепа била тежко разбита в една от само двете големи битки в открито поле в Сицилия. Гарнизонът се измъкнал, а 25 000 жители били продадени в робство.",
+      "sourceQuote": "He was heavily defeated in one of only two full-scale pitched battles fought on Sicily in the whole war.",
+      "reviewFlags": []
+    }
+  ]
+}

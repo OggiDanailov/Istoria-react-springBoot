@@ -1,0 +1,145 @@
+{
+  "batchName": "Empire: The Five Good Emperors (AD 96-192) - Latin words",
+  "chapterName": "Empire: The Five Good Emperors (AD 96-192)",
+  "difficulty": 1,
+  "batchOrder": 9,
+  "description": "Written by hand from the chapter text: the Latin words it explains",
+  "questions": [
+    {
+      "question": "Сенатът дал на Траян титлата optimus princeps. Какво означава тя?",
+      "options": [
+        "„Най-добрият владетел“",
+        "„Първият гражданин“",
+        "„Великият завоевател“",
+        "„Баща на отечеството“"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#trajan-best-ruler",
+      "explanation": "Той бил единственият император, който я получил официално; тя се появява на монетите от 105 г.",
+      "sourceQuote": "the title 'the best ruler' (*optimus princeps*)",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво представлявал limes, който Адриан укрепил?",
+      "options": [
+        "Границата с крепости и наблюдателни кули",
+        "Касата със заплатите на армията",
+        "Път през Италия",
+        "Личната охрана на императора"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#hadrian-the-traveller",
+      "explanation": "Адриановият вал в Британия бил част от него.",
+      "sourceQuote": "he strengthened the frontier (*limes*) with forts, watchtowers and constant drill for the troops.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво представлявали alimenta, които Траян узаконил?",
+      "options": [
+        "Помощи за сираци и бедни деца",
+        "Зърно за армията",
+        "Дарове за сенаторите",
+        "Храна за гладиаторите"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#trajan-best-ruler",
+      "explanation": "Те осигурявали пари, храна и обучение в цяла Италия.",
+      "sourceQuote": "He formalised the *alimenta*, a welfare scheme giving cash, food and schooling to orphans and poor children across Italy.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Антонин Пий дал последна парола: aequanimitas. Какво означава тя?",
+      "options": [
+        "Невъзмутимост, спокоен дух",
+        "Победа",
+        "Дълг",
+        "Мир"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#antoninus-pius",
+      "explanation": "Той я дал на офицера от нощната стража, докато лежал на смъртно легло през 161 г.",
+      "sourceQuote": "his final password: 'equanimity' (*aequanimitas*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво е horror imperii, който може би е изпитвал Марк Аврелий?",
+      "options": [
+        "Страх от императорската власт",
+        "Ужас от чумата",
+        "Страх от германските племена",
+        "Страх от Сената"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#marcus-aurelius",
+      "explanation": "Той поел властта през 161 г. неохотно и я споделил с Луций Вер.",
+      "sourceQuote": "a genuine 'fear of imperial power' (*horror imperii*)",
+      "reviewFlags": []
+    },
+    {
+      "question": "Според по-ранно споразумение царят на Дакия бил rex amicus. Какво означавало това?",
+      "options": [
+        "Зависим цар, „приятелски цар“ на Рим",
+        "Враг на Рим",
+        "Римски управител",
+        "Цар, обявен за бог"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#dacian-wars",
+      "explanation": "Получаваше римски пари и специалисти, което сенаторите смятаха за позорен данък.",
+      "sourceQuote": "its king was recognised as a client king (*rex amicus*)",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво е бил Forum Traiani?",
+      "options": [
+        "Траяновият форум, най-големият форум в Рим",
+        "Траяновата колона",
+        "Траяновият мост над Дунав",
+        "Вилата на Траян"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#trajan-best-ruler",
+      "explanation": "Построен с плячка от войните му, той е осветен на 1 януари 112 г.",
+      "sourceQuote": "the Forum of Trajan (*Forum Traiani*)",
+      "reviewFlags": []
+    },
+    {
+      "question": "Сенатът се колебаел дали да обяви Адриан за divus. Какво е divus?",
+      "options": [
+        "Бог – починал император, почитан с култ",
+        "Предател",
+        "Цар",
+        "Пожизнен сенатор"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#antoninus-pius",
+      "explanation": "Антонин настоял и получил прозвището Pius – „благочестивия“.",
+      "sourceQuote": "hesitated to declare Hadrian a god (*divus*)",
+      "reviewFlags": []
+    }
+  ]
+}

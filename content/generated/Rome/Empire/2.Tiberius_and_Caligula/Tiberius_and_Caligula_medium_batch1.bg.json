@@ -1,0 +1,194 @@
+{
+  "batchName": "Empire: Tiberius and Caligula (AD 14-41) - Medium Batch 1",
+  "chapterName": "Empire: Tiberius and Caligula (AD 14-41)",
+  "difficulty": 2,
+  "batchOrder": 3,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Поговорката, че никога не е имало „по-добър роб и по-лош господар“, се отнася до умението на Калигула в какво през годините му на Капри?",
+      "options": [
+        "Да ласкае сенаторите в Рим",
+        "Да управлява имперските финанси",
+        "Да се бие като обикновен войник",
+        "Да крие истинските си чувства от Тиберий",
+        "Да командва преторианската гвардия"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#caligula-rise",
+      "explanation": "Живеейки от 31 г. сл.н.е. на Капри под зоркото око на Тиберий, Калигула напълно прикривал чувствата си. Закрилял го и преторианският префект на Тиберий.",
+      "sourceQuote": "He hid his feelings so well that it was said there had never been \"a better slave or a worse master\", and Tiberius's praetorian prefect, commander of the imperial bodyguard, protected him.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кое северозападноафриканско царство Рим присъединил, след като Калигула екзекутирал царя му?",
+      "options": [
+        "Нумидия",
+        "Тракия",
+        "Комагена",
+        "Мавретания",
+        "Армения"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#horse-bridge-god",
+      "explanation": "Мавретания била присъединена, след като Калигула наредил да убият царя ѝ. Замисленото нахлуване в Британия пък било изоставено.",
+      "sourceQuote": "Abroad, a planned invasion of Britain was abandoned, while Mauretania, a kingdom in north-west Africa, was annexed after Caligula executed its king.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Античните автори не са единодушни как е умрял Тиберий. Кого обвиняват някои от тях? (изберете всички верни)",
+      "options": [
+        "Калигула",
+        "Управителя на Сирия",
+        "Вдовицата на Германик",
+        "Сеян",
+        "Новия преториански префект"
+      ],
+      "correctAnswers": [
+        0,
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#death-of-tiberius",
+      "explanation": "Според един разказ новият преториански префект задушил Тиберий с завивките му, когато той се размърдал, а други обвиняват Калигула. Някои съвременници описват естествена смърт.",
+      "sourceQuote": "Others blame Caligula himself.",
+      "reviewFlags": []
+    },
+    {
+      "question": "При какво условие Август осиновил Тиберий за син и наследник през 4 г. сл.н.е.?",
+      "options": [
+        "Тиберий да се разведе с дъщерята на Август",
+        "Тиберий да остане в уединение на Родос",
+        "Тиберий да дели властта със Сеян",
+        "Тиберий да се откаже от командването на армии",
+        "Тиберий да осинови племенника си Германик"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#tiberius-before-power",
+      "explanation": "Август накарал Тиберий да осинови популярния си племенник Германик, който така влязъл в линията на наследяване. Август се обърнал отново към Тиберий едва след смъртта на двамата си млади внуци.",
+      "sourceQuote": "In AD 4 Augustus adopted Tiberius as son and heir, on condition that Tiberius in turn adopt his popular nephew, Germanicus.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Къде воювал Тиберий като пълководец, полагайки основите на северната граница на империята? (изберете всички верни)",
+      "options": [
+        "Германия",
+        "Дунав",
+        "Британия",
+        "Мавретания",
+        "Алпите"
+      ],
+      "correctAnswers": [
+        0,
+        1,
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#tiberius-before-power",
+      "explanation": "Тиберий воювал в Алпите, по Дунав и в Германия и се показал като един от най-добрите пълководци на Рим. Британия и Мавретания са въпроси от управлението на Калигула.",
+      "sourceQuote": "His campaigns in the Alps, along the Danube and in Germany laid the foundations of the empire's northern frontier.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво оставил Тиберий в хазната при смъртта си?",
+      "options": [
+        "Празна хазна след разточителни игри",
+        "Едва достатъчно за заплатите на гвардията",
+        "Огромни дългове от войни",
+        "Близо 300 милиона сестерции",
+        "Близо 3 милиарда сестерции"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#death-of-tiberius",
+      "explanation": "Тиберий оставил близо 3 милиарда сестерции и стабилна империя, макар един римски автор да го нарекъл „най-мрачния от хората“. Делата му били по-добри от славата му.",
+      "sourceQuote": "A Roman writer called him \"the gloomiest of men\", yet he left the treasury nearly 3 billion sesterces, a common Roman coin, and a stable, consolidated empire.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кои били принудени да се самоубият в месеците, след като Калигула оздравял? (изберете всички верни)",
+      "options": [
+        "Внукът на Тиберий, още юноша",
+        "Преторианският префект, който го бил закрилял",
+        "Бившият му тъст",
+        "Любимата му сестра",
+        "Управителя на Сирия"
+      ],
+      "correctAnswers": [
+        0,
+        1,
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#caligula-turn",
+      "explanation": "Първи загинали бившият му тъст и юношата внук на Тиберий, негов сънаследник, а в началото на 38 г. сл.н.е. ги последвал и префектът. Сестра му умряла същата година, но не била убита – той я обявил за богиня.",
+      "sourceQuote": "His former father-in-law, an eminent senator, and Tiberius's teenage grandson, Caligula's co-heir, were forced to kill themselves.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Защо трудно можем да вярваме на щедрите хвалби за Тиберий от офицер, служил под негово командване?",
+      "options": [
+        "Написал ги 180 години по-късно",
+        "Никога не се срещнал с Тиберий",
+        "Бил брат на Сеян",
+        "Калигула му платил да ги напише",
+        "Може да отразяват предпазливост, а не възхищение"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#what-historians-think",
+      "explanation": "Пишейки при управлението на императора, когото хвалел, офицерът може да е бил по-скоро предпазлив, отколкото искрен. Други извори клонят в обратна посока, като един по-късен биограф, който обожава скандалите.",
+      "sourceQuote": "An officer who served under Tiberius praised him lavishly, though whether from admiration or prudence is unclear.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как бил свален Сеян през 31 г. сл.н.е.?",
+      "options": [
+        "Рейнските легиони тръгнали срещу него към Рим",
+        "Бил отровен на пир на Капри",
+        "Синовете на Германик разобличили заговора му в съда",
+        "Собствените му гвардейци го намушкали под двореца",
+        "В Сената било прочетено писмо от Тиберий, което го изобличавало"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#sejanus",
+      "explanation": "Сеян, който явно кроял да завземе властта, бил извикан в Сената и изобличен в писмо от Тиберий. Екзекутирали го до седмица, а процесите помели всеки, свързан с него.",
+      "sourceQuote": "In AD 31, apparently plotting to seize power himself, Sejanus was summoned to the Senate, where a letter from Tiberius was read out denouncing him.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как през 39 г. сл.н.е. Калигула показал, че предишното му твърдение за архива на Тиберий с делата за измяна е лъжа?",
+      "options": [
+        "Възобновил старите дела за измяна",
+        "Прочел ги на глас в Сената",
+        "Публикувал архива на Форума",
+        "Изпратил копия в провинциите",
+        "Предал ги на преторианската гвардия"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#caligula-turn",
+      "explanation": "Калигула публично изгорил архива, твърдейки, че не го е чел, но през 39 г. сл.н.е. съживил старите дела. Казал на сенаторите, че щом го мразят, по-добре да се страхуват от него.",
+      "sourceQuote": "Caligula had publicly burned Tiberius's files on treason (*maiestas*) trials, claiming he had not read them.",
+      "reviewFlags": []
+    }
+  ]
+}

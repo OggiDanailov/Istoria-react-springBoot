@@ -1,0 +1,179 @@
+{
+  "batchName": "Empire: The Year of Four Emperors and the Flavians (AD 69-96) - Easy Batch 2",
+  "chapterName": "Empire: The Year of Four Emperors and the Flavians (AD 69-96)",
+  "difficulty": 1,
+  "batchOrder": 2,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Коя прочута сграда, официално наречена Флавиев амфитеатър, започва Веспасиан?",
+      "options": [
+        "Циркус Максимус",
+        "Колизеумът",
+        "Пантеонът",
+        "Храмът на Юпитер"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#vespasian-reign",
+      "explanation": "Веспасиан започва Флавиевия амфитеатър, по-известен като Колизеума. Той строи и Храм на мира.",
+      "sourceQuote": "He built a Temple of Peace (*Templum Pacis*) and began the Flavian Amphitheatre (*Amphitheatrum Flavium*), better known as the Colosseum.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Каква задача получава Веспасиан през 67 г.?",
+      "options": [
+        "Да води нахлуването в Британия",
+        "Да защити Дунав от даките",
+        "Да потуши въстание в Галия",
+        "Да смаже еврейското въстание в Юдея"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#vespasian-wins",
+      "explanation": "През 67 г. Веспасиан е изпратен да смаже еврейското въстание в Юдея. По-рано той е воювал при нахлуването в Британия през 43 г. сл.н.е.",
+      "sourceQuote": "Vespasian fought in the invasion of Britain in AD 43, rose to consul, Rome's highest regular office, and in 67 was sent to crush the Jewish revolt in Judaea, the Roman province around Jerusalem.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Коя провинция е управлявал Отон, наследникът на Галба?",
+      "options": [
+        "Египет, житницата на Рим",
+        "Лузитания, приблизително днешна Португалия",
+        "Галия, приблизително днешна Франция",
+        "Тараконска Испания"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#the-nobleman-emperor",
+      "explanation": "Вторият от четиримата императори от 69 г. е управлявал Лузитания, приблизително днешна Португалия. Той е бил сред първите привърженици на Галба.",
+      "sourceQuote": "The second of the four emperors of AD 69 was Otho, an ambitious nobleman and governor of Lusitania, roughly modern Portugal.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как завършва управлението на Домициан през 96 г.?",
+      "options": [
+        "Пада в битка с даките",
+        "Убит е от придворни",
+        "Умира от треска",
+        "Слага край на живота си"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#domitian",
+      "explanation": "Придворни убиват Домициан на 18 септември 96 г. и с това Флавиевата династия свършва. След това Сенатът проклина паметта му.",
+      "sourceQuote": "Executions of senators followed, and on 18 September 96 court officials assassinated him, ending the dynasty.",
+      "reviewFlags": []
+    },
+    {
+      "question": "През коя година римляните разрушават Йерусалим?",
+      "options": [
+        "43 г. сл.н.е.",
+        "70 г. сл.н.е.",
+        "66 г. сл.н.е.",
+        "79 г. сл.н.е."
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#siege-of-jerusalem",
+      "explanation": "Йерусалим е разрушен през 70 г. сл.н.е. – най-драматичният поход на Флавиевата епоха. Еврейското въстание е избухнало през 66 г.",
+      "sourceQuote": "The most dramatic campaign of the Flavian era was the destruction of Jerusalem in AD 70.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Според един античен биограф колко пиршества на ден устройва Вителий?",
+      "options": [
+        "Пет",
+        "Едно",
+        "Три",
+        "Седем"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#vitellius",
+      "explanation": "Един биограф твърди, че Вителий устройва по три пиршества на ден. Античните автори описват управлението му като оргия от пиршества.",
+      "sourceQuote": "Ancient writers describe what followed as an orgy of feasting: one biographer claims he held three banquets a day.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой род управлява Рим почти век преди кризата от 68 г. сл.н.е.?",
+      "options": [
+        "Флавиите",
+        "Юлиево-Клавдиевата династия",
+        "Северите",
+        "Антонините"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#fall-of-nero",
+      "explanation": "Юлиево-Клавдиевата династия, наследниците на първия император, управлява почти век. До 68 г. последният ѝ император е изчерпал търпението на елита с процеси за държавна измяна и заговори.",
+      "sourceQuote": "For almost a century Rome had been ruled by one family, the Julio-Claudians, heirs of the first emperor.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво е децимацията – наказанието, което Галба налага на оцелелите от легион от бивши моряци?",
+      "options": [
+        "Екзекуция на всеки десети войник",
+        "Изгнание на легиона за десет години",
+        "Намаляване на заплатата с една десета",
+        "Бичуване на десетимата висши офицери"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#galba",
+      "explanation": "Децимацията е древно наказание, при което всеки десети войник е екзекутиран. Войските на Галба вече са избили хиляди от тези моряци, превърнати в легионери, пред Рим.",
+      "sourceQuote": "The survivors suffered decimation (*decimatio*), the ancient punishment in which one soldier in ten was put to death.",
+      "reviewFlags": []
+    },
+    {
+      "question": "В кой град Веспасиан е провъзгласен за император на 1 юли 69 г.?",
+      "options": [
+        "Антиохия",
+        "Александрия",
+        "Рим",
+        "Йерусалим"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#vespasian-wins",
+      "explanation": "Веспасиан е провъзгласен за император в Александрия, голямото египетско пристанище. Египет е важен, защото снабдява Рим със зърно.",
+      "sourceQuote": "On 1 July 69 he was proclaimed emperor in Alexandria, Egypt's great port.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Къде е управител Галба през 68 г. сл.н.е., когато войските му го провъзгласяват за император?",
+      "options": [
+        "Лузитания, приблизително днешна Португалия",
+        "Тараконска Испания",
+        "Юдея, около Йерусалим",
+        "Провинцията на долния Рейн"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#fall-of-nero",
+      "explanation": "Галба управлява Тараконска Испания, най-голямата провинция в Испания. Войските му го провъзгласяват за император в началото на април 68 г.",
+      "sourceQuote": "He found one in Galba, the elderly and childless governor of Hispania Tarraconensis, the largest province in Spain.",
+      "reviewFlags": []
+    }
+  ]
+}

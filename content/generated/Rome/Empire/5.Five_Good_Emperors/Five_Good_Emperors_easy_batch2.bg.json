@@ -1,0 +1,179 @@
+{
+  "batchName": "Empire: The Five Good Emperors (AD 96-192) - Easy Batch 2",
+  "chapterName": "Empire: The Five Good Emperors (AD 96-192)",
+  "difficulty": 1,
+  "batchOrder": 2,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Какво изобразяват спиралните релефи на Траяновата колона?",
+      "options": [
+        "Войната на Траян срещу Партия",
+        "Войните на Траян в Дакия",
+        "Пътуванията на Адриан из Гърция",
+        "Основаването на Рим"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#dacian-wars",
+      "explanation": "Издигната през 113 г., Траяновата колона разказва за Дакийските войни със спирални релефи. Според преданието прахът на Траян лежи в помещение в основата ѝ.",
+      "sourceQuote": "In 113 he raised Trajan's Column, whose spiral carvings tell the story of the wars.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой град превзели войските на Траян през 106 г., с което сложили край на Дакийските войни?",
+      "options": [
+        "Бейтар",
+        "Сармизегетуза",
+        "Ктезифон",
+        "Хатра"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#dacian-wars",
+      "explanation": "Сармизегетуза, столицата на даките, паднала през 106 г. Дакийският цар избягал и се самоубил, когато римската конница го обкръжила.",
+      "sourceQuote": "In 106 the Romans cut the water pipes of the Dacian capital, Sarmizegetusa, and the city fell.",
+      "reviewFlags": []
+    },
+    {
+      "question": "През коя година избухнало голямото въстание в Юдея при Адриан?",
+      "options": [
+        "132",
+        "117",
+        "161",
+        "70"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#jewish-revolt",
+      "explanation": "Въстанието започнало през 132 г. под водачеството на Бар Кохба, който имал месиански претенции. Отначало римляните били смазани и понесли тежки загуби.",
+      "sourceQuote": "In 132 a massive uprising broke out in Judaea under Bar Kokhba, a leader with messianic claims.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Каква титла дал Сенатът на Траян – почест, която никой друг император не получил официално?",
+      "options": [
+        "„Царят философ“",
+        "„Баща на отечеството“",
+        "„Най-добрият владетел“ (optimus princeps)",
+        "„Благочестивият“ (Pius)"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#trajan-best-ruler",
+      "explanation": "Сенаторите нарекли Траян „най-добрият владетел“ и титлата се появява на монетите му от 105 г. Той бил единственият император, който я получил официално.",
+      "sourceQuote": "The senators rewarded him with the title 'the best ruler' (*optimus princeps*), which appears on coins from 105.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Защо възрастният император Нерва осиновил Траян за свой син и наследник през 97 г.?",
+      "options": [
+        "Нуждаел се от подкрепата на армията",
+        "Траян бил негов племенник и единствен роднина",
+        "Траян го спасил от убиец",
+        "Сенатът гласувал да му наложи Траян"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#nerva-adopts-trajan",
+      "explanation": "Нерва нямал авторитет сред войниците, затова осиновил популярен пълководец. Траян се прославил в боеве с германските племена по Рейн.",
+      "sourceQuote": "Nerva needed the army on his side.",
+      "reviewFlags": []
+    },
+    {
+      "question": "В коя провинция Адриан наредил през 122 г. да се построи прочутата стена?",
+      "options": [
+        "Дакия",
+        "Галия",
+        "Германия",
+        "Британия"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#hadrian-the-traveller",
+      "explanation": "Адриановият вал в Британия бил построен от обикновени войници, „за да отделя римляните от варварите“. Адриан не го видял завършен.",
+      "sourceQuote": "In Britain in 122 he ordered the wall that bears his name, built by ordinary soldiers 'to separate Romans from barbarians'.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Каква мода въвел Адриан, по-късно последвана от повечето императори след него?",
+      "options": [
+        "Бръснел главата си",
+        "Носел гъста брада",
+        "Носел златен лавров венец",
+        "Носел всеки ден пурпурна тога"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#hadrian-the-traveller",
+      "explanation": "Адриан бил първият император, изобразяван с гъста брада. Заради любовта си към Гърция като младеж получил прякора „Гърчето“.",
+      "sourceQuote": "Teased in his youth as the 'Greekling', he became the first emperor shown with a full beard, a style most later emperors copied.",
+      "reviewFlags": []
+    },
+    {
+      "question": "През кой период управлявали Рим „петимата добри императори“?",
+      "options": [
+        "180 – 235 г. сл.н.е.",
+        "96 – 180 г. сл.н.е.",
+        "14 – 68 г. сл.н.е.",
+        "69 – 96 г. сл.н.е."
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#five-good-emperors-debate",
+      "explanation": "Петимата императори от Нерва до Марк Аврелий управлявали от 96 до 180 г. Английски историк от XVIII в. причислил тяхната епоха към най-щастливите в човешката история.",
+      "sourceQuote": "The label 'Five Good Emperors' covers Nerva, Trajan, Hadrian, Antoninus Pius and Marcus Aurelius, who ruled from 96 to 180.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Срещу коя империя Траян започнал последната си война през 113 г.?",
+      "options": [
+        "Понт",
+        "Партия",
+        "Дакия",
+        "Набатея"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#parthian-war",
+      "explanation": "Последната война на Траян била срещу Партия – голямата иранска империя отвъд Ефрат. Дотогава той вече бил завладял Дакия.",
+      "sourceQuote": "In 113 Trajan, the emperor who had already conquered Dacia, launched his last war, against Parthia, the great Iranian empire beyond the river Euphrates.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Флорентински политически мислител от Ренесанса възхвалявал петимата императори като доказателство за какво?",
+      "options": [
+        "Че християнството е укрепило Рим",
+        "Че осиновяването на най-добрия е по-добро от наследяването",
+        "Че Републиката трябва да бъде възстановена",
+        "Че войниците трябва да избират императорите"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#five-good-emperors-debate",
+      "explanation": "Идеята за „петимата добри императори“ води началото си от флорентински мислител, според когото осиновяването е по-добро от наследственото предаване на властта. По-късно английски историк популяризирал израза.",
+      "sourceQuote": "It goes back to a Renaissance Florentine political thinker who praised the five from Nerva to Marcus as proof that adopting the best man beat hereditary succession.",
+      "reviewFlags": []
+    }
+  ]
+}

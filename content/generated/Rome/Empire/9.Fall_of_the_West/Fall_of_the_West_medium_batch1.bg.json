@@ -1,0 +1,189 @@
+{
+  "batchName": "Empire: The Fall of the West (AD 395-476) - Medium Batch 1",
+  "chapterName": "Empire: The Fall of the West (AD 395-476)",
+  "difficulty": 2,
+  "batchOrder": 3,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Коя идея, споделяна и от езичници, и от християни, отхвърли авторът на „За Божия град“?",
+      "options": [
+        "Че истинската вяра носи земен успех",
+        "Че краят на света е далеч",
+        "Че Рим е основан от боговете",
+        "Че варварите не могат да бъдат християни",
+        "Че императорите трябва да бъдат почитани като богове"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#who-was-to-blame",
+      "explanation": "Епископът отхвърли идеята, че истинската вяра гарантира земен успех. Той твърдеше, че истинският дом на християните е небесен град, до който никое земно бедствие не може да достигне.",
+      "sourceQuote": "He rejected the idea, shared by pagans and Christians alike, that true religion should bring worldly success.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какъв е бил някога пълководецът, който през 475 г. коронова сина си Ромул Август?",
+      "options": [
+        "Ковчежник на папата",
+        "Учител на Одоакър",
+        "Секретар на Атила",
+        "Пратеник на Аларих",
+        "Вандалски адмирал"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#the-last-emperor",
+      "explanation": "Бащата на момчето някога е бил секретар на Атила. По-късно го убиват собствените му разбунтували се наемници, след като не изпълнява обещанието си да им даде земя.",
+      "sourceQuote": "In 475 Orestes, a general who had once been Attila's secretary, drove out the reigning emperor and crowned his own young son.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво претопиха римляните, за да съберат огромния откуп, поискан от Аларих през 408 г.?",
+      "options": [
+        "Императорски монети от Изтока",
+        "Легионерски брони",
+        "Езически статуи",
+        "Бронзови църковни камбани",
+        "Вратите на сградата на Сената"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#sieges-of-rome",
+      "explanation": "За да се събере цялата сума, бяха претопени езически статуи. Градът плати около 5000 фунта злато и 30 000 фунта сребро.",
+      "sourceQuote": "Pagan statues were melted down to make up the sum.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво предимство помогна на Източната империя да оцелее въпреки слабостите, които засягаха и Запада?",
+      "options": [
+        "Липсата на варварски войници в армията",
+        "Пощадена от чума и климатични промени",
+        "Траен съюз с хуните",
+        "Много по-голям и по-богат Сенат",
+        "Географията: стените на Константинопол и морето"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#why-the-west-fell",
+      "explanation": "Стените и морето пазеха сърцето на Изтока. Западът пък трябваше да брани около 2000 км граница по Рейн и Дунав.",
+      "sourceQuote": "Its advantage was geography: Constantinople's walls and the sea shielded its heartland, while the West had some 2,000 km of Rhine and Danube frontier to guard.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво всъщност искаше Аларих при обсадите си на Рим?",
+      "options": [
+        "Земя и зърно за народа си",
+        "Връщане на всички готски роби",
+        "Власт над Константинопол",
+        "Ръката на сестрата на императора",
+        "Трона на Западната империя"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#sieges-of-rome",
+      "explanation": "Аларих искаше главно земя и зърно за народа си. Императорът в Равена отказа дори това и отвърна с обиди.",
+      "sourceQuote": "Alaric's real demands were modest: land and grain for his people.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво загадъчно направи в Гърция полувандалският главнокомандващ на Запада?",
+      "options": [
+        "Продаде на готите зърно с печалба",
+        "Два пъти притисна Аларих и два пъти го пусна",
+        "Отказа да се бие и подаде оставка",
+        "Направи Аларих свой наследник и зет",
+        "Предаде Гърция на хуните"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#alaric-and-the-general",
+      "explanation": "Той на два пъти притисна Аларих и двата пъти го пусна, а историците и до днес спорят защо. По-късно се сражава с Аларих в Италия – при Поленция и Верона.",
+      "sourceQuote": "Twice he cornered Alaric in Greece and twice let him escape, and historians still argue why.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Колко различни теории за падането на Западната империя е преброил един съвременен учен?",
+      "options": [
+        "500",
+        "1,000",
+        "52",
+        "210",
+        "12"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#why-the-west-fell",
+      "explanation": "Един учен е преброил 210 теории. Днес историците посочват чумата, климата, преселенията, гражданските войни, смазващите данъци и елит, който не желае да плаща за отбраната.",
+      "sourceQuote": "One modern scholar has counted 210 different theories.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какъв повод използва Атила, за да нападне Запада през 451 г.?",
+      "options": [
+        "Рим приютил непокорния му племенник",
+        "Претенции за трона на източния император",
+        "Неплатени заплати на наемниците му",
+        "Отмъщение за убит хунски пратеник",
+        "Претенции за сестрата на императора и половината Запад"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#aetius-and-attila",
+      "explanation": "Сестрата на императора, принудена към годеж, който мразеше, изпратила на Атила пръстена си с молба за помощ. Той я обявил за своя невеста, а за зестра поискал половината Западна империя.",
+      "sourceQuote": "Attila claimed her as his bride, with half the western empire as her dowry, and in 451 crossed the Rhine.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво се случи в битката при Адрианопол на 9 август 378 г.?",
+      "options": [
+        "Готите унищожиха източна армия и убиха императора ѝ",
+        "Аларих бе разбит от полувандалски пълководец",
+        "Готите превзеха Константинопол за седмица",
+        "Хуните прогониха готите отвъд Дунав",
+        "Римляните смазаха готските бунтовници и ги прогониха"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#a-divided-empire",
+      "explanation": "При Адрианопол, в днешна европейска Турция, разбунтуваните готи унищожиха източна армия и убиха императора ѝ. След това Рим трябваше да ги засели като съюзници.",
+      "sourceQuote": "At Adrianople, in modern European Turkey, on 9 August 378 they destroyed an eastern army and killed its emperor.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Коя известна личност отведоха готите като заложник при разграбването на Рим през 410 г.?",
+      "options": [
+        "Командира на градската стража",
+        "Сестрата на самия император",
+        "Малкия син на императора",
+        "Римския епископ",
+        "Първенеца на Сената"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#sack-of-rome-410",
+      "explanation": "Сестрата на императора беше отведена като заложник. Освен това гражданите бяха измъчвани, за да издадат скритите си ценности.",
+      "sourceQuote": "Citizens were tortured to reveal hidden valuables, and the emperor's own sister was carried off as a hostage.",
+      "reviewFlags": []
+    }
+  ]
+}

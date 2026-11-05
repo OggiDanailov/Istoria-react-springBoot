@@ -1,0 +1,190 @@
+{
+  "batchName": "Empire: Roman Art and Architecture (c. 500 BC-AD 476) - Medium Batch 1",
+  "chapterName": "Empire: Roman Art and Architecture (c. 500 BC-AD 476)",
+  "difficulty": 2,
+  "batchOrder": 3,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "По-старите историци отхвърляли римското изкуство като просто подражание. Как го виждат днешните учени?",
+      "options": [
+        "Като чисто италийска традиция",
+        "Като дело на няколко прочути майстори с подпис",
+        "Като упадък след етруската оригиналност",
+        "Като пряко копие на египетското храмово изкуство",
+        "Като творческа смес от гръцки, етруски, италийски и египетски идеи"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#greek-roots",
+      "explanation": "Днес учените виждат в римското изкуство смесица от гръцки образци и други традиции. Самите римски творци били предимно безименни занаятчии.",
+      "sourceQuote": "Modern scholars see a creative blend instead, mixing Greek models with Etruscan, native Italian and even Egyptian ideas.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Защо монетите станали едно от главните оръдия на императорската пропаганда?",
+      "options": [
+        "Носели дълги писмени речи",
+        "Погребвали ги с мъртвите",
+        "Стигали и до най-отдалечените села",
+        "Били от чисто злато",
+        "Само сенаторите можели да ги ползват"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#portraits-and-ancestors",
+      "explanation": "Ликът на императора пътувал навсякъде, където стигали парите. Бюстове на владетеля също се изпращали в кметствата на провинциалните градове.",
+      "sourceQuote": "Because coins reached even remote villages, they became one of the main tools of imperial propaganda.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как римските акведукти преминавали през долини? (изберете всички верни)",
+      "options": [
+        "По сводести мостове",
+        "С лодки, пренасящи водата",
+        "С волски каруци с вода",
+        "През тръби под налягане",
+        "С парни помпи"
+      ],
+      "correctAnswers": [
+        0,
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#aqueducts-roads-bridges",
+      "explanation": "Повечето канали минавали под земята, но долините изисквали сводести мостове или тръби под налягане. Самото течение разчитало на гравитацията.",
+      "sourceQuote": "Most channels ran underground; where valleys intervened, they crossed on arched bridges or through pressurised pipes.",
+      "reviewFlags": []
+    },
+    {
+      "question": "От кои съседи римляните заимствали арката?",
+      "options": [
+        "Етруските",
+        "Картагенците",
+        "Египтяните",
+        "Гърците",
+        "Персийците"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#concrete-revolution",
+      "explanation": "Заедно с бетона, сводовете и куполите арката позволила на римляните да строят огромни покрити пространства.",
+      "sourceQuote": "Combined with the arch, borrowed from Rome's Etruscan neighbours, and with vaults and domes, concrete made possible vast covered spaces.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Къде в римската жилищна сграда били най-евтините стаи и защо?",
+      "options": [
+        "В мазето – влажни и тъмни",
+        "По средата – притиснати между съседи",
+        "На уличното ниво – изложени на шум и крадци",
+        "Отзад – съвсем без прозорци",
+        "Най-горе – най-далеч от водата и от изхода"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#arenas-baths-apartments",
+      "explanation": "До горните етажи водата стигала най-трудно, а при пожар оттам се бягало най-трудно. Insulae били прочути с честите пожари.",
+      "sourceQuote": "These were cramped, unhealthy and prone to fire, and the cheapest rooms were at the top, furthest from water and escape.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Защо архитектът Витрувий е толкова важен за историците?",
+      "options": [
+        "Той изобретил бетона с пуцолан",
+        "Той проектирал Колизеума",
+        "Той построил първия акведукт",
+        "Той възстановил Пантеона за Адриан",
+        "Неговият наръчник е единствената оцеляла римска книга за архитектура"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#concrete-revolution",
+      "explanation": "Витрувий писал през I в. пр.н.е. Той описва повечето техники, на които се крепяло римското строителство с бетон.",
+      "sourceQuote": "Most of these techniques are described by Vitruvius, an architect of the 1st century BC whose handbook is the only Roman book on architecture to survive.",
+      "reviewFlags": []
+    },
+    {
+      "question": "С какво постижение е запомнен войникът император Траян?",
+      "options": [
+        "Разширил империята до най-големите ѝ размери",
+        "Построил първия римски акведукт",
+        "Сложил край на Римската република",
+        "Покръстил империята",
+        "Преместил столицата на изток"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#trajan-and-hadrian",
+      "explanation": "При Траян и неговия наследник Адриан Рим достигнал художествения си връх. И двамата започнали огромни строежи на терми, акведукти, дворци и храмове.",
+      "sourceQuote": "Rome reached its artistic peak under two emperors: Trajan (AD 98–117), the soldier-emperor who expanded the empire to its greatest size, and Hadrian (AD 117–138), his successor and a passionate builder.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Римските базилики били зали за търговия и съдебни дела. Защо формата им се оказала толкова влиятелна по-късно?",
+      "options": [
+        "Станали образец за амфитеатрите",
+        "Станали план за обществените бани",
+        "Вдъхновили устройството на гръцките театри",
+        "Копирали ги за императорските дворци",
+        "Християните възприели формата за първите си големи църкви"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#city-of-marble",
+      "explanation": "Базиликите стояли близо до форума, където магистратите разглеждали дела. Векове по-късно християните използвали формата за църкви.",
+      "sourceQuote": "The oldest known was built in 184 BC; centuries later, Christians adopted the shape for their first great churches.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво прави купола на Пантеона съвършена полусфера?",
+      "options": [
+        "Широк е два пъти колкото е висок",
+        "Излят е за един ден",
+        "Опира точно на осем колони",
+        "Отворът му е равен на дебелината на стената",
+        "Височината на тавана е точно равна на вътрешния радиус"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#trajan-and-hadrian",
+      "explanation": "Еднаквите височина и радиус придават на интериора съвършени пропорции. Бетонният купол е увенчан с открито „око“ в центъра.",
+      "sourceQuote": "The ceiling's height exactly equals the interior radius, creating a perfect half-sphere.",
+      "reviewFlags": []
+    },
+    {
+      "question": "С какво погребално изкуство били особено известни етруските?",
+      "options": [
+        "Златни посмъртни маски върху лицето",
+        "Рисувани дървени табла, вързани за мумии",
+        "Мраморни бюстове в домашни светилища",
+        "Бронзови статуи до вратите на гробниците",
+        "Почти естествени на ръст глинени фигури, полегнали върху капаците на саркофази"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#greek-roots",
+      "explanation": "Етруските глинени фигури на мъртвите се излягали като гости на пиршество. Етруските научили много от гръцките си търговски партньори.",
+      "sourceQuote": "One of their specialities was near life-size clay figures of the dead, reclining on their coffin lids like guests at a dinner party.",
+      "reviewFlags": []
+    }
+  ]
+}

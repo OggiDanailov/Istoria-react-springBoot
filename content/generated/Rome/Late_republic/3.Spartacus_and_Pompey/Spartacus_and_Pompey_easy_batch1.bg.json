@@ -1,0 +1,179 @@
+{
+  "batchName": "Late Republic: Spartacus and Pompey (78-63 BCE) - Easy Batch 1",
+  "chapterName": "Late Republic: Spartacus and Pompey (78-63 BCE)",
+  "difficulty": 1,
+  "batchOrder": 1,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Какво е децимацията – древното наказание, което Крас възродил?",
+      "options": [
+        "Екзекуция на всеки десети войник по жребий",
+        "Изгнание на цял легион",
+        "Бичуване на всеки десети новобранец",
+        "Намаляване на заплатата с една десета"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#crassus-takes-command",
+      "explanation": "При децимацията всеки десети войник бил избиран по жребий и екзекутиран. Хората на Крас разбрали, че той е по-опасен за тях от врага.",
+      "sourceQuote": "He revived decimation (*decimatio*), an ancient punishment in which one soldier in every ten was chosen by lot and executed.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Защо нямаме запис, със собствените им думи, на това какво са искали въстаниците на Спартак?",
+      "options": [
+        "Записите им се изгубили в морето",
+        "Никой въстаник не записал целите им",
+        "Сенатът забранил писанията им",
+        "Писмата им изгорели в Капуа"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#spartacus-aims",
+      "explanation": "Понеже въстанието се провалило, никой въстаник не записал целите му. Всичко, което знаем, идва от римски и гръцки автори, които си противоречат.",
+      "sourceQuote": "Because the revolt failed, no rebel ever wrote down what Spartacus and his followers hoped to achieve.",
+      "reviewFlags": []
+    },
+    {
+      "question": "От коя латинска дума идва името на Робските войни (servile)?",
+      "options": [
+        "Остров",
+        "Роб",
+        "Бунтовник",
+        "Ферма"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#roman-slavery",
+      "explanation": "„Servile“ идва от servus – латински за роб. Първите две Робски войни избухнали в Сицилия през 135 и 104 г. пр.н.е.",
+      "sourceQuote": "These became known as the First and Second Servile Wars, from the Latin word for slave (*servus*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "Накъде се е насочвала робската армия на Спартак през пролетта на 72 г. пр.н.е.?",
+      "options": [
+        "Кампания",
+        "Сицилия",
+        "Брундизий",
+        "Цизалпийска Галия"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#consular-defeats",
+      "explanation": "Въстаниците тръгнали на север към Цизалпийска Галия – римската провинция под Алпите. Разтревоженият Сенат изпратил срещу тях и двамата консули.",
+      "sourceQuote": "By spring 72 BC, Spartacus' slave army was heading north towards Cisalpine Gaul, the Roman province in Italy's far north below the Alps.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Във филмите въстаниците на Спартак често се борят за премахване на робството. Какво казват древните автори за това?",
+      "options": [
+        "Че целта е била римско гражданство",
+        "Че целта е била премахване на робството",
+        "Никой не казва, че това е била целта им",
+        "Че целта е била освобождаване на гладиаторите"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#spartacus-aims",
+      "explanation": "Никой древен автор не твърди, че въстаниците са искали да премахнат робството, и нищо от действията на водачите им не изглежда насочено към това. Дори не е сигурно, че Спартак е бил единственият командир.",
+      "sourceQuote": "No ancient writer says this was their goal, and nothing the leaders did seems aimed at ending slavery as such.",
+      "reviewFlags": []
+    },
+    {
+      "question": "С какво младият Помпей си спечелил прякора „младия касапин“?",
+      "options": [
+        "С клането на последователите на Спартак",
+        "С опожаряване на бунтовен град в Сицилия",
+        "С екзекуцията на пленен бивш консул",
+        "С убийството на офицерите на собствения си баща"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#young-pompey",
+      "explanation": "Докато преследвал враговете на диктатора в Сицилия и Северна Африка, Помпей екзекутирал пленен бивш консул. Латинският прякор бил adulescentulus carnifex.",
+      "sourceQuote": "His execution of a captured former consul earned him the nickname \"teenage butcher\" (*adulescentulus carnifex*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "С кое животно огорченият Лукул сравнил Помпей, защото се хранел с чуждия труд?",
+      "options": [
+        "Вълк",
+        "Лисица",
+        "Чакал",
+        "Лешояд"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#pompey-in-the-east",
+      "explanation": "Лукул нарекъл Помпей лешояд, като се подиграл и на твърдението му, че е довършил Спартак, когото всъщност победил Крас.",
+      "sourceQuote": "The bitter Lucullus, the general he replaced, called Pompey a vulture who fed on other men's work, mocking his claim to have finished off Spartacus as well.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Къде били разпънати на кръст около 6 000 пленени оцелели от армията на Спартак?",
+      "options": [
+        "По бреговете на Тибър",
+        "По Фламиниевия път",
+        "По Апиевия път",
+        "На римския Форум"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#silarius-and-aftermath",
+      "explanation": "Пленниците били разпънати по Апиевия път – големия път между Рим и Капуа, където започнало въстанието.",
+      "sourceQuote": "About 6,000 captured survivors were crucified along the Appian Way (*Via Appia*), the great road from Rome to Capua.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Според гръцкия биограф какво направил Сенатът с двамата консули от 72 г. пр.н.е.?",
+      "options": [
+        "Изпратил ги в изгнание в Гърция",
+        "Удостоил ги с триумф",
+        "Направил ги съвместни диктатори",
+        "Отзовал ги"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#consular-defeats",
+      "explanation": "Двата основни древни разказа описват похода различно, но и в двата консулите са бити от Спартак. Унищожена била само отцепила се група въстаници край планината Гаргано.",
+      "sourceQuote": "He adds that the Senate then recalled both consuls.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Към кого се обърнал Сенатът през 71 г. пр.н.е., за да победи армията на Спартак?",
+      "options": [
+        "Крас",
+        "Сула",
+        "Лукул",
+        "Помпей"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#crassus-takes-command",
+      "explanation": "Отчаяният Сенат поверил командването на Крас – невероятно богат политик. Той получил осем легиона, може би между 32 000 и 48 000 обучени войници.",
+      "sourceQuote": "By 71 BC the Senate turned in desperation to Crassus, the immensely rich politician who now took on the slave army.",
+      "reviewFlags": []
+    }
+  ]
+}

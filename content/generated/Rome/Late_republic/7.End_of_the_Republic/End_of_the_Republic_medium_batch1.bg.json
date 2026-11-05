@@ -1,0 +1,189 @@
+{
+  "batchName": "Late Republic: Antony, Octavian and the End of the Republic (44-27 BCE) - Medium Batch 1",
+  "chapterName": "Late Republic: Antony, Octavian and the End of the Republic (44-27 BCE)",
+  "difficulty": 2,
+  "batchOrder": 3,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Срещу кого Сенатът официално обявява война през 32 г. пр.н.е.?",
+      "options": [
+        "Лепид",
+        "Марк Антоний",
+        "Партия",
+        "Клеопатра",
+        "Царя на Армения"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#propaganda-war",
+      "explanation": "Войната беше официално обявена на Клеопатра, макар че всички разбираха, че е срещу Антоний.",
+      "sourceQuote": "In 32 BC the Senate declared war on Cleopatra, a war everyone understood to be against Antony.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво стана, когато триумвиратът изтече в края на 33 г. пр.н.е.?",
+      "options": [
+        "Антоний се върна в Рим да се кандидатира за консул",
+        "Двамата консули и стотици сенатори избягаха при Антоний",
+        "Октавиан беше обявен за диктатор",
+        "Лепид беше върнат от изгнание",
+        "Сенатът го поднови за пет години"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#propaganda-war",
+      "explanation": "Двамата консули и стотици сенатори напуснаха Рим и се присъединиха към Антоний – знак, че в пропагандната война той все още има силна подкрепа.",
+      "sourceQuote": "When the triumvirate expired at the end of 33 BC, both consuls and hundreds of senators fled Rome to join Antony.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кого нареди да убият Октавиан, като уж казал, че „двама Цезаровци са с един повече“?",
+      "options": [
+        "Адмирала, който държеше Сицилия",
+        "По-малкия брат на Антоний",
+        "Плененият цар на Армения",
+        "Синът на Клеопатра от Юлий Цезар",
+        "Изгнания Лепид"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#alexandria-and-augustus",
+      "explanation": "Октавиан премахна сина на Клеопатра от Юлий Цезар – съперник за наследството на Цезар. След това Египет стана римска провинция.",
+      "sourceQuote": "Octavian had her son by Julius Caesar killed, supposedly remarking that \"two Caesars are one too many\".",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как се сравняваха бойните кораби на Антоний при Акциум с тези на Октавиан?",
+      "options": [
+        "Предимно преустроени египетски търговски кораби",
+        "Равни по размер, но много по-малко на брой",
+        "Огромни и бронирани, но бавни и без достатъчно гребци",
+        "По-малки и пъргави, с опитни екипажи",
+        "По-бързи, но леко построени и без броня"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#battle-of-actium",
+      "explanation": "Галерите на Антоний бяха огромни и бронирани, но бавни. По-малките и пъргави кораби на Октавиан се стрелкаха наоколо и обсипваха палубите им със стрели и камъни.",
+      "sourceQuote": "His galleys were huge and armoured, but slow and short of rowers.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Античните автори твърдят, че Клеопатра манипулирала Антоний. Как обясняват връзката им съвременните историци?",
+      "options": [
+        "Той укрепваше полезен зависим съюзник",
+        "Сенатът му нареди да я ухажва",
+        "Трябваше му съкровищницата ѝ, за да откупи Октавиан",
+        "Тя го омагьоса с египетска магия",
+        "Надяваше се да стане цар на Египет"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#antony-and-cleopatra",
+      "explanation": "Съвременните историци виждат съюза като част от политиката на Антоний да подкрепя силни зависими владетели, а не като манипулация.",
+      "sourceQuote": "Modern historians think he was simply strengthening a useful ally, in line with his policy of backing strong client monarchs.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кои бяха *equites*, много от които загинаха при проскрипциите?",
+      "options": [
+        "Избраните народни трибуни",
+        "Освободени роби, наети като доносници",
+        "Конните офицери ветерани на Цезар",
+        "Богатото съсловие точно под сенаторите",
+        "Жреците на бога на войната Марс"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#proscriptions",
+      "explanation": "*Equites*, или конниците, бяха богатото съсловие точно под сенаторите. Според античните оценки сред жертвите на проскрипциите е имало много конници наред със сенаторите.",
+      "sourceQuote": "Ancient writers give figures ranging from about 130 senators to 300 men, plus many knights (*equites*), the wealthy class just below the senators.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Защо Антоний и Октавиан не се сражаваха, когато се изправиха един срещу друг при Брундизий през 40 г. пр.н.е.?",
+      "options": [
+        "Партия току-що беше нахлула на изток",
+        "Лепид заплаши да нападне и двамата",
+        "Войниците им отказаха да се бият помежду си",
+        "Буря разби флота на Антоний",
+        "Сенатът нареди примирие"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#perusia-and-brundisium",
+      "explanation": "Войниците отказаха да се бият помежду си и накараха водачите си да преговарят – така се стигна до Брундизийския договор.",
+      "sourceQuote": "Their soldiers refused to fight one another and pushed them to negotiate.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Според разказ за първата битка при Филипи къде е прекарал сражението Октавиан?",
+      "options": [
+        "Болен на легло в Рим",
+        "На кораб в открито море",
+        "На пост при портите на лагера",
+        "Начело на конна атака",
+        "Скрит в блато"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#battle-of-philippi",
+      "explanation": "Разказваше се, че Октавиан се крил в блато, докато една от армиите на убийците щурмувала лагера му и унищожила три от легионите му.",
+      "sourceQuote": "Octavian, it was said, spent the fight hiding in a marsh.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво твърдят някои съвременни историци за бягството на Клеопатра и Антоний от битката при Акциум?",
+      "options": [
+        "Причинено е от внезапна паника",
+        "Наложила го е промяна на вятъра",
+        "Антоний е бил тежко ранен",
+        "Клеопатра е предавала Антоний",
+        "Пробивът е бил планиран от самото начало"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#battle-of-actium",
+      "explanation": "Античните автори го наричат паника или предателство, но някои съвременни историци смятат, че пробивът е бил планът. Повечето от флота остана назад.",
+      "sourceQuote": "Some modern historians argue the breakout was the plan all along.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Каква почит получи официално Юлий Цезар през януари 42 г. пр.н.е., преди похода към Филипи?",
+      "options": [
+        "Прахът му беше пренесен в Александрия",
+        "Беше официално обявен за бог",
+        "Статуята му беше поставена сред царете",
+        "Беше обявен за Баща на отечеството",
+        "Беше препогребан в сградата на Сената"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#battle-of-philippi",
+      "explanation": "През януари 42 г. пр.н.е. Цезар беше официално обявен за бог. След това отмъстителите му тръгнаха на война срещу убийците му.",
+      "sourceQuote": "In January 42 BC Julius Caesar was officially declared a god.",
+      "reviewFlags": []
+    }
+  ]
+}

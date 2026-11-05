@@ -1,0 +1,203 @@
+{
+  "batchName": "Late Republic: Spartacus and Pompey (78-63 BCE) - Hard Batch 1",
+  "chapterName": "Late Republic: Spartacus and Pompey (78-63 BCE)",
+  "difficulty": 3,
+  "batchOrder": 5,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Как гледал Сенатът на големите робски въстания в Сицилия през 135 и 104 г. пр.н.е.?",
+      "options": [
+        "Като повод да назначи диктатор",
+        "Като причина да премахне робските имения",
+        "Като нещо, което никога не е застрашавало Републиката",
+        "Като най-голямата заплаха след Ханибал",
+        "Като заговор, подкрепян от Митридат",
+        "Като доказателство, че Сицилия трябва да бъде изоставена"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 3,
+      "textReference": "#roman-slavery",
+      "explanation": "Макар Рим да воювал с години, за да ги смаже, Сенатът никога не смятал тези въстания за истинска заплаха. До 73 г. пр.н.е. никой не си представял, че роби могат да застрашат самия Рим.",
+      "sourceQuote": "Still, the Senate (*senatus*), Rome's governing council, never saw them as a real danger to the Republic.",
+      "reviewFlags": []
+    },
+    {
+      "question": "С какво била забележителна победата на Лукул пред Тигранакерт през 69 г. пр.н.е.?",
+      "options": [
+        "Спечелил без да загуби нито един човек",
+        "Пленил Митридат в битката",
+        "Воювал само с разбунтувани войски",
+        "Помогнала му партска армия",
+        "Врагът го превъзхождал повече от два пъти",
+        "Спечелил я с една нощна атака"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 3,
+      "textReference": "#lucullus-and-mithridates",
+      "explanation": "Лукул разгромил арменската армия пред новата ѝ столица, макар врагът да го превъзхождал повече от два пъти. Армения се управлявала от зетя на Митридат.",
+      "sourceQuote": "In 69 BC Lucullus crushed the Armenian army outside its new capital, Tigranocerta, despite being outnumbered more than two to one.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Древните разкази се разминават колко от собствените си войници Крас екзекутирал чрез децимация. Какъв диапазон дават?",
+      "options": [
+        "От 50 души до може би 4 000",
+        "От 50 души до може би 6 000",
+        "От 10 души до може би 400",
+        "От 500 души до може би 40 000",
+        "От 1 000 души до може би 8 000",
+        "От 300 души до може би 3 000"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#crassus-takes-command",
+      "explanation": "Един автор казва, че загинали 50 души от едно поделение, след като офицер не изпълнил заповед и загубил битка; друг говори за до 4 000. Така или иначе, ужасът подействал и обратът настъпил.",
+      "sourceQuote": "One writer says 50 men of a single unit died after an officer disobeyed orders and lost a battle; another suggests up to 4,000 may have been killed.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво означава името Спартак и на чии имена много прилича?",
+      "options": [
+        "„Разкъсващ веригите“; тракийски царе",
+        "„Син на щита“; тракийски богове",
+        "„Прославен с копието“; гръцки герои",
+        "„Господар на конете“; скитски царе",
+        "„Син на щита“; галски вождове",
+        "„Прославен с копието“; тракийски царе"
+      ],
+      "correctAnswers": [
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#escape-from-capua",
+      "explanation": "Спартак означава „прославен с копието“ и прилича на имената на тракийски царе. Древните автори спорели дали е бил римски помощен войник, или пленник.",
+      "sourceQuote": "His name, though, closely matches those of Thracian kings and means \"renowned by the spear\".",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво направил Помпей в Йерусалимския храм през 63 г. пр.н.е.?",
+      "options": [
+        "Превърнал го в храм на Юпитер",
+        "Обявил се за негов първосвещеник",
+        "Влязъл в светилището, но не докоснал съкровищата",
+        "Ограбил съкровищата му за триумфа си",
+        "Останал отвън от уважение към жреците",
+        "Опожарил го след тримесечната обсада"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 3,
+      "textReference": "#pompey-in-the-east",
+      "explanation": "Помпей влязъл в най-святото помещение, запазено за първосвещеника, което евреите сметнали за светотатство, но не докоснал съкровищата. Върнал се в Рим с огромно богатство.",
+      "sourceQuote": "He entered the Temple's most sacred chamber, which only the high priest could enter, an act Jews saw as desecration, though he left its treasures untouched.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какви правомощия дал Габиниевият закон от 67 г. пр.н.е. на Помпей? (изберете всички верни)",
+      "options": [
+        "Командване за десет години",
+        "Власт само в Киликия",
+        "Право да назначава заместници и да харчи огромни суми",
+        "Командване за три години",
+        "Консулство без избори",
+        "Власт над провинциите на около 75 км от морето"
+      ],
+      "correctAnswers": [
+        2,
+        3,
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#war-on-the-pirates",
+      "explanation": "Законът давал тригодишно командване над всички провинции на около 75 км от Средиземно море, със заместници и огромни средства. Сенатът се боял от такава власт, но народът го приел.",
+      "sourceQuote": "It gave Pompey sweeping command for three years over every province within about 75 km (50 miles) of the Mediterranean, with the right to appoint deputies and spend huge sums.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Във версията на гръцкия биограф за 72 г. пр.н.е. кого победил Спартак край Мутина, след като бил единия консул?",
+      "options": [
+        "Претор с 3 000 опълченци",
+        "Сили, дебаркирали в Брундизий",
+        "Първите два легиона на Крас",
+        "Двамата консули заедно",
+        "Армията на управител от 10 000 души",
+        "Авангарда на Помпей от Испания"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 3,
+      "textReference": "#consular-defeats",
+      "explanation": "Според гръцкия биограф Спартак бил единия консул, а после 10 000 души на един управител край Мутина, днешна Модена. Според другия основен разказ той победил и двамата консули.",
+      "sourceQuote": "The other account, by a Greek biographer, says Spartacus defeated one consul and then a governor's army of 10,000 near Mutina, modern Modena.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой неизяснен въпрос отслабва идеята, че Спартак е планирал да избяга през Алпите?",
+      "options": [
+        "Защо изгорил алпийските проходи",
+        "Защо никога не се сражавал с консулите",
+        "Защо се обърнал на юг, след като стигнал севера",
+        "Защо първо изпратил хора в Сицилия",
+        "Защо галите отказали да се присъединят",
+        "Защо вместо това тръгнал към Рим"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 3,
+      "textReference": "#spartacus-aims",
+      "explanation": "Ако целта са били Алпите, никой извор не обяснява защо се върнал на юг, след като стигнал Северна Италия. Твърденията, че се е целял в Рим, може би отразяват римските страхове.",
+      "sourceQuote": "And if Spartacus really aimed for the Alps, nobody explains why he turned back south after reaching northern Italy.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как Помпей започнал военната си кариера през 83 г. пр.н.е., още в началото на двайсетте си години?",
+      "options": [
+        "Събрал частен легион от ветераните на баща си",
+        "Повел флот срещу киликийските пирати",
+        "Наследил консулската армия на баща си",
+        "Бил избран за военен трибун",
+        "Сенатът го изпратил да управлява Сицилия",
+        "Записал се като конен офицер при Крас"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#young-pompey",
+      "explanation": "Помпей събрал собствен легион от ветераните на баща си и се присъединил към пълководеца, който по-късно станал диктатор. След това воювал в Италия, Сицилия и Северна Африка.",
+      "sourceQuote": "In 83 BC, still in his early twenties, he raised a private legion from his father's veterans and joined the general who went on to make himself dictator of Rome.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кое от изброеното последвало разгрома на армията на Спартак? (изберете всички верни)",
+      "options": [
+        "Римляните започнали да се отнасят по-меко с робите",
+        "Войниците на Помпей избили 5 000 бегълци",
+        "Сенатът затворил гладиаторските школи",
+        "Помпей изчакал да навърши възрастта за кандидатиране",
+        "Двамата пълководци били избрани за консули за 70 г. пр.н.е.",
+        "Крас и Помпей скоро се помирили"
+      ],
+      "correctAnswers": [
+        0,
+        1,
+        4
+      ],
+      "difficulty": 3,
+      "textReference": "#silarius-and-aftermath",
+      "explanation": "Помпей избил 5 000 бегълци и заявил, че той е сложил край на войната – нещо, което Крас никога не му простил. И двамата били избрани за консули за 70 г. пр.н.е., макар Помпей по закон да бил твърде млад, а страхът накарал римляните да се отнасят по-меко с робите.",
+      "sourceQuote": "Some historians think that, out of fear, Romans afterwards began treating their slaves less harshly.",
+      "reviewFlags": []
+    }
+  ]
+}

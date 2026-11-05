@@ -1,0 +1,179 @@
+{
+  "batchName": "Late Republic: Antony, Octavian and the End of the Republic (44-27 BCE) - Easy Batch 1",
+  "chapterName": "Late Republic: Antony, Octavian and the End of the Republic (44-27 BCE)",
+  "difficulty": 1,
+  "batchOrder": 1,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Кой пазел завещанието на Антоний, преди Октавиан да го заграби?",
+      "options": [
+        "Весталките",
+        "Дворът на Клеопатра",
+        "Двамата консули",
+        "Касиерите на Сената"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#propaganda-war",
+      "explanation": "Завещанието се пазело от весталките – жриците на свещеното огнище на Рим. Един предател издал това на Октавиан, който го заграбил и прочел.",
+      "sourceQuote": "Then a defector told Octavian about Antony's will, kept by the Vestal Virgins (*virgines Vestales*), the priestesses of Rome's sacred hearth.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как наричали себе си убийците на Цезар?",
+      "options": [
+        "Триумвирите",
+        "Отмъстителите",
+        "Оптиматите",
+        "Освободителите"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#after-caesars-murder",
+      "explanation": "Убийците се представяли за освободители (liberatores), избавили Рим от диктатор. Отначало дори били помилвани.",
+      "sourceQuote": "His killers called themselves the liberators (*liberatores*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "Къде Антоний повикал Клеопатра да се срещне с него след Филипи?",
+      "options": [
+        "Киликия",
+        "Антиохия",
+        "Атина",
+        "Рим"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#antony-and-cleopatra",
+      "explanation": "Антоний повикал гръкоезичната царица на Египет в Киликия, на южния бряг на днешна Турция, и скоро двамата станали любовници.",
+      "sourceQuote": "He summoned Cleopatra, the Greek-speaking queen of Egypt, to meet him in Cilicia, on the southern coast of modern Turkey.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой бил третият, който се присъединил към Антоний и Октавиан, за да образуват триумвирата?",
+      "options": [
+        "Крас",
+        "Помпей",
+        "Агрипа",
+        "Лепид"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#forming-the-triumvirate",
+      "explanation": "Лепид, Цезаров пълководец с командване на запад, бил домакин на срещата в Северна Италия, на която тримата сключили сделката си.",
+      "sourceQuote": "Urged on by their soldiers, the two met in northern Italy under the protection of Lepidus, a Caesarian general commanding in the west.",
+      "reviewFlags": []
+    },
+    {
+      "question": "През коя година Юлий Цезар бил убит на мартенските иди?",
+      "options": [
+        "31 г. пр.н.е.",
+        "42 г. пр.н.е.",
+        "49 г. пр.н.е.",
+        "44 г. пр.н.е."
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#after-caesars-murder",
+      "explanation": "Цезар бил наръган до смърт от група сенатори на 15 март 44 г. пр.н.е. След това в Рим за кратко се удържал несигурен компромис.",
+      "sourceQuote": "On 15 March 44 BC, Julius Caesar, the dictator who had made himself master of Rome, was stabbed to death by a band of senators.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Коя прочута добродетел на Юлий Цезар триумвирите обявили за грешка?",
+      "options": [
+        "Милосърдието му (clementia)",
+        "Благочестието му към боговете",
+        "Уважението му към Сената",
+        "Щедростта му към бедните"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#proscriptions",
+      "explanation": "Триумвирите обявили, че милосърдието на Цезар е било грешка, и приложили списък с хора, които трябвало да бъдат убити.",
+      "sourceQuote": "They issued a declaration that Caesar's famous mercy (*clementia*) had been a mistake, and attached a list of men to be killed.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Край кой нос в Западна Гърция бил разположен лагерът на Антоний преди решителната морска битка през 31 г. пр.н.е.?",
+      "options": [
+        "Акциум",
+        "Коринт",
+        "Филипи",
+        "Навлох"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#battle-of-actium",
+      "explanation": "Антоний разположил лагера си при Акциум – нос в устието на залив на Йонийския бряг. Адмиралът на Октавиан прекъснал снабдяването му.",
+      "sourceQuote": "Antony gathered a huge force in western Greece, camping at Actium, a headland at the mouth of a bay on the Ionian coast.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво ставало с човек, вписан в проскрипционен списък?",
+      "options": [
+        "Губел правото си да гласува в събранията",
+        "Не можел да влиза в Сената пет години",
+        "Можел да бъде убит на място, а имотът му – конфискуван",
+        "Бил заточван на остров, но запазвал имотите си"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#proscriptions",
+      "explanation": "Всеки проскрибиран можел да бъде убит на място, а имотът му се конфискувал и продавал. Ловци на глави и доносници получавали пари за всяка смърт.",
+      "sourceQuote": "This was a proscription (*proscriptio*): anyone named could be murdered on sight, and his property was seized and sold.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Каква роднинска връзка имал Октавиан с Юлий Цезар?",
+      "options": [
+        "Бил негов зет",
+        "Бил негов внук по сестра и осиновен наследник",
+        "Бил негов по-малък брат",
+        "Бил негов племенник по сватовство"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#after-caesars-murder",
+      "explanation": "Октавиан бил внук на сестрата на Цезар и негов осиновен наследник. Използвал тази връзка, за да отклони ветераните на Цезар от Антоний.",
+      "sourceQuote": "Octavian, Caesar's great-nephew and adopted heir, lured Caesar's veterans away from Antony and raised a private army.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой бил провъзгласен за „Цар на царете“ при Александрийските дарения?",
+      "options": [
+        "Плененият цар на Армения",
+        "Самият Марк Антоний",
+        "Синът на Клеопатра от Юлий Цезар",
+        "Най-големият римски син на Антоний"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#propaganda-war",
+      "explanation": "Синът на Клеопатра от Юлий Цезар бил провъзгласен за Цар на царете – пряко предизвикателство към твърдението на Октавиан, че е единственият наследник на Цезар.",
+      "sourceQuote": "Her son by Julius Caesar was hailed \"King of Kings\", a direct challenge to Octavian's claim to be Caesar's only heir.",
+      "reviewFlags": []
+    }
+  ]
+}

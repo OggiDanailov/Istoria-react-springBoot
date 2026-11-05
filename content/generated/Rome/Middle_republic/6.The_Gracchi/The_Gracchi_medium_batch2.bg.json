@@ -1,0 +1,192 @@
+{
+  "batchName": "Middle Republic: The Gracchi (133-121 BCE) - Medium Batch 2",
+  "chapterName": "Middle Republic: The Gracchi (133-121 BCE)",
+  "difficulty": 2,
+  "batchOrder": 4,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Един от триумфите на бащата на Гракхите го почитал за какво постижение?",
+      "options": [
+        "Разрушаването на Картаген",
+        "Двадесет години мир в Испания",
+        "Прочистването на моретата от киликийски пирати",
+        "Завършването на завладяването на Македония",
+        "Потушаването на бунт в Сардиния"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#family-of-the-gracchi",
+      "explanation": "Тиберий-баща бил почетен за умиротворяването на Испания. Тази слава по-късно накарала нумантийците да се доверят на сина му.",
+      "sourceQuote": "One honoured him for bringing twenty years of peace to Spain.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как Опимий спечелил делото срещу себе си за екзекутирането на граждани без право на обжалване?",
+      "options": [
+        "Твърдял, че Гай нападнал пръв",
+        "Доказал, че убитите не са граждани",
+        "Избягал в изгнание преди присъдата",
+        "Подкупил съдебните заседатели конници",
+        "Позовал се на извънредното решение на Сената"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#turning-point",
+      "explanation": "По ирония Опимий бил съден по собствения закон на Гай. Оправдаването му придало нова легитимност на извънредните решения на Сената.",
+      "sourceQuote": "Prosecuted under Gaius's own law against executing citizens without appeal, Opimius won by pointing to the Senate's emergency decree, giving such decrees new legitimacy.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Гай Гракх бил обвинен, че е помагал на бунт през 125 г. пр.н.е. в кой латински град?",
+      "options": [
+        "Капуа",
+        "Тускулум",
+        "Пренесте",
+        "Фрегеле",
+        "Алба Фуценс"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#gaius-gracchus-rises",
+      "explanation": "Гай се оправдал и бил избран за трибун за 123 г. пр.н.е.",
+      "sourceQuote": "He was later accused of helping a revolt in 125 BC at Fregellae, a Latin town south-east of Rome, but cleared himself and was elected tribune for 123 BC.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какви ползи според Тиберий щял да донесе поземленият му закон? (изберете всички верни)",
+      "options": [
+        "Помощ за бедните",
+        "Забавяне на преселването от селата в града",
+        "Гражданство за италийските съюзници",
+        "Повече мъже, годни за военна служба",
+        "Средства за флот срещу пиратите"
+      ],
+      "correctAnswers": [
+        0,
+        1,
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#the-land-law",
+      "explanation": "Тиберий свързвал земевладението с бедността, преселването в града и набора на войници. Обвинявал и богатите земевладелци за уж намаляващото население на Рим.",
+      "sourceQuote": "He argued that this would help the poor, slow the drift of country people into the city, and increase the number of men who owned enough property to qualify for army service.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво гласял надпис, издълбан една нощ, за новия храм на Опимий?",
+      "options": [
+        "Че почита грешната богиня",
+        "Че е построен върху гробовете на Гракхите",
+        "Че е платен с пергамско злато",
+        "Че е плод на безумен раздор",
+        "Че е дело на тиранин"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#turning-point",
+      "explanation": "Надписът гласял: „Дело на безумен раздор създава храм на Конкордия“. Той показвал, че не всички приемат официалната версия за възстановеното съгласие.",
+      "sourceQuote": "One night someone carved an inscription: \"A work of mad discord produces a temple of Concord.\"",
+      "reviewFlags": []
+    },
+    {
+      "question": "Защо Сципион Назика покрил главата си с тогата, докато водел нападението срещу Тиберий?",
+      "options": [
+        "За да представи нападението като религиозен обред",
+        "За да се предпази от камъни",
+        "За да скрие лицето си от гласоподавателите",
+        "За да покаже траур за Републиката",
+        "За да покаже, че е невъоръжен"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#death-of-tiberius",
+      "explanation": "Жреците покривали главите си при жертвоприношения, затова Назика представил убийството като обред, който освобождава Рим от бъдещ тиранин.",
+      "sourceQuote": "Drawing his toga over his head, as a priest did at a sacrifice, he led a mob to the voting place, framing the attack as a religious rite to rid Rome of a would-be tyrant.",
+      "reviewFlags": []
+    },
+    {
+      "question": "След 129 г. пр.н.е. протестите на коя група забавили работата на поземлената комисия?",
+      "options": [
+        "Бирниците конници",
+        "Италийските съюзници на Рим",
+        "Жреците на римските храмове",
+        "Градската беднота в Рим",
+        "Испанските спомагателни войски"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#land-commission",
+      "explanation": "Съюзниците твърдели, че комисарите отнемат земя, която те отдавна ползвали и смятали за награда за верността си.",
+      "sourceQuote": "Rome's Italian allies, the peoples of Italy who fought alongside Rome but lacked citizenship, protested that the commissioners were seizing land they had long used.",
+      "reviewFlags": []
+    },
+    {
+      "question": "В коя област на Италия Гай Гракх раздавал земя, след като подновил поземления закон на брат си?",
+      "options": [
+        "Етрурия",
+        "Цизалпийска Галия",
+        "Самний",
+        "Кампания",
+        "Апулия"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#laws-of-gaius",
+      "explanation": "Гай раздавал земя в Апулия, в югоизточна Италия. Осъзнал, че земята в Италия не стига, той замислил и колонии.",
+      "sourceQuote": "He also renewed his brother's land law and distributed land in Apulia, the south-eastern region of Italy.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой епизод показва трайното влияние на Корнелия над сина ѝ Гай?",
+      "options": [
+        "Тя писала най-прочутите му речи",
+        "Той оттеглил един свой законопроект по нейна молба",
+        "Тя избирала колегите му трибуни",
+        "Тя го убедила да завземе Авентина",
+        "Той кръстил колонията в Картаген на нея"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#family-of-the-gracchi",
+      "explanation": "Години след като отгледала децата си, Корнелия все още можела да убеди Гай да се откаже от законопроект. След смъртта на съпруга си тя се посветила на образованието им.",
+      "sourceQuote": "Her influence lasted: years later, Gaius dropped one of his own bills because Cornelia asked him to.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво спечелили конниците от законите на Гай Гракх? (изберете всички верни)",
+      "options": [
+        "Договори за събиране на данъци в провинция Азия",
+        "Места в съдилищата срещу корумпирани управници",
+        "Земни дялове в Апулия",
+        "Автоматични места в Сената",
+        "Командване на новите колонии"
+      ],
+      "correctAnswers": [
+        0,
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#laws-of-gaius",
+      "explanation": "Гай ухажвал тези богати несенатори с данъчни договори и места в съдилищата. Непредвидената последица била, че техните данъчни дружества започнали да експлоатират провинциите.",
+      "sourceQuote": "They received tax-collecting contracts in the province of Asia and seats on the juries that tried corrupt officials.",
+      "reviewFlags": []
+    }
+  ]
+}

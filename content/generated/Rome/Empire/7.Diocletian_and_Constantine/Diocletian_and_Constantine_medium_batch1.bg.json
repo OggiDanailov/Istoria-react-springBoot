@@ -1,0 +1,190 @@
+{
+  "batchName": "Empire: Diocletian and Constantine (AD 284-337) - Medium Batch 1",
+  "chapterName": "Empire: Diocletian and Constantine (AD 284-337)",
+  "difficulty": 2,
+  "batchOrder": 3,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Максиминан приел титлата „Herculius“ – на кого?",
+      "options": [
+        "Юпитер",
+        "Марс",
+        "Херкулес",
+        "Аполон",
+        "Митра"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#tetrarchy",
+      "explanation": "Максимиан взел титлата си от Херкулес, героичния помощник на Юпитер. Имената отразявали съюза: Диоклециан като старшия Йовий, а Максимиан – като негов Херкулесов партньор.",
+      "sourceQuote": "Maximian became *Herculius*, after Jupiter's heroic helper Hercules.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Според по-късната пропаганда на Константин как той избягал от двора на Галерий?",
+      "options": [
+        "Прескочил стените по време на пир",
+        "Отплавал с лодка по Дунав",
+        "Избягал нощем, осакатявайки пощенските коне след себе си",
+        "Измъкнал се, предрешен като пътуващ търговец",
+        "Подкупил дворцовата стража със злато"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#constantine-rise",
+      "explanation": "Според пропагандата на Константин той избягал още същата нощ, в която Галерий се съгласил да го пусне, като осакатявал пощенските коне, за да не го преследват. Галерий дал съгласието си след вечер на пиене.",
+      "sourceQuote": "According to Constantine's later propaganda, he fled that night, laming the post horses behind him.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Защо изборът на новите цезари през 305 г. навредил на Тетрархията?",
+      "options": [
+        "Армията отказала да приеме нови цезари",
+        "Сенатът в Рим избрал свои кандидати",
+        "Константин и Максенций били пренебрегнати в полза на съюзници на Галерий",
+        "Максимиан отказал да се оттегли в Милано",
+        "Диоклециан посочил собствените си синове вместо доказани пълководци"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#abdication",
+      "explanation": "Тълпата очаквала Константин и Максенций да станат цезари, но вместо тях били избрани двама съюзници на Галерий. Тази обида щяла да разруши системата.",
+      "sourceQuote": "The crowd expected Constantine and Maxentius, Maximian's son, to become Caesars, but two of Galerius's allies were chosen instead, a slight that would wreck the system.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Коя област, дълго освободена от данъци, трябвало да започне да плаща при Диоклециан?",
+      "options": [
+        "Галия",
+        "Сирия",
+        "Африка",
+        "Египет",
+        "Италия"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#reforms-and-prices",
+      "explanation": "Италия дълго била пощадена от редовни данъци, но при Диоклециан и тя започнала да плаща. Парите издържали по-голяма администрация и армия от около 580 000 души.",
+      "sourceQuote": "Italy, long untaxed, now paid too.",
+      "reviewFlags": []
+    },
+    {
+      "question": "В какви единици се определял новият редовен данък на Диоклециан? (изберете всички верни)",
+      "options": [
+        "Амфори вино от всяко имение",
+        "Модии – стандартни мерки за зърно",
+        "*Capita* – броене на хората по глави",
+        "Десятъци – една десета от всяка реколта",
+        "*Iuga* – поземлени единици според почвата и културата"
+      ],
+      "correctAnswers": [
+        2,
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#reforms-and-prices",
+      "explanation": "Данъкът се определял върху хората, броени в *capita*, и върху земята, измервана в *iuga*, които зависели от почвата и културата. От 296 г. преброяване на всеки пет години поддържало данните актуални.",
+      "sourceQuote": "It was assessed on people, counted in heads (*capita*), and on land, measured in units (*iuga*) that varied with soil and crop.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как Диоклециан публично унизил Галерий, след като персите го разбили през 297 г.?",
+      "options": [
+        "Отнел му титлата цезар",
+        "Понижил го в кавалерийски офицер",
+        "Заточил го в гарнизон на Дунав",
+        "Накарал го да върви една миля пред шествието",
+        "Накарал го да плати за изгубената армия"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#wars-and-persia",
+      "explanation": "Диоклециан накарал Галерий да върви около 1,5 км пред императорското шествие в пурпурните си одежди. През 298 г. Галерий отвърнал на удара и спечелил две големи битки.",
+      "sourceQuote": "Diocletian publicly blamed him, making him walk about 1.5 km (a mile) ahead of the imperial procession in his purple robes.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво създали епископите, свикани от Константин в Никея през 325 г.?",
+      "options": [
+        "Списък на забранени езически храмове",
+        "Никейският символ на вярата",
+        "Миланският едикт",
+        "Храмът „Божи гроб“",
+        "Първата латинска Библия"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#constantine-sole-ruler",
+      "explanation": "Епископите се събрали в Никея в Северозападна Турция и създали Никейския символ на вярата – изложение на християнското вероучение. Константин финансирал и големи църкви като храма „Божи гроб“.",
+      "sourceQuote": "In 325 he summoned bishops to Nicaea, a town in north-western Turkey, where they produced the Nicene Creed, a statement of Christian belief.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Каква военна длъжност заемал Диокъл към 282 г.?",
+      "options": [
+        "Префект на Египет",
+        "Адмирал на Адриатическия флот",
+        "Управител на провинция Далмация",
+        "Командир на конницата, охраняваща императорския двор",
+        "Командир на крепостите по Дунавската граница"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#diocletian-rise",
+      "explanation": "Към 282 г. Диокъл командвал конницата, която охранявала императорския двор. Той се издигнал в армията по време на кризата на III век.",
+      "sourceQuote": "By 282 Diocles commanded the cavalry that guarded the emperor's household.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво представлявал знакът Хи-Ро на бойното знаме на Константин – лабарума?",
+      "options": [
+        "Кръст в слънчевия диск",
+        "Инициалите на Константин и баща му",
+        "Латинско съкращение на „С този знак ще победиш“",
+        "Първите две гръцки букви от името на Христос",
+        "Орел, държащ лавров венец"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#constantine-vision",
+      "explanation": "Хи-Ро съчетава първите две гръцки букви от името на Христос. Според разказа на епископа Христос казал на Константин насън да го постави на лабарума.",
+      "sourceQuote": "That night Christ told him in a dream to make a battle standard, the *labarum*, bearing the Chi-Rho, the first two Greek letters of Christ's name.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Защо през 312 г. Максенций напуснал безопасността на римските стени, за да се сражава?",
+      "options": [
+        "Повярвал на пророчество, че врагът на Рим ще загине",
+        "Константин пробил градските стени",
+        "Войниците му се разбунтували и го принудили",
+        "Сенатът му заповядал да се бие",
+        "Запасите му от храна свършили"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#milvian-bridge",
+      "explanation": "Сибилинските книги гласели, че „врагът на римляните“ ще загине на 28 октомври, и Максенций приел това като обещание. Преди това той два пъти побеждавал нашественици, като се отбранявал зад стените.",
+      "sourceQuote": "The Sibylline Books, ancient prophecies kept in Rome, said that on 28 October “the enemy of the Romans” would die, and he took this as a promise.",
+      "reviewFlags": []
+    }
+  ]
+}

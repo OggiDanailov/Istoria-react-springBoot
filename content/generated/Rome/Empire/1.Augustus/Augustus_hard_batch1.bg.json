@@ -1,0 +1,204 @@
+{
+  "batchName": "Empire: Augustus and the Principate (27 BC-AD 14) - Hard Batch 1",
+  "chapterName": "Empire: Augustus and the Principate (27 BC-AD 14)",
+  "difficulty": 3,
+  "batchOrder": 5,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Кое твърдение най-добре описва мястото на мрамора в Августов Рим?",
+      "options": [
+        "Използвал се само за храмове",
+        "Бил забранен в полза на тухлите",
+        "Пръв го донесъл в Рим Август",
+        "Станал обичаен при Юлий Цезар",
+        "Използвал се само за сградата на Сената",
+        "Използван и преди, станал обичаен едва при Август"
+      ],
+      "correctAnswers": [
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#city-of-marble",
+      "explanation": "Мраморът не бил нещо ново, но едва при Август станал обичаен строителен материал, което дава основание на прочутата му хвалба.",
+      "sourceQuote": "Marble had been used before, but only under Augustus did it become a standard building material.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Зад твърдението на Август, че управлява чрез личен престиж, кои твърди факти крепели властта му? (изберете всички верни)",
+      "options": [
+        "Мрежа от клиенти и привърженици",
+        "Избор за пожизнен диктатор",
+        "Съюз с партския цар",
+        "Правомощия, гласувани от Сената и народа",
+        "Огромно лично състояние",
+        "Наследствена царска титла"
+      ],
+      "correctAnswers": [
+        0,
+        3,
+        4
+      ],
+      "difficulty": 3,
+      "textReference": "#second-settlement",
+      "explanation": "Август твърдял, че управлява чрез auctoritas, а не чрез длъжност, но властта му се крепяла на законни правомощия, на състоянието му и на мрежата му от клиенти и привърженици.",
+      "sourceQuote": "Behind the polite words stood three hard facts: legal powers voted by Senate and people, an enormous private fortune, and a vast network of clients and supporters bound to him by favours.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как изобразил през 1939 г. един прочут британски историк партията на младия Октавиан?",
+      "options": [
+        "Като изпратени от Бога миротворци",
+        "Като нещо като престъпна банда",
+        "Като истинско партньорство със Сената",
+        "Като група неохотни владетели",
+        "Като защитници на Републиката",
+        "Като наследници на гръцката философия"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 3,
+      "textReference": "#verdicts",
+      "explanation": "Писал във време, когато фашистките диктатори заимствали римски образи, той нарекъл Октавиан „болнав и зловещ“. По-новите автори смятат, че сравненията със съвременни тирани са подвеждащи.",
+      "sourceQuote": "A famous British historian, writing in 1939 as fascist dictators borrowed Roman imagery, painted the young Octavian as \"sickly and sinister\" and his faction as something like a crime gang.",
+      "reviewFlags": []
+    },
+    {
+      "question": "До колко легиона намалил Август римската армия след гражданските войни?",
+      "options": [
+        "20",
+        "60",
+        "15",
+        "28",
+        "35",
+        "21"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 3,
+      "textReference": "#running-the-empire",
+      "explanation": "Той намалил армията от около 60 легиона на 28 – около 170 000 професионални войници, подкрепени от помощни войски от неграждани. През 6 г. сл.н.е. създал военна хазна, от която да им се плаща.",
+      "sourceQuote": "After the civil wars he cut the army from about 60 legions to 28, some 170,000 professional soldiers, backed by auxiliary units of non-citizens.",
+      "reviewFlags": []
+    },
+    {
+      "question": "На кого официално обявил война Сенатът през 32 г. пр.н.е.?",
+      "options": [
+        "На Антоний и царицата заедно",
+        "На египетската царица",
+        "На отцепника адмирал",
+        "На партския цар",
+        "Лично на Марк Антоний",
+        "На третия триумвир"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 3,
+      "textReference": "#actium",
+      "explanation": "Войната била обявена на египетската царица, а не на Антоний. Година след Акциум и Антоний, и царицата сложили край на живота си.",
+      "sourceQuote": "In 32 BC the Senate declared war on Cleopatra.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Коя поредица подрежда правилно смъртите, осуетили плановете на Август за наследник?",
+      "options": [
+        "Племенникът му, после Гай и Луций, после Агрипа",
+        "Гай и Луций, после племенникът му, после Агрипа",
+        "Племенникът му, после Агрипа, после Гай и Луций",
+        "Агрипа, после племенникът му, после Гай и Луций",
+        "Агрипа, после Гай и Луций, после племенникът му",
+        "Гай и Луций, после Агрипа, после племенникът му"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 3,
+      "textReference": "#succession-and-death",
+      "explanation": "Племенникът му умрял през 23 г. пр.н.е., Агрипа – през 12 г. пр.н.е., а Гай и Луций – през 2 и 4 г. сл.н.е. Така наследник останал Тиберий.",
+      "sourceQuote": "Augustus adopted their sons Gaius and Lucius, but Agrippa died in 12 BC, and both boys died young, in AD 2 and AD 4.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Къде и кога Антоний и Октавиан разбили армиите на убийците на Цезар?",
+      "options": [
+        "Филипи в Македония, 44 г. пр.н.е.",
+        "Мутина в Северна Италия, 43 г. пр.н.е.",
+        "Филипи в Македония, 42 г. пр.н.е.",
+        "Акциум в Западна Гърция, 31 г. пр.н.е.",
+        "Александрия в Египет, 30 г. пр.н.е.",
+        "Фарсала в Тесалия, 48 г. пр.н.е."
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 3,
+      "textReference": "#caesars-heir",
+      "explanation": "Убийците били разгромени при Филипи в Северна Гърция през 42 г. пр.н.е. След това победителите си поделили римския свят.",
+      "sourceQuote": "In 42 BC Antony and Octavian crushed the assassins' armies at Philippi in Macedonia, in northern Greece.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кои качества на Август възхвалявал златният щит в сградата на Сената? (изберете всички верни)",
+      "options": [
+        "Красноречие",
+        "Храброст",
+        "Милосърдие",
+        "Богатство",
+        "Благочестие",
+        "Справедливост"
+      ],
+      "correctAnswers": [
+        1,
+        2,
+        4,
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#first-settlement",
+      "explanation": "Август отказал корона и скиптър, но приел златен щит, който възхвалявал неговата храброст, благочестие, милосърдие и справедливост.",
+      "sourceQuote": "He refused a crown or sceptre, but a golden shield in the Senate house praised his courage, piety, mercy and justice.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво хванало в капан оцелелите римляни от засадата край Калкризе през 9 г. сл.н.е.?",
+      "options": [
+        "Тесен проход между хълм и блато, зад скрит вал",
+        "Наводнен речен брод, пазен от стрелци",
+        "Планински проход, затрупан с отсечени дървета",
+        "Горяща гора около лагера им",
+        "Римска крепост, предадена отвътре",
+        "Клисура, затворена от германска конница"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#teutoburg-forest",
+      "explanation": "Проходът бил широк едва около 100 метра и се намирал зад скрит земен вал. Римската колона се била проточила на 15 до 20 км.",
+      "sourceQuote": "Near Kalkriese, in northern Germany, the survivors were trapped in a gap only about 100 metres (330 feet) wide between a hill and a bog, behind a hidden earthen wall.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Колко пъти до 13 г. сл.н.е. войските на Август го провъзгласили за победоносен пълководец (imperator)?",
+      "options": [
+        "30",
+        "21",
+        "15",
+        "28",
+        "7",
+        "12"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 3,
+      "textReference": "#expansion-and-peace",
+      "explanation": "Провъзгласили го за imperator 21 пъти. Август наричал своя мир мир, „роден от победи“.",
+      "sourceQuote": "By AD 13 his troops had hailed him as victorious general (*imperator*) 21 times.",
+      "reviewFlags": []
+    }
+  ]
+}

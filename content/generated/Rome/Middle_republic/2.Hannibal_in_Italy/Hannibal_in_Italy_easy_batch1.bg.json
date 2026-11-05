@@ -1,0 +1,179 @@
+{
+  "batchName": "Middle Republic: Hannibal in Italy (241-216 BCE) - Easy Batch 1",
+  "chapterName": "Middle Republic: Hannibal in Italy (241-216 BCE)",
+  "difficulty": 1,
+  "batchOrder": 1,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "През 238 г. пр.н.е. Рим нарушил договора си с Картаген, за да завземе кои острови?",
+      "options": [
+        "Крит и Кипър",
+        "Сардиния и Корсика",
+        "Балеарските острови",
+        "Сицилия и Малта"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#after-the-first-war",
+      "explanation": "Рим завзел картагенските Сардиния и Корсика, докато Картаген бил погълнат от Безпощадната война. Мнозина картагенци били дълбоко огорчени от това.",
+      "sourceQuote": "In 238 BC it broke the treaty and seized Carthaginian Sardinia and Corsica.",
+      "reviewFlags": []
+    },
+    {
+      "question": "При чие управление е писал историкът Ливий?",
+      "options": [
+        "Диктатора Сула",
+        "Император Август",
+        "Император Нерон",
+        "Македонския цар Филип V"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#sources-and-blame",
+      "explanation": "Ливий писал в Рим при Август и разчитал силно на Полибий. Той бил открито патриотичен, а описанията му на битки често са неточни.",
+      "sourceQuote": "Livy, writing in Rome under the emperor Augustus, relied heavily on Polybius but was openly patriotic.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво завзел Ханибал при Кана през пролетта на 216 г. пр.н.е., с което принудил Рим да събере огромна армия?",
+      "options": [
+        "Свещен храм на Юпитер",
+        "Голям римски склад с провизии",
+        "Военната хазна на консулите",
+        "Римски флот на котва"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#battle-of-cannae",
+      "explanation": "Ханибал превзел голям римски склад с провизии при Кана, селище в Апулия. Сенатът отговорил с най-голямата армия, която Рим някога бил събирал.",
+      "sourceQuote": "In spring 216 BC Hannibal seized a large Roman supply depot at Cannae, a village on the plain of Apulia in south-east Italy.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как отговорил римският Сенат на мирното предложение на Ханибал след Кана?",
+      "options": [
+        "Отказал преговори и забранил думата „мир“",
+        "Поискал едногодишно примирие",
+        "Приел и отстъпил Сицилия",
+        "Изпратил Варон да договори условия"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#after-cannae",
+      "explanation": "Сенатът отказал да преговаря, забранил думата „мир“ и дори въоръжил роби. Рим продължил да воюва още четиринадесет години.",
+      "sourceQuote": "The Senate refused to talk, banned the word 'peace' and enlisted even slaves.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Колко време продължило преминаването на Ханибал през Алпите?",
+      "options": [
+        "3 дни",
+        "6 седмици",
+        "15 дни",
+        "4 месеца"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#crossing-the-alps",
+      "explanation": "Ханибал преминал Алпите за 15 дни в късна есен. По пътя хората му се сблъскали със засади, падащи скали и лют студ.",
+      "sourceQuote": "Hannibal reached the Alps in late autumn and crossed them in 15 days.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какъв подигравателен прякор дали римляните на Фабий Максим?",
+      "options": [
+        "Скъперника",
+        "Протакащия",
+        "Страхливеца",
+        "Старата лисица"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#fabius-the-delayer",
+      "explanation": "Подигравали Фабий като Протакащия (Cunctator), защото отказвал да влезе в решително сражение. По-късно събитията доказали правотата на предпазливата му стратегия.",
+      "sourceQuote": "Soldiers, senators and ordinary citizens mocked him as the Delayer (*Cunctator*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво означавал прякорът „Барка“ на бащата на Ханибал?",
+      "options": [
+        "Лъв",
+        "Чук",
+        "Гръм",
+        "Мълния"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#barcas-in-spain",
+      "explanation": "„Барка“ означавал „мълния“. Бащата на Ханибал смазал бунта на наемниците през 237 г. пр.н.е., а после повел армията си към Испания.",
+      "sourceQuote": "Hannibal's father, a Carthaginian general nicknamed Barca, meaning 'lightning', crushed the mercenary revolt in 237 BC.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Къде се водела основно Първата пуническа война между Рим и Картаген?",
+      "options": [
+        "По крайбрежието на Галия",
+        "В Сицилия и около нея",
+        "В хълмовете на Тунис",
+        "В Южна Испания"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#after-the-first-war",
+      "explanation": "Първата пуническа война се водела основно в Сицилия и около нея, а загубата ѝ струвала на Картаген сицилийските му владения. Тя била и най-голямата морска война в древния свят.",
+      "sourceQuote": "The First Punic War, fought mostly on and around Sicily, had been the longest continuous conflict and the greatest naval war of the ancient world.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Според Полибий какъв алпийски проход избрал Ханибал?",
+      "options": [
+        "Най-южния проход",
+        "Най-краткия проход",
+        "Най-ниския проход",
+        "Най-високия проход"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#which-pass",
+      "explanation": "Полибий казва, че Ханибал минал през най-високия проход. Това подкрепя Кол дьо ла Траверсет – най-високия проход в Западните Алпи.",
+      "sourceQuote": "Polybius wrote that Hannibal took the highest pass, and the Traversette is the highest in the western Alps.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Защо Ханибал нахлул в Италия по суша, а не по море?",
+      "options": [
+        "За да събере гръцки съюзници в Масалия",
+        "Сенатът бил затворил пристанищата на Италия",
+        "За да избегне римското господство по море",
+        "Картаген нямал вече бойни кораби"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#crossing-the-alps",
+      "explanation": "Рим владеел морето, затова Ханибал тръгнал по суша. Рим бил планирал да воюва в Испания и Африка.",
+      "sourceQuote": "Hannibal instead carried the war to Italy by land, avoiding Rome's control of the sea.",
+      "reviewFlags": []
+    }
+  ]
+}

@@ -1,0 +1,179 @@
+{
+  "batchName": "Empire: The Fall of the West (AD 395-476) - Easy Batch 1",
+  "chapterName": "Empire: The Fall of the West (AD 395-476)",
+  "difficulty": 1,
+  "batchOrder": 1,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Защо от 376 г. огромен брой готи живеели в пределите на Римската империя?",
+      "options": [
+        "Бягали от хуните",
+        "Били наети като морски пехотинци",
+        "Следвали римски търговци",
+        "Били поканени да обработват земя в Галия"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#a-divided-empire",
+      "explanation": "Готите били бежанци, които бягали от хуните – номади конници от Евразийската степ. Корумпирани чиновници ги експлоатирали и те се разбунтували.",
+      "sourceQuote": "Since 376, huge numbers of Goths, a Germanic people fleeing the Huns, had been living inside the empire.",
+      "reviewFlags": []
+    },
+    {
+      "question": "През коя порта влезли готите в Рим на 24 август 410 г.?",
+      "options": [
+        "Апиевата порта",
+        "Остийската порта",
+        "Фламиниевата порта",
+        "Саларийската порта"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#sack-of-rome-410",
+      "explanation": "Готите влезли през Саларийската порта. Едни твърдели, че са я отворили предатели, други – че гладът.",
+      "sourceQuote": "On 24 August 410 the Goths entered Rome through the Salarian Gate.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как се казва прочутият труд на английски историк, който започнал да излиза през 1776 г.?",
+      "options": [
+        "„Животописи на дванадесетте цезари“",
+        "„За Божия град“",
+        "„Анали на императорски Рим“",
+        "„История на упадъка и падението на Римската империя“"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#why-the-west-fell",
+      "explanation": "„История на упадъка и падението на Римската империя“ започнала да излиза през 1776 г. Авторът ѝ винял варварите, християните и собствените раздори на римляните.",
+      "sourceQuote": "Edward Gibbon, an English historian whose Decline and Fall of the Roman Empire began appearing in 1776, blamed barbarians, Christians and the Romans' own quarrels.",
+      "reviewFlags": []
+    },
+    {
+      "question": "С какъв термин днес много учени назовават дългата промяна, при която римската култура надживяла римската власт?",
+      "options": [
+        "Византийската епоха",
+        "Късната античност",
+        "Тъмните векове",
+        "Епохата на Великото преселение на народите"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#why-the-west-fell",
+      "explanation": "Много учени говорят за „Късната античност“, за да подчертаят приемствеността, а не внезапния срив. Те поставят под въпрос и удобната крайна дата 476 г.",
+      "sourceQuote": "Many scholars now speak of “late antiquity”, a long transformation in which Roman culture lived on after Roman power ended.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кое голямо пристанище превзели вандалите през 439 г. и го направили своя столица?",
+      "options": [
+        "Кирена",
+        "Александрия",
+        "Картаген",
+        "Танжер"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#kingdoms-inside-the-empire",
+      "explanation": "Вандалите превзели Картаген в днешен Тунис. Направили го столица на независимо царство с мощен флот.",
+      "sourceQuote": "In 439 they captured Carthage (*Carthago*), the great port in modern Tunisia, and made it the capital of an independent kingdom with a powerful navy.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой принудил Ромул Августул да се откаже от трона на 4 септември 476 г.?",
+      "options": [
+        "Аеций",
+        "Аларих",
+        "Одоакър",
+        "Атила"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#the-last-emperor",
+      "explanation": "Одоакър, германски военачалник, свалил последния западен император. Той предвождал наемници, които се разбунтували, когато им отказали обещаната земя.",
+      "sourceQuote": "On 4 September 476 Odoacer forced Romulus Augustulus to give up the throne.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как загинал великият пълководец Аеций през 454 г.?",
+      "options": [
+        "Умрял от треска в морето",
+        "Бил промушен от самия император",
+        "Бил линчуван от римската тълпа",
+        "Паднал в битка с хуните"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#murder-and-vandal-sack",
+      "explanation": "Западният император убил Аеций със собствените си ръце. Някои историци смятат, че императорът искал да управлява сам, а не чрез могъщ управител.",
+      "sourceQuote": "In 454 the western emperor, Valentinian III, stabbed his great general Aetius to death with his own hands.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как Аларих довел Рим до ръба на глада в края на 408 г.?",
+      "options": [
+        "Спрял корабите със зърно по Тибър",
+        "Превзел пристанището на Картаген",
+        "Изгорил фермите в Кампания",
+        "Отровил акведуктите на града"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#sieges-of-rome",
+      "explanation": "Аларих прекъснал пътя на корабите със зърно нагоре по Тибър. Дажбите спаднали до една трета, а по улиците лежали непогребани трупове.",
+      "sourceQuote": "In late 408 Alaric marched on it unopposed and blocked the grain ships coming up the Tiber.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Плячкосването през 410 г. било първото падане на Рим в ръцете на чужд враг от около колко време?",
+      "options": [
+        "Около 500 години",
+        "Над 1000 години",
+        "Около 300 години",
+        "Почти 800 години"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#sack-of-rome-410",
+      "explanation": "Рим не бил падал в ръцете на чужд враг почти 800 години. Готите плячкосвали града три дни.",
+      "sourceQuote": "It was the first time in almost 800 years that Rome had fallen to a foreign enemy.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво означавал подигравателният прякор „Augustulus“?",
+      "options": [
+        "Момчето на Рим",
+        "Лъжливият Август",
+        "Последният Август",
+        "Малкият Август"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#the-last-emperor",
+      "explanation": "Съперниците се подигравали на момчето император, наричайки го „малкия Август“. Истинското му име, Ромул Август, напомняло за основателя на Рим и за първия му император.",
+      "sourceQuote": "The boy was named Romulus Augustus, after Rome's founder and its first emperor, but rivals mocked him as Romulus Augustulus, “little Augustus”.",
+      "reviewFlags": []
+    }
+  ]
+}

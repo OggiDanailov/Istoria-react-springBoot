@@ -1,0 +1,203 @@
+{
+  "batchName": "Empire: Roman Art and Architecture (c. 500 BC-AD 476) - Hard Batch 1",
+  "chapterName": "Empire: Roman Art and Architecture (c. 500 BC-AD 476)",
+  "difficulty": 3,
+  "batchOrder": 5,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Как се променил стилът на римския портрет от Републиката до управлението на Август?",
+      "options": [
+        "От египетски профили към изображения анфас",
+        "От идеализирани гръцки образи към груб, набръчкан реализъм",
+        "От статуи в цял ръст само към портрети на монети",
+        "От рисувани табла към мраморни бюстове",
+        "От глинени маски към бронзови глави",
+        "От груб реализъм с недостатъците към идеализирани образи в гръцки дух"
+      ],
+      "correctAnswers": [
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#portraits-and-ancestors",
+      "explanation": "При Републиката показването на телесните недостатъци било знак за добър характер. Август предпочитал силно идеализирани портрети в гръцки маниер.",
+      "sourceQuote": "Augustus, Rome's first emperor, preferred portraits that were Greek in flavour and highly idealised.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой вид римски стенопис по-късно подражавали ренесансовите художници?",
+      "options": [
+        "Изгледи на градски сгради",
+        "Сцени от джунглата в тесни жилища",
+        "Сцени от „Одисея“",
+        "Нарисувани фалшиви прозорци",
+        "Натюрморти с плодове, морски дарове и стъклени съдове с вода",
+        "Еротични сцени"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 3,
+      "textReference": "#painted-walls",
+      "explanation": "Римските стени показвали всекидневието, животни, митове и натюрморти. Натюрмортите привлекли вниманието на ренесансовите художници.",
+      "sourceQuote": "The walls show everyday life, animals, myths, erotic scenes and still lifes of fruit, seafood and glass jars of water, later imitated by Renaissance artists.",
+      "reviewFlags": []
+    },
+    {
+      "question": "По кои пътища гръцкото изкуство заляло Рим, докато армиите му покорявали гръцкия свят? (изберете всички верни)",
+      "options": [
+        "Военна плячка",
+        "Награди от Олимпийските игри",
+        "Дарове от египетски фараони",
+        "Данък от Картаген",
+        "Търговия",
+        "Изнудване"
+      ],
+      "correctAnswers": [
+        0,
+        4,
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#greek-roots",
+      "explanation": "Гръцкото изкуство пристигало като плячка, чрез изнудване или търговия. Римските храмове често били украсени с гръцки статуи „втора ръка“.",
+      "sourceQuote": "As Rome's armies conquered the Greek world, Greek art flooded into the city as war booty, extortion or trade.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кои черти отличавали новия стил на римската скулптура, появил се през III в. сл.н.е.? (изберете всички верни)",
+      "options": [
+        "Идеализирана гръцка красота",
+        "Големи очи",
+        "Плавно, естествено движение",
+        "Строго фронтални пози",
+        "Изящни, реалистични пропорции",
+        "Набити фигури"
+      ],
+      "correctAnswers": [
+        1,
+        3,
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#late-roman-style",
+      "explanation": "Късноримските фигури подчертавали властта, а не красотата. Историците и днес спорят защо художниците изоставили класическия стил.",
+      "sourceQuote": "Figures became stumpy, large-eyed and rigidly frontal, stressing power over beauty.",
+      "reviewFlags": []
+    },
+    {
+      "question": "В началото на IV в. сл.н.е. как се съотнасял броят на частните къщи в Рим с този на жилищните блокове?",
+      "options": [
+        "Около 45 000 градски къщи срещу 1800 блока",
+        "Около 1800 градски къщи срещу близо 45 000 блока",
+        "Около 500 градски къщи срещу 10 000 блока",
+        "Приблизително равен брой",
+        "Около 18 000 градски къщи срещу 4500 блока",
+        "Около 1800 градски къщи срещу 4500 блока"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 3,
+      "textReference": "#arenas-baths-apartments",
+      "explanation": "В Рим имало 1781 domus срещу 44 850 insulae. Повечето граждани живеели в тези пренаселени блокове до пет етажа.",
+      "sourceQuote": "In the early 4th century AD, Rome had 1,781 private town houses (*domus*) against 44,850 apartment blocks.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какъв рекорд държал Траяновият мост на Дунав?",
+      "options": [
+        "Първият мост изцяло от бетон",
+        "Най-високият мост в древния свят",
+        "Най-дългият сводест мост за хиляда години",
+        "Най-дългият сводест мост за пет века",
+        "Първият мост над Рейн",
+        "Най-дългият сводест мост за един век"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 3,
+      "textReference": "#aqueducts-roads-bridges",
+      "explanation": "Траяновият мост на Дунав останал най-дългият сводест мост в продължение на хиляда години. До Индустриалната революция само римляните строели мостове с бетон.",
+      "sourceQuote": "The bridge of Trajan, the soldier-emperor, over the Danube was the longest arch bridge for a thousand years.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Защо Траяновата колона е особено ценна за историците?",
+      "options": [
+        "Назовава всеки скулптор, който я е изваял",
+        "Описва основаването на Константинопол",
+        "Показва най-ранната известна карта на Рим",
+        "Изброява законите на императора в надписи",
+        "Описва истински походи – безценен извор за римското въоръжение",
+        "Преразказва гръцки митове за Троянската война"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 3,
+      "textReference": "#trajan-and-hadrian",
+      "explanation": "Докато гръцките скулптори разказвали за войната чрез мита, римляните предпочитали документа. Над 2500 фигури маршируват, строят и се сражават по колоната като в древен документален филм.",
+      "sourceQuote": "Where Greek sculptors told of war through myth, Romans preferred record, and the column is a priceless source on Roman armour.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Къде е най-ранната известна употреба на бетон от римляните, някъде след 273 г. пр.н.е.?",
+      "options": [
+        "Остия",
+        "Капуа",
+        "Тарквиния",
+        "Пестум",
+        "Коза",
+        "Помпей"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 3,
+      "textReference": "#concrete-revolution",
+      "explanation": "Коза била римска колония на брега северно от Рим. Бетонът там се изливал в дървени кофражи за многократна употреба и след това се облицовал.",
+      "sourceQuote": "The earliest known Roman use was at Cosa, a colony on the coast north of Rome, some time after 273 BC.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кога куполи с размера на Пантеона най-сетне били надминати?",
+      "options": [
+        "С появата на стоманените конструкции в края на XIX в.",
+        "С издигането на готическите катедрали през Средновековието",
+        "До един век, при Константин",
+        "През византийската епоха в Константинопол",
+        "През XX в. със стоманобетона",
+        "През Ренесанса, с тухлени куполи"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#trajan-and-hadrian",
+      "explanation": "Бетонният купол на Пантеона държал рекорда до появата на стоманените конструкции в края на XIX в. Той остава най-добре запазеният храм от древния свят.",
+      "sourceQuote": "Domes of this size were not surpassed until steel frames arrived in the late 19th century.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кога е построена най-старата известна римска базилика?",
+      "options": [
+        "273 г. пр.н.е.",
+        "212 г. пр.н.е.",
+        "146 г. пр.н.е.",
+        "184 г. пр.н.е.",
+        "509 г. пр.н.е.",
+        "27 г. пр.н.е."
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 3,
+      "textReference": "#city-of-marble",
+      "explanation": "Най-старата известна базилика датира от 184 г. пр.н.е. Базиликите били зали, където се въртели сделки и магистратите разглеждали дела.",
+      "sourceQuote": "The oldest known was built in 184 BC; centuries later, Christians adopted the shape for their first great churches.",
+      "reviewFlags": []
+    }
+  ]
+}

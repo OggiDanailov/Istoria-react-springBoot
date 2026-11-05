@@ -1,0 +1,193 @@
+{
+  "batchName": "Empire: The Year of Four Emperors and the Flavians (AD 69-96) - Medium Batch 2",
+  "chapterName": "Empire: The Year of Four Emperors and the Flavians (AD 69-96)",
+  "difficulty": 2,
+  "batchOrder": 4,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Какви злодеяния приписват античните извори на Вителий? (изберете всички верни)",
+      "options": [
+        "Въвеждане на данък върху урината от обществените тоалетни",
+        "Примамване на съперници в двореца с обещания за власт и убиването им",
+        "Изтезаване и убиване на лихвари, които искали да им се върнат парите",
+        "Довеждане на хазната почти до фалит с пиршества и шествия",
+        "Заповед за децимация на легион от бивши моряци"
+      ],
+      "correctAnswers": [
+        1,
+        2,
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#vitellius",
+      "explanation": "Пиршествата и шествията на Вителий почти разорили хазната. Според изворите той изтезавал и убивал лихвари и примамвал съперници на смърт. Данъкът върху урината бил на Веспасиан, а децимацията – на Галба.",
+      "sourceQuote": "Feasts and parades drove the treasury close to bankruptcy, and he reportedly had moneylenders who asked for repayment tortured and killed.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Срещу кого се хвърлили войниците на Галба пред Рим, избивайки хиляди?",
+      "options": [
+        "Галски воини, още верни на бунтовния управител",
+        "Нов легион от бивши моряци, които искали потвърждение на статута си",
+        "Легионери от Рейн, отказали да му се закълнат",
+        "Граждани, вдигнали бунт заради недостиг на зърно",
+        "Преторианци, които искали обещаната награда"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#galba",
+      "explanation": "Войниците на Галба нападнали нов легион от бивши моряци, които настоявали той да потвърди статута им. Това е една от причините историк да нарече пътуването му „дълъг и кървав поход“.",
+      "sourceQuote": "He killed officials who had opposed him, and outside the city his troops charged a new legion of former sailors who demanded he confirm their status, killing thousands.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Защо Веспасиан започнал пропагандна кампания, представяща управлението му като воля на боговете?",
+      "options": [
+        "Обвинявали го за опожаряването на храма на Юпитер",
+        "Сенатът го бил обявил за враг на държавата",
+        "Не можел да претендира за произход от първите императори",
+        "Бил загубил втората битка при Бедриакум",
+        "Не бил римски гражданин по рождение"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#vespasian-reign",
+      "explanation": "Тъй като не можел да претендира за произход от първите императори, Веспасиан се представял като избраник на боговете и носител на мир. Построил дори Храм на мира.",
+      "sourceQuote": "Unable to claim descent from the first emperors, Vespasian launched a propaganda campaign presenting his rule as willed by the gods and himself as a bringer of peace.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какъв ранг имал дядото на Веспасиан?",
+      "options": [
+        "Сенатор",
+        "Центурион",
+        "Командир на преторианците",
+        "Консул",
+        "Управител на провинция"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#vespasian-wins",
+      "explanation": "Дядото на Веспасиан бил центурион – офицер, командващ около осемдесет души. Родът се издигнал от неизвестността за четири поколения.",
+      "sourceQuote": "His grandfather had been a centurion, an officer commanding about eighty men.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как помни Тит еврейската традиция?",
+      "options": [
+        "Като спасител на Храма",
+        "Като един от най-добрите императори",
+        "Като „Тит Строителя“",
+        "Като „Тит Нечестивия“",
+        "Като „Тит Милостивия“"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#titus",
+      "explanation": "Еврейската традиция го нарича „Тит Нечестивия“. Римските автори, напротив, го помнели като един от най-добрите императори.",
+      "sourceQuote": "Despite earlier worries about his character, Roman writers remembered him as one of the best emperors, while Jewish tradition calls him \"Titus the Wicked\".",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как реагирал Галба, когато легионите от Рейн провъзгласили Вителий за император?",
+      "options": [
+        "Обявил управителя на Лузитания за свой наследник",
+        "Предложил да подели властта с Вителий",
+        "Най-сетне платил на гвардията обещаната награда",
+        "Осиновил млад сенатор за свой наследник",
+        "Тръгнал на север срещу легионите от Рейн"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#galba",
+      "explanation": "В паниката си Галба осиновил млад сенатор за свой наследник. Това смъртно обидило един амбициозен аристократ, който очаквал тази чест.",
+      "sourceQuote": "Panicking, Galba adopted a young senator as his heir.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как реагирал Тит на изригването на Везувий? (изберете всички верни)",
+      "options": [
+        "Посетил пострадалия район два пъти",
+        "Преселил оцелелите в нови градове в Галия",
+        "Наложил нов данък на Кампания за възстановяването",
+        "Отпуснал големи суми от хазната",
+        "Назначил двама бивши консули да ръководят помощта"
+      ],
+      "correctAnswers": [
+        0,
+        3,
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#titus",
+      "explanation": "Тит поверил помощта на двама бивши консули, отпуснал големи суми от хазната и посетил района два пъти. Платил възстановяването и след големия пожар в Рим през 80 г.",
+      "sourceQuote": "Titus appointed two former consuls to lead the relief effort, gave large sums from the treasury and visited twice.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво предложил Отон на Вителий в опит да сключи мир?",
+      "options": [
+        "Да делят консулството",
+        "Да се ожени за дъщерята на Вителий",
+        "Да му даде провинция Египет",
+        "Да му предаде преторианската гвардия",
+        "Да осинови Вителий за наследник"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#the-nobleman-emperor",
+      "explanation": "Той предложил мир и дори да се ожени за дъщерята на Вителий. Било твърде късно – половината армия от Рейн вече вървяла към Италия.",
+      "sourceQuote": "Otho offered peace, even offering to marry Vitellius's daughter, but it was too late.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Защо сенаторите посрещнали с облекчение възкачването на Отон през януари 69 г.?",
+      "options": [
+        "Бил победил легионите от Рейн в битка",
+        "Обещал да възстанови старата Република",
+        "Бил прочут пълководец от Юдея",
+        "Бил алчен, но без славата на жесток човек",
+        "Произхождал от стария Юлиево-Клавдиев род"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#the-nobleman-emperor",
+      "explanation": "Бил алчен, но не бил известен с жестокост, което успокоило Сената. Бързо спечелил популярност, раздавайки облаги.",
+      "sourceQuote": "He was greedy but had no record of cruelty, and he quickly won popularity by handing out favours.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Защо денят, в който Вителий поел поста върховен жрец, се смятал за зловещ?",
+      "options": [
+        "Бил годишнината от гибелната битка при Алия",
+        "Станало по време на слънчево затъмнение",
+        "Бил годишнината от убийството на Цезар",
+        "Бил денят, в който изгорял храмът на Юпитер",
+        "Съвпаднал с първата битка при Бедриакум"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#vitellius",
+      "explanation": "Той станал Pontifex Maximus на годишнината от битката при Алия – поражение от 390 г. пр.н.е. Римляните смятали този ден за нещастен.",
+      "sourceQuote": "He took the office of chief priest (*Pontifex Maximus*) on the anniversary of the Battle of the Allia, a disaster of 390 BC that Romans considered an unlucky day.",
+      "reviewFlags": []
+    }
+  ]
+}

@@ -1,0 +1,179 @@
+{
+  "batchName": "Late Republic: The Social War and Sulla (91-78 BCE) - Easy Batch 1",
+  "chapterName": "Late Republic: The Social War and Sulla (91-78 BCE)",
+  "difficulty": 1,
+  "batchOrder": 1,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Кои са самнитите?",
+      "options": [
+        "Най-старите съюзници на Рим, живеещи точно на юг от града",
+        "Гръцка колония в Неаполитанския залив, вярна на Рим",
+        "Корав планински народ от Южна и Централна Италия, дълго воювал с Рим",
+        "Галско племе, заселено в долината на По на север"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#rome-and-its-allies",
+      "explanation": "Самнитите били издръжлив планински народ, воювал с Рим в продължение на поколения. Те били сред последните бунтовници, които продължили да се бият в Съюзническата война.",
+      "sourceQuote": "Among them were the Samnites, a tough mountain people of south-central Italy who had fought Rome for generations.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой гръцки град Сула превзел с щурм и разграбил през 86 г. пр.н.е., защото застанал на страната на Митридат?",
+      "options": [
+        "Спарта",
+        "Атина",
+        "Тива",
+        "Коринт"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#east-and-civil-war",
+      "explanation": "Сула разграбил Атина на 1 март 86 г. пр.н.е. Същото лято той разгромил огромните армии на Митридат при Херонея и Орхомен.",
+      "sourceQuote": "On 1 March 86 BC, he stormed and sacked Athens, which had sided with Mithridates.",
+      "reviewFlags": []
+    },
+    {
+      "question": "С какво се хвалел надгробният надпис, който Сула сам съчинил?",
+      "options": [
+        "Че спасил Рим и от италийците, и от Митридат",
+        "Че единствен се отказал от върховната власт по своя воля",
+        "Че нито веднъж не загубил битка за всичките си години начело на армия",
+        "Че никой приятел не му е услужил и никой враг не го е оскърбил, без да получи пълно възмездие"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#death-and-legacy",
+      "explanation": "Надписът прославял това, че Сула връщал напълно и доброто, и злото. Рим му устроил погребение, по-пищно от всяко друго от поколения насам.",
+      "sourceQuote": "His self-written epitaph boasted that no friend had ever served him, and no enemy wronged him, without being repaid in full.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Каква почест спечелил Сула край Нола по време на Съюзническата война?",
+      "options": [
+        "Гражданския венец от дъбови листа за спасяване на гражданин",
+        "Титлата Баща на отечеството, дадена от Сената",
+        "Тревния венец, най-високото военно отличие на Рим",
+        "Стенния венец за първия, изкачил вражеска стена"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#fighting-90-89-bc",
+      "explanation": "Край Нола Сула спечелил тревния венец (corona graminea), най-високото военно отличие на Рим. В същия поход той превзел и Помпей.",
+      "sourceQuote": "In the south, Sulla took Pompeii and won the grass crown (*corona graminea*), Rome's highest military honour, near Nola.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Къде се водила решителната битка в гражданската война на Сула на 1 ноември 82 г. пр.н.е.?",
+      "options": [
+        "В равнината при Херонея",
+        "При Колинската порта на Рим",
+        "При река Толен",
+        "В пристанището на Брундизий"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#east-and-civil-war",
+      "explanation": "Колинската порта се намирала в североизточния край на Рим. Там Сула се сражавал срещу голяма армия от самнити и луканци.",
+      "sourceQuote": "The decisive battle came on 1 November 82 BC at the Colline Gate, on Rome's north-eastern edge, against a large Samnite and Lucanian army.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как нарекли въстаналите съюзници съперничещата държава, която създали?",
+      "options": [
+        "Лаций",
+        "Самний",
+        "Италия",
+        "Етрурия"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#outbreak-at-asculum",
+      "explanation": "Бунтовниците нарекли новата си държава Италия. Тя имала форум, сенат от 500 души, двама консули и дванадесет военачалници.",
+      "sourceQuote": "The rebels built a rival state they called Italia.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какъв опасен урок дала кариерата на Сула на по-късните римски пълководци?",
+      "options": [
+        "Че на италийските съюзници никога не може да се повери оръжие",
+        "Че пълководец с вярна армия може да завземе Рим",
+        "Че Сенатът винаги може да обуздае своите командири",
+        "Че мирът с източните царе носи най-много слава"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#death-and-legacy",
+      "explanation": "Примерът на Сула надживял законите му. Според преданието един по-късен пълководец попитал: „Щом Сула е могъл, защо да не мога и аз?“",
+      "sourceQuote": "He had shown that a general with a loyal army could seize Rome, and a later general reportedly asked, \"If Sulla could, why can't I?\"",
+      "reviewFlags": []
+    },
+    {
+      "question": "Като консул през 88 г. пр.н.е. Сула получил командването на войната срещу кой цар?",
+      "options": [
+        "Антиох, цар на Сирия",
+        "Митридат, цар на Понт",
+        "Тигран, цар на Армения",
+        "Югурта, цар на Нумидия"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#march-on-rome",
+      "explanation": "Митридат управлявал Понт на южния бряг на Черно море. Той завладял римската провинция Азия и организирал клането на около 80 000 римляни и италийци.",
+      "sourceQuote": "The Senate gave him a rich and glorious prize: command against Mithridates, king of Pontus on the Black Sea's southern shore.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Според най-пълния запазен античен разказ защо съюзниците тръгнали на война срещу Рим?",
+      "options": [
+        "Въстанали, за да освободят робите в римските имения",
+        "Искали да възстановят старото самнитско царство в планините",
+        "Искали римско гражданство, получили отказ и се вдигнали да го извоюват",
+        "Искали да спрат войната на Рим срещу Митридат на Изток"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#what-the-allies-wanted",
+      "explanation": "Античният разказ представя ясна история: отказано гражданство, а после борба за него. По думите му съюзниците искали да бъдат „съучастници във властта, а не поданици“.",
+      "sourceQuote": "He tells a clear story: the allies demanded Roman citizenship, were refused, and went to war to win it.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво била проскрипцията при Сула?",
+      "options": [
+        "Указ за конфискация на цялата обществена земя на съюзниците",
+        "Публичен списък на хора, осъдени на смърт без съд",
+        "Забрана за носене на оръжие в град Рим",
+        "Преброяване на италийците, получили наскоро гражданство"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#dictatorship-and-proscriptions",
+      "explanation": "Всеки можел да убие проскрибиран човек и да поиска награда. Първият списък съдържал около 80 имена, а после последвали още стотици.",
+      "sourceQuote": "His most infamous weapon was the proscription (*proscriptio*), a public list of men condemned to death without trial.",
+      "reviewFlags": []
+    }
+  ]
+}

@@ -1,0 +1,189 @@
+{
+  "batchName": "Middle Republic: Scipio and the Road to Zama (216-201 BCE) - Medium Batch 1",
+  "chapterName": "Middle Republic: Scipio and the Road to Zama (216-201 BCE)",
+  "difficulty": 2,
+  "batchOrder": 3,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Коя сцена, любима на ренесансовите художници, е известна като „Въздържанието на Сципион“?",
+      "options": [
+        "Сципион освобождава испански заложници без условия",
+        "Сципион отказва да стане пожизнен консул и диктатор",
+        "Сципион отхвърля условията на Ханибал преди Зама",
+        "Сципион връща красива пленница недокосната на годеника ѝ",
+        "Сципион пощадява жителите на Гадес след капитулацията"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#new-carthage",
+      "explanation": "В този разказ на много по-късен автор Сципион върнал невредима красива пленница на испанския ѝ годеник. Сципион се отнесъл великодушно и към 300-те испански заложници в Нови Картаген.",
+      "sourceQuote": "In it, Scipio returned a beautiful captive untouched to her Spanish fiancé.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Според един античен разказ какво направил младият Сципион в конния сблъсък при река Тицин?",
+      "options": [
+        "Занесъл вестта за поражението в Рим",
+        "Повел атаката, която спечелила битката",
+        "Спасил живота на обкръжения си баща",
+        "Пленил няколко от слоновете на Ханибал",
+        "Убил картагенски пълководец в двубой"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#survivor-of-cannae",
+      "explanation": "Според един разказ Сципион спасил баща си, когато вражески конници го обкръжили. Други автори приписват заслугата на неизвестен роб.",
+      "sourceQuote": "According to one ancient account, enemy horsemen surrounded Scipio's father in a cavalry clash on the river Ticinus in northern Italy, and young Scipio saved his life.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как гледат историците на прочутата история как Ханибал класирал най-великите пълководци в разговор със Сципион?",
+      "options": [
+        "Датират я към преговорите преди Зама",
+        "Приемат я, защото я съобщава Полибий",
+        "Смятат срещата за измислица",
+        "Извеждат я от изгубените мемоари на Сципион",
+        "Смятат, че говорещият е бил Масиниса"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#sources-and-legend",
+      "explanation": "Историците смятат, че тази среща никога не се е състояла. Тя е една от многото легенди, възникнали около Сципион.",
+      "sourceQuote": "A famous story has Hannibal later ranking the greatest generals in conversation with Scipio, but historians consider the meeting apocryphal.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кои били ядрото на армията, която Сципион повел към Африка?",
+      "options": [
+        "Ветерани от победата при Метавър",
+        "Нумидийски конници, пратени от Масиниса",
+        "Нови новобранци, свикани в Рим",
+        "Испански племена, набрани след Илипа",
+        "Два легиона оцелели от Кана, пратени в Сицилия"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#consul-at-thirty-one",
+      "explanation": "Ядрото на силите на Сципион били два легиона от оцелели при Кана, пратени в Сицилия. Той обучавал армията около година.",
+      "sourceQuote": "The core of his force was two legions (*legiones*) made up of survivors of Cannae who had been posted to Sicily.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво военно обезщетение трябвало да плати Картаген според мира от 201 г. пр.н.е.?",
+      "options": [
+        "40 тона злато наведнъж",
+        "1000 сребърни таланта за 10 години",
+        "10 000 сребърни таланта за 50 години",
+        "3200 сребърни таланта за 50 години",
+        "5000 сребърни таланта за 20 години"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#peace-and-africanus",
+      "explanation": "Картаген трябвало да плати 10 000 сребърни таланта за половин век. Освен това се отказал от бойните си слонове.",
+      "sourceQuote": "It had to pay 10,000 silver talents over 50 years, gave up its war elephants and kept only ten warships.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво според съвременните учени всъщност стояло зад назначаването на Сципион в Испания?",
+      "options": [
+        "Армията в Испания го провъзгласила за пълководец",
+        "Чичо му го посочил за наследник преди смъртта си",
+        "Консулите теглили жребий и се паднало неговото име",
+        "Народът го наложил на силно несъгласния Сенат",
+        "Сенаторите го избрали, а после накарали народа да гласува, за да изглежда законно"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#command-in-spain",
+      "explanation": "Учените смятат, че Сенатът избрал Сципион и използвал народно гласуване, за да узакони необичайното командване. Един римски историк два века по-късно обаче изобразява Сената като колебаещ се.",
+      "sourceQuote": "Modern scholars suspect instead that the senators picked Scipio themselves, then had the people vote on it to make an irregular command look legitimate.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как Сципион подредил пехотните си манипули при Зама срещу слоновете на Ханибал?",
+      "options": [
+        "Зад редица наострени колове и ровове",
+        "Плътно в едно монолитно каре",
+        "В обичайния си шахматен ред",
+        "Един зад друг, с открити коридори, пълни с леки бойци",
+        "Нарядко по хребет над равнината"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#battle-of-zama",
+      "explanation": "Вместо обичайния шахматен ред Сципион наредил манипулите така, че да оформят коридори. Повечето слонове се втурнали по тях, където били откъснати и избити.",
+      "sourceQuote": "Instead he lined them up one behind another, leaving open lanes filled with light skirmishers (*velites*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "Защо портретът на Сципион у Полибий може да е ласкателен, макар той да е като цяло надежден?",
+      "options": [
+        "Бил близък с рода на Сципион, а главният му информатор бил приятел на Сципион",
+        "Служил като офицер в африканската армия на Сципион",
+        "Сенатът му плащал да възхвалява римските пълководци",
+        "Разчитал само на гръцките мемоари на Сципион",
+        "Бил син на Сципион и писал семейна история"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#sources-and-legend",
+      "explanation": "Полибий бил близък приятел на роднини на Сципион, а главният му информатор бил заместникът на Сципион. Мемоарите на самия Сципион и историята на сина му са изгубени.",
+      "sourceQuote": "But he was a close friend of Scipio's relatives, and his main informant about Scipio was Scipio's own friend and second-in-command, so his picture may be flattering.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво правело командването на Сципион в Испания безпрецедентно?",
+      "options": [
+        "Бил първият римлянин, командвал армия отвъд морето",
+        "Бил назначен пряко от диктатор",
+        "Получил консулска власт, без никога да е бил консул",
+        "Бил избран само от Сената, без гласуване",
+        "Делял командването с нумидийски принц"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#command-in-spain",
+      "explanation": "Сципион не бил заемал нито една от висшите длъжности в Рим, но получил пълната военна власт на консул. Никой римлянин дотогава не бил получавал такава власт, без преди това да е бил консул.",
+      "sourceQuote": "He was the first Roman ever given such power without first serving as consul.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Каква слабост в отбраната на Нови Картаген използвал Сципион?",
+      "options": [
+        "Стените били повредени от земетресение",
+        "Пристанището останало неохранявано по време на празник",
+        "Лагуната от северната страна можела да се прегази при отлив",
+        "Предател отворил главната порта нощем",
+        "В цитаделата свършила питейната вода"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#new-carthage",
+      "explanation": "Сципион пратил отряд през плитката лагуна, докато стените били атакувани. Казал на войниците си, че Нептун му е обещал помощ.",
+      "sourceQuote": "A lagoon guarded the city's northern side, but at low tide it could be waded.",
+      "reviewFlags": []
+    }
+  ]
+}

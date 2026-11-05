@@ -1,0 +1,179 @@
+{
+  "batchName": "Middle Republic: The Fall of Carthage and Corinth (167-133 BCE) - Easy Batch 2",
+  "chapterName": "Middle Republic: The Fall of Carthage and Corinth (167-133 BCE)",
+  "difficulty": 1,
+  "batchOrder": 2,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Как историкът Полибий за първи път попаднал в Рим през 167 г. пр.н.е.?",
+      "options": [
+        "Като заложник от Ахейския съюз",
+        "Като пленник, взет в Коринт",
+        "Като учител, нает от Катон",
+        "Като пратеник на Македония"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#polybius-and-the-sources",
+      "explanation": "Полибий бил един от многото заложници, които Рим взел от Ахейския съюз. В Рим той станал приятел на Сципион Емилиан.",
+      "sourceQuote": "He came to Rome in 167 BC as one of the many hostages taken from the Achaean League, the alliance of southern Greek cities that Rome distrusted.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как Сципион Емилиан най-накрая победил Нуманция?",
+      "options": [
+        "Подкупил водачите ѝ да се предадат",
+        "Щурмувал я с бойни слонове",
+        "Отклонил река Дуеро",
+        "Построил седем крепости и я изморил от глад"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#numantine-war",
+      "explanation": "Вместо да атакува, Сципион обградил Нуманция със седем крепости и я изморил от глад. След болести и глад повечето оцелели нумантийци се самоубили, вместо да се предадат.",
+      "sourceQuote": "Instead of attacking, Scipio built a ring of seven forts around Numantia and starved it out.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как Сципион Емилиан успял да стане консул през 147 г. пр.н.е., макар че бил твърде млад?",
+      "options": [
+        "Възрастта му била подправена в записите",
+        "Армията го провъзгласила в Африка",
+        "Сенатът спрял правилата за възрастта",
+        "Първо бил назначен за диктатор"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#scipio-takes-command",
+      "explanation": "Народното искане, подкрепено от прочутото му родово име, накарало Сената да спре правилата за възрастта за тази година. След това бил избран за консул и получил еднолично командване в Африка.",
+      "sourceQuote": "But public demand was so strong, helped by his famous family name, that the Senate suspended the age rules for the year.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Каква роднинска връзка имал Сципион Емилиан с пълководеца, спечелил Втората пуническа война?",
+      "options": [
+        "Бил негов син",
+        "Бил негов правнук",
+        "Бил негов осиновен внук",
+        "Бил негов зет"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#a-faltering-siege",
+      "explanation": "Сципион Емилиан бил осиновен внук на победителя във Втората пуническа война. В началото на Третата пуническа война служел като военен трибун.",
+      "sourceQuote": "Scipio Aemilianus, adopted grandson of the general who had won the Second Punic War, was serving as a military tribune (*tribunus militum*), a middle-ranking post.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой възрастен римски сенатор, чиято омраза към Картаген станала легендарна, се разтревожил от богатството на града, когато го посетил като пратеник около 153 г. пр.н.е.?",
+      "options": [
+        "Сципион Емилиан",
+        "Мумий",
+        "Катон",
+        "Полибий"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#carthago-delenda-est",
+      "explanation": "Катон посетил Картаген като пратеник около 153 г. пр.н.е. и се разтревожил от растящото му богатство и сила. Той бил най-известният глас на сенатската групировка, която искала Картаген да бъде разрушен.",
+      "sourceQuote": "Around 153 BC he visited the city as an envoy and was alarmed by its growing wealth and strength.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Картаген, големият съперник на Рим, бил богат търговски град на територията на коя днешна страна?",
+      "options": [
+        "Западна Сицилия",
+        "Източна Либия",
+        "Южна Испания",
+        "Северен Тунис"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#carthage-under-rome",
+      "explanation": "Картаген бил богат търговски град на територията на днешен Северен Тунис. До средата на II в. пр.н.е. той вече бил загубил две дълги войни срещу Рим.",
+      "sourceQuote": "Its great rival, Carthage (*Carthago*), a wealthy trading city in what is now northern Tunisia, had lost two long wars to Rome.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво почетно прозвище приел Сципион Емилиан, след като разрушил Картаген?",
+      "options": [
+        "Магнус",
+        "Африкански",
+        "Ахейски",
+        "Пунически"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#after-carthage",
+      "explanation": "Сципион приел прозвището „Африкански“, точно както осиновителят му дядо. Отпразнувал и триумф – римското победно шествие.",
+      "sourceQuote": "He also took the honorary surname (*agnomen*) \"Africanus\", just as his adoptive grandfather had done.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Според мира от 201 г. пр.н.е. какво било забранено на Картаген без изричното разрешение на Рим?",
+      "options": [
+        "Да води каквато и да е война",
+        "Да сече свои монети",
+        "Да търгува с гръцки градове",
+        "Да избира свои магистрати"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#carthage-under-rome",
+      "explanation": "Картаген не можел да води никаква война без разрешението на Рим – клауза, която се оказала пагубна. Освен това трябвало да плати 10 000 сребърни таланта за 50 години.",
+      "sourceQuote": "It was also forbidden to wage war at all without Rome's express permission.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой прочут гръцки град разрушил Рим през 146 г. пр.н.е., същата година, в която паднал Картаген?",
+      "options": [
+        "Спарта",
+        "Атина",
+        "Тива",
+        "Коринт"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#sack-of-corinth",
+      "explanation": "Рим разрушил Коринт през 146 г. пр.н.е., същата година като Картаген. Коринт бил богато пристанище на провлака, свързващ Южна Гърция с континента.",
+      "sourceQuote": "In the same year that Carthage fell, 146 BC, Rome destroyed another famous city: Corinth, a rich Greek port on the narrow isthmus joining southern Greece to the mainland.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Надявайки се да купят мир през 149 г. пр.н.е., какво първо се съгласили да предадат на Рим картагенските пратеници?",
+      "options": [
+        "Град Утика",
+        "Половината от зърнената си реколта",
+        "Царското си семейство като заложници",
+        "Всяко оръжие в града"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#the-ultimatum",
+      "explanation": "Наредили на пратениците да предадат всяко оръжие в града и те неохотно се подчинили. Запазените сведения твърдят, че били изнесени 200 000 комплекта доспехи и 2 000 катапулта.",
+      "sourceQuote": "Its envoys were told to hand over every weapon in the city, and they reluctantly obeyed.",
+      "reviewFlags": []
+    }
+  ]
+}

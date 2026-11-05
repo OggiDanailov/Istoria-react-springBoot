@@ -1,0 +1,145 @@
+{
+  "batchName": "Middle Republic: Rome Turns East (200-167 BCE) - Latin words",
+  "chapterName": "Middle Republic: Rome Turns East (200-167 BCE)",
+  "difficulty": 1,
+  "batchOrder": 9,
+  "description": "Written by hand from the chapter text: the Latin words it explains",
+  "questions": [
+    {
+      "question": "На Истмийските игри през 196 г. пр.н.е. Фламинин провъзгласил libertas за гърците. Какво означава това?",
+      "options": [
+        "Свобода",
+        "Мир",
+        "Съюз",
+        "Гражданство"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#freedom-of-the-greeks",
+      "explanation": "Тълпата избухнала в ликуване, макар че Рим запазил войски в „оковите на Гърция“.",
+      "sourceQuote": "the Roman commander Flamininus proclaimed freedom (*libertas*) for the Greek communities Philip had ruled.",
+      "reviewFlags": []
+    },
+    {
+      "question": "През 171 г. пр.н.е. Рим обявил Персей за hostis. Какво означава това?",
+      "options": [
+        "Враг на държавата",
+        "Приятел на Рим",
+        "Зависим цар",
+        "Заложник"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#perseus-road-to-war",
+      "explanation": "Рим бил чул как царят на Пергам го обвинява, че се готви за война.",
+      "sourceQuote": "Rome declared him a public enemy (*hostis*), and war began in 171 BC.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как Емилий Павел отпразнувал победата си над Персей?",
+      "options": [
+        "С triumphus, в който Персей вървял окован",
+        "С игри в Коринт",
+        "Като построил храм при Пидна",
+        "Като освободил всички македонски пленници"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#end-of-macedon",
+      "explanation": "Персей прекарал остатъка от живота си под стража в Алба Фуценс в Централна Италия.",
+      "sourceQuote": "celebrated a triumph (*triumphus*), the grand victory parade, with Perseus led in chains before it.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Според Апамейския мир Антиох изпратил в Рим двадесет obsides. Кои били те?",
+      "options": [
+        "Заложници, сред тях най-малкият му син",
+        "Посланици пред Сената",
+        "Бойни слонове",
+        "Корабни капитани"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#peace-of-apamea",
+      "explanation": "Той трябвало да предаде и враговете на Рим, но Ханибал избягал.",
+      "sourceQuote": "Twenty hostages (*obsides*), including his youngest son, went to Rome",
+      "reviewFlags": []
+    },
+    {
+      "question": "Колко tributum плащала на Рим всяка от четирите македонски републики?",
+      "options": [
+        "Половината от това, което е взимал царят",
+        "Двойно повече от това, което е взимал царят",
+        "Колкото при царя",
+        "Нищо"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#end-of-macedon",
+      "explanation": "Рим обяви македонците за свободни, но разпокъса царството им.",
+      "sourceQuote": "each paying Rome a tribute (*tributum*) half what the king had taken.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кое римско събрание гласува единодушно за мир с Филип V през 197 г. пр.н.е.?",
+      "options": [
+        "Трибутното събрание (comitia tributa)",
+        "Центуриатното събрание",
+        "Сенатът",
+        "Събранието на куриите"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#freedom-of-the-greeks",
+      "explanation": "Филип трябваше да изтегли гарнизоните си, да плати 1000 таланта и да се откаже от флота си.",
+      "sourceQuote": "the Tribal Assembly (*comitia tributa*), another of the citizen assemblies, voted unanimously for it.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво стана, когато един консул за първи път поиска от comitia centuriata да обяви война на Филип V през 200 г. пр.н.е.?",
+      "options": [
+        "Почти единодушно отказа",
+        "Веднага гласува за война",
+        "Помоли Сената да реши",
+        "Гласува за мир с Картаген"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#rome-looks-east",
+      "explanation": "Отказът беше обяснен с умора от войните; на второ заседание консулът ги убеди.",
+      "sourceQuote": "In 200 BC one of the consuls asked the Centuriate Assembly (*comitia centuriata*), the citizen body that alone could declare war, to vote for war.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Защо за Фламинин беше важно дали командването му ще получи prorogatio?",
+      "options": [
+        "Ако го сменят, искаше славата за бърз мир",
+        "Искаше веднага пак да стане консул",
+        "Надяваше се да го пратят в Испания",
+        "Искаше да се оттегли в Гърция"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#cynoscephalae",
+      "explanation": "Щом разбра, че командването му е продължено, приятелите му в Рим тихомълком провалиха мирните преговори.",
+      "sourceQuote": "Flamininus did not yet know whether his command would be extended (*prorogatio*).",
+      "reviewFlags": []
+    }
+  ]
+}

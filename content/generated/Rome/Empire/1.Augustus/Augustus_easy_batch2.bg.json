@@ -1,0 +1,179 @@
+{
+  "batchName": "Empire: Augustus and the Principate (27 BC-AD 14) - Easy Batch 2",
+  "chapterName": "Empire: Augustus and the Principate (27 BC-AD 14)",
+  "difficulty": 1,
+  "batchOrder": 2,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Кой Августов паметник край Марсовото поле има релефи с шествие на жреци и римски семейства?",
+      "options": [
+        "Новата сграда на Сената",
+        "Олтарът на мира",
+        "Храмът на Марс Отмъстителя",
+        "Пантеонът"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#city-of-marble",
+      "explanation": "Олтарът на мира (Ara Pacis) се издигнал край Марсовото поле – крайречен квартал на север от стария център. Релефите му показват шествие на жреци, стражи и семейства.",
+      "sourceQuote": "Near the Field of Mars, a riverside district north of the old centre, rose the Altar of Peace (*Ara Pacis*), its carved panels showing priests, guards and Roman families in procession.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Колко римски легиона били вкарани в капана в Тевтобургската гора през 9 г. сл.н.е.?",
+      "options": [
+        "Десет",
+        "Три",
+        "Пет",
+        "Един"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#teutoburg-forest",
+      "explanation": "Убедили управителя да поведе три легиона към зимните им лагери по непознат път. Загинали между 15 000 и 20 000 римляни.",
+      "sourceQuote": "He fed the governor false reports of a revolt and persuaded him to march three legions home by an unfamiliar route.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой бил верният приятел и даровит пълководец, който печелел битките на Октавиан вместо него?",
+      "options": [
+        "Тиберий",
+        "Агрипа",
+        "Марк Антоний",
+        "Брут"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#actium",
+      "explanation": "Октавиан не бил велик пълководец, но имал Агрипа. През 36 г. пр.н.е. Агрипа унищожил флота на един отцепник адмирал, чиито блокади морели Италия с глад.",
+      "sourceQuote": "Octavian was no great general, but he had Agrippa, his loyal friend and gifted commander.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как била наречена дългата епоха на спокойствие, започнала при Август?",
+      "options": [
+        "Aerarium militare",
+        "Res Gestae",
+        "Pax Romana",
+        "Clades Variana"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#expansion-and-peace",
+      "explanation": "Римският мир, или Pax Romana, траел с прекъсвания около два века, тъй като големите войни вътре в империята почти престанали.",
+      "sourceQuote": "This era of calm became known as the Roman Peace (*Pax Romana*), and it lasted, with interruptions, for about two centuries.",
+      "reviewFlags": []
+    },
+    {
+      "question": "До коя река армиите на Август изтласкали римската граница?",
+      "options": [
+        "Тигър",
+        "Ефрат",
+        "Нил",
+        "Дунав"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#expansion-and-peace",
+      "explanation": "Армиите му довършили завладяването на Испания, превзели Алпите и изтласкали границата до Дунав.",
+      "sourceQuote": "His armies completed the conquest of Spain, took the Alps and pushed Rome's frontier to the Danube river.",
+      "reviewFlags": []
+    },
+    {
+      "question": "През коя година се състояла решителната битка при Акциум?",
+      "options": [
+        "42 г. пр.н.е.",
+        "31 г. пр.н.е.",
+        "44 г. пр.н.е.",
+        "27 г. пр.н.е."
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#actium",
+      "explanation": "Битката при Акциум се водила на 2 септември 31 г. пр.н.е. в залив на западния бряг на Гърция. Победата извоювал флотът на Агрипа.",
+      "sourceQuote": "The decisive clash came on 2 September 31 BC at Actium, a bay on the western coast of Greece.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какви според преданието били последните думи на Август?",
+      "options": [
+        "„Пиесата свърши; ръкопляскайте“",
+        "„Жребият е хвърлен“",
+        "„Дойдох, видях, победих“",
+        "„Върни ми легионите!“"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#succession-and-death",
+      "explanation": "Според преданието последните му думи били „Acta est fabula, plaudite“. Той умрял в Нола, близо до Неапол, през 14 г. сл.н.е.",
+      "sourceQuote": "His last words were reportedly \"The play is over; applaud\" (*Acta est fabula, plaudite*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кого осиновил Август през 4 г. сл.н.е. и издигнал до власт, равна на своята, до 13 г. сл.н.е.?",
+      "options": [
+        "Луций",
+        "Гай",
+        "Тиберий",
+        "Агрипа"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#succession-and-death",
+      "explanation": "Тиберий, по-големият син на съпругата му от първия ѝ брак, бил трудолюбив пълководец с победи в Германия и на Балканите.",
+      "sourceQuote": "In AD 4 Augustus adopted him, and by AD 13 Tiberius held powers equal to his own.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Каква кръвна връзка имал бъдещият Август с Юлий Цезар?",
+      "options": [
+        "Майка му била сестра на Цезар",
+        "Бил внук на Цезар",
+        "Баща му бил брат на Цезар",
+        "Майка му била племенница на Цезар"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#caesars-heir",
+      "explanation": "Голямото му предимство била майка му – племенница на Юлий Цезар. По-късно в завещанието си Цезар го посочил за главен наследник и осиновен син.",
+      "sourceQuote": "His great advantage was his mother, a niece of Julius Caesar, the general who had made himself master of Rome.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво означава името „Август“, дадено от Сената през 27 г. пр.н.е.?",
+      "options": [
+        "Почитаният",
+        "Първият гражданин",
+        "Завоевателят",
+        "Бащата"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#first-settlement",
+      "explanation": "Август означава „почитаният“. Името имало религиозен ореол и намеквало, че той стои близо до боговете.",
+      "sourceQuote": "The same day the Senate gave him a new name: Augustus (*augustus*), meaning \"the revered\".",
+      "reviewFlags": []
+    }
+  ]
+}

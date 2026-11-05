@@ -1,0 +1,202 @@
+{
+  "batchName": "Late Republic: Caesar's Civil War and the Ides of March (49-44 BCE) - Hard Batch 1",
+  "chapterName": "Late Republic: Caesar's Civil War and the Ides of March (49-44 BCE)",
+  "difficulty": 3,
+  "batchOrder": 5,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Кои данни за жертвите при Фарсала идват от твърденията на самия Цезар? (изберете всички верни)",
+      "options": [
+        "200 загинали негови войници",
+        "1 200 загинали негови войници",
+        "60 000 убити врагове",
+        "1 000 загинали негови войници",
+        "6 000 убити врагове",
+        "10 000 убити врагове"
+      ],
+      "correctAnswers": [
+        0,
+        2
+      ],
+      "difficulty": 3,
+      "textReference": "#battle-of-pharsalus",
+      "explanation": "Цезар твърдял, че е загубил 200 души и е избил 60 000. Друг античен историк дава по-вероятните числа 1 200 и 6 000.",
+      "sourceQuote": "Caesar claimed to have lost 200 men and killed 60,000; another ancient historian gives a likelier 1,200 and 6,000.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Колко време задържал Цезар диктатурата, поета през декември 49 г. пр.н.е., преди да се откаже от нея?",
+      "options": [
+        "Седемдесет и два дни",
+        "Една година",
+        "Три месеца",
+        "Шест месеца",
+        "Единадесет дни",
+        "Петдесет дни"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 3,
+      "textReference": "#spain-and-the-treasury",
+      "explanation": "Цезар проведе избори, спечели второ консулство и се отказа само след единадесет дни, за да тръгне след Помпей.",
+      "sourceQuote": "He ran elections, won a second consulship, and resigned the dictatorship after just eleven days before setting off after Pompey.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как историците оценяват ролята на гражданската война за падането на Републиката? (изберете всички верни)",
+      "options": [
+        "Война, наложена на Рим от партско нашествие",
+        "План, замислен от Цезар от самото начало",
+        "Борба, предизвикана главно от Клеопатра",
+        "Симптом на Република, вече неспособна да се реформира",
+        "Ударът, който сломил Републиката, отключен от грешни сметки",
+        "Кратка криза, която Републиката лесно преживяла"
+      ],
+      "correctAnswers": [
+        3,
+        4
+      ],
+      "difficulty": 3,
+      "textReference": "#aftermath-and-debate",
+      "explanation": "Някои историци смятат войната за удара, сломил Републиката, отключен по-скоро от грешни сметки, отколкото от замисъл. Други я виждат като симптом на Република, вече неспособна да се реформира.",
+      "sourceQuote": "Others call it a symptom of a Republic already unable to reform itself.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как Цезар уредил египетския трон след победата над египтяните?",
+      "options": [
+        "Египет станал римска провинция",
+        "Клеопатра управлявала сама като единствена царица",
+        "Младият цар бил възстановен под римска охрана",
+        "Бебето на Клеопатра било обявено за цар",
+        "Регентът управлявал, докато нов цар навърши пълнолетие",
+        "Клеопатра станала царица заедно с по-малък брат"
+      ],
+      "correctAnswers": [
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#pompey-and-cleopatra",
+      "explanation": "Цезар направил Клеопатра царица заедно с по-малкия ѝ брат и три месеца плавал с нея по Нил. През 47 г. пр.н.е. тя родила син, носещ името Цезар.",
+      "sourceQuote": "Caesar made Cleopatra queen alongside a younger brother and cruised the Nile with her for three months.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Последните думи на Цезар са спорни. Кои версии съобщават античните автори? (изберете всички верни)",
+      "options": [
+        "Не изрекъл никакви последни думи",
+        "„Отмъсти за мен, Антоний!“ на гръцки",
+        "„Жребият е хвърлен“ на латински",
+        "„Et tu, Brute?“ на латински",
+        "„Само Юпитер е цар“ на латински",
+        "„И ти ли, дете?“ на гръцки"
+      ],
+      "correctAnswers": [
+        0,
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#ides-of-march",
+      "explanation": "Според някои античини автори Цезар не казал нищо; други съобщават „И ти ли, дете?“ на гръцки. Един пише, че закрил лицето си, щом видял Брут.",
+      "sourceQuote": "Some ancient writers say he spoke none; others report \"You too, child?\" in Greek.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво станало с по-големия син на Помпей след битката при Мунда?",
+      "options": [
+        "Цезар го помилвал",
+        "Удавил се, бягайки от битката",
+        "Наръгал се в Утика",
+        "Избягал в Египет",
+        "Включил се в заговора срещу Цезар",
+        "Бил заловен и обезглавен"
+      ],
+      "correctAnswers": [
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#munda-and-honours",
+      "explanation": "Цезар победил при Мунда, като загубил около 1 000 души, а по-големият син на Помпей бил заловен и обезглавен. Един античен автор пише, че там Цезар за първи път се бил за живота си.",
+      "sourceQuote": "He won, losing around 1,000 men, and Pompey's elder son was caught and beheaded.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кое античо твърдение за мотивите на Цезар за войната съвременните историци поставят под съмнение?",
+      "options": [
+        "Че Сенатът гласувал 370 на 22",
+        "Че Сенатът приел крайното си решение",
+        "Че трибуните, подкрепящи Цезар, избягали при него",
+        "Че Рим бил обхванат от насилие на банди",
+        "Че се боял от съдебно преследване, ако се разоръжи",
+        "Че искал второ консулство"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 3,
+      "textReference": "#road-to-war",
+      "explanation": "Съвременните историци се съмняват, че страхът от съдебно преследване е движел Цезар. Изглежда гордостта и от двете страни е тласнала Рим към война.",
+      "sourceQuote": "Modern historians doubt ancient claims that he feared prosecution.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Според един античен автор защо ветераните на Цезар атакували при Тапс преди заповедта му?",
+      "options": [
+        "Още стоварвал войските си",
+        "Бил ранен от слон",
+        "Принасял жертва за добри знамения",
+        "Паднал от коня си",
+        "Имал епилептичен пристъп",
+        "Преговарял с нумидийския цар"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 3,
+      "textReference": "#zela-and-thapsus",
+      "explanation": "Един античен автор пише, че Цезар имал епилептичен пристъп. Битката била неравна: загинали около 10 000 помпеянци срещу около 50 войници на Цезар.",
+      "sourceQuote": "At Thapsus, in modern Tunisia, in 46 BC, Caesar's veterans charged before he gave the order; one ancient writer says he was having an epileptic fit.",
+      "reviewFlags": []
+    },
+    {
+      "question": "От трите случки, които античните автори смятали за последната капка срещу Цезар, коя била последна?",
+      "options": [
+        "Марк Антоний предлага диадема на Луперкалиите",
+        "Хора от тълпата приветстват Цезар като цар",
+        "Двама трибуни са лишени от длъжност",
+        "Цезар празнува триумфи със 72 ликтори",
+        "Цезар остава седнал пред делегация на Сената",
+        "Диадема се появява на статуята на Цезар"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#three-last-straws",
+      "explanation": "Луперкалиите, февруарски празник, дошли след случилото се през януари 44 г. пр.н.е. с диадемата на статуята и виковете „rex“. Антоний предложил диадемата два пъти.",
+      "sourceQuote": "Third, at the Lupercalia, a February festival, Mark Antony, Caesar's loyal lieutenant and fellow consul, twice placed a diadem on his head.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво е забележително в собствения разказ на Цезар за прекосяването на Рубикон?",
+      "options": [
+        "Цитира гръцки поет",
+        "Изобщо не споменава реката",
+        "Приписва идеята на Марк Антоний",
+        "Датира прекосяването на 9 март",
+        "Записва „жребият е хвърлен“",
+        "Описва лошо знамение при реката"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 3,
+      "textReference": "#crossing-the-rubicon",
+      "explanation": "Собственият разказ на Цезар изобщо не споменава Рубикон. Прочутите думи идват от други антични автори, които не са съгласни какво точно е казал.",
+      "sourceQuote": "Another ancient writer says he quoted a Greek poet instead, and Caesar's own account never mentions the river at all.",
+      "reviewFlags": []
+    }
+  ]
+}

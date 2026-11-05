@@ -1,0 +1,189 @@
+{
+  "batchName": "Empire: The Year of Four Emperors and the Flavians (AD 69-96) - Medium Batch 1",
+  "chapterName": "Empire: The Year of Four Emperors and the Flavians (AD 69-96)",
+  "difficulty": 2,
+  "batchOrder": 3,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Какво накара преторианската гвардия да изостави последния император от Юлиево-Клавдиевата династия през 68 г.?",
+      "options": [
+        "Решение на Сената, което ги освобождава от клетвата",
+        "Обещание за по 30 000 сестерции на човек от името на Галба",
+        "Вестта, че легионите от Рейн са минали на страната на Галба",
+        "Обещанието на Галба да удвои годишната им заплата",
+        "Заплахи от галската армия, разположена край Рим"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#fall-of-nero",
+      "explanation": "Един от командирите на самата гвардия обещал на всеки войник по 30 000 сестерции от името на Галба – около десетгодишна заплата. Дни по-късно Сенатът обявил императора за враг на държавата.",
+      "sourceQuote": "But in Rome the emperor's bodyguard, the Praetorian Guard (*cohortes praetoriae*), deserted him after one of its commanders promised each man 30,000 sesterces in Galba's name, roughly ten years' pay.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой предмет от Храма бил показан в триумфа на Тит и Веспасиан през 71 г.?",
+      "options": [
+        "Олтарът за всеизгаряния",
+        "Седмосвещникът",
+        "Златната корона на първосвещеника",
+        "Големите бронзови врати на Храма",
+        "Ковчегът на завета"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#siege-of-jerusalem",
+      "explanation": "В триумфалното шествие из Рим бил показан седмосвещникът от Храма. Триумфът бил тържествено победно шествие.",
+      "sourceQuote": "In 71 Titus and Vespasian celebrated a triumph (*triumphus*), a victory parade through Rome, displaying the Temple's seven-branched lampstand.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Според един античен биограф с какво се отличавал Галба от другите управители, когато през 68 г. избухнал галският бунт?",
+      "options": [
+        "Само той бил три пъти консул",
+        "Само той отказал трона, предложен от бунтовника",
+        "Само той бил роднина на управляващия род",
+        "Само той изпратил войски да смажат галското въстание",
+        "Само той не препратил писмата на бунтовника на императора"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#fall-of-nero",
+      "explanation": "Един античен биограф твърди, че Галба единствен от управителите не предал писмата на бунтовника на императора. Само след седмици войниците му го провъзгласили за император.",
+      "sourceQuote": "According to an ancient biographer, Galba was the only official who did not forward the rebel's letters to the emperor.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как по-малкият син на Веспасиан, Домициан, се спасил от боевете в Рим през 69 г.?",
+      "options": [
+        "Изведен тайно с преторианската гвардия",
+        "Скрит в каруца със зърно за Остия",
+        "Предрешен като поклонник на богинята Изида",
+        "Облечен като роб в служба на Сената",
+        "Предрешен като жрец на Юпитер"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#vespasian-wins",
+      "explanation": "Домициан се измъкнал, предрешен като поклонник на Изида. Чичо му, обсаден на Капитолийския хълм, нямал този късмет и бил екзекутиран.",
+      "sourceQuote": "Vespasian's younger son Domitian escaped disguised as a worshipper of the goddess Isis.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какъв подход избрал Домициан по границата на Рейн?",
+      "options": [
+        "Плащане на годишен данък на германските племена",
+        "Отбрана – с пътища, крепости и наблюдателни кули по нея",
+        "Заселване на победени даки по бреговете ѝ",
+        "Изтегляне на легионите обратно в Италия",
+        "Завладяване на всички земи до Елба"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#domitian",
+      "explanation": "Домициан предпочел отбраната и укрепил Рейн с пътища, крепости и наблюдателни кули. Срещу даките загубил легион и сключил мир, който критиците нарекли позорен.",
+      "sourceQuote": "On the frontiers he preferred defence, lining the Rhine with roads, forts and watchtowers.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Каква промяна направил Домициан в денария – основната сребърна монета на Рим?",
+      "options": [
+        "Спрял да го сече за пет години",
+        "Заменил го със златна монета",
+        "Наредил да се сече само в Александрия",
+        "Увеличил съдържанието на сребро с 12%",
+        "Намалил съдържанието на сребро с 12%"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#domitian",
+      "explanation": "Домициан увеличил съдържанието на сребро в денария с 12%. Освен това построил или възстановил около петдесет сгради.",
+      "sourceQuote": "He raised the silver content of the denarius, Rome's standard silver coin, by 12%, and built or restored around fifty structures, including a vast palace on the Palatine Hill.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво станало с галското въстание, с което започнал бунтът от 68 г.?",
+      "options": [
+        "Легионите от Рейн го смазали, а водачът му се самоубил",
+        "Тръгнало срещу Рим и принудило императора да бяга",
+        "Войските на Галба го погълнали, а водачът му станал консул",
+        "Преторианската гвардия го смазала пред Рим",
+        "Водачът му бил екзекутиран, след като Галба взел властта"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#fall-of-nero",
+      "explanation": "Легионите от Рейн смазали галското въстание, а водачът му сложил край на живота си. Императорът все пак паднал, щом гвардията го изоставила.",
+      "sourceQuote": "The Gallic rising was crushed by the legions (*legiones*) of the Rhine, and its leader killed himself.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво било отслабило защитниците на Йерусалим преди обсадата на Тит?",
+      "options": [
+        "Земетресение било срутило повечето градски стени",
+        "Три съперничещи бунтовнически групи се били помежду си и изгорили собствените си запаси от храна",
+        "Римски агенти били отровили водоснабдяването на града",
+        "Водачите на града вече се били предали на Веспасиан",
+        "Чума била покосила повечето защитници"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#siege-of-jerusalem",
+      "explanation": "Три съперничещи бунтовнически групи се били помежду си и изгорили собствените си хранителни запаси. Градът бил препълнен и с бежанци и поклонници за Пасха.",
+      "sourceQuote": "He led at least 48,200 soldiers against a city crowded with refugees and Passover pilgrims, where three rival rebel factions had fought each other and burned their own food stores.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой член на семейството на Веспасиан бил седем пъти консул и командвал преторианската гвардия по време на управлението му?",
+      "options": [
+        "Брат му, началник на градския гарнизон",
+        "Дядо му, бивш центурион",
+        "По-малкият му син Домициан",
+        "Зет му, управител на Рейн",
+        "По-големият му син Тит"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#vespasian-reign",
+      "explanation": "Тит бил седем пъти консул и командвал гвардията, като на практика управлявал редом с баща си. Веспасиан се погрижил властта да остане в семейството.",
+      "sourceQuote": "Power stayed in the family: his elder son Titus held seven consulships and commanded the Praetorian Guard, effectively ruling beside him.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кое решение на Галба отчуждило преторианската гвардия?",
+      "options": [
+        "Разпускането ѝ и замяната ѝ с испанци",
+        "Назначаването на Вителий за неин командир",
+        "Преместването ѝ на границата на Рейн",
+        "Отказът да плати наградата, обещана от негово име",
+        "Заповедта за децимация на гвардията"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#galba",
+      "explanation": "Галба отказал да плати на гвардията наградата, обещана от негово име. Освен това се доверявал само на тесен кръг алчни любимци от Испания.",
+      "sourceQuote": "Galba also refused to pay the Praetorian Guard the reward promised in his name, and he trusted only a small circle of greedy favourites from Spain.",
+      "reviewFlags": []
+    }
+  ]
+}

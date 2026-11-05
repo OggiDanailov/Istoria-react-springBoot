@@ -1,0 +1,145 @@
+{
+  "batchName": "Middle Republic: The Gracchi (133-121 BCE) - Latin words",
+  "chapterName": "Middle Republic: The Gracchi (133-121 BCE)",
+  "difficulty": 1,
+  "batchOrder": 9,
+  "description": "Written by hand from the chapter text: the Latin words it explains",
+  "questions": [
+    {
+      "question": "През 133 г. пр.н.е. Тиберий бил избран за tribunus plebis. Какво било това?",
+      "options": [
+        "Един от десетимата магистрати, защитаващи обикновените граждани",
+        "Един от двамата консули",
+        "Върховният жрец",
+        "Командир на конницата"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#the-land-law",
+      "explanation": "Той използвал поста, за да предложи поземления си закон.",
+      "sourceQuote": "Tiberius Gracchus was elected tribune of the plebs (*tribunus plebis*), one of ten officials whose job was to protect ordinary citizens.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Сципион Назика, който повел тълпата срещу Тиберий, бил pontifex maximus. Какво било това?",
+      "options": [
+        "Върховният жрец, глава на римската държавна религия",
+        "Първенецът на Сената",
+        "Консул",
+        "Съдия"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#death-of-tiberius",
+      "explanation": "Той представил нападението като религиозен обред за освобождаване на Рим от човек, стремящ се към тирания.",
+      "sourceQuote": "Scipio Nasica, was chief priest (*pontifex maximus*), head of Rome's state religion.",
+      "reviewFlags": []
+    },
+    {
+      "question": "След като смазал Гай, Опимий построил храм на Concordia. Коя била тя?",
+      "options": [
+        "Богинята на гражданското съгласие",
+        "Богинята на победата",
+        "Богинята на жътвата",
+        "Богинята на лова"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#turning-point",
+      "explanation": "Някой издълбал: „Дело на безумен раздор издига храм на Съгласието.“",
+      "sourceQuote": "built a grand temple to the goddess Concord (*Concordia*), symbol of civic harmony",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво бил lex Sempronia agraria?",
+      "options": [
+        "Поземленият закон на Тиберий",
+        "Зърненият закон на Гай",
+        "Закон за съдебните журита",
+        "Закон за основаване на колонии"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#the-land-law",
+      "explanation": "Той налагал старото ограничение от около 120 хектара обществена земя и давал излишъка на бедни граждани.",
+      "sourceQuote": "His agrarian law (*lex Sempronia agraria*) would enforce that limit",
+      "reviewFlags": []
+    },
+    {
+      "question": "Къде внесъл Тиберий поземления си закон, без първо да се допита до Сената?",
+      "options": [
+        "Плебейското събрание (concilium plebis)",
+        "Центуриатното събрание",
+        "Жреческата колегия",
+        "Консулите"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#breaking-the-rules",
+      "explanation": "Обичаят изисквал първо да се допита до Сената.",
+      "sourceQuote": "He took his bill straight to the Plebeian Council (*concilium plebis*)",
+      "reviewFlags": []
+    },
+    {
+      "question": "Гай виждал, че в Италия няма достатъчно земя за всички. Какво замислил?",
+      "options": [
+        "*Coloniae*, включително една отвъд морето – в Картаген",
+        "Война за завоюване на земя в Галия",
+        "Изкупуване на земя от италийските съюзници",
+        "Преселване на бедните в Сицилия"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#laws-of-gaius",
+      "explanation": "През 121 г. пр.н.е. нов трибун предложил да се отмени колонията в Картаген.",
+      "sourceQuote": "so he planned colonies (*coloniae*), new settlements of citizens, including one overseas at Carthage.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Като квестор в Испания през 137 г. пр.н.е. с какво се занимавал Тиберий?",
+      "options": [
+        "Финансите на войската",
+        "Конницата",
+        "Обсадните машини",
+        "Жреците на войската"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#tiberius-at-war",
+      "explanation": "Той договорил споразумението, което спасило обкръжената при Нуманция армия.",
+      "sourceQuote": "In 137 BC he went to Spain as a quaestor (*quaestor*), a junior officer in charge of an army's finances.",
+      "reviewFlags": []
+    },
+    {
+      "question": "През 121 г. пр.н.е. Сенатът приел първото си *senatus consultum ultimum*. Към какво призовавало то консула?",
+      "options": [
+        "Да защити държавата с всички необходими средства",
+        "Да проведе нови избори",
+        "Да сключи мир с Гай",
+        "Да изпрати Гай в изгнание"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#fall-of-gaius",
+      "explanation": "Опимий нападнал привържениците на Гракх на Авентина; Гай загинал отвъд Тибър.",
+      "sourceQuote": "It passed its first \"final decree\" (*senatus consultum ultimum*), urging him to defend the state by any means necessary.",
+      "reviewFlags": []
+    }
+  ]
+}

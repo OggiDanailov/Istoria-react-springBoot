@@ -1,0 +1,195 @@
+{
+  "batchName": "Middle Republic: Hannibal in Italy (241-216 BCE) - Medium Batch 2",
+  "chapterName": "Middle Republic: Hannibal in Italy (241-216 BCE)",
+  "difficulty": 2,
+  "batchOrder": 4,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Приблизително колко от 40 000 римляни при Требия си пробиха път навън?",
+      "options": [
+        "Около 35 000",
+        "Около 2 000",
+        "Около 20 000",
+        "Около 10 000",
+        "Около 30 000"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#trebia-and-trasimene",
+      "explanation": "Римляните бяха обкръжени на терен, избран от Ханибал, и само около една четвърт се спасиха. След това галите се стекоха в армията на Ханибал.",
+      "sourceQuote": "The Carthaginians surrounded the Romans, and only about 10,000 of 40,000 fought their way out.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как е описан Варон, един от двамата консули за 216 г. пр.н.е.?",
+      "options": [
+        "Сенатор с гръцко образование, който търсел мир",
+        "Опитен пълководец, подкрепял стратегията на Фабий",
+        "Аристократ, който предпочитал среден път",
+        "Бивш диктатор, извикан от Сицилия",
+        "Човек с уж скромен произход, настоявал за настъпателна война"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#fabius-the-delayer",
+      "explanation": "Варон уж бил със скромен произход и настоявал за настъпателна война. Колегата му аристократ предпочитал среден път.",
+      "sourceQuote": "For 216 BC the voters elected two consuls: Varro, a man of reportedly humble origins who demanded an aggressive war, and an aristocratic colleague who favoured a middle course.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Защо разказът на Полибий за Кана може да е пристрастен?",
+      "options": [
+        "Покровителят му бил внук на консула, загинал там",
+        "Пишел при император Август",
+        "Ползвал само картагенски източници",
+        "Служил като офицер при Ханибал",
+        "Бил личен секретар на Варон"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#sources-and-blame",
+      "explanation": "Покровителят на Полибий произлизаше от колегата на Варон – консула, загинал при Кана. След 216 г. пр.н.е. разказът му е запазен само на откъслеци.",
+      "sourceQuote": "But his account survives only in fragments after 216 BC, and his patron was the grandson of the consul killed at Cannae.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво дадоха на Картаген испанските владения на Баркидите? (изберете всички верни)",
+      "options": [
+        "Сребърни мини",
+        "Контрол над бродовете на Рона",
+        "Корабостроителници",
+        "Плодородни земи",
+        "Голям запас от новобранци"
+      ],
+      "correctAnswers": [
+        0,
+        2,
+        3,
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#barcas-in-spain",
+      "explanation": "Годините на планински войни спечелиха почти царски владения, които даваха сребро, земя, корабостроителници и войници. Преди това Картаген имаше само няколко крайбрежни града в Испания.",
+      "sourceQuote": "It gave Carthage silver mines, rich farmland, shipyards and a deep pool of recruits.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво съобщиха изследователите, че са открили в торфищата край Кол дьо ла Траверсет? (изберете всички верни)",
+      "options": [
+        "Материал, датиран с радиовъглерод около 218 г. пр.н.е.",
+        "Картагенски оръжия и останки от лагер",
+        "Почва, силно разровена от животни и хора",
+        "Костите на боен слон",
+        "Необичайно много чревни бактерии от коне и мулета"
+      ],
+      "correctAnswers": [
+        0,
+        2,
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#which-pass",
+      "explanation": "Изследователите съобщиха за разровена почва и необичайно много чревни бактерии от коне и мулета, датирани около 218 г. пр.н.е. По никой от маршрутите не са намерени оръжия или лагери.",
+      "sourceQuote": "Researchers studying peat bogs on both sides of its summit found soil heavily churned, they argue, by thousands of animals and people.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кого постави Ханибал в полумесечния център на строя си при Кана?",
+      "options": [
+        "Освободени италийски съюзници",
+        "Опитна африканска пехота",
+        "Гали и испанци, а сред тях и самия себе си",
+        "Испански и галски конници",
+        "Бойните си слонове"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#battle-of-cannae",
+      "explanation": "Гали и испанци държаха центъра, издаден към врага и предназначен да отстъпи. Опитната африканска пехота чакаше в двата края.",
+      "sourceQuote": "He placed Gauls and Spaniards in the centre, bulging toward the enemy in a crescent, and stood among them himself.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Защо след първите си победи Ханибал освобождаваше пленените римски съюзници и ги пращаше у дома?",
+      "options": [
+        "За да разкъса съюза на Рим",
+        "Защото не можеше да ги изхранва",
+        "За да спази Договора за Ебро",
+        "За да ги размени за картагенски пленници",
+        "За да ги наеме за водачи през Апенините"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#trebia-and-trasimene",
+      "explanation": "Ханибал пращаше италийските съюзници на Рим у дома да хвалят Картаген, надявайки се да разбие съюза на Рим. С римските пленници обаче се отнасяше сурово.",
+      "sourceQuote": "Hannibal hoped to pull Rome's alliance apart.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кои места минаха на страната на Ханибал след Кана? (изберете всички верни)",
+      "options": [
+        "Масалия",
+        "Остия",
+        "Капуа",
+        "Сагунт",
+        "Тарент"
+      ],
+      "correctAnswers": [
+        2,
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#after-cannae",
+      "explanation": "Капуа, вторият град на Италия, и пристанището Тарент минаха на страната на Ханибал. Само за 20 месеца Рим бе загубил може би 150 000 души.",
+      "sourceQuote": "Capua, Italy's second city, and the port of Tarentum went over to Hannibal.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Къде слезе римска армия през 218 г. пр.н.е., само за да изпусне минаващия Ханибал?",
+      "options": [
+        "При Тарент",
+        "В Сардиния",
+        "При Нови Картаген",
+        "При Масалия",
+        "При Сагунт"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#crossing-the-alps",
+      "explanation": "Римската армия слезе при Масалия, гръцки град, днес Марсилия, но Ханибал вече се бе изплъзнал. После той прекоси Рона и продължи към Алпите.",
+      "sourceQuote": "A Roman army that landed at Massalia, a Greek city now Marseille, missed him.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой алпийски проход напоследък печели привърженици като вероятния път на Ханибал?",
+      "options": [
+        "Проходът Малък Сен Бернар",
+        "Кол дьо Клапие",
+        "Кол дьо ла Траверсет",
+        "Проходът Бренер",
+        "Проходът Голям Сен Бернар"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#which-pass",
+      "explanation": "Кол дьо ла Траверсет, на днешната френско-италианска граница, сега е сред водещите кандидати. Скептиците още твърдят, че доказателствата са твърде оскъдни за сигурност.",
+      "sourceQuote": "Recently the Traversette, on the modern French-Italian border, has gained ground.",
+      "reviewFlags": []
+    }
+  ]
+}

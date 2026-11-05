@@ -1,0 +1,145 @@
+{
+  "batchName": "Empire: From Constantine's Sons to Theodosius (AD 337-395) - Latin words",
+  "chapterName": "Empire: From Constantine's Sons to Theodosius (AD 337-395)",
+  "difficulty": 1,
+  "batchOrder": 9,
+  "description": "Written by hand from the chapter text: the Latin words it explains",
+  "questions": [
+    {
+      "question": "Валент позволил на готите да прекосят Дунав като foederati. Какви били те?",
+      "options": [
+        "Съюзници, обвързани с договор",
+        "Роби",
+        "Граждани",
+        "Заложници"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#battle-of-adrianople",
+      "explanation": "Надявал се на земеделци и войници; мошеничеството на чиновниците ги тласнало към бунт.",
+      "sourceQuote": "let them cross the Danube as allies (*foederati*)",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво означава Vicisti, Galilaee?",
+      "options": [
+        "„Ти победи, Галилеецо“",
+        "„Аз победих, Галилеецо“",
+        "„Рим падна“",
+        "„Боговете са мъртви“"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#persian-campaign",
+      "explanation": "Легендата за последните думи на Юлиан се смята за измислица.",
+      "sourceQuote": "\"You have won, Galilean\" (*Vicisti, Galilaee*)",
+      "reviewFlags": []
+    },
+    {
+      "question": "Юлиан бил провъзгласен за Август в Лутеция. Кой град е това?",
+      "options": [
+        "Париж",
+        "Лион",
+        "Страсбург",
+        "Милано"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#proclaimed-in-paris",
+      "explanation": "Войниците му се разбунтували, вместо да тръгнат на изток.",
+      "sourceQuote": "proclaimed Julian Augustus, senior emperor, at Paris (*Lutetia*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "Юлиан искал да бъде primus inter pares. Какво означава това?",
+      "options": [
+        "Пръв сред равни",
+        "Пръв сред боговете",
+        "Господар и владетел",
+        "Баща на отечеството"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#julian-pagan-revival",
+      "explanation": "Участвал в дебатите на Сената като обикновен член.",
+      "sourceQuote": "Julian wanted to be first among equals (*primus inter pares*)",
+      "reviewFlags": []
+    },
+    {
+      "question": "Арбогаст бил magister militum на Запад. Какво било това?",
+      "options": [
+        "Главнокомандващ, най-висшият пълководец",
+        "Върховен жрец",
+        "Пазител на хазната",
+        "Управител на Галия"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#theodosius-legacy",
+      "explanation": "През 392 г. той качил на трона марионетен император.",
+      "sourceQuote": "the western master of soldiers (*magister militum*)",
+      "reviewFlags": []
+    },
+    {
+      "question": "Юлиан върнал властта на curiae. Какво били те?",
+      "options": [
+        "Градски съвети",
+        "Военни части",
+        "Храмове",
+        "Съдилища в Рим"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#julian-pagan-revival",
+      "explanation": "Той също опрости неплатените поземлени данъци.",
+      "sourceQuote": "the city councils (*curiae*)",
+      "reviewFlags": []
+    },
+    {
+      "question": "Юлиан спечелил голямата си битка при Аргенторатум през 357 г. Кой е този град днес?",
+      "options": [
+        "Страсбург",
+        "Кьолн",
+        "Вердюн",
+        "Трир"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#julian-in-gaul",
+      "explanation": "Макар и силно превъзхождани по численост, римляните изтласкали алеманите в Рейн.",
+      "sourceQuote": "at Strasbourg (*Argentoratum*)",
+      "reviewFlags": []
+    },
+    {
+      "question": "Съперникът на Юлиан в Галия бил *praefectus praetorio*. Каква била неговата длъжност по онова време?",
+      "options": [
+        "Най-високият граждански управник на Галия",
+        "Командир на легион",
+        "Епископ на Париж",
+        "Началник на флота"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#julian-in-gaul",
+      "explanation": "Юлиан блокирал увеличението на данъците, което той искал, и се сблъскал с него заради корупцията.",
+      "sourceQuote": "Gaul's top civil official, the praetorian prefect (*praefectus praetorio*)",
+      "reviewFlags": []
+    }
+  ]
+}

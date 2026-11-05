@@ -1,0 +1,189 @@
+{
+  "batchName": "Late Republic: Cicero, Catiline and the Triumvirate (63-53 BCE) - Medium Batch 1",
+  "chapterName": "Late Republic: Cicero, Catiline and the Triumvirate (63-53 BCE)",
+  "difficulty": 2,
+  "batchOrder": 3,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Освен огромните дългове, какъв мотив добавят съвременните историци за заговора на Катилина?",
+      "options": [
+        "Наранена гордост, че не е стигнал предците си",
+        "Тайни заповеди от Крас",
+        "Желание да освободи робите на Италия",
+        "Отмъщение за екзекуцията на роднина",
+        "Религиозен фанатизъм срещу Сената"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#catiline",
+      "explanation": "Античните автори обвиняват дълговете, а съвременните историци добавят наранената гордост. Изворите подсказват, че Катилина е искал преврат, който да го постави начело, а не социална революция.",
+      "sourceQuote": "Modern historians add wounded pride, the shame of failing to match one's ancestors.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Около колко сенатори се стекоха в Лука през 56 г. пр.н.е., за да се подмажат?",
+      "options": [
+        "Около петдесет",
+        "Около шестстотин",
+        "Около сто",
+        "Около четиристотин",
+        "Около двеста"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#luca-renewal",
+      "explanation": "Около двеста сенатори се появиха в Лука – знак колко власт държат съюзниците. Споразумението там осигури на Помпей и Крас ново общо консулство.",
+      "sourceQuote": "Some two hundred senators flocked there to curry favour.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Защо Цицерон избяга от Рим през 58 г. пр.н.е.?",
+      "options": [
+        "Войниците на Цезар заплашиха дома му",
+        "Закон на трибун изгонваше всеки, екзекутирал гражданин без съд",
+        "Осъден беше за подкуп на консулските избори",
+        "Боеше се от оцелелите привърженици на Катилина",
+        "Сенатът го лиши от почестите му"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#pistoria-and-exile",
+      "explanation": "Един подстрекател на тълпата, народен трибун, прокара закон, насочен право срещу екзекуцията на заговорниците от Цицерон. Цицерон избяга в Гърция и се върна на следващата година.",
+      "sourceQuote": "In 58 BC a rabble-rousing tribune passed a law banishing anyone who had executed a citizen without trial.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Приблизително от колко време никой от предците на Катилина не беше заемал консулската длъжност?",
+      "options": [
+        "Около четири века",
+        "Около петдесет години",
+        "Около един век",
+        "Около два века",
+        "Около шест века"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#catiline",
+      "explanation": "Катилина произхождаше от древен род, но никой от предците му не беше ставал консул от около четири века. Съвременните историци виждат в този срам ключов мотив.",
+      "sourceQuote": "None of his ancestors had held the consulship, Rome's top office, shared each year by two consuls (*consules*), for some four centuries.",
+      "reviewFlags": []
+    },
+    {
+      "question": "С каква дума вероятно биха нарекли тримата съюзници тайния си пакт?",
+      "options": [
+        "Clientela (покровителство)",
+        "Triumviratus (колегия от трима)",
+        "Societas (съдружие)",
+        "Amicitia (приятелство)",
+        "Imperium (командване)"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#alliance-formed",
+      "explanation": "Вероятно биха го нарекли amicitia, „приятелство“ – обичайната римска дума за политически съюз. Названието „триумвират“ се появява много по-късно.",
+      "sourceQuote": "They would probably have called it simply friendship (*amicitia*), the normal Roman word for a political alliance.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Защо, отчасти, Цицерон публикува речите си срещу Катилина около 60 г. пр.н.е.?",
+      "options": [
+        "За да докаже, че Цезар стои зад заговора",
+        "За да се защити от обвиненията, че е убил граждани без съд",
+        "За да спечели гласове за второ консулство",
+        "За да почете победата на колегата си консул",
+        "За да учи младите сенатори на реторика"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#catiline-historians",
+      "explanation": "Публикуването на речите помогна на Цицерон да оправдае екзекуциите. Той написа и мемоари, и поема, възхваляваща собственото му консулство.",
+      "sourceQuote": "He published his speeches against Catiline around 60 BC, partly to defend himself against charges of killing citizens without trial.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как един сатирик нарече тройката Помпей, Крас и Цезар?",
+      "options": [
+        "Колегия от трима",
+        "Тримата тирани",
+        "Бандата на тримата",
+        "Тримата царе",
+        "Триглаво чудовище"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#gang-of-three",
+      "explanation": "Един сатирик нарече тройката „триглаво чудовище“. Цицерон се оплакваше от „трима мъже“ с царска власт, а един съвременен популярен историк предпочита „Бандата на тримата“.",
+      "sourceQuote": "A satirist called the trio a \"three-headed monster\".",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кое галско племе заговорниците се опитаха да привлекат, но пратениците му разкриха плана?",
+      "options": [
+        "Белгите",
+        "Арверните",
+        "Едуите",
+        "Хелветите",
+        "Алоброгите"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#execution-debate",
+      "explanation": "Висш магистрат сред заговорниците се обърна към алоброгите, чиито пратеници разкриха плана. Тогава Цицерон ги използва като двойни агенти.",
+      "sourceQuote": "A senior magistrate among the plotters had tried to recruit the Allobroges, a Gallic tribe from what is now south-eastern France.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой всъщност командваше правителствената армия, която разгроми Катилина при Пистория?",
+      "options": [
+        "Самият Цицерон",
+        "Заместник, след като консулът се обяви за болен",
+        "Крас, на свои разноски",
+        "Помпей, току-що завърнал се от Изтока",
+        "Цезар, като висш магистрат"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#pistoria-and-exile",
+      "explanation": "Отговорният консул се престори на болен и предаде командването на заместник. Армията на Катилина беше унищожена, а самият той загина в боя.",
+      "sourceQuote": "Their commander, Cicero's former fellow consul, claimed to be ill and left a deputy in command.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Къде бивш армейски офицер беше вдигнал оръжие в полза на заговорниците до 27 октомври 63 г. пр.н.е.?",
+      "options": [
+        "Край Равена, на Адриатическо море",
+        "Край Фезуле, близо до днешна Флоренция",
+        "Край Лука, в Северна Италия",
+        "Край Остия, пристанището на Рим",
+        "Край Капуа, в Кампания"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#cicero-exposes-plot",
+      "explanation": "Бивш армейски офицер събра сили край Фезуле, хълмист град в Етрурия. Вестите за събиращи се там въоръжени мъже подтикнаха Сената да обяви извънредно положение.",
+      "sourceQuote": "By 27 October a former army officer had taken up arms near Faesulae, a hill town near modern Florence.",
+      "reviewFlags": []
+    }
+  ]
+}

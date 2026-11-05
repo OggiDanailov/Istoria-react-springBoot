@@ -1,0 +1,179 @@
+{
+  "batchName": "Empire: Diocletian and Constantine (AD 284-337) - Easy Batch 1",
+  "chapterName": "Empire: Diocletian and Constantine (AD 284-337)",
+  "difficulty": 1,
+  "batchOrder": 1,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Какво се е опитал да постигне Едиктът за максималните цени на Диоклециан от 301 г.?",
+      "options": [
+        "Да замени сребърните монети с нови златни",
+        "Да определи пожизнено заплатите на войниците",
+        "Да наложи горни цени на над хиляда стоки",
+        "Да премахне всички данъци върху италийската земя"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#reforms-and-prices",
+      "explanation": "Едиктът обвинявал алчните търговци за инфлацията и ограничавал цените на повече от хиляда стоки. Той пренебрегвал търсенето и предлагането и стоките се изнесли на черния пазар.",
+      "sourceQuote": "In late 301 his Edict on Maximum Prices (*Edictum de Pretiis Rerum Venalium*) blamed greedy merchants and set top prices for more than a thousand goods.",
+      "reviewFlags": []
+    },
+    {
+      "question": "В коя римска провинция е роден Диоклециан?",
+      "options": [
+        "Далмация",
+        "Панония",
+        "Мизия",
+        "Тракия"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#diocletian-rise",
+      "explanation": "Диоклециан се родил около 243 г. сл.н.е. в Далмация, на адриатическия бряг на днешна Хърватия. Семейството му било скромно, а античните автори наричат баща му ту писар, ту освободен роб.",
+      "sourceQuote": "Diocletian, the soldier-emperor who pulled Rome back from the brink, was born around AD 243 in Dalmatia, a Roman province on the Adriatic coast of modern Croatia.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво означава думата „Тетрархия“?",
+      "options": [
+        "Власт на войниците",
+        "Власт на боговете",
+        "Власт на четирима",
+        "Власт на двама"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#tetrarchy",
+      "explanation": "Тетрархията идва от гръцка дума, която означава „власт на четирима“: двама старши императори и двама младши цезари. Когато старшата двойка се оттегли, цезарите трябвало да заемат мястото ѝ.",
+      "sourceQuote": "This arrangement is called the Tetrarchy, from a Greek word meaning “rule by four”.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Когато го молели да се върне на власт, Диоклециан казал, че никой не би го помолил, ако види какво?",
+      "options": [
+        "Рибарниците, които изкопал",
+        "Лозята, които подрязал",
+        "Зелето, което посадил",
+        "Библиотеката, която построил"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#abdication",
+      "explanation": "Диоклециан казал, че който види зелето, отгледано със собствените му ръце, никога не би го помолил да се върне. Отговорил така в Карнунтум през 308 г.",
+      "sourceQuote": "If they could see the cabbages he had planted with his own hands, he replied, they would never ask.",
+      "reviewFlags": []
+    },
+    {
+      "question": "В коя година Константин воювал с Максенций и се сражавал при Милвийския мост?",
+      "options": [
+        "330",
+        "306",
+        "324",
+        "312"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#milvian-bridge",
+      "explanation": "До 312 г. Константин и шуреят му Максенций, владетел на Рим, вече воювали. Решителната битка се разиграла на 28 октомври същата година.",
+      "sourceQuote": "By 312 Constantine and his brother-in-law Maxentius, ruler of Rome, were at war.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Къде войската провъзгласила Константин за Август след смъртта на баща му през 306 г.?",
+      "options": [
+        "Милано",
+        "Трир",
+        "Йорк",
+        "Лондон"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#constantine-rise",
+      "explanation": "Бащата на Константин починал в Йорк на 25 юли 306 г. и войската там провъзгласила Константин за Август. Галерий неохотно го признал само за Цезар.",
+      "sourceQuote": "He joined his father, and when his father died at York on 25 July 306, the troops proclaimed Constantine Augustus.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой гръцки град Константин основал наново като Константинопол?",
+      "options": [
+        "Никея",
+        "Византион",
+        "Антиохия",
+        "Халкидон"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#constantine-sole-ruler",
+      "explanation": "Константин основал наново Византион на протока между Европа и Азия и го осветил през 330 г. като Константинопол. Градът останал столица повече от хиляда години.",
+      "sourceQuote": "He refounded Byzantium, a Greek city on the strait between Europe and Asia, dedicating it in 330 as Constantinople, “Constantine's City”.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Приблизително колко провинции имала империята след реформите на Диоклециан?",
+      "options": [
+        "Над двеста",
+        "Около двадесет и пет",
+        "Около петдесет",
+        "Почти сто"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#reforms-and-prices",
+      "explanation": "Диоклециан удвоил провинциите – от около петдесет на почти сто. В по-малките провинции никой управител не разполагал с достатъчно земя или войници, за да се разбунтува.",
+      "sourceQuote": "He doubled the provinces, from about fifty to almost a hundred, so that no governor held enough land or soldiers to rebel.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Коя империя, управлявана от сасанидските царе, била най-голямата заплаха за Рим на Изток?",
+      "options": [
+        "Армения",
+        "Палмира",
+        "Аксум",
+        "Персия"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#wars-and-persia",
+      "explanation": "Персия под властта на Сасанидите била големият източен съперник на Рим. През 297 г. персите разгромили Галерий в Северна Месопотамия.",
+      "sourceQuote": "The gravest threat was Persia, ruled by the Sasanian kings, Rome's great eastern rival.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво дал Миланският едикт от 313 г.?",
+      "options": [
+        "Помилване на всички заточени езически жреци",
+        "Гражданство на всички свободни жители",
+        "Свобода на вероизповеданието за всички религии",
+        "Освобождаване от данъци на цялото християнско духовенство"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#constantine-sole-ruler",
+      "explanation": "Миланският едикт дал свобода на вероизповеданието на всички религии. Той върнал и имуществото, конфискувано от християните.",
+      "sourceQuote": "In 313 Constantine and his eastern co-emperor, Licinius, agreed the Edict of Milan, granting freedom of worship to all religions and returning property seized from Christians.",
+      "reviewFlags": []
+    }
+  ]
+}

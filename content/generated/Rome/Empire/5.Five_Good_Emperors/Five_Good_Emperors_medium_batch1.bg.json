@@ -1,0 +1,189 @@
+{
+  "batchName": "Empire: The Five Good Emperors (AD 96-192) - Medium Batch 1",
+  "chapterName": "Empire: The Five Good Emperors (AD 96-192)",
+  "difficulty": 2,
+  "batchOrder": 3,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Защо „системата“ на осиновяване при тези императори се смята отчасти за въпрос на случайност?",
+      "options": [
+        "Всеки наследник е посочван от вдовицата на починалия император",
+        "Трима от тях нямали деца, а Марк избрал собствения си син",
+        "Сенатът теглел жребий за наследника на всеки император",
+        "Наследниците били избирани след допитване до оракулите",
+        "Гвардията избирала всеки наследник с възгласи в лагера"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#five-good-emperors-debate",
+      "explanation": "Нерва, Траян и Адриан нямали деца, затова осиновяването било необходимост. Когато Марк имал син, избрал него.",
+      "sourceQuote": "The adoption 'system' was also partly chance: Nerva, Trajan and Hadrian had no children, and when Marcus had a son, he chose him.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как и къде умира Траян през 117 г.?",
+      "options": [
+        "Убит от собствената си гвардия в Антиохия",
+        "От удар в Селинус, докато плавал към дома",
+        "В битка пред стените на Хатра",
+        "От треска в курорта Байи край Неапол",
+        "От чума в превзетия Ктезифон"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#parthian-war",
+      "explanation": "След неуспеха при Хатра здравето на Траян рухнало и той починал от удар в Селинус на южния бряг на Турция. Според преданието прахът му лежи в основата на колоната му.",
+      "sourceQuote": "Sailing home, he died of a stroke at Selinus, on the southern coast of modern Turkey, in August 117.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Коя територия предизвиква войната на Траян с Партия?",
+      "options": [
+        "Юдея",
+        "Кападокия",
+        "Месопотамия",
+        "Сирия",
+        "Армения"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#parthian-war",
+      "explanation": "Партия поставила в Армения цар, когото Рим не признавал. Траян го свалил и през 114 г. направил Армения римска провинция.",
+      "sourceQuote": "The trigger was Armenia, a mountain kingdom long shared between the two powers, where Parthia had installed a king Rome would not accept.",
+      "reviewFlags": []
+    },
+    {
+      "question": "При Марк Аврелий за пръв път Рим има двама императори. Какво отличава Марк като старшия?",
+      "options": [
+        "Само той е върховен жрец (pontifex maximus)",
+        "Само той носи титлата Август",
+        "Само той има право да сече монети",
+        "Бил е с двадесет години по-възрастен от съуправителя си",
+        "Само той командва преторианската гвардия"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#marcus-aurelius",
+      "explanation": "Марк настоял осиновеният му брат да управлява с равни титли, но само Марк бил върховен жрец. Нежеланието му да управлява може би отразява истински „страх от императорската власт“.",
+      "sourceQuote": "For the first time Rome had two emperors, though Marcus, who alone was chief priest (*pontifex maximus*), was clearly the senior.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво бедствие донасят римските войски, завърнали се от войната с Партия през 160-те години?",
+      "options": [
+        "Глад в цяла Италия",
+        "Срив на монетата",
+        "Бунт срещу императорите",
+        "Чума, вероятно едра шарка",
+        "Преследваща ги партска армия"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#marcus-aurelius",
+      "explanation": "Завърналите се войски донесли чума, която убила между пет и десет милиона души. Съимператорът на Марк вероятно умрял от нея през 169 г.",
+      "sourceQuote": "Returning troops brought a plague, probably smallpox, that killed five to ten million people.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как реагира Адриан, когато младият му гръцки спътник се удавя в Нил през 130 г.?",
+      "options": [
+        "Оттеглил се от обществения живот за година",
+        "Наредил екипажът на лодката да бъде екзекутиран",
+        "Основал град в негова чест и насърчил култа му",
+        "Забранил плаването по Нил за година",
+        "Погребал го под купола на Пантеона"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#hadrian-the-traveller",
+      "explanation": "Скърбящият император основал град в чест на младежа и насърчил култ, разпространил се из цялата империя. Как точно се удавил младежът от Витиния, и до днес не е известно.",
+      "sourceQuote": "When the youth drowned in the Nile in 130, in circumstances still unknown, the grieving emperor founded a city in his honour and promoted a cult of him that spread across the empire.",
+      "reviewFlags": []
+    },
+    {
+      "question": "С какво се отличава двадесет и три годишното управление на Антонин Пий?",
+      "options": [
+        "Донесло на Рим най-големите му завоевания",
+        "Било споделено поравно със съимператор",
+        "Завършило с преврат на преторианската гвардия",
+        "Преминало главно в обиколки на провинциите",
+        "Било най-дългото след първия император"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#antoninus-pius",
+      "explanation": "Мирното 23-годишно управление на Антонин било най-дългото след първия император. Той държал Марк до себе си в Рим и през 145 г. го оженил за дъщеря си.",
+      "sourceQuote": "His peaceful reign of twenty-three years was the longest since the first emperor.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво е „Historia Augusta“ – важен извор за Адриан?",
+      "options": [
+        "Сборник императорски биографии от края на IV в., прочут с измислиците си",
+        "Автобиографията на самия Адриан, писана в Тиволи",
+        "Византийско резюме на изгубена гръцка история на Рим",
+        "Сбирка надписи, събрани в Атина",
+        "Официална хвалебствена реч на сенатор към Траян"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#five-good-emperors-debate",
+      "explanation": "„Historia Augusta“ е прочута с измислиците си, макар животописът на Адриан в нея да се смята за сравнително надежден. Монети, надписи и археология запълват много празноти.",
+      "sourceQuote": "Much of what we know about Hadrian comes from the Historia Augusta, a late 4th-century collection of imperial biographies notorious for invention, though its life of Hadrian is thought fairly reliable.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как Траян нарежда на управител в Северозападна Турция да се отнася с християните?",
+      "options": [
+        "Да ги изгони незабавно от провинцията",
+        "Да не ги издирва, но да наказва признаващите, които не се отричат",
+        "Да ги принуди всички да служат в легионите",
+        "Да ги остави на мира, каквото и да признаят",
+        "Да арестува всички при всяко обвинение, подписано или анонимно"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#trajan-best-ruler",
+      "explanation": "Траян постановил християните да не бъдат издирвани, нито осъждани по анонимни доноси. Наказвани трябвало да бъдат само признаващите, които отказват да се откажат от вярата си.",
+      "sourceQuote": "When a governor in north-west Turkey asked how to treat Christians, Trajan replied that they should not be hunted down or condemned on anonymous accusations, but those who confessed and refused to give up their faith should be punished.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Към какво принуждават Нерва разбунтувалите се преторианци и командирът им?",
+      "options": [
+        "Да напусне Рим за дунавската граница",
+        "Да абдикира в полза на генерал от Рейн",
+        "Да осинови командира на гвардията",
+        "Да екзекутира убийците на предишния император",
+        "Да удвои заплатите и наградите на гвардията"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#nerva-adopts-trajan",
+      "explanation": "Гвардията се вдигнала срещу Нерва и командирът ѝ го принудил да екзекутира убийците на предишния император. Тази слабост тласнала Нерва да осинови популярен генерал.",
+      "sourceQuote": "Members of the Praetorian Guard (*cohortes praetoriae*), the elite bodyguard stationed in Rome, rose against him, and their commander forced him to execute the men who had killed the previous emperor.",
+      "reviewFlags": []
+    }
+  ]
+}

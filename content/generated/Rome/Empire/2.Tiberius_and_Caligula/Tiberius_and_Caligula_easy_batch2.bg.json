@@ -1,0 +1,179 @@
+{
+  "batchName": "Empire: Tiberius and Caligula (AD 14-41) - Easy Batch 2",
+  "chapterName": "Empire: Tiberius and Caligula (AD 14-41)",
+  "difficulty": 1,
+  "batchOrder": 2,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Какво си върна Германик от германците, унищожили три легиона в Тевтобургската гора?",
+      "options": [
+        "Всички римски пленници",
+        "Тялото на загиналия римски пълководец",
+        "Касите със заплатите на трите легиона",
+        "Два от трите изгубени орела"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#germanicus",
+      "explanation": "Германик си върна два от трите изгубени орела – свещените знамена на легионите. Той посети и бойното поле и започна да погребва останките на загиналите войници.",
+      "sourceQuote": "Germanicus visited the battlefield, began burying the soldiers' remains, and recovered two of the three lost eagles (*aquilae*), the sacred standards of the legions.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво означава прозвището „Калигула“?",
+      "options": [
+        "Ботушче",
+        "Войниче",
+        "Малкият Цезар",
+        "Малкият генерал"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#caligula-rise",
+      "explanation": "Като малко дете в Германия Гай носел миниатюрна униформа с малки войнишки ботуши (caligae), затова войниците го нарекли Калигула. Той беше син на пълководеца Германик.",
+      "sourceQuote": "As a toddler on campaign in Germany he wore a miniature uniform with little army boots (*caligae*), and the soldiers nicknamed him Caligula, \"little boot\".",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво се случи с Калигула през есента на 37 г. сл.н.е., само месеци след началото на управлението му?",
+      "options": [
+        "Тежко боледуваше около месец",
+        "Сенатът го свали за кратко",
+        "Поведе армия отвъд Рейн",
+        "Оцеля след заговор на преторианците"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#caligula-turn",
+      "explanation": "Калигула беше на прага на смъртта около месец. След като оздравя, започнаха убийствата.",
+      "sourceQuote": "In the autumn of AD 37, only months into his reign, the emperor Caligula fell gravely ill and hovered near death for about a month.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Според античните автори каква длъжност смятал Калигула да даде на коня си Инцитат?",
+      "options": [
+        "Преториански префект",
+        "Сенатор",
+        "Управител на Сирия",
+        "Консул"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#horse-bridge-god",
+      "explanation": "Според античните автори Калигула смятал да направи Инцитат („Бързия“) консул – един от двамата най-висши годишни магистрати в Рим. Повечето съвременни историци виждат в това шега за сметка на сенаторите, които жадуваха за тази чест.",
+      "sourceQuote": "Ancient writers say he planned to make it a consul, one of Rome's two highest annual officials.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво командваше Сеян като преториански префект?",
+      "options": [
+        "Преторианската гвардия",
+        "Легионите на Рейн",
+        "Легионите в Сирия",
+        "Флота в Мизенум"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#sejanus",
+      "explanation": "От 15 г. сл.н.е. Сеян командваше преторианската гвардия – личната охрана на императора. Този пост стана основата на огромната му власт.",
+      "sourceQuote": "Sejanus became praetorian prefect (*praefectus praetorio*) in AD 15, commanding the Praetorian Guard (*cohortes praetoriae*), the emperor's bodyguard.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как гледат днес много съвременни историци на Калигула?",
+      "options": [
+        "Като марионетка на преторианския си префект",
+        "Като млад мъж с почти безгранична власт и жесток хумор",
+        "Като мъдър реформатор, оклеветен от враговете си",
+        "Като истински безумец, подлуден от болестта"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#what-historians-think",
+      "explanation": "Много историци виждат в него не безумец, а млад мъж с почти безгранична власт, жестоко чувство за хумор и открито презрение към Сената. Няма надеждни сведения за душевното му състояние.",
+      "sourceQuote": "Many historians now see not a lunatic but a young man handed near-limitless power, with a cruel sense of humour and open contempt for the Senate.",
+      "reviewFlags": []
+    },
+    {
+      "question": "През 26 г. сл.н.е. Тиберий напусна Рим завинаги. Къде отиде?",
+      "options": [
+        "Капри",
+        "Родос",
+        "Сардиния",
+        "Сицилия"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#sejanus",
+      "explanation": "Тиберий се оттегли във вилите си на Капри – остров в Неаполитанския залив. Докато императорът отсъстваше, държавата управляваше Сеян.",
+      "sourceQuote": "In AD 26 Tiberius left Rome for good, retiring to his villas on Capri, an island in the Bay of Naples.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Коя почест отказа Тиберий, когато стана император?",
+      "options": [
+        "Място в Сената",
+        "Командването на легионите на Рейн",
+        "Титлата Баща на отечеството",
+        "Титлата първи гражданин (princeps)"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#reluctant-emperor",
+      "explanation": "Тиберий отказа титлата Баща на отечеството и Гражданския венец от дъбови листа. Прие обаче скромната титла princeps, която Сенатът потвърди през септември 14 г. сл.н.е.",
+      "sourceQuote": "He refused the title Father of the Fatherland (*pater patriae*) and the Civic Crown (*corona civica*), an oak-leaf wreath of honour.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как започна управлението си Калигула през 37 г. сл.н.е.?",
+      "options": [
+        "Изгони сенаторите, служили на Тиберий",
+        "Нахлу в Британия и присъедини южните племена",
+        "Намали заплатите на гвардията, за да напълни хазната",
+        "Раздаде пари на всеки гражданин и устрои пищни игри"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#caligula-rise",
+      "explanation": "Началото на Калигула беше бляскаво: парични дарения, пищни игри и двойна награда за гвардията. По-късно един еврейски автор нарече първите му седем месеца „Златен век“.",
+      "sourceQuote": "He doubled the Guard's bonus, gave cash to every citizen and staged lavish games.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как Тиберий стана доведен син на Август?",
+      "options": [
+        "Майка му се разведе с баща му и се омъжи за Август",
+        "Август го осинови, след като баща му загина в битка",
+        "Август го отгледа като заложник от Клавдиите",
+        "Баща му се ожени за овдовялата сестра на Август"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#tiberius-before-power",
+      "explanation": "Когато Тиберий беше малко дете, майка му напусна баща му и се омъжи за Август. Самият Тиберий произхождаше от Клавдиите – един от най-старите аристократични родове в Рим.",
+      "sourceQuote": "When he was a small child, his mother divorced his father and married Augustus, the man who would become Rome's first emperor.",
+      "reviewFlags": []
+    }
+  ]
+}

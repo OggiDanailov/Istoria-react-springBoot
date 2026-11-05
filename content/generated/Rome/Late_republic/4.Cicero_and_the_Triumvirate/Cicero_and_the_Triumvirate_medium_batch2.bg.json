@@ -1,0 +1,189 @@
+{
+  "batchName": "Late Republic: Cicero, Catiline and the Triumvirate (63-53 BCE) - Medium Batch 2",
+  "chapterName": "Late Republic: Cicero, Catiline and the Triumvirate (63-53 BCE)",
+  "difficulty": 2,
+  "batchOrder": 4,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Как партските конни стрелци при Каре бяха снабдявани със стрели?",
+      "options": [
+        "С речни лодки по Ефрат",
+        "С керван от камили",
+        "С каруци от Каре",
+        "От арменски съюзници",
+        "От пехотинци-носачи"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#carrhae",
+      "explanation": "Керван от камили постоянно снабдяваше стрелците, докато те обсипваха римското каре със стрели. Партската войска наброяваше около 10 000 конници.",
+      "sourceQuote": "Mounted archers rained arrows on the Roman square, resupplied by a train of camels.",
+      "reviewFlags": []
+    },
+    {
+      "question": "С колко Цезар намали дълга на данъчните компании, за да угоди на Крас?",
+      "options": [
+        "С половина",
+        "С една трета",
+        "С една десета",
+        "С една четвърт",
+        "С две трети"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#caesar-consulship",
+      "explanation": "Цезар намали дълга на данъчните компании с една трета. Същата година той одобри и източното уреждане на Помпей.",
+      "sourceQuote": "Caesar then cut the tax companies' debt by a third for Crassus and approved Pompey's eastern settlement.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво се случи с колегата на Цезар, когато той се опита да блокира гласуването на поземления закон?",
+      "options": [
+        "Беше убит на Форума",
+        "Тълпа го хвърли от трибуната и счупи фасциите му",
+        "Цезар нареди да го завлекат в затвора",
+        "Трибуните го лишиха от длъжността му",
+        "Ветераните на Помпей го прогониха в изгнание"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#caesar-consulship",
+      "explanation": "Тълпа го свали от ораторската трибуна и счупи фасциите му – символа на консулската власт. След това той се затвори у дома, обявявайки лоши поличби.",
+      "sourceQuote": "When the fellow consul tried to block the vote, a mob threw him from the speakers' platform and broke his fasces, the bundle of rods around an axe carried before a consul as a symbol of his authority.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Каква роля изигра Цезар при създаването на съюза с Помпей и Крас?",
+      "options": [
+        "Посредник между двама лични съперници",
+        "Водач, избран от Сената",
+        "Таен враг и на двамата",
+        "Младши партньор, финансиран от Помпей",
+        "Неутрален арбитър, назначен от трибуните"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#alliance-formed",
+      "explanation": "Помпей и Крас бяха съперници, които можеха да си сътрудничат само чрез посредник, и Цезар пое тази роля. Пактът беше сключен някъде между юли 60 и януари 59 г. пр.н.е.",
+      "sourceQuote": "Pompey and Crassus were personal rivals who could only cooperate through a go-between, and Caesar was that man.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво предложи Цезар за арестуваните заговорници на 5 декември 63 г. пр.н.е.?",
+      "options": [
+        "Доживотен затвор или задържане до съдебен процес",
+        "Изгнание в Гърция",
+        "Продаване в робство",
+        "Незабавна екзекуция",
+        "Пълно помилване"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#execution-debate",
+      "explanation": "По-мекото предложение на Цезар – доживотен затвор или задържане до процес – спечели мнозина, макар също да беше незаконно. Старшите сенатори до един бяха настоявали за смърт.",
+      "sourceQuote": "Then Caesar, a rising politician due to take high office the next year, proposed life imprisonment or custody until trial.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как римският политик, написал кратка история на заговора около двадесет години по-късно, представи Катилина?",
+      "options": [
+        "Като злодей, символ на нравствения упадък на Републиката",
+        "Като онеправдан реформатор, защитник на бедните",
+        "Като героичен пълководец, предаден от Сената",
+        "Като второстепенна фигура в кариерата на Цицерон",
+        "Като марионетка в ръцете на Крас"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#catiline-historians",
+      "explanation": "Този историк, който през 63 г. пр.н.е. бил извън Рим, разчитал силно на Цицерон. Той превърнал Катилина в злодей, решен от самото начало да унищожи Рим.",
+      "sourceQuote": "He leaned heavily on Cicero and portrayed Catiline as a villain bent on destroying Rome from the start, a symbol of the moral decay he believed was ruining the republic.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Историците, които се съмняват във властта на тройката, отбелязват, че съюзниците печелят големи победи само кога?",
+      "options": [
+        "Само когато са напълно единни, както през 59 и 55 г. пр.н.е.",
+        "През целите 50-те години без прекъсване",
+        "Едва след смъртта на Крас",
+        "Винаги когато Крас финансира кандидатите им",
+        "Само когато Цезар е в Рим"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#gang-of-three",
+      "explanation": "Скептиците отбелязват, че съюзниците често губели избори и постоянно се карали. Други виждат в пакта им мига, в който свободната Република умира.",
+      "sourceQuote": "Others point out that the allies often lost elections, quarrelled constantly, and won big only when fully united, as in 59 and 55 BC.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво се случи, когато Крас напусна Рим за Сирия през ноември 55 г. пр.н.е.?",
+      "options": [
+        "Бунтовници подпалиха дома му",
+        "Помпей го изпрати до брега",
+        "Един трибун тържествено го прокле при градската порта",
+        "Цезар му изпрати галски легиони",
+        "Сенатът му гласува триумф предварително"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#luca-renewal",
+      "explanation": "Един трибун прокле Крас при градската порта на 14 ноември 55 г. пр.н.е. Откритото използване на сила от съюзниците през тази година потвърди предупрежденията на критиците за тирания.",
+      "sourceQuote": "When Crassus left for Syria on 14 November 55 BC, a tribune solemnly cursed him at the city gate.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Чие предложение за по-безопасен път към партските земи Крас отхвърли два пъти?",
+      "options": [
+        "На Помпей",
+        "На царя на Понт",
+        "На управителя на Сирия",
+        "На партския цар",
+        "На арменския цар"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#carrhae",
+      "explanation": "Крас два пъти отхвърли предложението на арменския цар за път през Армения. Зимуването в Сирия му отне и предимството на изненадата.",
+      "sourceQuote": "He twice refused the Armenian king's offer of a safer route through Armenia, and after early successes spent the winter in Syria, losing the advantage of surprise.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво постановяваше т.нар. крайно решение на Сената (senatus consultum ultimum)?",
+      "options": [
+        "Даваше на консулите правен имунитет за всяко действие",
+        "Назначаваше диктатор за шест месеца",
+        "Призоваваше консулите да направят всичко нужно, за да защитят държавата",
+        "Нареждаше незабавния арест на Катилина",
+        "Отменяше консулските избори за годината"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#cicero-exposes-plot",
+      "explanation": "Крайното решение призоваваше консулите да предприемат всичко необходимо, за да защитят държавата. То обаче не даваше на Цицерон правен имунитет.",
+      "sourceQuote": "The Senate (*senatus*) declared an emergency and passed its so-called final decree (*senatus consultum ultimum*), urging the consuls to do whatever it took to protect the state.",
+      "reviewFlags": []
+    }
+  ]
+}

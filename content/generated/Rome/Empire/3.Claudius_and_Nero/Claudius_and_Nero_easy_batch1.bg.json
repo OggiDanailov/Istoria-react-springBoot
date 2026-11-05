@@ -1,0 +1,179 @@
+{
+  "batchName": "Empire: Claudius and Nero (AD 41-68) - Easy Batch 1",
+  "chapterName": "Empire: Claudius and Nero (AD 41-68)",
+  "difficulty": 1,
+  "batchOrder": 1,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Как гледат днес съвременните историци на Клавдий?",
+      "options": [
+        "Като способен и трудолюбив управник",
+        "Като жесток тиранин като Нерон",
+        "Като слаба марионетка на армията",
+        "Като глупак, воден от жените си"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#judging-the-sources",
+      "explanation": "Съвременните историци преразглеждат античната представа за глупака и виждат в него способен управник. Репутацията му пострадала отчасти защото собствените му книги са изгубени.",
+      "sourceQuote": "Modern historians have revised that view and see an able, hard-working administrator.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой в крайна сметка носел титлата „Британик“, тоест завоевател на Британия?",
+      "options": [
+        "Управителят на Британия",
+        "Осиновеният му син Нерон",
+        "Самият Клавдий",
+        "Малкият син на Клавдий"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#conquest-of-britain",
+      "explanation": "На Клавдий предложили титлата, но той я приел само за малкия си син, който станал известен като Британик. Сенатът гласувал на Клавдий и триумф.",
+      "sourceQuote": "He was offered the title \"Britannicus\", conqueror of Britain, but took it only for his baby son, who became known by that name.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Според почти всички античини автори как Агрипина уж убила Клавдий?",
+      "options": [
+        "С отровено вино на празник",
+        "С отровни гъби",
+        "С кинжал в банята",
+        "Като го задушила в съня му"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#claudius-wives-and-death",
+      "explanation": "Античните автори твърдят, че го отровила с гъби или с перо, пъхнато в гърлото му. Някои съвременни историци се съмняват, че изобщо е имало убийство.",
+      "sourceQuote": "Nearly all ancient writers blamed Agrippina, saying she poisoned him with mushrooms, or with a feather pushed down his throat to make him vomit.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво според преданието промърморил Нерон малко преди смъртта си?",
+      "options": [
+        "„Нека мразят, стига да се страхуват“",
+        "„Какъв артист губи светът!“",
+        "„Заварих Рим тухлен, а го оставям мраморен“",
+        "„И ти ли, сине мой?“"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#nero-downfall",
+      "explanation": "Античните автори разказват, че промърморил това във вилата на един освободен роб извън Рим. Когато конниците наближили, той се наръгал в гърлото с помощта на секретаря си.",
+      "sourceQuote": "There, ancient writers say, he muttered \"What an artist the world is losing!\"",
+      "reviewFlags": []
+    },
+    {
+      "question": "Боудика била царица на кое британско племе?",
+      "options": [
+        "Бриганти",
+        "Силури",
+        "Катувелауни",
+        "Ицени"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#boudica-revolt",
+      "explanation": "Боудика управлявала ицените – племе в днешния Норфък, в Източна Англия. Съпругът ѝ управлявал като съюзник на Рим.",
+      "sourceQuote": "Boudica was queen of the Iceni, a British tribe in what is now Norfolk in eastern England.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Според Тацит кого обвинил Нерон за Големия пожар?",
+      "options": [
+        "Евреите в Рим",
+        "Робите на сенаторите",
+        "Агенти на Партия",
+        "Християните"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#great-fire-of-rome",
+      "explanation": "Тацит пише, че Нерон обвинил християните, за да отклони подозренията, и мнозина били хвърлени на зверовете, разпнати или изгорени живи. По-късните християни го нарекли първия гонител на вярата им.",
+      "sourceQuote": "To deflect suspicion, Tacitus says, Nero blamed the Christians.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой убил племенника на Клавдий, управляващия император, през 41 г. сл.н.е.?",
+      "options": [
+        "Собствените освободени роби и роби на Клавдий",
+        "Разбунтувани войници от легионите при Рейн",
+        "Германските му телохранители, сами",
+        "Офицери от преторианската гвардия заедно със сенатори"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#claudius-accession",
+      "explanation": "Преториански офицери, към които се присъединили няколко сенатори, убили императора на 24 януари 41 г. сл.н.е. В хаоса германските телохранители посекли невинни благородници, сред тях и приятели на Клавдий.",
+      "sourceQuote": "On 24 January AD 41, Claudius's nephew, the emperor, was murdered by officers of the Praetorian Guard (*cohortes praetoriae*), the elite bodyguard stationed in Rome, together with several senators.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Къде избухнал Големият пожар през 64 г. сл.н.е.?",
+      "options": [
+        "На Форума на Август",
+        "На Палатинския хълм",
+        "В пристанището на Остия",
+        "Близо до Циркус Максимус"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#great-fire-of-rome",
+      "explanation": "Пожарът започнал близо до Циркус Максимус, римския стадион за колесничарски надбягвания, вероятно в магазини, пълни със запалими стоки. Горял повече от седем дни.",
+      "sourceQuote": "On the night of 18 to 19 July AD 64, a fire broke out near the Circus Maximus, Rome's huge chariot-racing stadium, probably in shops full of flammable goods.",
+      "reviewFlags": []
+    },
+    {
+      "question": "За кого се оженил Клавдий, след като третата му съпруга била екзекутирана?",
+      "options": [
+        "За собствената си племенница Агрипина",
+        "За младата дъщеря на сенатор",
+        "За вдовицата на племенника си",
+        "За галска благородничка"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#claudius-wives-and-death",
+      "explanation": "Клавдий се оженил за племенницата си Агрипина, правнучка на първия император. През 50 г. сл.н.е. той осиновил сина ѝ, който получил името Нерон.",
+      "sourceQuote": "Claudius then married his own niece, Agrippina, a great-granddaughter of the first emperor.",
+      "reviewFlags": []
+    },
+    {
+      "question": "На колко години бил Нерон, когато станал император през 54 г. сл.н.е.?",
+      "options": [
+        "21",
+        "12",
+        "16",
+        "25"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#nero-early-reign",
+      "explanation": "Когато Клавдий умрял, преторианската гвардия и Сенатът подкрепили 16-годишния Нерон. Той бил роден в Анциум през 37 г. сл.н.е.",
+      "sourceQuote": "When his stepfather Claudius died in AD 54, the Praetorian Guard and the Senate backed the 16-year-old as emperor.",
+      "reviewFlags": []
+    }
+  ]
+}

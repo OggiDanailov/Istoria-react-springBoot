@@ -1,0 +1,189 @@
+{
+  "batchName": "Middle Republic: Hannibal in Italy (241-216 BCE) - Medium Batch 1",
+  "chapterName": "Middle Republic: Hannibal in Italy (241-216 BCE)",
+  "difficulty": 2,
+  "batchOrder": 3,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Какво установи Договорът за Ебро от 226 г. пр.н.е.?",
+      "options": [
+        "Ебро като северна граница на сферата на Картаген",
+        "Правото на Картаген да заселва Цизалпийска Галия",
+        "Връщането на Сардиния на Картаген",
+        "Ебро като граница на Рим в Италия",
+        "Съвместно римско-картагенско управление на Сагунт"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#barcas-in-spain",
+      "explanation": "Договорът определи Ебро, река в Североизточна Испания, за северна граница на сферата на Картаген. По-късната сделка на Рим със Сагунт, южно от реката, щеше да създаде проблеми.",
+      "sourceQuote": "In 226 BC Rome and Carthage agreed the Ebro Treaty, which made the Ebro, a river in north-east Spain, the northern limit of Carthage's sphere.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой оглави римското посолство, което връчи исканията на Рим на Картаген след падането на Сагунт?",
+      "options": [
+        "Катон Стари",
+        "Фабий Максим",
+        "Клавдий Марцел",
+        "Варон",
+        "Сципион Африкански"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#saguntum",
+      "explanation": "Посолството водеше Фабий Максим, по-късно прочут като най-търпеливия пълководец на Рим. Рязките му искания бяха отхвърлени и през пролетта на 218 г. пр.н.е. Рим обяви война.",
+      "sourceQuote": "Rome sent an embassy to Carthage led by Fabius Maximus, the senator later famous as Rome's most patient general.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво отчаяно религиозно действие последва Кана, след като жреците се допитаха до Сибилинските книги?",
+      "options": [
+        "Построен бе нов храм на боговете на Картаген",
+        "Хора бяха погребани живи на говеждия пазар в Рим",
+        "Консулът Варон бе принесен в жертва на Марс",
+        "Весталките бяха прогонени от Рим",
+        "Всички храмове бяха затворени за година"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#after-cannae",
+      "explanation": "Хора бяха погребани живи на говеждия пазар като жертвоприношение. Сибилинските книги бяха свещени пророчества, пазени за извънредни случаи.",
+      "sourceQuote": "Priests consulted the Sibylline Books (*Libri Sibyllini*), sacred prophecies kept for emergencies, and people were buried alive in Rome's cattle market as a sacrifice.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво включваше „Фабиевата стратегия“?",
+      "options": [
+        "Търсене на една решителна битка възможно най-бързо",
+        "Избягване на открити битки и прекъсване на снабдяването",
+        "Подкупване на галите да изоставят Ханибал",
+        "Укрепване на Рим и изоставяне на селата",
+        "Нахлуване в Африка, за да принуди Ханибал да се върне"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#fabius-the-delayer",
+      "explanation": "Фабий тормозеше нашествениците и прекъсваше снабдяването им, докато Рим възстановяваше силите си. Стратегията беше крайно непопулярна, докато Ханибал опустошаваше нивите на Италия.",
+      "sourceQuote": "He avoided pitched battles, harassed the invaders and cut their supply lines, wearing them down while Rome rebuilt its strength.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Защо келтските племена в Цизалпийска Галия бяха гневни на Рим през 218 г. пр.н.е.?",
+      "options": [
+        "Рим бе забранил техните жреци друиди",
+        "Рим искаше тежък данък в сребро",
+        "Рим бе поробил иберийските им съюзници",
+        "Рим вербуваше мъжете им в легионите си",
+        "Рим основаваше колонии на заселници върху най-добрите им земи"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#saguntum",
+      "explanation": "Рим заселваше колонисти по най-добрите земи в долината на По. Пратениците на Ханибал вече ухажваха разгневените гали.",
+      "sourceQuote": "Meanwhile, in Cisalpine Gaul (*Gallia Cisalpina*), the Po valley lands of Celtic tribes in northern Italy, Rome was founding new colonies (*coloniae*) of settlers on the best land.",
+      "reviewFlags": []
+    },
+    {
+      "question": "От коя база Ханибал започна похода си към Италия през 218 г. пр.н.е.?",
+      "options": [
+        "Масалия, днешна Марсилия",
+        "Гадес, днешен Кадис",
+        "Нови Картаген, днешна Картахена",
+        "Сагунт, на източния бряг на Испания",
+        "Картаген, в днешен Тунис"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#crossing-the-alps",
+      "explanation": "Нови Картаген, днес Картахена, беше главната база на Ханибал. Оттам той тръгна на север през май или юни 218 г. пр.н.е.",
+      "sourceQuote": "In May or June 218 BC he marched north from New Carthage, his main base, now Cartagena.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как Картаген се справи с военния си дълг към Рим след Първата пуническа война?",
+      "options": [
+        "Плати, като предаде флота си",
+        "Плати го без затруднения",
+        "Изплаща го петдесет години",
+        "Договорът за Ебро го опрости",
+        "Не плати и бе нападнат"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#after-the-first-war",
+      "explanation": "Картаген остана най-богатото пристанище на своето време и лесно изплати дълга. Родът Барка скоро започна да крои планове как отново да се изправи срещу Рим.",
+      "sourceQuote": "It remained the most prosperous port of its day and paid its war debt to Rome with ease.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Срещу кого воюва Картаген в Безпощадната война след 241 г. пр.н.е.?",
+      "options": [
+        "Иберийски племена южно от Ебро",
+        "Келтските племена от долината на По",
+        "Римските легиони в Сицилия",
+        "Собствените си разбунтували се наемници и африкански поданици",
+        "Гръцки колонисти от Масалия"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#after-the-first-war",
+      "explanation": "Картаген се бореше за живота си срещу собствените си наемници и африкански поданици. Рим се възползва и завзе Сардиния и Корсика.",
+      "sourceQuote": "Carthage was soon fighting for its life against its own rebellious mercenaries and African subjects, a struggle known as the Truceless War.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Колко голяма армия събра Рим срещу Ханибал при Кана?",
+      "options": [
+        "Около 150 000 души",
+        "Около 86 000 души",
+        "Около 40 000 души",
+        "Около 26 000 души",
+        "Около 60 000 души"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#battle-of-cannae",
+      "explanation": "Осем римски легиона и толкова съюзнически войски – около 86 000 души, най-голямата армия, която Рим някога бе събирал. Римляните строиха пехотата си необичайно дълбоко.",
+      "sourceQuote": "The Senate (*senatus*) answered with the biggest army Rome had ever raised: eight Roman legions (*legiones*) plus as many allies, about 86,000 men.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Защо споразумението на Рим със Сагунт разтревожи Картаген?",
+      "options": [
+        "Сагунт бе приютил разбунтуваните наемници на Картаген",
+        "Сагунт лежеше северно от Ебро, в сферата на Рим",
+        "Сагунт беше главното сребърно пристанище на Картаген",
+        "Сагунт лежеше далеч южно от Ебро, в сферата на Картаген",
+        "Сагунт контролираше алпийските проходи"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#saguntum",
+      "explanation": "Сагунт лежеше далеч южно от Ебро, затова Картаген видя в споразумението римска намеса в собствената си сфера. По-късно градът остана сам срещу завоеванията на Ханибал.",
+      "sourceQuote": "Some time after the Ebro Treaty, Rome made a separate agreement with Saguntum, a city on Spain's east coast lying well south of the river.",
+      "reviewFlags": []
+    }
+  ]
+}

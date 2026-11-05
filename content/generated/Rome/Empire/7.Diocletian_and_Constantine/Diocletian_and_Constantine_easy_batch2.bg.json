@@ -1,0 +1,179 @@
+{
+  "batchName": "Empire: Diocletian and Constantine (AD 284-337) - Easy Batch 2",
+  "chapterName": "Empire: Diocletian and Constantine (AD 284-337)",
+  "difficulty": 1,
+  "batchOrder": 2,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "През коя година войници разрушили новата църква в Никомедия, с което започнало Великото гонение?",
+      "options": [
+        "311",
+        "293",
+        "285",
+        "303"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#great-persecution",
+      "explanation": "На 23 февруари 303 г. войници разрушили църквата в Никомедия и изгорили свещените ѝ книги. На следващия ден едикт заповядал църквите и свещените книги да бъдат унищожени в цялата империя.",
+      "sourceQuote": "On 23 February 303 soldiers tore down the new church at Nicomedia and burned its scriptures.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво направило оттеглянето на Диоклециан от власт през 305 г. безпрецедентно?",
+      "options": [
+        "Той бил първият император, който се оттеглил доброволно",
+        "Той бил първият император, предал властта на сина си",
+        "Той бил първият император, свален от своя Цезар",
+        "Той бил първият император, заточен от собствената си войска"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#abdication",
+      "explanation": "Диоклециан бил първият римски император, който се отказал от властта по своя воля. Максиимиан се оттеглил същия ден в Милано.",
+      "sourceQuote": "He became the first Roman emperor to step down voluntarily, and Maximian resigned the same day in Milan.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Къде е роден Константин?",
+      "options": [
+        "Трир",
+        "Наис (днешен Ниш)",
+        "Йорк",
+        "Никомедия"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#constantine-rise",
+      "explanation": "Константин се родил около 272 г. сл.н.е. в Наис, днешен Ниш в Сърбия. Майка му била жена със скромен произход.",
+      "sourceQuote": "Constantine, the emperor who would make Rome Christian, was born around AD 272 at Naissus, now Niš in Serbia.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как се казвал Диоклециан, преди да стане император?",
+      "options": [
+        "Диокъл",
+        "Диодор",
+        "Диоскор",
+        "Деций"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#diocletian-rise",
+      "explanation": "Той бил просто Диокъл, докато войската не го провъзгласила за император през 284 г. Тогава приел по-внушителното име Диоклециан.",
+      "sourceQuote": "His name was then plain Diocles, and his family was humble.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Дворецът, в който се оттеглил Диоклециан, е старото сърце на кой съвременен град?",
+      "options": [
+        "Дубровник",
+        "Загреб",
+        "Сплит",
+        "Белград"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#abdication",
+      "explanation": "Диоклециан се оттеглил в укрепен дворец на далматинския бряг, който днес е старият център на Сплит в Хърватия. В Далмация той се бил и родил.",
+      "sourceQuote": "Diocletian retired to a fortified palace on the Dalmatian coast, now the old heart of Split in Croatia.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой император, на смъртно легло през 311 г., прекратил Великото гонение?",
+      "options": [
+        "Галерий",
+        "Максимиан",
+        "Константин",
+        "Диоклециан"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#great-persecution",
+      "explanation": "Галерий прекратил гонението през 311 г. и признал, че то не е дало резултат. Повечето християни избегнали наказание, а много езичници не го одобрявали.",
+      "sourceQuote": "In 311 Galerius, near death, called it off, admitting it had not worked.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Когато Египет въстанал през 297 г., кой град обсаждал Диоклециан, докато не паднал?",
+      "options": [
+        "Александрия",
+        "Пелузий",
+        "Тива",
+        "Мемфис"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#wars-and-persia",
+      "explanation": "Диоклециан обсаждал Александрия, голямото пристанище на Египет, докато тя не паднала през 298 г. Бунтът избухнал отчасти заради новите данъци.",
+      "sourceQuote": "In 297 Egypt rebelled, partly over new taxes, and he besieged Alexandria, its great port, until it fell in 298.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Според епископа, написал житието на Константин, какви думи видял Константин заедно с кръст от светлина над слънцето?",
+      "options": [
+        "„С този знак ще победиш“",
+        "„Слава на Непобедимото слънце“",
+        "„Рим никога няма да падне“",
+        "„Върви и властвай над света“"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#constantine-vision",
+      "explanation": "Според разказа на епископа Константин видял думите „С този знак ще победиш“, на латински „in hoc signo vinces“. Той твърдял, че е чул историята от самия император.",
+      "sourceQuote": "While marching, Constantine saw a cross of light above the sun with the words “In this sign, conquer”, usually given in Latin as *in hoc signo vinces*.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как загинал Максенций в битката при Милвийския мост?",
+      "options": [
+        "Удавил се, когато мостът рухнал",
+        "Бил екзекутиран след залавянето си",
+        "Бил убит в двубой",
+        "Взел отрова, докато войската му бягала"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#milvian-bridge",
+      "explanation": "Докато войниците на Константин изтласквали армията на Максенций към реката, временният мост от лодки рухнал и Максенций се удавил. По-късно главата му била разнасяна из Рим.",
+      "sourceQuote": "The temporary bridge collapsed and Maxentius drowned.",
+      "reviewFlags": []
+    },
+    {
+      "question": "На кой бог в чест Диоклециан се нарекъл „Iovius“?",
+      "options": [
+        "Марс",
+        "Аполон",
+        "Херкулес",
+        "Юпитер"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#tetrarchy",
+      "explanation": "Диоклециан приел титлата Iovius на името на Юпитер, царя на боговете. Съвладетелят му Максимиан приел име в чест на помощника на Юпитер – Херкулес.",
+      "sourceQuote": "Diocletian styled himself *Iovius*, after Jupiter, king of the gods.",
+      "reviewFlags": []
+    }
+  ]
+}

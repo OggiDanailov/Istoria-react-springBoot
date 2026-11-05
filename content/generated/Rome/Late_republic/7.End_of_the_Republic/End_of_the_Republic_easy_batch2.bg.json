@@ -1,0 +1,179 @@
+{
+  "batchName": "Late Republic: Antony, Octavian and the End of the Republic (44-27 BCE) - Easy Batch 2",
+  "chapterName": "Late Republic: Antony, Octavian and the End of the Republic (44-27 BCE)",
+  "difficulty": 1,
+  "batchOrder": 2,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Къде Антоний и Октавиан разгромили главните убийци на Цезар през 42 г. пр.н.е.?",
+      "options": [
+        "Мутина",
+        "Фарсала",
+        "Филипи",
+        "Акциум"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#battle-of-philippi",
+      "explanation": "Армиите се срещнали при Филипи в Македония, Северна Гърция. И двамата главни убийци се самоубили след битките.",
+      "sourceQuote": "The armies met at Philippi, a town in Macedonia in northern Greece.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как Октавиан свалил Лепид в Сицилия през 36 г. пр.н.е.?",
+      "options": [
+        "Влязъл в лагера му и спечелил войниците му",
+        "Накарал един офицер да го убие",
+        "Победил го в морска битка",
+        "Накарал Сената да го обяви за враг на държавата"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#parthia-sicily-lepidus",
+      "explanation": "Октавиан влязъл в лагера на Лепид почти сам и войниците минали на негова страна. Лепид бил изгонен от триумвирата и заточен.",
+      "sourceQuote": "Octavian walked into his camp almost alone, and the soldiers switched sides.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Коя велика държава на източната граница на Рим нападнал Антоний през 36 г. пр.н.е.?",
+      "options": [
+        "Партия",
+        "Понт",
+        "Египет",
+        "Армения"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#parthia-sicily-lepidus",
+      "explanation": "Антоний нахлул в Партия, великата иранска държава, като искал връщането на римските знамена, изгубени седемнайсет години по-рано.",
+      "sourceQuote": "Antony invaded Parthia, the great Iranian empire on Rome's eastern border, demanding the return of Roman standards lost in a catastrophic defeat seventeen years earlier.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кого смятали за истинския победител в битката при Филипи?",
+      "options": [
+        "Лепид",
+        "Марк Антоний",
+        "Октавиан",
+        "Агрипа"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#battle-of-philippi",
+      "explanation": "В първата битка Антоний пробил в лагера на единия убиец и бил истинският победител. Лепид междувременно останал да пази Италия.",
+      "sourceQuote": "Antony was the real victor of Philippi.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как Октавиан нарекъл града, който основал край Акциум след победата си?",
+      "options": [
+        "Августа",
+        "Цезарея",
+        "Никопол, „Град на победата“",
+        "Александрия"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#battle-of-actium",
+      "explanation": "Октавиан основал Никопол, Града на победата, и изложил бронзовите тарани на пленени кораби в паметник на един хълм.",
+      "sourceQuote": "Octavian later founded Nicopolis, \"City of Victory\", nearby, and displayed the bronze rams of captured warships in a hilltop memorial.",
+      "reviewFlags": []
+    },
+    {
+      "question": "За колко време законът lex Titia от 43 г. пр.н.е. давал власт на триумвирите?",
+      "options": [
+        "Десет години",
+        "Една година",
+        "Пет години",
+        "Пожизнено"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#forming-the-triumvirate",
+      "explanation": "Lex Titia, прокаран от благосклонен трибун на 27 ноември 43 г. пр.н.е., дал на триумвирите власт за пет години.",
+      "sourceQuote": "A friendly tribune passed a law, the *lex Titia*, on 27 November 43 BC, giving them this power for five years.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво име дал Сенатът на Октавиан през 27 г. пр.н.е.?",
+      "options": [
+        "Август",
+        "Германик",
+        "Африкански",
+        "Велики"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#alexandria-and-augustus",
+      "explanation": "През 27 г. пр.н.е. Сенатът го нарекъл Август, което означава „почитан“. Той управлявал като първи гражданин (princeps).",
+      "sourceQuote": "He celebrated a triple triumph and, in 27 BC, the Senate gave him the name Augustus, meaning \"revered\".",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как бил скрепен Брундизийският договор през 40 г. пр.н.е.?",
+      "options": [
+        "Лепид официално осиновил Октавиан",
+        "Антоний се оженил за сестрата на Октавиан",
+        "Триумвирите се заклели пред весталките",
+        "Октавиан се оженил за дъщерята на Антоний"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#perusia-and-brundisium",
+      "explanation": "Антоний се оженил за сестрата на Октавиан, наскоро овдовяла, за да скрепи сделката. Италия бурно празнувала мира.",
+      "sourceQuote": "It was sealed by a marriage: Antony wed Octavian's sister, a recent widow.",
+      "reviewFlags": []
+    },
+    {
+      "question": "В кой италийски град Октавиан обсадил брата и съпругата на Антоний?",
+      "options": [
+        "Мутина",
+        "Перузия",
+        "Брундизий",
+        "Тарент"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#perusia-and-brundisium",
+      "explanation": "Октавиан ги обсадил в Перузия, днешна Перуджа. Когато градът паднал, той пуснал семейството на Антоний, но изгорил града.",
+      "sourceQuote": "Octavian trapped them in Perusia, modern Perugia in central Italy.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как умрял Марк Антоний през 30 г. пр.н.е.?",
+      "options": [
+        "Пробол се след лъжлива вест за смъртта на Клеопатра",
+        "Отровен от Клеопатра, за да спечели благоволението на Октавиан",
+        "Убит от войниците на Октавиан при падането на Александрия",
+        "Екзекутиран по заповед на Октавиан след съд"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#alexandria-and-augustus",
+      "explanation": "Излъган, че Клеопатра е мъртва, Антоний се пробол. Според древните автори го пренесли до гробницата ѝ и той умрял в ръцете ѝ.",
+      "sourceQuote": "Antony, falsely told that Cleopatra was dead, stabbed himself.",
+      "reviewFlags": []
+    }
+  ]
+}

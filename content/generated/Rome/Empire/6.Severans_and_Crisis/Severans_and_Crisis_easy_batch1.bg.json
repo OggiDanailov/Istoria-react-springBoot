@@ -1,0 +1,179 @@
+{
+  "batchName": "Empire: The Severans and the Crisis of the Third Century (AD 193-284) - Easy Batch 1",
+  "chapterName": "Empire: The Severans and the Crisis of the Third Century (AD 193-284)",
+  "difficulty": 1,
+  "batchOrder": 1,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Какво представлявала Тетрархията, създадена през 293 г.?",
+      "options": [
+        "Съвет от четирима сенатори",
+        "Гранична армия от четири легиона",
+        "Екип от четирима съимператори",
+        "Данък върху четири вида стоки"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#sources-and-legacy",
+      "explanation": "Тетрархията била екип от четирима съимператори, създаден от войник император, който завзел властта през 284 г. С нея кризата приключила.",
+      "sourceQuote": "The crisis ended with Diocletian, a soldier-emperor who seized power in 284 and in 293 set up the Tetrarchy, a team of four co-emperors.",
+      "reviewFlags": []
+    },
+    {
+      "question": "В кой град е роден Септимий Север, основателят на династията на Северите?",
+      "options": [
+        "Картаген",
+        "Лептис Магна",
+        "Александрия",
+        "Антиохия"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#septimius-severus",
+      "explanation": "Север се родил през 145 г. в Лептис Магна – богато пристанище на брега на днешна Либия. Родът му имал либийски, пунически и италийски корени.",
+      "sourceQuote": "Severus was born in 145 at Leptis Magna, a rich port on the coast of modern Libya.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой стоял зад убийството на Каракала през 217 г.?",
+      "options": [
+        "Управителят на Сирия",
+        "Партският цар",
+        "Неговият преториански префект",
+        "Консул от Сената"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#praetorian-emperor",
+      "explanation": "Убийството на Каракала организирал собственият му преториански префект – командир на елитната императорска охрана. При Северите тази длъжност станала могъща и опасна.",
+      "sourceQuote": "The man behind Caracalla's murder in 217 was his praetorian prefect (*praefectus praetorio*), commander of the Praetorian Guard (*cohortes praetoriae*), the emperor's elite bodyguard.",
+      "reviewFlags": []
+    },
+    {
+      "question": "На кое божество бил жрец младият император, известен като Елагабал?",
+      "options": [
+        "На римския бог Юпитер",
+        "На сирийския бог на слънцето Елагабал",
+        "На персийския бог Митра",
+        "На египетската богиня Изида"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#last-severans",
+      "explanation": "Той бил 14-годишен жрец на сирийския бог на слънцето Елагабал и е запомнен с името на своя бог – Елагабал. През 220 г. дори поставил бога си над Юпитер.",
+      "sourceQuote": "The first, a 14-year-old priest of the Syrian sun god Elagabal, is remembered by his god's name, as Elagabalus.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кое гранично укрепление възстановил Септимий Север по време на походите си в Британия?",
+      "options": [
+        "Адриановият вал",
+        "Аврелиановите стени",
+        "Антониновият вал",
+        "Сервиевата стена"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#septimius-severus",
+      "explanation": "Север воювал в Британия от 208 до 210 г. и възстановил Адриановия вал. Преди това бил разбил партите на изток.",
+      "sourceQuote": "Severus then beat the Parthians, the rulers of Persia and Mesopotamia, and from 208 to 210 he campaigned in Britain and rebuilt Hadrian's Wall.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво станало с денария, основната римска монета, към края на III век?",
+      "options": [
+        "Струвал двойно повече",
+        "Бил от чисто злато",
+        "Бил заменен с персийски монети",
+        "Почти обезценил се"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#money-plague-trade",
+      "explanation": "Императорите все повече примесвали бронз и мед в монетата, цените хвръкнали и денарият почти се обезценил. Обезценяването започнало при Септимий Север.",
+      "sourceQuote": "Prices spiralled, and by the century's end the denarius was nearly worthless.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кои били „войнишките императори“?",
+      "options": [
+        "Издигнати от войниците хора без политически опит и знатен произход",
+        "Пълководци, отказали трона от вярност",
+        "Сенатори, управлявали от военни лагери",
+        "Императори, строили нови крепости по границите"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#barracks-emperors",
+      "explanation": "Войнишките императори били издигани от войниците и нямали политически опит, знатни предци или наследствени права. Първият бил командир на легион от селски произход.",
+      "sourceQuote": "The army's new emperor, Maximinus Thrax, a legion commander of peasant origin, was the first of the barracks emperors: men raised by soldiers without political experience, noble ancestors or hereditary claim.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво дал Каракала на всеки свободен човек в Римската империя?",
+      "options": [
+        "Безплатна месечна дажба зърно",
+        "Правото да носи оръжие",
+        "Освобождаване от всички данъци",
+        "Римско гражданство"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#caracalla",
+      "explanation": "Каракала дал римско гражданство на всеки свободен жител на империята – по причини, които и днес не са ясни. Големите му обществени бани в Рим също още стоят.",
+      "sourceQuote": "For reasons still unclear, he granted Roman citizenship (*civitas*) to every free person in the empire.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как умрял Септимий Север през 211 г.?",
+      "options": [
+        "Убит от преторианската гвардия",
+        "Загинал в битка с партите",
+        "Отровен от сина си в Рим",
+        "От естествена смърт в Британия"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#septimius-severus",
+      "explanation": "Той умрял от естествена смърт в Британия през 211 г., след като воювал там и възстановил Адриановия вал.",
+      "sourceQuote": "He died of natural causes in Britain in 211.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Каква отцепила се държава образували към 268 г. Галия, Британия и за кратко Испания?",
+      "options": [
+        "Царството на Соасон",
+        "Галската империя",
+        "Франкската империя",
+        "Вестготското царство"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#zenobia",
+      "explanation": "Галската империя била едно от трите парчета, на които се разпаднала Римската империя към 268 г. На изток властта държала Палмира.",
+      "sourceQuote": "Gaul, Britain and briefly Spain formed a breakaway Gallic Empire.",
+      "reviewFlags": []
+    }
+  ]
+}

@@ -1,0 +1,179 @@
+{
+  "batchName": "Empire: From Constantine's Sons to Theodosius (AD 337-395) - Easy Batch 1",
+  "chapterName": "Empire: From Constantine's Sons to Theodosius (AD 337-395)",
+  "difficulty": 1,
+  "batchOrder": 1,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Как е бил смъртно ранен Юлиан в Персия?",
+      "options": [
+        "Стрела го улучила при обсада",
+        "Паднал от коня си в битка",
+        "Копие пронизало черния му дроб при нападение",
+        "Отровил го персийски пратеник"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#persian-campaign",
+      "explanation": "При едно персийско нападение Юлиан се хвърлил в боя без броня и копие пронизало черния му дроб. Лекарят му не успял да го спаси.",
+      "sourceQuote": "A spear pierced his liver, and despite his doctor's efforts he died.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Каква титла дал Констанций II на Юлиан през ноември 355 г.?",
+      "options": [
+        "Август",
+        "Преториански префект",
+        "Цезар",
+        "Главнокомандващ"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#julian-in-gaul",
+      "explanation": "Юлиан бил провъзгласен за Цезар, младши император, и оженен за сестрата на Констанций. След това бил изпратен в Галия с малка свита.",
+      "sourceQuote": "In November AD 355, Constantius II made his young cousin Julian a Caesar, a junior emperor, and married him to his sister.",
+      "reviewFlags": []
+    },
+    {
+      "question": "С какво се отличил Теодосий след победата си през 394 г.?",
+      "options": [
+        "Последният император, живял в самия Рим",
+        "Първият роден в Испания император на Рим",
+        "Първият император, покръстен като християнин",
+        "Последният владетел на цялата империя"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#theodosius-legacy",
+      "explanation": "След победата при река Фригид Теодосий управлявал цялата империя – последният човек, който някога го е правил. Той умрял в Милано през януари 395 г.",
+      "sourceQuote": "He now ruled the whole empire, the last man ever to do so.",
+      "reviewFlags": []
+    },
+    {
+      "question": "В кой град разбунтувалите се войници провъзгласили Юлиан за Август?",
+      "options": [
+        "Константинопол",
+        "Страсбург",
+        "Милано",
+        "Париж"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#proclaimed-in-paris",
+      "explanation": "Войниците, които не искали да напуснат Галия, провъзгласили Юлиан за старши император в Париж, тогава наричан Лутеция. До ноември той вече открито използвал титлата върху монетите си.",
+      "sourceQuote": "They mutinied and proclaimed Julian Augustus, senior emperor, at Paris (*Lutetia*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой император загинал в битката при Адрианопол, а тялото му така и не било намерено?",
+      "options": [
+        "Валент",
+        "Констанций II",
+        "Юлиан",
+        "Теодосий"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#battle-of-adrianople",
+      "explanation": "Валент, императорът на Изтока, загинал при разгрома и тялото му така и не било открито. Според едно предание той изгорял в горяща селска къща.",
+      "sourceQuote": "Valens' body was never found; one story says he died in a burning farmhouse.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой народ прогонил готите от земите им и ги накарал да търсят убежище в империята през 376 г.?",
+      "options": [
+        "Персите",
+        "Франките",
+        "Хуните",
+        "Алеманите"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#battle-of-adrianople",
+      "explanation": "Хуните, номади конници от степите, изтласкали готите от родината им. Тогава готите поискали да се заселят в Римската империя.",
+      "sourceQuote": "In AD 376 the Goths, a Germanic people driven from their lands by the Huns, nomadic horsemen from the steppes, asked to settle inside the empire.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Когато първият християнски император на Рим умрял през 337 г. сл.н.е., колко от синовете му били провъзгласени за съвладетели?",
+      "options": [
+        "Трима",
+        "Четирима",
+        "Двама",
+        "Петима"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#sons-of-constantine",
+      "explanation": "Трима синове били провъзгласени за съвладетели и си поделили римския свят. Преди това повечето други мъже от рода на стария император били избити.",
+      "sourceQuote": "When Rome's first Christian emperor died in AD 337, his three sons were proclaimed joint emperors and divided the Roman world between them.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Коя група била обявена за еретична с Едикта от Тесалоника?",
+      "options": [
+        "Гностиците",
+        "Донатистите",
+        "Арианите",
+        "Манихеите"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#theodosius-goths-and-faith",
+      "explanation": "Арианите, които учели, че Синът е сътворен от Отца и стои по-ниско от него, били обявени за еретици. Събор на епископите в Константинопол потвърдил официалната вяра през 381 г.",
+      "sourceQuote": "Opponents, notably the Arians, who taught that the Son was created by the Father and lesser than him, were branded heretics.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Откъде произхождал Теодосий, станал император на Изтока през 379 г.?",
+      "options": [
+        "Галия",
+        "Сирия",
+        "Британия",
+        "Испания"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#theodosius-goths-and-faith",
+      "explanation": "Теодосий бил военачалник от Испания. Баща му, прочут пълководец, бил екзекутиран при неясни обстоятелства.",
+      "sourceQuote": "With Valens dead and Rome's leadership shattered, the generals turned to Theodosius, a commander from Spain whose father, a famous general, had been executed in murky circumstances.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Къде Юлиан извоювал голямата си победа над алеманите през 357 г.?",
+      "options": [
+        "Вердюн",
+        "Кьолн",
+        "Страсбург",
+        "Париж"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#julian-in-gaul",
+      "explanation": "Звездният миг на Юлиан дошъл при Страсбург, наричан от римляните Аргенторатум. Многократно по-малобройните римляни спечелили смазваща победа и пленили вражеския цар.",
+      "sourceQuote": "His great moment came in 357 at Strasbourg (*Argentoratum*).",
+      "reviewFlags": []
+    }
+  ]
+}

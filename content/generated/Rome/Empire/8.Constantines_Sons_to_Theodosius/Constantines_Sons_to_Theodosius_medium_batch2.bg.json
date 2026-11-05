@@ -1,0 +1,189 @@
+{
+  "batchName": "Empire: From Constantine's Sons to Theodosius (AD 337-395) - Medium Batch 2",
+  "chapterName": "Empire: From Constantine's Sons to Theodosius (AD 337-395)",
+  "difficulty": 2,
+  "batchOrder": 4,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Защо вероятно Юлиан и полубрат му били пощадени при клането в семейството през 337 г.?",
+      "options": [
+        "Майка им подкупила войниците",
+        "Живеели в чужбина",
+        "Били много малки",
+        "Констанций имал нужда от наследници",
+        "Скрил ги епископ"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#sons-of-constantine",
+      "explanation": "Двете момчета вероятно били пощадени заради крехката си възраст – Юлиан бил на около шест години. Баща му бил сред убитите.",
+      "sourceQuote": "They were probably spared because they were so young.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво подчертават съвременните историци за Едикта от Тесалоника?",
+      "options": [
+        "Всъщност така и не бил обнародван",
+        "Издал го папата",
+        "Важал само за Западната империя",
+        "Забранил всяко езическо богослужение",
+        "Бил насочен само към Константинопол"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#theodosius-goths-and-faith",
+      "explanation": "Съвременните историци подчертават, че едиктът бил насочен към Константинопол и не превърнал християнството в държавна религия. Той определял кой може да се нарича „католик“.",
+      "sourceQuote": "Modern historians stress that the edict was aimed only at Constantinople and did not make Christianity the state religion.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Каква сатира написал Юлиан в отговор на жителите на Антиохия, които се подигравали с философската му брада?",
+      "options": [
+        "„Писмо до атиняните“",
+        "„Мразещият брадата“",
+        "„Химн за цар Хелиос“",
+        "„Цезарите“",
+        "„Против галилеяните“"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#persian-campaign",
+      "explanation": "След като антиохийците се присмели на брадата му, Юлиан им отвърнал със сатирата „Мразещият брадата“. Престоят му в града продължил девет напрегнати месеца.",
+      "sourceQuote": "After a prickly nine-month stay in Antioch, the great city of Roman Syria, where citizens mocked his philosopher's beard and he answered with a satire called the \"Beard Hater\", Julian set out against Persia in March AD 363.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Статуята на коя богиня уж накарал да се усмихне и засмее философ съперник, когото Юлиан си избрал за наставник?",
+      "options": [
+        "Изида",
+        "Атина",
+        "Деметра",
+        "Хеката",
+        "Кибела"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#julian-the-philosopher",
+      "explanation": "Философът практикувал теургия – магия, с която се призовавали боговете – и уж съживил статуя на Хеката. Един учител предупредил Юлиан да стои далеч от него, но Юлиан все пак го потърсил.",
+      "sourceQuote": "One teacher warned him about a rival philosopher who practised theurgy, magical rituals meant to call down the gods, and who had supposedly made a statue of the goddess Hecate smile and laugh.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Защо съгледвачите на Валент силно подценили готската армия преди Адрианопол?",
+      "options": [
+        "Пропуснали конницата, отишла за храна",
+        "Готите се скрили в гора",
+        "Хуните пристигнали по-късно като съюзници",
+        "Съгледвачите били подкупени",
+        "Мъгла покривала бойното поле"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#battle-of-adrianople",
+      "explanation": "Съгледвачите преброили около 10 000 готи, но пропуснали конницата, която била отишла да събира храна. Когато тя се върнала, обкръжила римляните.",
+      "sourceQuote": "His scouts counted about 10,000 Goths, missing the cavalry who were away gathering food.",
+      "reviewFlags": []
+    },
+    {
+      "question": "След година под надзор кой се застъпил за Юлиан, за да замине да учи в Атина?",
+      "options": [
+        "Преторианският префект",
+        "Императрицата",
+        "Готският му възпитател",
+        "Епископът на Милано",
+        "Полубрат му"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#julian-the-philosopher",
+      "explanation": "Императрицата се застъпила и Юлиан получил разрешение да учи в Атина. Там той бил посветен в Елевзинските мистерии.",
+      "sourceQuote": "After his year of detention, the empress spoke up for him and he was allowed to study in Athens.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво позволил на готите договорът на Теодосий от 382 г.?",
+      "options": [
+        "Да постъпват в легионите като обикновени новобранци",
+        "Да плащат данък срещу земя в Азия",
+        "Да завладеят провинция Галия",
+        "Да се върнат мирно на север от Дунав",
+        "Да се заселят на юг от Дунав под свои водачи"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#theodosius-goths-and-faith",
+      "explanation": "Готите се заселили на юг от Дунав под свои водачи и воювали за Рим като отделна сила. Това донесло мир, но създало полунезависим народ вътре в империята.",
+      "sourceQuote": "A treaty of 3 October 382 let them settle south of the Danube under their own leaders, fighting for Rome as a separate force.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Каква роля първоначално отредил Констанций II на Юлиан в Галия?",
+      "options": [
+        "Заложник в ръцете на армията",
+        "Върховен военачалник",
+        "Главен бирник",
+        "Фигурант пред опитни чиновници",
+        "Управител на градовете"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#julian-in-gaul",
+      "explanation": "Юлиан трябвало да бъде само фигурант, докато управляват опитни чиновници. Вместо това книжният младеж сам се научил да командва армия.",
+      "sourceQuote": "The idea was that Julian would be a figurehead while experienced officials ran things.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво направил Юлиан, след като пълководците му го посъветвали да не обсажда Ктезифон?",
+      "options": [
+        "Повикал подкрепления от Галия",
+        "Отстъпил нагоре по Ефрат",
+        "Изгорил флота си и навлязъл във вътрешността",
+        "Все пак построил обсадни кули",
+        "Сключил мир с Персия"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#persian-campaign",
+      "explanation": "Юлиан изгорил флота си и навлязъл във вътрешността – фатална грешка. Персите горели посевите пред него и наводнявали земите зад него, така че той бил принуден да отстъпи.",
+      "sourceQuote": "His generals advised against a siege, so Julian burned his fleet and pushed inland.",
+      "reviewFlags": []
+    },
+    {
+      "question": "От 43 разрушения на храмове, споменати в писмените извори, колко са потвърдили археолозите?",
+      "options": [
+        "Всичките 43",
+        "Тридесет и едно",
+        "Четирима",
+        "Дванадесет",
+        "Двадесет"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#theodosius-legacy",
+      "explanation": "Археолозите са потвърдили само четири от 43-те споменати разрушения. Съвременните историци се съмняват, че Теодосий е смазал езичеството.",
+      "sourceQuote": "Of 43 temple destructions reported in written sources, archaeologists have confirmed only four.",
+      "reviewFlags": []
+    }
+  ]
+}

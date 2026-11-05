@@ -1,0 +1,193 @@
+{
+  "batchName": "Empire: Claudius and Nero (AD 41-68) - Medium Batch 2",
+  "chapterName": "Empire: Claudius and Nero (AD 41-68)",
+  "difficulty": 2,
+  "batchOrder": 4,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Кого наело семейството на Клавдий да го дисциплинира, вярвайки, че състоянието му идва от мързел?",
+      "options": [
+        "Бивш мулетар",
+        "Треньор на гладиатори",
+        "Гръцки философ",
+        "Строга жрица",
+        "Пенсиониран центурион"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#claudius-early-life",
+      "explanation": "Наели бивш мулетар да го дисциплинира. Майка му дори го наричала чудовище и го сочела като мярка за глупост.",
+      "sourceQuote": "A former mule-driver was hired to discipline him, on the theory that his condition came from laziness.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Защо днешните историци смятат, че Клавдий се оженил за Агрипина?",
+      "options": [
+        "Тя контролирала преторианската гвардия",
+        "Нуждаел се от престижа на рода ѝ, докато Британик бил дете",
+        "Тя водела армии в Германия",
+        "Бил пленен от чара ѝ",
+        "Сенатът наредил брака"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#claudius-wives-and-death",
+      "explanation": "Античните автори твърдят, че го спечелила с чара си, но днешните историци виждат политика: родът ѝ давал престиж, докато синът му бил още малък. По-късно той направил сина ѝ Нерон сънаследник.",
+      "sourceQuote": "Modern historians see politics: Claudius needed the prestige of her bloodline, and his son Britannicus was still a child.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво предизвикало бунта срещу Нерон през март 68 г. сл.н.е.?",
+      "options": [
+        "Дъщерите на Боудика вдигнали Британия на въстание",
+        "Управител в Галия се разбунтувал срещу данъците на Нерон",
+        "Сенатът наредил арестуването на Нерон",
+        "Партско нашествие на изток",
+        "Преторианската гвардия провъзгласила нов император"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#nero-downfall",
+      "explanation": "Управителят на част от Галия се разбунтувал заради данъците и призовал управителя на Испания да претендира за трона. Дори командирът на гвардията по-късно изоставил Нерон.",
+      "sourceQuote": "In March AD 68 the governor of part of Gaul rebelled against Nero's taxes and urged the governor of Spain to claim the throne.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Колко дал Клавдий на всеки гвардеец след възкачването си?",
+      "options": [
+        "50 000 сестерции",
+        "15 000 сестерции",
+        "150 000 сестерции",
+        "5000 сестерции",
+        "1500 сестерции"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#claudius-accession",
+      "explanation": "Всеки гвардеец получил 15 000 сестерции. Критиците нарекли това първия случай, в който император купува верността на армията, макар че по-ранни императори оставяли подобни дарове в завещанията си.",
+      "sourceQuote": "He rewarded each guardsman with 15,000 sesterces.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво признал Тацит за историите на тези императори?",
+      "options": [
+        "Били преписани от книгите на Клавдий",
+        "Били изопачавани от страх, а после писани с прясна омраза",
+        "Преувеличавали победите на императорите",
+        "Всички били писани от освободени роби",
+        "Изгубили се в Големия пожар"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#judging-the-sources",
+      "explanation": "Тацит признава, че историите били изопачавани от страх, докато императорите били живи, и писани с прясна омраза след смъртта им. Един еврейски историк също се оплаквал от ласкателства и лъжи за Нерон.",
+      "sourceQuote": "Tacitus himself admitted that histories of these emperors were falsified out of fear while they lived and written in fresh hatred after they died.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какви мерки взел Клавдий, за да сложи край на зимния недостиг на зърно в Рим? (изберете всички верни)",
+      "options": [
+        "Определил цени на зърното в цяла Италия",
+        "Построил ново пристанище северно от Остия",
+        "Застраховал търговци, плаващи до Египет през зимата",
+        "Конфискувал частните зърнени запаси",
+        "Добавил фар към новото пристанище"
+      ],
+      "correctAnswers": [
+        1,
+        2,
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#claudius-government",
+      "explanation": "Клавдий построил ново пристанище с фар северно от Остия и застраховал търговците, които рискували зимни плавания до Египет. През 52 г. сл.н.е. докарал и два нови акведукта до Рим.",
+      "sourceQuote": "To end winter grain shortages, he built a new harbour north of Ostia, Rome's port, with a lighthouse, and insured merchants who risked winter voyages to Egypt.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Защо сенаторите били принудени да приемат Клавдий за император през 41 г. сл.н.е.?",
+      "options": [
+        "Веднага гласували единодушно за него",
+        "Народът бунтувал, докато Сенатът не отстъпил",
+        "Бил посочен за наследник в завещанието на племенника си",
+        "Легионите му потеглили към сградата на Сената",
+        "Спорели кой да управлява, а той отказал да се яви"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#claudius-accession",
+      "explanation": "Сенатът се заплел в спорове кой сенатор да управлява, после поискал Клавдий да се яви за одобрение. Той мъдро отказал и те трябвало да го приемат.",
+      "sourceQuote": "Meanwhile the Senate (*senatus*), Rome's council of elder statesmen, debated a change of government but fell to arguing over which of its members should rule.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как Нерон платил за възстановяването на Рим след пожара?",
+      "options": [
+        "Продал Златния дом",
+        "Обложил с данъци само християните",
+        "Взел заеми от египетски търговци",
+        "Претопил храмови съкровища",
+        "Вдигнал данъците и обезценил монетите"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#great-fire-of-rome",
+      "explanation": "Нерон вдигнал данъците и обезценил монетите. Новият град имал тухлени къщи по по-широки улици.",
+      "sourceQuote": "To pay for it, Nero raised taxes and debased the coinage.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво правело Британия изкусителна цел за римско завоевание? (изберете всички верни)",
+      "options": [
+        "Богатите ѝ лозя",
+        "Давала убежище на бунтовници от Галия",
+        "Мините ѝ",
+        "Прочутата ѝ търговия с коприна",
+        "Потенциалните роби"
+      ],
+      "correctAnswers": [
+        1,
+        2,
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#conquest-of-britain",
+      "explanation": "Британия предлагала мини и потенциални роби и била приютявала бунтовници от Галия. Непосредственият повод бил молба за помощ от британски съюзник, прогонен от земите си.",
+      "sourceQuote": "The island tempted Rome with its mines and potential slaves, and it had sheltered rebels from Gaul.",
+      "reviewFlags": []
+    },
+    {
+      "question": "За какво използвал Клавдий възстановената длъжност цензор?",
+      "options": [
+        "Да изгони всички освободени роби от длъжности",
+        "Да премахне консулството",
+        "Да даде гражданство на всеки британец",
+        "Да забрани гладиаторските игри в Рим",
+        "Да приеме знатни хора от Галия в Сената"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#claudius-government",
+      "explanation": "Като цензор той приел галски благородници в Сената, а речта му е запазена на бронзова плоча, открита в Лион. Цензорът водел списъците на гражданите и сенаторите.",
+      "sourceQuote": "He used it to admit nobles from Gaul into the Senate, a speech still preserved on a bronze plaque found at Lyon.",
+      "reviewFlags": []
+    }
+  ]
+}

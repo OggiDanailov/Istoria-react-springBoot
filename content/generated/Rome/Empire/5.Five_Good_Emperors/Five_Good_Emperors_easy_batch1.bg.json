@@ -1,0 +1,179 @@
+{
+  "batchName": "Empire: The Five Good Emperors (AD 96-192) - Easy Batch 1",
+  "chapterName": "Empire: The Five Good Emperors (AD 96-192)",
+  "difficulty": 1,
+  "batchOrder": 1,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "В коя съвременна държава се е намирала предимно Дакия – царството, завладяно от Траян?",
+      "options": [
+        "Украйна",
+        "Унгария",
+        "България",
+        "Румъния"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#dacian-wars",
+      "explanation": "Дакия се е простирала на север от долния Дунав, в днешна Румъния. Румънците и до днес почитат Траян като един от основателите на своя народ.",
+      "sourceQuote": "Dacia, a powerful kingdom north of the lower Danube in what is now Romania, had troubled Rome for years.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Коя философия следвал предано Марк Аврелий?",
+      "options": [
+        "Стоицизъм",
+        "Неоплатонизъм",
+        "Епикурейство",
+        "Кинизъм"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#marcus-aurelius",
+      "explanation": "Марк бил убеден стоик – последовател на философия на самообладанието и дълга. Той поел властта неохотно през 161 г.",
+      "sourceQuote": "Marcus Aurelius, born in Rome in 121 and the adopted heir of Antoninus Pius, was a devoted Stoic, follower of a philosophy of self-control and duty.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Каква последна парола дал умиращият Антонин Пий на офицера от нощната стража?",
+      "options": [
+        "Победа",
+        "Невъзмутимост",
+        "Дълг",
+        "Вечен Рим"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#antoninus-pius",
+      "explanation": "На 7 март 161 г. Антонин предал държавата на Марк и дал паролата „невъзмутимост“ (aequanimitas). Той умирал от треска в своето имение извън града.",
+      "sourceQuote": "On 7 March 161, dying of a fever at his country estate, he handed the state to Marcus and gave the officer of the night watch his final password: 'equanimity' (*aequanimitas*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "Каква връзка имал Адриан с Траян, преди да стане император?",
+      "options": [
+        "Бил внук и наследник на Нерва",
+        "Бил командир на гвардията на Траян",
+        "Бил най-големият роден син на Траян",
+        "Бил повереник на Траян и се оженил за внучката на сестра му"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#hadrian-succession",
+      "explanation": "Останал сирак на десет години, Адриан станал повереник на Траян, а по-късно се оженил за внучката на сестра му. И двамата произхождали от испанския град Италика.",
+      "sourceQuote": "Orphaned at ten, he became Trajan's ward and later married Trajan's grandniece.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво представлявали алиментите (alimenta), които Траян узаконил?",
+      "options": [
+        "Пенсионен фонд за ветерани легионери",
+        "Данък върху вноса на зърно от Египет",
+        "Помощи за бедните деца в Италия",
+        "Закон, ограничаващ пиршествата на сенаторите"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#trajan-best-ruler",
+      "explanation": "Алиментите осигурявали пари, храна и обучение на сираци и бедни деца в цяла Италия. Траян бил и щедър строител в Рим.",
+      "sourceQuote": "He formalised the *alimenta*, a welfare scheme giving cash, food and schooling to orphans and poor children across Italy.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как се наричат днес личните бележки, които Марк Аврелий писал в лагера?",
+      "options": [
+        "„Размисли“",
+        "„Изповеди“",
+        "„Анали“",
+        "„Записки“"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#marcus-aurelius",
+      "explanation": "Марк написал „Размисли“ на гръцки между 170 и 180 г., докато воювал. И днес те се четат широко.",
+      "sourceQuote": "In camp between 170 and 180 Marcus wrote, in Greek, the private notes now called the Meditations, still widely read.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как Антонин заслужил прозвището Пий – „благочестивия“?",
+      "options": [
+        "Като се грижел публично за стария си баща",
+        "Като отказвал всеки военен триумф",
+        "Като настоял Сенатът да обяви Адриан за бог",
+        "Като възстановил храмовете на Италия"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#antoninus-pius",
+      "explanation": "Антонин заплашил да откаже престола, ако Сенатът, който се колебаел, не обожестви Адриан. Сенаторите отстъпили и почели верността му с прозвището Пий.",
+      "sourceQuote": "The senators gave way and honoured his loyalty with the name Pius, 'the dutiful'.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Под какво име бил възстановен Йерусалим като град в гръцки стил след еврейското въстание?",
+      "options": [
+        "Кесария Морска",
+        "Елия Капитолина",
+        "Колония Агрипина",
+        "Антиноопол"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#jewish-revolt",
+      "explanation": "Йерусалим бил възстановен като Елия Капитолина. По същото време провинция Юдея била преименувана на Сирия Палестина.",
+      "sourceQuote": "Judaea was renamed Syria Palaestina, and Jerusalem was rebuilt as a Greek-style city called Aelia Capitolina.",
+      "reviewFlags": []
+    },
+    {
+      "question": "При кой император Римската империя достигнала най-големия си обхват?",
+      "options": [
+        "Антонин Пий",
+        "Марк Аврелий",
+        "Траян",
+        "Адриан"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#parthian-war",
+      "explanation": "Източните завоевания на Траян довели империята до най-големия ѝ обхват. Придобивките не се задържали, защото из цяла Месопотамия избухнали въстания.",
+      "sourceQuote": "Under Trajan the empire reached its greatest size.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Император Траян е роден в Италика – римски град край кой днешен град?",
+      "options": [
+        "Севиля",
+        "Лион",
+        "Картаген",
+        "Милано"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#nerva-adopts-trajan",
+      "explanation": "Траян е роден в Италика, близо до днешна Севиля в Южна Испания. Градът бил заселен от италийски ветерани.",
+      "sourceQuote": "That general was Trajan, born in AD 53 (or perhaps 56) in Italica, a Roman town near modern Seville in southern Spain that had been settled by Italian veterans.",
+      "reviewFlags": []
+    }
+  ]
+}

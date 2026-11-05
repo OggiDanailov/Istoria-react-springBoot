@@ -1,0 +1,203 @@
+{
+  "batchName": "Empire: The Year of Four Emperors and the Flavians (AD 69-96) - Hard Batch 1",
+  "chapterName": "Empire: The Year of Four Emperors and the Flavians (AD 69-96)",
+  "difficulty": 3,
+  "batchOrder": 5,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Йосиф Флавий, еврейски военачалник, станал историк, твърди, че Тит се опитал да спаси Втория храм. Какво мислят повечето съвременни учени за това твърдение?",
+      "options": [
+        "Смятат, че Храмът оцелял и бил сринат години по-късно",
+        "Приемат го, тъй като той наблюдавал от римската страна",
+        "Смятат, че Веспасиан заповядал опожаряването от Рим",
+        "Приемат го, но смятат, че войниците не се подчинили",
+        "Смятат, че бунтовниците изгорили Храма, за да не го дадат на Рим",
+        "Съмняват се в него"
+      ],
+      "correctAnswers": [
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#siege-of-jerusalem",
+      "explanation": "Повечето съвременни учени се съмняват в твърдението на Йосиф Флавий; някои подозират, че той защитава репутацията на Тит.",
+      "sourceQuote": "Most modern scholars doubt this. Some suspect he was protecting Titus's reputation; several see the destruction as deliberate.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кои войски първи тръгват в полза на Веспасиан и нахлуват в Италия през 69 г.?",
+      "options": [
+        "Дунавските легиони",
+        "Преторианската гвардия",
+        "Гарнизонът на Египет",
+        "Легионите на Испания",
+        "Легионите на долния Рейн",
+        "Легионите на Юдея"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#vespasian-wins",
+      "explanation": "Дунавските легиони нахлуват в Италия заради Веспасиан и разгромяват армията на Вителий във Втората битка при Бедриакум на 24 октомври 69 г.",
+      "sourceQuote": "The legions of the Danube moved first on his behalf, invading Italy and crushing Vitellius's army at the Second Battle of Bedriacum on 24 October.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кои сгради унищожава тридневният пожар, обхванал Рим през 80 г. сл.н.е.? (изберете всички верни)",
+      "options": [
+        "Колизеумът",
+        "Храмът на мира",
+        "Пантеонът",
+        "Възстановеният храм на Юпитер",
+        "Сградата на Сената",
+        "Палатинският дворец на Домициан"
+      ],
+      "correctAnswers": [
+        2,
+        3
+      ],
+      "difficulty": 3,
+      "textReference": "#titus",
+      "explanation": "Пожарът унищожава възстановения храм на Юпитер и Пантеона. Според един античен биограф по същото време избухва и чума.",
+      "sourceQuote": "In 80 a three-day fire swept Rome, destroying the rebuilt temple of Jupiter and the Pantheon, and according to one ancient biographer a plague struck at the same time.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво прави Веспасиан опасен претендент за трона през 69 г.? (изберете всички верни)",
+      "options": [
+        "Командване на четири легиона, близо 80 000 души",
+        "Верността на рейнските легиони",
+        "Произход от първите императори",
+        "Обещание за 30 000 сестерции на всеки преторианец",
+        "Близостта до Египет, житницата на Рим",
+        "Подкрепата на Сената от самото начало"
+      ],
+      "correctAnswers": [
+        0,
+        4
+      ],
+      "difficulty": 3,
+      "textReference": "#vespasian-wins",
+      "explanation": "Веспасиан разполага с четири легиона, близо 80 000 души, а Египет, житницата на Рим, е наблизо. Той не може да претендира за произход от първите императори, а рейнските легиони подкрепят Вителий.",
+      "sourceQuote": "With four legions, nearly 80,000 men, and Egypt, the source of Rome's grain, within reach, he was a formidable contender.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кои твърдения за падението на Вителий са верни? (изберете всички верни)",
+      "options": [
+        "Освен ветераните си от Германия той има слаба подкрепа",
+        "Убит е на Форума и главата му е набучена на кол",
+        "Бяга в Галия и умира там в изгнание",
+        "Заловен е в двореца и убит на 20 декември 69 г.",
+        "Слага край на живота си след загубата при Бедриакум",
+        "Позициите му рухват, когато източните армии застават зад Веспасиан"
+      ],
+      "correctAnswers": [
+        0,
+        3,
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#vitellius",
+      "explanation": "Със слаба подкрепа извън германските си ветерани, Вителий рухва, щом източните армии подкрепят Веспасиан, и е убит в двореца на 20 декември 69 г. Самоубийството след Бедриакум е съдбата на неговия предшественик.",
+      "sourceQuote": "When the eastern armies declared for Vespasian, his position collapsed.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво е необичайното в управителя в Галия, който вдига бунта през 68 г.?",
+      "options": [
+        "Принадлежи към управляващия род и се стреми към трона",
+        "Командва рейнските легиони, които после подкрепят Вителий",
+        "Внук е на центурион и по-късно основава династия",
+        "Със скромен произход е и сам не иска трона",
+        "Възрастен бездетен сенатор от Испания",
+        "Бивш командир на преторианците, подкупен от Галба"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 3,
+      "textReference": "#fall-of-nero",
+      "explanation": "Бунтовният управител е човек със скромен произход, който не иска трона и вместо това търси кандидат. Намира го в лицето на Галба.",
+      "sourceQuote": "In March of that year a governor in Gaul, a man of humble origins who did not want the throne himself, raised an army of Gallic warriors and went looking for a candidate.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Колко бързо е потушен бунтът на рейнския управител срещу Домициан през 89 г.?",
+      "options": [
+        "За 24 дни",
+        "За 100 дни",
+        "За около три месеца",
+        "За почти година",
+        "За около две години",
+        "За 8 дни"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#domitian",
+      "explanation": "Бунтът е потушен за 24 дни. Следват екзекуции на сенатори, а Домициан в крайна сметка е убит през 96 г.",
+      "sourceQuote": "In 89 a Rhine governor rebelled; the revolt was crushed within 24 days.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как описва един римски историк пътя на Галба от Испания до Рим?",
+      "options": [
+        "„път, платен със сребро“",
+        "„бавният път на един старец“",
+        "„дълъг и кървав поход“",
+        "„поход на просяци и любимци“",
+        "„погребално шествие за Републиката“",
+        "„триумф без война“"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 3,
+      "textReference": "#galba",
+      "explanation": "Историкът го нарича „дълъг и кървав поход“. Галба пътува месеци до Рим и по пътя избива служители, които са му се противопоставили.",
+      "sourceQuote": "A Roman historian called his journey \"a long and bloody march\".",
+      "reviewFlags": []
+    },
+    {
+      "question": "Къде и кога е разбита армията на Отон?",
+      "options": [
+        "Край Кремона, 14 април 69 г.",
+        "Край Кремона, 24 октомври 69 г.",
+        "Край Рим, 15 януари 69 г.",
+        "На Рейн, 2 януари 69 г.",
+        "Край Александрия, 1 юли 69 г.",
+        "При Лугдунум в Галия, март 69 г."
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#the-nobleman-emperor",
+      "explanation": "Армията му губи Първата битка при Бедриакум, край Кремона в Северна Италия, на 14 април 69 г. През октомври там се води втора битка.",
+      "sourceQuote": "On 14 April 69 his army was beaten at the First Battle of Bedriacum, near Cremona in northern Italy.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Приблизително каква част от монетите, сечени в Рим при Веспасиан, прославят победа или мир?",
+      "options": [
+        "Около половината",
+        "Почти две трети",
+        "Почти всички",
+        "Около една десета",
+        "Около една пета",
+        "Почти една трета"
+      ],
+      "correctAnswers": [
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#vespasian-reign",
+      "explanation": "Почти една трета от монетите на Рим прославят победа или мир. Те са част от кампанията на Веспасиан да се представи като донесъл мира.",
+      "sourceQuote": "Nearly a third of the coins minted in Rome celebrated victory or peace.",
+      "reviewFlags": []
+    }
+  ]
+}

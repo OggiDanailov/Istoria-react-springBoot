@@ -1,0 +1,191 @@
+{
+  "batchName": "Middle Republic: Rome Turns East (200-167 BCE) - Medium Batch 1",
+  "chapterName": "Middle Republic: Rome Turns East (200-167 BCE)",
+  "difficulty": 2,
+  "batchOrder": 3,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Кои крепости наричали „оковите на Гърция“? (изберете всички верни)",
+      "options": [
+        "Деметриада",
+        "Халкида",
+        "Пела",
+        "Ефес",
+        "Коринт"
+      ],
+      "correctAnswers": [
+        0,
+        1,
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#freedom-of-the-greeks",
+      "explanation": "Който държеше Коринт, Халкида и Деметриада, можеше да контролира Гърция, а Рим държеше войски и в трите. Легионите се изтеглиха напълно чак през 194 г. пр.н.е.",
+      "sourceQuote": "Rome kept troops in Corinth, Chalcis and Demetrias, three fortresses known as the \"fetters of Greece\" because whoever held them could control the country.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво ново поиска Фламинин от Филип V освен да спре нападенията срещу гръцките градове?",
+      "options": [
+        "Да изтегли гарнизоните си отвсякъде извън Македония, дори от Тесалия",
+        "Да плати разходите на Рим за цялата война",
+        "Да предаде бойните си слонове и целия си флот",
+        "Да предаде най-големия си син като заложник на Рим",
+        "Да скъса тайния си съюз с Антиох III"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#flamininus-takes-command",
+      "explanation": "Фламинин поиска обезщетение за всеки пострадал град и изтегляне отвсякъде извън Македония, включително от Тесалия. Филип напусна разгневен срещата.",
+      "sourceQuote": "Flamininus raised the price: Philip must compensate every city he had harmed and pull his garrisons out of everywhere beyond Macedon, even Thessaly, the broad plain of north-central Greece that Macedon had held since 353 BC.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Според античните автори защо мирните преговори през зимата на 198 г. пр.н.е. не доведоха доникъде?",
+      "options": [
+        "Пратениците на Филип бяха убити на път за Рим",
+        "Фламинин чакаше да разбере дали командването му ще бъде продължено",
+        "Филип при никакви условия не искаше да отстъпи Тесалия",
+        "Антиох III заплаши с нахлуване, ако Филип сключи мир",
+        "Сенатът вече беше наредил последен поход"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#cynoscephalae",
+      "explanation": "Античните автори твърдят, че Фламинин искал бърз мир само ако щели да го сменят. Щом научил, че командването му ще бъде продължено, приятелите му в Рим тихомълком провалили сделката.",
+      "sourceQuote": "Elections were under way in Rome, and Flamininus did not yet know whether his command would be extended (*prorogatio*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "Защо центуриатното събрание отначало отхвърли войната с Филип V през 200 г. пр.н.е.?",
+      "options": [
+        "Гняв срещу Атина, че отказала да плаща на войските",
+        "Страх от съюза на Филип с Антиох III",
+        "Изтощение след години война с Картаген",
+        "Поличбите обявиха войната за злощастна",
+        "Народен трибун наложи вето на предложението на консула"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#rome-looks-east",
+      "explanation": "Почти единодушният и безпрецедентен отказ беше обяснен с умората от войната след Втората пуническа война. На второ заседание консулът ги убеди.",
+      "sourceQuote": "It refused almost unanimously, an unprecedented rejection blamed on exhaustion after years of fighting Carthage.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво стана с великия картагенски пълководец в двора на Антиох III след Апамея?",
+      "options": [
+        "Върна се в Картаген и го поведе в нова война",
+        "Беше предаден на Рим и екзекутиран на Форума",
+        "Оттегли се спокойно на остров Родос",
+        "Избяга и години по-късно се самоуби, за да не бъде предаден",
+        "Беше изпратен в Рим като един от двадесетте заложници"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#peace-of-apamea",
+      "explanation": "От Антиох се изискваше да предаде враговете на Рим, но пълководецът избяга. Години по-късно той сложи край на живота си, за да не бъде предаден.",
+      "sourceQuote": "The great Carthaginian general at his court fled instead, and years later killed himself rather than be surrendered.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Античните разкази за началото на битката при Пидна се разминават. Какво твърди версията, предпочитана от римския историк, който я описва най-подробно?",
+      "options": [
+        "Емилий подгонил кон без ездач към врага",
+        "Римски офицер предизвикал македонец на двубой",
+        "Едно муле се отскубнало край реката и сбиването заради него се разраснало",
+        "Персей нападнал по време на лунното затъмнение",
+        "Македонците атакували призори след пир"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#pydna",
+      "explanation": "В тази по-скромна версия избягало муле предизвикало сбиване, докато двете страни черпели вода, и армиите се хвърлили в боя. Други автори твърдят, че Емилий предизвикал битката с кон без ездач.",
+      "sourceQuote": "The version favoured by the Roman historian who told the story at greatest length is humbler: a mule broke loose while both sides were drawing water from a river, a scuffle over it grew, and both armies poured in.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какъв данък трябваше да плаща на Рим всяка от четирите македонски републики?",
+      "options": [
+        "Двойно повече от това, което е взимал царят",
+        "Половината от това, което е взимал царят",
+        "Нищо",
+        "Една десета от реколтата",
+        "Колкото е взимал царят"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#end-of-macedon",
+      "explanation": "Всяка република плащаше на Рим половината от събираното от царя. Центрове на републиките бяха Амфиполис, Тесалоника, Пела и Пелагония.",
+      "sourceQuote": "It was split into four republics, centred on Amphipolis, Thessalonica, Pella and Pelagonia, each paying Rome a tribute (*tributum*) half what the king had taken.",
+      "reviewFlags": []
+    },
+    {
+      "question": "В кое голямо светилище едва не беше убит царят на Пергам при заговор, приписван на Персей?",
+      "options": [
+        "Делфи",
+        "Олимпия",
+        "Додона",
+        "Самотраки",
+        "Делос"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#perseus-road-to-war",
+      "explanation": "Покушението в Делфи, светилището на Аполон, стана скоро след като царят обвини Персей в Рим. Тогава Рим обяви Персей за враг на държавата и през 171 г. пр.н.е. започна война.",
+      "sourceQuote": "Soon afterwards that king was nearly murdered on a visit to Delphi, the great shrine of Apollo, and the plot was blamed on Perseus.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво се случи край хълма Калиник в Тесалия в началото на войната с Персей?",
+      "options": [
+        "Персей предаде съкровищницата си на римски флот",
+        "Римските войници се разбунтуваха и поискаха да се приберат",
+        "Римляните смазаха фалангата на Персей за по-малко от час",
+        "Етолийците преминаха на страната на Персей",
+        "Конницата и леката пехота на Персей спечелиха ясна победа над Рим"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#perseus-road-to-war",
+      "explanation": "Персей изби 2000 римски пехотинци и 200 конници с малки загуби. Въпреки това Рим отговори на мирните му предложения с искане за пълна капитулация.",
+      "sourceQuote": "Near a hill called Callinicus in Thessaly, Perseus's cavalry and light troops won a clear victory, killing 2,000 Roman infantry and 200 cavalry for small losses of their own.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кого събра Филип V за армията, сражавала се при Киноскефале?",
+      "options": [
+        "Малка елитна гвардия от 5000 подбрани мъже",
+        "Само професионални наемници от Крит и Галия",
+        "Новобранци от завзетите гръцки градове",
+        "Всеки мъж, когото можеше да отдели – от стари ветерани до непълнолетни момчета",
+        "Войници, заети от Антиох III"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#cynoscephalae",
+      "explanation": "Филип събра около 18 000 македонци – от стари ветерани до момчета. Редом с тях се биеха тракийски леки войски и наемници.",
+      "sourceQuote": "Philip now called up every man his kingdom could spare, from aged veterans to underage boys: about 18,000 Macedonians, plus Thracian light troops and hired soldiers.",
+      "reviewFlags": []
+    }
+  ]
+}

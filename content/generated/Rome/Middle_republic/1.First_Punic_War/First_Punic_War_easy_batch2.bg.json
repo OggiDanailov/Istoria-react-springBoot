@@ -1,0 +1,179 @@
+{
+  "batchName": "Middle Republic: The First Punic War (264-241 BCE) - Easy Batch 2",
+  "chapterName": "Middle Republic: The First Punic War (264-241 BCE)",
+  "difficulty": 1,
+  "batchOrder": 2,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Кой римски консул командвал флота, спечелил последната битка на войната?",
+      "options": [
+        "Сципион",
+        "Катул",
+        "Гай Дуилий",
+        "Регул"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#battle-of-the-aegates",
+      "explanation": "Катул довел флота в Сицилия през 242 г. пр.н.е. и безмилостно обучавал екипажите си. По-късно отпразнувал триумф в Рим.",
+      "sourceQuote": "Catulus, the consul who won the war's final battle, brought the fleet to Sicily in 242 BC.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Край кои острови се водила последната битка на Първата пуническа война през 241 г. пр.н.е.?",
+      "options": [
+        "Балеарските острови",
+        "Егатските острови",
+        "Малтийските острови",
+        "Липарските острови"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#battle-of-the-aegates",
+      "explanation": "Решителната битка се водила на 10 март 241 г. пр.н.е. край Егатските острови, точно на запад от Сицилия. Преди да изгребат в морето, римляните оставили мачтите и платната си на брега.",
+      "sourceQuote": "On 10 March 241 BC, near the Aegates Islands just west of Sicily, the Romans left masts and sails ashore and rowed into a strong headwind to intercept.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой сицилийски град, разположен срещу Италия през тесен пролив, станал повод за Първата пуническа война?",
+      "options": [
+        "Панорм",
+        "Месана",
+        "Сиракуза",
+        "Акрагас"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#messana",
+      "explanation": "Войната започнала заради Месана, днешна Месина, на североизточния край на Сицилия. Окупаторите на града помолили за помощ и Рим, и Картаген.",
+      "sourceQuote": "The war began over Messana, today's Messina, a city on Sicily's north-eastern tip facing Italy.",
+      "reviewFlags": []
+    },
+    {
+      "question": "В коя съвременна държава се намирал Картаген, големият съперник на Рим в Първата пуническа война?",
+      "options": [
+        "Мароко",
+        "Египет",
+        "Тунис",
+        "Либия"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#rome-and-carthage",
+      "explanation": "Картаген бил голям търговски град на територията на днешен Тунис. Държавата му се простирала по северноафриканския бряг и в Южна Испания.",
+      "sourceQuote": "Across the sea stood Carthage (*Carthago*), a great trading city in what is now Tunisia.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво са открили водолази край Западна Сицилия от битката при Егатските острови от 2010 г. насам?",
+      "options": [
+        "Над две дузини бронзови тарани",
+        "Картагенски плочки с договори",
+        "Цял абордажен мост corvus",
+        "Останките от флагмана на Дуилий"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#sources-and-debates",
+      "explanation": "Водолазите са извадили над две дузини бронзови тарани, както и шлемове и стотици делви. Мястото на находките потвърждава разказа на Полибий.",
+      "sourceQuote": "Since 2010, divers off western Sicily have found more than two dozen bronze rams from the Aegates battle, plus helmets and hundreds of storage jars.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Защо войните на Рим с Картаген се наричат „пунически“?",
+      "options": [
+        "Кръстени са на река Пуник в Сицилия",
+        "На латински думата означава „морска война“",
+        "Пуник било името на картагенския царски род",
+        "Римляните наричали картагенците Punici, т.е. финикийци"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#rome-and-carthage",
+      "explanation": "Римляните наричали картагенците Punici, т.е. финикийци, по името на техните предци. Затова този конфликт е известен като Първата пуническа война.",
+      "sourceQuote": "Romans called the Carthaginians *Punici*, meaning Phoenicians, after their ancestors.",
+      "reviewFlags": []
+    },
+    {
+      "question": "На какви войници разчитал най-вече Картаген за армиите си?",
+      "options": [
+        "Наборници от съюзни гръцки градове",
+        "Роби, освободени за служба",
+        "Граждани на Картаген",
+        "Наемни чужденци"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#siege-of-akragas",
+      "explanation": "Картаген разчитал главно на наемни чуждестранни войници. За да спаси Акрагас, той изпратил армия с 60 бойни слона.",
+      "sourceQuote": "Carthage, which relied mostly on hired foreign soldiers, shipped over a relief army of 50,000 infantry, 6,000 cavalry and 60 war elephants.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво означава името на стандартния боен кораб от онази епоха – квинкверемата?",
+      "options": [
+        "„С бронзов клюн“",
+        "„Петгребна“",
+        "„Бързоходна“",
+        "„Трипалубна“"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#rome-builds-a-fleet",
+      "explanation": "Квинкверема означава „петгребна“. Това била галера, дълга около 45 м, с тежък бронзов таран на водолинията.",
+      "sourceQuote": "That ship was a quinquereme, meaning \"five-oared\", the standard warship of the age.",
+      "reviewFlags": []
+    },
+    {
+      "question": "На кое същество бил наречен римският абордажен мост с шип – corvus?",
+      "options": [
+        "Вълк",
+        "Скорпион",
+        "Орел",
+        "Гарван"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#corvus-and-mylae",
+      "explanation": "Corvus означава гарван; мостът имал тежък железен шип, оформен като птичи клюн. Бил поставян, за да компенсира слабото мореплаване на римляните.",
+      "sourceQuote": "To make up for poor seamanship, the Romans fitted their ships with a boarding bridge nicknamed the raven (*corvus*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "През 260 г. пр.н.е. Рим почти нямал флот. Как проектирал първия си голям флот?",
+      "options": [
+        "Копирал корабокрушенски картагенски боен кораб",
+        "Наел гръцки корабостроители от Сиракуза",
+        "Купил кораби от Египет",
+        "Уголемил речните си шлепове"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#rome-builds-a-fleet",
+      "explanation": "Римляните копирали картагенски боен кораб, претърпял корабокрушение. Дотогава винаги взимали назаем малки ескадри от съюзниците си.",
+      "sourceQuote": "In 260 BC it began building a fleet, copying a shipwrecked Carthaginian warship.",
+      "reviewFlags": []
+    }
+  ]
+}

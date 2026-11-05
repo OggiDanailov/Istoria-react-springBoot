@@ -1,0 +1,191 @@
+{
+  "batchName": "Empire: The Fall of the West (AD 395-476) - Medium Batch 2",
+  "chapterName": "Empire: The Fall of the West (AD 395-476)",
+  "difficulty": 2,
+  "batchOrder": 4,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Кой град в северния край на Адриатическо море срина Атила при нахлуването си в Италия през 452 г.?",
+      "options": [
+        "Равена",
+        "Аквилея",
+        "Милано",
+        "Поленция",
+        "Верона"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#murder-and-vandal-sack",
+      "explanation": "Атила разруши Аквилея. После болести, глад и може би едно папско посолство го убедиха да се върне.",
+      "sourceQuote": "Attila returned in 452, invading Italy and razing Aquileia, a city at the head of the Adriatic.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Според подигравателна история на по-късен гръцки историк какво се уплашил императорът в Равена, че е загинало, когато чул, че „Рома е загинала“?",
+      "options": [
+        "Пауна си в клетка",
+        "Любимата си кокошка",
+        "Любимия си боен кон",
+        "Скъпоценния си сокол",
+        "Ловното си куче"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#sack-of-rome-410",
+      "explanation": "Според разказа от VI в. императорът си отдъхнал, като разбрал, че е загинал само градът, а не кокошката му на име Рома. Историята осмива безразличието му към падането на Рим.",
+      "sourceQuote": "He had feared for his favourite chicken, named Roma.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Защо загубата на Африка заради вандалите беше такъв удар за Западната империя? (изберете всички верни отговори)",
+      "options": [
+        "Беше главният източник на зърно за Рим",
+        "Доставяше повечето коне за армията",
+        "Лесно се отбраняваше",
+        "Беше богата",
+        "Беше родното място на императора"
+      ],
+      "correctAnswers": [
+        0,
+        2,
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#kingdoms-inside-the-empire",
+      "explanation": "Африка беше богата, лесна за отбрана и главен доставчик на зърно за Рим. За да покрие загубата, властта вдигна данъците на селяни, които вече не можеха да плащат повече.",
+      "sourceQuote": "Africa had been rich, easy to defend and the main source of Rome's grain.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Приблизително колко вандали, алани и други преминаха Рейн и навлязоха в Галия в началото на V в.?",
+      "options": [
+        "1,000,000",
+        "100,000",
+        "10,000",
+        "300,000",
+        "30,000"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#alaric-and-the-general",
+      "explanation": "Вероятно около 100 000 души преминаха Рейн и навлязоха в Галия. Това дойде на фона на друга готска орда, която опустошаваше Северна Италия през 405 и 406 г.",
+      "sourceQuote": "Then perhaps 100,000 Vandals, Alans (nomadic horsemen from the steppe) and others crossed the Rhine (*Rhenus*) into Gaul.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой народ стана главната сила в Североизточна Галия, докато империята се смаляваше?",
+      "options": [
+        "Алани",
+        "Свеви",
+        "Саксонци",
+        "Франки",
+        "Бургунди"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#kingdoms-inside-the-empire",
+      "explanation": "Франките завладяха Североизточна Галия. Междувременно Испания мина в ръцете на свеви, вандали и местни силни мъже.",
+      "sourceQuote": "Spain slipped into the hands of the Sueves, another Germanic people, the Vandals and local strongmen, while the Franks became the main power in north-eastern Gaul.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво означаваше готите да бъдат заселени като foederati след бунта си?",
+      "options": [
+        "Бяха поробени в императорски имения",
+        "Запазиха водачите си и воюваха за Рим",
+        "Бяха изпратени да пазят Британия",
+        "Бяха обезоръжени и пръснати по градовете",
+        "Станаха римски граждани и плащаха данъци"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#a-divided-empire",
+      "explanation": "Foederati бяха съюзни народи, които запазваха водачите си и в замяна воюваха за Рим. Рим засели готите по този начин, защото не можеше нито да ги смаже, нито да ги прогони.",
+      "sourceQuote": "Instead they were settled as allies (*foederati*), peoples who kept their own leaders and fought for Rome in return.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво стана със западния император година след като уби Аеций?",
+      "options": [
+        "Абдикира в полза на сина си",
+        "Почина от чума в Равена",
+        "Избяга в Константинопол",
+        "Беше пленен от вандалите",
+        "Беше убит от привържениците на Аеций"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#murder-and-vandal-sack",
+      "explanation": "Привържениците на Аеций убиха императора за отмъщение. После трона завзе богат сенатор, подстрекавал и двете убийства.",
+      "sourceQuote": "A year later Aetius's supporters murdered the emperor in revenge.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво се случи с царя на вестготите в битката на Каталаунските полета?",
+      "options": [
+        "Беше пленен от Атила",
+        "Премина на страната на хуните",
+        "Беше коронован за император",
+        "Загина в битката",
+        "Избяга обратно в Испания"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#aetius-and-attila",
+      "explanation": "Вестготският цар загина в сражението. Атила се оттегли в лагера си от каруци, а Аеций го остави да се прибере у дома.",
+      "sourceQuote": "The Visigothic king was killed, and Attila withdrew to his camp of wagons.",
+      "reviewFlags": []
+    },
+    {
+      "question": "В какво обвини християнството един езически историк след разграбването на Рим?",
+      "options": [
+        "Че изпразнило хазната за църкви",
+        "Че поканило готите в Италия",
+        "Че подкопало старите добродетели на империята",
+        "Че преместило столицата в Равена",
+        "Че разделило империята на две"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#who-was-to-blame",
+      "explanation": "Той твърдеше, че християнството е подкопало старите добродетели на империята. Други езичници казваха, че Рим е изгубил божията закрила, като се е отказал от жертвоприношенията.",
+      "sourceQuote": "One pagan historian blamed Christianity for sapping the empire's old virtues.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво направи Одоакър с императорските регалии, след като свали последния западен император?",
+      "options": [
+        "Изпрати ги на императора в Константинопол",
+        "Даде ги на папата",
+        "Погреба ги в гробницата на Ромул",
+        "Короняса се с тях",
+        "Претопи ги, за да плати на войските си"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#the-last-emperor",
+      "explanation": "Одоакър сам управляваше Италия и изпрати императорските регалии на императора в Константинопол.",
+      "sourceQuote": "Odoacer then ruled Italy himself and sent the imperial regalia to the emperor in Constantinople.",
+      "reviewFlags": []
+    }
+  ]
+}

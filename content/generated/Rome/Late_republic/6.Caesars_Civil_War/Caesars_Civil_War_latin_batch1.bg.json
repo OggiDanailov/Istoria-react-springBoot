@@ -1,0 +1,145 @@
+{
+  "batchName": "Late Republic: Caesar's Civil War and the Ides of March (49-44 BCE) - Latin words",
+  "chapterName": "Late Republic: Caesar's Civil War and the Ides of March (49-44 BCE)",
+  "difficulty": 1,
+  "batchOrder": 9,
+  "description": "Written by hand from the chapter text: the Latin words it explains",
+  "questions": [
+    {
+      "question": "Какво според преданието казал Цезар, когато прекосявал Рубикон?",
+      "options": [
+        "Alea iacta est: „жребият е хвърлен“",
+        "Veni, vidi, vici",
+        "Et tu, Brute",
+        "Carthago delenda est"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#crossing-the-rubicon",
+      "explanation": "Друг античен автор казва, че той цитирал гръцки поет, а собственият разказ на Цезар изобщо не споменава реката.",
+      "sourceQuote": "he declared \"the die is cast\" (*alea iacta est*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "След коя битка Цезар написал veni, vidi, vici?",
+      "options": [
+        "Зела, срещу цар на Понт",
+        "Фарсала",
+        "Тапс",
+        "Мунда"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#zela-and-thapsus",
+      "explanation": "„Дойдох, видях, победих“ обобщавало един много кратък поход.",
+      "sourceQuote": "Caesar summed up the brief campaign in a letter: \"I came, I saw, I conquered\" (*veni, vidi, vici*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "На кой ден бил убит Цезар?",
+      "options": [
+        "Мартенските иди (Idus Martiae), 15 март",
+        "Календите на януари",
+        "Луперкалиите, през февруари",
+        "Рождения му ден, през юли"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#ides-of-march",
+      "explanation": "Това било последното заседание на Сената, преди той да тръгне срещу партите.",
+      "sourceQuote": "fell on the Ides of March (*Idus Martiae*), 15 March.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Защо clementia на Цезар при Корфиниум била далновидна?",
+      "options": [
+        "Защото Италия не се обърнала срещу него",
+        "Защото напълнила хазната му",
+        "Защото веднага сложила край на войната",
+        "Защото Сенатът я поискал"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#crossing-the-rubicon",
+      "explanation": "За разлика от по-ранните водачи в гражданските войни, той не отмъщавал, а войските му не грабели.",
+      "sourceQuote": "This mercy (*clementia*) was shrewd.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Приветстван като rex, Цезар се пошегувал: „Не съм Рекс, а Цезар.“ Защо това е игра на думи?",
+      "options": [
+        "Rex означава цар и било също римско родово име",
+        "Рекс било името на коня му",
+        "Рекс бил жреческа титла, която носел",
+        "Рекс бил прякорът му в Галия"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#three-last-straws",
+      "explanation": "Когато трибуните арестували първия, който извикал, Цезар ги лишил от длъжност.",
+      "sourceQuote": "He punned, \"I am not Rex, but Caesar,\" since Rex was also a Roman family name.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Колко *lictores* са вървели пред Цезар при триумфите му през 46 г. пр.н.е.?",
+      "options": [
+        "Седемдесет и двама – три пъти повече от обичайното за диктатор",
+        "Дванадесет, като на консул",
+        "Двадесет и четирима, като на диктатор",
+        "Сто"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#munda-and-honours",
+      "explanation": "Те носели фасциите – снопове пръчки около брадва.",
+      "sourceQuote": "Seventy-two attendants (*lictores*) marched before him carrying the fasces",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво според Цезар е защитавал той, когато започва гражданската война?",
+      "options": [
+        "Своята *dignitas*, личната си чест",
+        "Свободата на галите",
+        "Правата на Сената",
+        "Богатството си"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#road-to-war",
+      "explanation": "Днешните историци се съмняват в древните твърдения, че се е страхувал от съдебно преследване.",
+      "sourceQuote": "Caesar said he was defending his personal honour (*dignitas*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "В началото на 44 г. пр.н.е. Цезар е обявен за *dictator perpetuo*. Какво означава това?",
+      "options": [
+        "Пожизнен диктатор",
+        "Диктатор за една година",
+        "Диктатор на провинциите",
+        "Диктатор за времето на война"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#munda-and-honours",
+      "explanation": "Ласкателният Сенат му дал и титлата „Баща на отечеството“.",
+      "sourceQuote": "Early in 44 BC he was made dictator for life (*dictator perpetuo*).",
+      "reviewFlags": []
+    }
+  ]
+}

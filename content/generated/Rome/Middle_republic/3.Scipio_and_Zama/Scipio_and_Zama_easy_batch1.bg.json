@@ -1,0 +1,179 @@
+{
+  "batchName": "Middle Republic: Scipio and the Road to Zama (216-201 BCE) - Easy Batch 1",
+  "chapterName": "Middle Republic: Scipio and the Road to Zama (216-201 BCE)",
+  "difficulty": 1,
+  "batchOrder": 1,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Какъв чин е имал Сципион в битката при Кана през 216 г. пр.н.е.?",
+      "options": [
+        "Претор",
+        "Едил",
+        "Военен трибун",
+        "Консул"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#survivor-of-cannae",
+      "explanation": "При Кана Сципион бил военен трибун – младши офицер. Той оцелял след катастрофата и събрал разпилените бойци.",
+      "sourceQuote": "In 216 BC Scipio served as a military tribune (*tribunus militum*), a junior officer, at Cannae in southern Italy.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Коя провинция получил Сципион като консул, с разрешение да премине в Африка?",
+      "options": [
+        "Галия",
+        "Сицилия",
+        "Испания",
+        "Сардиния"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#consul-at-thirty-one",
+      "explanation": "С компромисно решение Сципион получил Сицилия за провинция и можел да премине в Африка, ако прецени, че така е най-добре.",
+      "sourceQuote": "Scipio received Sicily as his province, with permission to cross to Africa if he judged it best.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой град, главната база за снабдяване на картагенците в Испания, превзел с щурм Сципион през 209 г. пр.н.е.?",
+      "options": [
+        "Сагунт",
+        "Нови Картаген",
+        "Утика",
+        "Гадес"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#new-carthage",
+      "explanation": "Вместо да гони трите картагенски армии, Сципион ударил Нови Картаген, днешна Картахена. Това била главната снабдителна база на врага.",
+      "sourceQuote": "Rather than chase the three Carthaginian armies, he struck at New Carthage, modern Cartagena on Spain's south-east coast.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво почетно прозвище приел Сципион след победата над Картаген?",
+      "options": [
+        "Протакащия",
+        "Африкански",
+        "Велики",
+        "Август"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#peace-and-africanus",
+      "explanation": "Сципион приел прозвището Африкански – „африканецът“. Той отпразнувал и триумф, великото победно шествие на Рим.",
+      "sourceQuote": "He took the honorary surname (*agnomen*) Africanus, \"the African\".",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как римляните научили за плана братът на Ханибал да се присъедини към него през 207 г. пр.н.е.?",
+      "options": [
+        "Шпиони в Картаген ги известили",
+        "Заловили пратениците му",
+        "Масиниса ги предупредил",
+        "Картагенски дезертьор им казал"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#battle-of-the-metaurus",
+      "explanation": "Римляните заловили пратениците, които носели писмата му, и научили за плана да се срещне с Ханибал в Средна Италия. Писмата стигнали до консула Клавдий Нерон.",
+      "sourceQuote": "Then the Romans captured his messengers and learned of his plan to meet Hannibal in central Italy.",
+      "reviewFlags": []
+    },
+    {
+      "question": "През коя планинска верига Ханибал превел армията си от Испания в Италия през 218 г. пр.н.е.?",
+      "options": [
+        "Алпите",
+        "Апенините",
+        "Балканите",
+        "Атласките планини"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#survivor-of-cannae",
+      "explanation": "Ханибал повел армията си от Испания през Алпите към Италия и така започнала Втората пуническа война. Сред римляните, излезли да го спрат, бил и младият Сципион.",
+      "sourceQuote": "The Carthaginian general Hannibal marched an army from Spain, over the Alps and into Italy.",
+      "reviewFlags": []
+    },
+    {
+      "question": "На колко години бил Сципион, когато бил избран за консул за 205 г. пр.н.е.?",
+      "options": [
+        "31",
+        "25",
+        "50",
+        "42"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#consul-at-thirty-one",
+      "explanation": "Сципион бил на 31 – далеч под обичайната минимална възраст от 42 години за консулство. Избрали го сред бурен ентусиазъм след завръщането му от Испания.",
+      "sourceQuote": "He was 31, while the normal minimum age for the office was 42.",
+      "reviewFlags": []
+    },
+    {
+      "question": "През коя година Сципион и Ханибал се срещнали край Зама?",
+      "options": [
+        "202 г. пр.н.е.",
+        "216 г. пр.н.е.",
+        "146 г. пр.н.е.",
+        "207 г. пр.н.е."
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#battle-of-zama",
+      "explanation": "През 202 г. пр.н.е. двамата пълководци се срещнали край Зама, в днешен Тунис. Сципион отхвърлил условията на Ханибал и последвала битка.",
+      "sourceQuote": "In 202 BC, near Zama in what is now Tunisia, Scipio and Hannibal met to parley.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой гръцки историк е основният запазен извор за кариерата на Сципион?",
+      "options": [
+        "Херодот",
+        "Тукидид",
+        "Полибий",
+        "Ксенофонт"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#sources-and-legend",
+      "explanation": "Повечето от това, което знаем, идва от Полибий, изпратен в Рим като заложник през 167 г. пр.н.е. Той разпитвал участници и от двете страни.",
+      "sourceQuote": "What survives comes mainly from Polybius, a Greek historian born around 200 BC who was sent to Rome as a hostage in 167 BC.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кое голямо картагенско пристанище обсадил Сципион след слизането си в Африка през 204 г. пр.н.е.?",
+      "options": [
+        "Утика",
+        "Гадес",
+        "Сиракуза",
+        "Нови Картаген"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#invasion-of-africa",
+      "explanation": "Сципион слязъл на брега на около 20 km северно от Утика и я обсадил, но градът издържал. Наблизо се разположили две вражески армии.",
+      "sourceQuote": "Scipio besieged Utica, but it held out, and two enemy armies camped nearby.",
+      "reviewFlags": []
+    }
+  ]
+}

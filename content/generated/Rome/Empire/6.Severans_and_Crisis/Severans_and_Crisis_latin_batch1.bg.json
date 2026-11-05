@@ -1,0 +1,145 @@
+{
+  "batchName": "Empire: The Severans and the Crisis of the Third Century (AD 193-284) - Latin words",
+  "chapterName": "Empire: The Severans and the Crisis of the Third Century (AD 193-284)",
+  "difficulty": 1,
+  "batchOrder": 9,
+  "description": "Written by hand from the chapter text: the Latin words it explains",
+  "questions": [
+    {
+      "question": "Какво означавала титлата Augusta, която носела Юлия Домна?",
+      "options": [
+        "Императрица",
+        "Жрица",
+        "Царица на Сирия",
+        "Майка на армията"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#julia-domna",
+      "explanation": "Тя водела голяма част от официалната кореспонденция на Каракала.",
+      "sourceQuote": "carried the title of empress (*Augusta*)",
+      "reviewFlags": []
+    },
+    {
+      "question": "Каракала дал civitas на всеки свободен човек в империята. Какво е civitas?",
+      "options": [
+        "Римско гражданство",
+        "Освобождаване от данъци",
+        "Парцел земя",
+        "Място в армията"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#caracalla",
+      "explanation": "Защо го направил, и днес не е ясно.",
+      "sourceQuote": "he granted Roman citizenship (*civitas*) to every free person in the empire.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво бил donativum, от който се нуждаел всеки нов император?",
+      "options": [
+        "Парична награда за войските",
+        "Дар за Сената",
+        "Храмово приношение",
+        "Данък върху земята"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#money-plague-trade",
+      "explanation": "Изплащането му карало императорите да примесват все повече бронз и мед в монетите.",
+      "sourceQuote": "each needing a quick bonus (*donativum*) for the troops",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кои били coloni в късната империя?",
+      "options": [
+        "Арендатори, обвързани със земята",
+        "Ветерани",
+        "Колонисти, изпратени в нови земи",
+        "Свободни търговци"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#money-plague-trade",
+      "explanation": "Те били ранен образец на средновековното крепостничество.",
+      "sourceQuote": "becoming tenant farmers bound to the soil (*coloni*)",
+      "reviewFlags": []
+    },
+    {
+      "question": "Елагабал се оженил за virgo Vestalis. Коя била тя?",
+      "options": [
+        "Весталка – жрица, заклела се в целомъдрие",
+        "Сирийска принцеса",
+        "Дъщеря на сенатор",
+        "Жрица на бога на слънцето"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#last-severans",
+      "explanation": "Монетите и надписите го потвърждават.",
+      "sourceQuote": "he married a Vestal Virgin (*virgo Vestalis*), a priestess sworn to chastity.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Макрин бил *praefectus praetorio*. Какво е това?",
+      "options": [
+        "Командир на преторианската гвардия",
+        "Управител на Сирия",
+        "Адмирал на флота",
+        "Върховен жрец"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#praetorian-emperor",
+      "explanation": "Той стоял зад убийството на Каракала през 217 г.",
+      "sourceQuote": "his praetorian prefect (*praefectus praetorio*)",
+      "reviewFlags": []
+    },
+    {
+      "question": "По-късните владетели се наричали domini вместо princeps. Какво означава domini?",
+      "options": [
+        "Господари",
+        "Първи граждани",
+        "Пълководци",
+        "Бащи"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#sources-and-legacy",
+      "explanation": "Промяната показала, че откритата монархия заменя старото преструване.",
+      "sourceQuote": "rulers now called themselves 'lords' (*domini*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "Зенобия вероятно била преведена в триумфа (triumphus) на Аврелиан. Какво е това?",
+      "options": [
+        "Победно шествие през Рим",
+        "Гладиаторско представление",
+        "Съдебен процес в Сената",
+        "Погребално шествие"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#aurelian",
+      "explanation": "По-късни автори твърдят, че тя се оттеглила във вила в Тибур.",
+      "sourceQuote": "his triumph (*triumphus*), the victory parade through Rome",
+      "reviewFlags": []
+    }
+  ]
+}

@@ -1,0 +1,203 @@
+{
+  "batchName": "Late Republic: Caesar in Gaul (58-50 BCE) - Hard Batch 1",
+  "chapterName": "Late Republic: Caesar in Gaul (58-50 BCE)",
+  "difficulty": 3,
+  "batchOrder": 5,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Приблизително колко се проточвал обозът на един легион по време на поход?",
+      "options": [
+        "Около 1 km",
+        "Около 20 km",
+        "Около 8 km",
+        "Около 12 km",
+        "Около 2 km",
+        "Около 4 km"
+      ],
+      "correctAnswers": [
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#legions-and-warriors",
+      "explanation": "Легионът се нуждаел от около хиляда товарни животни, проточили се на около 4 km (2,5 мили). Снабдяването било слабото място на Рим през цялата война.",
+      "sourceQuote": "Even so, a legion needed around a thousand pack animals, its baggage train (*impedimenta*), which stretched some 4 km (2.5 miles) on the march.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кога Галия окончателно била организирана в римски провинции?",
+      "options": [
+        "46 г. пр.н.е.",
+        "14 г. сл.н.е.",
+        "27 г. пр.н.е.",
+        "50 г. пр.н.е.",
+        "44 г. пр.н.е.",
+        "31 г. пр.н.е."
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 3,
+      "textReference": "#aftermath",
+      "explanation": "Галия била разделена на провинции едва през 27 г. пр.н.е., при първия император на Рим. По-късно латинският ѝ език се превърнал във френски.",
+      "sourceQuote": "Gaul became formal provinces only in 27 BC, under Rome's first emperor, and its Latin later grew into French.",
+      "reviewFlags": []
+    },
+    {
+      "question": "След разгрома на нервиите през 57 г. пр.н.е. Сенатът гласувал за Цезар рекордно дълго благодарствено честване. Колко продължило то?",
+      "options": [
+        "30 дни",
+        "12 дни",
+        "20 дни",
+        "5 дни",
+        "10 дни",
+        "15 дни"
+      ],
+      "correctAnswers": [
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#belgae-nervii-veneti",
+      "explanation": "15-дневното честване било най-дългото дотогава. То последвало почти катастрофа, при която нервиите нападнали от засада легионите, докато строели лагер.",
+      "sourceQuote": "The Senate later voted him a 15-day public thanksgiving (*supplicatio*), the longest yet.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какви стоки разменяли заможните галски племена срещу римско вино? (изберете всички верни)",
+      "options": [
+        "Роби",
+        "Зърно",
+        "Желязо",
+        "Кехлибар",
+        "Коприна",
+        "Зехтин"
+      ],
+      "correctAnswers": [
+        0,
+        1,
+        2
+      ],
+      "difficulty": 3,
+      "textReference": "#caesar-goes-to-gaul",
+      "explanation": "Галите разменяли зърно, желязо и роби срещу римско вино и сечали свои монети. Богатството им правело Галия примамлива цел за завоевание.",
+      "sourceQuote": "They minted coins and traded grain, iron and slaves for Roman wine.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Откога учените гледат подчертано скептично на разказа на Цезар за Галската война?",
+      "options": [
+        "От XIX в.",
+        "От 90-те години на XX в.",
+        "От Втората световна война",
+        "От Френската революция",
+        "От Ренесанса",
+        "От Първата световна война"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 3,
+      "textReference": "#caesars-account",
+      "explanation": "До XX в. учените до голяма степен вярвали на „Записки“-те на Цезар. Твърденията му за над милион убити гали и почти никакви римски жертви подхранват съмненията.",
+      "sourceQuote": "Since the Second World War they have grown sceptical.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво подсказва археологията за обсадните линии на Цезар при Алезия?",
+      "options": [
+        "Те се намирали далеч от Мон Оксоа",
+        "Били по-малко непрекъснати, отколкото твърди Цезар, но издържали",
+        "Никога не са съществували и са измислица на Цезар",
+        "Били изградени от камък, а не от пръст",
+        "Армията, дошла на помощ, ги пробила",
+        "Били двойно по-дълги, отколкото ги описва Цезар"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 3,
+      "textReference": "#siege-of-alesia",
+      "explanation": "Линиите имали пролуки, които Цезар не споменава, но изпълнили задачата си. Включвали ровове, насипи, кули и скрити ями със заострени и закалени в огън колове.",
+      "sourceQuote": "Archaeology suggests the lines were less continuous than Caesar claimed, but they held.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво правело войната на Цезар срещу царя на свевите политически неудобна?",
+      "options": [
+        "Той бил помогнал на Рим срещу хелветите",
+        "Бил женен за дъщеря на Помпей",
+        "Имал римско гражданство чрез Крас",
+        "Едуите се били заклели да го защитават",
+        "Плащал данък на Рим цяло десетилетие",
+        "Сенатът го бил обявил за приятел на Рим предходната година"
+      ],
+      "correctAnswers": [
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#helvetii-and-suebi",
+      "explanation": "Само година по-рано Сенатът бил обявил този германски цар за приятел на Рим. Цезар нападнал, след като галски съюзници се оплакали от завоеванията на царя.",
+      "sourceQuote": "Only the year before, the Senate (*senatus*) had named this king a friend of Rome.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво се случило с бащата на Верцингеториг?",
+      "options": [
+        "Паднал в битка срещу свевите",
+        "Бил прогонен от друидите",
+        "Бил убит от собствения си народ, защото се опитал да стане цар",
+        "Загинал в бой с Цезар при Бибракте",
+        "Бил отровен от съперници – едуйски благородници",
+        "Бил екзекутиран по римска заповед"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 3,
+      "textReference": "#vercingetorix",
+      "explanation": "Баща му, благородник, бил убит, защото се стремял към царска власт. Самият Верцингеториг по-късно бил провъзгласен за цар, след като прогонил проримските благородници.",
+      "sourceQuote": "His father, a nobleman, had been killed by his own people for trying to make himself king.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как реагирали враговете на Цезар в Сената на клането на два народа край Рейн през 55 г. пр.н.е.?",
+      "options": [
+        "Пратили пратеници да се извинят на германците",
+        "Поискали да го съдят",
+        "Възхвалили го като отбранителна победа",
+        "Гласували му 20-дневно благодарствено честване",
+        "Наредили му да се върне в Рим",
+        "Отнели му два легиона"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 3,
+      "textReference": "#rhine-and-britain",
+      "explanation": "Цезар връхлетял незащитен лагер и избил мъже, жени и деца. Твърдението му за 430 000 убити е невъзможно, но клането било толкова ужасно, че мнозина поискали той да бъде съден.",
+      "sourceQuote": "Still, the massacre was bad enough that his enemies in the Senate wanted to prosecute him.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кои подробности описват обсадата на втория римски лагер по време на зимния бунт от 54 г. пр.н.е.? (изберете всички верни)",
+      "options": [
+        "Над 90 процента от защитниците били убити или ранени",
+        "Защитниците приели свободен изход и си тръгнали",
+        "Лагерът паднал преди пристигането на Цезар",
+        "Обсадата продължила повече от две седмици",
+        "Бунтовниците използвали обсадни кули по римски образец",
+        "Цезар го спасил с десант от морето"
+      ],
+      "correctAnswers": [
+        0,
+        3,
+        4
+      ],
+      "difficulty": 3,
+      "textReference": "#ambiorix-revolt",
+      "explanation": "Бунтовниците копирали римската обсадна техника и държали лагера под атака повече от две седмици. Цезар го спасил с бързи преходи от около 32 km на ден, но дотогава над 90 процента от защитниците били убити или ранени.",
+      "sourceQuote": "Rebels then besieged a second camp for more than two weeks, using siege towers built on Roman models.",
+      "reviewFlags": []
+    }
+  ]
+}

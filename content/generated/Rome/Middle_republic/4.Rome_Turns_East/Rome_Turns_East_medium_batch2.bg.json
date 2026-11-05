@@ -1,0 +1,190 @@
+{
+  "batchName": "Middle Republic: Rome Turns East (200-167 BCE) - Medium Batch 2",
+  "chapterName": "Middle Republic: Rome Turns East (200-167 BCE)",
+  "difficulty": 2,
+  "batchOrder": 4,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Къде слезе Антиох III през 192 г. пр.н.е., обявявайки, че ще освободи гърците от римска власт?",
+      "options": [
+        "Халкида",
+        "Тесалоника",
+        "Атина",
+        "Коринт",
+        "Деметриада"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#cold-war-with-antiochus",
+      "explanation": "Антиох слезе в крайбрежната крепост Деметриада по покана на етолийците. Сенатът видя в това намеса, която не можеше да приеме.",
+      "sourceQuote": "In 192 BC he landed at Demetrias, a fortress on the Greek coast, announcing he would free the Greeks from Roman rule.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кои две по-малки сили първи потърсиха помощ от Рим срещу Филип V? (изберете всички верни)",
+      "options": [
+        "Спарта",
+        "Пергам",
+        "Картаген",
+        "Родос",
+        "Витиния"
+      ],
+      "correctAnswers": [
+        1,
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#rome-looks-east",
+      "explanation": "Към Рим се обърнаха Родос, богата островна търговска държава, и Пергам, царство в западна Мала Азия. По-късно към тях се присъедини Атина, след като македонски войски помогнаха за опустошаването на земите ѝ.",
+      "sourceQuote": "This alarmed two smaller powers: Rhodes, a rich island trading state, and Pergamon, a kingdom in western Asia Minor.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как армията на Емилий Павел разби македонската фаланга при Пидна?",
+      "options": [
+        "Стрелци обстреляха копиеносците от близките хълмове",
+        "Малки отряди се вмъкнаха в пролуките по неравния терен и удариха фланговете ѝ",
+        "Легионите удържаха, докато фалангата се умори и побегне",
+        "Конницата обкръжи фалангата на открит равен терен",
+        "Слонове се врязаха право в предните редици"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#pydna",
+      "explanation": "Неравният терен отвори пролуки във фалангата и римските отряди се вклиниха там, където дългите копия бяха безполезни. Битката свърши за около час.",
+      "sourceQuote": "Aemilius sent small units to slip into them like wedges and strike the exposed flanks, where the long spears were useless.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво внесе смут в собствената пехота на Антиох III при Магнезия?",
+      "options": [
+        "Бунт сред наемниците му",
+        "Внезапна буря край брега",
+        "Бягството на самия цар",
+        "Родоски десант зад линиите му",
+        "Собствените му бойни слонове"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#thermopylae-and-magnesia",
+      "explanation": "Слоновете на Антиох се превърнаха в бреме и разстроиха пехотата му. На другото крило атаката на конницата на пергамския цар разби строя му.",
+      "sourceQuote": "The king of Pergamon led a cavalry charge that smashed one wing, and Antiochus's own elephants threw his infantry into disorder.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как гордо се описваше Фламинин, командващ римляните от 198 г. пр.н.е.?",
+      "options": [
+        "Като любител на гръцката култура",
+        "Като отмъстител за Картаген",
+        "Като наследник на Александър Велики",
+        "Като син на бог Аполон",
+        "Като закрилник на младия египетски цар"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#flamininus-takes-command",
+      "explanation": "Фламинин, още ненавършил трийсет, се представяше за любител на гръцката култура. По-късно той режисира обявяването на гръцката свобода на Истмийските игри.",
+      "sourceQuote": "In 198 BC command passed to Flamininus, a consul not yet thirty who proudly called himself a lover of Greek culture.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Когато Рим обяви, че гръцките градове в Азия трябва да са свободни, как отговори Антиох III?",
+      "options": [
+        "Разположи гарнизон във всеки от тях",
+        "Изтегли армията си в Сирия",
+        "Предложи ги на Пергам",
+        "Сам ги обяви за свободни",
+        "Екзекутира римските пратеници"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#cold-war-with-antiochus",
+      "explanation": "Антиох ловко изби аргумента от ръцете на Рим, като сам обяви градовете за свободни. Римските преговарящи междувременно поверително казаха на пратениците му да си стоят от своята страна на протоците.",
+      "sourceQuote": "Antiochus neatly answered by declaring them free himself.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Коя война оправда Рим през 195 г. пр.н.е. с лозунга за гръцката свобода?",
+      "options": [
+        "Война срещу Спарта",
+        "Война срещу Родос",
+        "Война срещу Тракия",
+        "Война срещу Атина",
+        "Война срещу Епир"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#freedom-of-the-greeks",
+      "explanation": "Рим превърна собствения си лозунг за свобода в повод за война със Спарта през 195 г. пр.н.е. Междувременно Етолийският съюз твърдеше, че Рим иска да стане новият господар на Гърция.",
+      "sourceQuote": "Meanwhile, Rome used the slogan of Greek freedom to justify a war against Sparta in 195 BC.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Коя морска сила спря флот на Антиох III, воден от стария картагенски пълководец, някога нахлул в Италия?",
+      "options": [
+        "Картагенците",
+        "Атиняните",
+        "Родосците",
+        "Македонците",
+        "Египтяните"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#thermopylae-and-magnesia",
+      "explanation": "Родосците спряха този флот, командван от бившия нашественик в Италия, който сега служеше в двора на Антиох. Рим и съюзниците му спечелиха господството по море в две големи морски битки.",
+      "sourceQuote": "One of Antiochus's fleets, stopped by the Rhodians, was led by the old Carthaginian general who had once invaded Italy and now served at the king's court.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво стана с Епир – областта, подкрепила Персей?",
+      "options": [
+        "Беше освободен и освободен от данък",
+        "Стана петата македонска република",
+        "Царското му семейство беше изселено в Алба Фуценс",
+        "Римските войски разграбиха седемдесет града за един ден и поробиха 150 000 души",
+        "Беше даден на Пергам като награда"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#end-of-macedon",
+      "explanation": "Епир в северозападна Гърция беше жестоко наказан за подкрепата си за Персей. Междувременно македонските царски сановници бяха изселени в Италия.",
+      "sourceQuote": "In Epirus, the region of north-western Greece that had backed Perseus, Roman troops sacked seventy towns on a single day and enslaved 150,000 people.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Защо военните ограничения на Апамейския мир отпаднаха?",
+      "options": [
+        "Бяха определени да изтекат точно след десет години",
+        "Селевкидите платиха допълнително, за да ги откупят",
+        "Бяха обвързани лично с Антиох и отпаднаха с неговата смърт",
+        "Пергам помоли Рим да ги отмени след нов съюз",
+        "Рим ги отмени като награда за навременно плащане"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#peace-of-apamea",
+      "explanation": "Военните клаузи засягаха самия Антиох, който почина през 187 г. пр.н.е. Наследниците му възстановиха флота и отново изведоха слонове, а Рим до голяма степен си затвори очите.",
+      "sourceQuote": "The military limits were tied to Antiochus personally and lapsed when he died in 187 BC.",
+      "reviewFlags": []
+    }
+  ]
+}

@@ -1,0 +1,145 @@
+{
+  "batchName": "Empire: The Year of Four Emperors and the Flavians (AD 69-96) - Latin words",
+  "chapterName": "Empire: The Year of Four Emperors and the Flavians (AD 69-96)",
+  "difficulty": 1,
+  "batchOrder": 9,
+  "description": "Written by hand from the chapter text: the Latin words it explains",
+  "questions": [
+    {
+      "question": "Какво разбират римляните под decimatio – наказанието, използвано от Галба?",
+      "options": [
+        "Екзекуция на всеки десети войник",
+        "Намаляване на заплатата с една десета",
+        "Връщане на една десета от армията у дома",
+        "Бичуване на десет офицери"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#galba",
+      "explanation": "Галба го прилага към оцелелите от легион от бивши моряци.",
+      "sourceQuote": "decimation (*decimatio*), the ancient punishment in which one soldier in ten was put to death.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво означава pecunia non olet?",
+      "options": [
+        "„Парите не миришат“",
+        "„Парите са власт“",
+        "„Данъците никога не спят“",
+        "„Златото купува вярност“"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#vespasian-reign",
+      "explanation": "Преданието го свързва с данъка на Веспасиан върху урината от обществените тоалетни.",
+      "sourceQuote": "\"money does not smell\" (*pecunia non olet*)",
+      "reviewFlags": []
+    },
+    {
+      "question": "С какво име е по-известен Amphitheatrum Flavium?",
+      "options": [
+        "Колизеумът",
+        "Циркус Максимус",
+        "Пантеонът",
+        "Форумът"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#vespasian-reign",
+      "explanation": "Веспасиан го започва, а Тит го открива през 80 г. сл.н.е.",
+      "sourceQuote": "the Flavian Amphitheatre (*Amphitheatrum Flavium*), better known as the Colosseum.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Тит обявява покойния си баща за divus. Какво означава това?",
+      "options": [
+        "Бог",
+        "Герой на Сената",
+        "Баща на отечеството",
+        "Светец"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#titus",
+      "explanation": "Веспасиан, подобно на Август и Клавдий преди него, е обявен за бог.",
+      "sourceQuote": "He made his dead father a god (*divus*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво е Templum Pacis, построен от Веспасиан?",
+      "options": [
+        "Храмът на мира",
+        "Храмът на Юпитер",
+        "Храм на рода на Флавиите",
+        "Храм на Изида"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#vespasian-reign",
+      "explanation": "Той е част от кампанията му да се представи като донесъл мира.",
+      "sourceQuote": "He built a Temple of Peace (*Templum Pacis*)",
+      "reviewFlags": []
+    },
+    {
+      "question": "Вителий заема длъжността Pontifex Maximus. Каква е тя?",
+      "options": [
+        "Върховен жрец",
+        "Командващ флота",
+        "Управител на Рим",
+        "Глава на Сената"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#vitellius",
+      "explanation": "Той пое поста на годишнината от битката при Алия – нещастен ден.",
+      "sourceQuote": "He took the office of chief priest (*Pontifex Maximus*)",
+      "reviewFlags": []
+    },
+    {
+      "question": "През 68 г. сл.н.е. Сенатът обявил Нерон за hostis. Какво е hostis?",
+      "options": [
+        "Враг на държавата",
+        "Бог",
+        "Син на предател",
+        "Гост на държавата"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#fall-of-nero",
+      "explanation": "На следващия ден Нерон сложи край на живота си.",
+      "sourceQuote": "declared Nero a public enemy (*hostis*)",
+      "reviewFlags": []
+    },
+    {
+      "question": "След убийството на Домициан Сенатът наложил damnatio memoriae. Какво е това?",
+      "options": [
+        "Осъждане на паметта му",
+        "Държавно погребение",
+        "Обожествяването му",
+        "Забрана за рода му"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#domitian",
+      "explanation": "Сенаторските историци след това го представили като жесток тиранин.",
+      "sourceQuote": "The Senate condemned his memory (*damnatio memoriae*)",
+      "reviewFlags": []
+    }
+  ]
+}

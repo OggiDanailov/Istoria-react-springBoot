@@ -1,0 +1,179 @@
+{
+  "batchName": "Middle Republic: The Gracchi (133-121 BCE) - Easy Batch 2",
+  "chapterName": "Middle Republic: The Gracchi (133-121 BCE)",
+  "difficulty": 1,
+  "batchOrder": 2,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Каква извънредна мярка приел Сенатът за пръв път през 121 г. пр.н.е.?",
+      "options": [
+        "Списък на хора извън закона, които можели да бъдат убити",
+        "Назначаване на диктатор",
+        "Официално обявяване на война на Гай",
+        "„Крайно решение“ за защита на държавата с всички средства"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#fall-of-gaius",
+      "explanation": "С senatus consultum ultimum Сенатът призовал консула Опимий да защити държавата с всички необходими средства.",
+      "sourceQuote": "It passed its first \"final decree\" (*senatus consultum ultimum*), urging him to defend the state by any means necessary.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой роднина на Тиберий помагал в ръководството на поземлената комисия след смъртта му?",
+      "options": [
+        "По-малкият му брат Гай",
+        "Братовчед му Сципион Назика",
+        "Сестра му",
+        "Майка му Корнелия"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#land-commission",
+      "explanation": "Поземленият закон на Тиберий оцелял след убийството му и комисията продължила работа, поета от негови съмишленици, сред които и Гай.",
+      "sourceQuote": "The commission it created kept working, staffed by his allies, including his younger brother Gaius Gracchus.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво станало с телата на Тиберий и привържениците му след убийството им?",
+      "options": [
+        "Хвърлили ги в Тибър",
+        "Върнали ги на семействата им",
+        "Изложили ги на Форума",
+        "Погребали ги на Капитолия"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#death-of-tiberius",
+      "explanation": "Телата били изхвърлени в реката, която тече през Рим. Мъжете били пребити до смърт с камъни, дървени столове и други тъпи предмети.",
+      "sourceQuote": "They were beaten to death with stones, wooden chairs and other blunt objects, and their bodies were thrown into the Tiber, the river that runs through Rome.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Коя година античните и съвременните автори смятат за начало на упадъка на Римската република?",
+      "options": [
+        "111 г. пр.н.е.",
+        "146 г. пр.н.е.",
+        "133 г. пр.н.е.",
+        "121 г. пр.н.е."
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#turning-point",
+      "explanation": "През 133 г. пр.н.е. бил убит Тиберий Гракх. По-късно един прочут римски оратор пише, че Тиберий разделил един народ на две партии.",
+      "sourceQuote": "Both ancient and modern writers see 133 BC, the year of Tiberius Gracchus's murder, as the start of the Republic's decline.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как Гай Гракх променил начина на произнасяне на речи на Форума?",
+      "options": [
+        "Говорел на гръцки",
+        "Глашатаи четели писаните му речи",
+        "Говорел прав в бойна колесница",
+        "Обръщал се към тълпата, а не към Сената"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#gaius-gracchus-rises",
+      "explanation": "Обръщайки се към тълпата, Гай на практика обърнал гръб на Сената. Той бил сред най-великите римски оратори на своето време.",
+      "sourceQuote": "He even changed how speeches were given in the Forum: instead of facing the senate house, he turned towards the crowd, in effect turning his back on the Senate.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кои запазени предмети позволяват да се проследи работата на поземлената комисия на Гракхите?",
+      "options": [
+        "Гранични камъни с имената на комисарите",
+        "Папирусни регистри на новите заселници",
+        "Восъчни таблички за всеки дял",
+        "Бронзови монети с поземлени дарения"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#land-commission",
+      "explanation": "Гранични камъни, наречени cippi, с издълбани имена на комисарите, са открити из цяла Южна Италия.",
+      "sourceQuote": "Its progress can still be traced through boundary stones (*cippi*) carved with the commissioners' names, found all over southern Italy.",
+      "reviewFlags": []
+    },
+    {
+      "question": "На коя група предложил Гай Гракх римско гражданство през 122 г. пр.н.е.?",
+      "options": [
+        "На латините, най-близките съюзници на Рим",
+        "На нумантийците в Испания",
+        "На гърците от Пергам",
+        "На освободените роби на Рим"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#fall-of-gaius",
+      "explanation": "Това било най-смелото му предложение, което давало нови права и на други италийци. Съперник трибун наложил вето.",
+      "sourceQuote": "In 122 BC Gaius Gracchus, serving a second year as tribune, made his boldest proposal: citizenship for the Latins, Rome's closest allies, and new rights for other Italians.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой орган заобиколил Тиберий Гракх, като внесъл закона си направо в Плебейското събрание?",
+      "options": [
+        "Колегията на цензорите",
+        "Сенатът",
+        "Колегията на понтификите",
+        "Съветът на консулите"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#breaking-the-rules",
+      "explanation": "Обичаят изисквал законопроектът първо да се обсъди в Сената, но Тиберий отишъл направо в събранието на обикновените граждани.",
+      "sourceQuote": "He took his bill straight to the Plebeian Council (*concilium plebis*), the assembly of ordinary citizens, without first consulting the Senate (*senatus*), as custom expected.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Завещанието на кой цар, оставил царството и съкровищницата си на Рим, искал Тиберий да използва за поземлената си програма?",
+      "options": [
+        "Царя на Пергам",
+        "Царя на Нумидия",
+        "Царя на Египет",
+        "Царят на Сирия"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#breaking-the-rules",
+      "explanation": "Царят на Пергам завещал царството и съкровищницата си на Рим и Тиберий предложил да се използват тези средства, след като Сенатът оставил поземлената комисия без пари.",
+      "sourceQuote": "Then news arrived that the king of Pergamum, a rich Greek kingdom in western Asia Minor, had died and left his treasury and kingdom to Rome.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Каква висша длъжност заемал два пъти бащата на братя Гракхи?",
+      "options": [
+        "Pontifex maximus",
+        "Народен трибун",
+        "Диктатор",
+        "Консул"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#family-of-the-gracchi",
+      "explanation": "Баща им бил два пъти консул – един от двамата държавни глави, избирани всяка година. Бил също цензор и чествал два триумфа.",
+      "sourceQuote": "Their father, also called Tiberius, had twice been consul, one of the two heads of state elected each year.",
+      "reviewFlags": []
+    }
+  ]
+}

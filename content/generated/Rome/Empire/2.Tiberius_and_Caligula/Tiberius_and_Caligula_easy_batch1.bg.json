@@ -1,0 +1,179 @@
+{
+  "batchName": "Empire: Tiberius and Caligula (AD 14-41) - Easy Batch 1",
+  "chapterName": "Empire: Tiberius and Caligula (AD 14-41)",
+  "difficulty": 1,
+  "batchOrder": 1,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "През 6 г. пр.н.е., когато е на прага да стане вторият най-могъщ човек в Рим, къде внезапно се оттегля Тиберий?",
+      "options": [
+        "Сицилия",
+        "Крит",
+        "Родос",
+        "Капри"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#tiberius-before-power",
+      "explanation": "Тиберий се оттегли на Родос – гръцки остров край бреговете на днешна Турция. Историците и до днес спорят защо се отказа точно в този момент.",
+      "sourceQuote": "In 6 BC, on the verge of becoming the second most powerful man in Rome, he abruptly retired to Rhodes, a Greek island off the coast of modern Turkey.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Каква небивала почит оказа Калигула на любимата си сестра след смъртта ѝ през 38 г. сл.н.е.?",
+      "options": [
+        "Кръсти провинция на нейно име",
+        "Обяви я за богиня",
+        "Сложи лицето ѝ на всяка монета",
+        "Погреба я в мавзолея на Август"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#caligula-turn",
+      "explanation": "Калигула обяви сестра си за богиня. Тя беше първата римлянка, получила такава почит.",
+      "sourceQuote": "That year his beloved sister died, and he made her a goddess, the first Roman woman so honoured.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой е написал почти всички запазени разкази за Тиберий и Калигула?",
+      "options": [
+        "Сенатори и чиновници, писали много по-късно",
+        "Дворцови слуги, писали по същото време",
+        "Християнски монаси от Средновековието",
+        "Самите императори в мемоари"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#what-historians-think",
+      "explanation": "Повечето сведения идват от сенатори и чиновници, писали дълго след събитията – хора, които не обичаха особено императорите. Тази пристрастност оформя образа и на двамата владетели.",
+      "sourceQuote": "Nearly everything we know about Tiberius and Caligula comes from senators and officials writing long afterwards, men with little love for emperors.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Античните автори са единодушни кога и къде е починал Тиберий. За какво спорят?",
+      "options": [
+        "Кой го е наследил",
+        "Къде е погребан",
+        "Как е починал",
+        "В коя година е починал"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#death-of-tiberius",
+      "explanation": "Той почина на 16 март 37 г. сл.н.е. в Мизенум, но разказите за начина се различават. Според едни е бил задушен, други обвиняват Калигула, а някои съвременници описват естествена смърт.",
+      "sourceQuote": "Ancient writers agree on when and where, but not how.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как Тиберий пазеше границите на империята като император?",
+      "options": [
+        "Изоставяйки северните провинции",
+        "С нови гранични бази и дипломация",
+        "С скъпи завоевателни войни",
+        "Плащайки данък на германските племена"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#reluctant-emperor",
+      "explanation": "Тиберий избягваше скъпите завоевания и вместо тях укрепваше границите с бази и дипломация. Каквото и да мислеха сенаторите за него, той беше способен администратор.",
+      "sourceQuote": "He avoided costly conquests, strengthening the frontiers with new bases and diplomacy instead.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво се опитаха да направят разбунтуваните легиони на Рейн след смъртта на Август през 14 г. сл.н.е.?",
+      "options": [
+        "Да преминат към германските племена",
+        "Да обявят Тиберий за диктатор",
+        "Да обявят Германик за император",
+        "Да тръгнат към Рим и да възстановят Републиката"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#germanicus",
+      "explanation": "Легионите на Рейн, ядосани от неизплатените награди, се опитаха да направят пълководеца си Германик император. Той отказа.",
+      "sourceQuote": "When Augustus died in AD 14, those legions mutinied over unpaid bonuses and tried to proclaim Germanicus emperor.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой уби Калигула през 41 г. сл.н.е.?",
+      "options": [
+        "Войници от легионите на Рейн",
+        "Хора на управителя на Сирия",
+        "Офицери от собствената му преторианска гвардия",
+        "Германските му телохранители"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#assassination",
+      "explanation": "Калигула беше намушкан от офицери от собствената му преторианска гвардия. Германските му телохранители пристигнаха твърде късно и в яростта си избиха няколко случайни минувачи.",
+      "sourceQuote": "The killers were officers of his own Praetorian Guard.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Според преданието къде бил намерен чичото на Калигула, преди преторианците да го провъзгласят за император?",
+      "options": [
+        "Скрит зад завеса в двореца",
+        "В лагера на гвардията",
+        "На молитва в храма на Юпитер",
+        "В сградата на Сената"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#assassination",
+      "explanation": "Според преданието гвардеец намерил чичото на Калигула скрит зад завеса в двореца. Преторианците го направиха император и Сенатът отстъпи.",
+      "sourceQuote": "According to tradition, a guardsman found Caligula's uncle hiding behind a palace curtain; the Praetorians proclaimed him emperor and the Senate gave way.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Защо римските тълпи скандираха „Тиберий в Тибър!“ след смъртта му?",
+      "options": [
+        "Той се беше удавил в Тибър",
+        "Телата на престъпниците хвърляха в реката",
+        "Вилата му беше на брега на Тибър",
+        "Беше наредил да почистят реката"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#death-of-tiberius",
+      "explanation": "Тълпите искаха с тялото му да постъпят като с престъпник и да го хвърлят в реката. Сенатът също му отказа божествените почести, които беше получил Август.",
+      "sourceQuote": "The Senate refused him the divine honours given to Augustus, and crowds chanted \"To the Tiber with Tiberius!\", because criminals' bodies were thrown into the river.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Къде нареди Калигула да поставят негова статуя – светотатство за евреите?",
+      "options": [
+        "В голямата библиотека на Александрия",
+        "В храма в Смирна",
+        "В сградата на Сената в Рим",
+        "В Йерусалимския храм"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#horse-bridge-god",
+      "explanation": "Калигула нареди статуята му да бъде поставена в Йерусалимския храм. Той обичаше и да се преоблича като богове, включително като Юпитер.",
+      "sourceQuote": "More dangerously, he ordered his statue set up in the Temple in Jerusalem, a blasphemy for Jews.",
+      "reviewFlags": []
+    }
+  ]
+}

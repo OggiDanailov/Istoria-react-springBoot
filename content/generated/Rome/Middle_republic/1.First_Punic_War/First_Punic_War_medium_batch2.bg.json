@@ -1,0 +1,190 @@
+{
+  "batchName": "Middle Republic: The First Punic War (264-241 BCE) - Medium Batch 2",
+  "chapterName": "Middle Republic: The First Punic War (264-241 BCE)",
+  "difficulty": 2,
+  "batchOrder": 4,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "С какво се отличава битката при нос Екном през 256 г. пр.н.е.?",
+      "options": [
+        "Водена била изцяло през нощта",
+        "Вероятно е най-голямата морска битка в историята по брой участници",
+        "Била първата битка с *corvus*",
+        "Била най-голямата морска победа на Картаген",
+        "Сложила край на войната"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#regulus-in-africa",
+      "explanation": "С около 680 кораба и до 290 000 гребци и морски пехотинци Екном може би е най-голямата морска битка в историята по брой участници. Картаген загубил 94 кораба, Рим – 24.",
+      "sourceQuote": "With some 680 ships and up to 290,000 crew and marines, it was possibly the largest naval battle in history by number of combatants.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кого наел Картаген, за да преобучи армията си срещу Регул?",
+      "options": [
+        "Дезертьор от римските легиони",
+        "Египетски пълководец",
+        "Спартански командир на наемници",
+        "Атински адмирал",
+        "Македонски инженер"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#regulus-in-africa",
+      "explanation": "Спартански командир на наемници преобучил армията на Картаген. През 255 г. пр.н.е. преобучената армия разгромила римляните и пленила Регул.",
+      "sourceQuote": "Carthage hired a Spartan mercenary commander to retrain its army.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Почти фалирал до 243 г. пр.н.е., как Рим платил за последния си боен флот?",
+      "options": [
+        "Най-богатите граждани финансирали по един боен кораб",
+        "Претопил храмовите съкровища",
+        "Взел назаем пари от Египет",
+        "Продал в робство пленени сицилийци",
+        "Обложил тежко италийските си съюзници"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#battle-of-the-aegates",
+      "explanation": "Сенатът помолил най-богатите римляни да финансират по един боен кораб, като им бъде върнато от бъдещите военни плащания на Картаген. Египет бил отказал заем на Картаген.",
+      "sourceQuote": "So the Senate asked the richest Romans each to fund a warship, to be repaid from Carthage's future war payments.",
+      "reviewFlags": []
+    },
+    {
+      "question": "По време на обсадата на Акрагас какво дало шанс на гарнизона да нахлуе в римския лагер?",
+      "options": [
+        "Римляните се оттеглили, за да посрещнат флот",
+        "Римляните празнували празник",
+        "Един римски консул се разболял",
+        "Буря разрушила римските обсадни съоръжения",
+        "Римските войници се пръснали да събират реколтата"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#siege-of-akragas",
+      "explanation": "Изхранването на 40 000 души било трудно, докато Картаген владеел морето, затова по жътва войниците се пръснали за храна. Гарнизонът направил излаз, но бил отблъснат.",
+      "sourceQuote": "Feeding so many men was hard while Carthage ruled the sea, and at harvest time the troops scattered to gather crops.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какви били първите римски бойни кораби в сравнение с картагенския оригинал, който копирали?",
+      "options": [
+        "По-големи и по-добре въоръжени",
+        "По-малки, с по-малко гребци",
+        "По-леки и по-бързи",
+        "По-тежки и по-бавни",
+        "Еднакви във всяко отношение"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#rome-builds-a-fleet",
+      "explanation": "Неопитните римски корабостроители построили 120 бойни кораба, по-тежки и по-бавни от оригиналите. Синхронното гребане в квинкверема изисквало дълго обучение.",
+      "sourceQuote": "Rome built 120 warships, but its novice shipwrights produced copies that were heavier and slower than the originals.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Защо нямаме картагенски разказ за Първата пуническа война?",
+      "options": [
+        "Полибий ги изгорил в Рим",
+        "Изгубили се при корабокрушение",
+        "Хамилкар ги унищожил, когато напуснал Сицилия",
+        "Загинали, когато Картаген бил разрушен през 146 г. пр.н.е.",
+        "Картагенците никога не водели писмени записи"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#sources-and-debates",
+      "explanation": "Записите на Картаген се изгубили, когато Рим разрушил града през 146 г. пр.н.е. Така основен източник остава Полибий, който пише около век след войната.",
+      "sourceQuote": "Carthage's own records perished when the city was destroyed in 146 BC.",
+      "reviewFlags": []
+    },
+    {
+      "question": "В кои битки *corvus* ясно се споменава в нашите източници? (изберете всички верни отговори)",
+      "options": [
+        "Дрепана",
+        "Екном",
+        "Егатските острови",
+        "Миле",
+        "Липарските острови"
+      ],
+      "correctAnswers": [
+        1,
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#sources-and-debates",
+      "explanation": "*Corvus* ясно се споменава само при Миле и Екном, след което изчезва. Някои смятат, че теглото му правело корабите неустойчиви при буря.",
+      "sourceQuote": "It is clearly mentioned only at Mylae and Ecnomus, then vanishes.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво се случило при първото морско начинание на Рим – набег срещу Липарските острови?",
+      "options": [
+        "Всички кораби били пленени заедно с консула",
+        "Корабите заседнали край сицилийския бряг",
+        "Екипажите се разбунтували и отплавали към дома",
+        "Флотът бил разбит от буря",
+        "Консулът спечелил малка, но прочута победа"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#rome-builds-a-fleet",
+      "explanation": "Картагенски кораби заклещили през нощта 17-те римски кораба в пристанището и неопитните екипажи изпаднали в паника. Всички кораби, както и самият консул, били пленени.",
+      "sourceQuote": "The raw crews panicked, and every ship was captured, along with the consul himself.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво направил царят на Сиракуза през 263 г. пр.н.е., изправен срещу 40 000 римляни?",
+      "options": [
+        "Избягал в Картаген със съкровищницата си",
+        "Платил на Рим да напусне Сицилия",
+        "Минал на другата страна и се съгласил да изхранва римската армия",
+        "Дал открита битка и загинал",
+        "Поканил картагенски гарнизон в Сиракуза"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#messana",
+      "explanation": "Сиракуза, най-силният гръцки град в Сицилия, минала на другата страна и се съгласила да снабдява римската армия. Преди това тя притискала мамертинците в Месана.",
+      "sourceQuote": "In 263 BC, facing 40,000 Romans, the king of Syracuse switched sides and agreed to feed Rome's army.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Каква грешка допуснали самоуверените картагенци в битката при Миле?",
+      "options": [
+        "Нападнали през нощта в буря",
+        "Оставили тараните си в пристанището",
+        "Втурнали се в атака, без да пазят строй",
+        "Чакали твърде дълго, преди да влязат в бой",
+        "Разделили флота си на две"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#corvus-and-mylae",
+      "explanation": "Уверени в уменията си, картагенците нападнали без строй и били захванати от „гарваните“. Командирът на флагманския им кораб избягал с малка лодка.",
+      "sourceQuote": "Sure of their skill, the Carthaginians rushed in without keeping formation.",
+      "reviewFlags": []
+    }
+  ]
+}

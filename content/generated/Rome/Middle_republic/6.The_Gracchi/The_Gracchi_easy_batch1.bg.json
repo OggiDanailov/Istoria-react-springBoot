@@ -1,0 +1,179 @@
+{
+  "batchName": "Middle Republic: The Gracchi (133-121 BCE) - Easy Batch 1",
+  "chapterName": "Middle Republic: The Gracchi (133-121 BCE)",
+  "difficulty": 1,
+  "batchOrder": 1,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Какво построил Опимий до сградата на Сената след смъртта на Гай Гракх?",
+      "options": [
+        "Триумфална арка",
+        "Храм на богинята Конкордия",
+        "Храм на бог Марс",
+        "Своя статуя"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#turning-point",
+      "explanation": "Опимий ритуално пречистил града и посветил величествен храм на Конкордия – символ на гражданското съгласие.",
+      "sourceQuote": "Opimius ritually purified the city and built a grand temple to the goddess Concord (*Concordia*), symbol of civic harmony, beside the senate house.",
+      "reviewFlags": []
+    },
+    {
+      "question": "За какво отговарял Тиберий Гракх като квестор в Испания през 137 г. пр.н.е.?",
+      "options": [
+        "Обсадните машини на армията",
+        "Финансите на армията",
+        "Конницата на армията",
+        "Зърнения флот на армията"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#tiberius-at-war",
+      "explanation": "Квесторът бил младши магистрат, който отговарял за финансите на армията. Тиберий участвал в злополучния поход срещу Нуманция.",
+      "sourceQuote": "In 137 BC he went to Spain as a quaestor (*quaestor*), a junior officer in charge of an army's finances.",
+      "reviewFlags": []
+    },
+    {
+      "question": "На каква длъжност бил избран Тиберий Гракх през 133 г. пр.н.е.?",
+      "options": [
+        "Претор",
+        "Консул",
+        "Народен трибун",
+        "Цензор"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#the-land-law",
+      "explanation": "Тиберий станал народен трибун – един от десетимата магистрати, които трябвало да защитават обикновените граждани. Той използвал поста, за да прокара поземлената си реформа.",
+      "sourceQuote": "In 133 BC Tiberius Gracchus was elected tribune of the plebs (*tribunus plebis*), one of ten officials whose job was to protect ordinary citizens.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой повел тълпата, която убила Тиберий Гракх?",
+      "options": [
+        "Братовчед му Сципион Назика, върховният жрец",
+        "Консулът Опимий",
+        "Трибунът, наложил вето на закона му",
+        "Цензорът от онази година"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#death-of-tiberius",
+      "explanation": "Сципион Назика, братовчед на Тиберий и глава на римската държавна религия, повел нападението, след като консулът отказал да употреби сила.",
+      "sourceQuote": "Tiberius's own cousin, Scipio Nasica, was chief priest (*pontifex maximus*), head of Rome's state religion.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Къде планирал Гай Гракх отвъдморска колония от римски граждани?",
+      "options": [
+        "Пергам",
+        "Коринт",
+        "Картаген",
+        "Нуманция"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#laws-of-gaius",
+      "explanation": "Гай разбирал, че в Италия няма достатъчно земя за всички, затова замислил колонии, включително една в Картаген.",
+      "sourceQuote": "Gaius saw that Italy did not have enough land for everyone, so he planned colonies (*coloniae*), new settlements of citizens, including one overseas at Carthage.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какъв вид земя засягала реформата на Тиберий Гракх?",
+      "options": [
+        "Частни имоти на италийските съюзници",
+        "Провинциална земя в Испания и Африка",
+        "Обществена земя, завзета от Рим при покоряването на Италия",
+        "Храмови имоти на римските жреци"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#the-land-law",
+      "explanation": "Реформата засягала обществената земя (ager publicus). Според традиционните разкази богатите родове били заели огромни нейни площи.",
+      "sourceQuote": "He chose a burning issue: public land (*ager publicus*), territory Rome had taken in its conquests across Italy.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво постановявал зърненият закон на Гай Гракх?",
+      "options": [
+        "Фиксирана цена на зърното, малко под пазарната",
+        "Тежък данък върху търговците на зърно",
+        "Безплатно зърно за всички граждани",
+        "Забрана за внос на зърно отвъд морето"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#laws-of-gaius",
+      "explanation": "Законът определял цена за модий зърно. Държавата щяла да купува зърно, когато е евтино, и да го съхранява в обществени хамбари.",
+      "sourceQuote": "His grain law set a fixed, slightly below-harvest price for each measure of about 8.7 litres (one modius) of grain.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Къде започнал военната си кариера Тиберий Гракх през 147 г. пр.н.е.?",
+      "options": [
+        "При обсадата на Коринт",
+        "При обсадата на Картаген",
+        "При обсадата на Нуманция",
+        "При обсадата на Сиракуза"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#tiberius-at-war",
+      "explanation": "Тиберий служел под командването на зет си при Картаген. Един античен биограф твърди, че бил сред първите римляни, изкачили стените му.",
+      "sourceQuote": "He served under his brother-in-law in the siege of Carthage (*Carthago*), Rome's great rival city in North Africa.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Предложението за брак на кой владетел отхвърлила Корнелия, майката на Гракхите?",
+      "options": [
+        "Царя на Египет",
+        "Царя на Пергам",
+        "Царя на Македония",
+        "Царя на Нумидия"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#family-of-the-gracchi",
+      "explanation": "След смъртта на съпруга си Корнелия отказала на египетския цар и се посветила на отглеждането и образованието на децата си.",
+      "sourceQuote": "She even turned down a marriage proposal from the king of Egypt.",
+      "reviewFlags": []
+    },
+    {
+      "question": "С колко години приблизително бил по-малък Гай Гракх от брат си Тиберий?",
+      "options": [
+        "С около пет години",
+        "С около две години",
+        "С около петнадесет години",
+        "С около девет години"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#gaius-gracchus-rises",
+      "explanation": "Гай се родил около 154 г. пр.н.е., около девет години след Тиберий. През 133 г. пр.н.е. служел в Испания и бил член на поземлената комисия.",
+      "sourceQuote": "Gaius Gracchus, born around 154 BC, was about nine years younger than his murdered brother Tiberius.",
+      "reviewFlags": []
+    }
+  ]
+}

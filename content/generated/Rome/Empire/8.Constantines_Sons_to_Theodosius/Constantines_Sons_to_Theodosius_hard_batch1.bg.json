@@ -1,0 +1,205 @@
+{
+  "batchName": "Empire: From Constantine's Sons to Theodosius (AD 337-395) - Hard Batch 1",
+  "chapterName": "Empire: From Constantine's Sons to Theodosius (AD 337-395)",
+  "difficulty": 3,
+  "batchOrder": 5,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Каква част от армията на Валент приблизително се спасила от катастрофата при Адрианопол?",
+      "options": [
+        "Половината",
+        "Три четвърти",
+        "Две трети",
+        "Една четвърт",
+        "Една десета",
+        "Една трета"
+      ],
+      "correctAnswers": [
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#battle-of-adrianople",
+      "explanation": "Само една трета от армията се спасила от разгрома, който продължил до мръкване. Историците често виждат в битката началото на края на Западната империя.",
+      "sourceQuote": "Only a third of the army escaped.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как реагирал Юлиан, когато войниците му се опитали да го провъзгласят за Август след победата при Страсбург?",
+      "options": [
+        "Приел и сякъл монети",
+        "Смъмрил ги",
+        "Писал на Констанций за одобрение",
+        "Предложил титлата на пълководеца си",
+        "Приел само титлата Цезар",
+        "Екзекутирал подстрекателите"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 3,
+      "textReference": "#julian-in-gaul",
+      "explanation": "През 357 г. Юлиан смъмрил войниците, вместо да приеме титлата. След това прекосил Рейн и принудил три местни царства да се подчинят.",
+      "sourceQuote": "The soldiers tried to hail Julian as Augustus, senior emperor, but he rebuked them.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво станало на Запад през 392 г., което довело до последната гражданска война на Теодосий?",
+      "options": [
+        "Узурпатор убил западния император и завзел Галия",
+        "Западният император се върнал към езичеството",
+        "Синът на Теодосий бил убит в Милано",
+        "Западният император бил намерен обесен, а франкски пълководец поставил марионетка",
+        "Сенатът избрал езически император",
+        "Западният император загинал в битка с готите"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 3,
+      "textReference": "#theodosius-legacy",
+      "explanation": "Младият западен император бил намерен обесен, а франкският главнокомандващ качил марионетка на трона. Теодосий ги разбил при Фригид през 394 г.; по-ранната му гражданска война, през 388 г., била срещу друг узурпатор.",
+      "sourceQuote": "In 392 the young western emperor he had restored was found hanged, and Arbogast, a powerful Frankish general and the western master of soldiers (*magister militum*), put a puppet emperor on the throne.",
+      "reviewFlags": []
+    },
+    {
+      "question": "През коя година най-малкият брат на Констанций II загинал в битка с узурпатор на Запад?",
+      "options": [
+        "340",
+        "337",
+        "355",
+        "351",
+        "350",
+        "354"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 3,
+      "textReference": "#sons-of-constantine",
+      "explanation": "Най-малкият брат паднал през 350 г. в борба с пълководец, завзел властта на Запад. Констанций смазал узурпатора през 351 г., а най-големият брат бил умрял още през 340 г.",
+      "sourceQuote": "The youngest, Constans, fell in 350 fighting a usurper, a general who had seized power in the west.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как тълкуват днес историците ролята на Амвросий в покаянието на Теодосий след Тесалоника?",
+      "options": [
+        "Като човека, заповядал клането",
+        "Като съперник, кроящ да замени императора",
+        "Като съветник, предложил на императора да спаси лицето си",
+        "Като доказателство, че Църквата командва държавата",
+        "Като пионка на източните епископи",
+        "Като съмишленик на езичниците, засрамващ двора"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 3,
+      "textReference": "#massacre-of-thessalonica",
+      "explanation": "Векове наред случката се смятала за пример как Църквата командва държавата, но днес историците виждат в Амвросий само един от многото съветници. Според някои Теодосий поел вината, за да прикрие, че не е могъл да овладее войските си.",
+      "sourceQuote": "For centuries the episode was held up as proof that the Church could command the state, but historians now see Ambrose as just one adviser among many, offering the emperor a way to save face.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Каква ирония виждат историците в езическото възраждане на Юлиан?",
+      "options": [
+        "Той забранил жертвоприношенията, които обичал",
+        "То съживило юдаизма повече от езичеството",
+        "Разчитало на персийски жреци",
+        "В съперничеството с християнството направило езичеството подобно на него",
+        "Било финансирано от християнски епископи",
+        "Храмовете му били строени от християнски работници"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 3,
+      "textReference": "#julian-pagan-revival",
+      "explanation": "Юлиан искал езическите жреци да бъдат нравствени образци и да ръководят благотворителност като християнското духовенство. В съперничеството с християнството той направил езичеството по-подобно на него, а възраждането умряло заедно с него.",
+      "sourceQuote": "Historians note the irony: in competing with Christianity, he made paganism look more like it.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Къде чакал Юлиан по време на похода си на изток, пишейки писма до гръцките градове, за да оправдае бунта си?",
+      "options": [
+        "Адрианопол",
+        "Сирмиум",
+        "Аквилея",
+        "Наис",
+        "Тесалоника",
+        "Антиохия"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 3,
+      "textReference": "#proclaimed-in-paris",
+      "explanation": "Тъй като Аквилея се държала от верни на Констанций хора, Юлиан можел само да чака в Наис на Балканите. Смъртта на Констанций на 3 ноември 361 г. му отворила пътя.",
+      "sourceQuote": "Julian could only wait at Naissus in the Balkans, writing letters to Greek cities to justify himself.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кои били сочени като хвърлилия копието, убило Юлиан? (изберете всички верни)",
+      "options": [
+        "Арабин, сражаващ се за Персия",
+        "Готски наемник",
+        "Самият персийски цар",
+        "Светец, според по-късна християнска легенда",
+        "Християнски войник",
+        "Собственият лекар на Юлиан"
+      ],
+      "correctAnswers": [
+        0,
+        3,
+        4
+      ],
+      "difficulty": 3,
+      "textReference": "#persian-campaign",
+      "explanation": "Самоличността на хвърлилия копието била спорна: християнски войник, арабин, сражаващ се за Персия, а в по-късна легенда – светец. Наследникът на Юлиан трябвало да отстъпи земи, включително Нисибис, за да спаси обкръжената армия.",
+      "sourceQuote": "Who threw the spear was disputed: a Christian soldier, an Arab fighting for Persia, or, in later Christian legend, a saint.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кое било част от възпитанието на Юлиан, преди да отиде в Атина? (изберете всички верни)",
+      "options": [
+        "Ръкополагане за свещеник в Константинопол",
+        "Заточение в императорско имение в Кападокия",
+        "Обучение при Амвросий Милански",
+        "Обучение от епископ",
+        "Уроци при готски учител",
+        "Обучение при латински ритори в Рим"
+      ],
+      "correctAnswers": [
+        1,
+        3,
+        4
+      ],
+      "difficulty": 3,
+      "textReference": "#julian-the-philosopher",
+      "explanation": "Юлиан учил при епископ и при готски учител, когото помнел с обич, а после бил изпратен в отдалечено имение в Кападокия. Там един епископ му заемал книги с класическа гръцка литература.",
+      "sourceQuote": "He was taught by a bishop and by a Gothic tutor he later remembered fondly, then sent to a remote imperial estate in Cappadocia, in central Anatolia.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как Теодосий възстановил оределата си армия след Адрианопол? (изберете всички верни)",
+      "options": [
+        "Мобилизирал миньори",
+        "Наел персийска конница",
+        "Въоръжил освободени роби от Рим",
+        "Мобилизирал селяни",
+        "Набрал готски дезертьори",
+        "Изтеглил всички легиони от Британия"
+      ],
+      "correctAnswers": [
+        0,
+        3,
+        4
+      ],
+      "difficulty": 3,
+      "textReference": "#theodosius-goths-and-faith",
+      "explanation": "Теодосий мобилизирал селяни и миньори и набирал варвари, дори готски дезертьори. Въпреки това не успял да прогони готите и сключил договор с тях през 382 г.",
+      "sourceQuote": "His army was so depleted that he conscripted farmers and miners and recruited barbarians, even Gothic deserters.",
+      "reviewFlags": []
+    }
+  ]
+}

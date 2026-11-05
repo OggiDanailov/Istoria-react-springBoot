@@ -1,0 +1,179 @@
+{
+  "batchName": "Empire: Augustus and the Principate (27 BC-AD 14) - Easy Batch 1",
+  "chapterName": "Empire: Augustus and the Principate (27 BC-AD 14)",
+  "difficulty": 1,
+  "batchOrder": 1,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Какво направил Рим след катастрофата в Тевтобургската гора?",
+      "options": [
+        "Отказал се от завоевания отвъд Рейн",
+        "Завладял цяла Германия",
+        "Сключил мир с Партия",
+        "Преместил столицата в Галия"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#teutoburg-forest",
+      "explanation": "Варовото поражение отбелязало границата на Августовата експанзия и Рим се отказал от завоевания отвъд Рейн.",
+      "sourceQuote": "Rome abandoned conquest beyond the Rhine.",
+      "reviewFlags": []
+    },
+    {
+      "question": "От коя длъжност се отказал Август на 1 юли 23 г. пр.н.е., след като се възстановил от тежка болест?",
+      "options": [
+        "Върховното жречество",
+        "Диктатурата",
+        "Консулството",
+        "Трибуната"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#second-settlement",
+      "explanation": "След като едва не умрял, Август се отказал от консулството, което заемал всяка година. Вместо това Сенатът му дал още по-големи правомощия.",
+      "sourceQuote": "He seemed to be dying, but he recovered and, on 1 July 23 BC, gave up the consulship.",
+      "reviewFlags": []
+    },
+    {
+      "question": "С какво според преданието се похвалил Август за Рим на смъртния си одър?",
+      "options": [
+        "Заварил го във война, а го оставил в мир",
+        "Заварил го малък, а го оставил огромен",
+        "Заварил го беден, а го оставил богат",
+        "Заварил го от тухли, а го оставил от мрамор"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#city-of-marble",
+      "explanation": "Според преданието той твърдял, че е заварил Рим град от тухли, а го е оставил град от мрамор. Хвалбата имала основание – при него мраморът станал обичаен строителен материал.",
+      "sourceQuote": "On his deathbed, according to tradition, Augustus boasted that he had found Rome a city of brick and left it a city of marble.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кое от имената на Август оцеляло в по-късни титли като кайзер и цар?",
+      "options": [
+        "Imperator",
+        "Август",
+        "Princeps",
+        "Цезар"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#verdicts",
+      "explanation": "Титлата Цезар продължила да живее като кайзер и цар. Наследството му включвало също професионална армия, династия и преустроена столица.",
+      "sourceQuote": "Few deny his legacy: a professional army, a dynasty, a rebuilt capital, and titles such as Caesar that survived as kaiser and czar.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Каква длъжност заел Август през 12 г. пр.н.е., с която оглавил държавната религия на Рим?",
+      "options": [
+        "Авгур",
+        "Цензор",
+        "Princeps",
+        "Pontifex maximus"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#second-settlement",
+      "explanation": "През 12 г. пр.н.е. той станал върховен жрец – pontifex maximus. Десет години по-късно Сенатът го провъзгласил и за Баща на отечеството.",
+      "sourceQuote": "In 12 BC he became chief priest (*pontifex maximus*), head of Rome's state religion.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Каква охрана създал Август през 27 г. пр.н.е., която прераснала в могъща сила в римската политика?",
+      "options": [
+        "Помощните войски",
+        "Вигилите",
+        "Ликторите",
+        "Преторианската гвардия"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#running-the-empire",
+      "explanation": "Преторианската гвардия започнала като телохранители и прераснала в личните войски на императора. Много от институциите на Август го надживели със столетия.",
+      "sourceQuote": "In 27 BC he founded the Praetorian Guard, a bodyguard that grew into the emperor's household troops and a powerful force in Roman politics.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как гледали на Август християните през Средновековието?",
+      "options": [
+        "Като на неуспял пълководец",
+        "Като на изпратен от Бога миротворец",
+        "Като на забравен тиранин",
+        "Като на жесток гонител"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#verdicts",
+      "explanation": "Средновековните християни вярвали, че неговото управление е подготвило света за Христос.",
+      "sourceQuote": "In the Middle Ages Christians saw him as a God-sent peacemaker whose reign prepared the world for Christ.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как самият Август предпочитал да го наричат?",
+      "options": [
+        "Пожизнен диктатор",
+        "Победоносен пълководец (imperator)",
+        "Цар (rex)",
+        "Първи гражданин (princeps)"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#first-settlement",
+      "explanation": "Август предпочитал да го наричат водещ или първи гражданин – princeps. Създадената от него система е известна като Принципата.",
+      "sourceQuote": "Augustus preferred to be called the leading or first citizen (*princeps*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой месец бил преименуван на август в чест на Август през 8 г. пр.н.е.?",
+      "options": [
+        "Aprilis",
+        "Septembris",
+        "Секстилис",
+        "Квинтилис"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#running-the-empire",
+      "explanation": "Секстилис станал август, в съзвучие с юли, наречен на Юлий Цезар.",
+      "sourceQuote": "In 8 BC the month Sextilis was renamed August in his honour, matching July, named for Julius Caesar.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво било рожденото име на човека, който станал първият римски император?",
+      "options": [
+        "Гай Октавий",
+        "Гай Юлий",
+        "Марк Агрипа",
+        "Марк Антоний"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#caesars-heir",
+      "explanation": "Първият римски император се родил като Гай Октавий през 63 г. пр.н.е. в заможно, но не прочуто семейство. За годините от 44 до 27 г. пр.н.е. историците обикновено го наричат Октавиан.",
+      "sourceQuote": "The man who became Rome's first emperor was born Gaius Octavius in 63 BC, into a comfortable but not famous family.",
+      "reviewFlags": []
+    }
+  ]
+}

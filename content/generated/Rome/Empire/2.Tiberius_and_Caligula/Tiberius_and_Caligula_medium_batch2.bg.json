@@ -1,0 +1,189 @@
+{
+  "batchName": "Empire: Tiberius and Caligula (AD 14-41) - Medium Batch 2",
+  "chapterName": "Empire: Tiberius and Caligula (AD 14-41)",
+  "difficulty": 2,
+  "batchOrder": 4,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Калигула бил убит в деня преди да замине за кой град?",
+      "options": [
+        "Александрия",
+        "Антиохия",
+        "Йерусалим",
+        "Картаген",
+        "Атина"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#assassination",
+      "explanation": "На 24 януари 41 г. сл.н.е., ден преди да потегли за Александрия, Калигула бил намушкан в проход под двореца си по време на празнични игри.",
+      "sourceQuote": "On 24 January AD 41, the day before he was due to leave for Alexandria, Egypt's great city, the emperor Caligula was stabbed in a narrow passage beneath his palace during a festival of games.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Къде се разболял и умрял Германик през 19 г. сл.н.е., убеден, че са го отровили?",
+      "options": [
+        "Йерусалим",
+        "Александрия",
+        "Дамаск",
+        "Антиохия",
+        "Тарс"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#germanicus",
+      "explanation": "Германик умрял в Антиохия, главния град на Сирия, след ожесточена разпра с управителя на Сирия. Слуховете, че зад смъртта му стои Тиберий, така и не заглъхнали.",
+      "sourceQuote": "In October AD 19 he fell ill at Antioch, Syria's chief city, and died convinced he had been poisoned.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Колко души, обвинени в измяна през 22-годишното управление на Тиберий, преброил един съвременен учен?",
+      "options": [
+        "Точно 22",
+        "Около 300",
+        "Над 1 000",
+        "Около 5 000",
+        "Не повече от 52"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#what-historians-think",
+      "explanation": "Те били не повече от 52, а почти половината се отървали без присъда. Това поставя под въпрос античната представа за царство на терора.",
+      "sourceQuote": "One counted no more than 52 people accused of treason in Tiberius's 22-year reign, nearly half of whom escaped conviction.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как Германик сложил край на бунта на рейнските легиони през 14 г. сл.н.е.?",
+      "options": [
+        "Платил им от собствения си джоб",
+        "Разпуснал легионите",
+        "Поискал от Тиберий да изпрати гвардията",
+        "Оставил ги да го провъзгласят за император",
+        "Екзекутирал подстрекателите"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#germanicus",
+      "explanation": "Германик сам покрил неизплатените награди на войниците и после ги повел в Германия. Три години воювал с вожда, отговорен за катастрофата в Тевтобургската гора.",
+      "sourceQuote": "He refused, paid them out of his own pocket, and led them into Germany.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Тиберий не насърчавал почитането си и разрешил само един храм в своя чест. Къде бил той?",
+      "options": [
+        "Смирна",
+        "Атина",
+        "Антиохия",
+        "Ефес",
+        "Пергам"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#reluctant-emperor",
+      "explanation": "Единственият храм, който Тиберий разрешил, се издигал в Смирна – гръцки град в Западна Турция. Това подхожда на общата му неприязън към пищните почести.",
+      "sourceQuote": "He also discouraged worship of himself, allowing just one temple in his honour, at Smyrna, a Greek city in western Turkey.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой период един еврейски автор, посетил двора на Калигула, нарекъл „Златен век“?",
+      "options": [
+        "Месеците след болестта му",
+        "Детството му във военните лагери",
+        "Последната година преди убийството му",
+        "Годините му на Капри",
+        "Първите седем месеца от управлението му"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#caligula-rise",
+      "explanation": "Авторът възхвалявал първите седем месеца от управлението на Калигула. Това начало било белязано с парични дарове, пищни игри и удвоена награда за гвардията.",
+      "sourceQuote": "A Jewish writer who later visited his court called the first seven months a \"Golden Age\".",
+      "reviewFlags": []
+    },
+    {
+      "question": "Защо преместването на преторианската гвардия в самия Рим направило Сеян толкова силен?",
+      "options": [
+        "Хазната се озовала в казармите му",
+        "Позволило му да седи в Сената като консул",
+        "Дало му командването на рейнските легиони",
+        "Поставило 6 000 – 9 000 войници под негова власт в столицата",
+        "Направило го отговорник за снабдяването със зърно"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#sejanus",
+      "explanation": "След като Тиберий преместил гвардията от лагерите извън Рим в града, Сеян разполагал с хиляди войници в столицата. Тиберий започнал да го нарича „съратник в трудовете ми“.",
+      "sourceQuote": "When the emperor Tiberius moved the Guard from camps outside Rome into the city itself, Sejanus gained between 6,000 and 9,000 soldiers inside the capital.",
+      "reviewFlags": []
+    },
+    {
+      "question": "За какво заговорили някои сенатори след убийството на Калигула?",
+      "options": [
+        "Да направят дъщерята на Калигула императрица",
+        "Да възстановят Републиката без императори",
+        "Да изберат нов император с народно гласуване",
+        "Да преместят столицата в Александрия",
+        "Да върнат семейството на Германик от изгнание"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#assassination",
+      "explanation": "Някои сенатори говорели за връщане на Републиката, но преторианците имали други планове. Те провъзгласили за император чичото на Калигула.",
+      "sourceQuote": "In the Senate, some spoke of restoring the Republic, government without emperors.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как сенаторите тълкували отказа на Тиберий от почести като Гражданския венец?",
+      "options": [
+        "Като обида към паметта на Август",
+        "Като знак, че ще възстанови Републиката",
+        "Като лицемерие, а не скромност",
+        "Като доказателство за лошо здраве",
+        "Като истинска скромност, достойна за подражание"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#reluctant-emperor",
+      "explanation": "Сенаторите виждали в отказите му лицемерие и отношенията се влошили. Мъглявите му указания към Сената влошили нещата още повече.",
+      "sourceQuote": "Senators read this as hypocrisy, not humility, and relations soured.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Плаващият мост от кораби на Калигула, дълъг над 3 km, свързвал курорта Байи с кое близко пристанище?",
+      "options": [
+        "Неаполис",
+        "Путеоли",
+        "Мизенум",
+        "Остия",
+        "Брундизий"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#horse-bridge-god",
+      "explanation": "Мостът водел от Байи до Путеоли и Калигула преминал по него, яздейки Инцитат. Безсмислието му може би е било целта – демонстрация на пълна власт.",
+      "sourceQuote": "In AD 39 or 40 he built a floating bridge of ships more than 3 km (two miles) long, from Baiae, a seaside resort near Naples, to the nearby port of Puteoli.",
+      "reviewFlags": []
+    }
+  ]
+}

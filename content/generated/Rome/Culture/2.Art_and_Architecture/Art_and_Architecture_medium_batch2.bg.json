@@ -1,0 +1,191 @@
+{
+  "batchName": "Empire: Roman Art and Architecture (c. 500 BC-AD 476) - Medium Batch 2",
+  "chapterName": "Empire: Roman Art and Architecture (c. 500 BC-AD 476)",
+  "difficulty": 2,
+  "batchOrder": 4,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Към III в. сл.н.е. къде отивала по-голямата част от водата на римските акведукти?",
+      "options": [
+        "За престорени морски битки на арените",
+        "Към уличните чешми",
+        "Към стопанствата извън града",
+        "Към домовете на богатите",
+        "Към обществените терми"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#aqueducts-roads-bridges",
+      "explanation": "Тогава Рим имал единадесет акведукта, които снабдявали над един милион души. Термите поглъщали по-голямата част от водата.",
+      "sourceQuote": "By the 3rd century AD the city had eleven, supporting over a million people, and most of the water went to the public baths.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво съчетание обикновено следвали римските храмове?",
+      "options": [
+        "Гръцки план със стъпала от всички страни",
+        "Етруски план с гръцки колони",
+        "Египетски план с гръцки колони",
+        "Гръцки план с етруски колони",
+        "Етруски план изобщо без колони"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#city-of-marble",
+      "explanation": "Храмовете стояли на висок подиум със стъпала само отпред, но имали дорийски, йонийски или коринтски колони. В главното помещение, cella, стояла статуята на бога.",
+      "sourceQuote": "Temples followed an Etruscan layout, with a high platform and steps only at the front, but used Greek column styles: the plain Doric, the scroll-topped Ionic and the leafy Corinthian.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кои от тези видове сгради са римско изобретение? (изберете всички верни)",
+      "options": [
+        "Самата арка",
+        "Дорийската колона",
+        "Базиликата",
+        "Триумфалната арка",
+        "Амфитеатърът"
+      ],
+      "correctAnswers": [
+        2,
+        3,
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#arenas-baths-apartments",
+      "explanation": "Амфитеатърът, базиликата и триумфалната арка са сред малкото видове сгради, измислени от римляните. Арката е заимствана от етруските, а дорийската колона – от гърците.",
+      "sourceQuote": "The amphitheatre, an oval arena ringed by tiered seats, was one of the few building types the Romans invented, along with the basilica and the triumphal arch (*arcus triumphalis*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво изобразява прочутата скулптурна група на тетрарсите, днес във Венеция?",
+      "options": [
+        "Четирима синове на Константин",
+        "Четирима съуправляващи императори",
+        "Четирите годишни времена",
+        "Четиримата евангелисти",
+        "Четири богове закрилници на Рим"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#late-roman-style",
+      "explanation": "Изваяни около 305 г. сл.н.е., тетрарсите показват масивния късноримски стил. Същият облик се вижда на Арката на Константин.",
+      "sourceQuote": "A famous statue group of four co-ruling emperors, the Tetrarchs, carved around AD 305 and now in Venice, shows the same blocky look.",
+      "reviewFlags": []
+    },
+    {
+      "question": "След като бетонните стени поели тежестта на сградата, каква роля често играели колоните?",
+      "options": [
+        "Сами крепели покрива",
+        "Ползвали се само под земята",
+        "Превърнали се в обикновена украса",
+        "Провеждали вода през сърцевината си",
+        "Били напълно премахнати"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#concrete-revolution",
+      "explanation": "Някога колоните били незаменими опори. С носещите бетонни стени те често станали декоративни.",
+      "sourceQuote": "Columns, once essential supports, often became mere decoration in front of load-bearing walls.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво според оплакването на Плиний Стари се било случило с истинската портретна живопис?",
+      "options": [
+        "Станала твърде скъпа за поръчване",
+        "Била изместена от мозайките",
+        "Била забранена от императора",
+        "Била съсипана от гръцки роби",
+        "Изчезнала поради мързел"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#painted-walls",
+      "explanation": "Енциклопедията на Плиний е главният античен извор за римското изкуство. Той мърморел, че изкуството на истинския портрет е западнало.",
+      "sourceQuote": "Pliny the Elder, the 1st-century AD writer whose encyclopedia is our main ancient source on art, grumbled that true portrait painting had died out through laziness.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Към какво били прикрепяни реалистичните рисувани портрети във Фаюм в Римски Египет?",
+      "options": [
+        "Мумии",
+        "Носове на кораби",
+        "Домашни олтари",
+        "Военни знамена",
+        "Врати на гробници"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#painted-walls",
+      "explanation": "Тези редки портрети върху табла са оцелели в една земеделска област на Римски Египет. Те са ценно изключение, тъй като повечето живопис върху дърво е изгнила.",
+      "sourceQuote": "Rare panel portraits survive from the Fayum, a farming region of Roman Egypt, where realistic painted faces were attached to mummies.",
+      "reviewFlags": []
+    },
+    {
+      "question": "При Август кариерите на кое място в Северна Италия били отворени, за да снабдяват столицата с мрамор?",
+      "options": [
+        "Парос",
+        "Аквилея",
+        "Равена",
+        "Верона",
+        "Карара"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#city-of-marble",
+      "explanation": "Каларският мрамор започнал да тече към Рим от управлението на Август. От Гърция се внасяли и изящни цветни мрамори.",
+      "sourceQuote": "But from his reign the quarries at Carrara in northern Italy were opened up for the capital, and fine coloured marbles were imported from Greece.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво били imagines, носени на погребенията на знатните римски родове?",
+      "options": [
+        "Свитъци с длъжностите на рода",
+        "Бронзови статуи на домашните богове",
+        "Маски на предците на рода",
+        "Лаврови венци за покойника",
+        "Изрисувани щитове на минали победи"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#portraits-and-ancestors",
+      "explanation": "Маски на предците се носели в погребалните шествия. Нито една не е оцеляла, но много запазени бюстове вероятно изобразяват такива предци.",
+      "sourceQuote": "Ancestral busts were displayed in the entrance hall (*atrium*) of an aristocratic house, and at the funerals of great families, masks of the forebears (*imagines*) were worn in procession.",
+      "reviewFlags": []
+    },
+    {
+      "question": "След утвърждаването на християнството кои били единствените, изобразявани в големи статуи?",
+      "options": [
+        "Императорите",
+        "Предците на знатните родове",
+        "Светците",
+        "Епископите",
+        "Гладиаторите"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#late-roman-style",
+      "explanation": "Християнството сложило край на големите религиозни статуи, така че само императорите получавали колосални фигури. Запазени са огромни фрагменти от колосален Константин.",
+      "sourceQuote": "Christianity soon ended large religious statues; big figures were made only of emperors, like a colossal Constantine whose giant fragments survive.",
+      "reviewFlags": []
+    }
+  ]
+}

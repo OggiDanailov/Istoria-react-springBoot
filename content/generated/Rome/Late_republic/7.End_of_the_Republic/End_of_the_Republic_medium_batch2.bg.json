@@ -1,0 +1,191 @@
+{
+  "batchName": "Late Republic: Antony, Octavian and the End of the Republic (44-27 BCE) - Medium Batch 2",
+  "chapterName": "Late Republic: Antony, Octavian and the End of the Republic (44-27 BCE)",
+  "difficulty": 2,
+  "batchOrder": 4,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Защо Клеопатра реши да се самоубие през 30 г. пр.н.е.?",
+      "options": [
+        "Така повеляваше завещанието на Антоний",
+        "Последната ѝ армия премина на страната на Рим",
+        "Египетските жреци го поискаха",
+        "Октавиан отказа да се срещне с нея",
+        "Научи, че ще я водят в триумфа му"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#alexandria-and-augustus",
+      "explanation": "Клеопатра опита да преговаря, но научи, че ще бъде показвана в победното шествие на Октавиан. Тя умря на 12 август 30 г. пр.н.е.",
+      "sourceQuote": "Cleopatra tried to bargain, but learned she was destined to be paraded in Octavian's victory procession (*triumphus*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "Къде Антоний и Октавиан подновиха изтеклия триумвират през 37 г. пр.н.е.?",
+      "options": [
+        "Атина",
+        "Тарент",
+        "Брундизий",
+        "Мутина",
+        "Рим"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#parthia-sicily-lepidus",
+      "explanation": "В Тарент в Южна Италия те го подновиха за още пет години, а Антоний даде кораби за войната в Сицилия срещу обещани войски.",
+      "sourceQuote": "In 37 BC Antony and Octavian met at Tarentum in southern Italy and renewed the triumvirate, which had quietly lapsed, for five more years.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кои провинции присвои Антоний с незаконен закон през юни 44 г. пр.н.е.?",
+      "options": [
+        "Испания",
+        "Сирия",
+        "Африка",
+        "Галия",
+        "Македония"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#after-caesars-murder",
+      "explanation": "Антоний си даде провинциите в Галия – грубо днешна Франция и Северна Италия, откъдето можеше да заплашва самия Рим.",
+      "sourceQuote": "In June he pushed through an illegal law giving himself the provinces of Gaul, roughly modern France and northern Italy.",
+      "reviewFlags": []
+    },
+    {
+      "question": "След като завзе консулството през август 43 г. пр.н.е., какво направи Октавиан? (изберете всички верни)",
+      "options": [
+        "Потвърди осиновяването си като син на Цезар",
+        "Отмени обявяването на Антоний за враг на държавата",
+        "Помилва убийците и ги върна",
+        "Обяви война на Лепид",
+        "Създаде съдилища, за да осъдят убийците"
+      ],
+      "correctAnswers": [
+        0,
+        1,
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#forming-the-triumvirate",
+      "explanation": "Октавиан потвърди осиновяването си, накара убийците да бъдат осъдени задочно и тихомълком реабилитира Антоний, с което проправи пътя към споразумението им.",
+      "sourceQuote": "He confirmed his adoption as Caesar's son, set up courts to condemn the assassins in their absence, and quietly cancelled Antony's status as a public enemy.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кога за пръв път е използвано названието „Втори триумвират“?",
+      "options": [
+        "От самите триумвири",
+        "От придворните поети на Август",
+        "През XIX в.",
+        "През XVII в.",
+        "През Средновековието"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#forming-the-triumvirate",
+      "explanation": "Терминът е съвременен, използван за пръв път през XVII в., и днес много историци го избягват като подвеждащ. Тримата се наричаха съвет на тримата за възстановяване на републиката.",
+      "sourceQuote": "We call this the Second Triumvirate, but that label is modern, first used in the 17th century, and many historians now avoid it as misleading.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Край кое място в Сицилия адмиралът на Октавиан спечели решителната морска битка през 36 г. пр.н.е.?",
+      "options": [
+        "Брундизий",
+        "Тарент",
+        "Миле",
+        "Навлох",
+        "Акциум"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#parthia-sicily-lepidus",
+      "explanation": "Най-близкият приятел и адмирал на Октавиан спечели решителната битка край Навлох на 3 септември 36 г. пр.н.е.",
+      "sourceQuote": "His closest friend and admiral won the decisive sea battle off Naulochus, in Sicily, on 3 September 36 BC.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кое от следните беше част от несигурния компромис веднага след убийството на Цезар?",
+      "options": [
+        "Сенатът беше разпуснат",
+        "Решенията на Цезар бяха анулирани",
+        "Антоний стана диктатор за една година",
+        "Длъжността диктатор беше премахната",
+        "Убийците бяха изгонени от Италия"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#after-caesars-murder",
+      "explanation": "Компромисът помилва убийците, потвърди решенията на Цезар и премахна длъжността диктатор. Той не издържа дълго.",
+      "sourceQuote": "The assassins were pardoned, Caesar's decisions were confirmed, and the office of dictator was abolished.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Коя видна жертва на проскрипциите беше убита заедно с брат си, племенника си и сина си?",
+      "options": [
+        "Адмиралът, който владееше моретата от Сицилия",
+        "Върховният жрец на Рим",
+        "Пълководецът, командвал в Испания",
+        "Ораторът, нападал Антоний в речите си",
+        "Трибунът, прокарал *lex Titia*"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#proscriptions",
+      "explanation": "Ораторът, нападал Антоний в унищожителни речи, беше убит заедно с брат си, племенника си и сина си. Същият човек преди това беше убедил Сената да подкрепи Октавиан.",
+      "sourceQuote": "The orator who had attacked Antony in a series of blistering speeches was killed, along with his brother, nephew and son.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как постъпи Октавиан с Перузия, след като тя падна?",
+      "options": [
+        "Изби съветниците ѝ и я изгори",
+        "Предаде я непокътната на ветераните си",
+        "Продаде всички граждани в робство",
+        "Помилва всички и я остави невредима",
+        "Пощади града, но екзекутира брата на Антоний"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#perusia-and-brundisium",
+      "explanation": "Октавиан пусна семейството на Антоний и пощади войниците им, но изби градските съветници и изгори Перузия до основи.",
+      "sourceQuote": "When the town fell, he let Antony's family go and spared their soldiers, but massacred the town's councillors and burned it to the ground.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как Антоний помогна на Клеопатра да укрепи трона си?",
+      "options": [
+        "Като нареди да убият сестра ѝ",
+        "Като разби армията на брат ѝ",
+        "Като се ожени за нея по римски обред",
+        "Като подкупи Сената да я признае",
+        "Като изгони съперницата ѝ в Кипър"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#antony-and-cleopatra",
+      "explanation": "Антоний нареди да убият сестрата на Клеопатра, за да укрепи трона ѝ. По-късно ѝ даде земи, за да построи флот.",
+      "sourceQuote": "They soon began an affair, and Antony helped her secure her throne by having her sister killed.",
+      "reviewFlags": []
+    }
+  ]
+}

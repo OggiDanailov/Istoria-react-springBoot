@@ -1,0 +1,179 @@
+{
+  "batchName": "Late Republic: Caesar in Gaul (58-50 BCE) - Easy Batch 2",
+  "chapterName": "Late Republic: Caesar in Gaul (58-50 BCE)",
+  "difficulty": 1,
+  "batchOrder": 2,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Защо галската страна на историята за войната е изгубена?",
+      "options": [
+        "Сенатът забранил галските писания",
+        "Римляните изгорили галските библиотеки",
+        "Галите не писали история",
+        "Текстовете на друидите изгорели при пожар"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#caesars-account",
+      "explanation": "Без галски исторически съчинения зависим почти изцяло от версията на Цезар. След Втората световна война учените гледат на нея все по-скептично.",
+      "sourceQuote": "The Gauls wrote no histories, so their side of the story is lost.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Защо Цезар издигнал втори, външен пръстен от укрепления при Алезия?",
+      "options": [
+        "За да бележи границата на новата провинция",
+        "За да посрещне галската армия, идваща на помощ",
+        "За да пази корабите си с провизии",
+        "За да държи пленените гали"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#siege-of-alesia",
+      "explanation": "Вътрешният пръстен държал галите затворени, а външният, дълъг около 21 km, бил обърнат навън срещу идващите на помощ.",
+      "sourceQuote": "An outer ring about 21 km (14 Roman miles) long faced outward against the relievers.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Откъде идват почти всичките ни знания за Галската война?",
+      "options": [
+        "От летописите на галските друиди",
+        "От писмата на Помпей",
+        "От гръцки истории на галски търговци",
+        "От „Записки“-те на самия Юлий Цезар"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#caesars-account",
+      "explanation": "„Записки за Галската война“ на Цезар пристигали в Рим на части и държали подвизите му пред очите на обществото. Ясният им латински ги прави и днес класически учебен текст.",
+      "sourceQuote": "Almost everything known about the war comes from Julius Caesar himself.",
+      "reviewFlags": []
+    },
+    {
+      "question": "При кой град Верцингеториг нанесъл явно поражение на Цезар през 52 г. пр.н.е.?",
+      "options": [
+        "Аварик",
+        "Алезия",
+        "Бибракте",
+        "Герговия"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#vercingetorix",
+      "explanation": "При Герговия Цезар признал 700 убити, сред тях 46 центуриони. Историците подозират, че истинските загуби са били много по-големи.",
+      "sourceQuote": "At Gergovia, Vercingetorix inflicted a clear defeat.",
+      "reviewFlags": []
+    },
+    {
+      "question": "От кое могъщо племе в Централна Галия бил благородникът Верцингеториг?",
+      "options": [
+        "Арверните",
+        "Нервиите",
+        "Едуите",
+        "Ебуроните"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#vercingetorix",
+      "explanation": "Роден е около 82 г. пр.н.е. в Герговия, главния град на арверните. По-късно именно при Герговия той щял да нанесе на Цезар явно поражение.",
+      "sourceQuote": "Vercingetorix was born around 82 BC at Gergovia, chief town of the Arverni, a powerful tribe of central Gaul.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кое било голямото слабо място на римската армия по време на Галската война?",
+      "options": [
+        "Снабдяването",
+        "Конницата",
+        "Дисциплината",
+        "Мечовете"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#legions-and-warriors",
+      "explanation": "Всеки войник носел дажби само за няколко дни, затова храната била постоянна грижа. Отново и отново гладът диктувал ходовете на Цезар.",
+      "sourceQuote": "Rome's weak point was supply.",
+      "reviewFlags": []
+    },
+    {
+      "question": "От колко кохорти се състоял римският легион по времето на Цезар?",
+      "options": [
+        "Шест",
+        "Десет",
+        "Четири",
+        "Дванадесет"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#legions-and-warriors",
+      "explanation": "Легион от около 5 000 души се делял на десет кохорти по 480 войници. Кохортата заменила по-малката манипула.",
+      "sourceQuote": "Each legion was split into ten cohorts (*cohortes*) of 480 soldiers.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Каква била окончателната съдба на Верцингеториг?",
+      "options": [
+        "Помилван и превърнат в римски съюзник",
+        "Заточен на средиземноморски остров",
+        "Показан в триумф и удушен",
+        "Убит в боевете при Алезия"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#aftermath",
+      "explanation": "След около шест години в плен той бил показан в триумфа на Цезар през 46 г. пр.н.е. и удушен в Тулианум. От XIX в. насам е френски национален герой.",
+      "sourceQuote": "In 46 BC he was paraded in Caesar's triumph and then strangled in the Tullianum, Rome's prison.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кои двама мъже делели властта с Юлий Цезар в неофициалния съюз, наречен по-късно Първият триумвират?",
+      "options": [
+        "Цицерон и Катон",
+        "Марк Антоний и Лепид",
+        "Помпей и Крас",
+        "Сула и Марий"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#caesar-goes-to-gaul",
+      "explanation": "Партньори на Цезар били Помпей, най-прославеният пълководец на Рим, и Крас, най-богатият му човек. Тяхната подкрепа донесла на Цезар управлението на Галия.",
+      "sourceQuote": "His partners were Pompey, Rome's most celebrated general, and Crassus, its richest man.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Защо Цезар разпръснал зимните лагери на легионите си из Галия през 54 г. пр.н.е.?",
+      "options": [
+        "За да пази всеки речен брод в Галия",
+        "За да подготви второ нахлуване в Британия",
+        "За да не се разбунтуват легионите заедно",
+        "За да разпредели тежестта по изхранването им след лошата реколта"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#ambiorix-revolt",
+      "explanation": "Реколтата пропаднала, но Цезар накарал племената да хранят легионите му през зимата. Разпръскването на лагерите разпределило тежестта, но оставило всеки от тях изолиран.",
+      "sourceQuote": "To spread the burden he scattered their camps, which left each one isolated.",
+      "reviewFlags": []
+    }
+  ]
+}

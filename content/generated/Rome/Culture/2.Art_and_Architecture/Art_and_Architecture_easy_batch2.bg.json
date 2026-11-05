@@ -1,0 +1,179 @@
+{
+  "batchName": "Empire: Roman Art and Architecture (c. 500 BC-AD 476) - Easy Batch 2",
+  "chapterName": "Empire: Roman Art and Architecture (c. 500 BC-AD 476)",
+  "difficulty": 1,
+  "batchOrder": 2,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Кое било голямото римско нововъведение в стенописта?",
+      "options": [
+        "Абстрактни геометрични шарки",
+        "Бойни карти",
+        "Пейзажни сцени",
+        "Религиозни икони"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#painted-walls",
+      "explanation": "Римляните рисували цъфнали градини, градски изгледи и сцени от „Одисея“. Използвали дори ранна форма на перспектива.",
+      "sourceQuote": "The great Roman innovation was landscape: gardens in flower, views of city buildings and scenes from the Odyssey, the Greek epic of a hero's voyage home, using an early form of perspective.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво карало водата да тече по римските акведукти?",
+      "options": [
+        "Роби с ръчни помпи",
+        "Само земното притегляне",
+        "Тъпчещи колела, движени от волове",
+        "Редици водни колела"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#aqueducts-roads-bridges",
+      "explanation": "Акведуктите следвали лек наклон надолу чак до града. Повечето им канали минавали под земята.",
+      "sourceQuote": "Aqueducts carried water to cities by gravity alone, along gentle downward slopes.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Около колко зрители побирал Колизеумът?",
+      "options": [
+        "Около 20 000",
+        "Около 5000",
+        "Над 50 000",
+        "Над 250 000"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#arenas-baths-apartments",
+      "explanation": "Завършен около 80 г. сл.н.е., Колизеумът имал прибиращи се платнища за сянка. В него се провеждали гладиаторски боеве и дори инсценирани морски битки.",
+      "sourceQuote": "It held over 50,000 spectators, had retractable awnings for shade, and staged gladiator fights and even mock sea battles.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Коя вулканична пепел правела римския бетон необичайно здрав?",
+      "options": [
+        "Туфът",
+        "Пуцоланът",
+        "Гипсът",
+        "Травертинът"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#concrete-revolution",
+      "explanation": "Пуцоланът се смесвал с варов разтвор, вода и трошен камък. Полученият opus caementicium се изливал в дървени кофражи за многократна употреба.",
+      "sourceQuote": "Roman concrete (*opus caementicium*) mixed lime mortar, water and rubble with pozzolana, a volcanic ash that made it unusually strong.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой силен народ от Средна Италия, живял точно на север от Рим, бил сред най-ранните влияния върху римското изкуство?",
+      "options": [
+        "Самнитите",
+        "Картагенците",
+        "Галите",
+        "Етруските"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#greek-roots",
+      "explanation": "Римското изкуство започнало като заемащо – първо от етруските и от гръцките колонии в Южна Италия. Самите етруски научили много от гръцките си търговски партньори.",
+      "sourceQuote": "Its earliest influences came from the Etruscans, a powerful people of central Italy north of Rome, and from the Greek colonies of southern Italy.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Арката на Константин почита императора, при когото възтържествувала коя религия?",
+      "options": [
+        "Юдаизмът",
+        "Митраизмът",
+        "Култът към Изида",
+        "Християнството"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#late-roman-style",
+      "explanation": "Арката е завършена около 315 г. сл.н.е. близо до Колизеума. В нея по-стари класически медальони се съчетават с нови релефи с набити фигури.",
+      "sourceQuote": "It was built for Constantine, the emperor under whom Christianity triumphed, and it combines older carved roundels in the full classical style with new panels of squat, hard-edged figures.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво бил форумът – сърцето на всеки римски град?",
+      "options": [
+        "Укрепена цитадела на хълм",
+        "Хиподрум за колесници",
+        "Покрита баня",
+        "Открит площад за пазар, събрания и спорове"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#city-of-marble",
+      "explanation": "Форумът служел за пазар, място за срещи и политическа сцена. В Рим към първоначалния Форум по-късно се добавили по-величествени императорски форуми.",
+      "sourceQuote": "The heart of every Roman town was its forum, an open square serving as market, meeting place and stage for political debate.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво бил хипокаустът в римската баня?",
+      "options": [
+        "Студен басейн",
+        "Площадка за борба",
+        "Съблекалня",
+        "Подово отопление"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#arenas-baths-apartments",
+      "explanation": "Горещ въздух от пещ минавал под повдигнатите подове и през кухини в стените. Това бил предшественик на централното отопление.",
+      "sourceQuote": "Rooms were warmed by underfloor heating (*hypocaustum*), which sent hot air from a furnace beneath raised floors and through gaps in the walls, a forerunner of central heating.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Изригването на кой вулкан през 79 г. сл.н.е. запазило изрисуваните стаи в Помпей и Херкулан?",
+      "options": [
+        "Етна",
+        "Вулкано",
+        "Стромболи",
+        "Везувий"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#painted-walls",
+      "explanation": "Пепелта на Везувий погребала тези богати градове на Неаполитанския залив. Заради това бедствие повечето оцелели римски картини са стенописи.",
+      "sourceQuote": "When Mount Vesuvius erupted in AD 79, ash buried Pompeii and Herculaneum, wealthy towns on the Bay of Naples, preserving their decorated rooms.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Защо почти цялата най-ценена римска живопис е изгубена?",
+      "options": [
+        "Рисувана била върху плат, използван повторно",
+        "Унищожена била по заповед на християнските императори",
+        "Претопена била заради златните пигменти",
+        "Рисувана била върху дървени табла, които гният"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#painted-walls",
+      "explanation": "Римляните ценели най-много живописта върху табла, но дървото се разлага с времето. Оцеляло е предимно стенописи.",
+      "sourceQuote": "The most prestigious kind was painted on wooden panels, and wood rots.",
+      "reviewFlags": []
+    }
+  ]
+}

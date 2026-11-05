@@ -1,0 +1,179 @@
+{
+  "batchName": "Empire: Claudius and Nero (AD 41-68) - Easy Batch 2",
+  "chapterName": "Empire: Claudius and Nero (AD 41-68)",
+  "difficulty": 1,
+  "batchOrder": 2,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "На коя група разчитал Клавдий да ръководи службите за писма, финанси и правосъдие?",
+      "options": [
+        "Гръцки жреци и философи",
+        "Сенатори от стари родове",
+        "Освободени роби",
+        "Офицери от конническото съсловие"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#claudius-government",
+      "explanation": "Клавдий поставил освободени роби начело на отделни служби за писма, финанси и правосъдие. Сенаторите били възмутени и шепнели, че освободените роби управляват господаря си.",
+      "sourceQuote": "To run the empire day to day, he relied on freedmen (*liberti*), former slaves, who headed separate offices for letters, finance and justice.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Коя била първата цел на въстанието на Боудика?",
+      "options": [
+        "Камулодунум (Колчестър)",
+        "Остров Ангълси",
+        "Веруламиум",
+        "Лондиниум"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#boudica-revolt",
+      "explanation": "Бунтовниците нападнали първо Камулодунум – колония на ветерани, мразена заради скъпия си храм на Клавдий. Оцелелите издържали в този храм два дни.",
+      "sourceQuote": "Their first target was Camulodunum, modern Colchester, a colony of Roman veterans hated for its expensive temple to the god-emperor Claudius.",
+      "reviewFlags": []
+    },
+    {
+      "question": "С какво останал Клавдий след детска болест?",
+      "options": [
+        "С накуцване, заекване и треперене на главата",
+        "Сляп с едното око и глух",
+        "С чести припадъци и загуба на памет",
+        "С изсъхнала ръка и гърбица"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#claudius-early-life",
+      "explanation": "Болестта оставила Клавдий с накуцване, заекване и треперене на главата. Съвременни лекари предполагат детски паралич, церебрална парализа или синдром на Турет.",
+      "sourceQuote": "He belonged to the very top of Rome's ruling family, but as a child he suffered an illness that left him with a limp, a stammer and a shaking head.",
+      "reviewFlags": []
+    },
+    {
+      "question": "През коя година Клавдий изпратил легиони да нахлуят в Британия?",
+      "options": [
+        "48 г. сл.н.е.",
+        "41 г. сл.н.е.",
+        "43 г. сл.н.е.",
+        "54 г. сл.н.е."
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#conquest-of-britain",
+      "explanation": "През 43 г. сл.н.е. Клавдий изпратил четири легиона през Ламанш, след като един британски съюзник, прогонен от земите си, помолил за помощ.",
+      "sourceQuote": "In AD 43, after a British ally driven from his lands appealed for help, Claudius sent four legions (*legiones*), Rome's heavy infantry divisions of several thousand men each, across the Channel.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Къде се родил Клавдий, ставайки първият римски император, роден извън Италия?",
+      "options": [
+        "В Анциум, южно от Рим",
+        "В Коринт, Гърция",
+        "В Лугдунум (днешен Лион)",
+        "В Масилия (днешна Марсилия)"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#claudius-early-life",
+      "explanation": "Клавдий се родил в Лугдунум, днешен Лион, през 10 г. пр.н.е. Символично, негова реч за приемането на галски благородници в Сената по-късно била открита върху бронзова плоча в Лион.",
+      "sourceQuote": "Claudius was born in 10 BC at Lugdunum, modern Lyon in France, the first Roman emperor born outside Italy.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кого наредил Нерон да убият през 59 г. сл.н.е., според античните автори след инсцениран корабокрушение?",
+      "options": [
+        "Майка си, Агрипина",
+        "Учителя си стоик",
+        "Доведения си брат Британик",
+        "Първата си съпруга"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#nero-early-reign",
+      "explanation": "Един освободен роб уредил корабокрушение; когато Агрипина доплувала до брега, той я убил и обявил смъртта ѝ за самоубийство. Историците са единодушни, че след това поведението на Нерон станало много по-лошо.",
+      "sourceQuote": "In AD 59 Nero had his mother killed: according to ancient writers, a freedman arranged a shipwreck, and when she swam ashore he murdered her and called it suicide.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво станало, когато Нерон участвал в Олимпийските игри през 67 г. сл.н.е.?",
+      "options": [
+        "Спечелил всяко състезание, дори недовършено надбягване",
+        "Отказал да се състезава с гърци",
+        "Бил тежко ранен и избягал в Рим",
+        "Загубил всичко и си тръгнал опозорен"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#nero-downfall",
+      "explanation": "Нерон спечелил всички състезания, включително надбягване с колесници, в което паднал и така и не стигнал до финала. Римляните свързвали подобни изяви с роби и артисти.",
+      "sourceQuote": "In AD 67 he competed at the Olympic Games in Greece and won every contest, including a chariot race in which he fell out and never finished.",
+      "reviewFlags": []
+    },
+    {
+      "question": "От колко антични автори идва почти всичко, което знаем за Клавдий и Нерон?",
+      "options": [
+        "Двама",
+        "Трима",
+        "Петима",
+        "Седем"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#judging-the-sources",
+      "explanation": "Тримата са Тацит, един биограф на императорите и един по-късен гръцки сенатор. Всички произхождали от римските висши слоеве и обикновено заставали на страната на Сената.",
+      "sourceQuote": "Almost everything we know about Claudius and Nero comes from three writers: Tacitus, the senator-historian, a biographer of the emperors and a later Greek senator.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой строителен проект на Клавдий се провалил зрелищно, като наводнил гладиаторско представление?",
+      "options": [
+        "Мост над Тибър",
+        "Нов акведукт към Рим",
+        "Тунел за пресушаване на Фучинското езеро",
+        "Пристанището северно от Остия"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#claudius-government",
+      "explanation": "Отводнителният тунел на Фучинското езеро се оказал твърде малък и водата заляла гладиаторско представление, а Клавдий побягнал да спасява живота си. Двата му нови акведукта от 52 г. сл.н.е. обаче били успешни.",
+      "sourceQuote": "One project failed spectacularly: a tunnel to drain the Fucine Lake in central Italy was too small, and when opened its flood swamped a gladiator show, sending the emperor running for his life.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Според преданието къде намерили Клавдий скрит след убийството на племенника му?",
+      "options": [
+        "В храм на Капитолия",
+        "В лодка на Тибър",
+        "Зад завеса в двореца",
+        "В изба под сградата на Сената"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#claudius-accession",
+      "explanation": "Според преданието един гвардеец го намерил да се свива зад завеса и вместо да го убие, го провъзгласил за император. След това го отвели набързо в лагера на гвардията.",
+      "sourceQuote": "According to tradition, a guardsman found him cowering behind a curtain and, instead of killing him, hailed him as emperor.",
+      "reviewFlags": []
+    }
+  ]
+}

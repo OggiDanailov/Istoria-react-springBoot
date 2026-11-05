@@ -1,0 +1,145 @@
+{
+  "batchName": "Middle Republic: The Fall of Carthage and Corinth (167-133 BCE) - Latin words",
+  "chapterName": "Middle Republic: The Fall of Carthage and Corinth (167-133 BCE)",
+  "difficulty": 1,
+  "batchOrder": 9,
+  "description": "Written by hand from the chapter text: the Latin words it explains",
+  "questions": [
+    {
+      "question": "Какво означава Carthago delenda est?",
+      "options": [
+        "Картаген трябва да бъде разрушен",
+        "Картаген е победен",
+        "Картаген ще се издигне отново",
+        "Картаген принадлежи на Рим"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#carthago-delenda-est",
+      "explanation": "На Катон се приписва, че завършвал всяка своя реч с нея, но фразата е по-късна традиция.",
+      "sourceQuote": "with the words \"Carthage must be destroyed\" (*Carthago delenda est*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "След войната земите на Картаген станали римската provincia Африка. Откъде била управлявана?",
+      "options": [
+        "Утика",
+        "Картаген",
+        "Неферис",
+        "Рим"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#after-carthage",
+      "explanation": "Утика, близко пристанище, била застанала на страната на Рим; провинцията станала важен източник на зърно.",
+      "sourceQuote": "Carthage's lands became the Roman province (*provincia*) of Africa, governed from Utica",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как Сципион Емилиан отпразнувал падането на Картаген?",
+      "options": [
+        "С triumphus – римското победно шествие",
+        "Като основал колония на мястото му",
+        "С игри в Утика",
+        "Като построил храм на Ешмун"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#after-carthage",
+      "explanation": "Той приел и почетното прозвище Африкански, подобно на осиновителя си дядо.",
+      "sourceQuote": "celebrated a triumph (*triumphus*), Rome's victory parade.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Защо Сципион построил moles през входа на пристанището на Картаген?",
+      "options": [
+        "За да спре корабите със запаси да влизат в града",
+        "За да осигури безопасно пристанище на корабите си",
+        "За да придвижи обсадни кули до стените",
+        "За да защити Утика от набези"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#scipio-takes-command",
+      "explanation": "Картагенците отвърнали, като тайно прокопали нов канал към морето.",
+      "sourceQuote": "Supply ships kept slipping into Carthage, so Scipio built a huge mole (*moles*), a stone barrier across the harbour approach.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво станало със земите на Картаген след 146 г. пр.н.е.?",
+      "options": [
+        "Конфискувани като ager publicus – римска държавна земя",
+        "Дадени на нумидийския цар",
+        "Разделени между войниците на Сципион",
+        "Върнати на оцелелите"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#after-carthage",
+      "explanation": "Освен това било проклето всеки, който се опита да засели отново мястото.",
+      "sourceQuote": "The land was confiscated as public land (*ager publicus*), the property of the Roman state.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво agnomen приел Мумий след разрушаването на Коринт?",
+      "options": [
+        "Ахейски",
+        "Африкански",
+        "Corinthius",
+        "Macedonicus"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#sack-of-corinth",
+      "explanation": "Сципион Емилиан приел прозвището „Африкански“ след Картаген, както преди него и осиновителят му дядо.",
+      "sourceQuote": "Mummius took the honorary surname \"Achaicus\".",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво определял lex Villia annalis?",
+      "options": [
+        "Минимална възраст за длъжностите: 41 г. за консул",
+        "Големината на един легион",
+        "Границите на плячката на пълководеца",
+        "Правилата за триумф"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#scipio-takes-command",
+      "explanation": "През 147 г. пр.н.е. Сенатът отменил възрастовите правила, за да може 36- или 37-годишният Сципион да стане консул.",
+      "sourceQuote": "a law on minimum ages (*lex Villia annalis*) set the bar at 41.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какъв чин имал Сципион Емилиан през първите години от обсадата на Картаген?",
+      "options": [
+        "Военен трибун (tribunus militum)",
+        "Консул",
+        "Едил",
+        "Претор"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#a-faltering-siege",
+      "explanation": "Неведнъж спасявал римските войски и сенаторите, дошли на място, го забелязали.",
+      "sourceQuote": "was serving as a military tribune (*tribunus militum*), a middle-ranking post.",
+      "reviewFlags": []
+    }
+  ]
+}

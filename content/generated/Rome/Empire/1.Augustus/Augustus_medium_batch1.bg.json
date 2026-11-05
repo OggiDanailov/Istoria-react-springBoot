@@ -1,0 +1,190 @@
+{
+  "batchName": "Empire: Augustus and the Principate (27 BC-AD 14) - Medium Batch 1",
+  "chapterName": "Empire: Augustus and the Principate (27 BC-AD 14)",
+  "difficulty": 2,
+  "batchOrder": 3,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "В какво обвинява Марк Антоний пропагандата на Октавиан? (изберете всички верни)",
+      "options": [
+        "Че изоставил римската си съпруга, сестрата на Октавиан",
+        "Че изоставил войските си при Филипи",
+        "Че заговорничил за убийството на Юлий Цезар",
+        "Че дарил римски земи на децата на царицата",
+        "Че морил Италия с глад чрез морски блокади"
+      ],
+      "correctAnswers": [
+        0,
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#actium",
+      "explanation": "Октавиан обвинява Антоний, че е изоставил собствената му сестра заради чужда царица и раздава римски земи на децата ѝ. През 32 г. пр.н.е. Сенатът обявява война на Клеопатра.",
+      "sourceQuote": "Octavian waged a fierce propaganda war, accusing Antony of abandoning his Roman wife, Octavian's own sister, for a foreign queen and of giving away Roman lands to her children.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как завършва конфликтът с царицата на Куш на южната граница на Египет?",
+      "options": [
+        "Рим изоставя Южен Египет",
+        "Партите посредничат за примирие",
+        "Договор определя нова граница и гарантира търговията",
+        "Куш е присъединено като римска провинция",
+        "Царицата е отведена в Рим в окови"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#expansion-and-peace",
+      "explanation": "След нейните набези и римските контраудари царицата изпраща пратеници и се стига до договор. Куш е царство в днешен Судан.",
+      "sourceQuote": "After Roman counterattacks she sent envoys, and a treaty fixed a new border and guaranteed trade.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как Август си връща легионерските знамена, държани от партите, през 20 г. пр.н.е.?",
+      "options": [
+        "Чрез съюз с Куш",
+        "Като пленява партския цар",
+        "Чрез голямо нашествие",
+        "Като плаща огромен откуп",
+        "Чрез преговори, без битка"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#expansion-and-peace",
+      "explanation": "Някои римляни искат отмъщение, но Август представя сделката като преклонение на Партия пред Рим. Знамената са поставени в храма на Марс Отмъстителя.",
+      "sourceQuote": "In 20 BC Augustus negotiated their return without a fight.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Защо е отхвърлено предложението Октавиан да бъде наречен на Ромул?",
+      "options": [
+        "Името няма религиозно значение",
+        "Ромул е убил брат си",
+        "Звучи твърде царски",
+        "Антоний вече е ползвал името",
+        "Жреците го забраняват"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#first-settlement",
+      "explanation": "Ромул е легендарният основател и първи цар на Рим, а римляните мразят идеята за цар. Вместо това Сенатът избира името Август.",
+      "sourceQuote": "Another suggestion, to call him after Romulus, Rome's legendary founder and first king, was rejected as too royal.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кое твърдение за смъртта на Август много съвременни историци отхвърлят като клевета?",
+      "options": [
+        "Че загинал в битка в Германия",
+        "Че сложил край на живота си",
+        "Че Тиберий наредил да го наръгат",
+        "Че съпругата му го отровила, може би със смокиня",
+        "Че Сенатът го уморил от глад"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#succession-and-death",
+      "explanation": "Двама античини историци твърдят, че е отровен. Август умира в Нола, близо до Неапол, на 19 август 14 г. сл.н.е., на 75 години.",
+      "sourceQuote": "Two ancient historians claimed his wife, Livia, poisoned him, perhaps with a fig, but many modern historians dismiss this as slander.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво е първото действие на триумвирата на Октавиан, Марк Антоний и трети пълководец?",
+      "options": [
+        "Преброяване (census) на всички провинции",
+        "Прочистване на сенатори и богати търговци",
+        "Примирие с убийците на Цезар",
+        "Раздаване на зърно на бедните",
+        "Нашествие в Партия"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#caesars-heir",
+      "explanation": "Около 300 сенатори и богати търговци са обявени извън закона, а още хиляди губят имуществото си.",
+      "sourceQuote": "About 300 senators and wealthy businessmen were declared outlaws, and thousands more lost their property.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво пресъздава инсценираната морска битка, която Август урежда през 2 г. пр.н.е.?",
+      "options": [
+        "Гръцка морска победа над Персия",
+        "Битката при Акциум",
+        "Първата война на Рим с Картаген",
+        "Бягството на Антоний в Египет",
+        "Победата на Агрипа над адмирал бунтовник"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#city-of-marble",
+      "explanation": "Битката се води на изкуствено езеро, захранвано от нов акведукт, дълъг над 30 км. По негово време е открит и първият каменен амфитеатър в Рим.",
+      "sourceQuote": "Rome's first stone amphitheatre opened in his time, and in 2 BC he staged a mock naval battle on an artificial lake fed by a new aqueduct more than 30 km (twenty miles) long, recreating a famous Greek sea victory over Persia.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как според преданието реагира Август на вестта за Варовото поражение?",
+      "options": [
+        "Нарежда публичен триумф",
+        "Блъска глава в стените на двореца",
+        "Сам тръгва към Германия",
+        "Обвинява Сената",
+        "Оттегля се от обществения живот"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#teutoburg-forest",
+      "explanation": "Говори се, че викал към загиналия пълководец да му върне легионите. След това Рим се отказва от завоевания отвъд Рейн.",
+      "sourceQuote": "Augustus, it was said, banged his head against the palace walls, crying for the dead commander to give him back his legions.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Защо Август избягва открито да посочи наследник?",
+      "options": [
+        "Сенатът го е забранил",
+        "Надява се да възстанови Републиката",
+        "Римското право забранява осиновени наследници",
+        "Съпругата му се противопоставя на всички кандидати",
+        "Би изглеждало като основаване на монархия"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#succession-and-death",
+      "explanation": "Август няма син, затова тихомълком издига роднини.",
+      "sourceQuote": "Augustus had no son, and naming an heir openly would have looked like founding a monarchy.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Защо към 23 г. пр.н.е. ежегодното консулство се е превърнало в проблем за Август?",
+      "options": [
+        "Задължава го да води армии в чужбина",
+        "Прави господството му очевидно и спира съперниците",
+        "Струва му личното състояние",
+        "Забранено е от стар закон",
+        "Принуждава го да живее извън Рим"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#second-settlement",
+      "explanation": "Ежегодното му избиране за консул прави господството му явно и спира пътя на други амбициозни сенатори. Той се отказва от консулството на 1 юли 23 г. пр.н.е.",
+      "sourceQuote": "Augustus had been elected consul every year, which made his dominance obvious and blocked other ambitious senators.",
+      "reviewFlags": []
+    }
+  ]
+}

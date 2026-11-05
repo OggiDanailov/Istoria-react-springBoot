@@ -1,0 +1,179 @@
+{
+  "batchName": "Empire: Roman Art and Architecture (c. 500 BC-AD 476) - Easy Batch 1",
+  "chapterName": "Empire: Roman Art and Architecture (c. 500 BC-AD 476)",
+  "difficulty": 1,
+  "batchOrder": 1,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Кой император възстановява Пантеона в сегашния му вид?",
+      "options": [
+        "Константин",
+        "Адриан",
+        "Август",
+        "Траян"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#trajan-and-hadrian",
+      "explanation": "Адриан бил страстен строител. Неговият Пантеон, храм на всички богове, е най-добре запазеният храм от древния свят.",
+      "sourceQuote": "Hadrian rebuilt the Pantheon, a temple to all the gods, in its present form.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Къде в аристократичния римски дом били излагани бюстовете на предците?",
+      "options": [
+        "Във входната зала, или атриума",
+        "В личната спалня",
+        "В трапезарията, или триклиния",
+        "До кухненското огнище"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#portraits-and-ancestors",
+      "explanation": "Бюстовете на предците стояли в атриума – входната зала, която посетителите виждали първа. На погребенията дори носели маските на предците в шествие.",
+      "sourceQuote": "Ancestral busts were displayed in the entrance hall (*atrium*) of an aristocratic house, and at the funerals of great families, masks of the forebears (*imagines*) were worn in procession.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кое изкуство било истинската, собствена силна страна на римляните?",
+      "options": [
+        "Портретът",
+        "Мозаечният под",
+        "Рисуваната ваза",
+        "Бронзовият триножник"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#portraits-and-ancestors",
+      "explanation": "Римският портрет израснал от дълбокото почитане на рода. Бюстовете на предците били гордо излагани в аристократичните домове.",
+      "sourceQuote": "If the Romans had one great artistic strength of their own, it was the portrait.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Къде живеели повечето римски граждани?",
+      "options": [
+        "В селски вили",
+        "В жилищни блокове, наречени insulae",
+        "В частни градски къщи",
+        "В колиби извън стените"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#arenas-baths-apartments",
+      "explanation": "Insulae достигали до пет етажа. Били тесни, нездравословни и лесно се запалвали.",
+      "sourceQuote": "Most city dwellers lived not in houses but in apartment blocks (*insulae*), up to five storeys high.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой прочут римски акведукт-мост все още стои в Южна Франция?",
+      "options": [
+        "Пон Ньоф",
+        "Пон дю Гар",
+        "Траяновият мост",
+        "Акведуктът в Сеговия"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#aqueducts-roads-bridges",
+      "explanation": "Пон дю Гар е оцелял в Южна Франция. Акведуктът в Сеговия също още стои, но в Испания.",
+      "sourceQuote": "The Pont du Gard in southern France and the aqueduct of Segovia in Spain still stand.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Константин премества столицата в Константинопол. Как се е наричал по-рано този град?",
+      "options": [
+        "Византион",
+        "Антиохия",
+        "Александрия",
+        "Никомедия"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#late-roman-style",
+      "explanation": "Градът на Босфора бил Византион. Там римското изкуство попило източни влияния и прераснало във византийския стил.",
+      "sourceQuote": "When Constantine moved the capital to Constantinople, the city on the Bosporus once called Byzantium, Roman art absorbed eastern influences and grew into the Byzantine style.",
+      "reviewFlags": []
+    },
+    {
+      "question": "На кой материал се приписва „революция“ в римската архитектура?",
+      "options": [
+        "Желязото",
+        "Бетона",
+        "Мрамора",
+        "Печената тухла"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#concrete-revolution",
+      "explanation": "Бетонът съществувал и преди в Близкия изток, но римляните го усъвършенствали и го превърнали в гръбнака на най-величествените си сгради. Бил евтин и лесен за пренасяне.",
+      "sourceQuote": "Historians call the result the \"concrete revolution\".",
+      "reviewFlags": []
+    },
+    {
+      "question": "С какво прочуто се хвалел Август за град Рим?",
+      "options": [
+        "Заварил го малък, а го оставил най-големия град",
+        "Заварил го в руини и го възстановил за десетилетие",
+        "Заварил го дървен, а го оставил бронзов",
+        "Заварил го тухлен, а го оставил мраморен"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#city-of-marble",
+      "explanation": "Това било преувеличение, защото мраморът най-често бил само облицовка върху тухла или бетон. Все пак при неговото управление кариерите в Карара започнали да доставят камък за столицата.",
+      "sourceQuote": "Augustus, Rome's first emperor (27 BC–AD 14), famously boasted that he had found Rome a city of brick and left it a city of marble.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Разграбването на кой богат гръцки град през 146 г. пр.н.е. изпратило много гръцки художници в Рим като роби?",
+      "options": [
+        "Коринт",
+        "Спарта",
+        "Атина",
+        "Сиракуза"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#greek-roots",
+      "explanation": "След падането на Коринт през 146 г. пр.н.е. много от неговите художници били отведени като роби. Към II в. пр.н.е. повечето скулптори в Рим били гърци.",
+      "sourceQuote": "After the sack of Corinth, a wealthy Greek city, in 146 BC, many Greek artists were carried off as slaves.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Траяновата колона разказва за войните му в коя област, днешна Румъния?",
+      "options": [
+        "Британия",
+        "Дакия",
+        "Галия",
+        "Партия"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#trajan-and-hadrian",
+      "explanation": "Походите се разгръщат в изваян фриз, който се вие спираловидно около стълба на около 200 м дължина. Колоната е открита през 113 г. сл.н.е.",
+      "sourceQuote": "Trajan's Column, dedicated in AD 113, tells the story of his wars in Dacia, modern Romania, in a carved band spiralling about 200 m (650 feet) around the shaft.",
+      "reviewFlags": []
+    }
+  ]
+}

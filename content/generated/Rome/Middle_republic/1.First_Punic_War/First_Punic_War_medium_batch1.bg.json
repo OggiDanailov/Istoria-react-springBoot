@@ -1,0 +1,190 @@
+{
+  "batchName": "Middle Republic: The First Punic War (264-241 BCE) - Medium Batch 1",
+  "chapterName": "Middle Republic: The First Punic War (264-241 BCE)",
+  "difficulty": 2,
+  "batchOrder": 3,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "По модела на какво били построени корабите от последния флот на Рим, които нямали *corvus*?",
+      "options": [
+        "Гръцки триери от Сиракуза",
+        "Флагманът на Дуилий от Миле",
+        "Тежките кораби от Екном",
+        "Египетски царски галери",
+        "Бърз пленен кораб, пробиващ блокадата"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#battle-of-the-aegates",
+      "explanation": "Около 200 квинкверемы били построени по модела на бърз пленен кораб, пробиващ блокадата. Без *corvus* римляните трябвало да побеждават като истински моряци.",
+      "sourceQuote": "About 200 quinqueremes were built at no cost to the state, modelled on a fast captured blockade runner.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как римляните победили бойните слонове на Картаген при Панорм през 251 г. пр.н.е.?",
+      "options": [
+        "Преградили пътя с оковани каруци",
+        "Изкопали скрити ями на пътя",
+        "Обсипали ги с копия иззад стари обсадни насипи",
+        "Подплашили ги с горящи прасета",
+        "Нападнали ги с тежка конница"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#drepana-and-stalemate",
+      "explanation": "Копията, хвърляни иззад стари насипи, подплашили слоновете и те се втурнали назад през собствената си пехота. След това картагенците побягнали.",
+      "sourceQuote": "The Roman commander showered the beasts with javelins from behind old siege earthworks.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Защо победата на Рим при Акрагас не довела до пробив в Сицилия? (изберете всички верни отговори)",
+      "options": [
+        "Скалистите хълмове на Сицилия облагодетелствали защитниците",
+        "Римската армия била унищожена в битката",
+        "Крайбрежните градове на Картаген се снабдявали по море",
+        "Сиракуза отново се обърнала срещу Рим",
+        "Слоновете на Картаген държали всички планински проходи"
+      ],
+      "correctAnswers": [
+        0,
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#siege-of-akragas",
+      "explanation": "Хълмистият терен облагодетелствал защитниците, а укрепените крайбрежни градове на Картаген се снабдявали по море. Последвали години на набези и обсади.",
+      "sourceQuote": "Sicily's rugged hills favoured defenders.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво опитал римски консул при Дрепана през 249 г. пр.н.е., което довело до най-голямата морска победа на Картаген във войната?",
+      "options": [
+        "Десант в тила на Хамилкар",
+        "Морска атака по време на буря",
+        "Блокада с потопени кораби",
+        "Обсада с плаващи кули",
+        "Нощна изненадваща атака срещу вражеския флот"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#drepana-and-stalemate",
+      "explanation": "Консулът опитал нощна изненадваща атака, но корабите му се разпръснали в мрака и били притиснати към брега. Това била най-голямата морска победа на Картаген във войната.",
+      "sourceQuote": "A Roman consul then tried a night surprise attack on the enemy fleet at Drepana.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Когато Картаген се опитал да си върне Сардиния през 237 г. пр.н.е., какво направил Рим?",
+      "options": [
+        "Съгласил се да си поделят острова",
+        "Изобщо не обърнал внимание",
+        "Поискал Картаген да му предаде Хамилкар",
+        "Обявил това за повод за война и принудил Картаген да отстъпи Сардиния и Корсика",
+        "Нахлул в Африка за втори път"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#peace-and-aftermath",
+      "explanation": "Рим цинично обявил това за повод за война, завзел Сардиния и Корсика и поискал още 1 200 таланта. Това разпалило негодуванието на картагенците.",
+      "sourceQuote": "It forced Carthage to surrender Sardinia and Corsica and pay 1,200 more talents.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Къде отвел ветераните си Хамилкар Барка през 237 г. пр.н.е., за да изгради нова опора на властта си?",
+      "options": [
+        "Нумидия",
+        "Корсика",
+        "Сардиния",
+        "Испания",
+        "Галия"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#peace-and-aftermath",
+      "explanation": "Хамилкар отвел ветераните си в Испания през 237 г. пр.н.е. Преди това Картаген с голяма жестокост смазал бунта на собствените си наемници.",
+      "sourceQuote": "That year Hamilcar led his veterans to Spain to build a new power base.",
+      "reviewFlags": []
+    },
+    {
+      "question": "След като Регул превзел Тунис, защо Картаген продължил да се бие, вместо да сключи мир?",
+      "options": [
+        "Египет обещал голяма армия",
+        "Народът се надигнал срещу съвета",
+        "Условията на Регул за мир били прекалено тежки",
+        "Регул отказал изобщо да преговаря",
+        "Хамилкар Барка го забранил"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#regulus-in-africa",
+      "explanation": "Картаген поискал мир, но Регул поставил толкова тежки условия, че картагенците решили да се бият. Тунис се намирал само на 16 км от Картаген.",
+      "sourceQuote": "Carthage asked for peace, but his terms were so harsh that it fought on.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Когато през 270-те години пр.н.е. гръцки цар от Епир воювал срещу Рим и Картаген, как Картаген помогнал на Рим?",
+      "options": [
+        "Изпратил бойни слонове в Италия",
+        "Веднъж превозил римски войници със своите кораби",
+        "Предал на Рим остров Корсика",
+        "Плащал една година на наемниците на Рим",
+        "Заел на Рим най-добрия си адмирал"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#rome-and-carthage",
+      "explanation": "Картаген снабдявал Рим и веднъж превозил римски войници със своите кораби. Двата града сключили договори през 509, 348 и около 279 г. пр.н.е.",
+      "sourceQuote": "When a Greek king from Epirus, in north-western Greece, fought them both in the 270s BC, Carthage supplied Rome and once ferried Roman troops in its ships.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Каква била основната тактическа идея на *corvus*?",
+      "options": [
+        "Стрелба с лъкове от висока платформа",
+        "Превръщане на морската битка в сухопътна",
+        "Подпалване на вражеските кораби",
+        "Отвличане на пленени кораби към пристанището",
+        "Таранни удари под водолинията"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#corvus-and-mylae",
+      "explanation": "*Corvus* закачал два кораба един за друг, така че римските войници да се втурнат на абордаж. Това подхождало на римските легиони, които блестели в сухопътния бой.",
+      "sourceQuote": "A sea battle became a land battle, the kind Rome's legions excelled at.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Когато Сенатът не успял да реши дали да помогне на Месана, кой в крайна сметка решил да изпрати римски войски?",
+      "options": [
+        "Върховният жрец след гадаене",
+        "Сенатът при второ гласуване",
+        "Двамата консули сами",
+        "Италийските съюзници на Рим",
+        "Народното събрание"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#messana",
+      "explanation": "Въпросът бил отнесен до народното събрание, което гласувало „за“. Единият консул призовавал към война и обещавал богата плячка.",
+      "sourceQuote": "The Senate (*senatus*) was deadlocked, so the question went to the popular assembly (*comitia*).",
+      "reviewFlags": []
+    }
+  ]
+}

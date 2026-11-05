@@ -1,0 +1,179 @@
+{
+  "batchName": "Late Republic: Caesar in Gaul (58-50 BCE) - Easy Batch 1",
+  "chapterName": "Late Republic: Caesar in Gaul (58-50 BCE)",
+  "difficulty": 1,
+  "batchOrder": 1,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Кои две прегради Цезар пръв от римските пълководци преминал с армия?",
+      "options": [
+        "Рейн и Ламанш",
+        "Дунав и Черно море",
+        "Алпите и Пиренеите",
+        "Рона и Лоара"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#rhine-and-britain",
+      "explanation": "Нуждаещ се от громки новини, Цезар решил да направи нещо, което никоя римска армия не била правила дотогава. Той прехвърлил мост над Рейн за десет дни, а по-късно стъпил в Британия.",
+      "sourceQuote": "He chose to do what no Roman army had done before: cross both the Rhine and the English Channel.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как Цезар решил да се справи с 80 000-те галски воини в Алезия?",
+      "options": [
+        "Да щурмува стените веднага",
+        "Да прокопае тунел под града",
+        "Да договори примирие",
+        "Да умори защитниците с глад"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#siege-of-alesia",
+      "explanation": "Цезар предпочел блокадата пред щурма. Верцингеториг отвърнал, като пратил през нощта конници да свикат армия на помощ.",
+      "sourceQuote": "Caesar chose to starve them out rather than storm the walls.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Защо хелветите потеглили от Швейцарското плато през 58 г. пр.н.е.?",
+      "options": [
+        "Рим им заповядал да се преселят",
+        "Чума опустошила селата им",
+        "Реколтата им пропадала години наред",
+        "Германски народи ги притискали"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#helvetii-and-suebi",
+      "explanation": "Натискът на германските народи накарал хелветите да тръгнат на запад със семействата и стадата си на 28 март 58 г. пр.н.е.",
+      "sourceQuote": "The Helvetii, a group of related tribes on the Swiss plateau, were being squeezed by Germanic peoples.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво накарало няколко белгийски племена да се предадат през 57 г. пр.н.е. дори без бой?",
+      "options": [
+        "Римски флот по реките им",
+        "Гледката на римските обсадни съоръжения",
+        "Вестта за бойните слонове на Цезар",
+        "Смъртта на върховния им цар"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#belgae-nervii-veneti",
+      "explanation": "Обсадните съоръжения били непознати в Галия и самият им вид стигнал, за да се предадат няколко племена. Основната белгийска армия вече се била разпаднала поради липса на храна.",
+      "sourceQuote": "The mere sight of Roman siege works, unknown in Gaul, made several tribes surrender without a fight.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Колко дълъг бил необичайният мандат на Цезар като управител, когато поел провинциите си през 58 г. пр.н.е.?",
+      "options": [
+        "Десет години",
+        "Две години",
+        "Една година",
+        "Пет години"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#caesar-goes-to-gaul",
+      "explanation": "Обикновено управителите служели една година, но Цезар получил пет – достатъчно за истинска война. Провинциите му били Северна Италия, Илирик и Трансалпийска Галия.",
+      "sourceQuote": "His term ran for an unusual five years instead of one.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой накарал колебаещите се войници да слязат от корабите при първия десант на Цезар в Британия?",
+      "options": [
+        "Синът на Крас начело на конницата",
+        "Самият Цезар с меч в ръка",
+        "Центурион от Седми легион",
+        "Знаменосецът на Десети легион"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#rhine-and-britain",
+      "explanation": "Знаменосецът на Десети легион скочил в морето и войниците го последвали, за да не изгубят знамето си. По-късно Рим гласувал за Цезар 20-дневно благодарствено честване.",
+      "sourceQuote": "Then the standard bearer (*signifer*) of the Tenth Legion leapt into the sea, and the soldiers followed rather than lose their standard.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кои били венетите, които се опълчили на Цезар през 56 г. пр.н.е.?",
+      "options": [
+        "Мореплавателски племена от Бретан",
+        "Планински пастири от Алпите",
+        "Коневъди от Швейцарското плато",
+        "Германски нападатели от Рейн"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#belgae-nervii-veneti",
+      "explanation": "Венетите били мореплавателски племена от Бретан, чиито здрави дъбови платноходи властвали в Атлантика. Те задържали римски офицери, пратени да събират зърно.",
+      "sourceQuote": "In 56 BC the Veneti, seafaring tribes of Brittany, seized Roman officers sent to collect grain.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Коя река, бележеща границата на Италия, прекосил Цезар през 49 г. пр.н.е., за да започне гражданска война?",
+      "options": [
+        "Тибър",
+        "Рубикон",
+        "Рона",
+        "Рейн"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#aftermath",
+      "explanation": "Преминаването на Рубикон отприщило гражданската война, която Цезар спечелил. През 44 г. пр.н.е. той бил обявен за пожизнен диктатор.",
+      "sourceQuote": "In 49 BC he crossed the Rubicon, the river marking Italy's border, and won the civil war that followed.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Амбиорикс, който предвождал зимния бунт от 54 г. пр.н.е., бил вожд на кое племе?",
+      "options": [
+        "Нервиите",
+        "Арверните",
+        "Ебуроните",
+        "Венетите"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#ambiorix-revolt",
+      "explanation": "Амбиорикс предвождал ебуроните, племе от Североизточна Галия. Хитростта му довела до унищожаването на около легион и половина.",
+      "sourceQuote": "Ambiorix, the shrewd leader of the Eburones, a tribe of north-eastern Gaul, saw his chance.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво направили хелветите със селата си, преди да потеглят?",
+      "options": [
+        "Предали ги на римски заселници",
+        "Продали ги на едуите",
+        "Изгорили ги",
+        "Оставили воини да ги пазят"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#helvetii-and-suebi",
+      "explanation": "Изгорили селата си, за да няма връщане назад. Цезар им отказал преминаване през провинцията си и въпреки това ги нападнал.",
+      "sourceQuote": "They burned their villages so there could be no turning back.",
+      "reviewFlags": []
+    }
+  ]
+}

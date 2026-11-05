@@ -1,0 +1,145 @@
+{
+  "batchName": "Empire: The Fall of the West (AD 395-476) - Latin words",
+  "chapterName": "Empire: The Fall of the West (AD 395-476)",
+  "difficulty": 1,
+  "batchOrder": 9,
+  "description": "Written by hand from the chapter text: the Latin words it explains",
+  "questions": [
+    {
+      "question": "Рим все още бил Urbs Aeterna. Какво означава това?",
+      "options": [
+        "Вечният град",
+        "Златният град",
+        "Първият град",
+        "Светият град"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#sieges-of-rome",
+      "explanation": "Той вече не бил столица, но оставал символичното сърце на империята.",
+      "sourceQuote": "the Eternal City (*Urbs Aeterna*)",
+      "reviewFlags": []
+    },
+    {
+      "question": "Готите били заселени като foederati. Какво означава това?",
+      "options": [
+        "Съюзници, които запазвали собствените си вождове и воювали за Рим",
+        "Роби в римските стопанства",
+        "Римски граждани",
+        "Заложници"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#a-divided-empire",
+      "explanation": "Към 395 г. те били въоръжена сила, способна да заплаши всяка от двете половини на империята.",
+      "sourceQuote": "they were settled as allies (*foederati*), peoples who kept their own leaders and fought for Rome in return.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Одоакър дал на Ромул Августул пенсия от 6000 solidi. Какво били solidi?",
+      "options": [
+        "Златни монети",
+        "Сребърни монети",
+        "Акри земя",
+        "Войници"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#the-last-emperor",
+      "explanation": "Той изпратил момчето да живее при роднини в Кампания.",
+      "sourceQuote": "a yearly pension of 6,000 gold coins (*solidi*)",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво означавал Augustulus, прякорът на последния император?",
+      "options": [
+        "„Малкият Август“",
+        "„Последният Август“",
+        "„Лъжливият Август“",
+        "„Момчето цар“"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#the-last-emperor",
+      "explanation": "Истинското му име, Ромул Август, почитало основателя на Рим и първия му император.",
+      "sourceQuote": "rivals mocked him as Romulus Augustulus, “little Augustus”.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Стилихон бил magister militum на Запада. Какво означава това?",
+      "options": [
+        "Главнокомандващият",
+        "Върховният жрец",
+        "Пазителят на хазната",
+        "Секретарят на императора"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#alaric-and-the-general",
+      "explanation": "Той воювал срещу Аларих при Поленция и Верона.",
+      "sourceQuote": "its commander-in-chief (*magister militum*)",
+      "reviewFlags": []
+    },
+    {
+      "question": "През 439 г. вандалите превзели Carthago. Къде се намирал той?",
+      "options": [
+        "В днешен Тунис",
+        "В днешна Испания",
+        "В днешна Сицилия",
+        "В днешна Либия"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#kingdoms-inside-the-empire",
+      "explanation": "Превърнаха го в столица на независимо царство с мощен флот.",
+      "sourceQuote": "they captured Carthage (*Carthago*), the great port in modern Tunisia",
+      "reviewFlags": []
+    },
+    {
+      "question": "През 410 г. градовете на Британия получиха нареждане сами да се грижат за отбраната си. Какво последва?",
+      "options": [
+        "Никое римско управление не се върна там",
+        "Рим изпрати нови легиони",
+        "Готите завзеха Британия",
+        "Аеций си върна Британия"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#kingdoms-inside-the-empire",
+      "explanation": "Това беше една от многото загуби на смаляващия се Запад.",
+      "sourceQuote": "In 410 the towns of Britain (*Britannia*) were told to see to their own defence, and no Roman government ever ruled there again.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Коя река е Rhenus, през която вандали и алани преминаха в Галия?",
+      "options": [
+        "Рейн",
+        "Рона",
+        "Дунав",
+        "По"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#alaric-and-the-general",
+      "explanation": "Вероятно около 100 000 души я преминаха и навлязоха в Галия.",
+      "sourceQuote": "crossed the Rhine (*Rhenus*) into Gaul.",
+      "reviewFlags": []
+    }
+  ]
+}

@@ -1,0 +1,179 @@
+{
+  "batchName": "Empire: The Fall of the West (AD 395-476) - Easy Batch 2",
+  "chapterName": "Empire: The Fall of the West (AD 395-476)",
+  "difficulty": 1,
+  "batchOrder": 2,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Кой неуморен пълководец крепял Западната империя около две десетилетия преди нашествието на Атила?",
+      "options": [
+        "Рицимер",
+        "Аларих",
+        "Одоакър",
+        "Аеций"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#aetius-and-attila",
+      "explanation": "Аеций крепял Запада, като се сражавал с готи, франки и бунтовници. Често използвал за това хунски наемници.",
+      "sourceQuote": "For two decades the West was held together by Aetius, the tireless general who fought Goths, Franks and rebels, often with Hunnic mercenaries.",
+      "reviewFlags": []
+    },
+    {
+      "question": "След разделянето на римския свят през 395 г. от кой град била управлявана източната половина?",
+      "options": [
+        "Константинопол",
+        "Александрия",
+        "Равена",
+        "Антиохия"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#a-divided-empire",
+      "explanation": "Изтокът бил управляван от Константинопол, великия град на Босфора. Западът, включително Италия, Испания и Галия, се паднал на другия малолетен син.",
+      "sourceQuote": "One took the East, governed from Constantinople (*Constantinopolis*), the great city on the Bosphorus.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Колко време плячкосвали Рим вандалите през 455 г.?",
+      "options": [
+        "Две седмици",
+        "Шест месеца",
+        "Три дни",
+        "Една нощ"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#murder-and-vandal-sack",
+      "explanation": "Вандалите плячкосвали Рим две седмици – много по-основно, отколкото готите през 410 г. Отплавали с огромно съкровище и с една императорска принцеса.",
+      "sourceQuote": "The Vandals then plundered Rome for two weeks, far more thoroughly than the Goths in 410, and sailed away with huge treasure and an imperial princess.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво според преданието отговорил Аларих, когато римските пратеници го попитали какво ще остави на гражданите?",
+      "options": [
+        "Живота им",
+        "Боговете им",
+        "Стените им",
+        "Храмовете им"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#sieges-of-rome",
+      "explanation": "Според преданието Аларих отговорил: „Живота им.“ Той се изсмял и на самохвалството на Сената, като казал, че гъстата трева се коси по-лесно от рядката.",
+      "sourceQuote": "Asked what he would leave the citizens, he replied: “Their lives.”",
+      "reviewFlags": []
+    },
+    {
+      "question": "В началото на V в. уплашеният западен двор преместил столицата си от Милано в кой град?",
+      "options": [
+        "Равена",
+        "Верона",
+        "Аквилея",
+        "Неапол"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#alaric-and-the-general",
+      "explanation": "Дворът избягал в Равена, след като Аларих нахлул в Италия. Градът бил защитен от блата и имал път за бягство по море.",
+      "sourceQuote": "Even so, the frightened court moved its capital from Milan to Ravenna, a town near the Adriatic coast shielded by marshes and with an escape route by sea.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Къде Рим дал на вестготите земя за обработване през 418 г.?",
+      "options": [
+        "Бургундия",
+        "Аквитания",
+        "Бретан",
+        "Прованс"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#kingdoms-inside-the-empire",
+      "explanation": "Рим заселил вестготите в Аквитания, в Югозападна Франция – цял народ, който живеел в пределите на империята под властта на собствения си цар.",
+      "sourceQuote": "In 418 Rome gave them land to farm in Aquitaine, in south-western France.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Каква огромна книга написал един северноафрикански епископ като най-трайния отговор на плячкосването на Рим?",
+      "options": [
+        "„За Божия град“",
+        "„Устав на свети Бенедикт“",
+        "„Утехата на философията“",
+        "„Златната легенда“"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#who-was-to-blame",
+      "explanation": "Епископът написал „За Божия град“. Книгата твърдяла, че истинският дом на християните е небесният град, и се превърнала в една от основите на християнската мисъл.",
+      "sourceQuote": "The most lasting answer came from Augustine, a bishop in North Africa, who wrote a vast book called The City of God.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Къде коалицията на Аеций се сблъскала с армията на Атила през 451 г.?",
+      "options": [
+        "При Верона",
+        "На Каталаунските полета",
+        "При Поленция",
+        "При Адрианопол"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#aetius-and-attila",
+      "explanation": "Армиите се срещнали на Каталаунските полета край Троа, в Североизточна Франция. Били се за едно възвишение до мрак.",
+      "sourceQuote": "Around 20 June 451 the armies clashed on the Catalaunian Plains near Troyes, in north-eastern France, fighting over a ridge until dark.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво според езичниците предизвикало бедствието след плячкосването през 410 г.?",
+      "options": [
+        "Сенатът се бил покварил и обленил",
+        "Рим изоставил древните жертвоприношения",
+        "Варварите били допуснати в армията",
+        "Императорът напуснал Рим заради Равена"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#who-was-to-blame",
+      "explanation": "Езичниците казвали, че Рим е загубил божествената закрила, като се отказал от старите жертвоприношения. И християните, и езичниците използвали плячкосването като оръжие в спора си.",
+      "sourceQuote": "Pagans argued that Rome had lost divine protection by abandoning the ancient sacrifices.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво накарало готския вожд Аларих да се разбунтува през 395 г.?",
+      "options": [
+        "Хуните завзели земите му",
+        "Отказали му висок римски командирски пост",
+        "Отказали му римска невеста",
+        "Римляните екзекутирали баща му"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#alaric-and-the-general",
+      "explanation": "Аларих се разбунтувал, защото му отказали висок римски командирски пост. След това плячкосал Гърция.",
+      "sourceQuote": "Angry at being denied high Roman command, he revolted in 395 and plundered Greece.",
+      "reviewFlags": []
+    }
+  ]
+}

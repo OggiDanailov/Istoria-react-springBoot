@@ -1,0 +1,145 @@
+{
+  "batchName": "Middle Republic: Scipio and the Road to Zama (216-201 BCE) - Latin words",
+  "chapterName": "Middle Republic: Scipio and the Road to Zama (216-201 BCE)",
+  "difficulty": 1,
+  "batchOrder": 9,
+  "description": "Written by hand from the chapter text: the Latin words it explains",
+  "questions": [
+    {
+      "question": "След Зама Сципион приел agnomen Африкански. Какво е agnomen?",
+      "options": [
+        "Почетно прозвище",
+        "Военен чин",
+        "Римска провинция",
+        "Лавров венец"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#peace-and-africanus",
+      "explanation": "Африкански означава „африканецът“ – заради победата му над Картаген.",
+      "sourceQuote": "He took the honorary surname (*agnomen*) Africanus, \"the African\".",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой запълвал откритите коридори между римските манипули при Зама?",
+      "options": [
+        "Леки бойци (velites)",
+        "Бойни слонове",
+        "Нумидийски конници",
+        "Ветерани triarii"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#battle-of-zama",
+      "explanation": "Повечето слонове на Ханибал се втурнали по коридорите, където били отрязани и избити.",
+      "sourceQuote": "leaving open lanes filled with light skirmishers (*velites*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво бил triumphus, който Сципион отпразнувал през 201 г. пр.н.е.?",
+      "options": [
+        "Великото победно шествие през Рим",
+        "Морски преглед в Остия",
+        "Пир за Сената",
+        "Празник с игри в Картаген"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#peace-and-africanus",
+      "explanation": "Той внесъл в хазната и около 40 тона сребро.",
+      "sourceQuote": "Scipio returned home to celebrate a triumph (*triumphus*), the grand victory parade through Rome.",
+      "reviewFlags": []
+    },
+    {
+      "question": "През 213 г. пр.н.е. Сципион бил избран за aedilis. С какво се занимавал едилът?",
+      "options": [
+        "Грижел се за улиците и празниците на града",
+        "Командвал легион",
+        "Ръководел Сената",
+        "Съдел по дела"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#survivor-of-cannae",
+      "explanation": "Един трибун възразил, че Сципион е твърде млад, но отстъпил пред тълпата.",
+      "sourceQuote": "In 213 BC voters elected him aedile (*aedilis*), an official who looked after the city's streets and festivals.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой бил princeps senatus, който се противопоставял на плана на Сципион да нахлуе в Африка?",
+      "options": [
+        "Първенецът на Сената, възрастен и предпазлив пълководец",
+        "Най-младият сенатор",
+        "Върховният жрец на Юпитер",
+        "Консулът от 205 г. пр.н.е."
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#consul-at-thirty-one",
+      "explanation": "Възможно е отчасти да го е движела завист към популярността на Сципион.",
+      "sourceQuote": "The leader of the Senate (*princeps senatus*), an elderly general famous for his cautious strategy, fought Scipio's plan hard.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как Сципион променил обичайното разположение на своите manipuli при Зама?",
+      "options": [
+        "Подредил ги един зад друг, оставяйки открити коридори",
+        "Сбил ги в един дълбок блок",
+        "Скрил ги зад конницата",
+        "Разпръснал ги в една дълга линия"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#battle-of-zama",
+      "explanation": "Обикновено манипулите стояли разместено, като на шахматна дъска.",
+      "sourceQuote": "Normally his infantry companies, the maniples (*manipuli*), stood staggered like a chessboard.",
+      "reviewFlags": []
+    },
+    {
+      "question": "През 210 г. пр.н.е. Сципион получил imperium pro consule. Защо това било изключително?",
+      "options": [
+        "Никога не бил заемал някоя от висшите длъжности в Рим",
+        "Не бил римски гражданин",
+        "Бил загубил битка в Испания",
+        "Вече бил консул"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#command-in-spain",
+      "explanation": "Той бил първият римлянин, получил такава власт, без преди това да е бил консул.",
+      "sourceQuote": "yet he received the full military authority of a consul (*imperium pro consule*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какъв чин имал Сципион при Кана през 216 г. пр.н.е.?",
+      "options": [
+        "Военен трибун (tribunus militum), младши офицер",
+        "Консул",
+        "Командир на конницата",
+        "Едил"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#survivor-of-cannae",
+      "explanation": "Оцелял след катастрофата и събрал изостаналите бойци.",
+      "sourceQuote": "In 216 BC Scipio served as a military tribune (*tribunus militum*), a junior officer, at Cannae",
+      "reviewFlags": []
+    }
+  ]
+}

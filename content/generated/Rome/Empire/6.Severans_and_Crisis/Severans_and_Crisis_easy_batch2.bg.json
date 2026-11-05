@@ -1,0 +1,179 @@
+{
+  "batchName": "Empire: The Severans and the Crisis of the Third Century (AD 193-284) - Easy Batch 2",
+  "chapterName": "Empire: The Severans and the Crisis of the Third Century (AD 193-284)",
+  "difficulty": 1,
+  "batchOrder": 2,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "От кой богат кервански град управлявала царица Зенобия?",
+      "options": [
+        "Палмира",
+        "Дамаск",
+        "Петра",
+        "Едеса"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#zenobia",
+      "explanation": "Палмира била богат кервански град в Сирийската пустиня, който поел властта на римския изток. Зенобия управлявала там след убийството на съпруга си през 267 г.",
+      "sourceQuote": "In the east, power passed to Palmyra, a rich caravan city in the Syrian desert.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво е Зенобия днес в съвременна Сирия?",
+      "options": [
+        "Символ на римското владичество",
+        "Забравена второстепенна фигура",
+        "Злодейка от народните приказки",
+        "Патриотичен символ"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#sources-and-legacy",
+      "explanation": "Зенобия се превърнала в легенда и днес е патриотичен символ в Сирия. Античните извори за нея обаче често са пристрастни.",
+      "sourceQuote": "Zenobia, meanwhile, became a legend and is today a patriotic symbol in Syria.",
+      "reviewFlags": []
+    },
+    {
+      "question": "От коя земя била знатната Юлия Домна, съпругата на Септимий Север?",
+      "options": [
+        "Египет",
+        "Гърция",
+        "Сирия",
+        "Галия"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#julia-domna",
+      "explanation": "Юлия Домна била знатна сирийка, която се омъжила за Север през 187 г. Родила му двама сина и носела титлата императрица (Augusta).",
+      "sourceQuote": "The first was Julia Domna, a Syrian noblewoman who married Septimius Severus in 187 and bore him two sons.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой император тръгнал на изток и разбил Зенобия през 272 г.?",
+      "options": [
+        "Галиен",
+        "Аврелиан",
+        "Клавдий",
+        "Диоклециан"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#aurelian",
+      "explanation": "Аврелиан, суров войник император, тръгнал срещу Зенобия през 272 г. и после обединил отново империята. Палмира се предала през август 272 г.",
+      "sourceQuote": "Aurelian, the tough soldier-emperor who reunited Rome, marched east against Zenobia in 272.",
+      "reviewFlags": []
+    },
+    {
+      "question": "През 260 г. римски император бил пленен и умрял в плен. Кой го пленил?",
+      "options": [
+        "Готите",
+        "Сасанидите",
+        "Палмирците",
+        "Вандалите"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#barracks-emperors",
+      "explanation": "Сасанидите, нова персийска династия, пленили римски император през 260 г. и той умрял в плен. Междувременно готи и други племена нахлували през Рейн и Дунав.",
+      "sourceQuote": "Goths and other peoples raided across the Rhine and Danube, and in 260 the emperor Valerian was captured by the Sasanians, a new Persian dynasty, and died a prisoner.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Защо войниците убили последния император от рода на Северите и майка му през 235 г.?",
+      "options": [
+        "Откупил се от германските нашественици, вместо да ги накаже",
+        "Сключил скъпо струващ мир с партите",
+        "Опитал да намали наполовина заплатите на легионите",
+        "Приел култа към сирийски бог"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#last-severans",
+      "explanation": "Докато зимувал на Рейн, той платил на германските нашественици, вместо да се бие с тях, и войниците убили него и майка му. Управлявал от около 14-годишна възраст под нейно ръководство.",
+      "sourceQuote": "In 235, wintering on the Rhine, he paid off German raiders instead of punishing them, and his soldiers murdered him and his mother.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Според по-късни автори къде прекарала Зенобия последните си години?",
+      "options": [
+        "На остров Капри",
+        "Във вила в Тибур",
+        "Обратно в Палмира",
+        "В двора в Равена"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#aurelian",
+      "explanation": "По-късни автори твърдят, че Зенобия се оттеглила във вила в Тибур, днешно Тиволи. Най-вероятно преди това е била показана в триумфа на Аврелиан в Рим.",
+      "sourceQuote": "Zenobia was most likely paraded in his triumph (*triumphus*), the victory parade through Rome, and later writers said she retired to a villa at Tibur, modern Tivoli.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Между кои две епохи историците смятат кризата на III век за повратна точка?",
+      "options": [
+        "Бронзовата и желязната епоха",
+        "Класическата античност и Късната античност",
+        "Републиката и империята",
+        "Средновековието и Ренесанса"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#sources-and-legacy",
+      "explanation": "Кризата се смята за прехода от класическата към Късната античност. След нея владетелите се наричали „господари“, а не „първи гражданин“.",
+      "sourceQuote": "Historians see the crisis as the hinge between classical antiquity and late antiquity.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой период открило убийството на последния император от рода на Северите през 235 г.?",
+      "options": [
+        "Тетрархията",
+        "Кризата на III век",
+        "Pax Romana",
+        "Годината на четиримата императори"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#barracks-emperors",
+      "explanation": "Кризата на III век била половин век, в който империята едва не рухнала. Започнала с убийството на последния от Северите през 235 г.",
+      "sourceQuote": "The murder of the last Severan emperor in 235 opened the Crisis of the Third Century, half a century in which the empire nearly collapsed.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Откъде получил прякора си император Каракала?",
+      "options": [
+        "От сирийския град, където се родил",
+        "От германско племе, което победил",
+        "От галска туника с качулка, която носел",
+        "От меч, който носела охраната му"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#caracalla",
+      "explanation": "Каракала получил името си от галската туника с качулка, която обичал да носи. Той бил по-големият син на Септимий Север и Юлия Домна, роден през 188 г.",
+      "sourceQuote": "Caracalla, the elder son of Septimius Severus and Julia Domna, was born in 188 and named after the hooded Gallic tunic he liked to wear.",
+      "reviewFlags": []
+    }
+  ]
+}

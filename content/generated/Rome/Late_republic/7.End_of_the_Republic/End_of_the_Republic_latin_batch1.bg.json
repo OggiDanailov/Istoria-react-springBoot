@@ -1,0 +1,145 @@
+{
+  "batchName": "Late Republic: Antony, Octavian and the End of the Republic (44-27 BCE) - Latin words",
+  "chapterName": "Late Republic: Antony, Octavian and the End of the Republic (44-27 BCE)",
+  "difficulty": 1,
+  "batchOrder": 9,
+  "description": "Written by hand from the chapter text: the Latin words it explains",
+  "questions": [
+    {
+      "question": "Как наричали римляните Средиземно море – Mare Nostrum?",
+      "options": [
+        "„Нашето море“",
+        "„Великото море“",
+        "„Средното море“",
+        "„Морето на Цезар“"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#alexandria-and-augustus",
+      "explanation": "След Акциум и Александрия Октавиан владеел цялото море.",
+      "sourceQuote": "which Romans called \"Our Sea\" (*Mare Nostrum*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "Управлението на Август поставило началото на Pax Romana. Какво е това?",
+      "options": [
+        "Дългият Римски мир",
+        "Мирен договор с Партия",
+        "Нов календар",
+        "Закон срещу гражданските войни"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#alexandria-and-augustus",
+      "explanation": "Историците смятат 27 г. пр.н.е. за края на Републиката и началото на империята.",
+      "sourceQuote": "and of the long Roman Peace (*Pax Romana*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "Август управлявал като princeps. Какво означава това?",
+      "options": [
+        "Първи гражданин",
+        "Цар",
+        "Диктатор",
+        "Върховен жрец"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#alexandria-and-augustus",
+      "explanation": "Той запазил външните форми на Републиката, както и триумвирите.",
+      "sourceQuote": "He ruled as first citizen (*princeps*) while keeping the outward forms of the republic",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой пазел завещанието на Антоний в Рим?",
+      "options": [
+        "Virgines Vestales, жриците на свещеното огнище",
+        "Консулите",
+        "Пратениците на Клеопатра",
+        "Касиерите на Сената"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#propaganda-war",
+      "explanation": "Октавиан го заграбил и прочел публично; историците подозират, че част от него е измислил.",
+      "sourceQuote": "kept by the Vestal Virgins (*virgines Vestales*), the priestesses of Rome's sacred hearth.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кои били equites, избити при проскрипциите заедно със сенаторите?",
+      "options": [
+        "Конниците – богатото съсловие точно под сенаторите",
+        "Конни офицери от легионите",
+        "Жреци на Юпитер",
+        "Освободени роби"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#proscriptions",
+      "explanation": "Едно съвременно изследване стига до около 300 имена, поравно разпределени между сенатори и конници.",
+      "sourceQuote": "plus many knights (*equites*), the wealthy class just below the senators.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво постановява *lex Titia* от 27 ноември 43 г. пр.н.е.?",
+      "options": [
+        "Дава на тримата власт за пет години",
+        "Обявява Цезар за бог",
+        "Премахва диктатурата",
+        "Помилва убийците на Цезар"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#forming-the-triumvirate",
+      "explanation": "Това беше почти абсолютна власт: те можеха да назначават дори всички магистрати.",
+      "sourceQuote": "A friendly tribune passed a law, the *lex Titia*, on 27 November 43 BC, giving them this power for five years.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как се нарича официално съветът на тримата, triumviri rei publicae constituendae?",
+      "options": [
+        "Съвет на тримата за възстановяване на републиката",
+        "Тримата царе на Рим",
+        "Тримата пожизнени консули",
+        "Съвет на тримата за войната"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#forming-the-triumvirate",
+      "explanation": "Наричаме го Втори триумвират – съвременно название, използвано за пръв път през XVII в.",
+      "sourceQuote": "The three men named themselves the board of three for restoring the republic (*triumviri rei publicae constituendae*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как се наричаха убийците на Цезар?",
+      "options": [
+        "Liberatores – освободителите",
+        "Optimates – най-добрите",
+        "Patres – бащите",
+        "Populares – народните хора"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#after-caesars-murder",
+      "explanation": "Отначало се удържа един несигурен компромис: убийците бяха помилвани.",
+      "sourceQuote": "His killers called themselves the liberators (*liberatores*).",
+      "reviewFlags": []
+    }
+  ]
+}
