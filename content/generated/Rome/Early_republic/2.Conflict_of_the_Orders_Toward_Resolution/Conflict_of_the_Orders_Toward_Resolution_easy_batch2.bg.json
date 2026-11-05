@@ -1,0 +1,179 @@
+{
+  "batchName": "Early Republic: The Conflict of the Orders - Toward Resolution (450-367 BCE) - Easy Batch 2",
+  "chapterName": "Early Republic: The Conflict of the Orders - Toward Resolution (450-367 BCE)",
+  "difficulty": 1,
+  "batchOrder": 2,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Кои обикновено били кредиторите на задлъжнелите дребни селяни в ранния Рим?",
+      "options": [
+        "Народните трибуни",
+        "Етруски търговци",
+        "Богати патриции",
+        "Гръцки банкери от Куми"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#licinian-laws",
+      "explanation": "Дълговете тежали силно на дребните селяни, а кредиторите им обикновено били богати патриции. Новият закон за дълговете приспадал вече платената лихва от дължимата сума.",
+      "sourceQuote": "Debt weighed heavily on small farmers, whose creditors were usually wealthy patricians.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кои двама народни трибуни започнали десетгодишна борба за реформи през 375 г. пр.н.е.?",
+      "options": [
+        "Гай Лициний Столон и Луций Секстий Латеран",
+        "Публий Манлий и Марк Фурий Камил",
+        "Луций Генуций и Марк Манлий",
+        "Марк Папирий и Луций Албиний"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#licinius-and-sextius",
+      "explanation": "Лициний и Секстий започнали борба, която продължила десетилетие. Преизбирали ги година след година.",
+      "sourceQuote": "In 375 BC, two tribunes of the plebs, Gaius Licinius Stolo and Lucius Sextius Lateranus, launched a campaign that would last a decade.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Когато патрициите отказали да утвърдят първия плебейски консул на Рим, какво едва не направили плебеите?",
+      "options": [
+        "Да подпалят сградата на Сената",
+        "Да поканят галите обратно в Рим",
+        "Да направят сецесия – масово напускане на града",
+        "Да коронясат плебейски цар"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#first-plebeian-consul",
+      "explanation": "Плебеите едва не направили сецесия – масово напускане на града, както и преди. Според Ливий престарелият Камил постигнал компромис.",
+      "sourceQuote": "The plebeians came close to seceding, that is, staging a mass walkout from the city, as they had done before.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво бил диктаторът в Римската република?",
+      "options": [
+        "Съдия, председателстващ наказателни дела",
+        "Жрец, който се допитвал до свещени пророчества",
+        "Командващ при извънредно положение с пълномощия за шест месеца",
+        "Тиранин, заграбил властта доживот"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#siege-of-veii",
+      "explanation": "Републиканският диктатор бил командващ при извънредно положение с широки пълномощия за шест месеца, а не тиранин. Камил получил тази роля по време на войната с Вейи.",
+      "sourceQuote": "In the Republic, a dictator was an emergency commander given sweeping powers for six months, not a tyrant.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво заявил Брен, когато хвърлил меча си на везните?",
+      "options": [
+        "„Горко на победените!“",
+        "„Дойдох, видях, победих!“",
+        "„Рим трябва да бъде разрушен!“",
+        "„Жребият е хвърлен!“"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#sack-of-rome",
+      "explanation": "Римляните се оплакали, че галите използват фалшиви теглилки за златния откуп, а Брен отговорил, като добавил меча си. Във версията на Ливий тогава пристигнал Камил и отменил сделката.",
+      "sourceQuote": "When the Romans complained that the Gauls were using rigged weights, Brennus threw his sword onto the scales and declared, “Woe to the vanquished!”",
+      "reviewFlags": []
+    },
+    {
+      "question": "Доколко според историка Т. Дж. Корнел може да се вярва на драматичния разказ на Ливий за Лициниевите реформи?",
+      "options": [
+        "Много малко, макар самите промени да са сравнително сигурни",
+        "Само на частите с участието на Камил",
+        "На почти всичко, включително речите",
+        "На нищо, защото реформите никога не са се състояли"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#modern-verdict",
+      "explanation": "Корнел се съмнява в по-голямата част от драмата у Ливий, но смята самите промени в управлението за сравнително сигурни.",
+      "sourceQuote": "The historian T. J. Cornell believes very little of Livy's dramatic story can be trusted.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Къде се оттеглили бойците на Рим, когато галите достигнали града?",
+      "options": [
+        "На Капитолийския хълм",
+        "В пристанището Остия",
+        "В град Ардея",
+        "На Палатинския хълм"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#sack-of-rome",
+      "explanation": "Бойците и годните за битка сенатори се укрепили на Капитолия – укрепения хълм с цитаделата на Рим. Според Ливий галите заварили портите на града отворени, а стените – неохранявани.",
+      "sourceQuote": "The fighting men and able-bodied senators had withdrawn to the Capitoline, Rome's fortified citadel hill.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как реагирали отначало галите на старите римски магистрати, седнали в одеждите си на кресла от слонова кост?",
+      "options": [
+        "Подиграли им се и ги отвлекли",
+        "Взирали се в тях, сякаш са статуи",
+        "Поискали от старците откуп",
+        "Поклонили им се като на богове"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#sack-of-rome",
+      "explanation": "Старците, заемали високи длъжности, останали в церемониални одежди, а галите се взирали в тях като в статуи. Магията се развалила, когато един гал погалил брадата на Марк Папирий.",
+      "sourceQuote": "The Gauls stared at them as if they were statues.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой бил галският вожд в битката при Алия?",
+      "options": [
+        "Брен",
+        "Арунс",
+        "Дионисий",
+        "Верцингеториг"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#battle-of-the-allia",
+      "explanation": "Брен нападнал римските резерви на един хълм и паниката обхванала римската армия. Много римляни се удавили в Тибър.",
+      "sourceQuote": "Brennus, the Gallic chief, attacked the Roman reserves on a hill, and panic spread.",
+      "reviewFlags": []
+    },
+    {
+      "question": "На какво разстояние от Рим се намирал етруският град Вейи?",
+      "options": [
+        "Около 160 km (100 мили)",
+        "Около 60 km (37 мили)",
+        "Около 5 km (3 мили)",
+        "Около 16 km (10 мили)"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#siege-of-veii",
+      "explanation": "Вейи лежал само на 16 km от Рим, което го правело опасен съсед. Рим и Вейи водили дълга война с променлив успех, с победи и поражения и за двете страни.",
+      "sourceQuote": "Veii was a large Etruscan city just 16 km (10 miles) from Rome.",
+      "reviewFlags": []
+    }
+  ]
+}

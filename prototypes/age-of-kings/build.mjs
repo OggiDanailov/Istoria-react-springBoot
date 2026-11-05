@@ -129,7 +129,7 @@ const land = fs.readFileSync(path.join(HERE, 'land.json'), 'utf8').trim()
 const json = v => JSON.stringify(v).replace(/</g, '\\u003c')
 // Hold the Line, the chapter battles, from ../hold-the-line (game.css and game.js)
 const HTL = path.resolve(HERE, '../hold-the-line')
-const htl = `<script>const HTL_CSS = ${json(fs.readFileSync(path.join(HTL, 'game.css'), 'utf8'))}</script>\n<script>\n${fs.readFileSync(path.join(HTL, 'game.js'), 'utf8')}\n</script>`
+const htl = `<script>const HTL_CSS = ${json(fs.readFileSync(path.join(HTL, 'game.css'), 'utf8'))}; window.HTL_BG = ${json(JSON.parse(fs.readFileSync(path.join(HTL, 'strings.bg.json'), 'utf8')))}</script>\n<script>\n${fs.readFileSync(path.join(HTL, 'game.js'), 'utf8')}\n</script>`
 const html = template.replace('__HTL__', () => htl).replace('__ERAS__', () => json(CONFIG.eras)).replace('__CHAPTERS__', () => json(chapters)).replace('__LAND__', () => land)
 fs.writeFileSync(path.join(HERE, 'index.html'), html)
 console.log(`index.html: ${chapters.length} chapters, ${Math.round(html.length / 1024)} KB`)

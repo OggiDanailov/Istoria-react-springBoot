@@ -8,6 +8,7 @@ import { fileURLToPath } from 'node:url'
 const HERE = path.dirname(fileURLToPath(import.meta.url))
 const read = f => fs.readFileSync(path.join(HERE, f), 'utf8')
 const css = JSON.stringify(read('game.css')).replace(/</g, '\\u003c')
-const html = read('shell.html').replace('__HTL_CSS__', () => css).replace('__HTL_JS__', () => read('game.js'))
+const bg = JSON.stringify(JSON.parse(read('strings.bg.json'))).replace(/</g, '\\u003c')   // the Bulgarian strings
+const html = read('shell.html').replace('__HTL_CSS__', () => css).replace('__HTL_JS__', () => `window.HTL_BG = ${bg};\n` + read('game.js'))
 fs.writeFileSync(path.join(HERE, 'index.html'), html)
 console.log(`index.html: ${Math.round(html.length / 1024)} KB`)

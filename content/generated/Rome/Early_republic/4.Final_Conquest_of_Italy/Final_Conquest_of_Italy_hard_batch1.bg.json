@@ -1,0 +1,205 @@
+{
+  "batchName": "Early Republic: Final Conquest of Italy (290-264 BCE) - Hard Batch 1",
+  "chapterName": "Early Republic: Final Conquest of Italy (290-264 BCE)",
+  "difficulty": 3,
+  "batchOrder": 4,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "С какво Законът на Хортензий отиде по-далеч от по-ранните закони от 449 и 339 г. пр.н.е.?",
+      "options": [
+        "Даде на Сената вето над трибуните",
+        "Премахна нуждата от одобрение на Сената",
+        "Създаде длъжността трибун",
+        "За първи път позволи плебеи да стават консули",
+        "Премахна напълно патрицианския статут",
+        "Пренесе гласуването в центурии"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 3,
+      "textReference": "#lex-hortensia",
+      "explanation": "По-ранните закони все още изискваха Сенатът да одобрява решенията на плебеите; lex Hortensia премахна това изискване напълно. Така народът и неговите трибуни станаха важни играчи в римската политика.",
+      "sourceQuote": "However, they still needed the Senate, Rome's council of elders and ex-officials, to approve plebeian decisions.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кои фактори превърнаха сицилийския поход на Пир в провал? (изберете всички верни)",
+      "options": [
+        "Римска армия слезе на острова",
+        "Сицилийските му поддръжници се умориха да плащат за войната",
+        "Гали нахлуха в царството му Епир",
+        "Сиракуза мина на страната на Картаген",
+        "Пир нямаше достатъчно морска сила",
+        "Лилибей можеше да се снабдява по море"
+      ],
+      "correctAnswers": [
+        1,
+        4,
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#pyrrhus-in-sicily",
+      "explanation": "Пир не можа да блокира снабдявания по море Лилибей, а сицилийските му поддръжници се умориха да финансират войната. Той се върна в Италия в началото на 276 г. пр.н.е., без да е постигнал нищо трайно.",
+      "sourceQuote": "The city could be supplied by sea, and Pyrrhus lacked the naval strength to cut it off.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кои действия на Тарент доведоха до война с Рим? (изберете всички верни)",
+      "options": [
+        "Съюз с Картаген",
+        "Изпращане на войски при Сентинум",
+        "Отхвърляне на римски ултиматум през 281 г. пр.н.е.",
+        "Прогонване на проримското управление в Турии",
+        "Обсада на римската колония в Капуа",
+        "Нападение срещу римски флот в неговите води"
+      ],
+      "correctAnswers": [
+        2,
+        3,
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#tarentum-calls-for-help",
+      "explanation": "Тарент нападна римски флот във води, забранени по договор, прогони проримското управление в Турии и после отхвърли римския ултиматум в началото на 281 г. пр.н.е. Последва война.",
+      "sourceQuote": "It then marched on Thurii and threw out the city's pro-Roman government.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво постигна битката при Популония през 282 г. пр.н.е.?",
+      "options": [
+        "Донесе на Рим първата победа над Пир",
+        "Разгроми галите южно от Алпите",
+        "Постави Тарент под римска власт",
+        "Сложи край на Третата самнитска война",
+        "Даде на Рим първото му стъпало в Сицилия",
+        "Унищожи последните остатъци от етруската мощ"
+      ],
+      "correctAnswers": [
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#rome-after-the-samnite-wars",
+      "explanation": "Битката при крайбрежния етруски град Популония довърши последните остатъци от етруската мощ в областта. Гръцкият юг на Италия обаче все още беше извън римския контрол.",
+      "sourceQuote": "In 282 BC, a battle at Populonia, an Etruscan town on the coast, ended the last traces of Etruscan power in the region.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Плебейското събрание гласуваше по трибални окръзи, никога повече от 35. Колко от тях контролираха селските земевладелци?",
+      "options": [
+        "35",
+        "29",
+        "17",
+        "21",
+        "31",
+        "4"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 3,
+      "textReference": "#why-the-plebs-seceded",
+      "explanation": "Селските земевладелци контролираха 29 окръга, така че те, а не градските тълпи, държаха по-голямата част от гласовете. Това е една от причините историците да се съмняват в разказа за градски бунтове заради дългове.",
+      "sourceQuote": "Rural landowners controlled 29 of them, so they, not city crowds, held most of the power.",
+      "reviewFlags": []
+    },
+    {
+      "question": "В началото на войната през 264 г. пр.н.е. единствената записана помощ от южните гръцки градове бяха транспортни кораби от кои градове? (изберете всички верни)",
+      "options": [
+        "Локри",
+        "Регий",
+        "Тарент",
+        "Турии",
+        "Сиракуза",
+        "Неапол"
+      ],
+      "correctAnswers": [
+        0,
+        2,
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#how-rome-ruled-italy",
+      "explanation": "Рим взе назаем транспортни кораби от Неапол, Тарент и Локри. Това подсказва, че бремето за гръцките градове е било леко.",
+      "sourceQuote": "Even at the start of Rome's next great war in 264 BC, the only recorded help was a fleet of transport ships borrowed from Naples, Tarentum and Locri, a Greek city on Italy's toe.",
+      "reviewFlags": []
+    },
+    {
+      "question": "През кои години се води Първата пуническа война?",
+      "options": [
+        "275–241 г. пр.н.е.",
+        "264–241 г. пр.н.е.",
+        "241–218 г. пр.н.е.",
+        "264–218 г. пр.н.е.",
+        "264–146 г. пр.н.е.",
+        "281–264 г. пр.н.е."
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 3,
+      "textReference": "#italy-united-264-bc",
+      "explanation": "Първата пуническа война започна през 264 г. пр.н.е. и продължи до 241 г. пр.н.е. Същата 264 г. пр.н.е. Рим смаза последната съпротива в Етрурия.",
+      "sourceQuote": "This conflict, the First Punic War, lasted until 241 BC.",
+      "reviewFlags": []
+    },
+    {
+      "question": "След коя битка, според античното предание, Пир възкликнал: „Още една такава победа и сме загубени!“?",
+      "options": [
+        "Сентинум, 295 г. пр.н.е.",
+        "Аускулум, 279 г. пр.н.е.",
+        "Лилибей, 277 г. пр.н.е.",
+        "Хераклея, 280 г. пр.н.е.",
+        "Популония, 282 г. пр.н.е.",
+        "Беневент, 275 г. пр.н.е."
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 3,
+      "textReference": "#heraclea-and-asculum",
+      "explanation": "Пир отново разби римляните при Аускулум през 279 г. пр.н.е., но армията му понесе ужасни загуби. Вместо да продължи срещу Рим, той се обърна към Сицилия.",
+      "sourceQuote": "According to ancient tradition, he exclaimed after the battle: \"Another such victory and we are lost!\"",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как изворите описват изхода от последната битка на Пир с Рим при Беневент през 275 г. пр.н.е.?",
+      "options": [
+        "Всички са единни за смазваща римска победа",
+        "Като поредна скъпа победа на Пир",
+        "Като римска победа или като равенство",
+        "Като битка, решена от Картаген",
+        "Като битката, в която загина Пир",
+        "Като римско поражение, завършило с примирие"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 3,
+      "textReference": "#beneventum-and-withdrawal",
+      "explanation": "Едни извори наричат Беневент римска победа, други – равенство. Във всеки случай тя принуди Пир да мине в отбрана.",
+      "sourceQuote": "The outcome is described differently: some accounts call it a Roman victory, others a draw.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Каква странност съдържаше Законът на Хортензий?",
+      "options": [
+        "Позволяваше да гласуват само жителите на града",
+        "Забраняваше всяко гласуване по време на война",
+        "Ограничаваше трибуните до един мандат",
+        "Забраняваше гласуването в пазарни дни",
+        "Забраняваше гласуването по време на религиозни празници",
+        "Изискваше одобрение на Сената за гласуване за война"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 3,
+      "textReference": "#why-the-plebs-seceded",
+      "explanation": "Забраната за гласуване в пазарни дни затрудняваше селските стопани, които идваха в града точно в тези дни. Това е странно, като се има предвид, че реформата вероятно е била движена от селските плебеи.",
+      "sourceQuote": "The law did contain one oddity: it banned votes on market days, which made it harder for country farmers to vote when they came to town.",
+      "reviewFlags": []
+    }
+  ]
+}

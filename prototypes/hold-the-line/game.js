@@ -467,7 +467,7 @@ function drawDeity(c, type, T, greek, o = {}) {
   if (L.crown === 'moon') { c.fillStyle = '#f4f1e4'; c.beginPath(); c.arc(0, -57, 5.5, 0, TAU); c.fill(); c.fillStyle = L.hair; c.beginPath(); c.arc(1.8, -58.5, 4.6, 0, TAU); c.fill() }
   if (L.crown === 'wings') { c.fillStyle = '#9a8a5a'; c.beginPath(); c.ellipse(0, -51, 9.5, 3, 0, 0, TAU); c.fill(); c.fillStyle = '#ffffff'; for (const s of [-1, 1]) { c.beginPath(); c.moveTo(s * 7, -53); c.lineTo(s * 15, -61); c.lineTo(s * 12, -55); c.lineTo(s * 15, -57); c.lineTo(s * 9, -51); c.fill() } }
   if (greek && o.tag !== false) {   // the name tag, so you know who is coming
-    const name = FOES[type].name.toUpperCase()
+    const name = (LANG === 'bg' ? bgName(FOES[type].name) : FOES[type].name).toUpperCase()
     c.font = '800 9px Nunito, system-ui, sans-serif'; c.textAlign = 'center'
     const w = c.measureText(name).width + 8
     c.fillStyle = 'rgba(31, 52, 84, .92)'; rr(c, -w / 2, 3, w, 12, 4); c.fill()   // under the feet, clear of the health bar
@@ -1767,7 +1767,7 @@ let tray
 function renderTray() {
   tray.innerHTML = ''
   const nCards = Math.max(5, (G?.phase === 'deploy' ? Object.keys(G.vets) : LEVEL.units).length)
-  tray.style.setProperty('--n', nCards); tray.classList.toggle('many', nCards > 7); tray.classList.toggle('named', !!LEVEL.units.some(t => UNITS[t].deity))
+  tray.style.setProperty('--n', nCards); tray.classList.toggle('many', nCards > 7); tray.classList.toggle('named', !!LEVEL.units.some(t => UNITS[t].deity)); tray.classList.toggle('bg', LANG === 'bg')
   const deploying = G?.phase === 'deploy'
   for (const type of deploying ? Object.keys(G.vets) : LEVEL.units) {
     const U = UNITS[type], b = document.createElement('button')
@@ -1918,8 +1918,8 @@ function showMap() {
   }).join('')
   showPanel(`<span class="eyebrow">Campaign · the rise of Rome</span><h1>Hold the Line</h1>
     <p>${LEVELS.filter(x => !x.bonus).length} battles, from the Latin League to Attila, and a bonus contest of the gods. Each battle brings a new enemy and a new Roman unit.</p>
-    <ol class="road">${stops}</ol>`,
-    Object.fromEntries(LEVELS.map((L, i) => [`lvl${i}`, () => showBriefing(i)])))
+    <ol class="road">${stops}</ol>${opts.mode === 'chapter' ? '' : `<p><button class="tool" id="lang">${LANG === 'bg' ? 'English' : 'Български'}</button></p>`}`,
+    { ...Object.fromEntries(LEVELS.map((L, i) => [`lvl${i}`, () => showBriefing(i)])), lang: () => { LANG = LANG === 'bg' ? 'en' : 'bg'; try { localStorage.setItem('ave-lang', LANG) } catch {} ; renderTray(); showMap(); trTree(sroot) } })
 }
 function showGuide(focus, onBack) {
   const wasPlaying = G?.phase === 'play'
@@ -1973,6 +1973,11 @@ function showBriefing(i) {
       }])) })
 }
 function armyLine(score, L) {
+  if (LANG === 'bg') {   // in Bulgarian: "1 прашкар", "2 триарии"
+    const a = armyFor(score, L), BGV = { slinger: ['прашкар', 'прашкари'], triarius: ['триарий', 'триарии'], hastatus: ['хастат', 'хастати'], ceres: ['Церера', 'Церери'] }
+    const vets = Object.entries(a.vets).map(([t, n]) => `${n} ${(BGV[t] ?? [bgName(UNITS[t].name), bgName(UNITS[t].name)])[n === 1 ? 0 : 1]}`)
+    return `Започвате с ${a.grain} жито${vets.length ? ` и ветерани: ${vets.join(', ')}` : ' и без ветерани'}.${a.medicus ? ` С вас идва медик (военен лекар)${a.augur ? ' и авгур' : ''}.` : ''}`
+  }
   const a = armyFor(score, L), vets = Object.entries(a.vets).map(([t, n]) => `${n} ${n === 1 ? UNITS[t].name.toLowerCase() : UNITS[t].name.toLowerCase() + (t === 'triarius' ? '' : 's')}`.replace('triarius', n === 1 ? 'triarius' : 'triarii').replace('hastatuss', 'hastati'))
   return `You start with ${a.grain} grain${vets.length ? ` and veterans: ${vets.join(', ')}` : ' and no veterans'}.${a.medicus ? ` A medicus (army doctor) comes with you${a.augur ? ', and an augur' : ''}.` : ''}`
 }
@@ -1985,11 +1990,12 @@ function startLevel(i, score = quizScore) {
 function syncDeploy() {
   const left = Object.values(G.vets).reduce((a, b) => a + b, 0), box = $('deploy')
   box.hidden = G.phase !== 'deploy'
+  const bg = LANG === 'bg'
   $('deploy-text').textContent = left
-    ? `Your test score earned you veterans. Drag them onto the field for free (${left} still to place).`
-    : 'Your veterans are in place. Drag to adjust, then begin.'
-  if (G.hasMedicus) $('deploy-text').textContent += ` Your medicus can heal ${MEDICUS.heals === 1 ? 'one wounded soldier, once per battle' : `${MEDICUS.heals} wounded soldiers`}: tap ✚ Medicus, then the soldier.`
-  if (G.hasAugur) $('deploy-text').textContent += ' Once per battle, tap Augur for good omens: your soldiers fight harder for a while.'
+    ? (bg ? `Резултатът от теста ви донесе ветерани. Плъзнете ги на полето безплатно (остават ${left}).` : `Your test score earned you veterans. Drag them onto the field for free (${left} still to place).`)
+    : (bg ? 'Ветераните ви са на място. Плъзнете, за да ги наместите, после започнете.' : 'Your veterans are in place. Drag to adjust, then begin.')
+  if (G.hasMedicus) $('deploy-text').textContent += bg ? ` Медикът ви може да излекува ${MEDICUS.heals === 1 ? 'един ранен войник, веднъж на битка' : `${MEDICUS.heals} ранени войници`}: натиснете ✚ Медик, после войника.` : ` Your medicus can heal ${MEDICUS.heals === 1 ? 'one wounded soldier, once per battle' : `${MEDICUS.heals} wounded soldiers`}: tap ✚ Medicus, then the soldier.`
+  if (G.hasAugur) $('deploy-text').textContent += bg ? ' Веднъж на битка натиснете „Авгур“ за добри поличби: войниците ви се бият по-силно известно време.' : ' Once per battle, tap Augur for good omens: your soldiers fight harder for a while.'
 }
 function beginBattle() {
   if (G.phase !== 'deploy' && G.phase !== 'ready') return
@@ -2006,7 +2012,7 @@ function win() {
   if (opts.mode !== 'chapter') { progress.stars[i] = Math.max(progress.stars[i] ?? 0, stars); saveProgress() }
   setTimeout(() => showPanel(`<span class="eyebrow">Victory · ${LEVEL.year}</span><h2>You held the line at ${LEVEL.name.replace(/^The /, 'the ')}</h2>
     <p class="big-stars" aria-label="${stars} of 3 stars">${starText(stars)}</p>
-    <p>${G.killed} enemies fell and you lost ${G.lost === 1 ? 'one soldier' : G.lost + ' soldiers'}. ${stars === 3 ? 'The equites never had to ride.' : 'Win without the equites charging for three stars.'}</p>
+    <p>${LANG === 'bg' ? `Паднаха ${G.killed} врагове, а вие загубихте ${G.lost === 1 ? 'един войник' : G.lost + ' войници'}. ${stars === 3 ? 'Еквитите изобщо не се наложи да атакуват.' : 'Спечелете, без еквитите да атакуват, за три звезди.'}` : `${G.killed} enemies fell and you lost ${G.lost === 1 ? 'one soldier' : G.lost + ' soldiers'}. ${stars === 3 ? 'The equites never had to ride.' : 'Win without the equites charging for three stars.'}`}</p>
     <p class="history">${LEVEL.after}</p>
     ${next || opts.mode === 'chapter' ? '' : '<p><b>You have won the whole campaign, from Romulus to Attila.</b></p>'}
     ${opts.mode === 'chapter' ? `<div class="row"><button class="primary" id="continue">Continue</button><button class="tool" id="again">Play again</button></div>`
@@ -2090,6 +2096,57 @@ const MARKUP = `<main class="game">
   </div>
 </main>`
 let host = null, sroot = null, mounted = false, opts = { mode: 'campaign' }
+// ---------- language: English or Bulgarian. The Bulgarian strings come from strings.bg.json (added by the builds as
+// window.HTL_BG); text is translated as it appears in the game's shadow root, and the gods' name tags on the canvas.
+const HTL_BG = window.HTL_BG ?? {}
+let LANG = 'en', langObserver = null
+const bgYear = y => y.replace(/^c\. /, 'ок. ').replace(/AD (\d+)(–\d+)?/g, '$1$2 г. сл.н.е.').replace(/(\d+)(\/\d+)?\s*BC\b/g, '$1$2 г. пр.н.е.').replace(/^(\d+)(\/\d+)?$/, '$1$2 г.').replace(/(\d+)th century( BC)?/, (m, n, bc) => `${n} в.${bc ? ' пр.н.е.' : ''}`)
+const bgName = n => HTL_BG[n] ?? n
+const HTL_RE = [
+  [/^Battle (\d+) of (\d+) · (.+)$/, (m, a, b, y) => `Битка ${a} от ${b} · ${bgYear(HTL_BG[y] ?? y)}`],
+  [/^Bonus battle · (.+)$/, (m, y) => `Бонус битка · ${HTL_BG[y] ?? bgYear(y)}`],
+  [/^(Victory|Defeat) · (.+)$/, (m, v, y) => `${v === 'Victory' ? 'Победа' : 'Поражение'} · ${HTL_BG[y] ?? bgYear(y)}`],
+  [/^You held the line at (.+)$/, (m, b) => `Удържахте линията: ${bgName(b.replace(/^the /, 'The '))}`],
+  [/^(.+) broke into the camp$/, (m, e) => `${bgName(e[0].toLowerCase() + e.slice(1)) === e[0].toLowerCase() + e.slice(1) ? bgName(e) : bgName(e[0].toLowerCase() + e.slice(1))} нахлуха в лагера`],
+  [/^(\d+) enemies fell and you lost (one soldier|(\d+) soldiers)\.$/, (m, a, x, b) => `Паднаха ${a} врагове, а вие загубихте ${b ? b + ' войници' : 'един войник'}.`],
+  [/^(\d+) enemies fell before the line broke\.$/, 'Паднаха $1 врагове, преди линията да се пречупи.'],
+  [/^(\d+) enemies fell before the line broke\. (.+)$/, (m, a, h) => `Паднаха ${a} врагове, преди линията да се пречупи. ${HTL_BG[h] ?? h}`],
+  [/^(\d+) of 3 stars$/, '$1 от 3 звезди'],
+  [/^New unit: (.+)\.$/, (m, u) => 'Нова част: ' + bgName(u) + '.'],
+  [/^Next: (.+)$/, (m, b) => 'Следваща: ' + bgName(b)],
+  [/^Blessed (\d+)s$/, 'Благословени $1 с'],
+  [/^(\d+)s$/, '$1 с'],
+  [/^(\d+) rations$/, '$1 дажби'],
+  [/^Unit guide · (.+)$/, (m, b) => 'Ръководство · ' + bgName(b)],
+  [/^(Back to battle|Close) ✕$/, (m, b) => (b === 'Close' ? 'Затвори' : 'Обратно към битката') + ' ✕'],
+  [/^The augur reads the birds: the gods favour Rome! Your soldiers fight harder for (\d+) seconds\.$/, 'Авгурът разчита птиците: боговете са на страната на Рим! Войниците ви се бият по-силно $1 секунди.'],
+  [/^(.+), costs (\d+) rations$/, (m, n, c) => `${bgName(n)}, струва ${c} дажби`],
+  [/^(\d+) battles, from the Latin League to Attila, and a bonus contest of the gods\. Each battle brings a new enemy and a new Roman unit\.$/, '$1 битки – от Латинския съюз до Атила – и бонус състезание на боговете. Всяка битка носи нов враг и нова римска част.'],
+  [/^Locked: win (.+) first$/, (m, b) => 'Заключено: първо спечелете ' + bgName(b.replace(/^the /, 'The '))],
+  [/^(.+) · (.+)$/, (m, a, b) => (HTL_BG[a] || HTL_BG[b] || /\d/.test(a)) ? `${HTL_BG[a] ?? bgYear(a)} · ${HTL_BG[b] ?? bgName(b)}` : m],
+  [/^It bounces off! Only (\w+) can stop (\w+)\.$/, (m, a, b) => `Отскача! Само ${bgName(a)} може да спре ${bgName(b)}.`],
+  [/^(\w+)’s light passes through (\w+)! Only (\w+) can stop (\w+)\.$/, (m, a, b, c, d) => `Светлината на ${bgName(a)} минава през ${bgName(b)}! Само ${bgName(c)} може да спре ${bgName(d)}.`],
+]
+function trT(s) {
+  if (LANG !== 'bg' || !s) return s
+  const k = s.trim()
+  if (!k || !/[A-Za-z]/.test(k)) return s
+  let out = HTL_BG[k]
+  if (out == null) for (const [re, to] of HTL_RE) if (re.test(k)) { out = k.replace(re, to); break }
+  return out == null || out === k ? s : s.replace(k, out)
+}
+function trTree(root) {
+  if (LANG !== 'bg') return
+  const w = document.createTreeWalker(root, NodeFilter.SHOW_TEXT)
+  for (let n; (n = w.nextNode());) { if (n.parentNode?.nodeName === 'STYLE') continue; const t = trT(n.nodeValue); if (t !== n.nodeValue) n.nodeValue = t }
+  for (const el of [root, ...(root.querySelectorAll?.('[title], [aria-label]') ?? [])]) if (el.getAttribute) for (const a of ['title', 'aria-label']) if (el.hasAttribute(a)) { const t = trT(el.getAttribute(a)); if (t !== el.getAttribute(a)) el.setAttribute(a, t) }
+}
+function watchLanguage() {
+  langObserver?.disconnect()
+  langObserver = new MutationObserver(ms => { if (LANG !== 'bg') return; for (const m of ms) for (const n of m.addedNodes) n.nodeType === 3 ? (n.nodeValue = trT(n.nodeValue)) : n.nodeType === 1 && trTree(n) })
+  langObserver.observe(sroot, { childList: true, subtree: true })
+  trTree(sroot)
+}
 const $ = id => sroot.getElementById(id)
 function bindControls() {
   canvas.addEventListener('pointerdown', e => {
@@ -2143,8 +2200,10 @@ function exit(result) { const cb = opts.onExit; unmount(); cb?.(result) }
 function mount(el, o = {}) {
   unmount()
   host = el; opts = { mode: 'campaign', ...o }
+  try { LANG = o.lang ?? (localStorage.getItem('ave-lang') === 'bg' ? 'bg' : 'en') } catch { LANG = o.lang ?? 'en' }
   sroot = host.shadowRoot ?? host.attachShadow({ mode: 'open' })
   sroot.innerHTML = `<style>${HTL_CSS}</style>` + MARKUP
+  watchLanguage()
   canvas = $('field'); ctx = canvas.getContext('2d'); tray = $('tray'); overlay = $('overlay')
   shownCount = -1; mounted = true
   bindControls()
@@ -2159,5 +2218,5 @@ function unmount() {
   clearTimeout(bannerTimer); window.removeEventListener('resize', layout)
   sroot.innerHTML = ''
 }
-return { mount, unmount, armyFor, LEVELS, debug: { get G() { return G }, paintIcons, foeTypes, place, collect, update, startLevel, beginBattle, armyFor, showMap, LEVELS, UNITS, FOES, progress } }
+return { mount, unmount, armyFor, LEVELS, debug: { get G() { return G }, showBriefing, win, lose, paintIcons, foeTypes, place, collect, update, startLevel, beginBattle, armyFor, showMap, LEVELS, UNITS, FOES, progress } }
 })()

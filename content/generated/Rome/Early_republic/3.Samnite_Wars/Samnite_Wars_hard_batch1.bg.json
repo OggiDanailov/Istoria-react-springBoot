@@ -1,0 +1,203 @@
+{
+  "batchName": "Early Republic: The Samnite Wars (367-290 BCE) - Hard Batch 1",
+  "chapterName": "Early Republic: The Samnite Wars (367-290 BCE)",
+  "difficulty": 3,
+  "batchOrder": 5,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Какъв довод изтъкват учени като Корнел и Оукли, за да приемат разказа за предаването на Капуа на Рим?",
+      "options": [
+        "Самнитите го признали в договора си",
+        "Монетите на Капуа носят римски символи от 343 г. пр.н.е.",
+        "Ливий го преписал от кампански архиви",
+        "Диодор го потвърждава независимо",
+        "Доброволното подчинение било обичайна дипломация",
+        "Тукидид описва подобно събитие"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 3,
+      "textReference": "#doubting-livy",
+      "explanation": "Корнел и Оукли отбелязват, че доброволното подчинение било нормален дипломатически ход по онова време. Салмън и Форсайт обаче смятат, че историята е измислена.",
+      "sourceQuote": "Others, such as Cornell and Oakley, accept it, noting that voluntary submission was common diplomacy then.",
+      "reviewFlags": []
+    },
+    {
+      "question": "През 305 г. пр.н.е. римляните превзели Бовиан. Какво бил той?",
+      "options": [
+        "Гръцки град в Неаполитанския залив",
+        "Ключът на Рим към Етрурия",
+        "Столицата на пентрите, най-голямото самнитско племе",
+        "Мястото на свещената клетва на самнитите",
+        "Римски съюзник в Апулия",
+        "Главният град на сидицините"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 3,
+      "textReference": "#second-war-turning",
+      "explanation": "Бовиан бил столицата на пентрите, най-голямото самнитско племе. Година след падането му самнитите поискали мир и старият договор бил възстановен.",
+      "sourceQuote": "In Samnium the Romans took Bovianum, capital of the Pentri, the largest Samnite tribe, in 305 BC.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Колко римляни и съюзници преброил Полибий в битката при Теламон през 225 г. пр.н.е.?",
+      "options": [
+        "Около 100 000 римляни и 110 000 съюзници",
+        "Около 41 000 римляни и 21 000 съюзници",
+        "Около 21 000 римляни и 41 000 съюзници",
+        "Около 41 000 римляни и 210 000 съюзници",
+        "Около 40 000 римляни и 40 000 съюзници",
+        "Около 210 000 римляни и 41 000 съюзници"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 3,
+      "textReference": "#roman-alliance-system",
+      "explanation": "Полибий преброил около 41 000 римляни заедно с 210 000 съюзници – знак колко съюзническите войски превъзхождали римските. Тази жива сила довела Рим до победа над Пир и Картаген.",
+      "sourceQuote": "At the battle of Telamon against the Gauls in 225 BC, the Greek historian Polybius counted about 41,000 Romans alongside 210,000 allies.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Къде Валерий превзел самнитския лагер и разпръснал фуражирите им в третата римска победа през 343 г. пр.н.е.?",
+      "options": [
+        "Калес",
+        "Планината Гаур",
+        "Лаутуле",
+        "Суесула",
+        "Капуа",
+        "Куми"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 3,
+      "textReference": "#first-war-campaigns",
+      "explanation": "За третата победа Валерий се втурнал към Суесула, град в източния край на Кампания. След това и двамата консули отпразнували триумф.",
+      "sourceQuote": "In the third, Valerius rushed to Suessula, a town on Campania's eastern edge, captured the Samnite camp and scattered their foragers.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Според Ливий на какво основание римският Сенат отказал да спази споразумението от Кавдинските проходи?",
+      "options": [
+        "Народът никога не го бил одобрил",
+        "Гай Понтий нямал право да сключва договори",
+        "Фециалите не били положили клетва",
+        "Самнитите първи нарушили примирието",
+        "Консулите били измамени с лъжлив слух",
+        "Споразумението било сключено извън римска територия"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#caudine-forks",
+      "explanation": "Сенатът изтъкнал, че римският народ никога не е одобрявал споразумението, и войната се подновила. Някои историци смятат, че примирието от следващите години всъщност произтичало от Кавдинското споразумение.",
+      "sourceQuote": "Then, Livy says, the Senate refused to honour the agreement, arguing the people had never approved it, and the war resumed.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как римляните най-сетне влезли в Неапол през 326 г. пр.н.е.?",
+      "options": [
+        "Неаполис се вдигнал срещу Палеополис и го прогонил",
+        "Щурмували Палеополис след дълга обсада",
+        "Дезертьор им показал таен вход",
+        "Двама видни неаполитанци, отегчени от самнитския гарнизон, ги пуснали",
+        "Кампанците от Капуа отворили стените",
+        "Самнитският гарнизон предал града за злато"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 3,
+      "textReference": "#second-war-outbreak",
+      "explanation": "Двама видни неаполитанци, уморени от буйния самнитски гарнизон, пуснали римляните. Започналата така Втора, или Велика, самнитска война продължила до 304 г. пр.н.е.",
+      "sourceQuote": "In 326 BC two leading Neapolitans, fed up with the unruly Samnite garrison, let the Romans in.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кои народи влизали в коалицията срещу Рим към 295 г. пр.н.е.? (изберете всички верни)",
+      "options": [
+        "Кампанци",
+        "Етруски",
+        "Самнити",
+        "Гали сенонци",
+        "Луканци",
+        "Умбри"
+      ],
+      "correctAnswers": [
+        1,
+        2,
+        3,
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#third-war-sentinum",
+      "explanation": "Рим се изправил едновременно срещу самнити, етруски, умбри и гали сенонци. Римски набег отклонил етруските към дома им преди решителната битка при Сентинум.",
+      "sourceQuote": "By 295 BC Rome faced a coalition of four peoples: Samnites, Etruscans, Umbrians from the hills of central Italy, and Senone Gauls, Celtic warriors on the Adriatic coast.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Спасението на хълма от Деций през 343 г. пр.н.е. силно напомня прочут епизод от коя година и може би е заимствано от него?",
+      "options": [
+        "258 г. пр.н.е.",
+        "225 г. пр.н.е.",
+        "211 г. пр.н.е.",
+        "295 г. пр.н.е.",
+        "310 г. пр.н.е.",
+        "321 г. пр.н.е."
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#doubting-livy",
+      "explanation": "Спасението много прилича на прочут епизод от 258 г. пр.н.е., затова може да е по-късно заимстване. Под съмнение са и другите битки от Първата самнитска война.",
+      "sourceQuote": "Decius' hilltop rescue closely resembles a famous episode of 258 BC and may be borrowed from it.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Според Ливий как отговорили самнитските водачи, когато римските пратеници ги помолили да пощадят Кампания?",
+      "options": [
+        "Изпратили свои пратеници в Сената",
+        "Поискали Рим да им предаде сидицините",
+        "Потърсили помощ от етруските",
+        "Екзекутирали римските пратеници на място",
+        "Предложили да си поделят Кампания с Рим",
+        "Наредили на армиите си да навлязат в Кампания пред пратениците"
+      ],
+      "correctAnswers": [
+        5
+      ],
+      "difficulty": 3,
+      "textReference": "#first-war-outbreak",
+      "explanation": "Самнитските водачи предизвикателно наредили на армиите си да навлязат в Кампания така, че римските пратеници да чуят. Съвременните историци се съмняват, че това дръзко самнитско събрание почива на достоверен запис.",
+      "sourceQuote": "When Roman envoys asked the Samnites to spare what had become Roman property, Samnite leaders ordered their armies into Campania within earshot.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кои античните историци съобщават за договора между Рим и самнитите от 354 г. пр.н.е.? (изберете всички верни)",
+      "options": [
+        "Тукидид",
+        "Дионисий Халикарнаски",
+        "Ливий",
+        "Диодор",
+        "Полибий",
+        "Плутарх"
+      ],
+      "correctAnswers": [
+        2,
+        3
+      ],
+      "difficulty": 3,
+      "textReference": "#samnites-and-rome",
+      "explanation": "И Ливий, и Диодор споменават договора, но никой не посочва условията му. Съвременните историци предполагат, че той превърнал Лирис в разделителна линия между двете сили.",
+      "sourceQuote": "In 354 BC, according to the ancient historians Livy and Diodorus, Rome and the Samnites signed a treaty, but neither records its terms.",
+      "reviewFlags": []
+    }
+  ]
+}

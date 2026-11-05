@@ -1,0 +1,179 @@
+{
+  "batchName": "Early Republic: The Conflict of the Orders - Toward Resolution (450-367 BCE) - Easy Batch 3",
+  "chapterName": "Early Republic: The Conflict of the Orders - Toward Resolution (450-367 BCE)",
+  "difficulty": 1,
+  "batchOrder": 3,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Как римляните най-сетне проникнали във Вейи?",
+      "options": [
+        "Като прокопали тунел през вулканичната скала",
+        "Като подкупили страж да отвори портите",
+        "Като отклонили река под стените",
+        "Като принудили града да се предаде от глад"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#siege-of-veii",
+      "explanation": "Римляните прокопали тунел в меката вулканична скала, върху която стоял Вейи. Отбрани войници излезли вътре в града, докато защитниците пазели стените.",
+      "sourceQuote": "They dug a tunnel through the soft volcanic rock on which Veii stood.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кое правило нарушили братята Фабии, когато се включили в боевете при Клузий?",
+      "options": [
+        "Сенаторите не бива да командват войски",
+        "Консулите не бива да напускат Рим",
+        "Пратениците трябва да остават неутрални",
+        "Жреците не бива да проливат кръв"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#battle-of-the-allia",
+      "explanation": "Като посланици братята трябвало да останат неутрални, но единият убил галски вожд. Когато галите поискали да им ги предадат, Рим отказал.",
+      "sourceQuote": "This broke the rule that envoys must stay neutral.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как се нарича близо двувековното съперничество между римските патриции и плебеи?",
+      "options": [
+        "Войната на класите",
+        "Борбата между съсловията",
+        "Борбата на трибите",
+        "Сецесията на простолюдието"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#conflict-of-the-orders",
+      "explanation": "Съперничеството е известно като Борбата между съсловията и определя политиката през първите два века на Републиката. Патрициите държали властта, като монополизирали консулството и Сената.",
+      "sourceQuote": "Their rivalry lasted some two hundred years and is known as the Conflict of the Orders.",
+      "reviewFlags": []
+    },
+    {
+      "question": "От какъв камък била изградена огромната нова градска стена на Рим след галското разграбване?",
+      "options": [
+        "Тъмен базалт, донесен от Сицилия",
+        "Жълт камък, добит на територията на Вейи",
+        "Бял мрамор, докаран от Гърция",
+        "Ронлив местен камък от римските хълмове"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#rome-after-the-sack",
+      "explanation": "Старата стена била от ронлив местен камък, затова новата, дълга 11 km, била построена от по-добър жълт камък от територията на Вейи.",
+      "sourceQuote": "The new one was built of a better yellow stone quarried in Veii's territory.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Коя дата – годишнината от Алия – станала злокобен ден за римляните?",
+      "options": [
+        "1 януари",
+        "18 юли",
+        "21 април",
+        "15 март"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#battle-of-the-allia",
+      "explanation": "Годишнината от поражението, 18 юли, станала злокобен ден. Традицията датира битката към 390 г. пр.н.е., макар съвременните историци да предпочитат около 387 г. пр.н.е.",
+      "sourceQuote": "Its anniversary, 18 July, became an ill-omened day.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво събудило защитниците при нощното нападение срещу Капитолия?",
+      "options": [
+        "Трясъкът на рухваща стена",
+        "Крякането на свещените гъски на Юнона",
+        "Тръбата на един страж",
+        "Лаят на кучетата пазачи"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#sack-of-rome",
+      "explanation": "Стражите и кучетата спели, но свещените гъски на Юнона закрякали. Шумът им събудил Марк Манлий, който хвърлил първия нападател надолу по склона.",
+      "sourceQuote": "The guards and dogs slept, but the sacred geese of Juno honked.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой бил избран за диктатор около 396 г. пр.н.е., за да се справи с войната срещу Вейи?",
+      "options": [
+        "Марк Манлий",
+        "Публий Манлий Капитолин",
+        "Луций Секстий Латеран",
+        "Марк Фурий Камил"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#siege-of-veii",
+      "explanation": "След поредица неуспехи римляните се обърнали към Марк Фурий Камил. Той поел обсада, която вече била в ход.",
+      "sourceQuote": "Around 396 BC, after a string of Roman setbacks, the Romans chose Marcus Furius Camillus as dictator.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво били Сибилинските книги?",
+      "options": [
+        "Списък на римските консули",
+        "Сборник с римски закони",
+        "Сборник с пророчества",
+        "Регистър на поземлената собственост"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#licinian-laws",
+      "explanation": "Сибилинските книги били пророчества, до които се допитвали по време на чума, глад или война. Четвърти Лициниев закон променил кой се грижи за тях.",
+      "sourceQuote": "A fourth law concerned the Sibylline Books, a collection of prophecies.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Каква уредба често използвал Рим от 444 г. пр.н.е. вместо двамата си консули?",
+      "options": [
+        "Един диктатор, избиран за година",
+        "Военни трибуни с консулска власт",
+        "Двама претори, избирани от плебса",
+        "Съвет от десет патрициански съдии"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#conflict-of-the-orders",
+      "explanation": "Рим често бил управляван от „военни трибуни с консулска власт“, обикновено наричани консулски трибуни. В дадена година те били от трима до шестима.",
+      "sourceQuote": "From 444 BC, Rome often replaced its two consuls with a stranger arrangement.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой станал първият плебейски консул на Рим през 366 г. пр.н.е.?",
+      "options": [
+        "Гай Лициний Столон",
+        "Луций Секстий Латеран",
+        "Луций Генуций",
+        "Марк Манлий"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#first-plebeian-consul",
+      "explanation": "Секстий, един от двамата трибуни, водили дългата борба, станал първият плебейски консул. Патрициите отказали да утвърдят избора му и избухнали безредици.",
+      "sourceQuote": "In 366 BC Lucius Sextius Lateranus, one of the two tribunes who had led the long campaign, became Rome's first plebeian consul.",
+      "reviewFlags": []
+    }
+  ]
+}

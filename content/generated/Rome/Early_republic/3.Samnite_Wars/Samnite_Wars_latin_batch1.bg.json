@@ -1,0 +1,145 @@
+{
+  "batchName": "Early Republic: The Samnite Wars (367-290 BCE) - Latin words",
+  "chapterName": "Early Republic: The Samnite Wars (367-290 BCE)",
+  "difficulty": 1,
+  "batchOrder": 9,
+  "description": "Written by hand from the chapter text: the Latin words it explains",
+  "questions": [
+    {
+      "question": "При Кавдинските проходи римляните минали под *iugum*. Какво било то?",
+      "options": [
+        "Ярем от копия",
+        "Триумфална арка",
+        "Дървен мост",
+        "Редица щитове"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#caudine-forks",
+      "explanation": "Минаването под ярема показвало, че армията е победена и покорена.",
+      "sourceQuote": "The Romans filed out unarmed under the yoke (*iugum*), a frame of spears",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво била *devotio* на Публий Деций Муз при Сентинум?",
+      "options": [
+        "Обрекъл живота си на боговете и атакувал врага",
+        "Преминал на страната на самнитите",
+        "Заклел се никога да не отстъпва",
+        "Сключил мир с галите"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#third-war-sentinum",
+      "explanation": "Жертвата му сплотила войниците, а коалицията рухнала.",
+      "sourceQuote": "Decius then devoted himself (*devotio*): he prayed to the gods",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кои били *socii* на Рим?",
+      "options": [
+        "Съюзниците му, които пращали войници за войните му",
+        "Враговете му в Самний",
+        "Колонистите му",
+        "Жреците му"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#roman-alliance-system",
+      "explanation": "Съюзните народи запазвали собствените си управления, но пращали войски за своя сметка.",
+      "sourceQuote": "Allied peoples, the *socii* (\"allies\"), kept their own governments,",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво била *deditio*, като предаването на Капуа в разказа на Ливий?",
+      "options": [
+        "Безусловно предаване на Рим",
+        "Мирен договор между равни",
+        "Обявяване на война",
+        "Нова колония"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#first-war-outbreak",
+      "explanation": "С предаването си Кампания станала римска собственост, която Рим трябвало да защитава.",
+      "sourceQuote": "a surrender the Romans called *deditio*.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво означавала титлата *pro consule*?",
+      "options": [
+        "Вместо консул",
+        "Преди консулите",
+        "Срещу консулите",
+        "Избран от консулите"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#second-war-outbreak",
+      "explanation": "Пълководците, чието командване било удължено, за да завършат похода, ставали проконсули.",
+      "sourceQuote": "with the title of proconsul (*pro consule*, \"in place of a consul\").",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво бил *legio linteata* при Аквилония?",
+      "options": [
+        "Лененият легион от самнити, заклели се никога да не бягат",
+        "Римски легион от ветерани",
+        "Етруските съюзници на Рим",
+        "Охраната на консулите"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#aquilonia-and-the-end",
+      "explanation": "Елитните самнитски части полагали свещена клетва никога да не бягат под страх от смърт.",
+      "sourceQuote": "Elite units, the Linen Legion (*legio linteata*), swore a sacred oath",
+      "reviewFlags": []
+    },
+    {
+      "question": "Самнитите били принудени да сключат *foedus iniquum*. Какво е това?",
+      "options": [
+        "Неравноправен договор с Рим",
+        "Договор между равни",
+        "Примирие за една година",
+        "Брачен съюз"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#roman-alliance-system",
+      "explanation": "След 290 г. пр.н.е. самнитите трябвало да станат съюзници на Рим при условията на Рим.",
+      "sourceQuote": "on unequal terms (*foedus iniquum*, an \"unequal treaty\").",
+      "reviewFlags": []
+    },
+    {
+      "question": "Братът на Фабий прекосил *silva Ciminia*. Какво е това?",
+      "options": [
+        "Циминийската гора, която никой римлянин не бил прекосявал",
+        "Планински проход в Самний",
+        "Река в Етрурия",
+        "Свещена горичка в Рим"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#second-war-turning",
+      "explanation": "Той я прекосил, преоблечен като овчар, а след това Фабий превел армията си през нея.",
+      "sourceQuote": "through the dreaded Ciminian Forest (*silva Ciminia*), which no Roman had ever crossed.",
+      "reviewFlags": []
+    }
+  ]
+}

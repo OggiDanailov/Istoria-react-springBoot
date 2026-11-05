@@ -1,0 +1,189 @@
+{
+  "batchName": "Early Republic: The Conflict of the Orders - Origins (509-450 BCE) - Medium Batch 2",
+  "chapterName": "Early Republic: The Conflict of the Orders - Origins (509-450 BCE)",
+  "difficulty": 2,
+  "batchOrder": 5,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Защо организирането на ранното Плебейско събрание по курии помагало на патрициите?",
+      "options": [
+        "Гласовете се броели от патрициански жреци",
+        "Само земевладелци можели да членуват в курия",
+        "Куриите можели да се събират само с разрешение на консулите",
+        "Патрициите държали половината места във всяка курия",
+        "Много плебеи гласували както искали патрицианските им покровители"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#plebeian-council",
+      "explanation": "В куриите много плебеи зависели от патрициански покровители и гласували по нареждане. Така аристократите тихомълком насочвали кой да стане трибун.",
+      "sourceQuote": "The assembly was first organised by curiae, ancient groupings of families in which many plebeians depended on patrician patrons and voted as those patrons wished.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Къде се събрал народът по време на втората сецесия, преди да се оттегли на Свещения хълм?",
+      "options": [
+        "Яникулумът",
+        "Палатина",
+        "Капитолия",
+        "Квиринала",
+        "Авентина"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#appius-claudius-and-verginia",
+      "explanation": "Народът първо се събрал на Авентинския хълм, а после се оттеглил на Свещения хълм. Гневът се бил пренесъл от тълпата и към армията, разположена на лагер извън града.",
+      "sourceQuote": "The people gathered on the Aventine, one of Rome's hills, then withdrew to the Sacred Mount.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Защо сецесията била толкова мощно оръжие за плебеите?",
+      "options": [
+        "Можели да повикат на помощ чужди съюзници",
+        "Били повечето римляни и произвеждали повечето храна и стоки",
+        "Контролирали храмовете и хазната на града",
+        "Държали повечето места в Сената",
+        "Притежавали всички зърнени складове на града"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#first-secession",
+      "explanation": "Плебсът бил огромното мнозинство и произвеждал по-голямата част от храната и стоките на Рим. Когато си тръгвал, търговията спирала, а градът оставал без армия срещу враговете си.",
+      "sourceQuote": "Plebeians were the vast majority of Romans and produced most of the city's food and goods.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво заявил един трибун за консулите през 462 г. пр.н.е.?",
+      "options": [
+        "Че са крали от хазната на града",
+        "Че заговорничат да върнат царете",
+        "Че са предали Рим на волските",
+        "Че са твърде слаби, за да защитят града",
+        "Че са станали по-потиснически от царете"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#demand-for-written-law",
+      "explanation": "Трибунът казал, че консулите са по-лоши от царете, които са заменили. Той предложил комисия, която да определи и ограничи правомощията им.",
+      "sourceQuote": "In 462 BC a tribune declared that the consuls had become more oppressive than the kings they replaced, and proposed a commission to define and limit their powers.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Трибуните не командвали войски. Как тогава трибун можел да защити гражданин от магистрат?",
+      "options": [
+        "Като застане лично на пътя с неприкосновената си особа",
+        "Като подкупи стражите на магистрата",
+        "Като свика плебейско опълчение",
+        "Като призове боговете в някой храм",
+        "Като плати сам глобата на гражданина"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#tribunes-of-the-plebs",
+      "explanation": "Понеже трибуните били свещено неприкосновени, трибунът можел физически да застане между гражданина и магистрата. От това израснало правото на вето.",
+      "sourceQuote": "Shielded by this, a tribune could protect a citizen from a magistrate by placing his own untouchable person in the way.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как реагирал един непреклонен консул на общественото недоволство заради дълговете през 495 г. пр.н.е.?",
+      "options": [
+        "Засилил правото на кредиторите да хвърлят длъжниците в затвора",
+        "Създал длъжността народен трибун",
+        "Изгонил водещите лихвари на града",
+        "Опростил всички дългове към патрициите",
+        "Дал държавна земя на разорените ветерани"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#debt-crisis",
+      "explanation": "Вместо облекчение консулът засилил властта на кредиторите да затварят длъжниците. На следващата година плебейските войници отказали да тръгнат на поход.",
+      "sourceQuote": "Instead, one hard-line consul issued decrees reinforcing creditors' right to imprison debtors.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой единствено можел да се кандидатира за длъжност в ранната Република?",
+      "options": [
+        "Богатите плебейски търговци",
+        "Всеки гражданин войник",
+        "Само понтификите",
+        "Бившите армейски офицери",
+        "Патрициите"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#patricians-and-plebeians",
+      "explanation": "Само патрициите – тесен кръг аристократични родове – можели да се кандидатират за длъжност. И консулите, и Сенатът идвали от техните редици.",
+      "sourceQuote": "Both belonged to the patricians, a small circle of aristocratic families who alone could stand for office.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Защо историците намират за странно, че в ранния конфликт почти не се е проливала кръв?",
+      "options": [
+        "Древните извори описват непрестанни улични битки",
+        "Патрициите били наели чужди наемници",
+        "Плебеите контролирали цялото оръжие на армията",
+        "Римското право изисквало смърт за всеки бунт",
+        "Подобни раздори в късната Република бързо ставали кървави"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#how-reliable",
+      "explanation": "Толкова горчиви обиди довели до изненадващо малко насилие – за разлика от раздорите в късната Република. Това е една от няколкото загадки, които правят традиционния разказ спорен.",
+      "sourceQuote": "It is odd that such bitter grievances led to so little bloodshed, when similar quarrels in the late Republic quickly turned violent.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Защо Сенатът избрал Менений Агрипа за преговарящ през 494 г. пр.н.е.?",
+      "options": [
+        "Командвал армията срещу волските",
+        "Бил записал първите закони на Рим",
+        "Бил бивш консул, обичан от обикновените римляни",
+        "Бил върховният жрец на Рим",
+        "Самият той бил водил напускането на плебса"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#menenius-agrippa",
+      "explanation": "Сенатът имал нужда от човек, на когото стачкуващите да вярват, затова избрал обичан бивш консул. Според преданието той ги убедил с баснята за стомаха.",
+      "sourceQuote": "It chose Menenius Agrippa, a former consul who was well liked by ordinary Romans.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Защо военната служба била капан за плебейските войници в ранната Република?",
+      "options": [
+        "Трябвало сами да плащат за бойните си кораби",
+        "Губели правото си на глас, докато служели",
+        "Фермите им оставали изоставени, докато били на поход",
+        "Изпращали ги в чужбина за десетилетия",
+        "Плащали им само със завладяна земя"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#patricians-and-plebeians",
+      "explanation": "Докато войниците отсъствали, фермите им оставали необработени. Мнозина трябвало да взимат назаем от патрициите, а неизплатилите длъжници можели да бъдат бити, затваряни и дори поробвани.",
+      "sourceQuote": "While a plebeian soldier was away on campaign, his farm lay abandoned.",
+      "reviewFlags": []
+    }
+  ]
+}

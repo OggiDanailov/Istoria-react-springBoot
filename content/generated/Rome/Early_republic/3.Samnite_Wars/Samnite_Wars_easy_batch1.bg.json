@@ -1,0 +1,181 @@
+{
+  "batchName": "Early Republic: The Samnite Wars (367-290 BCE) - Easy Batch 1",
+  "chapterName": "Early Republic: The Samnite Wars (367-290 BCE)",
+  "difficulty": 1,
+  "batchOrder": 1,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Какво изисквал всеки договор с Рим от съюзниците му?",
+      "options": [
+        "Заложници от всеки знатен род",
+        "Войници за войните на Рим за своя сметка",
+        "Годишен данък в сребро",
+        "Бойни кораби за римския флот"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#roman-alliance-system",
+      "explanation": "Съюзниците запазвали собствените си управления, но трябвало да пращат войници за войните на Рим и да ги издържат сами. Така Рим разполагал с огромен резерв от хора.",
+      "sourceQuote": "Allied peoples kept their own governments, but every treaty required them to send soldiers for Rome's wars at their own expense.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво унижение преживяла обкръжената римска армия при Кавдинските проходи през 321 г. пр.н.е.?",
+      "options": [
+        "Принудили ги да изгорят собствените си знамена",
+        "Продали ги в робство в Самний",
+        "Трябвало да предадат консулите си за екзекуция",
+        "Минали един по един невъоръжени под ярема"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#caudine-forks",
+      "explanation": "Римляните минали невъоръжени под ярема – рамка от копия, символ на подчинение, – докато врагът ги осмивал. След това Рим потънал в траур.",
+      "sourceQuote": "The Romans filed out unarmed under the yoke, a frame of spears symbolising subjugation, while the enemy jeered.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как били организирани самнитите, големите съперници на Рим в Апенините?",
+      "options": [
+        "Като съюз на планински племена",
+        "Като федерация от келтски бойни дружини",
+        "Като единно царство с център Капуа",
+        "Като съюз на гръцки крайбрежни градове"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#samnites-and-rome",
+      "explanation": "Самнитите били съюз на планински племена, живеещи в Апенините, и най-силният народ в региона. Родината им се издигала отвъд плодородната кампанска равнина.",
+      "sourceQuote": "There lived the Samnites, a confederation of hill tribes and the strongest people in the region.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой народ помолил Рим за защита от самнитско нашествие и така предизвикал Третата самнитска война през 298 г. пр.н.е.?",
+      "options": [
+        "Луканците",
+        "Сидицините",
+        "Кампанците",
+        "Апулийците"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#third-war-sentinum",
+      "explanation": "Луканците, които живеели южно от Самний, потърсили помощ от Рим, когато самнитите нахлули. Последвалата война продължила до 290 г. пр.н.е.",
+      "sourceQuote": "The Third Samnite War broke out in 298 BC when the Lucanians, a people south of Samnium, asked Rome for protection against a Samnite invasion.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Според Ливий кой малък народ нападнали самнитите, с което разпалили Първата самнитска война?",
+      "options": [
+        "Сидицините",
+        "Умбрите",
+        "Луканците",
+        "Пентрите"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#first-war-outbreak",
+      "explanation": "Самнитите нападнали сидицините, чиято крепост северно от Кампания контролирала важен кръстопът. Кампанците им се притекли на помощ и били разбити два пъти.",
+      "sourceQuote": "The Samnites attacked the Sidicini, a small people north of Campania whose stronghold controlled a valuable crossroads.",
+      "reviewFlags": []
+    },
+    {
+      "question": "До 290 г. пр.н.е. до кое море достигала римската територия отвъд Апенините?",
+      "options": [
+        "Лигурийско",
+        "Тиренско",
+        "Йонийско",
+        "Адриатическо"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#roman-alliance-system",
+      "explanation": "Римската територия вече стигала през Апенините до Адриатическо море. Самнитите били принудени да сключат съюз с Рим при неравни условия.",
+      "sourceQuote": "Its territory now stretched across the Apennines to the Adriatic, and the Samnites were forced into an alliance with Rome on unequal terms.",
+      "reviewFlags": [
+        "fact-check: The question relies on the chapter's inaccurate dating: according to the source, Rome's territory reached the Adriatic only after conquests made once the war ended in 290 BC."
+      ]
+    },
+    {
+      "question": "Какво направили отчаяните кампански пратеници според Ливий, след като римският Сенат отхвърлил съюза им?",
+      "options": [
+        "Поканили римска колония да се засели в Капуа",
+        "Предали Капуа и цяла Кампания безусловно",
+        "Обещали на Рим годишен данък в зърно",
+        "Предложили заложници от знатните родове на Капуа"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#first-war-outbreak",
+      "explanation": "Пратениците изиграли последния си коз, като предали Капуа и цяла Кампания безусловно на Рим. Така Кампания станала римска собственост и на карта била поставена честта на Рим.",
+      "sourceQuote": "So the envoys played their last card: they surrendered Capua and all Campania unconditionally to Rome.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Къде Рим основал най-голямата си колония през 291 г. пр.н.е.?",
+      "options": [
+        "Луцерия",
+        "Венузия",
+        "Калес",
+        "Фрегеле"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#aquilonia-and-the-end",
+      "explanation": "Рим превзел Венузия, която контролирала пътищата към Лукания, Апулия и Самний, и основал там най-голямата си колония. Последната самнитска съпротива била смазана на следващата година.",
+      "sourceQuote": "In 291 BC Rome took Venusia, commanding routes into Lucania, Apulia and Samnium, and founded there its largest colony ever.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой е главният ни античен източник за Самнитските войни?",
+      "options": [
+        "Диодор",
+        "Тукидид",
+        "Полибий",
+        "Ливий"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#first-war-outbreak",
+      "explanation": "Главният източник е римският историк Ливий, макар да е писал около три века след събитията. Съвременните историци се отнасят към части от разказа му предпазливо.",
+      "sourceQuote": "Our main guide to these wars is Livy, a Roman historian writing about three centuries later.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какъв език говорели самнитите?",
+      "options": [
+        "Латински",
+        "Гръцки",
+        "Етруски",
+        "Оскски"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#samnites-and-rome",
+      "explanation": "Самнитите говорели оскски – италийски език, общ с няколко съседни народа. Самите кампанци в равнината долу произхождали от самнитски преселници.",
+      "sourceQuote": "The Samnites spoke Oscan, an Italian language shared with several neighbours.",
+      "reviewFlags": []
+    }
+  ]
+}

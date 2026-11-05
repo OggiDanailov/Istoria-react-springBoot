@@ -1,0 +1,179 @@
+{
+  "batchName": "Early Republic: The Conflict of the Orders - Origins (509-450 BCE) - Easy Batch 3",
+  "chapterName": "Early Republic: The Conflict of the Orders - Origins (509-450 BCE)",
+  "difficulty": 1,
+  "batchOrder": 3,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "В разказа на Ливий къде се втурнал дрипавият бивш войник, за да разкаже историята си?",
+      "options": [
+        "Форумът",
+        "Сградата на Сената",
+        "Циркус Максимус",
+        "Храмът на Капитолия"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#debt-crisis",
+      "explanation": "Дрипавият войник нахлул във Форума – главния площад на Рим. Историята му бързо обиколила града.",
+      "sourceQuote": "A former soldier, ragged and dishevelled, threw himself into the Forum, Rome's main public square.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Според Законите на дванадесетте таблици кога трябвало да приключват съдебните дела?",
+      "options": [
+        "При първото гласуване",
+        "По пладне",
+        "При залез слънце",
+        "След три дни"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#twelve-tables",
+      "explanation": "Делата приключвали при залез слънце. Таблиците били списък от конкретни правила като това, а не величествен законов кодекс.",
+      "sourceQuote": "Trials ended at sunset.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как се наричало собственото събрание на плебеите, създадено със споразумението от 494 г. пр.н.е.?",
+      "options": [
+        "Колегията на понтификите",
+        "Центуриатното събрание",
+        "Плебейското събрание",
+        "Ареопагът"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#plebeian-council",
+      "explanation": "Плебейското събрание позволявало на обикновените хора да се събират в свое собствено събрание. Там те избирали трибуните си.",
+      "sourceQuote": "The settlement of 494 BC also let plebeians meet in their own assembly, the Plebeian Council.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Към какво принудила децемвирите втората сецесия през 449 г. пр.н.е.?",
+      "options": [
+        "Да опростят всички дългове",
+        "Да се оттеглят от властта",
+        "Да избягат в Етрурия",
+        "Да пренапишат законите"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#appius-claudius-and-verginia",
+      "explanation": "Втората сецесия принудила тираничните децемвири да се оттеглят. След това трибуните и правото на обжалване били възстановени.",
+      "sourceQuote": "This second secession of 449 BC forced the decemvirs to resign.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой закон от 471 г. пр.н.е. променил начина на гласуване в Плебейското събрание?",
+      "options": [
+        "Lex Canuleia",
+        "Lex Hortensia",
+        "Lex Licinia",
+        "Lex Publilia"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#plebeian-council",
+      "explanation": "Един трибун прокарал *Lex Publilia* през 471 г. пр.н.е. Историците го смятат за момента, в който плебеите станали политически независими.",
+      "sourceQuote": "In 471 BC a tribune pushed through a law, the Lex Publilia, that changed the rules.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой бил плебейският водач, организирал напускането на града през 494 г. пр.н.е.?",
+      "options": [
+        "Сициний",
+        "Цинцинат",
+        "Менений Агрипа",
+        "Апий Клавдий"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#first-secession",
+      "explanation": "Сициний посъветвал плебеите да напуснат града заедно. Според традицията скоро той бил добавен към първите народни трибуни.",
+      "sourceQuote": "Advised by Sicinius, the plebeian leader who masterminded the walkout, they left the city together and camped on the Mons Sacer, the \"Sacred Mount\", a hill about 5 km (just over three miles) away.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой тълкувал неписаното право на Рим в ранната Република?",
+      "options": [
+        "Понтификите",
+        "Весталките",
+        "Плебейските старейшини",
+        "Трибуните"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#demand-for-written-law",
+      "explanation": "Само понтификите – жреци от висшите слоеве – тълкували закона. Плебей в спор с патриций се борел по правила, които знаела само другата страна.",
+      "sourceQuote": "It was interpreted only by the pontiffs, upper-class priests.",
+      "reviewFlags": []
+    },
+    {
+      "question": "В разказа на Ливий срещу кой враг воювал войникът, когато нападатели изгорили стопанството му?",
+      "options": [
+        "Сабините",
+        "Галите",
+        "Самнитите",
+        "Етруските"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#debt-crisis",
+      "explanation": "Той бил далеч, воювайки срещу сабините – планински народ на североизток от Рим. Докато го нямало, нападатели изгорили стопанството му и откраднали имуществото му.",
+      "sourceQuote": "While he fought the Sabines, a hill people north-east of Rome, raiders had burned his farm and stolen his property.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Според традицията през коя година римляните прогонили последния си цар и основали република?",
+      "options": [
+        "451 г. пр.н.е.",
+        "494 г. пр.н.е.",
+        "753 г. пр.н.е.",
+        "509 г. пр.н.е."
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#patricians-and-plebeians",
+      "explanation": "Традицията датира прогонването на последния римски цар и основаването на Републиката в 509 г. пр.н.е. Тогава властта преминала към двама консули и Сената.",
+      "sourceQuote": "According to tradition, the Romans drove out their last king in 509 BC and founded a republic.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Приблизително колко дълго Законите на дванадесетте таблици служили за основа на римското право?",
+      "options": [
+        "Хиляда години",
+        "Около век",
+        "Два века",
+        "Петстотин години"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#twelve-tables",
+      "explanation": "Законите на дванадесетте таблици били основа на римското право в продължение на хиляда години. По-късните римляни ги почитали.",
+      "sourceQuote": "Later Romans revered the Tables, which formed the basis of Roman law for a thousand years.",
+      "reviewFlags": []
+    }
+  ]
+}

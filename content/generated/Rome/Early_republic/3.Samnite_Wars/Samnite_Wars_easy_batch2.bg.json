@@ -1,0 +1,181 @@
+{
+  "batchName": "Early Republic: The Samnite Wars (367-290 BCE) - Easy Batch 2",
+  "chapterName": "Early Republic: The Samnite Wars (367-290 BCE)",
+  "difficulty": 1,
+  "batchOrder": 2,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Когато през 343 г. пр.н.е. самнитите обкръжили армията на римски консул в планински проход, как я спасил Публий Деций Муз?",
+      "options": [
+        "Довел подкрепления от Капуа",
+        "Завзел хълм и отвлякъл вниманието на врага",
+        "Подкупил самнитския пълководец да се изтегли",
+        "Извел армията през таен тунел"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#first-war-campaigns",
+      "explanation": "Деций, тогава младши офицер, завзел хълм с малък отряд и отвлякъл врага, докато армията се измъкне. Обкръженият консул бил Авъл Корнелий Кос.",
+      "sourceQuote": "A junior officer, Publius Decius Mus, seized a hilltop with a small band and distracted the enemy while the army escaped.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво трайно римско нововъведение възникнало при обсадата на Неапол?",
+      "options": [
+        "Назначаването на извънредни диктатори",
+        "Създаването на постоянен флот",
+        "Удължаване на командването с титлата проконсул",
+        "Избирането на двама консули всяка година"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#second-war-outbreak",
+      "explanation": "Вместо да предадат властта на следващите консули, пълководците запазили командването до края на похода като проконсули. Един от тях бил Квинт Публилий Филон.",
+      "sourceQuote": "Instead of handing over to the next year's consuls, the commanders, including Quintus Publilius Philo, had their military command extended until the campaign ended, with the title of proconsul.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво направил консулът Публий Деций Муз при Сентинум през 295 г. пр.н.е., след като галските колесници разбили крилото му?",
+      "options": [
+        "Сключил примирие с галите",
+        "Предал командването на колегата си Фабий",
+        "Обрекъл се на боговете и се хвърлил към смъртта",
+        "Отстъпил зад стените на римския лагер"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#third-war-sentinum",
+      "explanation": "Деций се помолил на боговете и се врязал във врага, жертвайки живота си. Войниците му се съвзели, а Фабий обходил самнитите и спечелил битката.",
+      "sourceQuote": "Decius then devoted himself: he prayed to the gods and charged into the enemy, sacrificing his life.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво представлявали Кавдинските проходи, където през 321 г. пр.н.е. била обкръжена римска армия?",
+      "options": [
+        "Блатист брод на Лирис",
+        "Гъста гора северно от Рим",
+        "Тесен крайбрежен проход край Куми",
+        "Две гористи апенински клисури, свързани с дефиле"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#caudine-forks",
+      "explanation": "Кавдинските проходи били две тесни гористи клисури в Апенините, свързани с тясно дефиле. Самнитите затворили двата края с отсечени дървета и скали.",
+      "sourceQuote": "The two consuls took the quickest road, through the Caudine Forks, two narrow wooded gorges in the Apennines joined by a tight ravine.",
+      "reviewFlags": []
+    },
+    {
+      "question": "В какво се заклели елитните самнитски части преди битката при Аквилония през 293 г. пр.н.е.?",
+      "options": [
+        "Да не щадят пленници",
+        "Да тръгнат срещу самия Рим",
+        "Да пожертват плячката си на боговете",
+        "Никога да не бягат под страх от смърт"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#aquilonia-and-the-end",
+      "explanation": "Елитните части се заклели със свещена клетва никога да не бягат под страх от смърт. Около 40 000 самнити се събрали при Аквилония в северозападен Самний.",
+      "sourceQuote": "Elite units swore a sacred oath never to flee, on pain of death.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Коя река разделяла Лаций, родината на латините около Рим, от Кампания?",
+      "options": [
+        "Лирис",
+        "Арно",
+        "Тибър",
+        "Волтурно"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#samnites-and-rome",
+      "explanation": "В средата на IV в. пр.н.е. римската територия стигала на юг до река Лирис – границата между Лаций и Кампания. Съвременните историци предполагат, че договорът от 354 г. пр.н.е. я превърнал в разделителна линия между Рим и самнитите.",
+      "sourceQuote": "This river divided Latium, the Latin homeland around Rome, from Campania, the fertile plain running down to the Bay of Naples.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Къде Марк Валерий Корв спечелил първата римска победа в Първата самнитска война?",
+      "options": [
+        "Лаутуле",
+        "Сентинум",
+        "Планината Гаур",
+        "Суесула"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#first-war-campaigns",
+      "explanation": "Валерий победил при планината Гаур, край Куми, с отчаяна атака по здрач. Ливий приписва на Рим три победи през 343 г. пр.н.е.",
+      "sourceQuote": "Marcus Valerius Corvus won the first at Mount Gaurus, near the coastal town of Cumae, with a desperate charge as daylight faded.",
+      "reviewFlags": []
+    },
+    {
+      "question": "През коя страховита гора, непрекосявана дотогава от римлянин, Квинт Фабий Максим Рулиан превел армията си?",
+      "options": [
+        "Циминийската гора",
+        "Арсийската гора",
+        "Гората Сила",
+        "Херцинската гора"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#second-war-turning",
+      "explanation": "Фабий първо изпратил през Циминийската гора своя брат, говорещ етруски, преоблечен като овчар, а после превел армията си. Така се отворил пътят към Етрурия.",
+      "sourceQuote": "Quintus Fabius Maximus Rullianus, Rome's leading general of the era, sent his Etruscan-speaking brother, disguised as a shepherd, through the dreaded Ciminian Forest, which no Roman had ever crossed.",
+      "reviewFlags": [
+        "fact-check: The explanation claims the march 'opened the way into Etruria', which the chapter does not state."
+      ]
+    },
+    {
+      "question": "Защо повечето историци днес приемат, че Първата самнитска война наистина се е състояла?",
+      "options": [
+        "Диодор я описва подробно",
+        "Никой римлянин не би измислил толкова неудобна история",
+        "Археолозите са открили бойните ѝ полета",
+        "Гръцки надписи съдържат мирния ѝ договор"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#doubting-livy",
+      "explanation": "Неудобните подробности за войната правят малко вероятно тя да е римска измислица. Някои историци някога я отхвърляли изцяло, защото Диодор не я споменава.",
+      "sourceQuote": "Most now accept it: no Roman would invent a story so embarrassing to Rome.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой град дал повод за Втората самнитска война?",
+      "options": [
+        "Неапол",
+        "Куми",
+        "Луцерия",
+        "Капуа"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#second-war-outbreak",
+      "explanation": "Поводът дал Неапол, тогава гръцки град: Ливий пише, че старият му град Палеополис нападнал римляни, живеещи в Кампания. Самнитски войски помагали в отбраната на града срещу Рим.",
+      "sourceQuote": "The spark came from Naples, then a Greek city made up of an old town, Paleopolis, and a newer one, Neapolis.",
+      "reviewFlags": []
+    }
+  ]
+}

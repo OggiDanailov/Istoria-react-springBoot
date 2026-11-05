@@ -1,0 +1,179 @@
+{
+  "batchName": "Early Republic: The Conflict of the Orders - Origins (509-450 BCE) - Easy Batch 1",
+  "chapterName": "Early Republic: The Conflict of the Orders - Origins (509-450 BCE)",
+  "difficulty": 1,
+  "batchOrder": 1,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Как се наричали решенията, приемани от Плебейското събрание?",
+      "options": [
+        "*Senatus consulta*",
+        "Декрети",
+        "Плебисцити",
+        "Едикти"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#plebeian-council",
+      "explanation": "Събранието приемало решения, наречени плебисцити. Отначало те били задължителни само за плебеите.",
+      "sourceQuote": "Here they elected their tribunes, the officials who protected commoners, and passed resolutions called plebiscites.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво можел да извика за помощ римлянин, заплашен от магистрат?",
+      "options": [
+        "„Призовавам боговете!“",
+        "„Аз съм римски гражданин!“",
+        "„Призовавам трибуните!“",
+        "„Призовавам Сената!“"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#tribunes-of-the-plebs",
+      "explanation": "Заплашеният римлянин можел да призове трибуните, които се намесвали, за да го защитят. Трибунът трябвало да присъства лично, за да се намеси.",
+      "sourceQuote": "A Roman under threat could cry \"I call upon the tribunes!\"",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как се наричала колегията от десет мъже, назначена да запише законите на Рим?",
+      "options": [
+        "Децемвирите",
+        "Триумвирите",
+        "Ликторите",
+        "Квесторите"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#demand-for-written-law",
+      "explanation": "Децемвирите, т.е. „десетимата мъже“, получили за една година неоспорима власт, за да запишат законите. Те били назначени около 450 г. пр.н.е.",
+      "sourceQuote": "A board of ten men, the decemvirs, was given one year of unchallengeable power to write down Rome's laws.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой бил най-прочутият член на втората колегия на децемвирите?",
+      "options": [
+        "Сициний",
+        "Цинцинат",
+        "Менений Агрипа",
+        "Апий Клавдий"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#appius-claudius-and-verginia",
+      "explanation": "Апий Клавдий бил най-скандалният от децемвирите. Традицията го обвинява за посегателството над Вергиния, което предизвикало втората сецесия.",
+      "sourceQuote": "Their most notorious member was Appius Claudius.",
+      "reviewFlags": []
+    },
+    {
+      "question": "С каква съвременна тактика често сравняват римската *secessio*?",
+      "options": [
+        "Обща стачка",
+        "Военен преврат",
+        "Гладна стачка",
+        "Търговско ембарго"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#first-secession",
+      "explanation": "Сецесията била масово оттегляне, подобно на днешна обща стачка. Когато плебсът напускал града, магазините и работилниците затваряли, а търговията спирала.",
+      "sourceQuote": "This tactic became known as a secessio, or secession: a mass withdrawal, much like a modern general strike.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво било ветото – най-известното правомощие на трибуните?",
+      "options": [
+        "Правото да блокират действията на магистратите и Сената",
+        "Правото да обявяват война на враговете на Рим",
+        "Правото да назначават нови сенатори",
+        "Правото да командват армия по време на война"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#tribunes-of-the-plebs",
+      "explanation": "Ветото позволявало на трибуна да блокира действията на консулите, на другите магистрати и дори на Сената. То произтичало от неприкосновеността на трибуна.",
+      "sourceQuote": "From this grew the veto, the power to block the acts of consuls, other magistrates and even the Senate.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво означавало, че народните трибуни са „свещени и неприкосновени“?",
+      "options": [
+        "Били освободени от всякакви данъци",
+        "Всеки, който им навреди, можел да бъде убит безнаказано",
+        "Никога не можели да бъдат отстранени чрез гласуване",
+        "Били и жреци на Юпитер"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#tribunes-of-the-plebs",
+      "explanation": "Плебеите се заклели, че всеки, който посегне на трибун, може да бъде убит безнаказано. Именно тази клетва, а не войски, била източникът на властта на трибуна.",
+      "sourceQuote": "Their power rested on an oath: they were sacrosanct, meaning the plebeians swore that anyone who laid hands on one could be killed without penalty.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво станало с обичайните длъжности в Рим около 450 г. пр.н.е., когато била създадена законодателната колегия?",
+      "options": [
+        "Били отворени за плебеите",
+        "Броят им бил удвоен",
+        "Били преместени извън града",
+        "Всички били временно отменени"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#demand-for-written-law",
+      "explanation": "Всички обичайни длъжности били временно отменени, за да могат децемвирите да запишат законите. Колегията имала неоспорима власт в продължение на година.",
+      "sourceQuote": "Around 450 BC, all regular offices were suspended.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как се нарича дългата борба между патрициите и плебеите в Рим?",
+      "options": [
+        "Борбата между съсловията",
+        "Кризата на Гракхите",
+        "Съюзническата война",
+        "Робската война"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#patricians-and-plebeians",
+      "explanation": "Тази борба е известна като Борбата между съсловията. Тя избухнала по-малко от двадесет години след основаването на Републиката.",
+      "sourceQuote": "The long struggle that followed, lasting until 287 BC, is known as the Conflict of the Orders.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Колко време заемал поста си консулът – един от главните магистрати на Републиката?",
+      "options": [
+        "Шест месеца",
+        "Пет години",
+        "Една година",
+        "Цял живот"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#patricians-and-plebeians",
+      "explanation": "Двамата консули се избирали за една година. Подобно на Сената, те произхождали от патрициански родове.",
+      "sourceQuote": "Power passed to two consuls, chief magistrates elected for a single year, and to the Senate, a council of leading men.",
+      "reviewFlags": []
+    }
+  ]
+}

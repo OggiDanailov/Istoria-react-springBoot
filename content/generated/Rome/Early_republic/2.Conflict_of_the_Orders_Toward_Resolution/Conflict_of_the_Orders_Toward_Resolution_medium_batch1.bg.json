@@ -1,0 +1,191 @@
+{
+  "batchName": "Early Republic: The Conflict of the Orders - Toward Resolution (450-367 BCE) - Medium Batch 1",
+  "chapterName": "Early Republic: The Conflict of the Orders - Toward Resolution (450-367 BCE)",
+  "difficulty": 2,
+  "batchOrder": 4,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Кой бивш консул, събуден от гъските, хвърлил първия гал нападател от Капитолийския хълм?",
+      "options": [
+        "Гай Лициний",
+        "Марк Папирий",
+        "Марк Манлий",
+        "Публий Манлий Капитолин",
+        "Луций Секстий"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#sack-of-rome",
+      "explanation": "Гакащите гъски на Юнона събудили Марк Манлий, който хвърлил първия нападател по склона и спасил крепостта.",
+      "sourceQuote": "Their noise roused Marcus Manlius, a former consul, who hurled the first attacker down the slope.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Според Ливий къде живял Камил в изгнание, преди да бъде повикан обратно като диктатор срещу галите?",
+      "options": [
+        "Вейи",
+        "Клузий",
+        "Цере",
+        "Куми",
+        "Ардея"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#sack-reliability",
+      "explanation": "Ливий поставя изгнанието на Камил в Ардея, град южно от Рим. Гръцките историци Полибий и Диодор Сицилийски обаче изобщо не го споменават.",
+      "sourceQuote": "According to Livy, Camillus was in exile at Ardea, a town south of Rome, and was recalled as dictator.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Когато галите поискали да им бъдат предадени братята Фабии, какво направил Рим?",
+      "options": [
+        "Избра ги за консулски трибуни за следващата година",
+        "Съди ги за убийство",
+        "Отново ги прати да преговарят",
+        "Изпрати ги в изгнание в Ардея",
+        "Предаде ги в окови"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#battle-of-the-allia",
+      "explanation": "Вместо да предаде пратениците, нарушили неутралитета, Рим ги почете, като ги избра за консулски трибуни. Разярени, галите тръгнали срещу Рим.",
+      "sourceQuote": "Instead, the Romans elected them consular tribunes for the next year.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Защо диктаторът Публий Манлий Капитолин разгневил патрициите?",
+      "options": [
+        "Отказал да воюва с волските",
+        "Предал Сибилинските книги на плебеи",
+        "Освободил всички длъжници от затвора",
+        "Избрал плебей за свой заместник",
+        "Оттеглил се, след като заплашил с насилие"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#licinius-and-sextius",
+      "explanation": "Манлий Капитолин избрал плебей за заместник и разстроил патрициите. После Лициний и Секстий спечелили десети мандат и целият им пакет бил приет.",
+      "sourceQuote": "A second dictator, Publius Manlius Capitolinus, angered patricians by picking a plebeian deputy.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как Лициниевите закони промениха пазенето на Сибилинските книги?",
+      "options": [
+        "Книгите бяха преместени в храма на Юнона във Вейи",
+        "Жречеството беше отворено само за жени",
+        "Десет жреци замениха двама, петима от тях плебеи",
+        "Сенатът пое прекия контрол",
+        "Книгите бяха предадени на трибуните"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#licinian-laws",
+      "explanation": "Двамата жреци патриции били заменени от десет, петима от които плебеи. За пръв път монополът на патрициите върху жреческите длъжности бил нарушен.",
+      "sourceQuote": "The new law replaced them with ten priests, five of them plebeians.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Между 444 и 401 г. пр.н.е. приблизително колко от около сто консулски трибуни били плебеи?",
+      "options": [
+        "Двадесет",
+        "Нито един",
+        "Петдесет",
+        "Двама",
+        "Седемдесет"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#conflict-of-the-orders",
+      "explanation": "Макар Ливий да твърди, че длъжността била отстъпка, достъпна за плебеи, само двама от около сто души, заемали я през този период, били плебеи. Около 400 г. пр.н.е. това се променило.",
+      "sourceQuote": "Between 444 and 401 BC, only two of about a hundred consular tribunes were plebeians.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой възрастен римлянин ударил гал с жезъла си от слонова кост и така предизвикал клането в града?",
+      "options": [
+        "Марк Папирий",
+        "Марк Фурий Камил",
+        "Луций Албиний",
+        "Луций Генуций",
+        "Марк Манлий"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#sack-of-rome",
+      "explanation": "Един гал погалил дългата брада на Марк Папирий, а Папирий го ударил с жезъла си. Започнало клане, а къщите били разграбени и опожарени.",
+      "sourceQuote": "Then one Gaul stroked the long beard of Marcus Papirius, who struck him with his ivory staff.",
+      "reviewFlags": []
+    },
+    {
+      "question": "С какво възгледът на Корнел за разграбването се различава от разказа на Ливий, че Рим бил опожарен и набързо възстановен?",
+      "options": [
+        "Смята, че римляните сами опожарили града",
+        "Смята, че галите оставили повечето сгради невредими и си тръгнали, след като им платили",
+        "Смята, че галите изобщо не влезли в Рим",
+        "Смята, че градът бил възстановен по правилна мрежа от улици",
+        "Смята, че галите окупирали Рим няколко десетилетия"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#rome-after-the-sack",
+      "explanation": "Корнел смята, че галите търсели главно плячка и си тръгнали, щом им платили. Той отбелязва още, че безразборното разположение на улиците и без това било обичайно за античните градове.",
+      "sourceQuote": "In his view they left most buildings standing and went home once they were paid.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво накарало Лициний и Секстий да отстъпят най-сетне през 370 г. пр.н.е., след като години наред блокирали изборите?",
+      "options": [
+        "Бунт на рода на Фабиите",
+        "Ново нашествие на гали от север",
+        "Нападение на Велитре срещу римска територия",
+        "Смъртта на Камил",
+        "Чумна епидемия в Рим"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#licinius-and-sextius",
+      "explanation": "Те отстъпили, когато Велитре, град на волските, нападнал римска територия. Въпреки това двамата били преизбирани година след година.",
+      "sourceQuote": "They gave way only in 370 BC, when Velitrae, a town of the Volscians, a people south-east of Rome, attacked Roman territory.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кои от изброените били задачи или правомощия на новата длъжност претор? (изберете всички верни отговори)",
+      "options": [
+        "Председателстване на наказателни дела",
+        "Главен съдия на Рим",
+        "Налагане на вето в Плебейското събрание",
+        "Пазене на Сибилинските книги",
+        "Командване на армия"
+      ],
+      "correctAnswers": [
+        0,
+        1,
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#first-plebeian-consul",
+      "explanation": "Преторът бил главният съдия на Рим, председателствал наказателните дела и можел да командва армия. Отначало длъжността била запазена за патриции.",
+      "sourceQuote": "The praetor served as Rome's chief judge, presiding over criminal trials.",
+      "reviewFlags": []
+    }
+  ]
+}

@@ -1,0 +1,179 @@
+{
+  "batchName": "Early Republic: The Conflict of the Orders - Toward Resolution (450-367 BCE) - Easy Batch 1",
+  "chapterName": "Early Republic: The Conflict of the Orders - Toward Resolution (450-367 BCE)",
+  "difficulty": 1,
+  "batchOrder": 1,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Колко обществена земя можел да притежава един човек според поземления закон на Лициний и Секстий?",
+      "options": [
+        "Около 120 хектара (300 акра)",
+        "Около половин хектар (един и четвърт акра)",
+        "Около 12 хектара (30 акра)",
+        "Около 1 200 хектара (3 000 акра)"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#licinian-laws",
+      "explanation": "Законът ограничавал владенията от обществена земя до около 120 хектара (300 акра). Такива закони лесно се заобикаляли и по-късно самият Лициний бил глобен, задето нарушил собствения си лимит.",
+      "sourceQuote": "The law limited any individual to about 120 hectares (300 acres) of it.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво правомощие позволявало на народните трибуни да спират държавните дела?",
+      "options": [
+        "Ауспициите",
+        "Цензурата",
+        "Ветото",
+        "Диктатурата"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#licinius-and-sextius",
+      "explanation": "Трибуните се избирали от плебеите, за да ги защитават, и можели да блокират решения с вето. Патрициите обърнали това оръжие срещу Лициний и Секстий, като убедили други трибуни да наложат вето на законопроекта им.",
+      "sourceQuote": "Tribunes were officials elected by the plebeians to protect them, and they could block official business with a veto.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как Рим обвързал по-тясно със себе си жителите на новозавладените Вейи след превземането им?",
+      "options": [
+        "Позволил им собствени консули",
+        "Дал им гражданство без право на глас",
+        "Направил ги пълноправни граждани с право на глас",
+        "Освободил ги от всички данъци"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#rome-after-the-sack",
+      "explanation": "Жителите на Вейи получили гражданство без право на глас. Рим укрепил и съюза си с Цере.",
+      "sourceQuote": "It bound newly conquered Veii closer by giving its people citizenship without the right to vote.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Къде се били заселили сенонците – галското племе, което разбило Рим?",
+      "options": [
+        "В Сицилия, край Сиракуза",
+        "В хълмовете около днешна Флоренция",
+        "На Неаполитанския залив, край Куми",
+        "На Адриатическия бряг около днешно Римини"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#battle-of-the-allia",
+      "explanation": "Сенонците били един от няколкото келтски народа, които неотдавна навлезли в Северна Италия; те се заселили около днешно Римини.",
+      "sourceQuote": "They settled on the Adriatic coast around modern Rimini.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Според Корнел какво направили плебейските водачи, след като достигнали до най-високите длъжности?",
+      "options": [
+        "Премахнали изцяло Сената",
+        "Забранили на патрициите да стават консули",
+        "Образували нова аристокрация заедно с патрициите",
+        "Преразпределили цялата обществена земя между бедните"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#modern-verdict",
+      "explanation": "Корнел смята, че богатите плебейски водачи се присъединили към патрициите в нова аристокрация и обърнали гръб на бедните. Ливий дори нарича някои трибуни „роби на нобилитета“.",
+      "sourceQuote": "Once inside, they formed a new aristocracy with the patricians and turned their backs on the poor.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Коя нова длъжност била запазена за патрициите при компромиса за първия плебейски консул?",
+      "options": [
+        "Трибунът",
+        "Преторът",
+        "Цензорът",
+        "Диктаторът"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#first-plebeian-consul",
+      "explanation": "Знатните приели плебейски консул, а в замяна новата преторска длъжност трябвало да се заема от патриций. Преторът бил главният съдия на Рим.",
+      "sourceQuote": "In return, the plebeians agreed that a new official, the praetor, would be a patrician.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какви според историка Т. Дж. Корнел всъщност били сенонците, нападнали Рим?",
+      "options": [
+        "Поклонници, посещаващи светилище",
+        "Преселници, търсещи обработваема земя",
+        "Наемници",
+        "Бежанци, бягащи от етруските"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#sack-reliability",
+      "explanation": "Тъй като нито един разказ не споменава галски съпруги или деца, Корнел вижда в сенонците войнска дружина, вероятно наемници. Скоро след това Дионисий I от Сиракуза наел гали за война в Южна Италия.",
+      "sourceQuote": "He thinks they were mercenaries.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кои били патрициите в ранната Римска република?",
+      "options": [
+        "Малка наследствена аристокрация",
+        "Етруски заселници, живеещи в Рим",
+        "Огромното мнозинство обикновени римляни",
+        "Избрани закрилници на бедните"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#conflict-of-the-orders",
+      "explanation": "Патрициите били малка наследствена аристокрация, която притежавала големи имения, давала пари назаем и смятала управлението за свое рождено право. Плебеите съставлявали огромното мнозинство обикновени римляни.",
+      "sourceQuote": "On one side stood the patricians, a small hereditary aristocracy who owned large estates, lent money and believed that ruling was their birthright.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Пред кое събрание внесли Лициний и Секстий трите си законопроекта за реформи?",
+      "options": [
+        "Сенатът",
+        "Жреческата колегия",
+        "Плебейското събрание",
+        "Съветът на старейшините"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#licinius-and-sextius",
+      "explanation": "Те внесли законопроектите си в Плебейското събрание – събранието на плебеите. Законите засягали дълговете, земята и консулството.",
+      "sourceQuote": "The pair put three bills to the Plebeian Council, the assembly of the plebeians.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Защо достоверността на разказите за Алия и разграбването на Рим е съмнителна?",
+      "options": [
+        "Запазени са само в повредени надписи",
+        "Съставени са от победените пълководци",
+        "Писали са ги само галски автори",
+        "Написани са векове след събитията"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#sack-reliability",
+      "explanation": "Всички разкази са от векове по-късно. Най-съмнително е героичното спасение от Камил, което много съвременни историци смятат за по-късна добавка.",
+      "sourceQuote": "All accounts of the Allia and the sack of Rome were written centuries after the events, so their reliability is doubtful.",
+      "reviewFlags": []
+    }
+  ]
+}

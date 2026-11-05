@@ -1,0 +1,191 @@
+{
+  "batchName": "Early Republic: The Conflict of the Orders - Origins (509-450 BCE) - Medium Batch 1",
+  "chapterName": "Early Republic: The Conflict of the Orders - Origins (509-450 BCE)",
+  "difficulty": 2,
+  "batchOrder": 4,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Защо в разказа на Ливий разореният бивш войник взел назаем пари за първи път?",
+      "options": [
+        "За да плати данък",
+        "За да плати зестрата на дъщеря си",
+        "За да купи ново оръжие",
+        "За да купи семе за сеитба",
+        "За да плати откуп на нападатели"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#debt-crisis",
+      "explanation": "Взел назаем, за да плати данък, а смазващата лихва погълнала фермата на дядо му, а после и тази на баща му. Накрая кредиторите го хвърлили в затвора и го бичували.",
+      "sourceQuote": "Back home, he borrowed to pay a tax, and crushing interest swallowed his grandfather's farm, then his father's.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Каква била главната цена на плебеите, за да се върнат в Рим след първата сецесия?",
+      "options": [
+        "Пълен писан кодекс на римското право",
+        "Дял от земята, завладяна от сабините",
+        "Постоянни места за плебеи в Сената",
+        "Нов служител, избран от плебса, който да го закриля",
+        "Правото да избират един от двамата консули"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#menenius-agrippa",
+      "explanation": "Плебсът поискал служител, избран измежду самите плебеи, който да ги пази от консулите. Сенатът се съгласил и така се появил народният трибун.",
+      "sourceQuote": "Their price for returning was a new kind of official, chosen from among the plebs, to protect them from the power of the consuls.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кое правило от Законите на дванадесетте таблици било против плебеите?",
+      "options": [
+        "Забрана плебеите да говорят в съда",
+        "Забрана плебеите да влизат в храмовете",
+        "Забрана плебеите да служат в армията",
+        "Забрана плебеите да притежават обработваема земя",
+        "Забрана за брак между патриции и плебеи"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#twelve-tables",
+      "explanation": "Един закон забранявал браковете между патриции и плебеи. Правилата на Таблиците за дълговете също били сурови, макар поне ясни.",
+      "sourceQuote": "Not everything helped the plebs: one law banned marriage between patricians and plebeians.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Каква загадка в официалните списъци на консулите смущава историците?",
+      "options": [
+        "В тях няма никакви консули преди 400 г. пр.н.е.",
+        "В тях са посочени няколко консули, известни като гърци",
+        "В тях има плебейски родови имена през V в. пр.н.е.",
+        "В тях липсват всички години на децемвирите",
+        "В някои години са изброени трима консули вместо двама"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#how-reliable",
+      "explanation": "Мъже с плебейски родови имена се появяват като консули през V в. пр.н.е. А уж тогава тази длъжност е била затворена за плебеите.",
+      "sourceQuote": "Official lists of consuls include men with plebeian family names in the fifth century BC, when the post was supposedly closed to them.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Според Законите на дванадесетте таблици кой притежавал плодовете, паднали от дърво в земята на съседа?",
+      "options": [
+        "Римската държава",
+        "Който ги вдигне пръв",
+        "Двамата собственици по равно",
+        "Съседът",
+        "Собственикът на дървото"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#twelve-tables",
+      "explanation": "Падналите плодове продължавали да принадлежат на собственика на дървото. Такива конкретни ежедневни правила са типични за Законите на дванадесетте таблици.",
+      "sourceQuote": "Fruit falling onto a neighbour's land still belonged to the tree's owner.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво променил *Lex Publilia* от 471 г. пр.н.е.?",
+      "options": [
+        "Дълговото робство щяло да бъде премахнато",
+        "Плебеите щели да гласуват по триби, а не по курии",
+        "Всяка година единият консул трябвало да е плебей",
+        "Плебисцитите вече щели да обвързват всички римляни",
+        "Трибуните щели да станат членове на Сената"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#plebeian-council",
+      "explanation": "Плебеите вече гласували по триби – окръзи на гражданите – и така избирали трибуните. Това ги освободило от влиянието на патрицианските покровители.",
+      "sourceQuote": "Plebeians would now gather and vote by tribe, districts of citizens, rather than by curia, and tribunes would be elected this way.",
+      "reviewFlags": []
+    },
+    {
+      "question": "С кои народи воювал Рим през 494 г. пр.н.е., когато плебейските войници отказали да тръгнат на поход? (изберете всички верни)",
+      "options": [
+        "Самнитите",
+        "Еквите",
+        "Сабините",
+        "Волските",
+        "Етруските"
+      ],
+      "correctAnswers": [
+        1,
+        2,
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#first-secession",
+      "explanation": "През 494 г. пр.н.е. Рим се изправил срещу сабините, еквите и волските. Еквите и волските били планински племена на изток и югоизток.",
+      "sourceQuote": "In 494 BC Rome was at war with three neighbouring peoples: the Sabines, and the Aequi and Volsci, hill tribes to the east and south-east.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Докъде стигала закрилата на трибуна?",
+      "options": [
+        "В Рим и около 1,5 км (една миля) извън него",
+        "В цяла Италия",
+        "Само в самия Форум",
+        "Навсякъде, където походвала римската армия",
+        "До 15 км (десет мили) от града"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#tribunes-of-the-plebs",
+      "explanation": "Закрилата на трибуна важала само в Рим и около 1,5 км (една миля) извън него. Освен това той трябвало да присъства лично, за да се намеси.",
+      "sourceQuote": "A tribune had to be physically present to intervene, and his protection held only within Rome and about 1.5 km (a mile) beyond.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Защо Сенатът увеличил броя на трибуните на десет през 457 г. пр.н.е.?",
+      "options": [
+        "За да успокои кампанията за писани закони",
+        "За да заместят консулите по време на чума",
+        "За да награди плебса за победа във война",
+        "За да има по един трибун за всяка нова триба",
+        "За да посрещнат пратениците, завърнали се от Гърция"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#demand-for-written-law",
+      "explanation": "Сенатът се надявал допълнителните трибуни да уталожат натиска за писани закони. Той вече го бил отлагал пет години, като се позовавал на войни и чума.",
+      "sourceQuote": "In 457 BC the Senate tried to defuse the campaign by raising the number of tribunes to ten.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво направил вторият съвет на децемвирите, когато мандатът му изтекъл?",
+      "options": [
+        "Отказал да се оттегли и управлявал без трибуни",
+        "Помолил плебса да продължи мандата му",
+        "Обнародвал окончателните закони и се оттеглил",
+        "Избягал от Рим, за да избегне съд",
+        "Предал властта на двама новоизбрани консули"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#appius-claudius-and-verginia",
+      "explanation": "Децемвирите се вкопчили във властта, без трибуни, които да ги възпират, и без право на обжалване. Дори накарали да убият бивш трибун, който ги критикувал.",
+      "sourceQuote": "When their term ended they refused to step down, ruling with no tribunes to check them and no right of appeal.",
+      "reviewFlags": []
+    }
+  ]
+}

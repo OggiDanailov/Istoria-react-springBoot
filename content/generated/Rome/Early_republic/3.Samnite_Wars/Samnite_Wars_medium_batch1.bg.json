@@ -1,0 +1,189 @@
+{
+  "batchName": "Early Republic: The Samnite Wars (367-290 BCE) - Medium Batch 1",
+  "chapterName": "Early Republic: The Samnite Wars (367-290 BCE)",
+  "difficulty": 2,
+  "batchOrder": 3,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Кой град, смятан от Рим за ключ към Етрурия, обсадили етруските през 311 г. пр.н.е.?",
+      "options": [
+        "Калес",
+        "Фрегеле",
+        "Куми",
+        "Сутрий",
+        "Венузия"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#second-war-turning",
+      "explanation": "Етруската обсада на Сутрий отворила втори фронт за Рим по време на Голямата самнитска война. Квинт Фабий Максим Рулиан отговорил с похода си през Циминийската гора.",
+      "sourceQuote": "In 311 BC the Etruscans, the wealthy city-states north of Rome, besieged Sutrium, which Rome saw as its key to Etruria.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Според разказа за Кавдинските проходи какво посъветвал възрастният баща на Понтий, Херений?",
+      "options": [
+        "Или да пусне всички, или да избие всички, но нищо средно",
+        "Да държи армията като заложник, докато Рим отстъпи Кампания",
+        "Да вземе откуп за консулите и да избие войниците",
+        "Да продаде пленниците на гръцки търговци на роби",
+        "Да изпрати римляните у дома под ярема"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#caudine-forks",
+      "explanation": "Херений казал, че ако пуснат всички, ще спечелят приятелството на Рим, а ако избият всички, ще осакатят Рим; средният път нямало да постигне нито едното, нито другото. Въпреки това Понтий избрал средния път.",
+      "sourceQuote": "Free them all and win Rome's friendship, the old man said, or kill them all and cripple Rome for years.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Защо самнитите сметнали римската колония Фрегеле, основана през 328 г. пр.н.е., за открита агресия?",
+      "options": [
+        "Лежала на Лирис в област, която те наскоро били завзели",
+        "Била построена в самнитската столица",
+        "Била основана по време на клетвено примирие",
+        "Преграждала пътя от Капуа към Неапол",
+        "Била заселена с кампански бунтовници"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#second-war-outbreak",
+      "explanation": "Фрегеле лежала на Лирис в земи, които самнитите наскоро били завзели. Тя последвала по-ранното заселване на 2 500 колонисти в Калес.",
+      "sourceQuote": "Then in 328 BC Rome founded a colony at Fregellae, on the Liris, in an area the Samnites had recently overrun.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Защо за събитията след Аквилония историците трябва да разчитат на кратки резюмета?",
+      "options": [
+        "Полибий започва историята си едва от 225 г. пр.н.е.",
+        "Диодор отказал да пише за Рим",
+        "Самнитите унищожили римските архиви",
+        "Римските записи изгорели при галско опустошение",
+        "Запазените книги на Ливий свършват дотам"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#aquilonia-and-the-end",
+      "explanation": "Запазените книги на Ливий завършват с Аквилония, затова по-късните събития знаем от кратки резюмета. Според тях самнитски пълководец на име Гай Понтий бил пленен, показан в триумф и обезглавен.",
+      "sourceQuote": "Livy's surviving books stop here; later events come from brief summaries.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Според Ливий защо римският Сенат първоначално отхвърлил предложението на кампанците за съюз?",
+      "options": [
+        "Рим вече воювал с етруските",
+        "Консулите отказали да поведат армия на юг",
+        "Кампания била твърде далеч, за да бъде защитена",
+        "Кампанците нападнали римски колонисти",
+        "Това би нарушило договора на Рим със самнитите"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#first-war-outbreak",
+      "explanation": "Сенаторите били изкушени от кампанското богатство, но не искали да нарушат договора си със самнитите. Едва когато Кампания се предала на Рим, на карта била заложена римската чест.",
+      "sourceQuote": "The senators, Livy says, were tempted but refused, since this would betray their treaty with the Samnites.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Учени като Салмън и Форсайт смятат, че разказът за предаването на Капуа през 343 г. пр.н.е. е пренесен назад от кое по-късно събитие?",
+      "options": [
+        "Истинското предаване на Капуа през 211 г. пр.н.е., след като застанала на страната на Картаген",
+        "Катастрофата при Кавдинските проходи през 321 г. пр.н.е.",
+        "Основаването на Венузия през 291 г. пр.н.е.",
+        "Битката при Теламон през 225 г. пр.н.е.",
+        "Обсадата на Неапол през 326 г. пр.н.е."
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#doubting-livy",
+      "explanation": "Според тях по-ранното предаване е измислено по образец на 211 г. пр.н.е., когато Рим наказал Капуа, че е застанала на страната на Картаген. Такъв разказ оневинявал Рим за нарушаването на договора и прехвърлял вината върху коварните кампанци.",
+      "sourceQuote": "Scholars such as Salmon and Forsythe think it was invented, projected back from Capua's real surrender in 211 BC, when Rome punished it for siding with Carthage, the North African trading power.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как консулът Папирий успял да пресрещне двадесет елитни самнитски отряда при Аквилония през 293 г. пр.н.е.?",
+      "options": [
+        "Прекосил гора, в която не бил влизал римлянин",
+        "Предупредил го дезертьор",
+        "Преоблякъл хората си като овчари",
+        "Подкупил самнитския пълководец",
+        "Колегата му примамил самнитите в капан"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#aquilonia-and-the-end",
+      "explanation": "Дезертьор предупредил Папирий, който пресрещнал елитните отряди и превзел Аквилония. По същото време близкият Коминий се предал на колегата му Карвилий.",
+      "sourceQuote": "Tipped off by a deserter, Papirius intercepted twenty elite Samnite companies and took Aquilonia, while Cominium surrendered to Carvilius.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Къде самнитите победили Рим през 315 г. пр.н.е., по време на Голямата самнитска война?",
+      "options": [
+        "Вадимонското езеро",
+        "Аквилония",
+        "Планината Гаур",
+        "Сентинум",
+        "Лаутуле"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#second-war-turning",
+      "explanation": "Когато след примирието боевете се подновили, самнитите победили при Лаутуле през 315 г. пр.н.е. Във войната имало неуспехи и за двете страни.",
+      "sourceQuote": "When fighting resumed, the Samnites won at Lautulae in 315 BC.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво направил Рим по мира от 341 г. пр.н.е., сложил край на Първата самнитска война?",
+      "options": [
+        "Оставил сидицините на самнитите, но запазил Капуа",
+        "Отказал се от всички претенции на север от Лирис",
+        "Основал колония във Фрегеле",
+        "Получил самнитски заложници и данък",
+        "Присъединил сидицините и изоставил Капуа"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#first-war-campaigns",
+      "explanation": "Рим оставил сидицините на самнитите, но запазил съюза си с Капуа. Старият договор със самнитите бил подновен.",
+      "sourceQuote": "Rome left the Sidicini to the Samnites but kept its alliance with Capua, a far greater prize.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво според гръцкия историк Дионисий Халикарнаски наистина подтикнало Рим да защити луканците през 298 г. пр.н.е.?",
+      "options": [
+        "Желание да основе колония във Венузия",
+        "Надежда да завземе луканските сребърни мини",
+        "Състрадание към слаб съсед",
+        "Страх от силата на самнитите",
+        "Свещено задължение по фециалното право"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#third-war-sentinum",
+      "explanation": "Дионисий смятал, че Рим действал от страх от силата на самнитите, а не от състрадание. Молбата на луканците отключила Третата самнитска война.",
+      "sourceQuote": "The Greek historian Dionysius of Halicarnassus thought Rome acted from fear of Samnite power, not compassion.",
+      "reviewFlags": []
+    }
+  ]
+}

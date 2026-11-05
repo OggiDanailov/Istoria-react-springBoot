@@ -1,0 +1,191 @@
+{
+  "batchName": "Early Republic: The Samnite Wars (367-290 BCE) - Medium Batch 2",
+  "chapterName": "Early Republic: The Samnite Wars (367-290 BCE)",
+  "difficulty": 2,
+  "batchOrder": 4,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Според Ливий коя тежко извоювана римска победа през 310 г. пр.н.е. за първи път сломила етруската мощ?",
+      "options": [
+        "Сентинум",
+        "Коминий",
+        "Вадимонското езеро",
+        "Сутрий",
+        "Суесула"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#second-war-turning",
+      "explanation": "Ливий поставя победата при Вадимонското езеро през 310 г. пр.н.е. Тя последвала дръзкия поход на Фабий през Циминийската гора.",
+      "sourceQuote": "In 310 BC, Livy says, a hard-fought victory at Lake Vadimo first broke Etruscan might.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Речта, която Ливий влага в устата на кампанските пратеници, силно напомня сцена у кой по-ранен историк?",
+      "options": [
+        "Полибий",
+        "Дионисий Халикарнаски",
+        "Диодор",
+        "Тукидид",
+        "Херодот"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#doubting-livy",
+      "explanation": "Речта е по образец на сцената у Тукидид, в която пратеници от Коркира молят Атина за помощ. Това е една от причините съвременните историци да се отнасят предпазливо към разказа на Ливий.",
+      "sourceQuote": "His Campanian ambassadors give a speech closely modelled on a scene in Thucydides, the Greek historian of the Peloponnesian War, where envoys from Corcyra beg Athens for help.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой богат град, точно на север от Неапол, бил главният град на кампанците?",
+      "options": [
+        "Капуа",
+        "Куми",
+        "Суесула",
+        "Калес",
+        "Луцерия"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#samnites-and-rome",
+      "explanation": "Капуа била главният кампански град. Когато сключил мир през 341 г. пр.н.е., Рим запазил съюза си с Капуа – далеч по-ценна плячка от сидицините.",
+      "sourceQuote": "By now, though, they had their own identity and their own rich cities, chief among them Capua, just north of Naples.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой самнитски пълководец повел армия на север, за да вдигне етруските по време на Третата самнитска война?",
+      "options": [
+        "Херений Понтий",
+        "Спурий Карвилий",
+        "Луций Папирий",
+        "Гелий Егнаций",
+        "Гай Понтий"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#third-war-sentinum",
+      "explanation": "Знаейки, че сами не могат да победят, самнитите изпратили Гелий Егнаций на север да изгради коалиция. До 295 г. пр.н.е. Рим се изправил срещу четири народа едновременно.",
+      "sourceQuote": "The Samnites knew they could not win alone, so their commander Gellius Egnatius took an army north to rally the Etruscans.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Според изворите как бил прекратен бунтът на римските гарнизонни войски в Кампания през 342 г. пр.н.е.?",
+      "options": [
+        "Валерий, назначен за диктатор, ги укротил мирно",
+        "Кампанците предали бунтовниците на Рим",
+        "Консулите екзекутирали водачите",
+        "Войските били разпуснати и изпратени у дома",
+        "Сенатът им платил, за да се върнат на служба"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#first-war-campaigns",
+      "explanation": "Валерий бил назначен за диктатор – извънреден управник с широки правомощия – и прекратил бунта без кръвопролитие. Според изворите войниците били прелъстени от кампанския разкош.",
+      "sourceQuote": "Valerius, named dictator, an emergency ruler with sweeping powers, talked them down without bloodshed.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Къде Рим заселил 2 500 колонисти през 30-те години на IV в. пр.н.е., на ключови пътища към Капуа и самнитските планини?",
+      "options": [
+        "Сутрий",
+        "Калес",
+        "Бовиан",
+        "Суесула",
+        "Луцерия"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#second-war-outbreak",
+      "explanation": "Рим заселил 2 500 колонисти в Калес, като продължавал да напредва в областта. Напрежението се засилило още повече с колонията във Фрегеле през 328 г. пр.н.е.",
+      "sourceQuote": "Through the 330s Rome kept pushing into the region, settling 2,500 colonists at Cales, a town on key routes towards Capua and the Samnite mountains.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво получавали съюзниците на Рим в замяна на войниците, които давали? (изберете всички верни)",
+      "options": [
+        "Рим плащал разходите за войниците им",
+        "Римска подкрепа за управляващите им родове",
+        "Освобождаване от пращане на войници",
+        "Дял от плячката",
+        "Римска закрила"
+      ],
+      "correctAnswers": [
+        1,
+        3,
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#roman-alliance-system",
+      "explanation": "Съюзниците получавали дял от плячката, който можел да бъде значителен, ползвали се с римска закрила и можели да разчитат Рим да подкрепи управляващите им родове в трудни времена. Те обаче трябвало сами да пращат и да издържат войниците си.",
+      "sourceQuote": "In return they shared the spoils, which could be considerable, and enjoyed Roman protection.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как самнитският пълководец Гай Понтий примамил римската армия към Кавдинските проходи?",
+      "options": [
+        "Изпратил дезертьор да издаде самнитския лагер",
+        "Накарал фалшиви овчари да твърдят, че Луцерия е нападната",
+        "Подправил писмо от римския Сенат",
+        "Предложил да предаде Бовиан",
+        "Нападнал Капуа и привлякъл консулите на юг"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#caudine-forks",
+      "explanation": "Понтий изпратил войници, преоблечени като овчари, да разпространят лъжлив слух за Луцерия, римски съюзник в Апулия. Консулите поели по най-краткия път – право в капана.",
+      "sourceQuote": "The Samnite commander Gaius Pontius sent soldiers disguised as shepherds to spread a false rumour that Luceria, a Roman ally in Apulia in south-eastern Italy, was under attack.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кои били римските фециали, които поискали удовлетворение от самнитите преди войната през 343 г. пр.н.е.?",
+      "options": [
+        "Магистрати, избирани да водят армии",
+        "Жреци, отговарящи за официалните искания и обявяването на война",
+        "Сенатори, които преговаряли за мирни договори",
+        "Пратеници, избрани от съюзни градове",
+        "Офицери, командващи гарнизонни войски"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#first-war-outbreak",
+      "explanation": "Фециалите били жреци, отговарящи за официалните искания и обявяването на война. Когато самнитите отказали удовлетворение, последвала война.",
+      "sourceQuote": "Rome's fetials, priests who handled formal demands and declarations of war, sought redress, were refused, and war followed.",
+      "reviewFlags": []
+    },
+    {
+      "question": "От кого произхождали кампанците, които обработвали равнината под Апенините?",
+      "options": [
+        "Латински колонисти",
+        "Гръцки колонисти",
+        "Самнитски преселници",
+        "Галски нашественици",
+        "Етруски заселници"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#samnites-and-rome",
+      "explanation": "Кампанците произхождали от самнитски преселници, но към средата на IV в. пр.н.е. имали своя собствена идентичност. Имали и свои богати градове.",
+      "sourceQuote": "The Campanians who farmed the plain below were descended from Samnite migrants.",
+      "reviewFlags": []
+    }
+  ]
+}

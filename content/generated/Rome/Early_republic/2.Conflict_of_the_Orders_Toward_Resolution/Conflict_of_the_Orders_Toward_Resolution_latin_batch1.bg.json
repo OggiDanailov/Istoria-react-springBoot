@@ -1,0 +1,145 @@
+{
+  "batchName": "Early Republic: The Conflict of the Orders - Toward Resolution (450-367 BCE) - Latin words",
+  "chapterName": "Early Republic: The Conflict of the Orders - Toward Resolution (450-367 BCE)",
+  "difficulty": 1,
+  "batchOrder": 9,
+  "description": "Written by hand from the chapter text: the Latin words it explains",
+  "questions": [
+    {
+      "question": "Какво имал предвид Брен с „Vae victis!“?",
+      "options": [
+        "Горко на победените!",
+        "Злато за победителите!",
+        "Рим падна!",
+        "Мир с Рим!"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#sack-of-rome",
+      "explanation": "Той хвърлил меча си на везните, когато римляните се оплакали от фалшиви теглилки.",
+      "sourceQuote": "declared, “Woe to the vanquished!” (*Vae victis!*)",
+      "reviewFlags": []
+    },
+    {
+      "question": "Римляните превзели Вейи чрез cuniculus. Какво бил той?",
+      "options": [
+        "Тунел",
+        "Обсадна кула",
+        "Таран",
+        "Мост"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#siege-of-veii",
+      "explanation": "Изкопали го в меката вулканична скала под града.",
+      "sourceQuote": "They dug a tunnel (*cuniculus*) through the soft volcanic rock",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво били anseres, които събудили Марк Манлий?",
+      "options": [
+        "Свещените гъски на Юнона",
+        "Пазачите кучета",
+        "Храмовите камбани",
+        "Весталките"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#sack-of-rome",
+      "explanation": "Стражите и кучетата спели, но гъските загакали.",
+      "sourceQuote": "but the sacred geese (*anseres*) of Juno honked.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво бил ager publicus, който поземленият закон ограничавал?",
+      "options": [
+        "Обществена земя, собственост на римската държава",
+        "Обработваема земя, собственост на плебеи",
+        "Земя, посветена на боговете",
+        "Общото пасище на патрициите"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#licinian-laws",
+      "explanation": "Богатите земевладелци заграбили огромни площи от нея; законът ограничил всеки до около 120 хектара (300 акра).",
+      "sourceQuote": "The land law targeted public land (*ager publicus*) owned by the Roman state.",
+      "reviewFlags": []
+    },
+    {
+      "question": "След падането на Вейи жителите му получили civitas sine suffragio. Какво било това?",
+      "options": [
+        "Гражданство без право на глас",
+        "Освобождаване от данъци",
+        "Право да избират свои консули",
+        "Изгнание от Италия"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#rome-after-the-sack",
+      "explanation": "То обвързало новозавладения град по-тясно с Рим.",
+      "sourceQuote": "by giving its people citizenship without the right to vote (*civitas sine suffragio*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "Диктаторът Публий Манлий Капитолин избрал плебей за magister equitum. Какво било това?",
+      "options": [
+        "Негов заместник, „началник на конницата“",
+        "Негов върховен жрец",
+        "Знаменосец на войската му",
+        "Съдия по наказателни дела"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#licinius-and-sextius",
+      "explanation": "Изборът на плебей за заместник разгневил патрициите.",
+      "sourceQuote": "angered patricians by picking a plebeian deputy, a \"master of the horse\" (*magister equitum*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво бил dies Alliensis?",
+      "options": [
+        "Злокобната годишнина от битката при Алия, 18 юли",
+        "Денят, в който галите напуснали Рим",
+        "Празникът на свещените гъски",
+        "Денят, в който паднал Вейи"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#battle-of-the-allia",
+      "explanation": "Денят на поражението при Алия станал ден, в който обществените дела се прекратявали.",
+      "sourceQuote": "Its anniversary, 18 July, became an ill-omened day (*dies Alliensis*, \"the day of the Allia\").",
+      "reviewFlags": []
+    },
+    {
+      "question": "Ливий нарекъл някои по-късни трибуни mancipia nobilium. Какво имал предвид?",
+      "options": [
+        "Роби на нобилитета",
+        "Приятели на народа",
+        "Синове на патрициите",
+        "Господари на закона"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#modern-verdict",
+      "explanation": "Веднъж дошли на власт, плебейските водачи се присъединили към патрициите в нов нобилитет и забравили бедните.",
+      "sourceQuote": "and Livy called some tribunes “slaves of the nobility” (*mancipia nobilium*).",
+      "reviewFlags": []
+    }
+  ]
+}

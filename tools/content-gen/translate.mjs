@@ -132,12 +132,20 @@ async function askExtras(client, system, list) {
   const key = createHash('sha256').update(JSON.stringify({ MODEL, extras: 1, ...request })).digest('hex').slice(0, 32)
   const file = path.join(RESPONSES_DIR, `${key}.json`)
   if (fs.existsSync(file)) return JSON.parse(fs.readFileSync(file, 'utf8'))
-  const message = await client.beta.messages.stream({
+  let message
+  for (let attempt = 1; ; attempt++) {   // dropped connections are retried
+    try { message = await client.beta.messages.stream({
     model: MODEL, max_tokens: 32000, system,
     messages: [{ role: 'user', content: [{ type: 'text', text: `Translate each of these ${list.length} short texts (labels for the "Key facts" sheet and the maps of one chapter). Return exactly ${list.length} translations, in the same order. Place names and peoples on maps: their usual Bulgarian names. Keep *Latin* exactly as it is.\n\n${JSON.stringify(list, null, 1)}` }] }],
     output_config: { effort: 'low', format: { type: 'json_schema', schema: EXTRA_SCHEMA } },
     betas: ['server-side-fallback-2026-07-01'], fallbacks: 'default',
-  }).finalMessage()
+    }).finalMessage(); break }
+    catch (err) {
+      const retryable = err instanceof Anthropic.APIConnectionError || err instanceof Anthropic.APIConnectionTimeoutError || /terminated|ECONNRESET|socket|timed out/i.test(err.message + (err.cause?.code ?? ''))
+      if (!retryable || attempt === 4) throw err
+      console.log(`    connection problem (${err.message}), retrying (${attempt}/3)...`); await sleep(8000 * attempt)
+    }
+  }
   usage.input += message.usage.input_tokens; usage.output += message.usage.output_tokens
   const result = JSON.parse(message.content.find(b => b.type === 'text').text)
   fs.mkdirSync(RESPONSES_DIR, { recursive: true }); fs.writeFileSync(file, JSON.stringify(result))
@@ -170,12 +178,15 @@ if (GAMES) {
     const unique = [...new Set(list.map(([, t]) => t))]
     const system = SYSTEM(glossary).split('Style example:')[0] + `The texts are quiz questions, answer options, explanations and mini-game items of one chapter ("${c.short}"). Latin words and phrases stay Latin even when they are not in asterisks (for example "Princeps", "Res Gestae", "Pax Romana"). Keep each answer option short, like the English.\n\nGlossary (English → Bulgarian):\n` + Object.entries({ ...glossary.terms, ...glossary.names }).map(([en, bg]) => `${en} → ${bg}`).join('\n')
     const out = new Map()
-    for (let i = 0; i < unique.length; i += 220) {   // in parts, so each answer stays well within the limits
-      const part = unique.slice(i, i + 220)
+    // a part whose answer has the wrong number of texts (one dropped or merged) is split in two and asked again
+    const translatePart = async part => {
       const r = await askExtras(client, system, part)
-      if (r.texts.length !== part.length) throw new Error(`${c.id}: got ${r.texts.length} texts back for ${part.length}`)
-      part.forEach((t, j) => out.set(t, r.texts[j]))
+      if (r.texts.length === part.length) return part.forEach((t, j) => out.set(t, r.texts[j]))
+      if (part.length === 1) throw new Error(`${c.id}: no translation for "${part[0].slice(0, 60)}"`)
+      console.log(`    ${c.id}: ${r.texts.length} texts back for ${part.length}; splitting`)
+      await translatePart(part.slice(0, part.length >> 1)); await translatePart(part.slice(part.length >> 1))
     }
+    for (let i = 0; i < unique.length; i += 220) await translatePart(unique.slice(i, i + 220))   // in parts, so each answer stays well within the limits
     for (const [p, t] of list) { const [f, ...rest] = p.split('.'); put(data[f.replace(/~/g, '.')], '.' + rest.join('.'), out.get(t)) }
     for (const f of files) fs.writeFileSync(path.join(dir, f.replace(/\.json$/, '.bg.json')), JSON.stringify(data[f], null, 2) + '\n')
     console.log(`${c.id}: ${files.length} files, ${unique.length} texts, ${Math.round((Date.now() - t0) / 1000)}s   (so far ~$${cost().toFixed(2)})`)

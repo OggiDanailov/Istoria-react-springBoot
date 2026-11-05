@@ -1,0 +1,191 @@
+{
+  "batchName": "Early Republic: The Conflict of the Orders - Toward Resolution (450-367 BCE) - Medium Batch 2",
+  "chapterName": "Early Republic: The Conflict of the Orders - Toward Resolution (450-367 BCE)",
+  "difficulty": 2,
+  "batchOrder": 5,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Какво се било случило с римската обсада на Вейи, когато Камил поел командването?",
+      "options": [
+        "Вейи предложил да се предаде при условия",
+        "Римската войска вече била изоставила обсадата",
+        "Защитниците унищожили голяма част от обсадната техника",
+        "Галите пристигнали да помогнат на Вейи",
+        "Чума покосила защитниците"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#siege-of-veii",
+      "explanation": "Рим вече обсаждал Вейи, но защитниците унищожили голяма част от римската обсадна техника. Затова римляните минали под земята и изкопали тунел.",
+      "sourceQuote": "When Camillus took over, Rome was already besieging Veii, and the defenders had destroyed much of the Roman siege equipment.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Как законът за дълговете на Лициний и Секстий облекчил длъжниците?",
+      "options": [
+        "Кредиторите трябвало да чакат десет години, преди да събират",
+        "Дълговете били прехвърлени на държавната хазна",
+        "Всички дългове били опростени с указ",
+        "Платената лихва се приспадала, а остатъкът се изплащал на три годишни вноски",
+        "Длъжниците получавали обществена земя вместо плащане"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#licinian-laws",
+      "explanation": "Вече платената лихва се приспадала от дълга, а остатъкът можел да се изплати на три равни годишни вноски. Дълговете тежали най-много на дребните селяни.",
+      "sourceQuote": "Under the new debt law, interest already paid was subtracted from the sum owed.",
+      "reviewFlags": []
+    },
+    {
+      "question": "След кой закон започнало редовното поделяне на консулата между патриции и плебеи?",
+      "options": [
+        "Законът на Камил от 368 г. пр.н.е.",
+        "Законът на Марк Манлий от 376 г. пр.н.е.",
+        "Законът на Лициний и Секстий от 367 г. пр.н.е.",
+        "Законът на Луций Генуций от 342 г. пр.н.е.",
+        "Законът на Публий Манлий от 337 г. пр.н.е."
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#modern-verdict",
+      "explanation": "Редовното поделяне започнало едва след закона на народния трибун Луций Генуций от 342 г. пр.н.е., който явно изисквал единият консул да бъде плебей.",
+      "sourceQuote": "Regular sharing began only after the law of Lucius Genucius, a tribune, in 342 BC.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кога за пръв път двама плебеи заемали заедно консулската длъжност?",
+      "options": [
+        "366 г. пр.н.е.",
+        "295 г. пр.н.е.",
+        "216 г. пр.н.е.",
+        "173 г. пр.н.е.",
+        "342 г. пр.н.е."
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#modern-verdict",
+      "explanation": "Едва през 173 г. пр.н.е. двама плебеи си поделили консулата. Това дълго забавяне е една от причините Корнел да нарича закона от 367 г. пр.н.е. загадъчен.",
+      "sourceQuote": "Two plebeians did not hold the consulship together until 173 BC.",
+      "reviewFlags": [
+        "fact-check: The explanation claims the delay until 173 BC is a reason Cornell finds the law puzzling, but the chapter links his puzzlement to plebeians having already served as consular tribunes and to the 355–343 BC patrician pairs, not to 173 BC."
+      ]
+    },
+    {
+      "question": "През коя година Рим разгромил сенонците, макар страхът от галите да не изчезнал?",
+      "options": [
+        "350 г. пр.н.е.",
+        "228 г. пр.н.е.",
+        "114 г. пр.н.е.",
+        "387 г. пр.н.е.",
+        "295 г. пр.н.е."
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#rome-after-the-sack",
+      "explanation": "Рим разгромил сенонците през 295 г. пр.н.е., но споменът за галите хвърлял дълга сянка. Галски нападатели връхлитали областта през 350 и 349 г. пр.н.е.",
+      "sourceQuote": "Even after Rome crushed the Senones in 295 BC, fear persisted.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой владетел наел гали за война в Южна Италия няколко месеца след разграбването на Рим?",
+      "options": [
+        "Дионисий I от Сиракуза",
+        "Арунс от Клузий",
+        "Пир Епирски",
+        "Тарквиний Горди от Рим",
+        "Брен, водачът на сенонците"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#sack-reliability",
+      "explanation": "Дионисий I от Сиракуза наел гали малко след това, което подкрепя мнението на Корнел, че сенонците били наемници.",
+      "sourceQuote": "A few months later, Dionysius I, the ruler of Syracuse in Sicily, hired Gauls for a war in southern Italy.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Колко консулски трибуни управлявали Рим в годините, когато заменяли консулите?",
+      "options": [
+        "Само един",
+        "Между трима и шестима",
+        "Точно двама",
+        "Точно десет",
+        "Между осем и дванадесет"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#conflict-of-the-orders",
+      "explanation": "През тези години Рим се управлявал от трима до шестима „военни трибуни с консулска власт“. Консулски трибуни управлявали в много години до 376 г. пр.н.е.",
+      "sourceQuote": "In those years it was run by between three and six “military tribunes with consular power”, usually called consular tribunes.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Според географа Страбон кой победил галите и си върнал златото от откупа?",
+      "options": [
+        "Камил, повикан от изгнание",
+        "Град Клузий",
+        "Тиранинът на Сиракуза",
+        "Гарнизонът на Марк Манлий",
+        "Цере, етруският съюзник на Рим"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#sack-reliability",
+      "explanation": "Страбон приписва на Цере победата над галите и връщането на златото. Диодор пък твърди, че етруска войска ги разбила на връщане от Южна Италия.",
+      "sourceQuote": "The geographer Strabo claims that Caere, Rome's Etruscan ally, beat them and recovered the ransom gold.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какъв откуп гладът и болестите принудили римляните да се съгласят да платят на галите?",
+      "options": [
+        "Сто таланта сребро",
+        "Храмовите съкровища на Юнона",
+        "Десет хиляди глави добитък",
+        "Половината от цялата обществена земя",
+        "Около 330 кг (хиляда фунта) злато"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#sack-of-rome",
+      "explanation": "Гладът и болестите довели до споразумение за около 330 кг (хиляда фунта) злато. Римляните се оплаквали, че галите използват фалшиви теглилки.",
+      "sourceQuote": "Famine and disease finally forced a deal: a ransom of about 330 kg (a thousand pounds) of gold.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Според Ливий защо човек на име Арунс довел сенонците в Клузий?",
+      "options": [
+        "За да си върне земя, отнета от семейството му",
+        "За да отмъсти на благородник, чийто син прелъстил жена му",
+        "За да продава вино на галите",
+        "За да свали римските консули",
+        "За да отмъсти за убийството на баща си от римляни"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 2,
+      "textReference": "#battle-of-the-allia",
+      "explanation": "Ливий разказва, че Арунс търсел отмъщение срещу местен благородник, чийто син прелъстил жена му. Историкът Т. Дж. Корнел се съмнява в тази романтична история.",
+      "sourceQuote": "He wanted revenge on a local nobleman whose son had seduced his wife.",
+      "reviewFlags": []
+    }
+  ]
+}

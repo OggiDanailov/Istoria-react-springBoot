@@ -21,7 +21,8 @@
 .card .cost .wheat { width: 9px; height: 9px; }
 .tray.many .card .cost { font-size: 10.5px; letter-spacing: -.02em; }   /* eight or nine units: tighter prices */
 .tray.many .card canvas { width: 34px; height: 34px; }
-.tray.named .card .name { display: block; font-size: 7.6px; letter-spacing: -.03em; text-overflow: clip; }   /* the gods' contest: the names matter */
+.tray.named .card .name { display: block; font-size: 7.6px; letter-spacing: -.03em; text-overflow: clip; }
+.tray.named.bg .card .name { font-size: 6.6px; letter-spacing: -.05em; }   /* Cyrillic letters are wider */   /* the gods' contest: the names matter */
 .card .cool { position: absolute; left: 0; right: 0; top: 0; background: rgba(27, 23, 21, .55); pointer-events: none; }
 .card.poor { filter: grayscale(.7) brightness(.8); }
 .card.poor .cost { color: var(--rome); }

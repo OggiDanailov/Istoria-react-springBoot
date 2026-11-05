@@ -1,0 +1,179 @@
+{
+  "batchName": "Early Republic: Final Conquest of Italy (290-264 BCE) - Easy Batch 2",
+  "chapterName": "Early Republic: Final Conquest of Italy (290-264 BCE)",
+  "difficulty": 1,
+  "batchOrder": 2,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Как Рим контролираше повечето гръцки градове на Magna Graecia след заминаването на Пир?",
+      "options": [
+        "Като ги разрушаваше и презаселваше",
+        "Като ги предаде на Картаген",
+        "Като ги обвърза с договори",
+        "Като изпрати римски управители"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#how-rome-ruled-italy",
+      "explanation": "Вместо да ги управлява пряко, Рим обвърза повечето гръцки градове с договори и така ги контролираше косвено. Освен гарнизоните, хватката му остана хлабава десетилетия наред.",
+      "sourceQuote": "Instead of ruling the Greek cities of Magna Graecia directly, it bound most of them through treaties.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Докъде бяха пораснали амбициите на Пир, когато отиде в Сицилия?",
+      "options": [
+        "Да завладее Египет и източните царства",
+        "Да си върне изгубените земи в Гърция",
+        "Да господства и над Южна Италия, и над Сицилия",
+        "Да превземе Рим и да управлява цял Лаций"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#pyrrhus-in-sicily",
+      "explanation": "Целите му вече далеч надхвърляха спасяването на Тарент. В крайна сметка обаче сицилийското му приключение не му донесе нищо трайно.",
+      "sourceQuote": "He aimed to dominate both southern Italy and Sicily.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Апиевият път, великият римски път, водеше на юг от Рим към кой град?",
+      "options": [
+        "Генуа",
+        "Аримин",
+        "Капуа",
+        "Арециум"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#rome-after-the-samnite-wars",
+      "explanation": "Апиевият път водеше на юг към Капуа и пренасяше римските армии и римското влияние дълбоко в Юга. Рим основаваше и колонии от верни граждани в завладените земи.",
+      "sourceQuote": "It also built the Appian Way, a great road running south from Rome toward Capua, which carried armies and influence deep into the south.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Според римското предание, запазено от Ливий, какво предизвика последната плебейска сецесия?",
+      "options": [
+        "Тираничен консул",
+        "Дълговете",
+        "Глад",
+        "Чума"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#why-the-plebs-seceded",
+      "explanation": "Традиционният разказ обвинява дълговете: разгневени тълпи се разбунтували, когато ги свикали да воюват срещу луканците. Днешните историци се съмняват в тази версия.",
+      "sourceQuote": "The Roman tradition, preserved in yearly chronicles and by the historian Livy, blamed debt.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Къде загина Пир през 272 г. пр.н.е.?",
+      "options": [
+        "Тарент",
+        "Аргос",
+        "Сиракуза",
+        "Пела"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#beneventum-and-withdrawal",
+      "explanation": "Пир загина в друга война – при Аргос в Южна Гърция. Същата година Тарент падна в ръцете на Рим.",
+      "sourceQuote": "That same year Pyrrhus himself was killed while fighting a different war at Argos, a city in southern Greece.",
+      "reviewFlags": []
+    },
+    {
+      "question": "В какво превърна Италия римската система от колонии, гражданство и съюзи?",
+      "options": [
+        "В доставчик на зърно за гръцкия свят",
+        "В една провинция с един управител",
+        "В огромен резерв от бойци",
+        "В хлабав съюз от свободни царства"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#how-rome-ruled-italy",
+      "explanation": "Римската система създаде резерв от войници, по-голям от този на всяка друга държава по онова време. Съюзниците оставаха независими на име, но трябваше да дават войски.",
+      "sourceQuote": "This system turned Italy into a vast reservoir of fighting men, larger than that of any other state of the time.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Откъде идваха самнитите, най-упоритите съперници на Рим в Централна Италия?",
+      "options": [
+        "От остров Сицилия",
+        "От Апенините",
+        "От крайбрежните равнини на Етрурия",
+        "От долината на По на север"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#rome-after-the-samnite-wars",
+      "explanation": "Самнитите бяха войнствен съюз от племена от Апенините. Рим води срещу тях три Самнитски войни между 343 и 290 г. пр.н.е.",
+      "sourceQuote": "Its toughest rivals had been the Samnites, a warlike coalition of tribes from the Apennine mountains.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво означава изразът „Пирова победа“?",
+      "options": [
+        "Победа, спечелена с изненадваща атака",
+        "Победа, толкова скъпа, че е почти поражение",
+        "Победа, спечелена с наемни чужди войски",
+        "Победа без никакви загуби"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#heraclea-and-asculum",
+      "explanation": "Изразът идва от Пир, чиито победи над Рим струваха ужасно скъпо на армията му. Казват, че той възкликнал: „Още една такава победа и сме загубени!“",
+      "sourceQuote": "A \"Pyrrhic victory\" is a win that costs the victor so much that it is almost a defeat.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой беше следващият враг, който сериозно оспори властта на Рим над Апенинския полуостров след Пир?",
+      "options": [
+        "Спартак",
+        "Ханибал",
+        "Филип Македонски",
+        "Митридат"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#beneventum-and-withdrawal",
+      "explanation": "Властта на Рим над Италия не беше сериозно застрашена отново, докато Ханибал не нахлу в края на века. Победата над Пир силно издигна авторитета му.",
+      "sourceQuote": "Its control of the Italian peninsula would not be seriously challenged again until Hannibal invaded at the end of the century.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Борбата между съсловията беше дълга борба между кои две групи в римското общество?",
+      "options": [
+        "Патриции и плебеи",
+        "Римляни и самнити",
+        "Сенатът и консулите",
+        "Латини и етруски"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#lex-hortensia",
+      "explanation": "Два века наследственият патрициански елит и масата обикновени граждани плебеи се бориха за политически права. Законът на Хортензий от 287 г. пр.н.е. сложи край на този конфликт.",
+      "sourceQuote": "For two centuries, Roman society had been split between the patricians, a small hereditary elite, and the plebeians, the mass of ordinary citizens.",
+      "reviewFlags": []
+    }
+  ]
+}

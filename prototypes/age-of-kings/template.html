@@ -1826,7 +1826,7 @@ function renderBattle() {
   window.scrollTo(0, 0)
   app.innerHTML = '<div class="battle-host" id="battle-host"></div>'
   HoldTheLine.mount(app.querySelector('#battle-host'), {
-    mode: 'chapter', level: HoldTheLine.LEVELS.indexOf(levelOf(i)), score,
+    mode: 'chapter', level: HoldTheLine.LEVELS.indexOf(levelOf(i)), score, lang: LANG,
     onExit: r => {
       if (!r.left && !review) {
         t.battles.push({ won: !!r.won, score, attempt: t.attempt, at: new Date().toISOString() })

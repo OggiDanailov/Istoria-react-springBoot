@@ -1,0 +1,179 @@
+{
+  "batchName": "Early Republic: Final Conquest of Italy (290-264 BCE) - Easy Batch 1",
+  "chapterName": "Early Republic: Final Conquest of Italy (290-264 BCE)",
+  "difficulty": 1,
+  "batchOrder": 1,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Какво ново донесе Първата пуническа война за римските армии?",
+      "options": [
+        "Това беше първата им война срещу гръцки цар",
+        "Това беше първата война, водена от плебеи",
+        "За първи път ги изведе извън Италия",
+        "Това беше първата им битка срещу галите"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#italy-united-264-bc",
+      "explanation": "Първата пуническа война за първи път изведе римските армии извън Апенинския полуостров. Тя започна с борбата за Сицилия.",
+      "sourceQuote": "It took Roman armies outside the Italian peninsula for the first time, beginning with the fight for Sicily.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой чужд цар Тарент повика за свой защитник срещу Рим?",
+      "options": [
+        "Пир Епирски",
+        "Филип Македонски",
+        "Ханибал от Картаген",
+        "Агатокъл Сиракузки"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#tarentum-calls-for-help",
+      "explanation": "Тарент знаеше, че армията му не може да се мери с римската, и се обърна към Пир, цар на Епир в Северозападна Гърция и Албания. Той стъпи в Тарент през зимата на 281/280 г. пр.н.е.",
+      "sourceQuote": "So it looked abroad for a champion and found one in Pyrrhus, king of Epirus, a Greek kingdom in what is now north-western Greece and Albania.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой беше назначен за диктатор, за да сложи край на кризата при последната плебейска сецесия?",
+      "options": [
+        "Маний Курий",
+        "Апий Клавдий",
+        "Квинт Хортензий",
+        "Публий Деций Муз"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#lex-hortensia",
+      "explanation": "За диктатор – временна извънредна длъжност в Рим – беше назначен Квинт Хортензий. Самият той беше плебей.",
+      "sourceQuote": "To end the crisis, Rome appointed Quintus Hortensius as dictator.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Пир премина в Сицилия, за да помогне на Сиракуза в борбата ѝ срещу коя сила?",
+      "options": [
+        "Египет",
+        "Картаген",
+        "Македония",
+        "Рим"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#pyrrhus-in-sicily",
+      "explanation": "Сиракуза, водещият гръцки град в Сицилия, воюваше с Картаген, който владееше голяма част от Западна Сицилия. Картаген беше богат търговски град в Северна Африка.",
+      "sourceQuote": "He came to help Syracuse, the leading Greek city on the island, in its struggle against Carthage.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Коя битка от 295 г. пр.н.е. беше повратна точка, показала, че никой не може да попречи на Рим да господства над Италия?",
+      "options": [
+        "Аускулум",
+        "Сентинум",
+        "Беневент",
+        "Хераклея"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#rome-after-the-samnite-wars",
+      "explanation": "При Сентинум в Умбрия Рим разби обединената армия на самнити, гали, етруски и умбри. След това римското господство над Италия изглеждаше неудържимо.",
+      "sourceQuote": "The turning point came in 295 BC at Sentinum, a town in Umbria in north-central Italy.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Срещу коя сила Рим започна война през 264 г. пр.н.е.?",
+      "options": [
+        "Епир",
+        "Македония",
+        "Картаген",
+        "Сиракуза"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 1,
+      "textReference": "#italy-united-264-bc",
+      "explanation": "През 264 г. пр.н.е. Рим започна война с Картаген – това беше началото на Първата пуническа война. Някога Картаген е бил съюзник на Рим.",
+      "sourceQuote": "In 264 BC, the same year, Rome went to war with Carthage, the North African trading power that had once been its ally.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво означава името Magna Graecia, дадено на гръцките градове в Южна Италия?",
+      "options": [
+        "Западна Гърция",
+        "Велика Гърция",
+        "Нова Гърция",
+        "Велика Италия"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#tarentum-calls-for-help",
+      "explanation": "Magna Graecia означава „Велика Гърция“ – верига от богати гръцки градове, основани от колонисти векове по-рано. Най-могъщият от тях беше Тарент.",
+      "sourceQuote": "Southern Italy was home to Magna Graecia, or Great Greece, a string of rich Greek cities founded by colonists centuries earlier.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво постигна lex Hortensia от 287 г. пр.н.е.?",
+      "options": [
+        "Опрости всички дългове на плебеите",
+        "Премахна завинаги длъжността диктатор",
+        "Даде римско гражданство на всички италийски съюзници",
+        "Направи решенията на Плебейското събрание задължителни за всички"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#lex-hortensia",
+      "explanation": "Законът направи всяко решение на Плебейското събрание задължително за всички граждани, включително за патрициите. На теория патриции и плебеи вече имаха равни политически права.",
+      "sourceQuote": "His law, the lex Hortensia, made every decision of the Plebeian Council binding on all citizens, patricians included.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Къде Пир победи римляните за първи път през 280 г. пр.н.е.?",
+      "options": [
+        "Аускулум",
+        "Сентинум",
+        "Беневент",
+        "Хераклея"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#heraclea-and-asculum",
+      "explanation": "Пир разби римляните при Хераклея в Лукания през 280 г. пр.н.е. След това някои от съюзниците на Рим веднага минаха на негова страна.",
+      "sourceQuote": "In 280 BC he defeated the Romans at Heraclea in Lucania, a region of southern Italy.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Къде отплава Пир през зимата на 275/274 г. пр.н.е., след като реши, че войната в Италия не може да бъде спечелена?",
+      "options": [
+        "Обратно в Сицилия",
+        "В Картаген",
+        "В Македония",
+        "У дома в Епир"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#beneventum-and-withdrawal",
+      "explanation": "Пир отплава у дома в Епир. В Тарент той остави само малък гарнизон от свои войници.",
+      "sourceQuote": "In the winter of 275/274 BC he sailed home to Epirus, leaving only a small garrison of his soldiers in Tarentum.",
+      "reviewFlags": []
+    }
+  ]
+}

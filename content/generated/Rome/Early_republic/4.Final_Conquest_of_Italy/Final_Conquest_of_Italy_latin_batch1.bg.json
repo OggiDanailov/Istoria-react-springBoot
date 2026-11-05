@@ -1,0 +1,145 @@
+{
+  "batchName": "Early Republic: Final Conquest of Italy (290-264 BCE) - Latin words",
+  "chapterName": "Early Republic: Final Conquest of Italy (290-264 BCE)",
+  "difficulty": 1,
+  "batchOrder": 9,
+  "description": "Written by hand from the chapter text: the Latin words it explains",
+  "questions": [
+    {
+      "question": "Какво беше Via Appia?",
+      "options": [
+        "Апиевият път, път на юг от Рим",
+        "Стена около Рим",
+        "Акведукт",
+        "Морски път до Сицилия"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#rome-after-the-samnite-wars",
+      "explanation": "Той пренасяше римските армии и римското влияние дълбоко в Юга, към Капуа.",
+      "sourceQuote": "It also built the Appian Way (*Via Appia*), a great road running south",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво означава Magna Graecia?",
+      "options": [
+        "Велика Гърция",
+        "Гръцко море",
+        "Стара Гърция",
+        "Гръцки съюз"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#tarentum-calls-for-help",
+      "explanation": "Така наричали богатите гръцки градове в Южна Италия, като Тарент.",
+      "sourceQuote": "Southern Italy was home to *Magna Graecia*, or Great Greece,",
+      "reviewFlags": []
+    },
+    {
+      "question": "Защо войните с Картаген се наричат „пунически“?",
+      "options": [
+        "От Punici – римското име за картагенците",
+        "От река Пуник в Африка",
+        "От картагенски цар на име Пуник",
+        "От латинската дума за „морска война“"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#italy-united-264-bc",
+      "explanation": "Картагенците били от финикийски произход и римляните ги наричали Punici.",
+      "sourceQuote": "\"Punic\" comes from *Punici*, the Romans' name for the Carthaginians",
+      "reviewFlags": []
+    },
+    {
+      "question": "Законът на Хортензий забраняваше гласуването в nundinae. Какво са били те?",
+      "options": [
+        "Пазарни дни",
+        "Свещени дни на Юпитер",
+        "Дните на преброяването",
+        "Дни на траур"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#why-the-plebs-seceded",
+      "explanation": "Забраната за гласуване в пазарни дни затрудняваше селските стопани, които идваха в града да търгуват.",
+      "sourceQuote": "it banned votes on market days (*nundinae*),",
+      "reviewFlags": []
+    },
+    {
+      "question": "Пир остави praesidium в Тарент. Какво беше това?",
+      "options": [
+        "Малък гарнизон от негови войници",
+        "Управител",
+        "Договор с Рим",
+        "Флот от кораби"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#beneventum-and-withdrawal",
+      "explanation": "Когато Тарент падна през 272 г. пр.н.е., на гарнизона беше позволено да се прибере у дома с мир.",
+      "sourceQuote": "leaving only a small garrison (*praesidium*) of his soldiers in Tarentum.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво бяха римските socii?",
+      "options": [
+        "Съюзни на Рим държави, длъжни да дават войници",
+        "Римски колонии на юг",
+        "Гръцките градове, управлявани пряко от Рим",
+        "Враговете на Рим в Сицилия"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#how-rome-ruled-italy",
+      "explanation": "Те оставаха независими на име, но изпращаха войски за войните на Рим.",
+      "sourceQuote": "its allies (*socii*), that stayed independent in name",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво постигна lex Hortensia от 287 г. пр.н.е.?",
+      "options": [
+        "Направи всяко решение на Плебейското събрание задължително за всички граждани",
+        "Даде на плебеите собствен консул",
+        "Отмени всички дългове",
+        "Основа нови колонии"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#lex-hortensia",
+      "explanation": "Той премахна нуждата Сенатът да одобрява решенията на плебеите и сложи край на Борбата между съсловията.",
+      "sourceQuote": "made every decision (*plebiscitum*) of the Plebeian Council (*concilium plebis*) binding on all citizens",
+      "reviewFlags": []
+    },
+    {
+      "question": "Някои общности получили *civitas sine suffragio*. Какво било това?",
+      "options": [
+        "Гражданство без право на глас",
+        "Пълно римско гражданство",
+        "Освобождаване от военна служба",
+        "Правото да основават колонии"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#how-rome-ruled-italy",
+      "explanation": "Това бил един от начините, по които Рим приобщавал покорените народи.",
+      "sourceQuote": "a partial version without the right to vote (*civitas sine suffragio*).",
+      "reviewFlags": []
+    }
+  ]
+}

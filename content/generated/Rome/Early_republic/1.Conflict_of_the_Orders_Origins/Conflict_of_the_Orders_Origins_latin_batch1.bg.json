@@ -1,0 +1,145 @@
+{
+  "batchName": "Early Republic: The Conflict of the Orders - Origins (509-450 BCE) - Latin words",
+  "chapterName": "Early Republic: The Conflict of the Orders - Origins (509-450 BCE)",
+  "difficulty": 1,
+  "batchOrder": 9,
+  "description": "Written by hand from the chapter text: the Latin words it explains",
+  "questions": [
+    {
+      "question": "Какво означава латинската дума veto?",
+      "options": [
+        "Забранявам",
+        "Съгласен съм",
+        "Обжалвам",
+        "Заповядвам"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#tribunes-of-the-plebs",
+      "explanation": "Трибун, който кажел veto, блокирал действие на магистрат или дори на Сената.",
+      "sourceQuote": "From this grew the veto (Latin for \"I forbid\")",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво е било secessio plebis?",
+      "options": [
+        "Масово напускане на Рим от плебса",
+        "Заседание на Сената",
+        "Нов писан закон",
+        "Данък за армията"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#first-secession",
+      "explanation": "Плебсът напускал града заедно, като при обща стачка, докато исканията му не бъдат изпълнени.",
+      "sourceQuote": "This tactic became known as a *secessio* (in full *secessio plebis*, \"the withdrawal of the plebs\")",
+      "reviewFlags": []
+    },
+    {
+      "question": "Плебеите пълнели редиците на exercitus. Какво е било това?",
+      "options": [
+        "Армията",
+        "Сенатът",
+        "Плебейското събрание",
+        "Жречеството"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#patricians-and-plebeians",
+      "explanation": "Плебейските войници били по-голямата част от армията – затова отказът им да се бият имал такава сила.",
+      "sourceQuote": "filled the ranks of the army (*exercitus*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво е било nexum?",
+      "options": [
+        "Дългово робство",
+        "Плебейско събрание",
+        "Брак между патриций и плебейка",
+        "Клетва на трибун"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#patricians-and-plebeians",
+      "explanation": "Длъжник, който не можел да плати, можел да бъде поробен: римляните наричали това nexum.",
+      "sourceQuote": "a form of debt bondage the Romans called *nexum*.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Плебисцитите носят името си от латинското plebiscita. Какво е означавало то?",
+      "options": [
+        "Решения на плебса",
+        "Гласувания на Сената",
+        "Закони на царете",
+        "Права на войниците"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#plebeian-council",
+      "explanation": "Плебисцитите били решенията на Плебейското събрание; в началото те обвързвали само плебеите.",
+      "sourceQuote": "and passed resolutions called plebiscites (*plebiscita*, \"decisions of the plebs\").",
+      "reviewFlags": []
+    },
+    {
+      "question": "Вторият съвет на децемвирите управлявал без provocatio. Какво е било това?",
+      "options": [
+        "Правото на обжалване",
+        "Правото на брак",
+        "Правото на глас по триби",
+        "Правото на собственост върху земя"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#appius-claudius-and-verginia",
+      "explanation": "Без правото на обжалване гражданите нямали защита срещу децемвирите.",
+      "sourceQuote": "ruling with no tribunes to check them and no right of appeal (*provocatio*).",
+      "reviewFlags": []
+    },
+    {
+      "question": "Римляните наричали дълга aes alienum. Какво означава това буквално?",
+      "options": [
+        "Чужд бронз",
+        "Тежко бреме",
+        "Веригата на заемодателя",
+        "Взето назаем зърно"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#debt-crisis",
+      "explanation": "Бронзът бил ранните пари на Рим, така че дългът буквално бил бронз, който принадлежи на някой друг.",
+      "sourceQuote": "debt (*aes alienum*, literally \"someone else's bronze\")",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво е било patria potestas в Законите на дванадесетте таблици?",
+      "options": [
+        "Властта на бащата над сина",
+        "Властта на консулите",
+        "Правото на патриция върху земя",
+        "Закрилата на трибуните"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 3,
+      "textReference": "#twelve-tables",
+      "explanation": "Таблиците я ограничавали: баща, продал сина си три пъти, губел властта си над него.",
+      "sourceQuote": "lost his power over him, the *patria potestas* (\"power of the father\").",
+      "reviewFlags": []
+    }
+  ]
+}

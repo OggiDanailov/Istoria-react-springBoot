@@ -1,0 +1,193 @@
+{
+  "batchName": "Early Republic: Final Conquest of Italy (290-264 BCE) - Medium Batch 1",
+  "chapterName": "Early Republic: Final Conquest of Italy (290-264 BCE)",
+  "difficulty": 2,
+  "batchOrder": 3,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Кои най-вероятно са стояли зад добре обмисления Закон на Хортензий?",
+      "options": [
+        "Патрицианските сенатори",
+        "Латинските съюзници",
+        "Народните трибуни",
+        "Двамата консули",
+        "Понтификите"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#why-the-plebs-seceded",
+      "explanation": "Учените смятат, че такъв грижливо изграден закон е имал нужда от организатори – най-вероятно народните трибуни. Суровите мерки на консулите също говорят за истински размирици в града.",
+      "sourceQuote": "Such a well-crafted law probably also needed organisers, most likely the plebeian tribunes.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кои народи воюваха срещу Рим в съюза, разбит при Сентинум през 295 г. пр.н.е.? (изберете всички верни)",
+      "options": [
+        "Гали",
+        "Картагенци",
+        "Самнити",
+        "Македонци",
+        "Етруски"
+      ],
+      "correctAnswers": [
+        0,
+        2,
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#rome-after-the-samnite-wars",
+      "explanation": "При Сентинум Рим разби пъстър съюз от самнити, гали, етруски и умбри. Галите били келтски воини от север.",
+      "sourceQuote": "There the Romans faced a mixed alliance of Samnites, Gauls, Etruscans and Umbrians.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво се случи с Тарент през 272 г. пр.н.е., около две години след като Пир отплава към дома?",
+      "options": [
+        "Стана столица на Пир",
+        "Влезе в нов самнитски съюз",
+        "Беше сринат, а жителите му – поробени",
+        "Падна в ръцете на Рим",
+        "Беше превзет от Картаген"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#beneventum-and-withdrawal",
+      "explanation": "Тарент падна в ръцете на Рим през 272 г. пр.н.е. Оставеният там епирски гарнизон получи право да се прибере у дома с мир.",
+      "sourceQuote": "In 272 BC, about two years after Pyrrhus left, Tarentum fell to Rome.",
+      "reviewFlags": []
+    },
+    {
+      "question": "С какви средства Рим приобщаваше покорените народи в Италия? (изберете всички верни)",
+      "options": [
+        "Съюзи със задължение за войници",
+        "Гръцки царе за управители",
+        "Колонии върху отнета земя",
+        "Гражданство без право на глас",
+        "Тежък годишен данък в зърно"
+      ],
+      "correctAnswers": [
+        0,
+        2,
+        3
+      ],
+      "difficulty": 2,
+      "textReference": "#how-rome-ruled-italy",
+      "explanation": "Рим отнемаше земя за колонии, даваше пълно или частично гражданство и сключваше военни съюзи с формално независими държави. Така той разполагаше с ненадминат запас от войници.",
+      "sourceQuote": "It also made military alliances with states that stayed independent in name but had to supply soldiers.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Помощта на Рим за кой гръцки град, нападнат от съюз начело със самнитите, разтревожи Тарент?",
+      "options": [
+        "Турии",
+        "Регий",
+        "Сиракуза",
+        "Неапол",
+        "Локри"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#tarentum-calls-for-help",
+      "explanation": "Рим се намеси, за да защити Турии на Тарентския залив. Тарент не искаше римляните да се месят в неговия заден двор.",
+      "sourceQuote": "When Thurii came under attack from a Samnite-led alliance, Rome stepped in to help.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Коя картагенска крепост на западния край на Сицилия Пир не успя да превземе?",
+      "options": [
+        "Лилибей",
+        "Агригент",
+        "Дрепана",
+        "Месана",
+        "Панорм"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 2,
+      "textReference": "#pyrrhus-in-sicily",
+      "explanation": "Пир не успя да превземе Лилибей – голямата крепост на Картаген на западния край на Сицилия. Войната там затъна в безизходица.",
+      "sourceQuote": "But he could not capture Lilybaeum, Carthage's great fortress on Sicily's western tip.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво смятат днешните учени за по-вероятна причина за последната сецесия на плебеите?",
+      "options": [
+        "Спор кой може да бъде консул",
+        "Искания на латините за гражданство",
+        "Кой да получи новата обществена земя",
+        "Страх от нашествие на Пир",
+        "Недостиг на зърно в града"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#why-the-plebs-seceded",
+      "explanation": "Третата самнитска война донесла на Рим обширни обществени земи и селските плебеи искали думата при разпределянето им. Учените се съмняват в традиционния разказ за дълговете.",
+      "sourceQuote": "The Third Samnite War had won Rome large tracts of public land, and rural plebeians wanted a say in how it was handed out.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Защо Рим насочи вниманието си на юг и отвъд морето, а не на север?",
+      "options": [
+        "Северна Италия нямаше ценна земя",
+        "Картаген предложи на Рим земя в Африка",
+        "Сенатът се боеше от бунтове в Етрурия",
+        "Пир още държеше земи на север",
+        "Алпите препречваха пътя, а галите бяха твърде силни"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#italy-united-264-bc",
+      "explanation": "Алпите препречваха пътя на север, а Рим още не бил готов да се изправи срещу галите в подножието им. Затова погледнал на юг – към Сицилия и Картаген.",
+      "sourceQuote": "Rome's attention had turned south and across the sea partly because the Alps blocked the way north, and because Rome was not yet ready to take on the Gauls who lived beneath them.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Защо след победата при Хераклея Пир тръгна на север към Лаций?",
+      "options": [
+        "За да посрещне картагенски флот",
+        "За да заграби зърното на Капуа",
+        "За да се съедини с етруските",
+        "За да набере галски воини",
+        "За да обсади град Рим"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "difficulty": 2,
+      "textReference": "#heraclea-and-asculum",
+      "explanation": "Пир се надявал да обедини силите си с етруските, които още воювали с Рим. Но Рим спечелил войната в Етрурия и Пир се оттеглил на юг за зимата.",
+      "sourceQuote": "Pyrrhus then marched quickly north into Latium, Rome's home region, hoping to link up with the Etruscans, who were still fighting Rome.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Според преданието на кой хълм се събраха плебеите при последната си сецесия около 287 г. пр.н.е.?",
+      "options": [
+        "Палатинският",
+        "Квириналският",
+        "Капитолийският",
+        "Авентинският",
+        "Яникулумът"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "difficulty": 2,
+      "textReference": "#lex-hortensia",
+      "explanation": "По предание плебеите се събрали на Яникулума – хълм отвъд река Тибър. С напускането си те оставили Рим без работници и войници.",
+      "sourceQuote": "According to tradition, around 287 BC they did this one more time, gathering on the Janiculum, a hill across the River Tiber.",
+      "reviewFlags": []
+    }
+  ]
+}

@@ -1,0 +1,179 @@
+{
+  "batchName": "Early Republic: The Conflict of the Orders - Origins (509-450 BCE) - Easy Batch 2",
+  "chapterName": "Early Republic: The Conflict of the Orders - Origins (509-450 BCE)",
+  "difficulty": 1,
+  "batchOrder": 2,
+  "description": "AI-generated from Wikipedia (claude-opus-5-5)",
+  "questions": [
+    {
+      "question": "Кой римски историк е оставил най-пълния разказ за дълговата криза в ранната Република?",
+      "options": [
+        "Ливий",
+        "Тацит",
+        "Салустий",
+        "Светоний"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#debt-crisis",
+      "explanation": "Ливий е оставил най-пълния разказ за тези години. Той описва историята на разорен бивш войник, която предава гневното настроение от 495 г. пр.н.е.",
+      "sourceQuote": "Livy, the Roman historian who wrote the fullest account of these years nearly five centuries later, tells a story that captures the mood.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кой е основният проблем за историците, които изучават ранната Борба между съсловията?",
+      "options": [
+        "Запазените закони не могат да бъдат разчетени",
+        "Никой не е описал събитията по онова време",
+        "Всички записи са изгорени от нашественици",
+        "Единствените извори са на гръцки"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#how-reliable",
+      "explanation": "Никой не е записал тези събития по онова време. Най-пълните разкази идват от Ливий и други автори, писали повече от четири века по-късно.",
+      "sourceQuote": "The core problem is that no one wrote about these events at the time.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Кого изпратил Сенатът да преговаря с плебеите на Свещения хълм?",
+      "options": [
+        "Луций Брут",
+        "Менений Агрипа",
+        "Апий Клавдий",
+        "Сициний"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#menenius-agrippa",
+      "explanation": "Сенатът избрал Менений Агрипа – бивш консул, на когото обикновените римляни имали доверие. Според традицията той спечелил стачкуващите с разказ, а не със заплахи.",
+      "sourceQuote": "It chose Menenius Agrippa, a former consul who was well liked by ordinary Romans.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Според традицията кой убил Вергиния, за да я спаси от Апий Клавдий?",
+      "options": [
+        "Годеникът ѝ",
+        "Брат ѝ",
+        "Тя се самоубила",
+        "Баща ѝ"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#appius-claudius-and-verginia",
+      "explanation": "Баща ѝ я убил, за да запази свободата и честта ѝ. Той бил уважаван центурион и убийството предизвикало бунтове.",
+      "sourceQuote": "To save her from Appius Claudius, her father killed her himself, to uphold her freedom and virtue.",
+      "reviewFlags": []
+    },
+    {
+      "question": "В традиционната притча на Менений Агрипа на коя част от тялото се разгневили крайниците?",
+      "options": [
+        "Сърцето",
+        "Стомаха",
+        "Очите",
+        "Главата"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#menenius-agrippa",
+      "explanation": "Крайниците негодували срещу стомаха, че се наслаждава на храната, докато те вършат цялата работа. Когато го оставили гладен, и те самите изнемощели.",
+      "sourceQuote": "Once, he said, the limbs of the body grew angry with the belly.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Според Ливий върху какво били издълбани Законите на дванадесетте таблици?",
+      "options": [
+        "Бронз",
+        "Глина",
+        "Дърво",
+        "Мрамор"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "difficulty": 1,
+      "textReference": "#twelve-tables",
+      "explanation": "Ливий твърди, че таблиците били гравирани върху бронз и изложени публично. Така всеки гражданин можел да знае закона.",
+      "sourceQuote": "According to Livy they were engraved on bronze and displayed publicly so every citizen could know them.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Какво твърди един съвременен учен за Борбата между съсловията?",
+      "options": [
+        "Че всъщност я водели патрициите",
+        "Че изобщо не е имало конфликт",
+        "Че е започнала още при царете",
+        "Че е продължила само една година"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#how-reliable",
+      "explanation": "Един учен твърди, че изобщо не е имало конфликт. Според това виждане по-късните римляни пренесли собствените си класови борби върху смътно запомненото минало.",
+      "sourceQuote": "One modern scholar has even argued there was no conflict at all, and that later Romans projected the class struggles of their own day onto a dimly remembered past.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Коя била първата длъжност в Рим, достъпна за обикновените хора?",
+      "options": [
+        "Цензор",
+        "Народен трибун",
+        "Консул",
+        "Претор"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#tribunes-of-the-plebs",
+      "explanation": "Длъжността народен трибун била голямата придобивка от първата сецесия. Според традицията първите трибуни встъпили в длъжност през 493 г. пр.н.е.",
+      "sourceQuote": "The great prize of the first secession of 494 BC was the tribune of the plebs, the first office in Rome open to commoners.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Каква била поуката от притчата на Менений Агрипа за стомаха?",
+      "options": [
+        "Народът на Рим трябва винаги да слуша консулите",
+        "Рим трябва да завладява нови земи, за да изхранва народа си",
+        "Бедните трябва да работят повече, ако искат да ядат",
+        "Рим има нужда патриции и плебеи да работят заедно"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "difficulty": 1,
+      "textReference": "#menenius-agrippa",
+      "explanation": "Подобно на тялото, Рим можел да оцелее само ако частите му си сътрудничат. Плебеите се съгласили да преговарят, но искали нещо повече от притча.",
+      "sourceQuote": "Rome, like a body, could not survive unless patricians and plebeians worked together.",
+      "reviewFlags": []
+    },
+    {
+      "question": "Къде се разположили плебеите по време на първата сецесия през 494 г. пр.н.е.?",
+      "options": [
+        "Яникулумът",
+        "Свещеният хълм",
+        "Капитолийският хълм",
+        "Пристанището Остия"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "difficulty": 1,
+      "textReference": "#first-secession",
+      "explanation": "Те се разположили на *Mons Sacer*, „Свещения хълм“, на около 5 km (малко над три мили) от града. Там издигнали прости укрепления и зачакали.",
+      "sourceQuote": "Advised by Sicinius, the plebeian leader who masterminded the walkout, they left the city together and camped on the Mons Sacer, the \"Sacred Mount\", a hill about 5 km (just over three miles) away.",
+      "reviewFlags": []
+    }
+  ]
+}
