@@ -32,16 +32,16 @@
       "blurb": "Augustus and his family: the first emperors, from the Roman Peace to Nero"
     },
     {
-      "id": "high-empire",
-      "name": "The High Empire",
-      "period": "AD 69–192",
-      "blurb": "The Flavians and the good emperors: Rome at the height of its power"
+      "id": "middle-empire",
+      "name": "The Middle Empire",
+      "period": "AD 69–284",
+      "blurb": "The good emperors, Rome at the height of its power, and the crisis that nearly broke it"
     },
     {
       "id": "late-empire",
       "name": "The Late Empire",
-      "period": "AD 193–476",
-      "blurb": "Crisis, the Christian emperors and the fall of the West"
+      "period": "AD 284–476",
+      "blurb": "Diocletian, the Christian emperors and the fall of the West"
     }
   ],
   "chapters": [
@@ -668,7 +668,7 @@
         "hard": 10
       },
       "short": "The Flavians",
-      "era": "high-empire",
+      "era": "middle-empire",
       "mapArea": "wide",
       "battle": {
         "name": "The siege of Jerusalem",
@@ -698,7 +698,7 @@
         "hard": 10
       },
       "short": "Five Good Emperors",
-      "era": "high-empire",
+      "era": "middle-empire",
       "mapArea": "wide",
       "maxNames": 8,
       "battle": {
@@ -727,7 +727,7 @@
         "hard": 10
       },
       "short": "The Third-Century Crisis",
-      "era": "late-empire",
+      "era": "middle-empire",
       "mapArea": "wide",
       "maxNames": 8,
       "battle": {
