@@ -20,6 +20,7 @@
 - **Two culture chapters** (Nov 1): Roman Religion and Mythology (chapter 2, after the Kingdom) and Roman Art and Architecture (the last chapter), ~$2; no battles. Every chapter now names its battle (`battle.level`), so chapters can be inserted anywhere. 29 chapters in all.
 - **A bigger field each era** (Nov 3): 6 lanes in the Early Republic, 7 in the Middle, 8 in the Late Republic (the Kingdom keeps 5), re-balanced with the scripted players. 
 - **Bulgarian** (Nov 5): the whole app and Hold the Line switch between English and Bulgarian (a button on the Ancient Rome screen). All 29 chapters translated through the API with a shared glossary of ~900 names (chronicles, maps, Key facts, questions, games; ~$26 of credit); Hold the Line's text translated by hand. The Kingdom was reviewed by the user first.
+- **The Empire in three eras** (Nov 7): Early Empire (27 BC–AD 68: Augustus to Nero, 3 chapters), High Empire (69–192: the Flavians and the good emperors, 2), Late Empire (193–476: the crisis to the fall, plus Art and Architecture, 5). A Severan chapter would even out the High Empire later.
 - **The Empire's nine battles** (Nov 4): the Teutoburg Forest to the Catalaunian Plains, on an 8 × 11 field, with the cohort card and a new unit, enemy and twist in each. All 28 battle chapters now have a playable battle.
 - **The Clash of the Gods** (Nov 4): the religion chapter's battle. Greek gods march down with name tags; only each one's Roman twin can stop it.
 

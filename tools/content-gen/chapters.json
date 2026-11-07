@@ -26,10 +26,22 @@
       "blurb": "Ambitious generals, civil wars and the fall of the Republic"
     },
     {
-      "id": "empire",
-      "name": "The Empire",
-      "period": "27 BC – AD 476",
-      "blurb": "Emperors, the Roman Peace and the fall of the West"
+      "id": "early-empire",
+      "name": "The Early Empire",
+      "period": "27 BC – AD 68",
+      "blurb": "Augustus and his family: the first emperors, from the Roman Peace to Nero"
+    },
+    {
+      "id": "high-empire",
+      "name": "The High Empire",
+      "period": "AD 69–192",
+      "blurb": "The Flavians and the good emperors: Rome at the height of its power"
+    },
+    {
+      "id": "late-empire",
+      "name": "The Late Empire",
+      "period": "AD 193–476",
+      "blurb": "Crisis, the Christian emperors and the fall of the West"
     }
   ],
   "chapters": [
@@ -569,7 +581,7 @@
         "hard": 10
       },
       "short": "Augustus",
-      "era": "empire",
+      "era": "early-empire",
       "mapArea": "wide",
       "battle": {
         "name": "The Teutoburg Forest",
@@ -598,7 +610,7 @@
         "hard": 10
       },
       "short": "Tiberius and Caligula",
-      "era": "empire",
+      "era": "early-empire",
       "mapArea": "wide",
       "battle": {
         "name": "Germanicus in Germany",
@@ -627,7 +639,7 @@
         "hard": 10
       },
       "short": "Claudius and Nero",
-      "era": "empire",
+      "era": "early-empire",
       "mapArea": "wide",
       "battle": {
         "name": "Boudica’s revolt",
@@ -656,7 +668,7 @@
         "hard": 10
       },
       "short": "The Flavians",
-      "era": "empire",
+      "era": "high-empire",
       "mapArea": "wide",
       "battle": {
         "name": "The siege of Jerusalem",
@@ -686,7 +698,7 @@
         "hard": 10
       },
       "short": "Five Good Emperors",
-      "era": "empire",
+      "era": "high-empire",
       "mapArea": "wide",
       "maxNames": 8,
       "battle": {
@@ -715,7 +727,7 @@
         "hard": 10
       },
       "short": "The Third-Century Crisis",
-      "era": "empire",
+      "era": "late-empire",
       "mapArea": "wide",
       "maxNames": 8,
       "battle": {
@@ -744,7 +756,7 @@
         "hard": 10
       },
       "short": "Diocletian and Constantine",
-      "era": "empire",
+      "era": "late-empire",
       "mapArea": "wide",
       "maxNames": 8,
       "battle": {
@@ -773,7 +785,7 @@
         "hard": 10
       },
       "short": "To Theodosius",
-      "era": "empire",
+      "era": "late-empire",
       "mapArea": "wide",
       "maxNames": 8,
       "battle": {
@@ -802,7 +814,7 @@
         "hard": 10
       },
       "short": "Fall of the West",
-      "era": "empire",
+      "era": "late-empire",
       "mapArea": "wide",
       "maxNames": 8,
       "battle": {
@@ -831,7 +843,7 @@
         "hard": 10
       },
       "short": "Art and Architecture",
-      "era": "empire",
+      "era": "late-empire",
       "mapArea": "wide",
       "maxNames": 8,
       "locked": true
