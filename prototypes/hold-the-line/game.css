@@ -23,6 +23,9 @@
 .tray.many .card canvas { width: 34px; height: 34px; }
 .tray.named .card .name { display: block; font-size: 7.6px; letter-spacing: -.03em; text-overflow: clip; }
 .tray.named.bg .card .name { font-size: 6.6px; letter-spacing: -.05em; }   /* Cyrillic letters are wider */   /* the gods' contest: the names matter */
+.card .twin { display: none; font: italic 800 7px/1.1 var(--body); letter-spacing: -.04em; color: #2f5f9a; white-space: nowrap; padding-right: 1px; }   /* the gods' contest: the Greek twin, in the first waves */
+.tray.hints .card .twin { display: block; }
+.tray.bg .card .twin { font-size: 6px; letter-spacing: -.06em; }   /* Cyrillic letters are wider */
 .card .cool { position: absolute; left: 0; right: 0; top: 0; background: rgba(27, 23, 21, .55); pointer-events: none; }
 .card.poor { filter: grayscale(.7) brightness(.8); }
 .card.poor .cost { color: var(--rome); }

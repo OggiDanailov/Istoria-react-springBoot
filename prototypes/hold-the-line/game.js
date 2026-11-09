@@ -334,11 +334,11 @@ const LEVELS = [
     waves: [w(26, ['hun']), w(42, ['ostrogoth', 'hun']), w(58, ['hun', 'hun', 'ostrogoth']), w(74, ['ostrogoth', 'ostrogoth', 'warrior']), w(90, ['hun', 'hun', 'hun']), w(106, ['ostrogoth', 'ostrogoth', 'hun', 'shield']),
       w(122, ['hun', 'ostrogoth', 'ostrogoth', 'hun']), w(138, ['chief', ...rep(3, 'ostrogoth'), ...rep(3, 'hun'), 'shield'], 'Attila’s army attacks the ridge!'), w(166, ['hun', 'hun', 'ostrogoth', 'ostrogoth']),
       w(182, ['ostrogoth', 'hun', 'hun', 'warrior']), w(198, ['attila', ...rep(3, 'ostrogoth'), ...rep(4, 'hun')], 'Attila himself rides into battle!')] },
-  { id: 'gods', name: 'The Clash of the Gods', year: 'a game of myth', enemy: 'the gods of Olympus', theme: 'gods', start: 200, more: 1.1, bonus: true, vetsAs: 'ceres',
+  { id: 'gods', name: 'The Clash of the Gods', year: 'a game of myth', enemy: 'the gods of Olympus', theme: 'gods', start: 200, more: 1.1, bonus: true, vetsAs: 'ceres', gap: 4.5, twinHints: 86,
     units: ['ceres', 'jupiter', 'juno', 'neptune', 'minerva', 'mars', 'venus', 'diana', 'mercury'],
-    twist: 'Not a real battle but a contest of knowledge. The Greek gods march down from Olympus, and each can be stopped only by its Roman twin: Jupiter for Zeus, Minerva for Athena. The light of any other god passes straight through. Read the name tags and send the right god to each lane.',
+    twist: 'Not a real battle but a contest of knowledge. The Greek gods come down from Olympus one at a time, and each can be stopped only by its Roman twin: Jupiter for Zeus, Minerva for Athena. The light of any other god passes straight through. Greek gods have blue name tags, yours red. In the first waves each card also shows its Greek twin; after that you play from memory. If a god reaches the bottom, Juno’s sacred geese drive it back, but only once in each lane.',
     blurb: 'The Romans matched their gods with the gods of the Greeks and took over their myths. Now the Greek gods come down from Olympus. Do you know who is who?',
-    after: 'Each pair shared its symbols: the thunderbolt of Jupiter and Zeus, the trident of Neptune and Poseidon, the bow and moon of Diana and Artemis. Apollo is the one great god with the same name in Greek and Latin.',
+    after: 'Each pair shared its symbols: the thunderbolt of Jupiter and Zeus, the trident of Neptune and Poseidon, the bow and moon of Diana and Artemis. Apollo is the one great god with the same name in Greek and Latin. And Juno’s geese are a real story: in 390 BC, when the Gauls climbed the Capitoline Hill at night, the sacred geese in her temple woke the defenders.',
     waves: [w(24, ['zeus']), w(40, ['poseidon']), w(54, ['zeus', 'athena']), w(70, ['ares']), w(86, ['hera', 'poseidon']), w(100, ['aphrodite', 'athena']), w(116, ['artemis', 'ares', 'zeus']),
       w(132, ['hermes', 'hera', 'poseidon', 'athena', 'artemis'], 'Olympus attacks in force!'), w(162, ['aphrodite', 'hermes', 'ares']), w(178, ['zeus', 'hera', 'artemis', 'poseidon']),
       w(196, ['zeus', 'hera', 'poseidon', 'athena', 'ares', 'aphrodite', 'artemis', 'hermes', 'zeus', 'ares'], 'The final wave: all of Olympus!')] },
@@ -393,6 +393,7 @@ const sfx = {
   win() { if (this.ok('win', 1)) [392, 494, 587, 784].forEach((f, i) => this.tone(f, 0.35, { type: 'triangle', vol: 0.09, at: i * 0.14 })) },
   lose() { if (this.ok('lose', 1)) [392, 349, 311, 262].forEach((f, i) => this.tone(f, 0.4, { type: 'sawtooth', vol: 0.04, at: i * 0.2 })) },
   squeal() { if (this.ok('squeal', 0.3)) { this.tone(900, 0.15, { type: 'square', vol: 0.04, to: 1500 }); this.tone(1100, 0.2, { type: 'square', vol: 0.035, to: 1700, at: 0.17 }) } },
+  honk() { if (this.ok('honk', 0.5)) { this.tone(520, 0.12, { type: 'square', vol: 0.05, to: 430 }); this.tone(500, 0.14, { type: 'square', vol: 0.05, to: 400, at: 0.16 }) } },
   trumpet() { if (this.ok('trumpet', 1)) { this.tone(320, 0.7, { type: 'sawtooth', vol: 0.06, to: 560 }); this.tone(330, 0.6, { type: 'sawtooth', vol: 0.04, to: 600, at: 0.1 }) } },
   bow() { if (this.ok('bow', 0.1)) this.noise(0.06, { vol: 0.05, freq: 4000 }) },
   thunk() { if (this.ok('thunk', 0.08)) this.noise(0.06, { vol: 0.08, freq: 500 }) },
@@ -427,7 +428,8 @@ const DEITY_LOOK = {"ceres": {"robe": "#e9d9a6", "hair": "#b07a3a", "crown": "wr
 // a god or goddess: feet at 0,0 like the soldiers. Greek gods (enemies) wear a blue border and carry a name tag
 function drawDeity(c, type, T, greek, o = {}) {
   const L = DEITY_LOOK[type], walk = o.walk ?? 0, act = o.anim > 0
-  shadow(c, 13, 4)
+  if (greek) { c.fillStyle = 'rgba(255, 255, 255, .9)'; for (const [x, y, r] of [[-9, -1, 6], [0, 0.5, 7.5], [9, -1, 6]]) { c.beginPath(); c.ellipse(x, y, r, r * 0.5, 0, 0, TAU); c.fill() } }   // down from Olympus on a cloud
+  else shadow(c, 13, 4)
   c.globalAlpha = 0.5; c.drawImage(glow(greek ? '170, 205, 240' : '250, 215, 120'), -22, -70, 44, 44); c.globalAlpha = 1   // a halo
   if (L.shield) { c.fillStyle = L.shield; c.strokeStyle = '#5a3a22'; c.lineWidth = 1.4; c.beginPath(); c.arc(-13, -24, 8.5, 0, TAU); c.fill(); c.stroke(); c.fillStyle = 'rgba(255,255,255,.35)'; c.beginPath(); c.arc(-13, -24, 3, 0, TAU); c.fill() }
   // the long robe, and its border
@@ -466,16 +468,16 @@ function drawDeity(c, type, T, greek, o = {}) {
   if (L.crown === 'flower') { c.fillStyle = '#e0607a'; for (let a = 0; a < 5; a++) { c.beginPath(); c.arc(6 + Math.cos(a * 1.26) * 2.2, -51 + Math.sin(a * 1.26) * 2.2, 1.8, 0, TAU); c.fill() } c.fillStyle = '#f2c230'; c.beginPath(); c.arc(6, -51, 1.3, 0, TAU); c.fill() }
   if (L.crown === 'moon') { c.fillStyle = '#f4f1e4'; c.beginPath(); c.arc(0, -57, 5.5, 0, TAU); c.fill(); c.fillStyle = L.hair; c.beginPath(); c.arc(1.8, -58.5, 4.6, 0, TAU); c.fill() }
   if (L.crown === 'wings') { c.fillStyle = '#9a8a5a'; c.beginPath(); c.ellipse(0, -51, 9.5, 3, 0, 0, TAU); c.fill(); c.fillStyle = '#ffffff'; for (const s of [-1, 1]) { c.beginPath(); c.moveTo(s * 7, -53); c.lineTo(s * 15, -61); c.lineTo(s * 12, -55); c.lineTo(s * 15, -57); c.lineTo(s * 9, -51); c.fill() } }
-  if (greek && o.tag !== false) {   // the name tag, so you know who is coming
-    const name = (LANG === 'bg' ? bgName(FOES[type].name) : FOES[type].name).toUpperCase()
+  if (o.tag !== false) {   // the name tag: blue for the Greek gods coming down, red for your own
+    const n = greek ? FOES[type].name : UNITS[type].short, name = (LANG === 'bg' ? bgName(n) : n).toUpperCase()
     c.font = '800 9px Nunito, system-ui, sans-serif'; c.textAlign = 'center'
     const w = c.measureText(name).width + 8
-    c.fillStyle = 'rgba(31, 52, 84, .92)'; rr(c, -w / 2, 3, w, 12, 4); c.fill()   // under the feet, clear of the health bar
+    c.fillStyle = greek ? 'rgba(31, 52, 84, .92)' : 'rgba(142, 43, 34, .92)'; rr(c, -w / 2, 3, w, 12, 4); c.fill()   // under the feet, clear of the health bar
     c.fillStyle = '#ffffff'; c.fillText(name, 0, 12)
   }
 }
 const DRAW_UNIT = {
-  ...Object.fromEntries(['ceres', 'jupiter', 'juno', 'neptune', 'minerva', 'mars', 'venus', 'diana', 'mercury'].map(t => [t, (c, u, T) => drawDeity(c, t, T, false, { anim: u.anim })])),
+  ...Object.fromEntries(['ceres', 'jupiter', 'juno', 'neptune', 'minerva', 'mars', 'venus', 'diana', 'mercury'].map(t => [t, (c, u, T) => drawDeity(c, t, T, false, { anim: u.anim, tag: !u.icon })])),
   ...Object.fromEntries(['supplyboat', 'archership', 'quinquereme', 'rammer', 'ballista', 'fireship', 'harpax'].map(t => [t, (c, u, T) => drawShip(c, UNITS[t].ship, T, false, u)])),
   slinger(c, u, T) {
     shadow(c, 13, 4); romanLegs(c)
@@ -984,8 +986,23 @@ function drawShip(c, kind, T, foe = false, f = null) {
   }
   if (f?.pinned > 0) { c.strokeStyle = '#cfd4d8'; c.lineWidth = 1.4; c.setLineDash([3, 2]); c.beginPath(); c.moveTo(0, -4); c.lineTo(0, 30); c.stroke(); c.setLineDash([]) }   // the hook's line
 }
+// Juno's sacred goose from the Capitol: it woke the defenders when the Gauls climbed the hill at night (390 BC)
+function drawGoose(c, e, T) {
+  const run = e.state === 'charge', flap = run ? Math.sin(T * 22) : 0, step = run ? Math.sin(T * 16) : 0
+  shadow(c, 12, 4)
+  line(c, -3, -9, -3 + step * 3, 0, '#e08a2a', 2.4); line(c, 3, -9, 3 - step * 3, 0, '#e08a2a', 2.4)
+  c.fillStyle = '#f7f4ec'; c.strokeStyle = '#b9b2a2'; c.lineWidth = 1
+  c.beginPath(); c.ellipse(0, -15, 12, 8, -0.15, 0, TAU); c.fill(); c.stroke()   // the body
+  c.beginPath(); c.moveTo(-10, -13); c.lineTo(-17, -19); c.lineTo(-11, -18); c.closePath(); c.fill(); c.stroke()   // the tail
+  c.fillStyle = '#e9e4d6'; c.beginPath(); c.ellipse(-1, -17 - flap * 4, 8, 4 + Math.abs(flap) * 3, -0.4 - flap * 0.5, 0, TAU); c.fill()   // the wing
+  line(c, 8, -19, 11, -34, '#f7f4ec', 5.5)   // the long neck
+  c.fillStyle = '#f7f4ec'; c.beginPath(); c.arc(11.5, -36, 5, 0, TAU); c.fill(); c.stroke()
+  c.fillStyle = '#e08a2a'; c.beginPath(); c.moveTo(15.5, -37.5); c.lineTo(22, -35 + (run ? Math.abs(step) * 2 : 0)); c.lineTo(15.5, -33.5); c.closePath(); c.fill()   // the beak, honking as it runs
+  c.fillStyle = INK; c.fillRect(11.5, -38, 1.8, 1.8)
+}
 function drawEques(c, e, T) {
   if (LEVEL.sea) { drawShip(c, 'ram', T); return }   // at sea: the reserve squadron
+  if (LEVEL.theme === 'gods') { drawGoose(c, e, T); return }   // in the gods' contest: Juno's sacred geese
 
   const g = e.state === 'charge' ? Math.sin(T * 16) : 0
   shadow(c, 12, 4)
@@ -1209,7 +1226,7 @@ function buildQueue() {
   let block = 0
   const LEADERS = ['chief', 'spartacus', 'flagship']
   for (const w of LEVEL.waves) {
-    const gap = w.big ? 0.7 : 1.6, troops = w.foes.filter(t => !LEADERS.includes(t))
+    const gap = LEVEL.gap ?? (w.big ? 0.7 : 1.6), troops = w.foes.filter(t => !LEADERS.includes(t))
     const extra = Math.round(troops.length * ((LEVEL.more ?? 1) - 1))   // a wider field needs more men to fill it
     const foes = [...w.foes, ...Array.from({ length: extra }, (_, i) => troops[i % troops.length])]
     const t0 = w.t + (LEVEL.delay ?? 0)   // a later start: more time to build before the first waves
@@ -1255,7 +1272,11 @@ function spawn(type, lane = null, y = -0.75, dir = 1) {
     lane = Math.random() < 0.55 ? from : Math.max(0, Math.min(COLS - 1, from + (Math.random() < 0.5 ? -1 : 1)))
   }
   if (lane == null && F.flanks) lane = [0, 1, COLS - 2, COLS - 1][Math.floor(Math.random() * 4)]   // they close in from the sides
-  if (lane == null) { do lane = Math.floor(Math.random() * COLS); while ((lane === G.lastLane && Math.random() < 0.7) || LEVEL.closed?.includes(lane)) }
+  if (lane == null) {
+    let tries = 0   // with one god at a time, never one right behind another: their name tags would overlap
+    const busy = l => LEVEL.gap && tries < 30 && G.foes.some(f => f.lane === l && f.hp > 0 && f.y < 1.8)
+    do { lane = Math.floor(Math.random() * COLS); tries++ } while ((lane === G.lastLane && Math.random() < 0.7) || LEVEL.closed?.includes(lane) || busy(lane))
+  }
   if (LEVEL.closed?.includes(lane)) lane = lane < COLS / 2 ? lane + 1 : lane - 1   // the woods close the outer lanes
   G.lastLane = lane
   const hp = Math.round(F.hp * EASE), tired = LEVEL.tired && G.t < LEVEL.tired
@@ -1385,11 +1406,21 @@ function update(dt) {
   while (G.queue.length && G.queue[0].t <= G.t) {
     const e = G.queue.shift()
     if (e.wave.big && !e.wave.announced) { e.wave.announced = true; announce(e.wave.big, true); sfx.horn() }
-    for (const t of e.type.split('+')) if (FOES[t].intro && !G.introduced.has(t)) { G.introduced.add(t); announce(FOES[t].intro, false, 3600) }
+    const first = e.type.split('+').filter(t => FOES[t].intro && !G.introduced.has(t))
+    for (const t of first) { G.introduced.add(t); announce(FOES[t].intro, false, 3600) }
     if (G.spawned === 0 && levelIndex === 0) announce('The Latins are coming!')
-    spawnEntry(e)
+    const f = spawnEntry(e)
+    if (LEVEL.theme === 'gods' && f) {   // one god at a time: say who, and light up the lane
+      G.fx.push({ kind: 'lane', lane: f.lane, t: 1.6 })
+      const n = LANG === 'bg' ? bgName(FOES[f.type].name) : FOES[f.type].name, k = f.lane + 1
+      if (!first.length) announce(LANG === 'bg' ? `${n} слиза по ${k}-${['', 'ва', 'ра', 'та', 'та', 'та', 'та', 'ма', 'ма'][k]} линия.` : `${n} is coming down the ${k}${['', 'st', 'nd', 'rd'][k] ?? 'th'} lane.`)
+    }
   }
   renderBar()
+  if (LEVEL.twinHints && G.t >= LEVEL.twinHints && !G.hintsGone) {   // from now on, from memory
+    G.hintsGone = true; tray.classList.remove('hints')
+    announce(LANG === 'bg' ? 'Оттук нататък – по памет: гръцките близнаци вече не са на картите.' : 'Now from memory: the Greek twins are gone from the cards.', true, 4200)
+  }
   // the battle's turning points
   for (const ev of G.events) if (!ev.done && G.t >= ev.t) {
     ev.done = true; announce(ev.text, true, 4200); sfx.horn()
@@ -1589,7 +1620,7 @@ function update(dt) {
     }
     if (f.dir < 0 && f.y <= -0.3) {   // through the far line: the equites on that side charge
       const e = G.equitesTop[f.lane]
-      if (e.state === 'ready') { e.state = 'charge'; G.charges++; G.shake = Math.max(G.shake, 6); sfx.charge(); announce('The equites charge!') }
+      if (e.state === 'ready') { e.state = 'charge'; G.charges++; G.shake = Math.max(G.shake, 6); lastStand().sound(); announce(lastStand().charge) }
       else if (e.state === 'used') return lose()
     }
     if (f.dir > 0 && f.y >= ROWS + 0.3) {
@@ -1599,7 +1630,7 @@ function update(dt) {
         continue
       }
       const e = G.equites[f.lane]
-      if (e.state === 'ready') { e.state = 'charge'; G.charges++; G.shake = Math.max(G.shake, 6); sfx.charge(); announce('The equites charge!'); tutorial('equites') }
+      if (e.state === 'ready') { e.state = 'charge'; G.charges++; G.shake = Math.max(G.shake, 6); lastStand().sound(); announce(lastStand().charge); tutorial('equites') }
       else if (e.state === 'used') return lose()
     }
   }
@@ -1715,6 +1746,7 @@ function draw() {
     if (p.kind === 'dust') { ctx.fillStyle = `rgba(205, 185, 140, ${a * 0.6})`; ctx.beginPath(); ctx.arc(p.x, p.y, Math.max(0.5, 3 * k + (0.7 - p.t) * 8), 0, TAU); ctx.fill() }
     if (p.kind === 'spark') { ctx.strokeStyle = `rgba(255, 230, 150, ${a})`; ctx.lineWidth = 2; ctx.beginPath(); for (let i = 0; i < 5; i++) { const an = i * TAU / 5; ctx.moveTo(p.x, p.y - 14 * k); ctx.lineTo(p.x + Math.cos(an) * 8 * k, p.y - 14 * k + Math.sin(an) * 8 * k) } ctx.stroke() }
     if (p.kind === 'shard') { ctx.fillStyle = `rgba(176, 138, 62, ${a})`; ctx.fillRect(p.x, p.y, 4 * k, 3 * k) }
+    if (p.kind === 'lane') { ctx.fillStyle = `rgba(140, 185, 240, ${Math.min(1, p.t) * 0.28})`; ctx.fillRect(lx(p.lane) - cell / 2, ry(0), cell, ry(ROWS) - ry(0)) }
     if (p.kind === 'ring') { ctx.strokeStyle = `rgba(251, 243, 228, ${a})`; ctx.lineWidth = 3; ctx.beginPath(); ctx.ellipse(p.x, p.y, (0.5 - p.t) * cell * 2, (0.5 - p.t) * cell, 0, 0, TAU); ctx.stroke() }
     if (p.kind === 'heal') { const y = p.y - (0.9 - p.t) * 30; ctx.fillStyle = `rgba(127, 176, 105, ${a})`; ctx.fillRect(p.x - 3, y - 11, 6, 22); ctx.fillRect(p.x - 11, y - 3, 22, 6) }
     if (p.kind === 'text') { ctx.fillStyle = `rgba(251, 243, 228, ${a})`; ctx.strokeStyle = `rgba(27, 23, 21, ${a})`; ctx.lineWidth = 3; ctx.font = `900 ${Math.round(16 * k + 4)}px Nunito, system-ui, sans-serif`; ctx.textAlign = 'center'; ctx.strokeText(p.text, p.x, p.y); ctx.fillText(p.text, p.x, p.y) }
@@ -1764,10 +1796,11 @@ const ghostUnit = type => ({ type, hp: UNITS[type].hp, max: UNITS[type].hp, anim
 
 // ---------- the card tray, controls and messages ----------
 let tray
+const twinOf = type => Object.values(FOES).find(f => f.twin === type)?.name
 function renderTray() {
   tray.innerHTML = ''
   const nCards = Math.max(5, (G?.phase === 'deploy' ? Object.keys(G.vets) : LEVEL.units).length)
-  tray.style.setProperty('--n', nCards); tray.classList.toggle('many', nCards > 7); tray.classList.toggle('named', !!LEVEL.units.some(t => UNITS[t].deity)); tray.classList.toggle('bg', LANG === 'bg')
+  tray.classList.toggle('hints', !!LEVEL.twinHints && !(G?.t >= LEVEL.twinHints)); tray.style.setProperty('--n', nCards); tray.classList.toggle('many', nCards > 7); tray.classList.toggle('named', !!LEVEL.units.some(t => UNITS[t].deity)); tray.classList.toggle('bg', LANG === 'bg')
   const deploying = G?.phase === 'deploy'
   for (const type of deploying ? Object.keys(G.vets) : LEVEL.units) {
     const U = UNITS[type], b = document.createElement('button')
@@ -1775,11 +1808,11 @@ function renderTray() {
     b.setAttribute('aria-label', `${U.name}, costs ${U.cost} rations`)
     b.innerHTML = deploying
       ? `<canvas width="92" height="92"></canvas><span class="name">${U.short}</span><span class="cost free" title="Free">×<span class="n">${G.vets[type]}</span></span><span class="cool"></span>`
-      : `<canvas width="92" height="92"></canvas><span class="name">${U.short}</span><span class="cost"><svg class="wheat" viewBox="0 0 20 20" aria-hidden="true"><use href="#wheat"/></svg>${U.cost}</span><span class="cool"></span>`
+      : `<canvas width="92" height="92"></canvas><span class="name">${U.short}</span>${LEVEL.twinHints && twinOf(type) ? `<span class="twin">${twinOf(type)}</span>` : ''}<span class="cost"><svg class="wheat" viewBox="0 0 20 20" aria-hidden="true"><use href="#wheat"/></svg>${U.cost}</span><span class="cool"></span>`
     const ic = b.querySelector('canvas').getContext('2d')
     ic.setTransform(2, 0, 0, 2, 0, 0); const sc = { cart: 0.62, caltrops: 1.15, shed: 0.62, pigs: 1 }[type] ?? 0.52
     ic.translate(23, { cart: 38, caltrops: 30, shed: 40, pigs: 36 }[type] ?? 44); ic.scale(sc, sc)
-    DRAW_UNIT[type](ic, ghostUnit(type), 0)
+    DRAW_UNIT[type](ic, { ...ghostUnit(type), icon: true }, 0)
     b.addEventListener('pointerdown', e => startDrag(e, type))
     b.addEventListener('contextmenu', e => e.preventDefault())
     b.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); select(G.selected === type ? null : type) } })
@@ -1833,6 +1866,10 @@ function renderBar(reset) {
   $('fill').style.width = (G.spawned / G.total * 100) + '%'
 }
 let bannerTimer = null
+// the last defence of each lane, named for this battle
+const lastStand = () => LEVEL.theme === 'gods'
+  ? { charge: LANG === 'bg' ? 'Свещените гъски на Юнона го прогонват!' : 'Juno’s sacred geese drive the god back!', sound: () => sfx.honk() }
+  : { charge: 'The equites charge!', sound: () => sfx.charge() }
 function announce(text, big = false, ms = 2600) {
   const el = $('banner')
   el.textContent = text; el.className = 'msg' + (big ? ' big' : '')
@@ -1845,7 +1882,7 @@ function tutorial(event, type) {
   if (event === 'placed' && type === 'cart') say('cart', 'Tap the glowing grain to collect it. Then place slingers in front of your carts.')
   if (event === 'placed' && type === 'slinger') say('slinger', `Slingers shoot at anyone coming down their lane. Cover all ${['', '', '', 'three', 'four', 'five', 'six', 'seven'][COLS]} lanes!`)
   if (event === 'hurt' && levelIndex === 0) say('hurt', 'A soldier is hurt! Drag him to another square to pull him out of the fight.')
-  if (event === 'equites') say('equites', 'The equites saved that lane, but they only charge once.')
+  if (event === 'equites') say('equites', LEVEL.theme === 'gods' ? 'Juno’s geese saved that lane, but only once.' : 'The equites saved that lane, but they only charge once.')
 }
 function select(type) { G.selected = type; G.dismiss = false; G.heal = false; syncTray() }
 
@@ -2012,7 +2049,7 @@ function win() {
   if (opts.mode !== 'chapter') { progress.stars[i] = Math.max(progress.stars[i] ?? 0, stars); saveProgress() }
   setTimeout(() => showPanel(`<span class="eyebrow">Victory · ${LEVEL.year}</span><h2>You held the line at ${LEVEL.name.replace(/^The /, 'the ')}</h2>
     <p class="big-stars" aria-label="${stars} of 3 stars">${starText(stars)}</p>
-    <p>${LANG === 'bg' ? `Паднаха ${G.killed} врагове, а вие загубихте ${G.lost === 1 ? 'един войник' : G.lost + ' войници'}. ${stars === 3 ? 'Еквитите изобщо не се наложи да атакуват.' : 'Спечелете, без еквитите да атакуват, за три звезди.'}` : `${G.killed} enemies fell and you lost ${G.lost === 1 ? 'one soldier' : G.lost + ' soldiers'}. ${stars === 3 ? 'The equites never had to ride.' : 'Win without the equites charging for three stars.'}`}</p>
+    <p>${LANG === 'bg' ? `Паднаха ${G.killed} врагове, а вие загубихте ${G.lost === 1 ? 'един войник' : G.lost + ' войници'}. ${LEVEL.theme === 'gods' ? (stars === 3 ? 'Гъските на Юнона изобщо не се наложи да се намесят.' : 'Спечелете, без гъските на Юнона да се намесят, за три звезди.') : stars === 3 ? 'Еквитите изобщо не се наложи да атакуват.' : 'Спечелете, без еквитите да атакуват, за три звезди.'}` : `${G.killed} enemies fell and you lost ${G.lost === 1 ? 'one soldier' : G.lost + ' soldiers'}. ${LEVEL.theme === 'gods' ? (stars === 3 ? 'Juno’s geese never had to wake.' : 'Win without Juno’s geese for three stars.') : stars === 3 ? 'The equites never had to ride.' : 'Win without the equites charging for three stars.'}`}</p>
     <p class="history">${LEVEL.after}</p>
     ${next || opts.mode === 'chapter' ? '' : '<p><b>You have won the whole campaign, from Romulus to Attila.</b></p>'}
     ${opts.mode === 'chapter' ? `<div class="row"><button class="primary" id="continue">Continue</button><button class="tool" id="again">Play again</button></div>`
