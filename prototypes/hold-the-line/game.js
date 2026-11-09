@@ -4,7 +4,7 @@ window.HoldTheLine = (() => {
 const TAU = Math.PI * 2
 let COLS = 5, ROWS = 7   // the field in cells; from the Middle Republic on, battles are fought on a bigger field
 const APPROACH = 0.95, CAMP = 0.85   // the enemy's approach on top, the camp below
-const SKIN = '#e0b088', SKIN_SHADE = '#c48e66', INK = '#2a211c'
+const SKIN = '#e0b088', SKIN_SHADE = '#c48e66', INK = '#2a211c', SKIN_TONE = SKIN, SKIN_TONE_SHADE = SKIN_SHADE
 
 // ---------- the armies ----------
 const UNITS = {
@@ -334,11 +334,11 @@ const LEVELS = [
     waves: [w(26, ['hun']), w(42, ['ostrogoth', 'hun']), w(58, ['hun', 'hun', 'ostrogoth']), w(74, ['ostrogoth', 'ostrogoth', 'warrior']), w(90, ['hun', 'hun', 'hun']), w(106, ['ostrogoth', 'ostrogoth', 'hun', 'shield']),
       w(122, ['hun', 'ostrogoth', 'ostrogoth', 'hun']), w(138, ['chief', ...rep(3, 'ostrogoth'), ...rep(3, 'hun'), 'shield'], 'Attila’s army attacks the ridge!'), w(166, ['hun', 'hun', 'ostrogoth', 'ostrogoth']),
       w(182, ['ostrogoth', 'hun', 'hun', 'warrior']), w(198, ['attila', ...rep(3, 'ostrogoth'), ...rep(4, 'hun')], 'Attila himself rides into battle!')] },
-  { id: 'gods', name: 'The Clash of the Gods', year: 'a game of myth', enemy: 'the gods of Olympus', theme: 'gods', start: 200, more: 1.1, bonus: true, vetsAs: 'ceres', gap: 4.5, twinHints: 86,
+  { id: 'gods', name: 'The Pantheon Siege', pantheon: true, year: 'a game of myth', enemy: 'the gods of Olympus', theme: 'gods', start: 200, more: 1.1, bonus: true, vetsAs: 'ceres', gap: 4.5, twinHints: 86,
     units: ['ceres', 'jupiter', 'juno', 'neptune', 'minerva', 'mars', 'venus', 'diana', 'mercury'],
     twist: 'Not a real battle but a contest of knowledge. The Greek gods come down from Olympus one at a time, and each can be stopped only by its Roman twin: Jupiter for Zeus, Minerva for Athena. The light of any other god passes straight through. Greek gods have blue name tags, yours red. In the first waves each card also shows its Greek twin; after that you play from memory. If a god reaches the bottom, Juno’s sacred geese drive it back, but only once in each lane.',
     blurb: 'The Romans matched their gods with the gods of the Greeks and took over their myths. Now the Greek gods come down from Olympus. Do you know who is who?',
-    after: 'Each pair shared its symbols: the thunderbolt of Jupiter and Zeus, the trident of Neptune and Poseidon, the bow and moon of Diana and Artemis. Apollo is the one great god with the same name in Greek and Latin. And Juno’s geese are a real story: in 390 BC, when the Gauls climbed the Capitoline Hill at night, the sacred geese in her temple woke the defenders.',
+    after: 'Each pair shared its symbols: the thunderbolt of Jupiter and Zeus, the trident of Neptune and Poseidon, the bow and moon of Diana and Artemis. Apollo is the one great god with the same name in Greek and Latin.',
     waves: [w(24, ['zeus']), w(40, ['poseidon']), w(54, ['zeus', 'athena']), w(70, ['ares']), w(86, ['hera', 'poseidon']), w(100, ['aphrodite', 'athena']), w(116, ['artemis', 'ares', 'zeus']),
       w(132, ['hermes', 'hera', 'poseidon', 'athena', 'artemis'], 'Olympus attacks in force!'), w(162, ['aphrodite', 'hermes', 'ares']), w(178, ['zeus', 'hera', 'artemis', 'poseidon']),
       w(196, ['zeus', 'hera', 'poseidon', 'athena', 'ares', 'aphrodite', 'artemis', 'hermes', 'zeus', 'ares'], 'The final wave: all of Olympus!')] },
@@ -351,6 +351,7 @@ const MEDICUS = { heals: 1, wait: 10 }, AUGUR = { seconds: 15, reload: 0.6, dama
 const SCORE = { grainPer10: 75, minGrain: 25, at80: -25, vetsAt80: 1, vetsPer10: 1, sky: [12, 14] }
 const VET_ORDER = ['slinger', 'triarius', 'slinger', 'hastatus', 'slinger', 'triarius', 'slinger']
 function armyFor(score, L = LEVEL) {
+  if (L.pantheon) return { grain: 0, vets: {}, medicus: false, augur: false, gate: panGate(score) }   // Pantheon Siege: the strength of Rome's gate
   const steps = (score - 80) / 10
   const grain = Math.max(SCORE.minGrain, Math.round((L.start + SCORE.at80 + steps * SCORE.grainPer10) / 25) * 25)
   const vets = {}
@@ -425,12 +426,24 @@ function romanLegs(c, kneel = false) {
   c.fillStyle = '#5a3a22'; c.fillRect(-6.5, -3, 5.5, 3); c.fillRect(1, -3, 5.5, 3)
 }
 const DEITY_LOOK = {"ceres": {"robe": "#e9d9a6", "hair": "#b07a3a", "crown": "wreath", "item": "wheat", "female": true}, "jupiter": {"robe": "#f1ead8", "hair": "#e8e4da", "beard": true, "crown": "wreath", "item": "bolt"}, "zeus": {"robe": "#f1ead8", "hair": "#e8e4da", "beard": true, "crown": "wreath", "item": "bolt"}, "juno": {"robe": "#efe3f0", "hair": "#4a2f1e", "crown": "diadem", "item": "sceptre", "female": true}, "hera": {"robe": "#efe3f0", "hair": "#4a2f1e", "crown": "diadem", "item": "sceptre", "female": true}, "neptune": {"robe": "#cfe3e6", "hair": "#7b8a8f", "beard": true, "crown": "diadem", "item": "trident"}, "poseidon": {"robe": "#cfe3e6", "hair": "#7b8a8f", "beard": true, "crown": "diadem", "item": "trident"}, "minerva": {"robe": "#e4e4d8", "hair": "#4a2f1e", "crown": "helmet", "crest": "#2f5f9a", "item": "spear", "shield": "#c9a24a", "female": true}, "athena": {"robe": "#e4e4d8", "hair": "#4a2f1e", "crown": "helmet", "crest": "#2f5f9a", "item": "spear", "shield": "#c9a24a", "female": true}, "mars": {"robe": "#e9d2c6", "hair": "#3a2414", "beard": true, "crown": "helmet", "crest": "#c0392b", "item": "sword", "shield": "#8e2b22"}, "ares": {"robe": "#e9d2c6", "hair": "#3a2414", "beard": true, "crown": "helmet", "crest": "#c0392b", "item": "sword", "shield": "#8e2b22"}, "venus": {"robe": "#f7dbe0", "hair": "#d9a441", "crown": "flower", "item": "dove", "female": true}, "aphrodite": {"robe": "#f7dbe0", "hair": "#d9a441", "crown": "flower", "item": "dove", "female": true}, "diana": {"robe": "#e3ead7", "hair": "#6b4a2b", "crown": "moon", "item": "bow", "female": true}, "artemis": {"robe": "#e3ead7", "hair": "#6b4a2b", "crown": "moon", "item": "bow", "female": true}, "mercury": {"robe": "#f0e6cf", "hair": "#8a5a2b", "crown": "wings", "item": "caduceus"}, "hermes": {"robe": "#f0e6cf", "hair": "#8a5a2b", "crown": "wings", "item": "caduceus"}}
+// Pantheon Siege brings the rest of the chapter's table
+Object.assign(DEITY_LOOK, {
+  apollo: { robe: '#f4ecd0', hair: '#e0b040', crown: 'wreath', item: 'lyre' },
+  vulcan: { robe: '#b08a6a', hair: '#3a2414', beard: true, item: 'hammer' },
+  vesta: { robe: '#f3efe4', hair: '#6b4a2b', crown: 'veil', item: 'flame', female: true },
+  bacchus: { robe: '#d7c2e0', hair: '#5a3a22', crown: 'wreath', item: 'grapes' },
+  pluto: { robe: '#5e5868', hair: '#1f1a1a', beard: true, crown: 'diadem', item: 'bident' },
+  saturn: { robe: '#cfc8b4', hair: '#bdb8ad', beard: true, item: 'sickle' },
+})
 // a god or goddess: feet at 0,0 like the soldiers. Greek gods (enemies) wear a blue border and carry a name tag
 function drawDeity(c, type, T, greek, o = {}) {
-  const L = DEITY_LOOK[type], walk = o.walk ?? 0, act = o.anim > 0
+  let L = DEITY_LOOK[type]; const walk = o.walk ?? 0, act = o.anim > 0, A = c.globalAlpha
+  // Pantheon Siege: the Greek gods come as marble statues; the ordinary ones carry nothing, a boss shows its symbol
+  if (o.marble) L = { ...L, robe: '#efede7', hair: '#d4d0c6', crest: '#d4d0c6', shield: L.shield && '#dcd8ce', ...(o.plain ? { item: null, crown: null, shield: null } : {}) }
+  const SKIN = o.marble ? '#e8e4dc' : SKIN_TONE, SKIN_SHADE = o.marble ? '#cfcabf' : SKIN_TONE_SHADE
   if (greek) { c.fillStyle = 'rgba(255, 255, 255, .9)'; for (const [x, y, r] of [[-9, -1, 6], [0, 0.5, 7.5], [9, -1, 6]]) { c.beginPath(); c.ellipse(x, y, r, r * 0.5, 0, 0, TAU); c.fill() } }   // down from Olympus on a cloud
   else shadow(c, 13, 4)
-  c.globalAlpha = 0.5; c.drawImage(glow(greek ? '170, 205, 240' : '250, 215, 120'), -22, -70, 44, 44); c.globalAlpha = 1   // a halo
+  c.globalAlpha = 0.5 * A; c.drawImage(glow(greek ? '170, 205, 240' : '250, 215, 120'), -22, -70, 44, 44); c.globalAlpha = A   // a halo
   if (L.shield) { c.fillStyle = L.shield; c.strokeStyle = '#5a3a22'; c.lineWidth = 1.4; c.beginPath(); c.arc(-13, -24, 8.5, 0, TAU); c.fill(); c.stroke(); c.fillStyle = 'rgba(255,255,255,.35)'; c.beginPath(); c.arc(-13, -24, 3, 0, TAU); c.fill() }
   // the long robe, and its border
   c.fillStyle = L.robe; c.beginPath(); c.moveTo(-9, -36); c.lineTo(9, -36); c.lineTo(12 + walk, -2); c.lineTo(-12 + walk, -2); c.closePath(); c.fill()
@@ -453,6 +466,12 @@ function drawDeity(c, type, T, greek, o = {}) {
   if (L.item === 'dove') { c.fillStyle = '#ffffff'; c.beginPath(); c.ellipse(hx + 2, hy - 4, 5, 3, -0.3, 0, TAU); c.fill(); c.beginPath(); c.ellipse(hx - 1, hy - 7, 4, 2, -1.1, 0, TAU); c.fill(); c.fillStyle = '#e0a63a'; c.fillRect(hx + 6, hy - 6, 2, 1.5) }
   if (L.item === 'bow') { c.strokeStyle = '#6b4a2b'; c.lineWidth = 2; c.beginPath(); c.arc(hx + 4, hy - 4, 12, -1.9, 1.9); c.stroke(); line(c, hx + 4 + 12 * Math.cos(-1.9), hy - 4 + 12 * Math.sin(-1.9), hx + 4 + 12 * Math.cos(1.9), hy - 4 + 12 * Math.sin(1.9), '#d9ccb0', 1) }
   if (L.item === 'caduceus') { line(c, hx, hy + 16, hx, hy - 26, '#c9a24a', 2); c.strokeStyle = '#3f6b3a'; c.lineWidth = 1.4; c.beginPath(); for (let t = 0; t <= 1; t += 0.05) { const y = hy + 10 - t * 32; c.lineTo(hx + Math.sin(t * 12) * 3.5, y) } c.stroke(); line(c, hx - 6, hy - 27, hx + 6, hy - 27, '#e8e4da', 2) }
+  if (L.item === 'lyre') { c.strokeStyle = '#c9a24a'; c.lineWidth = 2; c.beginPath(); c.moveTo(hx - 6, hy - 18); c.quadraticCurveTo(hx - 8, hy, hx, hy + 2); c.quadraticCurveTo(hx + 8, hy, hx + 6, hy - 18); c.stroke(); line(c, hx - 6, hy - 16, hx + 6, hy - 16, '#8a6a2a', 1.6); for (const dx of [-3, 0, 3]) line(c, hx + dx, hy - 15, hx + dx, hy - 1, '#f4ecd8', 0.8) }
+  if (L.item === 'hammer') { line(c, hx, hy + 8, hx, hy - 20, '#6b4a2b', 2.4); c.fillStyle = '#6f767c'; c.fillRect(hx - 7, hy - 27, 14, 7) }
+  if (L.item === 'flame') { c.fillStyle = '#a8742e'; c.beginPath(); c.ellipse(hx, hy - 2, 6, 3, 0, 0, TAU); c.fill(); const fl = Math.sin(T * 9) * 1.2; c.fillStyle = '#f08a24'; c.beginPath(); c.moveTo(hx - 5, hy - 3); c.quadraticCurveTo(hx - 4 + fl, hy - 14, hx, hy - 20); c.quadraticCurveTo(hx + 4 + fl, hy - 12, hx + 5, hy - 3); c.fill(); c.fillStyle = '#f7d046'; c.beginPath(); c.moveTo(hx - 2.5, hy - 3); c.quadraticCurveTo(hx, hy - 11, hx, hy - 13); c.quadraticCurveTo(hx + 1, hy - 9, hx + 2.5, hy - 3); c.fill() }
+  if (L.item === 'grapes') { c.fillStyle = '#c9a24a'; c.beginPath(); c.moveTo(hx - 6, hy - 10); c.lineTo(hx + 6, hy - 10); c.lineTo(hx + 2, hy - 3); c.lineTo(hx - 2, hy - 3); c.fill(); c.fillRect(hx - 1, hy - 3, 2, 5); c.fillRect(hx - 4, hy + 2, 8, 1.6); c.fillStyle = '#6b2f6b'; for (const [dx, dy] of [[-3, -13], [0, -13], [3, -13], [-1.5, -16], [1.5, -16], [0, -19]]) { c.beginPath(); c.arc(hx + dx, hy + dy, 1.9, 0, TAU); c.fill() } }
+  if (L.item === 'bident') { line(c, hx, hy + 18, hx, hy - 30, '#3a3a3a', 2); line(c, hx - 4, hy - 28, hx + 4, hy - 28, '#6a6a6a', 1.8); for (const dx of [-4, 4]) line(c, hx + dx, hy - 28, hx + dx, hy - 38, '#6a6a6a', 1.8) }
+  if (L.item === 'sickle') { line(c, hx, hy + 6, hx, hy - 8, '#6b4a2b', 2.4); c.strokeStyle = '#bfc7cc'; c.lineWidth = 2.4; c.beginPath(); c.arc(hx + 6, hy - 8, 7, Math.PI, Math.PI * 1.9); c.stroke() }
   if (L.item === 'wheat') { for (const dx of [-3, 0, 3]) { line(c, hx + dx * 0.4, hy + 6, hx + dx, hy - 18, '#b8902e', 1.4); c.fillStyle = '#e0b84a'; c.beginPath(); c.ellipse(hx + dx, hy - 20, 2, 4.5, 0, 0, TAU); c.fill() } }
   // head, hair, beard
   c.fillStyle = SKIN_SHADE; c.fillRect(-3, -40, 6, 5)
@@ -466,10 +485,11 @@ function drawDeity(c, type, T, greek, o = {}) {
   if (L.crown === 'diadem') { c.fillStyle = '#e0b84a'; c.beginPath(); c.moveTo(-7, -51); c.lineTo(-4, -58); c.lineTo(0, -52); c.lineTo(4, -58); c.lineTo(7, -51); c.closePath(); c.fill() }
   if (L.crown === 'helmet') { c.fillStyle = '#c9a24a'; c.beginPath(); c.arc(0, -48, 8, Math.PI, TAU); c.fill(); c.fillRect(-8, -49, 3, 7); c.fillStyle = L.crest; c.beginPath(); c.moveTo(-9, -54); c.quadraticCurveTo(0, -66, 9, -54); c.lineTo(6, -53); c.quadraticCurveTo(0, -61, -6, -53); c.fill() }
   if (L.crown === 'flower') { c.fillStyle = '#e0607a'; for (let a = 0; a < 5; a++) { c.beginPath(); c.arc(6 + Math.cos(a * 1.26) * 2.2, -51 + Math.sin(a * 1.26) * 2.2, 1.8, 0, TAU); c.fill() } c.fillStyle = '#f2c230'; c.beginPath(); c.arc(6, -51, 1.3, 0, TAU); c.fill() }
+  if (L.crown === 'veil') { c.fillStyle = o.marble ? '#e6e3dc' : '#f7f3ea'; c.beginPath(); c.moveTo(-9.5, -36); c.quadraticCurveTo(-12, -57, 0, -57); c.quadraticCurveTo(12, -57, 9.5, -36); c.lineTo(6.5, -40); c.quadraticCurveTo(7, -52, 0, -52.5); c.quadraticCurveTo(-7, -52, -6.5, -40); c.closePath(); c.fill() }
   if (L.crown === 'moon') { c.fillStyle = '#f4f1e4'; c.beginPath(); c.arc(0, -57, 5.5, 0, TAU); c.fill(); c.fillStyle = L.hair; c.beginPath(); c.arc(1.8, -58.5, 4.6, 0, TAU); c.fill() }
   if (L.crown === 'wings') { c.fillStyle = '#9a8a5a'; c.beginPath(); c.ellipse(0, -51, 9.5, 3, 0, 0, TAU); c.fill(); c.fillStyle = '#ffffff'; for (const s of [-1, 1]) { c.beginPath(); c.moveTo(s * 7, -53); c.lineTo(s * 15, -61); c.lineTo(s * 12, -55); c.lineTo(s * 15, -57); c.lineTo(s * 9, -51); c.fill() } }
   if (o.tag !== false) {   // the name tag: blue for the Greek gods coming down, red for your own
-    const n = greek ? FOES[type].name : UNITS[type].short, name = (LANG === 'bg' ? bgName(n) : n).toUpperCase()
+    const n = o.name ?? (greek ? FOES[type].name : UNITS[type].short), name = (o.name ?? (LANG === 'bg' ? bgName(n) : n)).toUpperCase()
     c.font = '800 9px Nunito, system-ui, sans-serif'; c.textAlign = 'center'
     const w = c.measureText(name).width + 8
     c.fillStyle = greek ? 'rgba(31, 52, 84, .92)' : 'rgba(142, 43, 34, .92)'; rr(c, -w / 2, 3, w, 12, 4); c.fill()   // under the feet, clear of the health bar
@@ -1027,6 +1047,7 @@ const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').match
 // grain, tools, messages and controls on the right. Tall screens: everything stacked, field at full width.
 const WIDE = window.matchMedia('(min-aspect-ratio: 5/4) and (min-width: 600px)')
 function layout() {
+  if (panActive) return   // Pantheon Siege lays out its own screen
   const wrap = $('wrap'), game = sroot.querySelector('.game'), top = Math.max(0, host.getBoundingClientRect().top)
   let avail, maxH
   if (WIDE.matches) {
@@ -1985,6 +2006,7 @@ function newFoesOf(i) {
 }
 function showBriefing(i) {
   const L = LEVELS[i]
+  if (L.pantheon) { levelIndex = i; LEVEL = L; return openPantheon() }
   const news = [
     ...(L.newUnit ? [`<li><canvas class="ic" data-unit="${L.newUnit}" width="88" height="88"></canvas><span><b>New unit: ${UNITS[L.newUnit].name}.</b> ${UNITS[L.newUnit].about}</span></li>`] : []),
     ...(i > 0 ? newFoesOf(i).map(t => `<li><canvas class="ic" data-foe="${t}" width="88" height="88"></canvas><span><b>New enemy.</b> ${FOES[t].intro}</span></li>`) : []),
@@ -2097,12 +2119,428 @@ function lose() {
 // ---------- the loop ----------
 let last = performance.now()
 function frame(now) {
-  if (!mounted) return
+  if (!mounted || panActive) return
   const dt = Math.max(0, Math.min(0.05, (now - last) / 1000)); last = now   // the first frame can come in a hair before `last`
   if (G.phase === 'play') { for (let i = 0; i < G.speed; i++) update(dt) }
   else if (G.phase === 'won' || G.phase === 'lost') { for (const c of G.corpses) c.t = Math.min(c.t + dt, 1); G.shake = Math.max(0, G.shake - dt * 12) }
   draw(); syncTray()
   requestAnimationFrame(frame)
+}
+
+// ---------- Pantheon Siege: the contest of the gods (the Religion chapter) ----------
+// The Greek gods walk down three lanes toward the gates of Rome, as marble statues with their names. Drop the matching
+// Roman god on a lane to stop the one coming down it: the right twin turns the Greek god into the Roman one; a wrong
+// one lets it walk on, rests that card for 5 seconds and flashes the right pair. Three levels bring the 15 pairs of the
+// chapter's table in three groups, each ending with a boss who shows only its symbol and a clue.
+const PAN_GODS = [
+  { k: 'jupiter', tier: 1, en: ['Jupiter', 'Zeus', 'the sky and thunder'], bg: ['Юпитер', 'Зевс', 'небето и гръмотевиците'],
+    clue: ['He hurls the thunderbolt and rules from Mount Olympus.', 'Той мята гръмотевици и царува от Олимп.'] },
+  { k: 'juno', tier: 1, en: ['Juno', 'Hera', 'marriage and women'], bg: ['Юнона', 'Хера', 'брака и жените'],
+    clue: ['Queen of the gods and guardian of marriage; the peacock is her bird.', 'Царица на боговете и закрилница на брака; паунът е нейната птица.'] },
+  { k: 'neptune', tier: 1, en: ['Neptune', 'Poseidon', 'the sea'], bg: ['Нептун', 'Посейдон', 'морето'],
+    clue: ['With his trident he shakes the earth and stirs up the sea.', 'С тризъбеца си разтърсва земята и вълнува морето.'] },
+  { k: 'minerva', tier: 1, en: ['Minerva', 'Athena', 'wisdom and crafts'], bg: ['Минерва', 'Атина', 'мъдростта и занаятите'],
+    clue: ['She sprang fully armed from her father’s head; the owl is her bird.', 'Родила се въоръжена от главата на баща си; совата е нейната птица.'] },
+  { k: 'mars', tier: 1, en: ['Mars', 'Ares', 'war'], bg: ['Марс', 'Арес', 'войната'],
+    clue: ['The god of war, and in Rome the father of Romulus and Remus.', 'Богът на войната, а в Рим – баща на Ромул и Рем.'] },
+  { k: 'venus', tier: 1, en: ['Venus', 'Aphrodite', 'love and beauty'], bg: ['Венера', 'Афродита', 'любовта и красотата'],
+    clue: ['The goddess of love, born from the foam of the sea.', 'Богинята на любовта, родена от морската пяна.'] },
+  { k: 'diana', tier: 2, en: ['Diana', 'Artemis', 'hunting and the moon'], bg: ['Диана', 'Артемида', 'лова и луната'],
+    clue: ['The huntress with the silver bow, twin sister of the god of light.', 'Ловджийката със сребърния лък, близначка на бога на светлината.'] },
+  { k: 'vulcan', tier: 2, en: ['Vulcan', 'Hephaestus', 'fire and the forge'], bg: ['Вулкан', 'Хефест', 'огъня и ковачницата'],
+    clue: ['The lame smith who forges the weapons of the gods under a volcano.', 'Куцият ковач, който кове оръжията на боговете под един вулкан.'] },
+  { k: 'vesta', tier: 2, en: ['Vesta', 'Hestia', 'the hearth'], bg: ['Веста', 'Хестия', 'огнището'],
+    clue: ['Her sacred fire burns in every home and must never go out.', 'Свещеният ѝ огън гори във всеки дом и никога не бива да угасне.'] },
+  { k: 'mercury', tier: 2, en: ['Mercury', 'Hermes', 'messages, travellers and trade'], bg: ['Меркурий', 'Хермес', 'вестите, пътниците и търговията'],
+    clue: ['The messenger of the gods, with winged sandals and a winged hat.', 'Вестителят на боговете, с крилати сандали и крилата шапка.'] },
+  { k: 'ceres', tier: 2, en: ['Ceres', 'Demeter', 'grain and the harvest'], bg: ['Церера', 'Деметра', 'житото и реколтата'],
+    clue: ['She makes the grain grow; while her daughter is in the underworld, it is winter.', 'Тя кара житото да расте; докато дъщеря ѝ е в подземното царство, е зима.'] },
+  { k: 'apollo', tier: 3, en: ['Apollo', 'Apollo', 'light, music and prophecy'], bg: ['Аполон', 'Аполон', 'светлината, музиката и пророчествата'],
+    clue: ['The god of the lyre, who speaks through the oracle at Delphi.', 'Богът с лирата, който говори чрез оракула в Делфи.'] },
+  { k: 'bacchus', tier: 3, en: ['Bacchus', 'Dionysus', 'wine'], bg: ['Бакхус', 'Дионис', 'виното'],
+    clue: ['The god of wine, followed by dancing maenads.', 'Богът на виното, следван от танцуващи менади.'] },
+  { k: 'pluto', tier: 3, en: ['Pluto', 'Hades', 'the underworld'], bg: ['Плутон', 'Хадес', 'подземното царство'],
+    clue: ['He rules the land of the dead, guarded by the three-headed dog Cerberus.', 'Той владее царството на мъртвите, пазено от триглавото куче Цербер.'] },
+  { k: 'saturn', tier: 3, en: ['Saturn', 'Cronus', 'sowing and a lost golden age'], bg: ['Сатурн', 'Кронос', 'сеитбата и изгубения златен век'],
+    clue: ['He swallowed his own children, until his youngest son overthrew him.', 'Той поглъщал децата си, докато най-малкият му син не го свалил.'] },
+]
+const PAN_LEVELS = [
+  { tier: 1, en: 'The great Olympians', bg: 'Великите олимпийци', walk: 12, gap: 2.6 },
+  { tier: 2, en: 'Gods of home and work', bg: 'Богове на дома и труда', walk: 11, gap: 2.4 },
+  { tier: 3, en: 'The whole Pantheon', bg: 'Целият пантеон', walk: 10, gap: 2.2 },
+]
+const PAN = { waves: 5, first: 4, hand: 6, rest: 5, slow: 5, cost: { slow: 3, reveal: 2, plus: 5 } }
+const panGate = score => score >= 90 ? 5 : score >= 80 ? 4 : 3   // the chapter test sets how many gods the gate can take
+const PAN_KEY = 'ave-pantheon'
+let panSave = { open: 1, stars: [], best: [] }
+try { panSave = { ...panSave, ...JSON.parse(localStorage.getItem(PAN_KEY) || '{}') } } catch {}
+const panStore = () => { try { localStorage.setItem(PAN_KEY, JSON.stringify(panSave)) } catch {} }
+const pt = (en, bg) => LANG === 'bg' ? bg : en
+const panGod = k => PAN_GODS.find(g => g.k === k)
+const rName = k => panGod(k)[LANG === 'bg' ? 'bg' : 'en'][0], gName = k => panGod(k)[LANG === 'bg' ? 'bg' : 'en'][1], godOf = k => panGod(k)[LANG === 'bg' ? 'bg' : 'en'][2]
+let P = null, panActive = false, panCanvas = null, pctx = null, panLast = 0, panDrag = null, flashTimer = null
+const PAN_MARKUP = () => `<main class="game pan">
+  <div class="pan-hud">
+    <div class="pan-gate" id="pan-gate" aria-live="polite"></div>
+    <div class="pan-score"><b id="pan-score">0</b><span id="pan-combo"></span></div>
+    <div class="pan-wave" id="pan-wave"></div>
+  </div>
+  <div class="field-wrap pan-wrap" id="wrap">
+    <canvas id="pan-field" aria-label="${pt('Three lanes down to the gates of Rome. The Greek gods walk down from Olympus at the top.', 'Три линии към портите на Рим. Гръцките богове слизат от Олимп горе.')}"></canvas>
+    <div class="pan-flash" id="pan-flash" hidden></div>
+    <div class="overlay" id="overlay" hidden></div>
+  </div>
+  <div class="pan-hand" id="pan-hand" hidden aria-label="${pt('Your Roman gods. Drag one onto a lane, or tap it and then tap a lane.', 'Вашите римски богове. Плъзнете един върху линия или го натиснете, а после натиснете линия.')}"></div>
+  <div class="msg" id="banner" aria-live="polite"></div>
+  <div class="pan-tools" id="pan-tools" hidden>
+    <span class="pan-favor" id="pan-favor"></span>
+    <button class="tool" id="pan-slow"></button><button class="tool" id="pan-reveal"></button><button class="tool" id="pan-plus"></button>
+    <button class="tool" id="pan-pause">${pt('Pause', 'Пауза')}</button>
+  </div>
+</main>`
+
+function openPantheon() {
+  panActive = true; P = null
+  sroot.innerHTML = `<style>${HTL_CSS}</style>` + PAN_MARKUP()
+  overlay = $('overlay'); panCanvas = $('pan-field'); pctx = panCanvas.getContext('2d')
+  panCanvas.addEventListener('pointerdown', panTapField)
+  $('pan-slow').addEventListener('click', () => { if (!P || P.phase !== 'play' || P.favor < PAN.cost.slow) return; P.arm = P.arm === 'slow' ? null : 'slow'; if (P.arm) announce(pt('Tap a lane to slow the god on it.', 'Натиснете линия, за да забавите бога по нея.')); panHud() })
+  $('pan-reveal').addEventListener('click', panReveal)
+  $('pan-plus').addEventListener('click', () => { if (!P || P.phase !== 'play' || P.favor < PAN.cost.plus || P.gate >= P.gateMax + 2) return; P.favor -= PAN.cost.plus; P.gate++; sfx.collect(); announce(pt('The gate of Rome is stronger.', 'Портата на Рим е по-здрава.')); panHud() })
+  $('pan-pause').addEventListener('click', panPause)
+  window.addEventListener('resize', panLayout)
+  panLayout(); panBriefing()
+  panLast = performance.now(); requestAnimationFrame(panFrame)
+}
+function panLeave(result) {
+  if (opts.mode === 'chapter') return exit(result)
+  mount(host, { ...opts })   // the standalone page: back to the campaign map
+}
+function panBriefing() {
+  if (P) P.phase = 'menu'
+  const open = i => i < panSave.open || (typeof window.__aveOpenAll === 'function' && window.__aveOpenAll())
+  const stops = PAN_LEVELS.map((L, i) => {
+    const s = panSave.stars[i] ?? 0, ok = open(i)
+    const gods = PAN_GODS.filter(g => g.tier === L.tier).map(g => rName(g.k)).join(', ')
+    return `<li class="stop ${s ? 'done' : ok ? 'open' : 'locked'}"><button id="pl${i}" ${ok ? '' : 'disabled'}>
+      <span class="num">${i + 1}</span>
+      <span class="what"><b>${pt(L.en, L.bg)}</b><small>${ok ? (i ? pt('New: ', 'Нови: ') : '') + gods : pt('Beat the boss of the level before', 'Победете боса на предишното ниво')}</small></span>
+      ${ok ? `<span class="stars" aria-label="${s} of 3 stars">${starText(s)}</span>` : ''}</button></li>`
+  }).join('')
+  showPanel(`<span class="eyebrow">${pt('A game of myth', 'Игра по митовете')}</span><h2>${pt('Pantheon Siege', 'Обсадата на Пантеона')}</h2>
+    <p>${pt('The Romans matched their gods with the gods of the Greeks. Now the Greek gods march on Rome. Do you know who is who?', 'Римляните съпоставили своите богове с боговете на гърците. Сега гръцките богове вървят към Рим. Знаете ли кой кой е?')}</p>
+    <ul class="pan-rules">
+      <li>${pt('<b>Drag</b> the Roman twin onto the lane of the Greek god coming down it, or tap the card and then the lane.', '<b>Плъзнете</b> римския близнак върху линията на гръцкия бог, който слиза по нея, или натиснете картата и после линията.')}</li>
+      <li>${pt('The <b>right god</b> wins points and Favor; right answers in a row multiply your points.', '<b>Правилният бог</b> носи точки и благоволение; верни отговори подред умножават точките.')}</li>
+      <li>${pt('A <b>wrong god</b> lets the Greek one walk on and rests for 5 seconds. Three wrong in a row and the Senate loses faith.', '<b>Грешен бог</b> пропуска гръцкия да продължи и почива 5 секунди. Три грешни подред – и Сенатът губи вяра.')}</li>
+      <li>${pt('Spend <b>Favor</b> to slow a lane, to see who comes next, or to strengthen the gate.', 'Харчете <b>благоволение</b>, за да забавите линия, да видите кой идва или да укрепите портата.')}</li>
+      <li>${pt('Each level ends with a <b>boss</b> who shows only a symbol and a clue.', 'Всяко ниво завършва с <b>бос</b>, който показва само символ и подсказка.')}</li>
+    </ul>
+    <ol class="road">${stops}</ol>
+    <p class="twist">${opts.mode === 'chapter' ? `<b>${pt(`Your chapter test: ${quizScore}%.`, `Вашият тест на главата: ${quizScore}%.`)}</b> ` : ''}${pt(`The gate of Rome can take ${panGate(quizScore)} gods.`, `Портата на Рим издържа ${panGate(quizScore)} бога.`)}</p>
+    <div class="row"><button class="tool" id="pan-leave">${opts.mode === 'chapter' ? pt('Back to the chapter', 'Обратно към главата') : pt('Back to the map', 'Към картата')}</button></div>`,
+    { ...Object.fromEntries(PAN_LEVELS.map((L, i) => [`pl${i}`, () => panStart(i)])), 'pan-leave': () => panLeave({ left: true }) })
+}
+function panStart(li, score = quizScore) {   // (a score can be given for testing)
+  const L = PAN_LEVELS[li], gate = panGate(score)
+  const pool = PAN_GODS.filter(g => g.tier <= L.tier).map(g => g.k), fresh = PAN_GODS.filter(g => g.tier === L.tier).map(g => g.k)
+  const pick = a => a[Math.floor(Math.random() * a.length)]
+  const queue = []
+  let t = 2.5, prev = null
+  for (let w = 0; w < PAN.waves; w++) {
+    const f = 1 + 0.15 * w   // each wave faster: the fifth comes 1.6 times as fast as the first
+    for (let i = 0; i < PAN.first + w; i++) {
+      let k; do k = pick(Math.random() < 0.55 ? fresh : pool); while (k === prev)   // the new gods of the level come most
+      prev = k; queue.push({ t, k, walk: L.walk / f, wave: w }); t += L.gap / f
+    }
+    t += 4   // a breath between waves
+  }
+  P = { li, L, pool, t: 0, phase: 'play', gate, gateMax: gate, score: 0, streak: 0, favor: 0, mistakes: 0, wrongRow: 0, gods: [], hand: [], cool: {}, queue,
+    wave: -1, fx: [], slow: {}, boss: pick(fresh), bossOut: false, sel: null, arm: null, hover: null, shake: 0, ids: 0 }
+  overlay.hidden = true; $('pan-flash').hidden = true; $('pan-hand').hidden = false; $('pan-tools').hidden = false
+  panFill(); panHud()
+  announce(pt(`Level ${li + 1}: ${L.en}`, `Ниво ${li + 1}: ${L.bg}`), true)
+  sfx.init()
+}
+// every god on the field has its Roman twin in the hand; the other cards are decoys from the level's gods
+function panFill(slot) {
+  const H = P.hand, need = [...new Set(P.gods.filter(g => g.state === 'walk').map(g => g.k))]
+  if (slot != null) { if (H.length > PAN.hand) H.splice(slot, 1); else H[slot] = null }
+  for (const k of need) if (!H.includes(k)) {
+    let i = H.indexOf(null)
+    if (i < 0) i = H.findIndex(c => !need.includes(c) && !((P.cool[c] ?? 0) > P.t))
+    if (i < 0) i = H.length
+    H[i] = k
+  }
+  for (let i = 0; i < PAN.hand; i++) if (H[i] == null) { const free = P.pool.filter(k => !H.includes(k)); H[i] = free[Math.floor(Math.random() * free.length)] }
+  panHandRender()
+}
+function panSpawn(e, boss = false) {
+  const busy = l => P.gods.some(g => g.lane === l && g.state === 'walk' && g.y < 0.28)
+  const free = [0, 1, 2].filter(l => !busy(l)), lanes = free.length ? free : [0, 1, 2]
+  const lane = lanes[Math.floor(Math.random() * lanes.length)]
+  P.gods.push({ id: ++P.ids, k: e.k, lane, y: 0, walk: e.walk, state: 'walk', t: 0, boss, named: !boss })
+  panFill()
+}
+function panUpdate(dt) {
+  P.t += dt
+  while (P.queue.length && P.queue[0].t <= P.t) {
+    const e = P.queue.shift()
+    if (e.wave !== P.wave) { P.wave = e.wave; announce(pt(`Wave ${e.wave + 1} of ${PAN.waves}`, `Вълна ${e.wave + 1} от ${PAN.waves}`), true); sfx.horn(); panHud() }
+    panSpawn(e)
+  }
+  if (!P.queue.length && !P.bossOut && !P.gods.some(g => g.state === 'walk')) {
+    P.bossOut = true; P.wave = PAN.waves
+    const g = panGod(P.boss)
+    announce(pt(`The boss! Only its symbol and a clue: ${g.clue[0]}`, `Босът! Само символ и подсказка: ${g.clue[1]}`), true, 7000); sfx.horn()
+    panSpawn({ k: P.boss, walk: P.L.walk * 1.35 }, true)
+    panHud()
+  }
+  for (const g of P.gods) {
+    g.t += dt
+    if (g.state === 'in') g.y += dt * 0.25
+    if (g.state !== 'walk') continue
+    g.y += dt / g.walk * ((P.slow[g.lane] ?? 0) > P.t ? 0.35 : 1)
+    if (g.y >= 1) panBreach(g)
+    if (P.phase !== 'play') return
+  }
+  P.gods = P.gods.filter(g => g.state === 'walk' || g.t < 0.9)
+  for (const f of P.fx) f.t -= dt
+  P.fx = P.fx.filter(f => f.t > 0)
+  P.shake = Math.max(0, P.shake - dt * 14)
+}
+function panBreach(g) {
+  P.gate--; P.streak = 0; P.mistakes++; P.shake = 9; sfx.boom()
+  if (g.boss) {   // the boss climbs back to Olympus and comes again, now with its name
+    g.y = 0; g.named = true
+    panFlashHtml(`<span class="g">${gName(g.k)}</span>${g.k === 'apollo' ? '' : ` = <span class="r">${rName(g.k)}</span>`}<small>${godOf(g.k)}</small>`)
+  } else { g.state = 'in'; g.t = 0; panFlash(g.k) }
+  panHud()
+  if (P.gate <= 0) panLose('gate')
+}
+function panDrop(i, lane) {
+  const card = P?.hand[i]
+  if (!card || P.phase !== 'play') return
+  P.sel = null
+  if ((P.cool[card] ?? 0) > P.t) { announce(pt(`${rName(card)} is still resting.`, `${rName(card)} още почива.`)); return panHandRender() }
+  const target = P.gods.filter(g => g.lane === lane && g.state === 'walk').sort((a, b) => b.y - a.y)[0]
+  if (!target) { announce(pt('No god is coming down that lane.', 'По тази линия не слиза бог.')); return panHandRender() }
+  if (target.k === card) {   // the twins meet: the Greek god becomes the Roman one
+    target.state = 'won'; target.t = 0; target.named = true
+    P.streak++; P.wrongRow = 0
+    const mult = P.streak >= 10 ? 4 : P.streak >= 6 ? 3 : P.streak >= 3 ? 2 : 1, pts = 100 * mult * (target.boss ? 5 : 1)
+    P.score += pts; P.favor += mult >= 3 ? 2 : 1
+    P.fx.push({ kind: 'text', text: '+' + pts, lane, y: target.y, t: 1.1 })
+    sfx.collect(); if (target.boss) sfx.charge()
+    if (P.streak === 3 || P.streak === 6 || P.streak === 10) announce(pt(`${P.streak} in a row: points ×${mult}!`, `${P.streak} подред: точки ×${mult}!`))
+    panFill(i)
+    if (target.boss) { P.phase = 'won'; setTimeout(() => { if (P?.phase === 'won') panVictory() }, 1200) }
+  } else {   // the wrong god: knocked aside, the Greek one walks on
+    P.mistakes++; P.wrongRow++; P.streak = 0; P.cool[card] = P.t + PAN.rest; P.shake = 3
+    P.fx.push({ kind: 'knock', k: card, lane, y: Math.min(0.97, target.y + 0.14), t: 0.8, dir: Math.random() < 0.5 ? -1 : 1 })
+    sfx.clang()
+    if (target.boss && !target.named) { target.named = true; panFlashHtml(pt(`Not ${rName(card)}! It is <span class="g">${gName(target.k)}</span>.`, `Не е ${rName(card)}! Това е <span class="g">${gName(target.k)}</span>.`)) }
+    else panFlash(target.k)
+    panHandRender()
+    if (P.wrongRow >= 3) return panLose('senate')
+  }
+  panHud()
+}
+const panFlash = k => panFlashHtml(`<span class="g">${gName(k)}</span>${k === 'apollo' ? ` = <span class="r">${rName(k)}</span>${pt(': the same name', ': същото име')}` : ` = <span class="r">${rName(k)}</span>`}<small>${pt('god of ', 'бог на ')}${godOf(k)}</small>`)
+function panFlashHtml(html) {
+  const el = $('pan-flash'); if (!el) return
+  el.innerHTML = html; el.hidden = false
+  clearTimeout(flashTimer); flashTimer = setTimeout(() => { el.hidden = true }, 1700)
+}
+function panReveal() {
+  if (!P || P.phase !== 'play' || P.favor < PAN.cost.reveal) return
+  const boss = P.gods.find(g => g.boss && !g.named && g.state === 'walk')
+  if (boss) { boss.named = true; panFlashHtml(pt(`The boss is <span class="g">${gName(boss.k)}</span>.`, `Босът е <span class="g">${gName(boss.k)}</span>.`)) }
+  else if (P.queue.length) panFlashHtml(pt(`Next comes <span class="g">${gName(P.queue[0].k)}</span>.`, `Следва <span class="g">${gName(P.queue[0].k)}</span>.`))
+  else panFlashHtml(pt('Next comes the boss.', 'Следва босът.'))
+  P.favor -= PAN.cost.reveal; panHud()
+}
+function panPause() {
+  if (!P || P.phase !== 'play') return
+  P.phase = 'paused'
+  showPanel(`<span class="eyebrow">${pt('Paused', 'Пауза')} · ${pt(P.L.en, P.L.bg)}</span><h2>${pt('Pantheon Siege', 'Обсадата на Пантеона')}</h2>
+    <p>${pt(`${P.score} points so far.`, `${P.score} точки досега.`)}</p>
+    <div class="row"><button class="primary" id="resume">${pt('Resume', 'Продължи')}</button><button class="tool" id="levels">${pt('Choose a level', 'Избери ниво')}</button><button class="tool" id="leave">${pt('Leave', 'Излез')}</button></div>`,
+    { resume: () => { overlay.hidden = true; P.phase = 'play'; panLast = performance.now() }, levels: panBriefing, leave: () => panLeave({ left: true }) })
+}
+function panVictory() {
+  const stars = P.mistakes === 0 ? 3 : P.mistakes <= 2 ? 2 : 1, li = P.li, next = li + 1 < PAN_LEVELS.length
+  panSave.stars[li] = Math.max(panSave.stars[li] ?? 0, stars); panSave.best[li] = Math.max(panSave.best[li] ?? 0, P.score)
+  if (next) panSave.open = Math.max(panSave.open, li + 2)
+  panStore(); sfx.win()
+  const newGods = next ? PAN_GODS.filter(g => g.tier === PAN_LEVELS[li + 1].tier).map(g => rName(g.k)).join(', ') : ''
+  showPanel(`<span class="eyebrow">${pt('Victory', 'Победа')} · ${pt(P.L.en, P.L.bg)}</span><h2>${pt('Rome holds!', 'Рим устоя!')}</h2>
+    <p class="big-stars" aria-label="${stars} of 3 stars">${starText(stars)}</p>
+    <p>${pt(`${P.score} points (best ${panSave.best[li]}) · ${P.mistakes === 0 ? 'no mistakes' : P.mistakes === 1 ? 'one mistake' : P.mistakes + ' mistakes'}.`, `${P.score} точки (най-добре ${panSave.best[li]}) · ${P.mistakes === 0 ? 'без грешки' : P.mistakes === 1 ? 'една грешка' : P.mistakes + ' грешки'}.`)}
+      ${stars < 3 ? pt('No mistakes for three stars.', 'Без грешки – за три звезди.') : ''}</p>
+    <p class="history">${next ? pt(`Next level: ${newGods}.`, `Следващо ниво: ${newGods}.`) : pt('You know the whole Pantheon: all fifteen pairs of the chapter’s table.', 'Знаете целия пантеон: всичките петнадесет двойки от таблицата в главата.')}</p>
+    <div class="row">${next ? `<button class="primary" id="pan-next">${pt('Next level', 'Следващо ниво')}</button>` : ''}
+      <button class="${next ? 'tool' : 'primary'}" id="pan-done">${opts.mode === 'chapter' ? pt('Continue', 'Продължи') : pt('Back to the map', 'Към картата')}</button>
+      <button class="tool" id="pan-again">${pt('Play again', 'Играй отново')}</button></div>`,
+    { 'pan-next': () => panStart(li + 1), 'pan-done': () => panLeave({ won: true, stars }), 'pan-again': () => panStart(li) })
+}
+function panLose(why) {
+  P.phase = 'lost'; sfx.lose()
+  const li = P.li
+  showPanel(`<span class="eyebrow">${pt('Defeat', 'Поражение')} · ${pt(P.L.en, P.L.bg)}</span>
+    <h2>${why === 'senate' ? pt('The Senate loses faith', 'Сенатът губи вяра') : pt('The gates of Rome fall', 'Портите на Рим падат')}</h2>
+    <p>${why === 'senate' ? pt('Three wrong gods in a row: no more guessing!', 'Три грешни бога подред: стига гадаене!') : pt('Too many Greek gods reached the gate.', 'Твърде много гръцки богове стигнаха портата.')} ${pt(`${P.score} points.`, `${P.score} точки.`)}</p>
+    <p class="history">${pt('The table of the Roman and Greek gods is in the chronicle, under “Foreign Gods and Mystery Cults”.', 'Таблицата с римските и гръцките богове е в хрониката, в раздела за чуждите богове и мистериите.')}</p>
+    <div class="row"><button class="primary" id="pan-again">${pt('Try again', 'Опитай пак')}</button><button class="tool" id="pan-levels">${pt('Choose a level', 'Избери ниво')}</button>
+      <button class="tool" id="pan-out">${opts.mode === 'chapter' ? pt('Back to the chapter', 'Обратно към главата') : pt('Back to the map', 'Към картата')}</button></div>`,
+    { 'pan-again': () => panStart(li), 'pan-levels': panBriefing, 'pan-out': () => panLeave({ won: false }) })
+}
+function panHud() {
+  if (!P) return
+  $('pan-gate').innerHTML = `<span class="lbl">${pt('Gate', 'Порта')}</span>` + Array.from({ length: Math.max(P.gateMax, P.gate) }, (_, i) => `<span class="hp ${i < P.gate ? '' : 'lost'}"></span>`).join('')
+  $('pan-score').textContent = P.score
+  const mult = P.streak >= 10 ? 4 : P.streak >= 6 ? 3 : P.streak >= 3 ? 2 : 1
+  $('pan-combo').textContent = mult > 1 ? '×' + mult : ''
+  $('pan-wave').textContent = P.wave >= PAN.waves ? pt('Boss', 'Бос') : P.wave >= 0 ? pt(`Wave ${P.wave + 1}/${PAN.waves}`, `Вълна ${P.wave + 1}/${PAN.waves}`) : ''
+  $('pan-favor').textContent = `✦ ${P.favor} ${pt('Favor', 'благоволение')}`
+  const tool = (id, label, cost, ok) => { const b = $(id); b.innerHTML = `${label} <b>✦${cost}</b>`; b.disabled = !ok || P.phase !== 'play'; b.classList.toggle('armed', id === 'pan-slow' && P.arm === 'slow') }
+  tool('pan-slow', pt('Slow a lane', 'Забави'), PAN.cost.slow, P.favor >= PAN.cost.slow)
+  tool('pan-reveal', pt('Who’s next', 'Кой идва'), PAN.cost.reveal, P.favor >= PAN.cost.reveal)
+  tool('pan-plus', pt('+1 gate', '+1 порта'), PAN.cost.plus, P.favor >= PAN.cost.plus && P.gate < P.gateMax + 2)
+}
+function panHandRender() {
+  const el = $('pan-hand'); if (!el || !P) return
+  el.style.setProperty('--n', P.hand.length)
+  el.innerHTML = P.hand.map((k, i) => `<button class="pan-card ${P.sel === i ? 'selected' : ''}" data-i="${i}" aria-label="${rName(k)}"><canvas width="96" height="104"></canvas><span class="name">${rName(k)}</span><span class="cool" data-k="${k}"></span></button>`).join('')
+  for (const b of el.querySelectorAll('.pan-card')) {
+    const k = P.hand[+b.dataset.i], c = b.querySelector('canvas').getContext('2d')
+    c.setTransform(2, 0, 0, 2, 0, 0); c.translate(24, 49); c.scale(0.62, 0.62); drawDeity(c, k, 0, false, { tag: false })
+    b.addEventListener('pointerdown', e => panDragStart(e, +b.dataset.i))
+    b.addEventListener('contextmenu', e => e.preventDefault())
+  }
+  panCool()
+}
+function panCool() {
+  if (!P) return
+  for (const s of sroot.querySelectorAll('.pan-card .cool')) { const left = (P.cool[s.dataset.k] ?? 0) - P.t; s.style.height = left > 0 ? `${Math.min(100, left / PAN.rest * 100)}%` : '0' }
+}
+const laneAt = (x, y) => {
+  const r = panCanvas.getBoundingClientRect()
+  if (x < r.left - 10 || x > r.right + 10 || y < r.top - 10 || y > r.bottom + 30) return null
+  return Math.max(0, Math.min(2, Math.floor((x - r.left) / r.width * 3)))
+}
+function panDragStart(e, i) {
+  if (!P || P.phase !== 'play' || panDrag) return
+  sfx.init(); e.preventDefault()
+  const card = e.currentTarget, sx = e.clientX, sy = e.clientY
+  panDrag = { i, moved: false, ghost: null }
+  const move = ev => {
+    if (!panDrag.moved && Math.hypot(ev.clientX - sx, ev.clientY - sy) < 8) return
+    if (!panDrag.moved) {
+      panDrag.moved = true
+      const g = document.createElement('canvas'); g.width = 128; g.height = 140; g.className = 'pan-ghost'
+      const c = g.getContext('2d'); c.setTransform(2, 0, 0, 2, 0, 0); c.translate(32, 64); c.scale(0.85, 0.85); drawDeity(c, P.hand[i], 0, false, { tag: false })
+      sroot.querySelector('.pan').append(g); panDrag.ghost = g; card.classList.add('lifted')
+    }
+    panDrag.ghost.style.left = ev.clientX + 'px'; panDrag.ghost.style.top = ev.clientY + 'px'
+    P.hover = laneAt(ev.clientX, ev.clientY)
+  }
+  const up = ev => {
+    window.removeEventListener('pointermove', move); window.removeEventListener('pointerup', up); window.removeEventListener('pointercancel', up)
+    const d = panDrag; panDrag = null; d.ghost?.remove(); card.classList.remove('lifted'); if (P) P.hover = null
+    if (!P || P.phase !== 'play') return
+    if (!d.moved) { P.sel = P.sel === i ? null : i; P.arm = null; panHandRender(); panHud(); if (P.sel != null) announce(pt(`Now tap the lane for ${rName(P.hand[i])}.`, `Сега натиснете линията за ${rName(P.hand[i])}.`)); return }
+    const l = ev.type === 'pointerup' ? laneAt(ev.clientX, ev.clientY) : null
+    if (l != null) panDrop(i, l)
+  }
+  window.addEventListener('pointermove', move); window.addEventListener('pointerup', up); window.addEventListener('pointercancel', up)
+}
+function panTapField(e) {
+  if (!P || P.phase !== 'play') return
+  sfx.init()
+  const l = laneAt(e.clientX, e.clientY); if (l == null) return
+  if (P.arm === 'slow') { P.arm = null; P.favor -= PAN.cost.slow; P.slow[l] = P.t + PAN.slow; sfx.place(); announce(pt('That lane is slowed for 5 seconds.', 'Тази линия е забавена за 5 секунди.')); return panHud() }
+  if (P.sel != null) panDrop(P.sel, l)
+}
+function panLayout() {
+  if (!panActive || !panCanvas) return
+  const w = $('wrap').clientWidth, h = Math.round(Math.min(window.innerHeight * 0.52, w * 1.3))
+  const dpr = Math.min(2, window.devicePixelRatio || 1)
+  panCanvas.style.height = h + 'px'; panCanvas.width = Math.round(w * dpr); panCanvas.height = Math.round(h * dpr)
+}
+function panFrame(now) {
+  if (!mounted || !panActive) return
+  const dt = Math.max(0, Math.min(0.05, (now - panLast) / 1000)); panLast = now
+  if (P?.phase === 'play') panUpdate(dt)
+  else if (P?.phase === 'won') { for (const g of P.gods) g.t += dt; for (const f of P.fx) f.t -= dt; P.fx = P.fx.filter(f => f.t > 0) }
+  panDraw(now / 1000); panCool()
+  requestAnimationFrame(panFrame)
+}
+function panDraw(T) {
+  const c = pctx, dpr = panCanvas.width / (panCanvas.clientWidth || 1), W = panCanvas.width / dpr, H = panCanvas.height / dpr
+  c.setTransform(dpr, 0, 0, dpr, 0, 0); c.clearRect(0, 0, W, H)
+  const sh = P?.shake ? (Math.random() - 0.5) * P.shake : 0
+  c.save(); c.translate(sh, 0)
+  const top = H * 0.13, gateY = H * 0.86, lw = W / 3, s = Math.min(lw / 56, (gateY - top) / 5 / 70 * 1.6)
+  // the three roads, and the lane being aimed at
+  for (let l = 0; l < 3; l++) {
+    c.fillStyle = l % 2 ? '#e9dfca' : '#f1e8d6'; c.fillRect(l * lw, 0, lw, H)
+    c.strokeStyle = 'rgba(120, 95, 60, .12)'; c.lineWidth = 1
+    for (let y = top; y < gateY; y += 26) { c.beginPath(); c.moveTo(l * lw, y); c.lineTo(l * lw + lw, y); c.stroke() }
+    if (P && (P.slow[l] ?? 0) > P.t) { c.fillStyle = 'rgba(120, 170, 230, .22)'; c.fillRect(l * lw, 0, lw, H) }
+    if (P && P.hover === l) { c.fillStyle = 'rgba(224, 166, 58, .25)'; c.fillRect(l * lw, 0, lw, H) }
+  }
+  c.strokeStyle = 'rgba(90, 70, 45, .3)'; c.lineWidth = 2
+  for (const x of [lw, lw * 2]) { c.setLineDash([6, 8]); c.beginPath(); c.moveTo(x, top); c.lineTo(x, gateY); c.stroke(); c.setLineDash([]) }
+  // Olympus: sky and clouds at the top
+  const sky = c.createLinearGradient(0, 0, 0, top); sky.addColorStop(0, '#9cc3e6'); sky.addColorStop(1, '#dbe9f4')
+  c.fillStyle = sky; c.fillRect(0, 0, W, top)
+  c.fillStyle = 'rgba(255, 255, 255, .95)'
+  for (let i = 0; i < 7; i++) { const x = ((i * 97 + T * 6) % (W + 80)) - 40; c.beginPath(); c.ellipse(x, top * 0.82, 34, 13, 0, 0, TAU); c.fill(); c.beginPath(); c.ellipse(x + 22, top * 0.66, 22, 11, 0, 0, TAU); c.fill() }
+  // the gods, the farthest first
+  if (P) for (const g of [...P.gods].sort((a, b) => a.y - b.y)) {
+    const x = lw * (g.lane + 0.5), y = top + Math.min(1, g.y) * (gateY - top), k = s * (g.boss ? 1.3 : 1)
+    const walk = Math.sin(T * 6 + g.id) * 1.6
+    c.save(); c.translate(x, y); c.scale(k, k)
+    if (g.state === 'walk' || g.state === 'in') {
+      if (g.state === 'in') c.globalAlpha = Math.max(0, 1 - g.t / 0.9)
+      if (g.boss) { c.globalAlpha *= 0.9; c.drawImage(glow('255, 210, 110'), -40, -86, 80, 80); c.globalAlpha = g.state === 'in' ? Math.max(0, 1 - g.t / 0.9) : 1 }
+      drawDeity(c, g.k, T, true, { marble: true, plain: !g.boss, walk, name: g.named ? gName(g.k) : '?' })
+    } else if (g.state === 'won') {   // a flash of laurel: the Greek statue turns into the Roman god
+      const a = Math.min(1, g.t / 0.45), out = Math.max(0, (g.t - 0.6) / 0.3)
+      c.globalAlpha = (1 - a); drawDeity(c, g.k, T, true, { marble: true, plain: !g.boss, name: gName(g.k) })
+      c.globalAlpha = a * (1 - out); drawDeity(c, g.k, T, false, { name: rName(g.k), anim: 1 })
+      c.globalAlpha = (1 - a) * 0.9 + 0.1 * (1 - out)
+      c.strokeStyle = '#5f8a3a'; c.lineWidth = 3; c.beginPath(); c.arc(0, -30, 18 + g.t * 50, 0, TAU); c.stroke()
+      c.fillStyle = '#7aa64a'; for (let j = 0; j < 10; j++) { const an = j * TAU / 10 + g.t * 2, r = 18 + g.t * 50; c.beginPath(); c.ellipse(Math.cos(an) * r, -30 + Math.sin(an) * r, 4, 2, an, 0, TAU); c.fill() }
+    }
+    c.restore()
+  }
+  // wrong gods knocked aside, and points
+  if (P) for (const f of P.fx) {
+    const x = lw * (f.lane + 0.5), y = top + f.y * (gateY - top)
+    if (f.kind === 'knock') {
+      const p = 1 - f.t / 0.8
+      c.save(); c.globalAlpha = Math.max(0, 1 - p); c.translate(x + f.dir * p * lw * 0.6, y - Math.sin(p * Math.PI) * 30); c.rotate(f.dir * p * 1.6); c.scale(s, s)
+      drawDeity(c, f.k, T, false, { name: rName(f.k) }); c.restore()
+    }
+    if (f.kind === 'text') {
+      c.globalAlpha = Math.min(1, f.t * 2); c.font = `900 ${Math.round(18 + 6 * s)}px Nunito, system-ui, sans-serif`; c.textAlign = 'center'
+      c.lineWidth = 4; c.strokeStyle = '#1b1715'; c.fillStyle = '#f7d046'; const ty = y - 90 * s - (1.1 - f.t) * 30
+      c.strokeText(f.text, x, ty); c.fillText(f.text, x, ty); c.globalAlpha = 1
+    }
+  }
+  // the gate of Rome at the bottom
+  c.fillStyle = '#b79c74'; c.fillRect(0, gateY, W, H - gateY)
+  c.strokeStyle = 'rgba(70, 50, 30, .35)'; c.lineWidth = 1
+  for (let y = gateY + 9; y < H; y += 9) { c.beginPath(); c.moveTo(0, y); c.lineTo(W, y); c.stroke(); for (let x = (y / 9) % 2 ? 0 : 12; x < W; x += 24) { c.beginPath(); c.moveTo(x, y - 9); c.lineTo(x, y); c.stroke() } }
+  c.fillStyle = '#8f7650'; for (let x = 0; x < W; x += 18) c.fillRect(x, gateY - 7, 11, 8)   // battlements
+  for (let l = 0; l < 3; l++) {   // a gate for each road
+    const gx = lw * (l + 0.5), gw = Math.min(46, lw * 0.42)
+    c.fillStyle = '#3b2a1c'; c.beginPath(); c.moveTo(gx - gw / 2, H); c.lineTo(gx - gw / 2, gateY + 12); c.arc(gx, gateY + 12, gw / 2, Math.PI, 0); c.lineTo(gx + gw / 2, H); c.fill()
+  }
+  c.fillStyle = '#fbf3e4'; c.font = `900 ${Math.round(11 + 2 * s)}px Nunito, system-ui, sans-serif`; c.textAlign = 'center'; c.fillText('SPQR', W / 2, H - 6)
+  c.restore()
 }
 
 // ---------- mounting: one game inside a host element (its styles kept apart in a shadow root) ----------
@@ -2245,6 +2683,8 @@ function mount(el, o = {}) {
   shownCount = -1; mounted = true
   bindControls()
   window.addEventListener('resize', layout); WIDE.addEventListener?.('change', () => requestAnimationFrame(layout))
+  panActive = false
+  if (opts.mode === 'chapter' && LEVELS[opts.level]?.pantheon) { quizScore = opts.score; levelIndex = opts.level; LEVEL = LEVELS[opts.level]; return openPantheon() }
   if (opts.mode === 'chapter') { quizScore = opts.score; newGame(opts.level, opts.score); showBriefing(opts.level) }
   else { newGame(0); showMap() }
   last = performance.now(); requestAnimationFrame(frame)
@@ -2252,8 +2692,8 @@ function mount(el, o = {}) {
 function unmount() {
   if (!mounted) return
   mounted = false; drag = null; moveDrag = null
-  clearTimeout(bannerTimer); window.removeEventListener('resize', layout)
+  clearTimeout(bannerTimer); window.removeEventListener('resize', layout); window.removeEventListener('resize', panLayout); panActive = false; P = null
   sroot.innerHTML = ''
 }
-return { mount, unmount, armyFor, LEVELS, debug: { get G() { return G }, showBriefing, win, lose, paintIcons, foeTypes, place, collect, update, startLevel, beginBattle, armyFor, showMap, LEVELS, UNITS, FOES, progress } }
+return { mount, unmount, armyFor, LEVELS, debug: { get P() { return P }, panStart, panDrop, panUpdate, openPantheon, PAN_GODS, get G() { return G }, showBriefing, win, lose, paintIcons, foeTypes, place, collect, update, startLevel, beginBattle, armyFor, showMap, LEVELS, UNITS, FOES, progress } }
 })()

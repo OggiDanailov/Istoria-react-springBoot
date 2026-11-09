@@ -174,12 +174,18 @@ Starting grain in these battles is 250–400 at 80% (Carrhae has the most, since
 average scripted player wins most of them at 80%; Pharsalus and the Colline Gate are the hardest. Twists still planned: Castor and Pollux (Lake Regillus),
 ambushes (Volscian Raids), mountain rocks and the sacred chickens (Aquilonia).
 
-**The Clash of the Gods** (the Gods and Myths chapter; a bonus battle in the standalone game): not history but a contest
-of knowledge, on the Kingdom's 5 × 7 field over Olympus's marble. Your cards are eight Roman gods (Jupiter, Juno,
-Neptune, Minerva, Mars, Venus, Diana, Mercury) and Ceres, who brings grain. The Greek gods march down with name tags,
-and each is hurt only by its Roman twin: any other god's light passes through them, and the first time the game says
-who is needed. The test score's veterans arrive as free Ceres. Checked with scripted players: one who knows the pairs
-wins with 2–3 stars; one who guesses a quarter of the time usually wins with 1 star and sometimes loses.
+**The Pantheon Siege** (the Gods and Myths chapter; replaced the Clash of the Gods on Nov 9, the user's design): not a
+battle but a matching game. The Greek gods walk down three lanes to the gates of Rome as marble statues with blue name
+tags; you hold six Roman gods (the twin of every god on the field is always in the hand, the rest are decoys) and drag
+one onto a lane. The right twin turns the Greek god into the Roman one in a flash of laurel (points, Favor, a combo ×2
+at 3 in a row, ×3 at 6, ×4 at 10); a wrong one is knocked aside, rests for 5 s, and the right pair flashes ("Ares =
+Mars · god of war"). A god at the gate costs one gate point; 3 wrong in a row and the Senate loses faith. Favor buys a
+slowed lane (3), who comes next (2) or +1 gate (5). Three levels follow the chapter's table of 15 pairs (the great
+Olympians; gods of home and work; the whole Pantheon, with Apollo, the one god with the same name), each 5 waves of
+4–8 gods, each faster, then a boss shown only by its symbol and a clue. The chapter test sets the gate: 3 below 80%,
+4 at 80–89%, 5 at 90%+. Stars: 3 for no mistakes, 2 for one or two. Winning level 1 wins the chapter; the levels and
+stars are saved in the browser. Scripted players (pantheon.test.mjs): knowing the pairs wins with 3 stars; a learner
+wins with 1–2 and sometimes loses gate points in level 3; a guesser (40% wrong) loses level 3.
 
 The Empire's nine battles are fought on the biggest field, **8 lanes × 11 rows**, and bring the **cohort**: one card
 that places three legionaries side by side (the middle one carries the standard).

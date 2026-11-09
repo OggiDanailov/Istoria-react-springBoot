@@ -145,3 +145,38 @@
   .controls { flex-wrap: wrap; }
   .controls .progress { flex-basis: 100%; }
 }
+
+/* Pantheon Siege (the Religion chapter's contest of the gods): three lanes, a hand of Roman gods */
+.pan-hud { display: flex; align-items: center; justify-content: space-between; gap: 8px; min-height: 30px; }
+.pan-gate { display: flex; gap: 3px; align-items: center; }
+.pan-gate .lbl { font: 800 11px/1 var(--body); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin-right: 3px; }
+.pan-gate .hp { width: 15px; height: 18px; border-radius: 4px 4px 8px 8px; background: var(--gold); border: 2px solid var(--ink); }
+.pan-gate .hp.lost { background: transparent; border-color: rgba(251, 243, 228, .35); }
+.pan-score b { font: 900 22px/1 var(--body); font-variant-numeric: tabular-nums; }
+.pan-score span { margin-left: 6px; color: var(--gold); font: 900 16px/1 var(--body); }
+.pan-wave { font: 800 11px/1 var(--body); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); min-width: 70px; text-align: right; }
+.pan-wrap { position: relative; }
+.pan-wrap canvas { display: block; width: 100%; border-radius: 14px; border: 3px solid var(--ink); touch-action: none; box-sizing: border-box; }
+.pan-flash { position: absolute; left: 50%; top: 40%; transform: translate(-50%, -50%); background: rgba(27, 23, 21, .9); color: var(--parch); border: 2px solid var(--gold); border-radius: 14px; padding: 10px 18px; text-align: center; font: 900 24px/1.15 var(--body); pointer-events: none; white-space: nowrap; box-shadow: 0 8px 20px rgba(0, 0, 0, .35); }
+.pan-flash small { display: block; margin-top: 3px; font: 700 13px/1.2 var(--body); color: var(--muted); white-space: normal; }
+.pan-flash .g { color: #9cc3f0; } .pan-flash .r { color: #f2a08f; }
+.pan-hand { display: grid; grid-template-columns: repeat(var(--n, 6), minmax(0, 1fr)); gap: 5px; }
+.pan-card { position: relative; display: flex; flex-direction: column; align-items: center; padding: 3px 1px 5px; border-radius: 10px; border: 2px solid var(--ink); background: var(--paper); color: var(--ink); touch-action: none; user-select: none; -webkit-user-select: none; -webkit-touch-callout: none; overflow: hidden; cursor: grab; font: inherit; }
+.pan-card canvas { width: 48px; height: 52px; pointer-events: none; }
+.pan-card .name { font: 900 10.5px/1.1 var(--body); letter-spacing: -.02em; white-space: nowrap; max-width: 100%; overflow: hidden; text-overflow: clip; }
+.pan-card.selected { outline: 3px solid var(--gold); outline-offset: 1px; transform: translateY(-3px); }
+.pan-card.lifted { opacity: .4; }
+.pan-card .cool { position: absolute; left: 0; right: 0; bottom: 0; height: 0; background: rgba(27, 23, 21, .62); pointer-events: none; }
+.pan-ghost { position: fixed; z-index: 50; pointer-events: none; width: 64px; height: 70px; transform: translate(-50%, -85%); filter: drop-shadow(0 6px 6px rgba(0, 0, 0, .4)); }
+.pan-tools { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.pan-tools .tool { font-size: 13px; padding: 7px 10px; }
+.pan-tools .tool b { color: var(--star); }
+.pan-tools .tool[disabled] { opacity: .45; }
+.pan-tools .tool.armed { outline: 3px solid var(--gold); }
+.pan-favor { font: 900 14px/1 var(--body); color: var(--gold); margin-right: auto; }
+.pan-rules { margin: 10px 0 12px; padding-left: 18px; font-size: 13.5px; line-height: 1.4; display: grid; gap: 4px; }
+/* its own order and full width (the battle's layout rules for the tray and field don't apply here) */
+.game.pan { display: flex; flex-direction: column; }
+.pan .pan-hud { order: 0; } .pan .pan-wrap { order: 1; } .pan .pan-hand { order: 2; } .pan .msg { order: 3; } .pan .pan-tools { order: 4; }
+.pan .pan-wrap { width: 100% !important; max-width: none; height: auto !important; margin: 0; align-self: stretch; }
+.pan .overlay { position: fixed; inset: 0; z-index: 40; }
