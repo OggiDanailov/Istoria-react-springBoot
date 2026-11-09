@@ -420,7 +420,7 @@ const CHAPTERS = __CHAPTERS__
 const LANG_KEY = 'ave-lang'
 let LANG = 'en'
 try { LANG = localStorage.getItem(LANG_KEY) === 'bg' ? 'bg' : 'en' } catch {}
-const BG_UI_MORE = {"Not yet.": "Още не.", "Tap or drag the": "Натиснете или плъзнете", "earliest": "най-ранното", "event onto the road.": "събитие на пътя.", "score so far": "резултат досега", "first": "първият", "Fun": "Забавно", "Confusing": "Объркващо", "Boring": "Скучно", "This copies your answers so you can paste them in a message to whoever sent you this game.": "Това копира отговорите ви, за да ги поставите в съобщение до този, който ви е изпратил играта.", "Correct!": "Вярно!", "true": "вярно", "false": "невярно", "belongs with the others. Look again.": "е свързано с останалите. Вижте пак.", "Yes,": "Да,", "Not": "Не е", ". Here’s another clue.": ". Ето още една подсказка.", "! Guessed from the first clue.": "! Познато от първата подсказка.", "Easy": "Лесен", "Medium": "Среден", "Hard": "Труден", "The Chronicle": "Хрониката", "to steer your legion.": "за да водите легиона си.", "Pass through the gate with the": "Минете през портата с", ". Avoid the barricades.": ". Пазете се от барикадите.", "Steer your legion through the gate with the right answer. Each right answer recruits a soldier.": "Водете легиона си през портата с верния отговор. Всеки верен отговор ви носи нов войник."}
+const BG_UI_MORE = {"Not yet.": "Още не.", "For reviewing content: opens every chapter, shows each chapter’s questions with their answers, and lets you play any battle at a score you pick. Your real progress isn’t changed.": "За преглед на съдържанието: отваря всяка глава, показва въпросите на всяка глава с отговорите им и ви позволява да изиграете всяка битка с избран от вас резултат. Истинският ви напредък не се променя.", "Each chapter ends with a test made of all its games; your first answer to each question counts. The test score sets your army for the chapter’s battle: around 80% gives a fair fight, 90% a comfortable one, and below 70% only an expert wins.": "Всяка глава завършва с тест от всичките ѝ игри; брои се първият ви отговор на всеки въпрос. Резултатът от теста определя армията ви за битката на главата: около 80% дава равна битка, 90% – удобна, а под 70% печели само експерт.", "Tap the": "Натиснете", "of the events left.": "от останалите събития.", "From the first to the last": "От първото до последното", "Ten pairs": "Десет двойки", "Ten statements": "Десет твърдения", "Tap a name, then what it matches.": "Натиснете име, после това, което му съответства.", "Tap or drag the": "Натиснете или плъзнете", "earliest": "най-ранното", "event onto the road.": "събитие на пътя.", "score so far": "резултат досега", "first": "първият", "Fun": "Забавно", "Confusing": "Объркващо", "Boring": "Скучно", "This copies your answers so you can paste them in a message to whoever sent you this game.": "Това копира отговорите ви, за да ги поставите в съобщение до този, който ви е изпратил играта.", "Correct!": "Вярно!", "true": "вярно", "false": "невярно", "belongs with the others. Look again.": "е свързано с останалите. Вижте пак.", "Yes,": "Да,", "Not": "Не е", ". Here’s another clue.": ". Ето още една подсказка.", "! Guessed from the first clue.": "! Познато от първата подсказка.", "Easy": "Лесен", "Medium": "Среден", "Hard": "Труден", "The Chronicle": "Хрониката", "to steer your legion.": "за да водите легиона си.", "Pass through the gate with the": "Минете през портата с", ". Avoid the barricades.": ". Пазете се от барикадите.", "Steer your legion through the gate with the right answer. Each right answer recruits a soldier.": "Водете легиона си през портата с верния отговор. Всеки верен отговор ви носи нов войник."}
 const BG_UI = {"Ave Caesar · History": "Ave Caesar · История", "Ancient Rome": "Древен Рим", "All eras": "Всички епохи", "Chapters": "Глави", "Menu": "Меню", "From a village of shepherds to the master of the Mediterranean, and the fall of the West. Pick an era.": "От селце на пастири до господар на Средиземноморието – и падането на Запада. Изберете епоха.", "Review mode: open everything": "Режим на преглед: отвори всичко", "Turn review mode off": "Изключи режима на преглед", "Every chapter is generated from Wikipedia and fact-checked by AI. Early Roman dates are the traditional ones; historians doubt many of them.": "Всяка глава е създадена по Уикипедия и проверена от изкуствен интелект. Ранните римски дати са традиционните; историците се съмняват в много от тях.", "Generated from Wikipedia and fact-checked by AI. Early Roman dates are the traditional ones; historians doubt many of them.": "Създадено по Уикипедия и проверено от изкуствен интелект. Ранните римски дати са традиционните; историците се съмняват в много от тях.", "Coming soon": "Очаквайте скоро", "No battle": "Без битка", "Chapter complete": "Главата е завършена", "Chapter test complete": "Тестът на главата е завършен", "The chapter test": "Тестът на главата", "Start the test": "Започни теста", "Play the next round": "Играй следващия рунд", "Read the chronicle": "Прочети хрониката", "Read the chronicle first": "Първо прочетете хрониката", "Key facts": "Ключови факти", "People": "Хора", "Dates": "Дати", "Latin words": "Латински думи", "Read": "Прочети", "Tap “Read” to open that part of the chronicle.": "Натиснете „Прочети“, за да отворите тази част от хрониката.", "Read more in the chronicle": "Прочетете повече в хрониката", "Tap the map to enlarge it.": "Натиснете картата, за да я увеличите.", "Review mode": "Режим на преглед", "Questions & answers": "Въпроси и отговори", "Review": "Преглед", "Play it with the army of a test score of:": "Изиграйте я с армията за резултат от теста:", "Review battles don’t change your progress.": "Битките в режим на преглед не променят напредъка ви.", "Review mode is on: everything is open.": "Режимът на преглед е включен: всичко е отворено.", "Review mode is off: each chapter opens when you win the battle before it.": "Режимът на преглед е изключен: всяка глава се отваря, когато спечелите битката преди нея.", "Up next in your test": "Следващ във вашия тест", "Up next:": "Следва:", "Finish the previous level to unlock": "Завършете предишното ниво, за да отключите", "✓ Done in this test": "✓ Изиграно в този тест", "Finish the test to open the next chapter.": "Завършете теста, за да отворите следващата глава.", "This battle isn’t built yet.": "Тази битка още не е готова.", "Finish the test": "Завършете теста", "Retake the test": "Направи теста отново", "Tap again: new questions, new score": "Натиснете пак: нови въпроси, нов резултат", "To battle": "Към битката", "Fight again": "Битка отново", "Back to the chapter": "Обратно към главата", "Learn from your mistakes": "Учете се от грешките си", "Where your mistakes came from": "Откъде дойдоха грешките ви", "Review these sections, then try again": "Прегледайте тези раздели и опитайте пак", "These mistakes count in your chapter test. Re-read the sections before the battle.": "Тези грешки се броят в теста на главата. Препрочетете разделите преди битката.", "Your progress": "Вашият напредък", "Reset my progress": "Изтрий напредъка ми", "Tap again to erase all tests, stars and battles": "Натиснете пак, за да изтриете всички тестове, звезди и битки", "Progress reset. Start again with the Kingdom.": "Напредъкът е изтрит. Започнете отново от Царството.", "You have conquered every chapter so far.": "Покорихте всички глави досега.", "Test not started": "Тестът не е започнал", "test not started": "тестът не е започнал", "test score": "резултат от теста", "Next question": "Следващ въпрос", "Next round": "Следващ рунд", "Next person": "Следващ човек", "Next statement": "Следващо твърдение", "See results": "Виж резултатите", "Start round 1": "Започни рунд 1", "Right!": "Вярно!", "Wrong.": "Грешно.", "Not quite.": "Не съвсем.", "Well done!": "Браво!", "Well done.": "Браво.", "No mistakes.": "Без грешки.", "right answer": "верен отговор", "TRUE": "ВЯРНО", "FALSE": "НЕВЯРНО", "✓ True": "✓ Вярно", "✗ False": "✗ Невярно", "← false · true →": "← невярно · вярно →", "Drag left and right": "Плъзнете наляво и надясно", "Swipe right if it’s true, left if it’s false.": "Плъзнете надясно, ако е вярно, и наляво, ако не е.", "Tap a name, then what it matches.": "Натиснете име, после това, което му съответства.", "Three of these belong together. Tap the one that doesn’t.": "Три от тези са свързани. Натиснете това, което не е.", "Drag each name onto its dot, or tap a name and then a dot.": "Плъзнете всяко име върху точката му или натиснете име, а после точка.", "Rome is marked in red. The blue line is the Tiber.": "Рим е отбелязан в червено. Синята линия е Тибър.", "This chapter has no Map Drop round.": "Тази глава няма рунд „На картата“.", "Guess early for a better score. Each extra clue costs a little.": "Познайте рано за по-добър резултат. Всяка следваща подсказка струва малко.", "Show another clue": "Покажи още една подсказка", "Hidden clue": "Скрита подсказка", "Guessed from the first clue.": "Познато от първата подсказка.", "Your first answer counts in the chapter test. Harder questions count more.": "Първият ви отговор се брои в теста на главата. По-трудните въпроси носят повече.", "Steer your legion through the right answers": "Водете легиона си през верните отговори", "March!": "Напред!", "Raise a Legion": "Събери легион", "Your briefing": "Вашият инструктаж", "How was this round?": "Как ви се стори този рунд?", "Too easy": "Твърде лесно", "Too hard": "Твърде трудно", "Learned something": "Научих нещо", "Send feedback": "Изпрати отзив", "Copy feedback": "Копирай отзива", "Copied!": "Копирано!", "Thanks! Your feedback was saved.": "Благодарим! Отзивът ви е запазен.", "Pick a word or write a comment first.": "Първо изберете дума или напишете коментар.", "Play again": "Играй отново", "You made it to the end": "Стигнахте до края", "A strong start.": "Силно начало.", "A weak result.": "Слаб резултат.", "You passed, just.": "Минахте – на косъм.", "A new test.": "Нов тест.", "A fair fight if you play well.": "Равна битка, ако играете добре.", "A hard fight: only careful play will win.": "Тежка битка: само внимателната игра ще победи.", "Very hard: retaking the test is the better plan.": "Много трудно: по-добре направете теста отново.", "Latin": "Латински", "ROME": "РИМ", "Who Doesn’t Belong?": "Кое не принадлежи?", "Spot the odd one out": "Открийте излишното", "Where It Happened": "Къде се случи", "Place the towns on the map": "Поставете градовете на картата", "Reinforcements": "Подкрепления", "10 questions from the whole chapter": "10 въпроса от цялата глава", "Close": "Затвори", "Chapter": "Глава", "Chronology Jam": "Хронологичен пъзел", "Match Pairs": "Двойки", "True or False": "Вярно или невярно", "Odd One Out": "Кое е излишното", "Who Am I?": "Кой съм аз?", "Map Drop": "На картата", "Legion Quiz": "Викторина на легиона", "Legion Run": "Походът на легиона", "Chronology Jam · put events in order": "Хронологичен пъзел · подредете събитията", "Match Pairs · who did what": "Двойки · кой какво е направил", "True or False · swipe to answer": "Вярно или невярно · плъзнете за отговор", "Odd One Out · spot the intruder": "Кое е излишното · открийте натрапника", "Who Am I? · guess from clues": "Кой съм аз? · познайте по подсказките", "Map Drop · where things were": "На картата · къде е било", "Legion Quiz · questions from the whole chapter": "Викторина на легиона · въпроси от цялата глава", "Legion Run · practice, not part of the test": "Походът на легиона · упражнение, не е част от теста"}
 const BG_GAMES = {"Chronology Jam": "Хронологичен пъзел", "Match Pairs": "Двойки", "True or False": "Вярно или невярно", "Odd One Out": "Кое е излишното", "Who Am I?": "Кой съм аз?", "Map Drop": "На картата", "Legion Quiz": "Викторина на легиона", "Legion Run": "Походът на легиона"}
 const BG_BATTLES = {"Lake Regillus": ["Регилското езеро", "битката при Регилското езеро"], "The Volscian Raids": ["Набезите на волските", "набезите на волските"], "The Siege of Veii": ["Обсадата на Вейи", "обсадата на Вейи"], "Aquilonia": ["Аквилония", "битката при Аквилония"], "Beneventum": ["Беневент", "битката при Беневент"], "Agrigentum": ["Агригент", "битката при Агригент"], "Cannae": ["Кана", "битката при Кана"], "Zama": ["Зама", "битката при Зама"], "Pydna": ["Пидна", "битката при Пидна"], "The Siege of Carthage": ["Обсадата на Картаген", "обсадата на Картаген"], "Aquae Sextiae": ["Акве Секстие", "битката при Акве Секстие"], "The Colline Gate": ["Колинската порта", "битката при Колинската порта"], "The Silarius River": ["Река Силарус", "битката при река Силарус"], "Carrhae": ["Каре", "битката при Каре"], "Alesia": ["Алезия", "битката при Алезия"], "Pharsalus": ["Фарсала", "битката при Фарсала"], "Actium": ["Акциум", "битката при Акциум"], "The Teutoburg Forest": ["Тевтобургската гора", "битката в Тевтобургската гора"], "Germanicus in Germany": ["Германик в Германия", "похода на Германик в Германия"], "Boudica’s Revolt": ["Въстанието на Боудика", "въстанието на Боудика"], "The Siege of Jerusalem": ["Обсадата на Йерусалим", "обсадата на Йерусалим"], "The Dacian Wars": ["Дакийските войни", "Дакийските войни"], "Zenobia of Palmyra": ["Зенобия от Палмира", "войната срещу Зенобия от Палмира"], "The Milvian Bridge": ["Милвийският мост", "битката при Милвийския мост"], "Adrianople": ["Адрианопол", "битката при Адрианопол"], "The Catalaunian Plains": ["Каталаунските полета", "битката на Каталаунските полета"], "The Clash of the Gods": ["Битката на боговете", "битката на боговете"]}
@@ -432,6 +432,7 @@ const bgPlural = (n, one, many) => +n === 1 ? one : many
 // labels built from numbers and names
 const BG_RE = [
   [/^Chapter test · round (\d+) of (\d+)$/, 'Тест на главата · рунд $1 от $2'],
+  [/^Chapter test · (\d+) of (\d+) done$/, 'Тест на главата · изиграни $1 от $2'],
   [/^(\d+) left · (\d+) mistakes?$/, (m, a, b) => `остават ${a} · ${b} ${bgPlural(b, 'грешка', 'грешки')}`],
   [/^(\d+) left$/, 'остават $1'],
   [/^Statement (\d+) of (\d+)$/, 'Твърдение $1 от $2'],
@@ -456,6 +457,8 @@ const BG_RE = [
   [/^(\d+) of (\d+) rounds done$/, '$1 от $2 рунда изиграни'],
   [/^(\d+) chapters? · (\d+) won · (\d+) \/ (\d+) ★$/, '$1 глави · $2 спечелени · $3 / $4 ★'],
   [/^Ancient Rome · (.+)$/, 'Древен Рим · $1'],
+  [/^(\d+) (events|pairs|statements) from the whole chapter$/, (m, n, w) => `${n} ${{ events: 'събития', pairs: 'двойки', statements: 'твърдения' }[w]} от цялата глава`],
+  [/^Screen (\d+) of (\d+)$/, 'Екран $1 от $2'],
   [/^Locked: finish (.+) first$/, 'Заключено: първо завършете „$1“'],
   [/^(Chronology Jam|Match Pairs|True or False|Odd One Out|Who Am I\?|Map Drop|Legion Quiz|Legion Run)( [IVX]+)?$/, (m, g, n) => BG_GAMES[g] + (n ?? '')],
   [/^Level (\d+): (.+)$/, 'Ниво $1: $2'],
@@ -512,7 +515,6 @@ const SECTIONS = [
   ['chrono', 'Chronology Jam · put events in order'],
   ['match', 'Match Pairs · who did what'],
   ['tf', 'True or False · swipe to answer'],
-  ['odd', 'Odd One Out · spot the intruder'],
   ['who', 'Who Am I? · guess from clues'],
   ['map', 'Map Drop · where things were'],
   ['quiz', 'Legion Quiz · questions from the whole chapter'],
@@ -523,28 +525,54 @@ const SECTIONS = [
 // hard it is to guess (true/false 0.5, one of four 0.75, putting in order or placing 0.8) and, for quiz questions, by
 // difficulty. The score sets the army for the chapter's battle. A retake draws new quiz questions and replaces the score.
 const TEST_KEY = 'ave-caesar-tests'
-const TEST_TYPES = ['chrono', 'match', 'tf', 'odd', 'who', 'map', 'quiz']
+const TEST_TYPES = ['chrono', 'match', 'tf', 'who', 'map', 'quiz']
+const TEST_FORMAT = 2   // 2 (Nov 9): one round per game, 6 events, 10 pairs, 10 statements, 10 questions, no Odd One Out
 let tests = {}
 try { tests = JSON.parse(localStorage.getItem(TEST_KEY) || '{}') || {} } catch { tests = {} }
+// a test begun in the old format starts again; won ones keep their score, stars and battles
+for (const t of Object.values(tests)) if (t && t.fmt !== TEST_FORMAT) { if (!t.won) Object.assign(t, { seed: Math.floor(Math.random() * 2 ** 31), answers: {}, done: {}, missSecs: {}, score: 0 }); t.fmt = TEST_FORMAT }
 const saveTests = () => { try { localStorage.setItem(TEST_KEY, JSON.stringify(tests)) } catch {} }
 const newSeed = () => Math.floor(Math.random() * 2 ** 31)
-const testOf = c => (tests[c.id] ??= { attempt: 1, seed: newSeed(), answers: {}, done: {}, missSecs: {}, score: 0, battles: [], won: false, stars: 0 })
+const testOf = c => (tests[c.id] ??= { fmt: TEST_FORMAT, attempt: 1, seed: newSeed(), answers: {}, done: {}, missSecs: {}, score: 0, battles: [], won: false, stars: 0 })
 function seededRandom(seed) {
   let a = seed >>> 0
   return () => { a = (a + 0x6D2B79F5) >>> 0; let t = Math.imul(a ^ (a >>> 15), 1 | a); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296 }
 }
 const seededShuffle = (arr, rnd) => { const a = arr.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(rnd() * (i + 1)); [a[i], a[j]] = [a[j], a[i]] } return a }
-// Two quiz rounds of ten (4 easy, 3 medium, 3 hard) drawn for this attempt from the chapter's whole question pool,
+// One quiz round of ten (4 easy, 3 medium, 3 hard) drawn for this attempt from the chapter's whole question pool,
 // with the answers in a new order
 function quizSetsFor(c) {
   const rnd = seededRandom(testOf(c).seed)
   const pool = Object.fromEntries([1, 2, 3].map(l => [l, seededShuffle(c.quizPool[l] ?? [], rnd)]))
   const mix = q => { const order = seededShuffle(q.options.map((_, i) => i), rnd); return { ...q, options: order.map(i => q.options[i]), a: order.indexOf(q.a) } }
-  return [0, 1].map(i => [...pool[1].slice(i * 4, i * 4 + 4), ...pool[2].slice(i * 3, i * 3 + 3), ...pool[3].slice(i * 3, i * 3 + 3)])
+  return [[...pool[1].slice(0, 4), ...pool[2].slice(0, 3), ...pool[3].slice(0, 3)]]
     .filter(qs => qs.length >= 8)
     .map((qs, i) => ({ name: ['Raise a Legion', 'Reinforcements'][i], blurb: `${qs.length} questions from the whole chapter`, questions: qs.map(mix) }))
 }
-let CH, TIMELINES, MATCHES, DECKS, ODDS, WHOS, MAPS, QUIZZES, CHAPTER, GAMES, MAP_BOUNDS, MAP_H
+// The test's other rounds, drawn for this attempt from all of the chapter's material
+// Chronology Jam: 6 events with different years, spread over the whole chapter (one from each sixth), so no two are close
+function chronoSetFor(c) {
+  const rnd = seededRandom(testOf(c).seed + 1), seen = new Set(), years = new Set()
+  const all = c.timelines.flatMap(t => t.events).filter(e => !seen.has(e.label) && seen.add(e.label)).sort((a, b) => a.y - b.y)
+    .filter(e => !years.has(e.y) && years.add(e.y))
+  const n = Math.min(6, all.length)
+  const events = Array.from({ length: n }, (_, k) => { const lo = Math.floor(k * all.length / n), hi = Math.floor((k + 1) * all.length / n); return all[lo + Math.floor(rnd() * (hi - lo))] })
+  return [{ name: LANG === 'bg' ? 'От първото до последното' : 'From the first to the last', blurb: LANG === 'bg' ? `${n} събития от цялата глава` : `${n} events from the whole chapter`, events }]
+}
+// Match Pairs: 10 pairs from all the chapter's sets, played as two screens of 5
+function matchSetFor(c) {
+  const rnd = seededRandom(testOf(c).seed + 2), left = new Set(), right = new Set()
+  const all = seededShuffle(c.matches.flatMap(m => m.pairs.map((p, i) => ({ p, sec: m.secs?.[i] }))), rnd)
+    .filter(x => !left.has(x.p[0]) && !right.has(x.p[1]) && left.add(x.p[0]) && right.add(x.p[1])).slice(0, 10)
+  return [{ name: LANG === 'bg' ? 'Десет двойки' : 'Ten pairs', blurb: LANG === 'bg' ? `${all.length} двойки от цялата глава` : `${all.length} pairs from the whole chapter`, pairs: all.map(x => x.p), secs: all.map(x => x.sec) }]
+}
+// True or False: 10 statements, half from each deck
+function tfSetFor(c) {
+  const rnd = seededRandom(testOf(c).seed + 3), per = Math.ceil(10 / c.decks.length)
+  const cards = seededShuffle(c.decks.flatMap(d => seededShuffle(d.cards, rnd).slice(0, per)), rnd).slice(0, 10)
+  return [{ name: LANG === 'bg' ? 'Десет твърдения' : 'Ten statements', blurb: LANG === 'bg' ? `${cards.length} твърдения от цялата глава` : `${cards.length} statements from the whole chapter`, cards }]
+}
+let CH, TIMELINES, MATCHES, DECKS, ODDS, WHOS, MAPS, QUIZZES, CHAPTER, GAMES, MAP_BOUNDS, MAP_H, CHRONO_SETS, MATCH_SETS, TF_SETS
 const CHAPTER_KEY = 'ave-caesar-chapter'
 let chapterIndex = 0
 try { chapterIndex = Math.min(CHAPTERS.length - 1, +localStorage.getItem(CHAPTER_KEY) || 0) } catch {}
@@ -554,11 +582,11 @@ function loadChapter(i) {
   CH = CHAPTERS[chapterIndex]
   ;({ timelines: TIMELINES, matches: MATCHES, decks: DECKS, odds: ODDS, whos: WHOS, maps: MAPS, sections: CHAPTER } = CH)
   QUIZZES = CH.quizzes = quizSetsFor(CH)   // drawn for this attempt of the test
+  CHRONO_SETS = chronoSetFor(CH); MATCH_SETS = matchSetFor(CH); TF_SETS = tfSetFor(CH)
   GAMES = {
-    tf: { title: 'True or False', sets: DECKS },
-    chrono: { title: 'Chronology Jam', sets: TIMELINES },
-    match: { title: 'Match Pairs', sets: MATCHES },
-    odd: { title: 'Odd One Out', sets: ODDS },
+    tf: { title: 'True or False', sets: TF_SETS },
+    chrono: { title: 'Chronology Jam', sets: CHRONO_SETS },
+    match: { title: 'Match Pairs', sets: MATCH_SETS },
     who: { title: 'Who Am I?', sets: WHOS },
     map: { title: 'Map Drop', sets: MAPS },
     quiz: { title: 'Legion Quiz', sets: QUIZZES },
@@ -865,7 +893,7 @@ function chronicleMap(m) {
   </figure>`
 }
 // Review mode: everything the chapter test can ask, with the answers, game by game
-const QA_TABS = [['quiz', 'Legion Quiz'], ['tf', 'True or False'], ['chrono', 'Timelines'], ['match', 'Pairs'], ['odd', 'Odd One Out'], ['who', 'Who Am I?'], ['map', 'Places']]
+const QA_TABS = [['quiz', 'Legion Quiz'], ['tf', 'True or False'], ['chrono', 'Timelines'], ['match', 'Pairs'], ['who', 'Who Am I?'], ['map', 'Places']]
 function openAnswers(tab = 'quiz') {
   const read = sec => sec ? ` <button class="kf-read" data-read="${sec}">Read</button>` : ''
   const item = (head, body) => `<div class="qa-item">${head}${body ? `<p>${body}</p>` : ''}</div>`
@@ -1156,15 +1184,15 @@ const recapList = items => `<ol class="recap">${items.map(i => `<li class="${i.m
 
 // ---------- Chronology Jam ----------
 START.chrono = set => {
-  const events = TIMELINES[set].events
+  const events = CHRONO_SETS[set].events
   const sortedIds = events.map((e, i) => ({ y: e.y, i })).sort((a, b) => a.y - b.y).map(e => e.i)
   return { sortedIds, boardIds: shuffle(sortedIds), colors: Object.fromEntries(sortedIds.map(i => [i, 1 + Math.floor(Math.random() * 5)])), placed: [], revealed: [] }
 }
 RENDER.chrono = () => {
-  const g = state, ev = id => TIMELINES[g.set].events[id]
+  const g = state, ev = id => CHRONO_SETS[g.set].events[id]
   app.innerHTML = `
     ${playHeader()}
-    ${statusLine('Tap or drag the <b>earliest</b> event onto the road.', g.sortedIds.length - g.placed.length)}
+    ${statusLine('Tap the <b>earliest</b> of the events left.', g.sortedIds.length - g.placed.length)}
     <div class="road" id="road" aria-label="Timeline, oldest first"><div class="lanes">
       ${g.sortedIds.map((_, i) => {
         const id = g.placed[i]
@@ -1181,14 +1209,8 @@ RENDER.chrono = () => {
     <div id="hint-area">${hintHtml(g.hint)}</div>`
   bindBack()
   const road = app.querySelector('#road')
-  const overRoad = y => y < road.getBoundingClientRect().bottom + 10
-  app.querySelectorAll('.tile:not(.gone)').forEach(t => {
-    onTap(t, () => chronoTap(+t.dataset.id, t))
-    draggable(t, {
-      onMove: e => road.classList.toggle('drop-target', overRoad(e.clientY)),
-      onDrop: (e, ok) => { road.classList.remove('drop-target'); t.classList.remove('dragging'); t.style.transform = ''; if (ok && overRoad(e.clientY)) chronoTap(+t.dataset.id, t); return false },
-    })
-  })
+  // tap only: dragging tiles stopped the page scrolling on phones, so the road could end up out of reach
+  app.querySelectorAll('.tile:not(.gone)').forEach(t => onTap(t, () => chronoTap(+t.dataset.id, t)))
   const last = road.querySelector(`[data-slot="${Math.max(0, g.placed.length - 1)}"]`)
   if (last) road.scrollLeft = Math.max(0, last.offsetLeft - road.clientWidth / 2 + 46)
 }
@@ -1196,7 +1218,7 @@ const sinceWhen = s => /^(Under|Soon|After|Possibly)/.test(s) ? s[0].toLowerCase
 function chronoTap(id, el) {
   const g = state
   if (busy || g.screen !== 'play' || g.placed.includes(id)) return
-  const e = TIMELINES[g.set].events[id]
+  const e = CHRONO_SETS[g.set].events[id]
   if (id === g.sortedIds[g.placed.length]) {
     const forced = g.placed.length === g.sortedIds.length - 1
     const note = earn(`chrono:${g.set}:${id}`, ['hastatus', 'princeps', 'triarius'][Math.min(g.set, 2)], el, { forced })
@@ -1208,7 +1230,7 @@ function chronoTap(id, el) {
       busy = false
       if (state !== g) return
       if (g.placed.length < g.sortedIds.length) return RENDER.chrono()
-      finish(recapList(g.sortedIds.map(i => { const x = TIMELINES[g.set].events[i]; return { when: x.when, title: x.label, text: x.fact } })))
+      finish(recapList(g.sortedIds.map(i => { const x = CHRONO_SETS[g.set].events[i]; return { when: x.when, title: x.label, text: x.fact } })))
     })
   } else {
     g.mistakes++
@@ -1245,26 +1267,27 @@ function flyTo(tile, slot, done) {
 }
 
 // ---------- Match Pairs ----------
+const MATCH_PAGE = 5   // pairs on one screen: ten at once is too crowded on a phone
 START.match = set => {
-  const ids = [...MATCHES[set].pairs.keys()]
-  return { left: shuffle(ids), right: shuffle(ids), matched: [], selected: null, colors: Object.fromEntries(ids.map(i => [i, (i % 5) + 1])) }
+  const ids = [...MATCH_SETS[set].pairs.keys()], page = ids.slice(0, MATCH_PAGE)
+  return { page: 0, left: shuffle(page), right: shuffle(page), matched: [], selected: null, colors: Object.fromEntries(ids.map(i => [i, (i % 5) + 1])) }
 }
 RENDER.match = () => {
-  const g = state, set = MATCHES[g.set]
+  const g = state, set = MATCH_SETS[g.set], pages = Math.ceil(set.pairs.length / MATCH_PAGE)
   const col = (ids, side) => ids.map(i => {
     const m = g.matched.includes(i)
     return `<button class="pick ${side === 'R' ? 'desc' : ''} ${m ? `matched c${g.colors[i]}` : ''} ${g.selected?.side === side && g.selected.id === i ? 'selected' : ''}" data-side="${side}" data-id="${i}" ${m ? 'disabled' : ''}>${esc(set.pairs[i][side === 'L' ? 0 : 1])}</button>`
   }).join('')
   app.innerHTML = `
     ${playHeader()}
-    ${statusLine('Tap a name, then what it matches.', set.pairs.length - g.matched.length)}
+    ${statusLine(`Tap a name, then what it matches.${pages > 1 ? ` <b>Screen ${g.page + 1} of ${pages}</b>` : ''}`, set.pairs.length - g.matched.length)}
     <div class="board pairs"><div class="col">${col(g.left, 'L')}</div><div class="col">${col(g.right, 'R')}</div></div>
     <div id="hint-area">${hintHtml(g.hint)}</div>`
   bindBack()
   app.querySelectorAll('.pick:not([disabled])').forEach(b => b.addEventListener('click', () => matchTap(b.dataset.side, +b.dataset.id)))
 }
 function matchTap(side, id) {
-  const g = state, set = MATCHES[g.set]
+  const g = state, set = MATCH_SETS[g.set]
   if (busy || g.matched.includes(id)) return
   if (!g.selected || g.selected.side === side) { g.selected = { side, id }; g.hint = null; return RENDER.match() }
   const other = g.selected
@@ -1279,6 +1302,14 @@ function matchTap(side, id) {
     if (g.matched.length === set.pairs.length) {
       busy = true
       setTimeout(() => { busy = false; if (state === g) finish(recapList(set.pairs.map(([a, b]) => ({ title: a, text: b })))) }, 700)
+    } else if (g.left.every(i => g.matched.includes(i))) {
+      // this screen is done: the next five
+      busy = true
+      setTimeout(() => {
+        busy = false; if (state !== g) return
+        g.page++; const next = [...set.pairs.keys()].slice(g.page * MATCH_PAGE, (g.page + 1) * MATCH_PAGE)
+        g.left = shuffle(next); g.right = shuffle(next); RENDER.match()
+      }, 700)
     }
   } else {
     g.mistakes++
@@ -1292,9 +1323,9 @@ function matchTap(side, id) {
 }
 
 // ---------- True or False ----------
-START.tf = set => ({ order: shuffle([...DECKS[set].cards.keys()]), index: 0, answered: null, misses: [] })
+START.tf = set => ({ order: shuffle([...TF_SETS[set].cards.keys()]), index: 0, answered: null, misses: [] })
 RENDER.tf = () => {
-  const g = state, deck = DECKS[g.set]
+  const g = state, deck = TF_SETS[g.set]
   const card = deck.cards[g.order[g.index]]
   const hasNext = g.index + 1 < g.order.length
   app.innerHTML = `
@@ -1336,7 +1367,7 @@ function verdictHtml(card, answered) {
 function answerTF(value, fromX) {
   const g = state
   if (busy || g.answered) return
-  const card = DECKS[g.set].cards[g.order[g.index]]
+  const card = TF_SETS[g.set].cards[g.order[g.index]]
   const el = app.querySelector('#card')
   const key = `tf:${g.set}:${g.order[g.index]}`
   if (value !== card.answer) { g.mistakes++; g.misses.push(g.order[g.index]); noteMiss(key, card.sec); buzz(); g.answered = { value } }
@@ -1353,7 +1384,7 @@ function nextTF() {
   g.answered = null
   g.index++
   if (g.index < g.order.length) return RENDER.tf()
-  const deck = DECKS[g.set]
+  const deck = TF_SETS[g.set]
   finish(recapList(g.order.map(i => ({ when: deck.cards[i].answer ? 'True' : 'False', title: deck.cards[i].claim, text: deck.cards[i].why, miss: g.misses.includes(i) }))))
 }
 
@@ -1575,10 +1606,11 @@ function renderBriefing() {
 // Your legion marches up a road. Drag to steer it through the gate with the right answer and around
 // barricades. Gate questions are the chapter's quiz and true/false items under the same keys, so each
 // fact still recruits only once, whichever game it is answered in.
-const MARCH = { gates: 8, gap: 640, first: 560, speed: 60 }   // slow enough to read each question before its gate
+const MARCH = { gates: 10, gap: 640, first: 560, speed: 60 }   // slow enough to read each question before its gate
 let anim = null   // the running canvas game (Legion Run or the battlefield)
 const stopLoop = () => { if (anim) anim.alive = false; anim = null }
 
+const tfWord = yes => LANG === 'bg' ? (yes ? 'Вярно' : 'Невярно') : (yes ? 'True' : 'False')
 function marchGates() {
   const pool = []
   CH.quizzes.forEach((set, si) => set.questions.forEach((q, qi) => {
@@ -1587,7 +1619,7 @@ function marchGates() {
       q: q.q, right: q.options[q.a], wrong: q.options[wrong[Math.floor(Math.random() * wrong.length)]], why: q.why, sec: q.sec })
   }))
   CH.decks.forEach((d, di) => d.cards.forEach((c, ci) => pool.push({ key: `tf:${di}:${ci}`, unit: 'hastatus',
-    q: `True or false? ${c.claim}`, right: c.answer ? 'True' : 'False', wrong: c.answer ? 'False' : 'True', why: c.why, sec: c.sec })))
+    q: `${LANG === 'bg' ? 'Вярно или невярно?' : 'True or false?'} ${c.claim}`, right: tfWord(c.answer), wrong: tfWord(!c.answer), why: c.why, sec: c.sec })))
   return shuffle(pool).slice(0, MARCH.gates).map((g, i) => ({ ...g, rightOnLeft: Math.random() < 0.5, y: MARCH.first + i * MARCH.gap, passed: null }))
 }
 START.march = () => ({ misses: [] })
