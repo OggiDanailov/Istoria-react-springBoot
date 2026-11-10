@@ -182,9 +182,11 @@ at 3 in a row, ×3 at 6, ×4 at 10); a wrong one is knocked aside, rests for 5 s
 Mars · god of war"). A god at the gate costs one gate point; 3 wrong in a row and the Senate loses faith. Favor buys a
 slowed lane (3), who comes next (2) or +1 gate (5). Three levels follow the chapter's table of 15 pairs (the great
 Olympians; gods of home and work; the whole Pantheon, with Apollo, the one god with the same name), each 5 waves of
-4–8 gods, each faster, then a boss shown only by its symbol and a clue. The chapter test sets the gate: 3 below 80%,
+4–8 gods, each a little faster, then a boss shown only by its symbol and a clue. The chapter test sets the gate: 3 below 80%,
 4 at 80–89%, 5 at 90%+. Stars: 3 for no mistakes, 2 for one or two. Winning level 1 wins the chapter; the levels and
-stars are saved in the browser. Scripted players (pantheon.test.mjs): knowing the pairs wins with 3 stars; a learner
+stars are saved in the browser. Slowed down after the user's first play ("no time to read the names and drag when three come at once"): gods take 15–18 s to
+walk down, at most 1 on the field in wave 1, 2 in waves 2–4 and 3 in wave 5, never two within 2.5 s, and a hand of 5.
+Scripted players (pantheon.test.mjs, 1.5–3 s per move): knowing the pairs wins with 3 stars; a learner
 wins with 1–2 and sometimes loses gate points in level 3; a guesser (40% wrong) loses level 3.
 
 The Empire's nine battles are fought on the biggest field, **8 lanes × 11 rows**, and bring the **cohort**: one card

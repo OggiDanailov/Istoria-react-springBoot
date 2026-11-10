@@ -1,5 +1,5 @@
 // Scripted players for Pantheon Siege, played in simulated time (fast). Each watches the three lanes and drops a Roman
-// god on the Greek god nearest the gate once it has walked a little way down (its reaction time), a move taking ~1 s. 'knows' always picks
+// god on the Greek god nearest the gate once it has walked a little way down (its reaction time), a move (reading the names, then dragging) taking 1.5–3 s. 'knows' always picks
 // the twin; 'learner' picks a wrong god some of the time (more often for the gods of the later levels); 'weak' guesses
 // wrong 40% of the time and is slower.
 // PLAN='[["knows",80,0],["learner",80,0]]' PAGE=/path/to/index.html node pantheon.test.mjs   (strategy, test score, level 0-2)
@@ -13,7 +13,7 @@ for (const [strategy, score, level] of JSON.parse(process.env.PLAN)) {
     const H = window.__hold
     H.openPantheon(); H.panStart(level, score)
     const P0 = H.P, rnd = Math.random
-    const react = { knows: 0.16, learner: 0.3, weak: 0.35 }[strategy], move = { knows: 0.9, learner: 1.3, weak: 1.6 }[strategy], wrongP = { knows: 0, learner: [0.1, 0.18, 0.25][level], weak: 0.4 }[strategy]
+    const react = { knows: 0.16, learner: 0.3, weak: 0.35 }[strategy], move = { knows: 1.5, learner: 2.2, weak: 2.8 }[strategy], wrongP = { knows: 0, learner: [0.1, 0.18, 0.25][level], weak: 0.4 }[strategy]
     const tried = {}
     let next = 0
     for (let step = 0; step < 20000 && H.P.phase === 'play'; step++) {
@@ -28,7 +28,7 @@ for (const [strategy, score, level] of JSON.parse(process.env.PLAN)) {
         if (!tried[g.id] && rnd() < wrongP * (g.boss ? 2 : 1)) { const w = P.hand.filter(c => c !== g.k && !((P.cool[c] ?? 0) > P.t)); if (w.length) k = w[Math.floor(rnd() * w.length)] }
         tried[g.id] = true
         const i = P.hand.indexOf(k)
-        if (i >= 0 && !((P.cool[k] ?? 0) > P.t)) { H.panDrop(i, lane); next = P.t + move; break }   // dragging a card takes a person about a second
+        if (i >= 0 && !((P.cool[k] ?? 0) > P.t)) { H.panDrop(i, lane); next = P.t + move; break }
       }
     }
     const P = H.P

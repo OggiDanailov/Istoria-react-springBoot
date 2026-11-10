@@ -2578,11 +2578,12 @@ const PAN_GODS = [
     clue: ['He swallowed his own children, until his youngest son overthrew him.', 'Той поглъщал децата си, докато най-малкият му син не го свалил.'] },
 ]
 const PAN_LEVELS = [
-  { tier: 1, en: 'The great Olympians', bg: 'Великите олимпийци', walk: 12, gap: 2.6 },
-  { tier: 2, en: 'Gods of home and work', bg: 'Богове на дома и труда', walk: 11, gap: 2.4 },
-  { tier: 3, en: 'The whole Pantheon', bg: 'Целият пантеон', walk: 10, gap: 2.2 },
+  { tier: 1, en: 'The great Olympians', bg: 'Великите олимпийци', walk: 18, gap: 4.5 },
+  { tier: 2, en: 'Gods of home and work', bg: 'Богове на дома и труда', walk: 16, gap: 4 },
+  { tier: 3, en: 'The whole Pantheon', bg: 'Целият пантеон', walk: 15, gap: 3.6 },
 ]
-const PAN = { waves: 5, first: 4, hand: 6, rest: 5, slow: 5, cost: { slow: 3, reveal: 2, plus: 5 } }
+// at most this many gods on the field in each wave (one at a time in the first), and never two within 2.5 s of each other
+const PAN = { waves: 5, first: 4, hand: 5, rest: 5, slow: 5, cap: [1, 2, 2, 2, 3], apart: 2.5, cost: { slow: 3, reveal: 2, plus: 5 } }
 const panGate = score => score >= 90 ? 5 : score >= 80 ? 4 : 3   // the chapter test sets how many gods the gate can take
 const PAN_KEY = 'ave-pantheon'
 let panSave = { open: 1, stars: [], best: [] }
@@ -2664,7 +2665,7 @@ function panStart(li, score = quizScore) {   // (a score can be given for testin
   const queue = []
   let t = 2.5, prev = null
   for (let w = 0; w < PAN.waves; w++) {
-    const f = 1 + 0.15 * w   // each wave faster: the fifth comes 1.6 times as fast as the first
+    const f = 1 + 0.08 * w   // each wave a little faster: the fifth comes a third faster than the first
     for (let i = 0; i < PAN.first + w; i++) {
       let k; do k = pick(Math.random() < 0.55 ? fresh : pool); while (k === prev)   // the new gods of the level come most
       prev = k; queue.push({ t, k, walk: L.walk / f, wave: w }); t += L.gap / f
@@ -2701,9 +2702,11 @@ function panSpawn(e, boss = false) {
 function panUpdate(dt) {
   P.t += dt
   while (P.queue.length && P.queue[0].t <= P.t) {
+    const on = P.gods.filter(g => g.state === 'walk').length
+    if (on >= PAN.cap[P.queue[0].wave] || P.t < (P.nextSpawn ?? 0)) break   // time to read and drag: the next god waits
     const e = P.queue.shift()
     if (e.wave !== P.wave) { P.wave = e.wave; announce(pt(`Wave ${e.wave + 1} of ${PAN.waves}`, `Вълна ${e.wave + 1} от ${PAN.waves}`), true); sfx.horn(); panHud() }
-    panSpawn(e)
+    panSpawn(e); P.nextSpawn = P.t + PAN.apart
   }
   if (!P.queue.length && !P.bossOut && !P.gods.some(g => g.state === 'walk')) {
     P.bossOut = true; P.wave = PAN.waves
