@@ -3118,8 +3118,9 @@ document.addEventListener('keydown', e => {
 function fallDraw(T) {
   const c = pctx, dpr = panCanvas.width / (panCanvas.clientWidth || 1), W = panCanvas.width / dpr, H = panCanvas.height / dpr
   const n = FALL.cols, cw = W / n, top = H * 0.09, tag = Math.round(Math.min(12, Math.max(9.5, cw * 0.25)))
-  const floor = H - tag * 2 - 22, s = Math.min(cw / 30, (floor - top) / 4 / 70)   // small figures; the names below them
-  const fallSpan = floor - 4 - top - 30 * s * 1.6, yOf = () => floor
+  const floor = H - tag * 2 - 22, s = Math.min(cw / 36, (floor - top) / 5 / 70)   // small figures; the names below them
+  const fs = s * 1.15   // the falling Roman god, a little bigger than the statues
+  const fallSpan = floor - 4 - top - 30 * fs, yOf = () => floor
   const xOf = slot => cw * (slot + 0.5)
   c.setTransform(dpr, 0, 0, dpr, 0, 0); c.clearRect(0, 0, W, H)
   c.save(); c.translate(P.shake ? (Math.random() - 0.5) * P.shake : 0, 0)
@@ -3136,20 +3137,28 @@ function fallDraw(T) {
   // the row of Greek gods, and their names below, high and low in turn
   c.fillStyle = '#c9b48e'; c.fillRect(0, floor - 2, W, H - floor + 2); c.fillStyle = '#b39d76'; c.fillRect(0, floor - 2, W, 4)
   c.font = `800 ${tag}px Nunito, system-ui, sans-serif`; c.textAlign = 'center'
+  // the names: two tiers, high for even places and low for odd; each tag as close under its god as the field and its
+  // neighbours on the same tier allow
+  const tags = Array.from({ length: n }, (_, slot) => { const name = gName(P.row[slot]).toUpperCase(); return { slot, name, w: c.measureText(name).width + 8, x: xOf(slot) } })
+  for (const tier of [0, 1]) {
+    const row = tags.filter(t => t.slot % 2 === tier)
+    for (const t of row) t.x = Math.max(t.w / 2 + 3, Math.min(W - t.w / 2 - 3, t.x))
+    for (let i = row.length - 2; i >= 0; i--) row[i].x = Math.min(row[i].x, row[i + 1].x - row[i + 1].w / 2 - 4 - row[i].w / 2)   // make room from the right
+    for (let i = 1; i < row.length; i++) row[i].x = Math.max(row[i].x, row[i - 1].x + row[i - 1].w / 2 + 4 + row[i].w / 2)   // and from the left
+  }
   for (let slot = 0; slot < n; slot++) {
-    const x = xOf(slot), k = P.row[slot]
+    const x = xOf(slot), k = P.row[slot], t = tags[slot]
     const born = P.born[slot] >= 0 ? Math.min(1, (P.t - P.born[slot]) / 0.4) : 1
     if (!P.gods.some(g => g.slot === slot)) {
       c.save(); c.globalAlpha = born; c.translate(x, floor - 2); c.scale(s * (0.8 + 0.2 * born), s * (0.8 + 0.2 * born))
       drawDeity(c, k, T, true, { marble: true, plain: true, tag: false })
       c.restore()
     }
-    const name = gName(k).toUpperCase(), w = c.measureText(name).width + 8, ty = floor + 6 + (slot % 2) * (tag + 8)
+    const ty = floor + 6 + (slot % 2) * (tag + 8)
     c.globalAlpha = born
-    c.strokeStyle = 'rgba(31, 52, 84, .5)'; c.lineWidth = 1; c.beginPath(); c.moveTo(x, floor + 2); c.lineTo(x, ty); c.stroke()   // a thread from the god to its name
-    const tx = Math.max(w / 2 + 3, Math.min(W - w / 2 - 3, x))   // the end names stay inside the field
-    c.fillStyle = 'rgba(31, 52, 84, .94)'; c.beginPath(); c.roundRect(tx - w / 2, ty, w, tag + 5, 4); c.fill()
-    c.fillStyle = '#ffffff'; c.fillText(name, tx, ty + tag + 0.5)
+    c.strokeStyle = 'rgba(31, 52, 84, .5)'; c.lineWidth = 1; c.beginPath(); c.moveTo(x, floor + 2); c.lineTo(t.x, ty); c.stroke()   // a thread from the god to its name
+    c.fillStyle = 'rgba(31, 52, 84, .94)'; c.beginPath(); c.roundRect(t.x - t.w / 2, ty, t.w, tag + 5, 4); c.fill()
+    c.fillStyle = '#ffffff'; c.fillText(t.name, t.x, ty + tag + 0.5)
     c.globalAlpha = 1
   }
   // the laurel flash where a twin landed
@@ -3163,11 +3172,17 @@ function fallDraw(T) {
   }
   // the falling Roman god
   if (cur) {
-    const x = cw * (cur.x + 0.5), y = top + 30 * s * 1.6 + cur.y * fallSpan, k = s * 1.6 * (cur.boss ? 1.15 : 1)
+    const x = cw * (cur.x + 0.5), y = top + 30 * fs + cur.y * fallSpan, k = fs * (cur.boss ? 1.2 : 1)
     c.save(); c.translate(x, y); c.scale(k, k)
     if (cur.boss) { c.globalAlpha = 0.9; c.drawImage(glow('255, 210, 110'), -40, -86, 80, 80); c.globalAlpha = 1 }
-    drawDeity(c, cur.k, T, false, { name: cur.named || P.bossNamed ? rName(cur.k) : '?', anim: Math.sin(T * 8) > 0 ? 1 : 0 })
+    drawDeity(c, cur.k, T, false, { tag: false, anim: Math.sin(T * 8) > 0 ? 1 : 0 })
     c.restore()
+    // its name under it, a little larger than the statues' names, and always inside the field
+    const name = (cur.named || P.bossNamed ? rName(cur.k) : '?').toUpperCase()
+    c.font = `800 ${tag + 2}px Nunito, system-ui, sans-serif`; c.textAlign = 'center'
+    const w = c.measureText(name).width + 10, tx = Math.max(w / 2 + 3, Math.min(W - w / 2 - 3, x)), ty = y + 4
+    c.fillStyle = 'rgba(142, 43, 34, .95)'; c.beginPath(); c.roundRect(tx - w / 2, ty, w, tag + 8, 5); c.fill()
+    c.fillStyle = '#ffffff'; c.fillText(name, tx, ty + tag + 2.5)
   }
   for (const f of P.fx) {
     const x = xOf(f.slot), y = yOf(f.slot)
