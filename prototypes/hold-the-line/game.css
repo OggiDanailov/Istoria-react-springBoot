@@ -182,3 +182,12 @@
 .pan .overlay { position: fixed; inset: 0; z-index: 40; }
 .pan-pick { margin: 4px 0 -2px; font-weight: 800; font-size: 13.5px; }
 .pan-go-row { margin: 12px 0 4px; } .pan-go-row .primary { width: 100%; }
+/* the Falling Gods: the choice of game, and the steering arrows */
+.pan-games { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 12px 0 0; }
+.pan-games button { display: grid; gap: 2px; text-align: left; padding: 9px 10px; border-radius: 12px; border: 2px solid var(--ink); background: var(--paper); color: var(--ink); font: inherit; cursor: pointer; }
+.pan-games button b { font: 800 14px/1.15 var(--body); }
+.pan-games button small { font-size: 12px; line-height: 1.25; color: var(--soft-ink); }
+.pan-games button[aria-pressed="true"] { background: #f6e2b8; outline: 3px solid var(--gold); outline-offset: 1px; }
+.pan .pan-steer { order: 2; display: grid; grid-template-columns: 1fr 1.4fr 1fr; gap: 8px; }
+.pan-steer .tool { font-size: 20px; padding: 12px 0; }
+.pan-steer #fall-drop { font-size: 15px; }

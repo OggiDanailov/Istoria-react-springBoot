@@ -2,15 +2,35 @@
 // god on the Greek god nearest the gate once it has walked a little way down (its reaction time), a move (reading the names, then dragging) taking 1.5–3 s. 'knows' always picks
 // the twin; 'learner' picks a wrong god some of the time (more often for the gods of the later levels); 'weak' guesses
 // wrong 40% of the time and is slower.
-// PLAN='[["knows",80,0],["learner",80,0]]' PAGE=/path/to/index.html node pantheon.test.mjs   (strategy, test score, level 0-2)
+// The Falling Gods ('fall' as the fourth item): the player reads the falling god's name (its reading time), then taps the
+// column of its twin (a wrong one some of the time) and drops it.
+// PLAN='[["knows",80,0],["learner",80,0,"fall"]]' PAGE=/path/to/index.html node pantheon.test.mjs   (strategy, test score, level 0-2, game)
 import { chromium } from 'playwright'
 const browser = await chromium.launch({ channel: 'chrome', headless: true })
 const page = await (await browser.newContext({ viewport: { width: 390, height: 844 } })).newPage()
 const errors = []; page.on('pageerror', e => errors.push(e.message))
 await page.goto('file://' + process.env.PAGE); await page.waitForTimeout(600)
-for (const [strategy, score, level] of JSON.parse(process.env.PLAN)) {
-  const r = await page.evaluate(([strategy, score, level]) => {
+for (const [strategy, score, level, game = 'siege'] of JSON.parse(process.env.PLAN)) {
+  const r = await page.evaluate(([strategy, score, level, game]) => {
     const H = window.__hold
+    if (game === 'fall') {
+      H.openPantheon(); H.fallStart(level, score)
+      const read = { knows: 1, learner: 1.8, weak: 2.5 }[strategy], wrongP = { knows: 0, learner: [0.1, 0.18, 0.25][level], weak: 0.4 }[strategy]
+      let seen = null, at = 0
+      for (let step = 0; step < 40000 && H.P.phase === 'play'; step++) {
+        H.fallUpdate(0.05)
+        const P = H.P, c = P.cur
+        if (!c) continue
+        if (seen !== c.id + ':' + !!c.missed) { seen = c.id + ':' + !!c.missed; at = P.t + (c.missed ? read * 0.6 : read) }   // after a miss, the right pair has just flashed
+        if (P.t >= at && !c.fast) {
+          let col = P.row.indexOf(c.k)
+          if (!c.missed && Math.random() < wrongP * (c.boss ? 2 : 1)) col = (col + 1 + Math.floor(Math.random() * (P.F.cols - 1))) % P.F.cols
+          H.fallTo(col); H.fallDrop()
+        }
+      }
+      const P = H.P
+      return { phase: P.phase, t: Math.round(P.t), score: P.score, mistakes: P.mistakes, gate: `${P.gate}/${P.gateMax}`, hand: '-' }
+    }
     H.openPantheon(); H.panStart(level, score)
     const P0 = H.P, rnd = Math.random
     const react = { knows: 0.16, learner: 0.3, weak: 0.35 }[strategy], move = { knows: 1.5, learner: 2.2, weak: 2.8 }[strategy], wrongP = { knows: 0, learner: [0.1, 0.18, 0.25][level], weak: 0.4 }[strategy]
@@ -33,7 +53,7 @@ for (const [strategy, score, level] of JSON.parse(process.env.PLAN)) {
     }
     const P = H.P
     return { phase: P.phase, t: Math.round(P.t), score: P.score, mistakes: P.mistakes, gate: `${P.gate}/${P.gateMax}`, hand: P.hand.length }
-  }, [strategy, score, level])
-  console.log(`level ${level + 1}`, strategy.padEnd(8), score + '%', r.phase.padEnd(5), `t=${r.t}s`, `score ${r.score}`, `mistakes ${r.mistakes}`, `gate ${r.gate}`, `hand ${r.hand}`)
+  }, [strategy, score, level, game])
+  console.log(game.padEnd(5), `level ${level + 1}`, strategy.padEnd(8), score + '%', r.phase.padEnd(5), `t=${r.t}s`, `score ${r.score}`, `mistakes ${r.mistakes}`, `gate ${r.gate}`, `hand ${r.hand}`)
 }
 console.log('errors:', [...new Set(errors)]); await browser.close()

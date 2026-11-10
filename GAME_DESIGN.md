@@ -189,6 +189,15 @@ walk down, at most 1 on the field in wave 1, 2 in waves 2–4 and 3 in wave 5, n
 Scripted players (pantheon.test.mjs, 1.5–3 s per move): knowing the pairs wins with 3 stars; a learner
 wins with 1–2 and sometimes loses gate points in level 3; a guesser (40% wrong) loses level 3.
 
+**The Falling Gods** (Nov 9, the user's idea, the second game of the same chapter; the briefing lets the player choose,
+each game keeps its own levels and stars, and winning level 1 of either wins the chapter): one Roman god falls at a
+time over 3, 4 or 5 columns (by level); the Greek gods stand at the bottom as marble statues with their names. Tap the
+column of the twin (or swipe, the arrows, or the keyboard), swipe down to drop. Right: laurel flash, points, combo.
+Wrong: the god bounces back up with the right pair flashing and its column glowing (a mistake for the stars); a second
+miss breaks through the gate. The row changes places, with one new face, every 4 gods; 20 gods per level, each a
+little faster (8 s down to 5 s in level 1), then the boss falling with only its symbol and a clue. Scripted players
+(pantheon.test.mjs, 'fall'): knowing the pairs wins with 3 stars, a learner with 1–3, a guesser gets through with 1.
+
 The Empire's nine battles are fought on the biggest field, **8 lanes × 11 rows**, and bring the **cohort**: one card
 that places three legionaries side by side (the middle one carries the standard).
 

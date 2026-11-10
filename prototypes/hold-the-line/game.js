@@ -2173,8 +2173,14 @@ const PAN_LEVELS = [
 const PAN = { waves: 5, first: 4, hand: 5, rest: 5, slow: 5, cap: [1, 2, 2, 2, 3], apart: 2.5, cost: { slow: 3, reveal: 2, plus: 5 } }
 const panGate = score => score >= 90 ? 5 : score >= 80 ? 4 : 3   // the chapter test sets how many gods the gate can take
 const PAN_KEY = 'ave-pantheon'
-let panSave = { open: 1, stars: [], best: [] }
-try { panSave = { ...panSave, ...JSON.parse(localStorage.getItem(PAN_KEY) || '{}') } } catch {}
+let panSave = { open: 1, stars: [], best: [], fall: { open: 1, stars: [], best: [] } }
+try { panSave = { ...panSave, ...JSON.parse(localStorage.getItem(PAN_KEY) || '{}') }; panSave.fall ??= { open: 1, stars: [], best: [] } } catch {}
+// the two games of the gods' chapter: the Pantheon Siege ('siege') and the Falling Gods ('fall'), each with its own levels won
+let panGame = 'fall'
+try { panGame = localStorage.getItem('ave-pantheon-game') === 'siege' ? 'siege' : 'fall' } catch {}
+const slotOf = game => game === 'fall' ? panSave.fall : panSave
+const titleOf = game => game === 'fall' ? pt('The Falling Gods', 'Падащите богове') : pt('Pantheon Siege', 'Обсадата на Пантеона')
+const startGame = (game, li) => game === 'fall' ? fallStart(li) : panStart(li)
 const panStore = () => { try { localStorage.setItem(PAN_KEY, JSON.stringify(panSave)) } catch {} }
 const pt = (en, bg) => LANG === 'bg' ? bg : en
 const panGod = k => PAN_GODS.find(g => g.k === k)
@@ -2192,6 +2198,9 @@ const PAN_MARKUP = () => `<main class="game pan">
     <div class="overlay" id="overlay" hidden></div>
   </div>
   <div class="pan-hand" id="pan-hand" hidden aria-label="${pt('Your Roman gods. Drag one onto a lane, or tap it and then tap a lane.', 'Вашите римски богове. Плъзнете един върху линия или го натиснете, а после натиснете линия.')}"></div>
+  <div class="pan-steer" id="pan-steer" hidden>
+    <button class="tool" id="fall-left" aria-label="${pt('Left', 'Наляво')}">◀</button><button class="tool" id="fall-drop">▼ ${pt('Drop', 'Пусни')}</button><button class="tool" id="fall-right" aria-label="${pt('Right', 'Надясно')}">▶</button>
+  </div>
   <div class="msg" id="banner" aria-live="polite"></div>
   <div class="pan-tools" id="pan-tools" hidden>
     <span class="pan-favor" id="pan-favor"></span>
@@ -2204,7 +2213,9 @@ function openPantheon() {
   panActive = true; P = null
   sroot.innerHTML = `<style>${HTL_CSS}</style>` + PAN_MARKUP()
   overlay = $('overlay'); panCanvas = $('pan-field'); pctx = panCanvas.getContext('2d')
-  panCanvas.addEventListener('pointerdown', panTapField)
+  panCanvas.addEventListener('pointerdown', e => P?.mode === 'fall' ? fallPointerDown(e) : panTapField(e))
+  panCanvas.addEventListener('pointerup', fallPointerUp)
+  $('fall-left').addEventListener('click', () => fallMove(-1)); $('fall-right').addEventListener('click', () => fallMove(1)); $('fall-drop').addEventListener('click', fallDrop)
   $('pan-slow').addEventListener('click', () => { if (!P || P.phase !== 'play' || P.favor < PAN.cost.slow) return; P.arm = P.arm === 'slow' ? null : 'slow'; if (P.arm) announce(pt('Tap a lane to slow the god on it.', 'Натиснете линия, за да забавите бога по нея.')); panHud() })
   $('pan-reveal').addEventListener('click', panReveal)
   $('pan-plus').addEventListener('click', () => { if (!P || P.phase !== 'play' || P.favor < PAN.cost.plus || P.gate >= P.gateMax + 2) return; P.favor -= PAN.cost.plus; P.gate++; sfx.collect(); announce(pt('The gate of Rome is stronger.', 'Портата на Рим е по-здрава.')); panHud() })
@@ -2219,31 +2230,45 @@ function panLeave(result) {
 }
 function panBriefing() {
   if (P) P.phase = 'menu'
-  const open = i => i < panSave.open || (typeof window.__aveOpenAll === 'function' && window.__aveOpenAll())
-  const nextLevel = Math.max(0, PAN_LEVELS.findIndex((L, i) => open(i) && !panSave.stars[i]))   // the first open level not yet won, else the first
+  const sv = slotOf(panGame)
+  const open = i => i < sv.open || (typeof window.__aveOpenAll === 'function' && window.__aveOpenAll())
+  const nextLevel = Math.max(0, PAN_LEVELS.findIndex((L, i) => open(i) && !sv.stars[i]))   // the first open level not yet won, else the first
   const stops = PAN_LEVELS.map((L, i) => {
-    const s = panSave.stars[i] ?? 0, ok = open(i)
+    const st = sv.stars[i] ?? 0, ok = open(i)
     const gods = PAN_GODS.filter(g => g.tier === L.tier).map(g => rName(g.k)).join(', ')
-    return `<li class="stop ${s ? 'done' : ok ? 'open' : 'locked'}"><button id="pl${i}" ${ok ? '' : 'disabled'}>
+    return `<li class="stop ${st ? 'done' : ok ? 'open' : 'locked'}"><button id="pl${i}" ${ok ? '' : 'disabled'}>
       <span class="num">${i + 1}</span>
       <span class="what"><b>${pt(L.en, L.bg)}</b><small>${ok ? (i ? pt('New: ', 'Нови: ') : '') + gods : pt('Beat the boss of the level before', 'Победете боса на предишното ниво')}</small></span>
-      ${ok ? `<span class="stars" aria-label="${s} of 3 stars">${starText(s)}</span>` : ''}</button></li>`
+      ${ok ? `<span class="stars" aria-label="${st} of 3 stars">${starText(st)}</span>` : ''}</button></li>`
   }).join('')
-  showPanel(`<span class="eyebrow">${pt('A game of myth', 'Игра по митовете')}</span><h2>${pt('Pantheon Siege', 'Обсадата на Пантеона')}</h2>
-    <p>${pt('The Romans matched their gods with the gods of the Greeks. Now the Greek gods march on Rome. Do you know who is who?', 'Римляните съпоставили своите богове с боговете на гърците. Сега гръцките богове вървят към Рим. Знаете ли кой кой е?')}</p>
+  const rules = panGame === 'fall' ? [
+    pt('One <b>Roman god</b> falls at a time. The <b>Greek gods</b> stand at the bottom.', 'Пада по един <b>римски бог</b>. <b>Гръцките богове</b> стоят долу.'),
+    pt('<b>Tap the column</b> of its Greek twin (or swipe, or use the arrows) to steer it there. Swipe down to drop it.', '<b>Натиснете колоната</b> на гръцкия му близнак (или плъзнете, или ползвайте стрелките), за да го насочите. Плъзнете надолу, за да го пуснете.'),
+    pt('The <b>right twin</b> wins points; right answers in a row multiply them. At the <b>wrong one</b> the god bounces back: try again. Miss twice and the gate loses a point.', '<b>Правилният близнак</b> носи точки; верни отговори подред ги умножават. При <b>грешния</b> богът отскача: опитайте пак. Два пропуска – и портата губи точка.'),
+    pt('The Greek gods change places every few gods, and each god falls a little faster.', 'Гръцките богове сменят местата си на няколко бога, а всеки бог пада малко по-бързо.'),
+    pt('Each level ends with a <b>boss</b> who shows only a symbol and a clue.', 'Всяко ниво завършва с <b>бос</b>, който показва само символ и подсказка.'),
+  ] : [
+    pt('<b>Drag</b> the Roman twin onto the lane of the Greek god coming down it, or tap the card and then the lane.', '<b>Плъзнете</b> римския близнак върху линията на гръцкия бог, който слиза по нея, или натиснете картата и после линията.'),
+    pt('The <b>right god</b> wins points and Favor; right answers in a row multiply your points.', '<b>Правилният бог</b> носи точки и благоволение; верни отговори подред умножават точките.'),
+    pt('A <b>wrong god</b> lets the Greek one walk on and rests for 5 seconds. Three wrong in a row and the Senate loses faith.', '<b>Грешен бог</b> пропуска гръцкия да продължи и почива 5 секунди. Три грешни подред – и Сенатът губи вяра.'),
+    pt('Spend <b>Favor</b> to slow a lane, to see who comes next, or to strengthen the gate.', 'Харчете <b>благоволение</b>, за да забавите линия, да видите кой идва или да укрепите портата.'),
+    pt('Each level ends with a <b>boss</b> who shows only a symbol and a clue.', 'Всяко ниво завършва с <b>бос</b>, който показва само символ и подсказка.'),
+  ]
+  const choose = g => { panGame = g; try { localStorage.setItem('ave-pantheon-game', g) } catch {} ; panBriefing() }
+  showPanel(`<span class="eyebrow">${pt('A game of myth', 'Игра по митовете')}</span><h2>${titleOf(panGame)}</h2>
+    <p>${pt('The Romans matched their gods with the gods of the Greeks. Do you know who is who?', 'Римляните съпоставили своите богове с боговете на гърците. Знаете ли кой кой е?')}</p>
+    <div class="pan-games" role="group" aria-label="${pt('Choose the game', 'Изберете играта')}">
+      <button id="pg-fall" aria-pressed="${panGame === 'fall'}"><b>${titleOf('fall')}</b><small>${pt('steer each falling god to its twin', 'насочете всеки падащ бог към близнака му')}</small></button>
+      <button id="pg-siege" aria-pressed="${panGame === 'siege'}"><b>${titleOf('siege')}</b><small>${pt('stop the gods marching on Rome', 'спрете боговете, които вървят към Рим')}</small></button>
+    </div>
     <div class="row pan-go-row"><button class="primary" id="pan-go">${pt(`▶ Start level ${nextLevel + 1}: ${PAN_LEVELS[nextLevel].en}`, `▶ Започни ниво ${nextLevel + 1}: ${PAN_LEVELS[nextLevel].bg}`)}</button></div>
-    <ul class="pan-rules">
-      <li>${pt('<b>Drag</b> the Roman twin onto the lane of the Greek god coming down it, or tap the card and then the lane.', '<b>Плъзнете</b> римския близнак върху линията на гръцкия бог, който слиза по нея, или натиснете картата и после линията.')}</li>
-      <li>${pt('The <b>right god</b> wins points and Favor; right answers in a row multiply your points.', '<b>Правилният бог</b> носи точки и благоволение; верни отговори подред умножават точките.')}</li>
-      <li>${pt('A <b>wrong god</b> lets the Greek one walk on and rests for 5 seconds. Three wrong in a row and the Senate loses faith.', '<b>Грешен бог</b> пропуска гръцкия да продължи и почива 5 секунди. Три грешни подред – и Сенатът губи вяра.')}</li>
-      <li>${pt('Spend <b>Favor</b> to slow a lane, to see who comes next, or to strengthen the gate.', 'Харчете <b>благоволение</b>, за да забавите линия, да видите кой идва или да укрепите портата.')}</li>
-      <li>${pt('Each level ends with a <b>boss</b> who shows only a symbol and a clue.', 'Всяко ниво завършва с <b>бос</b>, който показва само символ и подсказка.')}</li>
-    </ul>
+    <ul class="pan-rules">${rules.map(r => `<li>${r}</li>`).join('')}</ul>
     <p class="pan-pick">${pt('Or choose a level (tap it):', 'Или изберете ниво (натиснете го):')}</p>
     <ol class="road">${stops}</ol>
-    <p class="twist">${opts.mode === 'chapter' ? `<b>${pt(`Your chapter test: ${quizScore}%.`, `Вашият тест на главата: ${quizScore}%.`)}</b> ` : ''}${pt(`The gate of Rome can take ${panGate(quizScore)} gods.`, `Портата на Рим издържа ${panGate(quizScore)} бога.`)}</p>
+    <p class="twist">${opts.mode === 'chapter' ? `<b>${pt(`Your chapter test: ${quizScore}%.`, `Вашият тест на главата: ${quizScore}%.`)}</b> ` : ''}${panGame === 'fall' ? pt(`The gate of Rome can take ${panGate(quizScore)} double misses.`, `Портата на Рим издържа ${panGate(quizScore)} двойни пропуска.`) : pt(`The gate of Rome can take ${panGate(quizScore)} gods.`, `Портата на Рим издържа ${panGate(quizScore)} бога.`)}</p>
     <div class="row"><button class="tool" id="pan-leave">${opts.mode === 'chapter' ? pt('Back to the chapter', 'Обратно към главата') : pt('Back to the map', 'Към картата')}</button></div>`,
-    { ...Object.fromEntries(PAN_LEVELS.map((L, i) => [`pl${i}`, () => panStart(i)])), 'pan-go': () => panStart(nextLevel), 'pan-leave': () => panLeave({ left: true }) })
+    { ...Object.fromEntries(PAN_LEVELS.map((L, i) => [`pl${i}`, () => startGame(panGame, i)])), 'pan-go': () => startGame(panGame, nextLevel),
+      'pg-fall': () => choose('fall'), 'pg-siege': () => choose('siege'), 'pan-leave': () => panLeave({ left: true }) })
 }
 function panStart(li, score = quizScore) {   // (a score can be given for testing)
   const L = PAN_LEVELS[li], gate = panGate(score)
@@ -2259,9 +2284,9 @@ function panStart(li, score = quizScore) {   // (a score can be given for testin
     }
     t += 4   // a breath between waves
   }
-  P = { li, L, pool, t: 0, phase: 'play', gate, gateMax: gate, score: 0, streak: 0, favor: 0, mistakes: 0, wrongRow: 0, gods: [], hand: [], cool: {}, queue,
+  P = { mode: 'siege', li, L, pool, t: 0, phase: 'play', gate, gateMax: gate, score: 0, streak: 0, favor: 0, mistakes: 0, wrongRow: 0, gods: [], hand: [], cool: {}, queue,
     wave: -1, fx: [], slow: {}, boss: pick(fresh), bossOut: false, sel: null, arm: null, hover: null, shake: 0, ids: 0 }
-  overlay.hidden = true; $('pan-flash').hidden = true; $('pan-hand').hidden = false; $('pan-tools').hidden = false
+  overlay.hidden = true; $('pan-flash').hidden = true; $('pan-hand').hidden = false; $('pan-tools').hidden = false; $('pan-steer').hidden = true
   panFill(); panHud()
   announce(pt(`Level ${li + 1}: ${L.en}`, `Ниво ${li + 1}: ${L.bg}`), true)
   sfx.init()
@@ -2369,37 +2394,37 @@ function panReveal() {
 function panPause() {
   if (!P || P.phase !== 'play') return
   P.phase = 'paused'
-  showPanel(`<span class="eyebrow">${pt('Paused', 'Пауза')} · ${pt(P.L.en, P.L.bg)}</span><h2>${pt('Pantheon Siege', 'Обсадата на Пантеона')}</h2>
+  showPanel(`<span class="eyebrow">${pt('Paused', 'Пауза')} · ${pt(P.L.en, P.L.bg)}</span><h2>${titleOf(P.mode)}</h2>
     <p>${pt(`${P.score} points so far.`, `${P.score} точки досега.`)}</p>
     <div class="row"><button class="primary" id="resume">${pt('Resume', 'Продължи')}</button><button class="tool" id="levels">${pt('Choose a level', 'Избери ниво')}</button><button class="tool" id="leave">${pt('Leave', 'Излез')}</button></div>`,
     { resume: () => { overlay.hidden = true; P.phase = 'play'; panLast = performance.now() }, levels: panBriefing, leave: () => panLeave({ left: true }) })
 }
 function panVictory() {
-  const stars = P.mistakes === 0 ? 3 : P.mistakes <= 2 ? 2 : 1, li = P.li, next = li + 1 < PAN_LEVELS.length
-  panSave.stars[li] = Math.max(panSave.stars[li] ?? 0, stars); panSave.best[li] = Math.max(panSave.best[li] ?? 0, P.score)
-  if (next) panSave.open = Math.max(panSave.open, li + 2)
+  const stars = P.mistakes === 0 ? 3 : P.mistakes <= 2 ? 2 : 1, li = P.li, next = li + 1 < PAN_LEVELS.length, sv = slotOf(P.mode), game = P.mode
+  sv.stars[li] = Math.max(sv.stars[li] ?? 0, stars); sv.best[li] = Math.max(sv.best[li] ?? 0, P.score)
+  if (next) sv.open = Math.max(sv.open, li + 2)
   panStore(); sfx.win()
   const newGods = next ? PAN_GODS.filter(g => g.tier === PAN_LEVELS[li + 1].tier).map(g => rName(g.k)).join(', ') : ''
   showPanel(`<span class="eyebrow">${pt('Victory', 'Победа')} · ${pt(P.L.en, P.L.bg)}</span><h2>${pt('Rome holds!', 'Рим устоя!')}</h2>
     <p class="big-stars" aria-label="${stars} of 3 stars">${starText(stars)}</p>
-    <p>${pt(`${P.score} points (best ${panSave.best[li]}) · ${P.mistakes === 0 ? 'no mistakes' : P.mistakes === 1 ? 'one mistake' : P.mistakes + ' mistakes'}.`, `${P.score} точки (най-добре ${panSave.best[li]}) · ${P.mistakes === 0 ? 'без грешки' : P.mistakes === 1 ? 'една грешка' : P.mistakes + ' грешки'}.`)}
+    <p>${pt(`${P.score} points (best ${sv.best[li]}) · ${P.mistakes === 0 ? 'no mistakes' : P.mistakes === 1 ? 'one mistake' : P.mistakes + ' mistakes'}.`, `${P.score} точки (най-добре ${sv.best[li]}) · ${P.mistakes === 0 ? 'без грешки' : P.mistakes === 1 ? 'една грешка' : P.mistakes + ' грешки'}.`)}
       ${stars < 3 ? pt('No mistakes for three stars.', 'Без грешки – за три звезди.') : ''}</p>
     <p class="history">${next ? pt(`Next level: ${newGods}.`, `Следващо ниво: ${newGods}.`) : pt('You know the whole Pantheon: all fifteen pairs of the chapter’s table.', 'Знаете целия пантеон: всичките петнадесет двойки от таблицата в главата.')}</p>
     <div class="row">${next ? `<button class="primary" id="pan-next">${pt('Next level', 'Следващо ниво')}</button>` : ''}
       <button class="${next ? 'tool' : 'primary'}" id="pan-done">${opts.mode === 'chapter' ? pt('Continue', 'Продължи') : pt('Back to the map', 'Към картата')}</button>
       <button class="tool" id="pan-again">${pt('Play again', 'Играй отново')}</button></div>`,
-    { 'pan-next': () => panStart(li + 1), 'pan-done': () => panLeave({ won: true, stars }), 'pan-again': () => panStart(li) })
+    { 'pan-next': () => startGame(game, li + 1), 'pan-done': () => panLeave({ won: true, stars }), 'pan-again': () => startGame(game, li) })
 }
 function panLose(why) {
   P.phase = 'lost'; sfx.lose()
-  const li = P.li
+  const li = P.li, game = P.mode
   showPanel(`<span class="eyebrow">${pt('Defeat', 'Поражение')} · ${pt(P.L.en, P.L.bg)}</span>
     <h2>${why === 'senate' ? pt('The Senate loses faith', 'Сенатът губи вяра') : pt('The gates of Rome fall', 'Портите на Рим падат')}</h2>
-    <p>${why === 'senate' ? pt('Three wrong gods in a row: no more guessing!', 'Три грешни бога подред: стига гадаене!') : pt('Too many Greek gods reached the gate.', 'Твърде много гръцки богове стигнаха портата.')} ${pt(`${P.score} points.`, `${P.score} точки.`)}</p>
+    <p>${why === 'senate' ? pt('Three wrong gods in a row: no more guessing!', 'Три грешни бога подред: стига гадаене!') : (game === 'fall' ? pt('Too many gods landed on the wrong twin.', 'Твърде много богове паднаха при грешния близнак.') : pt('Too many Greek gods reached the gate.', 'Твърде много гръцки богове стигнаха портата.'))} ${pt(`${P.score} points.`, `${P.score} точки.`)}</p>
     <p class="history">${pt('The table of the Roman and Greek gods is in the chronicle, under “Foreign Gods and Mystery Cults”.', 'Таблицата с римските и гръцките богове е в хрониката, в раздела за чуждите богове и мистериите.')}</p>
     <div class="row"><button class="primary" id="pan-again">${pt('Try again', 'Опитай пак')}</button><button class="tool" id="pan-levels">${pt('Choose a level', 'Избери ниво')}</button>
       <button class="tool" id="pan-out">${opts.mode === 'chapter' ? pt('Back to the chapter', 'Обратно към главата') : pt('Back to the map', 'Към картата')}</button></div>`,
-    { 'pan-again': () => panStart(li), 'pan-levels': panBriefing, 'pan-out': () => panLeave({ won: false }) })
+    { 'pan-again': () => startGame(game, li), 'pan-levels': panBriefing, 'pan-out': () => panLeave({ won: false }) })
 }
 function panHud() {
   if (!P) return
@@ -2407,7 +2432,9 @@ function panHud() {
   $('pan-score').textContent = P.score
   const mult = P.streak >= 10 ? 4 : P.streak >= 6 ? 3 : P.streak >= 3 ? 2 : 1
   $('pan-combo').textContent = mult > 1 ? '×' + mult : ''
-  $('pan-wave').textContent = P.wave >= PAN.waves ? pt('Boss', 'Бос') : P.wave >= 0 ? pt(`Wave ${P.wave + 1}/${PAN.waves}`, `Вълна ${P.wave + 1}/${PAN.waves}`) : ''
+  const waves = P.mode === 'fall' ? FALL.drops / FALL.every : PAN.waves
+  $('pan-wave').textContent = P.wave >= waves ? pt('Boss', 'Бос') : P.wave >= 0 ? pt(`Wave ${P.wave + 1}/${waves}`, `Вълна ${P.wave + 1}/${waves}`) : ''
+  if (P.mode === 'fall') return
   $('pan-favor').textContent = `✦ ${P.favor} ${pt('Favor', 'благоволение')}`
   const tool = (id, label, cost, ok) => { const b = $(id); b.innerHTML = `${label} <b>✦${cost}</b>`; b.disabled = !ok || P.phase !== 'play'; b.classList.toggle('armed', id === 'pan-slow' && P.arm === 'slow') }
   tool('pan-slow', pt('Slow a lane', 'Забави'), PAN.cost.slow, P.favor >= PAN.cost.slow)
@@ -2477,9 +2504,10 @@ function panLayout() {
 function panFrame(now) {
   if (!mounted || !panActive) return
   const dt = Math.max(0, Math.min(0.05, (now - panLast) / 1000)); panLast = now
-  if (P?.phase === 'play') panUpdate(dt)
+  if (P?.phase === 'play') P.mode === 'fall' ? fallUpdate(dt) : panUpdate(dt)
   else if (P?.phase === 'won') { for (const g of P.gods) g.t += dt; for (const f of P.fx) f.t -= dt; P.fx = P.fx.filter(f => f.t > 0) }
-  panDraw(now / 1000); panCool()
+  if (P?.mode === 'fall') fallDraw(now / 1000); else panDraw(now / 1000)
+  panCool()
   requestAnimationFrame(panFrame)
 }
 function panDraw(T) {
@@ -2546,6 +2574,187 @@ function panDraw(T) {
     c.fillStyle = '#3b2a1c'; c.beginPath(); c.moveTo(gx - gw / 2, H); c.lineTo(gx - gw / 2, gateY + 12); c.arc(gx, gateY + 12, gw / 2, Math.PI, 0); c.lineTo(gx + gw / 2, H); c.fill()
   }
   c.fillStyle = '#fbf3e4'; c.font = `900 ${Math.round(11 + 2 * s)}px Nunito, system-ui, sans-serif`; c.textAlign = 'center'; c.fillText('SPQR', W / 2, H - 6)
+  c.restore()
+}
+
+// ---------- The Falling Gods: the second game of the gods' chapter ----------
+// One Roman god falls at a time; the Greek gods stand in a row at the bottom. Tap the column of its Greek twin (or
+// swipe, or use the arrows) to steer it there; it lands where it is. The right twin: points and a laurel flash; the
+// wrong one bounces it back up with the right pair flashing (a mistake), and a second miss costs a point of the gate. The row changes places every few gods, and each god
+// falls a little faster. The same three levels and bosses as the Pantheon Siege; the boss falls showing only its symbol.
+const FALL_LEVELS = [{ cols: 3, fall: 8, min: 5 }, { cols: 4, fall: 7.5, min: 4.6 }, { cols: 5, fall: 7, min: 4.2 }]
+const FALL = { drops: 20, every: 5, shuffle: 4 }   // gods per level, a wave every 5, the row reshuffled every 4
+function fallStart(li, score = quizScore) {
+  const L = PAN_LEVELS[li], F = FALL_LEVELS[li], gate = panGate(score)
+  const pool = PAN_GODS.filter(g => g.tier <= L.tier).map(g => g.k), fresh = PAN_GODS.filter(g => g.tier === L.tier).map(g => g.k)
+  P = { mode: 'fall', li, L, F, pool, fresh, t: 0, phase: 'play', gate, gateMax: gate, score: 0, streak: 0, favor: 0, mistakes: 0, wrongRow: 0,
+    gods: [], fx: [], row: [], dropped: 0, wave: 0, cur: null, boss: fresh[Math.floor(Math.random() * fresh.length)], bossOut: false, shake: 0, ids: 0, mark: null, wait: 1.2 }
+  fallRow(true)
+  overlay.hidden = true; $('pan-flash').hidden = true; $('pan-hand').hidden = true; $('pan-tools').hidden = true; $('pan-steer').hidden = false
+  panHud()
+  announce(pt(`Level ${li + 1}: ${L.en}`, `Ниво ${li + 1}: ${L.bg}`), true)
+  sfx.init()
+}
+// the Greek gods at the bottom: new places (and one new face) every few gods; the new gods of the level come most
+function fallRow(first) {
+  const n = P.F.cols, pick = a => a[Math.floor(Math.random() * a.length)]
+  let row = first ? [] : P.row.slice()
+  if (!first) { const out = Math.floor(Math.random() * n), cand = P.pool.filter(k => !row.includes(k)); if (cand.length) row[out] = pick(Math.random() < 0.6 && P.fresh.some(k => cand.includes(k)) ? P.fresh.filter(k => cand.includes(k)) : cand) }
+  while (row.length < n) { const cand = P.pool.filter(k => !row.includes(k)), f = P.fresh.filter(k => cand.includes(k)); row.push(pick(f.length && row.length < Math.ceil(n * 0.6) ? f : cand)) }
+  for (let i = row.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [row[i], row[j]] = [row[j], row[i]] }
+  if (P.bossOut && !row.includes(P.boss)) row[Math.floor(Math.random() * n)] = P.boss   // the boss's twin is always there
+  P.row = row; P.rowT = 0
+}
+function fallNext() {
+  const boss = P.dropped >= FALL.drops
+  if (boss && !P.bossOut) {
+    P.bossOut = true; P.wave = Math.ceil(FALL.drops / FALL.every)
+    if (!P.row.includes(P.boss)) { P.row[Math.floor(Math.random() * P.row.length)] = P.boss; P.rowT = 0 }
+    const g = panGod(P.boss)
+    announce(pt(`The boss! Only its symbol and a clue: ${g.clue[0]}`, `Босът! Само символ и подсказка: ${g.clue[1]}`), true, 7000); sfx.horn()
+  } else if (!boss && P.dropped % FALL.every === 0) {
+    P.wave = P.dropped / FALL.every
+    announce(pt(`Wave ${P.wave + 1} of ${FALL.drops / FALL.every}`, `Вълна ${P.wave + 1} от ${FALL.drops / FALL.every}`), true); sfx.horn()
+  }
+  let k
+  if (boss) k = P.boss
+  else { const cand = P.row.filter(x => x !== P.last); k = cand[Math.floor(Math.random() * cand.length)] }
+  P.last = k
+  const time = (P.F.fall - (P.F.fall - P.F.min) * Math.min(1, P.dropped / FALL.drops)) * (boss ? 1.3 : 1)   // each god a little faster
+  const col = Math.floor(Math.random() * P.F.cols)
+  P.cur = { id: ++P.ids, k, col, x: col, y: 0, time, fast: false, boss, named: !boss }
+  panHud()
+}
+function fallUpdate(dt) {
+  P.t += dt
+  P.rowT = (P.rowT ?? 0) + dt
+  if (!P.cur) { P.wait -= dt; if (P.wait <= 0 && P.phase === 'play') fallNext() }
+  const c = P.cur
+  if (c) {
+    c.x += (c.col - c.x) * Math.min(1, dt * 14)   // it slides across to its column
+    c.y += dt / c.time * (c.fast ? 7 : 1)
+    if (c.y >= 1) fallLand(c)
+  }
+  for (const g of P.gods) g.t += dt
+  P.gods = P.gods.filter(g => g.t < 0.9)
+  for (const f of P.fx) f.t -= dt
+  P.fx = P.fx.filter(f => f.t > 0)
+  if (P.mark && P.mark.t > 0) P.mark.t -= dt
+  P.shake = Math.max(0, P.shake - dt * 14)
+}
+function fallLand(c) {
+  const twin = P.row[c.col]
+  if (twin !== c.k && !c.missed) {   // a first miss: it bounces back up and the right pair flashes; steer it again
+    c.missed = true; c.y = 0.3; c.fast = false; c.named = true
+    P.mistakes++; P.wrongRow++; P.streak = 0; P.shake = 5; sfx.clang()
+    const right = P.row.indexOf(c.k)
+    if (right >= 0) P.mark = { col: right, t: 1.6 }
+    panFlash(c.k); panHud()
+    return
+  }
+  P.cur = null; P.wait = 0.7
+  if (twin === c.k) {
+    P.streak++; P.wrongRow = 0
+    const mult = P.streak >= 10 ? 4 : P.streak >= 6 ? 3 : P.streak >= 3 ? 2 : 1, pts = 100 * mult * (c.boss ? 5 : 1)
+    P.score += pts
+    P.gods.push({ k: c.k, lane: c.col, t: 0 })   // the laurel flash over the Greek twin
+    P.fx.push({ kind: 'text', text: '+' + pts, lane: c.col, y: 0.62, t: 1.1 })
+    sfx.collect(); if (c.boss) sfx.charge()
+    if (P.streak === 3 || P.streak === 6 || P.streak === 10) announce(pt(`${P.streak} in a row: points ×${mult}!`, `${P.streak} подред: точки ×${mult}!`))
+    if (c.boss) { P.phase = 'won'; panHud(); setTimeout(() => { if (P?.phase === 'won') panVictory() }, 1200); return }
+    P.dropped++
+    if (P.dropped % FALL.shuffle === 0 && P.dropped < FALL.drops) fallRow(false)
+  } else {   // wrong twice: it breaks through, a point of the gate
+    P.wrongRow++; P.streak = 0; P.gate--; P.shake = 8; sfx.clang(); sfx.boom()
+    P.fx.push({ kind: 'knock', k: c.k, lane: c.col, y: 0.8, t: 0.8, dir: c.col < P.F.cols / 2 ? -1 : 1 })
+    const right = P.row.indexOf(c.k)
+    if (right >= 0) P.mark = { col: right, t: 1.6 }
+    panFlash(c.k)
+    if (c.boss) { P.cur = null; P.wait = 1.2; P.bossNamed = true }   // the boss falls again, now with its name
+    else P.dropped++
+    if (P.gate <= 0) { panHud(); return panLose('gate') }
+  }
+  panHud()
+}
+// steering: tap a column, swipe, the arrows, or the keyboard
+function fallMove(d) { if (P?.mode === 'fall' && P.phase === 'play' && P.cur) { P.cur.col = Math.max(0, Math.min(P.F.cols - 1, P.cur.col + d)); sfx.place() } }
+function fallTo(col) { if (P?.mode === 'fall' && P.phase === 'play' && P.cur) { P.cur.col = Math.max(0, Math.min(P.F.cols - 1, col)); sfx.place() } }
+function fallDrop() { if (P?.mode === 'fall' && P.phase === 'play' && P.cur) P.cur.fast = true }
+let fallPointer = null
+function fallPointerDown(e) { if (P?.mode !== 'fall' || P.phase !== 'play') return; sfx.init(); fallPointer = { x: e.clientX, y: e.clientY } }
+function fallPointerUp(e) {
+  if (!fallPointer || P?.mode !== 'fall') return
+  const dx = e.clientX - fallPointer.x, dy = e.clientY - fallPointer.y; fallPointer = null
+  if (dy > 50 && dy > Math.abs(dx)) return fallDrop()   // a swipe down drops it
+  const r = panCanvas.getBoundingClientRect()
+  if (Math.abs(dx) > 30) return fallMove(Math.sign(dx) * Math.max(1, Math.round(Math.abs(dx) / (r.width / P.F.cols))))
+  fallTo(Math.floor((e.clientX - r.left) / r.width * P.F.cols))   // a tap: straight to that column
+}
+document.addEventListener('keydown', e => {
+  if (!panActive || P?.mode !== 'fall' || P.phase !== 'play') return
+  if (e.key === 'ArrowLeft') { e.preventDefault(); fallMove(-1) }
+  if (e.key === 'ArrowRight') { e.preventDefault(); fallMove(1) }
+  if (e.key === 'ArrowDown' || e.key === ' ') { e.preventDefault(); fallDrop() }
+})
+function fallDraw(T) {
+  const c = pctx, dpr = panCanvas.width / (panCanvas.clientWidth || 1), W = panCanvas.width / dpr, H = panCanvas.height / dpr
+  c.setTransform(dpr, 0, 0, dpr, 0, 0); c.clearRect(0, 0, W, H)
+  const n = P.F.cols, cw = W / n, top = H * 0.1, floor = H * 0.8, s = Math.min(cw / 52, (H * 0.2) / 70)
+  c.save(); c.translate(P.shake ? (Math.random() - 0.5) * P.shake : 0, 0)
+  for (let i = 0; i < n; i++) {   // the columns
+    c.fillStyle = i % 2 ? '#e9dfca' : '#f1e8d6'; c.fillRect(i * cw, 0, cw, H)
+    if (P.cur && Math.round(P.cur.x) === i) { c.fillStyle = 'rgba(224, 166, 58, .16)'; c.fillRect(i * cw, 0, cw, H) }
+    if (P.mark && P.mark.t > 0 && P.mark.col === i) { c.fillStyle = `rgba(224, 166, 58, ${0.45 * Math.min(1, P.mark.t)})`; c.fillRect(i * cw, 0, cw, H) }
+  }
+  c.strokeStyle = 'rgba(90, 70, 45, .3)'; c.lineWidth = 2; c.setLineDash([6, 8])
+  for (let i = 1; i < n; i++) { c.beginPath(); c.moveTo(i * cw, top); c.lineTo(i * cw, floor); c.stroke() }
+  c.setLineDash([])
+  const sky = c.createLinearGradient(0, 0, 0, top); sky.addColorStop(0, '#9cc3e6'); sky.addColorStop(1, '#dbe9f4')
+  c.fillStyle = sky; c.fillRect(0, 0, W, top)
+  c.fillStyle = 'rgba(255, 255, 255, .95)'
+  for (let i = 0; i < 6; i++) { const x = ((i * 97 + T * 6) % (W + 80)) - 40; c.beginPath(); c.ellipse(x, top * 0.8, 30, 11, 0, 0, TAU); c.fill() }
+  // the plinths and the Greek gods standing on them
+  c.fillStyle = '#c9b48e'; c.fillRect(0, floor, W, H - floor)
+  c.fillStyle = '#b39d76'; c.fillRect(0, floor, W, 5)
+  const fade = Math.min(1, (P.rowT ?? 1) / 0.4)
+  for (let i = 0; i < n; i++) {
+    const x = cw * (i + 0.5)
+    c.fillStyle = '#ddd2bb'; c.fillRect(x - cw * 0.34, floor - 4, cw * 0.68, 9)
+    c.save(); c.globalAlpha = fade; c.translate(x, floor - 4); c.scale(s, s)
+    drawDeity(c, P.row[i], T, true, { marble: true, plain: true, name: gName(P.row[i]) })
+    c.restore()
+  }
+  // the laurel flash where a twin landed
+  for (const g of P.gods) {
+    const x = cw * (g.lane + 0.5), a = Math.min(1, g.t / 0.3), out = Math.max(0, (g.t - 0.5) / 0.4)
+    c.save(); c.translate(x, floor - 4); c.scale(s, s); c.globalAlpha = a * (1 - out)
+    drawDeity(c, g.k, T, false, { name: rName(g.k), anim: 1 })
+    c.strokeStyle = '#5f8a3a'; c.lineWidth = 3; c.beginPath(); c.arc(0, -30, 18 + g.t * 50, 0, TAU); c.stroke()
+    c.fillStyle = '#7aa64a'; for (let j = 0; j < 10; j++) { const an = j * TAU / 10 + g.t * 2, r = 18 + g.t * 50; c.beginPath(); c.ellipse(Math.cos(an) * r, -30 + Math.sin(an) * r, 4, 2, an, 0, TAU); c.fill() }
+    c.restore()
+  }
+  // the falling Roman god
+  const cur = P.cur
+  if (cur) {
+    const x = cw * (cur.x + 0.5), y = top + 30 * s + cur.y * (floor - 4 - top - 30 * s), k = s * (cur.boss ? 1.2 : 1)
+    c.save(); c.translate(x, y); c.scale(k, k)
+    if (cur.boss) { c.globalAlpha = 0.9; c.drawImage(glow('255, 210, 110'), -40, -86, 80, 80); c.globalAlpha = 1 }
+    drawDeity(c, cur.k, T, false, { name: cur.named || P.bossNamed ? rName(cur.k) : '?', anim: Math.sin(T * 8) > 0 ? 1 : 0 })
+    c.restore()
+  }
+  for (const f of P.fx) {
+    const x = cw * (f.lane + 0.5), y = top + f.y * (floor - top)
+    if (f.kind === 'knock') {
+      const p = 1 - f.t / 0.8
+      c.save(); c.globalAlpha = Math.max(0, 1 - p); c.translate(x + f.dir * p * cw * 0.8, y - Math.sin(p * Math.PI) * 40); c.rotate(f.dir * p * 1.6); c.scale(s, s)
+      drawDeity(c, f.k, T, false, { name: rName(f.k) }); c.restore()
+    }
+    if (f.kind === 'text') {
+      c.globalAlpha = Math.min(1, f.t * 2); c.font = `900 ${Math.round(18 + 6 * s)}px Nunito, system-ui, sans-serif`; c.textAlign = 'center'
+      c.lineWidth = 4; c.strokeStyle = '#1b1715'; c.fillStyle = '#f7d046'; const ty = floor - 100 * s - (1.1 - f.t) * 30
+      c.strokeText(f.text, x, ty); c.fillText(f.text, x, ty); c.globalAlpha = 1
+    }
+  }
   c.restore()
 }
 
@@ -2701,5 +2910,5 @@ function unmount() {
   clearTimeout(bannerTimer); window.removeEventListener('resize', layout); window.removeEventListener('resize', panLayout); panActive = false; P = null
   sroot.innerHTML = ''
 }
-return { mount, unmount, armyFor, LEVELS, debug: { get P() { return P }, panStart, panDrop, panUpdate, openPantheon, PAN_GODS, get G() { return G }, showBriefing, win, lose, paintIcons, foeTypes, place, collect, update, startLevel, beginBattle, armyFor, showMap, LEVELS, UNITS, FOES, progress } }
+return { mount, unmount, armyFor, LEVELS, debug: { get P() { return P }, panStart, panDrop, panUpdate, fallStart, fallUpdate, fallTo, fallDrop, fallMove, openPantheon, PAN_GODS, get G() { return G }, showBriefing, win, lose, paintIcons, foeTypes, place, collect, update, startLevel, beginBattle, armyFor, showMap, LEVELS, UNITS, FOES, progress } }
 })()
