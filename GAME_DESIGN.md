@@ -191,9 +191,9 @@ wins with 1–2 and sometimes loses gate points in level 3; a guesser (40% wrong
 
 **The Falling Gods** (Nov 9, the user's idea, the second game of the same chapter; the briefing lets the player choose,
 each game keeps its own levels and stars, and winning level 1 of either wins the chapter): one Roman god falls at a
-time; eight Greek gods, out of all fifteen of the chapter's table, stand as marble statues with their names on two
-shelves of four (the user asked for eight, from all fifteen; two shelves so the names fit a phone). Tap its Greek twin
-(or the arrows, which walk through the eight places), swipe down to drop. Right: laurel flash, points, combo, and a new
+time; eight Greek gods, out of all fifteen of the chapter's table, stand as small marble statues in one row (the
+user's choice over two shelves), their name tags staggered high and low so each has two columns' width. Tap its Greek
+twin, or anywhere above it (or the arrows), swipe down to drop. Right: laurel flash, points, combo, and a new
 Greek god takes that place. Wrong: the god bounces back up with the right pair flashing and the twin's place glowing (a
 mistake for the stars); a second miss costs a point of the gate. Levels differ in speed only (Gently 10→7 s, Faster
 8.5→5.5 s, Fastest 7→4.5 s per god, 20 gods each), then a boss falling with only its symbol and a clue. Like the other
