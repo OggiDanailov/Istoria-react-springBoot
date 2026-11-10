@@ -2,8 +2,8 @@
 // god on the Greek god nearest the gate once it has walked a little way down (its reaction time), a move (reading the names, then dragging) taking 1.5–3 s. 'knows' always picks
 // the twin; 'learner' picks a wrong god some of the time (more often for the gods of the later levels); 'weak' guesses
 // wrong 40% of the time and is slower.
-// The Falling Gods ('fall' as the fourth item): the player reads the falling god's name (its reading time), then taps the
-// column of its twin (a wrong one some of the time) and drops it.
+// The Falling Gods ('fall' as the fourth item): the player reads the falling god's name and looks for its twin among the
+// eight on the shelves (its reading time), then taps it (a wrong one some of the time) and drops it.
 // PLAN='[["knows",80,0],["learner",80,0,"fall"]]' PAGE=/path/to/index.html node pantheon.test.mjs   (strategy, test score, level 0-2, game)
 import { chromium } from 'playwright'
 const browser = await chromium.launch({ channel: 'chrome', headless: true })
@@ -15,7 +15,7 @@ for (const [strategy, score, level, game = 'siege'] of JSON.parse(process.env.PL
     const H = window.__hold
     if (game === 'fall') {
       H.openPantheon(); H.fallStart(level, score)
-      const read = { knows: 1, learner: 1.8, weak: 2.5 }[strategy], wrongP = { knows: 0, learner: [0.1, 0.18, 0.25][level], weak: 0.4 }[strategy]
+      const read = { knows: 1.5, learner: 2.5, weak: 3.2 }[strategy], wrongP = { knows: 0, learner: [0.1, 0.18, 0.25][level], weak: 0.4 }[strategy]
       let seen = null, at = 0
       for (let step = 0; step < 40000 && H.P.phase === 'play'; step++) {
         H.fallUpdate(0.05)
@@ -24,7 +24,7 @@ for (const [strategy, score, level, game = 'siege'] of JSON.parse(process.env.PL
         if (seen !== c.id + ':' + !!c.missed) { seen = c.id + ':' + !!c.missed; at = P.t + (c.missed ? read * 0.6 : read) }   // after a miss, the right pair has just flashed
         if (P.t >= at && !c.fast) {
           let col = P.row.indexOf(c.k)
-          if (!c.missed && Math.random() < wrongP * (c.boss ? 2 : 1)) col = (col + 1 + Math.floor(Math.random() * (P.F.cols - 1))) % P.F.cols
+          if (!c.missed && Math.random() < wrongP * (c.boss ? 2 : 1)) col = (col + 1 + Math.floor(Math.random() * (P.row.length - 1))) % P.row.length
           H.fallTo(col); H.fallDrop()
         }
       }

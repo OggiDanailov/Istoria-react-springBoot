@@ -191,12 +191,14 @@ wins with 1–2 and sometimes loses gate points in level 3; a guesser (40% wrong
 
 **The Falling Gods** (Nov 9, the user's idea, the second game of the same chapter; the briefing lets the player choose,
 each game keeps its own levels and stars, and winning level 1 of either wins the chapter): one Roman god falls at a
-time over 3, 4 or 5 columns (by level); the Greek gods stand at the bottom as marble statues with their names. Tap the
-column of the twin (or swipe, the arrows, or the keyboard), swipe down to drop. Right: laurel flash, points, combo.
-Wrong: the god bounces back up with the right pair flashing and its column glowing (a mistake for the stars); a second
-miss breaks through the gate. The row changes places, with one new face, every 4 gods; 20 gods per level, each a
-little faster (8 s down to 5 s in level 1), then the boss falling with only its symbol and a clue. Scripted players
-(pantheon.test.mjs, 'fall'): knowing the pairs wins with 3 stars, a learner with 1–3, a guesser gets through with 1.
+time; eight Greek gods, out of all fifteen of the chapter's table, stand as marble statues with their names on two
+shelves of four (the user asked for eight, from all fifteen; two shelves so the names fit a phone). Tap its Greek twin
+(or the arrows, which walk through the eight places), swipe down to drop. Right: laurel flash, points, combo, and a new
+Greek god takes that place. Wrong: the god bounces back up with the right pair flashing and the twin's place glowing (a
+mistake for the stars); a second miss costs a point of the gate. Levels differ in speed only (Gently 10→7 s, Faster
+8.5→5.5 s, Fastest 7→4.5 s per god, 20 gods each), then a boss falling with only its symbol and a clue. Like the other
+games, it stays one narrow column on wide screens. Scripted players (pantheon.test.mjs, 'fall', 1.5–3 s to find the
+twin among eight): knowing the pairs wins with 3 stars, a learner with 1–3, a guesser gets through with 1.
 
 The Empire's nine battles are fought on the biggest field, **8 lanes × 11 rows**, and bring the **cohort**: one card
 that places three legionaries side by side (the middle one carries the standard).

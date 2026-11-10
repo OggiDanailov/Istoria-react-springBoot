@@ -191,3 +191,6 @@
 .pan .pan-steer { order: 2; display: grid; grid-template-columns: 1fr 1.4fr 1fr; gap: 8px; }
 .pan-steer .tool { font-size: 20px; padding: 12px 0; }
 .pan-steer #fall-drop { font-size: 15px; }
+/* the gods' games stay one narrow column, also on wide screens */
+.game.pan { max-width: 440px; margin-inline: auto; align-items: stretch; }
+.pan .msg { justify-content: center; text-align: center; min-height: 2.6em; align-items: center; width: auto; }

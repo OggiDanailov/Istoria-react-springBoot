@@ -2235,17 +2235,19 @@ function panBriefing() {
   const nextLevel = Math.max(0, PAN_LEVELS.findIndex((L, i) => open(i) && !sv.stars[i]))   // the first open level not yet won, else the first
   const stops = PAN_LEVELS.map((L, i) => {
     const st = sv.stars[i] ?? 0, ok = open(i)
-    const gods = PAN_GODS.filter(g => g.tier === L.tier).map(g => rName(g.k)).join(', ')
+    const gods = PAN_GODS.filter(g => g.tier === L.tier).map(g => rName(g.k)).join(', '), FL = FALL_LEVELS[i]
+    const name = panGame === 'fall' ? pt(FL.en, FL.bg) : pt(L.en, L.bg)
+    const what = panGame === 'fall' ? pt(['All fifteen pairs, falling gently', 'All fifteen pairs, falling faster', 'All fifteen pairs, falling fastest'][i], ['Всичките петнадесет двойки, падат спокойно', 'Всичките петнадесет двойки, падат по-бързо', 'Всичките петнадесет двойки, падат най-бързо'][i]) : (i ? pt('New: ', 'Нови: ') : '') + gods
     return `<li class="stop ${st ? 'done' : ok ? 'open' : 'locked'}"><button id="pl${i}" ${ok ? '' : 'disabled'}>
       <span class="num">${i + 1}</span>
-      <span class="what"><b>${pt(L.en, L.bg)}</b><small>${ok ? (i ? pt('New: ', 'Нови: ') : '') + gods : pt('Beat the boss of the level before', 'Победете боса на предишното ниво')}</small></span>
+      <span class="what"><b>${name}</b><small>${ok ? what : pt('Beat the boss of the level before', 'Победете боса на предишното ниво')}</small></span>
       ${ok ? `<span class="stars" aria-label="${st} of 3 stars">${starText(st)}</span>` : ''}</button></li>`
   }).join('')
   const rules = panGame === 'fall' ? [
-    pt('One <b>Roman god</b> falls at a time. The <b>Greek gods</b> stand at the bottom.', 'Пада по един <b>римски бог</b>. <b>Гръцките богове</b> стоят долу.'),
-    pt('<b>Tap the column</b> of its Greek twin (or swipe, or use the arrows) to steer it there. Swipe down to drop it.', '<b>Натиснете колоната</b> на гръцкия му близнак (или плъзнете, или ползвайте стрелките), за да го насочите. Плъзнете надолу, за да го пуснете.'),
+    pt('One <b>Roman god</b> falls at a time. Eight <b>Greek gods</b>, out of all fifteen, stand on two shelves at the bottom.', 'Пада по един <b>римски бог</b>. Осем <b>гръцки бога</b> от всичките петнадесет стоят на два рафта долу.'),
+    pt('<b>Tap its Greek twin</b> (or use the arrows) and it lands there. Swipe down to drop it faster.', '<b>Натиснете гръцкия му близнак</b> (или ползвайте стрелките) и той ще падне там. Плъзнете надолу, за да го пуснете по-бързо.'),
     pt('The <b>right twin</b> wins points; right answers in a row multiply them. At the <b>wrong one</b> the god bounces back: try again. Miss twice and the gate loses a point.', '<b>Правилният близнак</b> носи точки; верни отговори подред ги умножават. При <b>грешния</b> богът отскача: опитайте пак. Два пропуска – и портата губи точка.'),
-    pt('The Greek gods change places every few gods, and each god falls a little faster.', 'Гръцките богове сменят местата си на няколко бога, а всеки бог пада малко по-бързо.'),
+    pt('Each time you find a twin, a new Greek god takes its place; each god falls a little faster.', 'Всеки път, щом откриете близнак, мястото му заема нов гръцки бог; всеки бог пада малко по-бързо.'),
     pt('Each level ends with a <b>boss</b> who shows only a symbol and a clue.', 'Всяко ниво завършва с <b>бос</b>, който показва само символ и подсказка.'),
   ] : [
     pt('<b>Drag</b> the Roman twin onto the lane of the Greek god coming down it, or tap the card and then the lane.', '<b>Плъзнете</b> римския близнак върху линията на гръцкия бог, който слиза по нея, или натиснете картата и после линията.'),
@@ -2261,7 +2263,7 @@ function panBriefing() {
       <button id="pg-fall" aria-pressed="${panGame === 'fall'}"><b>${titleOf('fall')}</b><small>${pt('steer each falling god to its twin', 'насочете всеки падащ бог към близнака му')}</small></button>
       <button id="pg-siege" aria-pressed="${panGame === 'siege'}"><b>${titleOf('siege')}</b><small>${pt('stop the gods marching on Rome', 'спрете боговете, които вървят към Рим')}</small></button>
     </div>
-    <div class="row pan-go-row"><button class="primary" id="pan-go">${pt(`▶ Start level ${nextLevel + 1}: ${PAN_LEVELS[nextLevel].en}`, `▶ Започни ниво ${nextLevel + 1}: ${PAN_LEVELS[nextLevel].bg}`)}</button></div>
+    <div class="row pan-go-row"><button class="primary" id="pan-go">${pt(`▶ Start level ${nextLevel + 1}: ${(panGame === 'fall' ? FALL_LEVELS : PAN_LEVELS)[nextLevel].en}`, `▶ Започни ниво ${nextLevel + 1}: ${(panGame === 'fall' ? FALL_LEVELS : PAN_LEVELS)[nextLevel].bg}`)}</button></div>
     <ul class="pan-rules">${rules.map(r => `<li>${r}</li>`).join('')}</ul>
     <p class="pan-pick">${pt('Or choose a level (tap it):', 'Или изберете ниво (натиснете го):')}</p>
     <ol class="road">${stops}</ol>
@@ -2287,7 +2289,7 @@ function panStart(li, score = quizScore) {   // (a score can be given for testin
   P = { mode: 'siege', li, L, pool, t: 0, phase: 'play', gate, gateMax: gate, score: 0, streak: 0, favor: 0, mistakes: 0, wrongRow: 0, gods: [], hand: [], cool: {}, queue,
     wave: -1, fx: [], slow: {}, boss: pick(fresh), bossOut: false, sel: null, arm: null, hover: null, shake: 0, ids: 0 }
   overlay.hidden = true; $('pan-flash').hidden = true; $('pan-hand').hidden = false; $('pan-tools').hidden = false; $('pan-steer').hidden = true
-  panFill(); panHud()
+  panLayout(); panFill(); panHud()
   announce(pt(`Level ${li + 1}: ${L.en}`, `Ниво ${li + 1}: ${L.bg}`), true)
   sfx.init()
 }
@@ -2404,7 +2406,7 @@ function panVictory() {
   sv.stars[li] = Math.max(sv.stars[li] ?? 0, stars); sv.best[li] = Math.max(sv.best[li] ?? 0, P.score)
   if (next) sv.open = Math.max(sv.open, li + 2)
   panStore(); sfx.win()
-  const newGods = next ? PAN_GODS.filter(g => g.tier === PAN_LEVELS[li + 1].tier).map(g => rName(g.k)).join(', ') : ''
+  const newGods = !next ? '' : game === 'fall' ? pt(`${FALL_LEVELS[li + 1].en.toLowerCase()}`, `${FALL_LEVELS[li + 1].bg.toLowerCase()}`) : PAN_GODS.filter(g => g.tier === PAN_LEVELS[li + 1].tier).map(g => rName(g.k)).join(', ')
   showPanel(`<span class="eyebrow">${pt('Victory', 'Победа')} · ${pt(P.L.en, P.L.bg)}</span><h2>${pt('Rome holds!', 'Рим устоя!')}</h2>
     <p class="big-stars" aria-label="${stars} of 3 stars">${starText(stars)}</p>
     <p>${pt(`${P.score} points (best ${sv.best[li]}) · ${P.mistakes === 0 ? 'no mistakes' : P.mistakes === 1 ? 'one mistake' : P.mistakes + ' mistakes'}.`, `${P.score} точки (най-добре ${sv.best[li]}) · ${P.mistakes === 0 ? 'без грешки' : P.mistakes === 1 ? 'една грешка' : P.mistakes + ' грешки'}.`)}
@@ -2497,7 +2499,8 @@ function panTapField(e) {
 }
 function panLayout() {
   if (!panActive || !panCanvas) return
-  const w = $('wrap').clientWidth, h = Math.round(Math.min(window.innerHeight * 0.52, w * 1.3))
+  const fall = P?.mode ? P.mode === 'fall' : panGame === 'fall'
+  const w = $('wrap').clientWidth, h = Math.round(Math.min(window.innerHeight * (fall ? 0.66 : 0.52), w * (fall ? 1.55 : 1.3)))   // the falling game: tall and narrow
   const dpr = Math.min(2, window.devicePixelRatio || 1)
   panCanvas.style.height = h + 'px'; panCanvas.width = Math.round(w * dpr); panCanvas.height = Math.round(h * dpr)
 }
@@ -2578,38 +2581,40 @@ function panDraw(T) {
 }
 
 // ---------- The Falling Gods: the second game of the gods' chapter ----------
-// One Roman god falls at a time; the Greek gods stand in a row at the bottom. Tap the column of its Greek twin (or
-// swipe, or use the arrows) to steer it there; it lands where it is. The right twin: points and a laurel flash; the
-// wrong one bounces it back up with the right pair flashing (a mistake), and a second miss costs a point of the gate. The row changes places every few gods, and each god
-// falls a little faster. The same three levels and bosses as the Pantheon Siege; the boss falls showing only its symbol.
-const FALL_LEVELS = [{ cols: 3, fall: 8, min: 5 }, { cols: 4, fall: 7.5, min: 4.6 }, { cols: 5, fall: 7, min: 4.2 }]
-const FALL = { drops: 20, every: 5, shuffle: 4 }   // gods per level, a wave every 5, the row reshuffled every 4
+// One Roman god falls at a time; eight Greek gods, from all fifteen of the chapter's table, stand on two shelves at the
+// bottom. Tap its Greek twin (or use the arrows) and it lands there. The right twin: points and a laurel flash, and a
+// new Greek god takes that place; the wrong one bounces it back up with the right pair flashing (a mistake), and a
+// second miss costs a point of the gate. Three levels, each faster; each ends with a boss who falls showing only its
+// symbol and a clue.
+const FALL_LEVELS = [
+  { en: 'Gently', bg: 'Спокойно', fall: 10, min: 7 },
+  { en: 'Faster', bg: 'По-бързо', fall: 8.5, min: 5.5 },
+  { en: 'Fastest', bg: 'Най-бързо', fall: 7, min: 4.5 },
+]
+const FALL = { drops: 20, every: 5, cols: 4, rows: 2 }   // gods per level, a wave every 5, two shelves of four
+const ALL_GODS = PAN_GODS.map(g => g.k)
+let fallGeo = null   // where the shelves are on the screen, from the last drawing
 function fallStart(li, score = quizScore) {
-  const L = PAN_LEVELS[li], F = FALL_LEVELS[li], gate = panGate(score)
-  const pool = PAN_GODS.filter(g => g.tier <= L.tier).map(g => g.k), fresh = PAN_GODS.filter(g => g.tier === L.tier).map(g => g.k)
-  P = { mode: 'fall', li, L, F, pool, fresh, t: 0, phase: 'play', gate, gateMax: gate, score: 0, streak: 0, favor: 0, mistakes: 0, wrongRow: 0,
-    gods: [], fx: [], row: [], dropped: 0, wave: 0, cur: null, boss: fresh[Math.floor(Math.random() * fresh.length)], bossOut: false, shake: 0, ids: 0, mark: null, wait: 1.2 }
-  fallRow(true)
+  const gate = panGate(score), pick = a => a[Math.floor(Math.random() * a.length)]
+  P = { mode: 'fall', li, L: FALL_LEVELS[li], F: FALL_LEVELS[li], t: 0, phase: 'play', gate, gateMax: gate, score: 0, streak: 0, favor: 0, mistakes: 0, wrongRow: 0,
+    gods: [], fx: [], row: [], born: [], dropped: 0, wave: 0, cur: null, boss: pick(ALL_GODS), bossOut: false, shake: 0, ids: 0, mark: null, wait: 1.2 }
+  const left = ALL_GODS.slice()
+  for (let i = 0; i < FALL.cols * FALL.rows; i++) { const k = pick(left); left.splice(left.indexOf(k), 1); P.row.push(k); P.born.push(-1) }
   overlay.hidden = true; $('pan-flash').hidden = true; $('pan-hand').hidden = true; $('pan-tools').hidden = true; $('pan-steer').hidden = false
-  panHud()
-  announce(pt(`Level ${li + 1}: ${L.en}`, `Ниво ${li + 1}: ${L.bg}`), true)
+  panLayout(); panHud()
+  announce(pt(`Level ${li + 1}: ${FALL_LEVELS[li].en}`, `Ниво ${li + 1}: ${FALL_LEVELS[li].bg}`), true)
   sfx.init()
 }
-// the Greek gods at the bottom: new places (and one new face) every few gods; the new gods of the level come most
-function fallRow(first) {
-  const n = P.F.cols, pick = a => a[Math.floor(Math.random() * a.length)]
-  let row = first ? [] : P.row.slice()
-  if (!first) { const out = Math.floor(Math.random() * n), cand = P.pool.filter(k => !row.includes(k)); if (cand.length) row[out] = pick(Math.random() < 0.6 && P.fresh.some(k => cand.includes(k)) ? P.fresh.filter(k => cand.includes(k)) : cand) }
-  while (row.length < n) { const cand = P.pool.filter(k => !row.includes(k)), f = P.fresh.filter(k => cand.includes(k)); row.push(pick(f.length && row.length < Math.ceil(n * 0.6) ? f : cand)) }
-  for (let i = row.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [row[i], row[j]] = [row[j], row[i]] }
-  if (P.bossOut && !row.includes(P.boss)) row[Math.floor(Math.random() * n)] = P.boss   // the boss's twin is always there
-  P.row = row; P.rowT = 0
+// a matched Greek god leaves its place to one of the gods not on the shelves
+function fallRefill(slot) {
+  const out = ALL_GODS.filter(k => !P.row.includes(k))
+  P.row[slot] = out[Math.floor(Math.random() * out.length)]; P.born[slot] = P.t
 }
 function fallNext() {
   const boss = P.dropped >= FALL.drops
   if (boss && !P.bossOut) {
-    P.bossOut = true; P.wave = Math.ceil(FALL.drops / FALL.every)
-    if (!P.row.includes(P.boss)) { P.row[Math.floor(Math.random() * P.row.length)] = P.boss; P.rowT = 0 }
+    P.bossOut = true; P.wave = FALL.drops / FALL.every
+    if (!P.row.includes(P.boss)) { const s = Math.floor(Math.random() * P.row.length); P.row[s] = P.boss; P.born[s] = P.t }   // its twin is on a shelf
     const g = panGod(P.boss)
     announce(pt(`The boss! Only its symbol and a clue: ${g.clue[0]}`, `Босът! Само символ и подсказка: ${g.clue[1]}`), true, 7000); sfx.horn()
   } else if (!boss && P.dropped % FALL.every === 0) {
@@ -2621,19 +2626,21 @@ function fallNext() {
   else { const cand = P.row.filter(x => x !== P.last); k = cand[Math.floor(Math.random() * cand.length)] }
   P.last = k
   const time = (P.F.fall - (P.F.fall - P.F.min) * Math.min(1, P.dropped / FALL.drops)) * (boss ? 1.3 : 1)   // each god a little faster
-  const col = Math.floor(Math.random() * P.F.cols)
-  P.cur = { id: ++P.ids, k, col, x: col, y: 0, time, fast: false, boss, named: !boss }
+  const slot = FALL.cols + Math.floor(Math.random() * FALL.cols)   // it starts over the lower shelf, in a random place
+  P.cur = { id: ++P.ids, k, slot, x: slot % FALL.cols, y: 0, time, fast: false, boss, named: !boss }
   panHud()
 }
+const landAt = slot => Math.floor(slot / FALL.cols) === 0 ? (fallGeo?.landA ?? 0.72) : 1   // how far down each shelf is, of the whole fall
 function fallUpdate(dt) {
   P.t += dt
-  P.rowT = (P.rowT ?? 0) + dt
-  if (!P.cur) { P.wait -= dt; if (P.wait <= 0 && P.phase === 'play') fallNext() }
+  if (P.refill && P.t >= P.refill.at) { fallRefill(P.refill.slot); P.refill = null }
+  if (!P.cur) { P.wait -= dt; if (P.wait <= 0 && P.phase === 'play' && !P.refill) fallNext() }
   const c = P.cur
   if (c) {
-    c.x += (c.col - c.x) * Math.min(1, dt * 14)   // it slides across to its column
+    c.x += (c.slot % FALL.cols - c.x) * Math.min(1, dt * 14)   // it slides across to its place
     c.y += dt / c.time * (c.fast ? 7 : 1)
-    if (c.y >= 1) fallLand(c)
+    if (c.y >= landAt(c.slot) && Math.abs(c.x - c.slot % FALL.cols) < 0.2) fallLand(c)
+    else if (c.y > 1) c.y = 1
   }
   for (const g of P.gods) g.t += dt
   P.gods = P.gods.filter(g => g.t < 0.9)
@@ -2643,12 +2650,12 @@ function fallUpdate(dt) {
   P.shake = Math.max(0, P.shake - dt * 14)
 }
 function fallLand(c) {
-  const twin = P.row[c.col]
-  if (twin !== c.k && !c.missed) {   // a first miss: it bounces back up and the right pair flashes; steer it again
-    c.missed = true; c.y = 0.3; c.fast = false; c.named = true
+  const twin = P.row[c.slot]
+  if (twin !== c.k && !c.missed) {   // a first miss: it bounces back up and the right pair flashes; aim again
+    c.missed = true; c.y = 0.2; c.fast = false; c.named = true
     P.mistakes++; P.wrongRow++; P.streak = 0; P.shake = 5; sfx.clang()
     const right = P.row.indexOf(c.k)
-    if (right >= 0) P.mark = { col: right, t: 1.6 }
+    if (right >= 0) P.mark = { slot: right, t: 1.8 }
     panFlash(c.k); panHud()
     return
   }
@@ -2657,28 +2664,28 @@ function fallLand(c) {
     P.streak++; P.wrongRow = 0
     const mult = P.streak >= 10 ? 4 : P.streak >= 6 ? 3 : P.streak >= 3 ? 2 : 1, pts = 100 * mult * (c.boss ? 5 : 1)
     P.score += pts
-    P.gods.push({ k: c.k, lane: c.col, t: 0 })   // the laurel flash over the Greek twin
-    P.fx.push({ kind: 'text', text: '+' + pts, lane: c.col, y: 0.62, t: 1.1 })
+    P.gods.push({ k: c.k, slot: c.slot, t: 0 })   // the laurel flash over the Greek twin
+    P.fx.push({ kind: 'text', text: '+' + pts, slot: c.slot, t: 1.1 })
     sfx.collect(); if (c.boss) sfx.charge()
     if (P.streak === 3 || P.streak === 6 || P.streak === 10) announce(pt(`${P.streak} in a row: points ×${mult}!`, `${P.streak} подред: точки ×${mult}!`))
     if (c.boss) { P.phase = 'won'; panHud(); setTimeout(() => { if (P?.phase === 'won') panVictory() }, 1200); return }
     P.dropped++
-    if (P.dropped % FALL.shuffle === 0 && P.dropped < FALL.drops) fallRow(false)
+    P.refill = { slot: c.slot, at: P.t + 0.6 }   // after the flash, a new Greek god takes the place
   } else {   // wrong twice: it breaks through, a point of the gate
     P.wrongRow++; P.streak = 0; P.gate--; P.shake = 8; sfx.clang(); sfx.boom()
-    P.fx.push({ kind: 'knock', k: c.k, lane: c.col, y: 0.8, t: 0.8, dir: c.col < P.F.cols / 2 ? -1 : 1 })
+    P.fx.push({ kind: 'knock', k: c.k, slot: c.slot, t: 0.8, dir: c.slot % FALL.cols < FALL.cols / 2 ? -1 : 1 })
     const right = P.row.indexOf(c.k)
-    if (right >= 0) P.mark = { col: right, t: 1.6 }
+    if (right >= 0) P.mark = { slot: right, t: 1.8 }
     panFlash(c.k)
-    if (c.boss) { P.cur = null; P.wait = 1.2; P.bossNamed = true }   // the boss falls again, now with its name
+    if (c.boss) { P.wait = 1.2; P.bossNamed = true }   // the boss falls again, now with its name
     else P.dropped++
     if (P.gate <= 0) { panHud(); return panLose('gate') }
   }
   panHud()
 }
-// steering: tap a column, swipe, the arrows, or the keyboard
-function fallMove(d) { if (P?.mode === 'fall' && P.phase === 'play' && P.cur) { P.cur.col = Math.max(0, Math.min(P.F.cols - 1, P.cur.col + d)); sfx.place() } }
-function fallTo(col) { if (P?.mode === 'fall' && P.phase === 'play' && P.cur) { P.cur.col = Math.max(0, Math.min(P.F.cols - 1, col)); sfx.place() } }
+// aiming: tap a Greek god, or the arrows (they walk through the eight places), or the keyboard
+function fallMove(d) { if (P?.mode === 'fall' && P.phase === 'play' && P.cur) { const n = FALL.cols * FALL.rows; P.cur.slot = (P.cur.slot + d + n) % n; sfx.place() } }
+function fallTo(slot) { if (P?.mode === 'fall' && P.phase === 'play' && P.cur && slot >= 0) { P.cur.slot = slot; if (P.cur.y > landAt(slot)) P.cur.y = landAt(slot) - 0.02; sfx.place() } }
 function fallDrop() { if (P?.mode === 'fall' && P.phase === 'play' && P.cur) P.cur.fast = true }
 let fallPointer = null
 function fallPointerDown(e) { if (P?.mode !== 'fall' || P.phase !== 'play') return; sfx.init(); fallPointer = { x: e.clientX, y: e.clientY } }
@@ -2686,72 +2693,77 @@ function fallPointerUp(e) {
   if (!fallPointer || P?.mode !== 'fall') return
   const dx = e.clientX - fallPointer.x, dy = e.clientY - fallPointer.y; fallPointer = null
   if (dy > 50 && dy > Math.abs(dx)) return fallDrop()   // a swipe down drops it
-  const r = panCanvas.getBoundingClientRect()
-  if (Math.abs(dx) > 30) return fallMove(Math.sign(dx) * Math.max(1, Math.round(Math.abs(dx) / (r.width / P.F.cols))))
-  fallTo(Math.floor((e.clientX - r.left) / r.width * P.F.cols))   // a tap: straight to that column
+  if (Math.abs(dx) > 30) return fallMove(Math.sign(dx))
+  const r = panCanvas.getBoundingClientRect(), g = fallGeo; if (!g) return
+  const col = Math.max(0, Math.min(FALL.cols - 1, Math.floor((e.clientX - r.left) / r.width * FALL.cols)))
+  const y = e.clientY - r.top
+  const row = y < g.split ? (y < g.shelfTop ? Math.floor(P.cur?.slot / FALL.cols) : 0) : 1   // tapped a shelf: that god; above them: the same shelf
+  fallTo(row * FALL.cols + col)
 }
 document.addEventListener('keydown', e => {
   if (!panActive || P?.mode !== 'fall' || P.phase !== 'play') return
   if (e.key === 'ArrowLeft') { e.preventDefault(); fallMove(-1) }
   if (e.key === 'ArrowRight') { e.preventDefault(); fallMove(1) }
+  if (e.key === 'ArrowUp') { e.preventDefault(); fallMove(-FALL.cols) }
   if (e.key === 'ArrowDown' || e.key === ' ') { e.preventDefault(); fallDrop() }
 })
 function fallDraw(T) {
   const c = pctx, dpr = panCanvas.width / (panCanvas.clientWidth || 1), W = panCanvas.width / dpr, H = panCanvas.height / dpr
   c.setTransform(dpr, 0, 0, dpr, 0, 0); c.clearRect(0, 0, W, H)
-  const n = P.F.cols, cw = W / n, top = H * 0.1, floor = H * 0.8, s = Math.min(cw / 52, (H * 0.2) / 70)
+  const n = FALL.cols, cw = W / n, top = H * 0.09
+  const floorB = H * 0.94, floorA = H * 0.68, s = Math.min(cw / (LANG === 'bg' ? 66 : 68), (floorB - floorA) / 82)   // small enough that the names on a shelf don't touch
+  const fallSpan = floorB - 4 - top - 30 * s, yOf = slot => Math.floor(slot / n) === 0 ? floorA : floorB
+  fallGeo = { shelfTop: floorA - 75 * s, split: (floorA + floorB) / 2 - 10 * s, landA: (floorA - 2 - top - 30 * s) / fallSpan }
+  const xOf = slot => cw * (slot % n + 0.5)
   c.save(); c.translate(P.shake ? (Math.random() - 0.5) * P.shake : 0, 0)
-  for (let i = 0; i < n; i++) {   // the columns
-    c.fillStyle = i % 2 ? '#e9dfca' : '#f1e8d6'; c.fillRect(i * cw, 0, cw, H)
-    if (P.cur && Math.round(P.cur.x) === i) { c.fillStyle = 'rgba(224, 166, 58, .16)'; c.fillRect(i * cw, 0, cw, H) }
-    if (P.mark && P.mark.t > 0 && P.mark.col === i) { c.fillStyle = `rgba(224, 166, 58, ${0.45 * Math.min(1, P.mark.t)})`; c.fillRect(i * cw, 0, cw, H) }
-  }
-  c.strokeStyle = 'rgba(90, 70, 45, .3)'; c.lineWidth = 2; c.setLineDash([6, 8])
-  for (let i = 1; i < n; i++) { c.beginPath(); c.moveTo(i * cw, top); c.lineTo(i * cw, floor); c.stroke() }
-  c.setLineDash([])
+  for (let i = 0; i < n; i++) { c.fillStyle = i % 2 ? '#e9dfca' : '#f1e8d6'; c.fillRect(i * cw, 0, cw, H) }
   const sky = c.createLinearGradient(0, 0, 0, top); sky.addColorStop(0, '#9cc3e6'); sky.addColorStop(1, '#dbe9f4')
   c.fillStyle = sky; c.fillRect(0, 0, W, top)
   c.fillStyle = 'rgba(255, 255, 255, .95)'
-  for (let i = 0; i < 6; i++) { const x = ((i * 97 + T * 6) % (W + 80)) - 40; c.beginPath(); c.ellipse(x, top * 0.8, 30, 11, 0, 0, TAU); c.fill() }
-  // the plinths and the Greek gods standing on them
-  c.fillStyle = '#c9b48e'; c.fillRect(0, floor, W, H - floor)
-  c.fillStyle = '#b39d76'; c.fillRect(0, floor, W, 5)
-  const fade = Math.min(1, (P.rowT ?? 1) / 0.4)
-  for (let i = 0; i < n; i++) {
-    const x = cw * (i + 0.5)
-    c.fillStyle = '#ddd2bb'; c.fillRect(x - cw * 0.34, floor - 4, cw * 0.68, 9)
-    c.save(); c.globalAlpha = fade; c.translate(x, floor - 4); c.scale(s, s)
-    drawDeity(c, P.row[i], T, true, { marble: true, plain: true, name: gName(P.row[i]) })
-    c.restore()
+  for (let i = 0; i < 6; i++) { const x = ((i * 97 + T * 6) % (W + 80)) - 40; c.beginPath(); c.ellipse(x, top * 0.8, 28, 10, 0, 0, TAU); c.fill() }
+  // where the falling god will land, and (after a miss) where its twin is
+  const cur = P.cur
+  const glowAt = (slot, rgba) => { const x = xOf(slot), y = yOf(slot); c.fillStyle = rgba; c.beginPath(); c.roundRect(x - cw * 0.46, y - 80 * s, cw * 0.92, 80 * s + 6, 10); c.fill() }
+  if (cur) glowAt(cur.slot, 'rgba(224, 166, 58, .28)')
+  if (P.mark && P.mark.t > 0) glowAt(P.mark.slot, `rgba(127, 176, 105, ${0.55 * Math.min(1, P.mark.t)})`)
+  // two shelves of Greek gods, the upper one first
+  for (const [floor, r] of [[floorA, 0], [floorB, 1]]) {
+    c.fillStyle = '#c9b48e'; c.fillRect(0, floor - 2, W, 8); c.fillStyle = '#b39d76'; c.fillRect(0, floor + 6, W, 3)
+    for (let col = 0; col < n; col++) {
+      const slot = r * n + col, x = xOf(slot), k = P.row[slot]
+      const born = P.born[slot] >= 0 ? Math.min(1, (P.t - P.born[slot]) / 0.4) : 1
+      c.save(); c.globalAlpha = born; c.translate(x, floor - 2); c.scale(s * (0.8 + 0.2 * born), s * (0.8 + 0.2 * born))
+      if (!P.gods.some(g => g.slot === slot)) drawDeity(c, k, T, true, { marble: true, plain: true, name: gName(k) })
+      c.restore()
+    }
   }
   // the laurel flash where a twin landed
   for (const g of P.gods) {
-    const x = cw * (g.lane + 0.5), a = Math.min(1, g.t / 0.3), out = Math.max(0, (g.t - 0.5) / 0.4)
-    c.save(); c.translate(x, floor - 4); c.scale(s, s); c.globalAlpha = a * (1 - out)
+    const x = xOf(g.slot), a = Math.min(1, g.t / 0.3), out = Math.max(0, (g.t - 0.5) / 0.4)
+    c.save(); c.translate(x, yOf(g.slot) - 2); c.scale(s, s); c.globalAlpha = a * (1 - out)
     drawDeity(c, g.k, T, false, { name: rName(g.k), anim: 1 })
     c.strokeStyle = '#5f8a3a'; c.lineWidth = 3; c.beginPath(); c.arc(0, -30, 18 + g.t * 50, 0, TAU); c.stroke()
-    c.fillStyle = '#7aa64a'; for (let j = 0; j < 10; j++) { const an = j * TAU / 10 + g.t * 2, r = 18 + g.t * 50; c.beginPath(); c.ellipse(Math.cos(an) * r, -30 + Math.sin(an) * r, 4, 2, an, 0, TAU); c.fill() }
+    c.fillStyle = '#7aa64a'; for (let j = 0; j < 10; j++) { const an = j * TAU / 10 + g.t * 2, rr2 = 18 + g.t * 50; c.beginPath(); c.ellipse(Math.cos(an) * rr2, -30 + Math.sin(an) * rr2, 4, 2, an, 0, TAU); c.fill() }
     c.restore()
   }
   // the falling Roman god
-  const cur = P.cur
   if (cur) {
-    const x = cw * (cur.x + 0.5), y = top + 30 * s + cur.y * (floor - 4 - top - 30 * s), k = s * (cur.boss ? 1.2 : 1)
+    const x = cw * (cur.x + 0.5), y = top + 30 * s + cur.y * fallSpan, k = s * (cur.boss ? 1.15 : 1)
     c.save(); c.translate(x, y); c.scale(k, k)
     if (cur.boss) { c.globalAlpha = 0.9; c.drawImage(glow('255, 210, 110'), -40, -86, 80, 80); c.globalAlpha = 1 }
     drawDeity(c, cur.k, T, false, { name: cur.named || P.bossNamed ? rName(cur.k) : '?', anim: Math.sin(T * 8) > 0 ? 1 : 0 })
     c.restore()
   }
   for (const f of P.fx) {
-    const x = cw * (f.lane + 0.5), y = top + f.y * (floor - top)
+    const x = xOf(f.slot), y = yOf(f.slot)
     if (f.kind === 'knock') {
       const p = 1 - f.t / 0.8
-      c.save(); c.globalAlpha = Math.max(0, 1 - p); c.translate(x + f.dir * p * cw * 0.8, y - Math.sin(p * Math.PI) * 40); c.rotate(f.dir * p * 1.6); c.scale(s, s)
+      c.save(); c.globalAlpha = Math.max(0, 1 - p); c.translate(x + f.dir * p * cw * 0.8, y - 40 * s - Math.sin(p * Math.PI) * 40); c.rotate(f.dir * p * 1.6); c.scale(s, s)
       drawDeity(c, f.k, T, false, { name: rName(f.k) }); c.restore()
     }
     if (f.kind === 'text') {
-      c.globalAlpha = Math.min(1, f.t * 2); c.font = `900 ${Math.round(18 + 6 * s)}px Nunito, system-ui, sans-serif`; c.textAlign = 'center'
-      c.lineWidth = 4; c.strokeStyle = '#1b1715'; c.fillStyle = '#f7d046'; const ty = floor - 100 * s - (1.1 - f.t) * 30
+      c.globalAlpha = Math.min(1, f.t * 2); c.font = `900 ${Math.round(18 + 5 * s)}px Nunito, system-ui, sans-serif`; c.textAlign = 'center'
+      c.lineWidth = 4; c.strokeStyle = '#1b1715'; c.fillStyle = '#f7d046'; const ty = y - 95 * s - (1.1 - f.t) * 30
       c.strokeText(f.text, x, ty); c.fillText(f.text, x, ty); c.globalAlpha = 1
     }
   }
