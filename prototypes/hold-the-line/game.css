@@ -180,3 +180,5 @@
 .pan .pan-hud { order: 0; } .pan .pan-wrap { order: 1; } .pan .pan-hand { order: 2; } .pan .msg { order: 3; } .pan .pan-tools { order: 4; }
 .pan .pan-wrap { width: 100% !important; max-width: none; height: auto !important; margin: 0; align-self: stretch; }
 .pan .overlay { position: fixed; inset: 0; z-index: 40; }
+.pan-pick { margin: 4px 0 -2px; font-weight: 800; font-size: 13.5px; }
+.pan-go-row { margin: 12px 0 4px; } .pan-go-row .primary { width: 100%; }

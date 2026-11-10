@@ -2219,6 +2219,7 @@ function panLeave(result) {
 function panBriefing() {
   if (P) P.phase = 'menu'
   const open = i => i < panSave.open || (typeof window.__aveOpenAll === 'function' && window.__aveOpenAll())
+  const nextLevel = Math.max(0, PAN_LEVELS.findIndex((L, i) => open(i) && !panSave.stars[i]))   // the first open level not yet won, else the first
   const stops = PAN_LEVELS.map((L, i) => {
     const s = panSave.stars[i] ?? 0, ok = open(i)
     const gods = PAN_GODS.filter(g => g.tier === L.tier).map(g => rName(g.k)).join(', ')
@@ -2229,6 +2230,7 @@ function panBriefing() {
   }).join('')
   showPanel(`<span class="eyebrow">${pt('A game of myth', 'Игра по митовете')}</span><h2>${pt('Pantheon Siege', 'Обсадата на Пантеона')}</h2>
     <p>${pt('The Romans matched their gods with the gods of the Greeks. Now the Greek gods march on Rome. Do you know who is who?', 'Римляните съпоставили своите богове с боговете на гърците. Сега гръцките богове вървят към Рим. Знаете ли кой кой е?')}</p>
+    <div class="row pan-go-row"><button class="primary" id="pan-go">${pt(`▶ Start level ${nextLevel + 1}: ${PAN_LEVELS[nextLevel].en}`, `▶ Започни ниво ${nextLevel + 1}: ${PAN_LEVELS[nextLevel].bg}`)}</button></div>
     <ul class="pan-rules">
       <li>${pt('<b>Drag</b> the Roman twin onto the lane of the Greek god coming down it, or tap the card and then the lane.', '<b>Плъзнете</b> римския близнак върху линията на гръцкия бог, който слиза по нея, или натиснете картата и после линията.')}</li>
       <li>${pt('The <b>right god</b> wins points and Favor; right answers in a row multiply your points.', '<b>Правилният бог</b> носи точки и благоволение; верни отговори подред умножават точките.')}</li>
@@ -2236,10 +2238,11 @@ function panBriefing() {
       <li>${pt('Spend <b>Favor</b> to slow a lane, to see who comes next, or to strengthen the gate.', 'Харчете <b>благоволение</b>, за да забавите линия, да видите кой идва или да укрепите портата.')}</li>
       <li>${pt('Each level ends with a <b>boss</b> who shows only a symbol and a clue.', 'Всяко ниво завършва с <b>бос</b>, който показва само символ и подсказка.')}</li>
     </ul>
+    <p class="pan-pick">${pt('Or choose a level (tap it):', 'Или изберете ниво (натиснете го):')}</p>
     <ol class="road">${stops}</ol>
     <p class="twist">${opts.mode === 'chapter' ? `<b>${pt(`Your chapter test: ${quizScore}%.`, `Вашият тест на главата: ${quizScore}%.`)}</b> ` : ''}${pt(`The gate of Rome can take ${panGate(quizScore)} gods.`, `Портата на Рим издържа ${panGate(quizScore)} бога.`)}</p>
     <div class="row"><button class="tool" id="pan-leave">${opts.mode === 'chapter' ? pt('Back to the chapter', 'Обратно към главата') : pt('Back to the map', 'Към картата')}</button></div>`,
-    { ...Object.fromEntries(PAN_LEVELS.map((L, i) => [`pl${i}`, () => panStart(i)])), 'pan-leave': () => panLeave({ left: true }) })
+    { ...Object.fromEntries(PAN_LEVELS.map((L, i) => [`pl${i}`, () => panStart(i)])), 'pan-go': () => panStart(nextLevel), 'pan-leave': () => panLeave({ left: true }) })
 }
 function panStart(li, score = quizScore) {   // (a score can be given for testing)
   const L = PAN_LEVELS[li], gate = panGate(score)
