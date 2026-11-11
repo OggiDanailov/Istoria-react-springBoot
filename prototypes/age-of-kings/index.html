@@ -451,7 +451,7 @@ const SKIN = '#e0b088', SKIN_SHADE = '#c48e66', INK = '#2a211c', SKIN_TONE = SKI
 const UNITS = {
   cart:     { name: 'Supply cart', short: 'Cart', cost: 50, recharge: 7.5, hp: 300, grain: true, about: 'Brings a sack of grain every 20 seconds.' },
   slinger:  { name: 'Slinger', short: 'Slinger', cost: 100, recharge: 7.5, hp: 300, reload: 1.5, dmg: 20, range: 99, about: 'Shoots at anyone coming down his lane.' },
-  hastatus: { name: 'Hastatus', short: 'Hastatus', cost: 150, recharge: 7.5, hp: 300, reload: 2, dmg: 45, range: 2.7, melee: 35, about: 'Throws heavy javelins at close range, then fights with his sword.' },
+  hastatus: { name: 'Hastatus', short: 'Hastatus', cost: 125, recharge: 7.5, hp: 300, reload: 2, dmg: 45, range: 2.7, melee: 35, about: 'Throws heavy javelins at close range, then fights with his sword.' },
   triarius: { name: 'Triarius', short: 'Triarius', cost: 50, recharge: 25, hp: 1500, about: 'A veteran who kneels behind his shield and holds the lane.' },
   caltrops: { name: 'Caltrops', short: 'Caltrops', cost: 25, recharge: 25, hp: 300, armTime: 10, dmg: 450, trap: true, about: 'Iron spikes hidden in the grass. They arm after 10 seconds.' },
   princeps: { name: 'Princeps', short: 'Princeps', cost: 100, recharge: 10, hp: 700, melee: 55, about: 'A soldier in his prime: tough, and he cuts down whoever reaches him.' },
@@ -564,7 +564,7 @@ const w = (t, foes, big, from) => ({ t, foes, big, from })
 const rep = (n, t) => Array(n).fill(t)
 const BASE = ['cart', 'slinger', 'hastatus', 'triarius', 'caltrops']
 const LEVELS = [
-  { id: 'regillus', name: 'Lake Regillus', year: '496 BC', enemy: 'the Latin League', theme: 'lake', start: 100, units: BASE,
+  { id: 'regillus', name: 'Lake Regillus', year: '496 BC', enemy: 'the Latin League', theme: 'lake', start: 150, units: BASE,
     blurb: 'The Latin League marches on Rome to bring back Tarquin, the king the Romans drove out.',
     after: 'Legend says Castor and Pollux, the divine twins, fought for Rome that day. Rome built them a temple in the Forum, and its columns still stand.',
     waves: [w(30, ['warrior']), w(52, ['warrior']), w(70, ['warrior']), w(85, ['warrior', 'warrior']), w(100, ['shield']), w(114, ['warrior', 'warrior']), w(128, ['shield', 'warrior']),
@@ -785,20 +785,24 @@ const LEVELS = [
       w(196, ['zeus', 'hera', 'poseidon', 'athena', 'ares', 'aphrodite', 'artemis', 'hermes', 'zeus', 'ares'], 'The final wave: all of Olympus!')] },
 ]
 let LEVEL = LEVELS[0]
-// What the chapter's quiz score buys for its battle: starting grain and veteran soldiers, placed free before the
-// first enemy arrives. 80% gives the battle's normal start; every 10 points more or less adds or removes grain and
-// a veteran. Tuned so that at 70% only a strong player wins, at 80% an average one, and at 90% nearly everyone.
+// What the chapter's test score buys for its battle (the user's table, Nov 11). Below 50% there is no battle (the app
+// sends the player back to the chronicle). 50%: no equites and almost no grain, a battle that can't really be won;
+// 60%: 2 equites and 70% of the grain, super hard; 70%: 3 equites and 85%; 80%: 4 equites and the battle's normal
+// grain, a fair fight; 90%: 5 and 100%: 6 equites, with more grain. Veterans (free soldiers placed before the battle)
+// from 80%: 1, 2, 3; a medicus from 80%, an augur from 90%. The equites stand under the middle lanes and can be moved.
 const MEDICUS = { heals: 1, wait: 10 }, AUGUR = { seconds: 15, reload: 0.6, damage: 1.5 }
-const SCORE = { grainPer10: 75, minGrain: 25, at80: -25, vetsAt80: 1, vetsPer10: 1, sky: [12, 14] }
+const SCORE = { minGrain: 25, at80: 0, grain: [[50, 0.15], [60, 0.7], [70, 0.85], [80, 1], [90, 1.25], [100, 1.5]], sky: [12, 14] }
 const VET_ORDER = ['slinger', 'triarius', 'slinger', 'hastatus', 'slinger', 'triarius', 'slinger']
+const grainShare = score => { const g = SCORE.grain; if (score <= g[0][0]) return g[0][1]; for (let i = 1; i < g.length; i++) if (score <= g[i][0]) { const [a, fa] = g[i - 1], [b, fb] = g[i]; return fa + (fb - fa) * (score - a) / (b - a) } return g[g.length - 1][1] }
+// the user's table is for the Kingdom's five lanes; a wider field gets one more eques per extra lane, so the score always
+// leaves the same number of lanes unguarded (3 at 60%, 2 at 70%, 1 at 80%, none from 90%)
+const equitesFor = (score, L = LEVEL) => score >= 60 ? Math.min(L.cols ?? 5, Math.floor(score / 10) - 4 + (L.cols ?? 5) - 5) : 0
 function armyFor(score, L = LEVEL) {
   if (L.pantheon) return { grain: 0, vets: {}, medicus: false, augur: false, gate: panGate(score) }   // Pantheon Siege: the strength of Rome's gate
-  const steps = (score - 80) / 10
-  const grain = Math.max(SCORE.minGrain, Math.round((L.start + SCORE.at80 + steps * SCORE.grainPer10) / 25) * 25)
+  const grain = Math.max(SCORE.minGrain, Math.round((L.start + SCORE.at80) * grainShare(score) / 25) * 25)
   const vets = {}
-  VET_ORDER.slice(0, Math.max(0, Math.round(SCORE.vetsAt80 + steps * SCORE.vetsPer10))).forEach(t => { t = L.vetsAs ?? t; vets[t] = (vets[t] ?? 0) + 1 })
-  // helpers: a medicus (army doctor) from 80%, an augur from 90%
-  return { grain, vets, medicus: score >= 80, augur: score >= 90 }
+  VET_ORDER.slice(0, score >= 80 ? Math.floor((score - 70) / 10) : 0).forEach(t => { t = L.vetsAs ?? t; vets[t] = (vets[t] ?? 0) + 1 })
+  return { grain, vets, equites: equitesFor(score, L), medicus: score >= 80, augur: score >= 90 }
 }
 let quizScore = 80   // for testing; in the app it comes from the chapter's quizzes
 
@@ -1700,14 +1704,20 @@ function buildQueue() {
   }
   return q.sort((a, b) => a.t - b.t)
 }
+// the lanes the equites start under: the middle ones first (a closed lane never gets one)
+function equitesAt(n) {
+  const order = [...Array(COLS).keys()].filter(l => !LEVEL.closed?.includes(l)).sort((a, b) => Math.abs(a - (COLS - 1) / 2) - Math.abs(b - (COLS - 1) / 2) || a - b)
+  const have = new Set(order.slice(0, n))
+  return Array.from({ length: COLS }, (_, l) => ({ state: have.has(l) ? 'ready' : 'none', y: ROWS + 0.62 }))
+}
 function newGame(i = levelIndex, score = quizScore) {
   levelIndex = i; LEVEL = LEVELS[i]; COLS = LEVEL.cols ?? 5; ROWS = LEVEL.rows ?? 7
-  const army = armyFor(score)
+  const army = armyFor(score, LEVELS[i])
   LEVEL.waves.forEach(w => { w.announced = false })
   G = {
     t: 0, phase: 'ready', speed: G?.speed ?? 1, paused: false, rations: army.grain, vets: army.vets, score, ids: 0,
     units: [], foes: [], shots: [], foeShots: [], runners: [], drops: [], fx: [], corpses: [],
-    equites: Array.from({ length: COLS }, () => ({ state: 'ready', y: ROWS + 0.62 })),
+    equites: equitesAt(army.equites),
     equitesTop: LEVEL.twoFronts ? Array.from({ length: COLS }, () => ({ state: 'ready', y: -0.55 })) : [],
     cool: Object.fromEntries(LEVEL.units.map(t => [t, { triarius: 15, caltrops: 20, shed: 10, pigs: 10 }[t] ?? 0])),
     queue: buildQueue(), total: 0, spawned: 0, killed: 0, lost: 0, nextSky: 4, shake: 0,
@@ -1888,7 +1898,7 @@ function update(dt) {
   for (const ev of G.events) if (!ev.done && G.t >= ev.t) {
     ev.done = true; announce(ev.text, true, 4200); sfx.horn()
     if (ev.wings) for (const l of ev.wings) if (G.equites[l].state === 'ready') G.equites[l].state = 'used'
-    if (ev.masinissa) for (const e of G.equites) if (e.state === 'used') { e.state = 'ready'; e.y = ROWS + 0.62 }
+    if (ev.masinissa) for (const e of G.equites) if (e.state === 'used') { e.state = 'ready'; e.y = ROWS + 0.62 }   // only those that had charged
     const leave = test => {   // these ships turn and sail away; those still to come never arrive
       for (const f of G.foes) if (test(FOES[f.type])) { f.fleeing = true; f.eating = null }
       const before = G.queue.length; G.queue = G.queue.filter(e => !test(FOES[e.type])); G.total -= before - G.queue.length
@@ -2094,7 +2104,7 @@ function update(dt) {
       }
       const e = G.equites[f.lane]
       if (e.state === 'ready') { e.state = 'charge'; G.charges++; G.shake = Math.max(G.shake, 6); lastStand().sound(); announce(lastStand().charge); tutorial('equites') }
-      else if (e.state === 'used') return lose()
+      else return lose()   // no eques under this lane, or he has already charged
     }
   }
   // the equites ride up their lane once, cutting down everyone in it
@@ -2146,6 +2156,12 @@ function draw() {
       }
     }
   }
+  for (let l = 0; l < COLS; l++) if (G.equites[l]?.state === 'none' && !LEVEL.closed?.includes(l)) {   // an unguarded lane: no eques under it
+    const free = equesDrag?.moved
+    ctx.fillStyle = free ? (equesDrag.to === l ? 'rgba(251, 243, 228, .35)' : 'rgba(251, 243, 228, .14)') : 'rgba(142, 43, 34, .16)'
+    ctx.fillRect(l * cell + 3, ry(ROWS) + 2, cell - 6, CAMP * cell - 4)
+    ctx.strokeStyle = free ? 'rgba(251, 243, 228, .7)' : 'rgba(142, 43, 34, .45)'; ctx.lineWidth = 1.5; ctx.setLineDash([4, 4]); ctx.strokeRect(l * cell + 3, ry(ROWS) + 2, cell - 6, CAMP * cell - 4); ctx.setLineDash([])
+  }
   if (G.heal) for (const u of G.units) if (u.hp < u.max && u.type !== 'caltrops' && u.type !== 'pigs') {
     ctx.fillStyle = 'rgba(127, 176, 105, .28)'; ctx.fillRect(u.lane * cell + 3, ry(u.row) + 3, cell - 6, cell - 6)
     ctx.strokeStyle = '#7fb069'; ctx.lineWidth = 2.5; ctx.strokeRect(u.lane * cell + 3, ry(u.row) + 3, cell - 6, cell - 6)
@@ -2178,7 +2194,7 @@ function draw() {
     if (f.hp < f.max || (f.shieldMax && f.shield < f.shieldMax)) hpBar(foeX(f), ry(f.y) - (FOES[f.type].elephant ? 140 : f.type === 'calf' ? 74 : f.type === 'phalangite' ? 80 : 74) * k, (f.hp + f.shield) / (f.max + f.shieldMax), f.shield > 0 ? '#b08a3e' : '#e2574c')
   }])
   for (const [lane, e] of G.equitesTop.entries()) if (e.state !== 'used') items.push([ry(e.y), () => { ctx.save(); ctx.translate(lx(lane), ry(e.y)); ctx.scale(k * 0.9, k * 0.9); drawEques(ctx, e, T); ctx.restore() }])
-  for (const [lane, e] of G.equites.entries()) if (e.state !== 'used') items.push([ry(e.y), () => { ctx.save(); ctx.translate(lx(lane), ry(e.y)); ctx.scale(k * 0.9, k * 0.9); drawEques(ctx, e, T); ctx.restore() }])
+  for (const [lane, e] of G.equites.entries()) if (e.state !== 'used' && e.state !== 'none') items.push([ry(e.y), () => { ctx.save(); if (equesDrag?.moved && equesDrag.from === lane) ctx.globalAlpha = 0.4; ctx.translate(lx(lane), ry(e.y)); ctx.scale(k * 0.9, k * 0.9); drawEques(ctx, e, T); ctx.restore() }])
   for (const r of G.runners) items.push([ry(r.y), () => { ctx.save(); ctx.translate(lx(r.lane), ry(r.y)); ctx.scale(k, k); drawPig(ctx, T, true); ctx.restore() }])
   items.sort((a, b) => a[0] - b[0]).forEach(([, fn]) => fn())
   for (const s of G.foeShots) { const x = lx(s.lane) + s.dx * cell, y = ry(s.y) - 20 * k; if (s.stone) { ctx.fillStyle = '#5f5f58'; ctx.beginPath(); ctx.arc(x, y, 3 * k + 1, 0, TAU); ctx.fill(); continue } line(ctx, x, y - 9 * k, x, y + 5 * k, '#3f2a16', 1.5); line(ctx, x - 2.5 * k, y + 2 * k, x, y + 6 * k, '#9aa3aa', 1.5); line(ctx, x + 2.5 * k, y + 2 * k, x, y + 6 * k, '#9aa3aa', 1.5) }
@@ -2350,7 +2366,13 @@ function tutorial(event, type) {
 function select(type) { G.selected = type; G.dismiss = false; G.heal = false; syncTray() }
 
 // ---------- input: drag a card onto a square, or tap a card then a square ----------
-let drag = null, moveDrag = null
+let drag = null, moveDrag = null, equesDrag = null
+// an eques rides along the camp to a lane that has none (before or during the battle)
+function moveEques(from, to) {
+  if (to == null || to === from || G.equites[to]?.state !== 'none' || LEVEL.closed?.includes(to) || G.equites[from]?.state !== 'ready') return false
+  G.equites[to] = { state: 'ready', y: ROWS + 0.62 }; G.equites[from] = { state: 'none', y: ROWS + 0.62 }; sfx.place()
+  return true
+}
 function cellAt(clientX, clientY) {
   const r = canvas.getBoundingClientRect()
   const x = clientX - r.left, y = clientY - r.top
@@ -2369,11 +2391,17 @@ document.addEventListener('pointermove', e => {
   if (!mounted) return
   const c = cellAt(e.clientX, e.clientY)
   if (moveDrag) { if (Math.hypot(e.clientX - moveDrag.x0, e.clientY - moveDrag.y0) > 8) moveDrag.moved = true; G.hover = c?.inGrid ? c : null; return }
+  if (equesDrag) { if (Math.hypot(e.clientX - equesDrag.x0, e.clientY - equesDrag.y0) > 8) equesDrag.moved = true; equesDrag.to = c ? Math.max(0, Math.min(COLS - 1, c.lane)) : null; return }
   if (drag) { if (Math.hypot(e.clientX - drag.x0, e.clientY - drag.y0) > 8) { drag.moved = true; clearTimeout(drag.hold) } }
   if (drag || e.pointerType === 'mouse') G.hover = c?.inGrid ? c : null
 })
 document.addEventListener('pointerup', e => {
   if (!mounted) return
+  if (equesDrag) {
+    const d = equesDrag; equesDrag = null
+    if (d.moved && !moveEques(d.from, d.to)) sfx.deny()
+    return
+  }
   if (moveDrag) {
     const c = cellAt(e.clientX, e.clientY), m = moveDrag
     moveDrag = null; G.hover = null
@@ -2463,11 +2491,11 @@ function showBriefing(i) {
   showPanel(`<span class="eyebrow">${L.bonus ? 'Bonus battle' : `Battle ${i + 1} of ${LEVELS.filter(x => !x.bonus).length}`} · ${L.year}</span><h2>${L.name}</h2><p>${L.blurb}</p>${howto}${L.twist ? `<p class="twist"><b>This battle:</b> ${L.twist}</p>` : ''}
     ${news.length ? `<ul class="news">${news.join('')}</ul>` : ''}
     ${opts.mode === 'chapter' ? `<p class="twist"><b>Your chapter test: ${quizScore}%.</b> ${armyLine(quizScore, L)}</p>` : `<div class="score-pick"><span class="label">Your quiz result (test switch)</span>
-      <div class="chips">${[60, 70, 80, 90, 100].map(v => `<button id="score${v}" aria-pressed="${v === quizScore}">${v}%</button>`).join('')}</div>
+      <div class="chips">${[50, 60, 70, 80, 90, 100].map(v => `<button id="score${v}" aria-pressed="${v === quizScore}">${v}%</button>`).join('')}</div>
       <p class="army" id="army-line">${armyLine(quizScore, L)}</p></div>`}
     <div class="row"><button class="primary" id="go">To battle</button><button class="tool" id="guide-b">Unit guide</button><button class="tool" id="map">${opts.mode === 'chapter' ? 'Back to the chapter' : 'Map'}</button></div>`,
     { go: () => startLevel(i), map: opts.mode === 'chapter' ? () => exit({ left: true }) : showMap, 'guide-b': () => { newGame(i); showGuide(null, () => showBriefing(i)) },
-      ...Object.fromEntries([60, 70, 80, 90, 100].map(v => [`score${v}`, () => {
+      ...Object.fromEntries([50, 60, 70, 80, 90, 100].map(v => [`score${v}`, () => {
         quizScore = v
         overlay.querySelectorAll('.chips button').forEach(b => b.setAttribute('aria-pressed', b.id === `score${v}`))
         overlay.querySelector('#army-line').textContent = armyLine(v, L)
@@ -2477,24 +2505,29 @@ function armyLine(score, L) {
   if (LANG === 'bg') {   // in Bulgarian: "1 прашкар", "2 триарии"
     const a = armyFor(score, L), BGV = { slinger: ['прашкар', 'прашкари'], triarius: ['триарий', 'триарии'], hastatus: ['хастат', 'хастати'], ceres: ['Церера', 'Церери'] }
     const vets = Object.entries(a.vets).map(([t, n]) => `${n} ${(BGV[t] ?? [bgName(UNITS[t].name), bgName(UNITS[t].name)])[n === 1 ? 0 : 1]}`)
-    return `Започвате с ${a.grain} жито${vets.length ? ` и ветерани: ${vets.join(', ')}` : ' и без ветерани'}.${a.medicus ? ` С вас идва медик (военен лекар)${a.augur ? ' и авгур' : ''}.` : ''}`
+    return `Започвате с ${a.grain} жито, ${a.equites ? (a.equites === 1 ? 'един еквит' : a.equites + ' еквити') : 'без еквити'}${vets.length ? ` и ветерани: ${vets.join(', ')}` : ' и без ветерани'}.${a.medicus ? ` С вас идва медик (военен лекар)${a.augur ? ' и авгур' : ''}.` : ''}`
   }
   const a = armyFor(score, L), vets = Object.entries(a.vets).map(([t, n]) => `${n} ${n === 1 ? UNITS[t].name.toLowerCase() : UNITS[t].name.toLowerCase() + (t === 'triarius' ? '' : 's')}`.replace('triarius', n === 1 ? 'triarius' : 'triarii').replace('hastatuss', 'hastati'))
-  return `You start with ${a.grain} grain${vets.length ? ` and veterans: ${vets.join(', ')}` : ' and no veterans'}.${a.medicus ? ` A medicus (army doctor) comes with you${a.augur ? ', and an augur' : ''}.` : ''}`
+  return `You start with ${a.grain} grain, ${a.equites ? (a.equites === 1 ? 'one eques' : a.equites + ' equites') : 'no equites'}${vets.length ? ` and veterans: ${vets.join(', ')}` : ' and no veterans'}.${a.medicus ? ` A medicus (army doctor) comes with you${a.augur ? ', and an augur' : ''}.` : ''}`
 }
 function startLevel(i, score = quizScore) {
   overlay.hidden = true
   newGame(i, score); sfx.init()
-  if (Object.values(G.vets).some(n => n > 0)) { G.phase = 'deploy'; renderTray(); layout(); syncDeploy() }
+  if (Object.values(G.vets).some(n => n > 0) || G.equites.some((e, l) => e.state === 'none' && !LEVEL.closed?.includes(l))) { G.phase = 'deploy'; renderTray(); layout(); syncDeploy() }
   else beginBattle()
 }
 function syncDeploy() {
-  const left = Object.values(G.vets).reduce((a, b) => a + b, 0), box = $('deploy')
+  const left = Object.values(G.vets).reduce((a, b) => a + b, 0), box = $('deploy'), had = Object.values(armyFor(G.score).vets).reduce((a, b) => a + b, 0)
   box.hidden = G.phase !== 'deploy'
-  const bg = LANG === 'bg'
-  $('deploy-text').textContent = left
-    ? (bg ? `Резултатът от теста ви донесе ветерани. Плъзнете ги на полето безплатно (остават ${left}).` : `Your test score earned you veterans. Drag them onto the field for free (${left} still to place).`)
-    : (bg ? 'Ветераните ви са на място. Плъзнете, за да ги наместите, после започнете.' : 'Your veterans are in place. Drag to adjust, then begin.')
+  const bg = LANG === 'bg', eq = G.equites.filter(e => e.state === 'ready').length, open = G.equites.filter((e, l) => e.state === 'none' && !LEVEL.closed?.includes(l)).length
+  $('deploy-text').textContent = (left
+    ? (bg ? `Резултатът от теста ви донесе ветерани. Плъзнете ги на полето безплатно (остават ${left}). ` : `Your test score earned you veterans. Drag them onto the field for free (${left} still to place). `)
+    : had ? (bg ? 'Ветераните ви са на място. Плъзнете, за да ги наместите. ' : 'Your veterans are in place. Drag to adjust them. ') : '')
+    + (eq === 0
+      ? (bg ? 'Нямате еквити: резултатът от теста е твърде нисък. Всеки враг, който пробие, печели битката.' : 'You have no equites: your test score was too low. Any enemy who breaks through wins the battle.')
+      : open
+        ? (bg ? `Имате ${eq === 1 ? 'един еквит' : eq + ' еквити'} за ${eq + open} линии. Те атакуват веднъж; линиите без еквит (отбелязани в червено) са незащитени. Плъзнете еквит по дъното, за да го преместите – и преди, и по време на битката.` : `You have ${eq === 1 ? 'one eques' : eq + ' equites'} for ${eq + open} lanes. Each charges once; the lanes without one (marked in red) are unguarded. Drag a horseman along the bottom to move him, before or during the battle.`)
+        : (bg ? 'Всяка линия има еквит, който атакува веднъж.' : 'Every lane has an eques, who charges once.'))
   if (G.hasMedicus) $('deploy-text').textContent += bg ? ` Медикът ви може да излекува ${MEDICUS.heals === 1 ? 'един ранен войник, веднъж на битка' : `${MEDICUS.heals} ранени войници`}: натиснете ✚ Медик, после войника.` : ` Your medicus can heal ${MEDICUS.heals === 1 ? 'one wounded soldier, once per battle' : `${MEDICUS.heals} wounded soldiers`}: tap ✚ Medicus, then the soldier.`
   if (G.hasAugur) $('deploy-text').textContent += bg ? ' Веднъж на битка натиснете „Авгур“ за добри поличби: войниците ви се бият по-силно известно време.' : ' Once per battle, tap Augur for good omens: your soldiers fight harder for a while.'
 }
@@ -2613,7 +2646,7 @@ const PAN_LEVELS = [
 ]
 // at most this many gods on the field in each wave (one at a time in the first), and never two within 2.5 s of each other
 const PAN = { waves: 5, first: 4, hand: 5, rest: 5, slow: 5, cap: [1, 2, 2, 2, 3], apart: 2.5, cost: { slow: 3, reveal: 2, plus: 5 } }
-const panGate = score => score >= 90 ? 5 : score >= 80 ? 4 : 3   // the chapter test sets how many gods the gate can take
+const panGate = score => Math.max(1, Math.min(6, Math.floor(score / 10) - 4))   // the chapter test sets the gate: 1 at 50%, 2 at 60% … 6 at 100%
 const PAN_KEY = 'ave-pantheon'
 let panSave = { open: 1, stars: [], best: [], fall: { open: 1, stars: [], best: [] } }
 try { panSave = { ...panSave, ...JSON.parse(localStorage.getItem(PAN_KEY) || '{}') }; panSave.fall ??= { open: 1, stars: [], best: [] } } catch {}
@@ -3317,6 +3350,9 @@ function bindControls() {
     // grain first: it's the most urgent tap
     const d = G.drops.find(d => Math.hypot(d.x - c.x, d.y - c.y) < 26 * k + 8)
     if (d) return collect(d)
+    if (c.row >= ROWS && c.lane >= 0 && c.lane < COLS && G.equites[c.lane]?.state === 'ready') {   // an eques in the camp: drag him to another lane
+      equesDrag = { from: c.lane, x0: e.clientX, y0: e.clientY, moved: false }; canvas.setPointerCapture(e.pointerId); return
+    }
     if (!c.inGrid) return
     if (G.heal) {
       const u = unitAt(c.lane, c.row)
@@ -3377,13 +3413,13 @@ function mount(el, o = {}) {
 }
 function unmount() {
   if (!mounted) return
-  mounted = false; drag = null; moveDrag = null
+  mounted = false; drag = null; moveDrag = null; equesDrag = null
   clearTimeout(bannerTimer); window.removeEventListener('resize', layout); window.removeEventListener('resize', panLayout); panActive = false; P = null
   sroot.innerHTML = ''
 }
 // the gods' drawings and texts, for the Pantheon in the Ave Caesar chronicle
 const gods = { list: PAN_GODS, female: k => !!DEITY_LOOK[k]?.female, draw: (c, k, T, o = {}) => drawDeity(c, k, T, !!o.greek, o) }
-return { mount, unmount, armyFor, LEVELS, gods, debug: { get P() { return P }, panStart, panDrop, panUpdate, fallStart, fallUpdate, fallTo, fallDrop, fallMove, openPantheon, PAN_GODS, get G() { return G }, showBriefing, win, lose, paintIcons, foeTypes, place, collect, update, startLevel, beginBattle, armyFor, showMap, LEVELS, UNITS, FOES, progress } }
+return { mount, unmount, armyFor, LEVELS, gods, debug: { moveEques, get P() { return P }, panStart, panDrop, panUpdate, fallStart, fallUpdate, fallTo, fallDrop, fallMove, openPantheon, PAN_GODS, get G() { return G }, showBriefing, win, lose, paintIcons, foeTypes, place, collect, update, startLevel, beginBattle, armyFor, showMap, LEVELS, UNITS, FOES, progress } }
 })()
 
 </script>
@@ -3398,7 +3434,7 @@ const LANG_KEY = 'ave-lang'
 let LANG = 'en'
 try { LANG = localStorage.getItem(LANG_KEY) === 'bg' ? 'bg' : 'en' } catch {}
 const BG_UI_MORE = {"Not yet.": "Още не.", "For reviewing content: opens every chapter, shows each chapter’s questions with their answers, and lets you play any battle at a score you pick. Your real progress isn’t changed.": "За преглед на съдържанието: отваря всяка глава, показва въпросите на всяка глава с отговорите им и ви позволява да изиграете всяка битка с избран от вас резултат. Истинският ви напредък не се променя.", "Each chapter ends with a test made of all its games; your first answer to each question counts. The test score sets your army for the chapter’s battle: around 80% gives a fair fight, 90% a comfortable one, and below 70% only an expert wins.": "Всяка глава завършва с тест от всичките ѝ игри; брои се първият ви отговор на всеки въпрос. Резултатът от теста определя армията ви за битката на главата: около 80% дава равна битка, 90% – удобна, а под 70% печели само експерт.", "Tap the": "Натиснете", "of the events left.": "от останалите събития.", "From the first to the last": "От първото до последното", "Ten pairs": "Десет двойки", "Ten statements": "Десет твърдения", "Tap a name, then what it matches.": "Натиснете име, после това, което му съответства.", "Tap or drag the": "Натиснете или плъзнете", "earliest": "най-ранното", "event onto the road.": "събитие на пътя.", "score so far": "резултат досега", "first": "първият", "Fun": "Забавно", "Confusing": "Объркващо", "Boring": "Скучно", "This copies your answers so you can paste them in a message to whoever sent you this game.": "Това копира отговорите ви, за да ги поставите в съобщение до този, който ви е изпратил играта.", "Correct!": "Вярно!", "true": "вярно", "false": "невярно", "belongs with the others. Look again.": "е свързано с останалите. Вижте пак.", "Yes,": "Да,", "Not": "Не е", ". Here’s another clue.": ". Ето още една подсказка.", "! Guessed from the first clue.": "! Познато от първата подсказка.", "Easy": "Лесен", "Medium": "Среден", "Hard": "Труден", "The Chronicle": "Хрониката", "to steer your legion.": "за да водите легиона си.", "Pass through the gate with the": "Минете през портата с", ". Avoid the barricades.": ". Пазете се от барикадите.", "Steer your legion through the gate with the right answer. Each right answer recruits a soldier.": "Водете легиона си през портата с верния отговор. Всеки верен отговор ви носи нов войник."}
-const BG_UI = {"Ave Caesar · History": "Ave Caesar · История", "Ancient Rome": "Древен Рим", "All eras": "Всички епохи", "Chapters": "Глави", "Menu": "Меню", "From a village of shepherds to the master of the Mediterranean, and the fall of the West. Pick an era.": "От селце на пастири до господар на Средиземноморието – и падането на Запада. Изберете епоха.", "Review mode: open everything": "Режим на преглед: отвори всичко", "Turn review mode off": "Изключи режима на преглед", "Every chapter is generated from Wikipedia and fact-checked by AI. Early Roman dates are the traditional ones; historians doubt many of them.": "Всяка глава е създадена по Уикипедия и проверена от изкуствен интелект. Ранните римски дати са традиционните; историците се съмняват в много от тях.", "Generated from Wikipedia and fact-checked by AI. Early Roman dates are the traditional ones; historians doubt many of them.": "Създадено по Уикипедия и проверено от изкуствен интелект. Ранните римски дати са традиционните; историците се съмняват в много от тях.", "Coming soon": "Очаквайте скоро", "No battle": "Без битка", "Chapter complete": "Главата е завършена", "Chapter test complete": "Тестът на главата е завършен", "The chapter test": "Тестът на главата", "Start the test": "Започни теста", "Play the next round": "Играй следващия рунд", "Read the chronicle": "Прочети хрониката", "Read the chronicle first": "Първо прочетете хрониката", "Key facts": "Ключови факти", "People": "Хора", "Dates": "Дати", "Latin words": "Латински думи", "Read": "Прочети", "Tap “Read” to open that part of the chronicle.": "Натиснете „Прочети“, за да отворите тази част от хрониката.", "Read more in the chronicle": "Прочетете повече в хрониката", "Tap the map to enlarge it.": "Натиснете картата, за да я увеличите.", "Review mode": "Режим на преглед", "Questions & answers": "Въпроси и отговори", "Review": "Преглед", "Play it with the army of a test score of:": "Изиграйте я с армията за резултат от теста:", "Review battles don’t change your progress.": "Битките в режим на преглед не променят напредъка ви.", "Review mode is on: everything is open.": "Режимът на преглед е включен: всичко е отворено.", "Review mode is off: each chapter opens when you win the battle before it.": "Режимът на преглед е изключен: всяка глава се отваря, когато спечелите битката преди нея.", "Up next in your test": "Следващ във вашия тест", "Up next:": "Следва:", "Finish the previous level to unlock": "Завършете предишното ниво, за да отключите", "✓ Done in this test": "✓ Изиграно в този тест", "Finish the test to open the next chapter.": "Завършете теста, за да отворите следващата глава.", "This battle isn’t built yet.": "Тази битка още не е готова.", "Finish the test": "Завършете теста", "Retake the test": "Направи теста отново", "Tap again: new questions, new score": "Натиснете пак: нови въпроси, нов резултат", "To battle": "Към битката", "Fight again": "Битка отново", "Back to the chapter": "Обратно към главата", "Learn from your mistakes": "Учете се от грешките си", "Where your mistakes came from": "Откъде дойдоха грешките ви", "Review these sections, then try again": "Прегледайте тези раздели и опитайте пак", "These mistakes count in your chapter test. Re-read the sections before the battle.": "Тези грешки се броят в теста на главата. Препрочетете разделите преди битката.", "Your progress": "Вашият напредък", "Reset my progress": "Изтрий напредъка ми", "Tap again to erase all tests, stars and battles": "Натиснете пак, за да изтриете всички тестове, звезди и битки", "Progress reset. Start again with the Kingdom.": "Напредъкът е изтрит. Започнете отново от Царството.", "You have conquered every chapter so far.": "Покорихте всички глави досега.", "Test not started": "Тестът не е започнал", "test not started": "тестът не е започнал", "test score": "резултат от теста", "Next question": "Следващ въпрос", "Next round": "Следващ рунд", "Next person": "Следващ човек", "Next statement": "Следващо твърдение", "See results": "Виж резултатите", "Start round 1": "Започни рунд 1", "Right!": "Вярно!", "Wrong.": "Грешно.", "Not quite.": "Не съвсем.", "Well done!": "Браво!", "Well done.": "Браво.", "No mistakes.": "Без грешки.", "right answer": "верен отговор", "TRUE": "ВЯРНО", "FALSE": "НЕВЯРНО", "✓ True": "✓ Вярно", "✗ False": "✗ Невярно", "← false · true →": "← невярно · вярно →", "Drag left and right": "Плъзнете наляво и надясно", "Swipe right if it’s true, left if it’s false.": "Плъзнете надясно, ако е вярно, и наляво, ако не е.", "Tap a name, then what it matches.": "Натиснете име, после това, което му съответства.", "Three of these belong together. Tap the one that doesn’t.": "Три от тези са свързани. Натиснете това, което не е.", "Drag each name onto its dot, or tap a name and then a dot.": "Плъзнете всяко име върху точката му или натиснете име, а после точка.", "Rome is marked in red. The blue line is the Tiber.": "Рим е отбелязан в червено. Синята линия е Тибър.", "This chapter has no Map Drop round.": "Тази глава няма рунд „На картата“.", "Guess early for a better score. Each extra clue costs a little.": "Познайте рано за по-добър резултат. Всяка следваща подсказка струва малко.", "Show another clue": "Покажи още една подсказка", "Hidden clue": "Скрита подсказка", "Guessed from the first clue.": "Познато от първата подсказка.", "Your first answer counts in the chapter test. Harder questions count more.": "Първият ви отговор се брои в теста на главата. По-трудните въпроси носят повече.", "Steer your legion through the right answers": "Водете легиона си през верните отговори", "March!": "Напред!", "Raise a Legion": "Събери легион", "Your briefing": "Вашият инструктаж", "How was this round?": "Как ви се стори този рунд?", "Too easy": "Твърде лесно", "Too hard": "Твърде трудно", "Learned something": "Научих нещо", "Send feedback": "Изпрати отзив", "Copy feedback": "Копирай отзива", "Copied!": "Копирано!", "Thanks! Your feedback was saved.": "Благодарим! Отзивът ви е запазен.", "Pick a word or write a comment first.": "Първо изберете дума или напишете коментар.", "Play again": "Играй отново", "You made it to the end": "Стигнахте до края", "A strong start.": "Силно начало.", "A weak result.": "Слаб резултат.", "You passed, just.": "Минахте – на косъм.", "A new test.": "Нов тест.", "A fair fight if you play well.": "Равна битка, ако играете добре.", "A hard fight: only careful play will win.": "Тежка битка: само внимателната игра ще победи.", "Very hard: retaking the test is the better plan.": "Много трудно: по-добре направете теста отново.", "Latin": "Латински", "ROME": "РИМ", "Who Doesn’t Belong?": "Кое не принадлежи?", "Spot the odd one out": "Открийте излишното", "Where It Happened": "Къде се случи", "Place the towns on the map": "Поставете градовете на картата", "Reinforcements": "Подкрепления", "10 questions from the whole chapter": "10 въпроса от цялата глава", "Close": "Затвори", "Chapter": "Глава", "Chronology Jam": "Хронологичен пъзел", "Match Pairs": "Двойки", "True or False": "Вярно или невярно", "Odd One Out": "Кое е излишното", "Who Am I?": "Кой съм аз?", "Map Drop": "На картата", "Legion Quiz": "Викторина на легиона", "Legion Run": "Походът на легиона", "Chronology Jam · put events in order": "Хронологичен пъзел · подредете събитията", "Match Pairs · who did what": "Двойки · кой какво е направил", "True or False · swipe to answer": "Вярно или невярно · плъзнете за отговор", "Odd One Out · spot the intruder": "Кое е излишното · открийте натрапника", "Who Am I? · guess from clues": "Кой съм аз? · познайте по подсказките", "Map Drop · where things were": "На картата · къде е било", "Legion Quiz · questions from the whole chapter": "Викторина на легиона · въпроси от цялата глава", "Legion Run · practice, not part of the test": "Походът на легиона · упражнение, не е част от теста"}
+const BG_UI = {"Ave Caesar · History": "Ave Caesar · История", "Ancient Rome": "Древен Рим", "All eras": "Всички епохи", "Chapters": "Глави", "Menu": "Меню", "From a village of shepherds to the master of the Mediterranean, and the fall of the West. Pick an era.": "От селце на пастири до господар на Средиземноморието – и падането на Запада. Изберете епоха.", "Review mode: open everything": "Режим на преглед: отвори всичко", "Turn review mode off": "Изключи режима на преглед", "Every chapter is generated from Wikipedia and fact-checked by AI. Early Roman dates are the traditional ones; historians doubt many of them.": "Всяка глава е създадена по Уикипедия и проверена от изкуствен интелект. Ранните римски дати са традиционните; историците се съмняват в много от тях.", "Generated from Wikipedia and fact-checked by AI. Early Roman dates are the traditional ones; historians doubt many of them.": "Създадено по Уикипедия и проверено от изкуствен интелект. Ранните римски дати са традиционните; историците се съмняват в много от тях.", "Coming soon": "Очаквайте скоро", "No battle": "Без битка", "Chapter complete": "Главата е завършена", "Chapter test complete": "Тестът на главата е завършен", "The chapter test": "Тестът на главата", "Start the test": "Започни теста", "Play the next round": "Играй следващия рунд", "Read the chronicle": "Прочети хрониката", "Read the chronicle first": "Първо прочетете хрониката", "Key facts": "Ключови факти", "People": "Хора", "Dates": "Дати", "Latin words": "Латински думи", "Read": "Прочети", "Tap “Read” to open that part of the chronicle.": "Натиснете „Прочети“, за да отворите тази част от хрониката.", "Read more in the chronicle": "Прочетете повече в хрониката", "Tap the map to enlarge it.": "Натиснете картата, за да я увеличите.", "Review mode": "Режим на преглед", "Questions & answers": "Въпроси и отговори", "Review": "Преглед", "Play it with the army of a test score of:": "Изиграйте я с армията за резултат от теста:", "Review battles don’t change your progress.": "Битките в режим на преглед не променят напредъка ви.", "Review mode is on: everything is open.": "Режимът на преглед е включен: всичко е отворено.", "Review mode is off: each chapter opens when you win the battle before it.": "Режимът на преглед е изключен: всяка глава се отваря, когато спечелите битката преди нея.", "Up next in your test": "Следващ във вашия тест", "Up next:": "Следва:", "Finish the previous level to unlock": "Завършете предишното ниво, за да отключите", "✓ Done in this test": "✓ Изиграно в този тест", "Finish the test to open the next chapter.": "Завършете теста, за да отворите следващата глава.", "This battle isn’t built yet.": "Тази битка още не е готова.", "Finish the test": "Завършете теста", "Retake the test": "Направи теста отново", "Tap again: new questions, new score": "Натиснете пак: нови въпроси, нов резултат", "To battle": "Към битката", "Fight again": "Битка отново", "Back to the chapter": "Обратно към главата", "Learn from your mistakes": "Учете се от грешките си", "Where your mistakes came from": "Откъде дойдоха грешките ви", "Review these sections, then try again": "Прегледайте тези раздели и опитайте пак", "These mistakes count in your chapter test. Re-read the sections before the battle.": "Тези грешки се броят в теста на главата. Препрочетете разделите преди битката.", "Your progress": "Вашият напредък", "Reset my progress": "Изтрий напредъка ми", "Tap again to erase all tests, stars and battles": "Натиснете пак, за да изтриете всички тестове, звезди и битки", "Progress reset. Start again with the Kingdom.": "Напредъкът е изтрит. Започнете отново от Царството.", "You have conquered every chapter so far.": "Покорихте всички глави досега.", "Test not started": "Тестът не е започнал", "test not started": "тестът не е започнал", "test score": "резултат от теста", "Next question": "Следващ въпрос", "Next round": "Следващ рунд", "Next person": "Следващ човек", "Next statement": "Следващо твърдение", "See results": "Виж резултатите", "Start round 1": "Започни рунд 1", "Right!": "Вярно!", "Wrong.": "Грешно.", "Not quite.": "Не съвсем.", "Well done!": "Браво!", "Well done.": "Браво.", "No mistakes.": "Без грешки.", "right answer": "верен отговор", "TRUE": "ВЯРНО", "FALSE": "НЕВЯРНО", "✓ True": "✓ Вярно", "✗ False": "✗ Невярно", "← false · true →": "← невярно · вярно →", "Drag left and right": "Плъзнете наляво и надясно", "Swipe right if it’s true, left if it’s false.": "Плъзнете надясно, ако е вярно, и наляво, ако не е.", "Tap a name, then what it matches.": "Натиснете име, после това, което му съответства.", "Three of these belong together. Tap the one that doesn’t.": "Три от тези са свързани. Натиснете това, което не е.", "Drag each name onto its dot, or tap a name and then a dot.": "Плъзнете всяко име върху точката му или натиснете име, а после точка.", "Rome is marked in red. The blue line is the Tiber.": "Рим е отбелязан в червено. Синята линия е Тибър.", "This chapter has no Map Drop round.": "Тази глава няма рунд „На картата“.", "Guess early for a better score. Each extra clue costs a little.": "Познайте рано за по-добър резултат. Всяка следваща подсказка струва малко.", "Show another clue": "Покажи още една подсказка", "Hidden clue": "Скрита подсказка", "Guessed from the first clue.": "Познато от първата подсказка.", "Your first answer counts in the chapter test. Harder questions count more.": "Първият ви отговор се брои в теста на главата. По-трудните въпроси носят повече.", "Steer your legion through the right answers": "Водете легиона си през верните отговори", "March!": "Напред!", "Raise a Legion": "Събери легион", "Your briefing": "Вашият инструктаж", "How was this round?": "Как ви се стори този рунд?", "Too easy": "Твърде лесно", "Too hard": "Твърде трудно", "Learned something": "Научих нещо", "Send feedback": "Изпрати отзив", "Copy feedback": "Копирай отзива", "Copied!": "Копирано!", "Thanks! Your feedback was saved.": "Благодарим! Отзивът ви е запазен.", "Pick a word or write a comment first.": "Първо изберете дума или напишете коментар.", "Play again": "Играй отново", "You made it to the end": "Стигнахте до края", "A strong start.": "Силно начало.", "A weak result.": "Слаб резултат.", "You passed, just.": "Минахте – на косъм.", "A new test.": "Нов тест.", "A fair fight if you play well.": "Равна битка, ако играете добре.", "A hard fight: only careful play will win.": "Тежка битка: само внимателната игра ще победи.", "Very hard: retaking the test is the better plan.": "Много трудно: по-добре направете теста отново.", "Very hard: few equites to save you. Retaking the test is the better plan.": "Много трудно: малко еквити, които да ви спасят. По-добре направете теста отново.", "Almost impossible: no equites and almost no grain. Re-read the chronicle and retake the test.": "Почти невъзможно: без еквити и почти без жито. Препрочетете хрониката и направете теста отново.", "Latin": "Латински", "ROME": "РИМ", "Who Doesn’t Belong?": "Кое не принадлежи?", "Spot the odd one out": "Открийте излишното", "Where It Happened": "Къде се случи", "Place the towns on the map": "Поставете градовете на картата", "Reinforcements": "Подкрепления", "10 questions from the whole chapter": "10 въпроса от цялата глава", "Close": "Затвори", "Chapter": "Глава", "Chronology Jam": "Хронологичен пъзел", "Match Pairs": "Двойки", "True or False": "Вярно или невярно", "Odd One Out": "Кое е излишното", "Who Am I?": "Кой съм аз?", "Map Drop": "На картата", "Legion Quiz": "Викторина на легиона", "Legion Run": "Походът на легиона", "Chronology Jam · put events in order": "Хронологичен пъзел · подредете събитията", "Match Pairs · who did what": "Двойки · кой какво е направил", "True or False · swipe to answer": "Вярно или невярно · плъзнете за отговор", "Odd One Out · spot the intruder": "Кое е излишното · открийте натрапника", "Who Am I? · guess from clues": "Кой съм аз? · познайте по подсказките", "Map Drop · where things were": "На картата · къде е било", "Legion Quiz · questions from the whole chapter": "Викторина на легиона · въпроси от цялата глава", "Legion Run · practice, not part of the test": "Походът на легиона · упражнение, не е част от теста"}
 const BG_GAMES = {"Chronology Jam": "Хронологичен пъзел", "Match Pairs": "Двойки", "True or False": "Вярно или невярно", "Odd One Out": "Кое е излишното", "Who Am I?": "Кой съм аз?", "Map Drop": "На картата", "Legion Quiz": "Викторина на легиона", "Legion Run": "Походът на легиона"}
 const BG_BATTLES = {"Lake Regillus": ["Регилското езеро", "битката при Регилското езеро"], "The Volscian Raids": ["Набезите на волските", "набезите на волските"], "The Siege of Veii": ["Обсадата на Вейи", "обсадата на Вейи"], "Aquilonia": ["Аквилония", "битката при Аквилония"], "Beneventum": ["Беневент", "битката при Беневент"], "Agrigentum": ["Агригент", "битката при Агригент"], "Cannae": ["Кана", "битката при Кана"], "Zama": ["Зама", "битката при Зама"], "Pydna": ["Пидна", "битката при Пидна"], "The Siege of Carthage": ["Обсадата на Картаген", "обсадата на Картаген"], "Aquae Sextiae": ["Акве Секстие", "битката при Акве Секстие"], "The Colline Gate": ["Колинската порта", "битката при Колинската порта"], "The Silarius River": ["Река Силарус", "битката при река Силарус"], "Carrhae": ["Каре", "битката при Каре"], "Alesia": ["Алезия", "битката при Алезия"], "Pharsalus": ["Фарсала", "битката при Фарсала"], "Actium": ["Акциум", "битката при Акциум"], "The Teutoburg Forest": ["Тевтобургската гора", "битката в Тевтобургската гора"], "Germanicus in Germany": ["Германик в Германия", "похода на Германик в Германия"], "Boudica’s Revolt": ["Въстанието на Боудика", "въстанието на Боудика"], "The Siege of Jerusalem": ["Обсадата на Йерусалим", "обсадата на Йерусалим"], "The Dacian Wars": ["Дакийските войни", "Дакийските войни"], "Zenobia of Palmyra": ["Зенобия от Палмира", "войната срещу Зенобия от Палмира"], "The Milvian Bridge": ["Милвийският мост", "битката при Милвийския мост"], "Adrianople": ["Адрианопол", "битката при Адрианопол"], "The Catalaunian Plains": ["Каталаунските полета", "битката на Каталаунските полета"], "The Pantheon Siege": ["Обсадата на Пантеона", "обсадата на Пантеона"]}
 const BG_ERAS = {"kingdom": ["Царството", "753–509 г. пр.н.е.", "Седем царе – от Ромул до Тарквиний Горди"], "early-republic": ["Ранната република", "509–264 г. пр.н.е.", "Патриции срещу плебеи и завладяването на Италия"], "middle-republic": ["Средната република", "264–121 г. пр.н.е.", "Картаген, Ханибал и империя отвъд морето"], "late-republic": ["Късната република", "121–27 г. пр.н.е.", "Амбициозни пълководци, граждански войни и краят на Републиката"], "early-empire": ["Ранната империя", "27 г. пр.н.е. – 68 г. сл.н.е.", "Август и неговият род: първите императори, от Римския мир до Нерон"], "middle-empire": ["Средната империя", "69–284 г. сл.н.е.", "Добрите императори, Рим на върха на своята мощ, и кризата, която едва не го срина"], "late-empire": ["Късната империя", "284–476 г. сл.н.е.", "Диоклециан, християнските императори и падането на Запада"]}
@@ -3758,21 +3794,23 @@ const VET_NAMES = { slinger: ['slinger', 'slingers'], triarius: ['triarius', 'tr
 const VET_NAMES_BG = { slinger: ['прашкар', 'прашкари'], triarius: ['триарий', 'триарии'], hastatus: ['хастат', 'хастати'] }
 // the battle card is built in the reader's language (its sentences mix numbers and names, so the page's word list can't)
 const tl = (en, bg) => LANG === 'bg' ? bg : en
-const yearOf = L => LANG === 'bg' ? (window.HTL_BG?.[L.year] ?? bgDate(L.year)) : L.year
+const yearOf = L => LANG === 'bg' ? (window.HTL_BG?.[L.year] ?? bgDate(L.year.replace(/^(\d+)(?:st|nd|rd|th) century BC$/, '$1 в. пр.н.е.').replace(/^(\d+)(?:st|nd|rd|th) century AD$/, '$1 в. сл.н.е.'))) : L.year
 const nameOf = L => LANG === 'bg' ? (BG_BATTLES[L.name]?.[0] ?? L.name) : L.name
 const afterOf = L => LANG === 'bg' ? (window.HTL_BG?.[L.after] ?? L.after) : L.after
 const verdictText = score => LANG === 'bg' ? (BG_UI[verdictFor(score)] ?? verdictFor(score)) : verdictFor(score)
 function armyLine(score) {
   const a = HoldTheLine.armyFor(score, levelOf(chapterIndex))
   if (a.gate) return LANG === 'bg' ? `порта, която издържа ${a.gate} бога` : `a gate that holds against ${a.gate} gods`   // Pantheon Siege
+  const eq = a.equites ?? 0
   if (LANG === 'bg') {
     const v = Object.entries(a.vets).filter(([, n]) => n).map(([t, n]) => `${n} ${VET_NAMES_BG[t]?.[n === 1 ? 0 : 1] ?? t}`)
-    return `${a.grain} жито${v.length ? ' и ветерани: ' + v.join(', ') : ', без ветерани'}`
+    return `${a.grain} жито, ${eq ? (eq === 1 ? 'един еквит' : eq + ' еквити') : 'без еквити'}${v.length ? ' и ветерани: ' + v.join(', ') : ', без ветерани'}`
   }
   const vets = Object.entries(a.vets).filter(([, n]) => n).map(([t, n]) => `${n} veteran ${VET_NAMES[t]?.[n === 1 ? 0 : 1] ?? t}`)
-  return `${a.grain} grain${vets.length ? ' and ' + vets.join(', ') : ', no veterans'}`
+  return `${a.grain} grain, ${eq ? (eq === 1 ? 'one eques' : eq + ' equites') : 'no equites'}${vets.length ? ' and ' + vets.join(', ') : ', no veterans'}`
 }
-const verdictFor = score => score >= 90 ? 'A strong start.' : score >= 80 ? 'A fair fight if you play well.' : score >= 70 ? 'A hard fight: only careful play will win.' : 'Very hard: retaking the test is the better plan.'
+const PASS = 50   // below this, the army won't march: back to the chronicle and the test
+const verdictFor = score => score >= 90 ? 'A strong start.' : score >= 80 ? 'A fair fight if you play well.' : score >= 70 ? 'A hard fight: only careful play will win.' : score >= 60 ? 'Very hard: few equites to save you. Retaking the test is the better plan.' : 'Almost impossible: no equites and almost no grain. Re-read the chronicle and retake the test.'
 // The chronicle sections most of your mistakes came from
 function rereadHtml(t) {
   const ids = Object.entries(t.missSecs).sort((a, b) => b[1] - a[1]).map(([id]) => id).filter(id => CHAPTER.some(s => s.id === id)).slice(0, 4)
@@ -4258,7 +4296,7 @@ const reviewBattleHtml = L => `<section class="battle-card review-card">
       <span class="eyebrow">${esc(yearOf(L))} · ${tl('review mode', 'режим на преглед')}</span>
       <h2>${esc(Cap(battleOf(chapterIndex)))}</h2>
       <p class="task">Play it with the army of a test score of:</p>
-      <div class="actions">${[60, 70, 80, 90, 100].map(v => `<button class="ghost review-battle" data-score="${v}">${v}%</button>`).join('')}</div>
+      <div class="actions">${[50, 60, 70, 80, 90, 100].map(v => `<button class="ghost review-battle" data-score="${v}">${v}%</button>`).join('')}</div>
       <p class="task" style="font-size:13px">Review battles don’t change your progress.</p>
     </section>`
 // The card at the top of a chapter: the test while it's under way, then the battle
@@ -4300,6 +4338,13 @@ function testCardHtml() {
       <h2>${L.pantheon ? tl('Rome held against the gods of Olympus', 'Рим устоя срещу боговете на Олимп') : tl(`You held the line at ${esc(L.name)}`, `Удържахте линията: ${esc(nameOf(L))}`)}</h2>
       <p class="task">${tl(`Won with a test score of ${score}%.`, `Спечелена с резултат от теста ${score}%.`)} ${esc(afterOf(L))}</p>
       <div class="actions">${next ? `<button class="primary" id="next-chapter">${tl('Next chapter', 'Следваща глава')}: ${esc(next.short)}</button>` : '<span class="task"><b>You have conquered every chapter so far.</b></span>'}<button class="ghost to-battle">Fight again</button>${CH.keyFacts ? '<button class="ghost key-facts">Key facts</button>' : ''}</div>
+    </section>`
+  if (score < PASS) return `<section class="battle-card locked">
+      <span class="eyebrow">${tl('Test complete', 'Тестът е завършен')} · ${esc(yearOf(L))}</span>
+      <h2>${score}%: ${tl('the army refuses to march', 'армията отказва да тръгне')}</h2>
+      <p class="task">${tl(`Below ${PASS}% the soldiers won’t follow you into ${esc(battleOf(chapterIndex))}. Re-read the sections your mistakes came from, then retake the test.`, `Под ${PASS}% войниците няма да ви последват в ${esc(battleOf(chapterIndex))}. Препрочетете разделите, от които дойдоха грешките ви, и направете теста отново.`)}</p>
+      ${rereadHtml(t)}
+      <div class="actions"><button class="primary" id="retake">${tl('Retake the test', 'Направи теста отново')}</button><button class="ghost" id="chronicle-r">${tl('Read the chronicle', 'Прочети хрониката')}</button></div>
     </section>`
   return `<section class="battle-card">
       <span class="eyebrow">${tl('Test complete', 'Тестът е завършен')}${t.attempt > 1 ? ` · ${tl('attempt', 'опит')} ${t.attempt}` : ''} · ${esc(yearOf(L))}</span>
@@ -5029,7 +5074,7 @@ function drawFigure(ctx, x, y, kind, { dir = 1, walk = null, attack = null, scal
 function renderBattle() {
   const t = testOf(CH), i = chapterIndex, review = state.reviewScore != null && openAll
   const score = review ? state.reviewScore : pct(t.score)
-  if (!levelOf(i) || (!review && !testComplete(t))) return go({ screen: 'home' })   // no battle built yet, or the test isn't done
+  if (!levelOf(i) || (!review && (!testComplete(t) || score < PASS))) return go({ screen: 'home' })   // no battle built yet, the test isn't done, or it's below 50%
   window.scrollTo(0, 0)
   app.innerHTML = '<div class="battle-host" id="battle-host"></div>'
   HoldTheLine.mount(app.querySelector('#battle-host'), {
@@ -5052,7 +5097,9 @@ function renderResult() {
   const r = state, g = GAMES[r.type], t = testOf(CH), next = nextTestRound(t)
   // What to do next: the next round of the test, then the battle
   const actions = r.completed
-    ? `<p class="task"><b>${tl('Test complete', 'Тестът е завършен')}: ${pct(t.score)}%.</b> ${tl('Your army', 'Вашата армия')}: ${armyLine(pct(t.score))}.</p>
+    ? pct(t.score) < PASS ? `<p class="task"><b>${tl('Test complete', 'Тестът е завършен')}: ${pct(t.score)}%.</b> ${tl(`Below ${PASS}% the army won’t march. Re-read and retake the test.`, `Под ${PASS}% армията няма да тръгне. Препрочетете и направете теста отново.`)}</p>
+       <div class="actions"><button class="primary" id="to-chapter">${tl('Back to the chapter', 'Обратно към главата')}</button></div>`
+    : `<p class="task"><b>${tl('Test complete', 'Тестът е завършен')}: ${pct(t.score)}%.</b> ${tl('Your army', 'Вашата армия')}: ${armyLine(pct(t.score))}.</p>
        <div class="actions"><button class="primary" id="to-battle">${tl(`To ${esc(battleOf(chapterIndex))}`, `Към ${esc(battleOf(chapterIndex))}`)}</button><button class="ghost" id="to-chapter">Back to the chapter</button></div>`
     : !testComplete(t)
       ? `<div class="actions">${next ? `<button class="primary" id="next-round">Next round: ${esc(roundTitle(next))}</button>` : ''}${r.type === 'march' ? '<button class="ghost" id="again">Play again</button>' : ''}<button class="ghost" id="to-chapter">Back to the chapter</button></div>`
@@ -5139,13 +5186,13 @@ function renderRunDone() {
       <div>
         <p class="big-stars" style="margin:0">${score}%</p>
         <h2 style="margin-top:10px">${score >= 90 ? 'Excellent!' : score >= 80 ? 'Well done.' : score >= 70 ? 'You passed, just.' : 'A weak result.'}</h2>
-        <p class="task" style="margin-top:4px">${tl(`Your army for ${esc(battleOf(chapterIndex))}`, `Вашата армия за ${esc(battleOf(chapterIndex))}`)}: ${armyLine(score)}. ${verdictText(score)}</p>
+        <p class="task" style="margin-top:4px">${score < PASS ? tl(`Below ${PASS}% the army won’t march: re-read where your mistakes came from and retake the test.`, `Под ${PASS}% армията няма да тръгне: препрочетете откъде дойдоха грешките ви и направете теста отново.`) : `${tl(`Your army for ${esc(battleOf(chapterIndex))}`, `Вашата армия за ${esc(battleOf(chapterIndex))}`)}: ${armyLine(score)}. ${verdictText(score)}`}</p>
       </div>
       ${score < 90 && rereadHtml(t) ? `<div class="review"><h3>Where your mistakes came from</h3>${rereadHtml(t)}</div>` : ''}
-      <div class="actions"><button class="primary" id="to-battle">To battle</button><button class="ghost" id="menu">Back to the chapter</button></div>
+      <div class="actions">${score < PASS ? '' : '<button class="primary" id="to-battle">To battle</button>'}<button class="${score < PASS ? 'primary' : 'ghost'}" id="menu">Back to the chapter</button></div>
     </section>`
   bindBack()
-  app.querySelector('#to-battle').addEventListener('click', () => { run = null; go({ screen: 'battle' }) })
+  app.querySelector('#to-battle')?.addEventListener('click', () => { run = null; go({ screen: 'battle' }) })
   app.querySelector('#menu').addEventListener('click', () => { run = null; go({ screen: 'home' }) })
 }
 

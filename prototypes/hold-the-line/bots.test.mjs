@@ -10,7 +10,9 @@ async function run(level, strategy, score) {
     const H = window.__hold, idx = typeof level === 'number' ? level : H.LEVELS.findIndex(L => L.id === level)
     H.startLevel(idx, score)
     const G0 = H.G, LV = H.LEVELS[idx], C = G0.equites.length, R = LV.rows ?? 7, U = H.UNITS
-    const L = [...Array(C).keys()].sort((a, b) => Math.abs(a - (C - 1) / 2) - Math.abs(b - (C - 1) / 2))
+    // the lanes in the order a sensible player covers them: those with no eques under them first, then from the middle out
+    const guarded = l => G0.equites[l]?.state === 'ready'
+    const L = [...Array(C).keys()].sort((a, b) => guarded(a) - guarded(b) || Math.abs(a - (C - 1) / 2) - Math.abs(b - (C - 1) / 2))
     const has = t => LV.units.includes(t)
     const role = {
       grain: LV.units.find(t => U[t].grain),
@@ -38,6 +40,11 @@ async function run(level, strategy, score) {
       const foes = (l, below) => G.foes.filter(f => f.lane === l && f.hp > 0 && (below ? f.dir < 0 : f.dir > 0))
       const shooters = l => G.units.filter(u => u.lane === l && U[u.type].reload).length
       const front = R - 4, back = R - 2, grains = G.units.filter(u => U[u.type].grain).length
+      // like a player watching the red lanes: when an enemy nears the camp in a lane with no eques, a horseman rides over from a quiet lane
+      if (strategy !== 'casual') for (const l of L) if (G.equites[l]?.state === 'none' && G.foes.some(f => f.lane === l && f.hp > 0 && f.dir > 0 && f.y > R - 2.5)) {
+        const quiet = L.filter(q => G.equites[q]?.state === 'ready' && !G.foes.some(f => f.lane === q && f.hp > 0 && f.dir > 0 && f.y > R - 4)).sort((a, b) => Math.abs(a - l) - Math.abs(b - l))[0]
+        if (quiet != null && H.moveEques(quiet, l)) return
+      }
       if (role.torch && G.t > 40 && G.rations >= 200) for (let r = R - 1; r >= 2; r--) for (const l of L) if (put(role.torch, l, r)) return
       for (const l of L) if (G.foes.some(f => f.lane === l && H.FOES[f.type].elephant && !f.fleeing && f.y < front - 0.5)) { if (role.horn && !G.units.some(u => Math.abs(u.lane - l) <= 1 && u.type === role.horn) && (put(role.horn, l, front) || put(role.horn, l, front + 1))) return; if (!at(l, front) && put(role.trap, l, front)) return }
       // enemies from below (two fronts): a blocker at the back
@@ -51,6 +58,7 @@ async function run(level, strategy, score) {
         if (put(role.blocker, l, front) || (G.rations >= 200 && (put(role.fighter, l, front) || put(role.flank, l, front)))) return
       }
       if (role.group && G.rations >= U[role.group].cost + 75) for (const l of L) if (shooters(l) && foes(l).length > 1 && !at(l, front) && put(role.group, l, front)) return   // a cohort where the enemy crowds
+      for (const l of L) if (!guarded(l) && !shooters(l)) { if (put(role.shooter, l, back) || put(role.cheap, l, back)) return }   // the unguarded lanes (marked red) get a shooter first
       if (grains < 3) { for (const l of [L[0], L[1], L[2]]) if (put(role.grain, l, R - 1)) return }
       for (const l of L) if (!shooters(l)) { if (put(role.shooter, l, back)) return }
       if (grains < 5 && strategy !== 'casual') { for (const l of L) if (put(role.grain, l, R - 1)) return }

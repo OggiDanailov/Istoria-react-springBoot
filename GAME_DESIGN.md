@@ -81,19 +81,30 @@ The code: `weightOf()`, `testScore()` and `record()` in `prototypes/age-of-kings
 
 ## 4. From score to army
 
-The score buys two things for the battle: **starting grain** (rations to build units) and **veterans** (free soldiers
-placed before the first enemy arrives). The battle's normal start is reached at 80%; each 10 points is worth 75 grain
-and one veteran.
+(Reworked on Nov 11 with the user: the equites are now earned by the score and placed by the player.)
 
-Starting grain and veterans by score (veterans in order: slinger, triarius, slinger, hastatus):
+**Below 50% there is no battle**: "the army refuses to march"; the app sends the player back to the sections their
+mistakes came from and the test. From 50% the score buys:
 
-| Score | Lake Regillus | Volscian Raids | Siege of Veii | Aquilonia | Beneventum | Veterans |
+- **Equites**, the horsemen in the camp who charge up a lane once when an enemy breaks through. The user's table, for
+  the Kingdom's five lanes: 0 at 50%, 2 at 60%, 3 at 70%, 4 at 80%, 5 at 90%, 6 at 100% (never more than the lanes).
+  A wider field gets one more per extra lane, so the score always leaves the same number of lanes unguarded (3 at 60%,
+  2 at 70%, 1 at 80%, none from 90%). They start under the middle lanes; a lane without one is marked red in the camp,
+  and the player drags a horseman along the camp to another lane, before or during the battle. An enemy through an
+  unguarded lane (or one whose eques has charged) loses the battle.
+- **Starting grain**: a share of the battle's `start`: 15% at 50%, 70% at 60%, 85% at 70%, 100% at 80%, 125% at 90%,
+  150% at 100%.
+- **Veterans** (free soldiers placed before the first enemy: slinger, triarius, slinger…): 1 at 80%, 2 at 90%, 3 at
+  100%.
+
+| Score | Lake Regillus (grain · equites) | Volscian Raids | Siege of Veii | Aquilonia | Beneventum | Veterans |
 |---|---|---|---|---|---|---|
-| 60% | 25 | 25 | 25 | 25 | 75 | none |
-| 70% | 25 | 75 | 50 | 100 | 150 | none |
-| 80% | 75 | 150 | 125 | 175 | 225 | 1 |
-| 90% | 150 | 225 | 200 | 250 | 300 | 2 |
-| 100% | 225 | 300 | 275 | 325 | 375 | 3 |
+| 50% | 25 · 0 | 25 · 0 | 25 · 0 | 25 · 0 | 50 · 0 | 0 |
+| 60% | 100 · 2 | 150 · 3 | 125 · 3 | 150 · 3 | 200 · 3 | 0 |
+| 70% | 125 · 3 | 175 · 4 | 150 · 4 | 200 · 4 | 225 · 4 | 0 |
+| 80% | 150 · 4 | 200 · 5 | 175 · 5 | 225 · 5 | 275 · 5 | 1 |
+| 90% | 200 · 5 | 250 · 6 | 225 · 6 | 275 · 6 | 350 · 6 | 2 |
+| 100% | 225 · 5 | 300 · 6 | 275 · 6 | 350 · 6 | 425 · 6 | 3 |
 
 **Helpers** (also earned by the score):
 
@@ -102,16 +113,6 @@ Starting grain and veterans by score (veterans in order: slinger, triarius, slin
 | 80%+ | **Medicus** (army doctor) | heals a wounded soldier to full: tap ✚ Medicus, then the soldier. once per battle |
 | 90%+ | **Augur** (priest who reads the omens in the flight of birds) | once per battle: for 15 seconds your soldiers throw faster and hit 1.5× harder |
 
-The Middle Republic battles (a bigger field, tougher enemies):
-
-| Score | Agrigentum | Cannae | Zama | Pydna | Siege of Carthage | Veterans |
-|---|---|---|---|---|---|---|
-| 60% | 50 | 125 | 125 | 100 | 100 | none |
-| 70% | 125 | 200 | 200 | 175 | 175 | none |
-| 80% | 200 | 275 | 275 | 250 | 250 | 1 |
-| 90% | 275 | 350 | 350 | 325 | 325 | 2 |
-| 100% | 350 | 425 | 425 | 400 | 400 | 3 |
-
 Free grain also falls from the sky every 12–14 seconds, and supply carts bring 25 every 20 seconds, so building carts
 early always matters.
 
@@ -119,23 +120,25 @@ The code: `SCORE` and `armyFor()` in `prototypes/hold-the-line/game.js`; each ba
 
 ## 5. The target, and how it was checked
 
-| Score | Who should win |
+| Score | What it should feel like |
 |---|---|
-| under 60% | practically nobody |
-| 70% | only a strong player |
-| 80% | an average player, playing well |
-| 90–100% | nearly everyone |
+| under 50% | no battle: re-read and retake the test |
+| 50% | practically impossible (the user: "people get keen on playing and returning to reading") |
+| 60% | super hard: a long fight, usually lost |
+| 70% | hard: only careful play wins |
+| 80% | fair: an average player playing well wins |
+| 90–100% | comfortable |
 
-Checked with three scripted players (strong, average, casual) that never move soldiers or plan ahead, so a real person
-does better: at 60% the strong player lost every game; at 70% the strong player won 1 in 3 and the average player lost;
-at 80% the average player won every battle checked (Beneventum, the hardest, about half the time); at 90% the casual
-player won 2 in 3.
+Checked on Nov 11 with the scripted average player (bots.test.mjs), which now covers the red lanes first and moves an
+eques to a lane an enemy is nearing: at 50% lost within a minute and a half; at 60% always lost, but after a fight of
+2.5–3.5 minutes; at 70% mostly lost; at 80% won 10 of 12 runs of the five early battles and 19 of 21 later battles
+(Zenobia and Adrianople, the hardest before too, still lost at 80%).
 
 ## 6. The battles (Hold the Line)
 
 A lane-defence game: five lanes, the enemy marches down to the Roman camp. Place units on squares (drag, or tap then
 tap), move placed soldiers to another square, collect grain. If an enemy reaches the camp, that lane's equites charge
-once; a second break loses the battle. Stars: 3 if the equites never charged, 2 if one or two lanes needed them, 1 otherwise.
+once; a second break, or a break in a lane with no eques, loses the battle. Stars: 3 if the equites never charged, 2 if one or two lanes needed them, 1 otherwise.
 
 Each battle adds a new enemy and a new Roman unit, and some have a twist from their history: the gates of Veii, Pyrrhus's
 exhausted night march and the elephant calf at Beneventum.
@@ -182,8 +185,8 @@ at 3 in a row, ×3 at 6, ×4 at 10); a wrong one is knocked aside, rests for 5 s
 Mars · god of war"). A god at the gate costs one gate point; 3 wrong in a row and the Senate loses faith. Favor buys a
 slowed lane (3), who comes next (2) or +1 gate (5). Three levels follow the chapter's table of 15 pairs (the great
 Olympians; gods of home and work; the whole Pantheon, with Apollo, the one god with the same name), each 5 waves of
-4–8 gods, each a little faster, then a boss shown only by its symbol and a clue. The chapter test sets the gate: 3 below 80%,
-4 at 80–89%, 5 at 90%+. Stars: 3 for no mistakes, 2 for one or two. Winning level 1 wins the chapter; the levels and
+4–8 gods, each a little faster, then a boss shown only by its symbol and a clue. The chapter test sets the gate (since Nov 11: 1 point at 50%, 2 at 60% … 6 at 100%; before: 3 below 80%,
+4 at 80–89%, 5 at 90%+). Stars: 3 for no mistakes, 2 for one or two. Winning level 1 wins the chapter; the levels and
 stars are saved in the browser. Slowed down after the user's first play ("no time to read the names and drag when three come at once"): gods take 15–18 s to
 walk down, at most 1 on the field in wave 1, 2 in waves 2–4 and 3 in wave 5, never two within 2.5 s, and a hand of 5.
 Scripted players (pantheon.test.mjs, 1.5–3 s per move): knowing the pairs wins with 3 stars; a learner
