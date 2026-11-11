@@ -851,15 +851,15 @@ function paragraphHtml(p) {
 const chronicleHtml = () => latinNote() + CHAPTER.map(s => `<section data-sec="${s.id}"><h3>${esc(s.title)}</h3>${(CH.chronicleMaps ?? []).filter(m => m.sec === s.id).map(chronicleMap).join('')}${s.body.split(/\n\s*\n/).map(paragraphHtml).join('')}</section>`).join('') +
   `<p class="sources">Sources: Wikipedia, ${CH.sources.map(t => `“${esc(t)}”`).join(', ')} · CC BY-SA 4.0</p>`
 const openChronicle = focusId => openSheet(CH.title, chronicleHtml(), focusId)
-// ---------- the Pantheon in the chronicle: the Greek and Roman twins, one pair at a time ----------
-// The Greek god comes in as a marble statue, its Roman twin in colour beside it; tap the statue and it takes on its
-// colour and symbol: the twins shared them. Arrows, a swipe or the dots move between the 15 pairs; Play shows them all.
+// ---------- the Pantheon in the chronicle: the Roman and Greek twins, one pair at a time ----------
+// The Roman god (the one to learn) comes in as a marble statue, its Greek twin in colour beside it; tap the statue and
+// it takes on its colour and symbol: the twins shared them. Arrows, a swipe or the dots move between the 15 pairs; Play shows them all.
 function mountPantheonCard(el) {
   const list = HoldTheLine.gods.list, L = LANG === 'bg' ? 'bg' : 'en', n = list.length
   const t = (en, bg) => LANG === 'bg' ? bg : en
   let i = 0, shown = performance.now(), turned = null, timer = null
   el.innerHTML = `<div class="pn-head"><b>${t('The twin gods', 'Боговете близнаци')}</b><span class="pn-count"></span></div>
-    <div class="pn-stage"><canvas aria-label="${t('A Greek god and its Roman twin', 'Гръцки бог и неговият римски близнак')}"></canvas><span class="pn-tip">${t('Tap the statue', 'Натиснете статуята')}</span></div>
+    <div class="pn-stage"><canvas aria-label="${t('A Roman god and its Greek twin', 'Римски бог и неговият гръцки близнак')}"></canvas><span class="pn-tip">${t('Tap the statue', 'Натиснете статуята')}</span></div>
     <div class="pn-text" aria-live="polite"><p class="pn-names"></p><p class="pn-of"></p><p class="pn-clue"></p></div>
     <div class="pn-nav"><button class="ghost" data-pn="prev" aria-label="${t('Previous pair', 'Предишна двойка')}">◀</button>
       <div class="pn-dots">${list.map((g, j) => `<button data-dot="${j}" aria-label="${g[L][0]} · ${g[L][1]}"></button>`).join('')}</div>
@@ -871,7 +871,7 @@ function mountPantheonCard(el) {
     i = (j + n) % n; shown = performance.now(); turned = null
     const g = list[i][L]
     el.querySelector('.pn-count').textContent = `${i + 1} / ${n}`
-    el.querySelector('.pn-names').innerHTML = `<span class="g">${g[1]}</span> <span class="eq">=</span> <span class="r">${g[0]}</span>${g[0] === g[1] ? ` <small>${t('the same name in both languages', 'същото име и на двата езика')}</small>` : ''}`
+    el.querySelector('.pn-names').innerHTML = `<span class="r">${g[0]}</span> <span class="eq">=</span> <span class="g">${g[1]}</span>${g[0] === g[1] ? ` <small>${t('the same name in both languages', 'същото име и на двата езика')}</small>` : ''}`
     const she = HoldTheLine.gods.female(list[i].k)
     el.querySelector('.pn-of').textContent = she ? t(`Goddess of ${g[2]}.`, `Богиня на ${g[2]}.`) : t(`God of ${g[2]}.`, `Бог на ${g[2]}.`)
     el.querySelector('.pn-clue').textContent = list[i].clue[L === 'bg' ? 1 : 0]
@@ -907,14 +907,14 @@ function mountPantheonCard(el) {
     const k = list[i].k, g = list[i][L], p = Math.min(1, (now - shown) / 550), ease = 1 - Math.pow(1 - p, 3)
     const s = Math.min(H / 105, W / 170), floor = H * 0.8, T = now / 1000
     const turn = turned ? Math.min(1, (now - turned) / 600) : 0
-    // the Greek statue slides in from the left, the Roman god from the right
+    // the Roman statue slides in from the left, its Greek twin from the right
     const gx = W * 0.3 - (1 - ease) * W * 0.4, rx = W * 0.7 + (1 - ease) * W * 0.4
     ctx.save(); ctx.globalAlpha = ease; ctx.translate(gx, floor); ctx.scale(s, s)
-    ctx.globalAlpha = ease * (1 - turn); HoldTheLine.gods.draw(ctx, k, T, { greek: true, marble: true, plain: true, name: g[1] })
-    if (turn > 0) { ctx.globalAlpha = ease * turn; HoldTheLine.gods.draw(ctx, k, T, { greek: true, name: g[1] }) }
+    ctx.globalAlpha = ease * (1 - turn); HoldTheLine.gods.draw(ctx, k, T, { marble: true, plain: true, name: g[0] })
+    if (turn > 0) { ctx.globalAlpha = ease * turn; HoldTheLine.gods.draw(ctx, k, T, { name: g[0], anim: turn > 0.5 ? 1 : 0 }) }
     ctx.restore()
     ctx.save(); ctx.globalAlpha = ease; ctx.translate(rx, floor); ctx.scale(s, s)
-    HoldTheLine.gods.draw(ctx, k, T, { name: g[0], anim: turn > 0.5 ? 1 : 0 }); ctx.restore()
+    HoldTheLine.gods.draw(ctx, k, T, { greek: true, name: g[1] }); ctx.restore()
     // the link between the twins: an equals sign, and a ring of laurel when the statue turns
     if (p >= 1) {
       ctx.fillStyle = '#8e2b22'; ctx.font = `900 ${Math.round(24 * s / 1.6)}px Nunito, system-ui, sans-serif`; ctx.textAlign = 'center'; ctx.fillText('=', W / 2, floor - 30 * s)
