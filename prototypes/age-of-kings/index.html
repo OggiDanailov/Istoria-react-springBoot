@@ -22,6 +22,7 @@
   --tile-3: #6aa37a;        /* malachite green */
   --tile-4: #e9e1cf;        /* marble */
   --tile-5: #c86a3c;        /* cinnabar */
+  --tile-6: #b48ec4;        /* Tyrian purple, for matched pairs (marble would look unmatched) */
   --tile-ink: #1b1715;
   --sea: #2f5f7d;
   --land: #c9b48a;
@@ -418,7 +419,7 @@ button:focus-visible { outline: 3px solid var(--ochre); outline-offset: 2px; }
 
 /* Tile colours: last, so they override the neutral backgrounds above */
 .c1 { background: var(--tile-1); } .c2 { background: var(--tile-2); } .c3 { background: var(--tile-3); }
-.c4 { background: var(--tile-4); } .c5 { background: var(--tile-5); }
+.c4 { background: var(--tile-4); } .c5 { background: var(--tile-5); } .c6 { background: var(--tile-6); }
 
 @media (prefers-reduced-motion: reduce) {
   .shake { animation: none; outline: 3px solid var(--bad); }
@@ -4481,7 +4482,7 @@ function flyTo(tile, slot, done) {
 const MATCH_PAGE = 5   // pairs on one screen: ten at once is too crowded on a phone
 START.match = set => {
   const ids = [...MATCH_SETS[set].pairs.keys()], page = ids.slice(0, MATCH_PAGE)
-  return { page: 0, left: shuffle(page), right: shuffle(page), matched: [], selected: null, colors: Object.fromEntries(ids.map(i => [i, (i % 5) + 1])) }
+  return { page: 0, left: shuffle(page), right: shuffle(page), matched: [], selected: null, colors: Object.fromEntries(ids.map(i => [i, [1, 2, 3, 5, 6][i % 5]])) }   // never marble: it looks like an unmatched card
 }
 RENDER.match = () => {
   const g = state, set = MATCH_SETS[g.set], pages = Math.ceil(set.pairs.length / MATCH_PAGE)
