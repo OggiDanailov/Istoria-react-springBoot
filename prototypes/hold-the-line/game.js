@@ -2379,7 +2379,7 @@ function panDrop(i, lane) {
   }
   panHud()
 }
-const panFlash = k => panFlashHtml(`<span class="g">${gName(k)}</span>${k === 'apollo' ? ` = <span class="r">${rName(k)}</span>${pt(': the same name', ': същото име')}` : ` = <span class="r">${rName(k)}</span>`}<small>${pt('god of ', 'бог на ')}${godOf(k)}</small>`)
+const panFlash = k => panFlashHtml(`<span class="g">${gName(k)}</span>${k === 'apollo' ? ` = <span class="r">${rName(k)}</span>${pt(': the same name', ': същото име')}` : ` = <span class="r">${rName(k)}</span>`}<small>${DEITY_LOOK[k]?.female ? pt('goddess of ', 'богиня на ') : pt('god of ', 'бог на ')}${godOf(k)}</small>`)
 function panFlashHtml(html) {
   const el = $('pan-flash'); if (!el) return
   el.innerHTML = html; el.hidden = false
@@ -2939,5 +2939,7 @@ function unmount() {
   clearTimeout(bannerTimer); window.removeEventListener('resize', layout); window.removeEventListener('resize', panLayout); panActive = false; P = null
   sroot.innerHTML = ''
 }
-return { mount, unmount, armyFor, LEVELS, debug: { get P() { return P }, panStart, panDrop, panUpdate, fallStart, fallUpdate, fallTo, fallDrop, fallMove, openPantheon, PAN_GODS, get G() { return G }, showBriefing, win, lose, paintIcons, foeTypes, place, collect, update, startLevel, beginBattle, armyFor, showMap, LEVELS, UNITS, FOES, progress } }
+// the gods' drawings and texts, for the Pantheon in the Ave Caesar chronicle
+const gods = { list: PAN_GODS, female: k => !!DEITY_LOOK[k]?.female, draw: (c, k, T, o = {}) => drawDeity(c, k, T, !!o.greek, o) }
+return { mount, unmount, armyFor, LEVELS, gods, debug: { get P() { return P }, panStart, panDrop, panUpdate, fallStart, fallUpdate, fallTo, fallDrop, fallMove, openPantheon, PAN_GODS, get G() { return G }, showBriefing, win, lose, paintIcons, foeTypes, place, collect, update, startLevel, beginBattle, armyFor, showMap, LEVELS, UNITS, FOES, progress } }
 })()

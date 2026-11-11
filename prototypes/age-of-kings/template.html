@@ -268,6 +268,25 @@ button:focus-visible { outline: 3px solid var(--ochre); outline-offset: 2px; }
 .kf dd { margin: 0; font-size: 14.5px; line-height: 1.4; }
 .kf-read { border: none; background: none; color: #8e2b22; font-weight: 800; font-size: 13px; padding: 0 2px; text-decoration: underline; text-underline-offset: 2px; }
 .ctable { width: 100%; border-collapse: collapse; margin: 4px 0 14px; font-size: 14px; }
+/* the Pantheon above the gods' table */
+.pantheon { margin: 6px 0 14px; padding: 12px; border-radius: 16px; background: #fbf3e4; border: 2px solid #d9caa8; display: grid; gap: 8px; max-width: 560px; }
+.pn-head { display: flex; justify-content: space-between; align-items: baseline; }
+.pn-head b { font-family: var(--display); font-weight: 400; font-size: 20px; }
+.pn-count { font-size: 12px; font-weight: 800; color: #8e2b22; font-variant-numeric: tabular-nums; }
+.pn-stage { position: relative; }
+.pn-stage canvas { display: block; width: 100%; height: 190px; border-radius: 12px; touch-action: pan-y; cursor: pointer; }
+.pn-tip { position: absolute; left: 10px; top: 8px; font-size: 11.5px; font-weight: 800; color: #3b2a1c; background: rgba(251, 243, 228, .85); border-radius: 999px; padding: 3px 9px; pointer-events: none; }
+.pn-text p { margin: 0 0 4px; }
+.pn-names { font-size: 20px; font-weight: 900; }
+.pn-names .g { color: #2f5f9a; } .pn-names .r { color: #8e2b22; } .pn-names .eq { color: #8a7a6a; }
+.pn-names small { display: block; font-size: 12.5px; font-weight: 700; color: #6b5d50; }
+.pn-of { font-weight: 800; color: #3b2a1c; }
+.pn-clue { color: #4a3d33; font-style: italic; }
+.pn-nav { display: flex; align-items: center; justify-content: center; gap: 8px; }
+.pn-nav .ghost { min-height: 38px; }
+.pn-dots { display: flex; flex-wrap: nowrap; justify-content: center; gap: 4px; }
+.pn-dots button { flex: none; width: 10px; height: 10px; padding: 0; border-radius: 50%; border: 1.5px solid #8e2b22; background: transparent; cursor: pointer; }
+.pn-dots button.on { background: #8e2b22; }
 .ctable th, .ctable td { text-align: left; padding: 5px 8px; border-bottom: 1px solid #e2d6bf; vertical-align: top; }
 .ctable th { font-size: 12px; text-transform: uppercase; letter-spacing: .06em; color: #8e2b22; border-bottom: 2px solid #d9caa8; }
 .ctable td:first-child { font-weight: 700; }
@@ -811,6 +830,7 @@ function openSheet(title, html, focusId) {
   body.innerHTML = html
   sheet.hidden = false
   body.scrollTop = 0
+  body.querySelectorAll('[data-pantheon]').forEach(mountPantheonCard)
   document.getElementById('sheet-close').focus()
   if (focusId) {
     const sec = body.querySelector(`[data-sec="${focusId}"]`)
@@ -825,11 +845,91 @@ function paragraphHtml(p) {
   p = p.trim()
   if (!p.startsWith('|')) return `<p>${inline(p)}</p>`
   const [head, ...rows] = p.split('\n').filter(l => !/^\|[\s|:-]+\|$/.test(l.trim()))
-  return `<table class="ctable"><thead><tr>${cells(head).map(c => `<th>${c}</th>`).join('')}</tr></thead><tbody>${rows.map(r => `<tr>${cells(r).map(c => `<td>${c}</td>`).join('')}</tr>`).join('')}</tbody></table>`
+  const gods = /^\|\s*(Roman|Римски)\s*\|\s*(Greek|Гръцки)/.test(head.trim()) && HoldTheLine.gods   // the table of the Roman and Greek gods
+  return `${gods ? '<div class="pantheon" data-pantheon></div>' : ''}<table class="ctable"><thead><tr>${cells(head).map(c => `<th>${c}</th>`).join('')}</tr></thead><tbody>${rows.map(r => `<tr>${cells(r).map(c => `<td>${c}</td>`).join('')}</tr>`).join('')}</tbody></table>`
 }
 const chronicleHtml = () => latinNote() + CHAPTER.map(s => `<section data-sec="${s.id}"><h3>${esc(s.title)}</h3>${(CH.chronicleMaps ?? []).filter(m => m.sec === s.id).map(chronicleMap).join('')}${s.body.split(/\n\s*\n/).map(paragraphHtml).join('')}</section>`).join('') +
   `<p class="sources">Sources: Wikipedia, ${CH.sources.map(t => `“${esc(t)}”`).join(', ')} · CC BY-SA 4.0</p>`
 const openChronicle = focusId => openSheet(CH.title, chronicleHtml(), focusId)
+// ---------- the Pantheon in the chronicle: the Greek and Roman twins, one pair at a time ----------
+// The Greek god comes in as a marble statue, its Roman twin in colour beside it; tap the statue and it takes on its
+// colour and symbol: the twins shared them. Arrows, a swipe or the dots move between the 15 pairs; Play shows them all.
+function mountPantheonCard(el) {
+  const list = HoldTheLine.gods.list, L = LANG === 'bg' ? 'bg' : 'en', n = list.length
+  const t = (en, bg) => LANG === 'bg' ? bg : en
+  let i = 0, shown = performance.now(), turned = null, timer = null
+  el.innerHTML = `<div class="pn-head"><b>${t('The twin gods', 'Боговете близнаци')}</b><span class="pn-count"></span></div>
+    <div class="pn-stage"><canvas aria-label="${t('A Greek god and its Roman twin', 'Гръцки бог и неговият римски близнак')}"></canvas><span class="pn-tip">${t('Tap the statue', 'Натиснете статуята')}</span></div>
+    <div class="pn-text" aria-live="polite"><p class="pn-names"></p><p class="pn-of"></p><p class="pn-clue"></p></div>
+    <div class="pn-nav"><button class="ghost" data-pn="prev" aria-label="${t('Previous pair', 'Предишна двойка')}">◀</button>
+      <div class="pn-dots">${list.map((g, j) => `<button data-dot="${j}" aria-label="${g[L][0]} · ${g[L][1]}"></button>`).join('')}</div>
+      <button class="ghost" data-pn="next" aria-label="${t('Next pair', 'Следваща двойка')}">▶</button></div>
+    <div class="pn-nav"><button class="ghost pn-play" data-pn="play">▶ ${t('Show them all', 'Покажи всички')}</button></div>`
+  const cv = el.querySelector('canvas'), ctx = cv.getContext('2d')
+  const stop = () => { clearInterval(timer); timer = null; el.querySelector('.pn-play').textContent = '▶ ' + t('Show them all', 'Покажи всички') }
+  function show(j) {
+    i = (j + n) % n; shown = performance.now(); turned = null
+    const g = list[i][L]
+    el.querySelector('.pn-count').textContent = `${i + 1} / ${n}`
+    el.querySelector('.pn-names').innerHTML = `<span class="g">${g[1]}</span> <span class="eq">=</span> <span class="r">${g[0]}</span>${g[0] === g[1] ? ` <small>${t('the same name in both languages', 'същото име и на двата езика')}</small>` : ''}`
+    const she = HoldTheLine.gods.female(list[i].k)
+    el.querySelector('.pn-of').textContent = she ? t(`Goddess of ${g[2]}.`, `Богиня на ${g[2]}.`) : t(`God of ${g[2]}.`, `Бог на ${g[2]}.`)
+    el.querySelector('.pn-clue').textContent = list[i].clue[L === 'bg' ? 1 : 0]
+    el.querySelectorAll('[data-dot]').forEach(d => d.classList.toggle('on', +d.dataset.dot === i))
+    el.querySelector('.pn-tip').hidden = false
+  }
+  el.querySelector('[data-pn="prev"]').addEventListener('click', () => { stop(); show(i - 1) })
+  el.querySelector('[data-pn="next"]').addEventListener('click', () => { stop(); show(i + 1) })
+  el.querySelectorAll('[data-dot]').forEach(d => d.addEventListener('click', () => { stop(); show(+d.dataset.dot) }))
+  el.querySelector('[data-pn="play"]').addEventListener('click', e => {
+    if (timer) return stop()
+    e.currentTarget.textContent = '❚❚ ' + t('Pause', 'Пауза')
+    turned = performance.now(); timer = setInterval(() => { show(i + 1); setTimeout(() => { if (timer) turned = performance.now() }, 1400) }, 4200)
+  })
+  // tap the statue to turn it; swipe to move between the pairs
+  let down = null
+  cv.addEventListener('pointerdown', e => { down = { x: e.clientX, y: e.clientY } })
+  cv.addEventListener('pointerup', e => {
+    if (!down) return
+    const dx = e.clientX - down.x; down = null
+    if (Math.abs(dx) > 40) { stop(); return show(i + (dx < 0 ? 1 : -1)) }
+    turned = turned ? null : performance.now(); el.querySelector('.pn-tip').hidden = true
+  })
+  function frame(now) {
+    if (!el.isConnected) { clearInterval(timer); return }
+    const dpr = Math.min(2, window.devicePixelRatio || 1), W = cv.clientWidth, H = cv.clientHeight
+    if (cv.width !== Math.round(W * dpr)) { cv.width = Math.round(W * dpr); cv.height = Math.round(H * dpr) }
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0); ctx.clearRect(0, 0, W, H)
+    const sky = ctx.createLinearGradient(0, 0, 0, H); sky.addColorStop(0, '#a9cbe9'); sky.addColorStop(0.62, '#e8eef2'); sky.addColorStop(0.62, '#e2d4b6'); sky.addColorStop(1, '#cdb994')
+    ctx.fillStyle = sky; ctx.fillRect(0, 0, W, H)
+    ctx.fillStyle = 'rgba(255,255,255,.9)'
+    for (let c = 0; c < 4; c++) { const x = ((c * 140 + now / 60) % (W + 120)) - 60; ctx.beginPath(); ctx.ellipse(x, H * 0.18 + (c % 2) * 14, 34, 11, 0, 0, Math.PI * 2); ctx.fill() }
+    const k = list[i].k, g = list[i][L], p = Math.min(1, (now - shown) / 550), ease = 1 - Math.pow(1 - p, 3)
+    const s = Math.min(H / 105, W / 170), floor = H * 0.8, T = now / 1000
+    const turn = turned ? Math.min(1, (now - turned) / 600) : 0
+    // the Greek statue slides in from the left, the Roman god from the right
+    const gx = W * 0.3 - (1 - ease) * W * 0.4, rx = W * 0.7 + (1 - ease) * W * 0.4
+    ctx.save(); ctx.globalAlpha = ease; ctx.translate(gx, floor); ctx.scale(s, s)
+    ctx.globalAlpha = ease * (1 - turn); HoldTheLine.gods.draw(ctx, k, T, { greek: true, marble: true, plain: true, name: g[1] })
+    if (turn > 0) { ctx.globalAlpha = ease * turn; HoldTheLine.gods.draw(ctx, k, T, { greek: true, name: g[1] }) }
+    ctx.restore()
+    ctx.save(); ctx.globalAlpha = ease; ctx.translate(rx, floor); ctx.scale(s, s)
+    HoldTheLine.gods.draw(ctx, k, T, { name: g[0], anim: turn > 0.5 ? 1 : 0 }); ctx.restore()
+    // the link between the twins: an equals sign, and a ring of laurel when the statue turns
+    if (p >= 1) {
+      ctx.fillStyle = '#8e2b22'; ctx.font = `900 ${Math.round(24 * s / 1.6)}px Nunito, system-ui, sans-serif`; ctx.textAlign = 'center'; ctx.fillText('=', W / 2, floor - 30 * s)
+    }
+    if (turn > 0 && turn < 1) {
+      ctx.save(); ctx.globalAlpha = 1 - turn; ctx.strokeStyle = '#5f8a3a'; ctx.lineWidth = 3
+      const r = (14 + turn * 50) * s / 1.6
+      ctx.beginPath(); ctx.arc(gx, floor - 30 * s, r, 0, Math.PI * 2); ctx.stroke()
+      ctx.fillStyle = '#7aa64a'; for (let j = 0; j < 10; j++) { const an = j * Math.PI / 5 + turn * 2; ctx.beginPath(); ctx.ellipse(gx + Math.cos(an) * r, floor - 30 * s + Math.sin(an) * r, 4, 2, an, 0, Math.PI * 2); ctx.fill() }
+      ctx.restore()
+    }
+    requestAnimationFrame(frame)
+  }
+  show(0); requestAnimationFrame(frame)
+}
 // ---------- maps in the chronicle ----------
 // Drawn from the chapter's maps.json: a region map (coast, Tiber, towns, peoples, far-away places as arrows at the
 // edge) or a city map (hills, river, landmarks). Tap to enlarge.
