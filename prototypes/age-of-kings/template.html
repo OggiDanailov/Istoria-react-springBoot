@@ -287,6 +287,15 @@ button:focus-visible { outline: 3px solid var(--ochre); outline-offset: 2px; }
 .pn-dots { display: flex; flex-wrap: nowrap; justify-content: center; gap: 4px; }
 .pn-dots button { flex: none; width: 10px; height: 10px; padding: 0; border-radius: 50%; border: 1.5px solid #8e2b22; background: transparent; cursor: pointer; }
 .pn-dots button.on { background: #8e2b22; }
+/* the seven kings */
+.kg-steps { display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); gap: 3px; }
+.kg-steps button { display: grid; justify-items: center; gap: 1px; padding: 4px 1px; border-radius: 8px; border: 1.5px solid #d9caa8; background: #fff8ea; color: #3b2a1c; cursor: pointer; font: inherit; min-width: 0; }
+.kg-steps button b { font-family: var(--display); font-weight: 400; font-size: 15px; color: #8e2b22; }
+.kg-steps button span { font-size: 9px; letter-spacing: -.02em; font-weight: 800; max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.kg-steps button.on { background: #8e2b22; border-color: #8e2b22; color: #fbf3e4; }
+.kg-steps button.on b { color: #f3d48a; }
+.kg-meta { font-size: 13px; font-weight: 800; color: #8e2b22; letter-spacing: .02em; }
+.kg-facts { margin: 4px 0 0; padding-left: 18px; display: grid; gap: 3px; font-size: 14.5px; line-height: 1.4; }
 .ctable th, .ctable td { text-align: left; padding: 5px 8px; border-bottom: 1px solid #e2d6bf; vertical-align: top; }
 .ctable th { font-size: 12px; text-transform: uppercase; letter-spacing: .06em; color: #8e2b22; border-bottom: 2px solid #d9caa8; }
 .ctable td:first-child { font-weight: 700; }
@@ -831,6 +840,7 @@ function openSheet(title, html, focusId) {
   sheet.hidden = false
   body.scrollTop = 0
   body.querySelectorAll('[data-pantheon]').forEach(mountPantheonCard)
+  body.querySelectorAll('[data-kings]').forEach(mountKingsCard)
   document.getElementById('sheet-close').focus()
   if (focusId) {
     const sec = body.querySelector(`[data-sec="${focusId}"]`)
@@ -848,9 +858,103 @@ function paragraphHtml(p) {
   const gods = /^\|\s*(Roman|Римски)\s*\|\s*(Greek|Гръцки)/.test(head.trim()) && HoldTheLine.gods   // the table of the Roman and Greek gods
   return `${gods ? '<div class="pantheon" data-pantheon></div>' : ''}<table class="ctable"><thead><tr>${cells(head).map(c => `<th>${c}</th>`).join('')}</tr></thead><tbody>${rows.map(r => `<tr>${cells(r).map(c => `<td>${c}</td>`).join('')}</tr>`).join('')}</tbody></table>`
 }
-const chronicleHtml = () => latinNote() + CHAPTER.map(s => `<section data-sec="${s.id}"><h3>${esc(s.title)}</h3>${(CH.chronicleMaps ?? []).filter(m => m.sec === s.id).map(chronicleMap).join('')}${s.body.split(/\n\s*\n/).map(paragraphHtml).join('')}</section>`).join('') +
+const chronicleHtml = () => latinNote() + CHAPTER.map(s => `<section data-sec="${s.id}"><h3>${esc(s.title)}</h3>${(CH.chronicleMaps ?? []).filter(m => m.sec === s.id).map(chronicleMap).join('')}${s.body.split(/\n\s*\n/).map(paragraphHtml).join('')}${CH.id === 'kingdom' && s.id === 'birth-of-the-republic' ? '<div class="pantheon kings" data-kings></div>' : ''}</section>`).join('') +
   `<p class="sources">Sources: Wikipedia, ${CH.sources.map(t => `“${esc(t)}”`).join(', ')} · CC BY-SA 4.0</p>`
 const openChronicle = focusId => openSheet(CH.title, chronicleHtml(), focusId)
+// ---------- the seven kings in the Kingdom's chronicle, one at a time ----------
+// From the chronicle: each king's traditional dates, origin, a nickname and three facts; a figure with something to
+// remember him by. A last slide shows all seven in a row.
+const KINGS = [
+  { n: 'I', look: { robe: '#c9a0a8', hair: '#5a3a22', beard: true, crown: 'helmet', crest: '#c0392b', item: 'spear', shield: '#8e2b22' },
+    en: { name: 'Romulus', years: '753–716 BC', from: 'Latin', nick: 'The founder', facts: ['Founded Rome on the Palatine and gave it its first institutions.', 'Chose 100 “fathers” (patres): the first Senate.', 'Vanished in a storm; Romans worshipped him as the god Quirinus.'] },
+    bg: { name: 'Ромул', years: '753–716 г. пр.н.е.', from: 'латин', nick: 'Основателят', facts: ['Основал Рим на Палатина и му дал първите институции.', 'Избрал 100 „бащи“ (patres): първия Сенат.', 'Изчезнал в буря; римляните го почитали като бога Квирин.'] } },
+  { n: 'II', look: { robe: '#ece4d0', hair: '#e8e4da', beard: true, crown: 'wreath', item: 'flame' },
+    en: { name: 'Numa Pompilius', years: '715–673 BC', from: 'Sabine', nick: 'The king of peace and prayer', facts: ['Closed the doors of the temple of Janus: Rome was at peace.', 'Founded the Vestal Virgins and the office of Pontifex Maximus.', 'Added January and February to the calendar.'] },
+    bg: { name: 'Нума Помпилий', years: '715–673 г. пр.н.е.', from: 'сабинец', nick: 'Царят на мира и молитвата', facts: ['Затворил вратите на храма на Янус: Рим бил в мир.', 'Основал ордена на весталките и длъжността на върховния жрец.', 'Добавил януари и февруари към календара.'] } },
+  { n: 'III', look: { robe: '#b8786a', hair: '#2e1d10', beard: true, crown: 'helmet', crest: '#e0a63a', item: 'sword', shield: '#6e1f18' },
+    en: { name: 'Tullus Hostilius', years: '673–642 BC', from: 'Roman', nick: 'The warrior', facts: ['Destroyed Alba Longa and moved its people to Rome.', 'Built the senate house, the Curia Hostilia.', 'Scorned the gods; legend says Jupiter struck him with lightning.'] },
+    bg: { name: 'Тул Хостилий', years: '673–642 г. пр.н.е.', from: 'римлянин', nick: 'Воинът', facts: ['Разрушил Алба Лонга и преселил жителите ѝ в Рим.', 'Построил сградата на Сената – Curia Hostilia.', 'Презирал боговете; легендата разказва, че Юпитер го поразил с мълния.'] } },
+  { n: 'IV', look: { robe: '#9fb7a0', hair: '#6b4a2b', beard: true, crown: 'diadem', item: 'hammer' },
+    en: { name: 'Ancus Marcius', years: '642–617 BC', from: 'Sabine, Numa’s grandson', nick: 'The builder of bridge and port', facts: ['Built the first bridge over the Tiber, the Pons Sublicius.', 'Founded Ostia, Rome’s port at the mouth of the river.', 'Settled conquered Latins on the Aventine: the beginning of the plebs.'] },
+    bg: { name: 'Анк Марций', years: '642–617 г. пр.н.е.', from: 'сабинец, внук на Нума', nick: 'Строителят на моста и пристанището', facts: ['Построил първия мост над Тибър – Pons Sublicius.', 'Основал Остия – пристанището на Рим в устието на реката.', 'Заселил покорените латини на Авентина: началото на плебеите.'] } },
+  { n: 'V', look: { robe: '#d9b45a', hair: '#3a2414', beard: true, crown: 'diadem', item: 'sceptre' },
+    en: { name: 'Tarquinius Priscus', years: '616–579 BC', from: 'Etruscan', nick: 'The first Etruscan king', facts: ['Drained the valley with the Great Sewer (Cloaca Maxima) and began the Forum.', 'Laid out the Circus Maximus for chariot races.', 'Celebrated the first triumph.'] },
+    bg: { name: 'Тарквиний Приск', years: '616–579 г. пр.н.е.', from: 'етруск', nick: 'Първият етруски цар', facts: ['Отводнил долината с Големия канал (Cloaca Maxima) и поставил началото на Форума.', 'Положил основите на Circus Maximus за надбягвания с колесници.', 'Отпразнувал първия триумф.'] } },
+  { n: 'VI', look: { robe: '#a7b7cf', hair: '#4a2f1e', beard: true, crown: 'wreath', item: 'scroll' },
+    en: { name: 'Servius Tullius', years: '578–535 BC', from: 'Etruscan, a slave’s son', nick: 'The counter of citizens', facts: ['Held the first census and sorted citizens into five classes by wealth.', 'Divided the city into four districts (tribes).', 'Killed in a plot by his daughter Tullia and her husband Tarquin.'] },
+    bg: { name: 'Сервий Тулий', years: '578–535 г. пр.н.е.', from: 'етруск, син на робиня', nick: 'Броителят на гражданите', facts: ['Провел първото преброяване и разделил гражданите на пет класа според богатството им.', 'Разделил града на четири района (триби).', 'Убит при заговор на дъщеря си Тулия и съпруга ѝ Тарквиний.'] } },
+  { n: 'VII', look: { robe: '#5a3a4a', hair: '#1f1a1a', beard: true, crown: 'diadem', item: 'sword' },
+    en: { name: 'Tarquin the Proud', years: '535–509 BC', from: 'Etruscan', nick: 'The tyrant', facts: ['Seized power by murdering Servius Tullius.', 'Finished the great temple of Jupiter on the Capitol.', 'Driven out in 509 BC: Rome became a Republic.'] },
+    bg: { name: 'Тарквиний Горди', years: '535–509 г. пр.н.е.', from: 'етруск', nick: 'Тиранинът', facts: ['Завзел властта, като убил Сервий Тулий.', 'Довършил големия храм на Юпитер на Капитолия.', 'Прогонен през 509 г. пр.н.е.: Рим станал република.'] } },
+]
+const KING_SHORT = { en: ['Romulus', 'Numa', 'Tullus', 'Ancus', 'Priscus', 'Servius', 'Tarquin'], bg: ['Ромул', 'Нума', 'Тул', 'Анк', 'Приск', 'Сервий', 'Горди'] }   // the strip's labels: the two Tarquins apart
+function mountKingsCard(el) {
+  if (!HoldTheLine.gods) return
+  const L = LANG === 'bg' ? 'bg' : 'en', t = (en, bg) => LANG === 'bg' ? bg : en, n = KINGS.length
+  let i = 0, shown = performance.now(), timer = null
+  el.innerHTML = `<div class="pn-head"><b>${t('The seven kings', 'Седемте царе')}</b><span class="pn-count"></span></div>
+    <div class="pn-stage"><canvas aria-label="${t('The kings of Rome, one at a time', 'Царете на Рим, един по един')}"></canvas></div>
+    <div class="kg-steps">${KINGS.map((k, j) => `<button data-king="${j}" aria-label="${k[L].name}"><b>${k.n}</b><span>${KING_SHORT[L][j]}</span></button>`).join('')}<button data-king="${n}" class="all" aria-label="${t('All seven', 'Всичките седем')}"><b>★</b><span>${t('All', 'Всички')}</span></button></div>
+    <div class="pn-text kg-text" aria-live="polite"></div>
+    <div class="pn-nav"><button class="ghost" data-pn="prev" aria-label="${t('Previous king', 'Предишен цар')}">◀</button><button class="ghost pn-play" data-pn="play"></button><button class="ghost" data-pn="next" aria-label="${t('Next king', 'Следващ цар')}">▶</button></div>`
+  const cv = el.querySelector('canvas'), ctx = cv.getContext('2d'), play = el.querySelector('.pn-play')
+  const stop = () => { clearInterval(timer); timer = null; play.textContent = '▶ ' + t('One after another', 'Един след друг') }
+  function show(j) {
+    i = Math.max(0, Math.min(n, j)); shown = performance.now()
+    el.querySelector('.pn-count').textContent = i < n ? `${i + 1} / ${n}` : ''
+    el.querySelectorAll('[data-king]').forEach(b => b.classList.toggle('on', +b.dataset.king === i))
+    const box = el.querySelector('.kg-text')
+    if (i === n) box.innerHTML = `<p class="pn-names">${t('All seven kings', 'Всичките седем царе')}</p>
+      <p class="pn-clue">${t('Romulus founded, Numa prayed, Tullus fought, Ancus built; then three Etruscans: Priscus built big, Servius counted, and Tarquin the Proud ruled by fear, until Rome threw out its kings in 509 BC.', 'Ромул основал, Нума се молел, Тул воювал, Анк строил; после трима етруски: Приск строил нашироко, Сервий преброил, а Тарквиний Горди управлявал чрез страх – докато Рим не прогонил царете си през 509 г. пр.н.е.')}</p>`
+    else { const k = KINGS[i][L]; box.innerHTML = `<p class="pn-names"><span class="r">${KINGS[i].n} · ${k.name}</span></p>
+      <p class="kg-meta">${k.years} · ${k.from}</p><p class="pn-of">${k.nick}</p><ul class="kg-facts">${k.facts.map(f => `<li>${esc(f)}</li>`).join('')}</ul>` }
+  }
+  el.querySelector('[data-pn="prev"]').addEventListener('click', () => { stop(); show(i - 1) })
+  el.querySelector('[data-pn="next"]').addEventListener('click', () => { stop(); show(i + 1) })
+  el.querySelectorAll('[data-king]').forEach(b => b.addEventListener('click', () => { stop(); show(+b.dataset.king) }))
+  play.addEventListener('click', () => {
+    if (timer) return stop()
+    play.textContent = '❚❚ ' + t('Pause', 'Пауза')
+    if (i >= n) show(0)
+    timer = setInterval(() => { if (i >= n) return stop(); show(i + 1) }, 5200)
+  })
+  let down = null
+  cv.addEventListener('pointerdown', e => { down = e.clientX })
+  cv.addEventListener('pointerup', e => { if (down == null) return; const dx = e.clientX - down; down = null; if (Math.abs(dx) > 40) { stop(); show(i + (dx < 0 ? 1 : -1)) } })
+  function frame(now) {
+    if (!el.isConnected) { clearInterval(timer); return }
+    const dpr = Math.min(2, window.devicePixelRatio || 1), W = cv.clientWidth, H = cv.clientHeight
+    if (cv.width !== Math.round(W * dpr)) { cv.width = Math.round(W * dpr); cv.height = Math.round(H * dpr) }
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0); ctx.clearRect(0, 0, W, H)
+    // the Forum at dusk: sky, a row of columns, the paving
+    const sky = ctx.createLinearGradient(0, 0, 0, H); sky.addColorStop(0, '#e9c79a'); sky.addColorStop(0.62, '#f4e6cf'); sky.addColorStop(0.62, '#d8c6a2'); sky.addColorStop(1, '#c4ae86')
+    ctx.fillStyle = sky; ctx.fillRect(0, 0, W, H)
+    ctx.fillStyle = 'rgba(160, 130, 95, .28)'
+    for (let x = 18; x < W; x += 46) { ctx.fillRect(x, H * 0.2, 12, H * 0.42); ctx.fillRect(x - 3, H * 0.18, 18, 5) }
+    ctx.fillRect(0, H * 0.15, W, 6)
+    const T = now / 1000, p = Math.min(1, (now - shown) / 550), ease = 1 - Math.pow(1 - p, 3), floor = H * 0.84
+    if (i < n) {   // one king, sliding in, with his numeral
+      const s = Math.min(H / 92, W / 140), x = W / 2 + (1 - ease) * W * 0.35
+      ctx.save(); ctx.globalAlpha = ease; ctx.translate(x, floor); ctx.scale(s, s)
+      HoldTheLine.gods.draw(ctx, 'king', T, { look: KINGS[i].look, halo: false, name: KINGS[i][L].name, anim: Math.sin(T * 2) > 0.6 ? 1 : 0 })
+      ctx.restore()
+      ctx.globalAlpha = ease; ctx.fillStyle = '#8e2b22'; ctx.font = `400 ${Math.round(H * 0.24)}px Marcellus, Georgia, serif`; ctx.textAlign = 'left'
+      ctx.fillText(KINGS[i].n, 14, H * 0.32); ctx.globalAlpha = 1
+    } else {   // all seven in a row
+      const cw = W / n, s = Math.min(cw / 34, H / 110)
+      KINGS.forEach((k, j) => {
+        const a = Math.max(0, Math.min(1, (now - shown) / 220 - j * 0.6))
+        ctx.save(); ctx.globalAlpha = a; ctx.translate(cw * (j + 0.5), floor - (1 - a) * 20); ctx.scale(s, s)
+        HoldTheLine.gods.draw(ctx, 'king', T, { look: k.look, halo: false, tag: false }); ctx.restore()
+        ctx.globalAlpha = a; ctx.fillStyle = '#8e2b22'; ctx.font = `800 ${Math.round(Math.min(15, cw * 0.32))}px Nunito, system-ui, sans-serif`; ctx.textAlign = 'center'
+        ctx.fillText(k.n, cw * (j + 0.5), floor + 15); ctx.globalAlpha = 1
+      })
+    }
+    requestAnimationFrame(frame)
+  }
+  stop(); show(0); requestAnimationFrame(frame)
+}
+
 // ---------- the Pantheon in the chronicle: the Roman and Greek twins, one pair at a time ----------
 // The Roman god (the one to learn) comes in as a marble statue, its Greek twin in colour beside it; tap the statue and
 // it takes on its colour and symbol: the twins shared them. Arrows, a swipe or the dots move between the 15 pairs; Play shows them all.

@@ -437,13 +437,13 @@ Object.assign(DEITY_LOOK, {
 })
 // a god or goddess: feet at 0,0 like the soldiers. Greek gods (enemies) wear a blue border and carry a name tag
 function drawDeity(c, type, T, greek, o = {}) {
-  let L = DEITY_LOOK[type]; const walk = o.walk ?? 0, act = o.anim > 0, A = c.globalAlpha
+  let L = o.look ?? DEITY_LOOK[type]; const walk = o.walk ?? 0, act = o.anim > 0, A = c.globalAlpha
   // Pantheon Siege: the Greek gods come as marble statues; the ordinary ones carry nothing, a boss shows its symbol
   if (o.marble) L = { ...L, robe: '#efede7', hair: '#d4d0c6', crest: '#d4d0c6', shield: L.shield && '#dcd8ce', ...(o.plain ? { item: null, crown: null, shield: null } : {}) }
   const SKIN = o.marble ? '#e8e4dc' : SKIN_TONE, SKIN_SHADE = o.marble ? '#cfcabf' : SKIN_TONE_SHADE
   if (greek) { c.fillStyle = 'rgba(255, 255, 255, .9)'; for (const [x, y, r] of [[-9, -1, 6], [0, 0.5, 7.5], [9, -1, 6]]) { c.beginPath(); c.ellipse(x, y, r, r * 0.5, 0, 0, TAU); c.fill() } }   // down from Olympus on a cloud
   else shadow(c, 13, 4)
-  c.globalAlpha = 0.5 * A; c.drawImage(glow(greek ? '170, 205, 240' : '250, 215, 120'), -22, -70, 44, 44); c.globalAlpha = A   // a halo
+  if (o.halo !== false) { c.globalAlpha = 0.5 * A; c.drawImage(glow(greek ? '170, 205, 240' : '250, 215, 120'), -22, -70, 44, 44); c.globalAlpha = A }   // a halo (gods only)
   if (L.shield) { c.fillStyle = L.shield; c.strokeStyle = '#5a3a22'; c.lineWidth = 1.4; c.beginPath(); c.arc(-13, -24, 8.5, 0, TAU); c.fill(); c.stroke(); c.fillStyle = 'rgba(255,255,255,.35)'; c.beginPath(); c.arc(-13, -24, 3, 0, TAU); c.fill() }
   // the long robe, and its border
   c.fillStyle = L.robe; c.beginPath(); c.moveTo(-9, -36); c.lineTo(9, -36); c.lineTo(12 + walk, -2); c.lineTo(-12 + walk, -2); c.closePath(); c.fill()
@@ -472,6 +472,7 @@ function drawDeity(c, type, T, greek, o = {}) {
   if (L.item === 'grapes') { c.fillStyle = '#c9a24a'; c.beginPath(); c.moveTo(hx - 6, hy - 10); c.lineTo(hx + 6, hy - 10); c.lineTo(hx + 2, hy - 3); c.lineTo(hx - 2, hy - 3); c.fill(); c.fillRect(hx - 1, hy - 3, 2, 5); c.fillRect(hx - 4, hy + 2, 8, 1.6); c.fillStyle = '#6b2f6b'; for (const [dx, dy] of [[-3, -13], [0, -13], [3, -13], [-1.5, -16], [1.5, -16], [0, -19]]) { c.beginPath(); c.arc(hx + dx, hy + dy, 1.9, 0, TAU); c.fill() } }
   if (L.item === 'bident') { line(c, hx, hy + 18, hx, hy - 30, '#3a3a3a', 2); line(c, hx - 4, hy - 28, hx + 4, hy - 28, '#6a6a6a', 1.8); for (const dx of [-4, 4]) line(c, hx + dx, hy - 28, hx + dx, hy - 38, '#6a6a6a', 1.8) }
   if (L.item === 'sickle') { line(c, hx, hy + 6, hx, hy - 8, '#6b4a2b', 2.4); c.strokeStyle = '#bfc7cc'; c.lineWidth = 2.4; c.beginPath(); c.arc(hx + 6, hy - 8, 7, Math.PI, Math.PI * 1.9); c.stroke() }
+  if (L.item === 'scroll') { c.fillStyle = '#f2e6c4'; c.fillRect(hx - 2, hy - 16, 6, 14); c.fillStyle = '#c9a24a'; c.fillRect(hx - 3, hy - 17, 8, 2.5); c.fillRect(hx - 3, hy - 3.5, 8, 2.5) }
   if (L.item === 'wheat') { for (const dx of [-3, 0, 3]) { line(c, hx + dx * 0.4, hy + 6, hx + dx, hy - 18, '#b8902e', 1.4); c.fillStyle = '#e0b84a'; c.beginPath(); c.ellipse(hx + dx, hy - 20, 2, 4.5, 0, 0, TAU); c.fill() } }
   // head, hair, beard
   c.fillStyle = SKIN_SHADE; c.fillRect(-3, -40, 6, 5)
