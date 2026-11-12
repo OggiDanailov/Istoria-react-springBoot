@@ -358,15 +358,17 @@ const LEVELS = [
 let LEVEL = LEVELS[0]
 // What the chapter's test score buys for its battle (the user's table, Nov 11). Below 50% there is no battle (the app
 // sends the player back to the chronicle). 50%: no equites and almost no grain, a battle that can't really be won;
-// 60%: 2 equites and 70% of the grain, super hard; 70%: 3 equites and 85%; 80%: 4 equites and the battle's normal
+// 60%: 2 equites and 55% of the grain, super hard; 70%: 3 equites and 80%; 80%: 4 equites and the battle's normal
 // grain, a fair fight; 90%: 5 and 100%: 6 equites, with more grain. Veterans (free soldiers placed before the battle)
 // from 80%: 1, 2, 3; a medicus from 80%, an augur from 90%. The equites stand under the middle lanes and can be moved.
 const MEDICUS = { heals: 1, wait: 10 }, AUGUR = { seconds: 15, reload: 0.6, damage: 1.5 }
-const SCORE = { minGrain: 25, at80: 0, grain: [[50, 0.15], [60, 0.7], [70, 0.85], [80, 1], [90, 1.25], [100, 1.5]], sky: [12, 14] }
+const SCORE = { minGrain: 25, at80: 0, grain: [[50, 0.15], [60, 0.55], [70, 0.8], [80, 1], [90, 1.25], [100, 1.5]], sky: [12, 14] }
 const VET_ORDER = ['slinger', 'triarius', 'slinger', 'hastatus', 'slinger', 'triarius', 'slinger']
 const grainShare = score => { const g = SCORE.grain; if (score <= g[0][0]) return g[0][1]; for (let i = 1; i < g.length; i++) if (score <= g[i][0]) { const [a, fa] = g[i - 1], [b, fb] = g[i]; return fa + (fb - fa) * (score - a) / (b - a) } return g[g.length - 1][1] }
 // the user's table is for the Kingdom's five lanes; a wider field gets one more eques per extra lane, so the score always
 // leaves the same number of lanes unguarded (3 at 60%, 2 at 70%, 1 at 80%, none from 90%)
+// below 80% a poorly prepared army also faces a bolder enemy: more men in every wave (the user, Nov 12)
+const pressureFor = score => score >= 80 ? 1 : score >= 70 ? 1.08 : score >= 60 ? 1.15 : 1.2
 const equitesFor = (score, L = LEVEL) => score >= 60 ? Math.min(L.cols ?? 5, Math.floor(score / 10) - 4 + (L.cols ?? 5) - 5) : 0
 function armyFor(score, L = LEVEL) {
   if (L.pantheon) return { grain: 0, vets: {}, medicus: false, augur: false, gate: panGate(score) }   // Pantheon Siege: the strength of Rome's gate
@@ -1268,13 +1270,13 @@ let progress = { stars: {} }
 try { const saved = JSON.parse(localStorage.getItem(SAVE_KEY)); if (saved?.stars) progress = saved } catch {}
 const saveProgress = () => { try { localStorage.setItem(SAVE_KEY, JSON.stringify(progress)) } catch {} }
 const unlocked = () => true   // a prototype for testing: every battle is open
-function buildQueue() {
+function buildQueue(score = G?.score ?? quizScore) {
   const q = []
   let block = 0
   const LEADERS = ['chief', 'spartacus', 'flagship']
   for (const w of LEVEL.waves) {
     const gap = LEVEL.gap ?? (w.big ? 0.7 : 1.6), troops = w.foes.filter(t => !LEADERS.includes(t))
-    const extra = Math.round(troops.length * ((LEVEL.more ?? 1) - 1))   // a wider field needs more men to fill it
+    const extra = Math.round(troops.length * ((LEVEL.more ?? 1) * pressureFor(score) - 1))   // a wider field needs more men to fill it, and a weak test score brings more
     const foes = [...w.foes, ...Array.from({ length: extra }, (_, i) => troops[i % troops.length])]
     const t0 = w.t + (LEVEL.delay ?? 0)   // a later start: more time to build before the first waves
     foes.forEach((type, i) => {
@@ -1300,7 +1302,7 @@ function newGame(i = levelIndex, score = quizScore) {
     equites: equitesAt(army.equites),
     equitesTop: LEVEL.twoFronts ? Array.from({ length: COLS }, () => ({ state: 'ready', y: -0.55 })) : [],
     cool: Object.fromEntries(LEVEL.units.map(t => [t, { triarius: 15, caltrops: 20, shed: 10, pigs: 10 }[t] ?? 0])),
-    queue: buildQueue(), total: 0, spawned: 0, killed: 0, lost: 0, nextSky: 4, shake: 0,
+    queue: buildQueue(score), total: 0, spawned: 0, killed: 0, lost: 0, nextSky: 4, shake: 0,
     introduced: new Set(), selected: null, dismiss: false, hover: null, lastLane: -1, tips: {},
     hasMedicus: army.medicus, medicus: army.medicus ? MEDICUS.heals : 0, medicusWait: 0, heal: false,
     hasAugur: army.augur, augur: army.augur ? 1 : 0, blessUntil: -1,

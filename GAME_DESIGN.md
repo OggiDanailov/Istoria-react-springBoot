@@ -92,8 +92,9 @@ mistakes came from and the test. From 50% the score buys:
   2 at 70%, 1 at 80%, none from 90%). They start under the middle lanes; a lane without one is marked red in the camp,
   and the player drags a horseman along the camp to another lane, before or during the battle. An enemy through an
   unguarded lane (or one whose eques has charged) loses the battle.
-- **Starting grain**: a share of the battle's `start`: 15% at 50%, 70% at 60%, 85% at 70%, 100% at 80%, 125% at 90%,
-  150% at 100%.
+- **Starting grain**: a share of the battle's `start`: 15% at 50%, 55% at 60%, 80% at 70%, 100% at 80%, 125% at 90%,
+  150% at 100% (Nov 12: 60% was 70%, 70% was 85%; the user's daughter won the Volscian Raids at 60%).
+- **A bolder enemy below 80%**: every wave brings more men: +20% at 50%, +15% at 60%, +8% at 70% (Nov 12).
 - **Veterans** (free soldiers placed before the first enemy: slinger, triarius, slinger…): 1 at 80%, 2 at 90%, 3 at
   100%.
 
@@ -131,7 +132,8 @@ The code: `SCORE` and `armyFor()` in `prototypes/hold-the-line/game.js`; each ba
 
 Checked on Nov 11 with the scripted average player (bots.test.mjs), which now covers the red lanes first and moves an
 eques to a lane an enemy is nearing: at 50% lost within a minute and a half; at 60% always lost, but after a fight of
-2.5–3.5 minutes; at 70% mostly lost; at 80% won 10 of 12 runs of the five early battles and 19 of 21 later battles
+2.5–3.5 minutes; at 70% mostly lost; at 80% won 10 of 12 runs. After the Nov 12 tightening: at 60% even the strong
+player lost every run (Volscian Raids within 2 minutes; Lake Regillus by one enemy); at 70% about half; at 80% won 4 of 4 of the five early battles and 19 of 21 later battles
 (Zenobia and Adrianople, the hardest before too, still lost at 80%).
 
 ## 6. The battles (Hold the Line)
