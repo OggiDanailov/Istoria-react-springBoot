@@ -11,7 +11,7 @@ echo "1/3  Building the game..."
 "$NODE" build.mjs
 
 echo "2/3  Copying it to the server..."
-scp -q dist/play.html root@45.55.34.96:/root/ave-play-site.html
+scp dist/play.html root@45.55.34.96:/root/ave-play-site.html
 
 echo "3/3  Putting it in place..."
 ssh root@45.55.34.96 'mv /root/ave-play-site.html /root/ave-play/site/index.html'
