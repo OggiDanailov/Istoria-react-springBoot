@@ -1062,15 +1062,24 @@ function layout() {
   } else {
     avail = Math.min(game.clientWidth - 32, 480)
     const used = $('tray').offsetHeight + sroot.querySelector('.controls').offsetHeight + sroot.querySelector('.status').offsetHeight + $('banner').offsetHeight + 62 + top
-    maxH = Math.max(380, window.innerHeight - used)
+    maxH = Math.max(240, window.innerHeight - used)
   }
-  cell = Math.floor(Math.min(avail / COLS, maxH / (ROWS + APPROACH + CAMP)))
-  W = cell * COLS; H = Math.round(cell * (ROWS + APPROACH + CAMP)); k = cell / 72
+  const size = mh => {
+    cell = Math.floor(Math.min(avail / COLS, mh / (ROWS + APPROACH + CAMP)))
+    W = cell * COLS; H = Math.round(cell * (ROWS + APPROACH + CAMP)); k = cell / 72
+    canvas.style.width = W + 'px'; canvas.style.height = H + 'px'
+    wrap.style.width = (W + 6) + 'px'
+    for (const el of [sroot.querySelector('.status'), $('banner')]) el.style.width = WIDE.matches ? '' : (W + 6) + 'px'
+  }
+  size(maxH)
+  // on a small phone the battle must fit the screen: the field and cards don't scroll the page (they're for dragging),
+  // so whatever still sticks out below is taken off the field
+  if (!WIDE.matches) {
+    const over = Math.ceil(game.getBoundingClientRect().bottom + Math.max(0, window.scrollY) - window.innerHeight - (top > 0 ? 0 : 0))
+    if (over > 0) size(Math.max(200, H - over))
+  }
   dpr = Math.min(2, window.devicePixelRatio || 1)
   for (const cv of [canvas, bg]) { cv.width = Math.round(W * dpr); cv.height = Math.round(H * dpr) }
-  canvas.style.width = W + 'px'; canvas.style.height = H + 'px'
-  wrap.style.width = (W + 6) + 'px'
-  for (const el of [sroot.querySelector('.status'), $('banner')]) el.style.width = WIDE.matches ? '' : (W + 6) + 'px'
   paintField()
 }
 const LAWN = { pass: ['#7d9448', '#748b42'], adrianople: ['#b4a86a', '#aa9e61'], catalaunian: ['#a4ab5e', '#9aa157'], milvian: ['#94a856', '#8b9e4e'], dacia: ['#8a9d4f', '#819449'], forest: ['#6f8a45', '#67813f'], gods: ['#e6e0d0', '#dcd5c3'], lake: ['#94a856', '#8b9e4e'], hills: ['#93a252', '#89984b'], walls: ['#98a95a', '#8fa052'], mountains: ['#8a9d4f', '#819449'], river: ['#97aa58', '#8ea050'],
