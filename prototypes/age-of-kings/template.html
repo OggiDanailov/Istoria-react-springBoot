@@ -293,7 +293,8 @@ button:focus-visible { outline: 3px solid var(--ochre); outline-offset: 2px; }
 /* the seven kings */
 .allia .al-key { display: flex; gap: 6px; align-items: center; font-size: 12px; font-weight: 800; color: #3b2a1c; }
 .allia .al-key i { display: inline-block; width: 10px; height: 10px; border-radius: 50%; }
-.allia .al-key i.r { background: #b8322a; } .allia .al-key i.g { background: #2f5f9a; margin-left: 6px; }
+.allia .al-key { flex-wrap: wrap; justify-content: flex-end; row-gap: 2px; }
+.allia .al-key i { margin-left: 6px; }
 .allia .pn-stage canvas { height: 230px; cursor: default; }
 .al-cap { margin: 0; min-height: 3.2em; font-size: 14.5px; line-height: 1.4; }
 .al-cap b { color: #8e2b22; margin-right: 4px; font-variant-numeric: tabular-nums; }
@@ -852,7 +853,7 @@ function openSheet(title, html, focusId) {
   body.scrollTop = 0
   body.querySelectorAll('[data-pantheon]').forEach(mountPantheonCard)
   body.querySelectorAll('[data-kings]').forEach(mountKingsCard)
-  body.querySelectorAll('[data-allia]').forEach(mountAllia)
+  body.querySelectorAll('[data-replay]').forEach(el => mountReplay(el, el.dataset.replay))
   document.getElementById('sheet-close').focus()
   if (focusId) {
     const sec = body.querySelector(`[data-sec="${focusId}"]`)
@@ -873,107 +874,192 @@ function paragraphHtml(p) {
 // interactive pieces at the end of a chronicle section (mounted when the chronicle opens)
 const CHRONICLE_EXTRAS = {
   'kingdom:birth-of-the-republic': '<div class="pantheon kings" data-kings></div>',
-  'conflict-of-orders-resolution:battle-of-the-allia': '<div class="pantheon allia" data-allia></div>',
+  'conflict-of-orders-resolution:battle-of-the-allia': '<div class="pantheon allia" data-replay="allia"></div>',
+  'samnite-wars:caudine-forks': '<div class="pantheon allia" data-replay="caudine"></div>',
+  'samnite-wars:third-war-sentinum': '<div class="pantheon allia" data-replay="sentinum"></div>',
+  'final-conquest-of-italy:heraclea-and-asculum': '<div class="pantheon allia" data-replay="heraclea"></div>',
 }
 const chronicleHtml = () => latinNote() + CHAPTER.map(s => `<section data-sec="${s.id}"><h3>${esc(s.title)}</h3>${(CH.chronicleMaps ?? []).filter(m => m.sec === s.id).map(chronicleMap).join('')}${s.body.split(/\n\s*\n/).map(paragraphHtml).join('')}${CHRONICLE_EXTRAS[CH.id + ':' + s.id] ?? ''}</section>`).join('') +
   `<p class="sources">Sources: Wikipedia, ${CH.sources.map(t => `“${esc(t)}”`).join(', ')} · CC BY-SA 4.0</p>`
 const openChronicle = focusId => openSheet(CH.title, chronicleHtml(), focusId)
-// ---------- the battle of the Allia, replayed in dots (chapter 4's chronicle) ----------
-// After Livy, as the chronicle tells it: the Romans stretch a thin line from the Tiber to a hill, with their reserves on
-// the hill; Brennus strikes the hill first; panic runs along the line; the left wing is driven into the Tiber (many
-// drown, most survivors swim across to Veii); the right wing runs back to Rome. Five steps, about 18 seconds: each
-// step's caption needs time to be read (the user found 8 seconds too fast).
-function mountAllia(el) {
-  const t = (en, bg) => LANG === 'bg' ? bg : en
-  const STEPS = [
-    [0, t('The Romans stretch a long, thin line from the Tiber to a hill; their reserves wait on the hill. The Gauls come from the north.', 'Римляните разтягат дълга, тънка линия от Тибър до един хълм; резервът им чака на хълма. Галите идват от север.')],
-    [1.6, t('Brennus strikes the reserves on the hill first.', 'Брен удря първо резерва на хълма.')],
-    [3.0, t('Panic runs along the Roman line.', 'Паника обхваща римската линия.')],
-    [4.2, t('The left wing is driven into the Tiber: many drown, and most survivors swim across and flee to Veii.', 'Лявото крило е изтласкано в Тибър: мнозина се удавят, а повечето оцелели преплуват реката и бягат към Вейи.')],
-    [6.4, t('The right wing runs back to Rome. 18 July became the ill-omened “day of the Allia”.', 'Дясното крило бяга обратно към Рим. 18 юли става зловещият „ден на Алия“.')],
-  ], END = 8.2, SLOW = 2.2   // the timeline below is in story seconds; it plays 2.2 times slower
-  el.innerHTML = `<div class="pn-head"><b>${t('The Allia, step by step', 'Алия, стъпка по стъпка')}</b><span class="al-key"><i class="r"></i>${t('Romans', 'римляни')} <i class="g"></i>${t('Gauls', 'гали')}</span></div>
-    <div class="pn-stage"><canvas aria-label="${t('The battle of the Allia shown with dots: red for the Romans, blue for the Gauls', 'Битката при Алия, показана с точки: червени за римляните, сини за галите')}"></canvas></div>
+// ---------- battle replays in the chronicle: battles told in dots, step by step ----------
+// Each battle is data (REPLAYS): the ground (rivers, hills, woods, labels, things that appear: barricades, the yoke),
+// groups of dots with where they are at each moment (a line, or a cluster) and what befalls them (some fall, they
+// waver in panic, they drown with a splash), and five captions. Times are in "story seconds"; it plays SLOW times
+// slower so each caption can be read (the user found 8 seconds too fast). Positions are parts of the width and height.
+const RCOL = { rome: '#b8322a', gaul: '#2f5f9a', samnite: '#c27a1e', etruscan: '#8a7f75', epirus: '#6b4a8a', elephant: '#76716b' }
+const REPLAYS = {
+  // chapter 4: the Allia (Livy), as the chronicle tells it
+  allia: {
+    title: ['The Allia, step by step', 'Алия, стъпка по стъпка'],
+    key: [['rome', 'Romans', 'римляни'], ['gaul', 'Gauls', 'гали']],
+    ground: [
+      { river: [[0.13, -0.05], [0.11, 0.35], [0.15, 0.65], [0.12, 1.05]], w: 0.07, label: ['TIBER', 'ТИБЪР'], at: [0.135, 0.92], rot: true },
+      { brook: [[1.02, 0.16], [0.7, 0.26], [0.45, 0.14], [0.13, 0.24]] },
+      { text: [0.62, 0.27], t: ['the Allia brook', 'поток Алия'] },
+      { hill: [0.84, 0.56, 0.11, 0.12], label: ['hill', 'хълм'] },
+      { text: [0.01, 0.48], t: ['← Veii', '← Вейи'] }, { text: [0.99, 0.985], t: ['Rome ↓', 'Рим ↓'], right: true },
+    ],
+    groups: [
+      { side: 'rome', n: 16, keys: [[0, 'line', 0.19, 0.6, 0.55, 0.6, 0.03], [4.2, 'line', 0.19, 0.6, 0.55, 0.6, 0.03], [5.6, 'line', 0.11, 0.38, 0.15, 0.84, 0.04]], jitter: [3.0, 4.4], fall: [5.5, 6.3, 1], splash: true },
+      { side: 'rome', n: 10, keys: [[0, 'line', 0.2, 0.61, 0.55, 0.61, 0.03], [4.2, 'line', 0.2, 0.61, 0.55, 0.61, 0.03], [5.6, 'line', 0.11, 0.4, 0.15, 0.82, 0.04], [6.9, 'line', 0.02, 0.42, 0.06, 0.64, 0.04]], jitter: [3.0, 4.4] },
+      { side: 'rome', n: 20, keys: [[0, 'line', 0.56, 0.6, 0.79, 0.6, 0.03], [6.2, 'line', 0.56, 0.6, 0.79, 0.6, 0.03], [7.9, 'blob', 0.8, 1.16, 0.12, 0.05]], jitter: [3.0, 4.4] },
+      { side: 'rome', n: 12, keys: [[0, 'blob', 0.84, 0.56, 0.045, 0.04], [2.2, 'blob', 0.84, 0.56, 0.045, 0.04], [3.0, 'blob', 0.87, 0.63, 0.07, 0.06], [4.2, 'blob', 0.87, 0.63, 0.07, 0.06], [6.6, 'blob', 0.88, 1.16, 0.06, 0.04]], fall: [2.6, 3.2, 0.5] },
+      { side: 'gaul', n: 48, keys: [[0, 'line', 0.2, -0.1, 0.78, -0.16, 0.1], [1.6, 'line', 0.21, 0.48, 0.74, 0.48, 0.05], [3.4, 'line', 0.21, 0.48, 0.74, 0.48, 0.05], [5.6, 'line', 0.18, 0.55, 0.74, 0.62, 0.07]] },
+      { side: 'gaul', n: 16, keys: [[0, 'blob', 0.82, -0.15, 0.1, 0.05], [1.6, 'blob', 0.85, 0.42, 0.08, 0.04], [2.9, 'blob', 0.84, 0.56, 0.07, 0.06]] },
+    ],
+    steps: [
+      [0, 'The Romans stretch a long, thin line from the Tiber to a hill; their reserves wait on the hill. The Gauls come from the north.', 'Римляните разтягат дълга, тънка линия от Тибър до един хълм; резервът им чака на хълма. Галите идват от север.'],
+      [1.6, 'Brennus strikes the reserves on the hill first.', 'Брен удря първо резерва на хълма.'],
+      [3.0, 'Panic runs along the Roman line.', 'Паника обхваща римската линия.'],
+      [4.2, 'The left wing is driven into the Tiber: many drown, and most survivors swim across and flee to Veii.', 'Лявото крило е изтласкано в Тибър: мнозина се удавят, а повечето оцелели преплуват реката и бягат към Вейи.'],
+      [6.4, 'The right wing runs back to Rome. 18 July became the ill-omened “day of the Allia”.', 'Дясното крило бяга обратно към Рим. 18 юли става зловещият „ден на Алия“.'],
+    ], end: 8.2,
+  },
+  // chapter 5: the Caudine Forks (Livy)
+  caudine: {
+    title: ['The Caudine Forks, step by step', 'Кавдинските проходи, стъпка по стъпка'],
+    key: [['rome', 'Romans', 'римляни'], ['samnite', 'Samnites', 'самнити']],
+    ground: [
+      { woods: [0.24, 0.12, 0.3, 0.2] }, { woods: [0.76, 0.12, 0.3, 0.2] }, { woods: [0.24, 0.88, 0.3, 0.2] }, { woods: [0.76, 0.88, 0.3, 0.2] },
+      { woods: [0.5, 0.26, 0.11, 0.21] }, { woods: [0.5, 0.74, 0.11, 0.21] },
+      { text: [0.24, 0.36], t: ['first gorge', 'първа клисура'] }, { text: [0.76, 0.36], t: ['second gorge', 'втора клисура'] },
+      { text: [0.01, 0.7], t: ['← Rome', '← Рим'] }, { text: [0.99, 0.7], t: ['Luceria →', 'Луцерия →'], right: true },
+      { barrier: [0.95, 0.38, 0.95, 0.62], from: 1.6 }, { barrier: [0.04, 0.38, 0.04, 0.62], from: 3.0, to: 4.4 },   // the way back opens for the march under the yoke
+      { yoke: [0.12, 0.5], from: 4.4, label: ['the yoke', 'хомотът'] },
+    ],
+    groups: [
+      { side: 'rome', n: 50, keys: [[0, 'line', -0.3, 0.5, 0.05, 0.5, 0.03], [1.6, 'line', 0.52, 0.5, 0.9, 0.5, 0.06], [2.4, 'blob', 0.8, 0.5, 0.1, 0.07], [3.2, 'blob', 0.55, 0.5, 0.14, 0.05], [4.2, 'blob', 0.25, 0.5, 0.13, 0.07], [4.8, 'blob', 0.25, 0.5, 0.13, 0.07], [7.6, 'line', -1.1, 0.5, 0.12, 0.5, 0.008]], jitter: [2.3, 4.6] },
+      { side: 'samnite', n: 22, keys: [[1.8, 'line', 0.1, -0.06, 0.9, -0.06, 0.04], [3.2, 'line', 0.08, 0.3, 0.92, 0.3, 0.05], [4.6, 'line', 0.08, 0.3, 0.92, 0.3, 0.05], [6.2, 'line', 0.17, 0.41, 0.45, 0.41, 0.02]] },
+      { side: 'samnite', n: 22, keys: [[1.8, 'line', 0.1, 1.06, 0.9, 1.06, 0.04], [3.2, 'line', 0.08, 0.7, 0.92, 0.7, 0.05], [4.6, 'line', 0.08, 0.7, 0.92, 0.7, 0.05], [6.2, 'line', 0.17, 0.59, 0.45, 0.59, 0.02]] },   // lining the road to jeer
+    ],
+    steps: [
+      [0, 'Fooled by false shepherds, the consuls take the quickest road to Luceria: through the Caudine Forks, two wooded gorges joined by a narrow ravine.', 'Подведени от фалшиви пастири, консулите тръгват по най-краткия път към Луцерия: през Кавдинските проходи, две залесени клисури, свързани с тясна урва.'],
+      [1.6, 'The far end is blocked with felled trees and boulders.', 'Изходът отпред е преграден с отсечени дървета и камъни.'],
+      [3.0, 'The way back is blocked too, and the Samnites hold the wooded heights: the whole army is trapped.', 'И пътят назад е преграден, а самнитите държат залесените височини: цялата армия е в капан.'],
+      [4.4, 'Pontius lets them go, but in shame: unarmed, the Romans file out under the yoke, a frame of spears, while the Samnites jeer.', 'Понтий ги пуска, но опозорени: без оръжие римляните минават един по един под хомота – рамка от копия, – а самнитите им се присмиват.'],
+      [6.6, 'Rome went into mourning; then the Senate refused to honour the agreement, and the war went on.', 'Рим облякъл траур; после Сенатът отказал да спази споразумението и войната продължила.'],
+    ], end: 8.0,
+  },
+  // chapter 5: Sentinum
+  sentinum: {
+    title: ['Sentinum, step by step', 'Сентинум, стъпка по стъпка'],
+    key: [['rome', 'Romans', 'римляни'], ['gaul', 'Gauls', 'гали'], ['samnite', 'Samnites', 'самнити'], ['etruscan', 'Etruscans', 'етруски']],
+    ground: [
+      { tag: [0.27, 0.95], t: ['Decius', 'Деций'], to: 3.0 }, { tag: [0.73, 0.95], t: ['Fabius', 'Фабий'], to: 5.8 },
+      { tag: [0.27, 0.05], t: ['Gauls and their chariots', 'гали и колесниците им'], to: 1.6 }, { tag: [0.73, 0.05], t: ['Samnites', 'самнити'], to: 5.8 },
+      { flash: [0.27, 0.53], at: 3.9 },
+    ],
+    groups: [
+      { side: 'etruscan', n: 14, keys: [[0, 'blob', 0.5, 0.14, 0.11, 0.05], [1.4, 'blob', 0.5, -0.3, 0.11, 0.05]] },
+      { side: 'gaul', n: 18, keys: [[0, 'line', 0.08, 0.32, 0.46, 0.32, 0.04], [1.8, 'line', 0.08, 0.32, 0.46, 0.32, 0.04], [3.0, 'line', 0.1, 0.48, 0.46, 0.48, 0.04], [5.8, 'line', 0.1, 0.48, 0.46, 0.48, 0.04], [7.6, 'line', 0.05, -0.2, 0.45, -0.25, 0.05]] },
+      { side: 'gaul', n: 8, r: 5, keys: [[0, 'blob', 0.24, 0.2, 0.1, 0.03], [1.6, 'blob', 0.24, 0.2, 0.1, 0.03], [2.7, 'blob', 0.26, 0.7, 0.13, 0.05], [4.4, 'blob', 0.26, 0.56, 0.1, 0.04], [6.6, 'blob', 0.2, -0.25, 0.1, 0.04]], fall: [4.6, 5.6, 0.4] },
+      { side: 'samnite', n: 22, keys: [[0, 'line', 0.54, 0.32, 0.92, 0.32, 0.04], [4.6, 'line', 0.54, 0.32, 0.92, 0.32, 0.04], [5.9, 'line', 0.5, 0.38, 0.84, 0.26, 0.05], [7.6, 'line', 0.55, -0.2, 0.95, -0.25, 0.05]], jitter: [5.8, 6.6] },
+      { side: 'rome', n: 18, keys: [[0, 'line', 0.08, 0.7, 0.46, 0.7, 0.03], [1.8, 'line', 0.08, 0.7, 0.46, 0.7, 0.03], [2.9, 'blob', 0.27, 0.86, 0.17, 0.06], [4.4, 'blob', 0.27, 0.86, 0.17, 0.06], [5.3, 'line', 0.08, 0.63, 0.46, 0.63, 0.03], [7.6, 'line', 0.08, 0.42, 0.46, 0.42, 0.04]], jitter: [1.8, 3.2], fall: [2.4, 3.0, 0.25] },
+      { side: 'rome', n: 1, r: 5, ring: true, keys: [[3.0, 'blob', 0.27, 0.84, 0, 0], [3.9, 'blob', 0.27, 0.53, 0, 0]], fall: [3.9, 4.3, 1] },
+      { side: 'rome', n: 20, keys: [[0, 'line', 0.54, 0.7, 0.92, 0.7, 0.03], [4.6, 'line', 0.54, 0.7, 0.92, 0.7, 0.03], [6.0, 'line', 0.96, 0.62, 0.96, 0.2, 0.03], [7.6, 'line', 0.6, 0.14, 0.95, 0.14, 0.04]] },
+    ],
+    steps: [
+      [0, 'Fabius and Decius face the Samnites and the Gauls at Sentinum; a Roman raid has already drawn the Etruscans home.', 'Фабий и Деций се изправят срещу самнитите и галите при Сентинум; един римски набег вече е принудил етруските да се върнат у дома.'],
+      [1.6, 'Gallic chariots charge and break Decius’ wing.', 'Галските бойни колесници атакуват и разбиват крилото на Деций.'],
+      [3.0, 'Decius devotes himself: he prays to the gods and charges alone into the enemy, giving his life.', 'Деций се обрича в жертва: моли се на боговете и се хвърля сам срещу врага, жертвайки живота си.'],
+      [4.4, 'His men rally and stand.', 'Войниците му се съвземат и удържат.'],
+      [5.8, 'Fabius outflanks the Samnites, and the coalition collapses.', 'Фабий обхожда самнитите и коалицията рухва.'],
+    ], end: 7.8,
+  },
+  // chapter 6: Heraclea
+  heraclea: {
+    title: ['Heraclea, step by step', 'Хераклея, стъпка по стъпка'],
+    key: [['rome', 'Romans', 'римляни'], ['epirus', 'Pyrrhus’s army', 'армията на Пир'], ['elephant', 'elephants', 'слонове']],
+    ground: [
+      { river: [[0.56, -0.05], [0.53, 0.35], [0.59, 0.65], [0.56, 1.05]], w: 0.05, label: ['SIRIS', 'СИРИС'], at: [0.575, 0.2], rot: true },
+      { text: [0.01, 0.06], t: ['← Heraclea', '← Хераклея'] },
+      { tag: [0.15, 0.95], t: ['elephants', 'слонове'], from: 3.0, to: 4.6 },
+    ],
+    groups: [
+      { side: 'rome', n: 30, keys: [[0, 'line', 0.78, 0.25, 0.78, 0.72, 0.05], [1.6, 'line', 0.43, 0.28, 0.43, 0.7, 0.05], [3.2, 'line', 0.43, 0.28, 0.43, 0.7, 0.05], [4.9, 'line', 0.66, 0.28, 0.66, 0.72, 0.06], [6.8, 'line', 0.88, 0.25, 0.88, 0.75, 0.08]], jitter: [1.8, 3.4], fall: [4.4, 5.6, 0.3], splash: true },
+      { side: 'rome', n: 10, r: 3.8, keys: [[0, 'blob', 0.8, 0.88, 0.06, 0.04], [1.6, 'blob', 0.42, 0.86, 0.06, 0.04], [3.2, 'blob', 0.42, 0.86, 0.06, 0.04], [4.3, 'blob', 0.72, 0.96, 0.13, 0.04]], fall: [3.6, 4.6, 0.4], jitter: [3.4, 4.3] },
+      { side: 'epirus', n: 30, keys: [[0, 'line', 0.2, 0.28, 0.2, 0.7, 0.04], [1.6, 'line', 0.36, 0.28, 0.36, 0.7, 0.04], [3.2, 'line', 0.36, 0.28, 0.36, 0.7, 0.04], [4.9, 'line', 0.5, 0.28, 0.5, 0.7, 0.04], [6.8, 'line', 0.5, 0.28, 0.5, 0.7, 0.04]], fall: [2.0, 5.0, 0.3] },
+      { side: 'elephant', n: 5, r: 7, keys: [[3.0, 'blob', 0.12, 0.86, 0.05, 0.03], [3.9, 'blob', 0.42, 0.86, 0.06, 0.03], [4.9, 'blob', 0.5, 0.82, 0.05, 0.03]] },
+    ],
+    steps: [
+      [0, 'The Romans cross the river Siris to attack Pyrrhus.', 'Римляните преминават река Сирис, за да нападнат Пир.'],
+      [1.6, 'The battle sways back and forth: Pyrrhus’s phalanx holds the legions.', 'Битката се люлее насам-натам: фалангата на Пир удържа легионите.'],
+      [3.0, 'Then Pyrrhus sends in his elephants, which the Romans had never seen; their horses panic.', 'Тогава Пир пуска слоновете си, каквито римляните никога не са виждали; конете им се подплашват.'],
+      [4.4, 'The Roman army breaks and falls back across the river. Pyrrhus has won, but he has lost many of his best men.', 'Римската армия се огъва и отстъпва през реката. Пир е победил, но е загубил много от най-добрите си воини.'],
+      [6.0, 'A year later, at Asculum, he won again at a terrible cost: “Another such victory and we are lost!”', 'Година по-късно, при Аускулум, той пак победил на ужасна цена: „Още една такава победа и сме загубени!“'],
+    ], end: 7.6,
+  },
+}
+function mountReplay(el, id) {
+  const B = REPLAYS[id], L = LANG === 'bg' ? 1 : 0, tx = a => a[L], SLOW = 2.2
+  el.innerHTML = `<div class="pn-head"><b>${tx(B.title)}</b><span class="al-key">${B.key.map(([s, en, bg]) => `<i style="background:${RCOL[s]}"></i>${L ? bg : en}`).join(' ')}</span></div>
+    <div class="pn-stage"><canvas aria-label="${tx(B.title)}"></canvas></div>
     <p class="al-cap" aria-live="polite"></p>
-    <div class="pn-nav"><button class="ghost" data-al="play">↻ ${t('Play again', 'Пусни отново')}</button></div>`
+    <div class="pn-nav"><button class="ghost" data-al="play">↻ ${L ? 'Пусни отново' : 'Play again'}</button></div>`
   const cv = el.querySelector('canvas'), ctx = cv.getContext('2d'), cap = el.querySelector('.al-cap')
-  let rnd = 7; const R = () => (rnd = (rnd * 16807) % 2147483647) / 2147483647
-  // the map, in parts of the width (x) and height (y): the Tiber down the left, the Allia brook coming in from the east
-  const riverX = 0.13, lineY = 0.6, hill = { x: 0.84, y: 0.56 }
-  const romans = [], gauls = []
-  for (let i = 0; i < 46; i++) {   // the thin line, from the river bank to the foot of the hill
-    const u = i / 45, x = riverX + 0.06 + u * 0.6, y = lineY + (R() - 0.5) * 0.03
-    const left = u < 0.58, drown = left && R() < 0.62
-    romans.push({ x, y, left, drown, sx: (R() - 0.5) * 0.05, bank: lineY - 0.2 + R() * 0.42, cross: riverX - 0.07 - R() * 0.05, flee: { x: x + 0.05 + R() * 0.15, y: 1.12 + R() * 0.1 } })
-  }
-  for (let i = 0; i < 12; i++) romans.push({ x: hill.x + (R() - 0.5) * 0.09, y: hill.y + (R() - 0.5) * 0.08, reserve: true, dies: R() < 0.5, flee: { x: 0.8 + R() * 0.15, y: 1.12 + R() * 0.1 } })
-  for (let i = 0; i < 64; i++) {
-    const u = R(), toHill = i < 16
-    gauls.push({ x0: 0.2 + u * 0.75, y0: -0.1 - R() * 0.14, x1: toHill ? hill.x + (R() - 0.5) * 0.12 : riverX + 0.08 + u * 0.62, y1: toHill ? hill.y - 0.04 + (R() - 0.5) * 0.1 : lineY - 0.12 + (R() - 0.5) * 0.06, toHill, u })
-  }
+  // every dot keeps its own place in its group (along the line, or in the cluster) and its own fate
+  let seed = 7; const R = () => (seed = (seed * 16807) % 2147483647) / 2147483647
+  const groups = B.groups.map(g => ({ ...g, dots: Array.from({ length: g.n }, (_, i) => ({ u: g.n > 1 ? i / (g.n - 1) : 0.5, a: R(), b: R(), c: R(), ph: R() * 6 })) }))
   const ease = x => x <= 0 ? 0 : x >= 1 ? 1 : x * x * (3 - 2 * x)
-  const seg = (time, a, b) => ease((time - a) / (b - a))
+  const at = (k, d) => {   // a dot's place in one key: a line (with some depth) or a cluster
+    if (k[1] === 'line') { const [, , x1, y1, x2, y2, th = 0.03] = k, dx = x2 - x1, dy = y2 - y1, len = Math.hypot(dx, dy) || 1; return [x1 + dx * d.u + (-dy / len) * (d.a - 0.5) * th * 2, y1 + dy * d.u + (dx / len) * (d.a - 0.5) * th * 2] }
+    const [, , x, y, rx, ry] = k, an = d.b * Math.PI * 2, r = Math.sqrt(d.a)
+    return [x + Math.cos(an) * r * rx, y + Math.sin(an) * r * ry]
+  }
+  const where = (g, d, t) => {
+    const K = g.keys
+    if (t < K[0][0]) return null   // not on the field yet
+    let i = 0; while (i < K.length - 1 && t >= K[i + 1][0]) i++
+    const p = at(K[i], d); if (i === K.length - 1) return p
+    const q = at(K[i + 1], d), e = ease((t - K[i][0]) / (K[i + 1][0] - K[i][0]))
+    return [p[0] + (q[0] - p[0]) * e, p[1] + (q[1] - p[1]) * e]
+  }
   let start = null, step = -1
-  function draw(time) {
+  function draw(t) {
     const dpr = Math.min(2, window.devicePixelRatio || 1), W = cv.clientWidth, H = cv.clientHeight
     if (cv.width !== Math.round(W * dpr)) { cv.width = Math.round(W * dpr); cv.height = Math.round(H * dpr) }
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0)
-    ctx.fillStyle = '#d9cfa5'; ctx.fillRect(0, 0, W, H)   // the plain
-    ctx.fillStyle = 'rgba(120, 140, 70, .35)'; ctx.beginPath(); ctx.ellipse(hill.x * W, hill.y * H, W * 0.11, H * 0.12, 0, 0, Math.PI * 2); ctx.fill()   // the hill
-    // the Tiber, and the Allia brook flowing into it
-    ctx.strokeStyle = '#6fa3c8'; ctx.lineCap = 'round'
-    ctx.lineWidth = W * 0.07; ctx.beginPath(); ctx.moveTo(riverX * W, -10); ctx.bezierCurveTo(riverX * W - 18, H * 0.35, riverX * W + 14, H * 0.65, riverX * W - 6, H + 10); ctx.stroke()
-    ctx.lineWidth = 4; ctx.beginPath(); ctx.moveTo(W + 5, H * 0.16); ctx.bezierCurveTo(W * 0.7, H * 0.26, W * 0.45, H * 0.14, riverX * W, H * 0.24); ctx.stroke()
-    ctx.fillStyle = '#3b2a1c'; ctx.font = '800 11px Nunito, system-ui, sans-serif'; ctx.textAlign = 'left'
-    ctx.save(); ctx.translate(riverX * W + 5, H * 0.92); ctx.rotate(-Math.PI / 2); ctx.fillText(t('TIBER', 'ТИБЪР'), 0, 0); ctx.restore()
-    ctx.fillText(t('the Allia brook', 'поток Алия'), W * 0.62, H * 0.27)
-    ctx.fillText(t('hill', 'хълм'), hill.x * W - 12, hill.y * H - H * 0.13)
-    ctx.textAlign = 'left'; ctx.fillText('← ' + t('Veii', 'Вейи'), 4, H * 0.48)
-    ctx.textAlign = 'right'; ctx.fillText(t('Rome', 'Рим') + ' ↓', W - 6, H - 6)
-    const dot = (x, y, c, a = 1) => { if (a <= 0) return; ctx.globalAlpha = a; ctx.fillStyle = c; ctx.beginPath(); ctx.arc(x * W, y * H, 3.4, 0, Math.PI * 2); ctx.fill(); ctx.globalAlpha = 1 }
-    // the Gauls: march down, a band strikes the hill, then the whole host presses on and pushes the left toward the river
-    for (const g of gauls) {
-      const a = seg(time, 0, 1.6)
-      let x = g.x0 + (g.x1 - g.x0) * a, y = g.y0 + (g.y1 - g.y0) * a
-      if (g.toHill) { const b = seg(time, 1.6, 2.9); x += (hill.x - x) * b * 0.5; y += (hill.y + 0.02 - y) * b * 0.6 }
-      else { const b = seg(time, 3.4, 5.6); y += 0.12 * b; if (g.u < 0.58) { x -= (x - (riverX + 0.07)) * b * 0.8; y += (g.u - 0.3) * 0.3 * b } }   // the left pushed right up to the water
-      dot(x, y, '#2f5f9a')
+    ctx.fillStyle = '#d9cfa5'; ctx.fillRect(0, 0, W, H)
+    ctx.font = '800 11px Nunito, system-ui, sans-serif'
+    const curve = (pts, w, color) => { ctx.strokeStyle = color; ctx.lineWidth = w; ctx.lineCap = 'round'; ctx.beginPath(); ctx.moveTo(pts[0][0] * W, pts[0][1] * H); ctx.bezierCurveTo(pts[1][0] * W, pts[1][1] * H, pts[2][0] * W, pts[2][1] * H, pts[3][0] * W, pts[3][1] * H); ctx.stroke() }
+    for (const g of B.ground) {
+      if (g.from != null && t < g.from) continue
+      if (g.to != null && t >= g.to) continue
+      ctx.fillStyle = '#3b2a1c'; ctx.textAlign = g.right ? 'right' : 'left'
+      if (g.river) { curve(g.river, W * g.w, '#6fa3c8'); if (g.label) { ctx.save(); ctx.translate(g.at[0] * W, g.at[1] * H); if (g.rot) ctx.rotate(-Math.PI / 2); ctx.fillStyle = '#244a66'; ctx.textAlign = 'center'; ctx.fillText(tx(g.label), 0, 0); ctx.restore() } }
+      if (g.brook) curve(g.brook, 4, '#6fa3c8')
+      if (g.hill) { const [x, y, rx, ry] = g.hill; ctx.fillStyle = 'rgba(120, 140, 70, .35)'; ctx.beginPath(); ctx.ellipse(x * W, y * H, rx * W, ry * H, 0, 0, Math.PI * 2); ctx.fill(); if (g.label) { ctx.fillStyle = '#3b2a1c'; ctx.textAlign = 'center'; ctx.fillText(tx(g.label), x * W, (y - ry) * H - 4) } }
+      if (g.woods) { const [x, y, rx, ry] = g.woods; ctx.fillStyle = '#7d8f4e'; ctx.beginPath(); ctx.ellipse(x * W, y * H, rx * W, ry * H, 0, 0, Math.PI * 2); ctx.fill(); ctx.fillStyle = '#5f7338'; for (let k = 0; k < 14; k++) { const an = k * 2.4, r = ((k * 37) % 10) / 12; ctx.beginPath(); ctx.arc((x + Math.cos(an) * r * rx * 0.8) * W, (y + Math.sin(an) * r * ry * 0.8) * H, 4, 0, Math.PI * 2); ctx.fill() } }
+      if (g.text) { ctx.fillText(tx(g.t), g.text[0] * W, g.text[1] * H) }
+      if (g.tag) { ctx.textAlign = 'center'; ctx.fillStyle = '#3b2a1c'; ctx.fillText(tx(g.t), g.tag[0] * W, g.tag[1] * H) }
+      if (g.barrier) { const [x1, y1, x2, y2] = g.barrier, a = Math.min(1, (t - g.from) / 0.4); ctx.globalAlpha = a; ctx.strokeStyle = '#6b4a2b'; ctx.lineWidth = 3; for (let k = 0; k <= 8; k++) { const x = (x1 + (x2 - x1) * k / 8) * W, y = (y1 + (y2 - y1) * k / 8) * H; ctx.beginPath(); ctx.moveTo(x - 5, y - 5); ctx.lineTo(x + 5, y + 5); ctx.moveTo(x + 5, y - 5); ctx.lineTo(x - 5, y + 5); ctx.stroke() } ctx.globalAlpha = 1 }
+      if (g.yoke) { const [x, y] = g.yoke, a = Math.min(1, (t - g.from) / 0.4); ctx.globalAlpha = a; ctx.strokeStyle = '#4a3420'; ctx.lineWidth = 3; ctx.beginPath(); ctx.moveTo(x * W - 9, y * H + 14); ctx.lineTo(x * W - 9, y * H - 16); ctx.moveTo(x * W + 9, y * H + 14); ctx.lineTo(x * W + 9, y * H - 16); ctx.moveTo(x * W - 13, y * H - 12); ctx.lineTo(x * W + 13, y * H - 12); ctx.stroke(); if (g.label) { ctx.fillStyle = '#3b2a1c'; ctx.textAlign = 'center'; ctx.fillText(tx(g.label), x * W + 6, y * H - 22) } ctx.globalAlpha = 1 }
+      if (g.flash && t >= g.at && t < g.at + 0.9) { const p = (t - g.at) / 0.9; ctx.strokeStyle = `rgba(240, 190, 60, ${1 - p})`; ctx.lineWidth = 3; ctx.beginPath(); ctx.arc(g.flash[0] * W, g.flash[1] * H, 6 + p * 34, 0, Math.PI * 2); ctx.stroke() }
     }
-    // the Romans
-    for (const r of romans) {
-      let x = r.x, y = r.y, a = 1
-      if (r.reserve) {
-        const hit = seg(time, 2.2, 3.0)
-        x += (r.x - hill.x) * hit * 0.8; y += 0.05 * hit
-        if (r.dies) a = 1 - seg(time, 2.6, 3.2)
-        else { const f = seg(time, 4.2, 6.6); x += (r.flee.x - x) * f; y += (r.flee.y - y) * f }
-      } else {
-        if (time > 3.0 && time < 4.4) { x += Math.sin(time * 40 + r.x * 60) * 0.006; y += Math.cos(time * 33 + r.x * 50) * 0.005 }   // panic
-        if (r.left) {
-          const f = seg(time, 4.2, 5.6); x += (riverX + r.sx - x) * f; y += (r.bank - y) * f   // spread along the bank
-          if (r.drown) a = 1 - seg(time, 5.5, 6.3)
-          else { const c = seg(time, 5.7, 6.9); x += (r.cross - x) * c }
-        } else { const f = seg(time, 6.2, 7.9); x += (r.flee.x - x) * f; y += (r.flee.y - y) * f }
-      }
-      if (r.drown && time > 5.5 && time < 6.6 && a > 0) {   // a splash where a man goes under
-        ctx.strokeStyle = `rgba(255, 255, 255, ${0.8 * a})`; ctx.lineWidth = 1.5; ctx.beginPath(); ctx.arc(x * W, y * H, 4 + (1 - a) * 9, 0, Math.PI * 2); ctx.stroke()
-      }
-      dot(x, y, '#b8322a', a)
+    for (const g of groups) for (const d of g.dots) {
+      const p = where(g, d, t); if (!p) continue
+      let [x, y] = p, a = 1
+      if (g.jitter && t > g.jitter[0] && t < g.jitter[1]) { x += Math.sin(t * 40 + d.ph * 9) * 0.006; y += Math.cos(t * 33 + d.ph * 7) * 0.005 }   // panic: they waver
+      if (g.fall && d.c < g.fall[2]) a = 1 - ease((t - g.fall[0]) / (g.fall[1] - g.fall[0]))   // these fall (or drown)
+      if (a <= 0) continue
+      if (g.splash && g.fall && d.c < g.fall[2] && a < 1) { ctx.strokeStyle = `rgba(255, 255, 255, ${0.8 * a})`; ctx.lineWidth = 1.5; ctx.beginPath(); ctx.arc(x * W, y * H, 4 + (1 - a) * 9, 0, Math.PI * 2); ctx.stroke() }
+      ctx.globalAlpha = a; ctx.fillStyle = RCOL[g.side]; ctx.beginPath(); ctx.arc(x * W, y * H, g.r ?? 3.4, 0, Math.PI * 2); ctx.fill()
+      if (g.ring) { ctx.strokeStyle = '#e0a63a'; ctx.lineWidth = 2; ctx.beginPath(); ctx.arc(x * W, y * H, (g.r ?? 3.4) + 3, 0, Math.PI * 2); ctx.stroke() }
+      ctx.globalAlpha = 1
     }
-    // which step it is
-    let s = 0; for (let k = 0; k < STEPS.length; k++) if (time >= STEPS[k][0]) s = k
-    if (s !== step) { step = s; cap.innerHTML = `<b>${s + 1} / ${STEPS.length}</b> ${STEPS[s][1]}` }
+    let s = 0; for (let k = 0; k < B.steps.length; k++) if (t >= B.steps[k][0]) s = k
+    if (s !== step) { step = s; cap.innerHTML = `<b>${s + 1} / ${B.steps.length}</b> ${esc(B.steps[s][1 + L])}` }
   }
   function frame(now) {
     if (!el.isConnected) return
-    if (start != null) { const time = (now - start) / 1000 / SLOW; draw(Math.min(time, END)); if (time >= END) start = null }
+    if (start != null) { const t = (now - start) / 1000 / SLOW; draw(Math.min(t, B.end)); if (t >= B.end) start = null }
     requestAnimationFrame(frame)
   }
   const play = () => { start = performance.now(); step = -1 }
   el.querySelector('[data-al="play"]').addEventListener('click', play)
   draw(0)
-  // it plays by itself the first time it comes into view
-  const io = new IntersectionObserver(es => { if (es.some(e => e.isIntersecting)) { io.disconnect(); play() } }, { threshold: 0.6 })
+  const io = new IntersectionObserver(es => { if (es.some(e => e.isIntersecting)) { io.disconnect(); play() } }, { threshold: 0.6 })   // plays by itself the first time it is seen
   io.observe(cv)
   requestAnimationFrame(frame)
 }
