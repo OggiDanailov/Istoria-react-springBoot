@@ -881,7 +881,8 @@ const openChronicle = focusId => openSheet(CH.title, chronicleHtml(), focusId)
 // ---------- the battle of the Allia, replayed in dots (chapter 4's chronicle) ----------
 // After Livy, as the chronicle tells it: the Romans stretch a thin line from the Tiber to a hill, with their reserves on
 // the hill; Brennus strikes the hill first; panic runs along the line; the left wing is driven into the Tiber (many
-// drown, most survivors swim across to Veii); the right wing runs back to Rome. About 8 seconds, five steps.
+// drown, most survivors swim across to Veii); the right wing runs back to Rome. Five steps, about 18 seconds: each
+// step's caption needs time to be read (the user found 8 seconds too fast).
 function mountAllia(el) {
   const t = (en, bg) => LANG === 'bg' ? bg : en
   const STEPS = [
@@ -890,7 +891,7 @@ function mountAllia(el) {
     [3.0, t('Panic runs along the Roman line.', 'Паника обхваща римската линия.')],
     [4.2, t('The left wing is driven into the Tiber: many drown, and most survivors swim across and flee to Veii.', 'Лявото крило е изтласкано в Тибър: мнозина се удавят, а повечето оцелели преплуват реката и бягат към Вейи.')],
     [6.4, t('The right wing runs back to Rome. 18 July became the ill-omened “day of the Allia”.', 'Дясното крило бяга обратно към Рим. 18 юли става зловещият „ден на Алия“.')],
-  ], END = 8.2
+  ], END = 8.2, SLOW = 2.2   // the timeline below is in story seconds; it plays 2.2 times slower
   el.innerHTML = `<div class="pn-head"><b>${t('The Allia, step by step', 'Алия, стъпка по стъпка')}</b><span class="al-key"><i class="r"></i>${t('Romans', 'римляни')} <i class="g"></i>${t('Gauls', 'гали')}</span></div>
     <div class="pn-stage"><canvas aria-label="${t('The battle of the Allia shown with dots: red for the Romans, blue for the Gauls', 'Битката при Алия, показана с точки: червени за римляните, сини за галите')}"></canvas></div>
     <p class="al-cap" aria-live="polite"></p>
@@ -965,7 +966,7 @@ function mountAllia(el) {
   }
   function frame(now) {
     if (!el.isConnected) return
-    if (start != null) { const time = (now - start) / 1000; draw(Math.min(time, END)); if (time >= END) start = null }
+    if (start != null) { const time = (now - start) / 1000 / SLOW; draw(Math.min(time, END)); if (time >= END) start = null }
     requestAnimationFrame(frame)
   }
   const play = () => { start = performance.now(); step = -1 }
