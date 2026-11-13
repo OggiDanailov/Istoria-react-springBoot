@@ -137,8 +137,8 @@ const LEVELS = [
     waves: [w(28, ['raider']), w(46, ['warrior']), w(60, ['raider', 'raider']), w(76, ['warrior', 'warrior']), w(90, ['shield']), w(104, rep(3, 'raider')), w(120, ['warrior', 'shield']),
       w(136, ['chief', ...rep(4, 'raider'), 'warrior', 'warrior', 'shield'], 'A great wave approaches!'), w(165, ['raider', 'raider', 'warrior']), w(180, ['shield', 'warrior', 'raider']),
       w(198, ['chief', ...rep(5, 'raider'), ...rep(3, 'warrior'), 'shield', 'shield', 'cavalry'], 'The final wave!')] },
-  { id: 'allia', name: 'The Allia', year: '390 BC', enemy: 'Brennus and the Senone Gauls', theme: 'allia', start: 175, cols: 6, rows: 8, more: 1.2, tiber: true,
-    twist: 'The Tiber runs along your left. A Gaul’s first blow shoves the soldier he hits one square toward the river, and a soldier shoved off the bank drowns, while panic slows his neighbours. Triarii can’t be shoved, and nor can a soldier with a comrade on his river side: keep the line closed. Brennus strikes the hill on the right first.', units: [...BASE, 'princeps'],
+  { id: 'allia', name: 'The Allia', year: '390 BC', enemy: 'Brennus and the Senone Gauls', theme: 'allia', start: 175, cols: 6, rows: 10, more: 1.2, backRiver: true,
+    twist: 'The Tiber is at your back: no camp, no equites. A Gaul’s first blow knocks the soldier he hits one square back toward the river, and from the last row into it: he drowns, and panic slows the men around him. A soldier with a comrade right behind him can’t be knocked back, nor can triarii. A Gaul who reaches the river sweeps everything in his lane into the water and costs you a life. Brennus strikes the hill on the right first.', units: [...BASE, 'princeps'],
     blurb: 'The Senone Gauls under Brennus march on Rome. The Romans meet them where the Allia brook joins the Tiber, with no camp, the gods unconsulted and the line stretched dangerously thin.',
     after: 'You did better than the Romans: at the real Allia their line broke, many drowned in the Tiber, and the Gauls went on to sack Rome. 18 July became the ill-omened “day of the Allia”.',
     waves: [w(26, ['gaul', 'gaul'], 'Brennus’s men strike the hill on the right!', [4, 5]), w(44, ['gaul']), w(58, ['gaul', 'gaul']), w(74, ['chief', 'gaul']), w(90, ['gaul', 'gaul', 'gaul']),
@@ -361,6 +361,7 @@ const grainShare = score => { const g = SCORE.grain; if (score <= g[0][0]) retur
 const pressureFor = score => score >= 80 ? 1 : score >= 70 ? 1.08 : score >= 60 ? 1.15 : 1.2
 const equitesFor = (score, L = LEVEL) => score >= 60 ? Math.min(L.cols ?? 5, Math.floor(score / 10) - 4 + (L.cols ?? 5) - 5) : 0
 function armyFor(score, L = LEVEL) {
+  if (L.backRiver) { const a = armyFor(score, { ...L, backRiver: false, cols: 5 }); return { ...a, equites: 0, lives: a.equites } }   // the Allia: lives instead of equites
   if (L.pantheon) return { grain: 0, vets: {}, medicus: false, augur: false, gate: panGate(score) }   // Pantheon Siege: the strength of Rome's gate
   const grain = Math.max(SCORE.minGrain, Math.round((L.start + SCORE.at80) * grainShare(score) / 25) * 25)
   const vets = {}
@@ -1212,14 +1213,6 @@ function paintField() {
   }
   for (let i = 0; i < 14; i++) { c.fillStyle = rnd() < 0.5 ? '#f2e6c8' : '#e9c44a'; c.beginPath(); c.arc(rnd() * W, top + rnd() * (ry(ROWS) - top), 1.6, 0, TAU); c.fill() }
   if (LEVEL.uphill) { const g = c.createLinearGradient(0, top, 0, ry(ROWS)); g.addColorStop(0, 'rgba(255, 255, 255, 0)'); g.addColorStop(1, 'rgba(60, 40, 20, .14)'); c.fillStyle = g; c.fillRect(0, top, W, ry(ROWS) - top) }   // the slope up to the Roman lines
-  if (LEVEL.tiber) {   // the Tiber along the left edge: a shoved man off the bank falls in
-    const g = c.createLinearGradient(0, 0, cell * 0.26, 0); g.addColorStop(0, '#4f86ad'); g.addColorStop(1, '#6fa3c8')
-    c.fillStyle = g; c.beginPath(); c.moveTo(0, 0); c.lineTo(cell * 0.2, 0)
-    for (let y = 0; y <= H; y += cell * 0.5) c.lineTo(cell * (0.2 + Math.sin(y / cell * 1.7) * 0.05), y)
-    c.lineTo(0, H); c.closePath(); c.fill()
-    c.strokeStyle = 'rgba(255, 255, 255, .35)'; c.lineWidth = 1.2
-    for (let y = cell * 0.4; y < H; y += cell * 0.9) { c.beginPath(); c.moveTo(cell * 0.04, y); c.quadraticCurveTo(cell * 0.09, y - 3, cell * 0.14, y); c.stroke() }
-  }
   if (LEVEL.ditch != null && LEVEL.river) {   // a river across the field
     const y = ry(LEVEL.ditch)
     c.fillStyle = '#5d93b5'; c.fillRect(0, y + cell * 0.1, W, cell * 0.8)
@@ -1236,6 +1229,14 @@ function paintField() {
   }
   // the camp: trodden earth, a palisade, tents (on two fronts: Caesar's outer wall, and the plain beyond)
   const camp = ry(ROWS)
+  if (LEVEL.backRiver) {   // the Allia: the Tiber behind the Roman line, where the camp would be
+    const g = c.createLinearGradient(0, camp, 0, H); g.addColorStop(0, '#6fa3c8'); g.addColorStop(1, '#3f7299')
+    c.fillStyle = '#c9b48a'; c.fillRect(0, camp, W, cell * 0.08)   // the bank
+    c.fillStyle = g; c.fillRect(0, camp + cell * 0.08, W, H - camp)
+    c.strokeStyle = 'rgba(255, 255, 255, .35)'; c.lineWidth = 1.2
+    for (let k = 0; k < COLS * 2; k++) { const x = (k + 0.3) * cell * 0.5, y = camp + cell * (0.3 + (k % 3) * 0.17); c.beginPath(); c.moveTo(x - 7, y); c.quadraticCurveTo(x, y - 3, x + 7, y); c.stroke() }
+    return
+  }
   if (LEVEL.sea) {   // at sea: Octavian's harbour, where the reserve squadron waits behind a boom of floating logs
     c.fillStyle = '#3f7299'; c.fillRect(0, camp, W, H - camp)
     for (let x = 0; x < W; x += cell * 0.3) { c.fillStyle = '#6b4a2b'; rr(c, x + 2, camp + 1, cell * 0.24, cell * 0.08, 3); c.fill() }
@@ -1302,7 +1303,7 @@ function newGame(i = levelIndex, score = quizScore) {
   G = {
     t: 0, phase: 'ready', speed: G?.speed ?? 1, paused: false, rations: army.grain, vets: army.vets, score, ids: 0,
     units: [], foes: [], shots: [], foeShots: [], runners: [], drops: [], fx: [], corpses: [],
-    equites: equitesAt(army.equites),
+    equites: equitesAt(army.equites), lives: army.lives ?? 0,
     equitesTop: LEVEL.twoFronts ? Array.from({ length: COLS }, () => ({ state: 'ready', y: -0.55 })) : [],
     cool: Object.fromEntries(LEVEL.units.map(t => [t, { triarius: 15, caltrops: 20, shed: 10, pigs: 10 }[t] ?? 0])),
     queue: buildQueue(score), total: 0, spawned: 0, killed: 0, lost: 0, nextSky: 4, shake: 0,
@@ -1405,23 +1406,33 @@ function placeCohort(type, lane, row) {
   return true
 }
 const MOVABLE = t => !UNITS[t].trap && t !== 'pigs' && t !== 'torch' && t !== 'lilia'
-// At the Allia a Gaul's first blow shoves the man he hits one square toward the Tiber (on the left); off the bank he
-// drowns, and panic slows the men around him. Triarii kneel behind their shields and don't budge, nor do carts and
-// traps, nor a man with a comrade on his river side.
+// At the Allia a Gaul's first blow knocks the man he hits one square back, toward the Tiber behind the line; from the
+// last row he falls in and drowns, and panic slows the men around him. Triarii kneel behind their shields and don't
+// budge, nor do carts and traps, nor a man with a comrade right behind him.
 function shove(u) {
   if (u.type === 'triarius' || UNITS[u.type].grain || !MOVABLE(u.type)) return false
-  if (u.lane === 0) {   // off the bank, into the river
-    removeUnit(u); sfx.boom()
-    for (let i = 0; i < 10; i++) G.fx.push({ kind: 'dust', x: cell * 0.12, y: ry(u.row + 0.6), vx: (Math.random() - 0.5) * 60, vy: -Math.random() * 60, t: 0.6 })
-    G.fx.push({ kind: 'ring', x: cell * 0.12, y: ry(u.row + 0.7), t: 0.45 })
-    for (const v of G.units) if (Math.abs(v.lane - u.lane) <= 1 && Math.abs(v.row - u.row) <= 1) v.panic = 4
-    if (!G.tips.drown) { G.tips.drown = true; announce('Shoved into the Tiber! He drowns, and panic spreads to the men around him.', true, 3600) }
-    return true
-  }
-  if (unitAt(u.lane - 1, u.row) || !canStand(u.lane - 1, u.row)) return false   // a comrade on the river side holds him
-  moveUnit(u, u.lane - 1, u.row)
-  if (!G.tips.shove) { G.tips.shove = true; announce('The Gauls shove your men toward the Tiber! Close the gaps on the river side.', false, 3600) }
+  if (u.row === ROWS - 1) { drownUnit(u, true); if (!G.tips.drown) { G.tips.drown = true; announce('Knocked into the Tiber! He drowns, and panic spreads to the men around him.', true, 3600) } return true }
+  if (unitAt(u.lane, u.row + 1) || !canStand(u.lane, u.row + 1)) return false   // a comrade behind him holds him
+  moveUnit(u, u.lane, u.row + 1)
+  if (!G.tips.shove) { G.tips.shove = true; announce('The Gauls knock your men back toward the river! A soldier right behind each one stops it.', false, 3600) }
   return true
+}
+function drownUnit(u, panic) {
+  removeUnit(u); sfx.boom()
+  const x = lx(u.lane), y = ry(ROWS) + cell * 0.35
+  for (let i = 0; i < 8; i++) G.fx.push({ kind: 'dust', x, y, vx: (Math.random() - 0.5) * 60, vy: -Math.random() * 60, t: 0.6 })
+  G.fx.push({ kind: 'ring', x, y, t: 0.45 })
+  if (panic) for (const v of G.units) if (Math.abs(v.lane - u.lane) <= 1 && Math.abs(v.row - u.row) <= 1) v.panic = 4
+}
+// a Gaul who reaches the river sweeps his whole lane into the water, and costs a life
+function riverBreach(f) {
+  f.hp = 0; G.killed++; G.charges++; G.shake = Math.max(G.shake, 8)
+  for (const u of G.units.filter(u => u.lane === f.lane)) drownUnit(u, false)
+  if (G.lives <= 0) return lose()
+  G.lives--
+  announce(LANG === 'bg'
+    ? `Галите изтласкват линията в Тибър! ${G.lives ? (G.lives === 1 ? 'Остава един живот.' : `Остават ${G.lives} живота.`) : 'Не остават животи: следващият пробив решава битката.'}`
+    : `The Gauls drive the lane into the Tiber! ${G.lives ? (G.lives === 1 ? 'One life left.' : G.lives + ' lives left.') : 'No lives left: the next one breaks the line.'}`, true, 3600)
 }
 function moveUnit(u, lane, row) {
   if (!canStand(lane, row) || (u.lane === lane && u.row === row)) return false
@@ -1656,7 +1667,7 @@ function update(dt) {
       if (u.type === 'velites' && !u.fell && canStand(u.lane, u.row + f.dir)) { u.fell = true; moveUnit(u, u.lane, u.row + f.dir); continue }   // velites fall back, once
       if (UNITS[u.type].trap && u.armed) { explode(u); continue }
       if (FOES[f.type].jumps && !f.jumped) { f.jumped = true; f.jump = { from: f.y, to: f.dir < 0 ? u.row - 0.35 : u.row + 1.35, t: 0 }; f.eating = null; continue }
-      if (LEVEL.tiber && F.shoves && !f.shoved) { f.shoved = true; if (shove(u)) { f.eating = null; continue } }   // the Gallic charge at the Allia
+      if (LEVEL.backRiver && F.shoves && !f.shoved) { f.shoved = true; if (shove(u)) { f.eating = null; continue } }   // the Gallic charge at the Allia
       f.eating = u; u.hp -= FOES[f.type].dps * dt * (FOES[f.type].cleave && !UNITS[u.type].armour ? FOES[f.type].cleave : 1); u.hurt = 0.12; sfx.chop()
       if (u.hp < u.max * 0.5 && u.type !== 'triarius') tutorial('hurt')
       if (u.hp <= 0) removeUnit(u)
@@ -1702,6 +1713,7 @@ function update(dt) {
       else if (e.state === 'used') return lose()
     }
     if (f.dir > 0 && f.y >= ROWS + 0.3) {
+      if (LEVEL.backRiver) { riverBreach(f); if (G.phase !== 'play') return; continue }   // the Allia: the river behind the line
       if (LEVEL.openLanes && F.elephant && !G.units.some(x => x.lane === f.lane)) {   // Scipio's lanes: down an empty lane, an elephant runs out of the battle
         f.hp = 0; G.killed++
         if (!G.tips.lanes) { G.tips.lanes = true; announce('The elephant ran down an empty lane and out of the battle, as at Zama!') }
@@ -1761,7 +1773,7 @@ function draw() {
       }
     }
   }
-  for (let l = 0; l < COLS; l++) if (G.equites[l]?.state === 'none' && !LEVEL.closed?.includes(l)) {   // an unguarded lane: no eques under it
+  if (!LEVEL.backRiver) for (let l = 0; l < COLS; l++) if (G.equites[l]?.state === 'none' && !LEVEL.closed?.includes(l)) {   // an unguarded lane: no eques under it
     const free = equesDrag?.moved
     ctx.fillStyle = free ? (equesDrag.to === l ? 'rgba(251, 243, 228, .35)' : 'rgba(251, 243, 228, .14)') : 'rgba(142, 43, 34, .16)'
     ctx.fillRect(l * cell + 3, ry(ROWS) + 2, cell - 6, CAMP * cell - 4)
@@ -1799,6 +1811,11 @@ function draw() {
     if (f.hp < f.max || (f.shieldMax && f.shield < f.shieldMax)) hpBar(foeX(f), ry(f.y) - (FOES[f.type].elephant ? 140 : f.type === 'calf' ? 74 : f.type === 'phalangite' ? 80 : 74) * k, (f.hp + f.shield) / (f.max + f.shieldMax), f.shield > 0 ? '#b08a3e' : '#e2574c')
   }])
   for (const [lane, e] of G.equitesTop.entries()) if (e.state !== 'used') items.push([ry(e.y), () => { ctx.save(); ctx.translate(lx(lane), ry(e.y)); ctx.scale(k * 0.9, k * 0.9); drawEques(ctx, e, T); ctx.restore() }])
+  if (LEVEL.backRiver) items.push([ry(ROWS + 1), () => {   // the lives left, on the river
+    ctx.save(); ctx.font = `800 ${Math.round(11 + 3 * k)}px Nunito, system-ui, sans-serif`; ctx.textAlign = 'left'; ctx.fillStyle = 'rgba(255, 255, 255, .92)'
+    const label = (LANG === 'bg' ? 'Животи: ' : 'Lives: ') + (G.lives ? '♥'.repeat(G.lives) : (LANG === 'bg' ? 'няма' : 'none'))
+    ctx.fillText(label, 8, ry(ROWS) + cell * 0.62); ctx.restore()
+  }])
   for (const [lane, e] of G.equites.entries()) if (e.state !== 'used' && e.state !== 'none') items.push([ry(e.y), () => { ctx.save(); if (equesDrag?.moved && equesDrag.from === lane) ctx.globalAlpha = 0.4; ctx.translate(lx(lane), ry(e.y)); ctx.scale(k * 0.9, k * 0.9); drawEques(ctx, e, T); ctx.restore() }])
   for (const r of G.runners) items.push([ry(r.y), () => { ctx.save(); ctx.translate(lx(r.lane), ry(r.y)); ctx.scale(k, k); drawPig(ctx, T, true); ctx.restore() }])
   items.sort((a, b) => a[0] - b[0]).forEach(([, fn]) => fn())
@@ -2110,15 +2127,15 @@ function armyLine(score, L) {
   if (LANG === 'bg') {   // in Bulgarian: "1 прашкар", "2 триарии"
     const a = armyFor(score, L), BGV = { slinger: ['прашкар', 'прашкари'], triarius: ['триарий', 'триарии'], hastatus: ['хастат', 'хастати'], ceres: ['Церера', 'Церери'] }
     const vets = Object.entries(a.vets).map(([t, n]) => `${n} ${(BGV[t] ?? [bgName(UNITS[t].name), bgName(UNITS[t].name)])[n === 1 ? 0 : 1]}`)
-    return `Започвате с ${a.grain} жито, ${a.equites ? (a.equites === 1 ? 'един еквит' : a.equites + ' еквити') : 'без еквити'}${vets.length ? ` и ветерани: ${vets.join(', ')}` : ' и без ветерани'}.${a.medicus ? ` С вас идва медик (военен лекар)${a.augur ? ' и авгур' : ''}.` : ''}`
+    return `Започвате с ${a.grain} жито, ${a.lives != null ? (a.lives ? (a.lives === 1 ? 'един живот' : a.lives + ' живота') : 'без нито един живот') : a.equites ? (a.equites === 1 ? 'един еквит' : a.equites + ' еквити') : 'без еквити'}${vets.length ? ` и ветерани: ${vets.join(', ')}` : ' и без ветерани'}.${a.medicus ? ` С вас идва медик (военен лекар)${a.augur ? ' и авгур' : ''}.` : ''}`
   }
   const a = armyFor(score, L), vets = Object.entries(a.vets).map(([t, n]) => `${n} ${n === 1 ? UNITS[t].name.toLowerCase() : UNITS[t].name.toLowerCase() + (t === 'triarius' ? '' : 's')}`.replace('triarius', n === 1 ? 'triarius' : 'triarii').replace('hastatuss', 'hastati'))
-  return `You start with ${a.grain} grain, ${a.equites ? (a.equites === 1 ? 'one eques' : a.equites + ' equites') : 'no equites'}${vets.length ? ` and veterans: ${vets.join(', ')}` : ' and no veterans'}.${a.medicus ? ` A medicus (army doctor) comes with you${a.augur ? ', and an augur' : ''}.` : ''}`
+  return `You start with ${a.grain} grain, ${a.lives != null ? (a.lives ? (a.lives === 1 ? 'one life' : a.lives + ' lives') : 'no lives') : a.equites ? (a.equites === 1 ? 'one eques' : a.equites + ' equites') : 'no equites'}${vets.length ? ` and veterans: ${vets.join(', ')}` : ' and no veterans'}.${a.medicus ? ` A medicus (army doctor) comes with you${a.augur ? ', and an augur' : ''}.` : ''}`
 }
 function startLevel(i, score = quizScore) {
   overlay.hidden = true
   newGame(i, score); sfx.init()
-  if (Object.values(G.vets).some(n => n > 0) || G.equites.some((e, l) => e.state === 'none' && !LEVEL.closed?.includes(l))) { G.phase = 'deploy'; renderTray(); layout(); syncDeploy() }
+  if (Object.values(G.vets).some(n => n > 0) || LEVEL.backRiver || G.equites.some((e, l) => e.state === 'none' && !LEVEL.closed?.includes(l))) { G.phase = 'deploy'; renderTray(); layout(); syncDeploy() }
   else beginBattle()
 }
 function syncDeploy() {
@@ -2128,7 +2145,9 @@ function syncDeploy() {
   $('deploy-text').textContent = (left
     ? (bg ? `Резултатът от теста ви донесе ветерани. Плъзнете ги на полето безплатно (остават ${left}). ` : `Your test score earned you veterans. Drag them onto the field for free (${left} still to place). `)
     : had ? (bg ? 'Ветераните ви са на място. Плъзнете, за да ги наместите. ' : 'Your veterans are in place. Drag to adjust them. ') : '')
-    + (eq === 0
+    + (LEVEL.backRiver
+      ? (bg ? `Тибър е зад гърба ви. ${G.lives ? `Имате ${G.lives === 1 ? 'един живот' : G.lives + ' живота'}: гал, който стигне реката, помита линията си във водата и отнема живот.` : 'Нямате нито един живот: първият гал, който стигне реката, решава битката.'} Сложете втори войник точно зад всеки боец отпред.` : `The Tiber is at your back. ${G.lives ? `You have ${G.lives === 1 ? 'one life' : G.lives + ' lives'}: a Gaul who reaches the river sweeps his lane into the water and costs a life.` : 'You have no lives: the first Gaul to reach the river decides the battle.'} Put a second soldier right behind each fighter in front.`)
+      : eq === 0
       ? (bg ? 'Нямате еквити: резултатът от теста е твърде нисък. Всеки враг, който пробие, печели битката.' : 'You have no equites: your test score was too low. Any enemy who breaks through wins the battle.')
       : open
         ? (bg ? `Имате ${eq === 1 ? 'един еквит' : eq + ' еквити'} за ${eq + open} линии. Те атакуват веднъж; линиите без еквит (отбелязани в червено) са незащитени. Плъзнете еквит по дъното, за да го преместите – и преди, и по време на битката.` : `You have ${eq === 1 ? 'one eques' : eq + ' equites'} for ${eq + open} lanes. Each charges once; the lanes without one (marked in red) are unguarded. Drag a horseman along the bottom to move him, before or during the battle.`)
@@ -2164,7 +2183,7 @@ function lose() {
   const hint = { regillus: 'Build supply carts early, cover every lane, and keep triarii for the strongest attacks.',
     volsci: 'Raiders are fast: have a slinger in every lane before the bursts, and principes to cut down those who arrive.',
     veii: 'Archers stop out of reach and shoot your front soldier. Put siege sheds in front and slingers behind them.',
-    allia: 'Keep the river side closed: a soldier with a comrade on his left can’t be shoved, and triarii never are. Watch the hill on the right at the start.',
+    allia: 'Put a second soldier right behind each front fighter: then the Gauls can’t knock him back. Keep the last row by the river for carts and slingers, and watch the hill on the right at the start.',
     aquilonia: 'The Linen Legion is hard to kill. Rorarii in the middle lanes hit three lanes at once.',
     beneventum: 'Keep war pigs ready in front of your line: an elephant they reach runs back and tramples its own army.',
     agrigentum: 'Balearic slingers stop out of reach: scorpions and slingers behind a sturdy front line deal with them.',

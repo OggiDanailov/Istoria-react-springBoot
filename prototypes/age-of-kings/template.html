@@ -826,6 +826,7 @@ const verdictText = score => LANG === 'bg' ? (BG_UI[verdictFor(score)] ?? verdic
 function armyLine(score) {
   const a = HoldTheLine.armyFor(score, levelOf(chapterIndex))
   if (a.gate) return LANG === 'bg' ? `порта, която издържа ${a.gate} бога` : `a gate that holds against ${a.gate} gods`   // Pantheon Siege
+  if (a.lives != null) return LANG === 'bg' ? `${a.grain} жито и ${a.lives ? (a.lives === 1 ? 'един живот' : a.lives + ' живота') : 'нито един живот'} край реката` : `${a.grain} grain and ${a.lives ? (a.lives === 1 ? 'one life' : a.lives + ' lives') : 'no lives'} by the river`   // the Allia: lives, not equites
   const eq = a.equites ?? 0
   if (LANG === 'bg') {
     const v = Object.entries(a.vets).filter(([, n]) => n).map(([t, n]) => `${n} ${VET_NAMES_BG[t]?.[n === 1 ? 0 : 1] ?? t}`)
