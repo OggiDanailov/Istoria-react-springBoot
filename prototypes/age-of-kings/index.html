@@ -270,6 +270,14 @@ button:focus-visible { outline: 3px solid var(--ochre); outline-offset: 2px; }
 .kf dd { margin: 0; font-size: 14.5px; line-height: 1.4; }
 .kf-read { border: none; background: none; color: #8e2b22; font-weight: 800; font-size: 13px; padding: 0 2px; text-decoration: underline; text-underline-offset: 2px; }
 .app.in-battle { padding-bottom: 0; margin-bottom: 0; min-height: 0; }   /* the battle fits the screen below the top bar */
+.campaign { margin: 0 0 16px; padding: 12px; border-radius: 14px; background: #f3e6c8; border: 1.5px solid #d9caa8; }
+.campaign h3 { margin: 0 0 8px; font-size: 18px; }
+.campaign-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+.campaign-grid div { display: grid; gap: 1px; text-align: center; background: #fbf3e4; border-radius: 10px; padding: 8px 4px; }
+.campaign-grid b { font: 900 20px/1.1 var(--body); color: #8e2b22; font-variant-numeric: tabular-nums; }
+.campaign-grid span { font-size: 11.5px; font-weight: 800; color: #6b5d50; }
+.campaign-best { margin: 8px 0 0; font-size: 13.5px; font-weight: 700; }
+.campaign-strip { margin: 4px 0 0; font-weight: 800; font-size: 14px; color: var(--ochre); }
 .ctable { width: 100%; border-collapse: collapse; margin: 4px 0 14px; font-size: 14px; }
 /* the Pantheon above the gods' table */
 .pantheon { margin: 6px 0 14px; padding: 12px; border-radius: 16px; background: #fbf3e4; border: 2px solid #d9caa8; display: grid; gap: 8px; max-width: 560px; }
@@ -3467,7 +3475,13 @@ function bindControls() {
   })
 
 }
-function exit(result) { const cb = opts.onExit; unmount(); cb?.(result) }
+// the battle's own record goes back with the result: enemies down, soldiers lost, how long it took (the gods' games:
+// points and mistakes)
+function exit(result) {
+  const cb = opts.onExit
+  const stats = panActive ? (P ? { points: P.score, mistakes: P.mistakes } : {}) : G ? { killed: G.killed, lost: G.lost, secs: Math.round(G.t), breaks: G.charges } : {}
+  unmount(); cb?.({ ...stats, ...result })
+}
 // opts: { mode: 'campaign' } (the standalone page: map, five battles, saved stars)
 //    or { mode: 'chapter', level, score, onExit({ won, stars, left }) } (one battle with the army a chapter test earned)
 function mount(el, o = {}) {
@@ -4413,8 +4427,38 @@ function toggleReview() {
   closeSheet(); render()
   toast(openAll ? 'Review mode is on: everything is open.' : 'Review mode is off: each chapter opens when you win the battle before it.')
 }
+// ---------- the campaign record: every battle fought, across the whole game ----------
+// What a player has done so far, to make every battle count, won or lost: battles fought and won, stars, enemies
+// down, soldiers lost, the best battle. Kept with the tests in this browser.
+function campaignRecord() {
+  const all = Object.entries(tests).flatMap(([id, t]) => (t.battles ?? []).map(b => ({ ...b, id })))
+  const done = Object.values(tests).filter(t => testComplete(t))
+  const best = all.reduce((m, b) => (b.killed ?? 0) > (m?.killed ?? -1) ? b : m, null)
+  return { fought: all.length, won: all.filter(b => b.won).length, chapters: Object.values(tests).filter(t => t.won).length,
+    stars: Object.values(tests).reduce((a, t) => a + (t.stars ?? 0), 0), killed: all.reduce((a, b) => a + (b.killed ?? 0), 0),
+    lost: all.reduce((a, b) => a + (b.lost ?? 0), 0), best, avg: done.length ? Math.round(done.reduce((a, t) => a + pct(t.score), 0) / done.length) : null }
+}
+const nf = n => n.toLocaleString(LANG === 'bg' ? 'bg-BG' : 'en-GB')
+function recordToast(r) {
+  const { before, after } = r.record, best = (before.best?.killed ?? 0) < r.killed && before.fought > 0
+  const head = r.won ? tl(`<b>Victory!</b> ${CHAPTERS[chapterIndex + 1] ? `The next chapter is open: ${esc(CHAPTERS[chapterIndex + 1].short)}.` : ''}`, `<b>Победа!</b> ${CHAPTERS[chapterIndex + 1] ? `Следващата глава е отворена: ${esc(CHAPTERS[chapterIndex + 1].short)}.` : ''}`)
+    : tl('<b>The line broke</b>, but every enemy down counts.', '<b>Линията се пречупи</b>, но всеки паднал враг се брои.')
+  return `${head}<br>${tl(`+${nf(r.killed)} enemies down: <b>${nf(after.killed)}</b> in your campaign.`, `+${nf(r.killed)} паднали врагове: <b>${nf(after.killed)}</b> в кампанията ви.`)}${best ? '<br>' + tl('<b>A new record</b> for one battle!', '<b>Нов рекорд</b> за една битка!') : ''}`
+}
+function campaignHtml(compact) {
+  const c = campaignRecord()
+  if (!c.fought) return ''
+  if (compact) return `<p class="campaign-strip">${tl('Your campaign', 'Вашата кампания')}: ⚔ ${nf(c.killed)} ${tl('enemies down', 'паднали врагове')} · ${c.won}/${c.fought} ${tl('battles won', 'спечелени битки')} · ${c.stars}★</p>`
+  const cell = (n, label) => `<div><b>${n}</b><span>${label}</span></div>`
+  const best = c.best && c.best.killed ? (() => { const ch = CHAPTERS.find(x => x.id === c.best.id); return ch ? tl(`Best battle: ${esc(battleName(CHAPTERS.indexOf(ch)))}, ${nf(c.best.killed)} enemies down.`, `Най-добра битка: ${esc(nameOf(levelOf(CHAPTERS.indexOf(ch)) ?? { name: battleName(CHAPTERS.indexOf(ch)) }))}, ${nf(c.best.killed)} паднали врагове.`) : '' })() : ''
+  return `<div class="campaign"><h3>${tl('Your campaign', 'Вашата кампания')}</h3><div class="campaign-grid">
+    ${cell(nf(c.killed), tl('enemies down', 'паднали врагове'))}${cell(nf(c.lost), tl('soldiers lost', 'загубени войници'))}
+    ${cell(`${c.won}/${c.fought}`, tl('battles won', 'спечелени битки'))}${cell(c.stars + '★', tl('stars', 'звезди'))}
+    ${cell(c.chapters + '/' + CHAPTERS.length, tl('chapters conquered', 'покорени глави'))}${cell(c.avg != null ? c.avg + '%' : '–', tl('average test', 'среден тест'))}
+    </div>${best ? `<p class="campaign-best">${best}</p>` : ''}</div>`
+}
 function openProgress() {
-  openSheet('Your progress', `
+  openSheet('Your progress', `${campaignHtml()}
     <p style="margin:0 0 14px;font-size:14px"><button class="ghost dark" id="open-all">${openAll ? 'Turn review mode off' : 'Review mode: open everything'}</button><br>
       <span style="font-size:13px;color:#6b5d50">${openAll ? 'Review mode is on: every chapter is open, each chapter has its questions and answers, and every battle can be played at a score you pick. Review battles don’t change your progress.' : 'For reviewing content: opens every chapter, shows each chapter’s questions with their answers, and lets you play any battle at a score you pick. Your real progress isn’t changed.'}</span></p>
     <p style="font-size:14px">Each chapter ends with a test made of all its games; your first answer to each question counts. The test score sets your army for the chapter’s battle: around 80% gives a fair fight, 90% a comfortable one, and below 70% only an expert wins.</p>
@@ -4491,6 +4535,7 @@ function renderRome() {
       </button>` }).join('')}
     </div>
     <p><button class="ghost" id="review-toggle">${openAll ? 'Turn review mode off' : 'Review mode: open everything'}</button></p>
+    ${campaignHtml(true)}
     <p class="footnote">Every chapter is generated from Wikipedia and fact-checked by AI. Early Roman dates are the traditional ones; historians doubt many of them.</p>`
   app.querySelectorAll('[data-era]').forEach(b => b.addEventListener('click', () => openEra(ERAS.find(e => e.id === b.dataset.era))))
   app.querySelector('#review-toggle')?.addEventListener('click', toggleReview)
@@ -5350,13 +5395,16 @@ function renderBattle() {
     mode: 'chapter', level: HoldTheLine.LEVELS.indexOf(levelOf(i)), score, lang: LANG,
     onExit: r => {
       if (!r.left && !review) {
-        t.battles.push({ won: !!r.won, score, attempt: t.attempt, at: new Date().toISOString() })
+        const before = campaignRecord()
+        t.battles.push({ won: !!r.won, score, attempt: t.attempt, at: new Date().toISOString(), killed: r.killed ?? 0, lost: r.lost ?? 0, secs: r.secs ?? 0, stars: r.won ? r.stars ?? 1 : 0 })
+        r.record = { before, after: campaignRecord() }
         if (r.won) { t.won = true; t.stars = Math.max(t.stars ?? 0, r.stars ?? 1) }
         saveTests()
       }
       window.scrollTo(0, 0)
       go({ screen: 'home' })
-      if (r.won && !review && CHAPTERS[i + 1]) toast(tl(`<b>Victory at ${esc(battleName(i))}!</b> The next chapter is open: ${esc(CHAPTERS[i + 1].short)}.`, `<b>Победа: ${esc(nameOf(levelOf(i)))}!</b> Следващата глава е отворена: ${esc(CHAPTERS[i + 1].short)}.`), 4500)
+      if (!r.left && !review && r.record && r.killed != null) toast(recordToast(r), 5200)
+      else if (r.won && !review && CHAPTERS[i + 1]) toast(tl(`<b>Victory at ${esc(battleName(i))}!</b> The next chapter is open: ${esc(CHAPTERS[i + 1].short)}.`, `<b>Победа: ${esc(nameOf(levelOf(i)))}!</b> Следващата глава е отворена: ${esc(CHAPTERS[i + 1].short)}.`), 4500)
     },
   })
 }

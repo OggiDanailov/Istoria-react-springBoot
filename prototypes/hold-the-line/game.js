@@ -3016,7 +3016,13 @@ function bindControls() {
   })
 
 }
-function exit(result) { const cb = opts.onExit; unmount(); cb?.(result) }
+// the battle's own record goes back with the result: enemies down, soldiers lost, how long it took (the gods' games:
+// points and mistakes)
+function exit(result) {
+  const cb = opts.onExit
+  const stats = panActive ? (P ? { points: P.score, mistakes: P.mistakes } : {}) : G ? { killed: G.killed, lost: G.lost, secs: Math.round(G.t), breaks: G.charges } : {}
+  unmount(); cb?.({ ...stats, ...result })
+}
 // opts: { mode: 'campaign' } (the standalone page: map, five battles, saved stars)
 //    or { mode: 'chapter', level, score, onExit({ won, stars, left }) } (one battle with the army a chapter test earned)
 function mount(el, o = {}) {
