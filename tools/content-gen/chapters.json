@@ -148,12 +148,12 @@
       "short": "Toward Equality",
       "era": "early-republic",
       "battle": {
-        "name": "The Fall of Veii",
-        "year": "c. 396 BC",
-        "enemy": "Veii",
-        "sec": "siege-of-veii",
-        "intro": "Veii, a great Etruscan city just 16 km from Rome, has held out for years. Camillus, named dictator, has a plan: a tunnel through the soft rock beneath the walls.",
-        "level": "veii"
+        "name": "The Allia",
+        "year": "390 BC",
+        "enemy": "the Senone Gauls",
+        "sec": "battle-of-the-allia",
+        "intro": "The Senone Gauls under Brennus march on Rome. At the Allia brook, by the Tiber, the Romans stretch their line dangerously thin.",
+        "level": "allia"
       },
       "locked": true
     },
