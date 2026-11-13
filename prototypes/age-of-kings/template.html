@@ -291,6 +291,12 @@ button:focus-visible { outline: 3px solid var(--ochre); outline-offset: 2px; }
 .pn-dots button { flex: none; width: 10px; height: 10px; padding: 0; border-radius: 50%; border: 1.5px solid #8e2b22; background: transparent; cursor: pointer; }
 .pn-dots button.on { background: #8e2b22; }
 /* the seven kings */
+.allia .al-key { display: flex; gap: 6px; align-items: center; font-size: 12px; font-weight: 800; color: #3b2a1c; }
+.allia .al-key i { display: inline-block; width: 10px; height: 10px; border-radius: 50%; }
+.allia .al-key i.r { background: #b8322a; } .allia .al-key i.g { background: #2f5f9a; margin-left: 6px; }
+.allia .pn-stage canvas { height: 230px; cursor: default; }
+.al-cap { margin: 0; min-height: 3.2em; font-size: 14.5px; line-height: 1.4; }
+.al-cap b { color: #8e2b22; margin-right: 4px; font-variant-numeric: tabular-nums; }
 .kg-steps { display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); gap: 3px; }
 .kg-steps button { display: grid; justify-items: center; gap: 1px; padding: 4px 1px; border-radius: 8px; border: 1.5px solid #d9caa8; background: #fff8ea; color: #3b2a1c; cursor: pointer; font: inherit; min-width: 0; }
 .kg-steps button b { font-family: var(--display); font-weight: 400; font-size: 15px; color: #8e2b22; }
@@ -846,6 +852,7 @@ function openSheet(title, html, focusId) {
   body.scrollTop = 0
   body.querySelectorAll('[data-pantheon]').forEach(mountPantheonCard)
   body.querySelectorAll('[data-kings]').forEach(mountKingsCard)
+  body.querySelectorAll('[data-allia]').forEach(mountAllia)
   document.getElementById('sheet-close').focus()
   if (focusId) {
     const sec = body.querySelector(`[data-sec="${focusId}"]`)
@@ -863,9 +870,113 @@ function paragraphHtml(p) {
   const gods = /^\|\s*(Roman|Римски)\s*\|\s*(Greek|Гръцки)/.test(head.trim()) && HoldTheLine.gods   // the table of the Roman and Greek gods
   return `${gods ? '<div class="pantheon" data-pantheon></div>' : ''}<table class="ctable"><thead><tr>${cells(head).map(c => `<th>${c}</th>`).join('')}</tr></thead><tbody>${rows.map(r => `<tr>${cells(r).map(c => `<td>${c}</td>`).join('')}</tr>`).join('')}</tbody></table>`
 }
-const chronicleHtml = () => latinNote() + CHAPTER.map(s => `<section data-sec="${s.id}"><h3>${esc(s.title)}</h3>${(CH.chronicleMaps ?? []).filter(m => m.sec === s.id).map(chronicleMap).join('')}${s.body.split(/\n\s*\n/).map(paragraphHtml).join('')}${CH.id === 'kingdom' && s.id === 'birth-of-the-republic' ? '<div class="pantheon kings" data-kings></div>' : ''}</section>`).join('') +
+// interactive pieces at the end of a chronicle section (mounted when the chronicle opens)
+const CHRONICLE_EXTRAS = {
+  'kingdom:birth-of-the-republic': '<div class="pantheon kings" data-kings></div>',
+  'conflict-of-orders-resolution:battle-of-the-allia': '<div class="pantheon allia" data-allia></div>',
+}
+const chronicleHtml = () => latinNote() + CHAPTER.map(s => `<section data-sec="${s.id}"><h3>${esc(s.title)}</h3>${(CH.chronicleMaps ?? []).filter(m => m.sec === s.id).map(chronicleMap).join('')}${s.body.split(/\n\s*\n/).map(paragraphHtml).join('')}${CHRONICLE_EXTRAS[CH.id + ':' + s.id] ?? ''}</section>`).join('') +
   `<p class="sources">Sources: Wikipedia, ${CH.sources.map(t => `“${esc(t)}”`).join(', ')} · CC BY-SA 4.0</p>`
 const openChronicle = focusId => openSheet(CH.title, chronicleHtml(), focusId)
+// ---------- the battle of the Allia, replayed in dots (chapter 4's chronicle) ----------
+// After Livy, as the chronicle tells it: the Romans stretch a thin line from the Tiber to a hill, with their reserves on
+// the hill; Brennus strikes the hill first; panic runs along the line; the left wing is driven into the Tiber (many
+// drown, most survivors swim across to Veii); the right wing runs back to Rome. About 8 seconds, five steps.
+function mountAllia(el) {
+  const t = (en, bg) => LANG === 'bg' ? bg : en
+  const STEPS = [
+    [0, t('The Romans stretch a long, thin line from the Tiber to a hill; their reserves wait on the hill. The Gauls come from the north.', 'Римляните разтягат дълга, тънка линия от Тибър до един хълм; резервът им чака на хълма. Галите идват от север.')],
+    [1.6, t('Brennus strikes the reserves on the hill first.', 'Брен удря първо резерва на хълма.')],
+    [3.0, t('Panic runs along the Roman line.', 'Паника обхваща римската линия.')],
+    [4.2, t('The left wing is driven into the Tiber: many drown, and most survivors swim across and flee to Veii.', 'Лявото крило е изтласкано в Тибър: мнозина се удавят, а повечето оцелели преплуват реката и бягат към Вейи.')],
+    [6.4, t('The right wing runs back to Rome. 18 July became the ill-omened “day of the Allia”.', 'Дясното крило бяга обратно към Рим. 18 юли става зловещият „ден на Алия“.')],
+  ], END = 8.2
+  el.innerHTML = `<div class="pn-head"><b>${t('The Allia, step by step', 'Алия, стъпка по стъпка')}</b><span class="al-key"><i class="r"></i>${t('Romans', 'римляни')} <i class="g"></i>${t('Gauls', 'гали')}</span></div>
+    <div class="pn-stage"><canvas aria-label="${t('The battle of the Allia shown with dots: red for the Romans, blue for the Gauls', 'Битката при Алия, показана с точки: червени за римляните, сини за галите')}"></canvas></div>
+    <p class="al-cap" aria-live="polite"></p>
+    <div class="pn-nav"><button class="ghost" data-al="play">↻ ${t('Play again', 'Пусни отново')}</button></div>`
+  const cv = el.querySelector('canvas'), ctx = cv.getContext('2d'), cap = el.querySelector('.al-cap')
+  let rnd = 7; const R = () => (rnd = (rnd * 16807) % 2147483647) / 2147483647
+  // the map, in parts of the width (x) and height (y): the Tiber down the left, the Allia brook coming in from the east
+  const riverX = 0.13, lineY = 0.6, hill = { x: 0.84, y: 0.56 }
+  const romans = [], gauls = []
+  for (let i = 0; i < 46; i++) {   // the thin line, from the river bank to the foot of the hill
+    const u = i / 45, x = riverX + 0.06 + u * 0.6, y = lineY + (R() - 0.5) * 0.03
+    const left = u < 0.58, drown = left && R() < 0.62
+    romans.push({ x, y, left, drown, sx: (R() - 0.5) * 0.05, bank: lineY - 0.2 + R() * 0.42, cross: riverX - 0.07 - R() * 0.05, flee: { x: x + 0.05 + R() * 0.15, y: 1.12 + R() * 0.1 } })
+  }
+  for (let i = 0; i < 12; i++) romans.push({ x: hill.x + (R() - 0.5) * 0.09, y: hill.y + (R() - 0.5) * 0.08, reserve: true, dies: R() < 0.5, flee: { x: 0.8 + R() * 0.15, y: 1.12 + R() * 0.1 } })
+  for (let i = 0; i < 64; i++) {
+    const u = R(), toHill = i < 16
+    gauls.push({ x0: 0.2 + u * 0.75, y0: -0.1 - R() * 0.14, x1: toHill ? hill.x + (R() - 0.5) * 0.12 : riverX + 0.08 + u * 0.62, y1: toHill ? hill.y - 0.04 + (R() - 0.5) * 0.1 : lineY - 0.12 + (R() - 0.5) * 0.06, toHill, u })
+  }
+  const ease = x => x <= 0 ? 0 : x >= 1 ? 1 : x * x * (3 - 2 * x)
+  const seg = (time, a, b) => ease((time - a) / (b - a))
+  let start = null, step = -1
+  function draw(time) {
+    const dpr = Math.min(2, window.devicePixelRatio || 1), W = cv.clientWidth, H = cv.clientHeight
+    if (cv.width !== Math.round(W * dpr)) { cv.width = Math.round(W * dpr); cv.height = Math.round(H * dpr) }
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0)
+    ctx.fillStyle = '#d9cfa5'; ctx.fillRect(0, 0, W, H)   // the plain
+    ctx.fillStyle = 'rgba(120, 140, 70, .35)'; ctx.beginPath(); ctx.ellipse(hill.x * W, hill.y * H, W * 0.11, H * 0.12, 0, 0, Math.PI * 2); ctx.fill()   // the hill
+    // the Tiber, and the Allia brook flowing into it
+    ctx.strokeStyle = '#6fa3c8'; ctx.lineCap = 'round'
+    ctx.lineWidth = W * 0.07; ctx.beginPath(); ctx.moveTo(riverX * W, -10); ctx.bezierCurveTo(riverX * W - 18, H * 0.35, riverX * W + 14, H * 0.65, riverX * W - 6, H + 10); ctx.stroke()
+    ctx.lineWidth = 4; ctx.beginPath(); ctx.moveTo(W + 5, H * 0.16); ctx.bezierCurveTo(W * 0.7, H * 0.26, W * 0.45, H * 0.14, riverX * W, H * 0.24); ctx.stroke()
+    ctx.fillStyle = '#3b2a1c'; ctx.font = '800 11px Nunito, system-ui, sans-serif'; ctx.textAlign = 'left'
+    ctx.save(); ctx.translate(riverX * W + 5, H * 0.92); ctx.rotate(-Math.PI / 2); ctx.fillText(t('TIBER', 'ТИБЪР'), 0, 0); ctx.restore()
+    ctx.fillText(t('the Allia brook', 'поток Алия'), W * 0.62, H * 0.27)
+    ctx.fillText(t('hill', 'хълм'), hill.x * W - 12, hill.y * H - H * 0.13)
+    ctx.textAlign = 'left'; ctx.fillText('← ' + t('Veii', 'Вейи'), 4, H * 0.48)
+    ctx.textAlign = 'right'; ctx.fillText(t('Rome', 'Рим') + ' ↓', W - 6, H - 6)
+    const dot = (x, y, c, a = 1) => { if (a <= 0) return; ctx.globalAlpha = a; ctx.fillStyle = c; ctx.beginPath(); ctx.arc(x * W, y * H, 3.4, 0, Math.PI * 2); ctx.fill(); ctx.globalAlpha = 1 }
+    // the Gauls: march down, a band strikes the hill, then the whole host presses on and pushes the left toward the river
+    for (const g of gauls) {
+      const a = seg(time, 0, 1.6)
+      let x = g.x0 + (g.x1 - g.x0) * a, y = g.y0 + (g.y1 - g.y0) * a
+      if (g.toHill) { const b = seg(time, 1.6, 2.9); x += (hill.x - x) * b * 0.5; y += (hill.y + 0.02 - y) * b * 0.6 }
+      else { const b = seg(time, 3.4, 5.6); y += 0.12 * b; if (g.u < 0.58) { x -= (x - (riverX + 0.07)) * b * 0.8; y += (g.u - 0.3) * 0.3 * b } }   // the left pushed right up to the water
+      dot(x, y, '#2f5f9a')
+    }
+    // the Romans
+    for (const r of romans) {
+      let x = r.x, y = r.y, a = 1
+      if (r.reserve) {
+        const hit = seg(time, 2.2, 3.0)
+        x += (r.x - hill.x) * hit * 0.8; y += 0.05 * hit
+        if (r.dies) a = 1 - seg(time, 2.6, 3.2)
+        else { const f = seg(time, 4.2, 6.6); x += (r.flee.x - x) * f; y += (r.flee.y - y) * f }
+      } else {
+        if (time > 3.0 && time < 4.4) { x += Math.sin(time * 40 + r.x * 60) * 0.006; y += Math.cos(time * 33 + r.x * 50) * 0.005 }   // panic
+        if (r.left) {
+          const f = seg(time, 4.2, 5.6); x += (riverX + r.sx - x) * f; y += (r.bank - y) * f   // spread along the bank
+          if (r.drown) a = 1 - seg(time, 5.5, 6.3)
+          else { const c = seg(time, 5.7, 6.9); x += (r.cross - x) * c }
+        } else { const f = seg(time, 6.2, 7.9); x += (r.flee.x - x) * f; y += (r.flee.y - y) * f }
+      }
+      if (r.drown && time > 5.5 && time < 6.6 && a > 0) {   // a splash where a man goes under
+        ctx.strokeStyle = `rgba(255, 255, 255, ${0.8 * a})`; ctx.lineWidth = 1.5; ctx.beginPath(); ctx.arc(x * W, y * H, 4 + (1 - a) * 9, 0, Math.PI * 2); ctx.stroke()
+      }
+      dot(x, y, '#b8322a', a)
+    }
+    // which step it is
+    let s = 0; for (let k = 0; k < STEPS.length; k++) if (time >= STEPS[k][0]) s = k
+    if (s !== step) { step = s; cap.innerHTML = `<b>${s + 1} / ${STEPS.length}</b> ${STEPS[s][1]}` }
+  }
+  function frame(now) {
+    if (!el.isConnected) return
+    if (start != null) { const time = (now - start) / 1000; draw(Math.min(time, END)); if (time >= END) start = null }
+    requestAnimationFrame(frame)
+  }
+  const play = () => { start = performance.now(); step = -1 }
+  el.querySelector('[data-al="play"]').addEventListener('click', play)
+  draw(0)
+  // it plays by itself the first time it comes into view
+  const io = new IntersectionObserver(es => { if (es.some(e => e.isIntersecting)) { io.disconnect(); play() } }, { threshold: 0.6 })
+  io.observe(cv)
+  requestAnimationFrame(frame)
+}
+
 // ---------- the seven kings in the Kingdom's chronicle, one at a time ----------
 // From the chronicle: each king's traditional dates, origin, a nickname and three facts; a figure with something to
 // remember him by. A last slide shows all seven in a row.
