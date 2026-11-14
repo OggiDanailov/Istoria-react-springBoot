@@ -16,7 +16,7 @@ const UNITS = {
   princeps: { name: 'Princeps', short: 'Princeps', cost: 100, recharge: 10, hp: 700, melee: 55, about: 'A soldier in his prime: tough, and he cuts down whoever reaches him.' },
   shed:     { name: 'Siege shed', short: 'Shed', cost: 75, recharge: 20, hp: 1200, arrowMul: 0.15, about: 'A wooden shed covered in hides, like the ones Livy says the Romans built at Veii. Arrows barely hurt it, so put it in front.' },
   rorarii:  { name: 'Rorarii', short: 'Rorarii', cost: 225, recharge: 7.5, hp: 300, reload: 1.6, dmg: 20, range: 99, spread: true, about: 'Light troops Livy names in the early legion. They throw javelins into three lanes at once.' },
-  scorpio:  { name: 'Scorpion', short: 'Scorpion', cost: 175, recharge: 15, hp: 300, reload: 3.5, dmg: 110, range: 99, pierce: true, about: 'A bolt-shooting machine, used in Roman sieges. Each bolt flies through everyone in its lane.' },
+  scorpio:  { name: 'Scorpion', short: 'Scorpion', cost: 200, recharge: 15, hp: 300, reload: 3.5, dmg: 110, range: 99, pierce: true, about: 'A bolt-shooting machine, used in Roman sieges. Each bolt flies through everyone in its lane.' },
   velites:  { name: 'Velites', short: 'Velites', cost: 50, recharge: 5, hp: 180, reload: 2.4, dmg: 26, range: 3.6, skirmish: true, about: 'Young light troops with javelins. When the enemy reaches them, they fall back one square, once.' },
   cornicen: { name: 'Trumpeter', short: 'Trumpeter', cost: 75, recharge: 20, hp: 250, horn: { range: 2.6, every: 10 }, about: 'At Zama the Romans blared trumpets and panicked Hannibal’s elephants. He blares at any elephant coming at his lane or the lanes beside it.' },
   maniple:  { name: 'Maniple', short: 'Maniple', cost: 125, recharge: 10, hp: 650, melee: 35, flank: 70, about: 'A small, flexible unit. It fights in its own lane and strikes enemies in the lanes beside it from the side, where shields don’t protect them.' },
@@ -158,8 +158,8 @@ const LEVELS = [
     waves: [w(28, ['warrior']), w(46, ['phalangite']), w(62, ['warrior', 'warrior']), w(78, ['cavalry']), w(92, ['phalangite', 'warrior']), w(108, ['elephant+calf']), w(126, ['phalangite', 'phalangite']),
       w(140, ['chief', ...rep(3, 'phalangite'), 'warrior', 'warrior', 'cavalry'], 'A great wave approaches!'), w(170, ['elephant+calf', 'warrior']), w(188, ['phalangite', 'cavalry']),
       w(205, ['chief', 'elephant+calf', ...rep(3, 'phalangite'), ...rep(2, 'warrior'), 'elephant', 'cavalry', 'cavalry'], 'The final wave!')] },
-  { id: 'agrigentum', name: 'Agrigentum', year: '261 BC', enemy: 'Carthage’s relief army', theme: 'siege', start: 275, cols: 7, rows: 9, more: 1.17, ditch: 1,
-    twist: 'A bigger field: seven lanes and nine rows. The Romans dug a ditch around their siege lines: enemies crossing it slow right down, and you can’t build in it.', units: ['cart', 'slinger', 'hastatus', 'triarius', 'caltrops', 'princeps', 'rorarii', 'scorpio'], newUnit: 'scorpio',
+  { id: 'agrigentum', name: 'Agrigentum', year: '261 BC', enemy: 'Carthage’s relief army', theme: 'siege', start: 275, cols: 7, rows: 9, more: 1.17, ditch: 1, walls: { hp: 3000, from: 25, every: [8, 12], dmg: 45, reward: 150 },
+    twist: 'A bigger field: seven lanes and nine rows. The Romans dug a ditch around their siege lines: enemies crossing it slow right down, and you can’t build in it. Catapults on the walls of Akragas throw stones at your soldiers, but bolts that fly past the enemy strike the walls. Break them and the city falls silent.', units: ['cart', 'slinger', 'hastatus', 'triarius', 'caltrops', 'princeps', 'rorarii', 'scorpio'], newUnit: 'scorpio',
     blurb: 'Rome besieges Akragas, which the Romans call Agrigentum. Carthage sends a relief army of hired soldiers, slingers and 60 war elephants.',
     after: 'The relief army was heavily defeated and the garrison slipped away. The Romans sold 25,000 of the city’s people into slavery, but Sicily was far from won.',
     waves: [w(28, ['warrior']), w(44, ['balearic']), w(58, ['warrior', 'warrior']), w(72, ['shield', 'warrior']), w(88, ['balearic', 'warrior', 'warrior']), w(104, ['elephant']), w(118, ['shield', 'shield', 'warrior']),
@@ -1310,6 +1310,7 @@ function newGame(i = levelIndex, score = quizScore) {
     introduced: new Set(), selected: null, dismiss: false, hover: null, lastLane: -1, tips: {},
     hasMedicus: army.medicus, medicus: army.medicus ? MEDICUS.heals : 0, medicusWait: 0, heal: false,
     hasAugur: army.augur, augur: army.augur ? 1 : 0, blessUntil: -1,
+    walls: LEVEL.walls ? { hp: LEVEL.walls.hp, next: LEVEL.walls.from, hit: 0, warned: false } : null,
     houses: (LEVEL.houses ?? []).map(([lane, row]) => ({ lane, row, burned: false })), blocks: {}, events: (LEVEL.events ?? []).map(e => ({ ...e })), charges: 0,
   }
   G.total = G.queue.length
@@ -1598,19 +1599,34 @@ function update(dt) {
   // missiles
   for (const s of G.shots) {
     const sd = s.dir ?? -1
-    s.y += sd * s.speed * dt
+    s.jolt = Math.max(0, (s.jolt ?? 0) - dt)
+    s.y += sd * s.speed * dt * (s.jolt > 0 ? 0.2 : 1)
     const hit = G.foes.filter(f => f.lane === s.lane && f.hp > 0 && !f.jump && !s.hits?.has(f) && s.y <= f.y + 0.05 && s.y >= f.y - 0.85 && passes(s, f)).sort((a, b) => sd < 0 ? b.y - a.y : a.y - b.y)[0]
     if (hit) {
       hurtFoe(hit, s.dmg * twinMul(hit, s.src), s.kind, s.from != null && s.from !== s.lane)   // a javelin from the next lane hits the side
       if (s.breaks && hit.shield > 0) { hit.shield = 0; sfx.crack() }   // the pilum bends: the shield is useless
       if (s.splash) for (const f of G.foes) if (f !== hit && f.hp > 0 && Math.abs(f.lane - hit.lane) === 1 && Math.abs(f.y - hit.y) < 0.8) hurtFoe(f, s.dmg * s.splash, true)
       if (s.grapple) { hit.pinned = s.grapple; G.fx.push({ kind: 'ring', x: lx(s.lane), y: ry(hit.y), t: 0.4 }) }
-      if (s.pierce) (s.hits ??= new Set()).add(hit); else s.done = true   // a scorpion bolt flies on through
+      if (s.pierce) { (s.hits ??= new Set()).add(hit); s.jolt = 0.12; G.fx.push({ kind: 'ring', x: lx(s.lane), y: ry(hit.y + 0.3), t: 0.3 }) } else s.done = true   // a scorpion bolt punches through and flies on
       G.fx.push({ kind: 'spark', x: lx(s.lane), y: ry(s.y), t: 0.25 })
+    }
+    if (G.walls?.hp > 0 && sd < 0 && s.kind !== 'ray' && s.y < -0.6 && !s.done) {   // it flies on and strikes the walls of the city
+      s.done = true; G.walls.hp = Math.max(0, G.walls.hp - s.dmg); G.walls.hit = 0.3
+      for (let i = 0; i < 3; i++) G.fx.push({ kind: 'shard', x: lx(s.lane) + (Math.random() - 0.5) * 12, y: ry(-0.7) + Math.random() * 8, t: 0.4 })
+      if (G.walls.hp <= 0) { G.rations += LEVEL.walls.reward; G.shake = 10; sfx.crack(); announce(`The walls of Akragas are breached! The city falls silent. +${LEVEL.walls.reward} grain`, true, 3600) }
     }
     if (sd < 0 ? s.y < Math.max(-1, s.end) : s.y > Math.min(ROWS + 1, s.end)) s.done = true
   }
   G.shots = G.shots.filter(s => !s.done)
+  if (G.walls?.hp > 0 && G.t >= G.walls.next) {   // a catapult on the walls throws a stone at the first soldier in a lane
+    const W_ = LEVEL.walls, lanes = [...new Set(G.units.filter(u => !u.travel && u.type !== 'caltrops').map(u => u.lane))]
+    G.walls.next = G.t + W_.every[0] + Math.random() * (W_.every[1] - W_.every[0])
+    if (lanes.length) {
+      if (!G.walls.warned) { G.walls.warned = true; announce('The catapults of Akragas open fire!') }
+      G.foeShots.push({ lane: lanes[Math.floor(Math.random() * lanes.length)], y: -0.5, dir: 1, dmg: W_.dmg, dx: 0, stone: true, big: true }); sfx.throw()
+    }
+  }
+  if (G.walls) G.walls.hit = Math.max(0, G.walls.hit - dt)
   // enemy arrows hit the first soldier in their lane
   for (const s of G.foeShots) {
     s.y += 6 * dt * (s.dir ?? 1)
@@ -1749,12 +1765,32 @@ function update(dt) {
 }
 
 // ---------- drawing a frame ----------
+function drawWalls() {   // Akragas's walls: cracks as they take bolts, towers falling, rubble when breached
+  const top = ry(0), lost = 1 - G.walls.hp / LEVEL.walls.hp, c = ctx
+  let seed = 5; const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647
+  c.strokeStyle = '#5a4526'; c.lineWidth = 1.6
+  for (let i = 0; i < Math.floor(lost * 16); i++) { const x = W * (0.12 + rnd() * 0.76), y = top * (0.44 + rnd() * 0.2); c.beginPath(); c.moveTo(x, y); c.lineTo(x + (rnd() - 0.5) * 10, y + 6); c.lineTo(x + (rnd() - 0.5) * 12, y + 13); c.stroke() }
+  const fallen = [0.3, 0.7, 0.5].filter((_, i) => lost >= [0.34, 0.67, 1][i])
+  for (const x of fallen) {   // the tower is gone: paint the sky and hill back behind it, then a broken stump and rubble
+    c.save(); c.beginPath(); c.rect(W * x - 12, -1, 24, top * 0.42 + 1); c.clip()
+    c.fillStyle = '#74853f'; c.fillRect(W * x - 12, -1, 24, top); c.fillStyle = '#a89a6a'; c.beginPath(); c.moveTo(0, top); c.quadraticCurveTo(W / 2, -top * 0.7, W, top); c.fill(); c.restore()
+    c.fillStyle = '#d9cfb4'; c.beginPath(); c.moveTo(W * x - 9, top * 0.42); c.lineTo(W * x - 9, top * 0.26); c.lineTo(W * x - 3, top * 0.32); c.lineTo(W * x + 2, top * 0.22); c.lineTo(W * x + 9, top * 0.3); c.lineTo(W * x + 9, top * 0.42); c.fill()
+    c.fillStyle = '#c9b07a'; for (let j = 0; j < 5; j++) { c.beginPath(); c.arc(W * x - 9 + j * 4.5, top * 0.4 - (j % 2) * 3, 3.5, 0, TAU); c.fill() }
+  }
+  if (G.walls.hp <= 0) { c.fillStyle = 'rgba(80, 70, 55, .55)'; c.fillRect(W * 0.1, top * 0.34, W * 0.8, top * 0.4) }
+  if (G.walls.hit > 0) { c.fillStyle = `rgba(230, 220, 190, ${G.walls.hit * 1.5})`; c.fillRect(W * 0.1, top * 0.42, W * 0.8, top * 0.32) }
+  if (G.walls.hp > 0) {   // how much of the walls still stands
+    const bw = Math.min(90, W * 0.3), x = W - bw - 6, y = 4
+    c.fillStyle = 'rgba(27, 23, 21, .55)'; c.fillRect(x - 1, y - 1, bw + 2, 7); c.fillStyle = '#e0a63a'; c.fillRect(x, y, bw * (1 - lost), 5)
+  }
+}
 function draw() {
   ctx.setTransform(dpr, 0, 0, dpr, 0, 0)
   ctx.save()
   if (G.shake > 0 && !reduceMotion) ctx.translate((Math.random() - 0.5) * G.shake, (Math.random() - 0.5) * G.shake)
   ctx.drawImage(bg, 0, 0, W, H)
   const T = G.t
+  if (G.walls) drawWalls()
   // where the selected unit can go
   const moving = moveDrag?.moved && G.units.includes(moveDrag.u) ? moveDrag.u : null
   const placing = G.selected || G.dismiss || moving
@@ -1819,7 +1855,7 @@ function draw() {
   for (const [lane, e] of G.equites.entries()) if (e.state !== 'used' && e.state !== 'none') items.push([ry(e.y), () => { ctx.save(); if (equesDrag?.moved && equesDrag.from === lane) ctx.globalAlpha = 0.4; ctx.translate(lx(lane), ry(e.y)); ctx.scale(k * 0.9, k * 0.9); drawEques(ctx, e, T); ctx.restore() }])
   for (const r of G.runners) items.push([ry(r.y), () => { ctx.save(); ctx.translate(lx(r.lane), ry(r.y)); ctx.scale(k, k); drawPig(ctx, T, true); ctx.restore() }])
   items.sort((a, b) => a[0] - b[0]).forEach(([, fn]) => fn())
-  for (const s of G.foeShots) { const x = lx(s.lane) + s.dx * cell, y = ry(s.y) - 20 * k; if (s.stone) { ctx.fillStyle = '#5f5f58'; ctx.beginPath(); ctx.arc(x, y, 3 * k + 1, 0, TAU); ctx.fill(); continue } line(ctx, x, y - 9 * k, x, y + 5 * k, '#3f2a16', 1.5); line(ctx, x - 2.5 * k, y + 2 * k, x, y + 6 * k, '#9aa3aa', 1.5); line(ctx, x + 2.5 * k, y + 2 * k, x, y + 6 * k, '#9aa3aa', 1.5) }
+  for (const s of G.foeShots) { const x = lx(s.lane) + s.dx * cell, y = ry(s.y) - 20 * k; if (s.stone) { ctx.fillStyle = '#5f5f58'; ctx.beginPath(); ctx.arc(x, y, (s.big ? 5.5 : 3) * k + 1, 0, TAU); ctx.fill(); continue } line(ctx, x, y - 9 * k, x, y + 5 * k, '#3f2a16', 1.5); line(ctx, x - 2.5 * k, y + 2 * k, x, y + 6 * k, '#9aa3aa', 1.5); line(ctx, x + 2.5 * k, y + 2 * k, x, y + 6 * k, '#9aa3aa', 1.5) }
   // stones and javelins
   for (const s of G.shots) {
     const sideways = Math.min(1, Math.abs(s.y0 - s.y) / 0.9), x = lx(s.from ?? s.lane) + (lx(s.lane) - lx(s.from ?? s.lane)) * sideways + s.x0 * cell, y = ry(s.y) - 14 * k

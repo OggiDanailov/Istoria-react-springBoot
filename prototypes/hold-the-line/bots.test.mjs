@@ -78,11 +78,11 @@ async function run(level, strategy, score) {
   }, [level, strategy, score])
   const t0 = Date.now(); let st
   while (Date.now() - t0 < 200000) {
-    st = await page.evaluate(() => { const G = window.__hold.G; return { phase: G.phase, t: Math.round(G.t), killed: G.killed, total: G.total, charges: G.charges } })
+    st = await page.evaluate(() => { const G = window.__hold.G; return { phase: G.phase, t: Math.round(G.t), killed: G.killed, total: G.total, charges: G.charges, walls: G.walls && Math.round(G.walls.hp) } })
     if (st.phase !== 'play') break
     await page.waitForTimeout(300)
   }
-  console.log(name.padEnd(22), strategy.padEnd(7), score + '%', st.phase.padEnd(5), `t=${st.t}`, `killed ${st.killed}/${st.total}`, `charges ${st.charges}`)
+  console.log(name.padEnd(22), strategy.padEnd(7), score + '%', st.phase.padEnd(5), `t=${st.t}`, `killed ${st.killed}/${st.total}`, `charges ${st.charges}`, st.walls != null ? `walls ${st.walls}` : '')
 }
 for (const [lvl, strat, score] of JSON.parse(process.env.PLAN)) await run(lvl, strat, score)
 console.log('errors:', [...new Set(errors)]); await browser.close()
