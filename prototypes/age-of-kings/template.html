@@ -887,6 +887,10 @@ const CHRONICLE_EXTRAS = {
   'samnite-wars:caudine-forks': '<div class="pantheon allia" data-replay="caudine"></div>',
   'samnite-wars:third-war-sentinum': '<div class="pantheon allia" data-replay="sentinum"></div>',
   'final-conquest-of-italy:heraclea-and-asculum': '<div class="pantheon allia" data-replay="heraclea"></div>',
+  'conflict-of-orders-origins:first-secession': '<div class="pantheon allia" data-replay="secession"></div>',
+  'samnite-wars:aquilonia-and-the-end': '<div class="pantheon allia" data-replay="aquilonia"></div>',
+  'final-conquest-of-italy:beneventum-and-withdrawal': '<div class="pantheon allia" data-replay="beneventum"></div>',
+  'first-punic-war:siege-of-akragas': '<div class="pantheon allia" data-replay="agrigentum"></div>',
   'first-punic-war:corvus-and-mylae': '<div class="pantheon allia" data-replay="mylae"></div>',
   'first-punic-war:battle-of-the-aegates': '<div class="pantheon allia" data-replay="aegates"></div>',
   'hannibal-in-italy:trebia-and-trasimene': '<div class="pantheon allia" data-replay="trasimene"></div>',
@@ -902,7 +906,7 @@ const openChronicle = focusId => openSheet(CH.title, chronicleHtml(), focusId)
 // groups of dots with where they are at each moment (a line, or a cluster) and what befalls them (some fall, they
 // waver in panic, they drown with a splash), and five captions. Times are in "story seconds"; it plays SLOW times
 // slower so each caption can be read (the user found 8 seconds too fast). Positions are parts of the width and height.
-const RCOL = { carthage: '#33509a', macedon: '#6b4a8a', rome: '#b8322a', gaul: '#2f5f9a', samnite: '#c27a1e', etruscan: '#8a7f75', epirus: '#6b4a8a', elephant: '#76716b' }
+const RCOL = { patrician: '#d9a520', linen: '#f4eedd', carthage: '#33509a', macedon: '#6b4a8a', rome: '#b8322a', gaul: '#2f5f9a', samnite: '#c27a1e', etruscan: '#8a7f75', epirus: '#6b4a8a', elephant: '#76716b' }
 const REPLAYS = {
   // chapter 4: the Allia (Livy), as the chronicle tells it
   allia: {
@@ -982,7 +986,109 @@ const REPLAYS = {
       [5.8, 'Fabius outflanks the Samnites, and the coalition collapses.', 'Фабий обхожда самнитите и коалицията рухва.'],
     ], end: 7.8,
   },
+  // chapter 3: the First Secession
+  secession: {
+    title: ['The First Secession, step by step', 'Първата сецесия, стъпка по стъпка'],
+    key: [['rome', 'plebeians', 'плебеи'], ['patrician', 'patricians', 'патриции'], ['samnite', 'Volsci, Aequi, Sabines', 'волски, екви, сабини']],
+    ground: [
+      { city: [0.3, 0.42, 0.17, 0.13], label: ['Rome', 'Рим'] },
+      { hill: [0.74, 0.24, 0.15, 0.09], label: ['the Sacred Mount', 'Свещения хълм'] },
+      { barrier: [0.6, 0.37, 0.88, 0.37], from: 3.6 },
+      { tag: [0.62, 0.62], t: ['shops closed, no army', 'затворени дюкяни, няма армия'], from: 4.4, to: 7.2 },
+    ],
+    groups: [
+      { side: 'patrician', n: 7, keys: [[0, 'blob', 0.3, 0.42, 0.06, 0.04]] },
+      { side: 'rome', n: 30, keys: [[0, 'blob', 0.3, 0.44, 0.14, 0.09], [1.4, 'line', 0.1, 0.72, 0.5, 0.72, 0.02], [2.8, 'line', 0.1, 0.72, 0.5, 0.72, 0.02], [3.8, 'blob', 0.74, 0.24, 0.11, 0.06], [7.2, 'blob', 0.74, 0.24, 0.11, 0.06], [8.2, 'line', 0.1, 0.72, 0.5, 0.72, 0.02]], jitter: [1.6, 2.8] },
+      { side: 'samnite', n: 18, keys: [[0, 'line', 0.05, 1.15, 0.6, 1.15, 0.03], [4.4, 'line', 0.05, 1.15, 0.6, 1.15, 0.03], [5.6, 'line', 0.05, 0.9, 0.6, 0.9, 0.03]] },
+    ],
+    steps: [
+      [0, '494 BC: Rome is at war with the Sabines, and with the Aequi and Volsci, hill tribes to the east and south-east.', '494 г. пр.н.е.: Рим воюва със сабините и с еквите и волските – планински племена на изток и югоизток.'],
+      [1.4, 'The plebeian soldiers are called up as usual. This time they refuse to march.', 'Плебеите войници са свикани както обикновено. Този път те отказват да тръгнат.'],
+      [2.8, 'Advised by Sicinius, they leave the city together and camp on the Sacred Mount, about 5 km away, behind simple defences.', 'По съвет на Сикиний те напускат заедно града и се разполагат на Свещения хълм, на около 5 км, зад прости укрепления.'],
+      [4.4, 'Shops and workshops close, trade stops, and the city faces its enemies with no army.', 'Дюкяните и работилниците затварят, търговията спира и градът е изправен срещу враговете си без армия.'],
+      [7.2, 'The secession works: the plebs come back to defend Rome, and they have won their own officials, the tribunes.', 'Сецесията успява: плебеите се връщат да защитават Рим, и то със свои собствени служители – народните трибуни.'],
+    ], end: 9.0,
+  },
+  // chapter 5: Aquilonia
+  aquilonia: {
+    title: ['Aquilonia, step by step', 'Аквилония, стъпка по стъпка'],
+    key: [['rome', 'Romans', 'римляни'], ['samnite', 'Samnites', 'самнити'], ['linen', 'the Linen Legion', 'Лененият легион']],
+    ground: [
+      { city: [0.3, 0.14, 0.13, 0.06], label: ['Aquilonia', 'Аквилония'] },
+      { city: [0.8, 0.18, 0.1, 0.06], label: ['Cominium', 'Коминий'] },
+      { tag: [0.25, 0.97], t: ['Papirius', 'Папирий'], to: 2.8 }, { tag: [0.78, 0.97], t: ['Carvilius', 'Карвилий'], to: 2.8 },
+      { flash: [0.22, 0.58], at: 2.9 },
+    ],
+    groups: [
+      { side: 'samnite', n: 22, keys: [[0, 'blob', 0.3, 0.32, 0.17, 0.06], [4.4, 'blob', 0.3, 0.32, 0.17, 0.06], [5.0, 'blob', 0.3, 0.38, 0.17, 0.06], [6.2, 'blob', 0.3, 0.14, 0.1, 0.04]], fall: [5.0, 6.0, 0.7] },
+      { side: 'linen', n: 10, ring: true, keys: [[0, 'line', 0.18, 0.42, 0.42, 0.42, 0.01], [4.4, 'line', 0.18, 0.42, 0.42, 0.42, 0.01], [5.0, 'line', 0.18, 0.47, 0.42, 0.47, 0.01]], fall: [5.2, 6.2, 1] },
+      { side: 'samnite', n: 1, keys: [[0, 'blob', 0.36, 0.34, 0, 0], [2.6, 'blob', 0.36, 0.34, 0, 0], [3.0, 'blob', 0.22, 0.6, 0, 0]] },
+      { side: 'samnite', n: 8, keys: [[2.6, 'line', -0.3, 0.62, -0.05, 0.62, 0.02], [3.6, 'line', 0.02, 0.56, 0.14, 0.5, 0.02]], fall: [3.8, 4.6, 0.85] },
+      { side: 'rome', n: 6, keys: [[0, 'blob', 0.2, 0.86, 0.04, 0.03], [2.9, 'blob', 0.2, 0.86, 0.04, 0.03], [3.6, 'blob', 0.12, 0.6, 0.04, 0.04]] },
+      { side: 'rome', n: 22, keys: [[0, 'line', 0.08, 0.86, 0.46, 0.86, 0.02], [1.4, 'line', 0.12, 0.62, 0.48, 0.62, 0.02], [4.4, 'line', 0.12, 0.62, 0.48, 0.62, 0.02], [5.2, 'line', 0.12, 0.52, 0.48, 0.52, 0.02], [6.4, 'blob', 0.3, 0.2, 0.12, 0.05]], fall: [5.2, 6.0, 0.08] },
+      { side: 'samnite', n: 8, keys: [[0, 'blob', 0.8, 0.19, 0.07, 0.03]], becomes: { at: 6.4, side: 'rome' } },
+      { side: 'rome', n: 14, keys: [[0, 'line', 0.62, 0.86, 0.94, 0.86, 0.02], [1.4, 'line', 0.64, 0.36, 0.96, 0.36, 0.02]] },
+    ],
+    steps: [
+      [0, '293 BC: some 40,000 Samnites gather at Aquilonia. The Linen Legion swears a sacred oath never to flee, on pain of death.', '293 г. пр.н.е.: около 40 000 самнити се събират при Аквилония. Лененият легион полага свещена клетва никога да не бяга под страх от смърт.'],
+      [1.4, 'The consuls Papirius and Carvilius attack Aquilonia and nearby Cominium at once.', 'Консулите Папирий и Карвилий нападат едновременно Аквилония и близкия Коминий.'],
+      [2.8, 'Tipped off by a deserter, Papirius intercepts twenty elite Samnite companies on their way.', 'Предупреден от един дезертьор, Папирий пресреща по пътя двадесет елитни самнитски кохорти.'],
+      [4.4, 'Then he attacks: even the Linen Legion cannot hold, and Aquilonia falls.', 'После напада: дори Лененият легион не удържа и Аквилония пада.'],
+      [6.4, 'Cominium surrenders to Carvilius. Aquilonia sealed the Samnites’ fate; by 290 BC the last resistance was crushed.', 'Коминий се предава на Карвилий. Аквилония решава съдбата на самнитите; до 290 г. пр.н.е. и последната съпротива е смазана.'],
+    ], end: 8.4,
+  },
+  // chapter 6: Beneventum
+  beneventum: {
+    title: ['Beneventum, step by step', 'Беневент, стъпка по стъпка'], night: [0.6, 3.0],
+    key: [['rome', 'Romans', 'римляни'], ['epirus', 'Pyrrhus’s army', 'армията на Пир'], ['elephant', 'elephants', 'слонове']],
+    ground: [
+      { woods: [0.24, 0.24, 0.2, 0.13] },
+      { city: [0.5, 0.88, 0.14, 0.06], label: ['Roman camp', 'римският лагер'] },
+      { flash: [0.7, 0.6], at: 5.7 },
+    ],
+    groups: [
+      { side: 'epirus', n: 14, keys: [[0.6, 'line', -0.4, 0.12, -0.05, 0.12, 0.02], [1.6, 'blob', 0.24, 0.24, 0.15, 0.09], [2.8, 'blob', 0.24, 0.26, 0.15, 0.09], [3.4, 'blob', 0.3, 0.44, 0.12, 0.05], [4.4, 'blob', -0.25, 0.3, 0.06, 0.06]], jitter: [1.6, 3.4], fall: [3.6, 4.3, 0.6] },
+      { side: 'rome', n: 28, keys: [[0, 'line', 0.15, 0.72, 0.85, 0.72, 0.02], [3.0, 'line', 0.15, 0.72, 0.85, 0.72, 0.02], [3.6, 'line', 0.12, 0.54, 0.6, 0.5, 0.02], [4.4, 'line', 0.15, 0.62, 0.85, 0.62, 0.02], [5.4, 'line', 0.15, 0.74, 0.85, 0.74, 0.02], [6.4, 'line', 0.15, 0.62, 0.85, 0.62, 0.02], [7.6, 'line', 0.15, 0.42, 0.85, 0.42, 0.03]], fall: [5.0, 5.6, 0.12] },
+      { side: 'epirus', n: 24, keys: [[3.8, 'line', 0.15, -0.15, 0.85, -0.15, 0.02], [4.4, 'line', 0.15, 0.2, 0.85, 0.2, 0.02], [5.4, 'line', 0.15, 0.42, 0.85, 0.42, 0.02], [6.4, 'line', 0.15, 0.42, 0.85, 0.42, 0.02], [7.6, 'line', 0.15, 0.1, 0.85, 0.06, 0.04]], jitter: [6.2, 7.6], fall: [6.4, 7.4, 0.5] },
+      { side: 'elephant', n: 3, r: 6, keys: [[3.8, 'line', 0.3, -0.1, 0.6, -0.1, 0], [4.4, 'line', 0.3, 0.3, 0.6, 0.3, 0], [5.4, 'line', 0.3, 0.62, 0.6, 0.62, 0], [6.0, 'line', 0.3, 0.62, 0.6, 0.62, 0], [6.8, 'line', 0.3, 0.36, 0.6, 0.36, 0], [7.6, 'line', 0.3, -0.2, 0.6, -0.2, 0]], jitter: [5.8, 7.0] },
+      { side: 'elephant', n: 1, r: 3.6, keys: [[3.8, 'blob', 0.72, -0.1, 0, 0], [4.4, 'blob', 0.7, 0.3, 0, 0], [5.4, 'blob', 0.7, 0.6, 0, 0]], fall: [5.7, 6.2, 1] },
+    ],
+    steps: [
+      [0, '275 BC. Ancient writers tell how Pyrrhus planned a surprise: part of his army would march through the night and fall on the Roman camp.', '275 г. пр.н.е. Древните автори разказват, че Пир замислил изненада: част от армията му трябвало да премине през нощта и да нападне римския лагер.'],
+      [1.6, 'In the dark woods the column gets lost, and its torches burn out.', 'В тъмната гора колоната се изгубва, а факлите ѝ догарят.'],
+      [3.0, 'At dawn the men arrive exhausted, and the Romans drive them off.', 'Призори войниците пристигат изтощени и римляните ги прогонват.'],
+      [4.4, 'In the main battle Pyrrhus’s elephants push the Romans back towards their camp.', 'В главната битка слоновете на Пир изтласкват римляните назад към лагера.'],
+      [5.6, 'An elephant calf is wounded; its mother panics and turns on her own side.', 'Едно слонче е ранено; майка му се подплашва и се обръща срещу собствената войска.'],
+      [6.6, 'Pyrrhus’s lines break. Accounts disagree whether it was a victory or a draw, but Pyrrhus soon sails home.', 'Редиците на Пир се разпадат. Изворите спорят дали е било победа или равенство, но скоро Пир отплава към дома.'],
+    ], end: 8.6,
+  },
   // chapter 7: the First Punic War
+  agrigentum: {
+    title: ['Agrigentum, step by step', 'Агригент, стъпка по стъпка'], night: [6.0, 7.4],
+    key: [['rome', 'Romans', 'римляни'], ['carthage', 'Carthaginians', 'картагенци'], ['elephant', 'elephants', 'слонове']],
+    ground: [
+      { city: [0.5, 0.17, 0.2, 0.1], label: ['Akragas (Agrigentum)', 'Акрагас (Агригент)'] },
+      { barrier: [0.12, 0.36, 0.88, 0.36], from: 0 }, { tag: [0.5, 0.33], t: ['siege works', 'обсадни съоръжения'], to: 1.6 },
+      { hill: [0.8, 0.88, 0.2, 0.08], label: ['high ground', 'възвишение'] },
+      { flash: [0.5, 0.48], at: 2.4 },
+    ],
+    groups: [
+      { side: 'carthage', n: 12, keys: [[0, 'blob', 0.5, 0.17, 0.15, 0.06], [2.0, 'blob', 0.5, 0.17, 0.15, 0.06], [2.5, 'blob', 0.5, 0.48, 0.12, 0.05], [3.1, 'blob', 0.5, 0.17, 0.15, 0.06], [6.3, 'blob', 0.5, 0.17, 0.15, 0.06], [7.3, 'blob', -0.25, 0.14, 0.05, 0.05]] },
+      { side: 'rome', n: 22, keys: [[0, 'line', 0.14, 0.42, 0.86, 0.42, 0.02], [1.6, 'line', 0.14, 0.42, 0.86, 0.42, 0.02], [2.1, 'blob', 0.5, 0.74, 0.44, 0.2], [2.8, 'blob', 0.5, 0.74, 0.44, 0.2], [3.3, 'line', 0.14, 0.42, 0.86, 0.42, 0.02]] },
+      { side: 'rome', n: 22, keys: [[0, 'line', 0.14, 0.5, 0.86, 0.5, 0.02], [1.6, 'line', 0.14, 0.5, 0.86, 0.5, 0.02], [2.1, 'blob', 0.5, 0.76, 0.44, 0.18], [2.8, 'blob', 0.5, 0.76, 0.44, 0.18], [3.3, 'line', 0.14, 0.5, 0.86, 0.5, 0.02], [4.4, 'line', 0.14, 0.5, 0.86, 0.5, 0.02], [4.9, 'line', 0.12, 0.6, 0.88, 0.6, 0.025]], fall: [5.0, 5.9, 0.1] },
+      { side: 'carthage', n: 30, keys: [[3.0, 'blob', 1.2, 0.88, 0.06, 0.06], [3.6, 'blob', 0.78, 0.86, 0.14, 0.05], [4.4, 'blob', 0.78, 0.86, 0.14, 0.05], [5.0, 'line', 0.14, 0.7, 0.86, 0.7, 0.025], [5.6, 'line', 0.14, 0.7, 0.86, 0.7, 0.025], [6.6, 'blob', 1.25, 0.95, 0.08, 0.05]], fall: [5.2, 6.2, 0.65] },
+      { side: 'carthage', n: 6, r: 3.8, keys: [[3.0, 'blob', 1.2, 0.8, 0.04, 0.04], [3.6, 'blob', 0.95, 0.78, 0.03, 0.04], [4.4, 'blob', 0.95, 0.78, 0.03, 0.04], [5.0, 'blob', 0.92, 0.62, 0.03, 0.05], [6.4, 'blob', 1.2, 0.8, 0.04, 0.04]], fall: [5.3, 6.0, 0.5] },
+      { side: 'elephant', n: 3, r: 6, keys: [[3.0, 'line', 1.1, 0.8, 1.3, 0.8, 0], [3.6, 'line', 0.66, 0.79, 0.86, 0.79, 0], [4.4, 'line', 0.66, 0.79, 0.86, 0.79, 0], [5.0, 'line', 0.3, 0.66, 0.7, 0.66, 0]], fall: [5.3, 6.1, 0.8] },
+    ],
+    steps: [
+      [0, 'In 262 BC about 40,000 Romans besiege Akragas, Carthage’s main base on Sicily.', 'През 262 г. пр.н.е. около 40 000 римляни обсаждат Акрагас – главната база на Картаген в Сицилия.'],
+      [1.6, 'At harvest time the troops scatter to gather crops. The garrison bursts out and breaks into the Roman camp, before being driven back.', 'По жътва войниците се пръсват да събират реколтата. Гарнизонът излиза и нахлува в римския лагер, но е отблъснат.'],
+      [3.0, 'Carthage ships over a relief army: 50,000 infantry, 6,000 cavalry and 60 war elephants. Its general camps on high ground for two months.', 'Картаген прехвърля армия за помощ: 50 000 пехотинци, 6000 конници и 60 бойни слона. Пълководецът ѝ стои на възвишението два месеца.'],
+      [4.4, 'In spring 261 BC he attacks, and is heavily defeated: one of only two full-scale pitched battles on Sicily in the whole war.', 'През пролетта на 261 г. пр.н.е. той напада и е тежко разбит – една от само двете големи битки в открито поле в Сицилия през цялата война.'],
+      [6.0, 'That night the garrison slips away.', 'Същата нощ гарнизонът се измъква.'],
+      [7.4, 'The Romans sell 25,000 of the city’s people into slavery. But Sicily is far from won.', 'Римляните продават в робство 25 000 от жителите на града. Но Сицилия съвсем не е завладяна.'],
+    ], end: 8.8,
+  },
   mylae: {
     title: ['Mylae, step by step', 'Миле, стъпка по стъпка'], sea: true,
     key: [['rome', 'Roman ships', 'римски кораби'], ['carthage', 'Carthaginian ships', 'картагенски кораби']],
@@ -1187,6 +1293,7 @@ function mountReplay(el, id) {
       if (g.river) { curve(g.river, W * g.w, '#6fa3c8'); if (g.label) { ctx.save(); ctx.translate(g.at[0] * W, g.at[1] * H); if (g.rot) ctx.rotate(-Math.PI / 2); ctx.fillStyle = '#244a66'; ctx.textAlign = 'center'; ctx.fillText(tx(g.label), 0, 0); ctx.restore() } }
       if (g.brook) curve(g.brook, 4, '#6fa3c8')
       if (g.land) { ctx.fillStyle = '#d9cfa5'; ctx.beginPath(); g.land.forEach(([x, y], k) => k ? ctx.lineTo(x * W, y * H) : ctx.moveTo(x * W, y * H)); ctx.closePath(); ctx.fill(); if (g.label) { ctx.fillStyle = '#3b2a1c'; ctx.textAlign = 'center'; ctx.fillText(tx(g.label), g.at[0] * W, g.at[1] * H) } }
+      if (g.city) { const [x, y, rx, ry] = g.city; ctx.fillStyle = '#c9b48a'; ctx.strokeStyle = '#7a6545'; ctx.lineWidth = 3; ctx.beginPath(); ctx.roundRect((x - rx) * W, (y - ry) * H, rx * 2 * W, ry * 2 * H, 10); ctx.fill(); ctx.stroke(); if (g.label) { ctx.fillStyle = '#3b2a1c'; ctx.textAlign = 'center'; ctx.fillText(tx(g.label), x * W, (y - ry) * H - 5) } }
       if (g.isle) { const [x, y, rx, ry] = g.isle; ctx.fillStyle = '#d9cfa5'; ctx.beginPath(); ctx.ellipse(x * W, y * H, rx * W, ry * H, 0, 0, Math.PI * 2); ctx.fill(); if (g.label) { ctx.fillStyle = '#1f3c55'; ctx.textAlign = 'left'; ctx.fillText(tx(g.label), (x + rx) * W + 4, y * H + 4) } }
       if (g.lake) { const [x, y, rx, ry] = g.lake; ctx.fillStyle = '#6fa3c8'; ctx.beginPath(); ctx.ellipse(x * W, y * H, rx * W, ry * H, 0, 0, Math.PI * 2); ctx.fill(); if (g.label) { ctx.fillStyle = '#1f3c55'; ctx.textAlign = 'center'; ctx.fillText(tx(g.label), g.at[0] * W, g.at[1] * H) } }
       if (g.wind) { const a = Math.min(1, (t - (g.from ?? 0)) / 0.4); ctx.globalAlpha = 0.7 * a; ctx.strokeStyle = '#ffffff'; ctx.lineWidth = 2; for (const [x, y] of g.wind) { const sx = x * W + ((t * 30) % 20); ctx.beginPath(); ctx.moveTo(sx - 16, y * H); ctx.lineTo(sx + 16, y * H); ctx.moveTo(sx + 10, y * H - 5); ctx.lineTo(sx + 16, y * H); ctx.lineTo(sx + 10, y * H + 5); ctx.stroke() } if (g.label) { ctx.fillStyle = '#ffffff'; ctx.textAlign = 'left'; ctx.fillText(tx(g.label), g.wind[0][0] * W - 16, g.wind[0][1] * H - 8) } ctx.globalAlpha = 1 }
@@ -1220,6 +1327,7 @@ function mountReplay(el, id) {
       ctx.globalAlpha = 1
     }
     if (B.mist && t >= B.mist[0] && t < B.mist[1]) { const m = Math.min(1, (t - B.mist[0]) / 0.5, (B.mist[1] - t) / 0.8); ctx.fillStyle = `rgba(240, 240, 235, ${0.55 * m})`; ctx.fillRect(0, H * 0.3, W, H * 0.5) }   // morning mist
+    if (B.night && t >= B.night[0] && t < B.night[1]) { const m = Math.min(1, (t - B.night[0]) / 0.5, (B.night[1] - t) / 0.6); ctx.fillStyle = `rgba(20, 28, 60, ${0.5 * m})`; ctx.fillRect(0, 0, W, H) }   // night falls
     let s = 0; for (let k = 0; k < B.steps.length; k++) if (t >= B.steps[k][0]) s = k
     if (s !== step) { step = s; cap.innerHTML = `<b>${s + 1} / ${B.steps.length}</b> ${esc(B.steps[s][1 + L])}` }
   }
