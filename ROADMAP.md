@@ -1,6 +1,6 @@
 # ROADMAP - Ave Caesar
 
-**Last updated**: November 1, 2026
+**Last updated**: November 14, 2026
 **How the game works**: [GAME_DESIGN.md](GAME_DESIGN.md)
 **Live site**: https://avecaesar.org
 **Direction**: turn the quiz app into a game that teaches history. Short mini-games first, the chapter text as a "learn more" layer, AI-generated content so we can cover world history.
@@ -30,6 +30,8 @@
 - **The campaign record** (Nov 13, the user's request, "so it stimulates the player to keep fighting even when the battle is lost or won"): every battle now saves enemies down, soldiers lost and its length; the Progress screen shows the campaign (enemies down, soldiers lost, battles won, stars, chapters conquered, average test, best battle), the Ancient Rome screen a one-line summary, and after each battle won or lost a message with the new total and any new record. In the browser for now; on the server with player accounts later.
 - **Planned for the end (the user, Nov 13): real sound recordings.** Today every sound is generated in code (`sfx` in hold-the-line/game.js). Once the app is tested and approved, the user will supply MP3s (mono, 64–96 kbps, trimmed) named after the sounds (sling, throw, hit, chop, clang, die, place, collect, horn, charge, win, lose, crack, boom, trumpet, squeal, honk); each replaces its generated sound, the rest stay. About 200–400 KB for 20 effects; music, if any, loaded separately.
 - **The Allia replaces the Siege of Veii** (Nov 13, the user's idea, reworked after their first play): the Tiber is behind the Roman line (no camp, no equites; 10 rows). A Gaul's first blow knocks the man he hits one square back toward the river, and from the last row into it (he drowns; panic halves his neighbours' speed for 4 s); a comrade right behind him, a triarius, a cart or a trap never budges. A Gaul who reaches the river sweeps his whole lane into the water and costs a life; lives come from the test score (0 at 50%, 2 at 60% … 6 at 100%). The first wave strikes the hill on the right. Scripted players: 80% won 3/3, 90% won, 70% and 60% lost.
+- **Battle replays for chapters 3–10** (Nov 14, the user's rule: "every chapter with a battle game must have an animation of it"): Agrigentum, Mylae and the Aegates (ships, the corvus, captured ships changing colour, wind), Lake Trasimene (mist, lake), Cannae (the crescent and the double envelopment), Zama (the elephant lanes), Pydna; and three that were missing in chapters already read: the First Secession (chapter 3 has no battle in its chronicle), Aquilonia (the Linen Legion), Beneventum (the night march, the elephant calf). Chapters 11–28 still need theirs.
+- **Agrigentum, the walls fight back** (Nov 14, the user's ideas): catapults on the walls of Akragas throw stones at the first soldier in a lane; bolts that fly past the enemy strike the walls and stick in them; the damage shows in stages (cracks, fallen battlements, holes, towers falling, smoke, fires); breaching them silences the city (+150 grain); at victory the city falls and burns. The scorpion costs 200 (was 175), and each enemy its bolt pierces visibly jolts. Horses in the camp now take a press before a grain sack, and a refused move says why.
 - **Battle replays: the engine and the Early Republic** (Nov 13): the Allia rebuilt as data in a small engine (`REPLAYS` and `mountReplay` in the app: ground, groups of dots with keyframes, falls, panic, splashes, barricades, the yoke, a flash), plus the Caudine Forks, Sentinum (Decius's devotio) and Heraclea (the elephants; Asculum in the last caption). Next, by era as the user reads: Lake Trasimene, Cannae, Zama, Pydna; then Aquae Sextiae, Carrhae, Alesia, Pharsalus; then the Teutoburg Forest, the Milvian Bridge, Adrianople.
 - **Test score → army, reworked** (Nov 11, the user's design): no battle below 50%; the equites are earned (0 at 50%, 2 at 60%, 3 at 70%, 4 at 80%, 5 at 90%, 6 at 100% on five lanes, one more per extra lane) and placed and moved by the player; gentler grain steps; hastatus 125 (was 150); the gods' gate 1–6 by score. Rebalanced with the scripted players (see GAME_DESIGN §4–5).
 - **A shorter, even test** (Nov 9): one round per game, drawn for each attempt from all the chapter's material: Chronology Jam 6 events spread over the chapter (tap only; dragging blocked scrolling on phones), Match Pairs 10 pairs on two screens of 5, True or False 10, Legion Quiz 10, Legion Run 10 gates (practice). Odd One Out removed (its answers were often arguable). Who Am I? unchanged for now: 10 people per chapter would need new content (API credit). Unfinished old-format tests restart; won chapters keep their results.
@@ -39,14 +41,35 @@
 
 ---
 
-## Next
+## Next: the road to launch, in order
 
 | # | Step | Effort |
 |---|------|--------|
-| 1 | **Test the prototype with 5-10 people** (ideally not history fans), using the feedback box after each round. Decide which games to keep. | ~1 week, mostly waiting |
-| 2 | **Battles for the Empire**: the Teutoburg Forest, Germanicus in Germany, Boudica, the siege of Jerusalem, the Dacian Wars, Zenobia, the Milvian Bridge, Adrianople, the Catalaunian Plains (`battle.level` in `chapters.json`). | a few days |
-| 3 | **Games in the app**: game data in the database, React versions of the chosen games, a chapter opens as a game run, test scores, battles and progress saved per user. Show the explanation after each answer. **Leaderboard**: all-time "Hall of Legions" (total men, eagles as tie-breaker) plus a weekly board that resets every Monday (what it ranks needs rethinking now that soldiers are gone: e.g. battles won, stars, test scores); players shown by nickname, can opt out. Deploy. | 3-4 weeks part-time |
-| 4 | **Mobile**: installable web app (PWA) first, then App Store / Google Play via Capacitor. Needs a privacy policy and in-app account deletion. | 2-4 weeks |
+| 1 | **Chapter-by-chapter review** (in progress, at chapter 8, Cannae): the user reads each chronicle, takes the test, plays the battle; fixes and ideas as they come. Each battle chapter gets its chronicle replay (chapters 11–28 still to do). | ongoing |
+| 2 | **Test the prototype with 5-10 people** (ideally not history fans), using the feedback box at avecaesar.org/play. Decide which games to keep. | ~1 week, mostly waiting |
+| 3 | **The finale: the Grand Test and the Battle of Battles** (see below). Built once all chapters are approved, because it draws on all of them. | ~1 week |
+| 4 | **Real sound recordings**: the user supplies MP3s once the app is approved. | a few days |
+| 5 | **Games in the app**: game data in the database, React versions of the chosen games, a chapter opens as a game run, test scores, battles and progress saved per user. Show the explanation after each answer. **Leaderboard**: all-time "Hall of Legions" plus a weekly board that resets every Monday (what it ranks needs rethinking: e.g. battles won, stars, test scores); players shown by nickname, can opt out. Deploy. | 3-4 weeks part-time |
+| 6 | **Mobile**: installable web app (PWA) first, then App Store / Google Play via Capacitor. Needs a privacy policy and in-app account deletion. | 2-4 weeks |
+
+## The finale (the user's idea, Nov 14)
+
+At the end of Roman history, one last test and one last battle. Pass both and you are an **Expert in Roman History**.
+
+1. **The Grand Test**
+   - Unlocks once every chapter test has been passed.
+   - About 30-40 questions drawn from all the existing question pools: every era, the gods and Art and Architecture, spread evenly. No API cost.
+   - The same formats as the chapter tests (pairs, true or false, chronology, Legion Quiz, Who Am I…).
+   - A higher bar to pass: **70%**.
+2. **The Battle of Battles: Rome against all its enemies**
+   - About twice as long as a normal battle, **in two halves** (the Republic, then the Empire) with a short break between them, so a phone interruption doesn't cost everything.
+   - The waves follow Roman history in order, each era opening with a banner ("264 BC: Carthage!"): Gauls as at the Allia, Pyrrhus's elephants, Hannibal's army, Germanic tribes, Goths, and Attila's Huns as the final wave.
+   - The army: every unit unlocked in the campaign. The Grand Test score sets grain, veterans and equites, as in every chapter.
+3. **The reward: a Roman triumph**
+   - A short procession on the canvas: the player in the general's chariot, wearing a laurel wreath.
+   - Then **the player's own statue** stands in the Forum, beside Caesar's and Augustus's.
+   - A certificate, *"Civis Romanus · Expert in Roman History"*, with the player's name and the date, to save or print.
+   - Kept on the device until player accounts exist; then it goes on the profile and the leaderboard.
 
 ## Business model (decided)
 
