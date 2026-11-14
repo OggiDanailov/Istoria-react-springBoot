@@ -887,6 +887,12 @@ const CHRONICLE_EXTRAS = {
   'samnite-wars:caudine-forks': '<div class="pantheon allia" data-replay="caudine"></div>',
   'samnite-wars:third-war-sentinum': '<div class="pantheon allia" data-replay="sentinum"></div>',
   'final-conquest-of-italy:heraclea-and-asculum': '<div class="pantheon allia" data-replay="heraclea"></div>',
+  'first-punic-war:corvus-and-mylae': '<div class="pantheon allia" data-replay="mylae"></div>',
+  'first-punic-war:battle-of-the-aegates': '<div class="pantheon allia" data-replay="aegates"></div>',
+  'hannibal-in-italy:trebia-and-trasimene': '<div class="pantheon allia" data-replay="trasimene"></div>',
+  'hannibal-in-italy:battle-of-cannae': '<div class="pantheon allia" data-replay="cannae"></div>',
+  'scipio-and-zama:battle-of-zama': '<div class="pantheon allia" data-replay="zama"></div>',
+  'rome-turns-east:pydna': '<div class="pantheon allia" data-replay="pydna"></div>',
 }
 const chronicleHtml = () => latinNote() + CHAPTER.map(s => `<section data-sec="${s.id}"><h3>${esc(s.title)}</h3>${(CH.chronicleMaps ?? []).filter(m => m.sec === s.id).map(chronicleMap).join('')}${s.body.split(/\n\s*\n/).map(paragraphHtml).join('')}${CHRONICLE_EXTRAS[CH.id + ':' + s.id] ?? ''}</section>`).join('') +
   `<p class="sources">Sources: Wikipedia, ${CH.sources.map(t => `“${esc(t)}”`).join(', ')} · CC BY-SA 4.0</p>`
@@ -896,7 +902,7 @@ const openChronicle = focusId => openSheet(CH.title, chronicleHtml(), focusId)
 // groups of dots with where they are at each moment (a line, or a cluster) and what befalls them (some fall, they
 // waver in panic, they drown with a splash), and five captions. Times are in "story seconds"; it plays SLOW times
 // slower so each caption can be read (the user found 8 seconds too fast). Positions are parts of the width and height.
-const RCOL = { rome: '#b8322a', gaul: '#2f5f9a', samnite: '#c27a1e', etruscan: '#8a7f75', epirus: '#6b4a8a', elephant: '#76716b' }
+const RCOL = { carthage: '#33509a', macedon: '#6b4a8a', rome: '#b8322a', gaul: '#2f5f9a', samnite: '#c27a1e', etruscan: '#8a7f75', epirus: '#6b4a8a', elephant: '#76716b' }
 const REPLAYS = {
   // chapter 4: the Allia (Livy), as the chronicle tells it
   allia: {
@@ -976,6 +982,145 @@ const REPLAYS = {
       [5.8, 'Fabius outflanks the Samnites, and the coalition collapses.', 'Фабий обхожда самнитите и коалицията рухва.'],
     ], end: 7.8,
   },
+  // chapter 7: the First Punic War
+  mylae: {
+    title: ['Mylae, step by step', 'Миле, стъпка по стъпка'], sea: true,
+    key: [['rome', 'Roman ships', 'римски кораби'], ['carthage', 'Carthaginian ships', 'картагенски кораби']],
+    ground: [
+      { land: [[0, 0], [1, 0], [1, 0.1], [0.6, 0.14], [0, 0.11]], label: ['SICILY', 'СИЦИЛИЯ'], at: [0.5, 0.06] },
+      { text: [0.03, 0.18], t: ['Mylae', 'Миле'] },
+    ],
+    groups: [
+      { side: 'rome', ship: true, n: 6, r: 4, keys: [[0, 'line', 0.18, 0.76, 0.48, 0.76, 0.01], [3.0, 'line', 0.18, 0.76, 0.48, 0.76, 0.01], [3.3, 'line', 0.18, 0.68, 0.48, 0.68, 0.01]] },
+      { side: 'rome', ship: true, n: 6, r: 4, keys: [[0, 'line', 0.54, 0.78, 0.84, 0.78, 0.01], [4.0, 'line', 0.54, 0.78, 0.84, 0.78, 0.01], [4.7, 'line', 0.58, 0.58, 0.84, 0.48, 0.01]] },
+      { side: 'carthage', ship: true, n: 6, r: 4, keys: [[0, 'blob', 0.33, 0.2, 0.16, 0.05], [1.6, 'blob', 0.33, 0.34, 0.16, 0.06], [3.0, 'line', 0.18, 0.6, 0.48, 0.6, 0.01]], links: { to: 0, from: 3.2 }, becomes: { at: 4.0, side: 'rome' } },
+      { side: 'carthage', ship: true, n: 6, r: 4, keys: [[0, 'blob', 0.7, 0.2, 0.15, 0.05], [1.6, 'blob', 0.7, 0.32, 0.15, 0.06], [3.0, 'blob', 0.72, 0.42, 0.12, 0.05], [4.4, 'line', 0.6, 0.5, 0.88, 0.4, 0.01]], links: { to: 1, from: 4.7 }, becomes: { at: 5.6, side: 'rome' } },
+      { side: 'carthage', ship: true, n: 6, r: 4, keys: [[0, 'blob', 0.5, 0.06, 0.2, 0.03], [1.6, 'blob', 0.5, 0.2, 0.2, 0.04], [4.8, 'blob', 0.5, 0.26, 0.22, 0.05], [6.6, 'blob', 0.5, -0.25, 0.25, 0.05]] },
+    ],
+    steps: [
+      [0, 'Off Mylae, Duilius’s new Roman fleet waits. Each ship carries a corvus, a boarding bridge with an iron spike.', 'Край Миле новият римски флот на Дуилий чака. Всеки кораб носи „гарван“ – подвижен мост с железен шип.'],
+      [1.6, 'Sure of their skill, the Carthaginians rush in without keeping formation.', 'Уверени в уменията си, картагенците се втурват, без да пазят строя.'],
+      [3.0, 'The ravens drop and pin the first ships, the flagship among them; Roman soldiers charge across.', 'Гарваните падат и приковават първите кораби, сред тях и флагманския; римските войници нахлуват по мостовете.'],
+      [4.4, 'The next ships swing round to strike from the side, and are grappled and taken too.', 'Следващите кораби завиват, за да ударят отстрани, но и те биват закачени и пленени.'],
+      [6.2, 'The faster survivors flee. About 50 ships captured: Rome’s first victory at sea.', 'По-бързите оцелели бягат. Пленени са около 50 кораба: първата римска победа по море.'],
+    ], end: 7.8,
+  },
+  aegates: {
+    title: ['The Aegates Islands, step by step', 'Егатските острови, стъпка по стъпка'], sea: true,
+    key: [['rome', 'Roman ships', 'римски кораби'], ['carthage', 'Carthaginian ships', 'картагенски кораби']],
+    ground: [
+      { isle: [0.1, 0.12, 0.06, 0.04], label: ['Aegates Islands', 'Егатските острови'] }, { isle: [0.06, 0.26, 0.03, 0.025] },
+      { land: [[0.93, 0], [1, 0], [1, 1], [0.9, 1], [0.95, 0.5]], label: ['SICILY', 'СИЦИЛИЯ'], at: [0.96, 0.95] },
+      { wind: [[0.3, 0.08], [0.6, 0.08], [0.3, 0.94], [0.6, 0.94]], label: ['the wind', 'вятърът'], from: 1.4, to: 4.6 },
+    ],
+    groups: [
+      { side: 'carthage', ship: true, n: 21, r: 3.8, keys: [[0, 'blob', 0.16, 0.55, 0.11, 0.2], [3.0, 'blob', 0.4, 0.55, 0.11, 0.2], [4.6, 'blob', 0.4, 0.55, 0.11, 0.2], [6.4, 'blob', -0.15, 0.5, 0.06, 0.2]], fall: [3.2, 4.4, 0.45], splash: true },
+      { side: 'carthage', ship: true, n: 9, r: 3.8, keys: [[0, 'blob', 0.18, 0.55, 0.1, 0.18], [3.0, 'blob', 0.42, 0.55, 0.1, 0.18], [4.6, 'blob', 0.42, 0.55, 0.1, 0.18], [6.6, 'blob', 0.78, 0.55, 0.06, 0.12]], becomes: { at: 4.2, side: 'rome' } },
+      { side: 'rome', ship: true, n: 24, r: 3.8, keys: [[0, 'blob', 0.87, 0.55, 0.05, 0.2], [1.6, 'blob', 0.76, 0.55, 0.07, 0.2], [3.0, 'blob', 0.47, 0.55, 0.11, 0.18], [4.6, 'blob', 0.47, 0.55, 0.11, 0.18], [6.6, 'blob', 0.74, 0.55, 0.08, 0.16]], fall: [3.4, 4.4, 0.12], splash: true },
+    ],
+    steps: [
+      [0, 'Carthage’s fleet, 250 ships heavy with grain for its starving garrisons, sails for Sicily.', 'Флотът на Картаген – 250 кораба, натоварени с жито за гладуващите гарнизони – плава към Сицилия.'],
+      [1.6, 'Catulus’s new fleet, drilled for months and with no corvus this time, rows into a strong headwind to intercept.', 'Новият флот на Катул, обучаван с месеци и този път без гарван, гребе срещу силен насрещен вятър, за да ги пресрещне.'],
+      [3.0, 'Nimble and well drilled, the Romans ram the laden ships.', 'Пъргави и добре обучени, римляните таранят натоварените кораби.'],
+      [4.6, 'Fifty Carthaginian ships are sunk and seventy captured, for a loss of thirty.', 'Петдесет картагенски кораба са потопени и седемдесет – пленени, срещу загубата на трийсет.'],
+      [6.2, 'Carthage asks for peace: the First Punic War is over (241 BC).', 'Картаген моли за мир: Първата пуническа война е свършила (241 г. пр.н.е.).'],
+    ], end: 7.8,
+  },
+  // chapter 8: Hannibal in Italy
+  trasimene: {
+    title: ['Lake Trasimene, step by step', 'Тразименското езеро, стъпка по стъпка'], mist: [1.2, 4.4],
+    key: [['rome', 'Romans', 'римляни'], ['carthage', 'Hannibal’s army', 'армията на Ханибал']],
+    ground: [
+      { hill: [0.25, 0.1, 0.27, 0.12] }, { hill: [0.74, 0.1, 0.28, 0.12], label: ['hills', 'хълмове'] },
+      { lake: [0.5, 0.98, 0.62, 0.22], label: ['Lake Trasimene', 'Тразименското езеро'], at: [0.5, 0.92] },
+    ],
+    groups: [
+      { side: 'rome', n: 30, keys: [[0, 'line', -0.7, 0.62, -0.1, 0.62, 0.015], [1.4, 'line', -0.35, 0.62, 0.2, 0.62, 0.015], [2.8, 'line', 0.1, 0.62, 0.86, 0.62, 0.02], [4.2, 'line', 0.1, 0.6, 0.86, 0.6, 0.03]], jitter: [2.8, 4.6], fall: [4.2, 5.6, 0.6] },
+      { side: 'rome', n: 10, keys: [[0, 'line', -0.6, 0.63, -0.1, 0.63, 0.015], [1.4, 'line', -0.3, 0.63, 0.2, 0.63, 0.015], [2.8, 'line', 0.12, 0.64, 0.84, 0.64, 0.02], [4.2, 'line', 0.12, 0.64, 0.84, 0.64, 0.02], [5.0, 'line', 0.14, 0.78, 0.82, 0.78, 0.03]], jitter: [2.8, 4.6], fall: [5.0, 5.8, 0.8], splash: true },
+      { side: 'carthage', n: 36, keys: [[2.6, 'line', 0.08, 0.2, 0.92, 0.2, 0.05], [3.6, 'line', 0.1, 0.52, 0.88, 0.52, 0.03]] },
+      { side: 'carthage', n: 8, keys: [[2.6, 'blob', 0.96, 0.62, 0.025, 0.05]] },
+      { side: 'carthage', n: 8, keys: [[2.6, 'blob', 0.04, 0.62, 0.025, 0.05]] },
+    ],
+    steps: [
+      [0, 'Hannibal ravages the countryside to lure the consul into a hasty pursuit.', 'Ханибал опустошава околността, за да примами консула в прибързано преследване.'],
+      [1.4, 'At dawn the Roman column marches along the narrow shore of Lake Trasimene, into the morning mist.', 'Призори римската колона върви по тесния бряг на Тразименското езеро, в утринната мъгла.'],
+      [2.8, 'Hannibal’s army, hidden on the hills above, charges down; other troops close both ends of the road.', 'Армията на Ханибал, скрита на хълмовете отгоре, се спуска в атака; други части затварят двата края на пътя.'],
+      [4.2, 'Trapped between the hills and the lake, the column is cut to pieces; some are driven into the water.', 'Притисната между хълмовете и езерото, колоната е посечена; някои са изтласкани във водата.'],
+      [5.8, 'About 15,000 Romans die, the consul among them, and 10,000 are captured.', 'Загиват около 15 000 римляни, сред тях и консулът, а 10 000 са пленени.'],
+    ], end: 7.4,
+  },
+  cannae: {
+    title: ['Cannae, step by step', 'Кана, стъпка по стъпка'],
+    key: [['rome', 'Romans', 'римляни'], ['carthage', 'Hannibal’s army', 'армията на Ханибал']],
+    ground: [{ tag: [0.5, 0.97], t: ['the Roman legions, packed deep', 'римските легиони, строени в дълбочина'], to: 1.6 }, { tag: [0.5, 0.06], t: ['Hannibal’s crescent', 'полумесецът на Ханибал'], to: 3.0 }],
+    groups: [
+      { side: 'rome', n: 60, keys: [[0, 'blob', 0.5, 0.68, 0.16, 0.1], [1.6, 'blob', 0.5, 0.68, 0.16, 0.1], [3.0, 'blob', 0.5, 0.54, 0.14, 0.1], [4.4, 'blob', 0.5, 0.52, 0.12, 0.09], [5.8, 'blob', 0.5, 0.52, 0.1, 0.08]], jitter: [4.4, 7.8], fall: [5.8, 7.6, 0.6] },
+      { side: 'rome', n: 8, r: 3.8, keys: [[0, 'blob', 0.17, 0.68, 0.04, 0.05], [2.0, 'blob', 0.17, 0.68, 0.04, 0.05], [2.8, 'blob', 0.08, 0.9, 0.05, 0.05]], fall: [2.0, 2.8, 0.85] },
+      { side: 'rome', n: 8, r: 3.8, keys: [[0, 'blob', 0.83, 0.68, 0.04, 0.05], [3.6, 'blob', 0.83, 0.68, 0.04, 0.05], [4.4, 'blob', 0.93, 0.92, 0.04, 0.05]], fall: [3.6, 4.3, 0.85] },
+      { side: 'carthage', n: 30, keys: [[0, 'arc', 0.5, 0.18, 0.17, 0.24, 0.15, 0.85, 0.05], [1.6, 'arc', 0.5, 0.18, 0.17, 0.24, 0.15, 0.85, 0.05], [3.0, 'arc', 0.5, 0.62, 0.17, 0.26, 1.15, 1.85, 0.05]] },
+      { side: 'carthage', n: 10, keys: [[0, 'blob', 0.26, 0.34, 0.035, 0.05], [4.4, 'blob', 0.32, 0.54, 0.035, 0.08]] },
+      { side: 'carthage', n: 10, keys: [[0, 'blob', 0.74, 0.34, 0.035, 0.05], [4.4, 'blob', 0.68, 0.54, 0.035, 0.08]] },
+      { side: 'carthage', n: 12, r: 3.8, keys: [[0, 'blob', 0.15, 0.42, 0.05, 0.05], [1.6, 'blob', 0.15, 0.42, 0.05, 0.05], [2.3, 'blob', 0.17, 0.68, 0.05, 0.05], [3.2, 'blob', 0.5, 0.88, 0.09, 0.04], [3.9, 'blob', 0.83, 0.7, 0.05, 0.05], [5.8, 'blob', 0.5, 0.69, 0.12, 0.03]] },
+    ],
+    steps: [
+      [0, 'About 86,000 Romans, packed unusually deep, face Hannibal. His Gauls and Spaniards bulge toward them in a crescent; veteran Africans wait at either end.', 'Около 86 000 римляни, строени необичайно дълбоко, срещу Ханибал. Неговите гали и испанци се издуват към тях като полумесец; ветерани африканци чакат в двата края.'],
+      [1.6, 'On one wing Hannibal’s horsemen crush the Roman cavalry, then ride behind the army and rout the other wing too.', 'На едното крило конниците на Ханибал смазват римската конница, после минават зад армията и разбиват и другото крило.'],
+      [3.0, 'His centre gives ground step by step, as planned; the Romans crowd in after it.', 'Центърът му отстъпва крачка по крачка, както е замислено; римляните се натъпкват след него.'],
+      [4.4, 'The Africans turn inward on both flanks…', 'Африканците се обръщат навътре от двата фланга…'],
+      [5.8, '…and the cavalry strikes the rear: the double envelopment. The Roman army is surrounded.', '…а конницата удря в гръб: двойното обкръжение. Римската армия е обградена.'],
+    ], end: 7.6,
+  },
+  // chapter 9: Scipio and Zama
+  zama: {
+    title: ['Zama, step by step', 'Зама, стъпка по стъпка'],
+    key: [['rome', 'Romans and Numidians', 'римляни и нумидийци'], ['carthage', 'Hannibal’s army', 'армията на Ханибал'], ['elephant', 'elephants', 'слонове']],
+    ground: [{ flash: [0.3, 0.64], at: 2.0 }, { flash: [0.7, 0.64], at: 2.2 }, { tag: [0.5, 0.97], t: ['Scipio’s maniples, with open lanes', 'манипулите на Сципион с открити коридори'], to: 1.6 }, { tag: [0.5, 0.06], t: ['Hannibal’s veterans', 'ветераните на Ханибал'], from: 4.6, to: 6.0 }],
+    groups: [
+      ...[0.22, 0.4, 0.6, 0.78].map(x => ({ side: 'rome', n: 6, keys: [[0, 'line', x, 0.64, x, 0.84, 0.01], [4.6, 'line', x, 0.64, x, 0.84, 0.01], [5.4, 'line', x, 0.38, x, 0.58, 0.012]], jitter: [5.4, 7.0] })),
+      { side: 'elephant', n: 3, r: 6, keys: [[0, 'line', 0.31, 0.36, 0.69, 0.36, 0], [1.6, 'line', 0.31, 0.36, 0.69, 0.36, 0], [2.6, 'line', 0.31, 0.74, 0.69, 0.74, 0], [3.2, 'line', 0.31, 1.12, 0.69, 1.12, 0]], fall: [2.8, 3.3, 0.7] },
+      { side: 'elephant', n: 3, r: 6, keys: [[0, 'line', 0.4, 0.34, 0.6, 0.34, 0], [2.0, 'line', 0.4, 0.38, 0.6, 0.38, 0], [2.8, 'blob', 0.5, 0.12, 0.2, 0.04], [3.4, 'blob', 0.5, -0.25, 0.2, 0.04]] },
+      { side: 'carthage', n: 14, keys: [[0, 'line', 0.2, 0.28, 0.8, 0.28, 0.02]], fall: [4.8, 5.6, 0.85] },
+      { side: 'carthage', n: 14, keys: [[0, 'line', 0.2, 0.2, 0.8, 0.2, 0.02]], fall: [5.2, 6.0, 0.85] },
+      { side: 'carthage', n: 14, keys: [[0, 'line', 0.2, 0.12, 0.8, 0.12, 0.02], [5.4, 'line', 0.2, 0.12, 0.8, 0.12, 0.02], [6.0, 'line', 0.2, 0.3, 0.8, 0.3, 0.02], [7.6, 'line', 0.25, -0.2, 0.75, -0.25, 0.04]], fall: [6.6, 7.4, 0.7] },
+      { side: 'carthage', n: 6, r: 3.8, keys: [[0, 'blob', 0.07, 0.3, 0.03, 0.05], [3.2, 'blob', 0.07, 0.3, 0.03, 0.05], [4.2, 'blob', 0.04, -0.25, 0.03, 0.05]] },
+      { side: 'carthage', n: 6, r: 3.8, keys: [[0, 'blob', 0.93, 0.3, 0.03, 0.05], [3.2, 'blob', 0.93, 0.3, 0.03, 0.05], [4.2, 'blob', 0.96, -0.25, 0.03, 0.05]] },
+      { side: 'rome', n: 8, r: 3.8, keys: [[0, 'blob', 0.07, 0.7, 0.03, 0.05], [3.2, 'blob', 0.07, 0.7, 0.03, 0.05], [4.4, 'blob', 0.05, -0.25, 0.03, 0.05], [6.0, 'blob', 0.05, -0.25, 0.03, 0.05], [6.8, 'blob', 0.32, 0.05, 0.08, 0.03]] },
+      { side: 'rome', n: 8, r: 3.8, keys: [[0, 'blob', 0.93, 0.7, 0.03, 0.05], [3.2, 'blob', 0.93, 0.7, 0.03, 0.05], [4.4, 'blob', 0.95, -0.25, 0.03, 0.05], [6.0, 'blob', 0.95, -0.25, 0.03, 0.05], [6.8, 'blob', 0.68, 0.05, 0.08, 0.03]] },
+    ],
+    steps: [
+      [0, 'Scipio lines his maniples up one behind another, leaving open lanes. Hannibal puts 80 elephants in front.', 'Сципион нарежда манипулите си една зад друга и оставя открити коридори. Ханибал поставя 80 слона отпред.'],
+      [1.6, 'The elephants charge; trumpets blare. Some panic and flee back; most run down the open lanes and are cut off.', 'Слоновете атакуват; тръбите гърмят. Някои се плашат и бягат назад; повечето минават по откритите коридори и биват отрязани.'],
+      [3.2, 'The Roman and Numidian horsemen chase the Carthaginian cavalry off the field.', 'Римските и нумидийските конници прогонват картагенската конница от бойното поле.'],
+      [4.6, 'The infantry fights it out line by line; Hannibal’s veterans wait, fresh, in the third line.', 'Пехотата се бие линия по линия; ветераните на Ханибал чакат свежи в третата линия.'],
+      [6.0, 'The Roman cavalry returns and strikes the rear: Hannibal’s army breaks. Hannibal escapes.', 'Римската конница се връща и удря в гръб: армията на Ханибал се пречупва. Ханибал се спасява.'],
+    ], end: 7.8,
+  },
+  // chapter 10: Rome turns east
+  pydna: {
+    title: ['Pydna, step by step', 'Пидна, стъпка по стъпка'],
+    key: [['rome', 'Romans', 'римляни'], ['macedon', 'the Macedonian phalanx', 'македонската фаланга']],
+    ground: [
+      { brook: [[0, 0.5], [0.3, 0.46], [0.6, 0.54], [1, 0.48]] }, { text: [0.02, 0.45], t: ['the river', 'реката'] },
+      { hill: [0.38, 0.3, 0.06, 0.05] }, { hill: [0.63, 0.28, 0.055, 0.05], label: ['uneven ground', 'неравен терен'] },
+    ],
+    groups: [
+      { side: 'rome', n: 3, keys: [[0, 'blob', 0.48, 0.53, 0.02, 0.02], [1.4, 'blob', 0.48, 0.6, 0.02, 0.02]] },
+      { side: 'macedon', n: 3, keys: [[0, 'blob', 0.53, 0.47, 0.02, 0.02], [1.4, 'blob', 0.52, 0.42, 0.02, 0.02]] },
+      { side: 'macedon', n: 16, keys: [[0, 'line', 0.12, 0.22, 0.36, 0.22, 0.04], [1.6, 'line', 0.12, 0.42, 0.36, 0.42, 0.04], [3.0, 'line', 0.1, 0.42, 0.32, 0.38, 0.04], [5.8, 'line', 0.1, 0.42, 0.32, 0.38, 0.04], [7.6, 'line', 0.1, -0.2, 0.32, -0.25, 0.04]], fall: [5.8, 7.0, 0.75] },
+      { side: 'macedon', n: 16, keys: [[0, 'line', 0.4, 0.22, 0.62, 0.22, 0.04], [1.6, 'line', 0.4, 0.42, 0.62, 0.42, 0.04], [3.0, 'line', 0.44, 0.43, 0.57, 0.41, 0.04], [5.8, 'line', 0.44, 0.43, 0.57, 0.41, 0.04], [7.6, 'line', 0.4, -0.2, 0.6, -0.25, 0.04]], fall: [5.8, 7.0, 0.75] },
+      { side: 'macedon', n: 16, keys: [[0, 'line', 0.66, 0.22, 0.9, 0.22, 0.04], [1.6, 'line', 0.66, 0.42, 0.9, 0.42, 0.04], [3.0, 'line', 0.69, 0.37, 0.9, 0.42, 0.04], [5.8, 'line', 0.69, 0.37, 0.9, 0.42, 0.04], [7.6, 'line', 0.68, -0.2, 0.9, -0.25, 0.04]], fall: [5.8, 7.0, 0.75] },
+      { side: 'rome', n: 36, keys: [[0, 'line', 0.12, 0.66, 0.9, 0.66, 0.03], [1.6, 'line', 0.12, 0.66, 0.9, 0.66, 0.03], [2.6, 'line', 0.12, 0.75, 0.9, 0.75, 0.03], [5.8, 'line', 0.12, 0.75, 0.9, 0.75, 0.03], [6.6, 'line', 0.12, 0.52, 0.9, 0.52, 0.03], [7.6, 'line', 0.12, 0.3, 0.9, 0.3, 0.04]], jitter: [1.6, 2.8], fall: [1.8, 2.6, 0.05] },
+      { side: 'rome', n: 6, keys: [[4.2, 'blob', 0.38, 0.76, 0.015, 0.03], [5.0, 'blob', 0.38, 0.42, 0.015, 0.04], [5.8, 'line', 0.3, 0.36, 0.46, 0.36, 0.01]] },
+      { side: 'rome', n: 6, keys: [[4.2, 'blob', 0.63, 0.76, 0.015, 0.03], [5.0, 'blob', 0.63, 0.41, 0.015, 0.04], [5.8, 'line', 0.55, 0.34, 0.71, 0.34, 0.01]] },
+    ],
+    steps: [
+      [0, 'A mule breaks loose by the river; the scuffle over it grows, and both armies pour in.', 'Едно муле се откъсва край реката; сбиването около него се разраства и двете армии се втурват.'],
+      [1.6, 'At first the phalanx’s long spears pierce the Roman shields, and the legions fall back.', 'Отначало дългите копия на фалангата пробиват римските щитове и легионите отстъпват.'],
+      [3.0, 'But on the uneven ground gaps open in the phalanx.', 'Но на неравния терен във фалангата се отварят пролуки.'],
+      [4.4, 'Aemilius sends small units into the gaps like wedges, to strike the flanks where the long spears are useless.', 'Емилий изпраща малки отряди в пролуките като клинове, за да ударят фланговете, където дългите копия са безполезни.'],
+      [5.8, 'Within about an hour it is over: some 20,000 Macedonians fall, against about 100 Romans.', 'За около час всичко свършва: падат около 20 000 македонци срещу около 100 римляни.'],
+    ], end: 7.6,
+  },
   // chapter 6: Heraclea
   heraclea: {
     title: ['Heraclea, step by step', 'Хераклея, стъпка по стъпка'],
@@ -1009,9 +1154,10 @@ function mountReplay(el, id) {
   const cv = el.querySelector('canvas'), ctx = cv.getContext('2d'), cap = el.querySelector('.al-cap')
   // every dot keeps its own place in its group (along the line, or in the cluster) and its own fate
   let seed = 7; const R = () => (seed = (seed * 16807) % 2147483647) / 2147483647
-  const groups = B.groups.map(g => ({ ...g, dots: Array.from({ length: g.n }, (_, i) => ({ u: g.n > 1 ? i / (g.n - 1) : 0.5, a: R(), b: R(), c: R(), ph: R() * 6 })) }))
+  const groups = B.groups.map(g => ({ ...g, dots: Array.from({ length: g.n }, (_, i) => ({ u: g.n > 1 ? i / (g.n - 1) : 0.5, a: R(), b: R(), c: R(), ph: R() * 6, e: R() })) }))
   const ease = x => x <= 0 ? 0 : x >= 1 ? 1 : x * x * (3 - 2 * x)
-  const at = (k, d) => {   // a dot's place in one key: a line (with some depth) or a cluster
+  const at = (k, d) => {   // a dot's place in one key: a line (with some depth), an arc (Cannae's crescent) or a cluster
+    if (k[1] === 'arc') { const [, , cx, cy, rx, ry, a1, a2, th = 0.03] = k, an = (a1 + (a2 - a1) * d.u) * Math.PI, o = 1 + (d.a - 0.5) * th * 4; return [cx + Math.cos(an) * rx * o, cy + Math.sin(an) * ry * o] }
     if (k[1] === 'line') { const [, , x1, y1, x2, y2, th = 0.03] = k, dx = x2 - x1, dy = y2 - y1, len = Math.hypot(dx, dy) || 1; return [x1 + dx * d.u + (-dy / len) * (d.a - 0.5) * th * 2, y1 + dy * d.u + (dx / len) * (d.a - 0.5) * th * 2] }
     const [, , x, y, rx, ry] = k, an = d.b * Math.PI * 2, r = Math.sqrt(d.a)
     return [x + Math.cos(an) * r * rx, y + Math.sin(an) * r * ry]
@@ -1020,16 +1166,18 @@ function mountReplay(el, id) {
     const K = g.keys
     if (t < K[0][0]) return null   // not on the field yet
     let i = 0; while (i < K.length - 1 && t >= K[i + 1][0]) i++
-    const p = at(K[i], d); if (i === K.length - 1) return p
+    const p = at(K[i], d)
+    if (i === K.length - 1) { if (i > 0) { const o = at(K[i - 1], d); return [p[0], p[1], p[0] - o[0], p[1] - o[1]] } return [p[0], p[1], 0, 0] }
     const q = at(K[i + 1], d), e = ease((t - K[i][0]) / (K[i + 1][0] - K[i][0]))
-    return [p[0] + (q[0] - p[0]) * e, p[1] + (q[1] - p[1]) * e]
+    return [p[0] + (q[0] - p[0]) * e, p[1] + (q[1] - p[1]) * e, q[0] - p[0], q[1] - p[1]]   // and which way it is heading (for ships)
   }
   let start = null, step = -1
   function draw(t) {
     const dpr = Math.min(2, window.devicePixelRatio || 1), W = cv.clientWidth, H = cv.clientHeight
     if (cv.width !== Math.round(W * dpr)) { cv.width = Math.round(W * dpr); cv.height = Math.round(H * dpr) }
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0)
-    ctx.fillStyle = '#d9cfa5'; ctx.fillRect(0, 0, W, H)
+    ctx.fillStyle = B.sea ? '#5d93b8' : '#d9cfa5'; ctx.fillRect(0, 0, W, H)
+    if (B.sea) { ctx.strokeStyle = 'rgba(255, 255, 255, .25)'; ctx.lineWidth = 1.2; for (let k = 0; k < 18; k++) { const x = ((k * 53) % 97) / 97 * W, y = ((k * 37) % 89) / 89 * H; ctx.beginPath(); ctx.moveTo(x - 6, y); ctx.quadraticCurveTo(x, y - 3, x + 6, y); ctx.stroke() } }
     ctx.font = '800 11px Nunito, system-ui, sans-serif'
     const curve = (pts, w, color) => { ctx.strokeStyle = color; ctx.lineWidth = w; ctx.lineCap = 'round'; ctx.beginPath(); ctx.moveTo(pts[0][0] * W, pts[0][1] * H); ctx.bezierCurveTo(pts[1][0] * W, pts[1][1] * H, pts[2][0] * W, pts[2][1] * H, pts[3][0] * W, pts[3][1] * H); ctx.stroke() }
     for (const g of B.ground) {
@@ -1038,6 +1186,10 @@ function mountReplay(el, id) {
       ctx.fillStyle = '#3b2a1c'; ctx.textAlign = g.right ? 'right' : 'left'
       if (g.river) { curve(g.river, W * g.w, '#6fa3c8'); if (g.label) { ctx.save(); ctx.translate(g.at[0] * W, g.at[1] * H); if (g.rot) ctx.rotate(-Math.PI / 2); ctx.fillStyle = '#244a66'; ctx.textAlign = 'center'; ctx.fillText(tx(g.label), 0, 0); ctx.restore() } }
       if (g.brook) curve(g.brook, 4, '#6fa3c8')
+      if (g.land) { ctx.fillStyle = '#d9cfa5'; ctx.beginPath(); g.land.forEach(([x, y], k) => k ? ctx.lineTo(x * W, y * H) : ctx.moveTo(x * W, y * H)); ctx.closePath(); ctx.fill(); if (g.label) { ctx.fillStyle = '#3b2a1c'; ctx.textAlign = 'center'; ctx.fillText(tx(g.label), g.at[0] * W, g.at[1] * H) } }
+      if (g.isle) { const [x, y, rx, ry] = g.isle; ctx.fillStyle = '#d9cfa5'; ctx.beginPath(); ctx.ellipse(x * W, y * H, rx * W, ry * H, 0, 0, Math.PI * 2); ctx.fill(); if (g.label) { ctx.fillStyle = '#1f3c55'; ctx.textAlign = 'left'; ctx.fillText(tx(g.label), (x + rx) * W + 4, y * H + 4) } }
+      if (g.lake) { const [x, y, rx, ry] = g.lake; ctx.fillStyle = '#6fa3c8'; ctx.beginPath(); ctx.ellipse(x * W, y * H, rx * W, ry * H, 0, 0, Math.PI * 2); ctx.fill(); if (g.label) { ctx.fillStyle = '#1f3c55'; ctx.textAlign = 'center'; ctx.fillText(tx(g.label), g.at[0] * W, g.at[1] * H) } }
+      if (g.wind) { const a = Math.min(1, (t - (g.from ?? 0)) / 0.4); ctx.globalAlpha = 0.7 * a; ctx.strokeStyle = '#ffffff'; ctx.lineWidth = 2; for (const [x, y] of g.wind) { const sx = x * W + ((t * 30) % 20); ctx.beginPath(); ctx.moveTo(sx - 16, y * H); ctx.lineTo(sx + 16, y * H); ctx.moveTo(sx + 10, y * H - 5); ctx.lineTo(sx + 16, y * H); ctx.lineTo(sx + 10, y * H + 5); ctx.stroke() } if (g.label) { ctx.fillStyle = '#ffffff'; ctx.textAlign = 'left'; ctx.fillText(tx(g.label), g.wind[0][0] * W - 16, g.wind[0][1] * H - 8) } ctx.globalAlpha = 1 }
       if (g.hill) { const [x, y, rx, ry] = g.hill; ctx.fillStyle = 'rgba(120, 140, 70, .35)'; ctx.beginPath(); ctx.ellipse(x * W, y * H, rx * W, ry * H, 0, 0, Math.PI * 2); ctx.fill(); if (g.label) { ctx.fillStyle = '#3b2a1c'; ctx.textAlign = 'center'; ctx.fillText(tx(g.label), x * W, (y - ry) * H - 4) } }
       if (g.woods) { const [x, y, rx, ry] = g.woods; ctx.fillStyle = '#7d8f4e'; ctx.beginPath(); ctx.ellipse(x * W, y * H, rx * W, ry * H, 0, 0, Math.PI * 2); ctx.fill(); ctx.fillStyle = '#5f7338'; for (let k = 0; k < 14; k++) { const an = k * 2.4, r = ((k * 37) % 10) / 12; ctx.beginPath(); ctx.arc((x + Math.cos(an) * r * rx * 0.8) * W, (y + Math.sin(an) * r * ry * 0.8) * H, 4, 0, Math.PI * 2); ctx.fill() } }
       if (g.text) { ctx.fillText(tx(g.t), g.text[0] * W, g.text[1] * H) }
@@ -1046,6 +1198,11 @@ function mountReplay(el, id) {
       if (g.yoke) { const [x, y] = g.yoke, a = Math.min(1, (t - g.from) / 0.4); ctx.globalAlpha = a; ctx.strokeStyle = '#4a3420'; ctx.lineWidth = 3; ctx.beginPath(); ctx.moveTo(x * W - 9, y * H + 14); ctx.lineTo(x * W - 9, y * H - 16); ctx.moveTo(x * W + 9, y * H + 14); ctx.lineTo(x * W + 9, y * H - 16); ctx.moveTo(x * W - 13, y * H - 12); ctx.lineTo(x * W + 13, y * H - 12); ctx.stroke(); if (g.label) { ctx.fillStyle = '#3b2a1c'; ctx.textAlign = 'center'; ctx.fillText(tx(g.label), x * W + 6, y * H - 22) } ctx.globalAlpha = 1 }
       if (g.flash && t >= g.at && t < g.at + 0.9) { const p = (t - g.at) / 0.9; ctx.strokeStyle = `rgba(240, 190, 60, ${1 - p})`; ctx.lineWidth = 3; ctx.beginPath(); ctx.arc(g.flash[0] * W, g.flash[1] * H, 6 + p * 34, 0, Math.PI * 2); ctx.stroke() }
     }
+    for (const g of groups) if (g.links && t >= g.links.from) {   // the corvus: a boarding bridge pinning each ship to its enemy
+      const o = groups[g.links.to]
+      ctx.strokeStyle = '#6b4a2b'; ctx.lineWidth = 2.5
+      g.dots.forEach((d, i) => { const p = where(g, d, t), q = o.dots[i] && where(o, o.dots[i], t); if (p && q) { ctx.beginPath(); ctx.moveTo(p[0] * W, p[1] * H); ctx.lineTo(q[0] * W, q[1] * H); ctx.stroke() } })
+    }
     for (const g of groups) for (const d of g.dots) {
       const p = where(g, d, t); if (!p) continue
       let [x, y] = p, a = 1
@@ -1053,10 +1210,16 @@ function mountReplay(el, id) {
       if (g.fall && d.c < g.fall[2]) a = 1 - ease((t - g.fall[0]) / (g.fall[1] - g.fall[0]))   // these fall (or drown)
       if (a <= 0) continue
       if (g.splash && g.fall && d.c < g.fall[2] && a < 1) { ctx.strokeStyle = `rgba(255, 255, 255, ${0.8 * a})`; ctx.lineWidth = 1.5; ctx.beginPath(); ctx.arc(x * W, y * H, 4 + (1 - a) * 9, 0, Math.PI * 2); ctx.stroke() }
-      ctx.globalAlpha = a; ctx.fillStyle = RCOL[g.side]; ctx.beginPath(); ctx.arc(x * W, y * H, g.r ?? 3.4, 0, Math.PI * 2); ctx.fill()
+      const side = g.becomes && t >= g.becomes.at && d.e < (g.becomes.frac ?? 1) ? g.becomes.side : g.side   // captured: now Rome's
+      ctx.globalAlpha = a; ctx.fillStyle = RCOL[side]
+      if (g.ship) {   // a hull, bow first
+        const an = (p[2] || p[3]) ? Math.atan2(p[3] * H, p[2] * W) : (g.face ?? -Math.PI / 2), r = g.r ?? 3.4
+        ctx.save(); ctx.translate(x * W, y * H); ctx.rotate(an); ctx.beginPath(); ctx.moveTo(r * 2.4, 0); ctx.lineTo(r * 0.6, -r); ctx.lineTo(-r * 1.8, -r); ctx.lineTo(-r * 1.8, r); ctx.lineTo(r * 0.6, r); ctx.closePath(); ctx.fill(); ctx.fillStyle = 'rgba(255, 255, 255, .55)'; ctx.fillRect(-r * 0.8, -r * 0.35, r * 1.2, r * 0.7); ctx.restore()
+      } else { ctx.beginPath(); ctx.arc(x * W, y * H, g.r ?? 3.4, 0, Math.PI * 2); ctx.fill() }
       if (g.ring) { ctx.strokeStyle = '#e0a63a'; ctx.lineWidth = 2; ctx.beginPath(); ctx.arc(x * W, y * H, (g.r ?? 3.4) + 3, 0, Math.PI * 2); ctx.stroke() }
       ctx.globalAlpha = 1
     }
+    if (B.mist && t >= B.mist[0] && t < B.mist[1]) { const m = Math.min(1, (t - B.mist[0]) / 0.5, (B.mist[1] - t) / 0.8); ctx.fillStyle = `rgba(240, 240, 235, ${0.55 * m})`; ctx.fillRect(0, H * 0.3, W, H * 0.5) }   // morning mist
     let s = 0; for (let k = 0; k < B.steps.length; k++) if (t >= B.steps[k][0]) s = k
     if (s !== step) { step = s; cap.innerHTML = `<b>${s + 1} / ${B.steps.length}</b> ${esc(B.steps[s][1 + L])}` }
   }
