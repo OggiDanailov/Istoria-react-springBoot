@@ -4958,7 +4958,8 @@ RENDER.odd = () => {
 }
 
 // ---------- Who Am I? ----------
-START.who = set => ({ order: shuffle([...WHOS[set].people.keys()]), index: 0, shown: 1, wrong: [], solved: false, extraClues: 0, results: [] })
+// the four names in a new order each time (in the data the right one is often first)
+START.who = set => ({ order: shuffle([...WHOS[set].people.keys()]), opts: WHOS[set].people.map(p => shuffle(p.options)), index: 0, shown: 1, wrong: [], solved: false, extraClues: 0, results: [] })
 RENDER.who = () => {
   const g = state, p = WHOS[g.set].people[g.order[g.index]]
   app.innerHTML = `
@@ -4968,7 +4969,7 @@ RENDER.who = () => {
       <div class="clue ${i < g.shown ? '' : 'hidden-clue'}"><span class="n">${i + 1}</span><span>${i < g.shown ? esc(c) : 'Hidden clue'}</span></div>`).join('')}
     </div>
     ${!g.solved && g.shown < p.clues.length ? '<button class="ghost more" id="more">Show another clue</button>' : ''}
-    <div class="choices">${p.options.map(o => `
+    <div class="choices">${(g.opts?.[g.order[g.index]] ?? p.options).map(o => `
       <button class="choice ${g.wrong.includes(o) ? 'wrong' : ''} ${g.solved && o === p.name ? 'right' : ''}" data-name="${esc(o)}" ${g.solved || g.wrong.includes(o) ? 'disabled' : ''}>${esc(o)}</button>`).join('')}
     </div>
     <div id="hint-area">${hintHtml(g.hint)}</div>
