@@ -1769,25 +1769,66 @@ function update(dt) {
 }
 
 // ---------- drawing a frame ----------
-function drawWalls() {   // Akragas's walls: cracks as they take bolts, towers falling, rubble when breached
-  const top = ry(0), lost = 1 - G.walls.hp / LEVEL.walls.hp, c = ctx
+function drawWalls() {   // Akragas's walls: cracks, then holes, fallen battlements and towers, smoke and fire; and at victory the city burns
+  const top = ry(0), c = ctx, now = performance.now() / 1000
+  const burn = G.burn != null ? Math.min(1, G.burn / 3) : 0   // at victory the city falls and burns, whatever the walls had left
+  const lost = Math.max(1 - G.walls.hp / LEVEL.walls.hp, burn), wy = top * 0.42, wh = top * 0.32
+  const hill = (x0, w, y0 = -1) => { c.save(); c.beginPath(); c.rect(x0, y0, w, wy - y0); c.clip(); c.fillStyle = '#74853f'; c.fillRect(x0, -1, w, top); c.fillStyle = '#a89a6a'; c.beginPath(); c.moveTo(0, top); c.quadraticCurveTo(W / 2, -top * 0.7, W, top); c.fill(); c.restore() }
   let seed = 5; const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647
-  c.strokeStyle = '#5a4526'; c.lineWidth = 1.6
-  for (let i = 0; i < Math.floor(lost * 16); i++) { const x = W * (0.12 + rnd() * 0.76), y = top * (0.44 + rnd() * 0.2); c.beginPath(); c.moveTo(x, y); c.lineTo(x + (rnd() - 0.5) * 10, y + 6); c.lineTo(x + (rnd() - 0.5) * 12, y + 13); c.stroke() }
-  const fallen = [0.3, 0.7, 0.5].filter((_, i) => lost >= [0.34, 0.67, 1][i])
-  for (const x of fallen) {   // the tower is gone: paint the sky and hill back behind it, then a broken stump and rubble
-    c.save(); c.beginPath(); c.rect(W * x - 12, -1, 24, top * 0.42 + 1); c.clip()
-    c.fillStyle = '#74853f'; c.fillRect(W * x - 12, -1, 24, top); c.fillStyle = '#a89a6a'; c.beginPath(); c.moveTo(0, top); c.quadraticCurveTo(W / 2, -top * 0.7, W, top); c.fill(); c.restore()
-    c.fillStyle = '#d9cfb4'; c.beginPath(); c.moveTo(W * x - 9, top * 0.42); c.lineTo(W * x - 9, top * 0.26); c.lineTo(W * x - 3, top * 0.32); c.lineTo(W * x + 2, top * 0.22); c.lineTo(W * x + 9, top * 0.3); c.lineTo(W * x + 9, top * 0.42); c.fill()
-    c.fillStyle = '#c9b07a'; for (let j = 0; j < 5; j++) { c.beginPath(); c.arc(W * x - 9 + j * 4.5, top * 0.4 - (j % 2) * 3, 3.5, 0, TAU); c.fill() }
+  // scorch marks and cracks, thicker and longer as the damage grows
+  for (let i = 0; i < Math.floor(lost * 30); i++) {
+    const x = W * (0.12 + rnd() * 0.76), y = wy + rnd() * wh * 0.6, len = 6 + rnd() * 10 * (0.5 + lost)
+    c.strokeStyle = '#4a3820'; c.lineWidth = 1.2 + lost * 1.4; c.beginPath(); c.moveTo(x, y); c.lineTo(x + (rnd() - 0.5) * 10, y + len * 0.5); c.lineTo(x + (rnd() - 0.5) * 14, y + len); c.stroke()
   }
-  if (G.walls.hp <= 0) { c.fillStyle = 'rgba(80, 70, 55, .55)'; c.fillRect(W * 0.1, top * 0.34, W * 0.8, top * 0.4) }
+  // battlements knocked off, one by one
+  const crenels = []; for (let x = W * 0.1; x < W * 0.9; x += 14) crenels.push(x)
+  seed = 9; const order = crenels.map(x => [x, rnd()]).sort((p, q) => p[1] - q[1])
+  for (const [x] of order.slice(0, Math.floor(order.length * Math.min(1, lost * 1.2)))) hill(x - 1, 10, top * 0.34 - 1)
+  // holes punched through the wall, widening
+  seed = 13
+  const holes = [0.2, 0.62, 0.41, 0.8, 0.3, 0.52].slice(0, Math.floor(lost * 6.5))
+  for (const [i, hx] of holes.entries()) {
+    const r = (7 + rnd() * 5) * (0.6 + lost), x = W * hx, y = wy + wh * (0.25 + rnd() * 0.2)
+    c.fillStyle = 'rgba(45, 35, 25, .3)'; c.beginPath(); c.ellipse(x, y - r * 0.6, r * 1.1, r * 1.1, 0, 0, TAU); c.fill()   // soot above the hole
+    c.fillStyle = '#3a2c1e'; c.beginPath(); for (let j = 0; j < 9; j++) { const an = j / 9 * TAU, rr = r * (0.7 + ((j * 7 + i * 3) % 5) / 10); c.lineTo(x + Math.cos(an) * rr, y + Math.sin(an) * rr * 0.7) } c.closePath(); c.fill()
+    c.fillStyle = '#c9b07a'; for (let j = 0; j < 4; j++) { c.beginPath(); c.arc(x - r + j * r * 0.65, wy + wh + 2 - (j % 2) * 2, 3 + lost * 1.5, 0, TAU); c.fill() }   // the rubble at its foot
+  }
+  // the towers fall: a broken stump and rubble
+  const fallen = [0.3, 0.7, 0.5].filter((_, i) => lost >= [0.34, 0.67, 1][i])
+  for (const x of fallen) {
+    hill(W * x - 12, 24)
+    c.fillStyle = '#d9cfb4'; c.beginPath(); c.moveTo(W * x - 9, wy); c.lineTo(W * x - 9, top * 0.26); c.lineTo(W * x - 3, top * 0.32); c.lineTo(W * x + 2, top * 0.22); c.lineTo(W * x + 9, top * 0.3); c.lineTo(W * x + 9, wy); c.fill()
+    c.fillStyle = '#c9b07a'; for (let j = 0; j < 7; j++) { c.beginPath(); c.arc(W * x - 14 + j * 4.7, wy - (j % 2) * 3, 4, 0, TAU); c.fill() }
+  }
+  if (G.walls.hp <= 0 && !burn) { c.fillStyle = 'rgba(80, 70, 55, .45)'; c.fillRect(W * 0.1, top * 0.34, W * 0.8, top * 0.4) }
   for (const b of G.walls.stuck) {   // bolts bristling from the wall, their shafts pointing back at us
     c.save(); c.translate(b.x, b.y); c.rotate(b.tilt); line(c, 0, 0, 0, 11 * k + 3, '#4a3420', 2.6); line(c, -2.5, 9 * k + 2, 0, 11 * k + 3, '#cfd4d8', 1.4); line(c, 2.5, 9 * k + 2, 0, 11 * k + 3, '#cfd4d8', 1.4)
     c.fillStyle = '#3b2a1c'; c.beginPath(); c.arc(0, 0, 2, 0, TAU); c.fill(); c.restore()
   }
-  if (G.walls.hit > 0) { c.fillStyle = `rgba(230, 220, 190, ${G.walls.hit * 1.5})`; c.fillRect(W * 0.1, top * 0.42, W * 0.8, top * 0.32) }
-  if (G.walls.hp > 0) {   // how much of the walls still stands
+  // fire: a few small fires in the breaches once the walls are badly hurt; at victory the whole city burns
+  const flame = (x, y, h, ph) => {
+    const f = h * (0.8 + 0.2 * Math.sin(now * 13 + ph) + 0.1 * Math.sin(now * 29 + ph * 3)), w = h * 0.38
+    c.fillStyle = 'rgba(214, 72, 22, .9)'; c.beginPath(); c.moveTo(x - w, y); c.quadraticCurveTo(x - w * 0.9, y - f * 0.6, x + Math.sin(now * 7 + ph) * w * 0.4, y - f); c.quadraticCurveTo(x + w * 0.9, y - f * 0.6, x + w, y); c.fill()
+    c.fillStyle = 'rgba(255, 196, 60, .95)'; c.beginPath(); c.moveTo(x - w * 0.5, y); c.quadraticCurveTo(x - w * 0.4, y - f * 0.4, x + Math.sin(now * 9 + ph) * w * 0.25, y - f * 0.65); c.quadraticCurveTo(x + w * 0.4, y - f * 0.4, x + w * 0.5, y); c.fill()
+  }
+  const smoke = (x, y, n, size, dark) => {
+    for (let i = 0; i < n; i++) {
+      const ph = (now * 0.35 + i / n + x * 0.013) % 1, sx = x + Math.sin(ph * 5 + i) * 6 + ph * 14
+      c.fillStyle = `rgba(${dark ? '60, 55, 50' : '120, 115, 105'}, ${0.45 * (1 - ph)})`; c.beginPath(); c.arc(sx, y - ph * top * 1.1, size * (0.5 + ph), 0, TAU); c.fill()
+    }
+  }
+  if (lost >= 0.5) for (const hx of holes.slice(0, burn ? 0 : Math.floor((lost - 0.4) * 8))) smoke(W * hx, wy + wh * 0.3, 4, 4, false)
+  if (lost >= 0.75 && !burn) for (const hx of holes.slice(0, 2)) flame(W * hx, wy + wh * 0.55, top * 0.22, hx * 40)
+  if (burn > 0) {
+    c.fillStyle = `rgba(255, 120, 30, ${0.22 * burn})`; c.fillRect(0, 0, W, top)   // the glow of the fire
+    const glow = c.createLinearGradient(0, top, 0, top + cell * 1.4); glow.addColorStop(0, `rgba(255, 120, 30, ${0.25 * burn})`); glow.addColorStop(1, 'rgba(255, 120, 30, 0)'); c.fillStyle = glow; c.fillRect(0, top, W, cell * 1.4)
+    const xs = []; for (let x = 0.13; x < 0.88; x += 0.055) xs.push(x)
+    xs.forEach((x, i) => { const on = Math.min(1, Math.max(0, G.burn * 1.6 - ((i * 7) % xs.length) * 0.12)); if (on > 0) { smoke(W * x, wy, 3, 5 + on * 3, true); flame(W * x, wy + wh * 0.7, top * (0.25 + 0.3 * on) * (0.8 + ((i * 5) % 3) * 0.15), i * 2.1) } })
+    for (const x of [0.3, 0.5, 0.7]) if (G.burn > 0.4) flame(W * x, wy, top * 0.5 * Math.min(1, G.burn - 0.4), x * 31)
+    c.fillStyle = 'rgba(255, 210, 120, .9)'; for (let i = 0; i < 18 * burn; i++) { const ph = (now * 0.5 + i * 0.137) % 1; c.fillRect(W * (0.12 + ((i * 0.381) % 0.76)) + Math.sin(now * 3 + i) * 5, wy - ph * top * 0.9, 2, 2) }   // embers
+  }
+  if (G.walls.hit > 0) { c.fillStyle = `rgba(230, 220, 190, ${G.walls.hit * 1.5})`; c.fillRect(W * 0.1, wy, W * 0.8, wh) }
+  if (G.walls.hp > 0 && !burn) {   // how much of the walls still stands
     const bw = Math.min(90, W * 0.3), x = W - bw - 6, y = 4
     c.fillStyle = 'rgba(27, 23, 21, .55)'; c.fillRect(x - 1, y - 1, bw + 2, 7); c.fillStyle = '#e0a63a'; c.fillRect(x, y, bw * (1 - lost), 5)
   }
@@ -2229,6 +2270,7 @@ function starsFor() { const used = G.charges; return used === 0 ? 3 : used <= 2 
 function win() {
   if (G.phase !== 'play') return
   G.phase = 'won'; sfx.win()
+  if (G.walls) { G.burn = 0; G.walls.stuck = []; G.shake = 8; sfx.crack(); announce('Akragas falls! The city burns.', true, 4000) }   // the walls come down and the city goes up in flames
   const stars = starsFor(), i = levelIndex, next = LEVELS[i + 1]
   if (opts.mode !== 'chapter') { progress.stars[i] = Math.max(progress.stars[i] ?? 0, stars); saveProgress() }
   setTimeout(() => showPanel(`<span class="eyebrow">Victory · ${LEVEL.year}</span><h2>You held the line at ${LEVEL.name.replace(/^The /, 'the ')}</h2>
@@ -2238,7 +2280,7 @@ function win() {
     ${next || opts.mode === 'chapter' ? '' : '<p><b>You have won the whole campaign, from Romulus to Attila.</b></p>'}
     ${opts.mode === 'chapter' ? `<div class="row"><button class="primary" id="continue">Continue</button><button class="tool" id="again">Play again</button></div>`
       : `<div class="row">${next ? `<button class="primary" id="next">Next: ${next.name}</button>` : ''}<button class="tool" id="again">Play again</button><button class="tool" id="map">Map</button></div>`}`,
-    { next: () => showBriefing(i + 1), again: () => startLevel(i), map: showMap, continue: () => exit({ won: true, stars }) }), 1200)
+    { next: () => showBriefing(i + 1), again: () => startLevel(i), map: showMap, continue: () => exit({ won: true, stars }) }), G.walls ? 4500 : 1200)
 }
 function lose() {
   if (G.phase !== 'play') return
@@ -2285,7 +2327,7 @@ function frame(now) {
   if (!mounted || panActive) return
   const dt = Math.max(0, Math.min(0.05, (now - last) / 1000)); last = now   // the first frame can come in a hair before `last`
   if (G.phase === 'play') { for (let i = 0; i < G.speed; i++) update(dt) }
-  else if (G.phase === 'won' || G.phase === 'lost') { for (const c of G.corpses) c.t = Math.min(c.t + dt, 1); G.shake = Math.max(0, G.shake - dt * 12) }
+  else if (G.phase === 'won' || G.phase === 'lost') { for (const c of G.corpses) c.t = Math.min(c.t + dt, 1); G.shake = Math.max(0, G.shake - dt * 12); if (G.burn != null) G.burn += dt }
   draw(); syncTray()
   requestAnimationFrame(frame)
 }
