@@ -151,7 +151,7 @@ const LEVELS = [
     waves: [w(28, ['samnite']), w(46, ['samnite']), w(62, ['samnite']), w(80, ['linen']), w(92, ['samnite', 'samnite']), w(106, ['cavalry', 'samnite']), w(120, ['linen', 'samnite']),
       w(136, ['chief', ...rep(4, 'samnite'), 'linen', 'cavalry'], 'A great wave approaches!'), w(166, ['samnite', 'linen']), w(180, ['cavalry', 'cavalry', 'samnite']),
       w(196, ['chief', ...rep(4, 'samnite'), ...rep(2, 'linen'), 'cavalry', 'cavalry'], 'The final wave!')] },
-  { id: 'beneventum', name: 'Beneventum', year: '275 BC', enemy: 'King Pyrrhus', theme: 'river', start: 275, cols: 6, rows: 8, more: 1.2, tired: 80,
+  { id: 'beneventum', name: 'Beneventum', year: '275 BC', enemy: 'King Pyrrhus', theme: 'river', start: 325, cols: 6, rows: 8, more: 1.2, tired: 80,
     twist: 'Pyrrhus got lost on a night march: his first troops arrive exhausted and slow. Some elephants bring a calf; wound the calf and its mother panics.', units: [...BASE, 'princeps', 'shed', 'rorarii', 'pigs'], newUnit: 'pigs',
     blurb: 'King Pyrrhus of Epirus brings a professional army and war elephants, beasts the Romans first met only five years before.',
     after: 'Pyrrhus sailed home. His earlier victories had cost him so many men that a “Pyrrhic victory” still means a win not worth its price.',
@@ -219,7 +219,7 @@ const LEVELS = [
     waves: [w(26, ['samnite']), w(40, ['lucanian']), w(54, ['samnite', 'samnite']), w(70, ['lucanian', 'samnite']), w(86, ['linen', 'samnite']), w(100, ['lucanian', 'lucanian', 'cavalry']), w(114, ['samnite', 'samnite', 'lucanian']),
       w(130, ['chief', ...rep(3, 'samnite'), 'lucanian', 'lucanian', 'linen'], 'A great wave approaches!'), w(156, ['samnite', 'lucanian', 'cavalry']), w(176, ['linen', 'samnite', 'samnite']),
       w(194, ['chief', ...rep(4, 'samnite'), ...rep(2, 'lucanian'), 'linen', 'cavalry'], 'The final wave!')] },
-  { id: 'silarius', name: 'The Silarius River', year: '71 BC', enemy: 'Spartacus', theme: 'silarius', start: 325, cols: 8, rows: 10, more: 1.33, ditch: 2, river: true,
+  { id: 'silarius', name: 'The Silarius River', year: '71 BC', enemy: 'Spartacus', theme: 'silarius', start: 375, cols: 8, rows: 10, more: 1.33, ditch: 2, river: true,
     twist: 'The slave army must wade the river, which slows it (you can’t build in it). Gladiators lead the charge: watch for the retiarius’s net. In the final wave Spartacus himself attacks.',
     units: ['cart', 'slinger', 'velites', 'legionary', 'triarius', 'caltrops', 'maniple', 'scorpio', 'centurion'],
     blurb: 'Trapped by Crassus, Spartacus turns and throws his whole army at the legions by the Silarius River.',
@@ -227,7 +227,7 @@ const LEVELS = [
     waves: [w(26, ['slave']), w(38, ['slave', 'slave']), w(52, ['murmillo']), w(66, ['slave', 'slave', 'retiarius']), w(82, ['murmillo', 'slave', 'slave']), w(98, ['retiarius', 'retiarius', 'slave']), w(114, ['murmillo', 'murmillo', 'slave', 'slave']),
       w(130, ['chief', ...rep(4, 'slave'), 'murmillo', 'retiarius', 'cavalry'], 'A great wave approaches!'), w(158, [...rep(3, 'slave'), 'retiarius', 'murmillo']), w(176, ['murmillo', 'murmillo', 'retiarius', 'slave']),
       w(194, ['spartacus', ...rep(4, 'slave'), 'murmillo', 'murmillo', 'retiarius', 'retiarius'], 'Spartacus leads the final charge!')] },
-  { id: 'carrhae', name: 'Carrhae', year: '53 BC', enemy: 'the Parthians', theme: 'desert', start: 450, cols: 8, rows: 10, more: 1.33, noSky: true,
+  { id: 'carrhae', name: 'Carrhae', year: '53 BC', enemy: 'the Parthians', theme: 'desert', start: 500, cols: 8, rows: 10, more: 1.33, noSky: true,
     twist: 'In the desert no grain falls from the sky: build supply carts. Parthian horse archers keep their distance and shoot, riding back if you come close, and their camels bring them endless arrows. Form a testudo.',
     units: ['cart', 'slinger', 'velites', 'legionary', 'triarius', 'caltrops', 'centurion', 'scorpio', 'testudo'], newUnit: 'testudo',
     blurb: 'Crassus leads seven legions into the dry plains of Mesopotamia. Near Carrhae, Parthian horsemen ride out of the dust to the sound of drums.',
@@ -270,7 +270,7 @@ const LEVELS = [
       w(104, ['ambusher', 'ambusher', 'ambusher'], 'Another ambush from the trees!', 'woods'), w(118, ['german', 'german', 'shield', 'warrior']),
       w(134, ['chief', ...rep(4, 'german'), 'shield', 'shield', 'warrior'], 'Arminius’s warriors charge!'), w(156, rep(4, 'ambusher'), 'They pour out of the forest!', 'woods'), w(170, ['german', 'german', 'shield', 'warrior', 'german']),
       w(188, ['chief', ...rep(5, 'german'), ...rep(2, 'shield'), 'warrior', 'warrior'], 'The final attack!'), w(194, rep(4, 'ambusher'), null, 'woods')] },
-  { id: 'idistaviso', name: 'Germanicus in Germany', year: 'AD 16', enemy: 'Arminius and the Cherusci', theme: 'forest', start: 525, cols: 8, rows: 11,
+  { id: 'idistaviso', name: 'Germanicus in Germany', year: 'AD 16', enemy: 'Arminius and the Cherusci', theme: 'forest', start: 575, cols: 8, rows: 11,
     twist: 'Germanicus has come to avenge Varus. The Cherusci fight behind big wooden shields; in the last wave Arminius himself attacks.',
     units: ['cart', 'sagittarius', 'velites', 'legionary', 'cohort', 'triarius', 'caltrops', 'centurion', 'scorpio'], newUnit: 'sagittarius',
     blurb: 'AD 16. Germanicus, Tiberius’s heir, leads eight legions across the Rhine against Arminius, on a plain by the river Weser.',
@@ -302,7 +302,7 @@ const LEVELS = [
     waves: [w(26, ['dacian']), w(42, ['dacian', 'warrior']), w(58, ['dacian', 'dacian']), w(74, ['draco', 'dacian', 'dacian']), w(90, ['cataphract', 'dacian']), w(106, ['dacian', 'dacian', 'dacian', 'shield']),
       w(122, ['draco', 'dacian', 'cataphract', 'dacian']), w(138, ['chief', 'draco', ...rep(5, 'dacian'), 'cataphract'], 'The dragon standards howl: a great attack!'), w(166, ['dacian', 'dacian', 'draco', 'dacian']),
       w(182, ['cataphract', 'dacian', 'dacian', 'dacian']), w(198, ['chief', 'draco', 'draco', ...rep(6, 'dacian'), 'cataphract'], 'Decebalus’s final attack!')] },
-  { id: 'zenobia', name: 'Zenobia of Palmyra', year: 'AD 272', enemy: 'Zenobia’s army', theme: 'desert', start: 450, cols: 8, rows: 11, heat: 26,
+  { id: 'zenobia', name: 'Zenobia of Palmyra', year: 'AD 272', enemy: 'Zenobia’s army', theme: 'desert', start: 500, cols: 8, rows: 11, heat: 26,
     twist: 'Zenobia’s armoured horsemen are fearsome, but heavy: after a while on the field in the Syrian heat, they tire and slow right down. Hold them, then strike.',
     units: ['cart', 'sagittarius', 'legionary', 'cohort', 'clubman', 'triarius', 'caltrops', 'centurion', 'scorpio'], newUnit: 'clubman',
     blurb: 'Zenobia, queen of Palmyra, rules half the Roman East. Near Emesa, in Syria, the emperor Aurelian meets her army.',
@@ -1728,14 +1728,14 @@ function update(dt) {
   for (const [lane, e] of G.equites.entries()) {
     if (e.state !== 'charge') continue
     e.y -= 4.2 * dt
-    for (const f of G.foes) if (f.lane === lane && f.hp > 0 && Math.abs(f.y - e.y) < 0.6) hurtFoe(f, 9999)
+    for (const f of G.foes) if (f.lane === lane && f.hp > 0 && Math.abs(f.y - e.y) < 0.6) charged(f, e, -1)
     if (Math.random() < dt * 30) G.fx.push({ kind: 'dust', x: lx(lane) + (Math.random() - 0.5) * cell * 0.5, y: ry(e.y), vx: (Math.random() - 0.5) * 40, vy: -Math.random() * 30, t: 0.6 })
     if (e.y < -1.3) e.state = 'used'
   }
   for (const [lane, e] of G.equitesTop.entries()) {   // on two fronts, the equites at the top ride down their lane
     if (e.state !== 'charge') continue
     e.y += 4.2 * dt
-    for (const f of G.foes) if (f.lane === lane && f.hp > 0 && Math.abs(f.y - e.y) < 0.6) hurtFoe(f, 9999)
+    for (const f of G.foes) if (f.lane === lane && f.hp > 0 && Math.abs(f.y - e.y) < 0.6) charged(f, e, 1)
     if (Math.random() < dt * 30) G.fx.push({ kind: 'dust', x: lx(lane) + (Math.random() - 0.5) * cell * 0.5, y: ry(e.y), vx: (Math.random() - 0.5) * 40, vy: -Math.random() * 30, t: 0.6 })
     if (e.y > ROWS + 1.3) e.state = 'used'
   }
@@ -1989,6 +1989,21 @@ function select(type) { G.selected = type; G.dismiss = false; G.heal = false; sy
 
 // ---------- input: drag a card onto a square, or tap a card then a square ----------
 let drag = null, moveDrag = null, equesDrag = null
+// The equites' charge cuts down everyone in its lane, except the heavy ones (the user, Nov 14): elephants, the great
+// leaders and the big ships lose half their strength and are driven back half the field, once per
+// charge, so the player has time to finish them off.
+// (the armoured horsemen of Carrhae and Zenobia were on the list too, but they come in dozens: every one surviving a
+// charge made those battles unwinnable even at 80%, so the charge still cuts them down)
+const HEAVY = new Set(['elephant', 'charger', 'brennus', 'spartacus', 'arminius', 'attila', 'deceres', 'flagship'])
+function charged(f, e, back) {
+  if (!HEAVY.has(f.type)) return hurtFoe(f, 9999)
+  if (f.chargedBy === e) return
+  f.chargedBy = e; f.eating = null
+  f.hp = Math.ceil(f.hp / 2); f.flash = 0.25   // half its strength, whatever its armour or shield
+  f.y = back < 0 ? Math.max(-0.6, f.y - ROWS / 2) : Math.min(ROWS + 0.6, f.y + ROWS / 2)   // half the field: time to finish him off
+  G.shake = Math.max(G.shake, 5); sfx.crack()
+  if (!G.tips.heavy) { G.tips.heavy = true; announce('Heavy enemies withstand the charge: they lose half their strength and are driven back.', true, 4200) }
+}
 // an eques rides along the camp to a lane that has none (before or during the battle)
 function moveEques(from, to) {
   if (to == null || to === from || G.equites[to]?.state !== 'none' || LEVEL.closed?.includes(to) || G.equites[from]?.state !== 'ready') return false
