@@ -1310,7 +1310,7 @@ function newGame(i = levelIndex, score = quizScore) {
     introduced: new Set(), selected: null, dismiss: false, hover: null, lastLane: -1, tips: {},
     hasMedicus: army.medicus, medicus: army.medicus ? MEDICUS.heals : 0, medicusWait: 0, heal: false,
     hasAugur: army.augur, augur: army.augur ? 1 : 0, blessUntil: -1,
-    walls: LEVEL.walls ? { hp: LEVEL.walls.hp, next: LEVEL.walls.from, hit: 0, warned: false } : null,
+    walls: LEVEL.walls ? { hp: LEVEL.walls.hp, next: LEVEL.walls.from, hit: 0, warned: false, stuck: [] } : null,
     houses: (LEVEL.houses ?? []).map(([lane, row]) => ({ lane, row, burned: false })), blocks: {}, events: (LEVEL.events ?? []).map(e => ({ ...e })), charges: 0,
   }
   G.total = G.queue.length
@@ -1610,10 +1610,14 @@ function update(dt) {
       if (s.pierce) { (s.hits ??= new Set()).add(hit); s.jolt = 0.12; G.fx.push({ kind: 'ring', x: lx(s.lane), y: ry(hit.y + 0.3), t: 0.3 }) } else s.done = true   // a scorpion bolt punches through and flies on
       G.fx.push({ kind: 'spark', x: lx(s.lane), y: ry(s.y), t: 0.25 })
     }
-    if (G.walls?.hp > 0 && sd < 0 && s.kind !== 'ray' && s.y < -0.6 && !s.done) {   // it flies on and strikes the walls of the city
+    if (G.walls?.hp > 0 && sd < 0 && s.kind !== 'ray' && s.y < -0.38 && !s.done) {   // it flies on and strikes the walls of the city
       s.done = true; G.walls.hp = Math.max(0, G.walls.hp - s.dmg); G.walls.hit = 0.3
-      for (let i = 0; i < 3; i++) G.fx.push({ kind: 'shard', x: lx(s.lane) + (Math.random() - 0.5) * 12, y: ry(-0.7) + Math.random() * 8, t: 0.4 })
-      if (G.walls.hp <= 0) { G.rations += LEVEL.walls.reward; G.shake = 10; sfx.crack(); announce(`The walls of Akragas are breached! The city falls silent. +${LEVEL.walls.reward} grain`, true, 3600) }
+      const x = lx(s.lane) + s.x0 * cell, y = ry(APPROACH * 0.62 - APPROACH)   // the face of the wall
+      if (s.kind === 'bolt') { G.walls.stuck.push({ x, y: y + (Math.random() - 0.5) * 6, tilt: (Math.random() - 0.5) * 0.5 }); if (G.walls.stuck.length > 24) G.walls.stuck.shift() }
+      G.fx.push({ kind: 'ring', x, y, t: 0.3 })
+      for (let i = 0; i < 6; i++) G.fx.push({ kind: 'dust', x: x + (Math.random() - 0.5) * 10, y, vx: (Math.random() - 0.5) * 50, vy: -20 - Math.random() * 20, t: 0.6 })
+      sfx.crack()
+      if (G.walls.hp <= 0) { G.walls.stuck = []; G.rations += LEVEL.walls.reward; G.shake = 10; sfx.crack(); announce(`The walls of Akragas are breached! The city falls silent. +${LEVEL.walls.reward} grain`, true, 3600) }
     }
     if (sd < 0 ? s.y < Math.max(-1, s.end) : s.y > Math.min(ROWS + 1, s.end)) s.done = true
   }
@@ -1778,6 +1782,10 @@ function drawWalls() {   // Akragas's walls: cracks as they take bolts, towers f
     c.fillStyle = '#c9b07a'; for (let j = 0; j < 5; j++) { c.beginPath(); c.arc(W * x - 9 + j * 4.5, top * 0.4 - (j % 2) * 3, 3.5, 0, TAU); c.fill() }
   }
   if (G.walls.hp <= 0) { c.fillStyle = 'rgba(80, 70, 55, .55)'; c.fillRect(W * 0.1, top * 0.34, W * 0.8, top * 0.4) }
+  for (const b of G.walls.stuck) {   // bolts bristling from the wall, their shafts pointing back at us
+    c.save(); c.translate(b.x, b.y); c.rotate(b.tilt); line(c, 0, 0, 0, 11 * k + 3, '#4a3420', 2.6); line(c, -2.5, 9 * k + 2, 0, 11 * k + 3, '#cfd4d8', 1.4); line(c, 2.5, 9 * k + 2, 0, 11 * k + 3, '#cfd4d8', 1.4)
+    c.fillStyle = '#3b2a1c'; c.beginPath(); c.arc(0, 0, 2, 0, TAU); c.fill(); c.restore()
+  }
   if (G.walls.hit > 0) { c.fillStyle = `rgba(230, 220, 190, ${G.walls.hit * 1.5})`; c.fillRect(W * 0.1, top * 0.42, W * 0.8, top * 0.32) }
   if (G.walls.hp > 0) {   // how much of the walls still stands
     const bw = Math.min(90, W * 0.3), x = W - bw - 6, y = 4
@@ -2072,7 +2080,11 @@ document.addEventListener('pointerup', e => {
   if (!mounted) return
   if (equesDrag) {
     const d = equesDrag; equesDrag = null
-    if (d.moved && !moveEques(d.from, d.to)) sfx.deny()
+    if (d.moved && d.to !== d.from && !moveEques(d.from, d.to)) {
+      sfx.deny()
+      if (G.equites[d.to]?.state === 'ready' || G.equites[d.to]?.state === 'charge') announce('That lane already has an eques. Move him to a lane marked in red.')
+      else if (G.equites[d.to]?.state === 'used') announce('That lane’s eques has charged; his place can’t be filled.')
+    }
     return
   }
   if (moveDrag) {
@@ -3023,12 +3035,13 @@ function bindControls() {
     if (!G || (G.phase !== 'play' && G.phase !== 'deploy') || drag) return
     sfx.init()
     const c = cellAt(e.clientX, e.clientY); if (!c) return
-    // grain first: it's the most urgent tap
-    const d = G.drops.find(d => Math.hypot(d.x - c.x, d.y - c.y) < 26 * k + 8)
-    if (d) return collect(d)
-    if (c.row >= ROWS && c.lane >= 0 && c.lane < COLS && G.equites[c.lane]?.state === 'ready') {   // an eques in the camp: drag him to another lane
+    // an eques in the camp (his head reaches a little above it): drag him to another lane. He comes before grain, or a sack beside him would steal the press
+    if (c.y / cell - APPROACH >= ROWS - 0.2 && c.lane >= 0 && c.lane < COLS && G.equites[c.lane]?.state === 'ready') {
       equesDrag = { from: c.lane, x0: e.clientX, y0: e.clientY, moved: false }; canvas.setPointerCapture(e.pointerId); return
     }
+    // then grain: it's the most urgent tap
+    const d = G.drops.find(d => Math.hypot(d.x - c.x, d.y - c.y) < 26 * k + 8)
+    if (d) return collect(d)
     if (!c.inGrid) return
     if (G.heal) {
       const u = unitAt(c.lane, c.row)

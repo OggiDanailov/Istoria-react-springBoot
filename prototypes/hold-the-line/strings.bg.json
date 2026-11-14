@@ -678,5 +678,7 @@
 "Heavy enemies withstand the charge: they lose half their strength and are driven back.": "Тежките врагове издържат атаката: губят половината си сила и биват отблъснати назад.",
 "A bigger field: seven lanes and nine rows. The Romans dug a ditch around their siege lines: enemies crossing it slow right down, and you can’t build in it. Catapults on the walls of Akragas throw stones at your soldiers, but bolts that fly past the enemy strike the walls. Break them and the city falls silent.": "По-голямо поле: седем линии и девет реда. Римляните изкопали ров около обсадните си линии: враговете, които го прекосяват, силно забавят ход, а в него не може да се строи. Катапултите по стените на Акрагас хвърлят камъни по войниците ви, но стрелите, които прелитат покрай врага, удрят стените. Пробийте ги и градът замлъква.",
 "The catapults of Akragas open fire!": "Катапултите на Акрагас откриват огън!",
-"The walls of Akragas are breached! The city falls silent. +150 grain": "Стените на Акрагас са пробити! Градът замлъква. +150 жито"
+"The walls of Akragas are breached! The city falls silent. +150 grain": "Стените на Акрагас са пробити! Градът замлъква. +150 жито",
+"That lane already has an eques. Move him to a lane marked in red.": "В тази линия вече има конник. Преместете го в линия, отбелязана в червено.",
+"That lane’s eques has charged; his place can’t be filled.": "Конникът на тази линия вече е атакувал; мястото му не може да бъде заето."
 }
