@@ -2361,6 +2361,14 @@ function draw() {
     ctx.fillText(label, 8, ry(ROWS) + cell * 0.62); ctx.restore()
   }])
   for (const [lane, e] of G.equites.entries()) if (e.state !== 'used' && e.state !== 'none') items.push([ry(e.y), () => { ctx.save(); if (equesDrag?.moved && equesDrag.from === lane) ctx.globalAlpha = 0.4; ctx.translate(lx(lane), ry(e.y)); ctx.scale(k * 0.9, k * 0.9); drawEques(ctx, e, T); ctx.restore() }])
+  if (equesDrag?.moved && equesDrag.to != null && equesDrag.to !== equesDrag.from && G.equites[equesDrag.from]) {   // the horse being dragged, under the pointer: gold where he can go, red where he can't
+    const to = equesDrag.to, ok = G.equites[to]?.state === 'none' && !LEVEL.closed?.includes(to), y = ry(ROWS + 0.62)
+    items.push([y + 1, () => {
+      ctx.save(); ctx.strokeStyle = ok ? 'rgba(224, 166, 58, .95)' : 'rgba(190, 40, 30, .95)'; ctx.lineWidth = 3; ctx.beginPath(); ctx.ellipse(lx(to), y - 2, cell * 0.38, cell * 0.16, 0, 0, TAU); ctx.stroke(); ctx.restore()
+      ctx.save(); ctx.globalAlpha = ok ? 0.85 : 0.45; ctx.translate(lx(to), y); ctx.scale(k * 0.9, k * 0.9); drawEques(ctx, G.equites[equesDrag.from], T); ctx.restore()
+      if (!ok) { const m = cell * 0.16, cy = y - cell * 0.35; line(ctx, lx(to) - m, cy - m, lx(to) + m, cy + m, 'rgba(190, 40, 30, .95)', 4); line(ctx, lx(to) + m, cy - m, lx(to) - m, cy + m, 'rgba(190, 40, 30, .95)', 4) }
+    }])
+  }
   for (const r of G.runners) items.push([ry(r.y), () => { ctx.save(); ctx.translate(lx(r.lane), ry(r.y)); ctx.scale(k, k); drawPig(ctx, T, true); ctx.restore() }])
   items.sort((a, b) => a[0] - b[0]).forEach(([, fn]) => fn())
   for (const s of G.foeShots) { const x = lx(s.lane) + s.dx * cell, y = ry(s.y) - 20 * k; if (s.stone) { ctx.fillStyle = '#5f5f58'; ctx.beginPath(); ctx.arc(x, y, (s.big ? 5.5 : 3) * k + 1, 0, TAU); ctx.fill(); continue } line(ctx, x, y - 9 * k, x, y + 5 * k, '#3f2a16', 1.5); line(ctx, x - 2.5 * k, y + 2 * k, x, y + 6 * k, '#9aa3aa', 1.5); line(ctx, x + 2.5 * k, y + 2 * k, x, y + 6 * k, '#9aa3aa', 1.5) }
