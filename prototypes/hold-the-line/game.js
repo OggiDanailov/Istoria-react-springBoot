@@ -14,6 +14,7 @@ const UNITS = {
   triarius: { name: 'Triarius', short: 'Triarius', cost: 50, recharge: 25, hp: 1500, about: 'A veteran who kneels behind his shield and holds the lane.' },
   caltrops: { name: 'Caltrops', short: 'Caltrops', cost: 25, recharge: 25, hp: 300, armTime: 10, dmg: 450, trap: true, about: 'Iron spikes hidden in the grass. They arm after 10 seconds.' },
   princeps: { name: 'Princeps', short: 'Princeps', cost: 100, recharge: 10, hp: 700, melee: 55, about: 'A soldier in his prime: tough, and he cuts down whoever reaches him.' },
+  storm:    { name: 'Storming party', short: 'Storm', cost: 200, recharge: 30, hp: 1000, melee: 25, arrowMul: 0.2, march: 4, about: 'A testudo of legionaries that marches slowly up its lane toward the city. Arrows and stones barely hurt it. Get three inside through broken gates to take Carthage.' },
   petrobolos: { name: 'Stone-thrower', short: 'Stones', cost: 175, recharge: 15, hp: 300, reload: 4.5, dmg: 90, range: 99, kind: 'boulder', splash: 0.6, lob: true, about: 'A Roman ballista hurling stones. They fly over walls, and also hurt enemies in the lanes beside the one they hit.' },
   aries:    { name: 'Battering ram', short: 'Ram', cost: 150, recharge: 15, hp: 1000, arrowMul: 0.3, ram: 45, about: 'A heavy ram under a roof of hides. Put it right under the city wall: it pounds the wall in its lane.' },
   shed:     { name: 'Siege shed', short: 'Shed', cost: 75, recharge: 20, hp: 1200, arrowMul: 0.15, about: 'A wooden shed covered in hides, like the ones Livy says the Romans built at Veii. Arrows barely hurt it, so put it in front.' },
@@ -121,7 +122,7 @@ const FOES = {
   calf:       { name: 'Elephant calf', hp: 300, speed: 0.15, dps: 60, intro: 'An elephant calf walks ahead of its mother. Wound it and the mother panics, as happened at Beneventum.' },
   elephant:   { name: 'War elephant', hp: 2000, speed: 0.15, dps: 250, elephant: true, intro: 'War elephants! They crush whatever stands in their way. Send the pigs!' },
 }
-const UNIT_GUIDE = {"sagittarius": "Shoots an arrow down his whole lane every 1.3 seconds, harder than a stone. <i>Tip: behind a sturdy soldier.</i>", "volley": "One use. A second after you place it, every enemy in the nine squares around it takes a heavy hit. <i>Tip: where a crowd is about to reach your line.</i>", "onager": "Throws a heavy stone every 4 seconds down its lane; enemies in the lanes beside the one it hits are hurt too. <i>Tip: in the middle of the field.</i>", "lorica": "A tough legionary with a pilum and a sword, in extra armour: the Dacian falx does him no extra harm. <i>Tip: in front, where the falxmen come.</i>", "clubman": "Triple damage to anyone on horseback. <i>Tip: in the lanes the armoured horsemen come down.</i>", "labarum": "Doesn’t fight. Every soldier in its lane fights 25% harder. <i>Tip: in your busiest lane.</i>", "plumbata": "Throws darts at short range into his own lane and both lanes beside it. <i>Tip: just behind your front line.</i>", "foederati": "Very tough and cheap, with a sword. <i>Tip: a wall in front of your archers.</i>", "cohort": "One card, three legionaries side by side in the row you choose (the middle one carries the standard). Each throws his pilum and then fights. <i>Tip: across the lanes the enemy crowds into.</i>", "ceres": "Makes a sack of grain (25 rations) every 20 seconds. She doesn’t fight. <i>Tip: two or three early, at the back.</i>", "jupiter": "Throws divine light down the whole lane. It hurts only Zeus: anyone else it barely touches. <i>Tip: put Jupiter in the lane Zeus is coming down.</i>", "juno": "Throws divine light down the whole lane. It hurts only Hera: anyone else it barely touches. <i>Tip: put Juno in the lane Hera is coming down.</i>", "neptune": "Throws divine light down the whole lane. It hurts only Poseidon: anyone else it barely touches. <i>Tip: put Neptune in the lane Poseidon is coming down.</i>", "minerva": "Throws divine light down the whole lane. It hurts only Athena: anyone else it barely touches. <i>Tip: put Minerva in the lane Athena is coming down.</i>", "mars": "Throws divine light down the whole lane. It hurts only Ares: anyone else it barely touches. <i>Tip: put Mars in the lane Ares is coming down.</i>", "venus": "Throws divine light down the whole lane. It hurts only Aphrodite: anyone else it barely touches. <i>Tip: put Venus in the lane Aphrodite is coming down.</i>", "diana": "Throws divine light down the whole lane. It hurts only Artemis: anyone else it barely touches. <i>Tip: put Diana in the lane Artemis is coming down.</i>", "mercury": "Throws divine light down the whole lane. It hurts only Hermes: anyone else it barely touches. <i>Tip: put Mercury in the lane Hermes is coming down.</i>", "cart": "Makes a sack of grain (25 rations) every 20 seconds. It doesn’t fight. <i>Tip: build several early, at the back.</i>", "slinger": "Shoots a stone down his whole lane every 1.5 seconds. Fragile once an enemy reaches him. <i>Tip: put something sturdy in front of him.</i>", "hastatus": "Throws heavy javelins at enemies within about 2½ squares, more than twice a stone’s damage, then fights with his sword when they reach him. <i>Tip: javelins break shields fast.</i>", "triarius": "Five times a slinger’s health and no attack. He holds enemies in place while your other soldiers hit them. <i>Tip: in front of your shooters.</i>", "caltrops": "Hidden iron spikes. After 10 seconds they are armed, and the first enemy to step on them sets them off: everyone on that spot takes a huge hit. Before that, enemies trample them. <i>Tip: a horseman wastes his leap on unarmed caltrops.</i>", "princeps": "A tough swordsman who cuts down whoever reaches his square. <i>Tip: a strong front line against fast raiders.</i>", "shed": "A wooden shed covered in hides. Arrows do almost nothing to it. <i>Tip: put it in front, so archers shoot the shed instead of your slingers.</i>", "rorarii": "Throw javelins into their own lane and both lanes beside it. <i>Tip: in the middle lanes they cover three lanes at once.</i>", "scorpio": "Shoots a heavy bolt every 4 seconds that flies through up to three enemies in its lane, hitting each one. <i>Tip: great against crowded lanes and elephants.</i>", "velites": "Cheap javelin throwers with a short range. When an enemy reaches them they fall back one square (once), so they keep throwing. <i>Tip: a cheap first line.</i>", "cornicen": "Doesn’t fight. When an elephant comes within 2½ squares in his lane or the lanes beside it, he blares his horn and every such elephant panics and runs back. Then he needs 10 seconds to catch his breath. <i>Tip: a little in front of your shooters.</i>", "maniple": "A tough unit that fights in its lane and also hits enemies in the two lanes beside it from the side. Shields don’t stop blows from the side. Phalanx pikes do it less damage. <i>Tip: between two lanes the phalanx is coming down.</i>", "torch": "Can only be placed on a house. After 3 seconds the house burns down: no more ambushes from it, and you can build on the square. <i>Tip: burn the houses near your lines first.</i>", "legionary": "Throws a heavy pilum at enemies within about 2½ squares, then fights with his sword. A pilum that hits a shield ruins it at once. <i>Tip: put him where the shields come.</i>", "centurion": "Fights a little himself, but above all makes every soldier in the eight squares around him 30% stronger. <i>Tip: in the middle of a group of shooters.</i>", "testudo": "Very tough, fights a little, and takes only a tenth of the damage from arrows and stones. <i>Tip: in front of your line against archers.</i>", "fourthline": "A tough swordsman who deals triple damage to anyone on horseback. <i>Tip: in the lanes the cavalry is coming down.</i>", "lilia": "Hidden pits with sharp stakes. They don’t stop anyone: every enemy who crosses one takes a hit and slows to half speed while crossing. Enemies don’t attack them, so they last the whole battle. <i>Tip: put them where your shooters can hit the slowed enemy.</i>", "supplyboat": "Makes a sack of grain (25 rations) every 20 seconds. It doesn’t fight. <i>Tip: several early, at the back.</i>", "archership": "Shoots an arrow down its whole lane every 1.5 seconds. Fragile once an enemy ship reaches it.", "quinquereme": "Five times an archer ship’s strength and no attack. Holds enemy ships while the others shoot.", "rammer": "Rams any ship that reaches its square, hard.", "ballista": "A heavy bolt every 3½ seconds that flies through every ship in its lane.", "fireship": "Lit after 10 seconds; then the first enemy ship to touch it burns, and everything on that spot takes a huge hit. One use.", "harpax": "Fires a grappling hook that catches the first ship in its lane and holds it still for 4 seconds, so your other ships can hit it. <i>Tip: behind your archers, on the busiest lanes.</i>", "pigs": "Charge up the lane when an enemy comes near. An elephant they reach panics and runs back, trampling its own army; other enemies just take a hit. One use. <i>Tip: keep them in front of your line.</i>", "legion": "One card, three maniples side by side in the row you choose. Each takes less damage from the phalanx’s pikes and strikes the lanes beside it from the side. <i>Tip: just beyond the rough ground, where the phalanx breaks ranks.</i>", "aries": "Pounds the city wall in its lane, but only from the square right under it. Arrows and stones barely hurt it. <i>Tip: breach where your line is strongest; the defenders pour out there.</i>", "petrobolos": "Lobs a heavy stone every 4½ seconds over the city wall, into the crowd and the catapults behind it; the lanes beside the hit take a share. <i>Tip: aim it at the lanes of the enemy catapults.</i>"}
+const UNIT_GUIDE = {"sagittarius": "Shoots an arrow down his whole lane every 1.3 seconds, harder than a stone. <i>Tip: behind a sturdy soldier.</i>", "volley": "One use. A second after you place it, every enemy in the nine squares around it takes a heavy hit. <i>Tip: where a crowd is about to reach your line.</i>", "onager": "Throws a heavy stone every 4 seconds down its lane; enemies in the lanes beside the one it hits are hurt too. <i>Tip: in the middle of the field.</i>", "lorica": "A tough legionary with a pilum and a sword, in extra armour: the Dacian falx does him no extra harm. <i>Tip: in front, where the falxmen come.</i>", "clubman": "Triple damage to anyone on horseback. <i>Tip: in the lanes the armoured horsemen come down.</i>", "labarum": "Doesn’t fight. Every soldier in its lane fights 25% harder. <i>Tip: in your busiest lane.</i>", "plumbata": "Throws darts at short range into his own lane and both lanes beside it. <i>Tip: just behind your front line.</i>", "foederati": "Very tough and cheap, with a sword. <i>Tip: a wall in front of your archers.</i>", "cohort": "One card, three legionaries side by side in the row you choose (the middle one carries the standard). Each throws his pilum and then fights. <i>Tip: across the lanes the enemy crowds into.</i>", "ceres": "Makes a sack of grain (25 rations) every 20 seconds. She doesn’t fight. <i>Tip: two or three early, at the back.</i>", "jupiter": "Throws divine light down the whole lane. It hurts only Zeus: anyone else it barely touches. <i>Tip: put Jupiter in the lane Zeus is coming down.</i>", "juno": "Throws divine light down the whole lane. It hurts only Hera: anyone else it barely touches. <i>Tip: put Juno in the lane Hera is coming down.</i>", "neptune": "Throws divine light down the whole lane. It hurts only Poseidon: anyone else it barely touches. <i>Tip: put Neptune in the lane Poseidon is coming down.</i>", "minerva": "Throws divine light down the whole lane. It hurts only Athena: anyone else it barely touches. <i>Tip: put Minerva in the lane Athena is coming down.</i>", "mars": "Throws divine light down the whole lane. It hurts only Ares: anyone else it barely touches. <i>Tip: put Mars in the lane Ares is coming down.</i>", "venus": "Throws divine light down the whole lane. It hurts only Aphrodite: anyone else it barely touches. <i>Tip: put Venus in the lane Aphrodite is coming down.</i>", "diana": "Throws divine light down the whole lane. It hurts only Artemis: anyone else it barely touches. <i>Tip: put Diana in the lane Artemis is coming down.</i>", "mercury": "Throws divine light down the whole lane. It hurts only Hermes: anyone else it barely touches. <i>Tip: put Mercury in the lane Hermes is coming down.</i>", "cart": "Makes a sack of grain (25 rations) every 20 seconds. It doesn’t fight. <i>Tip: build several early, at the back.</i>", "slinger": "Shoots a stone down his whole lane every 1.5 seconds. Fragile once an enemy reaches him. <i>Tip: put something sturdy in front of him.</i>", "hastatus": "Throws heavy javelins at enemies within about 2½ squares, more than twice a stone’s damage, then fights with his sword when they reach him. <i>Tip: javelins break shields fast.</i>", "triarius": "Five times a slinger’s health and no attack. He holds enemies in place while your other soldiers hit them. <i>Tip: in front of your shooters.</i>", "caltrops": "Hidden iron spikes. After 10 seconds they are armed, and the first enemy to step on them sets them off: everyone on that spot takes a huge hit. Before that, enemies trample them. <i>Tip: a horseman wastes his leap on unarmed caltrops.</i>", "princeps": "A tough swordsman who cuts down whoever reaches his square. <i>Tip: a strong front line against fast raiders.</i>", "shed": "A wooden shed covered in hides. Arrows do almost nothing to it. <i>Tip: put it in front, so archers shoot the shed instead of your slingers.</i>", "rorarii": "Throw javelins into their own lane and both lanes beside it. <i>Tip: in the middle lanes they cover three lanes at once.</i>", "scorpio": "Shoots a heavy bolt every 4 seconds that flies through up to three enemies in its lane, hitting each one. <i>Tip: great against crowded lanes and elephants.</i>", "velites": "Cheap javelin throwers with a short range. When an enemy reaches them they fall back one square (once), so they keep throwing. <i>Tip: a cheap first line.</i>", "cornicen": "Doesn’t fight. When an elephant comes within 2½ squares in his lane or the lanes beside it, he blares his horn and every such elephant panics and runs back. Then he needs 10 seconds to catch his breath. <i>Tip: a little in front of your shooters.</i>", "maniple": "A tough unit that fights in its lane and also hits enemies in the two lanes beside it from the side. Shields don’t stop blows from the side. Phalanx pikes do it less damage. <i>Tip: between two lanes the phalanx is coming down.</i>", "torch": "Can only be placed on a house. After 3 seconds the house burns down: no more ambushes from it, and you can build on the square. <i>Tip: burn the houses near your lines first.</i>", "legionary": "Throws a heavy pilum at enemies within about 2½ squares, then fights with his sword. A pilum that hits a shield ruins it at once. <i>Tip: put him where the shields come.</i>", "centurion": "Fights a little himself, but above all makes every soldier in the eight squares around him 30% stronger. <i>Tip: in the middle of a group of shooters.</i>", "testudo": "Very tough, fights a little, and takes only a tenth of the damage from arrows and stones. <i>Tip: in front of your line against archers.</i>", "fourthline": "A tough swordsman who deals triple damage to anyone on horseback. <i>Tip: in the lanes the cavalry is coming down.</i>", "lilia": "Hidden pits with sharp stakes. They don’t stop anyone: every enemy who crosses one takes a hit and slows to half speed while crossing. Enemies don’t attack them, so they last the whole battle. <i>Tip: put them where your shooters can hit the slowed enemy.</i>", "supplyboat": "Makes a sack of grain (25 rations) every 20 seconds. It doesn’t fight. <i>Tip: several early, at the back.</i>", "archership": "Shoots an arrow down its whole lane every 1.5 seconds. Fragile once an enemy ship reaches it.", "quinquereme": "Five times an archer ship’s strength and no attack. Holds enemy ships while the others shoot.", "rammer": "Rams any ship that reaches its square, hard.", "ballista": "A heavy bolt every 3½ seconds that flies through every ship in its lane.", "fireship": "Lit after 10 seconds; then the first enemy ship to touch it burns, and everything on that spot takes a huge hit. One use.", "harpax": "Fires a grappling hook that catches the first ship in its lane and holds it still for 4 seconds, so your other ships can hit it. <i>Tip: behind your archers, on the busiest lanes.</i>", "pigs": "Charge up the lane when an enemy comes near. An elephant they reach panics and runs back, trampling its own army; other enemies just take a hit. One use. <i>Tip: keep them in front of your line.</i>", "legion": "One card, three maniples side by side in the row you choose. Each takes less damage from the phalanx’s pikes and strikes the lanes beside it from the side. <i>Tip: just beyond the rough ground, where the phalanx breaks ranks.</i>", "aries": "Pounds the city wall in its lane, but only from the square right under it. Arrows and stones barely hurt it. <i>Tip: breach where your line is strongest; the defenders pour out there.</i>", "petrobolos": "Lobs a heavy stone every 4½ seconds over the city wall, into the crowd and the catapults behind it; the lanes beside the hit take a share. <i>Tip: aim it at the lanes of the enemy catapults.</i>", "storm": "Marches one square up its lane every 4 seconds while the way ahead is clear, and fights whoever blocks it. Under the wall it waits until the gate in its lane is broken, then enters the city. <i>Tip: break a gate first, then march straight at it.</i>"}
 const FOE_GUIDE = {"brennus": "The Gallic chief: very tough, and at the Allia his first blow shoves a man toward the river like his warriors'.", "cheruscan": "Tough, with a big shield. Pila break it.", "arminius": "The leader: very tough and deadly up close. Slow him and hit him from everywhere.", "briton": "Fast and fierce, without armour. Shoot early.", "chariot": "Very fast. Races over the first soldier in its way, once, then slows down. Give it something cheap to pass.", "zealot": "Fast and hits hard. Keep shooters in every lane.", "dacian": "His falx does double damage to soldiers without extra armour. Armoured legionaries hold him.", "draco": "Carries the dragon standard. Tougher than a warrior.", "clibanarius": "Heavy armoured cavalry, very tough. Club-men beat it; in the heat it slows down.", "praetorian": "A Roman guardsman with a big shield. Pila break it.", "goth": "Tough, with a shield.", "gothrider": "Fast; leaps over the first soldier in his way, once.", "hun": "Shoots from about three squares away and rides back if you come close. A testudo shrugs off his arrows.", "ostrogoth": "Tough, with a shield and an axe.", "attila": "The king of the Huns: very tough and deadly. Hit him from everywhere.", "german": "Tough and quick, with a spear and a wooden shield. Two shooters per lane.", "ambusher": "Bursts out of the woods at the sides, in the middle of the field. Keep something in the outer lanes.", "zeus": "The Greek god of the sky and thunder, king of the gods. Only Jupiter can hurt him; everyone else’s blows bounce off.", "hera": "The Greek god of marriage, queen of the gods. Only Juno can hurt her; everyone else’s blows bounce off.", "poseidon": "The Greek god of the sea. Only Neptune can hurt him; everyone else’s blows bounce off.", "athena": "The Greek god of wisdom and crafts. Only Minerva can hurt her; everyone else’s blows bounce off.", "ares": "The Greek god of war. Only Mars can hurt him; everyone else’s blows bounce off.", "aphrodite": "The Greek god of love and beauty. Only Venus can hurt her; everyone else’s blows bounce off.", "artemis": "The Greek god of hunting and the moon. Only Diana can hurt her; everyone else’s blows bounce off.", "hermes": "The Greek god of messages and trade. Only Mercury can hurt him; everyone else’s blows bounce off.", "calf": "Walks ahead of its mother. Wound it badly and the mother panics: both run back, trampling Pyrrhus’s own soldiers. Aim your slingers at the calf.", "warrior": "The basic enemy. One or two slingers in a lane handle him.", "chief": "Carries the standard and walks a little faster.", "shield": "His bronze shield soaks up hits until it breaks (the bronze bar). Javelins break it quickly.", "cavalry": "Fast. He leaps over the first soldier in his way, once, then slows down. Give him something cheap to leap, or armed caltrops.", "raider": "Fast but weak, and comes in bursts. Keep a shooter in every lane.", "archer": "Stops about three squares from your first soldier and shoots it. Put a siege shed in front; your slingers still reach him.", "samnite": "Tougher than a Latin warrior. Two shooters per lane.", "linen": "Very tough elite. Hold him with a triarius and hit him from several soldiers at once.", "phalangite": "A big shield and a long pike. Break the shield with javelins.", "elephant": "Crushes soldiers in seconds and takes a lot of hits. War pigs make him flee; caltrops help.", "balearic": "Stops about four squares from your first soldier and slings stones at it. Your slingers still reach him.", "numidian": "Fast and light. When a soldier blocks him he rides into a free lane beside it, up to twice. Block the lanes beside, or shoot him early.", "gaul": "Fast and hits hard, but has no armour. Shoot him before he reaches your line.", "african": "Comes down the outer lanes, with a shield. Javelins break it.", "charger": "Charges fast, then slows down. If it reaches the camp in a lane with no Roman soldiers, it runs out of the battle (as at Zama). Trumpeters panic it.", "veteran": "Hannibal’s best: very tough, with a shield. Hold him and hit him from several soldiers.", "thracian": "Fast light troops. Keep a shooter in every lane.", "pikeman": "His pike strikes a square ahead of him, so swordsmen can’t reach him. His shield stops missiles from the front, but not from the side lanes (rorarii, maniples). Rough ground breaks his shield.", "bowman": "Stops about three squares from your first soldier and shoots it. Put a siege shed in front.", "galley": "A warship with thick timbers (the brown bar) that soak up hits before the hull is damaged.", "deceres": "A huge ship with archer towers: it stops out of reach and shoots, and takes a lot to sink.", "egyptian": "Fast but light. Cleopatra’s ships may not stay for the whole battle…", "flagship": "Antony’s own ship: the biggest of all, with archers. Watch what happens when Cleopatra sails away.", "teuton": "A huge, tough warrior. Hold him and hit him from several soldiers.", "ambron": "Fast and hits hard. Shoot him early.", "lucanian": "A spearman with a shield. Javelins and pila break it.", "murmillo": "A gladiator with a big shield (the bronze bar). Pila ruin it at once.", "retiarius": "Throws a net over the first soldier he reaches: that soldier can’t fight for 3 seconds.", "slave": "Weak, fast and many. Keep shooters in every lane.", "spartacus": "The rebel leader: very tough and deadly up close. Slow him and hit him from everywhere.", "horsearcher": "Shoots from about three squares away, and rides back up the lane when a soldier is close. A testudo shrugs off his arrows.", "cataphract": "Armoured horse and rider: slow for cavalry, very tough. The fourth line and pila deal with him.", "pompeian": "A Roman legionary on the other side, with a shield. Pila break it.", "slingarcher": "Stops out of reach and shoots your front soldier. A testudo shrugs it off.", "militia": "Defends his city. Comes down the street or bursts out of a house.", "volunteer": "Fast and weak, often in groups."}
 // A campaign of five battles, in historical order. Each adds an enemy and a Roman unit.
 const w = (t, foes, big, from) => ({ t, foes, big, from })
@@ -197,9 +198,9 @@ const LEVELS = [
       w(138, ['chief', 'phalanx3', 'phalanx3', 'thracian', 'thracian'], 'A great wave approaches!'), w(170, ['cavalry', 'pikeman', 'pikeman', 'thracian']),
       w(190, ['chief', 'phalanx3', 'phalanx3', 'phalanx3', ...rep(3, 'thracian'), 'cavalry'], 'The final wave!')] },
   { id: 'carthage', name: 'The Siege of Carthage', year: '146 BC', enemy: 'the Carthaginians', theme: 'carthage', start: 350, cols: 9, rows: 9, more: 1.2,
-    cityWall: { row: 3, hp: 1800, gates: [2, 6], gateEvery: 40, gateOpen: 4, engines: [[1, 1.2], [4, 0.6], [7, 1.2]] },
-    twist: 'A real siege on a wide field: Carthage’s wall runs across it, one section per lane, with the defenders gathering behind it and three catapults inside the city throwing stones over it. Your missiles and soldiers wear the wall down, and a battering ram right under it breaks it fast. Where a section falls, the defenders pour out; and every half minute the two gates open and they sally out. New: the stone-thrower, whose stones fly over the wall.',
-    units: ['cart', 'slinger', 'hastatus', 'triarius', 'princeps', 'scorpio', 'maniple', 'aries', 'petrobolos'], newUnit: 'petrobolos',
+    cityWall: { row: 3, gates: [1, 3, 5, 7], gateHp: 3000, gateEvery: 15, gateOpen: 5, storm: 3, refill: 18, pool: ['militia', 'militia', 'volunteer', 'volunteer', 'shield', 'bowman'], engines: [[0, 1.2], [4, 0.6], [8, 1.2]] },
+    twist: 'Storm the city! Carthage’s wall has four gates; one opens every 15 seconds and the defenders sally out and spread over the field, while three catapults inside the city lob stones over the wall. Break the gates with your missiles (the stone-thrower’s stones hit hardest), then march storming parties through them: when three are inside, Carthage falls. Until then the city keeps sending defenders.',
+    units: ['cart', 'slinger', 'hastatus', 'triarius', 'princeps', 'scorpio', 'maniple', 'petrobolos', 'storm'], newUnit: 'storm',
     blurb: '149–146 BC: for three years Rome besieges Carthage behind its great walls. Now Scipio Aemilianus must break through them, and then fight street by street toward the citadel, the Byrsa.',
     after: 'Carthage was destroyed and about 50,000 survivors were sold into slavery. The same year Rome destroyed Corinth. Rome now ruled the Mediterranean.',
     waves: [w(26, ['militia']), w(40, ['volunteer', 'volunteer']), w(56, ['militia', 'bowman']), w(70, ['militia', 'militia'], null, 'houses'), w(86, ['shield', 'volunteer', 'volunteer']), w(102, ['bowman', 'bowman', 'militia']),
@@ -602,6 +603,11 @@ const DRAW_UNIT = {
     romanHelmet(c, -42); feathers(c, -49, col)
   },
   petrobolos(c, u, T) { DRAW_UNIT.onager(c, u, T) },
+  storm(c, u, T) {   // a testudo with a red banner over it and scaling ladders
+    line(c, 18, -2, 24, -64, '#7a5636', 2); line(c, 25, -2, 31, -64, '#7a5636', 2); for (let y = -10; y > -62; y -= 9) line(c, 19 - y * 0.1 + 0.2, y, 26 - y * 0.1, y, '#7a5636', 1.6)
+    DRAW_UNIT.testudo(c)
+    line(c, 0, -56, 0, -82, '#5a3a22', 2); c.fillStyle = '#b8322a'; c.fillRect(0, -82, 14, 10)
+  },
   aries(c, u, T) {   // a roofed shed on wheels; a beam with a bronze ram's head swings out in front
     const swing = u.ramming ? Math.max(0, Math.sin(T * 6)) * 8 : 0
     line(c, 0, -26, 0, -70 - swing, '#5a3a22', 6)
@@ -1360,7 +1366,8 @@ function newGame(i = levelIndex, score = quizScore) {
     introduced: new Set(), selected: null, dismiss: false, hover: null, lastLane: -1, tips: {},
     hasMedicus: army.medicus, medicus: army.medicus ? MEDICUS.heals : 0, medicusWait: 0, heal: false,
     hasAugur: army.augur, augur: army.augur ? 1 : 0, blessUntil: -1,
-    cw: LEVEL.cityWall ? { seg: Array(COLS).fill(LEVEL.cityWall.hp), next: LEVEL.cityWall.from, warned: false, hit: Array(COLS).fill(0), gateUntil: -1, nextGate: LEVEL.cityWall.gateEvery ?? 1e9 } : null,
+    cw: LEVEL.cityWall ? { seg: Array.from({ length: COLS }, (_, l) => LEVEL.cityWall.gates ? (LEVEL.cityWall.gates.includes(l) ? LEVEL.cityWall.gateHp : Infinity) : LEVEL.cityWall.hp), next: LEVEL.cityWall.from, warned: false, hit: Array(COLS).fill(0), gateUntil: -1, openGate: null, gateTurn: 0, nextGate: LEVEL.cityWall.gateEvery ?? 1e9, entered: 0 } : null,
+    lobs: [],
     walls: LEVEL.walls ? { hp: LEVEL.walls.hp, next: LEVEL.walls.from, hit: 0, warned: false, stuck: [] } : null,
     houses: (LEVEL.houses ?? []).map(([lane, row]) => ({ lane, row, burned: false })), blocks: {}, events: (LEVEL.events ?? []).map(e => ({ ...e })), charges: 0,
   }
@@ -1425,16 +1432,20 @@ const houseAt = (lane, row) => G.houses.find(h => h.lane === lane && h.row === r
 const isRough = (lane, row) => !!LEVEL.rough?.some(([l, r]) => l === lane && r === row)
 // not in the siege ditch, not on a house (a torch-bearer goes only on a house)
 // Carthage's city wall: one section per lane on row cityWall.row; a section with hp left stops the defenders and our missiles
-const gateOpen = l => !!LEVEL.cityWall?.gates?.includes(l) && G.t < G.cw.gateUntil
+const gateOpen = l => !!G.cw && G.cw.openGate === l && G.t < G.cw.gateUntil   // the one gate open for a sally
+const isGate = l => !!LEVEL.cityWall?.gates?.includes(l)
 const wallUp = l => !!G.cw && G.cw.seg[l] > 0 && !gateOpen(l)
 function hitWall(l, dmg) {
   if (!wallUp(l)) return
+  if (LEVEL.cityWall.gates && !isGate(l)) { G.cw.hit[l] = 0.12; return }   // solid stone: only the gates can be broken
   G.cw.seg[l] = Math.max(0, G.cw.seg[l] - dmg); G.cw.hit[l] = 0.25
   if (G.cw.seg[l] > 0) return
   const y = ry(LEVEL.cityWall.row + 0.6)   // the section falls: rubble, dust, and the defenders behind it pour out
   for (let i = 0; i < 14; i++) G.fx.push({ kind: 'dust', x: lx(l) + (Math.random() - 0.5) * cell, y, vx: (Math.random() - 0.5) * 80, vy: -20 - Math.random() * 40, t: 0.9 })
   G.shake = Math.max(G.shake, 8); sfx.crack()
-  announce(G.cw.breached ? 'Another breach in the wall!' : 'The wall is breached! The defenders pour out.', true, 3200); G.cw.breached = true
+  if (isGate(l)) announce('A gate is broken open! A storming party can enter the city here.', true, 3600)
+  else announce(G.cw.breached ? 'Another breach in the wall!' : 'The wall is breached! The defenders pour out.', true, 3200)
+  G.cw.breached = true
 }
 function canPlace(type, lane, row) {
   if (G.cw && row <= LEVEL.cityWall.row) return false   // on the wall or behind it
@@ -1657,6 +1668,23 @@ function update(dt) {
       }
     }
     u.ramming = false
+    if (U.march && G.cw) {   // the storming party: a square up every few seconds while the way is clear; under a broken gate it enters the city
+      const wr = LEVEL.cityWall.row
+      if (u.row === wr + 1 && isGate(u.lane) && G.cw.seg[u.lane] <= 0 && !u.fighting) {
+        removeUnit(u, false); G.cw.entered++
+        for (let i = 0; i < 10; i++) G.fx.push({ kind: 'dust', x: lx(u.lane), y: ry(wr + 0.8), vx: (Math.random() - 0.5) * 60, vy: -30 * Math.random(), t: 0.7 })
+        sfx.horn(); announce(`A storming party is inside the city! ${G.cw.entered} of ${LEVEL.cityWall.storm}`, true, 3200)
+        if (G.cw.entered >= LEVEL.cityWall.storm) { win(); return }
+        continue
+      }
+      if ((u.marchCd = (u.marchCd ?? U.march) - dt) <= 0 && !u.fighting) {
+        u.marchCd = U.march
+        let next = u.row - 1
+        while (next > wr && unitAt(u.lane, next)) next--   // it passes through its own soldiers to the next free square
+        const blocked = G.foes.some(f => f.lane === u.lane && f.hp > 0 && f.y > next - 0.4 && f.y < u.row + 0.6)
+        if (next > wr && !blocked && canStand(u.lane, next)) moveUnit(u, u.lane, next)
+      }
+    }
     if (G.cw && u.row === LEVEL.cityWall.row + 1 && wallUp(u.lane) && !u.travel && (U.ram || (U.melee && !u.fighting))) {   // right under the wall: the ram pounds it, swordsmen hack at it
       hitWall(u.lane, (U.ram ?? U.melee * 0.25) * dt * pow); u.ramming = !!U.ram
       if (U.ram && Math.random() < dt * 1.2) { sfx.crack(); G.fx.push({ kind: 'dust', x: lx(u.lane), y: ry(LEVEL.cityWall.row + 0.95), vx: (Math.random() - 0.5) * 40, vy: -15, t: 0.4 }) }
@@ -1684,14 +1712,14 @@ function update(dt) {
       const above = f => f.y < u.row + 1.05 && f.y > Math.max(-0.55, u.row + 0.5 - U.range)
       const below = f => LEVEL.twoFronts && f.y > u.row + 0.6 && f.y < Math.min(ROWS + 0.7, u.row + 0.5 + U.range + 0.6)
       const inReach = G.foes.filter(f => lanes.includes(f.lane) && f.hp > 0 && (above(f) || below(f)))
-      const atWall = G.cw && lanes.some(wallUp) && u.row + 0.5 - U.range < LEVEL.cityWall.row + 1   // the city wall is in reach
+      const atWall = G.cw && lanes.some(l => wallUp(l) && (!LEVEL.cityWall.gates || isGate(l))) && u.row + 0.5 - U.range < LEVEL.cityWall.row + 1   // the city wall is in reach
       const near = inReach.length > 0 || atWall
       u.aiming = near
       if (near && u.cd <= 0) {
         // shoot at the closest threat, up the field or (on two fronts) down it; with nobody in reach, at the wall
         const target = inReach.sort((a, b) => Math.abs(a.y - u.row - 0.5) - Math.abs(b.y - u.row - 0.5))[0], down = !!target && below(target) && !above(target)
         u.cd = U.reload * (blessed ? AUGUR.reload : 1); u.anim = 0.35
-        for (const l of lanes) G.shots.push({ src: u.type, splash: U.splash, lob: U.lob, lane: l, from: u.lane, dir: down ? 1 : -1, y: u.row + (down ? 0.8 : 0.45), y0: u.row + (down ? 0.8 : 0.45), kind: U.kind ?? (U.pierce ? 'bolt' : u.type === 'slinger' ? 'stone' : 'pilum'), pierce: U.pierce === true ? 99 : U.pierce || 0, grapple: U.grapple, dmg: U.dmg * pow, breaks: U.breaks, speed: U.pierce ? 9 : u.type === 'slinger' ? 7 : 6, end: down ? u.row + 0.5 + U.range + 0.3 : u.row + 0.5 - U.range - 0.3, x0: (Math.random() - 0.5) * 0.1 })
+        for (const l of lanes) G.shots.push({ ty: target?.y, src: u.type, splash: U.splash, lob: U.lob, lane: l, from: u.lane, dir: down ? 1 : -1, y: u.row + (down ? 0.8 : 0.45), y0: u.row + (down ? 0.8 : 0.45), kind: U.kind ?? (U.pierce ? 'bolt' : u.type === 'slinger' ? 'stone' : 'pilum'), pierce: U.pierce === true ? 99 : U.pierce || 0, grapple: U.grapple, dmg: U.dmg * pow, breaks: U.breaks, speed: U.pierce ? 9 : u.type === 'slinger' ? 7 : 6, end: down ? u.row + 0.5 + U.range + 0.3 : u.row + 0.5 - U.range - 0.3, x0: (Math.random() - 0.5) * 0.1 })
         U.kind === 'arrow' ? sfx.bow() : u.type === 'slinger' ? sfx.sling() : sfx.throw()
       }
     }
@@ -1699,14 +1727,14 @@ function update(dt) {
   // missiles
   for (const s of G.shots) {
     const sd = s.dir ?? -1
-    if (G.cw && sd < 0 && !s.lob && wallUp(s.lane) && s.y < LEVEL.cityWall.row + 0.95) {   // the wall takes the blow (a lobbed stone flies over it)
-      hitWall(s.lane, s.dmg); s.done = true
+    if (G.cw && sd < 0 && (!s.lob || isGate(s.lane)) && wallUp(s.lane) && s.y < LEVEL.cityWall.row + 0.95) {   // the wall takes the blow (a lobbed stone flies over solid wall, but is aimed at a gate)
+      hitWall(s.lane, s.dmg * (s.kind === 'boulder' ? 2 : 1)); s.done = true
       G.fx.push({ kind: 'dust', x: lx(s.lane) + (Math.random() - 0.5) * 10, y: ry(LEVEL.cityWall.row + 0.9), vx: (Math.random() - 0.5) * 40, vy: -20, t: 0.4 })
       continue
     }
     s.jolt = Math.max(0, (s.jolt ?? 0) - dt)
     s.y += sd * s.speed * dt * (s.jolt > 0 ? 0.2 : 1)
-    const hit = G.foes.filter(f => f.lane === s.lane && f.hp > 0 && !f.jump && !s.hits?.has(f) && s.y <= f.y + 0.05 && s.y >= f.y - 0.85 && passes(s, f)).sort((a, b) => sd < 0 ? b.y - a.y : a.y - b.y)[0]
+    const hit = G.foes.filter(f => f.lane === s.lane && f.hp > 0 && !f.jump && !s.hits?.has(f) && (!s.lob || s.ty == null || s.y <= s.ty + 0.6) && s.y <= f.y + 0.05 && s.y >= f.y - 0.85 && passes(s, f)).sort((a, b) => sd < 0 ? b.y - a.y : a.y - b.y)[0]
     if (hit) {
       hurtFoe(hit, s.dmg * twinMul(hit, s.src), s.kind, s.from != null && s.from !== s.lane)   // a javelin from the next lane hits the side
       if (s.breaks && hit.shield > 0) { hit.shield = 0; sfx.crack() }   // the pilum bends: the shield is useless
@@ -1728,8 +1756,9 @@ function update(dt) {
   }
   G.shots = G.shots.filter(s => !s.done)
   if (G.cw && LEVEL.cityWall.gates && G.t >= G.cw.nextGate) {   // the gates swing open and the defenders sally out
-    G.cw.nextGate = G.t + LEVEL.cityWall.gateEvery; G.cw.gateUntil = G.t + LEVEL.cityWall.gateOpen
-    if (LEVEL.cityWall.gates.some(l => G.cw.seg[l] > 0)) { announce('The gates open: the defenders sally out!'); sfx.horn() }
+    G.cw.nextGate = G.t + LEVEL.cityWall.gateEvery
+    const shut = LEVEL.cityWall.gates.filter(l => G.cw.seg[l] > 0)
+    if (shut.length) { G.cw.openGate = shut[G.cw.gateTurn++ % shut.length]; G.cw.gateUntil = G.t + LEVEL.cityWall.gateOpen; announce('A gate opens: the defenders sally out!'); sfx.horn() }
   }
   if (G.cw && LEVEL.cityWall.every && G.cw.seg.some(h => h > 0) && G.t >= G.cw.next) {   // a catapult on a standing section throws a stone at the first soldier in its lane
     const C = LEVEL.cityWall, lanes = [...new Set(G.units.filter(u => !u.travel && wallUp(u.lane)).map(u => u.lane))]
@@ -1740,6 +1769,15 @@ function update(dt) {
     }
   }
   if (G.cw) G.cw.hit = G.cw.hit.map(h => Math.max(0, h - dt))
+  for (const b of G.lobs ?? []) {   // a catapult stone in flight: it lands on the square it was aimed at
+    if ((b.t += dt) < b.dur) continue
+    b.done = true
+    const u = unitAt(b.lane, b.row)
+    if (u) { u.hp -= b.dmg * (UNITS[u.type].arrowMul ? 0.5 : 1); u.hurt = 0.2; if (u.hp <= 0) removeUnit(u) }
+    for (let i = 0; i < 8; i++) G.fx.push({ kind: 'dust', x: lx(b.lane), y: ry(b.row + 0.8), vx: (Math.random() - 0.5) * 70, vy: -20 - Math.random() * 30, t: 0.6 })
+    G.fx.push({ kind: 'ring', x: lx(b.lane), y: ry(b.row + 0.8), t: 0.4 }); sfx.crack(); G.shake = Math.max(G.shake, 3)
+  }
+  if (G.lobs) G.lobs = G.lobs.filter(b => !b.done)
   if (G.walls?.hp > 0 && G.t >= G.walls.next) {   // a catapult on the walls throws a stone at the first soldier in a lane
     const W_ = LEVEL.walls, lanes = [...new Set(G.units.filter(u => !u.travel && u.type !== 'caltrops').map(u => u.lane))]
     G.walls.next = G.t + W_.every[0] + Math.random() * (W_.every[1] - W_.every[0])
@@ -1781,8 +1819,8 @@ function update(dt) {
       const E = FOES[f.type].engine
       if ((f.cd -= dt) <= 0) {
         f.cd = E.every[0] + Math.random() * (E.every[1] - E.every[0])
-        const lanes = [...new Set(G.units.filter(u => !u.travel && Math.abs(u.lane - f.lane) <= E.reach).map(u => u.lane))]
-        if (lanes.length) { G.foeShots.push({ lane: lanes[Math.floor(Math.random() * lanes.length)], y: LEVEL.cityWall?.row ?? f.y, dir: 1, dmg: E.dmg, dx: 0, stone: true, big: true }); f.anim = 0.4; sfx.throw() }
+        const targets = G.units.filter(u => !u.travel && Math.abs(u.lane - f.lane) <= E.reach)
+        if (targets.length) { const u = targets[Math.floor(Math.random() * targets.length)]; G.lobs.push({ x0: lx(f.lane), y0: ry(f.y) - 30 * k, lane: u.lane, row: u.row, t: 0, dur: 1.6, dmg: E.dmg }); f.anim = 0.4; sfx.throw() }
       }
       continue
     }
@@ -1862,6 +1900,10 @@ function update(dt) {
         const open = [...Array(COLS).keys()].filter(l => !wallUp(l)).sort((a, b) => Math.abs(a - f.lane) - Math.abs(b - f.lane))[0]
         if (open != null && !f.slide && Math.random() < dt * 0.8) { f.slide = { from: f.lane, t: 0 }; f.lane += Math.sign(open - f.lane) }   // along the wall toward the breach
       }
+      if (G.cw && f.dir > 0 && !FOES[f.type].engine && f.y > LEVEL.cityWall.row + 0.6) {   // out through the gate: they fan out over the field
+        if (f.goal == null) f.goal = Math.max(0, Math.min(COLS - 1, f.lane + Math.floor(Math.random() * 5) - 2))
+        if (f.goal !== f.lane && !f.slide && f.y < LEVEL.cityWall.row + 4 && Math.random() < dt * 1.6) { f.slide = { from: f.lane, t: 0 }; f.lane += Math.sign(f.goal - f.lane) }
+      }
       if (Math.random() < dt * 1.5) G.fx.push({ kind: 'dust', x: foeX(f), y: ry(f.y), vx: (Math.random() - 0.5) * 12, vy: -6, t: 0.5 })
     }
     if (f.dir < 0 && f.y <= -0.3) {   // through the far line: the equites on that side charge
@@ -1902,14 +1944,19 @@ function update(dt) {
   for (const p of G.fx) { p.t -= dt; if (p.vx != null) { p.x += p.vx * dt; p.y += p.vy * dt; p.vy += 120 * dt } if (p.kind === 'text') p.y -= 30 * dt }
   G.fx = G.fx.filter(p => p.t > 0)
   G.shake = Math.max(0, G.shake - dt * 12)
-  if (!G.queue.length && !G.foes.length) win()
+  if (G.cw && LEVEL.cityWall.refill && !G.queue.length && G.t >= (G.cw.nextRefill ??= G.t + LEVEL.cityWall.refill)) {   // more defenders, until the city falls
+    const pool = LEVEL.cityWall.pool, n = 4 + Math.floor(Math.random() * 3), wave = { t: G.t, foes: [] }
+    for (let i = 0; i < n; i++) G.queue.push({ t: G.t + i * 1.5, type: pool[Math.floor(Math.random() * pool.length)], wave })
+    G.total += n; G.cw.nextRefill = G.t + LEVEL.cityWall.refill; updateCount()
+  }
+  if (!G.queue.length && !G.foes.length && !LEVEL.cityWall?.storm) win()
 }
 
 // ---------- drawing a frame ----------
 function drawCityWall() {   // a section of stone per lane: cracks as it weakens, a strength bar, rubble where it has fallen
   const C = LEVEL.cityWall, y0 = ry(C.row), h = cell, c = ctx
   for (let l = 0; l < COLS; l++) {
-    const x = l * cell, hp = G.cw.seg[l], frac = hp / C.hp
+    const x = l * cell, hp = G.cw.seg[l], frac = C.gates ? (isGate(l) ? hp / C.gateHp : 1) : hp / C.hp
     if (hp <= 0) {   // rubble the defenders climb over
       c.fillStyle = '#b8a582'; for (let i = 0; i < 7; i++) { c.beginPath(); c.arc(x + cell * (0.12 + i * 0.13), y0 + h * (0.72 + (i % 2) * 0.12), cell * 0.1, 0, TAU); c.fill() }
       continue
@@ -1926,7 +1973,7 @@ function drawCityWall() {   // a section of stone per lane: cracks as it weakens
     let seed = 7 + l * 13; const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647
     for (let i = 0; i < Math.floor((1 - frac) * 9); i++) { const cx = x + cell * (0.1 + rnd() * 0.8), cy = y0 + h * (0.25 + rnd() * 0.5); c.beginPath(); c.moveTo(cx, cy); c.lineTo(cx + (rnd() - 0.5) * 10, cy + 7); c.lineTo(cx + (rnd() - 0.5) * 12, cy + 14); c.stroke() }
     if (G.cw.hit[l] > 0) { c.fillStyle = `rgba(240, 230, 200, ${G.cw.hit[l] * 2})`; c.fillRect(x, y0 + h * 0.18, cell, h * 0.82) }
-    c.fillStyle = 'rgba(27, 23, 21, .55)'; c.fillRect(x + cell * 0.15, y0 + h * 0.86, cell * 0.7, 5); c.fillStyle = frac > 0.5 ? '#e0a63a' : '#d4572d'; c.fillRect(x + cell * 0.15 + 1, y0 + h * 0.86 + 1, (cell * 0.7 - 2) * frac, 3)
+    if (!C.gates || isGate(l)) { c.fillStyle = 'rgba(27, 23, 21, .55)'; c.fillRect(x + cell * 0.15, y0 + h * 0.86, cell * 0.7, 5); c.fillStyle = frac > 0.5 ? '#e0a63a' : '#d4572d'; c.fillRect(x + cell * 0.15 + 1, y0 + h * 0.86 + 1, (cell * 0.7 - 2) * frac, 3) }   // only what can be broken has a strength bar
   }
 }
 function stormAt(t) {   // 0 to 1: how thick the sandstorm is at time t (it thickens over 8 seconds and clears over 8)
@@ -2097,10 +2144,21 @@ function draw() {
   }
   for (const r of G.runners) items.push([ry(r.y), () => { ctx.save(); ctx.translate(lx(r.lane), ry(r.y)); ctx.scale(k, k); drawPig(ctx, T, true); ctx.restore() }])
   items.sort((a, b) => a[0] - b[0]).forEach(([, fn]) => fn())
+  for (const b of G.lobs ?? []) {   // incoming: a red mark where it will land, the stone high in its arc, its shadow on the ground
+    const p = b.t / b.dur, x1 = lx(b.lane), y1 = ry(b.row + 0.8), gx = b.x0 + (x1 - b.x0) * p, gy = b.y0 + (y1 - b.y0) * p
+    ctx.strokeStyle = `rgba(212, 57, 45, ${0.35 + 0.6 * p})`; ctx.lineWidth = 2.5; ctx.beginPath(); ctx.ellipse(x1, y1, cell * (0.42 - 0.12 * p), cell * (0.18 - 0.05 * p), 0, 0, TAU); ctx.stroke()
+    ctx.fillStyle = 'rgba(0, 0, 0, .22)'; ctx.beginPath(); ctx.ellipse(gx, gy, 6 * k + 2, 3 * k + 1, 0, 0, TAU); ctx.fill()
+    ctx.fillStyle = '#6f6a60'; ctx.beginPath(); ctx.arc(gx, gy - Math.sin(Math.PI * p) * cell * 2.4, 6 * k + 2, 0, TAU); ctx.fill()
+  }
   for (const s of G.foeShots) { const x = lx(s.lane) + s.dx * cell, y = ry(s.y) - 20 * k; if (s.stone) { ctx.fillStyle = '#5f5f58'; ctx.beginPath(); ctx.arc(x, y, (s.big ? 5.5 : 3) * k + 1, 0, TAU); ctx.fill(); continue } line(ctx, x, y - 9 * k, x, y + 5 * k, '#3f2a16', 1.5); line(ctx, x - 2.5 * k, y + 2 * k, x, y + 6 * k, '#9aa3aa', 1.5); line(ctx, x + 2.5 * k, y + 2 * k, x, y + 6 * k, '#9aa3aa', 1.5) }
   // stones and javelins
   for (const s of G.shots) {
     const sideways = Math.min(1, Math.abs(s.y0 - s.y) / 0.9), x = lx(s.from ?? s.lane) + (lx(s.lane) - lx(s.from ?? s.lane)) * sideways + s.x0 * cell, y = ry(s.y) - 14 * k
+    if (s.lob && s.ty != null) {   // a lobbed stone: its shadow on the ground, the stone high in its arc
+      const p = Math.max(0, Math.min(1, (s.y0 - s.y) / Math.max(0.5, s.y0 - s.ty)))
+      ctx.fillStyle = 'rgba(0, 0, 0, .2)'; ctx.beginPath(); ctx.ellipse(x, y + 14 * k, 5 * k + 1.5, 2.5 * k + 1, 0, 0, TAU); ctx.fill()
+      ctx.fillStyle = '#7a7a70'; ctx.beginPath(); ctx.arc(x, y - Math.sin(Math.PI * p) * cell * 1.8, 5 * k + 1.5, 0, TAU); ctx.fill(); continue
+    }
     if (s.kind === 'stone') { ctx.fillStyle = '#5f5f58'; ctx.beginPath(); ctx.arc(x, y, 3 * k + 1, 0, TAU); ctx.fill() }
     else if (s.kind === 'arrow') { const d = s.dir > 0 ? -1 : 1; line(ctx, x, y + 8 * k * d, x, y - 6 * k * d, '#3f2a16', 1.5); line(ctx, x, y - 4 * k * d, x, y - 8 * k * d, '#9aa3aa', 1.8) }
     else if (s.kind === 'hook') { line(ctx, x, y + 10 * k, x, y - 4 * k, '#4a3420', 2); ctx.strokeStyle = '#9aa3aa'; ctx.lineWidth = 2; ctx.beginPath(); ctx.arc(x, y - 6 * k, 4 * k, Math.PI + 0.3, -0.3); ctx.stroke() }
@@ -3245,6 +3303,7 @@ const HTL_RE = [
   [/^Locked: win (.+) first$/, (m, b) => 'Заключено: първо спечелете ' + bgName(b.replace(/^the /, 'The '))],
   [/^(.+) · (.+)$/, (m, a, b) => (HTL_BG[a] || HTL_BG[b] || /\d/.test(a)) ? `${HTL_BG[a] ?? bgYear(a)} · ${HTL_BG[b] ?? bgName(b)}` : m],
   [/^It bounces off! Only (\w+) can stop (\w+)\.$/, (m, a, b) => `Отскача! Само ${bgName(a)} може да спре ${bgName(b)}.`],
+  [/^A storming party is inside the city! (\d+) of (\d+)$/, (m, a, b) => `Щурмови отряд е в града! ${a} от ${b}`],
   [/^(\w+)’s light passes through (\w+)! Only (\w+) can stop (\w+)\.$/, (m, a, b, c, d) => `Светлината на ${bgName(a)} минава през ${bgName(b)}! Само ${bgName(c)} може да спре ${bgName(d)}.`],
 ]
 function trT(s) {
