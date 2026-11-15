@@ -187,7 +187,7 @@ const LEVELS = [
   { id: 'pydna', name: 'Pydna', year: '168 BC', enemy: 'King Perseus of Macedon', theme: 'olympus', start: 300, cols: 7, rows: 9, more: 1.17,
     rough: [[1, 4], [5, 4], [0, 5], [3, 5], [6, 5], [2, 6], [4, 6]],
     twist: 'The phalanx comes in blocks that move as one: three lanes wide, or five if your test score was below 80%. When one of its men meets a soldier, the whole block halts, and its long pikes strike a square ahead for double damage; maniples take only half. On the rough ground (the stony squares) its men break ranks and lose their shields, as gaps opened at Pydna. New: the Legion, three maniples on one card.',
-    units: ['cart', 'slinger', 'velites', 'hastatus', 'triarius', 'caltrops', 'maniple', 'legion', 'scorpio'], newUnit: 'legion',
+    units: ['cart', 'slinger', 'velites', 'hastatus', 'triarius', 'caltrops', 'legion', 'scorpio'], newUnit: 'legion',
     blurb: 'At Pydna, by the sea below Mount Olympus, King Perseus’s phalanx bristles with long pikes that pierce Roman shields.',
     after: 'Within about an hour the phalanx broke. Perseus was led in chains in Aemilius Paullus’s triumph, and the kingdom of Macedon was no more.',
     waves: [w(26, ['pikeman']), w(42, ['thracian']), w(56, ['pikeman', 'thracian']), w(72, ['phalanx3']), w(90, ['cavalry', 'thracian']), w(106, ['phalanx3', 'thracian']), w(122, ['thracian', 'thracian', 'thracian']),
@@ -588,15 +588,15 @@ const DRAW_UNIT = {
     romanHelmet(c, -38)
     c.fillStyle = '#f2ede0'; c.strokeStyle = '#1b1715'; c.lineWidth = 1.2; c.beginPath(); c.ellipse(0, -50, 3.6, 9, 0, 0, TAU); c.fill(); c.stroke()   // white horsehair crest
   },
-  princeps(c, u, T) {
+  princeps(c, u, T, col = '#4f8fb8') {
     shadow(c, 14, 4.5); romanLegs(c)
-    c.fillStyle = '#8e2b22'; c.strokeStyle = '#4f8fb8'; c.lineWidth = 2; rr(c, -24, -44, 13, 37, 4); c.fill(); c.stroke()
+    c.fillStyle = '#8e2b22'; c.strokeStyle = col; c.lineWidth = 2; rr(c, -24, -44, 13, 37, 4); c.fill(); c.stroke()
     c.fillStyle = '#a8392f'; rr(c, -10.5, -34, 21, 22, 5); c.fill()
     c.fillStyle = '#8d939a'; rr(c, -10, -34, 20, 12, 4); c.fill()
     c.fillStyle = '#6d737a'; for (let y = -32; y < -23; y += 3) for (let x = -8 + (y % 2 ? 1.5 : 0); x < 9; x += 3) c.fillRect(x, y, 1.2, 1.2)
     c.fillStyle = '#5a3a22'; c.fillRect(-10.5, -19, 21, 2.5)
     swordArm(c, T, !u.fighting)
-    romanHelmet(c, -42); feathers(c, -49, '#4f8fb8')
+    romanHelmet(c, -42); feathers(c, -49, col)
   },
   shed(c, u) {
     shadow(c, 27, 6)
@@ -768,10 +768,11 @@ const DRAW_UNIT = {
   },
   maniple(c, u, T) {
     if (u.band || u.legionLook) return drawLegionMan(c, u, T)   // a maniple of a Legion card has its own look
-    line(c, -26, 0, -26, -84, '#5a3a22', 2.2)   // the maniple's standard, the signum
-    c.fillStyle = '#c9a24a'; for (const y of [-76, -67, -58]) { c.beginPath(); c.arc(-26, y, 3.6, 0, TAU); c.fill() }
-    c.beginPath(); c.moveTo(-26, -92); c.lineTo(-30, -84); c.lineTo(-22, -84); c.fill()
-    DRAW_UNIT.princeps(c, u, T)
+    line(c, -26, 0, -26, -78, '#5a3a22', 2.2)   // the maniple's standard, the signum, topped by a laurel wreath
+    c.fillStyle = '#c9a24a'; for (const y of [-68, -60]) { c.beginPath(); c.arc(-26, y, 3.6, 0, TAU); c.fill() }
+    c.strokeStyle = '#3f8a3a'; c.lineWidth = 3; c.beginPath(); c.arc(-26, -85, 6.5, 0, TAU); c.stroke()
+    c.fillStyle = '#5fae4f'; for (let i = 0; i < 8; i++) { const a = i / 8 * TAU; c.beginPath(); c.ellipse(-26 + Math.cos(a) * 6.5, -85 + Math.sin(a) * 6.5, 2.6, 1.4, a + 1.2, 0, TAU); c.fill() }
+    DRAW_UNIT.princeps(c, u, T, '#4fae5a')   // green plume and shield trim: not to be mistaken for the princeps
   },
   torch(c, u, T) {
     shadow(c, 12, 4); romanLegs(c)
