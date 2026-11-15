@@ -1906,7 +1906,8 @@ function update(dt) {
       if (F.charges && !f.charged && f.y > 3) { f.charged = true; f.speed = F.after }
       if (f.dir < 0) f.y = Math.max(f.y - v * dt, G.equitesTop[f.lane]?.state === 'charge' ? -0.35 : -99)
       else f.y = Math.min(f.y + v * dt, e.state === 'charge' ? ROWS + 0.35 : 99)
-      if (G.cw && f.dir > 0 && wallUp(f.lane) && f.y > LEVEL.cityWall.row - 0.15) {
+      if (G.cw && f.y > LEVEL.cityWall.row + 0.3) f.through = true   // past the wall: from now on it no longer holds him
+      if (G.cw && f.dir > 0 && !f.through && wallUp(f.lane) && f.y > LEVEL.cityWall.row - 0.15) {
         f.y = LEVEL.cityWall.row - 0.15   // held behind the wall
         const open = [...Array(COLS).keys()].filter(l => !wallUp(l)).sort((a, b) => Math.abs(a - f.lane) - Math.abs(b - f.lane))[0]
         if (open != null && !f.slide && Math.random() < dt * 0.8) { f.slide = { from: f.lane, t: 0 }; f.lane += Math.sign(open - f.lane) }   // along the wall toward the breach
