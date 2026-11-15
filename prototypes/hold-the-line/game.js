@@ -1431,8 +1431,11 @@ function place(type, lane, row) {
 }
 // a cohort fills three squares of a row: the one you chose and the two beside it (shifted to stay on the field)
 function placeCohort(type, lane, row) {
-  const U = UNITS[type], c = Math.max(1, Math.min(COLS - 2, lane)), lanes = [c - 1, c, c + 1].filter(l => canPlace(U.group, l, row))
-  if (!LEVEL.units.includes(type) || lanes.length < 2) { sfx.deny(); return false }
+  // all three or none: the square you chose is the middle man if it can be, otherwise the left or the right one
+  const U = UNITS[type], c = [lane, lane - 1, lane + 1].find(m => m >= 1 && m <= COLS - 2 && [m - 1, m, m + 1].every(l => canPlace(U.group, l, row)))
+  if (!LEVEL.units.includes(type)) { sfx.deny(); return false }
+  if (c == null) { sfx.deny(); announce(type === 'legion' ? 'A Legion needs three free squares side by side.' : 'A cohort needs three free squares side by side.'); return false }
+  const lanes = [c - 1, c, c + 1]
   if (G.phase === 'deploy') { if (!(G.vets[type] > 0)) { sfx.deny(); return false } G.vets[type]-- }
   else { if (G.rations < U.cost || G.cool[type] > 0) { sfx.deny(); return false } G.rations -= U.cost; G.cool[type] = U.recharge }
   const G2 = UNITS[U.group], band = ++G.ids   // the three move together from now on
@@ -1631,8 +1634,8 @@ function update(dt) {
       if (foe) { hurtFoe(foe, U.melee * dt * pow * (u.panic > 0 ? 0.5 : 1) * (U.antiCav && FOES[foe.type].mounted ? U.antiCav : 1) * twinMul(foe, u.type), true); if (Math.random() < dt * 2.5) { sfx.clang(); G.fx.push({ kind: 'spark', x: lx(u.lane), y: ry(u.row + 0.4), t: 0.2 }) } }
     }
     if (U.flank) {   // the maniple strikes enemies in the lanes beside it, from the side
-      const side = G.foes.filter(f => Math.abs(f.lane - u.lane) === 1 && f.hp > 0 && !f.jump && !f.fleeing && Math.abs(f.y - (u.row + 0.6)) < 0.75 + (FOES[f.type].reach ?? 0))
-      for (const f of side) { hurtFoe(f, U.flank * dt * pow, true, true); if (Math.random() < dt * 2) G.fx.push({ kind: 'spark', x: (lx(u.lane) + lx(f.lane)) / 2, y: ry(u.row + 0.4), t: 0.2 }) }
+      const side = G.foes.filter(f => Math.abs(f.lane - u.lane) === 1 && f.hp > 0 && !f.jump && !f.fleeing && Math.abs(f.y - (u.row + 0.6)) < 0.75)
+      for (const f of side) { hurtFoe(f, U.flank * dt * pow * (f.eating && f.eating.lane === f.lane ? 0.5 : 1), true, true); if (Math.random() < dt * 2) G.fx.push({ kind: 'spark', x: (lx(u.lane) + lx(f.lane)) / 2, y: ry(u.row + 0.4), t: 0.2 }) }   // full force on an enemy pushing past; half on one already held in his own lane
       if (side.length) u.fighting = true
     }
     if (U.blast && (u.arm += dt) >= U.blast.delay) {   // the volley lands on the nine squares around it
