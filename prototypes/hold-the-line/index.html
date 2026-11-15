@@ -26,7 +26,7 @@ const UNITS = {
   triarius: { name: 'Triarius', short: 'Triarius', cost: 50, recharge: 25, hp: 1500, about: 'A veteran who kneels behind his shield and holds the lane.' },
   caltrops: { name: 'Caltrops', short: 'Caltrops', cost: 25, recharge: 25, hp: 300, armTime: 10, dmg: 450, trap: true, about: 'Iron spikes hidden in the grass. They arm after 10 seconds.' },
   princeps: { name: 'Princeps', short: 'Princeps', cost: 100, recharge: 10, hp: 700, melee: 55, about: 'A soldier in his prime: tough, and he cuts down whoever reaches him.' },
-  vanguard: { name: 'Vanguard', short: 'Vanguard', cost: 200, recharge: 30, hp: 650, reload: 2.5, dmg: 40, range: 2.5, melee: 40, march: 4, about: 'A legionary who advances on his own, one square every 4 seconds: he throws his pilum at enemies ahead, fights whoever blocks him, goes through a gate into the city and on toward the Byrsa.' },
+  vanguard: { name: 'Vanguard', short: 'Vanguard', cost: 175, recharge: 25, hp: 900, reload: 2.5, dmg: 40, range: 2.5, melee: 40, march: 4, about: 'A legionary who advances on his own, one square every 4 seconds: he throws his pilum at enemies ahead, fights whoever blocks him, goes through a gate into the city and on toward the Byrsa.' },
   petrobolos: { name: 'Stone-thrower', short: 'Stones', cost: 175, recharge: 15, hp: 300, reload: 4.5, dmg: 90, range: 99, kind: 'boulder', splash: 0.6, lob: true, about: 'A Roman ballista hurling stones. They fly over walls, and also hurt enemies in the lanes beside the one they hit.' },
   aries:    { name: 'Battering ram', short: 'Ram', cost: 150, recharge: 15, hp: 1000, arrowMul: 0.3, ram: 45, about: 'A heavy ram under a roof of hides. Put it right under the city wall: it pounds the wall in its lane.' },
   shed:     { name: 'Siege shed', short: 'Shed', cost: 75, recharge: 20, hp: 1200, arrowMul: 0.15, about: 'A wooden shed covered in hides, like the ones Livy says the Romans built at Veii. Arrows barely hurt it, so put it in front.' },
@@ -89,7 +89,7 @@ const FOES = {
   thracian:   { name: 'Thracian', hp: 180, speed: 0.38, dps: 40, intro: 'Thracian light troops: fast and fierce.' },
   pikeman:    { name: 'Macedonian phalangite', hp: 260, shield: 380, speed: 0.16, dps: 45, reach: 0.9, frontShield: true, phalanx: true, intro: 'The phalanx! Its long pikes strike a square ahead, and its shields stop missiles from the front. Hit it from the side, or let it cross rough ground.' },
   bowman:     { name: 'Carthaginian archer', hp: 180, speed: 0.22, dps: 30, bow: { range: 3.2, reload: 2.2, dmg: 25 }, intro: 'Carthaginian archers! They stop out of reach and shoot your front soldier. A siege shed protects your line.' },
-  engine:     { name: 'Carthaginian catapult', hp: 700, speed: 0, dps: 0, engine: { every: [8, 12], dmg: 35, reach: 3 }, intro: 'Catapults inside the city throw stones over the wall at your soldiers. Break in to reach them, or answer with your own stone-thrower.' },
+  engine:     { name: 'Carthaginian catapult', hp: 700, speed: 0, dps: 0, engine: { every: [10, 14], dmg: 25, reach: 3 }, intro: 'Catapults inside the city throw stones over the wall at your soldiers. Break in to reach them, or answer with your own stone-thrower.' },
   militia:    { name: 'Carthaginian citizen', hp: 170, speed: 0.24, dps: 35, intro: 'Carthage’s citizens defend their streets and homes.' },
   volunteer:  { name: 'Freed slave', hp: 120, speed: 0.4, dps: 30, intro: 'Carthage freed its slaves to fight. They are fast but lightly armed.' },
   galley:     { name: 'Antony’s warship', hp: 300, shield: 100, speed: 0.2, dps: 45, ship: 'galley', intro: 'Antony’s warships! Their thick timbers soak up the first hits.' },
@@ -209,9 +209,9 @@ const LEVELS = [
     waves: [w(26, ['pikeman']), w(42, ['thracian']), w(56, ['pikeman', 'thracian']), w(72, ['phalanx3']), w(90, ['cavalry', 'thracian']), w(106, ['phalanx3', 'thracian']), w(122, ['thracian', 'thracian', 'thracian']),
       w(138, ['chief', 'phalanx3', 'phalanx3', 'thracian', 'thracian'], 'A great wave approaches!'), w(170, ['cavalry', 'pikeman', 'pikeman', 'thracian']),
       w(190, ['chief', 'phalanx3', 'phalanx3', 'phalanx3', ...rep(3, 'thracian'), 'cavalry'], 'The final wave!')] },
-  { id: 'carthage', name: 'The Siege of Carthage', year: '146 BC', enemy: 'the Carthaginians', theme: 'carthage', start: 400, cols: 10, rows: 11, more: 1.3,
+  { id: 'carthage', name: 'The Siege of Carthage', year: '146 BC', enemy: 'the Carthaginians', theme: 'carthage', start: 500, cols: 10, rows: 11, more: 1.15, lengthen: 0.6,
     cityWall: { row: 5, gates: [1, 3, 6, 8], storm: 3,
-      garrison: [['shield', 1, 4.1], ['shield', 3, 4.1], ['shield', 6, 4.1], ['shield', 8, 4.1], ['militia', 0, 2.6], ['militia', 4, 3], ['militia', 5, 2.4], ['militia', 7, 3], ['militia', 9, 2.6], ['shield', 1, 0.2], ['shield', 3, 0.2], ['shield', 6, 0.2], ['shield', 8, 0.2], ['militia', 0, 0.2], ['militia', 9, 0.2]], refill: 16, pool: ['militia', 'militia', 'volunteer', 'volunteer', 'shield', 'bowman'], engines: [[2, 1.6], [5, 0.7], [7, 1.6]] },
+      garrison: [['shield', 1, 4.1], ['shield', 3, 4.1], ['shield', 6, 4.1], ['shield', 8, 4.1], ['militia', 0, 2.6], ['militia', 4, 3], ['militia', 5, 2.4], ['militia', 7, 3], ['militia', 9, 2.6], ['shield', 1, 0.2], ['shield', 3, 0.2], ['shield', 6, 0.2], ['shield', 8, 0.2], ['militia', 0, 0.2], ['militia', 9, 0.2]], refill: 22, pool: ['militia', 'militia', 'volunteer', 'volunteer', 'shield', 'bowman'], engines: [[2, 1.6], [5, 0.7], [7, 1.6]] },
     twist: 'Take the city! Carthage’s wall splits the field in two. Its four gates are open both ways: the defenders come out through them and fan out toward your lines, and your vanguard goes in. Catapults inside the city lob stones at your soldiers on both sides of the wall; your stone-thrower lobs back over it. When three vanguards reach the Byrsa, the top row, Carthage falls. Until then the city keeps sending defenders.',
     units: ['cart', 'slinger', 'hastatus', 'triarius', 'princeps', 'scorpio', 'maniple', 'petrobolos', 'vanguard'], newUnit: 'vanguard',
     blurb: '149–146 BC: for three years Rome besieges Carthage behind its great walls. Now Scipio Aemilianus must break through them, and then fight street by street toward the citadel, the Byrsa.',
@@ -366,6 +366,7 @@ const LEVELS = [
 // From Zama on (the user, Nov 15) every battle runs about a quarter longer: before its first great wave come more waves of
 // ordinary troops (copies of the ones just before it), and the great waves, the events and the storms after it move later
 function lengthen(L, share = 0.25) {
+  share ??= 0.25
   const last = Math.max(...L.waves.map(x => x.t)), P = (L.waves.find(x => x.big) ?? L.waves.at(-1)).t, d = Math.round(last * share)
   const extra = L.waves.filter(x => x.t >= P - d && x.t < P).map(x => ({ ...x, t: x.t + d, big: null }))
   for (const x of L.waves) if (x.t >= P) x.t += d
@@ -373,7 +374,7 @@ function lengthen(L, share = 0.25) {
   for (const st of L.storms ?? []) if (st.at >= P) st.at += d
   L.waves = [...L.waves, ...extra].sort((a, b) => a.t - b.t)
 }
-for (const L of LEVELS.slice(LEVELS.findIndex(L => L.id === 'zama'))) if (!L.pantheon) lengthen(L)
+for (const L of LEVELS.slice(LEVELS.findIndex(L => L.id === 'zama'))) if (!L.pantheon) lengthen(L, L.lengthen)   // a siege can run longer still
 let LEVEL = LEVELS[0]
 // What the chapter's test score buys for its battle (the user's table, Nov 11). Below 50% there is no battle (the app
 // sends the player back to the chronicle). 50%: no equites and almost no grain, a battle that can't really be won;
@@ -616,10 +617,15 @@ const DRAW_UNIT = {
     romanHelmet(c, -42); feathers(c, -49, col)
   },
   petrobolos(c, u, T) { DRAW_UNIT.onager(c, u, T) },
-  vanguard(c, u, T) {   // a hastatus with a red cloak and a small red banner on his back
-    c.fillStyle = '#b8322a'; c.beginPath(); c.moveTo(-9, -34); c.lineTo(9, -34); c.lineTo(13, -6); c.lineTo(-13, -6); c.fill()
-    DRAW_UNIT.hastatus(c, u, T)
-    line(c, -14, -8, -14, -74, '#5a3a22', 2); c.fillStyle = '#b8322a'; c.fillRect(-14, -74, 12, 9); c.fillStyle = '#e0a63a'; c.fillRect(-14, -66, 12, 2)
+  vanguard(c, u, T) {   // the eagle-bearer: a bear-skin over his helmet and the legion's golden eagle
+    line(c, -15, -4, -15, -80, '#5a3a22', 2.4)
+    c.strokeStyle = '#c9a24a'; c.lineWidth = 2; c.beginPath(); c.arc(-15, -86, 7, 0, TAU); c.stroke()   // the wreath
+    c.fillStyle = '#f0c24a'; c.beginPath(); c.ellipse(-15, -88, 3, 4.5, 0, 0, TAU); c.fill()   // the eagle's body
+    c.beginPath(); c.moveTo(-16, -89); c.lineTo(-27, -97); c.lineTo(-22, -86); c.fill(); c.beginPath(); c.moveTo(-14, -89); c.lineTo(-3, -97); c.lineTo(-8, -86); c.fill()   // its wings
+    DRAW_UNIT.legionary(c, u, T)
+    c.fillStyle = '#6b4a2b'; c.beginPath(); c.ellipse(0, -47, 10, 7, 0, Math.PI, 0); c.fill(); c.fillRect(-10, -47, 20, 3)   // the bear-skin
+    c.beginPath(); c.moveTo(-10, -45); c.quadraticCurveTo(-15, -30, -12, -18); c.lineTo(-8, -20); c.lineTo(-8, -44); c.fill(); c.beginPath(); c.moveTo(10, -45); c.quadraticCurveTo(15, -30, 12, -18); c.lineTo(8, -20); c.lineTo(8, -44); c.fill()
+    for (const sx of [-6, 6]) { c.beginPath(); c.arc(sx, -53, 2.6, 0, TAU); c.fill() }   // its ears
   },
   aries(c, u, T) {   // a roofed shed on wheels; a beam with a bronze ram's head swings out in front
     const swing = u.ramming ? Math.max(0, Math.sin(T * 6)) * 8 : 0
@@ -1689,7 +1695,8 @@ function update(dt) {
       u.marchCd = U.march
       const wr = LEVEL.cityWall.row, free = (l, r) => l >= 0 && l < COLS && !unitAt(l, r) && !G.foes.some(f => f.lane === l && f.hp > 0 && Math.abs(f.y - r - 0.3) < 0.8)
       if (u.row === 0) {   // at the Byrsa
-        removeUnit(u, false); G.cw.entered++
+        removeUnit(u, false); G.cw.entered++; (G.cw.flags ??= []).push(u.lane)
+        G.fx.push({ kind: 'ring', x: lx(u.lane), y: ry(0.5), t: 0.5 }); G.fx.push({ kind: 'text', x: lx(u.lane), y: ry(0.4), text: `${LANG === 'bg' ? 'БИРСА' : 'BYRSA'} ${G.cw.entered}/${LEVEL.cityWall.storm}`, t: 2 })
         for (let i = 0; i < 10; i++) G.fx.push({ kind: 'dust', x: lx(u.lane), y: ry(0.8), vx: (Math.random() - 0.5) * 60, vy: -30 * Math.random(), t: 0.7 })
         sfx.horn(); announce(`A vanguard has reached the Byrsa! ${G.cw.entered} of ${LEVEL.cityWall.storm}`, true, 3200)
         if (G.cw.entered >= LEVEL.cityWall.storm) { win(); return }
@@ -1704,7 +1711,10 @@ function update(dt) {
       } else {
         let next = u.row - 1
         while (next >= 0 && unitAt(u.lane, next)) next--   // through his own soldiers to the next free square
-        if (next >= 0 && free(u.lane, next) && (next !== wr || isGate(u.lane))) stepUnit(u, u.lane, next)
+        if (next >= 0 && free(u.lane, next) && (next !== wr || isGate(u.lane))) {
+          if (next === wr) G.fx.push({ kind: 'text', x: lx(u.lane), y: ry(wr) - 6, text: LANG === 'bg' ? 'В града!' : 'Into the city!', t: 1.6 })
+          stepUnit(u, u.lane, next)
+        }
       }
     }
     if (G.cw && u.row === LEVEL.cityWall.row + 1 && wallUp(u.lane) && !u.travel && (U.ram || (U.melee && !u.fighting))) {   // right under the wall: the ram pounds it, swordsmen hack at it
@@ -1969,7 +1979,7 @@ function update(dt) {
   G.fx = G.fx.filter(p => p.t > 0)
   G.shake = Math.max(0, G.shake - dt * 12)
   if (G.cw && LEVEL.cityWall.refill && !G.queue.length && G.t >= (G.cw.nextRefill ??= G.t + LEVEL.cityWall.refill)) {   // more defenders, until the city falls
-    const pool = LEVEL.cityWall.pool, n = 4 + Math.floor(Math.random() * 3), wave = { t: G.t, foes: [] }
+    const pool = LEVEL.cityWall.pool, n = 3 + Math.floor(Math.random() * 3), wave = { t: G.t, foes: [] }
     for (let i = 0; i < n; i++) G.queue.push({ t: G.t + i * 1.5, type: pool[Math.floor(Math.random() * pool.length)], wave })
     G.total += n; G.cw.nextRefill = G.t + LEVEL.cityWall.refill; updateCount()
   }
@@ -1982,8 +1992,12 @@ function drawCityWall() {   // a section of stone per lane: cracks as it weakens
   if (C.storm) {   // the Byrsa: the top row, where the vanguard must get to
     c.fillStyle = 'rgba(224, 166, 58, .18)'; c.fillRect(0, ry(0), W, cell)
     c.strokeStyle = 'rgba(224, 166, 58, .8)'; c.lineWidth = 2; c.setLineDash([6, 5]); c.beginPath(); c.moveTo(0, ry(1)); c.lineTo(W, ry(1)); c.stroke(); c.setLineDash([])
-    c.font = `900 ${Math.round(11 * k + 5)}px Nunito, system-ui, sans-serif`; c.textAlign = 'left'; c.fillStyle = '#7a4a10'
-    c.fillText(`${LANG === 'bg' ? 'БИРСА' : 'BYRSA'} ${G.cw.entered}/${C.storm}`, 6, ry(0) + cell * 0.32)
+    for (const l of G.cw.flags ?? []) { line(c, lx(l) + 10, ry(0.85), lx(l) + 10, ry(0.15), '#5a3a22', 2.4); c.fillStyle = '#b8322a'; c.fillRect(lx(l) + 10, ry(0.15), cell * 0.3, cell * 0.2); c.fillStyle = '#f0c24a'; c.beginPath(); c.arc(lx(l) + 10, ry(0.13), 3, 0, TAU); c.fill() }   // a Roman flag where each vanguard got in
+    const label = `${LANG === 'bg' ? 'БИРСА' : 'BYRSA'}  ${G.cw.entered} / ${C.storm}`
+    c.font = `900 ${Math.round(13 * k + 7)}px Nunito, system-ui, sans-serif`; c.textAlign = 'center'
+    const tw = c.measureText(label).width + 18, bx = W / 2, by = ry(0) + cell * 0.08
+    c.fillStyle = 'rgba(27, 23, 21, .78)'; rr(c, bx - tw / 2, by, tw, 20 * k + 8, 10); c.fill()
+    c.fillStyle = '#f0c24a'; c.fillText(label, bx, by + 15 * k + 4)
   }
   for (let l = 0; l < COLS; l++) {
     const x = l * cell, hp = G.cw.seg[l], frac = C.gates ? (isGate(l) ? hp / C.gateHp : 1) : hp / C.hp
@@ -3308,7 +3322,7 @@ const MARKUP = `<main class="game">
   </div>
   <div class="msg" id="banner" aria-live="polite"></div>
   <div class="controls">
-    <div class="progress"><span class="label" id="level">Lake Regillus</span><div class="bar" id="bar"><div class="fill" id="fill"></div></div><span class="build" translate="no">build 15 Nov, 15:43</span></div>
+    <div class="progress"><span class="label" id="level">Lake Regillus</span><div class="bar" id="bar"><div class="fill" id="fill"></div></div><span class="build" translate="no">build 15 Nov, 15:57</span></div>
     <button class="tool" id="pause">Pause</button>
     <button class="tool" id="speed">1×</button>
     <button class="tool" id="guide">Guide</button>
