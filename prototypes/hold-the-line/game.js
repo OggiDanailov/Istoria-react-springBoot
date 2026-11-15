@@ -426,6 +426,23 @@ const sfx = {
 function rr(c, x, y, w, h, r) { c.beginPath(); c.roundRect(x, y, w, h, r) }
 function shadow(c, rx, ry) { c.fillStyle = 'rgba(25, 35, 10, .28)'; c.beginPath(); c.ellipse(0, 0, rx, ry, 0, 0, TAU); c.fill() }
 function line(c, x1, y1, x2, y2, color, width) { c.strokeStyle = color; c.lineWidth = width; c.lineCap = 'round'; c.beginPath(); c.moveTo(x1, y1); c.lineTo(x2, y2); c.stroke() }
+// the Legion's men: a big red shield with Jupiter's gold thunderbolt, a bronze breastplate, a tall red crest; the middle man carries the vexillum
+function drawLegionMan(c, u, T) {
+  if (u.cohort === 'standard') {
+    line(c, -27, 0, -27, -90, '#5a3a22', 2.4); line(c, -36, -84, -18, -84, '#5a3a22', 2)
+    c.fillStyle = '#b8322a'; c.fillRect(-35, -84, 16, 15); c.fillStyle = '#e0a63a'; for (let x = -35; x < -19; x += 3) c.fillRect(x, -69, 1.6, 4)   // the red banner with a gold fringe
+    c.fillStyle = '#e0a63a'; c.beginPath(); c.arc(-27, -92, 3, 0, TAU); c.fill()
+  }
+  shadow(c, 15, 4.5); romanLegs(c)
+  c.fillStyle = '#7a1f1a'; c.strokeStyle = '#e0a63a'; c.lineWidth = 2.2; rr(c, -26, -47, 15, 41, 4); c.fill(); c.stroke()   // the tall scutum
+  c.strokeStyle = '#f0c24a'; c.lineWidth = 2; c.beginPath(); c.moveTo(-17, -38); c.lineTo(-21, -27); c.lineTo(-16, -27); c.lineTo(-20, -15); c.stroke()   // the thunderbolt
+  c.fillStyle = '#b98a3e'; rr(c, -10.5, -35, 21, 23, 6); c.fill()   // bronze breastplate
+  c.strokeStyle = '#8a6528'; c.lineWidth = 1.2; c.beginPath(); c.moveTo(-6, -29); c.quadraticCurveTo(0, -25, 6, -29); c.moveTo(0, -33); c.lineTo(0, -16); c.stroke()
+  c.fillStyle = '#5a3a22'; c.fillRect(-10.5, -19, 21, 2.5)
+  swordArm(c, T, !u.fighting)
+  romanHelmet(c, -42)
+  c.fillStyle = '#b8322a'; c.beginPath(); c.ellipse(0, -53, 10, 6, 0, Math.PI, 0); c.fill(); c.fillRect(-1.5, -53, 3, 4)   // a tall red crest
+}
 function feathers(c, y, col) { [[-4, -7], [0, 0], [4, 7]].forEach(([dx, lean]) => { line(c, dx * 0.6, y, dx + lean * 0.35, y - 16, '#1b1715', 3.6); line(c, dx * 0.6, y, dx + lean * 0.35, y - 16, col, 2.4) }) }
 function romanHelmet(c, y) {
   c.fillStyle = SKIN_SHADE; c.fillRect(-3, y + 4, 6, 5)
@@ -670,9 +687,9 @@ const DRAW_UNIT = {
     c.fillStyle = SKIN; c.beginPath(); c.arc(0, -42, 7, 0, TAU); c.fill(); c.fillStyle = INK; c.fillRect(-3, -43, 1.8, 1.8); c.fillRect(1.4, -43, 1.8, 1.8)
     c.fillStyle = '#b08a3e'; c.beginPath(); c.arc(0, -45, 7.8, Math.PI, 0); c.fill(); c.fillRect(-7.8, -45, 3, 9); c.fillRect(4.8, -45, 3, 9)
   },
-  legion(c, u, T) {   // the card: two maniples with their standards
-    c.save(); c.translate(-8, 0); c.scale(0.72, 0.72); DRAW_UNIT.maniple(c, u, T); c.restore()
-    c.save(); c.translate(12, 0); c.scale(0.72, 0.72); DRAW_UNIT.maniple(c, u, T); c.restore()
+  legion(c, u, T) {   // the card: two of the Legion's men, one with the banner
+    c.save(); c.translate(-9, 0); c.scale(0.72, 0.72); drawLegionMan(c, { ...u, cohort: 'standard' }, T); c.restore()
+    c.save(); c.translate(11, 0); c.scale(0.72, 0.72); drawLegionMan(c, u, T); c.restore()
   },
   cohort(c, u, T) {   // the card: a legionary with the cohort's standard
     c.save(); c.translate(-9, 0); c.scale(0.8, 0.8); DRAW_UNIT.legionary(c, u, T); c.restore()
@@ -750,6 +767,7 @@ const DRAW_UNIT = {
     if (u.anim > 0) { c.strokeStyle = `rgba(251, 243, 228, ${Math.min(1, u.anim)})`; c.lineWidth = 2; for (const r of [8, 14, 20]) { c.beginPath(); c.arc(16, -42, r, -0.9, 0.9); c.stroke() } }
   },
   maniple(c, u, T) {
+    if (u.band || u.legionLook) return drawLegionMan(c, u, T)   // a maniple of a Legion card has its own look
     line(c, -26, 0, -26, -84, '#5a3a22', 2.2)   // the maniple's standard, the signum
     c.fillStyle = '#c9a24a'; for (const y of [-76, -67, -58]) { c.beginPath(); c.arc(-26, y, 3.6, 0, TAU); c.fill() }
     c.beginPath(); c.moveTo(-26, -92); c.lineTo(-30, -84); c.lineTo(-22, -84); c.fill()
