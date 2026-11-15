@@ -674,7 +674,6 @@
 "The catapults of Akragas open fire!": "Катапултите на Акрагас откриват огън!",
 "The walls of Akragas are breached! The city falls silent. +150 grain": "Стените на Акрагас са пробити! Градът замлъква. +150 жито",
 "That lane already has an eques. Move him to a lane marked in red.": "В тази линия вече има конник. Преместете го в линия, отбелязана в червено.",
-"That lane’s eques has charged; his place can’t be filled.": "Конникът на тази линия вече е атакувал; мястото му не може да бъде заето.",
 "Akragas falls! The city burns.": "Акрагас пада! Градът гори.",
 "A bolt-shooting machine, used in Roman sieges. Each bolt flies through up to three enemies in its lane.": "Машина, която изстрелва стрели – използвана при римските обсади. Всяка стрела пронизва до трима врагове в линията си.",
 "Shoots a heavy bolt every 4 seconds that flies through up to three enemies in its lane, hitting each one.": "Изстрелва тежка стрела на всеки 4 секунди, която пронизва до трима врагове в линията си и удря всеки поотделно.",
@@ -688,5 +687,6 @@
 "Tip: just beyond the rough ground, where the phalanx breaks ranks.": "Съвет: точно след неравния терен, където фалангата разкъсва строя си.",
 "The phalanx comes in blocks that move as one: three lanes wide, or five if your test score was below 80%. When one of its men meets a soldier, the whole block halts, and its long pikes strike a square ahead for double damage; maniples take only half. On the rough ground (the stony squares) its men break ranks and lose their shields, as gaps opened at Pydna. New: the Legion, three maniples on one card.": "Фалангата идва на блокове, които се движат като едно: широки три линии или пет, ако резултатът от теста ви е под 80%. Щом някой от войниците ѝ срещне ваш войник, целият блок спира, а дългите ѝ копия удрят едно поле напред с двойна щета; манипулите понасят само половината. На неравния терен (каменистите полета) войниците ѝ разкъсват строя и губят щитовете си – както се отворили пролуки при Пидна. Ново: Легионът, три манипула с една карта.",
 "The phalanx halts as one and levels its pikes!": "Фалангата спира като едно цяло и насочва копията си!",
-"A tough unit that fights in its lane and also hits enemies in the two lanes beside it from the side. Shields don’t stop blows from the side. Phalanx pikes do it only half damage.": "Издръжлива част, която се бие в своята линия и удря отстрани враговете в двете съседни. Щитовете не спират ударите отстрани. Копията на фалангата му нанасят само половин щета."
+"A tough unit that fights in its lane and also hits enemies in the two lanes beside it from the side. Shields don’t stop blows from the side. Phalanx pikes do it only half damage.": "Издръжлива част, която се бие в своята линия и удря отстрани враговете в двете съседни. Щитовете не спират ударите отстрани. Копията на фалангата му нанасят само половин щета.",
+"The enemy’s cavalry holds that wing: no eques can ride there.": "Вражеската конница държи този фланг: никой конник не може да отиде там."
 }

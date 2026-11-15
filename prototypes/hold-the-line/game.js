@@ -1534,7 +1534,7 @@ function update(dt) {
   // the battle's turning points
   for (const ev of G.events) if (!ev.done && G.t >= ev.t) {
     ev.done = true; announce(ev.text, true, 4200); sfx.horn()
-    if (ev.wings) for (const l of ev.wings) if (G.equites[l].state === 'ready') G.equites[l].state = 'used'
+    if (ev.wings) for (const l of ev.wings) { if (G.equites[l].state === 'ready') G.equites[l].state = 'used'; G.equites[l].routed = true }   // that wing is lost: no eques can ride there now
     if (ev.masinissa) for (const e of G.equites) if (e.state === 'used') { e.state = 'ready'; e.y = ROWS + 0.62 }   // only those that had charged
     const leave = test => {   // these ships turn and sail away; those still to come never arrive
       for (const f of G.foes) if (test(FOES[f.type])) { f.fleeing = true; f.eating = null }
@@ -1905,7 +1905,7 @@ function draw() {
       }
     }
   }
-  if (!LEVEL.backRiver) for (let l = 0; l < COLS; l++) if (G.equites[l]?.state === 'none' && !LEVEL.closed?.includes(l)) {   // an unguarded lane: no eques under it
+  if (!LEVEL.backRiver) for (let l = 0; l < COLS; l++) if ((G.equites[l]?.state === 'none' || G.equites[l]?.state === 'used') && !LEVEL.closed?.includes(l)) {   // an unguarded lane: no eques under it
     const free = equesDrag?.moved
     ctx.fillStyle = free ? (equesDrag.to === l ? 'rgba(251, 243, 228, .35)' : 'rgba(251, 243, 228, .14)') : 'rgba(142, 43, 34, .16)'
     ctx.fillRect(l * cell + 3, ry(ROWS) + 2, cell - 6, CAMP * cell - 4)
@@ -1950,7 +1950,7 @@ function draw() {
   }])
   for (const [lane, e] of G.equites.entries()) if (e.state !== 'used' && e.state !== 'none') items.push([ry(e.y), () => { ctx.save(); if (equesDrag?.moved && equesDrag.from === lane) ctx.globalAlpha = 0.4; ctx.translate(lx(lane), ry(e.y)); ctx.scale(k * 0.9, k * 0.9); drawEques(ctx, e, T); ctx.restore() }])
   if (equesDrag?.moved && equesDrag.to != null && equesDrag.to !== equesDrag.from && G.equites[equesDrag.from]) {   // the horse being dragged, under the pointer: gold where he can go, red where he can't
-    const to = equesDrag.to, ok = G.equites[to]?.state === 'none' && !LEVEL.closed?.includes(to), y = ry(ROWS + 0.62)
+    const to = equesDrag.to, ok = (G.equites[to]?.state === 'none' || G.equites[to]?.state === 'used') && !G.equites[to].routed && !LEVEL.closed?.includes(to), y = ry(ROWS + 0.62)
     items.push([y + 1, () => {
       ctx.save(); ctx.strokeStyle = ok ? 'rgba(224, 166, 58, .95)' : 'rgba(190, 40, 30, .95)'; ctx.lineWidth = 3; ctx.beginPath(); ctx.ellipse(lx(to), y - 2, cell * 0.38, cell * 0.16, 0, 0, TAU); ctx.stroke(); ctx.restore()
       ctx.save(); ctx.globalAlpha = ok ? 0.85 : 0.45; ctx.translate(lx(to), y); ctx.scale(k * 0.9, k * 0.9); drawEques(ctx, G.equites[equesDrag.from], T); ctx.restore()
@@ -2147,7 +2147,8 @@ function charged(f, e, back) {
 }
 // an eques rides along the camp to a lane that has none (before or during the battle)
 function moveEques(from, to) {
-  if (to == null || to === from || G.equites[to]?.state !== 'none' || LEVEL.closed?.includes(to) || G.equites[from]?.state !== 'ready') return false
+  const free = l => (G.equites[l]?.state === 'none' || G.equites[l]?.state === 'used') && !G.equites[l].routed   // a lane with no eques, or whose eques has charged
+  if (to == null || to === from || !free(to) || LEVEL.closed?.includes(to) || G.equites[from]?.state !== 'ready') return false
   G.equites[to] = { state: 'ready', y: ROWS + 0.62 }; G.equites[from] = { state: 'none', y: ROWS + 0.62 }; sfx.place()
   return true
 }
@@ -2180,7 +2181,7 @@ document.addEventListener('pointerup', e => {
     if (d.moved && d.to !== d.from && !moveEques(d.from, d.to)) {
       sfx.deny()
       if (G.equites[d.to]?.state === 'ready' || G.equites[d.to]?.state === 'charge') announce('That lane already has an eques. Move him to a lane marked in red.')
-      else if (G.equites[d.to]?.state === 'used') announce('That lane’s eques has charged; his place can’t be filled.')
+      else if (G.equites[d.to]?.routed) announce('The enemy’s cavalry holds that wing: no eques can ride there.')
     }
     return
   }
