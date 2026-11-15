@@ -327,7 +327,6 @@
 "Rome’s biggest army ever faces Hannibal on the open plain of Cannae. Hannibal has laid a trap. Can you hold where Rome broke?": "Най-голямата армия в историята на Рим се изправя срещу Ханибал на откритата равнина при Кана. Ханибал е заложил капан. Ще удържите ли там, където Рим се пречупи?",
 "At Cannae Rome lost perhaps 50,000 men in an afternoon. Yet the Senate refused to talk peace, and Rome fought on for fourteen more years.": "При Кана Рим загубил може би 50 000 души за един следобед. И все пак Сенатът отказал да преговаря за мир и Рим воювал още четиринадесет години.",
 "The Africans close in from the sides!": "Африканците се сключват отстрани!",
-"Scipio’s lanes: an elephant that reaches the camp down a lane with no Roman soldiers in it runs out of the battle without harm. At the end, Masinissa’s cavalry comes back and your equites can charge again.": "Линиите на Сципион: слон, който стигне лагера по линия без римски войници, побягва от битката, без да навреди. Накрая конницата на Масиниса се връща и еквитите ви могат да атакуват отново.",
 "Masinissa’s cavalry is back! Your equites can charge again.": "Конницата на Масиниса се върна! Еквитите ви могат да атакуват отново.",
 "Near Zama, in Africa, Hannibal faces Scipio with 80 war elephants in front and his veterans from Italy held back for the end.": "Край Зама, в Африка, Ханибал се изправя срещу Сципион с 80 бойни слона отпред и ветераните си от Италия, запазени за края.",
 "Zama ended the Second Punic War. Carthage gave up its elephants and its fleet, and Scipio took the name Africanus.": "Зама сложила край на Втората пуническа война. Картаген се отказал от слоновете и флота си, а Сципион получил прозвището Африкански.",
@@ -681,5 +680,8 @@
 "That lane’s eques has charged; his place can’t be filled.": "Конникът на тази линия вече е атакувал; мястото му не може да бъде заето.",
 "Akragas falls! The city burns.": "Акрагас пада! Градът гори.",
 "A bolt-shooting machine, used in Roman sieges. Each bolt flies through up to three enemies in its lane.": "Машина, която изстрелва стрели – използвана при римските обсади. Всяка стрела пронизва до трима врагове в линията си.",
-"Shoots a heavy bolt every 4 seconds that flies through up to three enemies in its lane, hitting each one.": "Изстрелва тежка стрела на всеки 4 секунди, която пронизва до трима врагове в линията си и удря всеки поотделно."
+"Shoots a heavy bolt every 4 seconds that flies through up to three enemies in its lane, hitting each one.": "Изстрелва тежка стрела на всеки 4 секунди, която пронизва до трима врагове в линията си и удря всеки поотделно.",
+"Scipio’s lanes: an elephant that reaches the camp down a lane with no Roman soldiers in it runs out of the battle without harm. At the end, Masinissa’s cavalry comes back and your equites can charge again. Twice a sandstorm sweeps over the field and hides the enemy’s advance.": "Линиите на Сципион: слон, който стигне лагера по линия без римски войници, побягва от битката, без да навреди. Накрая конницата на Масиниса се връща и еквитите ви могат да атакуват отново. Два пъти пясъчна буря помита полето и скрива настъплението на врага.",
+"A sandstorm is approaching!": "Наближава пясъчна буря!",
+"The sandstorm is passing.": "Пясъчната буря отминава."
 }

@@ -174,8 +174,8 @@ const LEVELS = [
     waves: [w(24, ['gaul']), w(36, ['numidian', 'gaul']), w(50, ['gaul', 'warrior', 'gaul']), w(64, ['numidian', 'gaul', 'numidian']), w(80, ['shield', 'gaul', 'gaul', 'warrior']), w(96, ['numidian', 'numidian', 'gaul']), w(110, ['gaul', 'gaul', 'shield', 'gaul']),
       w(126, ['chief', ...rep(5, 'gaul'), 'numidian', 'numidian', 'shield', 'shield'], 'A great wave approaches!'), w(156, ['african', 'african', 'african', 'african'], 'The Africans close in from the sides!'), w(172, ['numidian', 'numidian', 'gaul', 'gaul', 'african', 'african']),
       w(192, ['chief', ...rep(5, 'gaul'), ...rep(5, 'african'), ...rep(4, 'numidian'), 'shield'], 'The final wave!')] },
-  { id: 'zama', name: 'Zama', year: '202 BC', enemy: 'Hannibal', theme: 'zama', start: 325, cols: 7, rows: 9, more: 1.17, openLanes: true,
-    twist: 'Scipio’s lanes: an elephant that reaches the camp down a lane with no Roman soldiers in it runs out of the battle without harm. At the end, Masinissa’s cavalry comes back and your equites can charge again.',
+  { id: 'zama', name: 'Zama', year: '202 BC', enemy: 'Hannibal', theme: 'zama', start: 325, cols: 7, rows: 9, more: 1.17, openLanes: true, storms: [{ at: 96, last: 45 }, { at: 200, last: 32 }],
+    twist: 'Scipio’s lanes: an elephant that reaches the camp down a lane with no Roman soldiers in it runs out of the battle without harm. At the end, Masinissa’s cavalry comes back and your equites can charge again. Twice a sandstorm sweeps over the field and hides the enemy’s advance.',
     events: [{ t: 194, masinissa: true, text: 'Masinissa’s cavalry is back! Your equites can charge again.' }],
     units: ['cart', 'slinger', 'velites', 'hastatus', 'triarius', 'caltrops', 'princeps', 'scorpio', 'cornicen'], newUnit: 'cornicen',
     blurb: 'Near Zama, in Africa, Hannibal faces Scipio with 80 war elephants in front and his veterans from Italy held back for the end.',
@@ -345,6 +345,17 @@ const LEVELS = [
       w(132, ['hermes', 'hera', 'poseidon', 'athena', 'artemis'], 'Olympus attacks in force!'), w(162, ['aphrodite', 'hermes', 'ares']), w(178, ['zeus', 'hera', 'artemis', 'poseidon']),
       w(196, ['zeus', 'hera', 'poseidon', 'athena', 'ares', 'aphrodite', 'artemis', 'hermes', 'zeus', 'ares'], 'The final wave: all of Olympus!')] },
 ]
+// From Zama on (the user, Nov 15) every battle runs about a quarter longer: before its first great wave come more waves of
+// ordinary troops (copies of the ones just before it), and the great waves, the events and the storms after it move later
+function lengthen(L, share = 0.25) {
+  const last = Math.max(...L.waves.map(x => x.t)), P = (L.waves.find(x => x.big) ?? L.waves.at(-1)).t, d = Math.round(last * share)
+  const extra = L.waves.filter(x => x.t >= P - d && x.t < P).map(x => ({ ...x, t: x.t + d, big: null }))
+  for (const x of L.waves) if (x.t >= P) x.t += d
+  for (const e of L.events ?? []) if (e.t >= P) e.t += d
+  for (const st of L.storms ?? []) if (st.at >= P) st.at += d
+  L.waves = [...L.waves, ...extra].sort((a, b) => a.t - b.t)
+}
+for (const L of LEVELS.slice(LEVELS.findIndex(L => L.id === 'zama'))) if (!L.pantheon) lengthen(L)
 let LEVEL = LEVELS[0]
 // What the chapter's test score buys for its battle (the user's table, Nov 11). Below 50% there is no battle (the app
 // sends the player back to the chronicle). 50%: no equites and almost no grain, a battle that can't really be won;
@@ -1299,7 +1310,7 @@ function equitesAt(n) {
 function newGame(i = levelIndex, score = quizScore) {
   levelIndex = i; LEVEL = LEVELS[i]; COLS = LEVEL.cols ?? 5; ROWS = LEVEL.rows ?? 7
   const army = armyFor(score, LEVELS[i])
-  LEVEL.waves.forEach(w => { w.announced = false })
+  LEVEL.waves.forEach(w => { w.announced = false }); for (const st of LEVEL.storms ?? []) { st.warned = false; st.over = false }
   G = {
     t: 0, phase: 'ready', speed: G?.speed ?? 1, paused: false, rations: army.grain, vets: army.vets, score, ids: 0,
     units: [], foes: [], shots: [], foeShots: [], runners: [], drops: [], fx: [], corpses: [],
@@ -1505,6 +1516,10 @@ function update(dt) {
     }
   }
   renderBar()
+  for (const st of LEVEL.storms ?? []) {
+    if (!st.warned && G.t >= st.at - 8) { st.warned = true; announce('A sandstorm is approaching!', true, 4200); sfx.horn() }
+    if (!st.over && G.t >= st.at + st.last - 6) { st.over = true; announce('The sandstorm is passing.') }
+  }
   if (LEVEL.twinHints && G.t >= LEVEL.twinHints && !G.hintsGone) {   // from now on, from memory
     G.hintsGone = true; tray.classList.remove('hints')
     announce(LANG === 'bg' ? 'Оттук нататък – по памет: гръцките близнаци вече не са на картите.' : 'Now from memory: the Greek twins are gone from the cards.', true, 4200)
@@ -1769,6 +1784,25 @@ function update(dt) {
 }
 
 // ---------- drawing a frame ----------
+function stormAt(t) {   // 0 to 1: how thick the sandstorm is at time t (it thickens over 8 seconds and clears over 8)
+  let v = 0
+  for (const st of LEVEL.storms ?? []) v = Math.max(v, Math.min(1, (t - st.at) / 8, (st.at + st.last - t) / 8))
+  return Math.max(0, v)
+}
+function drawStorm() {
+  const T = G.t, s = stormAt(T), c = ctx
+  const warn = (LEVEL.storms ?? []).some(st => T >= st.at - 8 && T < st.at)
+  if (warn) { const g = c.createLinearGradient(0, 0, 0, ry(0)); g.addColorStop(0, 'rgba(196, 150, 80, .75)'); g.addColorStop(1, 'rgba(196, 150, 80, 0)'); c.fillStyle = g; c.fillRect(0, 0, W, ry(0)) }   // a brown wall of dust on the horizon
+  if (s <= 0) return
+  const g = c.createLinearGradient(0, 0, 0, H)   // thickest where the enemy comes from; the Roman line stays in sight
+  g.addColorStop(0, `rgba(205, 165, 100, ${0.97 * s})`); g.addColorStop(0.55, `rgba(205, 165, 100, ${0.9 * s})`); g.addColorStop(0.8, `rgba(205, 165, 100, ${0.45 * s})`); g.addColorStop(1, `rgba(205, 165, 100, ${0.15 * s})`)
+  c.fillStyle = g; c.fillRect(0, 0, W, H)
+  c.strokeStyle = `rgba(245, 225, 185, ${0.55 * s})`; c.lineWidth = 1.5
+  for (let i = 0; i < 70; i++) {   // the sand blowing across
+    const sp = 260 + (i % 5) * 70, x = ((i * 97.3 + T * sp) % (W + 120)) - 60, y = ((i * 53.7) % 1) * H * 0.85 + Math.sin(T * 2 + i) * 6
+    c.beginPath(); c.moveTo(x, y); c.lineTo(x + 18 + (i % 4) * 6, y + 2); c.stroke()
+  }
+}
 function drawWalls() {   // Akragas's walls: cracks, then holes, fallen battlements and towers, smoke and fire; and at victory the city burns
   const top = ry(0), c = ctx, now = performance.now() / 1000
   const burn = G.burn != null ? Math.min(1, G.burn / 3) : 0   // at victory the city falls and burns, whatever the walls had left
@@ -1925,6 +1959,7 @@ function draw() {
     else if (s.dir > 0) { line(ctx, x, y - 12 * k, x, y + 4 * k, '#6b4a2b', 2); line(ctx, x, y + 2 * k, x, y + 9 * k, '#cfd4d8', 1.8) }   // a javelin thrown down the field
     else { line(ctx, x, y + 12 * k, x, y - 4 * k, '#6b4a2b', 2); line(ctx, x, y - 2 * k, x, y - 9 * k, '#cfd4d8', 1.8) }
   }
+  if (LEVEL.storms) drawStorm()
   // grain
   for (const d of G.drops) {
     if (!d.falling && d.life < 3 && Math.floor(d.life * 6) % 2) continue
