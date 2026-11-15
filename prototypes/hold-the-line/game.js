@@ -1123,14 +1123,17 @@ const WIDE = window.matchMedia('(min-aspect-ratio: 5/4) and (min-width: 600px)')
 function layout() {
   if (panActive) return   // Pantheon Siege lays out its own screen
   const wrap = $('wrap'), game = sroot.querySelector('.game'), top = Math.max(0, host.getBoundingClientRect().top)
+  const banner = $('banner'), side = sroot.querySelector('.side')   // on a phone the messages float over the top of the field; on a wide screen they sit in the side column
+  if (WIDE.matches && banner.parentElement !== side) side.insertBefore(banner, side.querySelector('.controls'))
+  if (!WIDE.matches && banner.parentElement !== wrap) wrap.appendChild(banner)
   let avail, maxH
   if (WIDE.matches) {
     const sides = $('tray').offsetWidth + sroot.querySelector('.side').offsetWidth + 2 * 14
     avail = Math.min(game.clientWidth - sides - 32, 1000)
     maxH = Math.max(300, window.innerHeight - top - 28)
   } else {
-    avail = Math.min(game.clientWidth - 32, 480)
-    const used = $('tray').offsetHeight + sroot.querySelector('.controls').offsetHeight + sroot.querySelector('.status').offsetHeight + $('banner').offsetHeight + 62 + top
+    avail = Math.min(game.clientWidth - 16, 480)   // a phone: the field nearly edge to edge
+    const used = $('tray').offsetHeight + sroot.querySelector('.controls').offsetHeight + sroot.querySelector('.status').offsetHeight + 42 + top
     maxH = Math.max(240, window.innerHeight - used)
   }
   const size = mh => {
@@ -1138,7 +1141,7 @@ function layout() {
     W = cell * COLS; H = Math.round(cell * (ROWS + APPROACH + CAMP)); k = cell / 72
     canvas.style.width = W + 'px'; canvas.style.height = H + 'px'
     wrap.style.width = (W + 6) + 'px'
-    for (const el of [sroot.querySelector('.status'), $('banner')]) el.style.width = WIDE.matches ? '' : (W + 6) + 'px'
+    sroot.querySelector('.status').style.width = WIDE.matches ? '' : (W + 6) + 'px'; $('banner').style.width = ''
   }
   size(maxH)
   // on a small phone the battle must fit the screen: the field and cards don't scroll the page (they're for dragging),
