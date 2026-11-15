@@ -23,7 +23,7 @@ async function run(level, strategy, score) {
       shield: LV.units.find(t => U[t].arrowMul),
       fighter: LV.units.find(t => t === 'legionary') ?? LV.units.find(t => t === 'princeps') ?? LV.units.find(t => t === 'rammer') ?? LV.units.find(t => t === 'maniple'),
       anticav: LV.units.find(t => U[t].antiCav), flank: LV.units.find(t => U[t].flank), aura: LV.units.find(t => U[t].aura),
-      group: LV.units.find(t => U[t].group),
+      group: LV.units.find(t => U[t].group), ram: LV.units.find(t => U[t].ram), lob: LV.units.find(t => U[t].lob),
       trap: LV.units.find(t => U[t].trap), pit: LV.units.find(t => U[t].pit), horn: LV.units.find(t => U[t].horn), torch: LV.units.find(t => t === 'torch'),
     }
     for (const [t, n] of Object.entries(G0.vets)) for (let k = 0; k < n; k++) {
@@ -44,6 +44,11 @@ async function run(level, strategy, score) {
       if (strategy !== 'casual') for (const l of L) if (G.equites[l]?.state === 'none' && G.foes.some(f => f.lane === l && f.hp > 0 && f.dir > 0 && f.y > R - 2.5)) {
         const quiet = L.filter(q => G.equites[q]?.state === 'ready' && !G.foes.some(f => f.lane === q && f.hp > 0 && f.dir > 0 && f.y > R - 4)).sort((a, b) => Math.abs(a - l) - Math.abs(b - l))[0]
         if (quiet != null && H.moveEques(quiet, l)) return
+      }
+      if (LV.cityWall) {   // a siege: a ram under the wall in the middle, stone-throwers in the lanes of the enemy catapults
+        const wr = LV.cityWall.row, mid = Math.floor(C / 2)
+        if (role.ram && !G.units.some(u => u.type === role.ram) && put(role.ram, mid, wr + 1)) return
+        if (role.lob) for (const [l] of LV.cityWall.engines ?? []) if (G.foes.some(f => f.lane === l && H.FOES[f.type].engine && f.hp > 0) && !G.units.some(u => u.lane === l && u.type === role.lob) && put(role.lob, l, back)) return
       }
       if (role.torch && G.t > 40 && G.rations >= 200) for (let r = R - 1; r >= 2; r--) for (const l of L) if (put(role.torch, l, r)) return
       for (const l of L) if (G.foes.some(f => f.lane === l && H.FOES[f.type].elephant && !f.fleeing && f.y < front - 0.5)) { if (role.horn && !G.units.some(u => Math.abs(u.lane - l) <= 1 && u.type === role.horn) && (put(role.horn, l, front) || put(role.horn, l, front + 1))) return; if (!at(l, front) && put(role.trap, l, front)) return }

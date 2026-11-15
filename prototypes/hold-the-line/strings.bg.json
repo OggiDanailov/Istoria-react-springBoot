@@ -694,9 +694,17 @@
 "A heavy ram under a roof of hides. Put it right under the city wall: it pounds the wall in its lane.": "Тежък таран под покрив от кожи. Поставете го точно под градската стена: той руши стената в своята линия.",
 "Pounds the city wall in its lane, but only from the square right under it. Arrows and stones barely hurt it.": "Руши градската стена в своята линия, но само от полето точно под нея. Стрелите и камъните почти не го нараняват.",
 "Tip: breach where your line is strongest; the defenders pour out there.": "Съвет: пробийте там, където линията ви е най-силна; защитниците ще излязат оттам.",
-"A real siege: Carthage’s wall runs across the field, one section per lane, with catapults and archers on it and the defenders gathering behind. Your missiles and soldiers wear the wall down; a battering ram right under it breaks it fast. Where a section falls, the defenders pour out, so choose where to breach. New: the battering ram.": "Истинска обсада: стената на Картаген пресича полето, по един участък на линия, с катапулти и стрелци по нея, а защитниците се събират зад нея. Вашите метателни оръжия и войници рушат стената; таран точно под нея я пробива бързо. Където падне участък, защитниците нахлуват навън – затова изберете къде да пробиете. Ново: таранът.",
 "149–146 BC: for three years Rome besieges Carthage behind its great walls. Now Scipio Aemilianus must break through them, and then fight street by street toward the citadel, the Byrsa.": "149–146 г. пр.н.е.: три години Рим обсажда Картаген зад неговите големи стени. Сега Сципион Емилиан трябва да ги пробие и после да се бие улица по улица към цитаделата Бирса.",
 "The wall is breached! The defenders pour out.": "Стената е пробита! Защитниците нахлуват навън.",
 "Another breach in the wall!": "Нов пробив в стената!",
-"The catapults on the walls open fire!": "Катапултите по стените откриват огън!"
+"The catapults on the walls open fire!": "Катапултите по стените откриват огън!",
+"Stone-thrower": "Каменохвъргачка",
+"Stones": "Камъни",
+"A Roman ballista hurling stones. They fly over walls, and also hurt enemies in the lanes beside the one they hit.": "Римска балиста, която мята камъни. Те прелитат над стените и нараняват и враговете в съседните линии.",
+"Lobs a heavy stone every 4½ seconds over the city wall, into the crowd and the catapults behind it; the lanes beside the hit take a share.": "Мята тежък камък на всеки 4½ секунди над градската стена – в тълпата и катапултите зад нея; съседните линии също получават дял.",
+"Tip: aim it at the lanes of the enemy catapults.": "Съвет: насочете я към линиите на вражеските катапулти.",
+"Carthaginian catapult": "Картагенски катапулт",
+"Catapults inside the city throw stones over the wall at your soldiers. Break in to reach them, or answer with your own stone-thrower.": "Катапулти в града мятат камъни над стената по войниците ви. Пробийте, за да стигнете до тях, или отговорете със своя каменохвъргачка.",
+"The gates open: the defenders sally out!": "Портите се отварят: защитниците излизат!",
+"A real siege on a wide field: Carthage’s wall runs across it, one section per lane, with the defenders gathering behind it and three catapults inside the city throwing stones over it. Your missiles and soldiers wear the wall down, and a battering ram right under it breaks it fast. Where a section falls, the defenders pour out; and every half minute the two gates open and they sally out. New: the stone-thrower, whose stones fly over the wall.": "Истинска обсада на широко поле: стената на Картаген го пресича, по един участък на линия, защитниците се събират зад нея, а три катапулта в града мятат камъни над нея. Вашите метателни оръжия и войници рушат стената, а таран точно под нея я пробива бързо. Където падне участък, защитниците нахлуват навън; а на всеки половин минута двете порти се отварят и те правят излаз. Ново: каменохвъргачката, чиито камъни прелитат над стената."
 }
