@@ -9,7 +9,6 @@
 "Siege shed": "Обсаден навес",
 "A wooden shed covered in hides, like the ones Livy says the Romans built at Veii. Arrows barely hurt it, so put it in front.": "Дървен навес, покрит с кожи, като онези, които според Ливий римляните построили при Вейи. Стрелите почти не му вредят, затова го сложете отпред.",
 "Light troops Livy names in the early legion. They throw javelins into three lanes at once.": "Леки войски, които Ливий споменава в ранния легион. Хвърлят копия в три линии наведнъж.",
-"A bolt-shooting machine, used in Roman sieges. Each bolt flies through everyone in its lane.": "Машина, която изстрелва стрели – използвана при римските обсади. Всяка стрела пронизва всички в линията си.",
 "Young light troops with javelins. When the enemy reaches them, they fall back one square, once.": "Млади леки войници с копия. Когато врагът ги достигне, отстъпват едно поле назад – веднъж.",
 "At Zama the Romans blared trumpets and panicked Hannibal’s elephants. He blares at any elephant coming at his lane or the lanes beside it.": "При Зама римляните надули тръбите и подплашили слоновете на Ханибал. Той тръби срещу всеки слон, който идва по неговата линия или по съседните.",
 "A small, flexible unit. It fights in its own lane and strikes enemies in the lanes beside it from the side, where shields don’t protect them.": "Малка, гъвкава част. Бие се в своята линия и удря враговете в съседните линии отстрани, където щитовете не ги пазят.",
@@ -206,7 +205,6 @@
 "Tip: put it in front, so archers shoot the shed instead of your slingers.": "Съвет: сложете го отпред, за да стрелят стрелците по навеса вместо по прашкарите ви.",
 "Throw javelins into their own lane and both lanes beside it.": "Хвърлят копия в своята линия и в двете съседни.",
 "Tip: in the middle lanes they cover three lanes at once.": "Съвет: в средните линии покриват три линии наведнъж.",
-"Shoots a heavy bolt every 3½ seconds that flies through every enemy in its lane, hitting each one.": "Изстрелва тежка стрела на всеки 3½ секунди, която пронизва всеки враг в линията му и удря всеки поотделно.",
 "Tip: great against crowded lanes and elephants.": "Съвет: чудесен срещу претъпкани линии и слонове.",
 "Cheap javelin throwers with a short range. When an enemy reaches them they fall back one square (once), so they keep throwing.": "Евтини копиехвъргачи с малък обсег. Когато врагът ги стигне, отстъпват едно поле назад (веднъж) и продължават да хвърлят.",
 "Tip: a cheap first line.": "Съвет: евтина първа линия.",
@@ -681,5 +679,7 @@
 "The walls of Akragas are breached! The city falls silent. +150 grain": "Стените на Акрагас са пробити! Градът замлъква. +150 жито",
 "That lane already has an eques. Move him to a lane marked in red.": "В тази линия вече има конник. Преместете го в линия, отбелязана в червено.",
 "That lane’s eques has charged; his place can’t be filled.": "Конникът на тази линия вече е атакувал; мястото му не може да бъде заето.",
-"Akragas falls! The city burns.": "Акрагас пада! Градът гори."
+"Akragas falls! The city burns.": "Акрагас пада! Градът гори.",
+"A bolt-shooting machine, used in Roman sieges. Each bolt flies through up to three enemies in its lane.": "Машина, която изстрелва стрели – използвана при римските обсади. Всяка стрела пронизва до трима врагове в линията си.",
+"Shoots a heavy bolt every 4 seconds that flies through up to three enemies in its lane, hitting each one.": "Изстрелва тежка стрела на всеки 4 секунди, която пронизва до трима врагове в линията си и удря всеки поотделно."
 }
