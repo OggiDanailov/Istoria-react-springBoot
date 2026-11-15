@@ -11,7 +11,6 @@
 "Light troops Livy names in the early legion. They throw javelins into three lanes at once.": "Леки войски, които Ливий споменава в ранния легион. Хвърлят копия в три линии наведнъж.",
 "Young light troops with javelins. When the enemy reaches them, they fall back one square, once.": "Млади леки войници с копия. Когато врагът ги достигне, отстъпват едно поле назад – веднъж.",
 "At Zama the Romans blared trumpets and panicked Hannibal’s elephants. He blares at any elephant coming at his lane or the lanes beside it.": "При Зама римляните надули тръбите и подплашили слоновете на Ханибал. Той тръби срещу всеки слон, който идва по неговата линия или по съседните.",
-"A small, flexible unit. It fights in its own lane and strikes enemies in the lanes beside it from the side, where shields don’t protect them.": "Малка, гъвкава част. Бие се в своята линия и удря враговете в съседните линии отстрани, където щитовете не ги пазят.",
 "Sets a house on fire. Place him on a house: no more defenders can burst out of it, and the square is free again.": "Подпалва къща. Поставете го върху къща: от нея вече не могат да изскачат защитници и полето отново е свободно.",
 "Marius’s legionary. His pilum bends when it strikes, so an enemy shield it hits is useless.": "Легионерът на Марий. Пилумът му се огъва при удар, така че вражеският щит, който улучи, става безполезен.",
 "Auxiliary archer": "Помощен стрелец",
@@ -210,7 +209,6 @@
 "Tip: a cheap first line.": "Съвет: евтина първа линия.",
 "Doesn’t fight. When an elephant comes within 2½ squares in his lane or the lanes beside it, he blares his horn and every such elephant panics and runs back. Then he needs 10 seconds to catch his breath.": "Не се бие. Когато слон приближи на 2½ полета в неговата линия или в съседните, той надува рога и всеки такъв слон изпада в паника и бяга назад. После му трябват 10 секунди, за да си поеме дъх.",
 "Tip: a little in front of your shooters.": "Съвет: малко пред стрелците ви.",
-"A tough unit that fights in its lane and also hits enemies in the two lanes beside it from the side. Shields don’t stop blows from the side.": "Издръжлива част, която се бие в своята линия и удря отстрани враговете в двете съседни. Щитовете не спират ударите отстрани.",
 "Tip: between two lanes the phalanx is coming down.": "Съвет: между две линии, по които идва фалангата.",
 "Can only be placed on a house. After 3 seconds the house burns down: no more ambushes from it, and you can build on the square.": "Може да се постави само върху къща. След 3 секунди къщата изгаря: от нея няма повече засади и можете да строите на полето.",
 "Tip: burn the houses near your lines first.": "Съвет: първо изгорете къщите близо до редиците ви.",
@@ -334,7 +332,6 @@
 "The second line!": "Втората линия!",
 "Hannibal’s veterans: the final wave!": "Ветераните на Ханибал: последната вълна!",
 "King Perseus of Macedon": "Цар Персей Македонски",
-"The phalanx comes in blocks, three lanes wide. Its long pikes strike a square ahead. On the rough ground (the stony squares) its shields break, as gaps opened in its ranks at Pydna.": "Фалангата идва на блокове, широки три линии. Дългите ѝ копия удрят едно поле напред. На неравния терен (каменистите полета) щитовете ѝ се трошат, както при Пидна се отворили пролуки в редиците ѝ.",
 "At Pydna, by the sea below Mount Olympus, King Perseus’s phalanx bristles with long pikes that pierce Roman shields.": "При Пидна, край морето под планината Олимп, фалангата на цар Персей е настръхнала с дълги копия, които пробиват римските щитове.",
 "Within about an hour the phalanx broke. Perseus was led in chains in Aemilius Paullus’s triumph, and the kingdom of Macedon was no more.": "За около час фалангата се разпаднала. Персей бил воден в окови в триумфа на Емилий Павел, а Македонското царство престанало да съществува.",
 "The Siege of Carthage": "Обсадата на Картаген",
@@ -683,5 +680,13 @@
 "Shoots a heavy bolt every 4 seconds that flies through up to three enemies in its lane, hitting each one.": "Изстрелва тежка стрела на всеки 4 секунди, която пронизва до трима врагове в линията си и удря всеки поотделно.",
 "Scipio’s lanes: an elephant that reaches the camp down a lane with no Roman soldiers in it runs out of the battle without harm. At the end, Masinissa’s cavalry comes back and your equites can charge again. Twice a sandstorm sweeps over the field and hides the enemy’s advance.": "Линиите на Сципион: слон, който стигне лагера по линия без римски войници, побягва от битката, без да навреди. Накрая конницата на Масиниса се връща и еквитите ви могат да атакуват отново. Два пъти пясъчна буря помита полето и скрива настъплението на врага.",
 "A sandstorm is approaching!": "Наближава пясъчна буря!",
-"The sandstorm is passing.": "Пясъчната буря отминава."
+"The sandstorm is passing.": "Пясъчната буря отминава.",
+"A small, flexible unit. It fights in its own lane and strikes enemies in the lanes beside it from the side, where shields don’t protect them. Drilled against the phalanx, a maniple takes only half damage from its pikes.": "Малка, гъвкава част. Бие се в своята линия и удря враговете в съседните линии отстрани, където щитовете не ги пазят. Обучен срещу фалангата, манипулът понася само половината от щетите от копията ѝ.",
+"Legion": "Легион",
+"A small legion: one card places three maniples side by side. Only maniples can stand up to the phalanx head-on.": "Малък легион: една карта поставя три манипула един до друг. Само манипулите могат да удържат фалангата челно.",
+"One card, three maniples side by side in the row you choose. Each takes only half damage from the phalanx’s pikes and strikes the lanes beside it from the side.": "Една карта, три манипула един до друг в реда, който изберете. Всеки понася само половин щета от копията на фалангата и удря отстрани съседните линии.",
+"Tip: just beyond the rough ground, where the phalanx breaks ranks.": "Съвет: точно след неравния терен, където фалангата разкъсва строя си.",
+"The phalanx comes in blocks that move as one: three lanes wide, or five if your test score was below 80%. When one of its men meets a soldier, the whole block halts, and its long pikes strike a square ahead for double damage; maniples take only half. On the rough ground (the stony squares) its men break ranks and lose their shields, as gaps opened at Pydna. New: the Legion, three maniples on one card.": "Фалангата идва на блокове, които се движат като едно: широки три линии или пет, ако резултатът от теста ви е под 80%. Щом някой от войниците ѝ срещне ваш войник, целият блок спира, а дългите ѝ копия удрят едно поле напред с двойна щета; манипулите понасят само половината. На неравния терен (каменистите полета) войниците ѝ разкъсват строя и губят щитовете си – както се отворили пролуки при Пидна. Ново: Легионът, три манипула с една карта.",
+"The phalanx halts as one and levels its pikes!": "Фалангата спира като едно цяло и насочва копията си!",
+"A tough unit that fights in its lane and also hits enemies in the two lanes beside it from the side. Shields don’t stop blows from the side. Phalanx pikes do it only half damage.": "Издръжлива част, която се бие в своята линия и удря отстрани враговете в двете съседни. Щитовете не спират ударите отстрани. Копията на фалангата му нанасят само половин щета."
 }
