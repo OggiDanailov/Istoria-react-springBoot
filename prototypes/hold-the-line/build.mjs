@@ -7,8 +7,9 @@ import { fileURLToPath } from 'node:url'
 
 const HERE = path.dirname(fileURLToPath(import.meta.url))
 const read = f => fs.readFileSync(path.join(HERE, f), 'utf8')
+const BUILD = new Date().toLocaleString('en-GB', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' })   // shown in the corner of the battle screen, so a tester can tell which version is running
 const css = JSON.stringify(read('game.css')).replace(/</g, '\\u003c')
 const bg = JSON.stringify(JSON.parse(read('strings.bg.json'))).replace(/</g, '\\u003c')   // the Bulgarian strings
-const html = read('shell.html').replace('__HTL_CSS__', () => css).replace('__HTL_JS__', () => `window.HTL_BG = ${bg};\n` + read('game.js'))
+const html = read('shell.html').replace('__HTL_CSS__', () => css).replace('__HTL_JS__', () => `window.HTL_BG = ${bg};\n` + read('game.js').replace('__HTL_BUILD__', BUILD))
 fs.writeFileSync(path.join(HERE, 'index.html'), html)
 console.log(`index.html: ${Math.round(html.length / 1024)} KB`)

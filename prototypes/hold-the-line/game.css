@@ -197,3 +197,5 @@
 /* the gods' games stay one narrow column, also on wide screens */
 .game.pan { max-width: 440px; margin-inline: auto; align-items: stretch; }
 .pan .msg { justify-content: center; text-align: center; min-height: 2.6em; align-items: center; width: auto; }
+
+.progress .build { display: block; margin-top: 3px; font: 700 9px/1 var(--body); letter-spacing: .04em; color: var(--muted); opacity: .75; }
