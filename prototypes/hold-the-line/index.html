@@ -1428,9 +1428,9 @@ function placeCohort(type, lane, row) {
   if (!LEVEL.units.includes(type) || lanes.length < 2) { sfx.deny(); return false }
   if (G.phase === 'deploy') { if (!(G.vets[type] > 0)) { sfx.deny(); return false } G.vets[type]-- }
   else { if (G.rations < U.cost || G.cool[type] > 0) { sfx.deny(); return false } G.rations -= U.cost; G.cool[type] = U.recharge }
-  const G2 = UNITS[U.group]
+  const G2 = UNITS[U.group], band = ++G.ids   // the three move together from now on
   for (const l of lanes) {
-    G.units.push({ type: U.group, lane: l, row, hp: U.hp, max: U.hp, cd: 0.4, anim: 0, hurt: 0, armed: false, arm: 0, aiming: false, fighting: false, cohort: l === c ? 'standard' : true })
+    G.units.push({ band, type: U.group, lane: l, row, hp: U.hp, max: U.hp, cd: 0.4, anim: 0, hurt: 0, armed: false, arm: 0, aiming: false, fighting: false, cohort: l === c ? 'standard' : true })
     for (let i = 0; i < 4; i++) G.fx.push({ kind: 'dust', x: lx(l) + (Math.random() - 0.5) * cell * 0.6, y: ry(row + 0.82), vx: (Math.random() - 0.5) * 30, vy: -Math.random() * 20, t: 0.5 })
   }
   sfx.place(); updateCount(); if (G.phase !== 'deploy') tutorial('placed', type); else syncDeploy()
@@ -1470,6 +1470,26 @@ function moveUnit(u, lane, row) {
   u.fromLane = u.lane; u.fromRow = u.row; u.lane = lane; u.row = row
   u.travel = G.phase === 'deploy' ? 0 : Math.max(0.25, Math.hypot(u.lane - u.fromLane, u.row - u.fromRow) / 4); u.travelT = 0   // about four squares a second
   for (const f of G.foes) if (f.eating === u) f.eating = null
+  sfx.place(); return true
+}
+// a band (a Legion's maniples, a cohort's legionaries) moves as one line: every man shifts by the same squares
+const bandOf = u => u.band ? G.units.filter(x => x.band === u.band) : [u]
+function bandTargets(u, lane, row) {
+  const men = bandOf(u), dl = lane - u.lane, dr = row - u.row
+  const to = men.map(m => [m, m.lane + dl, m.row + dr])
+  const free = (l, r) => { const there = unitAt(l, r); return (!there || men.includes(there)) && l >= 0 && l < COLS && r >= 0 && r < ROWS && r !== LEVEL.ditch && !LEVEL.closed?.includes(l) && !houseAt(l, r) }   // its own men's squares count as free
+  const ok = (dl || dr) && men.every(m => !m.travel) && to.every(([, l, r]) => free(l, r))
+  return ok ? to : null
+}
+function moveBand(u, lane, row) {
+  if (!u.band) return moveUnit(u, lane, row)
+  const to = bandTargets(u, lane, row)
+  if (!to) { sfx.deny(); return false }
+  for (const [m, l, r] of to) {
+    m.fromLane = m.lane; m.fromRow = m.row; m.lane = l; m.row = r
+    m.travel = G.phase === 'deploy' ? 0 : Math.max(0.25, Math.hypot(m.lane - m.fromLane, m.row - m.fromRow) / 4); m.travelT = 0
+    for (const f of G.foes) if (f.eating === m) f.eating = null
+  }
   sfx.place(); return true
 }
 function removeUnit(u, lost = true) { G.units = G.units.filter(x => x !== u); if (lost) G.lost++; for (const f of G.foes) if (f.eating === u) f.eating = null }
@@ -1908,10 +1928,15 @@ function draw() {
       if (ok) { ctx.fillStyle = 'rgba(251, 243, 228, .10)'; ctx.fillRect(c * cell + 2, ry(r) + 2, cell - 4, cell - 4) }
     }
     if (G.hover) {
-      const { lane, row } = G.hover, ok = G.dismiss ? !!unitAt(lane, row) : canPlace(G.selected ?? moving?.type ?? 'slinger', lane, row)
+      const { lane, row } = G.hover, band = moving?.band ? bandTargets(moving, lane, row) : null
+      const ok = G.dismiss ? !!unitAt(lane, row) : moving?.band ? !!band : canPlace(G.selected ?? moving?.type ?? 'slinger', lane, row)
       ctx.strokeStyle = ok ? '#fbf3e4' : 'rgba(212, 57, 45, .9)'; ctx.lineWidth = 3; ctx.strokeRect(lane * cell + 3, ry(row) + 3, cell - 6, cell - 6)
       if (ok && G.selected) { ctx.save(); ctx.globalAlpha = 0.55; ctx.translate(lx(lane), ry(row + 0.82)); ctx.scale(k, k); DRAW_UNIT[G.selected](ctx, ghostUnit(G.selected), T); ctx.restore() }
-      if (ok && moving) {
+      if (ok && band) for (const [m, l, r] of band) {   // the whole line, where it would go
+        ctx.strokeStyle = '#fbf3e4'; ctx.lineWidth = 3; ctx.strokeRect(l * cell + 3, ry(r) + 3, cell - 6, cell - 6)
+        ctx.save(); ctx.globalAlpha = 0.7; ctx.translate(lx(l), ry(r + 0.82)); ctx.scale(k, k); DRAW_UNIT[m.type](ctx, m, T); ctx.restore()
+      }
+      else if (ok && moving) {
         ctx.strokeStyle = 'rgba(251, 243, 228, .8)'; ctx.lineWidth = 2; ctx.setLineDash([6, 5]); ctx.beginPath(); ctx.moveTo(lx(moving.lane), ry(moving.row + 0.6)); ctx.lineTo(lx(lane), ry(row + 0.6)); ctx.stroke(); ctx.setLineDash([])
         ctx.save(); ctx.globalAlpha = 0.7; ctx.translate(lx(lane), ry(row + 0.82)); ctx.scale(k, k); DRAW_UNIT[moving.type](ctx, moving, T); ctx.restore()
       }
@@ -2200,7 +2225,7 @@ document.addEventListener('pointerup', e => {
   if (moveDrag) {
     const c = cellAt(e.clientX, e.clientY), m = moveDrag
     moveDrag = null; G.hover = null
-    if (m.moved && c?.inGrid && G.units.includes(m.u) && (G.phase === 'play' || G.phase === 'deploy')) moveUnit(m.u, c.lane, c.row)
+    if (m.moved && c?.inGrid && G.units.includes(m.u) && (G.phase === 'play' || G.phase === 'deploy')) moveBand(m.u, c.lane, c.row)
     return
   }
   if (!drag) return
