@@ -204,3 +204,6 @@
 .field-wrap > .msg { position: absolute; left: 8px; right: 8px; top: 6px; z-index: 2; min-height: 0; padding: 6px 10px; border-radius: 10px;
   background: rgba(27, 23, 21, .8); line-height: 1.3; pointer-events: none; box-shadow: 0 2px 8px rgba(0, 0, 0, .25); }
 .field-wrap > .msg:empty { display: none; }
+.status:has(.goal:not([hidden])) { flex-wrap: wrap; }
+.goal { order: 3; flex-basis: 100%; text-align: center; font: 800 12.5px/1.2 var(--body); color: #f0c24a; background: var(--ink); border-radius: 999px; padding: 5px 10px; white-space: nowrap; }   /* the siege's goal, on its own line under the grain and tools */
+.rations { order: 0; } .hud-right { order: 1; }
