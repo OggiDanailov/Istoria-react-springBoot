@@ -239,7 +239,8 @@
 .land #land-field { display: block; touch-action: none; }
 
 .land .field-wrap { align-self: center; width: auto; }
-.land-act { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; min-height: 34px; font: 700 13px/1.3 var(--body); color: var(--parch); }
+.land-act { display: block; min-height: 20px; padding: 7px 10px; border-radius: 10px; background: var(--gold); color: var(--ink); font: 700 13.5px/1.3 var(--body); box-shadow: 0 2px 0 var(--ink); }
+.land-act:empty { display: none; }
 .land-act .tool { margin-left: auto; }
 .land-hint { font: 700 12px/1.3 var(--body); color: var(--muted); }
 .land-fam { display: flex; flex-wrap: wrap; gap: 5px; align-items: center; }

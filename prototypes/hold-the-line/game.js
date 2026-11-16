@@ -2801,6 +2801,8 @@ function openLand() {
     announce(pt('The assembly removes Octavius from office; no tribune had ever been deposed before. The veto is gone, and the Senate is furious.', 'Събранието отстранява Октавий от длъжност; никога досега трибун не е бил свалян. Ветото пада, а Сенатът е разгневен.'), true, 4200); landRender() })
   window.addEventListener('resize', landLayout)
   landLayout(); landBriefing()
+  const tick = () => { if (!mounted || !landActive) return; if (LD?.pulse && LD.phase === 'play') landRender(); setTimeout(tick, 80) }   // keep the hinted squares pulsing
+  tick()
 }
 function landNew() {
   const score = quizScore
@@ -2846,7 +2848,33 @@ function landTap(e) {
   const r = lcv.getBoundingClientRect(), s = lcv.clientWidth / LAND.cols, c = Math.floor((e.clientX - r.left) / s), row = Math.floor((e.clientY - r.top) / s)
   const p = LD.plots.find(p => p.c === c && p.r === row); if (!p) return
   if (p.state === 'ready' && LD.selFam != null) return landSettle(p)
-  LD.selPlot = p; sfx.place?.(); landRender()
+  LD.selPlot = p; landRender(); landCard(p)
+}
+function landCard(p) {   // what this square is, what you can do with it, and what it costs
+  const type = { valley: pt('fertile valley', 'плодородна долина'), hills: pt('hills', 'хълмове'), marsh: pt('marsh', 'блато') }[p.type] + (isRoad(p) ? pt(', by the road', ', край пътя') : '')
+  const close = () => { overlay.hidden = true; LD.selPlot = null; landRender() }
+  if (p.state === 'estate') {
+    const n = LD.plots.filter(q => q.owner === p.owner && q.state === 'estate').length, a = LAND.estates[p.owner]
+    return showPanel(`<span class="eyebrow">${type}</span><h2>${pt(`Land of the ${p.owner}`, `Земята на рода ${p.owner}`)}</h2>
+      <p>${pt(`A rich family, the ${p.owner}, holds ${n} square${n > 1 ? 's' : ''} of public land, more than the law allows. <b>Reclaim it</b> for the commission: it costs no money, but the Senate’s anger rises by <b>${a}</b>. Their squares become free land, ready to be equipped.`, `Богатият род ${p.owner} държи ${n} парцел${n > 1 ? 'а' : ''} обществена земя – повече, отколкото законът позволява. <b>Отнемете я</b> за комисията: не струва пари, но гневът на Сената расте с <b>${a}</b>. Парцелите им стават свободна земя, готова за снабдяване.`)}</p>
+      ${LD.event === 'veto' ? `<p class="twist">${pt('Octavius has vetoed the law this season: you cannot reclaim until next season, unless you depose him (the button at the bottom).', 'Октавий е наложил вето на закона този сезон: не можете да отнемате до следващия сезон, освен ако не го отстраните (бутона отдолу).')}</p>` : ''}
+      <div class="row">${LD.event === 'veto' ? '' : `<button class="primary" id="card-go">${pt(`Reclaim · anger +${a}`, `Отнеми · гняв +${a}`)}</button>`}<button class="tool" id="card-no">${pt('Not now', 'Не сега')}</button></div>`,
+      { 'card-go': () => { overlay.hidden = true; landReclaim(p.owner) }, 'card-no': close })
+  }
+  if (p.state === 'open') {
+    const cost = plotCost(p), poor = LD.money < cost
+    return showPanel(`<span class="eyebrow">${type}</span><h2>${pt('Free public land', 'Свободна обществена земя')}</h2>
+      <p>${p.type === 'marsh' ? pt(`Before a family can farm it, the marsh must be <b>drained and equipped</b>: <b>${cost} denarii</b>, and it is ready next season.`, `Преди семейство да го обработва, блатото трябва да се <b>пресуши и снабди</b>: <b>${cost} денария</b>, готово следващия сезон.`)
+        : pt(`Before a family can farm it, it needs <b>tools, seed and oxen</b>: <b>${cost} denarii</b>${isRoad(p) ? ' (land by the road costs 100 more)' : ''}. Then it is ready at once.`, `Преди семейство да я обработва, тя има нужда от <b>инструменти, семе и волове</b>: <b>${cost} денария</b>${isRoad(p) ? ' (земята край пътя струва 100 повече)' : ''}. После е готова веднага.`)}
+      ${pt(` Worth ${LAND.types[p.type].value} support once a family farms it.`, ` Носи ${LAND.types[p.type].value} подкрепа, щом семейство я обработва.`)}</p>
+      ${poor ? `<p class="twist">${pt(`The treasury holds only ${LD.money} denarii.`, `В хазната има само ${LD.money} денария.`)}</p>` : ''}
+      <div class="row">${poor ? '' : `<button class="primary" id="card-go">${pt(`Equip · ${cost} denarii`, `Снабди · ${cost} денария`)}</button>`}<button class="tool" id="card-no">${pt('Not now', 'Не сега')}</button></div>`,
+      { 'card-go': () => { overlay.hidden = true; landEquip(p) }, 'card-no': close })
+  }
+  const say = (h, t) => showPanel(`<span class="eyebrow">${type}</span><h2>${h}</h2><p>${t}</p><div class="row"><button class="primary" id="card-no">OK</button></div>`, { 'card-no': close })
+  if (p.state === 'draining') return say(pt('Being drained', 'Пресушава се'), pt('Workers are draining this marsh. It will be ready for a family next season.', 'Работници пресушават това блато. Ще е готово за семейство следващия сезон.'))
+  if (p.state === 'ready') return say(pt('Ready for a family', 'Готов за семейство'), pt(`This square is equipped. <b>Tap a waiting family</b> at the bottom of the screen, then tap this square to settle them here. Worth ${LAND.types[p.type].value} support, +2 if it is the land the family likes.`, `Този парцел е снабден. <b>Докоснете чакащо семейство</b> в долната част на екрана, после докоснете парцела, за да го заселите тук. Носи ${LAND.types[p.type].value} подкрепа, +2 ако е земята, която семейството харесва.`))
+  if (p.state === 'farm') return say(pt('A family’s farm', 'Ферма на семейство'), pt(`${whoOf(p.family)[0].toUpperCase() + whoOf(p.family).slice(1)} farms here now.`, `Тук вече живее ${whoOf(p.family)}.`))
 }
 function landReclaim(owner) {
   if (LD.event === 'veto') { sfx.deny(); return announce(pt('Octavius vetoes every reclaim this season. Wait for the next season, or depose him.', 'Октавий налага вето на всяко отнемане този сезон. Изчакайте следващия сезон или го отстранете.')) }
@@ -2940,6 +2968,7 @@ function landRender() {
     if (p.state === 'farm') { c.fillStyle = '#efe4cc'; c.fillRect(x + s * 0.3, y + s * 0.45, s * 0.4, s * 0.3); c.fillStyle = '#9a5a32'; c.beginPath(); c.moveTo(x + s * 0.24, y + s * 0.47); c.lineTo(x + s * 0.5, y + s * 0.24); c.lineTo(x + s * 0.76, y + s * 0.47); c.fill(); c.font = `${Math.round(s * 0.22)}px system-ui`; c.fillText(LAND.families[p.family].icon, x + s * 0.78, y + s * 0.3) }
     c.strokeStyle = 'rgba(27, 23, 21, .35)'; c.lineWidth = 1; c.strokeRect(x + 0.5, y + 0.5, s - 1, s - 1)
     if (LD.selPlot === p) { c.strokeStyle = '#e0a63a'; c.lineWidth = 4; c.strokeRect(x + 2, y + 2, s - 4, s - 4) }
+    if (LD.pulse === p.state && (p.state !== 'open' || LD.money >= plotCost(p))) { c.strokeStyle = `rgba(240, 194, 74, ${0.5 + 0.45 * Math.sin(performance.now() / 160)})`; c.lineWidth = 4; c.strokeRect(x + 3, y + 3, s - 6, s - 6) }   // the squares the next step means
     if (p.state === 'ready' && LD.selFam != null) { const f = LD.families.find(f => f.id === LD.selFam), m = f ? matchOf(f, p) : 0; c.strokeStyle = m > 0 ? '#7fb069' : m < 0 ? '#d4392d' : '#fbf3e4'; c.lineWidth = 3; c.strokeRect(x + 5, y + 5, s - 10, s - 10) }
   }
   // the HUD
@@ -2949,20 +2978,17 @@ function landRender() {
   const bar = $('land-anger'); bar.style.width = Math.min(100, LD.anger) + '%'; bar.style.background = LD.anger > 75 ? '#d4392d' : LD.anger > 50 ? '#e0a63a' : '#7fb069'
   $('land-pergamum').disabled = LD.pergamum; $('land-pergamum').textContent = LD.pergamum ? pt('Pergamum’s treasure: spent', 'Съкровището на Пергам: похарчено') : pt('Pergamum’s treasure', 'Съкровището на Пергам')
   $('land-depose').hidden = !(LD.event === 'veto' && !LD.deposed && LD.phase === 'play')
-  // what you can do with the chosen plot
-  const p = LD.selPlot, act = $('land-act'), typeName = t => ({ valley: pt('Valley', 'Долина'), hills: pt('Hills', 'Хълмове'), marsh: pt('Marsh', 'Блато') })[t]
-  let html = `<span class="land-hint">${pt('Tap a square of land.', 'Докоснете парцел земя.')}</span>`
-  if (p) {
-    const where = `<b>${typeName(p.type)}${isRoad(p) ? pt(', by the road', ', край пътя') : ''}</b>`
-    if (p.state === 'estate') { const n = LD.plots.filter(q => q.owner === p.owner && q.state === 'estate').length
-      html = `${where} · ${pt(`held by the ${p.owner} (${n} square${n > 1 ? 's' : ''})`, `в ръцете на рода ${p.owner} (${n} парцел${n > 1 ? 'а' : ''})`)}<button class="tool" id="act-go">${pt(`Reclaim · anger +${LAND.estates[p.owner]}`, `Отнеми · гняв +${LAND.estates[p.owner]}`)}</button>` }
-    if (p.state === 'open') html = `${where} · ${pt('free public land', 'свободна обществена земя')}<button class="tool" id="act-go">${p.type === 'marsh' ? pt(`Drain and equip · ${plotCost(p)} d`, `Пресуши и снабди · ${plotCost(p)} д`) : pt(`Equip · ${plotCost(p)} d`, `Снабди · ${plotCost(p)} д`)}</button>`
-    if (p.state === 'draining') html = `${where} · ${pt('being drained: ready next season', 'пресушава се: готов следващия сезон')}`
-    if (p.state === 'ready') html = `${where} · ${pt(`equipped: choose a waiting family below, then tap this square (value ${LAND.types[p.type].value})`, `снабден: изберете чакащо семейство отдолу, после докоснете парцела (стойност ${LAND.types[p.type].value})`)}`
-    if (p.state === 'farm') html = `${where} · ${pt(`${whoOf(p.family)} farms here`, `тук живее ${whoOf(p.family)}`)}`
-  }
-  act.innerHTML = html
-  act.querySelector('#act-go')?.addEventListener('click', () => p.state === 'estate' ? landReclaim(p.owner) : landEquip(p))
+  // the next step, always in view; the squares it means pulse
+  const has = st => LD.plots.some(q => q.state === st), step = LD.phase !== 'play' ? null
+    : LD.selFam != null ? (has('ready') ? 3.5 : 2)
+    : has('ready') && LD.families.length ? 3 : has('open') && LD.money >= 100 ? 2 : has('estate') && LD.event !== 'veto' ? 1 : 4
+  LD.pulse = step === 1 ? 'estate' : step === 2 ? 'open' : step === 3.5 ? 'ready' : null
+  $('land-act').innerHTML = step == null ? '' : `<b>${{ 1: pt('Step 1', 'Стъпка 1'), 2: pt('Step 2', 'Стъпка 2'), 3: pt('Step 3', 'Стъпка 3'), 3.5: pt('Step 3', 'Стъпка 3'), 4: '✓' }[step]}</b> ${{
+    1: pt('Tap a rich family’s coloured land and reclaim it for the commission.', 'Докоснете цветната земя на богат род и я отнемете за комисията.'),
+    2: pt('Tap a free square (dashed outline) and equip it with tools, seed and oxen.', 'Докоснете свободен парцел (с пунктир) и го снабдете с инструменти, семе и волове.'),
+    3: pt('Tap a waiting family below, then a ⚒ square to settle them there.', 'Докоснете чакащо семейство отдолу, после парцел с ⚒, за да го заселите там.'),
+    3.5: pt('Now tap a ⚒ square: green outline = land this family likes.', 'Сега докоснете парцел с ⚒: зелена рамка = земя, която семейството харесва.'),
+    4: pt('Nothing more you can do now: end the season.', 'Засега нямате друг ход: завършете сезона.') }[step]}`
   // the families waiting for land
   const fam = $('land-fam')
   fam.innerHTML = `<span class="land-hint">${LD.families.length ? pt('Waiting for land:', 'Чакат земя:') : pt('No family is waiting.', 'Никое семейство не чака.')}</span>` + LD.families.map(f => { const F = LAND.families[f.type], likes = F.likes ? pt(` · likes ${{ road: 'the road', hills: 'hills', valley: 'valley' }[F.likes]}`, ` · иска ${{ road: 'път', hills: 'хълмове', valley: 'долина' }[F.likes]}`) : ''
