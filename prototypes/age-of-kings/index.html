@@ -660,7 +660,7 @@ const LEVELS = [
   { id: 'carthage', name: 'The Siege of Carthage', year: '146 BC', enemy: 'the Carthaginians', theme: 'carthage', start: 500, cols: 9, rows: 11, more: 1.15, lengthen: 0.6,
     cityWall: { row: 5, gates: [1, 3, 5, 7], storm: 3, refill: 22, pool: ['militia', 'militia', 'volunteer', 'volunteer', 'shield', 'bowman'],
       statues: [[1, 'Baal Hammon'], [4, 'Tanit'], [7, 'Eshmun']],
-      garrison: [['shield', 1, 4.1], ['shield', 3, 4.1], ['shield', 5, 4.1], ['shield', 7, 4.1], ['militia', 2, 3.2], ['militia', 6, 3.2], ['militia', 8, 2.8], ['militia', 0, 2.8], ['shield', 1, 1.5], ['shield', 4, 1.5], ['shield', 7, 1.5], ['militia', 3, 0.6], ['militia', 5, 0.6]],
+      garrison: [['shield', 1, 4.1], ['shield', 3, 4.1], ['shield', 5, 4.1], ['shield', 7, 4.1], ['militia', 2, 3.2], ['militia', 6, 3.2], ['militia', 8, 2.8], ['militia', 0, 2.8], ['shield', 1, 2.0], ['shield', 4, 2.0], ['shield', 7, 2.0], ['militia', 3, 0.6], ['militia', 5, 0.6]],
       engines: [[0, 1.9], [4, 2.0], [8, 1.9]] },
     twist: 'Take the city! Carthage’s wall splits the field in two. Its four gates are open both ways: the defenders come out through them and fan out toward your lines, and your vanguard goes in. Catapults inside the city lob stones at your soldiers on both sides of the wall; your stone-thrower lobs back over it. On the Byrsa, at the top, stand the statues of three gods of Carthage: Baal Hammon, Tanit and Eshmun. Each vanguard who reaches one sets it on fire; when all three burn, Carthage falls.',
     units: ['cart', 'slinger', 'hastatus', 'triarius', 'princeps', 'scorpio', 'maniple', 'petrobolos', 'vanguard'], newUnit: 'vanguard',
@@ -2463,12 +2463,32 @@ function drawCityWall() {   // a section of stone per lane: cracks as it weakens
     for (const [l, name] of C.statues ?? []) {   // a god of Carthage on a plinth; once a vanguard reaches it, a blackened statue in flames
       const x = lx(l), yb = ry(0.95), gone = burned.has(l), s2 = cell / 72
       c.fillStyle = '#8a7a5a'; c.fillRect(x - cell * 0.38, yb - cell * 0.2, cell * 0.76, cell * 0.2); c.fillStyle = '#a8977a'; c.fillRect(x - cell * 0.32, yb - cell * 0.26, cell * 0.64, cell * 0.08)   // the plinth
-      const body = gone ? '#2e2620' : '#c8302a', trim = gone ? '#1b1715' : '#f0c24a'
-      c.fillStyle = body; c.strokeStyle = trim; c.lineWidth = 2
-      c.beginPath(); c.moveTo(x - 15 * s2, yb - cell * 0.26); c.lineTo(x - 9 * s2, yb - cell * 0.95); c.lineTo(x + 9 * s2, yb - cell * 0.95); c.lineTo(x + 15 * s2, yb - cell * 0.26); c.closePath(); c.fill(); c.stroke()   // the robed god, in red
-      c.beginPath(); c.arc(x, yb - cell * 1.06, 10 * s2, 0, TAU); c.fill(); c.stroke()   // the head
-      if (!gone) { c.fillStyle = '#f0c24a'; c.beginPath(); c.moveTo(x - 9 * s2, yb - cell * 1.14); c.lineTo(x - 5 * s2, yb - cell * 1.3); c.lineTo(x, yb - cell * 1.16); c.lineTo(x + 5 * s2, yb - cell * 1.3); c.lineTo(x + 9 * s2, yb - cell * 1.14); c.fill()   // a gold crown
-        c.strokeStyle = '#f0c24a'; c.lineWidth = 3; c.beginPath(); c.moveTo(x + 9 * s2, yb - cell * 0.75); c.lineTo(x + 22 * s2, yb - cell * 1.2); c.stroke() }   // a raised arm
+      const trim = gone ? '#1b1715' : '#f0c24a', top = yb - cell * 0.26, Y = h => yb - cell * h
+      c.lineWidth = 2; c.strokeStyle = trim
+      if (name === 'Tanit') {   // the sign of Tanit: a triangle robe, arms held out, a round head, a crescent moon above
+        c.fillStyle = gone ? '#2e2620' : '#e0582a'
+        c.beginPath(); c.moveTo(x - 16 * s2, top); c.lineTo(x, Y(0.9)); c.lineTo(x + 16 * s2, top); c.closePath(); c.fill(); c.stroke()
+        c.fillRect(x - 17 * s2, Y(0.86), 34 * s2, 5 * s2); c.strokeRect(x - 17 * s2, Y(0.86), 34 * s2, 5 * s2)   // her arms
+        c.beginPath(); c.arc(x, Y(1.02), 9 * s2, 0, TAU); c.fill(); c.stroke()
+        if (!gone) { c.fillStyle = '#f0c24a'; c.beginPath(); c.arc(x, Y(1.28), 8 * s2, 0.15 * Math.PI, 0.85 * Math.PI); c.arc(x, Y(1.22), 7 * s2, 0.8 * Math.PI, 0.2 * Math.PI, true); c.fill() }   // the crescent
+      } else {
+        const crown = name === 'Baal Hammon'
+        c.fillStyle = gone ? '#2e2620' : crown ? '#9e1f1a' : '#c8302a'
+        c.beginPath(); c.moveTo(x - 15 * s2, top); c.lineTo(x - 9 * s2, Y(0.95)); c.lineTo(x + 9 * s2, Y(0.95)); c.lineTo(x + 15 * s2, top); c.closePath(); c.fill(); c.stroke()   // the robe
+        c.beginPath(); c.arc(x, Y(1.06), 10 * s2, 0, TAU); c.fill(); c.stroke()   // the head
+        if (crown) {   // Baal Hammon: a beard, a tall crown, a ram's horn and a sceptre
+          c.fillStyle = gone ? '#1b1715' : '#5a2a1a'; c.beginPath(); c.moveTo(x - 7 * s2, Y(1.02)); c.lineTo(x, Y(0.86)); c.lineTo(x + 7 * s2, Y(1.02)); c.fill()
+          if (!gone) {
+            c.fillStyle = '#f0c24a'; c.beginPath(); c.moveTo(x - 8 * s2, Y(1.15)); c.lineTo(x - 5 * s2, Y(1.42)); c.lineTo(x + 5 * s2, Y(1.42)); c.lineTo(x + 8 * s2, Y(1.15)); c.fill()   // the tall crown
+            c.strokeStyle = '#e8dcc0'; c.lineWidth = 2.5; c.beginPath(); c.arc(x - 11 * s2, Y(1.1), 5 * s2, -0.5 * Math.PI, 0.8 * Math.PI); c.stroke()   // the ram's horn
+            c.strokeStyle = '#f0c24a'; c.lineWidth = 2.5; c.beginPath(); c.moveTo(x + 13 * s2, top); c.lineTo(x + 16 * s2, Y(1.3)); c.stroke(); c.fillStyle = '#f0c24a'; c.beginPath(); c.arc(x + 16 * s2, Y(1.33), 3.5 * s2, 0, TAU); c.fill()   // the sceptre
+          }
+        } else if (!gone) {   // Eshmun, the healer: a laurel wreath and a staff with a snake wound round it
+          c.strokeStyle = '#5fae4f'; c.lineWidth = 3; c.beginPath(); c.arc(x, Y(1.1), 9 * s2, Math.PI * 0.9, Math.PI * 2.1); c.stroke()
+          c.strokeStyle = '#6b4a2b'; c.lineWidth = 2.5; c.beginPath(); c.moveTo(x + 15 * s2, top); c.lineTo(x + 15 * s2, Y(1.35)); c.stroke()
+          c.strokeStyle = '#3f8a3a'; c.lineWidth = 2; c.beginPath(); for (let t = 0; t <= 1; t += 0.05) { const yy = top - (top - Y(1.3)) * t, xx = x + 15 * s2 + Math.sin(t * 14) * 4 * s2; t ? c.lineTo(xx, yy) : c.moveTo(xx, yy) } c.stroke()
+        }
+      }
       if (gone) for (let f = 0; f < 3; f++) {   // flames and smoke
         const fx = x + (f - 1) * 11 * s2, fh = cell * (0.75 + 0.2 * Math.sin(now * 9 + f * 2 + l))
         c.fillStyle = 'rgba(214, 72, 22, .9)'; c.beginPath(); c.moveTo(fx - 6 * s2, yb - cell * 0.2); c.quadraticCurveTo(fx, yb - cell * 0.2 - fh * 1.3, fx + 6 * s2, yb - cell * 0.2); c.fill()
@@ -3806,7 +3826,7 @@ const MARKUP = `<main class="game">
   </div>
   <div class="msg" id="banner" aria-live="polite"></div>
   <div class="controls">
-    <div class="progress"><span class="label" id="level">Lake Regillus</span><div class="bar" id="bar"><div class="fill" id="fill"></div></div><span class="build" translate="no">build 16 Nov, 13:15</span></div>
+    <div class="progress"><span class="label" id="level">Lake Regillus</span><div class="bar" id="bar"><div class="fill" id="fill"></div></div><span class="build" translate="no">build 16 Nov, 13:27</span></div>
     <button class="tool" id="pause">Pause</button>
     <button class="tool" id="speed">1×</button>
     <button class="tool" id="guide">Guide</button>
