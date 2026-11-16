@@ -26,7 +26,7 @@ const UNITS = {
   triarius: { name: 'Triarius', short: 'Triarius', cost: 50, recharge: 25, hp: 1500, about: 'A veteran who kneels behind his shield and holds the lane.' },
   caltrops: { name: 'Caltrops', short: 'Caltrops', cost: 25, recharge: 25, hp: 300, armTime: 10, dmg: 450, trap: true, about: 'Iron spikes hidden in the grass. They arm after 10 seconds.' },
   princeps: { name: 'Princeps', short: 'Princeps', cost: 100, recharge: 10, hp: 700, melee: 55, about: 'A soldier in his prime: tough, and he cuts down whoever reaches him.' },
-  vanguard: { name: 'Vanguard', short: 'Vanguard', cost: 175, recharge: 25, hp: 900, reload: 2.5, dmg: 40, range: 2.5, melee: 40, march: 4, about: 'A legionary who advances on his own, one square every 4 seconds: he throws his pilum at enemies ahead, fights whoever blocks him, goes through a gate into the city and on to the statues of Carthage’s gods on the Byrsa.' },
+  vanguard: { name: 'Vanguard', short: 'Vanguard', cost: 175, recharge: 25, hp: 600, reload: 2.5, dmg: 40, range: 2.5, melee: 40, march: 4, about: 'A legionary who advances on his own, one square every 4 seconds: he throws his pilum at enemies ahead, fights whoever blocks him, goes through a gate into the city and on to the statues of Carthage’s gods on the Byrsa.' },
   petrobolos: { name: 'Stone-thrower', short: 'Stones', cost: 175, recharge: 15, hp: 300, reload: 4.5, dmg: 90, range: 99, kind: 'boulder', splash: 0.6, lob: true, about: 'A Roman ballista hurling stones. They fly over walls, and also hurt enemies in the lanes beside the one they hit.' },
   aries:    { name: 'Battering ram', short: 'Ram', cost: 150, recharge: 15, hp: 1000, arrowMul: 0.3, ram: 45, about: 'A heavy ram under a roof of hides. Put it right under the city wall: it pounds the wall in its lane.' },
   shed:     { name: 'Siege shed', short: 'Shed', cost: 75, recharge: 20, hp: 1200, arrowMul: 0.15, about: 'A wooden shed covered in hides, like the ones Livy says the Romans built at Veii. Arrows barely hurt it, so put it in front.' },
@@ -209,8 +209,8 @@ const LEVELS = [
     waves: [w(26, ['pikeman']), w(42, ['thracian']), w(56, ['pikeman', 'thracian']), w(72, ['phalanx3']), w(90, ['cavalry', 'thracian']), w(106, ['phalanx3', 'thracian']), w(122, ['thracian', 'thracian', 'thracian']),
       w(138, ['chief', 'phalanx3', 'phalanx3', 'thracian', 'thracian'], 'A great wave approaches!'), w(170, ['cavalry', 'pikeman', 'pikeman', 'thracian']),
       w(190, ['chief', 'phalanx3', 'phalanx3', 'phalanx3', ...rep(3, 'thracian'), 'cavalry'], 'The final wave!')] },
-  { id: 'carthage', name: 'The Siege of Carthage', year: '146 BC', enemy: 'the Carthaginians', theme: 'carthage', start: 500, cols: 9, rows: 11, more: 1.15, lengthen: 0.6,
-    cityWall: { row: 5, gates: [1, 3, 5, 7], storm: 3, refill: 22, pool: ['militia', 'militia', 'volunteer', 'volunteer', 'shield', 'bowman'],
+  { id: 'carthage', name: 'The Siege of Carthage', year: '146 BC', enemy: 'the Carthaginians', theme: 'carthage', start: 500, cols: 9, rows: 11, more: 1.15, lengthen: 0.6, swarm: 'volunteer',
+    cityWall: { row: 5, gates: [1, 3, 5, 7], storm: 3, refill: 22, pool: ['militia', 'volunteer', 'volunteer', 'volunteer', 'volunteer', 'shield', 'bowman'],
       statues: [[1, 'Baal Hammon'], [4, 'Tanit'], [7, 'Eshmun']],
       garrison: [['shield', 1, 4.1], ['shield', 3, 4.1], ['shield', 5, 4.1], ['shield', 7, 4.1], ['militia', 2, 3.2], ['militia', 6, 3.2], ['militia', 8, 2.8], ['militia', 0, 2.8], ['shield', 1, 2.0], ['shield', 4, 2.0], ['shield', 7, 2.0], ['militia', 3, 0.6], ['militia', 5, 0.6]],
       engines: [[0, 1.9], [4, 2.0], [8, 1.9]] },
@@ -1363,6 +1363,7 @@ function buildQueue(score = G?.score ?? quizScore) {
     const gap = LEVEL.gap ?? (w.big ? 0.7 : 1.6), troops = w.foes.filter(t => !LEADERS.includes(t))
     const extra = Math.round(troops.length * ((LEVEL.more ?? 1) * pressureFor(score) - 1))   // a wider field needs more men to fill it, and a weak test score brings more
     const foes = [...w.foes, ...Array.from({ length: extra }, (_, i) => troops[i % troops.length]).map(t => t === 'phalanx3' ? 'pikeman' : t)]   // the extra men come singly, never as whole phalanx blocks
+    if (LEVEL.swarm) foes.push(...Array(w.big ? 4 : 2).fill(LEVEL.swarm))   // a battle with a swarm of weak fighters (Carthage's freed slaves)
     const t0 = w.t + (LEVEL.delay ?? 0)   // a later start: more time to build before the first waves
     foes.forEach((type, i) => {
       if (type === 'phalanx3') { block++; const half = score >= 80 || COLS < 5 ? 1 : 2; for (let off = -half; off <= half; off++) q.push({ t: t0 + i * gap, type: 'pikeman', wave: w, block, off, half }) }   // a block of the phalanx: three lanes wide, five below 80%
@@ -1998,7 +1999,7 @@ function update(dt) {
   G.fx = G.fx.filter(p => p.t > 0)
   G.shake = Math.max(0, G.shake - dt * 12)
   if (G.cw && LEVEL.cityWall.refill && !G.queue.length && G.t >= (G.cw.nextRefill ??= G.t + LEVEL.cityWall.refill)) {   // more defenders, until the city falls
-    const pool = LEVEL.cityWall.pool, n = 3 + Math.floor(Math.random() * 3), wave = { t: G.t, foes: [] }
+    const pool = LEVEL.cityWall.pool, n = 4 + Math.floor(Math.random() * 4), wave = { t: G.t, foes: [] }
     for (let i = 0; i < n; i++) G.queue.push({ t: G.t + i * 1.5, type: pool[Math.floor(Math.random() * pool.length)], wave })
     G.total += n; G.cw.nextRefill = G.t + LEVEL.cityWall.refill; updateCount()
   }
@@ -3378,7 +3379,7 @@ const MARKUP = `<main class="game">
   </div>
   <div class="msg" id="banner" aria-live="polite"></div>
   <div class="controls">
-    <div class="progress"><span class="label" id="level">Lake Regillus</span><div class="bar" id="bar"><div class="fill" id="fill"></div></div><span class="build" translate="no">build 16 Nov, 13:27</span></div>
+    <div class="progress"><span class="label" id="level">Lake Regillus</span><div class="bar" id="bar"><div class="fill" id="fill"></div></div><span class="build" translate="no">build 16 Nov, 13:39</span></div>
     <button class="tool" id="pause">Pause</button>
     <button class="tool" id="speed">1×</button>
     <button class="tool" id="guide">Guide</button>
