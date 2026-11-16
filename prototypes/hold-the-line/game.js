@@ -200,7 +200,7 @@ const LEVELS = [
   { id: 'carthage', name: 'The Siege of Carthage', year: '146 BC', enemy: 'the Carthaginians', theme: 'carthage', start: 500, cols: 9, rows: 11, more: 1.15, lengthen: 0.6,
     cityWall: { row: 5, gates: [1, 3, 5, 7], storm: 3, refill: 22, pool: ['militia', 'militia', 'volunteer', 'volunteer', 'shield', 'bowman'],
       statues: [[1, 'Baal Hammon'], [4, 'Tanit'], [7, 'Eshmun']],
-      garrison: [['shield', 1, 4.1], ['shield', 3, 4.1], ['shield', 5, 4.1], ['shield', 7, 4.1], ['militia', 2, 3.2], ['militia', 6, 3.2], ['militia', 8, 2.8], ['militia', 0, 2.8], ['shield', 1, 0.9], ['shield', 4, 0.9], ['shield', 7, 0.9], ['militia', 3, 0.6], ['militia', 5, 0.6]],
+      garrison: [['shield', 1, 4.1], ['shield', 3, 4.1], ['shield', 5, 4.1], ['shield', 7, 4.1], ['militia', 2, 3.2], ['militia', 6, 3.2], ['militia', 8, 2.8], ['militia', 0, 2.8], ['shield', 1, 1.5], ['shield', 4, 1.5], ['shield', 7, 1.5], ['militia', 3, 0.6], ['militia', 5, 0.6]],
       engines: [[0, 1.9], [4, 2.0], [8, 1.9]] },
     twist: 'Take the city! Carthage’s wall splits the field in two. Its four gates are open both ways: the defenders come out through them and fan out toward your lines, and your vanguard goes in. Catapults inside the city lob stones at your soldiers on both sides of the wall; your stone-thrower lobs back over it. On the Byrsa, at the top, stand the statues of three gods of Carthage: Baal Hammon, Tanit and Eshmun. Each vanguard who reaches one sets it on fire; when all three burn, Carthage falls.',
     units: ['cart', 'slinger', 'hastatus', 'triarius', 'princeps', 'scorpio', 'maniple', 'petrobolos', 'vanguard'], newUnit: 'vanguard',
@@ -1143,7 +1143,8 @@ function layout() {
     W = cell * COLS; H = Math.round(cell * (ROWS + APPROACH + CAMP)); k = cell / 72
     canvas.style.width = W + 'px'; canvas.style.height = H + 'px'
     wrap.style.width = (W + 6) + 'px'
-    sroot.querySelector('.status').style.width = WIDE.matches ? '' : (avail + 6) + 'px'; $('banner').style.width = ''   // the full width, never narrower: a narrow bar wraps, grows taller and squeezes the field
+    sroot.querySelector('.status').style.width = WIDE.matches ? '' : (avail + 6) + 'px'; $('banner').style.width = ''
+    $('banner').style.top = !WIDE.matches && LEVEL.cityWall?.statues ? Math.round(ry(LEVEL.cityWall.row) - cell * 0.2) + 'px' : ''   // in the siege, messages over the wall: the top of the field is the Byrsa   // the full width, never narrower: a narrow bar wraps, grows taller and squeezes the field
   }
   size(maxH)
   // on a small phone the battle must fit the screen: the field and cards don't scroll the page (they're for dragging),
@@ -1961,6 +1962,12 @@ function update(dt) {
   for (const [lane, e] of G.equites.entries()) {
     if (e.state !== 'charge') continue
     e.y -= 4.2 * dt
+    if (G.cw && (e.y < (isGate(lane) ? 1.6 : LEVEL.cityWall.row + 1))) {   // the wall stops him, unless he rides through a gate; the Byrsa is the vanguard's work
+      e.state = 'used'; sfx.crack(); G.shake = Math.max(G.shake, 4)
+      for (let i = 0; i < 10; i++) G.fx.push({ kind: 'dust', x: lx(lane) + (Math.random() - 0.5) * cell * 0.6, y: ry(e.y + 0.3), vx: (Math.random() - 0.5) * 60, vy: -Math.random() * 40, t: 0.7 })
+      if (!G.tips.wallHorse && !isGate(lane)) { G.tips.wallHorse = true; announce('The charge breaks on the wall! Only through a gate can the horsemen ride into the city.') }
+      continue
+    }
     for (const f of G.foes) if (f.lane === lane && f.hp > 0 && Math.abs(f.y - e.y) < 0.6) charged(f, e, -1)
     if (Math.random() < dt * 30) G.fx.push({ kind: 'dust', x: lx(lane) + (Math.random() - 0.5) * cell * 0.5, y: ry(e.y), vx: (Math.random() - 0.5) * 40, vy: -Math.random() * 30, t: 0.6 })
     if (e.y < -1.3) e.state = 'used'
@@ -1995,19 +2002,23 @@ function drawCityWall() {   // a section of stone per lane: cracks as it weakens
     const now = performance.now() / 1000, burned = G.cw.burned ?? new Set()
     for (const [l, name] of C.statues ?? []) {   // a god of Carthage on a plinth; once a vanguard reaches it, a blackened statue in flames
       const x = lx(l), yb = ry(0.95), gone = burned.has(l), s2 = cell / 72
-      c.fillStyle = '#9a8a6a'; c.fillRect(x - cell * 0.3, yb - cell * 0.18, cell * 0.6, cell * 0.18)   // the plinth
-      c.fillStyle = gone ? '#2e2620' : '#b98a3e'
-      c.beginPath(); c.moveTo(x - 9 * s2, yb - cell * 0.18); c.lineTo(x - 6 * s2, yb - cell * 0.62); c.lineTo(x + 6 * s2, yb - cell * 0.62); c.lineTo(x + 9 * s2, yb - cell * 0.18); c.fill()   // the robed figure
-      c.beginPath(); c.arc(x, yb - cell * 0.7, 7 * s2, 0, TAU); c.fill()   // its head
-      if (!gone) { c.strokeStyle = '#e0b85a'; c.lineWidth = 2; c.beginPath(); c.moveTo(x + 6 * s2, yb - cell * 0.5); c.lineTo(x + 14 * s2, yb - cell * 0.82); c.stroke() }   // a raised arm
+      c.fillStyle = '#8a7a5a'; c.fillRect(x - cell * 0.38, yb - cell * 0.2, cell * 0.76, cell * 0.2); c.fillStyle = '#a8977a'; c.fillRect(x - cell * 0.32, yb - cell * 0.26, cell * 0.64, cell * 0.08)   // the plinth
+      const body = gone ? '#2e2620' : '#c8302a', trim = gone ? '#1b1715' : '#f0c24a'
+      c.fillStyle = body; c.strokeStyle = trim; c.lineWidth = 2
+      c.beginPath(); c.moveTo(x - 15 * s2, yb - cell * 0.26); c.lineTo(x - 9 * s2, yb - cell * 0.95); c.lineTo(x + 9 * s2, yb - cell * 0.95); c.lineTo(x + 15 * s2, yb - cell * 0.26); c.closePath(); c.fill(); c.stroke()   // the robed god, in red
+      c.beginPath(); c.arc(x, yb - cell * 1.06, 10 * s2, 0, TAU); c.fill(); c.stroke()   // the head
+      if (!gone) { c.fillStyle = '#f0c24a'; c.beginPath(); c.moveTo(x - 9 * s2, yb - cell * 1.14); c.lineTo(x - 5 * s2, yb - cell * 1.3); c.lineTo(x, yb - cell * 1.16); c.lineTo(x + 5 * s2, yb - cell * 1.3); c.lineTo(x + 9 * s2, yb - cell * 1.14); c.fill()   // a gold crown
+        c.strokeStyle = '#f0c24a'; c.lineWidth = 3; c.beginPath(); c.moveTo(x + 9 * s2, yb - cell * 0.75); c.lineTo(x + 22 * s2, yb - cell * 1.2); c.stroke() }   // a raised arm
       if (gone) for (let f = 0; f < 3; f++) {   // flames and smoke
-        const fx = x + (f - 1) * 8 * s2, fh = cell * (0.45 + 0.15 * Math.sin(now * 9 + f * 2 + l))
+        const fx = x + (f - 1) * 11 * s2, fh = cell * (0.75 + 0.2 * Math.sin(now * 9 + f * 2 + l))
         c.fillStyle = 'rgba(214, 72, 22, .9)'; c.beginPath(); c.moveTo(fx - 6 * s2, yb - cell * 0.2); c.quadraticCurveTo(fx, yb - cell * 0.2 - fh * 1.3, fx + 6 * s2, yb - cell * 0.2); c.fill()
         c.fillStyle = 'rgba(255, 196, 60, .95)'; c.beginPath(); c.moveTo(fx - 3 * s2, yb - cell * 0.2); c.quadraticCurveTo(fx, yb - cell * 0.2 - fh * 0.8, fx + 3 * s2, yb - cell * 0.2); c.fill()
         const ph = (now * 0.4 + f / 3 + l * 0.1) % 1; c.fillStyle = `rgba(70, 64, 58, ${0.4 * (1 - ph)})`; c.beginPath(); c.arc(fx + ph * 10, yb - cell * 0.9 - ph * cell * 1.2, 5 + ph * 9, 0, TAU); c.fill()
       }
-      c.font = `800 ${Math.round(7 * k + 5)}px Nunito, system-ui, sans-serif`; c.textAlign = 'center'; c.fillStyle = gone ? '#7a2a1a' : '#5a4020'
-      c.fillText(LANG === 'bg' ? (HTL_BG[name] ?? name) : name, x, yb + 9 * k + 2)
+      const nm = LANG === 'bg' ? (HTL_BG[name] ?? name) : name
+      c.font = `900 ${Math.round(8 * k + 5)}px Nunito, system-ui, sans-serif`; c.textAlign = 'center'
+      const tw = c.measureText(nm).width + 8; c.fillStyle = gone ? 'rgba(27, 23, 21, .6)' : 'rgba(27, 23, 21, .85)'; rr(c, x - tw / 2, yb + 1, tw, 10 * k + 5, 4); c.fill()
+      c.fillStyle = gone ? '#9a8a7a' : '#f0c24a'; c.fillText(nm, x, yb + 8 * k + 4)
     }
     const nb = G.cw.burned?.size ?? 0, label = $('level'), text = `🔥 ${nb}/${C.storm} ${LANG === 'bg' ? 'статуи' : 'statues'}`
     if (label.textContent !== text) label.textContent = text   // the goal, where the battle's name is: no extra line taking room from the field
