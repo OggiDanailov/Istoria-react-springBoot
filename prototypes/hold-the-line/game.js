@@ -1143,7 +1143,7 @@ function layout() {
     W = cell * COLS; H = Math.round(cell * (ROWS + APPROACH + CAMP)); k = cell / 72
     canvas.style.width = W + 'px'; canvas.style.height = H + 'px'
     wrap.style.width = (W + 6) + 'px'
-    sroot.querySelector('.status').style.width = WIDE.matches ? '' : (W + 6) + 'px'; $('banner').style.width = ''
+    sroot.querySelector('.status').style.width = WIDE.matches ? '' : (avail + 6) + 'px'; $('banner').style.width = ''   // the full width, never narrower: a narrow bar wraps, grows taller and squeezes the field
   }
   size(maxH)
   // on a small phone the battle must fit the screen: the field and cards don't scroll the page (they're for dragging),
@@ -1384,7 +1384,7 @@ function newGame(i = levelIndex, score = quizScore) {
     houses: (LEVEL.houses ?? []).map(([lane, row]) => ({ lane, row, burned: false })), blocks: {}, events: (LEVEL.events ?? []).map(e => ({ ...e })), charges: 0,
   }
   G.total = G.queue.length
-  renderTray(); renderBar(true); updateCount(); $('level').textContent = LEVEL.name; $('goal').hidden = !LEVEL.cityWall?.storm
+  renderTray(); renderBar(true); updateCount(); $('level').textContent = LEVEL.name
   layout()
 }
 
@@ -2009,8 +2009,8 @@ function drawCityWall() {   // a section of stone per lane: cracks as it weakens
       c.font = `800 ${Math.round(7 * k + 5)}px Nunito, system-ui, sans-serif`; c.textAlign = 'center'; c.fillStyle = gone ? '#7a2a1a' : '#5a4020'
       c.fillText(LANG === 'bg' ? (HTL_BG[name] ?? name) : name, x, yb + 9 * k + 2)
     }
-    const nb = G.cw.burned?.size ?? 0, goal = $('goal'), text = nb ? (LANG === 'bg' ? `🔥 ${nb} изгорени · остават ${C.storm - nb}` : `🔥 ${nb} burned · ${C.storm - nb} to go`) : (LANG === 'bg' ? 'Целта: 3-те статуи' : 'Goal: the 3 statues')
-    if (goal.hidden || goal.textContent !== text) { goal.hidden = false; goal.textContent = text }   // the goal, in the bar above the field
+    const nb = G.cw.burned?.size ?? 0, label = $('level'), text = `🔥 ${nb}/${C.storm} ${LANG === 'bg' ? 'статуи' : 'statues'}`
+    if (label.textContent !== text) label.textContent = text   // the goal, where the battle's name is: no extra line taking room from the field
   }
   for (let l = 0; l < COLS; l++) {
     const x = l * cell, hp = G.cw.seg[l], frac = C.gates ? (isGate(l) ? hp / C.gateHp : 1) : hp / C.hp
@@ -3326,7 +3326,6 @@ const MARKUP = `<main class="game">
   </div>
   <div class="side">
   <div class="status">
-      <span class="goal" id="goal" hidden></span>
       <div class="rations" id="rations" aria-live="polite"><svg class="wheat" viewBox="0 0 20 20" aria-hidden="true"><g fill="#e0a63a"><ellipse cx="10" cy="4" rx="2.4" ry="3.6"/><ellipse cx="6.5" cy="8" rx="2.2" ry="3.3" transform="rotate(-30 6.5 8)"/><ellipse cx="13.5" cy="8" rx="2.2" ry="3.3" transform="rotate(30 13.5 8)"/><ellipse cx="7" cy="12.5" rx="2" ry="3" transform="rotate(-30 7 12.5)"/><ellipse cx="13" cy="12.5" rx="2" ry="3" transform="rotate(30 13 12.5)"/></g><path d="M10 6v13" stroke="#b8862a" stroke-width="1.6"/></svg><span id="count">100</span></div>
     <div class="hud-right">
       <button class="tool" id="dismiss" title="Send a soldier home (frees the square)">Dismiss</button>
