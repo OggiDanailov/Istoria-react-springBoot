@@ -270,6 +270,7 @@ button:focus-visible { outline: 3px solid var(--ochre); outline-offset: 2px; }
 .kf dd { margin: 0; font-size: 14.5px; line-height: 1.4; }
 .kf-read { border: none; background: none; color: #8e2b22; font-weight: 800; font-size: 13px; padding: 0 2px; text-decoration: underline; text-underline-offset: 2px; }
 .app.in-battle { padding-bottom: 0; margin-bottom: 0; min-height: 0; }   /* the battle fits the screen below the top bar */
+@media (max-width: 599px) { body:has(.app.in-battle) .hud { display: none; } .app.in-battle { padding-top: 0; margin-top: 0; } }   /* a phone in battle: the field gets the whole screen (Pause → Leave the battle goes back) */
 .campaign { margin: 0 0 16px; padding: 12px; border-radius: 14px; background: #f3e6c8; border: 1.5px solid #d9caa8; }
 .campaign h3 { margin: 0 0 8px; font-size: 18px; }
 .campaign-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
