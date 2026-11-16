@@ -352,6 +352,8 @@ const LEVELS = [
     waves: [w(24, ['zeus']), w(40, ['poseidon']), w(54, ['zeus', 'athena']), w(70, ['ares']), w(86, ['hera', 'poseidon']), w(100, ['aphrodite', 'athena']), w(116, ['artemis', 'ares', 'zeus']),
       w(132, ['hermes', 'hera', 'poseidon', 'athena', 'artemis'], 'Olympus attacks in force!'), w(162, ['aphrodite', 'hermes', 'ares']), w(178, ['zeus', 'hera', 'artemis', 'poseidon']),
       w(196, ['zeus', 'hera', 'poseidon', 'athena', 'ares', 'aphrodite', 'artemis', 'hermes', 'zeus', 'ares'], 'The final wave: all of Olympus!')] },
+  { id: 'land', name: 'Divide the Land', land: true, bonus: true, year: '133 BC', enemy: 'the rich landowners', theme: 'gods', units: [], waves: [],
+    blurb: 'Tiberius Gracchus’s land law: cut down the estates of the rich to the legal limit and give the surplus to landless families, before the Senate’s anger boils over.', after: '' },
 ]
 // From Zama on (the user, Nov 15) every battle runs about a quarter longer: before its first great wave come more waves of
 // ordinary troops (copies of the ones just before it), and the great waves, the events and the storms after it move later
@@ -364,7 +366,7 @@ function lengthen(L, share = 0.25) {
   for (const st of L.storms ?? []) if (st.at >= P) st.at += d
   L.waves = [...L.waves, ...extra].sort((a, b) => a.t - b.t)
 }
-for (const L of LEVELS.slice(LEVELS.findIndex(L => L.id === 'zama'))) if (!L.pantheon) lengthen(L, L.lengthen)   // a siege can run longer still
+for (const L of LEVELS.slice(LEVELS.findIndex(L => L.id === 'zama'))) if (!L.pantheon && !L.land) lengthen(L, L.lengthen)   // a siege can run longer still
 let LEVEL = LEVELS[0]
 // What the chapter's test score buys for its battle (the user's table, Nov 11). Below 50% there is no battle (the app
 // sends the player back to the chronicle). 50%: no equites and almost no grain, a battle that can't really be won;
@@ -381,6 +383,7 @@ const grainShare = score => { const g = SCORE.grain; if (score <= g[0][0]) retur
 const pressureFor = score => score >= 80 ? 1 : score >= 70 ? 1.08 : score >= 60 ? 1.15 : 1.2
 const equitesFor = (score, L = LEVEL) => score >= 60 ? Math.min(L.cols ?? 5, Math.floor(score / 10) - 4 + (L.cols ?? 5) - 5) : 0
 function armyFor(score, L = LEVEL) {
+  if (L.land) return { grain: 0, vets: {}, equites: 0, medicus: false, augur: false, land: { time: landTime(score), anger: landStart(score) } }   // Divide the Land: time, and the Senate's starting mood
   if (L.backRiver) { const a = armyFor(score, { ...L, backRiver: false, cols: 5 }); return { ...a, equites: 0, lives: a.equites } }   // the Allia: lives instead of equites
   if (L.pantheon) return { grain: 0, vets: {}, medicus: false, augur: false, gate: panGate(score) }   // Pantheon Siege: the strength of Rome's gate
   const grain = Math.max(SCORE.minGrain, Math.round((L.start + SCORE.at80) * grainShare(score) / 25) * 25)
@@ -2479,7 +2482,7 @@ function startDrag(e, type) {
   select(type)
 }
 document.addEventListener('pointermove', e => {
-  if (!mounted) return
+  if (!mounted || !G || panActive) return   // no battlefield on this screen (the gods' games, Divide the Land)
   const c = cellAt(e.clientX, e.clientY)
   if (moveDrag) { if (Math.hypot(e.clientX - moveDrag.x0, e.clientY - moveDrag.y0) > 8) moveDrag.moved = true; G.hover = c?.inGrid ? c : null; return }
   if (equesDrag) { if (Math.hypot(e.clientX - equesDrag.x0, e.clientY - equesDrag.y0) > 8) equesDrag.moved = true; equesDrag.to = c ? Math.max(0, Math.min(COLS - 1, c.lane)) : null; return }
@@ -2572,6 +2575,7 @@ function newFoesOf(i) {
 function showBriefing(i) {
   const L = LEVELS[i]
   if (L.pantheon) { levelIndex = i; LEVEL = L; return openPantheon() }
+  if (L.land) { levelIndex = i; LEVEL = L; return openLand() }
   const news = [
     ...(L.newUnit ? [`<li><canvas class="ic" data-unit="${L.newUnit}" width="88" height="88"></canvas><span><b>New unit: ${UNITS[L.newUnit].name}.</b> ${UNITS[L.newUnit].about}</span></li>`] : []),
     ...(i > 0 ? newFoesOf(i).map(t => `<li><canvas class="ic" data-foe="${t}" width="88" height="88"></canvas><span><b>New enemy.</b> ${FOES[t].intro}</span></li>`) : []),
@@ -2752,6 +2756,182 @@ const PAN_LEVELS = [
 // at most this many gods on the field in each wave (one at a time in the first), and never two within 2.5 s of each other
 const PAN = { waves: 5, first: 4, hand: 5, rest: 5, slow: 5, cap: [1, 2, 2, 2, 3], apart: 2.5, cost: { slow: 3, reveal: 2, plus: 5 } }
 const panGate = score => Math.max(1, Math.min(6, Math.floor(score / 10) - 4))   // the chapter test sets the gate: 1 at 50%, 2 at 60% … 6 at 100%
+// ---------- Divide the Land: the Gracchi's land law (133 BC), the game of chapter 12 ----------
+// A map of public land in strips held by rich families. The law (lex Sempronia agraria) lets a family keep 500 iugera,
+// plus 250 for each son (Appian), up to 1,000. Tap an estate that holds too much to cut it down: its surplus becomes plots,
+// and a tap on a plot settles a landless family there. Every cut angers the Senate, more for a borderline estate than per
+// plot of a huge one; when the anger boils over, the senators storm the Capitol, as they did in 133 BC.
+const LAND = {
+  cols: 6, rows: 8, iugera: 125,   // each square: 125 iugera
+  estates: [['Cornelii', 12, 0], ['Fabii', 7, 1], ['Claudii', 9, 2], ['Aemilii', 6, 1], ['Metelli', 10, 0], ['Valerii', 4, 0]],   // [family, squares, sons]
+  goal: 14, arrive: 2.6, maxWait: 6, cut: [10, 4], decay: 0.8,   // anger per cut: 10 + 4 per plot freed; it cools by 0.8 a second
+  veto: { at: 0.3, last: 10, depose: 25 },   // a third of the way in, the tribune Octavius vetoes: no cuts for 10 seconds, unless he is deposed (more anger)
+}
+const landTime = score => 70 + Math.max(0, Math.floor(score / 10) - 5) * 10   // 70 s at 50%, 120 s at 100%
+const landStart = score => score >= 80 ? 0 : score >= 70 ? 10 : score >= 60 ? 15 : 20   // the Senate's mood before you begin
+let LD = null, landActive = false, lcv = null, lctx = null, landLast = 0
+const LAND_MARKUP = () => `<main class="game land">
+  <div class="land-hud">
+    <div class="land-stat"><span>${pt('Families settled', 'Заселени семейства')}</span><b id="land-settled">0</b></div>
+    <div class="land-stat anger"><span>${pt('Senate anger', 'Гневът на Сената')}</span><div class="land-bar"><i id="land-anger"></i></div></div>
+    <div class="land-stat"><span>${pt('Time left', 'Оставащо време')}</span><b id="land-time">0</b></div>
+  </div>
+  <div class="field-wrap" id="wrap"><canvas id="land-field" aria-label="${pt('A map of public land, in strips held by rich families.', 'Карта на обществената земя, на ивици, държани от богати родове.')}"></canvas><div class="overlay" id="overlay" hidden></div></div>
+  <div class="msg" id="banner" aria-live="polite"></div>
+  <div class="controls"><button class="tool" id="land-depose" hidden>${pt('Depose Octavius', 'Отстрани Октавий')}</button><span style="flex:1"></span><button class="tool" id="land-pause">${pt('Pause', 'Пауза')}</button></div>
+</main>`
+function openLand() {
+  landActive = true; panActive = true; LD = null
+  sroot.innerHTML = `<style>${HTL_CSS}</style>` + LAND_MARKUP()
+  overlay = $('overlay'); lcv = $('land-field'); lctx = lcv.getContext('2d')
+  lcv.addEventListener('pointerdown', landTap)
+  $('land-pause').addEventListener('click', () => { if (!LD || LD.phase !== 'play') return; LD.phase = 'paused'
+    showPanel(`<h2>${pt('Paused', 'Пауза')}</h2><div class="row"><button class="primary" id="resume">${pt('Resume', 'Продължи')}</button><button class="tool" id="leave">${pt('Leave', 'Изход')}</button></div>`,
+      { resume: () => { overlay.hidden = true; LD.phase = 'play'; landLast = performance.now() }, leave: () => panLeave({ left: true }) }) })
+  $('land-depose').addEventListener('click', () => { if (!LD?.veto?.on) return; LD.veto.on = false; LD.anger = Math.min(100, LD.anger + LAND.veto.depose); $('land-depose').hidden = true; sfx.crack()
+    announce(pt('The assembly removes Octavius from office: no tribune had ever been deposed before. The Senate is furious.', 'Събранието отстранява Октавий от длъжност – никога досега трибун не е бил свалян. Сенатът е разгневен.'), true, 4200) })
+  window.addEventListener('resize', landLayout)
+  landLayout(); landBriefing()
+  landLast = performance.now(); requestAnimationFrame(landFrame)
+}
+function landNew() {
+  const score = quizScore, cells = []
+  LAND.estates.forEach(([name, n, sons], i) => { for (let k = 0; k < n; k++) cells.push(i) })
+  const grid = cells.map((e, k) => { const r = Math.floor(k / LAND.cols), c0 = k % LAND.cols; return { e, c: r % 2 ? LAND.cols - 1 - c0 : c0, r, state: 'held' } })   // the estates run as strips, snaking across the map
+  LD = { phase: 'play', t: 0, time: landTime(score), anger: landStart(score), peak: landStart(score), settled: 0, waiting: 2, nextFamily: LAND.arrive,
+    grid, cut: new Set(), fx: [], veto: { at: landTime(score) * LAND.veto.at, done: false, on: false, until: 0 } }
+}
+const keepOf = i => Math.min(8, 4 + 2 * LAND.estates[i][2])   // squares a family may keep: 500 iugera, +250 per son, at most 1,000
+const heldOf = i => LD.grid.filter(g => g.e === i && g.state === 'held').length
+function landBriefing() {
+  landNew(); LD.phase = 'menu'
+  const L = LEVELS[levelIndex]
+  showPanel(`<span class="eyebrow">${pt('133 BC · the land law of Tiberius Gracchus', '133 г. пр.н.е. · поземленият закон на Тиберий Гракх')}</span><h2>${pt('Divide the Land', 'Разделете земята')}</h2>
+    <p>${pt('Rich families hold huge stretches of public land. Tiberius’s law lets each keep <b>500 iugera</b>, and, the historian Appian says, <b>250 more for each son</b>, up to 1,000. Each square on the map is 125 iugera.',
+      'Богатите родове държат огромни части от обществената земя. Законът на Тиберий позволява на всеки род да запази <b>500 югера</b>, а според историка Апиан и <b>още 250 за всеки син</b>, до 1000. Всяко поле на картата е 125 югера.')}</p>
+    <ul><li>${pt('<b>Tap an estate marked in red</b> (it holds too much) to cut it down. Its surplus becomes free plots.', '<b>Докоснете имение, отбелязано в червено</b> (държи твърде много), за да го орежете. Излишъкът става свободни парцели.')}</li>
+    <li>${pt('<b>Tap a free plot</b> to settle a landless family there.', '<b>Докоснете свободен парцел</b>, за да заселите там безимотно семейство.')}</li>
+    <li>${pt(`Every cut angers the Senate. A big estate costs less anger for each plot it gives than a borderline one. If the anger reaches the top, the senators storm the Capitol. Settle <b>${LAND.goal} families</b> before your year as tribune ends.`, `Всяко орязване гневи Сената. Голямо имение струва по-малко гняв на парцел от едно на ръба. Ако гневът стигне върха, сенаторите нахлуват на Капитолия. Заселете <b>${LAND.goal} семейства</b>, преди годината ви като трибун да свърши.`)}</li></ul>
+    <p class="twist">${pt(`Your test score gives you ${LD.time} seconds and a Senate whose anger starts at ${LD.anger}.`, `Резултатът от теста ви дава ${LD.time} секунди и Сенат, чийто гняв започва от ${LD.anger}.`)}</p>
+    <div class="row"><button class="primary" id="begin-land">${pt('Begin', 'Начало')}</button><button class="tool" id="leave">${pt('Leave', 'Изход')}</button></div>`,
+    { 'begin-land': () => { overlay.hidden = true; LD.phase = 'play'; landLast = performance.now(); sfx.horn() }, leave: () => panLeave({ left: true }) })
+}
+function landLayout() {
+  if (!landActive || !lcv) return
+  const w = $('wrap').clientWidth, h = Math.round(Math.min(window.innerHeight * 0.62, w * (LAND.rows + 1.4) / LAND.cols))
+  const dpr = Math.min(2, window.devicePixelRatio || 1)
+  lcv.style.width = w + 'px'; lcv.style.height = h + 'px'; lcv.width = Math.round(w * dpr); lcv.height = Math.round(h * dpr)
+}
+const landGeo = () => { const W = lcv.clientWidth, H = lcv.clientHeight, s = Math.min(W / LAND.cols, (H - 0.0) / (LAND.rows + 1.4)), ox = (W - s * LAND.cols) / 2; return { W, H, s, ox, oy: 4, qy: 4 + s * LAND.rows + s * 0.2 } }
+function landTap(e) {
+  if (!LD || LD.phase !== 'play') return
+  const r = lcv.getBoundingClientRect(), { s, ox, oy } = landGeo(), c = Math.floor((e.clientX - r.left - ox) / s), row = Math.floor((e.clientY - r.top - oy) / s)
+  const g = LD.grid.find(g => g.c === c && g.r === row); if (!g) return
+  if (g.state === 'free') {   // a family settles here
+    if (LD.waiting < 1) { announce(pt('No family is waiting yet. More are on their way to Rome.', 'Още никое семейство не чака. Идват още към Рим.')); return }
+    g.state = 'farm'; LD.waiting--; LD.settled++; sfx.place(); LD.fx.push({ c: g.c, r: g.r, t: 0.6, kind: 'ring' })
+    if (LD.settled >= LAND.goal) landEnd(true)
+    return
+  }
+  if (g.state !== 'held') return
+  const i = g.e, surplus = heldOf(i) - keepOf(i)
+  if (surplus <= 0) { announce(pt(`The ${LAND.estates[i][0]} hold no more than the law allows.`, `Родът ${LAND.estates[i][0]} не държи повече от позволеното.`)); return }
+  if (LD.veto.on) { announce(pt('Octavius vetoes every cut! Wait, or have the assembly depose him.', 'Октавий налага вето на всяко орязване! Изчакайте или накарайте събранието да го отстрани.')); sfx.deny(); return }
+  const mine = LD.grid.filter(x => x.e === i && x.state === 'held'), extra = mine.slice(mine.length - surplus)   // the far end of the strip is cut off
+  for (const x of extra) { x.state = 'free'; LD.fx.push({ c: x.c, r: x.r, t: 0.6, kind: 'cut' }) }
+  LD.anger += LAND.cut[0] + LAND.cut[1] * surplus; LD.peak = Math.max(LD.peak, LD.anger); sfx.crack()
+  announce(pt(`The ${LAND.estates[i][0]} lose ${surplus * LAND.iugera} iugera: ${surplus} new plot${surplus > 1 ? 's' : ''}.`, `Родът ${LAND.estates[i][0]} губи ${surplus * LAND.iugera} югера: ${surplus} нов${surplus > 1 ? 'и парцела' : ' парцел'}.`))
+  if (LD.anger >= 100) landEnd(false, 'anger')
+}
+function landUpdate(dt) {
+  LD.t += dt
+  LD.anger = Math.max(0, LD.anger - LAND.decay * dt)
+  if ((LD.nextFamily -= dt) <= 0) { LD.nextFamily = LAND.arrive; if (LD.waiting < LAND.maxWait) LD.waiting++ }   // landless families keep arriving in Rome
+  const v = LD.veto
+  if (!v.done && LD.t >= v.at) { v.done = true; v.on = true; v.until = LD.t + LAND.veto.last; $('land-depose').hidden = false; sfx.horn()
+    announce(pt('The tribune Octavius vetoes the law! No cuts while his veto stands.', 'Трибунът Октавий налага вето на закона! Никакви орязвания, докато ветото му е в сила.'), true, 4200) }
+  if (v.on && LD.t >= v.until) { v.on = false; $('land-depose').hidden = true; announce(pt('Octavius’s veto lapses.', 'Ветото на Октавий отпада.')) }
+  for (const f of LD.fx) f.t -= dt
+  LD.fx = LD.fx.filter(f => f.t > 0)
+  if (LD.t >= LD.time) landEnd(false, 'time')
+}
+function landEnd(won, why) {
+  if (LD.phase !== 'play') return
+  LD.phase = won ? 'won' : 'lost'; $('land-depose').hidden = true
+  const stars = won ? (LD.peak < 60 ? 3 : LD.peak < 85 ? 2 : 1) : 0
+  won ? sfx.win() : sfx.lose?.()
+  const body = won
+    ? pt(`<p>You settled ${LD.settled} families, and the Senate’s anger peaked at ${Math.round(LD.peak)}.</p><p class="history">Tiberius’s land commission went on to give out land to tens of thousands of settlers; its boundary stones are still found across southern Italy. But the senators never forgave him: in 133 BC a mob led by his own cousin beat him to death on the Capitol.</p>`,
+        `<p>Заселихте ${LD.settled} семейства, а гневът на Сената стигна най-много ${Math.round(LD.peak)}.</p><p class="history">Поземлената комисия на Тиберий раздала земя на десетки хиляди заселници; гранитните ѝ знаци още се намират из Южна Италия. Но сенаторите никога не му простили: през 133 г. пр.н.е. тълпа, водена от собствения му братовчед, го пребила до смърт на Капитолия.</p>`)
+    : why === 'anger'
+      ? pt('<p>The Senate’s anger boils over. As in 133 BC, senators and their followers storm the Capitol with clubs and broken benches, and the reform dies with its tribune.</p><p>Cut the biggest estates first: they give the most plots for the anger they cause. Leave the borderline ones.</p>',
+           '<p>Гневът на Сената прелива. Както през 133 г. пр.н.е., сенатори и привържениците им нахлуват на Капитолия с тояги и строшени пейки, а реформата загива заедно с трибуна си.</p><p>Орежете първо най-големите имения: те дават най-много парцели за гнева, който предизвикват. Оставете тези на ръба.</p>')
+      : pt(`<p>Your year as tribune is over, with ${LD.settled} of ${LAND.goal} families settled.</p><p>Work faster: cut the big estates early, and settle a family on every free plot as soon as one is waiting.</p>`,
+           `<p>Годината ви като трибун свърши, със заселени ${LD.settled} от ${LAND.goal} семейства.</p><p>Работете по-бързо: орежете големите имения рано и заселвайте семейство на всеки свободен парцел веднага щом някое чака.</p>`)
+  setTimeout(() => showPanel(`<span class="eyebrow">${won ? pt('Victory', 'Победа') : pt('Defeat', 'Поражение')} · 133 ${pt('BC', 'пр.н.е.')}</span><h2>${won ? pt('The land is divided', 'Земята е разделена') : why === 'anger' ? pt('Murder on the Capitol', 'Убийство на Капитолия') : pt('Out of time', 'Времето изтече')}</h2>
+    ${won ? `<p class="big-stars" aria-label="${stars} of 3 stars">${'★'.repeat(stars) + '☆'.repeat(3 - stars)}</p>` : ''}${body}
+    <div class="row">${opts.mode === 'chapter' ? `<button class="primary" id="continue">${pt('Continue', 'Продължи')}</button>` : ''}<button class="tool" id="again">${pt('Play again', 'Играй отново')}</button></div>`,
+    { continue: () => exit({ won, stars, killed: LD.settled, lost: 0, secs: Math.round(LD.t) }), again: () => landBriefing() }), 900)
+}
+const LAND_COLORS = ['#b5634a', '#7f8f4a', '#9a7a3a', '#6f7f9a', '#a05a6e', '#8a7a5a']
+function landDraw(T) {
+  const c = lctx, dpr = lcv.width / lcv.clientWidth, { W, H, s, ox, oy, qy } = landGeo()
+  c.setTransform(dpr, 0, 0, dpr, 0, 0)
+  c.fillStyle = '#c9b98a'; c.fillRect(0, 0, W, H)
+  if (!LD) return
+  const over = new Set(LAND.estates.map((_, i) => i).filter(i => heldOf(i) > keepOf(i)))
+  for (const g of LD.grid) {
+    const x = ox + g.c * s, y = oy + g.r * s
+    if (g.state === 'held') {
+      c.fillStyle = LAND_COLORS[g.e]; c.fillRect(x + 1, y + 1, s - 2, s - 2)
+      c.strokeStyle = 'rgba(255, 255, 255, .18)'; c.lineWidth = 1; for (let k = 1; k < 4; k++) { c.beginPath(); c.moveTo(x + 3, y + s * k / 4); c.lineTo(x + s - 3, y + s * k / 4); c.stroke() }   // furrows
+      if (over.has(g.e)) { c.strokeStyle = `rgba(212, 57, 45, ${0.6 + 0.3 * Math.sin(T * 5)})`; c.lineWidth = 3; c.strokeRect(x + 2.5, y + 2.5, s - 5, s - 5) }
+    } else if (g.state === 'free') {
+      c.fillStyle = '#e6d9a8'; c.fillRect(x + 1, y + 1, s - 2, s - 2)
+      c.strokeStyle = 'rgba(90, 120, 50, .8)'; c.lineWidth = 2; c.setLineDash([5, 4]); c.strokeRect(x + 4, y + 4, s - 8, s - 8); c.setLineDash([])
+      c.fillStyle = '#5a7a32'; c.font = `900 ${Math.round(s * 0.3)}px Nunito, system-ui, sans-serif`; c.textAlign = 'center'; c.fillText('+', x + s / 2, y + s * 0.62)
+    } else {   // a small farm: a hut and a field
+      c.fillStyle = '#9fb36a'; c.fillRect(x + 1, y + 1, s - 2, s - 2)
+      c.fillStyle = '#efe4cc'; c.fillRect(x + s * 0.3, y + s * 0.42, s * 0.4, s * 0.32); c.fillStyle = '#9a5a32'; c.beginPath(); c.moveTo(x + s * 0.24, y + s * 0.44); c.lineTo(x + s * 0.5, y + s * 0.22); c.lineTo(x + s * 0.76, y + s * 0.44); c.fill()
+    }
+  }
+  // each estate's name and what it holds: squares now / squares allowed
+  LAND.estates.forEach(([name, , sons], i) => {
+    const cells = LD.grid.filter(g => g.e === i && g.state === 'held'); if (!cells.length) return
+    const g = cells[Math.floor(cells.length / 2)], x = ox + g.c * s + s / 2, y = oy + g.r * s + s / 2, held = cells.length * LAND.iugera, keep = keepOf(i) * LAND.iugera, too = held > keep
+    const t1 = pt(name, name), t2 = `${held} / ${keep}`
+    c.font = `900 ${Math.round(s * 0.2 + 4)}px Nunito, system-ui, sans-serif`; c.textAlign = 'center'
+    const w = Math.max(c.measureText(t1).width, c.measureText(t2).width) + 10
+    c.fillStyle = too ? 'rgba(142, 43, 34, .92)' : 'rgba(27, 23, 21, .78)'; rr(c, x - w / 2, y - s * 0.34, w, s * 0.68, 6); c.fill()
+    c.fillStyle = '#fbf3e4'; c.fillText(t1, x, y - 2); c.fillStyle = too ? '#ffd9a0' : '#cdb9a0'; c.font = `800 ${Math.round(s * 0.16 + 3)}px Nunito, system-ui, sans-serif`; c.fillText(t2 + (sons ? ` · ${sons} ${sons > 1 ? pt('sons', 'сина') : pt('son', 'син')}` : ''), x, y + s * 0.2)
+  })
+  for (const f of LD.fx) { const x = ox + f.c * s + s / 2, y = oy + f.r * s + s / 2, a = f.t / 0.6
+    c.strokeStyle = f.kind === 'cut' ? `rgba(212, 57, 45, ${a})` : `rgba(90, 140, 60, ${a})`; c.lineWidth = 3; c.beginPath(); c.arc(x, y, s * (0.6 - f.t * 0.5), 0, TAU); c.stroke() }
+  // the families waiting for land
+  c.fillStyle = 'rgba(27, 23, 21, .82)'; rr(c, ox, qy, s * LAND.cols, s * 1.1, 10); c.fill()
+  c.fillStyle = '#cdb9a0'; c.font = `800 ${Math.round(s * 0.17 + 3)}px Nunito, system-ui, sans-serif`; c.textAlign = 'left'
+  c.fillText(pt('Waiting for land', 'Чакат земя'), ox + 10, qy + s * 0.32)
+  for (let k = 0; k < LAND.maxWait; k++) {
+    const x = ox + 18 + k * s * 0.85, y = qy + s * 0.78, here = k < LD.waiting
+    c.globalAlpha = here ? 1 : 0.18; c.fillStyle = '#efe4cc'
+    c.beginPath(); c.arc(x, y - s * 0.28, s * 0.09, 0, TAU); c.fill(); c.fillRect(x - s * 0.08, y - s * 0.2, s * 0.16, s * 0.22)   // a farmer
+    c.beginPath(); c.arc(x + s * 0.2, y - s * 0.2, s * 0.07, 0, TAU); c.fill(); c.fillRect(x + s * 0.14, y - s * 0.14, s * 0.12, s * 0.16)   // and his family
+    c.globalAlpha = 1
+  }
+  if (LD.veto.on) { c.fillStyle = 'rgba(142, 43, 34, .22)'; c.fillRect(ox, oy, s * LAND.cols, s * LAND.rows); c.fillStyle = '#fbf3e4'; c.font = `900 ${Math.round(s * 0.45)}px Marcellus, Georgia, serif`; c.textAlign = 'center'; c.fillText('VETO', ox + s * LAND.cols / 2, oy + s * LAND.rows / 2) }
+  // the HUD
+  $('land-settled').textContent = `${LD.settled} / ${LAND.goal}`
+  $('land-time').textContent = Math.max(0, Math.ceil(LD.time - LD.t)) + 's'
+  const bar = $('land-anger'); bar.style.width = Math.min(100, LD.anger) + '%'; bar.style.background = LD.anger > 75 ? '#d4392d' : LD.anger > 50 ? '#e0a63a' : '#7fb069'
+}
+function landFrame(now) {
+  if (!mounted || !landActive) return
+  const dt = Math.max(0, Math.min(0.05, (now - landLast) / 1000)); landLast = now
+  if (LD?.phase === 'play') landUpdate(dt)
+  landDraw(now / 1000)
+  requestAnimationFrame(landFrame)
+}
+
 const PAN_KEY = 'ave-pantheon'
 let panSave = { open: 1, stars: [], best: [], fall: { open: 1, stars: [], best: [] } }
 try { panSave = { ...panSave, ...JSON.parse(localStorage.getItem(PAN_KEY) || '{}') }; panSave.fall ??= { open: 1, stars: [], best: [] } } catch {}
@@ -3527,6 +3707,7 @@ function mount(el, o = {}) {
   window.addEventListener('resize', layout); WIDE.addEventListener?.('change', () => requestAnimationFrame(layout))
   panActive = false
   if (opts.mode === 'chapter' && LEVELS[opts.level]?.pantheon) { quizScore = opts.score; levelIndex = opts.level; LEVEL = LEVELS[opts.level]; return openPantheon() }
+  if (opts.mode === 'chapter' && LEVELS[opts.level]?.land) { quizScore = opts.score; levelIndex = opts.level; LEVEL = LEVELS[opts.level]; return openLand() }
   if (opts.mode === 'chapter') { quizScore = opts.score; newGame(opts.level, opts.score); showBriefing(opts.level) }
   else { newGame(0); showMap() }
   last = performance.now(); requestAnimationFrame(frame)
@@ -3534,7 +3715,7 @@ function mount(el, o = {}) {
 function unmount() {
   if (!mounted) return
   mounted = false; drag = null; moveDrag = null; equesDrag = null
-  clearTimeout(bannerTimer); window.removeEventListener('resize', layout); window.removeEventListener('resize', panLayout); panActive = false; P = null
+  clearTimeout(bannerTimer); window.removeEventListener('resize', layout); window.removeEventListener('resize', panLayout); window.removeEventListener('resize', landLayout); panActive = false; landActive = false; P = null; LD = null
   sroot.innerHTML = ''
 }
 // the gods' drawings and texts, for the Pantheon in the Ave Caesar chronicle

@@ -228,3 +228,12 @@
 /* panels over the field (the list of battles, briefings, the guide): scroll them with a finger on any phone, and don't let the scroll run on into the page */
 .overlay { touch-action: pan-y; -webkit-overflow-scrolling: touch; overscroll-behavior: contain; }
 .panel { touch-action: pan-y; -webkit-overflow-scrolling: touch; overscroll-behavior: contain; }
+
+/* Divide the Land: three numbers over the map */
+.land-hud { display: grid; grid-template-columns: 1fr 1.4fr 1fr; gap: 6px; align-items: end; }
+.land-stat { display: flex; flex-direction: column; gap: 3px; font: 800 10.5px/1.1 var(--body); color: var(--muted); text-transform: uppercase; letter-spacing: .06em; }
+.land-stat b { font: 900 18px/1 var(--body); color: var(--parch); letter-spacing: 0; font-variant-numeric: tabular-nums; }
+.land-bar { height: 14px; border-radius: 999px; background: var(--rome-deep); border: 2px solid var(--ink); overflow: hidden; }
+.land-bar i { display: block; height: 100%; width: 0; background: #7fb069; transition: width .2s; }
+.land .field-wrap { width: 100%; box-sizing: border-box; }
+.land #land-field { display: block; touch-action: none; }

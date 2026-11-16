@@ -367,7 +367,15 @@
       "short": "The Gracchi",
       "era": "middle-republic",
       "mapArea": "mediterranean",
-      "locked": true
+      "locked": true,
+      "battle": {
+        "name": "Divide the Land",
+        "year": "133 BC",
+        "enemy": "the rich landowners",
+        "sec": "the-land-law",
+        "level": "land",
+        "intro": "Tiberius Gracchus’s land law: cut the estates of the rich down to the legal limit and settle landless families on the surplus, before the Senate’s anger boils over."
+      }
     },
     {
       "id": "marius",
