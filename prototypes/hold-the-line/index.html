@@ -3003,7 +3003,7 @@ function landRender() {
     4: pt('Nothing more you can do now: end the season.', 'Засега нямате друг ход: завършете сезона.') }[step]}`
   // the families waiting for land
   const fam = $('land-fam')
-  fam.innerHTML = `<span class="land-hint">${LD.families.length ? pt('Waiting for land:', 'Чакат земя:') : pt('No family is waiting.', 'Никое семейство не чака.')}</span>` + LD.families.map(f => { const F = LAND.families[f.type], likes = F.likes ? pt(` · likes ${{ road: 'the road', hills: 'hills', valley: 'valley' }[F.likes]}`, ` · иска ${{ road: 'път', hills: 'хълмове', valley: 'долина' }[F.likes]}`) : ''
+  fam.innerHTML = `<span class="land-hint">${LD.families.length ? pt('Waiting for land:', 'Чакат земя:') : pt('No family is waiting. New families arrive at the start of each season: get land ready now, then end the season.', 'Никое семейство не чака. Нови семейства пристигат в началото на всеки сезон: подгответе земя сега, после завършете сезона.')}</span>` + LD.families.map(f => { const F = LAND.families[f.type], likes = F.likes ? pt(` · likes ${{ road: 'the road', hills: 'hills', valley: 'valley' }[F.likes]}`, ` · иска ${{ road: 'път', hills: 'хълмове', valley: 'долина' }[F.likes]}`) : ''
     return `<button class="land-card${LD.selFam === f.id ? ' on' : ''}" data-id="${f.id}"><span class="ic">${F.icon}</span><b>${pt(...F.name)}</b><small>${likes}</small><i>${'●'.repeat(LAND.patience + 1 - f.age)}${'○'.repeat(f.age)}</i></button>` }).join('')
   fam.querySelectorAll('.land-card').forEach(b => b.addEventListener('click', () => { LD.selFam = LD.selFam === +b.dataset.id ? null : +b.dataset.id; landRender() }))
 }
@@ -3642,7 +3642,7 @@ const MARKUP = `<main class="game">
   </div>
   <div class="msg" id="banner" aria-live="polite"></div>
   <div class="controls">
-    <div class="progress"><span class="label" id="level">Lake Regillus</span><div class="bar" id="bar"><div class="fill" id="fill"></div></div><span class="build" translate="no">build 16 Nov, 16:18</span></div>
+    <div class="progress"><span class="label" id="level">Lake Regillus</span><div class="bar" id="bar"><div class="fill" id="fill"></div></div><span class="build" translate="no">build 16 Nov, 16:25</span></div>
     <button class="tool" id="pause">Pause</button>
     <button class="tool" id="speed">1×</button>
     <button class="tool" id="guide">Guide</button>
