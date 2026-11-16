@@ -3725,6 +3725,8 @@ function bindControls() {
     const t = e.touches[0], edge = 32
     if (t && (t.clientX < edge || t.clientX > innerWidth - edge) && e.composedPath().some(n => n === canvas || n.classList?.contains('card'))) e.preventDefault()
   }, { passive: false })
+  canvas.addEventListener('pointerdown', e => e.preventDefault())   // a press on the field is the player's: no text selection, no browser drag
+  sroot.addEventListener('dragstart', e => e.preventDefault())   // nor the browser dragging a selection or picture across the screen
   canvas.addEventListener('pointerdown', e => {
     if (!G || (G.phase !== 'play' && G.phase !== 'deploy') || drag) return
     sfx.init()

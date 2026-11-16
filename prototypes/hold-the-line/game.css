@@ -251,3 +251,7 @@
 .land-card i { font-style: normal; font-size: 9px; letter-spacing: 1px; color: var(--rome); }
 .land-card.on { background: var(--gold); transform: translateY(-2px); box-shadow: 0 4px 0 var(--ink); }
 .primary.small { padding: 8px 14px; font-size: 14px; }
+
+/* nothing in the battle gets selected by a quick double click or a drag, except the text of the panels */
+.game { user-select: none; -webkit-user-select: none; }
+.panel { user-select: text; -webkit-user-select: text; }
