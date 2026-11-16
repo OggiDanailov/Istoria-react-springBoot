@@ -3298,7 +3298,7 @@ function landBriefing() {
 }
 function landLayout() {
   if (!landActive || !lcv) return
-  const w = Math.min(sroot.querySelector('.game').clientWidth - 34, 520), h = Math.round(w * LAND.rows / LAND.cols)   // the full width of the screen
+  const w = Math.min(Math.min(window.innerWidth, sroot.querySelector('.game').clientWidth) - 40, 520), h = Math.round(w * LAND.rows / LAND.cols)   // the screen's width, with room for the frame
   const dpr = Math.min(2, window.devicePixelRatio || 1)
   lcv.style.width = w + 'px'; lcv.style.height = h + 'px'; lcv.width = Math.round(w * dpr); lcv.height = Math.round(h * dpr)
   landRender()
@@ -3416,8 +3416,7 @@ function landRender() {
     if (p.type === 'hills') { c.fillStyle = '#b59a5e'; c.fillRect(x, y, s, s); c.fillStyle = '#a3884e'; for (const [hx, hy, hr] of [[0.3, 0.75, 0.32], [0.72, 0.8, 0.28], [0.55, 0.55, 0.22]]) { c.beginPath(); c.arc(x + s * hx, y + s * hy, s * hr, Math.PI, 0); c.fill() } }
     if (p.type === 'marsh') { c.fillStyle = '#6f9a8a'; c.fillRect(x, y, s, s); c.strokeStyle = '#4e7a5a'; c.lineWidth = 2; for (const rx of [0.25, 0.45, 0.7]) { c.beginPath(); c.moveTo(x + s * rx, y + s * 0.85); c.lineTo(x + s * rx + 3, y + s * 0.55); c.stroke() } c.strokeStyle = 'rgba(220, 240, 250, .5)'; c.beginPath(); c.moveTo(x + s * 0.15, y + s * 0.35); c.quadraticCurveTo(x + s * 0.3, y + s * 0.3, x + s * 0.45, y + s * 0.35); c.stroke() }
   }
-  c.fillStyle = 'rgba(180, 150, 100, .9)'; c.fillRect(LAND.roadCol * s + s * 0.42, 0, s * 0.16, s * LAND.rows)   // the road
-  c.fillStyle = 'rgba(120, 95, 60, .7)'; for (let y = 4; y < s * LAND.rows; y += 14) c.fillRect(LAND.roadCol * s + s * 0.49, y, s * 0.02, 7)
+
   for (const p of LD.plots) {
     const x = p.c * s, y = p.r * s
     c.font = `800 ${Math.round(s * 0.13 + 4)}px Nunito, system-ui, sans-serif`; c.textAlign = 'center'
@@ -3426,6 +3425,7 @@ function landRender() {
     if (p.state === 'draining') { c.fillStyle = 'rgba(70, 120, 170, .55)'; c.fillRect(x + 1, y + 1, s - 2, s - 2); c.fillStyle = '#fbf3e4'; c.fillText(pt('draining', 'пресушава се'), x + s / 2, y + s * 0.55) }
     if (p.state === 'ready') { c.fillStyle = 'rgba(251, 243, 228, .35)'; c.fillRect(x + 1, y + 1, s - 2, s - 2); c.font = `${Math.round(s * 0.36)}px system-ui`; c.fillText('⚒️', x + s / 2, y + s * 0.66) }
     if (p.state === 'farm') { c.fillStyle = '#efe4cc'; c.fillRect(x + s * 0.3, y + s * 0.45, s * 0.4, s * 0.3); c.fillStyle = '#9a5a32'; c.beginPath(); c.moveTo(x + s * 0.24, y + s * 0.47); c.lineTo(x + s * 0.5, y + s * 0.24); c.lineTo(x + s * 0.76, y + s * 0.47); c.fill(); c.font = `${Math.round(s * 0.22)}px system-ui`; c.fillText(LAND.families[p.family].icon, x + s * 0.78, y + s * 0.3) }
+    if (isRoad(p)) { const t = pt('road', 'път'); c.font = `800 ${Math.round(s * 0.12 + 3)}px Nunito, system-ui, sans-serif`; const tw = c.measureText(t).width + 8; c.fillStyle = 'rgba(120, 90, 50, .9)'; rr(c, x + s - tw - 3, y + s - 15, tw, 12, 4); c.fill(); c.fillStyle = '#fbf3e4'; c.textAlign = 'center'; c.fillText(t, x + s - tw / 2 - 3, y + s - 6) }   // a road sign on squares by the road
     c.strokeStyle = 'rgba(27, 23, 21, .35)'; c.lineWidth = 1; c.strokeRect(x + 0.5, y + 0.5, s - 1, s - 1)
     if (LD.selPlot === p) { c.strokeStyle = '#e0a63a'; c.lineWidth = 4; c.strokeRect(x + 2, y + 2, s - 4, s - 4) }
     if (LD.pulse === p.state && (p.state !== 'open' || LD.money >= plotCost(p))) { c.strokeStyle = `rgba(240, 194, 74, ${0.5 + 0.45 * Math.sin(performance.now() / 160)})`; c.lineWidth = 4; c.strokeRect(x + 3, y + 3, s - 6, s - 6) }   // the squares the next step means
@@ -4090,7 +4090,7 @@ const MARKUP = `<main class="game">
   </div>
   <div class="msg" id="banner" aria-live="polite"></div>
   <div class="controls">
-    <div class="progress"><span class="label" id="level">Lake Regillus</span><div class="bar" id="bar"><div class="fill" id="fill"></div></div><span class="build" translate="no">build 16 Nov, 16:25</span></div>
+    <div class="progress"><span class="label" id="level">Lake Regillus</span><div class="bar" id="bar"><div class="fill" id="fill"></div></div><span class="build" translate="no">build 16 Nov, 17:13</span></div>
     <button class="tool" id="pause">Pause</button>
     <button class="tool" id="speed">1×</button>
     <button class="tool" id="guide">Guide</button>
