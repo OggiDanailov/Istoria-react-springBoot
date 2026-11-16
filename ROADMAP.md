@@ -101,6 +101,8 @@ At the end of Roman history, one last test and one last battle. Pass both and yo
 
 ## Open decisions
 
+- **The Land Commission (Gracchi chapter) is parked** (Nov 16): the user found it too confusing (too many rules at once). Proposed when we come back: one goal (families settled 0/10), only money (equip: valley 300, hills 150) and Senate anger (reclaim), no road, draining, family types or patience; keep the Senate's events and Pergamum's treasure. Or a different game idea altogether.
+
 - Which mini-games survive player testing?
 - Do we keep the long hand-written chapters as optional "deep dives"?
 - The previous detailed content plan (Late Republic topics) is in the git history of this file.
