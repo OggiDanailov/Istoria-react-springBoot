@@ -1134,7 +1134,7 @@ function layout() {
     avail = Math.min(game.clientWidth - sides - 32, 1000)
     maxH = Math.max(300, window.innerHeight - top - 28)
   } else {
-    avail = Math.min(game.clientWidth - 16, 480)   // a phone: the field nearly edge to edge
+    avail = Math.min(game.clientWidth - 28, 480)   // a phone: the field nearly edge to edge, clear of the swipe-back edge
     const used = $('tray').offsetHeight + sroot.querySelector('.controls').offsetHeight + sroot.querySelector('.status').offsetHeight + 42 + top
     maxH = Math.max(240, window.innerHeight - used)
   }
@@ -3399,6 +3399,12 @@ function watchLanguage() {
 }
 const $ = id => sroot.getElementById(id)
 function bindControls() {
+  // a touch that starts near the screen's edge on the field or a card belongs to the game, not to the phone's swipe-back gesture
+  // (which otherwise closes the page when you drag a soldier out of the leftmost lane); buttons near the edge still work
+  sroot.addEventListener('touchstart', e => {
+    const t = e.touches[0], edge = 32
+    if (t && (t.clientX < edge || t.clientX > innerWidth - edge) && e.composedPath().some(n => n === canvas || n.classList?.contains('card'))) e.preventDefault()
+  }, { passive: false })
   canvas.addEventListener('pointerdown', e => {
     if (!G || (G.phase !== 'play' && G.phase !== 'deploy') || drag) return
     sfx.init()
