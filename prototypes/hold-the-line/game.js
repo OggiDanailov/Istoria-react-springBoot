@@ -198,11 +198,11 @@ const LEVELS = [
       w(138, ['chief', 'phalanx3', 'phalanx3', 'thracian', 'thracian'], 'A great wave approaches!'), w(170, ['cavalry', 'pikeman', 'pikeman', 'thracian']),
       w(190, ['chief', 'phalanx3', 'phalanx3', 'phalanx3', ...rep(3, 'thracian'), 'cavalry'], 'The final wave!')] },
   { id: 'carthage', name: 'The Siege of Carthage', year: '146 BC', enemy: 'the Carthaginians', theme: 'carthage', start: 500, cols: 9, rows: 11, more: 1.15, lengthen: 0.6, swarm: 'volunteer',
-    cityWall: { row: 5, gates: [1, 3, 5, 7], storm: 3, refill: 22, pool: ['militia', 'volunteer', 'volunteer', 'volunteer', 'volunteer', 'shield', 'bowman'],
+    cityWall: { row: 5, gates: [1, 3, 5, 7], gateCycle: 20, storm: 3, refill: 22, pool: ['militia', 'volunteer', 'volunteer', 'volunteer', 'volunteer', 'shield', 'bowman'],
       statues: [[1, 'Baal Hammon'], [4, 'Tanit'], [7, 'Eshmun']],
       garrison: [['shield', 1, 4.1], ['shield', 3, 4.1], ['shield', 5, 4.1], ['shield', 7, 4.1], ['militia', 2, 3.2], ['militia', 6, 3.2], ['militia', 8, 2.8], ['militia', 0, 2.8], ['shield', 1, 2.0], ['shield', 4, 2.0], ['shield', 7, 2.0], ['militia', 3, 0.6], ['militia', 5, 0.6]],
       engines: [[0, 1.9], [4, 2.0], [8, 1.9]] },
-    twist: 'Take the city! Carthage’s wall splits the field in two. Its four gates are open both ways: the defenders come out through them and fan out toward your lines, and your vanguard goes in. Catapults inside the city lob stones at your soldiers on both sides of the wall; your stone-thrower lobs back over it. On the Byrsa, at the top, stand the statues of three gods of Carthage: Baal Hammon, Tanit and Eshmun. Each vanguard who reaches one sets it on fire; when all three burn, Carthage falls.',
+    twist: 'Take the city! Carthage’s wall splits the field in two. Its four gates open and shut, each on its own timer of about 20 seconds; when a great wave comes, they all open. Through an open gate the defenders come out and fan out toward your lines, and your vanguard goes in; a shut gate is wall, and only the catapults’ stones fly over it. Catapults inside the city lob stones at your soldiers on both sides of the wall; your stone-thrower lobs back over it. On the Byrsa, at the top, stand the statues of three gods of Carthage: Baal Hammon, Tanit and Eshmun. Each vanguard who reaches one sets it on fire; when all three burn, Carthage falls.',
     units: ['cart', 'slinger', 'hastatus', 'triarius', 'princeps', 'scorpio', 'maniple', 'petrobolos', 'vanguard'], newUnit: 'vanguard',
     blurb: '149–146 BC: for three years Rome besieges Carthage behind its great walls. Now Scipio Aemilianus must break through them, and then fight street by street toward the citadel, the Byrsa.',
     after: 'Carthage was destroyed and about 50,000 survivors were sold into slavery. The same year Rome destroyed Corinth. Rome now ruled the Mediterranean.',
@@ -1380,12 +1380,16 @@ function newGame(i = levelIndex, score = quizScore) {
     introduced: new Set(), selected: null, dismiss: false, hover: null, lastLane: -1, tips: {},
     hasMedicus: army.medicus, medicus: army.medicus ? MEDICUS.heals : 0, medicusWait: 0, heal: false,
     hasAugur: army.augur, augur: army.augur ? 1 : 0, blessUntil: -1,
-    cw: LEVEL.cityWall ? { seg: Array.from({ length: COLS }, (_, l) => LEVEL.cityWall.gates ? (LEVEL.cityWall.gates.includes(l) ? (LEVEL.cityWall.gateHp ?? 0) : Infinity) : LEVEL.cityWall.hp), next: LEVEL.cityWall.from, warned: false, hit: Array(COLS).fill(0), gateUntil: -1, openGate: null, gateTurn: 0, nextGate: LEVEL.cityWall.gateEvery ?? 1e9, entered: 0 } : null,
+    cw: LEVEL.cityWall ? { seg: Array.from({ length: COLS }, (_, l) => LEVEL.cityWall.gates ? (LEVEL.cityWall.gates.includes(l) ? (LEVEL.cityWall.gateCycle ? Infinity : LEVEL.cityWall.gateHp ?? 0) : Infinity) : LEVEL.cityWall.hp), next: LEVEL.cityWall.from, warned: false, hit: Array(COLS).fill(0), gateUntil: -1, openGate: null, gateTurn: 0, nextGate: LEVEL.cityWall.gateEvery ?? 1e9, entered: 0 } : null,
     lobs: [],
     walls: LEVEL.walls ? { hp: LEVEL.walls.hp, next: LEVEL.walls.from, hit: 0, warned: false, stuck: [] } : null,
     houses: (LEVEL.houses ?? []).map(([lane, row]) => ({ lane, row, burned: false })), blocks: {}, events: (LEVEL.events ?? []).map(e => ({ ...e })), charges: 0,
   }
   G.total = G.queue.length
+  if (LEVEL.cityWall?.gateCycle) {   // each gate on its own timer, starting at random: about half are open at any time
+    G.cw.cycle = {}
+    LEVEL.cityWall.gates.forEach((l, i) => { const open = i % 2 === 0 ? Math.random() < 0.7 : Math.random() < 0.3; G.cw.cycle[l] = { open, doors: open ? 1 : 0, next: 4 + Math.random() * LEVEL.cityWall.gateCycle } })
+  }
   renderTray(); renderBar(true); updateCount(); $('level').textContent = LEVEL.name
   layout()
 }
@@ -1446,9 +1450,10 @@ const houseAt = (lane, row) => G.houses.find(h => h.lane === lane && h.row === r
 const isRough = (lane, row) => !!LEVEL.rough?.some(([l, r]) => l === lane && r === row)
 // not in the siege ditch, not on a house (a torch-bearer goes only on a house)
 // Carthage's city wall: one section per lane on row cityWall.row; a section with hp left stops the defenders and our missiles
-const gateOpen = l => !!G.cw && G.cw.openGate === l && G.t < G.cw.gateUntil   // the one gate open for a sally
+const gateOpen = l => !!G.cw && (G.cw.cycle ? !!G.cw.cycle[l]?.open && G.cw.cycle[l].doors > 0.8 : G.cw.openGate === l && G.t < G.cw.gateUntil)   // a gate on its timer is passable once its doors are open
 const isGate = l => !!LEVEL.cityWall?.gates?.includes(l)
 const wallUp = l => !!G.cw && G.cw.seg[l] > 0 && !gateOpen(l)
+const openGates = () => (LEVEL.cityWall?.gates ?? []).filter(l => !wallUp(l))
 function hitWall(l, dmg) {
   if (!wallUp(l)) return
   if (LEVEL.cityWall.gates && !isGate(l)) { G.cw.hit[l] = 0.12; return }   // solid stone: only the gates can be broken
@@ -1611,7 +1616,11 @@ function update(dt) {
   // spawns, wave announcements, new enemies
   while (G.queue.length && G.queue[0].t <= G.t) {
     const e = G.queue.shift()
-    if (e.wave.big && !e.wave.announced) { e.wave.announced = true; announce(e.wave.big, true); sfx.horn() }
+    if (e.wave.big && !e.wave.announced) {
+      e.wave.announced = true; sfx.horn()
+      if (G.cw?.cycle) { for (const g of Object.values(G.cw.cycle)) { g.open = true; g.next = G.t + LEVEL.cityWall.gateCycle } announce('A great sally! All the gates open.', true, 3600) }   // a great wave: every gate swings open
+      else announce(e.wave.big, true)
+    }
     const first = e.type.split('+').filter(t => FOES[t].intro && !G.introduced.has(t))
     for (const t of first) { G.introduced.add(t); announce(FOES[t].intro, false, 3600) }
     if (G.spawned === 0 && levelIndex === 0) announce('The Latins are coming!')
@@ -1704,16 +1713,17 @@ function update(dt) {
         if (target != null && free(l, 0)) stepUnit(u, l, 0)
         continue
       }
-      if (u.row === wr + 1 && !isGate(u.lane)) {   // under solid wall: along it toward the nearest gate
-        const gate = LEVEL.cityWall.gates.slice().sort((a, b) => Math.abs(a - u.lane) - Math.abs(b - u.lane))[0], l = u.lane + Math.sign(gate - u.lane)
-        if (free(l, u.row)) stepUnit(u, l, u.row)
+      if (u.row === wr + 1 && wallUp(u.lane)) {   // under the wall or a shut gate: along it toward the nearest open gate, or wait under a gate
+        const near = a => a.slice().sort((p, q) => Math.abs(p - u.lane) - Math.abs(q - u.lane))[0]
+        const gate = near(openGates()) ?? (isGate(u.lane) ? u.lane : near(LEVEL.cityWall.gates)), l = u.lane + Math.sign(gate - u.lane)
+        if (l !== u.lane && free(l, u.row)) stepUnit(u, l, u.row)
       } else if (u.row < wr && target != null && target !== u.lane && Math.random() < 0.5) {   // inside the city: through the streets toward the nearest statue still standing
         const l = u.lane + Math.sign(target - u.lane)
         if (free(l, u.row)) stepUnit(u, l, u.row)
       } else {
         let next = u.row - 1
         while (next >= 0 && unitAt(u.lane, next)) next--   // through his own soldiers to the next free square
-        if (next >= 0 && free(u.lane, next) && (next !== wr || isGate(u.lane))) {
+        if (next >= 0 && free(u.lane, next) && (next !== wr || !wallUp(u.lane))) {
           if (next === wr) G.fx.push({ kind: 'text', x: lx(u.lane), y: ry(wr) - 6, text: LANG === 'bg' ? 'В града!' : 'Into the city!', t: 1.6 })
           stepUnit(u, u.lane, next)
         }
@@ -1804,6 +1814,13 @@ function update(dt) {
     }
   }
   if (G.cw) G.cw.hit = G.cw.hit.map(h => Math.max(0, h - dt))
+  if (G.cw?.cycle) for (const [l, g] of Object.entries(G.cw.cycle)) {   // the gates swing open and shut on their timers
+    if (G.t >= g.next) {
+      g.open = !g.open; g.next = G.t + LEVEL.cityWall.gateCycle * (0.85 + Math.random() * 0.3)
+      G.fx.push({ kind: 'text', x: lx(+l), y: ry(LEVEL.cityWall.row) - 4, text: g.open ? (LANG === 'bg' ? 'Отворена' : 'Open') : (LANG === 'bg' ? 'Затворена' : 'Shut'), t: 1.2 }); sfx.crack()
+    }
+    g.doors = Math.max(0, Math.min(1, g.doors + (g.open ? 1 : -1) * dt * 1.2))
+  }
   for (const b of G.lobs ?? []) {   // a catapult stone in flight: it lands on the square it was aimed at
     if ((b.t += dt) < b.dur) continue
     b.done = true
@@ -1963,10 +1980,10 @@ function update(dt) {
   for (const [lane, e] of G.equites.entries()) {
     if (e.state !== 'charge') continue
     e.y -= 4.2 * dt
-    if (G.cw && (e.y < (isGate(lane) ? 1.6 : LEVEL.cityWall.row + 1))) {   // the wall stops him, unless he rides through a gate; the Byrsa is the vanguard's work
+    if (G.cw && (e.y < (isGate(lane) && !wallUp(lane) ? 1.6 : LEVEL.cityWall.row + 1))) {   // the wall stops him, unless he rides through a gate; the Byrsa is the vanguard's work
       e.state = 'used'; sfx.crack(); G.shake = Math.max(G.shake, 4)
       for (let i = 0; i < 10; i++) G.fx.push({ kind: 'dust', x: lx(lane) + (Math.random() - 0.5) * cell * 0.6, y: ry(e.y + 0.3), vx: (Math.random() - 0.5) * 60, vy: -Math.random() * 40, t: 0.7 })
-      if (!G.tips.wallHorse && !isGate(lane)) { G.tips.wallHorse = true; announce('The charge breaks on the wall! Only through a gate can the horsemen ride into the city.') }
+      if (!G.tips.wallHorse && wallUp(lane)) { G.tips.wallHorse = true; announce('The charge breaks on the wall! Only through a gate can the horsemen ride into the city.') }
       continue
     }
     for (const f of G.foes) if (f.lane === lane && f.hp > 0 && Math.abs(f.y - e.y) < 0.6) charged(f, e, -1)
@@ -2046,12 +2063,14 @@ function drawCityWall() {   // a section of stone per lane: cracks as it weakens
   }
   for (let l = 0; l < COLS; l++) {
     const x = l * cell, hp = G.cw.seg[l], frac = C.gates ? (isGate(l) ? hp / C.gateHp : 1) : hp / C.hp
-    if (hp <= 0 && C.gates && C.gateHp == null) {   // an open gateway: stone either side of an arch, its wooden doors swung open
+    if ((hp <= 0 && C.gates && C.gateHp == null) || (G.cw.cycle && isGate(l))) {   // a gateway: stone either side of an arch, its wooden doors open, shut or swinging
       c.fillStyle = '#cdb98e'; c.fillRect(x, y0 + h * 0.04, cell, h * 0.96)
       c.fillStyle = '#c2ad80'; for (let q = 0; q < 2; q++) c.fillRect(x + cell * (0.04 + q * 0.76), y0, cell * 0.2, h * 0.12)   // the towers' battlements
       c.fillStyle = '#5a4a36'; c.beginPath(); c.moveTo(x + cell * 0.22, y0 + h); c.lineTo(x + cell * 0.22, y0 + h * 0.5); c.arc(x + cell * 0.5, y0 + h * 0.5, cell * 0.28, Math.PI, 0); c.lineTo(x + cell * 0.78, y0 + h); c.fill()
       c.fillStyle = '#e8dcc0'; c.beginPath(); c.moveTo(x + cell * 0.27, y0 + h); c.lineTo(x + cell * 0.27, y0 + h * 0.52); c.arc(x + cell * 0.5, y0 + h * 0.52, cell * 0.23, Math.PI, 0); c.lineTo(x + cell * 0.73, y0 + h); c.fill()   // daylight through the gateway
-      c.fillStyle = '#7a5232'; c.fillRect(x + cell * 0.08, y0 + h * 0.45, cell * 0.13, h * 0.55); c.fillRect(x + cell * 0.79, y0 + h * 0.45, cell * 0.13, h * 0.55)   // the doors, open
+      const op = G.cw.cycle ? G.cw.cycle[l].doors : 1, dw = cell * 0.23 * (1 - op) + cell * 0.04   // each door leaf: across the arch when shut, folded to the side when open
+      c.fillStyle = '#7a5232'; c.fillRect(x + cell * 0.27, y0 + h * 0.3, dw, h * 0.7); c.fillRect(x + cell * 0.73 - dw, y0 + h * 0.3, dw, h * 0.7)
+      if (op < 0.2) { c.strokeStyle = '#4a3020'; c.lineWidth = 1.5; c.beginPath(); c.moveTo(x + cell * 0.5, y0 + h * 0.3); c.lineTo(x + cell * 0.5, y0 + h); for (const yy of [0.55, 0.8]) { c.moveTo(x + cell * 0.27, y0 + h * yy); c.lineTo(x + cell * 0.73, y0 + h * yy) } c.stroke() }   // the planks and bars of a shut gate
       continue
     }
     if (hp <= 0) {   // rubble the defenders climb over
