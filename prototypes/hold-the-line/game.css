@@ -224,3 +224,7 @@
   .bar { height: 8px; }
   .progress .build { margin-top: 1px; }
 }
+
+/* panels over the field (the list of battles, briefings, the guide): scroll them with a finger on any phone, and don't let the scroll run on into the page */
+.overlay { touch-action: pan-y; -webkit-overflow-scrolling: touch; overscroll-behavior: contain; }
+.panel { touch-action: pan-y; -webkit-overflow-scrolling: touch; overscroll-behavior: contain; }
