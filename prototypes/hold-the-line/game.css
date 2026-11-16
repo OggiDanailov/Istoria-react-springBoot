@@ -230,10 +230,23 @@
 .panel { touch-action: pan-y; -webkit-overflow-scrolling: touch; overscroll-behavior: contain; }
 
 /* Divide the Land: three numbers over the map */
-.land-hud { display: grid; grid-template-columns: 1fr 1.4fr 1fr; gap: 6px; align-items: end; }
+.land-hud { display: grid; grid-template-columns: .8fr 1fr 1.3fr 1fr; gap: 6px; align-items: end; }
 .land-stat { display: flex; flex-direction: column; gap: 3px; font: 800 10.5px/1.1 var(--body); color: var(--muted); text-transform: uppercase; letter-spacing: .06em; }
 .land-stat b { font: 900 18px/1 var(--body); color: var(--parch); letter-spacing: 0; font-variant-numeric: tabular-nums; }
 .land-bar { height: 14px; border-radius: 999px; background: var(--rome-deep); border: 2px solid var(--ink); overflow: hidden; }
 .land-bar i { display: block; height: 100%; width: 0; background: #7fb069; transition: width .2s; }
 .land .field-wrap { width: 100%; box-sizing: border-box; }
 .land #land-field { display: block; touch-action: none; }
+
+.land .field-wrap { align-self: center; width: auto; }
+.land-act { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; min-height: 34px; font: 700 13px/1.3 var(--body); color: var(--parch); }
+.land-act .tool { margin-left: auto; }
+.land-hint { font: 700 12px/1.3 var(--body); color: var(--muted); }
+.land-fam { display: flex; flex-wrap: wrap; gap: 5px; align-items: center; }
+.land-card { display: grid; grid-template-columns: auto 1fr; column-gap: 5px; align-items: center; text-align: left; padding: 4px 8px 4px 6px; border-radius: 10px; border: 2px solid var(--ink);
+  background: var(--parch); color: var(--ink); font: 800 12px/1.1 var(--body); box-shadow: 0 2px 0 var(--ink); cursor: pointer; }
+.land-card .ic { grid-row: span 3; font-size: 20px; }
+.land-card small { font: 700 10px/1.1 var(--body); color: var(--soft-ink); }
+.land-card i { font-style: normal; font-size: 9px; letter-spacing: 1px; color: var(--rome); }
+.land-card.on { background: var(--gold); transform: translateY(-2px); box-shadow: 0 4px 0 var(--ink); }
+.primary.small { padding: 8px 14px; font-size: 14px; }

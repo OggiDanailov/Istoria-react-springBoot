@@ -369,12 +369,12 @@
       "mapArea": "mediterranean",
       "locked": true,
       "battle": {
-        "name": "Divide the Land",
+        "name": "The Land Commission",
         "year": "133 BC",
         "enemy": "the rich landowners",
         "sec": "the-land-law",
         "level": "land",
-        "intro": "Tiberius Gracchus’s land law: cut the estates of the rich down to the legal limit and settle landless families on the surplus, before the Senate’s anger boils over."
+        "intro": "Run Tiberius Gracchus’s land commission for eight seasons: reclaim land from the rich, pay to equip it and settle landless families, before the Senate’s anger boils over."
       }
     },
     {
