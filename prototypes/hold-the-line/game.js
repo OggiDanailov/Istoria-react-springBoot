@@ -220,8 +220,8 @@ const LEVELS = [
     waves: [w(26, ['ambron']), w(40, ['teuton']), w(54, ['ambron', 'ambron']), w(70, ['teuton', 'warrior', 'wagon']), w(86, ['shield', 'teuton']), w(100, ['ambron', 'ambron', 'ambron', 'wagon']), w(116, ['teuton', 'teuton', 'shield']),
       w(132, ['chief', ...rep(3, 'teuton'), 'ambron', 'ambron', 'shield', 'wagon'], 'A great wave approaches!'), w(160, ['teuton', 'teuton', 'ambron', 'cavalry', 'wagon']), w(178, ['shield', 'teuton', 'teuton']),
       w(194, ['chief', ...rep(4, 'teuton'), ...rep(3, 'ambron'), 'shield', 'cavalry', 'wagon', 'wagon'], 'The final wave!')] },
-  { id: 'colline-gate', name: 'The Colline Gate', year: '82 BC', enemy: 'the Samnites and Lucanians', theme: 'rome', start: 400, cols: 8, rows: 11, more: 1.22, midGate: 5,
-    twist: 'Sulla holds the Colline Gate, in the middle of the field, with his horsemen; the enemy attacks from both sides (a game twist: the real battle was fought before the walls). Soldiers above the gate face up, soldiers below it face down. If an enemy reaches the gate, that lane’s eques charges toward him; flick an eques up or down to send him early. Late on, Sulla’s own wing on the left breaks, but Crassus routs the enemy on the right.',
+  { id: 'colline-gate', name: 'The Colline Gate', year: '82 BC', enemy: 'the Samnites and Lucanians', theme: 'rome', start: 400, cols: 8, rows: 11, more: 1.22, midGate: 5, recharge: { triarius: 1 },
+    twist: 'Sulla holds the Colline Gate, in the middle of the field, with his horsemen; the enemy attacks from both sides (a game twist: the real battle was fought before the walls). Soldiers above the gate face up, soldiers below it face down. If an enemy reaches the gate, that lane’s eques charges toward him; flick an eques up or down to send him early. Late on, Sulla’s own wing on the left breaks, but Crassus routs the enemy on the right. Triarii are ready at once: as many as your grain allows.',
     events: [{ t: 150, text: 'Sulla’s left wing is wavering!' }, { t: 165, wings: [0], text: 'Sulla’s wing breaks! No equites on the left lane.' }, { t: 170, rout: [4, 5, 6, 7], text: 'Crassus has won on the right! The enemy there flees.' }],
     units: ['cart', 'slinger', 'velites', 'legionary', 'triarius', 'caltrops', 'maniple', 'scorpio', 'centurion'], newUnit: 'centurion',
     blurb: '1 November 82 BC: a great Samnite and Lucanian army stands at Rome’s Colline Gate. Sulla races back to save the city.',
@@ -1346,8 +1346,6 @@ function paintField() {
     const gy = ry(LEVEL.midGate)
     c.fillStyle = '#b8a47e'; c.fillRect(0, gy + cell * 0.08, W, cell * 0.84)
     c.strokeStyle = 'rgba(90, 70, 45, .5)'; c.lineWidth = 1; for (let r = 0; r < 3; r++) { const yy = gy + cell * (0.08 + r * 0.28); c.beginPath(); c.moveTo(0, yy); c.lineTo(W, yy); c.stroke() }
-    const gx = W / 2; c.fillStyle = '#4a3a2a'; c.beginPath(); c.moveTo(gx - cell * 0.35, gy + cell * 0.92); c.lineTo(gx - cell * 0.35, gy + cell * 0.4); c.arc(gx, gy + cell * 0.4, cell * 0.35, Math.PI, 0); c.lineTo(gx + cell * 0.35, gy + cell * 0.92); c.fill()   // the gate
-    c.fillStyle = '#3b2a1c'; c.font = `800 ${Math.round(cell * 0.2)}px Nunito, system-ui, sans-serif`; c.textAlign = 'center'; c.fillText(LANG === 'bg' ? 'Колинската порта' : 'The Colline Gate', gx, gy + cell * 0.2)
     return
   }
   if (LEVEL.twoFronts) {
@@ -1413,7 +1411,7 @@ function newGame(i = levelIndex, score = quizScore) {
     units: [], foes: [], shots: [], foeShots: [], runners: [], drops: [], fx: [], corpses: [],
     equites: equitesAt(army.equites), lives: army.lives ?? 0,
     equitesTop: LEVEL.twoFronts ? Array.from({ length: COLS }, () => ({ state: 'ready', y: -0.55 })) : [],
-    cool: Object.fromEntries(LEVEL.units.map(t => [t, { triarius: 15, caltrops: 20, shed: 10, pigs: 10 }[t] ?? 0])),
+    cool: Object.fromEntries(LEVEL.units.map(t => [t, LEVEL.recharge?.[t] != null ? 0 : { triarius: 15, caltrops: 20, shed: 10, pigs: 10 }[t] ?? 0])),   // a battle's own recharges start ready
     queue: buildQueue(score), total: 0, spawned: 0, killed: 0, lost: 0, nextSky: 4, shake: 0,
     introduced: new Set(), selected: null, dismiss: false, hover: null, lastLane: -1, tips: {},
     hasMedicus: army.medicus, medicus: army.medicus ? MEDICUS.heals : 0, medicusWait: 0, heal: false,
@@ -1529,7 +1527,7 @@ function place(type, lane, row) {
     G.vets[type]--
   } else {
     if (G.rations < U.cost || G.cool[type] > 0) { sfx.deny(); return false }
-    G.rations -= U.cost; G.cool[type] = U.recharge
+    G.rations -= U.cost; G.cool[type] = LEVEL.recharge?.[type] ?? U.recharge
   }
   G.units.push({ type, lane, row, hp: U.hp, max: U.hp, cd: U.grain ? 5 : 0.4, anim: 0, hurt: 0, armed: false, arm: U.armTime ?? 0, aiming: false, fighting: false })
   for (let i = 0; i < 6; i++) G.fx.push({ kind: 'dust', x: lx(lane) + (Math.random() - 0.5) * cell * 0.6, y: ry(row + 0.82), vx: (Math.random() - 0.5) * 30, vy: -Math.random() * 20, t: 0.5 })
@@ -1544,7 +1542,7 @@ function placeCohort(type, lane, row) {
   if (c == null) { sfx.deny(); announce(type === 'legion' ? 'A Legion needs three free squares side by side.' : 'A cohort needs three free squares side by side.'); return false }
   const lanes = [c - 1, c, c + 1]
   if (G.phase === 'deploy') { if (!(G.vets[type] > 0)) { sfx.deny(); return false } G.vets[type]-- }
-  else { if (G.rations < U.cost || G.cool[type] > 0) { sfx.deny(); return false } G.rations -= U.cost; G.cool[type] = U.recharge }
+  else { if (G.rations < U.cost || G.cool[type] > 0) { sfx.deny(); return false } G.rations -= U.cost; G.cool[type] = LEVEL.recharge?.[type] ?? U.recharge }
   const G2 = UNITS[U.group], band = ++G.ids   // the three move together from now on
   for (const l of lanes) {
     G.units.push({ band, type: U.group, lane: l, row, hp: U.hp, max: U.hp, cd: 0.4, anim: 0, hurt: 0, armed: false, arm: 0, aiming: false, fighting: false, cohort: l === c ? 'standard' : true })
