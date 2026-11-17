@@ -918,6 +918,21 @@ function drawLegionMan(c, u, T) {
 }
 function feathers(c, y, col) { [[-4, -7], [0, 0], [4, 7]].forEach(([dx, lean]) => { line(c, dx * 0.6, y, dx + lean * 0.35, y - 16, '#1b1715', 3.6); line(c, dx * 0.6, y, dx + lean * 0.35, y - 16, col, 2.4) }) }
 let FACING_US = false   // set while drawing a soldier turned to face down the field (below the middle gate): his helmet shows his face
+// a row of Italian trees across a strip of the field (y0 to y1): umbrella pines and round oaks, alternating
+function treeRow(c, y0, y1, rnd) {
+  const h = y1 - y0
+  for (let i = 0, x = cell * 0.3; x < W + cell * 0.3; i++, x += cell * (0.55 + rnd() * 0.2)) {
+    const base = y0 + h * (0.82 + rnd() * 0.12), pine = i % 2 === 0, th = h * (pine ? 0.62 : 0.42)
+    c.fillStyle = '#5a3e26'; c.fillRect(x - 2, base - th, 4, th)   // the trunk
+    if (pine) {   // a flat, wide umbrella crown
+      c.fillStyle = '#3d5a2a'; c.beginPath(); c.ellipse(x, base - th, cell * 0.3, h * 0.17, 0, 0, TAU); c.fill()
+      c.fillStyle = '#4c6c34'; c.beginPath(); c.ellipse(x - cell * 0.05, base - th - h * 0.06, cell * 0.2, h * 0.1, 0, 0, TAU); c.fill()
+    } else {   // a round oak
+      c.fillStyle = '#466a30'; for (const [dx, dy, r] of [[-0.1, 0.02, 0.15], [0.1, 0.02, 0.15], [0, -0.1, 0.17]]) { c.beginPath(); c.arc(x + dx * cell, base - th + dy * cell - h * 0.1, r * cell, 0, TAU); c.fill() }
+      c.fillStyle = 'rgba(255, 255, 255, .12)'; c.beginPath(); c.arc(x - 0.05 * cell, base - th - h * 0.2, 0.07 * cell, 0, TAU); c.fill()
+    }
+  }
+}
 function romanHelmet(c, y) {
   if (FACING_US) {   // seen from the front: the face, cheek guards, and the helmet's dome above
     c.fillStyle = SKIN; c.beginPath(); c.arc(0, y + 1.5, 7, 0, TAU); c.fill()
@@ -1700,9 +1715,9 @@ function paintField() {
     c.fillStyle = '#7f8f4a'; c.fillRect(0, 0, W, top)
     for (let x = cell * 0.3; x < W; x += cell * 0.9) { c.fillStyle = '#6b4a2b'; c.fillRect(x, top * 0.45, cell * 0.6, top * 0.25); c.fillStyle = '#d9c89a'; c.beginPath(); c.ellipse(x + cell * 0.3, top * 0.45, cell * 0.3, top * 0.22, 0, Math.PI, 0); c.fill(); c.fillStyle = '#3f2a16'; c.beginPath(); c.arc(x + cell * 0.12, top * 0.72, 4, 0, TAU); c.arc(x + cell * 0.48, top * 0.72, 4, 0, TAU); c.fill() }
   }
-  if (theme === 'rome') {   // the Samnite camp before Rome's walls
+  if (theme === 'rome') {   // the countryside outside Rome: umbrella pines and oaks
     c.fillStyle = '#8a9a52'; c.fillRect(0, 0, W, top)
-    for (let x = cell * 0.4; x < W; x += cell * 1.0) { c.fillStyle = '#6a5a8a'; c.beginPath(); c.moveTo(x - cell * 0.28, top * 0.75); c.lineTo(x, top * 0.18); c.lineTo(x + cell * 0.28, top * 0.75); c.fill() }
+    treeRow(c, 0, top, rnd)
   }
   if (theme === 'silarius') {   // the mountains of Lucania
     for (const [x, ht] of [[0.5, 0.9], [1.9, 1.1], [3.3, 0.85], [4.6, 1.05], [5.7, 0.8]]) { c.fillStyle = '#7d8796'; c.beginPath(); c.moveTo((x - 0.9) * cell, top); c.lineTo(x * cell, top - ht * top); c.lineTo((x + 0.9) * cell, top); c.fill() }
@@ -1802,7 +1817,8 @@ function paintField() {
     return
   }
   if (LEVEL.midGate != null) {   // the Colline Gate: Rome's wall across the middle of the field; open ground at the bottom too
-    c.fillStyle = '#8f9a5a'; c.fillRect(0, camp, W, H - camp)
+    c.fillStyle = '#8a9a52'; c.fillRect(0, camp, W, H - camp)
+    treeRow(c, camp, H, rnd)   // the same trees as at the top
     const gy = ry(LEVEL.midGate)
     c.fillStyle = '#b8a47e'; c.fillRect(0, gy + cell * 0.08, W, cell * 0.84)
     c.strokeStyle = 'rgba(90, 70, 45, .5)'; c.lineWidth = 1; for (let r = 0; r < 3; r++) { const yy = gy + cell * (0.08 + r * 0.28); c.beginPath(); c.moveTo(0, yy); c.lineTo(W, yy); c.stroke() }
@@ -4189,7 +4205,7 @@ const MARKUP = `<main class="game">
   </div>
   <div class="msg" id="banner" aria-live="polite"></div>
   <div class="controls">
-    <div class="progress"><span class="label" id="level">Lake Regillus</span><div class="bar" id="bar"><div class="fill" id="fill"></div></div><span class="build" translate="no">build 17 Nov, 16:07</span></div>
+    <div class="progress"><span class="label" id="level">Lake Regillus</span><div class="bar" id="bar"><div class="fill" id="fill"></div></div><span class="build" translate="no">build 17 Nov, 18:34</span></div>
     <button class="tool" id="pause">Pause</button>
     <button class="tool" id="speed">1×</button>
     <button class="tool" id="guide">Guide</button>
