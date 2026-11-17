@@ -680,10 +680,10 @@ const LEVELS = [
     waves: [w(26, ['ambron']), w(40, ['teuton']), w(54, ['ambron', 'ambron']), w(70, ['teuton', 'warrior', 'wagon']), w(86, ['shield', 'teuton']), w(100, ['ambron', 'ambron', 'ambron', 'wagon']), w(116, ['teuton', 'teuton', 'shield']),
       w(132, ['chief', ...rep(3, 'teuton'), 'ambron', 'ambron', 'shield', 'wagon'], 'A great wave approaches!'), w(160, ['teuton', 'teuton', 'ambron', 'cavalry', 'wagon']), w(178, ['shield', 'teuton', 'teuton']),
       w(194, ['chief', ...rep(4, 'teuton'), ...rep(3, 'ambron'), 'shield', 'cavalry', 'wagon', 'wagon'], 'The final wave!')] },
-  { id: 'colline-gate', name: 'The Colline Gate', year: '82 BC', enemy: 'the Samnites and Lucanians', theme: 'rome', start: 400, cols: 8, rows: 11, more: 1.22, midGate: 5, recharge: { triarius: 1 },
+  { id: 'colline-gate', name: 'The Colline Gate', year: '82 BC', enemy: 'the Samnites and Lucanians', theme: 'rome', start: 500, cols: 8, rows: 11, more: 1.1, midGate: 5, recharge: { triarius: 1 },
     twist: 'Sulla holds the Colline Gate, in the middle of the field, with his horsemen; the enemy attacks from both sides (a game twist: the real battle was fought before the walls). Soldiers above the gate face up, soldiers below it face down. If an enemy reaches the gate, that lane’s eques charges toward him; flick an eques up or down to send him early. Late on, Sulla’s own wing on the left breaks, but Crassus routs the enemy on the right. Triarii are ready at once: as many as your grain allows.',
     events: [{ t: 150, text: 'Sulla’s left wing is wavering!' }, { t: 165, wings: [0], text: 'Sulla’s wing breaks! No equites on the left lane.' }, { t: 170, rout: [4, 5, 6, 7], text: 'Crassus has won on the right! The enemy there flees.' }],
-    units: ['cart', 'slinger', 'velites', 'legionary', 'triarius', 'caltrops', 'maniple', 'scorpio', 'centurion'], newUnit: 'centurion',
+    units: ['cart', 'sudes', 'legionary', 'triarius', 'caltrops', 'maniple', 'legion', 'scorpio', 'centurion'], newUnit: 'centurion',
     blurb: '1 November 82 BC: a great Samnite and Lucanian army stands at Rome’s Colline Gate. Sulla races back to save the city.',
     after: 'Sulla won. The next day thousands of prisoners were killed, and he made himself dictator.',
     waves: [w(26, ['samnite']), w(40, ['lucanian'], 'The Lucanians attack from the south, below the gate!', 'below'), w(54, ['samnite', 'samnite']), w(70, ['lucanian', 'lucanian'], null, 'below'), w(86, ['linen', 'samnite']), w(100, ['lucanian', 'lucanian', 'samnite'], null, 'below'), w(114, ['samnite', 'samnite', 'lucanian']),
@@ -2130,7 +2130,7 @@ function update(dt) {
       else announce(e.wave.big, true)
     }
     const first = e.type.split('+').filter(t => FOES[t].intro && !G.introduced.has(t))
-    for (const t of first) { G.introduced.add(t); announce(FOES[t].intro, false, 3600) }
+    for (const t of first) { G.introduced.add(t); if (firstTime('foe:' + t)) announce(FOES[t].intro, false, 3600) }   // the first time ever; the Guide has them all
     if (G.spawned === 0 && levelIndex === 0) announce('The Latins are coming!')
     const f = spawnEntry(e)
     if (LEVEL.theme === 'gods' && f) {   // one god at a time: say who, and light up the lane
@@ -2980,8 +2980,11 @@ function announce(text, big = false, ms = 2600) {
   clearTimeout(bannerTimer); bannerTimer = setTimeout(() => { el.textContent = '' }, ms)   // the line keeps its height, so the field never jumps
 }
 // first-game hints, each shown once
+// tips and enemy introductions are shown once ever on this device, not again in every battle
+let SEEN; try { SEEN = new Set(JSON.parse(localStorage.getItem('htl-seen') || '[]')) } catch { SEEN = new Set() }
+const firstTime = key => { if (SEEN.has(key)) return false; SEEN.add(key); try { localStorage.setItem('htl-seen', JSON.stringify([...SEEN])) } catch {} ; return true }
 function tutorial(event, type) {
-  const say = (key, text, ms = 4200) => { if (G.tips[key]) return; G.tips[key] = true; announce(text, false, ms) }
+  const say = (key, text, ms = 4200) => { if (G.tips[key]) return; G.tips[key] = true; if (firstTime('tip:' + key)) announce(text, false, ms) }
   if (event === 'start') say('start', 'Drag a supply cart onto the field. Carts bring rations.')
   if (event === 'placed' && type === 'cart') say('cart', 'Tap the glowing grain to collect it. Then place slingers in front of your carts.')
   if (event === 'placed' && type === 'slinger') say('slinger', `Slingers shoot at anyone coming down their lane. Cover all ${['', '', '', 'three', 'four', 'five', 'six', 'seven'][COLS]} lanes!`)
@@ -4186,7 +4189,7 @@ const MARKUP = `<main class="game">
   </div>
   <div class="msg" id="banner" aria-live="polite"></div>
   <div class="controls">
-    <div class="progress"><span class="label" id="level">Lake Regillus</span><div class="bar" id="bar"><div class="fill" id="fill"></div></div><span class="build" translate="no">build 17 Nov, 14:29</span></div>
+    <div class="progress"><span class="label" id="level">Lake Regillus</span><div class="bar" id="bar"><div class="fill" id="fill"></div></div><span class="build" translate="no">build 17 Nov, 15:46</span></div>
     <button class="tool" id="pause">Pause</button>
     <button class="tool" id="speed">1×</button>
     <button class="tool" id="guide">Guide</button>
