@@ -79,7 +79,7 @@ const FOES = {
   pikeman:    { name: 'Macedonian phalangite', hp: 260, shield: 380, speed: 0.16, dps: 45, reach: 0.9, frontShield: true, phalanx: true, intro: 'The phalanx! Its long pikes strike a square ahead, and its shields stop missiles from the front. Hit it from the side, or let it cross rough ground.' },
   bowman:     { name: 'Carthaginian archer', hp: 180, speed: 0.22, dps: 30, bow: { range: 3.2, reload: 2.2, dmg: 25 }, intro: 'Carthaginian archers! They stop out of reach and shoot your front soldier. A siege shed protects your line.' },
   engine:     { name: 'Carthaginian catapult', hp: 700, speed: 0, dps: 0, engine: { every: [10, 14], dmg: 25, reach: 3 }, intro: 'Catapults inside the city throw stones over the wall at your soldiers. Break in to reach them, or answer with your own stone-thrower.' },
-  wagon:      { name: 'Burning wagon', hp: 260, speed: 0.45, dps: 0, wagon: 650, intro: 'The Teutones set a wagon on fire and push it at your line! It crushes the first soldier it hits. Shoot it on the way, or break it on stakes.' },
+  wagon:      { name: 'Burning wagon', hp: 260, speed: 0.45, dps: 0, wagon: 650, intro: 'The Teutones set a wagon on fire and roll it at your line! It crushes every soldier in its path. Shoot it on the way, or break it on stakes.' },
   militia:    { name: 'Carthaginian citizen', hp: 170, speed: 0.24, dps: 35, intro: 'Carthage’s citizens defend their streets and homes.' },
   volunteer:  { name: 'Freed slave', hp: 120, speed: 0.4, dps: 30, intro: 'Carthage freed its slaves to fight. They are fast but lightly armed.' },
   galley:     { name: 'Antony’s warship', hp: 300, shield: 100, speed: 0.2, dps: 45, ship: 'galley', intro: 'Antony’s warships! Their thick timbers soak up the first hits.' },
@@ -211,8 +211,8 @@ const LEVELS = [
     waves: [w(26, ['militia']), w(40, ['volunteer', 'volunteer']), w(56, ['militia', 'bowman']), w(70, ['militia', 'militia'], null, 'houses'), w(86, ['shield', 'volunteer', 'volunteer']), w(102, ['bowman', 'bowman', 'militia']),
       w(116, ['militia', 'militia', 'volunteer'], null, 'houses'), w(132, ['chief', ...rep(3, 'militia'), ...rep(3, 'volunteer'), 'shield', 'bowman'], 'A great wave approaches!'), w(162, ['militia', 'volunteer', 'volunteer'], null, 'houses'),
       w(178, ['shield', 'shield', 'bowman', 'militia']), w(196, ['chief', ...rep(4, 'militia'), ...rep(4, 'volunteer'), ...rep(2, 'shield'), 'bowman'], 'The last stand at the Byrsa!')] },
-  { id: 'aquae-sextiae', name: 'Aquae Sextiae', year: '102 BC', enemy: 'the Teutones and Ambrones', theme: 'hill', start: 300, cols: 8, rows: 10, more: 1.33, uphill: 4,
-    twist: 'The Teutones charge uphill at Marius’s position, so they slow down on the last four rows. Now and then they push a burning wagon at your line (a game twist; their wagon trains were real): plant stakes in its path. Late in the battle Marius’s 3,000 hidden men strike them from behind. New: Marius’s reforms make every soldier a legionary armed alike, so the hastatus and princeps retire.',
+  { id: 'aquae-sextiae', name: 'Aquae Sextiae', year: '102 BC', enemy: 'the Teutones and Ambrones', theme: 'hill', start: 300, cols: 8, rows: 10, more: 1.33, uphill: 4, wagonCarts: true,
+    twist: 'The Teutones charge uphill at Marius’s position, so they slow down on the last four rows. Now and then one of their wagons along the top catches fire and rolls down its lane (a game twist; their wagon trains were real). It crushes every soldier in its path, and the horseman at the bottom too; only stakes stop it. It cannot win the battle for them. Late in the battle Marius’s 3,000 hidden men strike them from behind. New: Marius’s reforms make every soldier a legionary armed alike, so the hastatus and princeps retire.',
     events: [{ t: 178, ambush: 250, text: 'Marius’s 3,000 hidden men strike the Teutones from behind!' }],
     units: ['cart', 'slinger', 'velites', 'legionary', 'triarius', 'sudes', 'caltrops', 'scorpio'], newUnit: 'legionary',
     blurb: 'In 102 BC the Teutones and Ambrones march on Italy. Near Aquae Sextiae, in southern Gaul, Marius waits for them on high ground.',
@@ -899,16 +899,16 @@ const FOE_LOOK = {
   militia:    { tunic: '#b8864e', head: 'hair', weapon: 'axe' },
   volunteer:  { tunic: '#9a8a70', head: 'hair', weapon: 'javelin', fast: true },
 }
+function drawWagon(c, T, fire) {   // a Teutonic wagon with a hide cover; fire 0..1 = how far the flames have taken it
+  c.fillStyle = '#3f2a16'; for (const x of [-15, 15]) { c.beginPath(); c.arc(x, -6, 7, 0, TAU); c.fill() }
+  c.fillStyle = '#6b4a2b'; c.fillRect(-22, -22, 44, 14); c.fillStyle = '#5a3a22'; c.fillRect(-22, -26, 44, 4)
+  if (fire < 1) { c.fillStyle = '#d9c89a'; c.beginPath(); c.ellipse(0, -26, 20, 11, 0, Math.PI, 0); c.fill() }   // the cover, until it burns
+  if (fire > 0) for (let i = 0; i < 4; i++) { const fx = -15 + i * 10, fh = (18 + 8 * Math.sin(T * 11 + i * 1.7)) * fire
+    c.fillStyle = 'rgba(214, 72, 22, .92)'; c.beginPath(); c.moveTo(fx - 6, -24); c.quadraticCurveTo(fx, -24 - fh * 1.6, fx + 6, -24); c.fill()
+    c.fillStyle = 'rgba(255, 196, 60, .95)'; c.beginPath(); c.moveTo(fx - 3, -24); c.quadraticCurveTo(fx, -24 - fh, fx + 3, -24); c.fill() }
+}
 function drawFoe(c, f, T) {
-  if (FOES[f.type]?.wagon) {   // a wagon in flames, pushed by unseen hands
-    shadow(c, 22, 5)
-    c.fillStyle = '#3f2a16'; for (const x of [-15, 15]) { c.beginPath(); c.arc(x, -6, 7, 0, TAU); c.fill() }
-    c.fillStyle = '#6b4a2b'; c.fillRect(-22, -22, 44, 14); c.fillStyle = '#5a3a22'; c.fillRect(-22, -26, 44, 4)
-    for (let i = 0; i < 4; i++) { const fx = -15 + i * 10, fh = 18 + 8 * Math.sin(T * 11 + i * 1.7)
-      c.fillStyle = 'rgba(214, 72, 22, .92)'; c.beginPath(); c.moveTo(fx - 6, -24); c.quadraticCurveTo(fx, -24 - fh * 1.6, fx + 6, -24); c.fill()
-      c.fillStyle = 'rgba(255, 196, 60, .95)'; c.beginPath(); c.moveTo(fx - 3, -24); c.quadraticCurveTo(fx, -24 - fh, fx + 3, -24); c.fill() }
-    return
-  }
+  if (FOES[f.type]?.wagon) { shadow(c, 22, 5); drawWagon(c, T, 1); return }   // a wagon in flames, rolling down
   if (FOES[f.type]?.engine) {   // Carthage's catapult, with a purple pennant
     c.save(); c.scale(1.15, 1.15); DRAW_UNIT.onager(c, { anim: f.anim }, T)
     line(c, 16, -6, 16, -40, '#5a3a22', 1.8); c.fillStyle = '#6a2f6e'; c.beginPath(); c.moveTo(16, -40); c.lineTo(30, -35 + Math.sin(T * 4) * 1.5); c.lineTo(16, -30); c.fill(); c.restore(); return
@@ -1163,7 +1163,7 @@ function layout() {
     canvas.style.width = W + 'px'; canvas.style.height = H + 'px'
     wrap.style.width = (W + 6) + 'px'
     sroot.querySelector('.status').style.width = WIDE.matches ? '' : (avail + 6) + 'px'; $('banner').style.width = ''
-    $('banner').style.top = !WIDE.matches && LEVEL.cityWall?.statues ? Math.round(ry(LEVEL.cityWall.row) - cell * 0.2) + 'px' : ''   // in the siege, messages over the wall: the top of the field is the Byrsa   // the full width, never narrower: a narrow bar wraps, grows taller and squeezes the field
+    $('banner').style.top = WIDE.matches ? '' : LEVEL.cityWall?.statues ? Math.round(ry(LEVEL.cityWall.row) - cell * 0.2) + 'px' : LEVEL.wagonCarts ? Math.round(ry(1.6)) + 'px' : ''   // keep the top clear where it matters: the Byrsa in the siege, the wagons at Aquae Sextiae   // the full width, never narrower: a narrow bar wraps, grows taller and squeezes the field
   }
   size(maxH)
   // on a small phone the battle must fit the screen: the field and cards don't scroll the page (they're for dragging),
@@ -1226,7 +1226,8 @@ function paintField() {
   if (theme === 'river') {   // Pyrrhus's camp beyond the field
     for (let x = cell * 0.4; x < W; x += cell * 1.1) { c.fillStyle = '#8a6a9a'; c.beginPath(); c.moveTo(x - cell * 0.3, top * 0.7); c.lineTo(x, top * 0.12); c.lineTo(x + cell * 0.3, top * 0.7); c.fill(); c.fillStyle = '#6a2f6e'; c.fillRect(x - 1, top * 0.04, 2, top * 0.1) }
   }
-  if (theme === 'hill') {   // the Teutones' wagons below the hill
+  if (theme === 'hill' && LEVEL.wagonCarts) { c.fillStyle = '#7f8f4a'; c.fillRect(0, 0, W, top) }   // the wagons themselves are drawn live: they catch fire and roll
+  else if (theme === 'hill') {   // the Teutones' wagons below the hill
     c.fillStyle = '#7f8f4a'; c.fillRect(0, 0, W, top)
     for (let x = cell * 0.3; x < W; x += cell * 0.9) { c.fillStyle = '#6b4a2b'; c.fillRect(x, top * 0.45, cell * 0.6, top * 0.25); c.fillStyle = '#d9c89a'; c.beginPath(); c.ellipse(x + cell * 0.3, top * 0.45, cell * 0.3, top * 0.22, 0, Math.PI, 0); c.fill(); c.fillStyle = '#3f2a16'; c.beginPath(); c.arc(x + cell * 0.12, top * 0.72, 4, 0, TAU); c.arc(x + cell * 0.48, top * 0.72, 4, 0, TAU); c.fill() }
   }
@@ -1402,6 +1403,7 @@ function newGame(i = levelIndex, score = quizScore) {
     cw: LEVEL.cityWall ? { seg: Array.from({ length: COLS }, (_, l) => LEVEL.cityWall.gates ? (LEVEL.cityWall.gates.includes(l) ? (LEVEL.cityWall.gateCycle ? Infinity : LEVEL.cityWall.gateHp ?? 0) : Infinity) : LEVEL.cityWall.hp), next: LEVEL.cityWall.from, warned: false, hit: Array(COLS).fill(0), gateUntil: -1, openGate: null, gateTurn: 0, nextGate: LEVEL.cityWall.gateEvery ?? 1e9, entered: 0 } : null,
     lobs: [],
     walls: LEVEL.walls ? { hp: LEVEL.walls.hp, next: LEVEL.walls.from, hit: 0, warned: false, stuck: [] } : null,
+    carts: Array(COLS).fill(!!LEVEL.wagonCarts), igniting: [],
     houses: (LEVEL.houses ?? []).map(([lane, row]) => ({ lane, row, burned: false })), blocks: {}, events: (LEVEL.events ?? []).map(e => ({ ...e })), charges: 0,
   }
   G.total = G.queue.length
@@ -1443,6 +1445,13 @@ function spawn(type, lane = null, y = -0.75, dir = 1) {
   return f
 }
 function spawnEntry(e) {
+  if (e.type === 'wagon' && LEVEL.wagonCarts) {   // a wagon at the top catches fire; two seconds later it rolls down its lane
+    const lanes = G.carts.map((v, l) => v ? l : null).filter(l => l != null && !G.igniting.some(g => g.lane === l))
+    const lane = lanes.length ? lanes[Math.floor(Math.random() * lanes.length)] : Math.floor(Math.random() * COLS)
+    G.igniting.push({ lane, at: G.t, roll: G.t + 2.2 }); sfx.crack()
+    if (!G.tips.ignite) { G.tips.ignite = true; announce('A wagon catches fire at the top! In a moment it will roll down its lane.', true, 3200) }
+    return null
+  }
   if (e.block) {   // the phalanx keeps its lanes side by side
     const h = e.half ?? 1, c = G.blocks[e.block] ??= h + Math.floor(Math.random() * (COLS - 2 * h))
     const f = spawn(e.type, c + e.off)
@@ -1833,6 +1842,8 @@ function update(dt) {
     }
   }
   if (G.cw) G.cw.hit = G.cw.hit.map(h => Math.max(0, h - dt))
+  for (const g of G.igniting ?? []) if (G.t >= g.roll && !g.done) { g.done = true; G.carts[g.lane] = false; const f = spawn('wagon', g.lane, -0.6); f.dx = 0 }   // the burning wagon starts to roll
+  if (G.igniting) G.igniting = G.igniting.filter(g => !g.done)
   if (G.cw?.cycle) for (const [l, g] of Object.entries(G.cw.cycle)) {   // the gates swing open and shut on their timers
     if (G.t >= g.next) {
       g.open = !g.open; g.next = G.t + LEVEL.cityWall.gateCycle * (0.85 + Math.random() * 0.3)
@@ -1915,13 +1926,14 @@ function update(dt) {
     const pit = G.units.find(u => u.lane === f.lane && UNITS[u.type].pit && f.y >= u.row + 0.2 && f.y <= u.row + 1.0)
     if (pit && !(f.pits ??= new Set()).has(pit)) { f.pits.add(pit); hurtFoe(f, UNITS.lilia.pit.dmg); G.fx.push({ kind: 'spark', x: lx(f.lane), y: ry(f.y), t: 0.3 }) }
     const bow = F.bow
-    if (u && F.wagon) {   // the burning wagon crashes into the first thing in its lane
+    if (u && F.wagon) {   // the burning wagon: stakes break it; anyone else in its path is crushed, and it rolls on
       const stakes = UNITS[u.type].stakes
-      u.hp -= stakes ? 60 : F.wagon; u.hurt = 0.3; f.hp = 0; G.killed++; sfx.crack(); G.shake = Math.max(G.shake, stakes ? 3 : 7)
       for (let i = 0; i < 12; i++) G.fx.push({ kind: 'dust', x: lx(f.lane) + (Math.random() - 0.5) * cell * 0.6, y: ry(f.y + 0.3), vx: (Math.random() - 0.5) * 70, vy: -20 - Math.random() * 40, t: 0.7 })
-      G.fx.push({ kind: 'ring', x: lx(f.lane), y: ry(f.y + 0.4), t: 0.5 })
-      if (stakes && !G.tips.stakes) { G.tips.stakes = true; announce('The wagon breaks on the stakes and burns out!') }
-      if (u.hp <= 0) removeUnit(u)
+      G.fx.push({ kind: 'ring', x: lx(f.lane), y: ry(f.y + 0.4), t: 0.5 }); sfx.crack(); G.shake = Math.max(G.shake, stakes ? 3 : 6)
+      if (stakes) {
+        u.hp -= 60; u.hurt = 0.3; f.hp = 0; G.killed++; if (u.hp <= 0) removeUnit(u)
+        if (!G.tips.stakes) { G.tips.stakes = true; announce('The wagon breaks on the stakes and burns out!') }
+      } else { removeUnit(u); if (!G.tips.crush) { G.tips.crush = true; announce('The burning wagon crushes everyone in its path! Only stakes can stop it.') } }
       continue
     }
     if (u) {
@@ -1992,6 +2004,12 @@ function update(dt) {
       if (e.state === 'ready') { e.state = 'charge'; G.charges++; G.shake = Math.max(G.shake, 6); lastStand().sound(); announce(lastStand().charge) }
       else if (e.state === 'used') return lose()
     }
+    if (f.dir > 0 && f.y >= ROWS + 0.3 && F.wagon) {   // a wagon that reaches the camp takes the horse of its lane with it, and burns out: it cannot win the battle
+      const e = G.equites[f.lane]; if (e?.state === 'ready') { e.state = 'used'; announce('The burning wagon reaches the camp and kills the horseman of that lane!') }
+      f.hp = 0; G.killed++; sfx.crack(); G.shake = Math.max(G.shake, 6)
+      for (let i = 0; i < 14; i++) G.fx.push({ kind: 'dust', x: lx(f.lane) + (Math.random() - 0.5) * cell * 0.7, y: ry(ROWS + 0.3), vx: (Math.random() - 0.5) * 80, vy: -20 - Math.random() * 40, t: 0.8 })
+      continue
+    }
     if (f.dir > 0 && f.y >= ROWS + 0.3) {
       if (LEVEL.backRiver) { riverBreach(f); if (G.phase !== 'play') return; continue }   // the Allia: the river behind the line
       if (LEVEL.openLanes && F.elephant && !G.units.some(x => x.lane === f.lane)) {   // Scipio's lanes: down an empty lane, an elephant runs out of the battle
@@ -2036,7 +2054,7 @@ function update(dt) {
     for (let i = 0; i < n; i++) G.queue.push({ t: G.t + i * 1.5, type: pool[Math.floor(Math.random() * pool.length)], wave })
     G.total += n; G.cw.nextRefill = G.t + LEVEL.cityWall.refill; updateCount()
   }
-  if (!G.queue.length && !G.foes.length && !LEVEL.cityWall?.storm) win()
+  if (!G.queue.length && !G.foes.length && !G.igniting?.length && !LEVEL.cityWall?.storm) win()   // a wagon still catching fire is an enemy on its way
 }
 
 // ---------- drawing a frame ----------
@@ -2311,6 +2329,10 @@ function draw() {
     else if (s.kind === 'bolt') { line(ctx, x, y + 14 * k, x, y - 8 * k, '#4a3420', 3); line(ctx, x, y - 6 * k, x, y - 13 * k, '#cfd4d8', 2.6) }
     else if (s.dir > 0) { line(ctx, x, y - 12 * k, x, y + 4 * k, '#6b4a2b', 2); line(ctx, x, y + 2 * k, x, y + 9 * k, '#cfd4d8', 1.8) }   // a javelin thrown down the field
     else { line(ctx, x, y + 12 * k, x, y - 4 * k, '#6b4a2b', 2); line(ctx, x, y - 2 * k, x, y - 9 * k, '#cfd4d8', 1.8) }
+  }
+  if (LEVEL.wagonCarts) for (let l = 0; l < COLS; l++) if (G.carts[l]) {   // the Teutones' wagons along the top; one catching fire shakes and blazes up
+    const g = G.igniting.find(g => g.lane === l), fire = g ? Math.min(1, (T - g.at) / 2) : 0, jig = g ? Math.sin(T * 30) * 1.5 : 0
+    ctx.save(); ctx.translate(lx(l) + jig, ry(-0.12)); ctx.scale(k * 0.75, k * 0.75); drawWagon(ctx, T, fire); ctx.restore()
   }
   if (LEVEL.storms) drawStorm()
   // grain
