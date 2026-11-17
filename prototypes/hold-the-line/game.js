@@ -220,15 +220,15 @@ const LEVELS = [
     waves: [w(26, ['ambron']), w(40, ['teuton']), w(54, ['ambron', 'ambron']), w(70, ['teuton', 'warrior', 'wagon']), w(86, ['shield', 'teuton']), w(100, ['ambron', 'ambron', 'ambron', 'wagon']), w(116, ['teuton', 'teuton', 'shield']),
       w(132, ['chief', ...rep(3, 'teuton'), 'ambron', 'ambron', 'shield', 'wagon'], 'A great wave approaches!'), w(160, ['teuton', 'teuton', 'ambron', 'cavalry', 'wagon']), w(178, ['shield', 'teuton', 'teuton']),
       w(194, ['chief', ...rep(4, 'teuton'), ...rep(3, 'ambron'), 'shield', 'cavalry', 'wagon', 'wagon'], 'The final wave!')] },
-  { id: 'colline-gate', name: 'The Colline Gate', year: '82 BC', enemy: 'the Samnites and Lucanians', theme: 'rome', start: 400, cols: 8, rows: 10, more: 1.22,
-    twist: 'Sulla’s own wing, on the left, breaks: the left lane loses its equites. Hold on: Crassus is winning on the right, and in time his wing routs the enemy there.',
+  { id: 'colline-gate', name: 'The Colline Gate', year: '82 BC', enemy: 'the Samnites and Lucanians', theme: 'rome', start: 400, cols: 8, rows: 11, more: 1.22, midGate: 5,
+    twist: 'Sulla holds the Colline Gate, in the middle of the field, with his horsemen; the enemy attacks from both sides (a game twist: the real battle was fought before the walls). Soldiers above the gate face up, soldiers below it face down. If an enemy reaches the gate, that lane’s eques charges toward him; flick an eques up or down to send him early. Late on, Sulla’s own wing on the left breaks, but Crassus routs the enemy on the right.',
     events: [{ t: 150, text: 'Sulla’s left wing is wavering!' }, { t: 165, wings: [0], text: 'Sulla’s wing breaks! No equites on the left lane.' }, { t: 170, rout: [4, 5, 6, 7], text: 'Crassus has won on the right! The enemy there flees.' }],
     units: ['cart', 'slinger', 'velites', 'legionary', 'triarius', 'caltrops', 'maniple', 'scorpio', 'centurion'], newUnit: 'centurion',
     blurb: '1 November 82 BC: a great Samnite and Lucanian army stands at Rome’s Colline Gate. Sulla races back to save the city.',
     after: 'Sulla won. The next day thousands of prisoners were killed, and he made himself dictator.',
-    waves: [w(26, ['samnite']), w(40, ['lucanian']), w(54, ['samnite', 'samnite']), w(70, ['lucanian', 'samnite']), w(86, ['linen', 'samnite']), w(100, ['lucanian', 'lucanian', 'cavalry']), w(114, ['samnite', 'samnite', 'lucanian']),
-      w(130, ['chief', ...rep(3, 'samnite'), 'lucanian', 'lucanian', 'linen'], 'A great wave approaches!'), w(156, ['samnite', 'lucanian', 'cavalry']), w(176, ['linen', 'samnite', 'samnite']),
-      w(194, ['chief', ...rep(4, 'samnite'), ...rep(2, 'lucanian'), 'linen', 'cavalry'], 'The final wave!')] },
+    waves: [w(26, ['samnite']), w(40, ['lucanian'], 'The Lucanians attack from the south, below the gate!', 'below'), w(54, ['samnite', 'samnite']), w(70, ['lucanian', 'lucanian'], null, 'below'), w(86, ['linen', 'samnite']), w(100, ['lucanian', 'lucanian', 'cavalry'], null, 'below'), w(114, ['samnite', 'samnite', 'lucanian']),
+      w(130, ['chief', ...rep(3, 'samnite'), 'lucanian', 'linen'], 'A great wave approaches!'), w(140, ['lucanian', 'lucanian', 'samnite'], null, 'below'), w(156, ['samnite', 'lucanian', 'cavalry']), w(170, ['lucanian', 'samnite'], null, 'below'), w(176, ['linen', 'samnite', 'samnite']),
+      w(194, ['chief', ...rep(3, 'samnite'), 'linen', 'cavalry'], 'The final wave, from both sides!'), w(196, [...rep(3, 'lucanian'), 'samnite'], null, 'below')] },
   { id: 'silarius', name: 'The Silarius River', year: '71 BC', enemy: 'Spartacus', theme: 'silarius', start: 375, cols: 8, rows: 10, more: 1.33, ditch: 2, river: true,
     twist: 'The slave army must wade the river, which slows it (you can’t build in it). Gladiators lead the charge: watch for the retiarius’s net. In the final wave Spartacus himself attacks.',
     units: ['cart', 'slinger', 'velites', 'legionary', 'triarius', 'caltrops', 'maniple', 'scorpio', 'centurion'],
@@ -1135,6 +1135,7 @@ let canvas, ctx
 const bg = document.createElement('canvas'), bctx = bg.getContext('2d')
 let W = 0, H = 0, cell = 72, k = 1, dpr = 1
 const lx = lane => (lane + 0.5) * cell
+const eqHome = () => LEVEL.midGate != null ? LEVEL.midGate + 0.62 : ROWS + 0.62   // where an eques waits
 const ry = row => (APPROACH + row) * cell
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
 
@@ -1332,6 +1333,15 @@ function paintField() {
     c.fillStyle = '#c9b48a'; c.fillRect(0, H - cell * 0.12, W, cell * 0.12)
     return
   }
+  if (LEVEL.midGate != null) {   // the Colline Gate: Rome's wall across the middle of the field; open ground at the bottom too
+    c.fillStyle = '#8f9a5a'; c.fillRect(0, camp, W, H - camp)
+    const gy = ry(LEVEL.midGate)
+    c.fillStyle = '#b8a47e'; c.fillRect(0, gy + cell * 0.08, W, cell * 0.84)
+    c.strokeStyle = 'rgba(90, 70, 45, .5)'; c.lineWidth = 1; for (let r = 0; r < 3; r++) { const yy = gy + cell * (0.08 + r * 0.28); c.beginPath(); c.moveTo(0, yy); c.lineTo(W, yy); c.stroke() }
+    const gx = W / 2; c.fillStyle = '#4a3a2a'; c.beginPath(); c.moveTo(gx - cell * 0.35, gy + cell * 0.92); c.lineTo(gx - cell * 0.35, gy + cell * 0.4); c.arc(gx, gy + cell * 0.4, cell * 0.35, Math.PI, 0); c.lineTo(gx + cell * 0.35, gy + cell * 0.92); c.fill()   // the gate
+    c.fillStyle = '#3b2a1c'; c.font = `800 ${Math.round(cell * 0.2)}px Nunito, system-ui, sans-serif`; c.textAlign = 'center'; c.fillText(LANG === 'bg' ? 'Колинската порта' : 'The Colline Gate', gx, gy + cell * 0.2)
+    return
+  }
   if (LEVEL.twoFronts) {
     c.fillStyle = '#86964a'; c.fillRect(0, camp, W, H - camp)
     const stake = cell * 0.13
@@ -1384,7 +1394,7 @@ function buildQueue(score = G?.score ?? quizScore) {
 function equitesAt(n) {
   const order = [...Array(COLS).keys()].filter(l => !LEVEL.closed?.includes(l)).sort((a, b) => Math.abs(a - (COLS - 1) / 2) - Math.abs(b - (COLS - 1) / 2) || a - b)
   const have = new Set(order.slice(0, n))
-  return Array.from({ length: COLS }, (_, l) => ({ state: have.has(l) ? 'ready' : 'none', y: ROWS + 0.62 }))
+  return Array.from({ length: COLS }, (_, l) => ({ state: have.has(l) ? 'ready' : 'none', y: eqHome() }))
 }
 function newGame(i = levelIndex, score = quizScore) {
   levelIndex = i; LEVEL = LEVELS[i]; COLS = LEVEL.cols ?? 5; ROWS = LEVEL.rows ?? 7
@@ -1496,6 +1506,7 @@ function hitWall(l, dmg) {
   G.cw.breached = true
 }
 function canPlace(type, lane, row) {
+  if (LEVEL.midGate === row) return false   // the gate row is the horsemen's
   if (G.cw && row <= LEVEL.cityWall.row) return false   // on the wall or behind it
   if (lane < 0 || lane >= COLS || row < 0 || row >= ROWS || unitAt(lane, row) || row === LEVEL.ditch || LEVEL.closed?.includes(lane)) return false
   return type === 'torch' ? !!houseAt(lane, row) : !houseAt(lane, row)
@@ -1673,7 +1684,7 @@ function update(dt) {
   for (const ev of G.events) if (!ev.done && G.t >= ev.t) {
     ev.done = true; announce(ev.text, true, 4200); sfx.horn()
     if (ev.wings) for (const l of ev.wings) { if (G.equites[l].state === 'ready') G.equites[l].state = 'used'; G.equites[l].routed = true }   // that wing is lost: no eques can ride there now
-    if (ev.masinissa) for (const e of G.equites) if (e.state === 'used') { e.state = 'ready'; e.y = ROWS + 0.62 }   // only those that had charged
+    if (ev.masinissa) for (const e of G.equites) if (e.state === 'used') { e.state = 'ready'; e.y = eqHome() }   // only those that had charged
     const leave = test => {   // these ships turn and sail away; those still to come never arrive
       for (const f of G.foes) if (test(FOES[f.type])) { f.fleeing = true; f.eating = null }
       const before = G.queue.length; G.queue = G.queue.filter(e => !test(FOES[e.type])); G.total -= before - G.queue.length
@@ -1782,8 +1793,9 @@ function update(dt) {
     }
     if (U.reload && !(U.melee && u.fighting)) {
       const lanes = U.spread ? [u.lane - 1, u.lane, u.lane + 1].filter(l => l >= 0 && l < COLS) : [u.lane]
-      const above = f => f.y < u.row + 1.05 && f.y > Math.max(-0.55, u.row + 0.5 - U.range)
-      const below = f => LEVEL.twoFronts && f.y > u.row + 0.6 && f.y < Math.min(ROWS + 0.7, u.row + 0.5 + U.range + 0.6)
+      const downward = LEVEL.midGate != null && u.row > LEVEL.midGate   // below the middle gate: he faces down
+      const above = f => !downward && f.y < u.row + 1.05 && f.y > Math.max(-0.55, u.row + 0.5 - U.range)
+      const below = f => (LEVEL.twoFronts || downward) && f.y > u.row + 0.6 && f.y < Math.min(ROWS + 0.7, u.row + 0.5 + U.range + 0.6)
       const sheltered = f => G.cw && !U.lob && u.row > LEVEL.cityWall.row && f.y < LEVEL.cityWall.row + 0.9 && wallUp(f.lane)   // behind solid wall, out of reach
       const inReach = G.foes.filter(f => lanes.includes(f.lane) && f.hp > 0 && (above(f) || below(f)) && !sheltered(f))
       const atWall = G.cw && lanes.some(l => wallUp(l) && (!LEVEL.cityWall.gates || isGate(l))) && u.row + 0.5 - U.range < LEVEL.cityWall.row + 1   // the city wall is in reach
@@ -1912,11 +1924,11 @@ function update(dt) {
       }
       continue
     }
-    if (f.fleeing) {   // a panicked elephant runs back up the lane, trampling its own side
-      f.y -= 0.9 * dt
+    if (f.fleeing) {   // a panicked elephant runs back up the lane, trampling its own side (anyone fleeing runs back the way he came)
+      f.y -= 0.9 * dt * (f.dir ?? 1)
       f.trampled ??= new Set()
       if (FOES[f.type].elephant) for (const o of G.foes) if (o !== f && o !== f.calf && o.type !== 'calf' && o.lane === f.lane && o.hp > 0 && Math.abs(o.y - f.y) < 0.55 && !f.trampled.has(o)) { f.trampled.add(o); hurtFoe(o, 300) }
-      if (f.y < -1.4) { f.hp = 0; G.killed++ }
+      if (f.y < -1.4 || f.y > ROWS + 1.4) { f.hp = 0; G.killed++ }
       continue
     }
     if (f.slide) { f.slide.t += dt / 0.45; if (f.slide.t >= 1) f.slide = null }
@@ -2005,6 +2017,12 @@ function update(dt) {
       }
       if (Math.random() < dt * 1.5) G.fx.push({ kind: 'dust', x: foeX(f), y: ry(f.y), vx: (Math.random() - 0.5) * 12, vy: -6, t: 0.5 })
     }
+    if (LEVEL.midGate != null && (f.dir > 0 ? f.y >= LEVEL.midGate - 0.15 : f.y <= LEVEL.midGate + 1.15)) {   // at the gate in the middle
+      const e = G.equites[f.lane]
+      if (e.state === 'ready') { e.state = 'charge'; e.dir = f.dir > 0 ? -1 : 1; G.charges++; G.shake = Math.max(G.shake, 6); lastStand().sound(); announce(lastStand().charge) }
+      else if (e.state !== 'charge') return lose()
+      continue
+    }
     if (f.dir < 0 && f.y <= -0.3) {   // through the far line: the equites on that side charge
       const e = G.equitesTop[f.lane]
       if (e.state === 'ready') { e.state = 'charge'; G.charges++; G.shake = Math.max(G.shake, 6); lastStand().sound(); announce(lastStand().charge) }
@@ -2031,16 +2049,17 @@ function update(dt) {
   // the equites ride up their lane once, cutting down everyone in it
   for (const [lane, e] of G.equites.entries()) {
     if (e.state !== 'charge') continue
-    e.y -= 4.2 * dt
+    const dir = e.dir ?? -1
+    e.y += dir * 4.2 * dt
     if (G.cw && (e.y < (isGate(lane) && !wallUp(lane) ? 1.6 : LEVEL.cityWall.row + 1))) {   // the wall stops him, unless he rides through a gate; the Byrsa is the vanguard's work
       e.state = 'used'; sfx.crack(); G.shake = Math.max(G.shake, 4)
       for (let i = 0; i < 10; i++) G.fx.push({ kind: 'dust', x: lx(lane) + (Math.random() - 0.5) * cell * 0.6, y: ry(e.y + 0.3), vx: (Math.random() - 0.5) * 60, vy: -Math.random() * 40, t: 0.7 })
       if (!G.tips.wallHorse && wallUp(lane)) { G.tips.wallHorse = true; announce('The charge breaks on the wall! Only through a gate can the horsemen ride into the city.') }
       continue
     }
-    for (const f of G.foes) if (f.lane === lane && f.hp > 0 && Math.abs(f.y - e.y) < 0.6) charged(f, e, -1)
+    for (const f of G.foes) if (f.lane === lane && f.hp > 0 && Math.abs(f.y - e.y) < 0.6) charged(f, e, dir)
     if (Math.random() < dt * 30) G.fx.push({ kind: 'dust', x: lx(lane) + (Math.random() - 0.5) * cell * 0.5, y: ry(e.y), vx: (Math.random() - 0.5) * 40, vy: -Math.random() * 30, t: 0.6 })
-    if (e.y < -1.3) e.state = 'used'
+    if (e.y < -1.3 || e.y > ROWS + 1.3) e.state = 'used'
   }
   for (const [lane, e] of G.equitesTop.entries()) {   // on two fronts, the equites at the top ride down their lane
     if (e.state !== 'charge') continue
@@ -2260,8 +2279,9 @@ function draw() {
   if (!LEVEL.backRiver) for (let l = 0; l < COLS; l++) if ((G.equites[l]?.state === 'none' || G.equites[l]?.state === 'used') && !LEVEL.closed?.includes(l)) {   // an unguarded lane: no eques under it
     const free = equesDrag?.moved
     ctx.fillStyle = free ? (equesDrag.to === l ? 'rgba(251, 243, 228, .35)' : 'rgba(251, 243, 228, .14)') : 'rgba(142, 43, 34, .16)'
-    ctx.fillRect(l * cell + 3, ry(ROWS) + 2, cell - 6, CAMP * cell - 4)
-    ctx.strokeStyle = free ? 'rgba(251, 243, 228, .7)' : 'rgba(142, 43, 34, .45)'; ctx.lineWidth = 1.5; ctx.setLineDash([4, 4]); ctx.strokeRect(l * cell + 3, ry(ROWS) + 2, cell - 6, CAMP * cell - 4); ctx.setLineDash([])
+    const gy = LEVEL.midGate != null ? ry(LEVEL.midGate) : ry(ROWS), gh = LEVEL.midGate != null ? cell : CAMP * cell
+    ctx.fillRect(l * cell + 3, gy + 2, cell - 6, gh - 4)
+    ctx.strokeStyle = free ? 'rgba(251, 243, 228, .7)' : 'rgba(142, 43, 34, .45)'; ctx.lineWidth = 1.5; ctx.setLineDash([4, 4]); ctx.strokeRect(l * cell + 3, gy + 2, cell - 6, gh - 4); ctx.setLineDash([])
   }
   if (G.heal) for (const u of G.units) if (u.hp < u.max && u.type !== 'caltrops' && u.type !== 'pigs') {
     ctx.fillStyle = 'rgba(127, 176, 105, .28)'; ctx.fillRect(u.lane * cell + 3, ry(u.row) + 3, cell - 6, cell - 6)
@@ -2306,7 +2326,7 @@ function draw() {
   }])
   for (const [lane, e] of G.equites.entries()) if (e.state !== 'used' && e.state !== 'none') items.push([ry(e.y), () => { ctx.save(); if (equesDrag?.moved && equesDrag.from === lane) ctx.globalAlpha = 0.4; ctx.translate(lx(lane), ry(e.y)); ctx.scale(k * 0.9, k * 0.9); drawEques(ctx, e, T); ctx.restore() }])
   if (equesDrag?.moved && equesDrag.to != null && equesDrag.to !== equesDrag.from && G.equites[equesDrag.from]) {   // the horse being dragged, under the pointer: gold where he can go, red where he can't
-    const to = equesDrag.to, ok = (G.equites[to]?.state === 'none' || G.equites[to]?.state === 'used') && !G.equites[to].routed && !LEVEL.closed?.includes(to), y = ry(ROWS + 0.62)
+    const to = equesDrag.to, ok = (G.equites[to]?.state === 'none' || G.equites[to]?.state === 'used') && !G.equites[to].routed && !LEVEL.closed?.includes(to), y = ry(eqHome())
     items.push([y + 1, () => {
       ctx.save(); ctx.strokeStyle = ok ? 'rgba(224, 166, 58, .95)' : 'rgba(190, 40, 30, .95)'; ctx.lineWidth = 3; ctx.beginPath(); ctx.ellipse(lx(to), y - 2, cell * 0.38, cell * 0.16, 0, 0, TAU); ctx.stroke(); ctx.restore()
       ctx.save(); ctx.globalAlpha = ok ? 0.85 : 0.45; ctx.translate(lx(to), y); ctx.scale(k * 0.9, k * 0.9); drawEques(ctx, G.equites[equesDrag.from], T); ctx.restore()
@@ -2520,7 +2540,7 @@ function charged(f, e, back) {
 function moveEques(from, to) {
   const free = l => (G.equites[l]?.state === 'none' || G.equites[l]?.state === 'used') && !G.equites[l].routed   // a lane with no eques, or whose eques has charged
   if (to == null || to === from || !free(to) || LEVEL.closed?.includes(to) || G.equites[from]?.state !== 'ready') return false
-  G.equites[to] = { state: 'ready', y: ROWS + 0.62 }; G.equites[from] = { state: 'none', y: ROWS + 0.62 }; sfx.place()
+  G.equites[to] = { state: 'ready', y: eqHome() }; G.equites[from] = { state: 'none', y: eqHome() }; sfx.place()
   return true
 }
 function cellAt(clientX, clientY) {
@@ -2549,6 +2569,11 @@ document.addEventListener('pointerup', e => {
   if (!mounted) return
   if (equesDrag) {
     const d = equesDrag; equesDrag = null
+    const dy = e.clientY - d.y0, dx = e.clientX - d.x0
+    if (LEVEL.midGate != null && G.phase === 'play' && Math.abs(dy) > cell * 0.7 && Math.abs(dy) > Math.abs(dx) * 1.5) {   // flicked up or down: he charges that way now
+      const q = G.equites[d.from]; if (q?.state === 'ready') { q.state = 'charge'; q.dir = dy < 0 ? -1 : 1; G.charges++; G.shake = Math.max(G.shake, 6); lastStand().sound(); announce(lastStand().charge) }
+      return
+    }
     if (d.moved && d.to !== d.from && !moveEques(d.from, d.to)) {
       sfx.deny()
       if (G.equites[d.to]?.state === 'ready' || G.equites[d.to]?.state === 'charge') announce('That lane already has an eques. Move him to a lane marked in red.')
@@ -3767,7 +3792,8 @@ function bindControls() {
     sfx.init()
     const c = cellAt(e.clientX, e.clientY); if (!c) return
     // an eques in the camp (his head reaches a little above it): drag him to another lane. He comes before grain, or a sack beside him would steal the press
-    if (c.y / cell - APPROACH >= ROWS - 0.2 && c.lane >= 0 && c.lane < COLS && G.equites[c.lane]?.state === 'ready') {
+    const fr = c.y / cell - APPROACH, onEq = LEVEL.midGate != null ? fr >= LEVEL.midGate - 0.1 && fr < LEVEL.midGate + 1 : fr >= ROWS - 0.2
+    if (onEq && c.lane >= 0 && c.lane < COLS && G.equites[c.lane]?.state === 'ready') {
       equesDrag = { from: c.lane, x0: e.clientX, y0: e.clientY, moved: false }; canvas.setPointerCapture(e.pointerId); return
     }
     // then grain: it's the most urgent tap
