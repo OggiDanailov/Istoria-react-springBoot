@@ -255,3 +255,7 @@
 /* nothing in the battle gets selected by a quick double click or a drag, except the text of the panels */
 .game { user-select: none; -webkit-user-select: none; }
 .panel { user-select: text; -webkit-user-select: text; }
+
+/* messages over the field: see-through, smaller, and never in the way of a tap */
+.field-wrap > .msg { background: rgba(27, 23, 21, .45); box-shadow: none; text-shadow: 0 1px 2px rgba(0, 0, 0, .9), 0 0 6px rgba(0, 0, 0, .6); pointer-events: none; padding: 4px 8px; }
+.field-wrap > .msg.big { font-size: 16px; }

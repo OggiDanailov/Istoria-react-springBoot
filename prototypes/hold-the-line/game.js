@@ -79,7 +79,7 @@ const FOES = {
   pikeman:    { name: 'Macedonian phalangite', hp: 260, shield: 380, speed: 0.16, dps: 45, reach: 0.9, frontShield: true, phalanx: true, intro: 'The phalanx! Its long pikes strike a square ahead, and its shields stop missiles from the front. Hit it from the side, or let it cross rough ground.' },
   bowman:     { name: 'Carthaginian archer', hp: 180, speed: 0.22, dps: 30, bow: { range: 3.2, reload: 2.2, dmg: 25 }, intro: 'Carthaginian archers! They stop out of reach and shoot your front soldier. A siege shed protects your line.' },
   engine:     { name: 'Carthaginian catapult', hp: 700, speed: 0, dps: 0, engine: { every: [10, 14], dmg: 25, reach: 3 }, intro: 'Catapults inside the city throw stones over the wall at your soldiers. Break in to reach them, or answer with your own stone-thrower.' },
-  wagon:      { name: 'Burning wagon', hp: 260, speed: 0.45, dps: 0, wagon: 650, intro: 'The Teutones set a wagon on fire and roll it at your line! It crushes every soldier in its path. Shoot it on the way, or break it on stakes.' },
+  wagon:      { name: 'Burning wagon', hp: 260, speed: 0.45, dps: 0, wagon: 650, intro: 'The Teutones set a wagon on fire and roll it at your line, with warriors charging behind it! Missiles can’t stop it, and it crushes every soldier in its path: only stakes break it.' },
   militia:    { name: 'Carthaginian citizen', hp: 170, speed: 0.24, dps: 35, intro: 'Carthage’s citizens defend their streets and homes.' },
   volunteer:  { name: 'Freed slave', hp: 120, speed: 0.4, dps: 30, intro: 'Carthage freed its slaves to fight. They are fast but lightly armed.' },
   galley:     { name: 'Antony’s warship', hp: 300, shield: 100, speed: 0.2, dps: 45, ship: 'galley', intro: 'Antony’s warships! Their thick timbers soak up the first hits.' },
@@ -211,8 +211,8 @@ const LEVELS = [
     waves: [w(26, ['militia']), w(40, ['volunteer', 'volunteer']), w(56, ['militia', 'bowman']), w(70, ['militia', 'militia'], null, 'houses'), w(86, ['shield', 'volunteer', 'volunteer']), w(102, ['bowman', 'bowman', 'militia']),
       w(116, ['militia', 'militia', 'volunteer'], null, 'houses'), w(132, ['chief', ...rep(3, 'militia'), ...rep(3, 'volunteer'), 'shield', 'bowman'], 'A great wave approaches!'), w(162, ['militia', 'volunteer', 'volunteer'], null, 'houses'),
       w(178, ['shield', 'shield', 'bowman', 'militia']), w(196, ['chief', ...rep(4, 'militia'), ...rep(4, 'volunteer'), ...rep(2, 'shield'), 'bowman'], 'The last stand at the Byrsa!')] },
-  { id: 'aquae-sextiae', name: 'Aquae Sextiae', year: '102 BC', enemy: 'the Teutones and Ambrones', theme: 'hill', start: 300, cols: 8, rows: 10, more: 1.33, uphill: 4, wagonCarts: true,
-    twist: 'The Teutones charge uphill at Marius’s position, so they slow down on the last four rows. Now and then one of their wagons along the top catches fire and rolls down its lane (a game twist; their wagon trains were real). It crushes every soldier in its path, and the horseman at the bottom too; only stakes stop it. It cannot win the battle for them. Late in the battle Marius’s 3,000 hidden men strike them from behind. New: Marius’s reforms make every soldier a legionary armed alike, so the hastatus and princeps retire.',
+  { id: 'aquae-sextiae', name: 'Aquae Sextiae', year: '102 BC', enemy: 'the Teutones and Ambrones', theme: 'hill', start: 300, cols: 8, rows: 10, more: 1.33, uphill: 4, wagonCarts: true, wagonBand: ['teuton', 'teuton', 'ambron', 'ambron'],
+    twist: 'The Teutones charge uphill at Marius’s position, so they slow down on the last four rows. Now and then one of their wagons along the top catches fire and rolls down its lane (a game twist; their wagon trains were real). No missile can stop it: it crushes every soldier in its path, and the horseman at the bottom too, and a band of warriors charges down the lane behind it. Only stakes stop it. The wagon itself cannot win the battle, but the warriors behind it can. Late in the battle Marius’s 3,000 hidden men strike them from behind. New: Marius’s reforms make every soldier a legionary armed alike, so the hastatus and princeps retire.',
     events: [{ t: 178, ambush: 250, text: 'Marius’s 3,000 hidden men strike the Teutones from behind!' }],
     units: ['cart', 'slinger', 'velites', 'legionary', 'triarius', 'sudes', 'caltrops', 'scorpio'], newUnit: 'legionary',
     blurb: 'In 102 BC the Teutones and Ambrones march on Italy. Near Aquae Sextiae, in southern Gaul, Marius waits for them on high ground.',
@@ -1445,6 +1445,7 @@ function spawn(type, lane = null, y = -0.75, dir = 1) {
   return f
 }
 function spawnEntry(e) {
+  if (e.lane != null) return spawn(e.type, e.lane)   // sent down a given lane (the warriors behind a wagon)
   if (e.type === 'wagon' && LEVEL.wagonCarts) {   // a wagon at the top catches fire; two seconds later it rolls down its lane
     const lanes = G.carts.map((v, l) => v ? l : null).filter(l => l != null && !G.igniting.some(g => g.lane === l))
     const lane = lanes.length ? lanes[Math.floor(Math.random() * lanes.length)] : Math.floor(Math.random() * COLS)
@@ -1609,7 +1610,7 @@ function twinMul(f, src) {
   return 0.1
 }
 function hurtFoe(f, dmg, quiet = false, flank = false) {
-  if (f.hp <= 0) return
+  if (f.hp <= 0 || FOES[f.type].wagon) return   // a burning wagon: no missile or blade stops it, only stakes
   if (f.shield > 0 && !(flank && FOES[f.type].frontShield)) {
     const a = Math.min(f.shield, dmg); f.shield -= a; dmg -= a
     if (f.shield <= 0) { sfx.crack(); for (let i = 0; i < 8; i++) G.fx.push({ kind: 'shard', x: lx(f.lane), y: ry(f.y) - 25 * k, vx: (Math.random() - 0.5) * 90, vy: -Math.random() * 70, t: 0.6 }) }
@@ -1807,7 +1808,7 @@ function update(dt) {
     }
     s.jolt = Math.max(0, (s.jolt ?? 0) - dt)
     s.y += sd * s.speed * dt * (s.jolt > 0 ? 0.2 : 1)
-    const hit = G.foes.filter(f => f.lane === s.lane && f.hp > 0 && !f.jump && !s.hits?.has(f) && (!s.lob || s.ty == null || s.y <= s.ty + 0.6) && s.y <= f.y + 0.05 && s.y >= f.y - 0.85 && passes(s, f)).sort((a, b) => sd < 0 ? b.y - a.y : a.y - b.y)[0]
+    const hit = G.foes.filter(f => f.lane === s.lane && f.hp > 0 && !f.jump && !FOES[f.type].wagon && !s.hits?.has(f) && (!s.lob || s.ty == null || s.y <= s.ty + 0.6) && s.y <= f.y + 0.05 && s.y >= f.y - 0.85 && passes(s, f)).sort((a, b) => sd < 0 ? b.y - a.y : a.y - b.y)[0]
     if (hit) {
       hurtFoe(hit, s.dmg * twinMul(hit, s.src), s.kind, s.from != null && s.from !== s.lane)   // a javelin from the next lane hits the side
       if (s.breaks && hit.shield > 0) { hit.shield = 0; sfx.crack() }   // the pilum bends: the shield is useless
@@ -1842,7 +1843,12 @@ function update(dt) {
     }
   }
   if (G.cw) G.cw.hit = G.cw.hit.map(h => Math.max(0, h - dt))
-  for (const g of G.igniting ?? []) if (G.t >= g.roll && !g.done) { g.done = true; G.carts[g.lane] = false; const f = spawn('wagon', g.lane, -0.6); f.dx = 0 }   // the burning wagon starts to roll
+  for (const g of G.igniting ?? []) if (G.t >= g.roll && !g.done) {   // the burning wagon starts to roll, and a band of warriors follows it down the lane
+    g.done = true; G.carts[g.lane] = false; const f = spawn('wagon', g.lane, -0.6); f.dx = 0
+    const band = LEVEL.wagonBand ?? [], wave = { t: G.t, foes: [] }
+    band.forEach((type, i) => G.queue.push({ t: G.t + 2.5 + i * 1.2, type, wave, lane: g.lane }))
+    if (band.length) { G.total += band.length; G.queue.sort((a, b) => a.t - b.t); updateCount() }
+  }
   if (G.igniting) G.igniting = G.igniting.filter(g => !g.done)
   if (G.cw?.cycle) for (const [l, g] of Object.entries(G.cw.cycle)) {   // the gates swing open and shut on their timers
     if (G.t >= g.next) {
@@ -1933,7 +1939,7 @@ function update(dt) {
       if (stakes) {
         u.hp -= 60; u.hurt = 0.3; f.hp = 0; G.killed++; if (u.hp <= 0) removeUnit(u)
         if (!G.tips.stakes) { G.tips.stakes = true; announce('The wagon breaks on the stakes and burns out!') }
-      } else { removeUnit(u); if (!G.tips.crush) { G.tips.crush = true; announce('The burning wagon crushes everyone in its path! Only stakes can stop it.') } }
+      } else { removeUnit(u); if (!G.tips.crush) { G.tips.crush = true; announce('The burning wagon crushes everyone in its path! Only stakes can stop it, and its warriors are right behind.') } }
       continue
     }
     if (u) {
