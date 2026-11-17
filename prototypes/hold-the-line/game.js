@@ -1153,7 +1153,7 @@ function layout() {
     avail = Math.min(game.clientWidth - sides - 32, 1000)
     maxH = Math.max(300, window.innerHeight - top - 28)
   } else {
-    avail = Math.min(game.clientWidth - 28, 480)   // a phone: the field nearly edge to edge, clear of the swipe-back edge
+    avail = Math.min(game.clientWidth - 40, 480)   // a phone: the field nearly edge to edge, clear of the swipe-back edge
     const used = $('tray').offsetHeight + sroot.querySelector('.controls').offsetHeight + sroot.querySelector('.status').offsetHeight + 42 + top
     maxH = Math.max(240, window.innerHeight - used)
   }
@@ -2229,7 +2229,7 @@ function draw() {
   const T = G.t
   if (G.walls) drawWalls()
   // where the selected unit can go
-  const moving = moveDrag?.moved && G.units.includes(moveDrag.u) ? moveDrag.u : null
+  const moving = moveDrag?.moved && G.units.includes(moveDrag.u) ? moveDrag.u : G.moveSel && G.units.includes(G.moveSel) ? G.moveSel : null
   const placing = G.selected || G.dismiss || moving
   if (placing) {
     for (let r = 0; r < ROWS; r++) for (let c = 0; c < COLS; c++) {
@@ -2262,6 +2262,9 @@ function draw() {
     ctx.strokeStyle = '#7fb069'; ctx.lineWidth = 2.5; ctx.strokeRect(u.lane * cell + 3, ry(u.row) + 3, cell - 6, cell - 6)
   }
   if (G.cw) drawCityWall()
+  if (G.moveSel && G.units.includes(G.moveSel)) for (const m of bandOf(G.moveSel)) {   // the soldier picked up by a tap
+    ctx.strokeStyle = `rgba(240, 194, 74, ${0.65 + 0.3 * Math.sin(T * 6)})`; ctx.lineWidth = 3; ctx.strokeRect(m.lane * cell + 3, ry(m.row) + 3, cell - 6, cell - 6)
+  }
   // everything on the ground, back to front
   const items = []
   for (const c of G.corpses) items.push([ry(c.y) - 2, () => {
@@ -2488,7 +2491,7 @@ function tutorial(event, type) {
   if (event === 'hurt' && levelIndex === 0) say('hurt', 'A soldier is hurt! Drag him to another square to pull him out of the fight.')
   if (event === 'equites') say('equites', LEVEL.theme === 'gods' ? 'Juno’s geese saved that lane, but only once.' : 'The equites saved that lane, but they only charge once.')
 }
-function select(type) { G.selected = type; G.dismiss = false; G.heal = false; syncTray() }
+function select(type) { G.selected = type; G.dismiss = false; G.heal = false; G.moveSel = null; syncTray() }   // choosing a card puts down a soldier picked up by a tap
 
 // ---------- input: drag a card onto a square, or tap a card then a square ----------
 let drag = null, moveDrag = null, equesDrag = null
@@ -2551,6 +2554,10 @@ document.addEventListener('pointerup', e => {
     const c = cellAt(e.clientX, e.clientY), m = moveDrag
     moveDrag = null; G.hover = null
     if (m.moved && c?.inGrid && G.units.includes(m.u) && (G.phase === 'play' || G.phase === 'deploy')) moveBand(m.u, c.lane, c.row)
+    else if (!m.moved && G.units.includes(m.u)) {   // a tap, not a drag: pick him up; the next tap on a free square moves him there
+      G.moveSel = G.moveSel === m.u ? null : m.u
+      if (G.moveSel && !G.tips.tapMove) { G.tips.tapMove = true; announce(LANG === 'bg' ? 'Докоснете свободно поле, за да го преместите там.' : 'Tap a free square to move him there.') }
+    }
     return
   }
   if (!drag) return
@@ -3772,6 +3779,8 @@ function bindControls() {
     if (G.dismiss) { const u = unitAt(c.lane, c.row); if (u) { removeUnit(u, false); sfx.place() } G.dismiss = false; syncTray(); return }
     if (G.selected) { if (place(G.selected, c.lane, c.row)) select(null); return }
     const u = unitAt(c.lane, c.row)
+    if (!u && G.moveSel && G.units.includes(G.moveSel)) { moveBand(G.moveSel, c.lane, c.row); G.moveSel = null; return }   // the second tap of tap-to-move
+    if (!u) G.moveSel = null
     if (u && MOVABLE(u.type) && !u.travel) { moveDrag = { u, x0: e.clientX, y0: e.clientY, moved: false }; canvas.setPointerCapture(e.pointerId) }
   })
   $('dismiss').addEventListener('click', () => { if (G.phase !== 'play') return; G.dismiss = !G.dismiss; G.heal = false; G.selected = null; syncTray() })
@@ -3817,6 +3826,7 @@ function mount(el, o = {}) {
   canvas = $('field'); ctx = canvas.getContext('2d'); tray = $('tray'); overlay = $('overlay')
   shownCount = -1; mounted = true
   bindControls()
+  history.pushState({ htl: true }, ''); window.addEventListener('popstate', onBackSwipe)   // a "back" swipe uses up this step instead of leaving the page
   window.addEventListener('resize', layout); WIDE.addEventListener?.('change', () => requestAnimationFrame(layout))
   panActive = false
   if (opts.mode === 'chapter' && LEVELS[opts.level]?.pantheon) { quizScore = opts.score; levelIndex = opts.level; LEVEL = LEVELS[opts.level]; return openPantheon() }
@@ -3825,8 +3835,17 @@ function mount(el, o = {}) {
   else { newGame(0); showMap() }
   last = performance.now(); requestAnimationFrame(frame)
 }
+function onBackSwipe() {   // the phone's back gesture fired: stay, put the step back, pause
+  if (!mounted) return
+  history.pushState({ htl: true }, '')
+  if (panActive && P?.phase === 'play') panPause()
+  else if (G?.phase === 'play') $('pause')?.click()
+  announce(LANG === 'bg' ? 'Това беше жестът „назад“ на телефона: битката е на пауза. За изход използвайте „Напусни битката“.' : 'That was the phone’s “back” gesture: the battle is paused. To leave, use “Leave the battle”.', true, 4200)
+}
 function unmount() {
   if (!mounted) return
+  window.removeEventListener('popstate', onBackSwipe)
+  if (history.state?.htl) history.back()   // take the extra step back out
   mounted = false; drag = null; moveDrag = null; equesDrag = null
   clearTimeout(bannerTimer); window.removeEventListener('resize', layout); window.removeEventListener('resize', panLayout); window.removeEventListener('resize', landLayout); panActive = false; landActive = false; P = null; LD = null
   sroot.innerHTML = ''

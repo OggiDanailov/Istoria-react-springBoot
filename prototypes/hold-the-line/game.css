@@ -208,7 +208,7 @@
 
 /* a phone held upright: everything around the field slimmer, so the field gets the room */
 @media not ((min-aspect-ratio: 5/4) and (min-width: 600px)) {
-  .game { padding-inline: 14px; padding-block: 4px 6px; gap: 5px; }
+  .game { padding-inline: 20px; padding-block: 4px 6px; gap: 5px; }   /* the screen's edges belong to the phone's gestures */
   .tray { gap: 3px; }
   .card { padding: 2px 1px 1px; border-radius: 8px; box-shadow: 0 2px 0 var(--ink); }
   .card canvas, .tray.many .card canvas { width: 28px; height: 28px; }
