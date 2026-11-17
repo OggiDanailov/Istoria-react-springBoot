@@ -4150,7 +4150,7 @@ const MARKUP = `<main class="game">
   </div>
   <div class="msg" id="banner" aria-live="polite"></div>
   <div class="controls">
-    <div class="progress"><span class="label" id="level">Lake Regillus</span><div class="bar" id="bar"><div class="fill" id="fill"></div></div><span class="build" translate="no">build 16 Nov, 22:06</span></div>
+    <div class="progress"><span class="label" id="level">Lake Regillus</span><div class="bar" id="bar"><div class="fill" id="fill"></div></div><span class="build" translate="no">build 17 Nov, 12:23</span></div>
     <button class="tool" id="pause">Pause</button>
     <button class="tool" id="speed">1×</button>
     <button class="tool" id="guide">Guide</button>
@@ -4771,6 +4771,8 @@ const CHRONICLE_EXTRAS = {
   'conflict-of-orders-origins:first-secession': '<div class="pantheon allia" data-replay="secession"></div>',
   'samnite-wars:aquilonia-and-the-end': '<div class="pantheon allia" data-replay="aquilonia"></div>',
   'final-conquest-of-italy:beneventum-and-withdrawal': '<div class="pantheon allia" data-replay="beneventum"></div>',
+  'carthage-and-corinth:fall-of-carthage': '<div class="pantheon allia" data-replay="carthage"></div>',
+  'marius:aquae-sextiae-and-vercellae': '<div class="pantheon allia" data-replay="aquae"></div>',
   'first-punic-war:siege-of-akragas': '<div class="pantheon allia" data-replay="agrigentum"></div>',
   'first-punic-war:corvus-and-mylae': '<div class="pantheon allia" data-replay="mylae"></div>',
   'first-punic-war:battle-of-the-aegates': '<div class="pantheon allia" data-replay="aegates"></div>',
@@ -4787,7 +4789,7 @@ const openChronicle = focusId => openSheet(CH.title, chronicleHtml(), focusId)
 // groups of dots with where they are at each moment (a line, or a cluster) and what befalls them (some fall, they
 // waver in panic, they drown with a splash), and five captions. Times are in "story seconds"; it plays SLOW times
 // slower so each caption can be read (the user found 8 seconds too fast). Positions are parts of the width and height.
-const RCOL = { patrician: '#d9a520', linen: '#f4eedd', carthage: '#33509a', macedon: '#6b4a8a', rome: '#b8322a', gaul: '#2f5f9a', samnite: '#c27a1e', etruscan: '#8a7f75', epirus: '#6b4a8a', elephant: '#76716b' }
+const RCOL = { teuton: '#3f6a8f', ambron: '#9a6a2a', deserter: '#8a8278', patrician: '#d9a520', linen: '#f4eedd', carthage: '#33509a', macedon: '#6b4a8a', rome: '#b8322a', gaul: '#2f5f9a', samnite: '#c27a1e', etruscan: '#8a7f75', epirus: '#6b4a8a', elephant: '#76716b' }
 const REPLAYS = {
   // chapter 4: the Allia (Livy), as the chronicle tells it
   allia: {
@@ -4866,6 +4868,57 @@ const REPLAYS = {
       [4.4, 'His men rally and stand.', 'Войниците му се съвземат и удържат.'],
       [5.8, 'Fabius outflanks the Samnites, and the coalition collapses.', 'Фабий обхожда самнитите и коалицията рухва.'],
     ], end: 7.8,
+  },
+  // chapter 11: the fall of Carthage
+  carthage: {
+    title: ['The fall of Carthage, step by step', 'Падането на Картаген, стъпка по стъпка'],
+    key: [['rome', 'Romans', 'римляни'], ['carthage', 'Carthaginians', 'картагенци'], ['deserter', 'Roman deserters', 'римски дезертьори']],
+    ground: [
+      { hill: [0.5, 0.17, 0.26, 0.12], label: ['the Byrsa', 'Бирса'] }, { city: [0.5, 0.15, 0.07, 0.045] }, { tag: [0.5, 0.26], t: ['Temple of Eshmoun', 'храмът на Ешмун'], to: 6.2 },
+      ...[[0.18, 0.42], [0.36, 0.4], [0.64, 0.4], [0.82, 0.42], [0.25, 0.56], [0.5, 0.55], [0.75, 0.56]].map(([x, y]) => ({ city: [x, y, 0.06, 0.035] })),
+      { barrier: [0.06, 0.7, 0.94, 0.7], from: 0, to: 1.6 }, { tag: [0.5, 0.67], t: ['the walls', 'стените'], to: 1.6 },
+      { lake: [0.5, 1.02, 0.5, 0.12], label: ['the harbour', 'пристанището'], at: [0.5, 0.97] },
+      { flash: [0.5, 0.7], at: 1.6 }, { flash: [0.3, 0.7], at: 1.8 },
+      { fire: [0.25, 0.56], from: 3.4 }, { fire: [0.5, 0.55], from: 3.7 }, { fire: [0.75, 0.56], from: 4.0 }, { fire: [0.18, 0.42], from: 4.5 }, { fire: [0.36, 0.4], from: 4.8 }, { fire: [0.64, 0.4], from: 5.0 }, { fire: [0.82, 0.42], from: 5.2 },
+      { fire: [0.5, 0.13], from: 6.3 },
+    ],
+    groups: [
+      { side: 'rome', n: 30, keys: [[0, 'blob', 0.5, 0.86, 0.3, 0.04], [1.4, 'line', 0.14, 0.76, 0.86, 0.76, 0.02], [2.4, 'line', 0.14, 0.66, 0.86, 0.66, 0.02], [3.6, 'line', 0.14, 0.5, 0.86, 0.5, 0.025], [4.8, 'line', 0.16, 0.36, 0.84, 0.36, 0.025], [6.0, 'arc', 0.5, 0.2, 0.3, 0.13, 0.15, 0.85, 0.04]] },
+      { side: 'carthage', n: 26, keys: [[0, 'line', 0.12, 0.66, 0.88, 0.66, 0.015], [1.6, 'line', 0.12, 0.62, 0.88, 0.62, 0.02], [3.0, 'blob', 0.5, 0.46, 0.34, 0.07], [4.6, 'blob', 0.5, 0.24, 0.18, 0.05]], fall: [1.8, 5.6, 0.85], jitter: [1.6, 5.0] },
+      { side: 'deserter', n: 9, keys: [[4.4, 'blob', 0.5, 0.06, 0.05, 0.02], [5.0, 'blob', 0.5, 0.14, 0.06, 0.03]], fall: [6.4, 7.2, 1] },
+      { side: 'carthage', n: 1, r: 5, ring: true, keys: [[4.4, 'blob', 0.62, 0.17, 0, 0], [6.4, 'blob', 0.62, 0.17, 0, 0], [7.2, 'blob', 0.5, 0.32, 0, 0]] },
+    ],
+    steps: [
+      [0, 'Spring 146 BC: after three years of siege, Scipio Aemilianus launches the final assault from the harbour.', 'Пролетта на 146 г. пр.н.е.: след три години обсада Сципион Емилиан започва последния щурм откъм пристанището.'],
+      [1.4, 'The Romans break through the walls.', 'Римляните пробиват стените.'],
+      [3.0, 'For six days they fight street by street, burning the houses behind them.', 'Шест дни те се бият улица по улица и палят къщите след себе си.'],
+      [4.6, 'The last defenders, and about 900 Roman deserters, hold out on the Byrsa in the Temple of Eshmoun.', 'Последните защитници и около 900 римски дезертьори се държат на Бирса, в храма на Ешмун.'],
+      [6.2, 'The deserters burn the temple around themselves. Hasdrubal (with the gold ring) surrenders; some 50,000 survivors are sold into slavery.', 'Дезертьорите подпалват храма около себе си. Хасдрубал (със златния пръстен) се предава; около 50 000 оцелели са продадени в робство.'],
+    ], end: 8.4,
+  },
+  // chapter 13: Aquae Sextiae
+  aquae: {
+    title: ['Aquae Sextiae, step by step', 'Акве Секстие, стъпка по стъпка'],
+    key: [['rome', 'Romans', 'римляни'], ['teuton', 'Teutones', 'тевтони'], ['ambron', 'Ambrones', 'амброни']],
+    ground: [
+      { hill: [0.5, 0.86, 0.4, 0.14] }, { tag: [0.5, 0.97], t: ['Marius’s camp on the hill', 'лагерът на Марий на хълма'] },
+      { brook: [[0, 0.5], [0.35, 0.46], [0.65, 0.54], [1, 0.5]] }, { text: [0.02, 0.45], t: ['the springs', 'изворите'] },
+      { woods: [0.12, 0.2, 0.11, 0.08] }, { tag: [0.12, 0.08], t: ['hidden: 3,000 men', 'скрити: 3000 души'], to: 5.6 },
+    ],
+    groups: [
+      { side: 'teuton', n: 30, keys: [[0, 'line', -0.9, 0.24, -0.1, 0.24, 0.02], [1.6, 'line', 0.3, 0.24, 1.1, 0.24, 0.02], [3.0, 'line', 0.25, 0.24, 1.05, 0.24, 0.02], [3.6, 'blob', 0.55, 0.3, 0.3, 0.06], [4.6, 'line', 0.16, 0.62, 0.84, 0.62, 0.03], [5.8, 'line', 0.16, 0.6, 0.84, 0.6, 0.03]], jitter: [5.6, 7.4], fall: [5.8, 7.2, 0.85] },
+      { side: 'ambron', n: 12, keys: [[0, 'blob', 0.72, 0.5, 0.1, 0.04], [1.6, 'blob', 0.72, 0.5, 0.1, 0.04], [2.2, 'blob', 0.66, 0.54, 0.12, 0.05]], fall: [2.3, 3.0, 0.9], jitter: [1.8, 2.8], splash: true },
+      { side: 'rome', n: 26, keys: [[0, 'line', 0.2, 0.78, 0.8, 0.78, 0.015], [4.4, 'line', 0.2, 0.78, 0.8, 0.78, 0.015], [4.8, 'line', 0.16, 0.7, 0.84, 0.7, 0.02]], jitter: [4.6, 5.8] },
+      { side: 'rome', n: 6, keys: [[1.2, 'blob', 0.6, 0.72, 0.04, 0.03], [1.8, 'blob', 0.66, 0.56, 0.06, 0.03], [3.0, 'blob', 0.6, 0.72, 0.04, 0.03]] },
+      { side: 'rome', n: 10, keys: [[0, 'blob', 0.12, 0.2, 0.06, 0.04], [5.4, 'blob', 0.12, 0.2, 0.06, 0.04], [6.2, 'line', 0.2, 0.48, 0.8, 0.48, 0.02]] },
+    ],
+    steps: [
+      [0, '102 BC: Marius refuses battle. The Teutones simply march past his fortified camp; their column takes six days to file by.', '102 г. пр.н.е.: Марий отказва битка. Тевтоните просто минават покрай укрепения му лагер; колоната им се изнизва шест дни.'],
+      [1.6, 'Near Aquae Sextiae, Roman servants fetching water clash with bathing Ambrones. The scuffle explodes into battle, and the Ambrones are crushed.', 'Край Акве Секстие римски слуги, дошли за вода, се сбиват с къпещи се амброни. Сбиването прераства в битка и амброните са разбити.'],
+      [3.2, 'Days later the Teutones charge uphill at the Roman position on the hill.', 'Дни по-късно тевтоните атакуват нагоре към римската позиция на хълма.'],
+      [5.6, 'About 3,000 men hidden nearby strike them from behind.', 'Около 3000 души, скрити наблизо, ги удрят в гръб.'],
+      [7.0, 'Ancient writers put the Teutones killed or captured at 100,000 to 200,000.', 'Древните автори определят убитите или пленените тевтони на 100 000 до 200 000.'],
+    ], end: 8.6,
   },
   // chapter 3: the First Secession
   secession: {
@@ -5175,6 +5228,7 @@ function mountReplay(el, id) {
       if (g.brook) curve(g.brook, 4, '#6fa3c8')
       if (g.land) { ctx.fillStyle = '#d9cfa5'; ctx.beginPath(); g.land.forEach(([x, y], k) => k ? ctx.lineTo(x * W, y * H) : ctx.moveTo(x * W, y * H)); ctx.closePath(); ctx.fill(); if (g.label) { ctx.fillStyle = '#3b2a1c'; ctx.textAlign = 'center'; ctx.fillText(tx(g.label), g.at[0] * W, g.at[1] * H) } }
       if (g.city) { const [x, y, rx, ry] = g.city; ctx.fillStyle = '#c9b48a'; ctx.strokeStyle = '#7a6545'; ctx.lineWidth = 3; ctx.beginPath(); ctx.roundRect((x - rx) * W, (y - ry) * H, rx * 2 * W, ry * 2 * H, 10); ctx.fill(); ctx.stroke(); if (g.label) { ctx.fillStyle = '#3b2a1c'; ctx.textAlign = 'center'; ctx.fillText(tx(g.label), x * W, (y - ry) * H - 5) } }
+      if (g.fire) { const [x, y] = g.fire, a = Math.min(1, (t - (g.from ?? 0)) / 0.5); for (let i = 0; i < 3; i++) { const fx = x * W + (i - 1) * 6, fh = (12 + 5 * Math.sin(t * 14 + i * 2 + x * 9)) * a; ctx.fillStyle = 'rgba(214, 72, 22, .9)'; ctx.beginPath(); ctx.moveTo(fx - 5, y * H); ctx.quadraticCurveTo(fx, y * H - fh * 1.5, fx + 5, y * H); ctx.fill(); ctx.fillStyle = 'rgba(255, 196, 60, .95)'; ctx.beginPath(); ctx.moveTo(fx - 2.5, y * H); ctx.quadraticCurveTo(fx, y * H - fh, fx + 2.5, y * H); ctx.fill() } }
       if (g.isle) { const [x, y, rx, ry] = g.isle; ctx.fillStyle = '#d9cfa5'; ctx.beginPath(); ctx.ellipse(x * W, y * H, rx * W, ry * H, 0, 0, Math.PI * 2); ctx.fill(); if (g.label) { ctx.fillStyle = '#1f3c55'; ctx.textAlign = 'left'; ctx.fillText(tx(g.label), (x + rx) * W + 4, y * H + 4) } }
       if (g.lake) { const [x, y, rx, ry] = g.lake; ctx.fillStyle = '#6fa3c8'; ctx.beginPath(); ctx.ellipse(x * W, y * H, rx * W, ry * H, 0, 0, Math.PI * 2); ctx.fill(); if (g.label) { ctx.fillStyle = '#1f3c55'; ctx.textAlign = 'center'; ctx.fillText(tx(g.label), g.at[0] * W, g.at[1] * H) } }
       if (g.wind) { const a = Math.min(1, (t - (g.from ?? 0)) / 0.4); ctx.globalAlpha = 0.7 * a; ctx.strokeStyle = '#ffffff'; ctx.lineWidth = 2; for (const [x, y] of g.wind) { const sx = x * W + ((t * 30) % 20); ctx.beginPath(); ctx.moveTo(sx - 16, y * H); ctx.lineTo(sx + 16, y * H); ctx.moveTo(sx + 10, y * H - 5); ctx.lineTo(sx + 16, y * H); ctx.lineTo(sx + 10, y * H + 5); ctx.stroke() } if (g.label) { ctx.fillStyle = '#ffffff'; ctx.textAlign = 'left'; ctx.fillText(tx(g.label), g.wind[0][0] * W - 16, g.wind[0][1] * H - 8) } ctx.globalAlpha = 1 }

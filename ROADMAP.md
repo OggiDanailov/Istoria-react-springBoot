@@ -50,7 +50,7 @@
 
 | # | Step | Effort |
 |---|------|--------|
-| 1 | **Chapter-by-chapter review** (in progress: chapters 1-11 done, next chapter 13, Marius and Aquae Sextiae; chapter 11, Carthage, still needs its chronicle replay): the user reads each chronicle, takes the test, plays the battle; fixes and ideas as they come. Each battle chapter gets its chronicle replay (chapters 11–28 still to do). | ongoing |
+| 1 | **Chapter-by-chapter review** (in progress: chapters 1-13 done, with chronicle replays through chapter 13 (the fall of Carthage and Aquae Sextiae added Nov 17); next chapter 14, Sulla and the Colline Gate): the user reads each chronicle, takes the test, plays the battle; fixes and ideas as they come. Each battle chapter gets its chronicle replay (chapters 11–28 still to do). | ongoing |
 | 2 | **Test the prototype with 5-10 people** (ideally not history fans), using the feedback box at avecaesar.org/play. Decide which games to keep. | ~1 week, mostly waiting |
 | 3 | **The finale: the Grand Test and the Battle of Battles** (see below). Built once all chapters are approved, because it draws on all of them. | ~1 week |
 | 4 | **Real sound recordings**: the user supplies MP3s once the app is approved. | a few days |
