@@ -238,9 +238,9 @@ const LEVELS = [
     units: ['cart', 'slinger', 'velites', 'legionary', 'triarius', 'caltrops', 'maniple', 'scorpio', 'centurion'], newUnit: 'centurion',
     blurb: '1 November 82 BC: a great Samnite and Lucanian army stands at Rome’s Colline Gate. Sulla races back to save the city.',
     after: 'Sulla won. The next day thousands of prisoners were killed, and he made himself dictator.',
-    waves: [w(26, ['samnite']), w(40, ['lucanian'], 'The Lucanians attack from the south, below the gate!', 'below'), w(54, ['samnite', 'samnite']), w(70, ['lucanian', 'lucanian'], null, 'below'), w(86, ['linen', 'samnite']), w(100, ['lucanian', 'lucanian', 'cavalry'], null, 'below'), w(114, ['samnite', 'samnite', 'lucanian']),
-      w(130, ['chief', ...rep(3, 'samnite'), 'lucanian', 'linen'], 'A great wave approaches!'), w(140, ['lucanian', 'lucanian', 'samnite'], null, 'below'), w(156, ['samnite', 'lucanian', 'cavalry']), w(170, ['lucanian', 'samnite'], null, 'below'), w(176, ['linen', 'samnite', 'samnite']),
-      w(194, ['chief', ...rep(3, 'samnite'), 'linen', 'cavalry'], 'The final wave, from both sides!'), w(196, [...rep(3, 'lucanian'), 'samnite'], null, 'below')] },
+    waves: [w(26, ['samnite']), w(40, ['lucanian'], 'The Lucanians attack from the south, below the gate!', 'below'), w(54, ['samnite', 'samnite']), w(70, ['lucanian', 'lucanian'], null, 'below'), w(86, ['linen', 'samnite']), w(100, ['lucanian', 'lucanian', 'samnite'], null, 'below'), w(114, ['samnite', 'samnite', 'lucanian']),
+      w(130, ['chief', ...rep(3, 'samnite'), 'lucanian', 'linen'], 'A great wave approaches!'), w(140, ['lucanian', 'lucanian', 'samnite'], null, 'below'), w(156, ['samnite', 'lucanian', 'samnite']), w(170, ['lucanian', 'samnite'], null, 'below'), w(176, ['linen', 'samnite', 'samnite']),
+      w(194, ['chief', ...rep(3, 'samnite'), 'linen', 'samnite'], 'The final wave, from both sides!'), w(196, [...rep(3, 'lucanian'), 'samnite'], null, 'below')] },
   { id: 'silarius', name: 'The Silarius River', year: '71 BC', enemy: 'Spartacus', theme: 'silarius', start: 375, cols: 8, rows: 10, more: 1.33, ditch: 2, river: true,
     twist: 'The slave army must wade the river, which slows it (you can’t build in it). Gladiators lead the charge: watch for the retiarius’s net. In the final wave Spartacus himself attacks.',
     units: ['cart', 'slinger', 'velites', 'legionary', 'triarius', 'caltrops', 'maniple', 'scorpio', 'centurion'],
@@ -1565,7 +1565,8 @@ function placeCohort(type, lane, row) {
   sfx.place(); updateCount(); if (G.phase !== 'deploy') tutorial('placed', type); else syncDeploy()
   return true
 }
-const NO_TURN = new Set(['cart', 'scorpio', 'onager', 'petrobolos', 'caltrops', 'sudes', 'lilia', 'shed', 'aries'])   // machines and things: no face to turn
+const NO_TURN = new Set(['cart', 'caltrops', 'sudes', 'lilia', 'shed', 'aries'])   // things with no front or back
+const FLIP_MACHINE = new Set(['scorpio', 'onager', 'petrobolos'])   // machines: below the gate they point down the field
 const MOVABLE = t => !UNITS[t].trap && t !== 'pigs' && t !== 'torch' && t !== 'lilia'
 // At the Allia a Gaul's first blow knocks the man he hits one square back, toward the Tiber behind the line; from the
 // last row he falls in and drowns, and panic slows the men around him. Triarii kneel behind their shields and don't
@@ -2329,7 +2330,8 @@ function draw() {
       if (moveDrag?.moved && moveDrag.u === u) ctx.globalAlpha = 0.45
       if (G.t < G.blessUntil && u.type !== 'caltrops' && u.type !== 'pigs') { ctx.globalAlpha = 0.55; ctx.drawImage(glow('240, 200, 90'), -30, -56, 60, 60); ctx.globalAlpha = 1 }
       const turned = LEVEL.midGate != null && u.row > LEVEL.midGate && !NO_TURN.has(u.type)   // below the middle gate he faces down: mirrored, and his face shows
-      if (turned) ctx.scale(-1, 1)
+      if (turned && FLIP_MACHINE.has(u.type)) { ctx.translate(0, -22); ctx.scale(1, -1); ctx.translate(0, 22) }   // a machine turned to shoot down
+      else if (turned) ctx.scale(-1, 1)
       FACING_US = turned; DRAW_UNIT[u.type](ctx, u, T); FACING_US = false; ctx.restore()
       if (u.hp < u.max && u.type !== 'caltrops' && u.type !== 'pigs') hpBar(ux, uy + 5 * k, u.hp / u.max)
     }])
@@ -3738,7 +3740,7 @@ const MARKUP = `<main class="game">
   </div>
   <div class="msg" id="banner" aria-live="polite"></div>
   <div class="controls">
-    <div class="progress"><span class="label" id="level">Lake Regillus</span><div class="bar" id="bar"><div class="fill" id="fill"></div></div><span class="build" translate="no">build 17 Nov, 12:58</span></div>
+    <div class="progress"><span class="label" id="level">Lake Regillus</span><div class="bar" id="bar"><div class="fill" id="fill"></div></div><span class="build" translate="no">build 17 Nov, 13:14</span></div>
     <button class="tool" id="pause">Pause</button>
     <button class="tool" id="speed">1×</button>
     <button class="tool" id="guide">Guide</button>
