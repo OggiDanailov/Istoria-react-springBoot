@@ -917,7 +917,15 @@ function drawLegionMan(c, u, T) {
   c.fillStyle = '#b8322a'; c.beginPath(); c.ellipse(0, -53, 10, 6, 0, Math.PI, 0); c.fill(); c.fillRect(-1.5, -53, 3, 4)   // a tall red crest
 }
 function feathers(c, y, col) { [[-4, -7], [0, 0], [4, 7]].forEach(([dx, lean]) => { line(c, dx * 0.6, y, dx + lean * 0.35, y - 16, '#1b1715', 3.6); line(c, dx * 0.6, y, dx + lean * 0.35, y - 16, col, 2.4) }) }
+let FACING_US = false   // set while drawing a soldier turned to face down the field (below the middle gate): his helmet shows his face
 function romanHelmet(c, y) {
+  if (FACING_US) {   // seen from the front: the face, cheek guards, and the helmet's dome above
+    c.fillStyle = SKIN; c.beginPath(); c.arc(0, y + 1.5, 7, 0, TAU); c.fill()
+    c.fillStyle = INK; c.fillRect(-3, y + 0.5, 1.8, 1.8); c.fillRect(1.4, y + 0.5, 1.8, 1.8)
+    c.fillStyle = '#c9a24a'; c.beginPath(); c.arc(0, y - 1, 8.5, Math.PI, 0); c.fill(); c.fillRect(-8.5, y - 1, 3, 9); c.fillRect(5.5, y - 1, 3, 9)
+    c.fillStyle = '#8a6a2a'; c.beginPath(); c.arc(0, y - 9, 2, 0, TAU); c.fill()
+    return
+  }
   c.fillStyle = SKIN_SHADE; c.fillRect(-3, y + 4, 6, 5)
   c.fillStyle = '#c9a24a'; c.beginPath(); c.arc(0, y, 8.5, 0, TAU); c.fill()
   c.strokeStyle = '#8a6a2a'; c.lineWidth = 1.4; c.beginPath(); c.arc(0, y, 8.5, 0.15, Math.PI - 0.15); c.stroke()
@@ -2005,6 +2013,7 @@ function placeCohort(type, lane, row) {
   sfx.place(); updateCount(); if (G.phase !== 'deploy') tutorial('placed', type); else syncDeploy()
   return true
 }
+const NO_TURN = new Set(['cart', 'scorpio', 'onager', 'petrobolos', 'caltrops', 'sudes', 'lilia', 'shed', 'aries'])   // machines and things: no face to turn
 const MOVABLE = t => !UNITS[t].trap && t !== 'pigs' && t !== 'torch' && t !== 'lilia'
 // At the Allia a Gaul's first blow knocks the man he hits one square back, toward the Tiber behind the line; from the
 // last row he falls in and drowns, and panic slows the men around him. Triarii kneel behind their shields and don't
@@ -2767,7 +2776,9 @@ function draw() {
       ctx.save(); ctx.translate(ux + (u.hurt > 0 && !reduceMotion ? (Math.random() - 0.5) * 2.5 : 0), uy); ctx.scale(k, k)
       if (moveDrag?.moved && moveDrag.u === u) ctx.globalAlpha = 0.45
       if (G.t < G.blessUntil && u.type !== 'caltrops' && u.type !== 'pigs') { ctx.globalAlpha = 0.55; ctx.drawImage(glow('240, 200, 90'), -30, -56, 60, 60); ctx.globalAlpha = 1 }
-      DRAW_UNIT[u.type](ctx, u, T); ctx.restore()
+      const turned = LEVEL.midGate != null && u.row > LEVEL.midGate && !NO_TURN.has(u.type)   // below the middle gate he faces down: mirrored, and his face shows
+      if (turned) ctx.scale(-1, 1)
+      FACING_US = turned; DRAW_UNIT[u.type](ctx, u, T); FACING_US = false; ctx.restore()
       if (u.hp < u.max && u.type !== 'caltrops' && u.type !== 'pigs') hpBar(ux, uy + 5 * k, u.hp / u.max)
     }])
   }
@@ -4175,7 +4186,7 @@ const MARKUP = `<main class="game">
   </div>
   <div class="msg" id="banner" aria-live="polite"></div>
   <div class="controls">
-    <div class="progress"><span class="label" id="level">Lake Regillus</span><div class="bar" id="bar"><div class="fill" id="fill"></div></div><span class="build" translate="no">build 17 Nov, 12:49</span></div>
+    <div class="progress"><span class="label" id="level">Lake Regillus</span><div class="bar" id="bar"><div class="fill" id="fill"></div></div><span class="build" translate="no">build 17 Nov, 12:58</span></div>
     <button class="tool" id="pause">Pause</button>
     <button class="tool" id="speed">1×</button>
     <button class="tool" id="guide">Guide</button>
