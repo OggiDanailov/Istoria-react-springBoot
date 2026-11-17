@@ -4189,7 +4189,7 @@ const MARKUP = `<main class="game">
   </div>
   <div class="msg" id="banner" aria-live="polite"></div>
   <div class="controls">
-    <div class="progress"><span class="label" id="level">Lake Regillus</span><div class="bar" id="bar"><div class="fill" id="fill"></div></div><span class="build" translate="no">build 17 Nov, 15:59</span></div>
+    <div class="progress"><span class="label" id="level">Lake Regillus</span><div class="bar" id="bar"><div class="fill" id="fill"></div></div><span class="build" translate="no">build 17 Nov, 16:07</span></div>
     <button class="tool" id="pause">Pause</button>
     <button class="tool" id="speed">1×</button>
     <button class="tool" id="guide">Guide</button>
@@ -4813,6 +4813,7 @@ const CHRONICLE_EXTRAS = {
   'final-conquest-of-italy:beneventum-and-withdrawal': '<div class="pantheon allia" data-replay="beneventum"></div>',
   'carthage-and-corinth:fall-of-carthage': '<div class="pantheon allia" data-replay="carthage"></div>',
   'marius:aquae-sextiae-and-vercellae': '<div class="pantheon allia" data-replay="aquae"></div>',
+  'social-war-and-sulla:east-and-civil-war': '<div class="pantheon allia" data-replay="colline"></div>',
   'first-punic-war:siege-of-akragas': '<div class="pantheon allia" data-replay="agrigentum"></div>',
   'first-punic-war:corvus-and-mylae': '<div class="pantheon allia" data-replay="mylae"></div>',
   'first-punic-war:battle-of-the-aegates': '<div class="pantheon allia" data-replay="aegates"></div>',
@@ -4935,6 +4936,30 @@ const REPLAYS = {
       [4.6, 'The last defenders, and about 900 Roman deserters, hold out on the Byrsa in the Temple of Eshmoun.', 'Последните защитници и около 900 римски дезертьори се държат на Бирса, в храма на Ешмун.'],
       [6.2, 'The deserters burn the temple around themselves. Hasdrubal (with the gold ring) surrenders; some 50,000 survivors are sold into slavery.', 'Дезертьорите подпалват храма около себе си. Хасдрубал (със златния пръстен) се предава; около 50 000 оцелели са продадени в робство.'],
     ], end: 8.4,
+  },
+  // chapter 14: the Colline Gate
+  colline: {
+    title: ['The Colline Gate, step by step', 'Колинската порта, стъпка по стъпка'], night: [3.8, 7.4],
+    key: [['rome', 'Sulla’s Romans', 'римляните на Сула'], ['samnite', 'Samnites and Lucanians', 'самнити и луканци']],
+    ground: [
+      { city: [0.5, 0.14, 0.3, 0.06], label: ['Rome', 'Рим'] },
+      { barrier: [0.04, 0.24, 0.96, 0.24] }, { tag: [0.5, 0.28], t: ['the Colline Gate', 'Колинската порта'] },
+      { text: [0.6, 0.97], t: ['↓ to Antemnae', '↓ към Антемне'], from: 5.7, to: 7.4 },
+    ],
+    groups: [
+      { side: 'samnite', n: 22, keys: [[0, 'line', 0.08, 1.15, 0.46, 1.15, 0.02], [1.4, 'line', 0.08, 0.64, 0.46, 0.64, 0.02], [3.4, 'line', 0.08, 0.6, 0.46, 0.6, 0.02], [4.4, 'line', 0.08, 0.42, 0.46, 0.42, 0.025], [6.0, 'line', 0.08, 0.42, 0.46, 0.42, 0.025], [6.8, 'blob', 0.27, 0.62, 0.16, 0.08]], jitter: [3.6, 6.4], fall: [5.8, 7.0, 0.85] },
+      { side: 'samnite', n: 18, keys: [[0, 'line', 0.54, 1.15, 0.92, 1.15, 0.02], [1.4, 'line', 0.54, 0.64, 0.92, 0.64, 0.02], [3.4, 'line', 0.54, 0.6, 0.92, 0.6, 0.02], [4.6, 'line', 0.54, 0.72, 0.92, 0.72, 0.03], [5.6, 'blob', 0.72, 1.08, 0.14, 0.05]], jitter: [3.6, 5.0], fall: [4.6, 5.8, 0.6] },
+      { side: 'rome', n: 16, keys: [[0, 'line', -0.5, 0.5, -0.1, 0.5, 0.02], [1.4, 'line', 0.08, 0.52, 0.46, 0.52, 0.02], [3.4, 'line', 0.08, 0.52, 0.46, 0.52, 0.02], [4.4, 'line', 0.08, 0.32, 0.46, 0.32, 0.02], [6.0, 'line', 0.08, 0.32, 0.46, 0.32, 0.02], [6.8, 'line', 0.08, 0.5, 0.46, 0.5, 0.02]], jitter: [3.6, 6.4], fall: [3.8, 4.6, 0.3] },
+      { side: 'rome', n: 16, keys: [[0, 'line', -0.5, 0.5, -0.1, 0.5, 0.02], [1.4, 'line', 0.54, 0.52, 0.92, 0.52, 0.02], [3.4, 'line', 0.54, 0.52, 0.92, 0.52, 0.02], [4.6, 'line', 0.54, 0.62, 0.92, 0.62, 0.02], [5.6, 'line', 0.54, 0.84, 0.92, 0.84, 0.03]], jitter: [3.6, 5.0] },
+    ],
+    steps: [
+      [0, '82 BC: the Samnite leader Pontius Telesinus slips past Sulla’s armies and marches on Rome itself with a great Samnite and Lucanian army.', '82 г. пр.н.е.: самнитският вожд Понтий Телезин се изплъзва от армиите на Сула и тръгва към самия Рим с голяма армия от самнити и луканци.'],
+      [1.4, 'Sulla hurries to save the city. On 1 November, late in the afternoon, his tired legions attack before the Colline Gate.', 'Сула бърза да спаси града. На 1 ноември, късно следобед, уморените му легиони атакуват пред Колинската порта.'],
+      [3.6, 'Sulla’s own wing, on the left, gives way and is pushed back to the city walls.', 'Крилото на самия Сула, вляво, поддава и е изтласкано назад до градските стени.'],
+      [4.6, 'On the right, Crassus routs the enemy and chases them as far as Antemnae, about 5 km away.', 'Вдясно Крас разбива врага и го преследва чак до Антемне, на около 5 км.'],
+      [6.0, 'The fighting goes on into the night. By morning Telesinus is dead and his army destroyed.', 'Боят продължава през нощта. До сутринта Телезин е мъртъв, а армията му – унищожена.'],
+      [7.4, 'The next day, while Sulla addresses the Senate, thousands of prisoners are butchered within earshot.', 'На следващия ден, докато Сула говори пред Сената, хиляди пленници са избити толкова наблизо, че писъците им се чуват.'],
+    ], end: 9.0,
   },
   // chapter 13: Aquae Sextiae
   aquae: {
