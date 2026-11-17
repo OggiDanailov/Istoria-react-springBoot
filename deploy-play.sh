@@ -11,6 +11,7 @@ echo "1/3  Building the game..."
 "$NODE" build.mjs
 
 echo "2/3  Copying it to the server..."
+scp dist/manifest.webmanifest dist/icon-180.png dist/icon-192.png dist/icon-512.png root@45.55.34.96:/root/ave-play/site/   # what lets a phone install it as an app
 scp dist/play.html root@45.55.34.96:/root/ave-play-site.html
 
 echo "3/3  Putting it in place..."

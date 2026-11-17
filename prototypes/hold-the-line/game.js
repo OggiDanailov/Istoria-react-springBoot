@@ -3845,7 +3845,6 @@ function onBackSwipe() {   // the phone's back gesture fired: stay, put the step
 function unmount() {
   if (!mounted) return
   window.removeEventListener('popstate', onBackSwipe)
-  if (history.state?.htl) history.back()   // take the extra step back out
   mounted = false; drag = null; moveDrag = null; equesDrag = null
   clearTimeout(bannerTimer); window.removeEventListener('resize', layout); window.removeEventListener('resize', panLayout); window.removeEventListener('resize', landLayout); panActive = false; landActive = false; P = null; LD = null
   sroot.innerHTML = ''

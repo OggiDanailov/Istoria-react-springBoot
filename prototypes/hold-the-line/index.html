@@ -3696,7 +3696,7 @@ const MARKUP = `<main class="game">
   </div>
   <div class="msg" id="banner" aria-live="polite"></div>
   <div class="controls">
-    <div class="progress"><span class="label" id="level">Lake Regillus</span><div class="bar" id="bar"><div class="fill" id="fill"></div></div><span class="build" translate="no">build 16 Nov, 21:21</span></div>
+    <div class="progress"><span class="label" id="level">Lake Regillus</span><div class="bar" id="bar"><div class="fill" id="fill"></div></div><span class="build" translate="no">build 16 Nov, 21:49</span></div>
     <button class="tool" id="pause">Pause</button>
     <button class="tool" id="speed">1×</button>
     <button class="tool" id="guide">Guide</button>
@@ -3857,7 +3857,6 @@ function onBackSwipe() {   // the phone's back gesture fired: stay, put the step
 function unmount() {
   if (!mounted) return
   window.removeEventListener('popstate', onBackSwipe)
-  if (history.state?.htl) history.back()   // take the extra step back out
   mounted = false; drag = null; moveDrag = null; equesDrag = null
   clearTimeout(bannerTimer); window.removeEventListener('resize', layout); window.removeEventListener('resize', panLayout); window.removeEventListener('resize', landLayout); panActive = false; landActive = false; P = null; LD = null
   sroot.innerHTML = ''

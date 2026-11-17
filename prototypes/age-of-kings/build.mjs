@@ -138,9 +138,21 @@ fs.writeFileSync(path.join(HERE, 'index.html'), html)
 fs.mkdirSync(path.join(HERE, 'dist'), { recursive: true })
 fs.writeFileSync(path.join(HERE, 'dist', 'play.html'), `<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="robots" content="noindex, nofollow"><title>Ave Caesar · test</title></head>
+<meta name="robots" content="noindex, nofollow"><title>Ave Caesar · test</title>
+<link rel="manifest" href="manifest.webmanifest" crossorigin="use-credentials">
+<meta name="theme-color" content="#8e2b22"><meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="Ave Caesar">
+<link rel="apple-touch-icon" href="icon-180.png"><link rel="icon" href="icon-192.png"></head>
 <body>
 ${html}
 </body></html>
 `)
+// installable from the phone's browser ("Add to Home screen"): it then opens full-screen like an app,
+// with no address bar and, on an iPhone, no Safari swipe-back
+fs.writeFileSync(path.join(HERE, 'dist', 'manifest.webmanifest'), JSON.stringify({
+  name: 'Ave Caesar', short_name: 'Ave Caesar', start_url: './', scope: './', display: 'standalone', orientation: 'portrait',
+  background_color: '#8e2b22', theme_color: '#8e2b22',
+  icons: [{ src: 'icon-192.png', sizes: '192x192', type: 'image/png' }, { src: 'icon-512.png', sizes: '512x512', type: 'image/png' }, { src: 'icon-512.png', sizes: '512x512', type: 'image/png', purpose: 'maskable' }],
+}, null, 2))
+for (const f of ['icon-180.png', 'icon-192.png', 'icon-512.png']) fs.copyFileSync(path.join(HERE, 'icons', f), path.join(HERE, 'dist', f))
 console.log(`index.html: ${chapters.length} chapters, ${Math.round(html.length / 1024)} KB`)

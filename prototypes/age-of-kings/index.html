@@ -4144,7 +4144,7 @@ const MARKUP = `<main class="game">
   </div>
   <div class="msg" id="banner" aria-live="polite"></div>
   <div class="controls">
-    <div class="progress"><span class="label" id="level">Lake Regillus</span><div class="bar" id="bar"><div class="fill" id="fill"></div></div><span class="build" translate="no">build 16 Nov, 21:21</span></div>
+    <div class="progress"><span class="label" id="level">Lake Regillus</span><div class="bar" id="bar"><div class="fill" id="fill"></div></div><span class="build" translate="no">build 16 Nov, 21:50</span></div>
     <button class="tool" id="pause">Pause</button>
     <button class="tool" id="speed">1×</button>
     <button class="tool" id="guide">Guide</button>
@@ -4305,7 +4305,6 @@ function onBackSwipe() {   // the phone's back gesture fired: stay, put the step
 function unmount() {
   if (!mounted) return
   window.removeEventListener('popstate', onBackSwipe)
-  if (history.state?.htl) history.back()   // take the extra step back out
   mounted = false; drag = null; moveDrag = null; equesDrag = null
   clearTimeout(bannerTimer); window.removeEventListener('resize', layout); window.removeEventListener('resize', panLayout); window.removeEventListener('resize', landLayout); panActive = false; landActive = false; P = null; LD = null
   sroot.innerHTML = ''
@@ -4539,7 +4538,22 @@ let state = { screen: 'rome' }
 let busy = false
 let run = null // { plan, step, results }
 
-function go(next) { stopLoop(); if (state.screen === 'battle') { HoldTheLine.unmount(); app.classList.remove('in-battle') } state = next; render() }
+// The phone's back swipe moves back through the app's screens, like an app, instead of leaving the site.
+// Each screen change is a step in the browser's history; a battle handles its own back swipe (it pauses).
+const appSteps = [], SAFE = ['rome', 'era', 'home', 'briefing']   // the screens it is safe to go back to
+let fromHistory = false
+function go(next) {
+  stopLoop(); if (state.screen === 'battle') { HoldTheLine.unmount(); app.classList.remove('in-battle') } state = next
+  if (!fromHistory) { appSteps.push(next); try { history.pushState({ app: appSteps.length - 1 }, '') } catch {} }
+  render()
+}
+window.addEventListener('popstate', e => {
+  if (state.screen === 'battle') return   // the battle pauses itself
+  const i = e.state?.app, to = i != null ? appSteps[i] : null
+  if (!to || !SAFE.includes(to.screen)) { if (e.state) history.back(); return }   // a battle, a finished round or the battle's own step: skip past it
+  fromHistory = true; try { go(to) } finally { fromHistory = false }
+})
+appSteps.push(state); try { history.replaceState({ app: 0 }, '') } catch {}   // the first screen is the bottom step
 const RENDER = {}
 function render() {
   busy = false

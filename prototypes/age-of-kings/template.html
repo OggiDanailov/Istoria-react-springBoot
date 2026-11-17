@@ -680,7 +680,22 @@ let state = { screen: 'rome' }
 let busy = false
 let run = null // { plan, step, results }
 
-function go(next) { stopLoop(); if (state.screen === 'battle') { HoldTheLine.unmount(); app.classList.remove('in-battle') } state = next; render() }
+// The phone's back swipe moves back through the app's screens, like an app, instead of leaving the site.
+// Each screen change is a step in the browser's history; a battle handles its own back swipe (it pauses).
+const appSteps = [], SAFE = ['rome', 'era', 'home', 'briefing']   // the screens it is safe to go back to
+let fromHistory = false
+function go(next) {
+  stopLoop(); if (state.screen === 'battle') { HoldTheLine.unmount(); app.classList.remove('in-battle') } state = next
+  if (!fromHistory) { appSteps.push(next); try { history.pushState({ app: appSteps.length - 1 }, '') } catch {} }
+  render()
+}
+window.addEventListener('popstate', e => {
+  if (state.screen === 'battle') return   // the battle pauses itself
+  const i = e.state?.app, to = i != null ? appSteps[i] : null
+  if (!to || !SAFE.includes(to.screen)) { if (e.state) history.back(); return }   // a battle, a finished round or the battle's own step: skip past it
+  fromHistory = true; try { go(to) } finally { fromHistory = false }
+})
+appSteps.push(state); try { history.replaceState({ app: 0 }, '') } catch {}   // the first screen is the bottom step
 const RENDER = {}
 function render() {
   busy = false
