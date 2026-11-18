@@ -246,8 +246,8 @@ const LEVELS = [
     units: ['cart', 'slinger', 'velites', 'legionary', 'triarius', 'caltrops', 'maniple', 'scorpio', 'centurion'],
     blurb: 'Trapped by Crassus, Spartacus turns and throws his whole army at the legions by the Silarius River.',
     after: 'Most of the rebels died on the field. Spartacus fell fighting, though his body was never found, and 6,000 captives were crucified along the Appian Way.',
-    waves: [w(26, ['slave']), w(38, ['slave', 'slave']), w(52, ['murmillo', 'slave']), w(66, ['slave', 'slave', 'retiarius']), w(82, ['murmillo', 'slave', 'slave', 'slave']), w(98, ['retiarius', 'retiarius', 'slave']), w(114, ['murmillo', 'murmillo', 'slave', 'slave', 'slave']),
-      w(130, ['chief', ...rep(5, 'slave'), 'murmillo', 'retiarius', 'cavalry'], 'A great wave approaches!'), w(158, [...rep(4, 'slave'), 'retiarius', 'murmillo']), w(176, ['murmillo', 'murmillo', 'retiarius', 'slave']),
+    waves: [w(26, ['slave']), w(38, ['slave', 'slave']), w(52, ['murmillo', 'retiarius']), w(66, ['slave', 'slave', 'retiarius']), w(82, ['murmillo', 'murmillo', 'slave', 'slave']), w(98, ['retiarius', 'retiarius', 'slave']), w(114, ['murmillo', 'murmillo', 'retiarius', 'slave', 'slave']),
+      w(130, ['chief', ...rep(4, 'slave'), 'murmillo', 'murmillo', 'retiarius', 'cavalry'], 'A great wave approaches!'), w(158, [...rep(3, 'slave'), 'retiarius', 'retiarius', 'murmillo']), w(176, ['murmillo', 'murmillo', 'retiarius', 'slave']),
       w(194, ['spartacus', ...rep(4, 'slave'), 'murmillo', 'murmillo', 'retiarius', 'retiarius'], 'Spartacus leads the final charge!')] },
   { id: 'carrhae', name: 'Carrhae', year: '53 BC', enemy: 'the Parthians', theme: 'desert', start: 500, cols: 8, rows: 10, more: 1.33, noSky: true,
     twist: 'In the desert no grain falls from the sky: build supply carts. Parthian horse archers keep their distance and shoot, riding back if you come close, and their camels bring them endless arrows. Form a testudo.',
@@ -3757,7 +3757,7 @@ const MARKUP = `<main class="game">
   </div>
   <div class="msg" id="banner" aria-live="polite"></div>
   <div class="controls">
-    <div class="progress"><span class="label" id="level">Lake Regillus</span><div class="bar" id="bar"><div class="fill" id="fill"></div></div><span class="build" translate="no">build 17 Nov, 22:42</span></div>
+    <div class="progress"><span class="label" id="level">Lake Regillus</span><div class="bar" id="bar"><div class="fill" id="fill"></div></div><span class="build" translate="no">build 17 Nov, 22:45</span></div>
     <button class="tool" id="pause">Pause</button>
     <button class="tool" id="speed">1×</button>
     <button class="tool" id="guide">Guide</button>
