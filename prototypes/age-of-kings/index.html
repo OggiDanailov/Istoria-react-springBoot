@@ -576,7 +576,7 @@ const FOES = {
   murmillo:   { name: 'Murmillo', hp: 300, shield: 400, speed: 0.2, dps: 50, intro: 'Gladiators! The murmillo fights behind a big shield.' },
   retiarius:  { name: 'Retiarius', hp: 200, speed: 0.3, dps: 35, nets: true, intro: 'The retiarius throws his net: the first soldier he reaches can’t fight for a few seconds.' },
   slave:      { name: 'Rebel slave', hp: 130, speed: 0.36, dps: 30, intro: 'Spartacus’s army: tens of thousands of runaway slaves.' },
-  spartacus:  { name: 'Spartacus', hp: 1800, speed: 0.2, dps: 120, intro: 'Spartacus himself charges at your lines!' },
+  spartacus:  { name: 'Spartacus', hp: 3000, speed: 0.2, dps: 160, intro: 'Spartacus himself charges at your lines!' },
   horsearcher:{ name: 'Parthian horse archer', hp: 170, speed: 0.45, dps: 25, mounted: true, kites: true, bow: { range: 3.4, reload: 2.1, dmg: 16 }, intro: 'Parthian horse archers! They keep their distance and shoot, and ride back if you come too close.' },
   cataphract: { name: 'Cataphract', hp: 450, shield: 200, speed: 0.3, dps: 70, mounted: true, intro: 'Cataphracts: horse and rider covered in armour.' },
   pompeian:   { name: 'Pompeian legionary', hp: 280, shield: 150, speed: 0.2, dps: 45, intro: 'Pompey’s legions: Romans fighting Romans.' },
@@ -689,7 +689,7 @@ const LEVELS = [
     waves: [w(26, ['samnite']), w(40, ['lucanian'], 'The Lucanians attack from the south, below the gate!', 'below'), w(54, ['samnite', 'samnite']), w(70, ['lucanian', 'lucanian'], null, 'below'), w(86, ['linen', 'samnite']), w(100, ['lucanian', 'lucanian', 'samnite'], null, 'below'), w(114, ['samnite', 'samnite', 'lucanian']),
       w(130, ['chief', ...rep(3, 'samnite'), 'lucanian', 'linen'], 'A great wave approaches!'), w(140, ['lucanian', 'lucanian', 'samnite'], null, 'below'), w(156, ['samnite', 'lucanian', 'samnite']), w(170, ['lucanian', 'samnite'], null, 'below'), w(176, ['linen', 'samnite', 'samnite']),
       w(194, ['chief', ...rep(3, 'samnite'), 'linen', 'samnite'], 'The final wave, from both sides!'), w(196, [...rep(3, 'lucanian'), 'samnite'], null, 'below')] },
-  { id: 'silarius', name: 'The Silarius River', year: '71 BC', enemy: 'Spartacus', theme: 'silarius', start: 375, cols: 8, rows: 10, more: 1.49, ditch: 2, river: true,
+  { id: 'silarius', name: 'The Silarius River', year: '71 BC', enemy: 'Spartacus', theme: 'silarius', start: 375, cols: 8, rows: 10, more: 1.6, ditch: 2, river: true,
     twist: 'The slave army must wade the river, which slows it (you can’t build in it). Gladiators lead the charge: watch for the retiarius’s net. In the final wave Spartacus himself attacks.',
     units: ['cart', 'slinger', 'velites', 'legionary', 'triarius', 'caltrops', 'maniple', 'scorpio', 'centurion'],
     blurb: 'Trapped by Crassus, Spartacus turns and throws his whole army at the legions by the Silarius River.',
@@ -1377,7 +1377,7 @@ const FOE_LOOK = {
   murmillo:   { tunic: '#d9c89a', head: 'murmillo', weapon: 'sword', shield: 'long' },
   retiarius:  { tunic: '#d9c89a', head: 'hair', weapon: 'trident' },
   slave:      { tunic: '#9a8a70', head: 'hair', weapon: 'javelin', fast: true },
-  spartacus:  { tunic: '#6a2f6e', head: 'thraex', weapon: 'sica', shield: 'small', big: 1.3 },
+  spartacus:  { tunic: '#6a2f6e', head: 'thraex', weapon: 'sica', shield: 'small', big: 1.45 },
   pompeian:   { tunic: '#8e2b22', head: 'roman', weapon: 'sword', shield: 'scutum' },
   militia:    { tunic: '#b8864e', head: 'hair', weapon: 'axe' },
   volunteer:  { tunic: '#9a8a70', head: 'hair', weapon: 'javelin', fast: true },
@@ -4205,7 +4205,7 @@ const MARKUP = `<main class="game">
   </div>
   <div class="msg" id="banner" aria-live="polite"></div>
   <div class="controls">
-    <div class="progress"><span class="label" id="level">Lake Regillus</span><div class="bar" id="bar"><div class="fill" id="fill"></div></div><span class="build" translate="no">build 17 Nov, 22:29</span></div>
+    <div class="progress"><span class="label" id="level">Lake Regillus</span><div class="bar" id="bar"><div class="fill" id="fill"></div></div><span class="build" translate="no">build 17 Nov, 22:36</span></div>
     <button class="tool" id="pause">Pause</button>
     <button class="tool" id="speed">1×</button>
     <button class="tool" id="guide">Guide</button>
