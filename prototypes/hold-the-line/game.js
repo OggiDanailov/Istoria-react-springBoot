@@ -229,7 +229,7 @@ const LEVELS = [
     waves: [w(26, ['samnite']), w(40, ['lucanian'], 'The Lucanians attack from the south, below the gate!', 'below'), w(54, ['samnite', 'samnite']), w(70, ['lucanian', 'lucanian'], null, 'below'), w(86, ['linen', 'samnite']), w(100, ['lucanian', 'lucanian', 'samnite'], null, 'below'), w(114, ['samnite', 'samnite', 'lucanian']),
       w(130, ['chief', ...rep(3, 'samnite'), 'lucanian', 'linen'], 'A great wave approaches!'), w(140, ['lucanian', 'lucanian', 'samnite'], null, 'below'), w(156, ['samnite', 'lucanian', 'samnite']), w(170, ['lucanian', 'samnite'], null, 'below'), w(176, ['linen', 'samnite', 'samnite']),
       w(194, ['chief', ...rep(3, 'samnite'), 'linen', 'samnite'], 'The final wave, from both sides!'), w(196, [...rep(3, 'lucanian'), 'samnite'], null, 'below')] },
-  { id: 'silarius', name: 'The Silarius River', year: '71 BC', enemy: 'Spartacus', theme: 'silarius', start: 375, cols: 8, rows: 10, more: 1.33, ditch: 2, river: true,
+  { id: 'silarius', name: 'The Silarius River', year: '71 BC', enemy: 'Spartacus', theme: 'silarius', start: 375, cols: 8, rows: 10, more: 1.49, ditch: 2, river: true,
     twist: 'The slave army must wade the river, which slows it (you can’t build in it). Gladiators lead the charge: watch for the retiarius’s net. In the final wave Spartacus himself attacks.',
     units: ['cart', 'slinger', 'velites', 'legionary', 'triarius', 'caltrops', 'maniple', 'scorpio', 'centurion'],
     blurb: 'Trapped by Crassus, Spartacus turns and throws his whole army at the legions by the Silarius River.',
