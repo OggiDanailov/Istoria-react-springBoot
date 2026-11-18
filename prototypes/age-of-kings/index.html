@@ -4205,7 +4205,7 @@ const MARKUP = `<main class="game">
   </div>
   <div class="msg" id="banner" aria-live="polite"></div>
   <div class="controls">
-    <div class="progress"><span class="label" id="level">Lake Regillus</span><div class="bar" id="bar"><div class="fill" id="fill"></div></div><span class="build" translate="no">build 17 Nov, 22:45</span></div>
+    <div class="progress"><span class="label" id="level">Lake Regillus</span><div class="bar" id="bar"><div class="fill" id="fill"></div></div><span class="build" translate="no">build 17 Nov, 22:59</span></div>
     <button class="tool" id="pause">Pause</button>
     <button class="tool" id="speed">1×</button>
     <button class="tool" id="guide">Guide</button>
@@ -4831,6 +4831,7 @@ const CHRONICLE_EXTRAS = {
   'marius:aquae-sextiae-and-vercellae': '<div class="pantheon allia" data-replay="aquae"></div>',
   'social-war-and-sulla:east-and-civil-war': '<div class="pantheon allia" data-replay="colline"></div>',
   'spartacus-and-pompey:silarius-and-aftermath': '<div class="pantheon allia" data-replay="silarius"></div>',
+  'cicero-and-the-triumvirate:carrhae': '<div class="pantheon allia" data-replay="carrhae"></div>',
   'first-punic-war:siege-of-akragas': '<div class="pantheon allia" data-replay="agrigentum"></div>',
   'first-punic-war:corvus-and-mylae': '<div class="pantheon allia" data-replay="mylae"></div>',
   'first-punic-war:battle-of-the-aegates': '<div class="pantheon allia" data-replay="aegates"></div>',
@@ -4847,7 +4848,7 @@ const openChronicle = focusId => openSheet(CH.title, chronicleHtml(), focusId)
 // groups of dots with where they are at each moment (a line, or a cluster) and what befalls them (some fall, they
 // waver in panic, they drown with a splash), and five captions. Times are in "story seconds"; it plays SLOW times
 // slower so each caption can be read (the user found 8 seconds too fast). Positions are parts of the width and height.
-const RCOL = { rebel: '#3f7d6a', teuton: '#3f6a8f', ambron: '#9a6a2a', deserter: '#8a8278', patrician: '#d9a520', linen: '#f4eedd', carthage: '#33509a', macedon: '#6b4a8a', rome: '#b8322a', gaul: '#2f5f9a', samnite: '#c27a1e', etruscan: '#8a7f75', epirus: '#6b4a8a', elephant: '#76716b' }
+const RCOL = { parthian: '#5b4a9a', cataphract: '#6f7884', camel: '#c9a46a', rebel: '#3f7d6a', teuton: '#3f6a8f', ambron: '#9a6a2a', deserter: '#8a8278', patrician: '#d9a520', linen: '#f4eedd', carthage: '#33509a', macedon: '#6b4a8a', rome: '#b8322a', gaul: '#2f5f9a', samnite: '#c27a1e', etruscan: '#8a7f75', epirus: '#6b4a8a', elephant: '#76716b' }
 const REPLAYS = {
   // chapter 4: the Allia (Livy), as the chronicle tells it
   allia: {
@@ -5003,6 +5004,32 @@ const REPLAYS = {
       [4.0, 'By the Silarius River, Spartacus (with the gold ring) turns and throws his whole army at the legions.', 'Край река Силарий Спартак (със златния пръстен) се обръща и хвърля цялата си армия срещу легионите.'],
       [5.6, 'The rebels are routed and most die on the field. Spartacus falls fighting, though his body is never found.', 'Бунтовниците са разгромени и повечето загиват на бойното поле. Спартак пада в боя, но тялото му така и не е намерено.'],
       [6.8, 'Pompey’s troops catch and kill 5,000 fugitives. About 6,000 prisoners are crucified along the Appian Way.', 'Войниците на Помпей залавят и избиват 5000 бегълци. Около 6000 пленници са разпнати по Апиевия път.'],
+    ], end: 9.0,
+  },
+  // chapter 16: Carrhae
+  carrhae: {
+    title: ['Carrhae, step by step', 'Каре, стъпка по стъпка'],
+    key: [['rome', 'Romans', 'римляни'], ['gaul', 'Gallic horse', 'гали'], ['parthian', 'horse archers', 'стрелци'], ['cataphract', 'cataphracts', 'катафракти']],
+    ground: [
+      { city: [0.14, 0.92, 0.07, 0.035], label: ['Carrhae', 'Каре'] },
+      { tag: [0.5, 0.05], t: ['drums thunder', 'тъпани гърмят'], from: 1.2, to: 2.6 }, { tag: [0.78, 0.05], t: ['camels: fresh arrows', 'камили: нови стрели'], from: 2.8, to: 5.6 },
+      ...[[2.8, 0.38, 0.47], [3.1, 0.62, 0.56], [3.4, 0.5, 0.42], [3.8, 0.4, 0.58], [4.1, 0.6, 0.46], [4.5, 0.47, 0.62], [4.9, 0.36, 0.5], [5.3, 0.64, 0.52]].map(([at, x, y]) => ({ flash: [x, y], at })),
+    ],
+    groups: [
+      { side: 'rome', n: 36, keys: [[0, 'line', 0.5, 1.15, 0.5, 0.75, 0.04], [1.4, 'arc', 0.5, 0.52, 0.15, 0.11, 0, 2, 0.08], [5.8, 'arc', 0.5, 0.52, 0.15, 0.11, 0, 2, 0.08], [6.8, 'blob', 0.34, 0.76, 0.08, 0.04]], jitter: [2.6, 5.8], fall: [2.8, 6.2, 0.4] },
+      { side: 'rome', n: 1, r: 5, ring: true, keys: [[0, 'blob', 0.5, 0.8, 0, 0], [1.4, 'blob', 0.5, 0.52, 0, 0], [5.8, 'blob', 0.5, 0.52, 0, 0], [6.8, 'blob', 0.34, 0.74, 0, 0]], fall: [7.4, 7.6, 1] },
+      { side: 'gaul', n: 8, keys: [[0, 'blob', 0.5, 0.96, 0.03, 0.03], [1.4, 'blob', 0.5, 0.52, 0.04, 0.03], [4.2, 'blob', 0.5, 0.52, 0.04, 0.03], [4.8, 'blob', 0.82, 0.44, 0.05, 0.04], [5.4, 'blob', 0.92, 0.26, 0.04, 0.03]], fall: [5.3, 5.8, 1] },
+      { side: 'parthian', n: 16, keys: [[0, 'line', 0.2, -0.2, 0.8, -0.2, 0.02], [1.6, 'line', 0.2, 0.1, 0.8, 0.1, 0.02], [2.4, 'arc', 0.5, 0.52, 0.36, 0.3, 0.0, 2.0, 0.03], [3.0, 'arc', 0.5, 0.52, 0.36, 0.3, 0.25, 2.25, 0.03], [3.6, 'arc', 0.5, 0.52, 0.36, 0.3, 0.5, 2.5, 0.03], [4.2, 'arc', 0.5, 0.52, 0.36, 0.3, 0.75, 2.75, 0.03], [4.8, 'arc', 0.5, 0.52, 0.36, 0.3, 1.0, 3.0, 0.03], [5.4, 'arc', 0.5, 0.52, 0.36, 0.3, 1.25, 3.25, 0.03], [6.0, 'arc', 0.5, 0.52, 0.36, 0.3, 1.5, 3.5, 0.03], [6.6, 'arc', 0.5, 0.52, 0.36, 0.3, 1.75, 3.75, 0.03], [7.2, 'arc', 0.5, 0.52, 0.36, 0.3, 2.0, 4.0, 0.03]] },
+      { side: 'cataphract', n: 10, keys: [[0, 'line', 0.3, -0.3, 0.7, -0.3, 0.02], [1.0, 'line', 0.3, 0.17, 0.7, 0.17, 0.02], [4.6, 'line', 0.3, 0.17, 0.7, 0.17, 0.02], [5.2, 'line', 0.7, 0.3, 0.98, 0.3, 0.02], [6.2, 'line', 0.3, 0.17, 0.7, 0.17, 0.02]] },
+      { side: 'camel', n: 5, keys: [[0, 'blob', 0.92, -0.2, 0.03, 0.02], [2.8, 'blob', 0.92, 0.08, 0.03, 0.02], [3.4, 'blob', 0.84, 0.14, 0.03, 0.02], [4.0, 'blob', 0.92, 0.08, 0.03, 0.02], [4.6, 'blob', 0.84, 0.14, 0.03, 0.02], [5.2, 'blob', 0.92, 0.08, 0.03, 0.02]] },
+    ],
+    steps: [
+      [0, 'Spring 53 BC: Crassus (with the gold ring) marches into Mesopotamia with seven legions, and meets a Parthian army of about 10,000 horsemen near Carrhae.', 'Пролетта на 53 г. пр.н.е.: Крас (със златния пръстен) навлиза в Месопотамия със седем легиона и при Каре среща партска армия от около 10 000 конници.'],
+      [1.2, 'Drums thunder and armoured horsemen reveal gleaming steel. The Romans form a square.', 'Тъпани гърмят, а бронирани конници разкриват блестяща стомана. Римляните се строяват в каре.'],
+      [2.6, 'Mounted archers ride round the square, raining arrows, while a train of camels brings them fresh ones.', 'Конни стрелци обикалят карето и обсипват римляните със стрели, а керван камили им носи нови.'],
+      [4.2, 'Crassus’s son Publius leads a breakout with the Gallic horsemen. He is lured away and killed.', 'Синът на Крас, Публий, води пробив с галските конници. Той е подмамен надалеч и убит.'],
+      [5.8, 'The Romans retreat towards Carrhae, abandoning 4,000 wounded.', 'Римляните отстъпват към Каре и изоставят 4000 ранени.'],
+      [7.2, 'At truce talks a scuffle breaks out and Crassus is killed. About 20,000 Romans die and 10,000 are captured, with the legions’ eagles.', 'На преговорите за примирие избухва сбиване и Крас е убит. Около 20 000 римляни загиват, а 10 000 са пленени, заедно с орлите на легионите.'],
     ], end: 9.0,
   },
   // chapter 13: Aquae Sextiae
