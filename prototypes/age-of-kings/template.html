@@ -910,6 +910,7 @@ const CHRONICLE_EXTRAS = {
   'carthage-and-corinth:fall-of-carthage': '<div class="pantheon allia" data-replay="carthage"></div>',
   'marius:aquae-sextiae-and-vercellae': '<div class="pantheon allia" data-replay="aquae"></div>',
   'social-war-and-sulla:east-and-civil-war': '<div class="pantheon allia" data-replay="colline"></div>',
+  'spartacus-and-pompey:silarius-and-aftermath': '<div class="pantheon allia" data-replay="silarius"></div>',
   'first-punic-war:siege-of-akragas': '<div class="pantheon allia" data-replay="agrigentum"></div>',
   'first-punic-war:corvus-and-mylae': '<div class="pantheon allia" data-replay="mylae"></div>',
   'first-punic-war:battle-of-the-aegates': '<div class="pantheon allia" data-replay="aegates"></div>',
@@ -926,7 +927,7 @@ const openChronicle = focusId => openSheet(CH.title, chronicleHtml(), focusId)
 // groups of dots with where they are at each moment (a line, or a cluster) and what befalls them (some fall, they
 // waver in panic, they drown with a splash), and five captions. Times are in "story seconds"; it plays SLOW times
 // slower so each caption can be read (the user found 8 seconds too fast). Positions are parts of the width and height.
-const RCOL = { teuton: '#3f6a8f', ambron: '#9a6a2a', deserter: '#8a8278', patrician: '#d9a520', linen: '#f4eedd', carthage: '#33509a', macedon: '#6b4a8a', rome: '#b8322a', gaul: '#2f5f9a', samnite: '#c27a1e', etruscan: '#8a7f75', epirus: '#6b4a8a', elephant: '#76716b' }
+const RCOL = { rebel: '#3f7d6a', teuton: '#3f6a8f', ambron: '#9a6a2a', deserter: '#8a8278', patrician: '#d9a520', linen: '#f4eedd', carthage: '#33509a', macedon: '#6b4a8a', rome: '#b8322a', gaul: '#2f5f9a', samnite: '#c27a1e', etruscan: '#8a7f75', epirus: '#6b4a8a', elephant: '#76716b' }
 const REPLAYS = {
   // chapter 4: the Allia (Livy), as the chronicle tells it
   allia: {
@@ -1055,6 +1056,33 @@ const REPLAYS = {
       [4.6, 'On the right, Crassus routs the enemy and chases them as far as Antemnae, about 5 km away.', 'Вдясно Крас разбива врага и го преследва чак до Антемне, на около 5 км.'],
       [6.0, 'The fighting goes on into the night. By morning Telesinus is dead and his army destroyed.', 'Боят продължава през нощта. До сутринта Телезин е мъртъв, а армията му – унищожена.'],
       [7.4, 'The next day, while Sulla addresses the Senate, thousands of prisoners are butchered within earshot.', 'На следващия ден, докато Сула говори пред Сената, хиляди пленници са избити толкова наблизо, че писъците им се чуват.'],
+    ], end: 9.0,
+  },
+  // chapter 15: the Silarius River
+  silarius: {
+    title: ['The Silarius River, step by step', 'Река Силарий, стъпка по стъпка'],
+    key: [['rome', 'Romans', 'римляни'], ['rebel', 'Spartacus’s rebels', 'бунтовниците на Спартак']],
+    ground: [
+      { brook: [[0, 0.3], [0.4, 0.27], [0.7, 0.33], [1, 0.29]] }, { text: [0.02, 0.24], t: ['the Silarius River', 'река Силарий'] },
+      { barrier: [0.04, 0.8, 0.96, 0.8], to: 2.4 }, { tag: [0.5, 0.97], t: ['Crassus’s wall across the toe of Italy', 'стената на Крас през върха на Италия'], to: 2.4 },
+      { flash: [0.5, 0.8], at: 2.2 },
+      { tag: [0.5, 0.08], t: ['Pompey, back from Spain', 'Помпей, завърнал се от Испания'], from: 6.8 },
+      { tag: [0.5, 0.75], t: ['6,000 crucified on the Appian Way', '6000 разпнати по Апиевия път'], from: 7.6 },
+    ],
+    groups: [
+      { side: 'rebel', n: 34, keys: [[0, 'blob', 0.5, 0.875, 0.3, 0.025], [1.4, 'blob', 0.5, 0.875, 0.3, 0.025], [2.4, 'blob', 0.5, 0.66, 0.1, 0.06], [3.2, 'blob', 0.5, 0.45, 0.16, 0.06], [4.0, 'line', 0.12, 0.4, 0.88, 0.4, 0.02], [5.2, 'line', 0.12, 0.5, 0.88, 0.5, 0.02], [6.8, 'line', 0.12, 0.5, 0.88, 0.5, 0.02], [7.6, 'blob', 0.5, 0.62, 0.12, 0.03]], jitter: [5.2, 6.8], fall: [5.6, 6.8, 0.82] },
+      { side: 'rebel', n: 8, keys: [[0, 'blob', 0.5, 0.875, 0.3, 0.025], [1.4, 'blob', 0.5, 0.875, 0.3, 0.025], [2.4, 'blob', 0.5, 0.66, 0.1, 0.06], [3.2, 'blob', 0.5, 0.45, 0.16, 0.06], [4.0, 'line', 0.2, 0.38, 0.8, 0.38, 0.02], [6.2, 'line', 0.2, 0.38, 0.8, 0.38, 0.02], [7.0, 'blob', 0.5, 0.18, 0.2, 0.04]], fall: [7.2, 7.8, 1] },
+      { side: 'rebel', n: 1, r: 5, ring: true, keys: [[0, 'blob', 0.5, 0.875, 0, 0], [1.4, 'blob', 0.5, 0.875, 0, 0], [2.4, 'blob', 0.5, 0.68, 0, 0], [3.2, 'blob', 0.5, 0.45, 0, 0], [4.0, 'blob', 0.5, 0.42, 0, 0], [5.2, 'blob', 0.5, 0.52, 0, 0]], fall: [6.0, 6.2, 1] },
+      { side: 'rome', n: 30, keys: [[0, 'line', 0.06, 0.74, 0.94, 0.74, 0.015], [2.2, 'line', 0.06, 0.74, 0.94, 0.74, 0.015], [3.4, 'line', 0.12, 0.74, 0.88, 0.74, 0.02], [4.6, 'line', 0.12, 0.6, 0.88, 0.6, 0.02], [5.4, 'line', 0.12, 0.56, 0.88, 0.56, 0.02], [6.8, 'line', 0.12, 0.56, 0.88, 0.56, 0.02]], jitter: [5.2, 6.8], fall: [5.6, 6.6, 0.15] },
+      { side: 'rome', n: 12, keys: [[0, 'line', 0.25, -0.2, 0.75, -0.2, 0.02], [6.6, 'line', 0.25, -0.2, 0.75, -0.2, 0.02], [7.2, 'line', 0.25, 0.14, 0.75, 0.14, 0.02]] },
+    ],
+    steps: [
+      [0, '71 BC: Crassus has walled Spartacus’s army into the toe of Italy, near Rhegium, cutting off its supplies.', '71 г. пр.н.е.: Крас е затворил армията на Спартак на върха на Италия, край Регий, и е прекъснал снабдяването ѝ.'],
+      [1.4, 'Hearing that Pompey is marching home from Spain, Spartacus offers to negotiate. Crassus, unwilling to share the glory, refuses.', 'Като научава, че Помпей се връща от Испания, Спартак предлага преговори. Крас, който не иска да дели славата, отказва.'],
+      [2.2, 'The rebels smash through his lines and flee north, exhausted and losing their discipline.', 'Бунтовниците пробиват линиите му и бягат на север, изтощени и все по-недисциплинирани.'],
+      [4.0, 'By the Silarius River, Spartacus (with the gold ring) turns and throws his whole army at the legions.', 'Край река Силарий Спартак (със златния пръстен) се обръща и хвърля цялата си армия срещу легионите.'],
+      [5.6, 'The rebels are routed and most die on the field. Spartacus falls fighting, though his body is never found.', 'Бунтовниците са разгромени и повечето загиват на бойното поле. Спартак пада в боя, но тялото му така и не е намерено.'],
+      [6.8, 'Pompey’s troops catch and kill 5,000 fugitives. About 6,000 prisoners are crucified along the Appian Way.', 'Войниците на Помпей залавят и избиват 5000 бегълци. Около 6000 пленници са разпнати по Апиевия път.'],
     ], end: 9.0,
   },
   // chapter 13: Aquae Sextiae
