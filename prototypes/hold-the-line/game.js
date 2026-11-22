@@ -46,6 +46,7 @@ const UNITS = {
   rammer:      { name: 'Ramming ship', short: 'Rammer', cost: 100, recharge: 10, hp: 700, melee: 55, flank: 45, ship: 'ram', about: 'Fast and nimble, with a bronze ram at the bow. It smashes any ship that comes alongside.' },
   ballista:    { name: 'Ballista ship', short: 'Ballista', cost: 175, recharge: 15, hp: 300, reload: 3.5, dmg: 110, range: 99, pierce: true, ship: 'ballista', about: 'A ship carrying a bolt-thrower. Each bolt flies through every ship in its lane.' },
   fireship:    { name: 'Fire pots', short: 'Fire pots', cost: 25, recharge: 25, hp: 300, armTime: 10, dmg: 450, trap: true, ship: 'fire', about: 'A small boat full of burning pitch. Once it’s lit (10 seconds), the first enemy to touch it goes up in flames.' },
+  octavian:    { name: 'Octavian’s flagship', short: 'Octavian', cost: 0, recharge: 0, hp: 2400, ship: 'admiral', about: 'Octavian and Agrippa’s flagship. It is on the field from the start; if it sinks, the battle is lost. Any enemy ship that breaks through a lane with no reserve squadron rams it.' },
   harpax:      { name: 'Harpax ship', short: 'Harpax', cost: 150, recharge: 12, hp: 350, reload: 4, dmg: 35, range: 99, kind: 'hook', grapple: 4, ship: 'harpax', about: 'Agrippa’s invention: a grappling hook fired from a catapult. It catches an enemy ship and holds it still for 4 seconds.' },
   ceres:    { name: 'Ceres', short: 'Ceres', cost: 50, recharge: 7.5, hp: 300, grain: true, deity: 'ceres', about: 'Goddess of grain and the harvest. Brings a sack of grain every 20 seconds.' },
   jupiter: { name: 'Jupiter', short: 'Jupiter', cost: 50, recharge: 5, hp: 300, reload: 1.4, dmg: 45, range: 99, kind: 'ray', deity: 'jupiter', about: 'The Roman god of the sky and thunder, king of the gods. Only Jupiter can stop Zeus.' },
@@ -84,8 +85,9 @@ const FOES = {
   volunteer:  { name: 'Freed slave', hp: 120, speed: 0.4, dps: 30, intro: 'Carthage freed its slaves to fight. They are fast but lightly armed.' },
   galley:     { name: 'Antony’s warship', hp: 300, shield: 100, speed: 0.2, dps: 45, ship: 'galley', intro: 'Antony’s warships! Their thick timbers soak up the first hits.' },
   deceres:    { name: 'Great ship', hp: 750, shield: 250, speed: 0.12, dps: 70, bow: { range: 3, reload: 2.5, dmg: 25 }, ship: 'great', intro: 'Antony’s great ships, with towers full of archers. Slow, but very hard to sink. Hold them with a harpax.' },
+  cleoflag:   { name: 'Cleopatra’s flagship', hp: 1000, shield: 200, speed: 0.12, dps: 60, bow: { range: 3, reload: 2.4, dmg: 25 }, target: 'Cleopatra', ship: 'great', intro: 'Cleopatra’s own flagship, under a purple sail! Sink it: at half strength she will try to flee.' },
   egyptian:   { name: 'Cleopatra’s ship', hp: 220, speed: 0.3, dps: 35, egyptian: true, ship: 'egyptian', intro: 'Cleopatra’s Egyptian squadron, under purple sails.' },
-  flagship:   { name: 'Antony’s flagship', hp: 1200, shield: 300, speed: 0.1, dps: 80, bow: { range: 3, reload: 2.2, dmg: 30 }, flagship: true, ship: 'great', intro: 'Antony’s flagship joins the battle!' },
+  flagship:   { name: 'Antony’s flagship', hp: 1200, shield: 300, speed: 0.1, dps: 80, bow: { range: 3, reload: 2.2, dmg: 30 }, flagship: true, target: 'Antony', ship: 'great', intro: 'Antony’s flagship joins the battle!' },
   zeus: { name: 'Zeus', hp: 270, speed: 0.2, dps: 40, deity: 'zeus', twin: 'jupiter', intro: 'Zeus, the Greek god of the sky and thunder, king of the gods. Only his Roman twin can stop him: Jupiter.' },
   hera: { name: 'Hera', hp: 270, speed: 0.2, dps: 40, deity: 'hera', twin: 'juno', intro: 'Hera, the Greek god of marriage, queen of the gods. Only her Roman twin can stop her: Juno.' },
   poseidon: { name: 'Poseidon', hp: 270, speed: 0.2, dps: 40, deity: 'poseidon', twin: 'neptune', intro: 'Poseidon, the Greek god of the sea. Only his Roman twin can stop him: Neptune.' },
@@ -264,13 +266,13 @@ const LEVELS = [
       w(122, rep(4, 'cavalry'), 'Pompey’s 7,000 horsemen charge your left wing!', [0, 1, 2]),
       w(140, ['legate', 'legion3', 'pompeian', 'slingarcher', 'slingarcher', 'pomscorpio'], 'A great wave approaches!'), w(166, ['legion3', 'legion3', 'cavalry', 'slingarcher', 'pomscorpio']),
       w(190, ['legate', 'legion3', 'legion3', 'pompeian', 'cavalry', 'cavalry', 'slingarcher', 'pomscorpio'], 'The final wave!')] },
-  { id: 'actium', name: 'Actium', year: '31 BC', enemy: 'Antony and Cleopatra', theme: 'sea', sea: true, start: 425, cols: 10, rows: 10, more: 1.35, weave: true,
-    twist: 'A battle at sea on open water: every unit is a ship. Antony’s ships weave from lane to lane as they row in, and gusts of wind push his whole fleet sideways. Your rammers strike ships beside them too. Watch Cleopatra’s squadron: halfway through, her ships hoist their sails and flee, and Antony follows her.',
-    events: [{ t: 84, wind: 1, text: 'A gust from the west drives Antony’s ships one lane east!' }, { t: 150, cleopatra: true, text: 'Cleopatra’s squadron hoists its sails and flees!' }, { t: 172, antony: true, text: 'Antony abandons his fleet and follows Cleopatra!' }, { t: 128, wind: -1, text: 'The wind turns: Antony’s ships are pushed one lane west!' }, { t: 198, wind: 1, text: 'A last gust from the west!' }],
+  { id: 'actium', name: 'Actium', year: '31 BC', enemy: 'Antony and Cleopatra', theme: 'sea', sea: true, start: 425, cols: 10, rows: 10, more: 1.35, weave: true, admiral: true,
+    twist: 'Your fleet sails out to meet Antony’s. Protect Octavian’s flagship (gold sail, in your bottom row): if it sinks, you lose, and any ship that breaks through a lane with no reserve rams it. To win, sink Antony’s and Cleopatra’s flagships (ringed in gold). At half strength they flee: catch them before they escape, or win as history did, with fewer stars. Antony’s ships weave in the upper half and gusts push them sideways; your rammers strike ships beside them too.',
+    events: [{ t: 84, wind: 1, text: 'A gust from the west drives Antony’s ships one lane east!' }, { t: 128, wind: -1, text: 'The wind turns: Antony’s ships are pushed one lane west!' }, { t: 198, wind: 1, text: 'A last gust from the west!' }],
     units: ['supplyboat', 'archership', 'quinquereme', 'rammer', 'ballista', 'fireship', 'harpax'], newUnit: 'harpax',
     blurb: 'Off the headland of Actium, in western Greece, Octavian’s fleet under Agrippa blocks the fleet of Antony and Cleopatra. Whoever wins rules the Roman world.',
     after: 'Antony and Cleopatra escaped to Egypt, where both killed themselves the next year. Octavian, soon called Augustus, was master of the Roman world.',
-    waves: [w(26, ['galley']), w(42, ['egyptian', 'galley']), w(58, ['galley', 'galley']), w(74, ['deceres']), w(90, ['egyptian', 'egyptian', 'galley']), w(106, ['deceres', 'galley']), w(122, ['egyptian', 'egyptian', 'galley', 'galley']),
+    waves: [w(26, ['galley']), w(42, ['egyptian', 'galley']), w(58, ['galley', 'galley']), w(74, ['deceres']), w(90, ['egyptian', 'egyptian', 'galley']), w(106, ['deceres', 'galley']), w(122, ['cleoflag', 'egyptian', 'egyptian', 'galley', 'galley'], 'Cleopatra’s flagship sails into the battle!'),
       w(136, ['flagship', 'deceres', 'galley', 'galley', 'egyptian', 'egyptian', 'egyptian'], 'Antony’s fleet attacks in force!'), w(164, ['galley', 'galley', 'deceres']),
       w(186, ['deceres', 'deceres', ...rep(4, 'galley')], 'The last of Antony’s fleet!')] },
   { id: 'teutoburg', name: 'The Teutoburg Forest', year: 'AD 9', enemy: 'Arminius and the Germanic tribes', theme: 'forest', start: 450, cols: 8, rows: 11,
@@ -575,7 +577,7 @@ function drawDeity(c, type, T, greek, o = {}) {
 }
 const DRAW_UNIT = {
   ...Object.fromEntries(['ceres', 'jupiter', 'juno', 'neptune', 'minerva', 'mars', 'venus', 'diana', 'mercury'].map(t => [t, (c, u, T) => drawDeity(c, t, T, false, { anim: u.anim, tag: !u.icon })])),
-  ...Object.fromEntries(['supplyboat', 'archership', 'quinquereme', 'rammer', 'ballista', 'fireship', 'harpax'].map(t => [t, (c, u, T) => drawShip(c, UNITS[t].ship, T, false, u)])),
+  ...Object.fromEntries(['supplyboat', 'archership', 'quinquereme', 'rammer', 'ballista', 'fireship', 'harpax', 'octavian'].map(t => [t, (c, u, T) => drawShip(c, UNITS[t].ship, T, false, u)])),
   slinger(c, u, T) {
     shadow(c, 13, 4); romanLegs(c)
     c.fillStyle = '#8e2b22'; c.strokeStyle = '#5a1a14'; c.lineWidth = 1.5; c.beginPath(); c.arc(-12, -24, 7.5, 0, TAU); c.fill(); c.stroke()
@@ -934,6 +936,7 @@ function drawWagon(c, T, fire) {   // a Teutonic wagon with a hide cover; fire 0
     c.fillStyle = 'rgba(255, 196, 60, .95)'; c.beginPath(); c.moveTo(fx - 3, -24); c.quadraticCurveTo(fx, -24 - fh, fx + 3, -24); c.fill() }
 }
 function drawFoe(c, f, T) {
+  if (FOES[f.type]?.target) { const pl = 1 + Math.sin(T * 4) * 0.08; c.save(); c.strokeStyle = 'rgba(224, 184, 74, .9)'; c.lineWidth = 3; c.beginPath(); c.ellipse(0, -36, 30 * pl, 44 * pl, 0, 0, TAU); c.stroke(); c.restore() }   // Antony's and Cleopatra's flagships: the targets, ringed in gold
   if (FOES[f.type]?.bolt) {   // Pompey's scorpion: the same machine as ours, turned to shoot down the field, with a blue pennant
     c.save(); c.translate(0, -22); c.scale(1, -1); c.translate(0, 22); DRAW_UNIT.scorpio(c, { anim: f.anim }, T); c.restore()
     line(c, 13, -4, 13, -36, '#5a3a22', 1.6); c.fillStyle = '#2e4c86'; c.beginPath(); c.moveTo(13, -36); c.lineTo(25, -32 + Math.sin(T * 4) * 1.5); c.lineTo(13, -28); c.fill(); return
@@ -1104,10 +1107,11 @@ function drawShip(c, kind, T, foe = false, f = null) {
   // A galley seen from above, bow toward the enemy (the user found the old ones looked like beetles, Nov 22): a long slim
   // hull with a bronze ram and a curled stern post, thin oars in banks, a foam wake, and the side's colour on the sail
   // and the rail: Octavian red, Antony blue-green, Cleopatra purple and gold.
-  const big = kind === 'great' || kind === 'heavy', small = kind === 'fire' || kind === 'supply'
-  const L = big ? 66 : small ? 40 : 54, Wd = big ? 22 : small ? 17 : 17, top = -L - 2, mid = (top - 2) / 2
-  const egypt = foe && (kind === 'egyptian' || f?.type === 'egyptian'), flag = f?.type === 'flagship'
-  const side = !foe ? { rail: '#b8322a', sail: '#b8322a', mark: '#e0b84a', hull: '#c08a52', deck: '#d9b07a' }
+  const big = kind === 'great' || kind === 'heavy' || kind === 'admiral', small = kind === 'fire' || kind === 'supply'
+  const L = kind === 'admiral' ? 74 : big ? 66 : small ? 40 : 54, Wd = big ? 22 : small ? 17 : 17, top = -L - 2, mid = (top - 2) / 2
+  const egypt = foe && (kind === 'egyptian' || f?.type === 'egyptian' || f?.type === 'cleoflag'), flag = f?.type === 'flagship' || f?.type === 'cleoflag' || kind === 'admiral'
+  const side = kind === 'admiral' ? { rail: '#e0b84a', sail: '#e0b84a', mark: '#8e2b22', hull: '#c08a52', deck: '#d9b07a' }   // Octavian's flagship: a gold sail with a red wreath
+    : !foe ? { rail: '#b8322a', sail: '#b8322a', mark: '#e0b84a', hull: '#c08a52', deck: '#d9b07a' }
     : egypt ? { rail: '#c9a24a', sail: '#6a2f6e', mark: '#e0b84a', hull: '#a0773e', deck: '#c79a5a' }
     : { rail: '#2f6f8a', sail: '#2f6f8a', mark: '#e9e1cf', hull: '#5a4434', deck: '#7a5f48' }
   c.save()
@@ -1152,7 +1156,7 @@ function drawShip(c, kind, T, foe = false, f = null) {
     line(c, -sw / 2, my, sw / 2, my, '#5a3a22', 1.6)   // the yard
     c.fillStyle = side.sail; c.beginPath(); c.moveTo(-sw / 2, my); c.lineTo(sw / 2, my); c.quadraticCurveTo(sw / 2 + 1, my + 9, sw / 2 - 2, my + 12); c.quadraticCurveTo(0, my + 17, -sw / 2 + 2, my + 12); c.quadraticCurveTo(-sw / 2 - 1, my + 9, -sw / 2, my); c.fill()
     c.strokeStyle = 'rgba(0, 0, 0, .18)'; c.lineWidth = 0.8; c.stroke()
-    shipMark(c, foe ? (egypt || flag ? 'sun' : kind === 'great' ? 'tower' : 'band') : kind, 0, my + 7.5, side.mark, sw)
+    shipMark(c, foe ? (egypt || flag ? 'sun' : kind === 'great' ? 'tower' : 'band') : kind === 'admiral' ? 'wreath' : kind, 0, my + 7.5, side.mark, sw)
     c.fillStyle = '#5a3a22'; c.beginPath(); c.arc(0, my, 1.8, 0, TAU); c.fill()   // the mast top
   }
   // a pennant at the stern in the side's colour
@@ -1171,6 +1175,7 @@ function shipMark(c, kind, x, y, col, sw) {
   else if (kind === 'heavy') { c.beginPath(); c.moveTo(-4.5, -4); c.lineTo(4.5, -4); c.lineTo(4.5, 0.5); c.quadraticCurveTo(4.5, 4.5, 0, 6); c.quadraticCurveTo(-4.5, 4.5, -4.5, 0.5); c.closePath(); c.stroke() }   // a shield: it holds
   else if (kind === 'harpax') { line(c, 0, -5, 0, 2, col, 1.6); c.beginPath(); c.arc(0, 2, 3.4, 0, Math.PI); c.stroke(); line(c, -3.4, 2, -4.4, 0.5, col, 1.4); line(c, 3.4, 2, 4.4, 0.5, col, 1.4) }   // a grappling hook
   else if (kind === 'supply') { c.beginPath(); c.ellipse(0, 1.5, 4, 3.8, 0, 0, TAU); c.fill(); line(c, -2, -2.5, 2, -2.5, col, 1.4) }   // a grain sack
+  else if (kind === 'wreath') { c.lineWidth = 1.6; c.beginPath(); c.arc(0, 0, 4.5, 0.5, Math.PI * 2 - 0.5); c.stroke(); for (let j = 0; j < 6; j++) { const a = 0.9 + j * 0.85; c.beginPath(); c.ellipse(Math.cos(a) * 4.5, Math.sin(a) * 4.5, 1.8, 0.9, a, 0, TAU); c.fill() } }   // Octavian: a laurel wreath
   else if (kind === 'sun') { c.beginPath(); c.arc(0, 0, 3, 0, TAU); c.fill(); for (let j = 0; j < 8; j++) { const a = j * Math.PI / 4; line(c, Math.cos(a) * 4, Math.sin(a) * 4, Math.cos(a) * 6, Math.sin(a) * 6, col, 1) } }   // Cleopatra's sun
   else if (kind === 'tower') { c.fillRect(-4, -3, 8, 7); for (const xx of [-4, -0.8, 2.4]) c.fillRect(xx, -5, 1.6, 2) }   // a great ship: its tower
   else c.fillRect(-sw / 2 + 1, -2, sw - 2, 2.4)   // Antony's warship: a pale band
@@ -1368,7 +1373,7 @@ function paintField() {
     c.fillStyle = '#3f5a2c'; c.fillRect(l * cell, top, cell, ry(ROWS) - top)
     for (let y = top; y < ry(ROWS); y += cell * 0.5) { c.fillStyle = rnd() < 0.5 ? '#2f4a22' : '#35522a'; c.beginPath(); c.arc(l * cell + cell * (0.3 + rnd() * 0.4), y + cell * 0.25, cell * 0.32, 0, TAU); c.fill() }
   }
-  if (LEVEL.sea) for (let i = 0; i < 160; i++) {   // little waves
+  if (LEVEL.sea && !LEVEL.admiral) for (let i = 0; i < 160; i++) {   // little waves (at Actium they roll past instead: drawn each frame)
     const x = rnd() * W, y = top + rnd() * (ry(ROWS) - top)
     c.strokeStyle = 'rgba(230, 240, 250, .28)'; c.lineWidth = 1.2; c.beginPath(); c.moveTo(x - 5, y); c.quadraticCurveTo(x, y - 3, x + 5, y); c.stroke()
   }
@@ -1452,7 +1457,7 @@ const BLOCKS = { phalanx3: { type: 'pikeman' }, legion3: { type: 'pompeian', hal
 function buildQueue(score = G?.score ?? quizScore) {
   const q = []
   let block = 0
-  const LEADERS = ['chief', 'legate', 'spartacus', 'flagship', 'wagon']
+  const LEADERS = ['chief', 'legate', 'spartacus', 'flagship', 'cleoflag', 'wagon']
   for (const w of LEVEL.waves) {
     const gap = LEVEL.gap ?? (w.big ? 0.7 : 1.6), troops = w.foes.filter(t => !LEADERS.includes(t))
     const extra = Math.round(troops.length * ((LEVEL.more ?? 1) * pressureFor(score) - 1))   // a wider field needs more men to fill it, and a weak test score brings more
@@ -1497,6 +1502,8 @@ function newGame(i = levelIndex, score = quizScore) {
     G.cw.cycle = {}
     LEVEL.cityWall.gates.forEach((l, i) => { const open = i % 2 === 0 ? Math.random() < 0.7 : Math.random() < 0.3; G.cw.cycle[l] = { open, doors: open ? 1 : 0, next: 4 + Math.random() * LEVEL.cityWall.gateCycle } })
   }
+  if (LEVEL.admiral) G.units.push({ type: 'octavian', lane: Math.floor((COLS - 1) / 2), row: ROWS - 1, hp: UNITS.octavian.hp, max: UNITS.octavian.hp, cd: 0, anim: 0, hurt: 0, armed: false, arm: 0, aiming: false, fighting: false })   // Actium: Octavian's flagship, to protect at all costs
+  G.resolved = {}
   renderTray(); renderBar(true); updateCount(); $('level').textContent = LEVEL.name
   layout()
 }
@@ -1688,7 +1695,7 @@ function moveBand(u, lane, row) {
   }
   sfx.place(); return true
 }
-function removeUnit(u, lost = true) { G.units = G.units.filter(x => x !== u); if (lost) G.lost++; for (const f of G.foes) if (f.eating === u) f.eating = null }
+function removeUnit(u, lost = true) { G.units = G.units.filter(x => x !== u); if (lost) G.lost++; for (const f of G.foes) if (f.eating === u) f.eating = null; if (u.type === 'octavian' && G.phase === 'play') { G.loseText = 'Octavian’s flagship has been sunk'; lose() } }
 // In the Clash of the Gods a god's light flies through every Greek god except its twin (and says so, once)
 function passes(s, f) {
   const twin = FOES[f.type].twin
@@ -2013,8 +2020,10 @@ function update(dt) {
       }
       continue
     }
+    if (FOES[f.type].target && !f.fleeing && f.hp < f.max / 2) { f.fleeing = true; f.eating = null; announce(`${FOES[f.type].target}’s flagship turns to flee! Sink it before it escapes!`, true, 3200) }   // Actium: at half strength they run for it
     if (f.fleeing) {   // a panicked elephant runs back up the lane, trampling its own side (anyone fleeing runs back the way he came)
-      f.y -= 0.9 * dt * (f.dir ?? 1)
+      f.y -= (FOES[f.type].target ? 0.32 : 0.9) * dt * (f.dir ?? 1)
+      if (FOES[f.type].target && f.y < -1.4) { f.escaped = true; f.hp = 0; announce(`${FOES[f.type].target} has escaped, as in history!`, true, 3200); continue }
       f.trampled ??= new Set()
       if (FOES[f.type].elephant) for (const o of G.foes) if (o !== f && o !== f.calf && o.type !== 'calf' && o.lane === f.lane && o.hp > 0 && Math.abs(o.y - f.y) < 0.55 && !f.trampled.has(o)) { f.trampled.add(o); hurtFoe(o, 300) }
       if (f.y < -1.4 || f.y > ROWS + 1.4) { f.hp = 0; G.killed++ }
@@ -2136,6 +2145,12 @@ function update(dt) {
       }
       const e = G.equites[f.lane]
       if (e.state === 'ready') { e.state = 'charge'; G.charges++; G.shake = Math.max(G.shake, 6); lastStand().sound(); announce(lastStand().charge); tutorial('equites') }
+      else if (LEVEL.admiral) {   // Actium: it rams Octavian's flagship, and sinks in the collision
+        const o = G.units.find(u => u.type === 'octavian'), dmg = Math.min(700, Math.round(f.hp + (f.shield ?? 0)))
+        f.hp = 0
+        if (o) { o.hp -= dmg; o.hurt = 0.3; G.shake = Math.max(G.shake, 8); sfx.crack(); G.fx.push({ kind: 'ring', x: lx(o.lane), y: ry(o.row + 0.5), t: 0.5 }); announce(`An enemy ship broke through and rammed Octavian’s flagship! (−${dmg})`); if (o.hp <= 0) { removeUnit(o); return } }
+        continue
+      }
       else return lose()   // no eques under this lane, or he has already charged
     }
   }
@@ -2161,6 +2176,8 @@ function update(dt) {
     if (Math.random() < dt * 30) G.fx.push({ kind: 'dust', x: lx(lane) + (Math.random() - 0.5) * cell * 0.5, y: ry(e.y), vx: (Math.random() - 0.5) * 40, vy: -Math.random() * 30, t: 0.6 })
     if (e.y > ROWS + 1.3) e.state = 'used'
   }
+  for (const f of G.foes) if (f.hp <= 0 && FOES[f.type].target && !G.resolved[f.type]) { G.resolved[f.type] = f.escaped ? 'escaped' : 'sunk'; if (!f.escaped) announce(`${FOES[f.type].target}’s flagship is sunk!`, true, 3000) }
+  if (LEVEL.admiral && Object.keys(G.resolved).length >= 2 && G.phase === 'play') return win()   // both flagships sunk or fled: the battle is decided
   G.foes = G.foes.filter(f => f.hp > 0)
   for (const c of G.corpses) c.t += dt
   G.corpses = G.corpses.filter(c => c.t < 3.5)
@@ -2172,7 +2189,7 @@ function update(dt) {
     for (let i = 0; i < n; i++) G.queue.push({ t: G.t + i * 1.5, type: pool[Math.floor(Math.random() * pool.length)], wave })
     G.total += n; G.cw.nextRefill = G.t + LEVEL.cityWall.refill; updateCount()
   }
-  if (!G.queue.length && !G.foes.length && !G.igniting?.length && !LEVEL.cityWall?.storm) win()   // a wagon still catching fire is an enemy on its way
+  if (!G.queue.length && !G.foes.length && !G.igniting?.length && !LEVEL.cityWall?.storm && !LEVEL.admiral) win()   // at Actium only the two flagships decide it   // a wagon still catching fire is an enemy on its way
 }
 
 // ---------- drawing a frame ----------
@@ -2344,6 +2361,15 @@ function draw() {
   ctx.save()
   if (G.shake > 0 && !reduceMotion) ctx.translate((Math.random() - 0.5) * G.shake, (Math.random() - 0.5) * G.shake)
   ctx.drawImage(bg, 0, 0, W, H)
+  if (LEVEL.admiral) {   // Actium: the sea rolls past, so the fleet seems to sail forward to meet Antony's
+    const top = ry(0), h = ry(ROWS) - top, off = (performance.now() / 1000) * cell * 0.35
+    ctx.save(); ctx.beginPath(); ctx.rect(0, top, W, h); ctx.clip(); ctx.strokeStyle = 'rgba(230, 240, 250, .3)'; ctx.lineWidth = 1.2
+    for (let i = 0; i < 150; i++) {
+      const x = ((i * 97.3) % 1) * W + ((i * 0.6180339) % 1) * W, y = top + (((i * 0.3819) % 1) * h + off) % h
+      ctx.beginPath(); ctx.moveTo(x % W - 5, y); ctx.quadraticCurveTo(x % W, y - 3, x % W + 5, y); ctx.stroke()
+    }
+    ctx.restore()
+  }
   const T = G.t
   if (G.walls) drawWalls()
   // where the selected unit can go
@@ -2839,7 +2865,7 @@ function beginBattle() {
   sfx.horn()
   if (levelIndex === 0) tutorial('start'); else announce(`${LEVEL.name} · ${LEVEL.year}`, true)
 }
-function starsFor() { const used = G.charges; return used === 0 ? 3 : used <= 2 ? 2 : 1 }
+function starsFor() { const used = G.charges, base = used === 0 ? 3 : used <= 2 ? 2 : 1; return LEVEL.admiral ? Math.max(1, base - Object.values(G.resolved ?? {}).filter(v => v === 'escaped').length) : base }   // Actium: a star less for each flagship that got away
 function win() {
   if (G.phase !== 'play') return
   G.phase = 'won'; sfx.win()
@@ -2849,6 +2875,7 @@ function win() {
   setTimeout(() => showPanel(`<span class="eyebrow">Victory · ${LEVEL.year}</span><h2>You held the line at ${LEVEL.name.replace(/^The /, 'the ')}</h2>
     <p class="big-stars" aria-label="${stars} of 3 stars">${starText(stars)}</p>
     <p>${LANG === 'bg' ? `Паднаха ${G.killed} врагове, а вие загубихте ${G.lost === 1 ? 'един войник' : G.lost + ' войници'}. ${LEVEL.theme === 'gods' ? (stars === 3 ? 'Гъските на Юнона изобщо не се наложи да се намесят.' : 'Спечелете, без гъските на Юнона да се намесят, за три звезди.') : stars === 3 ? 'Еквитите изобщо не се наложи да атакуват.' : 'Спечелете, без еквитите да атакуват, за три звезди.'}` : `${G.killed} enemies fell and you lost ${G.lost === 1 ? 'one soldier' : G.lost + ' soldiers'}. ${LEVEL.theme === 'gods' ? (stars === 3 ? 'Juno’s geese never had to wake.' : 'Win without Juno’s geese for three stars.') : stars === 3 ? 'The equites never had to ride.' : 'Win without the equites charging for three stars.'}`}</p>
+    ${LEVEL.admiral ? `<p>${['flagship', 'cleoflag'].map(t => `${FOES[t].target}’s flagship: <b>${G.resolved[t] === 'escaped' ? 'escaped' : 'sunk'}</b>`).join(' · ')}</p>` : ''}
     <p class="history">${LEVEL.after}</p>
     ${next || opts.mode === 'chapter' ? '' : '<p><b>You have won the whole campaign, from Romulus to Attila.</b></p>'}
     ${opts.mode === 'chapter' ? `<div class="row"><button class="primary" id="continue">Continue</button><button class="tool" id="again">Play again</button></div>`
@@ -2875,7 +2902,7 @@ function lose() {
     carrhae: 'Testudos shrug off the arrows; build supply carts, since no grain falls in the desert.',
     alesia: 'Enemies come from both sides: keep tough soldiers at the back as well as the front.',
     pharsalus: 'Pompey’s cavalry charges the left wing: fourth-line men there triple their damage against riders.',
-    actium: 'Harpax ships hold the big ships still while the others hit them.',
+    actium: 'Keep a reserve in every lane near Octavian’s flagship, and hold the gold-ringed flagships with harpax ships while ballistas and rammers sink them before they flee.',
     teutoburg: 'Warriors burst out of the woods at the sides: keep shooters in the outer lanes too.',
     idistaviso: 'The Cherusci have big shields: pila break them. Save a cohort for Arminius.',
     boudica: 'Only the middle lanes are open: crowd them with shooters and throw a pilum volley at the biggest crowds.',
@@ -2886,7 +2913,7 @@ function lose() {
     adrianople: 'The cavalry comes from behind late in the battle: keep tough soldiers at the back.',
     catalaunian: 'The Huns shoot from a distance: testudos and allies in front, archers behind.',
     gods: 'Read the name tags: only Jupiter stops Zeus, only Minerva stops Athena, and so on.' }[LEVEL.id] ?? ''
-  setTimeout(() => showPanel(`<span class="eyebrow">Defeat · ${LEVEL.year}</span><h2>${LEVEL.enemy[0].toUpperCase() + LEVEL.enemy.slice(1)} broke into the camp</h2>
+  setTimeout(() => showPanel(`<span class="eyebrow">Defeat · ${LEVEL.year}</span><h2>${G.loseText ?? LEVEL.enemy[0].toUpperCase() + LEVEL.enemy.slice(1) + ' broke into the camp'}</h2>
     <p>${G.killed} enemies fell before the line broke. ${hint}</p>
     ${opts.mode === 'chapter' ? `<p>Go back to the chapter: re-read the sections you missed and retake the test for a stronger army. Or fight again with the same army.</p>
     <div class="row"><button class="primary" id="chapter">Back to the chapter</button><button class="tool" id="again">Fight again</button></div>`
@@ -3844,6 +3871,13 @@ const HTL_RE = [
   [/^Bonus battle · (.+)$/, (m, y) => `Бонус битка · ${HTL_BG[y] ?? bgYear(y)}`],
   [/^(Victory|Defeat) · (.+)$/, (m, v, y) => `${v === 'Victory' ? 'Победа' : 'Поражение'} · ${HTL_BG[y] ?? bgYear(y)}`],
   [/^You held the line at (.+)$/, (m, b) => `Удържахте линията: ${bgName(b.replace(/^the /, 'The '))}`],
+  [/^(Antony|Cleopatra)’s flagship turns to flee! Sink it before it escapes!$/, (m, who) => `Флагманът на ${(who === 'Antony' ? 'Антоний' : 'Клеопатра')} бяга! Потопете го, преди да се измъкне!`],
+  [/^(Antony|Cleopatra) has escaped, as in history!$/, (m, who) => `${(who === 'Antony' ? 'Антоний' : 'Клеопатра')} се измъкна – като в историята!`],
+  [/^(Antony|Cleopatra)’s flagship is sunk!$/, (m, who) => `Флагманът на ${(who === 'Antony' ? 'Антоний' : 'Клеопатра')} е потопен!`],
+  [/^An enemy ship broke through and rammed Octavian’s flagship! \(−(\d+)\)$/, (m, n) => `Вражески кораб проби и таранира флагмана на Октавиан! (−${n})`],
+  [/^(Antony|Cleopatra)’s flagship: $/, (m, who) => `Флагманът на ${(who === 'Antony' ? 'Антоний' : 'Клеопатра')}: `],
+  [/^ · (Antony|Cleopatra)’s flagship: $/, (m, who) => ` · флагманът на ${(who === 'Antony' ? 'Антоний' : 'Клеопатра')}: `],
+  [/^(sunk|escaped)$/, (m, w) => w === 'sunk' ? 'потопен' : 'избягал'],
   [/^(.+) broke into the camp$/, (m, e) => `${bgName(e[0].toLowerCase() + e.slice(1)) === e[0].toLowerCase() + e.slice(1) ? bgName(e) : bgName(e[0].toLowerCase() + e.slice(1))} нахлуха в лагера`],
   [/^(\d+) enemies fell and you lost (one soldier|(\d+) soldiers)\.$/, (m, a, x, b) => `Паднаха ${a} врагове, а вие загубихте ${b ? b + ' войници' : 'един войник'}.`],
   [/^(\d+) enemies fell before the line broke\.$/, 'Паднаха $1 врагове, преди линията да се пречупи.'],
@@ -3920,7 +3954,7 @@ function bindControls() {
       } else sfx.deny()
       syncTray(); return
     }
-    if (G.dismiss) { const u = unitAt(c.lane, c.row); if (u) { removeUnit(u, false); sfx.place() } G.dismiss = false; syncTray(); return }
+    if (G.dismiss) { const u = unitAt(c.lane, c.row); if (u?.type === 'octavian') { sfx.deny(); announce('Octavian’s flagship stays in the battle!') } else if (u) { removeUnit(u, false); sfx.place() } G.dismiss = false; syncTray(); return }
     if (G.selected) { if (place(G.selected, c.lane, c.row)) select(null); return }
     const u = unitAt(c.lane, c.row)
     if (!u && G.moveSel && G.units.includes(G.moveSel)) { moveBand(G.moveSel, c.lane, c.row); G.moveSel = null; return }   // the second tap of tap-to-move
