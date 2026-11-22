@@ -246,7 +246,7 @@ const LEVELS = [
       w(136, [...rep(5, 'horsearcher'), 'cataphract', 'cataphract'], 'The drums thunder: a great attack!'), w(166, ['horsearcher', 'horsearcher', 'cataphract', 'horsearcher']),
       w(190, [...rep(5, 'horsearcher'), ...rep(2, 'cataphract')], 'The final attack!')] },
   { id: 'alesia', name: 'Alesia', year: '52 BC', enemy: 'Vercingetorix and the Gallic relief army', theme: 'alesia', start: 475, cols: 8, rows: 10, more: 1.2, twoFronts: true,
-    twist: 'Two fronts: Vercingetorix attacks from the town above, and later a Gallic relief army attacks from behind you, from below. Your soldiers fight toward whichever side the enemy comes from, and each side has its own equites.',
+    twist: 'Two fronts: Vercingetorix attacks from the town above, and later a Gallic relief army attacks from behind you, from below. Your soldiers fight toward whichever side the enemy comes from. Each side has its own row of equites, at the top and at the bottom, and your test score sets how many.',
     units: ['cart', 'slinger', 'velites', 'legionary', 'triarius', 'scorpio', 'maniple', 'lilia'], newUnit: 'lilia',
     blurb: 'Caesar has trapped Vercingetorix in the hilltop town of Alesia behind a ring of walls. Now a huge Gallic army is coming to rescue him, so Caesar has built a second ring, facing out.',
     after: 'The relief army broke and Vercingetorix surrendered, laying his arms at Caesar’s feet. The conquest of Gaul was all but complete.',
@@ -1158,6 +1158,7 @@ let canvas, ctx
 const bg = document.createElement('canvas'), bctx = bg.getContext('2d')
 let W = 0, H = 0, cell = 72, k = 1, dpr = 1
 const lx = lane => (lane + 0.5) * cell
+const TOP_EQ = -0.1   // where the top equites wait on two fronts: just above the inner wall, fully on the field
 const eqHome = () => LEVEL.midGate != null ? LEVEL.midGate + 0.62 : ROWS + 0.62   // where an eques waits
 const ry = row => (APPROACH + row) * cell
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
@@ -1426,7 +1427,7 @@ function newGame(i = levelIndex, score = quizScore) {
     t: 0, phase: 'ready', speed: G?.speed ?? 1, paused: false, rations: army.grain, vets: army.vets, score, ids: 0,
     units: [], foes: [], shots: [], foeShots: [], runners: [], drops: [], fx: [], corpses: [],
     equites: equitesAt(army.equites), lives: army.lives ?? 0,
-    equitesTop: LEVEL.twoFronts ? Array.from({ length: COLS }, () => ({ state: 'ready', y: -0.55 })) : [],
+    equitesTop: LEVEL.twoFronts ? equitesAt(army.equites).map(e => ({ ...e, y: TOP_EQ })) : [],   // on two fronts: as many at the top as at the bottom, in the same lanes
     cool: Object.fromEntries(LEVEL.units.map(t => [t, LEVEL.recharge?.[t] != null ? 0 : { triarius: 15, caltrops: 20, shed: 10, pigs: 10 }[t] ?? 0])),   // a battle's own recharges start ready
     queue: buildQueue(score), total: 0, spawned: 0, killed: 0, lost: 0, nextSky: 4, shake: 0,
     introduced: new Set(), selected: null, dismiss: false, hover: null, lastLane: -1, tips: {},
@@ -2050,7 +2051,7 @@ function update(dt) {
     if (f.dir < 0 && f.y <= -0.3) {   // through the far line: the equites on that side charge
       const e = G.equitesTop[f.lane]
       if (e.state === 'ready') { e.state = 'charge'; G.charges++; G.shake = Math.max(G.shake, 6); lastStand().sound(); announce(lastStand().charge) }
-      else if (e.state === 'used') return lose()
+      else if (e.state !== 'charge') return lose()   // spent, or no eques in that lane
     }
     if (f.dir > 0 && f.y >= ROWS + 0.3 && F.wagon) {   // a wagon that reaches the camp takes the horse of its lane with it, and burns out: it cannot win the battle
       const e = G.equites[f.lane]; if (e?.state === 'ready') { e.state = 'used'; announce('The burning wagon reaches the camp and kills the horseman of that lane!') }
@@ -2345,7 +2346,7 @@ function draw() {
     drawFoe(ctx, f, T); ctx.restore()
     if (f.hp < f.max || (f.shieldMax && f.shield < f.shieldMax)) hpBar(foeX(f), ry(f.y) - (FOES[f.type].elephant ? 140 : f.type === 'calf' ? 74 : f.type === 'phalangite' ? 80 : 74) * k, (f.hp + f.shield) / (f.max + f.shieldMax), f.shield > 0 ? '#b08a3e' : '#e2574c')
   }])
-  for (const [lane, e] of G.equitesTop.entries()) if (e.state !== 'used') items.push([ry(e.y), () => { ctx.save(); ctx.translate(lx(lane), ry(e.y)); ctx.scale(k * 0.9, k * 0.9); drawEques(ctx, e, T); ctx.restore() }])
+  for (const [lane, e] of G.equitesTop.entries()) if (e.state === 'ready' || e.state === 'charge') items.push([ry(e.y), () => { ctx.save(); ctx.translate(lx(lane), ry(e.y)); ctx.scale(-k * 0.9, k * 0.9); FACING_US = true; drawEques(ctx, e, T); FACING_US = false; ctx.restore() }])   // facing down the field, toward the town's attackers
   if (LEVEL.backRiver) items.push([ry(ROWS + 1), () => {   // the lives left, on the river
     ctx.save(); ctx.font = `800 ${Math.round(11 + 3 * k)}px Nunito, system-ui, sans-serif`; ctx.textAlign = 'left'; ctx.fillStyle = 'rgba(255, 255, 255, .92)'
     const label = (LANG === 'bg' ? 'Животи: ' : 'Lives: ') + (G.lives ? '♥'.repeat(G.lives) : (LANG === 'bg' ? 'няма' : 'none'))
