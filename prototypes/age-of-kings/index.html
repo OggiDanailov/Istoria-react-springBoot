@@ -4216,7 +4216,7 @@ const MARKUP = `<main class="game">
   </div>
   <div class="msg" id="banner" aria-live="polite"></div>
   <div class="controls">
-    <div class="progress"><span class="label" id="level">Lake Regillus</span><div class="bar" id="bar"><div class="fill" id="fill"></div></div><span class="build" translate="no">build 22 Nov, 13:17</span></div>
+    <div class="progress"><span class="label" id="level">Lake Regillus</span><div class="bar" id="bar"><div class="fill" id="fill"></div></div><span class="build" translate="no">build 22 Nov, 13:20</span></div>
     <button class="tool" id="pause">Pause</button>
     <button class="tool" id="speed">1×</button>
     <button class="tool" id="guide">Guide</button>
@@ -4847,6 +4847,7 @@ const CHRONICLE_EXTRAS = {
   'spartacus-and-pompey:silarius-and-aftermath': '<div class="pantheon allia" data-replay="silarius"></div>',
   'cicero-and-the-triumvirate:carrhae': '<div class="pantheon allia" data-replay="carrhae"></div>',
   'caesar-in-gaul:siege-of-alesia': '<div class="pantheon allia" data-replay="alesia"></div>',
+  'caesars-civil-war:battle-of-pharsalus': '<div class="pantheon allia" data-replay="pharsalus"></div>',
   'first-punic-war:siege-of-akragas': '<div class="pantheon allia" data-replay="agrigentum"></div>',
   'first-punic-war:corvus-and-mylae': '<div class="pantheon allia" data-replay="mylae"></div>',
   'first-punic-war:battle-of-the-aegates': '<div class="pantheon allia" data-replay="aegates"></div>',
@@ -4863,7 +4864,7 @@ const openChronicle = focusId => openSheet(CH.title, chronicleHtml(), focusId)
 // groups of dots with where they are at each moment (a line, or a cluster) and what befalls them (some fall, they
 // waver in panic, they drown with a splash), and five captions. Times are in "story seconds"; it plays SLOW times
 // slower so each caption can be read (the user found 8 seconds too fast). Positions are parts of the width and height.
-const RCOL = { civilian: '#a89f8e', parthian: '#5b4a9a', cataphract: '#6f7884', camel: '#c9a46a', rebel: '#3f7d6a', teuton: '#3f6a8f', ambron: '#9a6a2a', deserter: '#8a8278', patrician: '#d9a520', linen: '#f4eedd', carthage: '#33509a', macedon: '#6b4a8a', rome: '#b8322a', gaul: '#2f5f9a', samnite: '#c27a1e', etruscan: '#8a7f75', epirus: '#6b4a8a', elephant: '#76716b' }
+const RCOL = { pompey: '#7a3b5e', pomcav: '#b5728f', civilian: '#a89f8e', parthian: '#5b4a9a', cataphract: '#6f7884', camel: '#c9a46a', rebel: '#3f7d6a', teuton: '#3f6a8f', ambron: '#9a6a2a', deserter: '#8a8278', patrician: '#d9a520', linen: '#f4eedd', carthage: '#33509a', macedon: '#6b4a8a', rome: '#b8322a', gaul: '#2f5f9a', samnite: '#c27a1e', etruscan: '#8a7f75', epirus: '#6b4a8a', elephant: '#76716b' }
 const REPLAYS = {
   // chapter 4: the Allia (Livy), as the chronicle tells it
   allia: {
@@ -5073,6 +5074,30 @@ const REPLAYS = {
       [4.8, 'The relief army arrives, perhaps 50,000 to 100,000 strong. The Gauls attack from inside and outside at once.', 'Пристига спасителната армия, вероятно от 50 000 до 100 000 души. Галите атакуват едновременно отвътре и отвън.'],
       [6.8, 'The attacks fail, the relievers melt away, and Vercingetorix surrenders.', 'Атаките се провалят, спасителите се разпръсват и Верцингеторикс се предава.'],
     ], end: 9.0,
+  },
+  // chapter 18: Pharsalus
+  pharsalus: {
+    title: ['Pharsalus, step by step', 'Фарсала, стъпка по стъпка'],
+    key: [['rome', 'Caesar', 'Цезар'], ['pompey', 'Pompey', 'Помпей'], ['pomcav', 'Pompey’s cavalry', 'конницата на Помпей']],
+    ground: [
+      { brook: [[0.04, 0], [0.06, 0.35], [0.025, 0.7], [0.045, 1]] }, { text: [0.07, 0.97], t: ['the Enipeus river', 'река Енипей'] },
+      { tag: [0.7, 0.93], t: ['the hidden fourth line', 'скритата четвърта линия'], from: 2.8, to: 4.4 },
+    ],
+    groups: [
+      { side: 'pompey', n: 34, keys: [[0, 'line', 0.1, 0.27, 0.72, 0.27, 0.07], [3.4, 'line', 0.1, 0.27, 0.72, 0.27, 0.07], [4.0, 'line', 0.1, 0.32, 0.72, 0.32, 0.07], [5.2, 'line', 0.1, 0.32, 0.72, 0.32, 0.07], [6.4, 'blob', 0.36, 0.06, 0.24, 0.05]], jitter: [3.8, 5.8], fall: [4.6, 6.4, 0.4] },
+      { side: 'pomcav', n: 16, keys: [[0, 'blob', 0.86, 0.25, 0.06, 0.06], [1.8, 'blob', 0.86, 0.25, 0.06, 0.06], [2.8, 'blob', 0.88, 0.6, 0.07, 0.06], [3.4, 'blob', 0.88, 0.62, 0.07, 0.05], [4.4, 'blob', 0.92, 0.12, 0.05, 0.05], [5.2, 'blob', 0.95, -0.25, 0.04, 0.04]], jitter: [3.0, 3.8], fall: [3.4, 4.0, 0.3] },
+      { side: 'pompey', n: 1, r: 5, ring: true, keys: [[0, 'blob', 0.4, 0.17, 0, 0], [5.8, 'blob', 0.4, 0.17, 0, 0], [6.8, 'blob', 0.3, -0.25, 0, 0]] },
+      { side: 'rome', n: 26, keys: [[0, 'line', 0.12, 0.56, 0.72, 0.56, 0.05], [3.0, 'line', 0.12, 0.56, 0.72, 0.56, 0.05], [3.8, 'line', 0.12, 0.42, 0.72, 0.42, 0.05], [5.2, 'line', 0.12, 0.42, 0.72, 0.42, 0.05], [6.4, 'line', 0.12, 0.26, 0.72, 0.26, 0.05]], jitter: [3.8, 5.8], fall: [4.0, 5.8, 0.05] },
+      { side: 'rome', n: 4, keys: [[0, 'blob', 0.84, 0.57, 0.03, 0.02], [2.2, 'blob', 0.84, 0.57, 0.03, 0.02], [2.8, 'blob', 0.8, 0.7, 0.03, 0.02]] },
+      { side: 'rome', n: 9, keys: [[0, 'blob', 0.84, 0.84, 0.06, 0.02], [2.8, 'blob', 0.84, 0.84, 0.06, 0.02], [3.3, 'line', 0.78, 0.68, 0.97, 0.68, 0.02], [4.2, 'line', 0.78, 0.68, 0.97, 0.68, 0.02], [5.0, 'line', 0.76, 0.4, 0.94, 0.4, 0.02], [6.2, 'line', 0.74, 0.3, 0.92, 0.3, 0.02]], jitter: [3.3, 3.9] },
+    ],
+    steps: [
+      [0, '9 August 48 BC, near Pharsalus in Greece. By Caesar’s count, his 22,000 legionaries face some 45,000 under Pompey (with the gold ring).', '9 август 48 г. пр.н.е., край Фарсала в Гърция. По сметката на Цезар неговите 22 000 легионери са изправени срещу около 45 000 под командването на Помпей (със златния пръстен).'],
+      [1.6, 'Pompey’s plan: his infantry holds while 5,000 to 7,000 horsemen sweep round Caesar’s right flank, where Caesar has only 1,000.', 'Планът на Помпей: пехотата му удържа, докато 5000 до 7000 конници обхождат десния фланг на Цезар, където той има само 1000.'],
+      [2.8, 'But Caesar has hidden a fourth line behind his right. When the horsemen charge, these men leap up and jab their javelins at them.', 'Но Цезар е скрил четвърта линия зад десния си фланг. Когато конниците атакуват, тези войници скачат и ги мушкат с копията си.'],
+      [4.2, 'The cavalry flees. The fourth line swings round, and Pompey’s left wing collapses.', 'Конницата бяга. Четвъртата линия завива и левият фланг на Помпей рухва.'],
+      [5.8, 'Pompey escapes. Caesar claimed to have lost 200 men and killed 60,000; another ancient historian gives a likelier 1,200 and 6,000.', 'Помпей бяга. Цезар твърди, че е загубил 200 души и е убил 60 000; друг древен историк дава по-правдоподобните 1200 и 6000.'],
+    ], end: 8.2,
   },
   // chapter 13: Aquae Sextiae
   aquae: {
