@@ -370,7 +370,6 @@
 "Pompey’s cavalry broke and fled, his legions followed, and Pompey escaped to Egypt, where he was murdered. Caesar was master of Rome.": "Конницата на Помпей се пречупила и побягнала, легионите му я последвали, а Помпей избягал в Египет, където бил убит. Цезар станал господар на Рим.",
 "Pompey’s 7,000 horsemen charge your left wing!": "7000-те конници на Помпей атакуват левия ви фланг!",
 "Antony and Cleopatra": "Антоний и Клеопатра",
-"A battle at sea: every unit is a ship. Watch Cleopatra’s squadron: halfway through, her ships hoist their sails and flee, and Antony follows her.": "Битка по море: всяка част е кораб. Следете ескадрата на Клеопатра: по средата на битката корабите ѝ вдигат платна и бягат, а Антоний я последва.",
 "Cleopatra’s squadron hoists its sails and flees!": "Ескадрата на Клеопатра вдига платна и бяга!",
 "Antony abandons his fleet and follows Cleopatra!": "Антоний изоставя флота си и последва Клеопатра!",
 "Off the headland of Actium, in western Greece, Octavian’s fleet under Agrippa blocks the fleet of Antony and Cleopatra. Whoever wins rules the Roman world.": "Край нос Акциум, в Западна Гърция, флотът на Октавиан под командването на Агрипа блокира флота на Антоний и Клеопатра. Който победи, ще управлява римския свят.",
@@ -736,5 +735,9 @@
 "Pompey's own scorpion. It sets up at the top of the lane where you have the most men and shoots a bolt through up to three of them every 4 seconds. It doesn't move: knock it out with scorpions or slingers. <i>Tip: don't pile everything into one lane.</i>": "Собственият скорпион на Помпей. Разполага се в горния край на линията, където имате най-много хора, и на всеки 4 секунди изстрелва стрела, която пронизва до трима от тях. Не се движи: унищожете го със скорпиони или прашкари. <i>Съвет: не трупайте всичко в една линия.</i>",
 "Pompeian legate": "Помпейски легат",
 "A legate of Pompey leads this wave: a tough Roman officer under his standard.": "Легат на Помпей води тази вълна: як римски офицер под своето знаме.",
-"One of Pompey's legates, leading a wave under his standard: a Roman officer, tougher than a legionary, with a shield to break first.": "Един от легатите на Помпей, който води вълна под своето знаме: римски офицер, по-як от легионер, с щит, който първо трябва да се пробие."
+"One of Pompey's legates, leading a wave under his standard: a Roman officer, tougher than a legionary, with a shield to break first.": "Един от легатите на Помпей, който води вълна под своето знаме: римски офицер, по-як от легионер, с щит, който първо трябва да се пробие.",
+"A battle at sea on open water: every unit is a ship. Antony’s ships weave from lane to lane as they row in, and gusts of wind push his whole fleet sideways. Your rammers strike ships beside them too. Watch Cleopatra’s squadron: halfway through, her ships hoist their sails and flee, and Antony follows her.": "Морска битка в открито море: всяка единица е кораб. Корабите на Антоний криволичат от линия на линия, докато гребат към вас, а пориви на вятъра изтласкват целия му флот встрани. Вашите тараноносци удрят и корабите до себе си. Внимавайте за ескадрата на Клеопатра: по средата на битката корабите ѝ вдигат платна и бягат, а Антоний я последва.",
+"A gust from the west drives Antony’s ships one lane east!": "Порив от запад изтласква корабите на Антоний една линия на изток!",
+"The wind turns: Antony’s ships are pushed one lane west!": "Вятърът се обръща: корабите на Антоний са изтласкани една линия на запад!",
+"A last gust from the west!": "Последен порив от запад!"
 }

@@ -43,7 +43,7 @@ const UNITS = {
   supplyboat:  { name: 'Supply boat', short: 'Supply', cost: 50, recharge: 7.5, hp: 300, grain: true, ship: 'supply', about: 'A round-bellied merchant boat. Brings a sack of grain every 20 seconds.' },
   archership:  { name: 'Archer ship', short: 'Archers', cost: 100, recharge: 7.5, hp: 300, reload: 1.5, dmg: 20, range: 99, kind: 'arrow', ship: 'archers', about: 'A light liburnian with archers on deck. Shoots at any ship coming down its lane.' },
   quinquereme: { name: 'Quinquereme', short: 'Quinquereme', cost: 50, recharge: 25, hp: 1500, ship: 'heavy', about: 'A big warship with a strong hull. It doesn’t attack, but holds the enemy back.' },
-  rammer:      { name: 'Ramming ship', short: 'Rammer', cost: 100, recharge: 10, hp: 700, melee: 55, ship: 'ram', about: 'Fast and nimble, with a bronze ram at the bow. It smashes any ship that comes alongside.' },
+  rammer:      { name: 'Ramming ship', short: 'Rammer', cost: 100, recharge: 10, hp: 700, melee: 55, flank: 45, ship: 'ram', about: 'Fast and nimble, with a bronze ram at the bow. It smashes any ship that comes alongside.' },
   ballista:    { name: 'Ballista ship', short: 'Ballista', cost: 175, recharge: 15, hp: 300, reload: 3.5, dmg: 110, range: 99, pierce: true, ship: 'ballista', about: 'A ship carrying a bolt-thrower. Each bolt flies through every ship in its lane.' },
   fireship:    { name: 'Fire pots', short: 'Fire pots', cost: 25, recharge: 25, hp: 300, armTime: 10, dmg: 450, trap: true, ship: 'fire', about: 'A small boat full of burning pitch. Once it’s lit (10 seconds), the first enemy to touch it goes up in flames.' },
   harpax:      { name: 'Harpax ship', short: 'Harpax', cost: 150, recharge: 12, hp: 350, reload: 4, dmg: 35, range: 99, kind: 'hook', grapple: 4, ship: 'harpax', about: 'Agrippa’s invention: a grappling hook fired from a catapult. It catches an enemy ship and holds it still for 4 seconds.' },
@@ -264,9 +264,9 @@ const LEVELS = [
       w(122, rep(4, 'cavalry'), 'Pompey’s 7,000 horsemen charge your left wing!', [0, 1, 2]),
       w(140, ['legate', 'legion3', 'pompeian', 'slingarcher', 'slingarcher', 'pomscorpio'], 'A great wave approaches!'), w(166, ['legion3', 'legion3', 'cavalry', 'slingarcher', 'pomscorpio']),
       w(190, ['legate', 'legion3', 'legion3', 'pompeian', 'cavalry', 'cavalry', 'slingarcher', 'pomscorpio'], 'The final wave!')] },
-  { id: 'actium', name: 'Actium', year: '31 BC', enemy: 'Antony and Cleopatra', theme: 'sea', sea: true, start: 425, cols: 8, rows: 10, more: 1.2,
-    twist: 'A battle at sea: every unit is a ship. Watch Cleopatra’s squadron: halfway through, her ships hoist their sails and flee, and Antony follows her.',
-    events: [{ t: 150, cleopatra: true, text: 'Cleopatra’s squadron hoists its sails and flees!' }, { t: 172, antony: true, text: 'Antony abandons his fleet and follows Cleopatra!' }],
+  { id: 'actium', name: 'Actium', year: '31 BC', enemy: 'Antony and Cleopatra', theme: 'sea', sea: true, start: 425, cols: 10, rows: 10, more: 1.35, weave: true,
+    twist: 'A battle at sea on open water: every unit is a ship. Antony’s ships weave from lane to lane as they row in, and gusts of wind push his whole fleet sideways. Your rammers strike ships beside them too. Watch Cleopatra’s squadron: halfway through, her ships hoist their sails and flee, and Antony follows her.',
+    events: [{ t: 84, wind: 1, text: 'A gust from the west drives Antony’s ships one lane east!' }, { t: 150, cleopatra: true, text: 'Cleopatra’s squadron hoists its sails and flees!' }, { t: 172, antony: true, text: 'Antony abandons his fleet and follows Cleopatra!' }, { t: 128, wind: -1, text: 'The wind turns: Antony’s ships are pushed one lane west!' }, { t: 198, wind: 1, text: 'A last gust from the west!' }],
     units: ['supplyboat', 'archership', 'quinquereme', 'rammer', 'ballista', 'fireship', 'harpax'], newUnit: 'harpax',
     blurb: 'Off the headland of Actium, in western Greece, Octavian’s fleet under Agrippa blocks the fleet of Antony and Cleopatra. Whoever wins rules the Roman world.',
     after: 'Antony and Cleopatra escaped to Egypt, where both killed themselves the next year. Octavian, soon called Augustus, was master of the Roman world.',
@@ -1111,6 +1111,7 @@ function drawShip(c, kind, T, foe = false, f = null) {
     : egypt ? { rail: '#c9a24a', sail: '#6a2f6e', mark: '#e0b84a', hull: '#a0773e', deck: '#c79a5a' }
     : { rail: '#2f6f8a', sail: '#2f6f8a', mark: '#e9e1cf', hull: '#5a4434', deck: '#7a5f48' }
   c.save()
+  if (COLS >= 10) c.scale(1.2, 1.2)   // on the wide sea the lanes are narrow: draw the ships a little bigger
   if (foe) { c.translate(0, mid); c.scale(1, -1); c.translate(0, -mid) }   // the enemy's bow points down the field
   const sway = Math.sin(T * 6 + (f?.phase ?? 0))
   // the wake: two lines of foam spreading from the stern
@@ -1753,6 +1754,7 @@ function update(dt) {
   for (const ev of G.events) if (!ev.done && G.t >= ev.t) {
     ev.done = true; announce(ev.text, true, 4200); sfx.horn()
     if (ev.wings) for (const l of ev.wings) { if (G.equites[l].state === 'ready') G.equites[l].state = 'used'; G.equites[l].routed = true }   // that wing is lost: no eques can ride there now
+    if (ev.wind) for (const f of G.foes) if (f.hp > 0 && FOES[f.type].ship && !f.eating && !f.slide && !f.fleeing) { const to = f.lane + ev.wind; if (to >= 0 && to < COLS) { f.slide = { from: f.lane, t: 0 }; f.lane = to } }
     if (ev.masinissa) for (const e of G.equites) if (e.state === 'used') { e.state = 'ready'; e.y = eqHome() }   // only those that had charged
     const leave = test => {   // these ships turn and sail away; those still to come never arrive
       for (const f of G.foes) if (test(FOES[f.type])) { f.fleeing = true; f.eating = null }
@@ -2006,6 +2008,10 @@ function update(dt) {
       continue
     }
     if (f.slide) { f.slide.t += dt / 0.45; if (f.slide.t >= 1) f.slide = null }
+    if (LEVEL.weave && FOES[f.type].ship && !f.slide && !f.eating && !f.fleeing && f.y > 0.4 && f.y < ROWS - 1.6 && Math.random() < dt * 0.14) {   // at sea a ship weaves into a neighbouring lane
+      const to = f.lane + (Math.random() < 0.5 ? -1 : 1)
+      if (to >= 0 && to < COLS) { f.slide = { from: f.lane, t: 0 }; f.lane = to }
+    }
     if (f.jump) {
       f.jump.t += dt / 0.6; f.y = f.jump.from + (f.jump.to - f.jump.from) * Math.min(1, f.jump.t)
       if (f.jump.t >= 1) { f.jump = null; f.speed = FOES.cavalry.after }
