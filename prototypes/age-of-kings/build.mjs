@@ -132,7 +132,7 @@ const HTL = path.resolve(HERE, '../hold-the-line')
 const BUILD = new Date().toLocaleString('en-GB', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' })   // shown in the corner of the battle screen, so a tester can tell which version is running
 
 const htl = `<script>const HTL_CSS = ${json(fs.readFileSync(path.join(HTL, 'game.css'), 'utf8'))}; window.HTL_BG = ${json(JSON.parse(fs.readFileSync(path.join(HTL, 'strings.bg.json'), 'utf8')))}</script>\n<script>\n${fs.readFileSync(path.join(HTL, 'game.js'), 'utf8').replace('__HTL_BUILD__', BUILD)}\n</script>`
-const html = template.replace('__HTL__', () => htl).replace('__ERAS__', () => json(CONFIG.eras)).replace('__CHAPTERS__', () => json(chapters)).replace('__LAND__', () => land)
+const html = template.replace('__HTL__', () => htl).replace('__ERAS__', () => json(CONFIG.eras)).replace('__CHAPTERS__', () => json(chapters)).replace('__LAND__', () => land).replace('__EMPIRE__', () => fs.readFileSync(path.join(ROOT, 'content/empire/territory.json'), 'utf8').trim())
 fs.writeFileSync(path.join(HERE, 'index.html'), html)
 // the same app as a complete page, for the password-protected test site (avecaesar.org/play): dist/play.html
 fs.mkdirSync(path.join(HERE, 'dist'), { recursive: true })

@@ -327,6 +327,19 @@ button:focus-visible { outline: 3px solid var(--ochre); outline-offset: 2px; }
 .cmap.zoom .tap { display: none; }
 .cmap .sea { fill: #a9c8d8; } .cmap .ground { fill: #eadfc2; }
 .cmap .land { fill: #eadfc2; stroke: #b9a77e; stroke-width: .6; }
+.cmap .terr { fill: #d58c84; stroke: #fbf3e4; stroke-width: .4; stroke-opacity: .7; }   /* solid: where outlines overlap it doesn't show */
+.cmap .terr.new { fill: #e0a63a; }
+.cmap text.terr-name { font-size: 7.5px; fill: #4a1a12; }
+.cmap text.terr-name.new { fill: #5a3300; font-size: 8.5px; }
+.cmap.world svg { cursor: default; }
+.world-panel { background: #fbf3e4; color: #1b1715; border-radius: 14px; padding: 10px 14px 12px; margin-top: 10px; }
+.world-key { display: flex; gap: 14px; flex-wrap: wrap; font-size: 13px; color: #5a4d40; margin: 6px 0 2px; }
+.world-key i { display: inline-block; width: 12px; height: 10px; border-radius: 3px; margin-right: 5px; vertical-align: -1px; }
+.world-step { display: grid; gap: 8px; margin: 10px 0; }
+.world-step input[type=range] { width: 100%; accent-color: #8e2b22; }
+.world-step .row { display: flex; gap: 10px; align-items: center; justify-content: space-between; }
+.world-new { font-size: 14px; color: #3b2a1c; min-height: 2.6em; }
+.world-card { display: block; width: 100%; text-align: left; margin: 14px 0 4px; }
 .cmap .river { fill: none; stroke: #5b93b8; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
 .cmap .river.big { stroke-width: 9; stroke: #8fb7cf; }
 .cmap .river.big.small { stroke-width: 4; }
@@ -4216,7 +4229,7 @@ const MARKUP = `<main class="game">
   </div>
   <div class="msg" id="banner" aria-live="polite"></div>
   <div class="controls">
-    <div class="progress"><span class="label" id="level">Lake Regillus</span><div class="bar" id="bar"><div class="fill" id="fill"></div></div><span class="build" translate="no">build 22 Nov, 13:28</span></div>
+    <div class="progress"><span class="label" id="level">Lake Regillus</span><div class="bar" id="bar"><div class="fill" id="fill"></div></div><span class="build" translate="no">build 22 Nov, 13:45</span></div>
     <button class="tool" id="pause">Pause</button>
     <button class="tool" id="speed">1×</button>
     <button class="tool" id="guide">Guide</button>
@@ -4616,7 +4629,7 @@ let run = null // { plan, step, results }
 
 // The phone's back swipe moves back through the app's screens, like an app, instead of leaving the site.
 // Each screen change is a step in the browser's history; a battle handles its own back swipe (it pauses).
-const appSteps = [], SAFE = ['rome', 'era', 'home', 'briefing']   // the screens it is safe to go back to
+const appSteps = [], SAFE = ['rome', 'era', 'home', 'briefing', 'world']   // the screens it is safe to go back to
 let fromHistory = false
 function go(next) {
   stopLoop(); if (state.screen === 'battle') { HoldTheLine.unmount(); app.classList.remove('in-battle') } state = next
@@ -4636,6 +4649,7 @@ function render() {
   renderHud()
   if (state.screen === 'rome') return renderRome()
   if (state.screen === 'era') return renderEra(state.era)
+  if (state.screen === 'world') return renderWorld()
   if (state.screen === 'home') return renderHome()
   if (state.screen === 'briefing') return renderBriefing()
   if (state.screen === 'play') return RENDER[state.type]()
@@ -4856,7 +4870,7 @@ const CHRONICLE_EXTRAS = {
   'scipio-and-zama:battle-of-zama': '<div class="pantheon allia" data-replay="zama"></div>',
   'rome-turns-east:pydna': '<div class="pantheon allia" data-replay="pydna"></div>',
 }
-const chronicleHtml = () => latinNote() + CHAPTER.map(s => `<section data-sec="${s.id}"><h3>${esc(s.title)}</h3>${(CH.chronicleMaps ?? []).filter(m => m.sec === s.id).map(chronicleMap).join('')}${s.body.split(/\n\s*\n/).map(paragraphHtml).join('')}${CHRONICLE_EXTRAS[CH.id + ':' + s.id] ?? ''}</section>`).join('') +
+const chronicleHtml = () => latinNote() + CHAPTER.map(s => `<section data-sec="${s.id}"><h3>${esc(s.title)}</h3>${(CH.chronicleMaps ?? []).filter(m => m.sec === s.id).map(chronicleMap).join('')}${s.body.split(/\n\s*\n/).map(paragraphHtml).join('')}${CHRONICLE_EXTRAS[CH.id + ':' + s.id] ?? ''}</section>`).join('') + empireEnd() +
   `<p class="sources">Sources: Wikipedia, ${CH.sources.map(t => `“${esc(t)}”`).join(', ')} · CC BY-SA 4.0</p>`
 const openChronicle = focusId => openSheet(CH.title, chronicleHtml(), focusId)
 // ---------- battle replays in the chronicle: battles told in dots, step by step ----------
@@ -5655,6 +5669,114 @@ function mountPantheonCard(el) {
   }
   show(0); requestAnimationFrame(frame)
 }
+// ---------- the Roman World: Rome's territory, chapter by chapter ----------
+// One map for the whole story (content/empire/territory.json). Each territory is drawn clipped to the real coast, so
+// its outline only has to be right inland. A chapter's map is everything Roman by the end of its period, with what it
+// added in gold. Early on, while Rome is still in Italy, the chapter map zooms in on Italy.
+const EMPIRE = {
+  "description": "Rome's territory over time, for the Roman World map. Drawn by hand from Wikipedia's maps: each outline is rough inland and is clipped to the real coastline when drawn, so only land borders matter. 'from' is the year it became Roman (negative = BC); 'to' (optional) the year it was lost. Points are [lat, lon]. 'at' is where the name goes.",
+  "until": -27,
+  "skip": ["roman-religion", "roman-art"],
+  "bounds": { "latMin": 27.5, "latMax": 52.5, "lonMin": -10.5, "lonMax": 41.5 },
+  "regions": [
+    { "id": "rome", "small": true, "name": "Rome", "bg": "Рим", "from": -509, "at": [41.9, 12.5], "pts": [[42.15, 12.25], [42.15, 12.85], [41.75, 12.95], [41.6, 12.5], [41.75, 12.2]] },
+    { "id": "veii", "small": true, "name": "Veii", "bg": "Вейи", "from": -396, "at": [42.1, 12.1], "pts": [[42.45, 11.85], [42.35, 12.55], [42.12, 12.5], [42.05, 11.9]] },
+    { "id": "latium", "small": true, "name": "Latium", "bg": "Лацио", "from": -338, "at": [41.45, 12.95], "pts": [[42.25, 11.95], [42.4, 13.3], [41.6, 13.95], [41.15, 13.75], [41.3, 12.6], [41.9, 11.95]] },
+    { "id": "campania", "small": true, "name": "Campania", "bg": "Кампания", "from": -338, "at": [40.95, 14.4], "pts": [[41.5, 13.6], [41.3, 14.7], [40.95, 15.15], [40.4, 15.1], [40.4, 14.2], [40.9, 13.8]] },
+    { "id": "samnium", "small": true, "name": "Samnium", "bg": "Самний", "from": -290, "at": [41.8, 14.9], "pts": [[43.0, 14.0], [42.6, 14.4], [41.95, 15.3], [41.45, 15.5], [40.95, 15.1], [41.2, 14.5], [41.6, 13.7], [42.35, 13.1]] },
+    { "id": "etruria", "small": true, "name": "Etruria and Umbria", "bg": "Етрурия и Умбрия", "from": -280, "at": [43.1, 11.9], "pts": [[44.1, 10.0], [44.1, 11.7], [44.15, 12.6], [43.75, 13.9], [43.0, 14.2], [42.3, 13.4], [42.1, 12.4], [42.1, 11.9], [42.4, 11.0], [43.0, 10.2]] },
+    { "id": "south-italy", "small": true, "name": "Southern Italy", "bg": "Южна Италия", "from": -272, "at": [40.3, 16.4], "pts": [[41.95, 15.2], [41.9, 16.3], [40.6, 18.7], [39.8, 18.6], [37.85, 16.2], [37.9, 15.55], [39.9, 15.0], [40.45, 14.85], [41.0, 15.0], [41.45, 15.4]] },
+    { "id": "sicily", "name": "Sicily", "bg": "Сицилия", "from": -241, "at": [37.5, 14.2], "pts": [[38.45, 12.2], [38.35, 15.7], [36.5, 15.3], [36.5, 12.2]] },
+    { "id": "sardinia", "name": "Sardinia and Corsica", "bg": "Сардиния и Корсика", "from": -238, "at": [40.1, 9.0], "pts": [[43.1, 8.3], [43.1, 9.8], [38.7, 9.9], [38.7, 7.9]] },
+    { "id": "cisalpine", "name": "Cisalpine Gaul", "bg": "Цизалпийска Галия", "from": -220, "at": [45.1, 10.2], "pts": [[44.1, 7.6], [45.5, 7.0], [46.2, 8.5], [46.4, 10.5], [46.25, 12.5], [45.8, 13.6], [45.4, 13.2], [44.05, 12.5], [43.95, 11.7], [44.05, 10.1], [44.15, 8.5]] },
+    { "id": "spain-coast", "name": "Hispania", "bg": "Испания", "from": -206, "at": [39.2, -1.6], "pts": [[42.5, 3.3], [42.6, 0.5], [41.5, -0.5], [40.0, -1.5], [38.8, -3.5], [38.4, -6.0], [37.5, -7.6], [36.6, -7.6], [35.9, -5.6], [36.5, -2.0], [38.4, 0.6], [40.5, 0.9], [41.3, 2.6]] },
+    { "id": "illyria", "name": "Illyria", "bg": "Илирия", "from": -167, "at": [42.5, 19.3], "pts": [[42.75, 18.3], [42.65, 19.7], [41.0, 20.5], [40.2, 20.25], [40.15, 19.2], [41.8, 19.2]] },
+    { "id": "macedonia", "name": "Macedonia and Greece", "bg": "Македония и Гърция", "short": "Macedonia", "shortBg": "Македония", "from": -146, "at": [40.5, 22.4], "pts": [[41.4, 19.4], [42.1, 20.6], [42.25, 22.8], [41.55, 24.7], [40.8, 24.8], [39.9, 24.1], [39.0, 23.6], [37.6, 24.6], [36.2, 23.1], [36.3, 21.4], [38.3, 20.5], [39.6, 19.8], [40.5, 19.25]] },
+    { "id": "africa", "name": "Africa", "bg": "Африка", "from": -146, "at": [35.1, 9.9], "pts": [[37.45, 8.6], [37.45, 11.3], [35.4, 11.3], [35.15, 10.5], [35.25, 8.4], [36.5, 8.4]] },
+    { "id": "spain-inland", "name": "Inland Spain", "bg": "Вътрешна Испания", "small": true, "from": -133, "at": [40.4, -4.6], "pts": [[42.6, 0.5], [42.6, -3.0], [41.8, -5.5], [41.0, -7.0], [40.3, -9.2], [38.6, -9.6], [36.9, -9.2], [37.5, -7.6], [38.4, -6.0], [38.8, -3.5], [40.0, -1.5], [41.5, -0.5]] },
+    { "id": "asia", "name": "Asia", "bg": "Азия", "from": -129, "at": [38.6, 28.4], "pts": [[40.5, 25.8], [40.35, 28.5], [39.5, 30.5], [38.5, 31.0], [37.3, 30.0], [36.5, 28.6], [36.4, 27.1], [38.0, 25.8], [39.5, 25.7]] },
+    { "id": "narbonensis", "name": "Southern Gaul", "bg": "Южна Галия", "from": -121, "at": [43.9, 4.4], "pts": [[42.35, 2.8], [43.5, 1.2], [44.0, 2.5], [44.5, 4.3], [45.5, 4.8], [46.3, 6.2], [45.5, 7.0], [44.1, 7.6], [43.6, 7.6], [43.0, 6.0], [43.2, 3.6]] },
+    { "id": "cilicia", "name": "Cilicia", "bg": "Киликия", "from": -102, "at": [36.9, 33.6], "pts": [[37.0, 30.4], [37.35, 32.5], [37.25, 34.5], [37.05, 36.1], [36.5, 36.3], [35.9, 33.5], [36.0, 32.2], [36.7, 30.6]] },
+    { "id": "cyrenaica", "name": "Cyrenaica", "bg": "Киренайка", "from": -96, "at": [32.3, 21.8], "pts": [[33.3, 19.6], [33.3, 23.4], [31.6, 25.1], [30.4, 24.0], [30.7, 19.9]] },
+    { "id": "bithynia", "name": "Bithynia and Pontus", "bg": "Витиния и Понт", "short": "Bithynia", "shortBg": "Витиния", "from": -74, "at": [40.9, 31.5], "pts": [[41.25, 28.9], [41.5, 32.0], [42.1, 35.0], [41.35, 36.6], [41.05, 38.2], [40.4, 37.6], [40.5, 35.0], [40.55, 32.0], [40.0, 30.0], [40.35, 28.4]] },
+    { "id": "crete", "name": "Crete", "bg": "Крит", "from": -67, "at": [35.25, 24.9], "pts": [[35.8, 23.3], [35.8, 26.5], [34.7, 26.5], [34.7, 23.3]] },
+    { "id": "syria", "name": "Syria", "bg": "Сирия", "from": -64, "at": [34.5, 38.1], "pts": [[36.95, 36.0], [36.95, 38.2], [35.9, 39.0], [34.2, 37.6], [33.0, 36.5], [33.0, 35.0], [34.5, 35.7], [35.8, 35.6], [36.5, 35.8]] },
+    { "id": "cyprus", "name": "Cyprus", "bg": "Кипър", "from": -58, "at": [34.7, 32.6], "pts": [[35.8, 32.1], [35.8, 34.7], [34.45, 34.7], [34.45, 32.1]] },
+    { "id": "gaul", "name": "Gaul", "bg": "Галия", "from": -50, "at": [47.4, 2.0], "pts": [[43.35, -2.0], [42.8, 0.5], [43.5, 1.2], [44.0, 2.5], [44.5, 4.3], [45.5, 4.8], [46.3, 6.2], [47.6, 7.6], [49.0, 8.2], [50.0, 8.35], [51.0, 6.8], [51.9, 6.1], [52.1, 4.0], [51.5, 1.5], [50.0, -2.0], [48.6, -5.6], [47.0, -3.0], [45.5, -1.8]] },
+    { "id": "numidia", "name": "Numidia", "bg": "Нумидия", "from": -46, "at": [35.6, 5.6], "pts": [[37.05, 4.9], [37.45, 8.6], [35.25, 8.4], [34.8, 5.5], [35.8, 4.7]] },
+    { "id": "egypt", "name": "Egypt", "bg": "Египет", "from": -30, "at": [29.0, 30.8], "pts": [[31.7, 25.1], [31.7, 32.6], [31.2, 34.2], [29.5, 34.9], [27.5, 33.8], [27.5, 30.2], [29.0, 25.0]] }
+  ]
+}
+const ITALY_VIEW = { latMin: 36.4, latMax: 46.9, lonMin: 6.4, lonMax: 19.2 }
+function chapterYear(c) {   // the end of the chapter's period: 753-509 BC -> -509, 27 BC-AD 14 -> 14; null if the map doesn't reach it
+  if (EMPIRE.skip.includes(c.id)) return null
+  const p = (c.en?.period ?? c.period).trim(), last = p.split('-').pop().trim(), n = +(last.match(/\d+/)?.[0] ?? 0)
+  if (!n) return null
+  const y = /AD/.test(last) || (/^AD/.test(p) && !/BC/.test(last)) ? n : -n
+  return y <= EMPIRE.until ? y : null
+}
+const yearText = y => LANG === 'bg' ? (y < 0 ? `${-y} г. пр.н.е.` : `${y} г. сл.н.е.`) : (y < 0 ? `${-y} BC` : `AD ${y}`)
+const regionName = (r, short) => short && r.short ? (LANG === 'bg' ? r.shortBg : r.short) : (LANG === 'bg' ? r.bg : r.name)
+let empireClips = 0
+function empireMap(year, since, { all = false, zoom = false } = {}) {
+  const held = EMPIRE.regions.filter(r => r.from <= year && !(r.to <= year)), isNew = r => r.from > since
+  const inItaly = held.every(r => r.pts.every(([la, lo]) => la >= ITALY_VIEW.latMin && la <= ITALY_VIEW.latMax && lo >= ITALY_VIEW.lonMin && lo <= ITALY_VIEW.lonMax))
+  const b = zoom && inItaly ? ITALY_VIEW : EMPIRE.bounds, kx = Math.cos((b.latMin + b.latMax) / 2 * Math.PI / 180)
+  const W = 300, H = Math.round(W * (b.latMax - b.latMin) / ((b.lonMax - b.lonMin) * kx))
+  const P = (lat, lon) => [(lon - b.lonMin) / (b.lonMax - b.lonMin) * W, (b.latMax - lat) / (b.latMax - b.latMin) * H]
+  const path = pts => pts.map(([la, lo], i) => `${i ? 'L' : 'M'}${P(la, lo).map(v => v.toFixed(1)).join(',')}`).join(' ') + 'Z'
+  const land = LAND.filter(l => l.pts.length > 6).map(l => path(l.pts.map(([lo, la]) => [la, lo]))).join(' ')
+  const id = `empire-clip-${++empireClips}`, [rx, ry] = P(ROME.lat, ROME.lon), italy = b === ITALY_VIEW
+  let art = `<rect class="sea" width="${W}" height="${H}"/><path class="land" d="${land}"/><clipPath id="${id}"><path d="${land}"/></clipPath>`
+  art += `<g clip-path="url(#${id})">${held.map(r => `<path class="terr${isNew(r) ? ' new' : ''}" d="${path(r.pts)}"/>`).join('')}</g>`
+  art += `<circle class="rome" cx="${rx.toFixed(1)}" cy="${ry.toFixed(1)}" r="${italy ? 3.6 : 2.4}"/>`
+  // names: what is new always; on the big map everything, except Italy's small pieces (too crowded at that scale)
+  const named = held.filter(r => r.id !== 'rome' && (isNew(r) || (all && (italy || !r.small))))
+  for (const r of named) { const [x, y] = P(...r.at); art += `<text class="terr-name${isNew(r) ? ' new' : ''}" x="${x.toFixed(1)}" y="${(y + 2.5).toFixed(1)}" text-anchor="middle">${esc(regionName(r, !italy))}</text>` }
+  art += `<text x="${(rx + (italy ? 6 : -4)).toFixed(1)}" y="${(ry - (italy ? 4 : 3)).toFixed(1)}" text-anchor="${italy ? 'start' : 'end'}">${LANG === 'bg' ? 'Рим' : 'Rome'}</text>`   // on the big map to the left, clear of Illyria
+  return { svg: `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${LANG === 'bg' ? 'Карта на римската територия' : 'Map of Roman territory'}">${art}</svg>`, fresh: held.filter(isNew) }
+}
+const freshText = fresh => fresh.length ? `${LANG === 'bg' ? 'Ново' : 'New'}: ${fresh.map(r => `<b>${esc(regionName(r))}</b> (${yearText(r.from)})`).join(', ')}` : (LANG === 'bg' ? 'Без нови земи.' : 'No new lands.')
+const worldKey = () => `<div class="world-key"><span><i style="background:#d58c84"></i>${LANG === 'bg' ? 'римска земя' : 'Roman land'}</span><span><i style="background:#e0a63a"></i>${LANG === 'bg' ? 'ново в тази глава' : 'new in this chapter'}</span></div>`
+// at the end of each chapter's chronicle: Rome after this chapter
+function empireEnd() {
+  const i = CHAPTERS.indexOf(CH), y = chapterYear(CH)
+  if (y == null) return ''
+  let since = -9999; for (let j = i - 1; j >= 0; j--) { const py = chapterYear(CHAPTERS[j]); if (py != null) { since = py; break } }
+  const m = empireMap(y, since, { zoom: true })
+  return `<section class="empire-end"><h3>${LANG === 'bg' ? 'Рим след тази глава' : 'Rome after this chapter'}</h3>
+    <figure class="cmap" tabindex="0">${m.svg}<figcaption>${worldKey()}${freshText(m.fresh)} <span class="tap">${LANG === 'bg' ? 'Натиснете картата, за да я увеличите.' : 'Tap the map to enlarge it.'}</span></figcaption></figure>
+    <p><button class="ghost" data-world>${LANG === 'bg' ? 'Отвори картата на римския свят' : 'Open the Roman World map'}</button></p></section>`
+}
+document.addEventListener('click', e => { if (e.target.closest('[data-world]')) { closeSheet(); go({ screen: 'world' }) } })
+// the Roman World screen: drag through the chapters you have opened, or press play
+const worldSteps = () => CHAPTERS.map((c, i) => ({ c, i, y: chapterYear(c) })).filter(s => s.y != null && isUnlocked(s.i))
+let worldTimer = null
+function renderWorld() {
+  const steps = worldSteps(), all = CHAPTERS.filter(c => chapterYear(c) != null).length
+  const g = state; g.step = Math.min(g.step ?? steps.length - 1, steps.length - 1)
+  const s = steps[g.step], m = empireMap(s.y, g.step > 0 ? steps[g.step - 1].y : -9999, { all: true })
+  app.innerHTML = `
+    <header class="top"><div class="brand"><small>${LANG === 'bg' ? 'Древен Рим' : 'Ancient Rome'}</small><h1>${LANG === 'bg' ? 'Римският свят' : 'The Roman World'}</h1></div>
+      <button class="ghost" id="up">${LANG === 'bg' ? 'Всички епохи' : 'All eras'}</button></header>
+    <figure class="cmap world">${m.svg}</figure>
+    <div class="world-panel">${worldKey()}
+    <div class="world-step">
+      <div class="row"><b>${esc(s.c.short)} · ${yearText(s.y)}</b><button class="ghost" id="world-play">${worldTimer ? (LANG === 'bg' ? 'Пауза' : 'Pause') : (LANG === 'bg' ? '▶ Пусни' : '▶ Play')}</button></div>
+      <input type="range" id="world-step" min="0" max="${steps.length - 1}" value="${g.step}" aria-label="${LANG === 'bg' ? 'Глава' : 'Chapter'}">
+      <div class="world-new">${freshText(m.fresh)}</div>
+    </div></div>
+    ${steps.length < all ? `<p class="footnote">${LANG === 'bg' ? 'Спечелете битките на следващите глави, за да видите как Рим расте по-нататък.' : 'Win the next chapters’ battles to watch Rome grow further.'}</p>` : ''}`
+  app.querySelector('#up').addEventListener('click', () => { stopWorld(); go({ screen: 'rome' }) })
+  app.querySelector('#world-step').addEventListener('input', e => { stopWorld(); g.step = +e.target.value; renderWorld() })
+  app.querySelector('#world-play').addEventListener('click', () => {
+    if (worldTimer) { stopWorld(); return renderWorld() }
+    if (g.step >= steps.length - 1) g.step = 0
+    worldTimer = setInterval(() => { if (state !== g || g.step >= steps.length - 1) return stopWorld(true); g.step++; renderWorld() }, 1400)
+    renderWorld()
+  })
+}
+function stopWorld(redraw) { clearInterval(worldTimer); worldTimer = null; if (redraw && state.screen === 'world') renderWorld() }
 // ---------- maps in the chronicle ----------
 // Drawn from the chapter's maps.json: a region map (coast, Tiber, towns, peoples, far-away places as arrows at the
 // edge) or a city map (hills, river, landmarks). Tap to enlarge.
@@ -5886,11 +6008,13 @@ function renderRome() {
         ${chs.length ? progressBar(total) : ''}
       </button>` }).join('')}
     </div>
+    <button class="era-card world-card" id="world"><span class="era-period">${LANG === 'bg' ? 'Карта' : 'Map'}</span><b>${LANG === 'bg' ? 'Римският свят' : 'The Roman World'}</b><span class="era-blurb">${LANG === 'bg' ? 'Вижте как Рим расте, глава по глава.' : 'Watch Rome grow, chapter by chapter.'}</span></button>
     <p><button class="ghost" id="review-toggle">${openAll ? 'Turn review mode off' : 'Review mode: open everything'}</button></p>
     ${campaignHtml(true)}
     <p class="footnote">Every chapter is generated from Wikipedia and fact-checked by AI. Early Roman dates are the traditional ones; historians doubt many of them.</p>`
   app.querySelectorAll('[data-era]').forEach(b => b.addEventListener('click', () => openEra(ERAS.find(e => e.id === b.dataset.era))))
   app.querySelector('#review-toggle')?.addEventListener('click', toggleReview)
+  app.querySelector('#world').addEventListener('click', () => go({ screen: 'world' }))
   app.querySelector('#lang').addEventListener('click', () => setLang(LANG === 'bg' ? 'en' : 'bg'))
 }
 function renderEra(eraId) {

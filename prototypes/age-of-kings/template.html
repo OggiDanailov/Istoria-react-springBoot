@@ -327,6 +327,19 @@ button:focus-visible { outline: 3px solid var(--ochre); outline-offset: 2px; }
 .cmap.zoom .tap { display: none; }
 .cmap .sea { fill: #a9c8d8; } .cmap .ground { fill: #eadfc2; }
 .cmap .land { fill: #eadfc2; stroke: #b9a77e; stroke-width: .6; }
+.cmap .terr { fill: #d58c84; stroke: #fbf3e4; stroke-width: .4; stroke-opacity: .7; }   /* solid: where outlines overlap it doesn't show */
+.cmap .terr.new { fill: #e0a63a; }
+.cmap text.terr-name { font-size: 7.5px; fill: #4a1a12; }
+.cmap text.terr-name.new { fill: #5a3300; font-size: 8.5px; }
+.cmap.world svg { cursor: default; }
+.world-panel { background: #fbf3e4; color: #1b1715; border-radius: 14px; padding: 10px 14px 12px; margin-top: 10px; }
+.world-key { display: flex; gap: 14px; flex-wrap: wrap; font-size: 13px; color: #5a4d40; margin: 6px 0 2px; }
+.world-key i { display: inline-block; width: 12px; height: 10px; border-radius: 3px; margin-right: 5px; vertical-align: -1px; }
+.world-step { display: grid; gap: 8px; margin: 10px 0; }
+.world-step input[type=range] { width: 100%; accent-color: #8e2b22; }
+.world-step .row { display: flex; gap: 10px; align-items: center; justify-content: space-between; }
+.world-new { font-size: 14px; color: #3b2a1c; min-height: 2.6em; }
+.world-card { display: block; width: 100%; text-align: left; margin: 14px 0 4px; }
 .cmap .river { fill: none; stroke: #5b93b8; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
 .cmap .river.big { stroke-width: 9; stroke: #8fb7cf; }
 .cmap .river.big.small { stroke-width: 4; }
@@ -682,7 +695,7 @@ let run = null // { plan, step, results }
 
 // The phone's back swipe moves back through the app's screens, like an app, instead of leaving the site.
 // Each screen change is a step in the browser's history; a battle handles its own back swipe (it pauses).
-const appSteps = [], SAFE = ['rome', 'era', 'home', 'briefing']   // the screens it is safe to go back to
+const appSteps = [], SAFE = ['rome', 'era', 'home', 'briefing', 'world']   // the screens it is safe to go back to
 let fromHistory = false
 function go(next) {
   stopLoop(); if (state.screen === 'battle') { HoldTheLine.unmount(); app.classList.remove('in-battle') } state = next
@@ -702,6 +715,7 @@ function render() {
   renderHud()
   if (state.screen === 'rome') return renderRome()
   if (state.screen === 'era') return renderEra(state.era)
+  if (state.screen === 'world') return renderWorld()
   if (state.screen === 'home') return renderHome()
   if (state.screen === 'briefing') return renderBriefing()
   if (state.screen === 'play') return RENDER[state.type]()
@@ -922,7 +936,7 @@ const CHRONICLE_EXTRAS = {
   'scipio-and-zama:battle-of-zama': '<div class="pantheon allia" data-replay="zama"></div>',
   'rome-turns-east:pydna': '<div class="pantheon allia" data-replay="pydna"></div>',
 }
-const chronicleHtml = () => latinNote() + CHAPTER.map(s => `<section data-sec="${s.id}"><h3>${esc(s.title)}</h3>${(CH.chronicleMaps ?? []).filter(m => m.sec === s.id).map(chronicleMap).join('')}${s.body.split(/\n\s*\n/).map(paragraphHtml).join('')}${CHRONICLE_EXTRAS[CH.id + ':' + s.id] ?? ''}</section>`).join('') +
+const chronicleHtml = () => latinNote() + CHAPTER.map(s => `<section data-sec="${s.id}"><h3>${esc(s.title)}</h3>${(CH.chronicleMaps ?? []).filter(m => m.sec === s.id).map(chronicleMap).join('')}${s.body.split(/\n\s*\n/).map(paragraphHtml).join('')}${CHRONICLE_EXTRAS[CH.id + ':' + s.id] ?? ''}</section>`).join('') + empireEnd() +
   `<p class="sources">Sources: Wikipedia, ${CH.sources.map(t => `“${esc(t)}”`).join(', ')} · CC BY-SA 4.0</p>`
 const openChronicle = focusId => openSheet(CH.title, chronicleHtml(), focusId)
 // ---------- battle replays in the chronicle: battles told in dots, step by step ----------
@@ -1721,6 +1735,81 @@ function mountPantheonCard(el) {
   }
   show(0); requestAnimationFrame(frame)
 }
+// ---------- the Roman World: Rome's territory, chapter by chapter ----------
+// One map for the whole story (content/empire/territory.json). Each territory is drawn clipped to the real coast, so
+// its outline only has to be right inland. A chapter's map is everything Roman by the end of its period, with what it
+// added in gold. Early on, while Rome is still in Italy, the chapter map zooms in on Italy.
+const EMPIRE = __EMPIRE__
+const ITALY_VIEW = { latMin: 36.4, latMax: 46.9, lonMin: 6.4, lonMax: 19.2 }
+function chapterYear(c) {   // the end of the chapter's period: 753-509 BC -> -509, 27 BC-AD 14 -> 14; null if the map doesn't reach it
+  if (EMPIRE.skip.includes(c.id)) return null
+  const p = (c.en?.period ?? c.period).trim(), last = p.split('-').pop().trim(), n = +(last.match(/\d+/)?.[0] ?? 0)
+  if (!n) return null
+  const y = /AD/.test(last) || (/^AD/.test(p) && !/BC/.test(last)) ? n : -n
+  return y <= EMPIRE.until ? y : null
+}
+const yearText = y => LANG === 'bg' ? (y < 0 ? `${-y} г. пр.н.е.` : `${y} г. сл.н.е.`) : (y < 0 ? `${-y} BC` : `AD ${y}`)
+const regionName = (r, short) => short && r.short ? (LANG === 'bg' ? r.shortBg : r.short) : (LANG === 'bg' ? r.bg : r.name)
+let empireClips = 0
+function empireMap(year, since, { all = false, zoom = false } = {}) {
+  const held = EMPIRE.regions.filter(r => r.from <= year && !(r.to <= year)), isNew = r => r.from > since
+  const inItaly = held.every(r => r.pts.every(([la, lo]) => la >= ITALY_VIEW.latMin && la <= ITALY_VIEW.latMax && lo >= ITALY_VIEW.lonMin && lo <= ITALY_VIEW.lonMax))
+  const b = zoom && inItaly ? ITALY_VIEW : EMPIRE.bounds, kx = Math.cos((b.latMin + b.latMax) / 2 * Math.PI / 180)
+  const W = 300, H = Math.round(W * (b.latMax - b.latMin) / ((b.lonMax - b.lonMin) * kx))
+  const P = (lat, lon) => [(lon - b.lonMin) / (b.lonMax - b.lonMin) * W, (b.latMax - lat) / (b.latMax - b.latMin) * H]
+  const path = pts => pts.map(([la, lo], i) => `${i ? 'L' : 'M'}${P(la, lo).map(v => v.toFixed(1)).join(',')}`).join(' ') + 'Z'
+  const land = LAND.filter(l => l.pts.length > 6).map(l => path(l.pts.map(([lo, la]) => [la, lo]))).join(' ')
+  const id = `empire-clip-${++empireClips}`, [rx, ry] = P(ROME.lat, ROME.lon), italy = b === ITALY_VIEW
+  let art = `<rect class="sea" width="${W}" height="${H}"/><path class="land" d="${land}"/><clipPath id="${id}"><path d="${land}"/></clipPath>`
+  art += `<g clip-path="url(#${id})">${held.map(r => `<path class="terr${isNew(r) ? ' new' : ''}" d="${path(r.pts)}"/>`).join('')}</g>`
+  art += `<circle class="rome" cx="${rx.toFixed(1)}" cy="${ry.toFixed(1)}" r="${italy ? 3.6 : 2.4}"/>`
+  // names: what is new always; on the big map everything, except Italy's small pieces (too crowded at that scale)
+  const named = held.filter(r => r.id !== 'rome' && (isNew(r) || (all && (italy || !r.small))))
+  for (const r of named) { const [x, y] = P(...r.at); art += `<text class="terr-name${isNew(r) ? ' new' : ''}" x="${x.toFixed(1)}" y="${(y + 2.5).toFixed(1)}" text-anchor="middle">${esc(regionName(r, !italy))}</text>` }
+  art += `<text x="${(rx + (italy ? 6 : -4)).toFixed(1)}" y="${(ry - (italy ? 4 : 3)).toFixed(1)}" text-anchor="${italy ? 'start' : 'end'}">${LANG === 'bg' ? 'Рим' : 'Rome'}</text>`   // on the big map to the left, clear of Illyria
+  return { svg: `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${LANG === 'bg' ? 'Карта на римската територия' : 'Map of Roman territory'}">${art}</svg>`, fresh: held.filter(isNew) }
+}
+const freshText = fresh => fresh.length ? `${LANG === 'bg' ? 'Ново' : 'New'}: ${fresh.map(r => `<b>${esc(regionName(r))}</b> (${yearText(r.from)})`).join(', ')}` : (LANG === 'bg' ? 'Без нови земи.' : 'No new lands.')
+const worldKey = () => `<div class="world-key"><span><i style="background:#d58c84"></i>${LANG === 'bg' ? 'римска земя' : 'Roman land'}</span><span><i style="background:#e0a63a"></i>${LANG === 'bg' ? 'ново в тази глава' : 'new in this chapter'}</span></div>`
+// at the end of each chapter's chronicle: Rome after this chapter
+function empireEnd() {
+  const i = CHAPTERS.indexOf(CH), y = chapterYear(CH)
+  if (y == null) return ''
+  let since = -9999; for (let j = i - 1; j >= 0; j--) { const py = chapterYear(CHAPTERS[j]); if (py != null) { since = py; break } }
+  const m = empireMap(y, since, { zoom: true })
+  return `<section class="empire-end"><h3>${LANG === 'bg' ? 'Рим след тази глава' : 'Rome after this chapter'}</h3>
+    <figure class="cmap" tabindex="0">${m.svg}<figcaption>${worldKey()}${freshText(m.fresh)} <span class="tap">${LANG === 'bg' ? 'Натиснете картата, за да я увеличите.' : 'Tap the map to enlarge it.'}</span></figcaption></figure>
+    <p><button class="ghost" data-world>${LANG === 'bg' ? 'Отвори картата на римския свят' : 'Open the Roman World map'}</button></p></section>`
+}
+document.addEventListener('click', e => { if (e.target.closest('[data-world]')) { closeSheet(); go({ screen: 'world' }) } })
+// the Roman World screen: drag through the chapters you have opened, or press play
+const worldSteps = () => CHAPTERS.map((c, i) => ({ c, i, y: chapterYear(c) })).filter(s => s.y != null && isUnlocked(s.i))
+let worldTimer = null
+function renderWorld() {
+  const steps = worldSteps(), all = CHAPTERS.filter(c => chapterYear(c) != null).length
+  const g = state; g.step = Math.min(g.step ?? steps.length - 1, steps.length - 1)
+  const s = steps[g.step], m = empireMap(s.y, g.step > 0 ? steps[g.step - 1].y : -9999, { all: true })
+  app.innerHTML = `
+    <header class="top"><div class="brand"><small>${LANG === 'bg' ? 'Древен Рим' : 'Ancient Rome'}</small><h1>${LANG === 'bg' ? 'Римският свят' : 'The Roman World'}</h1></div>
+      <button class="ghost" id="up">${LANG === 'bg' ? 'Всички епохи' : 'All eras'}</button></header>
+    <figure class="cmap world">${m.svg}</figure>
+    <div class="world-panel">${worldKey()}
+    <div class="world-step">
+      <div class="row"><b>${esc(s.c.short)} · ${yearText(s.y)}</b><button class="ghost" id="world-play">${worldTimer ? (LANG === 'bg' ? 'Пауза' : 'Pause') : (LANG === 'bg' ? '▶ Пусни' : '▶ Play')}</button></div>
+      <input type="range" id="world-step" min="0" max="${steps.length - 1}" value="${g.step}" aria-label="${LANG === 'bg' ? 'Глава' : 'Chapter'}">
+      <div class="world-new">${freshText(m.fresh)}</div>
+    </div></div>
+    ${steps.length < all ? `<p class="footnote">${LANG === 'bg' ? 'Спечелете битките на следващите глави, за да видите как Рим расте по-нататък.' : 'Win the next chapters’ battles to watch Rome grow further.'}</p>` : ''}`
+  app.querySelector('#up').addEventListener('click', () => { stopWorld(); go({ screen: 'rome' }) })
+  app.querySelector('#world-step').addEventListener('input', e => { stopWorld(); g.step = +e.target.value; renderWorld() })
+  app.querySelector('#world-play').addEventListener('click', () => {
+    if (worldTimer) { stopWorld(); return renderWorld() }
+    if (g.step >= steps.length - 1) g.step = 0
+    worldTimer = setInterval(() => { if (state !== g || g.step >= steps.length - 1) return stopWorld(true); g.step++; renderWorld() }, 1400)
+    renderWorld()
+  })
+}
+function stopWorld(redraw) { clearInterval(worldTimer); worldTimer = null; if (redraw && state.screen === 'world') renderWorld() }
 // ---------- maps in the chronicle ----------
 // Drawn from the chapter's maps.json: a region map (coast, Tiber, towns, peoples, far-away places as arrows at the
 // edge) or a city map (hills, river, landmarks). Tap to enlarge.
@@ -1952,11 +2041,13 @@ function renderRome() {
         ${chs.length ? progressBar(total) : ''}
       </button>` }).join('')}
     </div>
+    <button class="era-card world-card" id="world"><span class="era-period">${LANG === 'bg' ? 'Карта' : 'Map'}</span><b>${LANG === 'bg' ? 'Римският свят' : 'The Roman World'}</b><span class="era-blurb">${LANG === 'bg' ? 'Вижте как Рим расте, глава по глава.' : 'Watch Rome grow, chapter by chapter.'}</span></button>
     <p><button class="ghost" id="review-toggle">${openAll ? 'Turn review mode off' : 'Review mode: open everything'}</button></p>
     ${campaignHtml(true)}
     <p class="footnote">Every chapter is generated from Wikipedia and fact-checked by AI. Early Roman dates are the traditional ones; historians doubt many of them.</p>`
   app.querySelectorAll('[data-era]').forEach(b => b.addEventListener('click', () => openEra(ERAS.find(e => e.id === b.dataset.era))))
   app.querySelector('#review-toggle')?.addEventListener('click', toggleReview)
+  app.querySelector('#world').addEventListener('click', () => go({ screen: 'world' }))
   app.querySelector('#lang').addEventListener('click', () => setLang(LANG === 'bg' ? 'en' : 'bg'))
 }
 function renderEra(eraId) {
