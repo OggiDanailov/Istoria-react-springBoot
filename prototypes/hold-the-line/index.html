@@ -1164,16 +1164,29 @@ function drawShip(c, kind, T, foe = false, f = null) {
     line(c, -sw / 2, my, sw / 2, my, '#5a3a22', 1.6)   // the yard
     c.fillStyle = side.sail; c.beginPath(); c.moveTo(-sw / 2, my); c.lineTo(sw / 2, my); c.quadraticCurveTo(sw / 2 + 1, my + 9, sw / 2 - 2, my + 12); c.quadraticCurveTo(0, my + 17, -sw / 2 + 2, my + 12); c.quadraticCurveTo(-sw / 2 - 1, my + 9, -sw / 2, my); c.fill()
     c.strokeStyle = 'rgba(0, 0, 0, .18)'; c.lineWidth = 0.8; c.stroke()
-    c.fillStyle = side.mark
-    if (!foe) { c.lineWidth = 1.6; c.strokeStyle = side.mark; c.beginPath(); c.arc(0, my + 7.5, 3.6, 0, TAU); c.stroke() }   // Rome: a gold wreath
-    else if (egypt || flag) { c.beginPath(); c.arc(0, my + 7.5, 3, 0, TAU); c.fill(); for (let j = 0; j < 8; j++) { const a = j * Math.PI / 4; line(c, Math.cos(a) * 4, my + 7.5 + Math.sin(a) * 4, Math.cos(a) * 6, my + 7.5 + Math.sin(a) * 6, side.mark, 1) } }   // a gold sun
-    else c.fillRect(-sw / 2 + 1, my + 5.5, sw - 2, 2.4)   // Antony: a pale band
+    shipMark(c, foe ? (egypt || flag ? 'sun' : kind === 'great' ? 'tower' : 'band') : kind, 0, my + 7.5, side.mark, sw)
     c.fillStyle = '#5a3a22'; c.beginPath(); c.arc(0, my, 1.8, 0, TAU); c.fill()   // the mast top
   }
   // a pennant at the stern in the side's colour
   line(c, 0, -8, 0, -19, '#5a3a22', 1.2); c.fillStyle = flag ? '#e0b84a' : side.sail; c.beginPath(); c.moveTo(0, -19); c.lineTo(7 + sway, -16); c.lineTo(0, -13); c.fill()
   c.restore()
   if (f?.pinned > 0) { c.strokeStyle = '#cfd4d8'; c.lineWidth = 1.4; c.setLineDash([3, 2]); c.beginPath(); c.moveTo(0, -4); c.lineTo(0, 30); c.stroke(); c.setLineDash([]) }   // the hook's line
+}
+// The symbol on a ship's sail, so each kind can be told apart at a glance (and matches its card): drawn mast-up, in the
+// sail's own coordinates (the enemy's ships are flipped as a whole, so their marks read upside down to us: a sun and a
+// band read the same either way).
+function shipMark(c, kind, x, y, col, sw) {
+  c.save(); c.translate(x, y); if (kind !== 'band') c.scale(1.35, 1.35); c.fillStyle = col; c.strokeStyle = col; c.lineWidth = 1.5; c.lineCap = 'round'
+  if (kind === 'archers') { c.beginPath(); c.arc(-1, 0, 5, -1.1, 1.1); c.stroke(); line(c, -1 + 5 * Math.cos(1.1), 5 * Math.sin(1.1), -1 + 5 * Math.cos(-1.1), 5 * Math.sin(-1.1), col, 0.9); line(c, -5, 0, 5, 0, col, 1.2); c.beginPath(); c.moveTo(5, 0); c.lineTo(2.5, -1.8); c.lineTo(2.5, 1.8); c.fill() }   // a bow and arrow
+  else if (kind === 'ballista') { line(c, -5.5, -1.5, 5.5, -1.5, col, 1.8); line(c, 0, -4, 0, 5, col, 1.6); c.beginPath(); c.moveTo(0, -5.5); c.lineTo(-2, -2.5); c.lineTo(2, -2.5); c.fill() }   // a bolt-thrower
+  else if (kind === 'ram') { c.beginPath(); c.moveTo(0, -5); c.lineTo(5, 3.5); c.lineTo(0, 1.5); c.lineTo(-5, 3.5); c.closePath(); c.fill() }   // an arrowhead: the ram
+  else if (kind === 'heavy') { c.beginPath(); c.moveTo(-4.5, -4); c.lineTo(4.5, -4); c.lineTo(4.5, 0.5); c.quadraticCurveTo(4.5, 4.5, 0, 6); c.quadraticCurveTo(-4.5, 4.5, -4.5, 0.5); c.closePath(); c.stroke() }   // a shield: it holds
+  else if (kind === 'harpax') { line(c, 0, -5, 0, 2, col, 1.6); c.beginPath(); c.arc(0, 2, 3.4, 0, Math.PI); c.stroke(); line(c, -3.4, 2, -4.4, 0.5, col, 1.4); line(c, 3.4, 2, 4.4, 0.5, col, 1.4) }   // a grappling hook
+  else if (kind === 'supply') { c.beginPath(); c.ellipse(0, 1.5, 4, 3.8, 0, 0, TAU); c.fill(); line(c, -2, -2.5, 2, -2.5, col, 1.4) }   // a grain sack
+  else if (kind === 'sun') { c.beginPath(); c.arc(0, 0, 3, 0, TAU); c.fill(); for (let j = 0; j < 8; j++) { const a = j * Math.PI / 4; line(c, Math.cos(a) * 4, Math.sin(a) * 4, Math.cos(a) * 6, Math.sin(a) * 6, col, 1) } }   // Cleopatra's sun
+  else if (kind === 'tower') { c.fillRect(-4, -3, 8, 7); for (const xx of [-4, -0.8, 2.4]) c.fillRect(xx, -5, 1.6, 2) }   // a great ship: its tower
+  else c.fillRect(-sw / 2 + 1, -2, sw - 2, 2.4)   // Antony's warship: a pale band
+  c.restore()
 }
 // Juno's sacred goose from the Capitol: it woke the defenders when the Gauls climbed the hill at night (390 BC)
 function drawGoose(c, e, T) {
@@ -2020,7 +2033,7 @@ function update(dt) {
       continue
     }
     if (f.slide) { f.slide.t += dt / 0.45; if (f.slide.t >= 1) f.slide = null }
-    if (LEVEL.weave && FOES[f.type].ship && !f.slide && !f.eating && !f.fleeing && f.y > 0.4 && f.y < ROWS - 1.6 && Math.random() < dt * 0.14) {   // at sea a ship weaves into a neighbouring lane
+    if (LEVEL.weave && FOES[f.type].ship && !f.slide && !f.eating && !f.fleeing && !(f.pinned > 0) && f.y > 0.4 && f.y < ROWS / 2 && Math.random() < dt * 0.14) {   // at sea a ship weaves into a neighbouring lane, but only in the upper half: from midfield it holds its lane, and a hooked ship can't
       const to = f.lane + (Math.random() < 0.5 ? -1 : 1)
       if (to >= 0 && to < COLS) { f.slide = { from: f.lane, t: 0 }; f.lane = to }
     }
@@ -3823,7 +3836,7 @@ const MARKUP = `<main class="game">
   </div>
   <div class="msg" id="banner" aria-live="polite"></div>
   <div class="controls">
-    <div class="progress"><span class="label" id="level">Lake Regillus</span><div class="bar" id="bar"><div class="fill" id="fill"></div></div><span class="build" translate="no">build 22 Nov, 15:34</span></div>
+    <div class="progress"><span class="label" id="level">Lake Regillus</span><div class="bar" id="bar"><div class="fill" id="fill"></div></div><span class="build" translate="no">build 22 Nov, 15:44</span></div>
     <button class="tool" id="pause">Pause</button>
     <button class="tool" id="speed">1×</button>
     <button class="tool" id="guide">Guide</button>
