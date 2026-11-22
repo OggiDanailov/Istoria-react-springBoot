@@ -250,9 +250,9 @@ const LEVELS = [
     units: ['cart', 'slinger', 'velites', 'legionary', 'triarius', 'scorpio', 'maniple', 'lilia'], newUnit: 'lilia',
     blurb: 'Caesar has trapped Vercingetorix in the hilltop town of Alesia behind a ring of walls. Now a huge Gallic army is coming to rescue him, so Caesar has built a second ring, facing out.',
     after: 'The relief army broke and Vercingetorix surrendered, laying his arms at Caesar’s feet. The conquest of Gaul was all but complete.',
-    waves: [w(26, ['gaul']), w(42, ['warrior', 'gaul']), w(58, ['shield', 'gaul']), w(74, ['gaul', 'gaul', 'warrior']), w(92, ['gaul', 'gaul'], 'The Gallic relief army attacks from behind!', 'below'),
-      w(108, ['shield', 'gaul']), w(120, ['cavalry', 'gaul'], null, 'below'), w(134, ['chief', ...rep(3, 'gaul'), 'shield', 'warrior'], 'Vercingetorix attacks from the town!'), w(152, ['gaul', 'gaul', 'shield', 'cavalry'], null, 'below'),
-      w(168, ['shield', 'gaul', 'gaul']), w(186, ['chief', ...rep(4, 'gaul'), 'shield', 'cavalry'], 'The relief army’s final assault!', 'below'), w(190, ['chief', ...rep(3, 'gaul'), 'shield', 'shield'])] },
+    waves: [w(26, ['gaul']), w(42, ['warrior', 'gaul']), w(58, ['shield', 'gaul']), w(70, ['gaul', 'gaul', 'shield'], 'The Gallic relief army attacks from behind!', 'below'), w(78, ['gaul', 'gaul', 'warrior']),
+      w(96, ['shield', 'warrior'], null, 'below'), w(108, ['shield', 'gaul', 'shield']), w(120, ['cavalry', 'gaul', 'shield'], null, 'below'), w(134, ['chief', ...rep(3, 'gaul'), 'shield', 'warrior'], 'Vercingetorix attacks from the town!'), w(152, ['gaul', 'gaul', 'shield', 'cavalry', 'warrior'], null, 'below'),
+      w(168, ['shield', 'shield', 'gaul', 'gaul', 'warrior']), w(186, ['chief', ...rep(4, 'gaul'), 'shield', 'cavalry'], 'The relief army’s final assault!', 'below'), w(190, ['chief', ...rep(3, 'gaul'), 'shield', 'shield'])] },
   { id: 'pharsalus', name: 'Pharsalus', year: '48 BC', enemy: 'Pompey', theme: 'pharsalus', start: 525, cols: 8, rows: 10, more: 1.0, delay: 20,
     twist: 'Romans against Romans. Pompey’s 7,000 horsemen charge your left wing. Caesar’s answer was a hidden fourth line of picked men who thrust their pila at the riders.',
     units: ['cart', 'slinger', 'velites', 'legionary', 'triarius', 'maniple', 'scorpio', 'centurion', 'fourthline'], newUnit: 'fourthline',
@@ -2302,11 +2302,17 @@ function draw() {
     }
   }
   if (!LEVEL.backRiver) for (let l = 0; l < COLS; l++) if ((G.equites[l]?.state === 'none' || G.equites[l]?.state === 'used') && !LEVEL.closed?.includes(l)) {   // an unguarded lane: no eques under it
-    const free = equesDrag?.moved
+    const free = equesDrag?.moved && !equesDrag.top
     ctx.fillStyle = free ? (equesDrag.to === l ? 'rgba(251, 243, 228, .35)' : 'rgba(251, 243, 228, .14)') : 'rgba(142, 43, 34, .16)'
     const gy = LEVEL.midGate != null ? ry(LEVEL.midGate) : ry(ROWS), gh = LEVEL.midGate != null ? cell : CAMP * cell
     ctx.fillRect(l * cell + 3, gy + 2, cell - 6, gh - 4)
     ctx.strokeStyle = free ? 'rgba(251, 243, 228, .7)' : 'rgba(142, 43, 34, .45)'; ctx.lineWidth = 1.5; ctx.setLineDash([4, 4]); ctx.strokeRect(l * cell + 3, gy + 2, cell - 6, gh - 4); ctx.setLineDash([])
+  }
+  if (LEVEL.twoFronts) for (let l = 0; l < COLS; l++) if (G.equitesTop[l]?.state === 'none' || G.equitesTop[l]?.state === 'used') {   // an unguarded lane at the top
+    const free = equesDrag?.moved && equesDrag.top, y0 = ry(-0.85), h = ry(0) - y0 - 3
+    ctx.fillStyle = free ? (equesDrag.to === l ? 'rgba(251, 243, 228, .35)' : 'rgba(251, 243, 228, .14)') : 'rgba(142, 43, 34, .16)'
+    ctx.fillRect(l * cell + 3, y0, cell - 6, h)
+    ctx.strokeStyle = free ? 'rgba(251, 243, 228, .7)' : 'rgba(142, 43, 34, .45)'; ctx.lineWidth = 1.5; ctx.setLineDash([4, 4]); ctx.strokeRect(l * cell + 3, y0, cell - 6, h); ctx.setLineDash([])
   }
   if (G.heal) for (const u of G.units) if (u.hp < u.max && u.type !== 'caltrops' && u.type !== 'pigs') {
     ctx.fillStyle = 'rgba(127, 176, 105, .28)'; ctx.fillRect(u.lane * cell + 3, ry(u.row) + 3, cell - 6, cell - 6)
@@ -2346,18 +2352,19 @@ function draw() {
     drawFoe(ctx, f, T); ctx.restore()
     if (f.hp < f.max || (f.shieldMax && f.shield < f.shieldMax)) hpBar(foeX(f), ry(f.y) - (FOES[f.type].elephant ? 140 : f.type === 'calf' ? 74 : f.type === 'phalangite' ? 80 : 74) * k, (f.hp + f.shield) / (f.max + f.shieldMax), f.shield > 0 ? '#b08a3e' : '#e2574c')
   }])
-  for (const [lane, e] of G.equitesTop.entries()) if (e.state === 'ready' || e.state === 'charge') items.push([ry(e.y), () => { ctx.save(); ctx.translate(lx(lane), ry(e.y)); ctx.scale(-k * 0.9, k * 0.9); FACING_US = true; drawEques(ctx, e, T); FACING_US = false; ctx.restore() }])   // facing down the field, toward the town's attackers
+  for (const [lane, e] of G.equitesTop.entries()) if (e.state === 'ready' || e.state === 'charge') items.push([ry(e.y), () => { ctx.save(); if (equesDrag?.moved && equesDrag.top && equesDrag.from === lane) ctx.globalAlpha = 0.4; ctx.translate(lx(lane), ry(e.y)); ctx.scale(-k * 0.9, k * 0.9); FACING_US = true; drawEques(ctx, e, T); FACING_US = false; ctx.restore() }])   // facing down the field, toward the town's attackers
   if (LEVEL.backRiver) items.push([ry(ROWS + 1), () => {   // the lives left, on the river
     ctx.save(); ctx.font = `800 ${Math.round(11 + 3 * k)}px Nunito, system-ui, sans-serif`; ctx.textAlign = 'left'; ctx.fillStyle = 'rgba(255, 255, 255, .92)'
     const label = (LANG === 'bg' ? 'Животи: ' : 'Lives: ') + (G.lives ? '♥'.repeat(G.lives) : (LANG === 'bg' ? 'няма' : 'none'))
     ctx.fillText(label, 8, ry(ROWS) + cell * 0.62); ctx.restore()
   }])
-  for (const [lane, e] of G.equites.entries()) if (e.state !== 'used' && e.state !== 'none') items.push([ry(e.y), () => { ctx.save(); if (equesDrag?.moved && equesDrag.from === lane) ctx.globalAlpha = 0.4; ctx.translate(lx(lane), ry(e.y)); ctx.scale(k * 0.9, k * 0.9); drawEques(ctx, e, T); ctx.restore() }])
-  if (equesDrag?.moved && equesDrag.to != null && equesDrag.to !== equesDrag.from && G.equites[equesDrag.from]) {   // the horse being dragged, under the pointer: gold where he can go, red where he can't
-    const to = equesDrag.to, ok = (G.equites[to]?.state === 'none' || G.equites[to]?.state === 'used') && !G.equites[to].routed && !LEVEL.closed?.includes(to), y = ry(eqHome())
+  for (const [lane, e] of G.equites.entries()) if (e.state !== 'used' && e.state !== 'none') items.push([ry(e.y), () => { ctx.save(); if (equesDrag?.moved && !equesDrag.top && equesDrag.from === lane) ctx.globalAlpha = 0.4; ctx.translate(lx(lane), ry(e.y)); ctx.scale(k * 0.9, k * 0.9); drawEques(ctx, e, T); ctx.restore() }])
+  const dragRow = equesDrag && eqRow(equesDrag.top)
+  if (equesDrag?.moved && equesDrag.to != null && equesDrag.to !== equesDrag.from && dragRow[equesDrag.from]) {   // the horse being dragged, under the pointer: gold where he can go, red where he can't
+    const to = equesDrag.to, ok = (dragRow[to]?.state === 'none' || dragRow[to]?.state === 'used') && !dragRow[to].routed && !LEVEL.closed?.includes(to), y = ry(equesDrag.top ? TOP_EQ : eqHome())
     items.push([y + 1, () => {
       ctx.save(); ctx.strokeStyle = ok ? 'rgba(224, 166, 58, .95)' : 'rgba(190, 40, 30, .95)'; ctx.lineWidth = 3; ctx.beginPath(); ctx.ellipse(lx(to), y - 2, cell * 0.38, cell * 0.16, 0, 0, TAU); ctx.stroke(); ctx.restore()
-      ctx.save(); ctx.globalAlpha = ok ? 0.85 : 0.45; ctx.translate(lx(to), y); ctx.scale(k * 0.9, k * 0.9); drawEques(ctx, G.equites[equesDrag.from], T); ctx.restore()
+      ctx.save(); ctx.globalAlpha = ok ? 0.85 : 0.45; ctx.translate(lx(to), y); if (equesDrag.top) { ctx.scale(-k * 0.9, k * 0.9); FACING_US = true } else ctx.scale(k * 0.9, k * 0.9); drawEques(ctx, dragRow[equesDrag.from], T); FACING_US = false; ctx.restore()
       if (!ok) { const m = cell * 0.16, cy = y - cell * 0.35; line(ctx, lx(to) - m, cy - m, lx(to) + m, cy + m, 'rgba(190, 40, 30, .95)', 4); line(ctx, lx(to) + m, cy - m, lx(to) - m, cy + m, 'rgba(190, 40, 30, .95)', 4) }
     }])
   }
@@ -2568,10 +2575,12 @@ function charged(f, e, back) {
   if (!G.tips.heavy) { G.tips.heavy = true; announce('Heavy enemies withstand the charge: they lose half their strength and are driven back.', true, 4200) }
 }
 // an eques rides along the camp to a lane that has none (before or during the battle)
-function moveEques(from, to) {
-  const free = l => (G.equites[l]?.state === 'none' || G.equites[l]?.state === 'used') && !G.equites[l].routed   // a lane with no eques, or whose eques has charged
-  if (to == null || to === from || !free(to) || LEVEL.closed?.includes(to) || G.equites[from]?.state !== 'ready') return false
-  G.equites[to] = { state: 'ready', y: eqHome() }; G.equites[from] = { state: 'none', y: eqHome() }; sfx.place()
+const eqRow = top => top ? G.equitesTop : G.equites   // on two fronts the top row moves the same way
+function moveEques(from, to, top = false) {
+  const row = eqRow(top), y = top ? TOP_EQ : eqHome()
+  const free = l => (row[l]?.state === 'none' || row[l]?.state === 'used') && !row[l].routed   // a lane with no eques, or whose eques has charged
+  if (to == null || to === from || !free(to) || LEVEL.closed?.includes(to) || row[from]?.state !== 'ready') return false
+  row[to] = { state: 'ready', y }; row[from] = { state: 'none', y }; sfx.place()
   return true
 }
 function cellAt(clientX, clientY) {
@@ -2605,10 +2614,11 @@ document.addEventListener('pointerup', e => {
       const q = G.equites[d.from]; if (q?.state === 'ready') { q.state = 'charge'; q.dir = dy < 0 ? -1 : 1; G.charges++; G.shake = Math.max(G.shake, 6); lastStand().sound(); announce(lastStand().charge) }
       return
     }
-    if (d.moved && d.to !== d.from && !moveEques(d.from, d.to)) {
+    if (d.moved && d.to !== d.from && !moveEques(d.from, d.to, d.top)) {
       sfx.deny()
-      if (G.equites[d.to]?.state === 'ready' || G.equites[d.to]?.state === 'charge') announce('That lane already has an eques. Move him to a lane marked in red.')
-      else if (G.equites[d.to]?.routed) announce('The enemy’s cavalry holds that wing: no eques can ride there.')
+      const row = eqRow(d.top)
+      if (row[d.to]?.state === 'ready' || row[d.to]?.state === 'charge') announce('That lane already has an eques. Move him to a lane marked in red.')
+      else if (row[d.to]?.routed) announce('The enemy’s cavalry holds that wing: no eques can ride there.')
     }
     return
   }
@@ -3826,6 +3836,9 @@ function bindControls() {
     const fr = c.y / cell - APPROACH, onEq = LEVEL.midGate != null ? fr >= LEVEL.midGate - 0.1 && fr < LEVEL.midGate + 1 : fr >= ROWS - 0.2
     if (onEq && c.lane >= 0 && c.lane < COLS && G.equites[c.lane]?.state === 'ready') {
       equesDrag = { from: c.lane, x0: e.clientX, y0: e.clientY, moved: false }; canvas.setPointerCapture(e.pointerId); return
+    }
+    if (LEVEL.twoFronts && fr < 0.1 && c.lane >= 0 && c.lane < COLS && G.equitesTop[c.lane]?.state === 'ready') {   // a top eques (two fronts): he stands just above the inner wall
+      equesDrag = { from: c.lane, x0: e.clientX, y0: e.clientY, moved: false, top: true }; canvas.setPointerCapture(e.pointerId); return
     }
     // then grain: it's the most urgent tap
     const d = G.drops.find(d => Math.hypot(d.x - c.x, d.y - c.y) < 26 * k + 8)
