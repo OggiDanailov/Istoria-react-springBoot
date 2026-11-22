@@ -1,0 +1,7 @@
+{
+  "name": "ave-caesar-print",
+  "private": true,
+  "type": "module",
+  "description": "Prints Ave Caesar's documents (the book in English and Bulgarian, chapters and battles, Hold the Line cut-outs) as PDFs. Run ./make-pdfs.sh",
+  "dependencies": { "playwright": "^1.50.0" }
+}

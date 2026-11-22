@@ -47,3 +47,4 @@ backend/data/quizdb.mv.db
 *.sql.dump
 ave_caesar_complete.sql
 backend/data/
+tools/print/node_modules/
