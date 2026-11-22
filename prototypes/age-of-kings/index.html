@@ -4216,7 +4216,7 @@ const MARKUP = `<main class="game">
   </div>
   <div class="msg" id="banner" aria-live="polite"></div>
   <div class="controls">
-    <div class="progress"><span class="label" id="level">Lake Regillus</span><div class="bar" id="bar"><div class="fill" id="fill"></div></div><span class="build" translate="no">build 22 Nov, 12:50</span></div>
+    <div class="progress"><span class="label" id="level">Lake Regillus</span><div class="bar" id="bar"><div class="fill" id="fill"></div></div><span class="build" translate="no">build 22 Nov, 13:17</span></div>
     <button class="tool" id="pause">Pause</button>
     <button class="tool" id="speed">1×</button>
     <button class="tool" id="guide">Guide</button>
@@ -4846,6 +4846,7 @@ const CHRONICLE_EXTRAS = {
   'social-war-and-sulla:east-and-civil-war': '<div class="pantheon allia" data-replay="colline"></div>',
   'spartacus-and-pompey:silarius-and-aftermath': '<div class="pantheon allia" data-replay="silarius"></div>',
   'cicero-and-the-triumvirate:carrhae': '<div class="pantheon allia" data-replay="carrhae"></div>',
+  'caesar-in-gaul:siege-of-alesia': '<div class="pantheon allia" data-replay="alesia"></div>',
   'first-punic-war:siege-of-akragas': '<div class="pantheon allia" data-replay="agrigentum"></div>',
   'first-punic-war:corvus-and-mylae': '<div class="pantheon allia" data-replay="mylae"></div>',
   'first-punic-war:battle-of-the-aegates': '<div class="pantheon allia" data-replay="aegates"></div>',
@@ -4862,7 +4863,7 @@ const openChronicle = focusId => openSheet(CH.title, chronicleHtml(), focusId)
 // groups of dots with where they are at each moment (a line, or a cluster) and what befalls them (some fall, they
 // waver in panic, they drown with a splash), and five captions. Times are in "story seconds"; it plays SLOW times
 // slower so each caption can be read (the user found 8 seconds too fast). Positions are parts of the width and height.
-const RCOL = { parthian: '#5b4a9a', cataphract: '#6f7884', camel: '#c9a46a', rebel: '#3f7d6a', teuton: '#3f6a8f', ambron: '#9a6a2a', deserter: '#8a8278', patrician: '#d9a520', linen: '#f4eedd', carthage: '#33509a', macedon: '#6b4a8a', rome: '#b8322a', gaul: '#2f5f9a', samnite: '#c27a1e', etruscan: '#8a7f75', epirus: '#6b4a8a', elephant: '#76716b' }
+const RCOL = { civilian: '#a89f8e', parthian: '#5b4a9a', cataphract: '#6f7884', camel: '#c9a46a', rebel: '#3f7d6a', teuton: '#3f6a8f', ambron: '#9a6a2a', deserter: '#8a8278', patrician: '#d9a520', linen: '#f4eedd', carthage: '#33509a', macedon: '#6b4a8a', rome: '#b8322a', gaul: '#2f5f9a', samnite: '#c27a1e', etruscan: '#8a7f75', epirus: '#6b4a8a', elephant: '#76716b' }
 const REPLAYS = {
   // chapter 4: the Allia (Livy), as the chronicle tells it
   allia: {
@@ -5044,6 +5045,33 @@ const REPLAYS = {
       [4.2, 'Crassus’s son Publius leads a breakout with the Gallic horsemen. He is lured away and killed.', 'Синът на Крас, Публий, води пробив с галските конници. Той е подмамен надалеч и убит.'],
       [5.8, 'The Romans retreat towards Carrhae, abandoning 4,000 wounded.', 'Римляните отстъпват към Каре и изоставят 4000 ранени.'],
       [7.2, 'At truce talks a scuffle breaks out and Crassus is killed. About 20,000 Romans die and 10,000 are captured, with the legions’ eagles.', 'На преговорите за примирие избухва сбиване и Крас е убит. Около 20 000 римляни загиват, а 10 000 са пленени, заедно с орлите на легионите.'],
+    ], end: 9.0,
+  },
+  // chapter 17: Alesia
+  alesia: {
+    title: ['The siege of Alesia, step by step', 'Обсадата на Алезия, стъпка по стъпка'], night: [1.0, 2.4],
+    key: [['rome', 'Romans', 'римляни'], ['gaul', 'Gauls', 'гали'], ['civilian', 'townsfolk', 'жители']],
+    ground: [
+      { hill: [0.5, 0.5, 0.13, 0.16] }, { city: [0.5, 0.5, 0.06, 0.05], label: ['Alesia', 'Алезия'] },
+      { tag: [0.5, 0.2], t: ['inner ring, 16 km', 'вътрешен пръстен, 16 км'], from: 2.4, to: 3.6 },
+      { tag: [0.5, 0.06], t: ['outer ring, 21 km', 'външен пръстен, 21 км'], from: 2.8, to: 4.6 },
+    ],
+    groups: [
+      { side: 'gaul', n: 20, keys: [[0, 'blob', -0.3, 0.5, 0.06, 0.06], [1.0, 'blob', 0.5, 0.5, 0.07, 0.07], [5.0, 'blob', 0.5, 0.5, 0.07, 0.07], [5.6, 'arc', 0.5, 0.5, 0.12, 0.17, 0, 2, 0.03], [6.4, 'arc', 0.5, 0.5, 0.12, 0.17, 0, 2, 0.03], [7.0, 'blob', 0.5, 0.5, 0.06, 0.06]], jitter: [5.6, 6.6], fall: [5.8, 6.8, 0.4] },
+      { side: 'gaul', n: 1, r: 5, ring: true, keys: [[0, 'blob', -0.3, 0.5, 0, 0], [1.0, 'blob', 0.5, 0.48, 0, 0], [6.8, 'blob', 0.5, 0.48, 0, 0], [7.8, 'blob', 0.5, 0.82, 0, 0]] },
+      { side: 'gaul', n: 3, keys: [[0, 'blob', -0.3, 0.5, 0.02, 0.02], [1.0, 'blob', 0.5, 0.5, 0.03, 0.03], [1.2, 'blob', 0.5, 0.5, 0.03, 0.03], [2.2, 'blob', 0.5, -0.2, 0.05, 0.02]] },
+      { side: 'rome', n: 22, keys: [[0, 'blob', 0.5, 1.2, 0.1, 0.04], [1.6, 'blob', 0.5, 1.2, 0.1, 0.04], [2.4, 'arc', 0.5, 0.5, 0.19, 0.27, 0, 2, 0.04], [5.6, 'arc', 0.5, 0.5, 0.19, 0.27, 0, 2, 0.04], [6.2, 'arc', 0.5, 0.5, 0.18, 0.25, 0, 2, 0.04], [7.0, 'arc', 0.5, 0.5, 0.19, 0.27, 0, 2, 0.04]], jitter: [5.6, 6.6] },
+      { side: 'rome', n: 30, keys: [[0, 'blob', 0.5, 1.2, 0.1, 0.04], [2.0, 'blob', 0.5, 1.2, 0.1, 0.04], [3.0, 'arc', 0.5, 0.5, 0.32, 0.43, 0, 2, 0.04], [5.0, 'arc', 0.5, 0.5, 0.32, 0.43, 0, 2, 0.04], [5.6, 'arc', 0.5, 0.5, 0.33, 0.44, 0, 2, 0.04], [7.0, 'arc', 0.5, 0.5, 0.32, 0.43, 0, 2, 0.04]], jitter: [5.2, 6.6] },
+      { side: 'civilian', n: 9, keys: [[0, 'blob', -0.3, 0.5, 0.04, 0.04], [1.0, 'blob', 0.5, 0.52, 0.05, 0.04], [3.6, 'blob', 0.5, 0.52, 0.05, 0.04], [4.4, 'arc', 0.5, 0.5, 0.255, 0.35, 0, 2, 0.02]], fall: [4.6, 5.6, 1] },
+      { side: 'gaul', n: 34, keys: [[0, 'arc', 0.5, 0.5, 0.7, 0.75, 0, 2, 0.05], [4.6, 'arc', 0.5, 0.5, 0.7, 0.75, 0, 2, 0.05], [5.4, 'arc', 0.5, 0.5, 0.42, 0.53, 0, 2, 0.04], [6.4, 'arc', 0.5, 0.5, 0.42, 0.53, 0, 2, 0.04], [7.4, 'arc', 0.5, 0.5, 0.75, 0.8, 0, 2, 0.05]], jitter: [5.4, 6.6], fall: [5.6, 6.8, 0.35] },
+    ],
+    steps: [
+      [0, 'September 52 BC: Vercingetorix (with the gold ring) falls back on Alesia, a hilltop town, with some 80,000 warriors. Caesar decides to starve them out.', 'Септември 52 г. пр.н.е.: Верцингеторикс (със златния пръстен) се оттегля в Алезия, град на хълм, с около 80 000 воини. Цезар решава да ги измори от глад.'],
+      [1.2, 'By night, Vercingetorix sends riders out to summon a relief army.', 'През нощта Верцингеторикс изпраща конници да свикат спасителна армия.'],
+      [2.4, 'Caesar builds an inner ring of walls to pen the Gauls in, and an outer ring facing out, with hidden pits and stakes in front.', 'Цезар изгражда вътрешен пръстен от укрепления, за да затвори галите, и външен пръстен, обърнат навън, със скрити ями и колове пред тях.'],
+      [3.6, 'As food runs out, the women, children, old and sick are sent out. Caesar will not let them through, and they starve between the lines.', 'Когато храната свършва, жените, децата, старите и болните са изпратени навън. Цезар не ги пропуска и те умират от глад между линиите.'],
+      [4.8, 'The relief army arrives, perhaps 50,000 to 100,000 strong. The Gauls attack from inside and outside at once.', 'Пристига спасителната армия, вероятно от 50 000 до 100 000 души. Галите атакуват едновременно отвътре и отвън.'],
+      [6.8, 'The attacks fail, the relievers melt away, and Vercingetorix surrenders.', 'Атаките се провалят, спасителите се разпръсват и Верцингеторикс се предава.'],
     ], end: 9.0,
   },
   // chapter 13: Aquae Sextiae
