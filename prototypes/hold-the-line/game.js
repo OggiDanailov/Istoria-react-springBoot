@@ -1101,34 +1101,65 @@ function drawElephant(c, f, T, calf = false, african = false) {
 }
 // A ship seen from above and behind (ours) or ahead (theirs), feet at 0,0. o: what kind of ship and whose
 function drawShip(c, kind, T, foe = false, f = null) {
+  // A galley seen from above, bow toward the enemy (the user found the old ones looked like beetles, Nov 22): a long slim
+  // hull with a bronze ram and a curled stern post, thin oars in banks, a foam wake, and the side's colour on the sail
+  // and the rail: Octavian red, Antony blue-green, Cleopatra purple and gold.
   const big = kind === 'great' || kind === 'heavy', small = kind === 'fire' || kind === 'supply'
-  const L = big ? 64 : small ? 40 : 52, Wd = big ? 30 : small ? 22 : 24, top = -L - 4
-  c.fillStyle = 'rgba(20, 50, 80, .25)'; c.beginPath(); c.ellipse(0, -3, Wd * 0.6, 5, 0, 0, TAU); c.fill()   // its shadow on the water
-  // oars, sweeping
-  if (!small) { const sw = Math.sin(T * 6 + (f?.phase ?? 0)) * 4; c.strokeStyle = '#6b4a2b'; c.lineWidth = 1.4; for (let i = 0; i < 4; i++) { const y = top + 14 + i * (L - 24) / 3; c.beginPath(); c.moveTo(-Wd / 2, y); c.lineTo(-Wd / 2 - 10, y + sw); c.moveTo(Wd / 2, y); c.lineTo(Wd / 2 + 10, y + sw); c.stroke() } }
-  // the hull: pointed toward the enemy
-  const hull = foe ? (kind === 'egyptian' ? '#8a6a3a' : '#5a3a3a') : '#7a5636'
-  c.fillStyle = hull; c.beginPath()
-  if (foe) { c.moveTo(0, -2); c.quadraticCurveTo(Wd / 2, -12, Wd / 2, -L / 2); c.lineTo(Wd / 2, top + 6); c.quadraticCurveTo(0, top - 2, -Wd / 2, top + 6); c.lineTo(-Wd / 2, -L / 2); c.quadraticCurveTo(-Wd / 2, -12, 0, -2) }
-  else { c.moveTo(0, top); c.quadraticCurveTo(Wd / 2, top + 10, Wd / 2, -L / 2); c.lineTo(Wd / 2, -10); c.quadraticCurveTo(0, 0, -Wd / 2, -10); c.lineTo(-Wd / 2, -L / 2); c.quadraticCurveTo(-Wd / 2, top + 10, 0, top) }
-  c.fill()
-  c.fillStyle = foe ? '#7a5050' : '#9a7448'; rr(c, -Wd / 2 + 4, top + 8, Wd - 8, L - 18, 4); c.fill()   // the deck
-  if (kind === 'ram' || foe) { const ry0 = foe ? -2 : top; c.fillStyle = '#b08a3e'; c.beginPath(); c.moveTo(-4, ry0 + (foe ? -4 : 4)); c.lineTo(0, ry0 + (foe ? 6 : -6)); c.lineTo(4, ry0 + (foe ? -4 : 4)); c.fill() }   // the bronze ram
-  if (foe && kind !== 'egyptian') { c.fillStyle = '#e9e1cf'; c.beginPath(); c.arc(-6, -12, 2.4, 0, TAU); c.arc(6, -12, 2.4, 0, TAU); c.fill(); c.fillStyle = INK; c.beginPath(); c.arc(-6, -12, 1.1, 0, TAU); c.arc(6, -12, 1.1, 0, TAU); c.fill() }   // painted eyes on the bow
-  if (kind === 'supply') for (const [x, y] of [[-5, -22], [5, -24], [0, -32]]) { c.fillStyle = '#e9dcc0'; c.beginPath(); c.ellipse(x, y, 5, 4.5, 0, 0, TAU); c.fill() }
-  if (kind === 'fire') { c.fillStyle = '#3f2a16'; for (const [x, y] of [[-5, -18], [5, -20], [0, -28]]) { c.beginPath(); c.arc(x, y, 4, 0, TAU); c.fill() } if (f?.armed !== false) { const fl = Math.sin(T * 18) * 2; c.fillStyle = '#e0a63a'; c.beginPath(); c.ellipse(0, -32 + fl * 0.3, 5, 9, 0, 0, TAU); c.fill(); c.fillStyle = '#d4392d'; c.beginPath(); c.ellipse(0, -30, 3, 5, 0, 0, TAU); c.fill() } }
-  if (kind === 'ballista') { line(c, -9, -30, 9, -30, '#6b4a2b', 3); line(c, 0, -40, 0, -22, '#4a3420', 2.4) }
-  if (kind === 'harpax') { line(c, 0, -42, 0, -22, '#4a3420', 2.4); c.strokeStyle = '#9aa3aa'; c.lineWidth = 2; c.beginPath(); c.arc(0, -44, 4, 0.2, Math.PI - 0.2); c.stroke(); line(c, 0, -48, 0, -40, '#9aa3aa', 2) }
-  if (kind === 'archers') for (const x of [-5, 5]) { c.fillStyle = SKIN; c.beginPath(); c.arc(x, -30, 3.2, 0, TAU); c.fill(); c.fillStyle = '#c9a24a'; c.beginPath(); c.arc(x, -31, 3.4, Math.PI, 0); c.fill() }
-  if (kind === 'great') { c.fillStyle = '#8a6236'; rr(c, -9, -L * 0.62, 18, 16, 2); c.fill(); c.fillStyle = '#5a3a22'; for (let x = -9; x < 9; x += 5) c.fillRect(x, -L * 0.62 - 3, 3, 3) }   // an archer tower
-  // the mast and its sail
-  if (kind !== 'fire') {
-    const sail = foe ? (kind === 'egyptian' || f?.type === 'flagship' ? '#6a2f6e' : '#8a3a3a') : '#e9e1cf', my = -L * 0.5
-    line(c, 0, my + 6, 0, my - 26, '#5a3a22', 2.2)
-    c.fillStyle = sail; rr(c, -Wd / 2 - 2, my - 24, Wd + 4, 14, 2); c.fill()
-    if (!foe) { c.fillStyle = '#8e2b22'; c.fillRect(-Wd / 2 - 2, my - 19, Wd + 4, 3) }
-    if (foe && kind === 'egyptian') { c.fillStyle = '#c9a24a'; c.beginPath(); c.arc(0, my - 17, 3, 0, TAU); c.fill() }
+  const L = big ? 66 : small ? 40 : 54, Wd = big ? 22 : small ? 17 : 17, top = -L - 2, mid = (top - 2) / 2
+  const egypt = foe && (kind === 'egyptian' || f?.type === 'egyptian'), flag = f?.type === 'flagship'
+  const side = !foe ? { rail: '#b8322a', sail: '#b8322a', mark: '#e0b84a', hull: '#c08a52', deck: '#d9b07a' }
+    : egypt ? { rail: '#c9a24a', sail: '#6a2f6e', mark: '#e0b84a', hull: '#a0773e', deck: '#c79a5a' }
+    : { rail: '#2f6f8a', sail: '#2f6f8a', mark: '#e9e1cf', hull: '#5a4434', deck: '#7a5f48' }
+  c.save()
+  if (foe) { c.translate(0, mid); c.scale(1, -1); c.translate(0, -mid) }   // the enemy's bow points down the field
+  const sway = Math.sin(T * 6 + (f?.phase ?? 0))
+  // the wake: two lines of foam spreading from the stern
+  c.strokeStyle = 'rgba(255, 255, 255, .4)'; c.lineWidth = 1.4
+  for (const s of [-1, 1]) { c.beginPath(); c.moveTo(s * Wd * 0.25, 0); c.quadraticCurveTo(s * Wd * 0.4, 4, s * Wd * (0.55 + 0.05 * sway), 7); c.stroke() }
+  // oars: thin, many, sweeping together, with a splash at each blade
+  if (!small) {
+    const n = big ? 8 : 6, reach = 8 + sway * 3
+    c.strokeStyle = '#e8dcc4'; c.lineWidth = 1
+    for (let i = 0; i < n; i++) {
+      const y = top + L * 0.32 + i * (L * 0.5) / (n - 1)
+      for (const s of [-1, 1]) {
+        c.beginPath(); c.moveTo(s * Wd * 0.45, y); c.lineTo(s * (Wd * 0.45 + 9), y + reach * 0.6); c.stroke()
+        c.fillStyle = 'rgba(255, 255, 255, .5)'; c.beginPath(); c.arc(s * (Wd * 0.45 + 9), y + reach * 0.6 + 1, 1.3, 0, TAU); c.fill()
+      }
+    }
   }
+  // the hull: pointed bow, rounded stern
+  const hullPath = () => { c.beginPath(); c.moveTo(0, top); c.bezierCurveTo(Wd * 0.55, top + L * 0.18, Wd / 2, top + L * 0.4, Wd / 2, top + L * 0.7); c.quadraticCurveTo(Wd / 2, -2, 0, -2); c.quadraticCurveTo(-Wd / 2, -2, -Wd / 2, top + L * 0.7); c.bezierCurveTo(-Wd / 2, top + L * 0.4, -Wd * 0.55, top + L * 0.18, 0, top) }
+  c.fillStyle = 'rgba(20, 50, 80, .28)'; c.save(); c.translate(2, 3); hullPath(); c.fill(); c.restore()   // shadow on the water
+  c.fillStyle = side.hull; hullPath(); c.fill()
+  c.strokeStyle = side.rail; c.lineWidth = 2.2; hullPath(); c.stroke()   // the painted rail: whose ship it is
+  c.save(); hullPath(); c.clip(); c.fillStyle = side.deck; c.fillRect(-Wd * 0.32, top + L * 0.2, Wd * 0.64, L * 0.68)
+  c.strokeStyle = 'rgba(80, 50, 30, .35)'; c.lineWidth = 0.7; for (let x = -Wd * 0.32 + 3; x < Wd * 0.32; x += 3.5) { c.beginPath(); c.moveTo(x, top + L * 0.2); c.lineTo(x, top + L * 0.88); c.stroke() } c.restore()
+  // the bronze ram at the bow, and the curled stern post
+  c.fillStyle = '#b08a3e'; c.beginPath(); c.moveTo(-3, top + 4); c.lineTo(0, top - 6); c.lineTo(3, top + 4); c.fill()
+  c.strokeStyle = side.hull === '#5a4434' ? '#3f2e22' : '#8a6236'; c.lineWidth = 2.4; c.beginPath(); c.arc(0, -5, 3.5, Math.PI * 0.1, Math.PI * 1.6); c.stroke()
+  // what the ship carries
+  if (kind === 'supply') for (const [x, y] of [[-3, -16], [3, -20], [0, -27]]) { c.fillStyle = '#e9dcc0'; c.strokeStyle = '#a08a5a'; c.lineWidth = 0.8; c.beginPath(); c.ellipse(x, y, 4, 3.6, 0, 0, TAU); c.fill(); c.stroke() }
+  if (kind === 'fire') { c.fillStyle = '#3f2a16'; for (const [x, y] of [[-3, -14], [3, -17], [0, -25]]) { c.beginPath(); c.arc(x, y, 3.4, 0, TAU); c.fill() } if (f?.armed !== false) { const fl = Math.sin(T * 18) * 2; c.fillStyle = '#e0a63a'; c.beginPath(); c.moveTo(-5, -20); c.quadraticCurveTo(0, -36 - fl, 5, -20); c.fill(); c.fillStyle = '#f3d36a'; c.beginPath(); c.moveTo(-2.5, -21); c.quadraticCurveTo(0, -30 - fl, 2.5, -21); c.fill() } }
+  if (kind === 'ballista') { line(c, -8, top + L * 0.26, 8, top + L * 0.26, '#6b4a2b', 3); line(c, 0, top + L * 0.15, 0, top + L * 0.36, '#4a3420', 2.4) }
+  if (kind === 'harpax') { line(c, 0, top + L * 0.14, 0, top + L * 0.34, '#4a3420', 2.4); c.strokeStyle = '#cfd4d8'; c.lineWidth = 2; c.beginPath(); c.arc(0, top + L * 0.12, 4, 0.2, Math.PI - 0.2); c.stroke() }
+  if (kind === 'archers') for (const x of [-4, 4]) { c.fillStyle = SKIN; c.beginPath(); c.arc(x, top + L * 0.28, 2.8, 0, TAU); c.fill(); c.fillStyle = '#c9a24a'; c.beginPath(); c.arc(x, top + L * 0.28 - 0.8, 3, Math.PI, 0); c.fill() }
+  if (kind === 'great') { c.fillStyle = '#6b4a2b'; rr(c, -7, top + L * 0.18, 14, 12, 2); c.fill(); c.fillStyle = '#3f2a16'; for (let x = -7; x < 7; x += 4.5) c.fillRect(x, top + L * 0.18 - 2.5, 2.5, 2.5) }   // an archer tower
+  // the mast and the square sail, bellied by the wind, in the side's colour
+  if (kind !== 'fire') {
+    const my = top + L * 0.52, sw = Wd + (big ? 16 : 12)
+    line(c, -sw / 2, my, sw / 2, my, '#5a3a22', 1.6)   // the yard
+    c.fillStyle = side.sail; c.beginPath(); c.moveTo(-sw / 2, my); c.lineTo(sw / 2, my); c.quadraticCurveTo(sw / 2 + 1, my + 9, sw / 2 - 2, my + 12); c.quadraticCurveTo(0, my + 17, -sw / 2 + 2, my + 12); c.quadraticCurveTo(-sw / 2 - 1, my + 9, -sw / 2, my); c.fill()
+    c.strokeStyle = 'rgba(0, 0, 0, .18)'; c.lineWidth = 0.8; c.stroke()
+    c.fillStyle = side.mark
+    if (!foe) { c.lineWidth = 1.6; c.strokeStyle = side.mark; c.beginPath(); c.arc(0, my + 7.5, 3.6, 0, TAU); c.stroke() }   // Rome: a gold wreath
+    else if (egypt || flag) { c.beginPath(); c.arc(0, my + 7.5, 3, 0, TAU); c.fill(); for (let j = 0; j < 8; j++) { const a = j * Math.PI / 4; line(c, Math.cos(a) * 4, my + 7.5 + Math.sin(a) * 4, Math.cos(a) * 6, my + 7.5 + Math.sin(a) * 6, side.mark, 1) } }   // a gold sun
+    else c.fillRect(-sw / 2 + 1, my + 5.5, sw - 2, 2.4)   // Antony: a pale band
+    c.fillStyle = '#5a3a22'; c.beginPath(); c.arc(0, my, 1.8, 0, TAU); c.fill()   // the mast top
+  }
+  // a pennant at the stern in the side's colour
+  line(c, 0, -8, 0, -19, '#5a3a22', 1.2); c.fillStyle = flag ? '#e0b84a' : side.sail; c.beginPath(); c.moveTo(0, -19); c.lineTo(7 + sway, -16); c.lineTo(0, -13); c.fill()
+  c.restore()
   if (f?.pinned > 0) { c.strokeStyle = '#cfd4d8'; c.lineWidth = 1.4; c.setLineDash([3, 2]); c.beginPath(); c.moveTo(0, -4); c.lineTo(0, 30); c.stroke(); c.setLineDash([]) }   // the hook's line
 }
 // Juno's sacred goose from the Capitol: it woke the defenders when the Gauls climbed the hill at night (390 BC)
