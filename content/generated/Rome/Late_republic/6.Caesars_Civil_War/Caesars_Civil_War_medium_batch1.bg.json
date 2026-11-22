@@ -19,8 +19,8 @@
       ],
       "difficulty": 2,
       "textReference": "#crossing-the-rubicon",
-      "explanation": "Помпей отплавал от Брундизий в „петата“ на Италия. Цезар пристигнал на 9 март – твърде късно, за да го спре.",
-      "sourceQuote": "Pompey sailed from Brundisium, a port on the heel of Italy, to raise an army in the east.",
+      "explanation": "Помпей се оттеглил в Брундизий в „петата“ на Италия. Цезар обсадил пристанището, но около седмица по-късно Помпей се измъкнал по море.",
+      "sourceQuote": "Pompey retreated to Brundisium, a port on the heel of Italy, to sail east and raise an army.",
       "reviewFlags": []
     },
     {
@@ -55,7 +55,7 @@
       ],
       "difficulty": 2,
       "textReference": "#aftermath-and-debate",
-      "explanation": "Убийците избегнали наказание, но назначенията на Цезар останали в сила. Междувременно гражданите се криели по домовете си, а по-късно разгневени тълпи опожарили залата, в която бил убит.",
+      "explanation": "Убийците избегнали наказание, но назначенията на Цезар останали в сила. Междувременно гражданите се криели по домовете си, а на погребението му разгневени тълпи изгорили тялото му във Форума.",
       "sourceQuote": "Mark Antony, Caesar's fellow consul, brokered a compromise: the assassins would go unpunished, but Caesar's appointments would stand.",
       "reviewFlags": []
     },
@@ -78,7 +78,7 @@
       "reviewFlags": []
     },
     {
-      "question": "Къде Цезар побеждава пълководците на Помпей през юни 49 г. пр.н.е.?",
+      "question": "Къде Цезар побеждава пълководците на Помпей през лятото на 49 г. пр.н.е.?",
       "options": [
         "Зела",
         "Утика",
@@ -92,7 +92,7 @@
       "difficulty": 2,
       "textReference": "#spain-and-the-treasury",
       "explanation": "Цезар победил при Илерда в Североизточна Испания и скоро целият полуостров минал в неговите ръце.",
-      "sourceQuote": "In June he defeated Pompey's commanders at Ilerda, in north-east Spain, and the peninsula soon fell to him.",
+      "sourceQuote": "That summer he defeated Pompey's commanders at Ilerda, in north-east Spain, and the peninsula soon fell to him.",
       "reviewFlags": []
     },
     {

@@ -61,7 +61,7 @@
         },
         {
           "label": "Caesar wins at Ilerda in Spain",
-          "when": "June 49 BC",
+          "when": "Summer 49 BC",
           "year": -49,
           "fact": "Defeating Pompey's commanders in north-east Spain soon brought the whole peninsula under Caesar's control.",
           "sectionId": "spain-and-the-treasury",
@@ -109,7 +109,7 @@
           "label": "Corfinium's garrison surrenders",
           "when": "Early 49 BC",
           "year": -49,
-          "fact": "At this town in central Italy Caesar freed some fifty senators and noblemen and even returned the soldiers' pay.",
+          "fact": "At this town in central Italy Caesar freed some fifty senators and noblemen and even handed back the war chest to their commander.",
           "sectionId": "crossing-the-rubicon",
           "reviewFlags": []
         },
@@ -266,16 +266,16 @@
           "reviewFlags": []
         },
         {
-          "claim": "After Corfinium surrendered, Caesar freed some fifty senators and noblemen and returned the soldiers' pay.",
+          "claim": "After Corfinium surrendered, Caesar freed some fifty senators and noblemen and handed back the war chest to their commander.",
           "answer": true,
           "why": "This mercy (clementia) was shrewd: Caesar took no revenge, so Italy did not turn on him.",
           "sectionId": "crossing-the-rubicon",
           "reviewFlags": []
         },
         {
-          "claim": "Caesar reached Brundisium too late to stop Pompey sailing east.",
+          "claim": "Caesar besieged Pompey at Brundisium, but Pompey slipped away by sea.",
           "answer": true,
-          "why": "Pompey sailed from Brundisium to raise an army in the east; Caesar arrived on 9 March, too late.",
+          "why": "Caesar arrived on 9 March and besieged the port, but about a week later Pompey sailed east to raise an army.",
           "sectionId": "crossing-the-rubicon",
           "reviewFlags": []
         },
@@ -412,12 +412,12 @@
     {
       "items": [
         "Freed senators at Corfinium",
-        "Returned the soldiers' pay",
+        "Handed back the war chest",
         "Let his troops take no plunder",
         "Threatened a vetoing tribune"
       ],
       "oddIndex": 3,
-      "why": "Freeing the senators, returning the pay and forbidding plunder were Caesar’s shrewd mercy (clementia) in Italy in 49 BC; threatening a tribune’s life to seize the treasury was the opposite.",
+      "why": "Freeing the senators, handing back the war chest and forbidding plunder were Caesar’s shrewd mercy (clementia) in Italy in 49 BC; threatening a tribune’s life to seize the treasury was the opposite.",
       "sectionId": "crossing-the-rubicon",
       "reviewFlags": []
     },
@@ -450,7 +450,7 @@
           "clues": [
             "As gang violence engulfed Rome, the Senate drew close to me.",
             "I rejected the Senate's 370-to-22 vote that both rival commanders should disarm.",
-            "I abandoned Rome with many senators and sailed from Brundisium to raise an army in the east.",
+            "I abandoned Rome with many senators and slipped away from Brundisium by sea to raise an army in the east.",
             "I was Rome's most celebrated general and once Caesar's ally."
           ],
           "sectionId": "road-to-war",
@@ -468,7 +468,7 @@
             "When Caesar marched to Spain in 49 BC, he left me in charge of Italy.",
             "After the Ides of March I brokered a compromise: no punishment for the killers, but Caesar's appointments would stand.",
             "At the Lupercalia I twice placed a diadem on Caesar's head.",
-            "I married Cleopatra and was beaten at Actium in 31 BC."
+            "I became Cleopatra’s partner and was beaten at Actium in 31 BC."
           ],
           "sectionId": "three-last-straws",
           "reviewFlags": []
@@ -576,7 +576,7 @@
       "wikipediaTitle": "Lleida",
       "lat": 41.61666667,
       "lon": 0.63333333,
-      "why": "Here in north-east Spain Caesar defeated Pompey's commanders in June 49 BC.",
+      "why": "Here in north-east Spain Caesar defeated Pompey's commanders in the summer of 49 BC.",
       "sectionId": "spain-and-the-treasury",
       "coordinates": "Wikipedia: Lleida",
       "reviewFlags": []

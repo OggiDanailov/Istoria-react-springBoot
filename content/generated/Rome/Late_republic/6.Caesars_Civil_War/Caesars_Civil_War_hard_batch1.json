@@ -8,9 +8,9 @@
     {
       "question": "Which Pharsalus casualty figures come from Caesar's own claims? (select all that apply)",
       "options": [
-        "200 of his own men lost",
+        "About 200 of his own men lost",
         "1,200 of his own men lost",
-        "60,000 enemy killed",
+        "15,000 enemy killed",
         "1,000 of his own men lost",
         "6,000 enemy killed",
         "10,000 enemy killed"
@@ -21,8 +21,8 @@
       ],
       "difficulty": 3,
       "textReference": "#battle-of-pharsalus",
-      "explanation": "Caesar claimed to have lost 200 men and killed 60,000. Another ancient historian gives the likelier figures of 1,200 and 6,000.",
-      "sourceQuote": "Caesar claimed to have lost 200 men and killed 60,000; another ancient historian gives a likelier 1,200 and 6,000.",
+      "explanation": "Caesar claimed to have lost about 200 men and killed 15,000, with 24,000 more captured. Another ancient source gives the likelier figures of 1,200 and 6,000.",
+      "sourceQuote": "Caesar claimed to have lost about 200 men and killed 15,000, with 24,000 more captured; another ancient source gives a likelier 1,200 and 6,000.",
       "reviewFlags": []
     },
     {

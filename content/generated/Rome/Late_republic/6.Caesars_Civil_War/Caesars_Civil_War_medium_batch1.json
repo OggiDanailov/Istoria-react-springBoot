@@ -19,8 +19,8 @@
       ],
       "difficulty": 2,
       "textReference": "#crossing-the-rubicon",
-      "explanation": "Pompey left from Brundisium on the heel of Italy. Caesar arrived on 9 March, too late to stop him.",
-      "sourceQuote": "Pompey sailed from Brundisium, a port on the heel of Italy, to raise an army in the east.",
+      "explanation": "Pompey retreated to Brundisium on the heel of Italy. Caesar besieged the port, but about a week later Pompey slipped away by sea.",
+      "sourceQuote": "Pompey retreated to Brundisium, a port on the heel of Italy, to sail east and raise an army.",
       "reviewFlags": []
     },
     {
@@ -55,7 +55,7 @@
       ],
       "difficulty": 2,
       "textReference": "#aftermath-and-debate",
-      "explanation": "The assassins escaped punishment, but Caesar's appointments stood. Meanwhile citizens hid indoors and angry crowds later burned the hall where he died.",
+      "explanation": "The assassins escaped punishment, but Caesar's appointments stood. Meanwhile citizens hid indoors, and at his funeral angry crowds cremated his body in the Forum.",
       "sourceQuote": "Mark Antony, Caesar's fellow consul, brokered a compromise: the assassins would go unpunished, but Caesar's appointments would stand.",
       "reviewFlags": []
     },
@@ -78,7 +78,7 @@
       "reviewFlags": []
     },
     {
-      "question": "Where did Caesar defeat Pompey's commanders in June 49 BC?",
+      "question": "Where did Caesar defeat Pompey's commanders in the summer of 49 BC?",
       "options": [
         "Zela",
         "Utica",
@@ -92,7 +92,7 @@
       "difficulty": 2,
       "textReference": "#spain-and-the-treasury",
       "explanation": "Caesar won at Ilerda in north-east Spain, and the whole peninsula soon fell to him.",
-      "sourceQuote": "In June he defeated Pompey's commanders at Ilerda, in north-east Spain, and the peninsula soon fell to him.",
+      "sourceQuote": "That summer he defeated Pompey's commanders at Ilerda, in north-east Spain, and the peninsula soon fell to him.",
       "reviewFlags": []
     },
     {

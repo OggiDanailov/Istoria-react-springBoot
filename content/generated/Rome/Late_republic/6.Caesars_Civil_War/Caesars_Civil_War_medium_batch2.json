@@ -100,7 +100,7 @@
       "question": "After the garrison at Corfinium surrendered, what did Caesar do?",
       "options": [
         "Let his legions plunder the town freely",
-        "Freed the senators and returned soldiers' pay",
+        "Freed the senators and handed back the war chest",
         "Sold the garrison soldiers into slavery",
         "Sent the prisoners east in chains",
         "Executed the senators among the garrison"
@@ -110,8 +110,8 @@
       ],
       "difficulty": 2,
       "textReference": "#crossing-the-rubicon",
-      "explanation": "Caesar freed some fifty senators and noblemen and even returned the soldiers' pay. This shrewd clemency kept Italy from turning on him.",
-      "sourceQuote": "Caesar freed some fifty senators and noblemen and even returned the soldiers' pay.",
+      "explanation": "Caesar freed some fifty senators and noblemen and even handed back the war chest to their commander. This shrewd clemency kept Italy from turning on him.",
+      "sourceQuote": "Caesar freed some fifty senators and noblemen and even handed back the war chest to their commander.",
       "reviewFlags": []
     },
     {
