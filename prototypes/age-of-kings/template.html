@@ -928,6 +928,7 @@ const CHRONICLE_EXTRAS = {
   'cicero-and-the-triumvirate:carrhae': '<div class="pantheon allia" data-replay="carrhae"></div>',
   'caesar-in-gaul:siege-of-alesia': '<div class="pantheon allia" data-replay="alesia"></div>',
   'caesars-civil-war:battle-of-pharsalus': '<div class="pantheon allia" data-replay="pharsalus"></div>',
+  'end-of-the-republic:battle-of-actium': '<div class="pantheon allia" data-replay="actium"></div>',
   'first-punic-war:siege-of-akragas': '<div class="pantheon allia" data-replay="agrigentum"></div>',
   'first-punic-war:corvus-and-mylae': '<div class="pantheon allia" data-replay="mylae"></div>',
   'first-punic-war:battle-of-the-aegates': '<div class="pantheon allia" data-replay="aegates"></div>',
@@ -944,7 +945,7 @@ const openChronicle = focusId => openSheet(CH.title, chronicleHtml(), focusId)
 // groups of dots with where they are at each moment (a line, or a cluster) and what befalls them (some fall, they
 // waver in panic, they drown with a splash), and five captions. Times are in "story seconds"; it plays SLOW times
 // slower so each caption can be read (the user found 8 seconds too fast). Positions are parts of the width and height.
-const RCOL = { pompey: '#7a3b5e', pomcav: '#b5728f', civilian: '#a89f8e', parthian: '#5b4a9a', cataphract: '#6f7884', camel: '#c9a46a', rebel: '#3f7d6a', teuton: '#3f6a8f', ambron: '#9a6a2a', deserter: '#8a8278', patrician: '#d9a520', linen: '#f4eedd', carthage: '#33509a', macedon: '#6b4a8a', rome: '#b8322a', gaul: '#2f5f9a', samnite: '#c27a1e', etruscan: '#8a7f75', epirus: '#6b4a8a', elephant: '#76716b' }
+const RCOL = { antony: '#2f6f8a', cleopatra: '#7a3b8a', pompey: '#7a3b5e', pomcav: '#b5728f', civilian: '#a89f8e', parthian: '#5b4a9a', cataphract: '#6f7884', camel: '#c9a46a', rebel: '#3f7d6a', teuton: '#3f6a8f', ambron: '#9a6a2a', deserter: '#8a8278', patrician: '#d9a520', linen: '#f4eedd', carthage: '#33509a', macedon: '#6b4a8a', rome: '#b8322a', gaul: '#2f5f9a', samnite: '#c27a1e', etruscan: '#8a7f75', epirus: '#6b4a8a', elephant: '#76716b' }
 const REPLAYS = {
   // chapter 4: the Allia (Livy), as the chronicle tells it
   allia: {
@@ -1178,6 +1179,34 @@ const REPLAYS = {
       [4.2, 'The cavalry flees. The fourth line swings round, and Pompey’s left wing collapses.', 'Конницата бяга. Четвъртата линия завива и левият фланг на Помпей рухва.'],
       [5.8, 'Pompey escapes. Caesar claimed to have lost about 200 men and killed 15,000, with 24,000 captured; another ancient source gives a likelier 1,200 and 6,000.', 'Помпей бяга. Цезар твърди, че е загубил около 200 души и е убил 15 000, а 24 000 е пленил; друг античен източник дава по-правдоподобните 1200 и 6000.'],
     ], end: 8.2,
+  },
+  // chapter 19: Actium
+  actium: {
+    title: ['Actium, step by step', 'Акциум, стъпка по стъпка'], sea: true,
+    key: [['rome', 'Octavian', 'Октавиан'], ['antony', 'Antony', 'Антоний'], ['cleopatra', 'Cleopatra', 'Клеопатра']],
+    ground: [
+      { land: [[0.72, 0], [1, 0], [1, 0.43], [0.88, 0.45], [0.8, 0.33]], label: ['GREECE', 'ГЪРЦИЯ'], at: [0.9, 0.1] },
+      { land: [[0.8, 0.57], [1, 0.55], [1, 1], [0.7, 1], [0.76, 0.72]] },
+      { text: [0.99, 0.5], t: ['Gulf of Ambracia →', 'Амбракийски залив →'], right: true },
+      { text: [0.97, 0.66], t: ['ACTIUM', 'АКЦИУМ'], right: true }, { tag: [0.72, 0.88], t: ['Antony’s camp', 'лагерът на Антоний'], to: 2.4 },
+      { tag: [0.8, 0.22], t: ['Octavian’s camp', 'лагерът на Октавиан'], to: 2.4 },
+      ...[[0.5, 0.27, 6.4], [0.52, 0.4, 6.6], [0.5, 0.62, 6.8], [0.53, 0.74, 7.0], [0.49, 0.33, 7.2]].map(([x, y, from]) => ({ fire: [x, y], from })),
+    ],
+    groups: [
+      { side: 'rome', ship: true, n: 26, r: 3.4, keys: [[0, 'line', 0.3, 0.16, 0.3, 0.84, 0.03], [1.8, 'line', 0.3, 0.16, 0.3, 0.84, 0.03], [2.8, 'line', 0.38, 0.14, 0.38, 0.86, 0.04], [6.2, 'line', 0.38, 0.14, 0.38, 0.86, 0.04], [7.2, 'line', 0.42, 0.12, 0.42, 0.88, 0.04]], jitter: [3.0, 6.0], fall: [3.2, 5.8, 0.08], splash: true },
+      { side: 'antony', ship: true, n: 10, r: 5, keys: [[0, 'blob', 1.12, 0.49, 0.04, 0.02], [1.8, 'blob', 1.12, 0.49, 0.04, 0.02], [2.8, 'line', 0.52, 0.2, 0.52, 0.44, 0.03], [6.2, 'line', 0.52, 0.2, 0.52, 0.44, 0.03]], jitter: [3.0, 6.0], fall: [3.6, 6.4, 0.45], splash: true },
+      { side: 'antony', ship: true, n: 10, r: 5, keys: [[0, 'blob', 1.12, 0.49, 0.04, 0.02], [1.8, 'blob', 1.12, 0.49, 0.04, 0.02], [2.8, 'line', 0.52, 0.56, 0.52, 0.8, 0.03], [6.2, 'line', 0.52, 0.56, 0.52, 0.8, 0.03]], jitter: [3.0, 6.0], fall: [3.6, 6.4, 0.45], splash: true },
+      { side: 'antony', ship: true, n: 6, r: 5, keys: [[0, 'blob', 1.12, 0.49, 0.04, 0.02], [1.8, 'blob', 1.12, 0.49, 0.04, 0.02], [2.8, 'line', 0.56, 0.3, 0.56, 0.7, 0.02], [6.4, 'line', 0.56, 0.3, 0.56, 0.7, 0.02], [7.4, 'line', 0.5, 0.3, 0.5, 0.7, 0.02]], becomes: { at: 6.8, side: 'rome' } },
+      { side: 'cleopatra', ship: true, n: 8, r: 4, keys: [[0, 'blob', 1.12, 0.49, 0.04, 0.02], [2.0, 'blob', 1.12, 0.49, 0.04, 0.02], [3.0, 'blob', 0.66, 0.5, 0.03, 0.07], [4.8, 'blob', 0.66, 0.5, 0.03, 0.07], [5.4, 'blob', 0.5, 0.5, 0.02, 0.03], [5.9, 'blob', 0.42, 0.93, 0.03, 0.03], [6.6, 'blob', 0.12, 1.2, 0.04, 0.03]] },
+      { side: 'antony', ship: true, n: 1, r: 4, ring: true, keys: [[0, 'blob', 1.12, 0.5, 0, 0], [1.8, 'blob', 1.12, 0.5, 0, 0], [2.8, 'blob', 0.56, 0.5, 0, 0], [5.5, 'blob', 0.56, 0.5, 0, 0], [6.0, 'blob', 0.46, 0.93, 0, 0], [6.8, 'blob', 0.16, 1.2, 0, 0]] },
+    ],
+    steps: [
+      [0, 'Summer 31 BC: Antony’s huge force is camped at Actium, in western Greece. Octavian’s fleet blockades the bay, and malaria and desertion ravage Antony’s camp.', 'Лятото на 31 г. пр.н.е.: огромната армия на Антоний е на лагер при Акциум в Западна Гърция. Флотът на Октавиан блокира залива, а маларията и дезертьорството опустошават лагера на Антоний.'],
+      [1.8, '2 September: Antony’s fleet rows out to break the blockade. His galleys are huge and armoured, but slow and short of rowers.', '2 септември: флотът на Антоний излиза, за да пробие блокадата. Галерите му са огромни и бронирани, но бавни и без достатъчно гребци.'],
+      [3.0, 'Octavian’s smaller, nimble ships dart in and shower their decks with arrows and stones. The fighting rages all afternoon.', 'По-малките и пъргави кораби на Октавиан се стрелкат около тях и обсипват палубите им със стрели и камъни. Боят продължава цял следобед.'],
+      [4.8, 'Then Cleopatra’s squadron, waiting behind the line, slips through a gap to the open sea, and Antony (with the gold ring) follows. Panic, betrayal, or the plan all along? Historians still argue.', 'Тогава ескадрата на Клеопатра, която чака зад линията, се измъква през пролука в открито море, а Антоний (със златния пръстен) я следва. Паника, предателство или предварителен план? Историците още спорят.'],
+      [6.4, 'Most of Antony’s fleet is left behind, burned or captured, and within about a week his leaderless army surrenders.', 'Повечето от флота на Антоний остава зад тях – изгорен или пленен, – а след около седмица армията му, останала без водач, се предава.'],
+    ], end: 8.4,
   },
   // chapter 13: Aquae Sextiae
   aquae: {
