@@ -257,7 +257,7 @@ const LEVELS = [
       w(168, ['shield', 'shield', 'gaul', 'gaul', 'warrior']), w(186, ['chief', ...rep(4, 'gaul'), 'shield', 'cavalry'], 'The relief army’s final assault!', 'below'), w(190, ['chief', ...rep(3, 'gaul'), 'shield', 'shield'])] },
   { id: 'pharsalus', name: 'Pharsalus', year: '48 BC', enemy: 'Pompey', theme: 'pharsalus', start: 450, cols: 8, rows: 10, more: 1.0, delay: 20,
     twist: 'Romans against Romans, with the same weapons on both sides: Pompey’s legions march in blocks of three like yours, and his scorpions set up where your men are thickest. His 7,000 horsemen charge your left wing; Caesar’s answer was a hidden fourth line of picked men who thrust their pila at the riders.',
-    units: ['cart', 'slinger', 'velites', 'legionary', 'triarius', 'legion', 'scorpio', 'centurion', 'fourthline'], newUnit: 'fourthline',
+    units: ['cart', 'slinger', 'velites', 'legionary', 'triarius', 'legion', 'scorpio', 'fourthline'], newUnit: 'fourthline',
     blurb: 'On the plain of Pharsalus, in Thessaly, Caesar’s veterans face Pompey’s far larger army. Pompey is sure his cavalry will win the day.',
     after: 'Pompey’s cavalry broke and fled, his legions followed, and Pompey escaped to Egypt, where he was murdered. Caesar was master of Rome.',
     waves: [w(26, ['pompeian']), w(42, ['pompeian', 'slingarcher']), w(58, ['legion3']), w(74, ['cavalry', 'pompeian', 'pomscorpio']), w(90, ['slingarcher', 'legion3', 'pompeian']), w(106, ['legion3', 'cavalry']),
