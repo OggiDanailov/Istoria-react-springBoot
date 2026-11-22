@@ -278,7 +278,7 @@ const LEVELS = [
       w(122, rep(4, 'cavalry'), 'Pompey’s 7,000 horsemen charge your left wing!', [0, 1, 2]),
       w(140, ['legate', 'legion3', 'pompeian', 'slingarcher', 'slingarcher', 'pomscorpio'], 'A great wave approaches!'), w(166, ['legion3', 'legion3', 'cavalry', 'slingarcher', 'pomscorpio']),
       w(190, ['legate', 'legion3', 'legion3', 'pompeian', 'cavalry', 'cavalry', 'slingarcher', 'pomscorpio'], 'The final wave!')] },
-  { id: 'actium', name: 'Actium', year: '31 BC', enemy: 'Antony and Cleopatra', theme: 'sea', sea: true, start: 425, cols: 10, rows: 10, more: 1.35, weave: true, admiral: true,
+  { id: 'actium', name: 'Actium', year: '31 BC', enemy: 'Antony and Cleopatra', theme: 'sea', sea: true, start: 425, cols: 10, rows: 10, more: 1.35, weave: true, admiral: true, scroll: 0.3, shore: true, closed: [9],
     twist: 'Your fleet sails out to meet Antony’s. Octavian’s flagship (gold sail) waits at the bottom: any enemy ship that gets past your fleet sails on to attack it, and if it sinks, you lose. Its archers fight back, and a better test score makes it stronger. To win, sink Antony’s and Cleopatra’s flagships (ringed in gold). At half strength they flee: catch them before they escape, or win as history did, with fewer stars. Antony’s ships weave in the upper half and gusts push them sideways; your rammers strike ships beside them too.',
     events: [{ t: 84, wind: 1, text: 'A gust from the west drives Antony’s ships one lane east!' }, { t: 128, wind: -1, text: 'The wind turns: Antony’s ships are pushed one lane west!' }, { t: 198, wind: 1, text: 'A last gust from the west!' }],
     units: ['supplyboat', 'archership', 'quinquereme', 'rammer', 'ballista', 'fireship', 'harpax'], newUnit: 'harpax',
@@ -1177,6 +1177,40 @@ function drawShip(c, kind, T, foe = false, f = null) {
   c.restore()
   if (f?.pinned > 0) { c.strokeStyle = '#cfd4d8'; c.lineWidth = 1.4; c.setLineDash([3, 2]); c.beginPath(); c.moveTo(0, -4); c.lineTo(0, 30); c.stroke(); c.setLineDash([]) }   // the hook's line
 }
+// A moving battle (the user's idea for Actium and, later, the Empire's battles, Nov 22): the squares, the waves and the shore
+// slide down the screen as if the fleet were sailing forward, while the ships keep their places. The distance travelled
+// is game time × speed, so it stops when the game is paused.
+function drawScroll() {
+  const c = ctx, top = ry(0), bot = ry(ROWS), off = G.t * LEVEL.scroll * cell, land = LEVEL.shore ? lx(COLS - 1) - cell / 2 : W
+  c.fillStyle = '#4f87ab'; c.fillRect(0, 0, W, H)
+  // the squares of the field, sliding down (the checker repeats every two rows)
+  c.save(); c.beginPath(); c.rect(0, top, land, bot - top); c.clip()
+  const shift = off % (2 * cell)
+  for (let r = -2; r <= ROWS; r++) for (let col = 0; col < COLS; col++) { c.fillStyle = LAWN.sea[((r % 2) + 2 + col) % 2]; c.fillRect(col * cell, top + r * cell + shift, cell, cell) }
+  c.restore()
+  // waves everywhere on the water
+  c.save(); c.beginPath(); c.rect(0, 0, land, H); c.clip(); c.strokeStyle = 'rgba(230, 240, 250, .3)'; c.lineWidth = 1.2
+  for (let i = 0; i < 170; i++) { const x = ((i * 0.7548) % 1) * land, y = (((i * 0.5698) % 1) * (H + 20) + off) % (H + 20) - 10; c.beginPath(); c.moveTo(x - 5, y); c.quadraticCurveTo(x, y - 3, x + 5, y); c.stroke() }
+  c.restore()
+  if (LEVEL.shore) drawShore(land, off)
+}
+// The coast of western Greece on the right, sliding past: beaches, cliffs, olive groves, villages and a temple, each piece
+// chosen from its place along the coast, so the same stretch looks the same while it passes.
+function drawShore(x0, off) {
+  const c = ctx, seg = cell * 2.2, first = Math.floor(-off / seg) - 1, h = (n, m) => { const v = Math.sin(n * 127.1 + m * 311.7) * 43758.5453; return v - Math.floor(v) }
+  const edge = y => x0 + cell * 0.12 + Math.sin((y - off) / (cell * 1.3)) * cell * 0.1 + Math.sin((y - off) / (cell * 0.47)) * cell * 0.04   // the waterline
+  c.fillStyle = '#d9c48e'; c.beginPath(); c.moveTo(W, 0); for (let y = 0; y <= H; y += 6) c.lineTo(edge(y) - cell * 0.06, y); c.lineTo(W, H); c.fill()   // the beach
+  c.fillStyle = '#8f9a5a'; c.beginPath(); c.moveTo(W, 0); for (let y = 0; y <= H; y += 6) c.lineTo(edge(y) + cell * 0.14, y); c.lineTo(W, H); c.fill()   // the land
+  c.strokeStyle = 'rgba(255, 255, 255, .65)'; c.lineWidth = 1.6; c.beginPath(); for (let y = 0; y <= H; y += 6) c[y ? 'lineTo' : 'moveTo'](edge(y) - cell * 0.08, y); c.stroke()   // surf
+  for (let n = first; n < first + Math.ceil(H / seg) + 3; n++) {
+    const y = n * seg + off, kind = h(n, 1), cx = edge(y) + cell * 0.4 + h(n, 2) * cell * 0.25
+    if (y < -seg || y > H + seg) continue
+    if (kind < 0.18) { c.fillStyle = '#8a7a62'; c.beginPath(); c.moveTo(edge(y), y - seg * 0.4); c.lineTo(W, y - seg * 0.5); c.lineTo(W, y + seg * 0.3); c.lineTo(edge(y) + cell * 0.1, y + seg * 0.2); c.fill(); c.fillStyle = 'rgba(0, 0, 0, .15)'; c.fillRect(edge(y), y - seg * 0.1, W, 3) }   // a cliff
+    else if (kind < 0.5) for (let j = 0; j < 5; j++) { const tx = cx + (h(n, j + 3) - 0.3) * cell * 0.5, ty = y + (h(n, j + 9) - 0.5) * seg * 0.7; c.fillStyle = '#5f7a3a'; c.beginPath(); c.arc(tx, ty, cell * 0.09, 0, TAU); c.fill(); c.fillStyle = '#7a9a4a'; c.beginPath(); c.arc(tx - 1, ty - 1, cell * 0.05, 0, TAU); c.fill() }   // olive trees
+    else if (kind < 0.8) for (let j = 0; j < 3; j++) { const hx = cx + (h(n, j + 4) - 0.3) * cell * 0.45, hy = y + (j - 1) * cell * 0.3; c.fillStyle = '#efe4cc'; c.fillRect(hx - cell * 0.09, hy - cell * 0.07, cell * 0.18, cell * 0.14); c.fillStyle = '#b5552f'; c.fillRect(hx - cell * 0.1, hy - cell * 0.09, cell * 0.2, cell * 0.05) }   // a village: white walls, red roofs
+    else { c.fillStyle = '#efe4cc'; c.fillRect(cx - cell * 0.18, y - cell * 0.12, cell * 0.36, cell * 0.24); c.fillStyle = '#d9cfb8'; for (let j = 0; j < 4; j++) c.fillRect(cx - cell * 0.16 + j * cell * 0.1, y - cell * 0.12, cell * 0.04, cell * 0.24); c.fillStyle = '#c9a24a'; c.beginPath(); c.moveTo(cx - cell * 0.2, y - cell * 0.12); c.lineTo(cx, y - cell * 0.22); c.lineTo(cx + cell * 0.2, y - cell * 0.12); c.fill() }   // a temple
+  }
+}
 // The symbol on a ship's sail, so each kind can be told apart at a glance (and matches its card): drawn mast-up, in the
 // sail's own coordinates (the enemy's ships are flipped as a whole, so their marks read upside down to us: a sun and a
 // band read the same either way).
@@ -1276,6 +1310,7 @@ const LAWN = { allia: ['#a3ad60', '#99a358'], pass: ['#7d9448', '#748b42'], adri
 function paintField() {
   const c = bctx, theme = LEVEL.theme
   c.setTransform(dpr, 0, 0, dpr, 0, 0)
+  if (LEVEL.scroll) { c.fillStyle = '#4f87ab'; c.fillRect(0, 0, W, H); return }   // a moving battle: the squares, waves and shore are drawn each frame (drawScroll)
   let seed = 11; const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647
   // the approach, different for each battle
   const top = ry(0)
@@ -1515,7 +1550,7 @@ function newGame(i = levelIndex, score = quizScore) {
     G.cw.cycle = {}
     LEVEL.cityWall.gates.forEach((l, i) => { const open = i % 2 === 0 ? Math.random() < 0.7 : Math.random() < 0.3; G.cw.cycle[l] = { open, doors: open ? 1 : 0, next: 4 + Math.random() * LEVEL.cityWall.gateCycle } })
   }
-  G.admiral = army.admiral ? { hp: army.admiral, max: army.admiral, cd: 1, hurt: 0 } : null   // Actium: Octavian's flagship in the harbour strip, to protect at all costs
+  G.admiral = army.admiral ? { hp: army.admiral, max: army.admiral, cd: 1, hurt: 0, lane: Math.floor((COLS - (LEVEL.closed?.length ?? 0) - 1) / 2), enter: 0 } : null   // Actium: Octavian's flagship in the harbour strip, to protect at all costs
   G.resolved = {}
   renderTray(); renderBar(true); updateCount(); $('level').textContent = LEVEL.name
   layout()
@@ -1610,6 +1645,7 @@ function canPlace(type, lane, row) {
   if (LEVEL.midGate === row) return false   // the gate row is the horsemen's
   if (G.cw && row <= LEVEL.cityWall.row) return false   // on the wall or behind it
   if (lane < 0 || lane >= COLS || row < 0 || row >= ROWS || unitAt(lane, row) || row === LEVEL.ditch || LEVEL.closed?.includes(lane)) return false
+  if (G.admiral && lane === G.admiral.lane && row === ROWS - 1) return false   // Actium: the flagship's bow
   return type === 'torch' ? !!houseAt(lane, row) : !houseAt(lane, row)
 }
 const canStand = (lane, row) => canPlace('slinger', lane, row)
@@ -1787,7 +1823,7 @@ function update(dt) {
   for (const ev of G.events) if (!ev.done && G.t >= ev.t) {
     ev.done = true; announce(ev.text, true, 4200); sfx.horn()
     if (ev.wings) for (const l of ev.wings) { if (G.equites[l].state === 'ready') G.equites[l].state = 'used'; G.equites[l].routed = true }   // that wing is lost: no eques can ride there now
-    if (ev.wind) for (const f of G.foes) if (f.hp > 0 && FOES[f.type].ship && !f.eating && !f.slide && !f.fleeing) { const to = f.lane + ev.wind; if (to >= 0 && to < COLS) { f.slide = { from: f.lane, t: 0 }; f.lane = to } }
+    if (ev.wind) for (const f of G.foes) if (f.hp > 0 && FOES[f.type].ship && !f.eating && !f.slide && !f.fleeing) { const to = f.lane + ev.wind; if (to >= 0 && to < COLS && !LEVEL.closed?.includes(to)) { f.slide = { from: f.lane, t: 0 }; f.lane = to } }
     if (ev.masinissa) for (const e of G.equites) if (e.state === 'used') { e.state = 'ready'; e.y = eqHome() }   // only those that had charged
     const leave = test => {   // these ships turn and sail away; those still to come never arrive
       for (const f of G.foes) if (test(FOES[f.type])) { f.fleeing = true; f.eating = null }
@@ -2036,7 +2072,7 @@ function update(dt) {
     if (FOES[f.type].target && !f.fleeing && f.hp < f.max / 2) { f.fleeing = true; f.eating = null; announce(`${FOES[f.type].target}’s flagship turns to flee! Sink it before it escapes!`, true, 3200) }   // Actium: at half strength they run for it
     if (f.hunting && !f.fleeing) {   // Actium: past the fleet, along the bottom toward Octavian's flagship, then at it
       if (f.slide) { f.slide.t += dt / 0.45; if (f.slide.t >= 1) f.slide = null }
-      const mid = (COLS - 1) / 2, near = Math.abs(f.lane - mid) <= 0.6
+      const mid = G.admiral?.lane ?? (COLS - 1) / 2, near = Math.abs(f.lane - mid) <= 0.6
       if (!near && !f.slide && Math.random() < dt * 2.5) { f.slide = { from: f.lane, t: 0 }; f.lane += Math.sign(mid - f.lane) > 0 ? 1 : -1 }
       if (near && G.admiral) { G.admiral.hp -= FOES[f.type].dps * dt; G.admiral.hurt = 0.12; f.anim = 0.2; if (G.admiral.hp <= 0) { G.loseText = 'Octavian’s flagship has been sunk'; return lose() } }
       continue
@@ -2053,7 +2089,7 @@ function update(dt) {
     if (f.slide) { f.slide.t += dt / 0.45; if (f.slide.t >= 1) f.slide = null }
     if (LEVEL.weave && FOES[f.type].ship && !f.slide && !f.eating && !f.fleeing && !(f.pinned > 0) && f.y > 0.4 && f.y < ROWS / 2 && Math.random() < dt * 0.14) {   // at sea a ship weaves into a neighbouring lane, but only in the upper half: from midfield it holds its lane, and a hooked ship can't
       const to = f.lane + (Math.random() < 0.5 ? -1 : 1)
-      if (to >= 0 && to < COLS) { f.slide = { from: f.lane, t: 0 }; f.lane = to }
+      if (to >= 0 && to < COLS && !LEVEL.closed?.includes(to)) { f.slide = { from: f.lane, t: 0 }; f.lane = to }
     }
     if (f.jump) {
       f.jump.t += dt / 0.6; f.y = f.jump.from + (f.jump.to - f.jump.from) * Math.min(1, f.jump.t)
@@ -2195,7 +2231,7 @@ function update(dt) {
   for (const f of G.foes) if (f.hp <= 0 && FOES[f.type].target && !G.resolved[f.type]) { G.resolved[f.type] = f.escaped ? 'escaped' : 'sunk'; if (!f.escaped) announce(`${FOES[f.type].target}’s flagship is sunk!`, true, 3000) }
   if (LEVEL.admiral && Object.keys(G.resolved).length >= 2 && G.phase === 'play') return win()   // both flagships sunk or fled: the battle is decided
   if (G.admiral && (G.admiral.cd -= dt) <= 0) {   // Octavian's flagship: its archers shoot the closest attacker
-    const t = G.foes.filter(f => f.hunting && f.hp > 0).sort((a, b) => Math.abs(a.lane - (COLS - 1) / 2) - Math.abs(b.lane - (COLS - 1) / 2))[0]
+    const t = G.foes.filter(f => f.hunting && f.hp > 0).sort((a, b) => Math.abs(a.lane - G.admiral.lane) - Math.abs(b.lane - G.admiral.lane))[0]
     if (t) { G.admiral.cd = 1; hurtFoe(t, 45); G.fx.push({ kind: 'ring', x: foeX(t), y: ry(t.y), t: 0.3 }); sfx.bow() } else G.admiral.cd = 0.3
   }
   G.foes = G.foes.filter(f => f.hp > 0)
@@ -2381,15 +2417,7 @@ function draw() {
   ctx.save()
   if (G.shake > 0 && !reduceMotion) ctx.translate((Math.random() - 0.5) * G.shake, (Math.random() - 0.5) * G.shake)
   ctx.drawImage(bg, 0, 0, W, H)
-  if (LEVEL.admiral) {   // Actium: the sea rolls past, so the fleet seems to sail forward to meet Antony's
-    const top = ry(0), h = ry(ROWS) - top, off = (performance.now() / 1000) * cell * 0.35
-    ctx.save(); ctx.beginPath(); ctx.rect(0, top, W, h); ctx.clip(); ctx.strokeStyle = 'rgba(230, 240, 250, .3)'; ctx.lineWidth = 1.2
-    for (let i = 0; i < 150; i++) {
-      const x = ((i * 97.3) % 1) * W + ((i * 0.6180339) % 1) * W, y = top + (((i * 0.3819) % 1) * h + off) % h
-      ctx.beginPath(); ctx.moveTo(x % W - 5, y); ctx.quadraticCurveTo(x % W, y - 3, x % W + 5, y); ctx.stroke()
-    }
-    ctx.restore()
-  }
+  if (LEVEL.scroll) drawScroll()   // the field slides down: the fleet sails forward
   const T = G.t
   if (G.walls) drawWalls()
   // where the selected unit can go
@@ -2472,10 +2500,11 @@ function draw() {
     const label = (LANG === 'bg' ? 'Животи: ' : 'Lives: ') + (G.lives ? '♥'.repeat(G.lives) : (LANG === 'bg' ? 'няма' : 'none'))
     ctx.fillText(label, 8, ry(ROWS) + cell * 0.62); ctx.restore()
   }])
-  if (G.admiral) items.push([ry(ROWS + 0.9), () => {   // Octavian's flagship in the harbour strip, broadside to the field
-    const x = W / 2, y = ry(ROWS) + CAMP * cell * 0.55
-    ctx.save(); ctx.translate(x + (G.admiral.hurt > 0 && !reduceMotion ? (Math.random() - 0.5) * 3 : 0), y); ctx.rotate(-Math.PI / 2); ctx.scale(k * 1.05, k * 1.05); ctx.translate(37, 0); drawShip(ctx, 'admiral', T); ctx.restore()
-    hpBar(x, y - CAMP * cell * 0.42, Math.max(0, G.admiral.hp / G.admiral.max))
+  if (G.admiral) items.push([ry(ROWS + 0.9), () => {   // Octavian's flagship at the back of the middle lane, bow forward; at the start it sails in from below
+    G.admiral.enter = Math.min(1, G.admiral.enter + 0.006); const e = 1 - Math.pow(1 - G.admiral.enter, 3)
+    const x = lx(G.admiral.lane), y = ry(ROWS) + CAMP * cell * 0.92 + (1 - e) * (CAMP * cell + cell * 1.4)
+    ctx.save(); ctx.translate(x + (G.admiral.hurt > 0 && !reduceMotion ? (Math.random() - 0.5) * 3 : 0), y); ctx.scale(k * 1.2, k * 1.2); drawShip(ctx, 'admiral', T); ctx.restore()
+    if (e > 0.95) hpBar(x, y + 3, Math.max(0, G.admiral.hp / G.admiral.max))
   }])
   for (const [lane, e] of G.equites.entries()) if (e.state !== 'used' && e.state !== 'none') items.push([ry(e.y), () => { ctx.save(); if (equesDrag?.moved && !equesDrag.top && equesDrag.from === lane) ctx.globalAlpha = 0.4; ctx.translate(lx(lane), ry(e.y)); ctx.scale(k * 0.9, k * 0.9); drawEques(ctx, e, T); ctx.restore() }])
   const dragRow = equesDrag && eqRow(equesDrag.top)
@@ -3877,7 +3906,7 @@ const MARKUP = `<main class="game">
   </div>
   <div class="msg" id="banner" aria-live="polite"></div>
   <div class="controls">
-    <div class="progress"><span class="label" id="level">Lake Regillus</span><div class="bar" id="bar"><div class="fill" id="fill"></div></div><span class="build" translate="no">build 22 Nov, 16:17</span></div>
+    <div class="progress"><span class="label" id="level">Lake Regillus</span><div class="bar" id="bar"><div class="fill" id="fill"></div></div><span class="build" translate="no">build 22 Nov, 16:34</span></div>
     <button class="tool" id="pause">Pause</button>
     <button class="tool" id="speed">1×</button>
     <button class="tool" id="guide">Guide</button>
