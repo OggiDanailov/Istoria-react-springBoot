@@ -728,14 +728,14 @@ const LEVELS = [
     waves: [w(26, ['gaul']), w(42, ['warrior', 'gaul']), w(58, ['shield', 'gaul']), w(70, ['gaul', 'gaul', 'shield'], 'The Gallic relief army attacks from behind!', 'below'), w(78, ['gaul', 'gaul', 'warrior']),
       w(96, ['shield', 'warrior'], null, 'below'), w(108, ['shield', 'gaul', 'shield']), w(120, ['cavalry', 'gaul', 'shield'], null, 'below'), w(134, ['chief', ...rep(3, 'gaul'), 'shield', 'warrior'], 'Vercingetorix attacks from the town!'), w(152, ['gaul', 'gaul', 'shield', 'cavalry', 'warrior'], null, 'below'),
       w(168, ['shield', 'shield', 'gaul', 'gaul', 'warrior']), w(186, ['chief', ...rep(4, 'gaul'), 'shield', 'cavalry'], 'The relief army’s final assault!', 'below'), w(190, ['chief', ...rep(3, 'gaul'), 'shield', 'shield'])] },
-  { id: 'pharsalus', name: 'Pharsalus', year: '48 BC', enemy: 'Pompey', theme: 'pharsalus', start: 525, cols: 8, rows: 10, more: 1.0, delay: 20,
+  { id: 'pharsalus', name: 'Pharsalus', year: '48 BC', enemy: 'Pompey', theme: 'pharsalus', start: 450, cols: 8, rows: 10, more: 1.0, delay: 20,
     twist: 'Romans against Romans, with the same weapons on both sides: Pompey’s legions march in blocks of three like yours, and his scorpions set up where your men are thickest. His 7,000 horsemen charge your left wing; Caesar’s answer was a hidden fourth line of picked men who thrust their pila at the riders.',
     units: ['cart', 'slinger', 'velites', 'legionary', 'triarius', 'legion', 'scorpio', 'centurion', 'fourthline'], newUnit: 'fourthline',
     blurb: 'On the plain of Pharsalus, in Thessaly, Caesar’s veterans face Pompey’s far larger army. Pompey is sure his cavalry will win the day.',
     after: 'Pompey’s cavalry broke and fled, his legions followed, and Pompey escaped to Egypt, where he was murdered. Caesar was master of Rome.',
-    waves: [w(26, ['pompeian']), w(42, ['pompeian', 'slingarcher']), w(58, ['legion3']), w(74, ['cavalry', 'pompeian', 'pomscorpio']), w(90, ['slingarcher', 'pompeian', 'pompeian']), w(106, ['legion3', 'cavalry']),
+    waves: [w(26, ['pompeian']), w(42, ['pompeian', 'slingarcher']), w(58, ['legion3']), w(74, ['cavalry', 'pompeian', 'pomscorpio']), w(90, ['slingarcher', 'legion3', 'pompeian']), w(106, ['legion3', 'cavalry']),
       w(122, rep(4, 'cavalry'), 'Pompey’s 7,000 horsemen charge your left wing!', [0, 1, 2]),
-      w(140, ['legate', 'legion3', 'pompeian', 'slingarcher', 'slingarcher', 'pomscorpio'], 'A great wave approaches!'), w(166, ['legion3', 'pompeian', 'cavalry', 'slingarcher']),
+      w(140, ['legate', 'legion3', 'pompeian', 'slingarcher', 'slingarcher', 'pomscorpio'], 'A great wave approaches!'), w(166, ['legion3', 'legion3', 'cavalry', 'slingarcher', 'pomscorpio']),
       w(190, ['legate', 'legion3', 'legion3', 'pompeian', 'cavalry', 'cavalry', 'slingarcher', 'pomscorpio'], 'The final wave!')] },
   { id: 'actium', name: 'Actium', year: '31 BC', enemy: 'Antony and Cleopatra', theme: 'sea', sea: true, start: 425, cols: 8, rows: 10, more: 1.2,
     twist: 'A battle at sea: every unit is a ship. Watch Cleopatra’s squadron: halfway through, her ships hoist their sails and flee, and Antony follows her.',
@@ -4247,7 +4247,7 @@ const MARKUP = `<main class="game">
   </div>
   <div class="msg" id="banner" aria-live="polite"></div>
   <div class="controls">
-    <div class="progress"><span class="label" id="level">Lake Regillus</span><div class="bar" id="bar"><div class="fill" id="fill"></div></div><span class="build" translate="no">build 22 Nov, 14:17</span></div>
+    <div class="progress"><span class="label" id="level">Lake Regillus</span><div class="bar" id="bar"><div class="fill" id="fill"></div></div><span class="build" translate="no">build 22 Nov, 14:29</span></div>
     <button class="tool" id="pause">Pause</button>
     <button class="tool" id="speed">1×</button>
     <button class="tool" id="guide">Guide</button>
