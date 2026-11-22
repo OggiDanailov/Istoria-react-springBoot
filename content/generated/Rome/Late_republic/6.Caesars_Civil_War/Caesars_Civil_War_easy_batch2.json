@@ -125,20 +125,20 @@
       "reviewFlags": []
     },
     {
-      "question": "Who became Rome's first emperor in 27 BC?",
+      "question": "After the Ides of March, who brokered a compromise: no punishment for the assassins, but Caesar's appointments would stand?",
       "options": [
-        "Cleopatra's son by Caesar",
+        "Cleopatra",
         "Mark Antony",
-        "Caesar's grandnephew and heir",
+        "Octavian",
         "Brutus"
       ],
       "correctAnswers": [
-        2
+        1
       ],
       "difficulty": 1,
       "textReference": "#aftermath-and-debate",
-      "explanation": "Caesar's will named his 18-year-old grandnephew as heir, and he took the Caesar name. In 27 BC he became Rome's first emperor.",
-      "sourceQuote": "In 27 BC the heir became Rome's first emperor.",
+      "explanation": "Mark Antony, Caesar's fellow consul, brokered the compromise: the assassins went unpunished, but Caesar's appointments stood.",
+      "sourceQuote": "Mark Antony, Caesar's fellow consul, brokered a compromise: the assassins would go unpunished, but Caesar's appointments would stand.",
       "reviewFlags": []
     },
     {

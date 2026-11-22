@@ -125,20 +125,20 @@
       "reviewFlags": []
     },
     {
-      "question": "Кой станал първият император на Рим през 27 г. пр.н.е.?",
+      "question": "Кой постига компромис след мартенските иди: убийците остават ненаказани, но назначенията на Цезар остават в сила?",
       "options": [
-        "Синът на Клеопатра от Цезар",
+        "Клеопатра",
         "Марк Антоний",
-        "Внукът на сестрата на Цезар и негов наследник",
+        "Октавиан",
         "Брут"
       ],
       "correctAnswers": [
-        2
+        1
       ],
       "difficulty": 1,
       "textReference": "#aftermath-and-debate",
-      "explanation": "В завещанието си Цезар посочил за наследник 18-годишния внук на сестра си, който приел името Цезар. През 27 г. пр.н.е. той станал първият император на Рим.",
-      "sourceQuote": "In 27 BC the heir became Rome's first emperor.",
+      "explanation": "Марк Антоний, колегата консул на Цезар, постига компромиса: убийците остават ненаказани, но назначенията на Цезар остават в сила.",
+      "sourceQuote": "Mark Antony, Caesar's fellow consul, brokered a compromise: the assassins would go unpunished, but Caesar's appointments would stand.",
       "reviewFlags": []
     },
     {

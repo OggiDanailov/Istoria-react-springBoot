@@ -30,19 +30,19 @@
           "reviewFlags": []
         },
         {
+          "label": "Caesar wins at Thapsus",
+          "when": "46 BC",
+          "year": -46,
+          "fact": "Caesar's veterans charged before he gave the order; some 10,000 Pompeians died, against about 50 of Caesar's men.",
+          "sectionId": "zela-and-thapsus",
+          "reviewFlags": []
+        },
+        {
           "label": "Caesar murdered on the Ides of March",
           "when": "15 March 44 BC",
           "year": -44,
           "fact": "Stabbed 23 times at a Senate meeting in the Theatre of Pompey, he fell near Pompey's statue.",
           "sectionId": "ides-of-march",
-          "reviewFlags": []
-        },
-        {
-          "label": "Antony and Cleopatra beaten at Actium",
-          "when": "31 BC",
-          "year": -31,
-          "fact": "After this defeat off western Greece, both Mark Antony and Cleopatra took their own lives.",
-          "sectionId": "aftermath-and-debate",
           "reviewFlags": []
         }
       ]
@@ -103,7 +103,7 @@
     },
     {
       "name": "From Civil War to Empire",
-      "blurb": "Eight steps from Caesar's first act of mercy to Rome's first emperor.",
+      "blurb": "Six steps from Caesar's first act of mercy to dictator for life.",
       "events": [
         {
           "label": "Corfinium's garrison surrenders",
@@ -138,35 +138,19 @@
           "reviewFlags": []
         },
         {
+          "label": "Caesar's last battle, at Munda",
+          "when": "45 BC",
+          "year": -45,
+          "fact": "Against the sons of Pompey in southern Spain, Caesar fought, it was said, for his life for the first time. He won, losing around 1,000 men.",
+          "sectionId": "munda-and-honours",
+          "reviewFlags": []
+        },
+        {
           "label": "Caesar made dictator for life",
           "when": "Early 44 BC",
           "year": -44,
           "fact": "The title dictator perpetuo crowned a flood of honours that included 'Father of his Country'.",
           "sectionId": "munda-and-honours",
-          "reviewFlags": []
-        },
-        {
-          "label": "Second Triumvirate is formed",
-          "when": "43 BC",
-          "year": -43,
-          "fact": "Caesar's heir, Mark Antony and another Caesarian general formed this three-man ruling alliance.",
-          "sectionId": "aftermath-and-debate",
-          "reviewFlags": []
-        },
-        {
-          "label": "Brutus defeated at Philippi",
-          "when": "42 BC",
-          "year": -42,
-          "fact": "The triumvirs beat Caesar's assassin at Philippi, in northern Greece.",
-          "sectionId": "aftermath-and-debate",
-          "reviewFlags": []
-        },
-        {
-          "label": "Caesar's heir becomes first emperor",
-          "when": "27 BC",
-          "year": -27,
-          "fact": "The grandnephew named in Caesar's will, who had taken the Caesar name, became Rome's first emperor.",
-          "sectionId": "aftermath-and-debate",
           "reviewFlags": []
         }
       ]
@@ -365,7 +349,7 @@
         {
           "claim": "Caesar's will named his 18-year-old grandnephew as his heir.",
           "answer": true,
-          "why": "The heir took the Caesar name and in 27 BC became Rome's first emperor.",
+          "why": "He named Octavian, and the struggle between him and Mark Antony for Caesar's power would end the Republic.",
           "sectionId": "aftermath-and-debate",
           "reviewFlags": []
         }
@@ -425,12 +409,12 @@
       "items": [
         "Pharsalus",
         "Thapsus",
-        "Philippi",
-        "Actium"
+        "Dyrrachium",
+        "Thessaly"
       ],
       "oddIndex": 1,
-      "why": "Pharsalus, Philippi and Actium are in or off Greece; Thapsus is in modern Tunisia in North Africa.",
-      "sectionId": "aftermath-and-debate",
+      "why": "Pharsalus, Dyrrachium and Thessaly are in the Balkans, where Caesar fought Pompey in 48 BC; Thapsus is in modern Tunisia in North Africa.",
+      "sectionId": "battle-of-pharsalus",
       "reviewFlags": []
     }
   ],
@@ -468,7 +452,7 @@
             "When Caesar marched to Spain in 49 BC, he left me in charge of Italy.",
             "After the Ides of March I brokered a compromise: no punishment for the killers, but Caesar's appointments would stand.",
             "At the Lupercalia I twice placed a diadem on Caesar's head.",
-            "I became Cleopatra’s partner and was beaten at Actium in 31 BC."
+            "In 44 BC I was Caesar's fellow consul."
           ],
           "sectionId": "three-last-straws",
           "reviewFlags": []

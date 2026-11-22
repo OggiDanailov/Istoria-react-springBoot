@@ -169,21 +169,21 @@
       "reviewFlags": []
     },
     {
-      "question": "Where did the Second Triumvirate defeat Brutus in 42 BC?",
+      "question": "What did angry crowds do at Caesar's funeral?",
       "options": [
-        "Actium",
-        "Dyrrachium",
-        "Philippi",
-        "Munda",
-        "Pharsalus"
+        "Cremated his body in the Forum and tried to burn the assassins' houses",
+        "Carried his body into the Senate house",
+        "Crowned his statue with a diadem",
+        "Hailed Brutus as their liberator",
+        "Buried him on the Capitol"
       ],
       "correctAnswers": [
-        2
+        0
       ],
       "difficulty": 2,
       "textReference": "#aftermath-and-debate",
-      "explanation": "The triumvirs beat Brutus at Philippi in northern Greece. They also declared Caesar a god and revived murderous purges.",
-      "sourceQuote": "They declared Caesar a god, revived murderous purges of their enemies, and defeated Brutus at Philippi, in northern Greece, in 42 BC.",
+      "explanation": "At his funeral, angry crowds cremated Caesar's body in the Forum and tried to burn the assassins' houses.",
+      "sourceQuote": "At his funeral, angry crowds cremated his body in the Forum and tried to burn the assassins' houses.",
       "reviewFlags": []
     }
   ]

@@ -142,20 +142,20 @@
       "reviewFlags": []
     },
     {
-      "question": "At which battle was Mark Antony defeated in 31 BC?",
+      "question": "Whom did Caesar's will name as his heir?",
       "options": [
-        "Actium",
-        "Munda",
-        "Philippi",
-        "Pharsalus"
+        "Mark Antony",
+        "Brutus",
+        "His 18-year-old grandnephew Octavian",
+        "Cleopatra's son by Caesar"
       ],
       "correctAnswers": [
-        0
+        2
       ],
       "difficulty": 1,
       "textReference": "#aftermath-and-debate",
-      "explanation": "Antony, now Cleopatra's partner, was beaten at Actium off western Greece; a year later both took their own lives.",
-      "sourceQuote": "Antony, now the partner of Cleopatra, queen of Egypt and Caesar's former lover, was beaten at Actium, off western Greece, in 31 BC; a year later both took their own lives in Alexandria.",
+      "explanation": "Caesar's will named his 18-year-old grandnephew, Octavian. The struggle between him and Mark Antony for Caesar's power would end the Republic.",
+      "sourceQuote": "Caesar's will named as heir his 18-year-old grandnephew, Octavian. The struggle between him and Mark Antony for Caesar's power would bring the Republic to its end.",
       "reviewFlags": []
     },
     {

@@ -142,20 +142,20 @@
       "reviewFlags": []
     },
     {
-      "question": "В коя битка бил разбит Марк Антоний през 31 г. пр.н.е.?",
+      "question": "Кого посочва Цезар за наследник в завещанието си?",
       "options": [
-        "Акциум",
-        "Мунда",
-        "Филипи",
-        "Фарсала"
+        "Марк Антоний",
+        "Брут",
+        "18-годишния си внучатия племенник Октавиан",
+        "Сина на Клеопатра от Цезар"
       ],
       "correctAnswers": [
-        0
+        2
       ],
       "difficulty": 1,
       "textReference": "#aftermath-and-debate",
-      "explanation": "Антоний, вече партньор на Клеопатра, бил разбит при Акциум край Западна Гърция; година по-късно двамата сложили край на живота си.",
-      "sourceQuote": "Antony, now the partner of Cleopatra, queen of Egypt and Caesar's former lover, was beaten at Actium, off western Greece, in 31 BC; a year later both took their own lives in Alexandria.",
+      "explanation": "Цезар посочва за наследник 18-годишния си внучатия племенник Октавиан. Борбата между него и Марк Антоний за властта на Цезар щяла да сложи край на Републиката.",
+      "sourceQuote": "Caesar's will named as heir his 18-year-old grandnephew, Octavian. The struggle between him and Mark Antony for Caesar's power would bring the Republic to its end.",
       "reviewFlags": []
     },
     {

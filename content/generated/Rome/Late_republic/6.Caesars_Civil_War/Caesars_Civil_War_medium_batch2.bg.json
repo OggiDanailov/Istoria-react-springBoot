@@ -169,21 +169,21 @@
       "reviewFlags": []
     },
     {
-      "question": "Къде Вторият триумвират побеждава Брут през 42 г. пр.н.е.?",
+      "question": "Какво правят разгневените тълпи на погребението на Цезар?",
       "options": [
-        "Акциум",
-        "Дирахиум",
-        "Филипи",
-        "Мунда",
-        "Фарсала"
+        "Изгарят тялото му във Форума и се опитват да подпалят къщите на убийците",
+        "Внасят тялото му в сградата на Сената",
+        "Слагат диадема на статуята му",
+        "Приветстват Брут като освободител",
+        "Погребват го на Капитолия"
       ],
       "correctAnswers": [
-        2
+        0
       ],
       "difficulty": 2,
       "textReference": "#aftermath-and-debate",
-      "explanation": "Триумвирите разбили Брут при Филипи в Северна Гърция. Те обявили Цезар за бог и възобновили кървавите чистки.",
-      "sourceQuote": "They declared Caesar a god, revived murderous purges of their enemies, and defeated Brutus at Philippi, in northern Greece, in 42 BC.",
+      "explanation": "На погребението разгневените тълпи изгарят тялото на Цезар във Форума и се опитват да подпалят къщите на убийците.",
+      "sourceQuote": "At his funeral, angry crowds cremated his body in the Forum and tried to burn the assassins' houses.",
       "reviewFlags": []
     }
   ]
