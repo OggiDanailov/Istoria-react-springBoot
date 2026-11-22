@@ -24,7 +24,7 @@
       "reviewFlags": []
     },
     {
-      "question": "Какво стана, когато триумвиратът изтече в края на 33 г. пр.н.е.?",
+      "question": "Какво стана в началото на 32 г. пр.н.е., след като триумвиратът изтече?",
       "options": [
         "Антоний се върна в Рим да се кандидатира за консул",
         "Двамата консули и стотици сенатори избягаха при Антоний",
@@ -37,8 +37,8 @@
       ],
       "difficulty": 2,
       "textReference": "#propaganda-war",
-      "explanation": "Двамата консули и стотици сенатори напуснаха Рим и се присъединиха към Антоний – знак, че в пропагандната война той все още има силна подкрепа.",
-      "sourceQuote": "When the triumvirate expired at the end of 33 BC, both consuls and hundreds of senators fled Rome to join Antony.",
+      "explanation": "В началото на 32 г. пр.н.е. двамата консули и стотици сенатори напуснаха Рим и се присъединиха към Антоний – знак, че в пропагандната война той все още има силна подкрепа.",
+      "sourceQuote": "The triumvirate expired at the end of 33 BC, and early in 32 BC both consuls and hundreds of senators fled Rome to join Antony.",
       "reviewFlags": []
     },
     {
@@ -56,7 +56,7 @@
       "difficulty": 2,
       "textReference": "#alexandria-and-augustus",
       "explanation": "Октавиан премахна сина на Клеопатра от Юлий Цезар – съперник за наследството на Цезар. След това Египет стана римска провинция.",
-      "sourceQuote": "Octavian had her son by Julius Caesar killed, supposedly remarking that \"two Caesars are one too many\".",
+      "sourceQuote": "Octavian had Caesarion killed, supposedly remarking that \"two Caesars are one too many\".",
       "reviewFlags": []
     },
     {

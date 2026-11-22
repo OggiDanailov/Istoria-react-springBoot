@@ -42,7 +42,7 @@
       "reviewFlags": []
     },
     {
-      "question": "Кои провинции присвои Антоний с незаконен закон през юни 44 г. пр.н.е.?",
+      "question": "Кои провинции присвои Антоний през юни 44 г. пр.н.е. със закон, прокаран сред сплашване?",
       "options": [
         "Испания",
         "Сирия",
@@ -56,7 +56,7 @@
       "difficulty": 2,
       "textReference": "#after-caesars-murder",
       "explanation": "Антоний си даде провинциите в Галия – грубо днешна Франция и Северна Италия, откъдето можеше да заплашва самия Рим.",
-      "sourceQuote": "In June he pushed through an illegal law giving himself the provinces of Gaul, roughly modern France and northern Italy.",
+      "sourceQuote": "In June, amid intimidation, he pushed through a law giving himself the provinces of Gaul, roughly modern France and northern Italy.",
       "reviewFlags": []
     },
     {
@@ -134,7 +134,7 @@
       "reviewFlags": []
     },
     {
-      "question": "Коя видна жертва на проскрипциите беше убита заедно с брат си, племенника си и сина си?",
+      "question": "Коя видна жертва на проскрипциите беше убита заедно с брат си и племенника си?",
       "options": [
         "Адмиралът, който владееше моретата от Сицилия",
         "Върховният жрец на Рим",
@@ -147,8 +147,8 @@
       ],
       "difficulty": 2,
       "textReference": "#proscriptions",
-      "explanation": "Ораторът, нападал Антоний в унищожителни речи, беше убит заедно с брат си, племенника си и сина си. Същият човек преди това беше убедил Сената да подкрепи Октавиан.",
-      "sourceQuote": "The orator who had attacked Antony in a series of blistering speeches was killed, along with his brother, nephew and son.",
+      "explanation": "Цицерон, нападал Антоний в унищожителни речи, беше убит заедно с брат си и племенника си. Преди това той беше убедил Сената да подкрепи Октавиан.",
+      "sourceQuote": "Cicero, who had attacked Antony in a series of blistering speeches, the Philippics (*Philippicae*), was killed, along with his brother and nephew.",
       "reviewFlags": []
     },
     {

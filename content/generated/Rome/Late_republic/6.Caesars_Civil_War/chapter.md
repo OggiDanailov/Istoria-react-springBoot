@@ -90,11 +90,9 @@ His last words are disputed. Some ancient writers say he spoke none; others repo
 
 ## Aftermath and the Fall of the Republic {#aftermath-and-debate}
 
-The killers of Julius Caesar marched through Rome proclaiming freedom, but citizens hid indoors, and at his funeral angry crowds cremated his body in the Forum and tried to burn the assassins' houses. Mark Antony brokered a compromise: the assassins would go unpunished, but Caesar's appointments would stand.
+The killers of Julius Caesar marched through Rome proclaiming freedom, but citizens hid indoors. At his funeral, angry crowds cremated his body in the Forum and tried to burn the assassins' houses. Mark Antony, Caesar's fellow consul, brokered a compromise: the assassins would go unpunished, but Caesar's appointments would stand.
 
-Caesar's will named as heir his 18-year-old grandnephew Octavian, who took the Caesar name. In 43 BC he joined Mark Antony and Lepidus, another Caesarian general, in the Second Triumvirate, a three-man ruling alliance. They declared Caesar a god, revived murderous purges of their enemies, and defeated Brutus and Cassius at Philippi, in northern Greece, in 42 BC.
-
-The alliance collapsed. Antony, now the partner of Cleopatra, queen of Egypt and Caesar's former lover, was beaten at Actium, off western Greece, in 31 BC; a year later both took their own lives in Alexandria. In 27 BC Octavian became Rome's first emperor, taking the name Augustus.
+Caesar's will named as heir his 18-year-old grandnephew, Octavian. The struggle between him and Mark Antony for Caesar's power would bring the Republic to its end.
 
 Historians still debate the war's role. Some see it as the blow that broke the Republic, triggered by miscalculation rather than design. Others call it a symptom of a Republic already unable to reform itself.
 

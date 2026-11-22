@@ -106,7 +106,7 @@
       "blurb": "Harder: the steps in between the famous battles.",
       "events": [
         {
-          "label": "Antony grabs Gaul by an illegal law",
+          "label": "Antony grabs Gaul by a law forced through",
           "when": "June 44 BC",
           "year": -44,
           "fact": "From Gaul, roughly modern France and northern Italy, Antony could menace Rome itself.",
@@ -125,7 +125,7 @@
           "label": "Julius Caesar declared a god",
           "when": "January 42 BC",
           "year": -42,
-          "fact": "His avengers then took about forty legions across the Adriatic against his assassins.",
+          "fact": "His avengers then took about nineteen legions across the Adriatic against his assassins.",
           "sectionId": "battle-of-philippi",
           "reviewFlags": []
         },
@@ -465,7 +465,7 @@
             "Julius Caesar"
           ],
           "clues": [
-            "In June 44 BC I pushed through an illegal law giving myself the provinces of Gaul.",
+            "In June 44 BC, amid intimidation, I pushed through a law giving myself the provinces of Gaul.",
             "Parthian horse archers harried my army through a 27-day retreat.",
             "I was the real victor of Philippi.",
             "Ancient accounts say I died in the arms of the queen of Egypt."
