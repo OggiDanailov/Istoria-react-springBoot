@@ -269,9 +269,9 @@ const LEVELS = [
       w(122, rep(4, 'cavalry'), 'Pompey’s 7,000 horsemen charge your left wing!', [0, 1, 2]),
       w(140, ['legate', 'legion3', 'pompeian', 'slingarcher', 'slingarcher', 'pomscorpio'], 'A great wave approaches!'), w(166, ['legion3', 'legion3', 'cavalry', 'slingarcher', 'pomscorpio']),
       w(190, ['legate', 'legion3', 'legion3', 'pompeian', 'cavalry', 'cavalry', 'slingarcher', 'pomscorpio'], 'The final wave!')] },
-  { id: 'actium', name: 'Actium', year: '31 BC', enemy: 'Antony and Cleopatra', theme: 'sea', sea: true, start: 425, rows: 10, more: 1.0, lengthen: 0, admiral: true, counters: true, scroll: 0.3, shore: 'both', closed: [0, 8], cols: 9, forts: { first: 40, every: 45, hp: 300, reload: 4.5, dmg: 70, reach: 2 },
+  { id: 'actium', name: 'Actium', year: '31 BC', enemy: 'Antony and Cleopatra', theme: 'sea', sea: true, start: 425, rows: 10, more: 1.0, lengthen: 0, admiral: true, counters: true, scroll: 0.3, shore: 'both', closed: [0, 8], cols: 9, reefs: { first: 26, every: 24, len: 1.2 }, forts: { first: 40, every: 45, hp: 300, reload: 4.5, dmg: 70, reach: 2 },
     stages: [[0, 'the approach', 'приближаването'], [86, 'the wing on your left', 'крилото вляво'], [136, 'Cleopatra breaks through', 'Клеопатра пробива'], [176, 'Antony’s flagship', 'флагманът на Антоний']],
-    twist: 'Each of your ships answers one kind of enemy, with double damage, and does only half to the rest: archer ships against light warships (pale band) and fire ships, boarding ships against great ships (with a tower), tower ships against Cleopatra’s fast ships (purple sail). Supply boats bring grain and shoot at the forts on the shore. Four stages, announced as they come; a shadow at the top of a lane warns of each ship. Octavian’s flagship (gold sail) holds the middle and can only fall back down its own lane: if it sinks, you lose. Forts on both coasts bombard the ship nearest their shore. Win by sinking Cleopatra’s and Antony’s flagships (ringed in gold); at half strength they flee, and each one that escapes costs a star.',
+    twist: 'Each of your ships answers one kind of enemy, with double damage, and does only half to the rest: archer ships against light warships (pale band) and fire ships, boarding ships against great ships (with a tower), tower ships against Cleopatra’s fast ships (purple sail). Supply boats bring grain and shoot at the forts on the shore. Four stages, announced as they come; a shadow at the top of a lane warns of each ship. Octavian’s flagship (gold sail) holds the middle and can only fall back down its own lane: if it sinks, you lose. Forts on both coasts bombard the ship nearest their shore, and reefs jut from the coasts into the outer lanes: a flashing warning shows their lanes, and any ship they reach, yours or Antony’s, is wrecked. Win by sinking Cleopatra’s and Antony’s flagships (ringed in gold); at half strength they flee, and each one that escapes costs a star.',
     units: ['supplyboat', 'archership', 'corvus', 'turris'], newUnit: 'corvus',
     blurb: 'Off the headland of Actium, in western Greece, Octavian’s fleet under Agrippa blocks the fleet of Antony and Cleopatra. Whoever wins rules the Roman world.',
     after: 'Antony and Cleopatra escaped to Egypt, where both killed themselves the next year. Octavian, soon called Augustus, was master of the Roman world.',
@@ -1207,6 +1207,7 @@ function drawScroll() {
   c.restore()
   if (LEVEL.shore) drawShore(land, off)
   if (LEVEL.shore === 'both') { c.save(); c.translate(W, 0); c.scale(-1, 1); drawShore(W - from, off, 7); c.restore() }   // the other coast, mirrored, with its own villages and cliffs
+  if (LEVEL.reefs) drawReefs()
   if (LEVEL.admiral) {   // a shadow at the top of a lane: a ship arrives there in a few seconds
     for (const e of G.queue) {
       if (e.lane == null || e.t - G.t > 4) continue
@@ -1233,6 +1234,28 @@ function drawScroll() {
 }
 // The coast of western Greece on the right, sliding past: beaches, cliffs, olive groves, villages and a temple, each piece
 // chosen from its place along the coast, so the same stretch looks the same while it passes.
+// Reefs (Actium): a rocky point juts from one coast into the outer one or two sea lanes and comes down with the scenery.
+// A warning flashes while it is still above the field; any ship it reaches, Roman or Antony's, is wrecked.
+const reefLanes = r => { const edge = r.side > 0 ? COLS - 2 : 1; return Array.from({ length: r.depth }, (_, i) => edge - i * r.side) }
+const reefCovers = (r, lane, y) => reefLanes(r).includes(lane) && y > r.y - 0.15 && y < r.y + r.len + 0.15
+function drawReefs() {
+  const c = ctx
+  for (const r of G.reefs ?? []) {
+    const lanes = reefLanes(r), x0 = r.side > 0 ? lx(Math.min(...lanes)) - cell / 2 : 0, x1 = r.side > 0 ? W : lx(Math.max(...lanes)) + cell / 2
+    if (r.y < 0) {   // still above the field: a warning at the top of its lanes
+      const a = 0.45 + 0.35 * Math.sin(performance.now() / 120)
+      for (const l of lanes) { const x = lx(l), y = ry(0) + cell * 0.12; c.fillStyle = `rgba(200, 40, 30, ${a})`; c.beginPath(); c.moveTo(x, y); c.lineTo(x - cell * 0.24, y + cell * 0.42); c.lineTo(x + cell * 0.24, y + cell * 0.42); c.fill(); c.fillStyle = `rgba(255, 255, 255, ${a + 0.2})`; c.fillRect(x - 1.5, y + cell * 0.14, 3, cell * 0.14); c.fillRect(x - 1.5, y + cell * 0.32, 3, 3) }
+    }
+    const top = ry(r.y), h = r.len * cell
+    if (top > H || top + h < 0) continue
+    c.fillStyle = 'rgba(255, 255, 255, .55)'; c.beginPath(); c.ellipse((x0 + x1) / 2, top + h / 2, (x1 - x0) / 2 + cell * 0.12, h / 2 + cell * 0.12, 0, 0, TAU); c.fill()   // surf
+    for (let i = 0; i < 9; i++) {   // the rocks
+      const rx = x0 + ((i * 0.618 + r.seed) % 1) * (x1 - x0), ry0 = top + ((i * 0.382 + r.seed * 2) % 1) * h, rr0 = cell * (0.16 + ((i * 0.27) % 1) * 0.14)
+      c.fillStyle = '#6f6556'; c.beginPath(); c.moveTo(rx - rr0, ry0 + rr0 * 0.5); c.lineTo(rx - rr0 * 0.4, ry0 - rr0); c.lineTo(rx + rr0 * 0.5, ry0 - rr0 * 0.7); c.lineTo(rx + rr0, ry0 + rr0 * 0.5); c.closePath(); c.fill()
+      c.fillStyle = '#8f8574'; c.beginPath(); c.moveTo(rx - rr0 * 0.4, ry0 - rr0); c.lineTo(rx + rr0 * 0.5, ry0 - rr0 * 0.7); c.lineTo(rx + rr0 * 0.1, ry0); c.closePath(); c.fill()
+    }
+  }
+}
 function drawShore(x0, off, seed = 0) {
   const c = ctx, seg = cell * 2.2, first = Math.floor(-off / seg) - 1, h = (n, m) => { const v = Math.sin((n + seed * 31) * 127.1 + m * 311.7) * 43758.5453; return v - Math.floor(v) }
   const edge = y => x0 + cell * 0.12 + Math.sin((y - off) / (cell * 1.3)) * cell * 0.1 + Math.sin((y - off) / (cell * 0.47)) * cell * 0.04   // the waterline
@@ -1702,6 +1725,7 @@ function canPlace(type, lane, row) {
   if (LEVEL.midGate === row) return false   // the gate row is the horsemen's
   if (G.cw && row <= LEVEL.cityWall.row) return false   // on the wall or behind it
   if (lane < 0 || lane >= COLS || row < 0 || row >= ROWS || unitAt(lane, row) || row === LEVEL.ditch || LEVEL.closed?.includes(lane)) return false
+  if (G.reefs?.some(r => reefCovers(r, lane, row + 0.5))) return false   // on the rocks
   return type === 'torch' ? !!houseAt(lane, row) : !houseAt(lane, row)
 }
 const canStand = (lane, row) => canPlace('slinger', lane, row)
@@ -2103,6 +2127,17 @@ function update(dt) {
       }
     }
     G.forts = G.forts.filter(o => o.y < ROWS + 1.5)
+  }
+  if (LEVEL.reefs) {   // reefs: one every so often, from one coast or the other, down with the scenery
+    G.reefs ??= []; G.nextReef ??= LEVEL.reefs.first
+    if (G.t >= G.nextReef) { G.reefs.push({ side: Math.random() < 0.5 ? -1 : 1, depth: Math.random() < 0.5 ? 1 : 2, y: -2.4, len: LEVEL.reefs.len, seed: Math.random() }); G.nextReef = G.t + LEVEL.reefs.every * (0.8 + Math.random() * 0.4) }
+    for (const r of G.reefs) {
+      r.y += LEVEL.scroll * dt
+      if (r.y > -0.6 && !r.warned) { r.warned = true; if (!G.tips.reef) { G.tips.reef = true; announce('Rocks ahead! Move your ships out of the flashing lanes before the reef reaches them.', true, 3600) } }
+      for (const u of [...G.units]) if (u.type !== 'octavian' && !u.travel && reefCovers(r, u.lane, u.row + 0.5)) { G.fx.push({ kind: 'ring', x: lx(u.lane), y: ry(u.row + 0.5), t: 0.5 }); for (let i = 0; i < 10; i++) G.fx.push({ kind: 'shard', x: lx(u.lane), y: ry(u.row + 0.5), vx: (Math.random() - 0.5) * 90, vy: -Math.random() * 60, t: 0.6 }); sfx.crack(); G.shake = Math.max(G.shake, 5); removeUnit(u); announce('One of your ships struck the rocks!') }
+      for (const f of G.foes) if (f.hp > 0 && reefCovers(r, f.lane, f.y)) { f.hp = 0; G.killed++; G.fx.push({ kind: 'ring', x: foeX(f), y: ry(f.y), t: 0.5 }); sfx.crack(); if (!G.tips.reefFoe) { G.tips.reefFoe = true; announce('An enemy ship was wrecked on the rocks!') } }
+    }
+    G.reefs = G.reefs.filter(r => r.y < ROWS + 1.5)
   }
   for (const b of G.lobs ?? []) {   // a catapult stone in flight: it lands on the square it was aimed at
     if ((b.t += dt) < b.dur) continue
