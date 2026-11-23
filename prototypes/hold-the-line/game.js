@@ -268,7 +268,7 @@ const LEVELS = [
       w(140, ['legate', 'legion3', 'pompeian', 'slingarcher', 'slingarcher', 'pomscorpio'], 'A great wave approaches!'), w(166, ['legion3', 'legion3', 'cavalry', 'slingarcher', 'pomscorpio']),
       w(190, ['legate', 'legion3', 'legion3', 'pompeian', 'cavalry', 'cavalry', 'slingarcher', 'pomscorpio'], 'The final wave!')] },
   { id: 'actium', name: 'Actium', year: '31 BC', enemy: 'Antony and Cleopatra', theme: 'sea', sea: true, start: 425, cols: 10, rows: 10, more: 1.35, weave: true, admiral: true, scroll: 0.3, shore: true, closed: [9], forts: { first: 30, every: 32, hp: 300, reload: 4.5, dmg: 70, reach: 2 },
-    twist: 'Your fleet sails out to meet Antony’s. Octavian’s flagship (gold sail) waits at the bottom: any enemy ship that gets past your fleet sails on to attack it, and if it sinks, you lose. Its archers fight back, and a better test score makes it stronger. To win, sink Antony’s and Cleopatra’s flagships (ringed in gold). At half strength they flee: catch them before they escape, or win as history did, with fewer stars. Antony’s ships weave in the upper half and gusts push them sideways; your rammers strike ships beside them too. Antony’s forts on the shore throw stones at the lanes nearest the coast as you sail past; your supply boats’ archers shoot sideways, at ships beside them and at the forts.',
+    twist: 'Your fleet sails out to meet Antony’s, with Octavian’s flagship (gold sail) in the middle of the field: a ship like the others but much stronger, and if it sinks, you lose. Guard it on every side: enemy ships in its lane ram it, archers above hit the first ship in their way, ships passing in the lanes beside it attack it, and a fort’s stone hits the ship nearest the shore on its row. To win, sink Antony’s and Cleopatra’s flagships (ringed in gold); at half strength they flee, and each one that escapes costs a star. Supply boats’ archers shoot sideways, at passing ships and at the forts.',
     events: [{ t: 84, wind: 1, text: 'A gust from the west drives Antony’s ships one lane east!' }, { t: 128, wind: -1, text: 'The wind turns: Antony’s ships are pushed one lane west!' }, { t: 198, wind: 1, text: 'A last gust from the west!' }],
     units: ['supplyboat', 'archership', 'quinquereme', 'rammer', 'ballista', 'fireship', 'harpax'], newUnit: 'harpax',
     blurb: 'Off the headland of Actium, in western Greece, Octavian’s fleet under Agrippa blocks the fleet of Antony and Cleopatra. Whoever wins rules the Roman world.',
@@ -1190,9 +1190,9 @@ function drawScroll() {
       c.fillStyle = '#a39782'; c.fillRect(-s, -s * 0.7, s * 2, s * 1.4); c.fillStyle = '#8a7f6c'; for (let i = 0; i < 5; i++) c.fillRect(-s + i * s * 0.45, -s * 0.9, s * 0.25, s * 0.22)
       c.fillStyle = '#7a6f5e'; c.fillRect(-s * 0.35, -s * 1.3, s * 0.7, s * 0.7); c.fillStyle = '#3f2e22'; c.fillRect(-s * 0.12, -s * 0.2, s * 0.24, s * 0.5)
       line(c, s * 0.2, -s * 1.3, s * 0.2, -s * 2, '#5a3a22', 1.5); c.fillStyle = '#2f6f8a'; c.beginPath(); c.moveTo(s * 0.2, -s * 2); c.lineTo(s * 0.75, -s * 1.8); c.lineTo(s * 0.2, -s * 1.6); c.fill()
-    } else { c.fillStyle = '#8a7f6c'; for (let i = 0; i < 6; i++) { c.beginPath(); c.arc(-s * 0.8 + i * s * 0.32, s * 0.2 - (i % 2) * s * 0.15, s * 0.22, 0, TAU); c.fill() } }
+    } else { c.fillStyle = 'rgba(80, 70, 60, .35)'; for (let i = 0; i < 3; i++) { c.beginPath(); c.arc(Math.sin(G.t * 2 + i) * s * 0.3, -s * (0.6 + i * 0.5), s * (0.3 + i * 0.12), 0, TAU); c.fill() } c.fillStyle = '#8a7f6c'; for (let i = 0; i < 6; i++) { c.beginPath(); c.arc(-s * 0.8 + i * s * 0.32, s * 0.2 - (i % 2) * s * 0.15, s * 0.22, 0, TAU); c.fill() } }
     c.restore()
-    if (o.hp > 0 && o.hp < o.max) hpBar(x, y + s * 0.9, o.hp / o.max)
+    if (o.hp > 0) hpBar(x, y + s * 0.9, o.hp / o.max)
   }
 }
 // The coast of western Greece on the right, sliding past: beaches, cliffs, olive groves, villages and a temple, each piece
@@ -1552,7 +1552,11 @@ function newGame(i = levelIndex, score = quizScore) {
     G.cw.cycle = {}
     LEVEL.cityWall.gates.forEach((l, i) => { const open = i % 2 === 0 ? Math.random() < 0.7 : Math.random() < 0.3; G.cw.cycle[l] = { open, doors: open ? 1 : 0, next: 4 + Math.random() * LEVEL.cityWall.gateCycle } })
   }
-  G.admiral = army.admiral ? { hp: army.admiral, max: army.admiral, cd: 1, hurt: 0, lane: Math.floor((COLS - (LEVEL.closed?.length ?? 0) - 1) / 2), enter: 0 } : null   // Actium: Octavian's flagship in the harbour strip, to protect at all costs
+  G.admiral = null
+  if (army.admiral) {   // Actium: Octavian's flagship, a ship on the field like the others but far stronger; it sails in from below to the middle
+    const lane = Math.floor((COLS - (LEVEL.closed?.length ?? 0) - 1) / 2), row = Math.floor(ROWS / 2)
+    G.units.push({ type: 'octavian', lane, row, hp: army.admiral, max: army.admiral, cd: 0, anim: 0, hurt: 0, armed: false, arm: 0, aiming: false, fighting: false, fromLane: lane, fromRow: ROWS + 1.5, travel: 5, travelT: 0 })
+  }
   G.resolved = {}
   renderTray(); renderBar(true); updateCount(); $('level').textContent = LEVEL.name
   layout()
@@ -1647,7 +1651,6 @@ function canPlace(type, lane, row) {
   if (LEVEL.midGate === row) return false   // the gate row is the horsemen's
   if (G.cw && row <= LEVEL.cityWall.row) return false   // on the wall or behind it
   if (lane < 0 || lane >= COLS || row < 0 || row >= ROWS || unitAt(lane, row) || row === LEVEL.ditch || LEVEL.closed?.includes(lane)) return false
-  if (G.admiral && lane === G.admiral.lane && row === ROWS - 1) return false   // Actium: the flagship's bow
   return type === 'torch' ? !!houseAt(lane, row) : !houseAt(lane, row)
 }
 const canStand = (lane, row) => canPlace('slinger', lane, row)
@@ -1825,7 +1828,7 @@ function update(dt) {
   for (const ev of G.events) if (!ev.done && G.t >= ev.t) {
     ev.done = true; announce(ev.text, true, 4200); sfx.horn()
     if (ev.wings) for (const l of ev.wings) { if (G.equites[l].state === 'ready') G.equites[l].state = 'used'; G.equites[l].routed = true }   // that wing is lost: no eques can ride there now
-    if (ev.wind) for (const f of G.foes) if (f.hp > 0 && FOES[f.type].ship && !f.eating && !f.slide && !f.fleeing) { const to = f.lane + ev.wind; if (to >= 0 && to < COLS && !LEVEL.closed?.includes(to)) { f.slide = { from: f.lane, t: 0 }; f.lane = to } }
+    if (ev.wind) for (const f of G.foes) if (f.hp > 0 && FOES[f.type].ship && !f.eating && !f.slide && !f.fleeing) { const to = f.lane + ev.wind; if (to >= 0 && to < COLS && !LEVEL.closed?.includes(to) && !G.units.some(u => u.lane === to && Math.abs(u.row + 0.5 - f.y) < 1.2)) { f.slide = { from: f.lane, t: 0 }; f.lane = to } }
     if (ev.masinissa) for (const e of G.equites) if (e.state === 'used') { e.state = 'ready'; e.y = eqHome() }   // only those that had charged
     const leave = test => {   // these ships turn and sail away; those still to come never arrive
       for (const f of G.foes) if (test(FOES[f.type])) { f.fleeing = true; f.eating = null }
@@ -2033,8 +2036,9 @@ function update(dt) {
       o.y += LEVEL.scroll * dt; o.hurt = Math.max(0, o.hurt - dt)
       if (o.hp > 0 && o.y > 0 && o.y < ROWS - 0.3 && (o.cd -= dt) <= 0) {
         o.cd = LEVEL.forts.reload * (0.8 + Math.random() * 0.4)
-        const targets = G.units.filter(u => !u.travel && COLS - 1 - u.lane <= LEVEL.forts.reach && Math.abs(u.row + 0.5 - o.y) <= 2.5)
-        if (targets.length) { const u = targets[Math.floor(Math.random() * targets.length)]; G.lobs ??= []; G.lobs.push({ x0: lx(COLS - 1), y0: ry(o.y) - 10 * k, lane: u.lane, row: u.row, t: 0, dur: 1.6, dmg: LEVEL.forts.dmg }); sfx.throw() }
+        const rows = G.units.filter(u => !u.travel && Math.abs(u.row + 0.5 - o.y) <= 1.5).map(u => u.row).sort((a, b) => Math.abs(a + 0.5 - o.y) - Math.abs(b + 0.5 - o.y))
+        const targets = rows.length ? [G.units.filter(u => !u.travel && u.row === rows[0]).sort((a, b) => b.lane - a.lane)[0]] : []   // the ship nearest the shore on the row level with the fort: the others behind it are shielded
+        if (targets.length) { const u = targets[0]; G.lobs ??= []; G.lobs.push({ x0: lx(COLS - 1), y0: ry(o.y) - 10 * k, lane: u.lane, row: u.row, t: 0, dur: 1.6, dmg: LEVEL.forts.dmg }); sfx.throw() }
       }
     }
     G.forts = G.forts.filter(o => o.y < ROWS + 1.5)
@@ -2099,15 +2103,15 @@ function update(dt) {
       }
       continue
     }
-    if (FOES[f.type].target && !f.fleeing && f.hp < f.max / 2) { f.fleeing = true; f.eating = null; announce(`${FOES[f.type].target}’s flagship turns to flee! Sink it before it escapes!`, true, 3200) }   // Actium: at half strength they run for it
-    if (f.hunting && !f.fleeing) {   // Actium: past the fleet, along the bottom toward Octavian's flagship, then at it
-      if (f.slide) { f.slide.t += dt / 0.45; if (f.slide.t >= 1) f.slide = null }
-      const mid = G.admiral?.lane ?? (COLS - 1) / 2, near = Math.abs(f.lane - mid) <= 0.6
-      if (!near && !f.slide && Math.random() < dt * 2.5) { f.slide = { from: f.lane, t: 0 }; f.lane += Math.sign(mid - f.lane) > 0 ? 1 : -1 }
-      if (near && G.admiral) { G.admiral.hp -= FOES[f.type].dps * dt; G.admiral.hurt = 0.12; f.anim = 0.2; if (G.admiral.hp <= 0) { G.loseText = 'Octavian’s flagship has been sunk'; return lose() } }
-      continue
+    if (LEVEL.admiral && FOES[f.type].ship && !f.fleeing && !f.eating) {   // Actium: a ship passing alongside the flagship attacks it from the side
+      const o = G.units.find(u => u.type === 'octavian' && !u.travel)
+      if (o && Math.abs(f.lane - o.lane) === 1 && Math.abs(f.y - (o.row + 0.5)) < 0.55) {
+        o.hp -= FOES[f.type].dps * 0.7 * dt; o.hurt = 0.12; f.anim = 0.2
+        if (!G.tips.flank) { G.tips.flank = true; announce('An enemy ship attacks Octavian’s flagship from the side! Guard the lanes beside it.', true, 3200) }
+        if (o.hp <= 0) { removeUnit(o); return }
+      }
     }
-    if (f.fleeing) f.hunting = false
+    if (FOES[f.type].target && !f.fleeing && f.hp < f.max / 2) { f.fleeing = true; f.eating = null; announce(`${FOES[f.type].target}’s flagship turns to flee! Sink it before it escapes!`, true, 3200) }   // Actium: at half strength they run for it
     if (f.fleeing) {   // a panicked elephant runs back up the lane, trampling its own side (anyone fleeing runs back the way he came)
       f.y -= (FOES[f.type].target ? 0.32 : 0.9) * dt * (f.dir ?? 1)
       if (FOES[f.type].target && f.y < -1.4) { f.escaped = true; f.hp = 0; announce(`${FOES[f.type].target} has escaped, as in history!`, true, 3200); continue }
@@ -2119,7 +2123,7 @@ function update(dt) {
     if (f.slide) { f.slide.t += dt / 0.45; if (f.slide.t >= 1) f.slide = null }
     if (LEVEL.weave && FOES[f.type].ship && !f.slide && !f.eating && !f.fleeing && !(f.pinned > 0) && f.y > 0.4 && f.y < ROWS / 2 && Math.random() < dt * 0.14) {   // at sea a ship weaves into a neighbouring lane, but only in the upper half: from midfield it holds its lane, and a hooked ship can't
       const to = f.lane + (Math.random() < 0.5 ? -1 : 1)
-      if (to >= 0 && to < COLS && !LEVEL.closed?.includes(to)) { f.slide = { from: f.lane, t: 0 }; f.lane = to }
+      if (to >= 0 && to < COLS && !LEVEL.closed?.includes(to) && !G.units.some(u => u.lane === to && Math.abs(u.row + 0.5 - f.y) < 1.2)) { f.slide = { from: f.lane, t: 0 }; f.lane = to }   // only into free water
     }
     if (f.jump) {
       f.jump.t += dt / 0.6; f.y = f.jump.from + (f.jump.to - f.jump.from) * Math.min(1, f.jump.t)
@@ -2232,7 +2236,7 @@ function update(dt) {
       }
       const e = G.equites[f.lane]
       if (e.state === 'ready') { e.state = 'charge'; G.charges++; G.shake = Math.max(G.shake, 6); lastStand().sound(); announce(lastStand().charge); tutorial('equites') }
-      else if (LEVEL.admiral) { f.hunting = true; f.y = ROWS + 0.4; f.eating = null; if (!G.tips.hunt) { G.tips.hunt = true; announce('An enemy ship got past your fleet and sails for Octavian’s flagship!', true, 3000) } continue }   // Actium: it goes after the flagship
+      else if (LEVEL.admiral) { f.hp = 0; continue }   // Actium: no line to hold; a ship that gets past the fleet sails away (its danger was the flagship on the way)
       else return lose()   // no eques under this lane, or he has already charged
     }
   }
@@ -2260,10 +2264,6 @@ function update(dt) {
   }
   for (const f of G.foes) if (f.hp <= 0 && FOES[f.type].target && !G.resolved[f.type]) { G.resolved[f.type] = f.escaped ? 'escaped' : 'sunk'; if (!f.escaped) announce(`${FOES[f.type].target}’s flagship is sunk!`, true, 3000) }
   if (LEVEL.admiral && Object.keys(G.resolved).length >= 2 && G.phase === 'play') return win()   // both flagships sunk or fled: the battle is decided
-  if (G.admiral && (G.admiral.cd -= dt) <= 0) {   // Octavian's flagship: its archers shoot the closest attacker
-    const t = G.foes.filter(f => f.hunting && f.hp > 0).sort((a, b) => Math.abs(a.lane - G.admiral.lane) - Math.abs(b.lane - G.admiral.lane))[0]
-    if (t) { G.admiral.cd = 1; hurtFoe(t, 45); G.fx.push({ kind: 'ring', x: foeX(t), y: ry(t.y), t: 0.3 }); sfx.bow() } else G.admiral.cd = 0.3
-  }
   G.foes = G.foes.filter(f => f.hp > 0)
   for (const c of G.corpses) c.t += dt
   G.corpses = G.corpses.filter(c => c.t < 3.5)
@@ -2529,12 +2529,6 @@ function draw() {
     ctx.save(); ctx.font = `800 ${Math.round(11 + 3 * k)}px Nunito, system-ui, sans-serif`; ctx.textAlign = 'left'; ctx.fillStyle = 'rgba(255, 255, 255, .92)'
     const label = (LANG === 'bg' ? 'Животи: ' : 'Lives: ') + (G.lives ? '♥'.repeat(G.lives) : (LANG === 'bg' ? 'няма' : 'none'))
     ctx.fillText(label, 8, ry(ROWS) + cell * 0.62); ctx.restore()
-  }])
-  if (G.admiral) items.push([ry(ROWS + 0.9), () => {   // Octavian's flagship at the back of the middle lane, bow forward; at the start it sails in from below
-    G.admiral.enter = Math.min(1, G.admiral.enter + 0.006); const e = 1 - Math.pow(1 - G.admiral.enter, 3)
-    const x = lx(G.admiral.lane), y = ry(ROWS) + CAMP * cell * 0.92 + (1 - e) * (CAMP * cell + cell * 1.4)
-    ctx.save(); ctx.translate(x + (G.admiral.hurt > 0 && !reduceMotion ? (Math.random() - 0.5) * 3 : 0), y); ctx.scale(k * 1.2, k * 1.2); drawShip(ctx, 'admiral', T); ctx.restore()
-    if (e > 0.95) hpBar(x, y + 3, Math.max(0, G.admiral.hp / G.admiral.max))
   }])
   for (const [lane, e] of G.equites.entries()) if (e.state !== 'used' && e.state !== 'none') items.push([ry(e.y), () => { ctx.save(); if (equesDrag?.moved && !equesDrag.top && equesDrag.from === lane) ctx.globalAlpha = 0.4; ctx.translate(lx(lane), ry(e.y)); ctx.scale(k * 0.9, k * 0.9); drawEques(ctx, e, T); ctx.restore() }])
   const dragRow = equesDrag && eqRow(equesDrag.top)
@@ -2932,7 +2926,7 @@ function syncDeploy() {
   $('deploy-text').textContent = (left
     ? (bg ? `Резултатът от теста ви донесе ветерани. Плъзнете ги на полето безплатно (остават ${left}). ` : `Your test score earned you veterans. Drag them onto the field for free (${left} still to place). `)
     : had ? (bg ? 'Ветераните ви са на място. Плъзнете, за да ги наместите. ' : 'Your veterans are in place. Drag to adjust them. ') : '')
-    + (LEVEL.admiral ? (bg ? `Флагманът на Октавиан чака в дъното (сила ${G.admiral.max}). Вражески кораб, който мине покрай флота ви, плава към него и го напада; стрелците му отвръщат.` : `Octavian’s flagship waits at the bottom (strength ${G.admiral.max}). An enemy ship that gets past your fleet sails on to attack it; its archers shoot back.`)
+    + (LEVEL.admiral ? (bg ? 'Флагманът на Октавиан влиза в средата на полето. Пазете го отвсякъде: отпред, от стрелите отгоре, от корабите, които минават до него, и от камъните на крепостите на брега.' : 'Octavian’s flagship sails into the middle of the field. Guard it on every side: from the front, from arrows from above, from ships passing beside it, and from the stones of the forts on the shore.')
       : LEVEL.backRiver
       ? (bg ? `Тибър е зад гърба ви. ${G.lives ? `Имате ${G.lives === 1 ? 'един живот' : G.lives + ' живота'}: гал, който стигне реката, помита линията си във водата и отнема живот.` : 'Нямате нито един живот: първият гал, който стигне реката, решава битката.'} Сложете втори войник точно зад всеки боец отпред.` : `The Tiber is at your back. ${G.lives ? `You have ${G.lives === 1 ? 'one life' : G.lives + ' lives'}: a Gaul who reaches the river sweeps his lane into the water and costs a life.` : 'You have no lives: the first Gaul to reach the river decides the battle.'} Put a second soldier right behind each fighter in front.`)
       : eq === 0
@@ -2993,7 +2987,7 @@ function lose() {
     carrhae: 'Testudos shrug off the arrows; build supply carts, since no grain falls in the desert.',
     alesia: 'Enemies come from both sides: keep tough soldiers at the back as well as the front.',
     pharsalus: 'Pompey’s cavalry charges the left wing: fourth-line men there triple their damage against riders.',
-    actium: 'Stop every ship before it gets past your fleet, especially in the middle lanes, and hold the gold-ringed flagships with harpax ships while ballistas and rammers sink them before they flee.',
+    actium: 'Build a ring around Octavian’s flagship: a ship in front of it, ships in the lanes beside it, and one between it and the shore. Then hold the gold-ringed flagships with harpax ships while ballistas and rammers sink them.',
     teutoburg: 'Warriors burst out of the woods at the sides: keep shooters in the outer lanes too.',
     idistaviso: 'The Cherusci have big shields: pila break them. Save a cohort for Arminius.',
     boudica: 'Only the middle lanes are open: crowd them with shooters and throw a pilum volley at the biggest crowds.',
