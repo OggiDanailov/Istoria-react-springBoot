@@ -268,14 +268,16 @@ const LEVELS = [
       w(122, rep(4, 'cavalry'), 'Pompey’s 7,000 horsemen charge your left wing!', [0, 1, 2]),
       w(140, ['legate', 'legion3', 'pompeian', 'slingarcher', 'slingarcher', 'pomscorpio'], 'A great wave approaches!'), w(166, ['legion3', 'legion3', 'cavalry', 'slingarcher', 'pomscorpio']),
       w(190, ['legate', 'legion3', 'legion3', 'pompeian', 'cavalry', 'cavalry', 'slingarcher', 'pomscorpio'], 'The final wave!')] },
-  { id: 'actium', name: 'Actium', year: '31 BC', enemy: 'Antony and Cleopatra', theme: 'sea', sea: true, start: 425, cols: 10, rows: 10, more: 1.35, weave: true, admiral: true, scroll: 0.3, shore: true, closed: [9], forts: { first: 30, every: 32, hp: 300, reload: 4.5, dmg: 70, reach: 2 },
-    twist: 'Your fleet sails out to meet Antony’s, with Octavian’s flagship (gold sail) in the middle: much stronger than the rest, and if it sinks, you lose. Antony’s ships that get past your fleet turn and attack from behind, and keep coming until you sink them. Four ships: supply boats (grain, and light shots at ships beside them and at the forts on the shore), archer ships (forward and backward), tower ships (left and right) and boarding ships (they hold and fight whatever reaches them). Win by sinking Antony’s and Cleopatra’s flagships (ringed in gold); at half strength they flee, and each one that escapes costs a star.',
+  { id: 'actium', name: 'Actium', year: '31 BC', enemy: 'Antony and Cleopatra', theme: 'sea', sea: true, start: 425, cols: 8, rows: 10, more: 1.0, lengthen: 0, admiral: true, scroll: 0.3, shore: true, closed: [7], forts: { first: 40, every: 45, hp: 300, reload: 4.5, dmg: 70, reach: 2 },
+    stages: [[0, 'the approach', 'приближаването'], [86, 'the wing on your left', 'крилото вляво'], [136, 'Cleopatra breaks through', 'Клеопатра пробива'], [176, 'Antony’s flagship', 'флагманът на Антоний']],
+    twist: 'Four stages, announced as they come: Antony’s fleet rows out, his right wing tries to slip round your left, Cleopatra’s squadron dashes down the middle, and finally Antony’s flagship comes out. A shadow at the top of a lane warns of each ship a few seconds before it arrives. Protect Octavian’s flagship (gold sail, in the middle): if it sinks, you lose. Win by sinking Cleopatra’s and Antony’s flagships (ringed in gold); at half strength they flee, and each one that escapes costs a star. A ship that gets past your fleet turns once and attacks from behind.',
     units: ['supplyboat', 'archership', 'turris', 'corvus'], newUnit: 'corvus',
     blurb: 'Off the headland of Actium, in western Greece, Octavian’s fleet under Agrippa blocks the fleet of Antony and Cleopatra. Whoever wins rules the Roman world.',
     after: 'Antony and Cleopatra escaped to Egypt, where both killed themselves the next year. Octavian, soon called Augustus, was master of the Roman world.',
-    waves: [w(26, ['galley']), w(42, ['egyptian', 'galley']), w(58, ['galley', 'galley']), w(74, ['deceres']), w(90, ['egyptian', 'egyptian', 'galley']), w(106, ['deceres', 'galley']), w(122, ['cleoflag', 'egyptian', 'egyptian', 'galley', 'galley'], 'Cleopatra’s flagship sails into the battle!'),
-      w(136, ['flagship', 'deceres', 'galley', 'galley', 'egyptian', 'egyptian', 'egyptian'], 'Antony’s fleet attacks in force!'), w(164, ['galley', 'galley', 'deceres']),
-      w(186, ['deceres', 'deceres', ...rep(4, 'galley')], 'The last of Antony’s fleet!')] },
+    waves: [w(18, ['galley'], 'Stage 1 of 4: Antony’s fleet rows out of the bay.', [3]), w(32, ['galley', 'galley'], null, [2, 4]), w(48, ['deceres'], null, [3]), w(64, ['galley', 'galley'], null, [1, 5]),
+      w(88, ['galley', 'galley', 'galley'], 'Stage 2 of 4: Antony’s right wing tries to slip round your left!', [0, 1]), w(108, ['deceres', 'galley'], null, [0, 1]),
+      w(138, ['cleoflag', 'egyptian', 'egyptian', 'egyptian', 'egyptian'], 'Stage 3 of 4: Cleopatra’s squadron dashes down the middle!', [3, 2, 4]),
+      w(178, ['flagship', 'galley', 'galley'], 'Stage 4 of 4: Antony’s flagship comes out. Sink it before it escapes!', [3, 2, 4])] },
   { id: 'teutoburg', name: 'The Teutoburg Forest', year: 'AD 9', enemy: 'Arminius and the Germanic tribes', theme: 'forest', start: 450, cols: 8, rows: 11,
     twist: 'The Empire’s biggest field yet: eight lanes and eleven rows. The legions march through dark forest in the rain, strung out over miles, and warriors burst out of the woods at the sides, in the middle of the field. New: the cohort, three legionaries placed with one card.',
     units: ['cart', 'slinger', 'velites', 'legionary', 'cohort', 'triarius', 'caltrops', 'centurion', 'scorpio'], newUnit: 'cohort',
@@ -1203,6 +1205,18 @@ function drawScroll() {
   for (let i = 0; i < 170; i++) { const x = ((i * 0.7548) % 1) * land, y = (((i * 0.5698) % 1) * (H + 20) + off) % (H + 20) - 10; c.beginPath(); c.moveTo(x - 5, y); c.quadraticCurveTo(x, y - 3, x + 5, y); c.stroke() }
   c.restore()
   if (LEVEL.shore) drawShore(land, off)
+  if (LEVEL.admiral) {   // a shadow at the top of a lane: a ship arrives there in a few seconds
+    for (const e of G.queue) {
+      if (e.lane == null || e.t - G.t > 4) continue
+      const x = lx(e.lane), y = ry(0) + cell * 0.1, a = 0.35 + 0.25 * Math.sin(performance.now() / 160)
+      c.fillStyle = `rgba(20, 40, 60, ${a})`; c.beginPath(); c.ellipse(x, y + cell * 0.15, cell * 0.16, cell * 0.36, 0, 0, TAU); c.fill()
+      c.fillStyle = `rgba(255, 235, 190, ${a + 0.2})`; c.beginPath(); c.moveTo(x - cell * 0.13, y + cell * 0.55); c.lineTo(x + cell * 0.13, y + cell * 0.55); c.lineTo(x, y + cell * 0.75); c.fill()
+    }
+    const st = (LEVEL.stages ?? []).filter(x => G.t >= x[0]), n = st.length, bg = LANG === 'bg'
+    const mark = t => ({ sunk: '✓', escaped: '↗' })[G.resolved?.[t]] ?? (G.foes.some(f => f.type === t && f.hp > 0) ? '⚔' : '–')
+    const text = `${bg ? 'Етап' : 'Stage'} ${n}/${LEVEL.stages.length}: ${st.at(-1)?.[bg ? 2 : 1] ?? ''} · ${bg ? 'Клеопатра' : 'Cleopatra'} ${mark('cleoflag')} · ${bg ? 'Антоний' : 'Antony'} ${mark('flagship')}`
+    const label = $('level'); if (label.textContent !== text) label.textContent = text   // the goal, where the battle's name is
+  }
   for (const o of G.forts ?? []) {   // a fort of Antony's army on the shore: stone walls, a tower, his blue-green banner; rubble once silenced
     const x = lx(COLS - 1) + cell * 0.08, y = ry(o.y), s = cell * 0.36
     c.save(); c.translate(x + (o.hurt > 0 ? (Math.random() - 0.5) * 3 : 0), y)
@@ -1550,7 +1564,7 @@ function buildQueue(score = G?.score ?? quizScore) {
     const t0 = w.t + (LEVEL.delay ?? 0)   // a later start: more time to build before the first waves
     foes.forEach((type, i) => {
       if (BLOCKS[type]) { block++; const half = BLOCKS[type].half ?? (score >= 80 || COLS < 5 ? 1 : 2); for (let off = -half; off <= half; off++) q.push({ t: t0 + i * gap, type: BLOCKS[type].type, wave: w, block, off, half }) }   // a block of the phalanx: three lanes wide, five below 80%
-      else q.push({ t: t0 + i * gap, type, wave: w })
+      else q.push({ t: t0 + i * gap, type, wave: w, ...(LEVEL.admiral && Array.isArray(w.from) ? { lane: w.from[i % w.from.length] } : {}) })   // Actium: the lane is known in advance (the warning shadow)
     })
   }
   return q.sort((a, b) => a.t - b.t)
@@ -2251,7 +2265,7 @@ function update(dt) {
       else if (e.state !== 'charge') return lose()
       continue
     }
-    if (LEVEL.admiral && f.dir < 0 && f.y <= -0.3) { f.dir = 1; f.y = -0.25; f.eating = null; continue }   // Actium: back at the top, it turns for another pass
+    if (LEVEL.admiral && f.dir < 0 && f.y <= -0.3) { f.hp = 0; continue }   // Actium: back at the top after its one pass from behind, it sails off
     if (f.dir < 0 && f.y <= -0.3) {   // through the far line: the equites on that side charge
       const e = G.equitesTop[f.lane]
       if (e.state === 'ready') { e.state = 'charge'; G.charges++; G.shake = Math.max(G.shake, 6); lastStand().sound(); announce(lastStand().charge) }
@@ -2272,7 +2286,7 @@ function update(dt) {
       }
       const e = G.equites[f.lane]
       if (e.state === 'ready') { e.state = 'charge'; G.charges++; G.shake = Math.max(G.shake, 6); lastStand().sound(); announce(lastStand().charge); tutorial('equites') }
-      else if (LEVEL.admiral) { f.dir = -1; f.y = ROWS + 0.25; f.eating = null; if (!G.tips.turn) { G.tips.turn = true; announce('Ships that get past your fleet turn and attack from behind!', true, 3200) } continue }   // Actium: it turns and comes back up, attacking from the rear
+      else if (LEVEL.admiral) { f.dir = -1; f.y = ROWS + 0.25; f.eating = null; if (!G.tips.turn) { G.tips.turn = true; announce('A ship that got past your fleet turns and attacks from behind!', true, 3200) } continue }   // Actium: it turns once and comes back up, attacking from the rear
       else return lose()   // no eques under this lane, or he has already charged
     }
   }
