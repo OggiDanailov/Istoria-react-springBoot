@@ -269,16 +269,16 @@ const LEVELS = [
       w(122, rep(4, 'cavalry'), 'Pompey’s 7,000 horsemen charge your left wing!', [0, 1, 2]),
       w(140, ['legate', 'legion3', 'pompeian', 'slingarcher', 'slingarcher', 'pomscorpio'], 'A great wave approaches!'), w(166, ['legion3', 'legion3', 'cavalry', 'slingarcher', 'pomscorpio']),
       w(190, ['legate', 'legion3', 'legion3', 'pompeian', 'cavalry', 'cavalry', 'slingarcher', 'pomscorpio'], 'The final wave!')] },
-  { id: 'actium', name: 'Actium', year: '31 BC', enemy: 'Antony and Cleopatra', theme: 'sea', sea: true, start: 425, cols: 8, rows: 10, more: 1.0, lengthen: 0, admiral: true, counters: true, scroll: 0.3, shore: true, closed: [7], forts: { first: 40, every: 45, hp: 300, reload: 4.5, dmg: 70, reach: 2 },
+  { id: 'actium', name: 'Actium', year: '31 BC', enemy: 'Antony and Cleopatra', theme: 'sea', sea: true, start: 425, rows: 10, more: 1.0, lengthen: 0, admiral: true, counters: true, scroll: 0.3, shore: 'both', closed: [0, 8], cols: 9, forts: { first: 40, every: 45, hp: 300, reload: 4.5, dmg: 70, reach: 2 },
     stages: [[0, 'the approach', 'приближаването'], [86, 'the wing on your left', 'крилото вляво'], [136, 'Cleopatra breaks through', 'Клеопатра пробива'], [176, 'Antony’s flagship', 'флагманът на Антоний']],
-    twist: 'Each of your ships answers one kind of enemy, with double damage, and does only half to the rest: archer ships against light warships (pale band) and fire ships, boarding ships against great ships (with a tower), tower ships against Cleopatra’s fast ships (purple sail). Supply boats bring grain and shoot at the forts on the shore. Four stages, announced as they come; a shadow at the top of a lane warns of each ship. Protect Octavian’s flagship (gold sail): if it sinks, you lose. Win by sinking Cleopatra’s and Antony’s flagships (ringed in gold); at half strength they flee, and each one that escapes costs a star.',
+    twist: 'Each of your ships answers one kind of enemy, with double damage, and does only half to the rest: archer ships against light warships (pale band) and fire ships, boarding ships against great ships (with a tower), tower ships against Cleopatra’s fast ships (purple sail). Supply boats bring grain and shoot at the forts on the shore. Four stages, announced as they come; a shadow at the top of a lane warns of each ship. Octavian’s flagship (gold sail) holds the middle and can only fall back down its own lane: if it sinks, you lose. Forts on both coasts bombard the ship nearest their shore. Win by sinking Cleopatra’s and Antony’s flagships (ringed in gold); at half strength they flee, and each one that escapes costs a star.',
     units: ['supplyboat', 'archership', 'corvus', 'turris'], newUnit: 'corvus',
     blurb: 'Off the headland of Actium, in western Greece, Octavian’s fleet under Agrippa blocks the fleet of Antony and Cleopatra. Whoever wins rules the Roman world.',
     after: 'Antony and Cleopatra escaped to Egypt, where both killed themselves the next year. Octavian, soon called Augustus, was master of the Roman world.',
-    waves: [w(18, ['galley'], 'Stage 1 of 4: Antony’s fleet rows out of the bay.', [3]), w(32, ['galley', 'galley'], null, [2, 4]), w(46, ['firehulk'], null, [3]), w(58, ['deceres'], null, [3]), w(70, ['galley', 'firehulk'], null, [1, 5]),
-      w(88, ['galley', 'deceres', 'galley'], 'Stage 2 of 4: Antony’s right wing tries to slip round your left!', [0, 1]), w(106, ['firehulk', 'deceres'], null, [0, 1]),
-      w(138, ['cleoflag', 'egyptian', 'egyptian', 'egyptian', 'egyptian'], 'Stage 3 of 4: Cleopatra’s squadron dashes down the middle!', [3, 2, 4]),
-      w(178, ['flagship', 'deceres', 'firehulk'], 'Stage 4 of 4: Antony’s flagship comes out. Sink it before it escapes!', [3, 2, 4])] },
+    waves: [w(18, ['galley'], 'Stage 1 of 4: Antony’s fleet rows out of the bay.', [4]), w(32, ['galley', 'galley'], null, [3, 5]), w(46, ['firehulk'], null, [4]), w(58, ['deceres'], null, [4]), w(70, ['galley', 'firehulk'], null, [2, 6]),
+      w(88, ['galley', 'deceres', 'galley'], 'Stage 2 of 4: Antony’s right wing tries to slip round your left!', [1, 2]), w(106, ['firehulk', 'deceres'], null, [1, 2]),
+      w(138, ['cleoflag', 'egyptian', 'egyptian', 'egyptian', 'egyptian'], 'Stage 3 of 4: Cleopatra’s squadron dashes down the middle!', [4, 3, 5]),
+      w(178, ['flagship', 'deceres', 'firehulk'], 'Stage 4 of 4: Antony’s flagship comes out. Sink it before it escapes!', [4, 3, 5])] },
   { id: 'teutoburg', name: 'The Teutoburg Forest', year: 'AD 9', enemy: 'Arminius and the Germanic tribes', theme: 'forest', start: 450, cols: 8, rows: 11,
     twist: 'The Empire’s biggest field yet: eight lanes and eleven rows. The legions march through dark forest in the rain, strung out over miles, and warriors burst out of the woods at the sides, in the middle of the field. New: the cohort, three legionaries placed with one card.',
     units: ['cart', 'slinger', 'velites', 'legionary', 'cohort', 'triarius', 'caltrops', 'centurion', 'scorpio'], newUnit: 'cohort',
@@ -1194,18 +1194,19 @@ function drawShip(c, kind, T, foe = false, f = null) {
 // slide down the screen as if the fleet were sailing forward, while the ships keep their places. The distance travelled
 // is game time × speed, so it stops when the game is paused.
 function drawScroll() {
-  const c = ctx, top = ry(0), bot = ry(ROWS), off = G.t * LEVEL.scroll * cell, land = LEVEL.shore ? lx(COLS - 1) - cell / 2 : W
+  const c = ctx, top = ry(0), bot = ry(ROWS), off = G.t * LEVEL.scroll * cell, land = LEVEL.shore ? lx(COLS - 1) - cell / 2 : W, from = LEVEL.shore === 'both' ? lx(0) + cell / 2 : 0
   c.fillStyle = '#4f87ab'; c.fillRect(0, 0, W, H)
   // the squares of the field, sliding down (the checker repeats every two rows)
-  c.save(); c.beginPath(); c.rect(0, top, land, bot - top); c.clip()
+  c.save(); c.beginPath(); c.rect(from, top, land - from, bot - top); c.clip()
   const shift = off % (2 * cell)
   for (let r = -2; r <= ROWS; r++) for (let col = 0; col < COLS; col++) { c.fillStyle = LAWN.sea[((r % 2) + 2 + col) % 2]; c.fillRect(col * cell, top + r * cell + shift, cell, cell) }
   c.restore()
   // waves everywhere on the water
-  c.save(); c.beginPath(); c.rect(0, 0, land, H); c.clip(); c.strokeStyle = 'rgba(230, 240, 250, .3)'; c.lineWidth = 1.2
+  c.save(); c.beginPath(); c.rect(from, 0, land - from, H); c.clip(); c.strokeStyle = 'rgba(230, 240, 250, .3)'; c.lineWidth = 1.2
   for (let i = 0; i < 170; i++) { const x = ((i * 0.7548) % 1) * land, y = (((i * 0.5698) % 1) * (H + 20) + off) % (H + 20) - 10; c.beginPath(); c.moveTo(x - 5, y); c.quadraticCurveTo(x, y - 3, x + 5, y); c.stroke() }
   c.restore()
   if (LEVEL.shore) drawShore(land, off)
+  if (LEVEL.shore === 'both') { c.save(); c.translate(W, 0); c.scale(-1, 1); drawShore(W - from, off, 7); c.restore() }   // the other coast, mirrored, with its own villages and cliffs
   if (LEVEL.admiral) {   // a shadow at the top of a lane: a ship arrives there in a few seconds
     for (const e of G.queue) {
       if (e.lane == null || e.t - G.t > 4) continue
@@ -1219,7 +1220,7 @@ function drawScroll() {
     const label = $('level'); if (label.textContent !== text) label.textContent = text   // the goal, where the battle's name is
   }
   for (const o of G.forts ?? []) {   // a fort of Antony's army on the shore: stone walls, a tower, his blue-green banner; rubble once silenced
-    const x = lx(COLS - 1) + cell * 0.08, y = ry(o.y), s = cell * 0.36
+    const x = (o.side ?? 1) > 0 ? lx(COLS - 1) + cell * 0.08 : lx(0) - cell * 0.08, y = ry(o.y), s = cell * 0.36
     c.save(); c.translate(x + (o.hurt > 0 ? (Math.random() - 0.5) * 3 : 0), y)
     if (o.hp > 0) {
       c.fillStyle = '#a39782'; c.fillRect(-s, -s * 0.7, s * 2, s * 1.4); c.fillStyle = '#8a7f6c'; for (let i = 0; i < 5; i++) c.fillRect(-s + i * s * 0.45, -s * 0.9, s * 0.25, s * 0.22)
@@ -1232,8 +1233,8 @@ function drawScroll() {
 }
 // The coast of western Greece on the right, sliding past: beaches, cliffs, olive groves, villages and a temple, each piece
 // chosen from its place along the coast, so the same stretch looks the same while it passes.
-function drawShore(x0, off) {
-  const c = ctx, seg = cell * 2.2, first = Math.floor(-off / seg) - 1, h = (n, m) => { const v = Math.sin(n * 127.1 + m * 311.7) * 43758.5453; return v - Math.floor(v) }
+function drawShore(x0, off, seed = 0) {
+  const c = ctx, seg = cell * 2.2, first = Math.floor(-off / seg) - 1, h = (n, m) => { const v = Math.sin((n + seed * 31) * 127.1 + m * 311.7) * 43758.5453; return v - Math.floor(v) }
   const edge = y => x0 + cell * 0.12 + Math.sin((y - off) / (cell * 1.3)) * cell * 0.1 + Math.sin((y - off) / (cell * 0.47)) * cell * 0.04   // the waterline
   c.fillStyle = '#d9c48e'; c.beginPath(); c.moveTo(W, 0); for (let y = 0; y <= H; y += 6) c.lineTo(edge(y) - cell * 0.06, y); c.lineTo(W, H); c.fill()   // the beach
   c.fillStyle = '#8f9a5a'; c.beginPath(); c.moveTo(W, 0); for (let y = 0; y <= H; y += 6) c.lineTo(edge(y) + cell * 0.14, y); c.lineTo(W, H); c.fill()   // the land
@@ -1603,7 +1604,7 @@ function newGame(i = levelIndex, score = quizScore) {
   }
   G.admiral = null
   if (army.admiral) {   // Actium: Octavian's flagship, a ship on the field like the others but far stronger; it sails in from below to the middle
-    const lane = Math.floor((COLS - (LEVEL.closed?.length ?? 0) - 1) / 2), row = Math.floor(ROWS / 2)
+    const sea = [...Array(COLS).keys()].filter(l => !LEVEL.closed?.includes(l)), lane = sea[Math.floor((sea.length - 1) / 2)], row = Math.floor(ROWS / 2)
     G.units.push({ type: 'octavian', lane, row, hp: army.admiral, max: army.admiral, cd: 0, anim: 0, hurt: 0, armed: false, arm: 0, aiming: false, fighting: false, fromLane: lane, fromRow: ROWS + 1.5, travel: 5, travelT: 0 })
   }
   G.resolved = {}
@@ -1697,6 +1698,7 @@ function hitWall(l, dmg) {
   G.cw.breached = true
 }
 function canPlace(type, lane, row) {
+  if (type === 'octavian') { const o = G.units.find(x => x.type === 'octavian'); return !!o && lane === o.lane && row > o.row && canStand(lane, row) }   // dragging the flagship: only backwards (the squares it may go show as free)
   if (LEVEL.midGate === row) return false   // the gate row is the horsemen's
   if (G.cw && row <= LEVEL.cityWall.row) return false   // on the wall or behind it
   if (lane < 0 || lane >= COLS || row < 0 || row >= ROWS || unitAt(lane, row) || row === LEVEL.ditch || LEVEL.closed?.includes(lane)) return false
@@ -1781,6 +1783,7 @@ function stepUnit(u, lane, row) {   // the vanguard's own step: unlike a placed 
 }
 function moveUnit(u, lane, row) {
   if (!canStand(lane, row) || (u.lane === lane && u.row === row)) return false
+  if (u.type === 'octavian' && (lane !== u.lane || row < u.row)) { sfx.deny(); if (!G.tips.backOnly) { G.tips.backOnly = true; announce('Octavian’s flagship holds the middle: it can only fall back, down its own lane.') } return false }   // Actium
   u.fromLane = u.lane; u.fromRow = u.row; u.lane = lane; u.row = row
   u.travel = G.phase === 'deploy' ? 0 : Math.max(0.15, Math.hypot(u.lane - u.fromLane, u.row - u.fromRow) / 8); u.travelT = 0   // about eight squares a second
   for (const f of G.foes) if (f.eating === u) f.eating = null
@@ -1918,13 +1921,13 @@ function update(dt) {
       u.scd = (u.scd ?? 1) - dt
       if (u.scd <= 0) {
         const yr = u.row + 0.5, ships = U.fortsOnly ? [] : G.foes.filter(f => f.hp > 0 && !f.hunting && f.lane !== u.lane && Math.abs(f.lane - u.lane) <= U.side && Math.abs(f.y - yr) <= 0.75)
-        const fort = (G.forts ?? []).find(o => o.hp > 0 && COLS - 1 - u.lane <= (U.fortReach ?? U.side) && Math.abs(o.y - yr) <= 0.9)
+        const fort = (G.forts ?? []).find(o => o.hp > 0 && ((o.side ?? 1) > 0 ? COLS - 1 - u.lane : u.lane) <= (U.fortReach ?? U.side) && Math.abs(o.y - yr) <= 0.9)
         const f = ships.sort((a, b) => Math.abs(a.lane - u.lane) - Math.abs(b.lane - u.lane))[0]
         if (f || fort) {
           u.scd = U.sideReload ?? U.reload; u.anim = 0.3; sfx.bow()
           const dmg = (U.sideDmg ?? U.dmg) * pow
-          G.fx.push({ kind: 'sidearrow', x1: lx(u.lane), y1: ry(u.row + 0.45), x2: f ? foeX(f) : lx(COLS - 1), y2: f ? ry(f.y) - 22 * k : ry(fort.y), t: 0.32 })
-          if (f) hurtFoe(f, dmg * matchMul(u.type, f)); else { fort.hp -= dmg; fort.hurt = 0.15; if (fort.hp <= 0) { G.shake = Math.max(G.shake, 5); sfx.crack(); for (let i = 0; i < 10; i++) G.fx.push({ kind: 'dust', x: lx(COLS - 1), y: ry(fort.y), vx: (Math.random() - 0.5) * 80, vy: -Math.random() * 50, t: 0.7 }); announce('A fort on the shore is silenced!') } }
+          G.fx.push({ kind: 'sidearrow', x1: lx(u.lane), y1: ry(u.row + 0.45), x2: f ? foeX(f) : (fort.side ?? 1) > 0 ? lx(COLS - 1) : lx(0), y2: f ? ry(f.y) - 22 * k : ry(fort.y), t: 0.32 })
+          if (f) hurtFoe(f, dmg * matchMul(u.type, f)); else { fort.hp -= dmg; fort.hurt = 0.15; if (fort.hp <= 0) { G.shake = Math.max(G.shake, 5); sfx.crack(); for (let i = 0; i < 10; i++) G.fx.push({ kind: 'dust', x: (fort.side ?? 1) > 0 ? lx(COLS - 1) : lx(0), y: ry(fort.y), vx: (Math.random() - 0.5) * 80, vy: -Math.random() * 50, t: 0.7 }); announce('A fort on the shore is silenced!') } }
         } else u.scd = 0.25
       }
       if (!U.grain) continue
@@ -2089,14 +2092,14 @@ function update(dt) {
   }
   if (LEVEL.forts) {   // forts on the shore: one comes into view every so often, moves down with the coast and throws stones at the ships nearest the shore
     G.forts ??= []; G.nextFort ??= LEVEL.forts.first
-    if (G.t >= G.nextFort) { G.forts.push({ y: -0.9, hp: LEVEL.forts.hp, max: LEVEL.forts.hp, cd: 2 + Math.random() * 2, hurt: 0 }); G.nextFort = G.t + LEVEL.forts.every * (0.8 + Math.random() * 0.4); if (!G.tips.fort) { G.tips.fort = true; announce('A fort on the shore! Its catapult hits the lanes nearest the coast. Supply boats near the shore can shoot at it.', true, 3600) } }
+    if (G.t >= G.nextFort) { G.fortSide = LEVEL.shore === 'both' ? -(G.fortSide ?? -1) : 1; G.forts.push({ y: -0.9, hp: LEVEL.forts.hp, max: LEVEL.forts.hp, cd: 2 + Math.random() * 2, hurt: 0, side: G.fortSide }); G.nextFort = G.t + LEVEL.forts.every * (0.8 + Math.random() * 0.4); if (!G.tips.fort) { G.tips.fort = true; announce('A fort on the shore! Its catapult hits the lanes nearest the coast. Supply boats near the shore can shoot at it.', true, 3600) } }
     for (const o of G.forts) {
       o.y += LEVEL.scroll * dt; o.hurt = Math.max(0, o.hurt - dt)
       if (o.hp > 0 && o.y > 0 && o.y < ROWS - 0.3 && (o.cd -= dt) <= 0) {
         o.cd = LEVEL.forts.reload * (0.8 + Math.random() * 0.4)
         const rows = G.units.filter(u => !u.travel && Math.abs(u.row + 0.5 - o.y) <= 1.5).map(u => u.row).sort((a, b) => Math.abs(a + 0.5 - o.y) - Math.abs(b + 0.5 - o.y))
-        const targets = rows.length ? [G.units.filter(u => !u.travel && u.row === rows[0]).sort((a, b) => b.lane - a.lane)[0]] : []   // the ship nearest the shore on the row level with the fort: the others behind it are shielded
-        if (targets.length) { const u = targets[0]; G.lobs ??= []; G.lobs.push({ x0: lx(COLS - 1), y0: ry(o.y) - 10 * k, lane: u.lane, row: u.row, t: 0, dur: 1.6, dmg: LEVEL.forts.dmg }); sfx.throw() }
+        const targets = rows.length ? [G.units.filter(u => !u.travel && u.row === rows[0]).sort((a, b) => (b.lane - a.lane) * (o.side ?? 1))[0]] : []   // the ship nearest the fort's shore on its row: the others behind it are shielded
+        if (targets.length) { const u = targets[0]; G.lobs ??= []; G.lobs.push({ x0: (o.side ?? 1) > 0 ? lx(COLS - 1) : lx(0), y0: ry(o.y) - 10 * k, lane: u.lane, row: u.row, t: 0, dur: 1.6, dmg: LEVEL.forts.dmg }); sfx.throw() }
       }
     }
     G.forts = G.forts.filter(o => o.y < ROWS + 1.5)
@@ -4183,5 +4186,5 @@ function unmount() {
 }
 // the gods' drawings and texts, for the Pantheon in the Ave Caesar chronicle
 const gods = { list: PAN_GODS, female: k => !!DEITY_LOOK[k]?.female, draw: (c, k, T, o = {}) => drawDeity(c, k, T, !!o.greek, o) }
-return { mount, unmount, armyFor, LEVELS, gods, debug: { moveEques, get P() { return P }, panStart, panDrop, panUpdate, fallStart, fallUpdate, fallTo, fallDrop, fallMove, openPantheon, PAN_GODS, get G() { return G }, showBriefing, win, lose, paintIcons, foeTypes, place, collect, update, startLevel, beginBattle, armyFor, showMap, LEVELS, UNITS, FOES, progress } }
+return { mount, unmount, armyFor, LEVELS, gods, debug: { moveEques, moveUnit, get P() { return P }, panStart, panDrop, panUpdate, fallStart, fallUpdate, fallTo, fallDrop, fallMove, openPantheon, PAN_GODS, get G() { return G }, showBriefing, win, lose, paintIcons, foeTypes, place, collect, update, startLevel, beginBattle, armyFor, showMap, LEVELS, UNITS, FOES, progress } }
 })()
