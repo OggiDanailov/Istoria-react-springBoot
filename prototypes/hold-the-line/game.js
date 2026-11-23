@@ -40,15 +40,15 @@ const UNITS = {
   testudo:    { name: 'Testudo', short: 'Testudo', cost: 75, recharge: 15, hp: 1200, melee: 15, arrowMul: 0.1, about: '“The tortoise”: soldiers lock their shields in front and over their heads. Arrows and stones barely hurt it.' },
   fourthline: { name: 'Fourth line', short: '4th line', cost: 100, recharge: 10, hp: 500, melee: 40, antiCav: 3, about: 'Caesar’s hidden fourth line at Pharsalus: picked men who thrust their pila up at the horsemen. Three times as deadly against cavalry.' },
   lilia:    { name: 'Lilia', short: 'Lilia', cost: 50, recharge: 12, hp: 400, pit: { dmg: 110, slow: 0.5 }, about: 'Caesar’s “lilies” at Alesia: hidden pits with a sharpened stake in each. Enemies walk over them, get hurt and slow down. They don’t block the lane, and they last.' },
-  supplyboat:  { name: 'Supply boat', short: 'Supply', cost: 50, recharge: 7.5, hp: 300, grain: true, side: 2, fortReach: 99, sideDmg: 15, sideReload: 2, ship: 'supply', about: 'A round-bellied merchant boat. Brings a sack of grain every 20 seconds, and its few archers shoot lightly at ships passing beside it and at a fort on the shore when one passes level with it.' },
-  archership:  { name: 'Archer ship', short: 'Archers', cost: 100, recharge: 7.5, hp: 300, reload: 1.5, dmg: 20, range: 99, both: true, counters: ['light', 'fire'], kind: 'arrow', ship: 'archers', about: 'A light liburnian with archers on deck. Shoots forward and backward along its lane: at ships coming at you and at ships that got behind.' },
+  supplyboat:  { name: 'Supply boat', short: 'Supply', cost: 50, recharge: 7.5, hp: 300, grain: true, side: 2, fortReach: 99, sideDmg: 15, sideReload: 2, aimRange: 4, ship: 'supply', about: 'A round-bellied merchant boat. Brings a sack of grain every 20 seconds, and its few archers shoot lightly at ships passing beside it and at a fort on the shore when one passes level with it.' },
+  archership:  { name: 'Archer ship', short: 'Archers', cost: 100, recharge: 7.5, hp: 300, reload: 1.5, dmg: 20, range: 99, both: true, aimRange: 5.5, counters: ['light', 'fire'], kind: 'arrow', ship: 'archers', about: 'A light liburnian with archers on deck. Shoots forward and backward along its lane: at ships coming at you and at ships that got behind.' },
   quinquereme: { name: 'Quinquereme', short: 'Quinquereme', cost: 50, recharge: 25, hp: 1500, ship: 'heavy', about: 'A big warship with a strong hull. It doesn’t attack, but holds the enemy back.' },
   rammer:      { name: 'Ramming ship', short: 'Rammer', cost: 100, recharge: 10, hp: 700, melee: 55, flank: 45, ship: 'ram', about: 'Fast and nimble, with a bronze ram at the bow. It smashes any ship that comes alongside.' },
   ballista:    { name: 'Ballista ship', short: 'Ballista', cost: 175, recharge: 15, hp: 300, reload: 3.5, dmg: 110, range: 99, pierce: true, ship: 'ballista', about: 'A ship carrying a bolt-thrower. Each bolt flies through every ship in its lane.' },
   fireship:    { name: 'Fire pots', short: 'Fire pots', cost: 25, recharge: 25, hp: 300, armTime: 10, dmg: 450, trap: true, ship: 'fire', about: 'A small boat full of burning pitch. Once it’s lit (10 seconds), the first enemy to touch it goes up in flames.' },
-  turris:      { name: 'Tower ship', short: 'Tower', cost: 125, recharge: 12, hp: 450, reload: 1.4, dmg: 32, side: 3, counters: ['fast'], ship: 'tower', about: 'Agrippa’s tower ship (navis turrita): archers in a wooden tower shoot to the left and right along its row, at enemy ships beside it and at forts on the shore. It doesn’t shoot forward.' },
+  turris:      { name: 'Tower ship', short: 'Tower', cost: 125, recharge: 12, hp: 450, reload: 1.4, dmg: 32, side: 3, aimRange: 4.5, counters: ['fast'], ship: 'tower', about: 'Agrippa’s tower ship (navis turrita): archers in a wooden tower shoot to the left and right along its row, at enemy ships beside it and at forts on the shore. It doesn’t shoot forward.' },
   corvus:      { name: 'Boarding ship', short: 'Boarding', cost: 100, recharge: 10, hp: 700, melee: 65, board: true, counters: ['heavy'], ship: 'corvus', about: 'A heavy ship with a boarding bridge (corvus). When an enemy ship reaches it, from the front or from behind, the bridge drops onto its deck and marines run across to fight. The ship it holds can’t move on.' },
-  octavian:    { name: 'Octavian’s flagship', short: 'Octavian', cost: 0, recharge: 0, hp: 2400, melee: 45, side: 2, sideDmg: 18, sideReload: 1.8, neutral: true, ship: 'admiral', about: 'Octavian and Agrippa’s flagship, in the middle of the fleet: if it sinks, the battle is lost. It can only fall back down its own lane. Its marines fight any ship that reaches it, and its archers shoot at ships beside it, up to two lanes away.' },
+  octavian:    { name: 'Octavian’s flagship', short: 'Octavian', cost: 0, recharge: 0, hp: 2400, melee: 45, side: 2, sideDmg: 18, sideReload: 1.8, aimRange: 4, neutral: true, ship: 'admiral', about: 'Octavian and Agrippa’s flagship, in the middle of the fleet: if it sinks, the battle is lost. It can only fall back down its own lane. Its marines fight any ship that reaches it, and its archers shoot at ships beside it, up to two lanes away.' },
   harpax:      { name: 'Harpax ship', short: 'Harpax', cost: 150, recharge: 12, hp: 350, reload: 4, dmg: 35, range: 99, kind: 'hook', grapple: 4, ship: 'harpax', about: 'Agrippa’s invention: a grappling hook fired from a catapult. It catches an enemy ship and holds it still for 4 seconds.' },
   ceres:    { name: 'Ceres', short: 'Ceres', cost: 50, recharge: 7.5, hp: 300, grain: true, deity: 'ceres', about: 'Goddess of grain and the harvest. Brings a sack of grain every 20 seconds.' },
   jupiter: { name: 'Jupiter', short: 'Jupiter', cost: 50, recharge: 5, hp: 300, reload: 1.4, dmg: 45, range: 99, kind: 'ray', deity: 'jupiter', about: 'The Roman god of the sky and thunder, king of the gods. Only Jupiter can stop Zeus.' },
@@ -269,9 +269,9 @@ const LEVELS = [
       w(122, rep(4, 'cavalry'), 'Pompey’s 7,000 horsemen charge your left wing!', [0, 1, 2]),
       w(140, ['legate', 'legion3', 'pompeian', 'slingarcher', 'slingarcher', 'pomscorpio'], 'A great wave approaches!'), w(166, ['legion3', 'legion3', 'cavalry', 'slingarcher', 'pomscorpio']),
       w(190, ['legate', 'legion3', 'legion3', 'pompeian', 'cavalry', 'cavalry', 'slingarcher', 'pomscorpio'], 'The final wave!')] },
-  { id: 'actium', name: 'Actium', year: '31 BC', enemy: 'Antony and Cleopatra', theme: 'sea', sea: true, start: 425, rows: 10, more: 1.0, lengthen: 0, admiral: true, counters: true, scroll: 0.3, shore: 'both', closed: [0, 8], cols: 9, reefs: { first: 26, every: 24, len: 1.2 }, forts: { first: 40, every: 45, hp: 300, reload: 4.5, dmg: 70, reach: 2 },
+  { id: 'actium', name: 'Actium', year: '31 BC', enemy: 'Antony and Cleopatra', theme: 'sea', sea: true, start: 425, rows: 10, more: 1.0, lengthen: 0, admiral: true, counters: true, aim: { range: 5 }, scroll: 0.3, shore: 'both', closed: [0, 8], cols: 9, reefs: { first: 26, every: 24, len: 1.2 }, forts: { first: 40, every: 45, hp: 300, reload: 4.5, dmg: 70, reach: 2 },
     stages: [[0, 'the approach', 'приближаването'], [86, 'the wing on your left', 'крилото вляво'], [136, 'Cleopatra breaks through', 'Клеопатра пробива'], [176, 'Antony’s flagship', 'флагманът на Антоний']],
-    twist: 'Each of your ships answers one kind of enemy, with double damage, and does only half to the rest: archer ships against light warships (pale band) and fire ships, boarding ships against great ships (with a tower), tower ships against Cleopatra’s fast ships (purple sail). Supply boats bring grain and shoot at the forts on the shore. Four stages, announced as they come; a shadow at the top of a lane warns of each ship. Octavian’s flagship (gold sail) holds the middle and can only fall back down its own lane; its marines and archers fight back, but if it sinks, you lose. Antony’s light and fast ships shoot sideways at your fleet as they pass: answer them with tower ships and supply boats. Forts on both coasts bombard the ship nearest their shore, and reefs jut from the coasts into the outer lanes: a flashing warning shows their lanes, and any ship they reach, yours or Antony’s, is wrecked. Win by sinking Cleopatra’s and Antony’s flagships (ringed in gold); at half strength they flee, and each one that escapes costs a star.',
+    twist: 'Aim your ships: tap one of your ships (its range shows as a circle), then tap an enemy ship inside it; it keeps shooting at that target. Ships without orders shoot at the nearest enemy in range, in any direction. Each of your ships answers one kind of enemy, with double damage, and does only half to the rest: archer ships against light warships (pale band) and fire ships, boarding ships against great ships (with a tower), tower ships against Cleopatra’s fast ships (purple sail). Supply boats bring grain and shoot at the forts on the shore. Four stages, announced as they come; a shadow at the top of a lane warns of each ship. Octavian’s flagship (gold sail) holds the middle and can only fall back down its own lane; its marines and archers fight back, but if it sinks, you lose. Antony’s light and fast ships shoot sideways at your fleet as they pass: answer them with tower ships and supply boats. Forts on both coasts bombard the ship nearest their shore, and reefs jut from the coasts into the outer lanes: a flashing warning shows their lanes, and any ship they reach, yours or Antony’s, is wrecked. Win by sinking Cleopatra’s and Antony’s flagships (ringed in gold); at half strength they flee, and each one that escapes costs a star.',
     units: ['supplyboat', 'archership', 'corvus', 'turris'], newUnit: 'corvus',
     blurb: 'Off the headland of Actium, in western Greece, Octavian’s fleet under Agrippa blocks the fleet of Antony and Cleopatra. Whoever wins rules the Roman world.',
     after: 'Antony and Cleopatra escaped to Egypt, where both killed themselves the next year. Octavian, soon called Augustus, was master of the Roman world.',
@@ -1208,6 +1208,7 @@ function drawScroll() {
   if (LEVEL.shore) drawShore(land, off)
   if (LEVEL.shore === 'both') { c.save(); c.translate(W, 0); c.scale(-1, 1); drawShore(W - from, off, 7); c.restore() }   // the other coast, mirrored, with its own villages and cliffs
   if (LEVEL.reefs) drawReefs()
+  if (LEVEL.aim) drawAim()
   if (LEVEL.admiral) {   // a shadow at the top of a lane: a ship arrives there in a few seconds
     for (const e of G.queue) {
       if (e.lane == null || e.t - G.t > 4) continue
@@ -1772,6 +1773,58 @@ function matchMul(type, f) {
   if ((f.matchShown ?? 0) < G.t) { f.matchShown = G.t + 0.6; G.fx.push({ kind: 'text', x: foeX(f) + 10, y: ry(f.y) - 30 * k, text: strong ? '×2' : '½', t: 0.7, col: strong ? '#f0c24a' : '#cfd4d8' }) }
   return m
 }
+// Free aiming (a pilot for Actium, Nov 23): a ship shoots in any direction at a target within its range, measured in
+// squares from its centre. Tap one of your ships, then an enemy ship: that ship keeps shooting at it while it is in range.
+// Ships without an order shoot at the nearest enemy in range (supply boats at a fort first). The shots fly as arrows.
+const unitPos = u => [u.lane + 0.5, u.row + 0.5]
+const foePos = f => [foeX(f) / cell, f.y - 0.35]
+const fortPos = o => [(o.side ?? 1) > 0 ? COLS - 0.5 : 0.5, o.y]
+const dist = (a, b) => Math.hypot(a[0] - b[0], a[1] - b[1])
+const aimRange = U => U.aimRange ?? LEVEL.aim.range
+function aimShoot(u, U, pow, dt) {
+  if (u.travel || (u.acd = (u.acd ?? 0.6) - dt) > 0) return
+  const me = unitPos(u), R = aimRange(U)
+  let t = u.aim && u.aim.hp > 0 && dist(me, foePos(u.aim)) <= R ? { foe: u.aim } : null
+  if (!t && U.fortReach) { const o = (G.forts ?? []).filter(o => o.hp > 0 && dist(me, fortPos(o)) <= R)[0]; if (o) t = { fort: o } }
+  if (!t) { const f = G.foes.filter(f => f.hp > 0 && f.y > -0.5 && dist(me, foePos(f)) <= R).sort((a, b) => dist(me, foePos(a)) - dist(me, foePos(b)))[0]; if (f) t = { foe: f } }
+  if (!t) { u.acd = 0.25; return }
+  u.acd = U.sideReload ?? U.reload; u.anim = 0.3; sfx.bow()
+  G.darts ??= []; G.darts.push({ x: me[0], y: me[1] - 0.1, ...t, dmg: (U.sideDmg ?? U.dmg) * pow, src: u.type })
+}
+function hitFort(o, dmg) {
+  o.hp -= dmg; o.hurt = 0.15
+  if (o.hp <= 0) { G.shake = Math.max(G.shake, 5); sfx.crack(); const [fx, fy] = fortPos(o); for (let i = 0; i < 10; i++) G.fx.push({ kind: 'dust', x: fx * cell, y: ry(fy), vx: (Math.random() - 0.5) * 80, vy: -Math.random() * 50, t: 0.7 }); announce('A fort on the shore is silenced!') }
+}
+function updateDarts(dt) {   // arrows in flight, Roman and Antony's, each homing on its target
+  for (const d of G.darts ?? []) {
+    const tp = d.foe ? (d.foe.hp > 0 ? foePos(d.foe) : null) : d.fort ? (d.fort.hp > 0 ? fortPos(d.fort) : null) : d.unit ? (G.units.includes(d.unit) ? unitPos(d.unit) : null) : null
+    if (!tp) { d.done = true; continue }
+    const dx = tp[0] - d.x, dy = tp[1] - d.y, len = Math.hypot(dx, dy), step = 9 * dt
+    d.ang = Math.atan2(dy, dx)
+    if (len <= step + 0.2) {
+      d.done = true
+      if (d.foe) hurtFoe(d.foe, d.dmg * matchMul(d.src, d.foe))
+      else if (d.fort) hitFort(d.fort, d.dmg)
+      else if (d.unit) { d.unit.hp -= d.dmg; d.unit.hurt = 0.12; if (d.unit.hp <= 0) removeUnit(d.unit) }
+    } else { d.x += dx / len * step; d.y += dy / len * step }
+  }
+  if (G.darts) G.darts = G.darts.filter(d => !d.done)
+}
+function drawAim() {   // the arrows, the range of the ship you picked, and every ship's chosen target
+  const c = ctx
+  const sel = G.moveSel && G.units.includes(G.moveSel) && (UNITS[G.moveSel.type].reload || UNITS[G.moveSel.type].side) ? G.moveSel : null
+  if (sel) { const [x, y] = unitPos(sel); c.save(); c.strokeStyle = 'rgba(240, 194, 74, .85)'; c.fillStyle = 'rgba(240, 194, 74, .08)'; c.lineWidth = 2; c.setLineDash([6, 5]); c.beginPath(); c.arc(x * cell, ry(y), aimRange(UNITS[sel.type]) * cell, 0, TAU); c.fill(); c.stroke(); c.restore() }
+  for (const u of G.units) if (u.aim && u.aim.hp > 0) {
+    const a = unitPos(u), b = foePos(u.aim)
+    c.save(); c.strokeStyle = u === sel ? 'rgba(240, 194, 74, .95)' : 'rgba(240, 194, 74, .45)'; c.lineWidth = u === sel ? 2.2 : 1.4; c.setLineDash([4, 4]); c.beginPath(); c.moveTo(a[0] * cell, ry(a[1])); c.lineTo(b[0] * cell, ry(b[1])); c.stroke(); c.setLineDash([])
+    c.beginPath(); c.arc(b[0] * cell, ry(b[1]), cell * 0.3, 0, TAU); c.stroke(); c.restore()
+  }
+  for (const d of G.darts ?? []) {
+    c.save(); c.translate(d.x * cell, ry(d.y)); c.rotate(d.ang ?? -Math.PI / 2); c.scale(k * 1.4, k * 1.4)
+    line(c, -11, 0, 7, 0, '#4a3420', 1.8); c.fillStyle = '#9aa3aa'; c.beginPath(); c.moveTo(11, 0); c.lineTo(6, -2.6); c.lineTo(6, 2.6); c.fill()
+    c.fillStyle = d.unit ? '#2f6f8a' : '#e9e1cf'; c.beginPath(); c.moveTo(-11, 0); c.lineTo(-15, -3); c.lineTo(-8, 0); c.lineTo(-15, 3); c.fill(); c.restore()
+  }
+}
 const MOVABLE = t => !UNITS[t].trap && t !== 'pigs' && t !== 'torch' && t !== 'lilia'
 // At the Allia a Gaul's first blow knocks the man he hits one square back, toward the Tiber behind the line; from the
 // last row he falls in and drowns, and panic slows the men around him. Triarii kneel behind their shields and don't
@@ -1941,7 +1994,8 @@ function update(dt) {
     if (u.travel) { u.travelT += dt; if (u.travelT >= u.travel) u.travel = 0; continue }
     if (u.netted > 0) { u.netted -= dt; continue }   // caught in a retiarius's net
     const pow = (blessed ? AUGUR.damage : 1) * (G.units.some(c => UNITS[c.type].aura && c !== u && Math.abs(c.lane - u.lane) <= 1 && Math.abs(c.row - u.row) <= 1) ? 1.3 : 1) * (G.units.some(c => UNITS[c.type].laneAura && c !== u && c.lane === u.lane) ? 1.25 : 1)
-    if (U.side) {   // shooting left and right along its row, never forward (supply boats at sea; the tower ship)
+    if (LEVEL.aim && (U.reload || U.side)) { aimShoot(u, U, pow, dt); if (!U.grain && !U.melee) continue }   // free aiming (the pilot): any direction, within range
+    if (U.side && !LEVEL.aim) {   // shooting left and right along its row, never forward (supply boats at sea; the tower ship)
       u.scd = (u.scd ?? 1) - dt
       if (u.scd <= 0) {
         const yr = u.row + 0.5, ships = U.fortsOnly ? [] : G.foes.filter(f => f.hp > 0 && !f.hunting && f.lane !== u.lane && Math.abs(f.lane - u.lane) <= U.side && Math.abs(f.y - yr) <= 0.75)
@@ -2036,7 +2090,7 @@ function update(dt) {
     if (u.type === 'pigs' && G.foes.some(f => f.lane === u.lane && f.hp > 0 && !f.fleeing && f.y >= u.row - U.trigger && f.y <= u.row + 1)) {
       removeUnit(u, false); G.runners.push({ lane: u.lane, y: u.row + 0.82 }); sfx.squeal()
     }
-    if (U.reload && !(U.melee && u.fighting)) {
+    if (U.reload && !LEVEL.aim && !(U.melee && u.fighting)) {
       const lanes = U.spread ? [u.lane - 1, u.lane, u.lane + 1].filter(l => l >= 0 && l < COLS) : [u.lane]
       const downward = LEVEL.midGate != null && u.row > LEVEL.midGate   // below the middle gate: he faces down
       const above = f => !downward && f.y < u.row + 1.05 && f.y > Math.max(-0.55, u.row + 0.5 - U.range)
@@ -2202,12 +2256,13 @@ function update(dt) {
     if (FOES[f.type].sideBow && !f.fleeing && f.y > 0 && f.y < ROWS) {   // Actium: archers on the enemy's light and fast ships shoot left and right at the Roman ship nearest them on their row
       const B = FOES[f.type].sideBow
       if ((f.scd = (f.scd ?? 1 + Math.random()) - dt) <= 0) {
-        const t = G.units.filter(u => !u.travel && Math.abs(u.row + 0.5 - f.y) < 0.7 && Math.abs(u.lane - f.lane) >= 1 && Math.abs(u.lane - f.lane) <= B.reach).sort((a, b) => Math.abs(a.lane - f.lane) - Math.abs(b.lane - f.lane))[0]
+        const me = foePos(f), t = LEVEL.aim ? G.units.filter(u => !u.travel && dist(me, unitPos(u)) <= 4.5).sort((a, b) => dist(me, unitPos(a)) - dist(me, unitPos(b)))[0]
+          : G.units.filter(u => !u.travel && Math.abs(u.row + 0.5 - f.y) < 0.7 && Math.abs(u.lane - f.lane) >= 1 && Math.abs(u.lane - f.lane) <= B.reach).sort((a, b) => Math.abs(a.lane - f.lane) - Math.abs(b.lane - f.lane))[0]
         if (t) {
           f.scd = B.reload * (0.85 + Math.random() * 0.3); f.anim = 0.25; sfx.bow()
-          G.fx.push({ kind: 'sidearrow', x1: foeX(f), y1: ry(f.y) - 22 * k, x2: lx(t.lane), y2: ry(t.row + 0.45), t: 0.32, foe: true })
-          t.hp -= B.dmg; t.hurt = 0.12
-          if (!G.tips.sideFire) { G.tips.sideFire = true; announce('Enemy ships shoot at your ships beside them! Answer with tower ships and supply boats.', true, 3400) }
+          if (LEVEL.aim) { G.darts ??= []; G.darts.push({ x: me[0], y: me[1], unit: t, dmg: B.dmg }) }   // an arrow that flies to it
+          else { G.fx.push({ kind: 'sidearrow', x1: foeX(f), y1: ry(f.y) - 22 * k, x2: lx(t.lane), y2: ry(t.row + 0.45), t: 0.32, foe: true }); t.hp -= B.dmg; t.hurt = 0.12 }
+          if (!G.tips.sideFire) { G.tips.sideFire = true; announce(LEVEL.aim ? 'Antony’s ships shoot at your ships in range! Aim yours back: tap a ship, then an enemy.' : 'Enemy ships shoot at your ships beside them! Answer with tower ships and supply boats.', true, 3400) }
           if (t.hp <= 0) removeUnit(t)
         } else f.scd = 0.4
       }
@@ -2366,6 +2421,7 @@ function update(dt) {
   }
   for (const f of G.foes) if (f.hp <= 0 && FOES[f.type].target && !G.resolved[f.type]) { G.resolved[f.type] = f.escaped ? 'escaped' : 'sunk'; if (!f.escaped) announce(`${FOES[f.type].target}’s flagship is sunk!`, true, 3000) }
   if (LEVEL.admiral && Object.keys(G.resolved).length >= 2 && G.phase === 'play') return win()   // both flagships sunk or fled: the battle is decided
+  if (LEVEL.aim) updateDarts(dt)
   G.foes = G.foes.filter(f => f.hp > 0)
   for (const c of G.corpses) c.t += dt
   G.corpses = G.corpses.filter(c => c.t < 3.5)
@@ -2908,7 +2964,8 @@ document.addEventListener('pointerup', e => {
     if (m.moved && c?.inGrid && G.units.includes(m.u) && (G.phase === 'play' || G.phase === 'deploy')) moveBand(m.u, c.lane, c.row)
     else if (!m.moved && G.units.includes(m.u)) {   // a tap, not a drag: pick him up; the next tap on a free square moves him there
       G.moveSel = G.moveSel === m.u ? null : m.u
-      if (G.moveSel && !G.tips.tapMove) { G.tips.tapMove = true; announce(LANG === 'bg' ? 'Докоснете свободно поле, за да го преместите там.' : 'Tap a free square to move him there.') }
+      if (G.moveSel && LEVEL.aim && (UNITS[G.moveSel.type].reload || UNITS[G.moveSel.type].side) && !G.tips.tapAim) { G.tips.tapAim = true; announce(LANG === 'bg' ? 'Докоснете вражески кораб в кръга, за да стреля по него, или свободно поле, за да го преместите.' : 'Tap an enemy ship inside the circle to make it the target, or a free square to move there.', true, 3600) }
+      else if (G.moveSel && !G.tips.tapMove) { G.tips.tapMove = true; announce(LANG === 'bg' ? 'Докоснете свободно поле, за да го преместите там.' : 'Tap a free square to move him there.') }
     }
     return
   }
@@ -4143,6 +4200,14 @@ function bindControls() {
     }
     if (G.dismiss) { const u = unitAt(c.lane, c.row); if (u?.type === 'octavian') { sfx.deny(); announce('Octavian’s flagship stays in the battle!') } else if (u) { removeUnit(u, false); sfx.place() } G.dismiss = false; syncTray(); return }
     if (G.selected) { if (place(G.selected, c.lane, c.row)) select(null); return }
+    if (LEVEL.aim && G.moveSel && G.units.includes(G.moveSel) && (UNITS[G.moveSel.type].reload || UNITS[G.moveSel.type].side)) {   // aiming: the tap was on an enemy ship?
+      const at = [c.x / cell, c.y / cell - APPROACH], f = G.foes.filter(f => f.hp > 0 && dist(at, foePos(f)) < 0.75).sort((a, b) => dist(at, foePos(a)) - dist(at, foePos(b)))[0]
+      if (f) {
+        if (dist(unitPos(G.moveSel), foePos(f)) > aimRange(UNITS[G.moveSel.type])) { sfx.deny(); announce('Out of range: pick a ship inside the circle.') }
+        else { G.moveSel.aim = f; sfx.place(); G.fx.push({ kind: 'ring', x: foeX(f), y: ry(f.y - 0.35), t: 0.4 }); G.moveSel = null }
+        return
+      }
+    }
     const u = unitAt(c.lane, c.row)
     if (!u && G.moveSel && G.units.includes(G.moveSel)) { moveBand(G.moveSel, c.lane, c.row); G.moveSel = null; return }   // the second tap of tap-to-move
     if (!u) G.moveSel = null
