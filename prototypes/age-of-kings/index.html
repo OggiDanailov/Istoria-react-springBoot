@@ -742,7 +742,7 @@ const LEVELS = [
       w(122, rep(4, 'cavalry'), 'Pompey’s 7,000 horsemen charge your left wing!', [0, 1, 2]),
       w(140, ['legate', 'legion3', 'pompeian', 'slingarcher', 'slingarcher', 'pomscorpio'], 'A great wave approaches!'), w(166, ['legion3', 'legion3', 'cavalry', 'slingarcher', 'pomscorpio']),
       w(190, ['legate', 'legion3', 'legion3', 'pompeian', 'cavalry', 'cavalry', 'slingarcher', 'pomscorpio'], 'The final wave!')] },
-  { id: 'actium', name: 'Actium', year: '31 BC', enemy: 'Antony and Cleopatra', theme: 'sea', sea: true, start: 425, rows: 10, more: 1.0, lengthen: 0, flagHits: true, counters: true, scroll: 0.3, shore: 'both', closed: [0, 8], cols: 9, reefs: { first: 26, every: 24, len: 1.2 }, forts: { first: 40, every: 45, hp: 450, reload: 4.5, dmg: 90, reach: 2, reward: 75 },
+  { id: 'actium', name: 'Actium', year: '31 BC', enemy: 'Antony and Cleopatra', theme: 'sea', sea: true, start: 350, rows: 10, more: 1.15, lengthen: 0, flagHits: true, counters: true, scroll: 0.3, shore: 'both', closed: [0, 8], cols: 9, reefs: { first: 26, every: 24, len: 1.2 }, forts: { first: 40, every: 45, hp: 450, reload: 4.5, dmg: 90, reach: 2, reward: 75 },
     stages: [[0, 'the approach', 'приближаването'], [86, 'the wings on both sides', 'крилата от двете страни'], [136, 'Cleopatra breaks through', 'Клеопатра пробива'], [176, 'Antony’s flagship', 'флагманът на Антоний']],
     twist: 'Hold the line at sea. Octavian’s flagship waits at the bottom: every enemy ship that gets past your fleet rams it, and when it sinks, you lose (a better test score lets it take more hits). Each of your ships answers one kind of enemy, with double damage, and does only half to the rest: archer ships against light warships (pale band) and fire ships, boarding ships against great ships (with a tower), tower ships against Cleopatra’s fast ships (purple sail). Supply boats bring grain and shoot at the forts on both shores. The battle comes in four stages, and a shadow at the top of a lane warns of each ship. Cleopatra’s and Antony’s flagships are huge and very hard to sink.',
     units: ['supplyboat', 'archership', 'corvus', 'turris'], newUnit: 'corvus',
@@ -4586,7 +4586,7 @@ const MARKUP = `<main class="game">
   </div>
   <div class="msg" id="banner" aria-live="polite"></div>
   <div class="controls">
-    <div class="progress"><span class="label" id="level">Lake Regillus</span><div class="bar" id="bar"><div class="fill" id="fill"></div></div><span class="build" translate="no">build 24 Nov, 22:08</span></div>
+    <div class="progress"><span class="label" id="level">Lake Regillus</span><div class="bar" id="bar"><div class="fill" id="fill"></div></div><span class="build" translate="no">build 24 Nov, 22:35</span></div>
     <button class="tool" id="pause">Pause</button>
     <button class="tool" id="speed">1×</button>
     <button class="tool" id="guide">Guide</button>
