@@ -281,7 +281,7 @@ const LEVELS = [
       w(122, rep(4, 'cavalry'), 'Pompey’s 7,000 horsemen charge your left wing!', [0, 1, 2]),
       w(140, ['legate', 'legion3', 'pompeian', 'slingarcher', 'slingarcher', 'pomscorpio'], 'A great wave approaches!'), w(166, ['legion3', 'legion3', 'cavalry', 'slingarcher', 'pomscorpio']),
       w(190, ['legate', 'legion3', 'legion3', 'pompeian', 'cavalry', 'cavalry', 'slingarcher', 'pomscorpio'], 'The final wave!')] },
-  { id: 'actium', name: 'Actium', year: '31 BC', enemy: 'Antony and Cleopatra', theme: 'sea', sea: true, start: 425, rows: 10, more: 1.0, lengthen: 0, flagHits: true, counters: true, scroll: 0.3, shore: 'both', closed: [0, 8], cols: 9, forts: { first: 40, every: 45, hp: 300, reload: 4.5, dmg: 70, reach: 2 },
+  { id: 'actium', name: 'Actium', year: '31 BC', enemy: 'Antony and Cleopatra', theme: 'sea', sea: true, start: 425, rows: 10, more: 1.0, lengthen: 0, flagHits: true, counters: true, scroll: 0.3, shore: 'both', closed: [0, 8], cols: 9, reefs: { first: 26, every: 24, len: 1.2 }, forts: { first: 40, every: 45, hp: 450, reload: 4.5, dmg: 90, reach: 2, reward: 75 },
     stages: [[0, 'the approach', 'приближаването'], [86, 'the wings on both sides', 'крилата от двете страни'], [136, 'Cleopatra breaks through', 'Клеопатра пробива'], [176, 'Antony’s flagship', 'флагманът на Антоний']],
     twist: 'Hold the line at sea. Octavian’s flagship waits at the bottom: every enemy ship that gets past your fleet rams it, and when it sinks, you lose (a better test score lets it take more hits). Each of your ships answers one kind of enemy, with double damage, and does only half to the rest: archer ships against light warships (pale band) and fire ships, boarding ships against great ships (with a tower), tower ships against Cleopatra’s fast ships (purple sail). Supply boats bring grain and shoot at the forts on both shores. The battle comes in four stages, and a shadow at the top of a lane warns of each ship. Cleopatra’s and Antony’s flagships are huge and very hard to sink.',
     units: ['supplyboat', 'archership', 'corvus', 'turris'], newUnit: 'corvus',
@@ -1222,16 +1222,10 @@ function drawScroll() {
   if (LEVEL.shore === 'both') { c.save(); c.translate(W, 0); c.scale(-1, 1); drawShore(W - from, off, 7); c.restore() }   // the other coast, mirrored, with its own villages and cliffs
   if (LEVEL.reefs) drawReefs()
   if (LEVEL.aim) drawAim()
-  if (LEVEL.stages) {   // a shadow at the top of a lane: a ship arrives there in a few seconds
-    for (const e of G.queue) {
-      if (e.lane == null || e.t - G.t > 4) continue
-      const x = lx(e.lane), y = ry(0) + cell * 0.1, a = 0.35 + 0.25 * Math.sin(performance.now() / 160)
-      c.fillStyle = `rgba(20, 40, 60, ${a})`; c.beginPath(); c.ellipse(x, y + cell * 0.15, cell * 0.16, cell * 0.36, 0, 0, TAU); c.fill()
-      c.fillStyle = `rgba(255, 235, 190, ${a + 0.2})`; c.beginPath(); c.moveTo(x - cell * 0.13, y + cell * 0.55); c.lineTo(x + cell * 0.13, y + cell * 0.55); c.lineTo(x, y + cell * 0.75); c.fill()
-    }
+  if (LEVEL.stages) {   // the stage and the flagship's hits, where the battle's name is
     const st = (LEVEL.stages ?? []).filter(x => G.t >= x[0]), n = st.length, bg = LANG === 'bg'
     const mark = t => ({ sunk: '✓', escaped: '↗' })[G.resolved?.[t]] ?? (G.foes.some(f => f.type === t && f.hp > 0) ? '⚔' : '–')
-    if (LEVEL.flagHits) { const text = `${bg ? 'Етап' : 'Stage'} ${n}/${LEVEL.stages.length} · ${bg ? 'флагман' : 'flagship'} ${'●'.repeat(Math.max(0, G.flagHits))}${'○'.repeat(Math.max(0, G.flagMax - G.flagHits))}`; const label = $('level'); if (label.textContent !== text) label.textContent = text }
+    if (LEVEL.flagHits) { const text = `${bg ? 'Етап' : 'Stage'} ${n}/${LEVEL.stages.length} ${'●'.repeat(Math.max(0, G.flagHits))}${'○'.repeat(Math.max(0, G.flagMax - G.flagHits))}`; const label = $('level'); if (label.textContent !== text) label.textContent = text }
     else {
     const text = `${bg ? 'Етап' : 'Stage'} ${n}/${LEVEL.stages.length}: ${st.at(-1)?.[bg ? 2 : 1] ?? ''} · ${bg ? 'Клеопатра' : 'Cleopatra'} ${mark('cleoflag')} · ${bg ? 'Антоний' : 'Antony'} ${mark('flagship')}`
     const label = $('level'); if (label.textContent !== text) label.textContent = text   // the goal, where the battle's name is
@@ -1244,7 +1238,8 @@ function drawScroll() {
       c.fillStyle = '#a39782'; c.fillRect(-s, -s * 0.7, s * 2, s * 1.4); c.fillStyle = '#8a7f6c'; for (let i = 0; i < 5; i++) c.fillRect(-s + i * s * 0.45, -s * 0.9, s * 0.25, s * 0.22)
       c.fillStyle = '#7a6f5e'; c.fillRect(-s * 0.35, -s * 1.3, s * 0.7, s * 0.7); c.fillStyle = '#3f2e22'; c.fillRect(-s * 0.12, -s * 0.2, s * 0.24, s * 0.5)
       line(c, s * 0.2, -s * 1.3, s * 0.2, -s * 2, '#5a3a22', 1.5); c.fillStyle = '#2f6f8a'; c.beginPath(); c.moveTo(s * 0.2, -s * 2); c.lineTo(s * 0.75, -s * 1.8); c.lineTo(s * 0.2, -s * 1.6); c.fill()
-    } else { c.fillStyle = 'rgba(80, 70, 60, .35)'; for (let i = 0; i < 3; i++) { c.beginPath(); c.arc(Math.sin(G.t * 2 + i) * s * 0.3, -s * (0.6 + i * 0.5), s * (0.3 + i * 0.12), 0, TAU); c.fill() } c.fillStyle = '#8a7f6c'; for (let i = 0; i < 6; i++) { c.beginPath(); c.arc(-s * 0.8 + i * s * 0.32, s * 0.2 - (i % 2) * s * 0.15, s * 0.22, 0, TAU); c.fill() } }
+    } else { if (o.burning) for (let i = 0; i < 3; i++) { const fl = Math.sin(G.t * 9 + i * 2) * 3; c.fillStyle = 'rgba(224, 120, 40, .9)'; c.beginPath(); c.moveTo(-s * 0.6 + i * s * 0.6 - 6, 0); c.quadraticCurveTo(-s * 0.6 + i * s * 0.6, -s * 1.1 - fl, -s * 0.6 + i * s * 0.6 + 6, 0); c.fill(); c.fillStyle = 'rgba(250, 210, 90, .9)'; c.beginPath(); c.moveTo(-s * 0.6 + i * s * 0.6 - 3, 0); c.quadraticCurveTo(-s * 0.6 + i * s * 0.6, -s * 0.6 - fl, -s * 0.6 + i * s * 0.6 + 3, 0); c.fill() }
+      c.fillStyle = 'rgba(80, 70, 60, .35)'; for (let i = 0; i < 3; i++) { c.beginPath(); c.arc(Math.sin(G.t * 2 + i) * s * 0.3, -s * (0.6 + i * 0.5), s * (0.3 + i * 0.12), 0, TAU); c.fill() } c.fillStyle = '#8a7f6c'; for (let i = 0; i < 6; i++) { c.beginPath(); c.arc(-s * 0.8 + i * s * 0.32, s * 0.2 - (i % 2) * s * 0.15, s * 0.22, 0, TAU); c.fill() } }
     c.restore()
     if (o.hp > 0) hpBar(x, y + s * 0.9, o.hp / o.max)
   }
@@ -1255,6 +1250,12 @@ function drawScroll() {
 // A warning flashes while it is still above the field; any ship it reaches, Roman or Antony's, is wrecked.
 const reefLanes = r => { const edge = r.side > 0 ? COLS - 2 : 1; return Array.from({ length: r.depth }, (_, i) => edge - i * r.side) }
 const reefCovers = (r, lane, y) => reefLanes(r).includes(lane) && y > r.y - 0.15 && y < r.y + r.len + 0.15
+function fortSilenced(o) {   // flames over the rubble, and grain for the fleet: sacks to tap, as from the sky
+  o.burning = true
+  const R = LEVEL.forts?.reward ?? 0, x = (o.side ?? 1) > 0 ? lx(COLS - 2) : lx(1)
+  if (R) for (let i = 0; i < 3; i++) G.drops.push({ x: x + (Math.random() - 0.5) * cell * 0.6, y: ry(o.y) - cell * 0.4, ty: ry(Math.max(0.6, Math.min(ROWS - 0.6, o.y + (Math.random() - 0.5) * 0.8))), v: 25, life: 10, falling: true, amount: Math.round(R / 3) })
+  announce(R ? `A fort on the shore is silenced! +${R} grain` : 'A fort on the shore is silenced!')
+}
 function drawReefs() {
   const c = ctx
   for (const r of G.reefs ?? []) {
@@ -1265,7 +1266,7 @@ function drawReefs() {
     }
     const top = ry(r.y), h = r.len * cell
     if (top > H || top + h < 0) continue
-    c.fillStyle = 'rgba(255, 255, 255, .55)'; c.beginPath(); c.ellipse((x0 + x1) / 2, top + h / 2, (x1 - x0) / 2 + cell * 0.12, h / 2 + cell * 0.12, 0, 0, TAU); c.fill()   // surf
+    c.strokeStyle = 'rgba(255, 255, 255, .7)'; c.lineWidth = 1.6; for (let i = 0; i < 14; i++) { const a = i / 14 * TAU + G.t * 0.8, fx = (x0 + x1) / 2 + Math.cos(a) * ((x1 - x0) / 2 + cell * 0.06), fy = top + h / 2 + Math.sin(a) * (h / 2 + cell * 0.06); c.beginPath(); c.arc(fx, fy, cell * 0.06, a, a + 1.6); c.stroke() }   // surf: flecks of foam breaking on the rocks
     for (let i = 0; i < 9; i++) {   // the rocks
       const rx = x0 + ((i * 0.618 + r.seed) % 1) * (x1 - x0), ry0 = top + ((i * 0.382 + r.seed * 2) % 1) * h, rr0 = cell * (0.16 + ((i * 0.27) % 1) * 0.14)
       c.fillStyle = '#6f6556'; c.beginPath(); c.moveTo(rx - rr0, ry0 + rr0 * 0.5); c.lineTo(rx - rr0 * 0.4, ry0 - rr0); c.lineTo(rx + rr0 * 0.5, ry0 - rr0 * 0.7); c.lineTo(rx + rr0, ry0 + rr0 * 0.5); c.closePath(); c.fill()
@@ -1810,7 +1811,7 @@ function aimShoot(u, U, pow, dt) {
 }
 function hitFort(o, dmg) {
   o.hp -= dmg; o.hurt = 0.15
-  if (o.hp <= 0) { G.shake = Math.max(G.shake, 5); sfx.crack(); const [fx, fy] = fortPos(o); for (let i = 0; i < 10; i++) G.fx.push({ kind: 'dust', x: fx * cell, y: ry(fy), vx: (Math.random() - 0.5) * 80, vy: -Math.random() * 50, t: 0.7 }); announce('A fort on the shore is silenced!') }
+  if (o.hp <= 0) { G.shake = Math.max(G.shake, 5); sfx.crack(); const [fx, fy] = fortPos(o); for (let i = 0; i < 10; i++) G.fx.push({ kind: 'dust', x: fx * cell, y: ry(fy), vx: (Math.random() - 0.5) * 80, vy: -Math.random() * 50, t: 0.7 }); fortSilenced(o) }
 }
 function updateDarts(dt) {   // arrows in flight, Roman and Antony's, each homing on its target
   for (const d of G.darts ?? []) {
@@ -2022,7 +2023,7 @@ function update(dt) {
           u.scd = U.sideReload ?? U.reload; u.anim = 0.3; sfx.bow()
           const dmg = (U.sideDmg ?? U.dmg) * pow
           G.fx.push({ kind: 'sidearrow', x1: lx(u.lane), y1: ry(u.row + 0.45), x2: f ? foeX(f) : (fort.side ?? 1) > 0 ? lx(COLS - 1) : lx(0), y2: f ? ry(f.y) - 22 * k : ry(fort.y), t: 0.32 })
-          if (f) hurtFoe(f, dmg * matchMul(u.type, f)); else { fort.hp -= dmg; fort.hurt = 0.15; if (fort.hp <= 0) { G.shake = Math.max(G.shake, 5); sfx.crack(); for (let i = 0; i < 10; i++) G.fx.push({ kind: 'dust', x: (fort.side ?? 1) > 0 ? lx(COLS - 1) : lx(0), y: ry(fort.y), vx: (Math.random() - 0.5) * 80, vy: -Math.random() * 50, t: 0.7 }); announce('A fort on the shore is silenced!') } }
+          if (f) hurtFoe(f, dmg * matchMul(u.type, f)); else { fort.hp -= dmg; fort.hurt = 0.15; if (fort.hp <= 0) { G.shake = Math.max(G.shake, 5); sfx.crack(); for (let i = 0; i < 10; i++) G.fx.push({ kind: 'dust', x: (fort.side ?? 1) > 0 ? lx(COLS - 1) : lx(0), y: ry(fort.y), vx: (Math.random() - 0.5) * 80, vy: -Math.random() * 50, t: 0.7 }); fortSilenced(fort) } }
         } else u.scd = 0.25
       }
       if (!U.grain && !U.melee) continue   // the flagship also fights at close quarters
@@ -4124,7 +4125,7 @@ const MARKUP = `<main class="game">
   </div>
   <div class="msg" id="banner" aria-live="polite"></div>
   <div class="controls">
-    <div class="progress"><span class="label" id="level">Lake Regillus</span><div class="bar" id="bar"><div class="fill" id="fill"></div></div><span class="build" translate="no">build 24 Nov, 19:35</span></div>
+    <div class="progress"><span class="label" id="level">Lake Regillus</span><div class="bar" id="bar"><div class="fill" id="fill"></div></div><span class="build" translate="no">build 24 Nov, 22:08</span></div>
     <button class="tool" id="pause">Pause</button>
     <button class="tool" id="speed">1×</button>
     <button class="tool" id="guide">Guide</button>
