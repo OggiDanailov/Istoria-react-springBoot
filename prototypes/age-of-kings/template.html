@@ -929,6 +929,7 @@ const CHRONICLE_EXTRAS = {
   'caesar-in-gaul:siege-of-alesia': '<div class="pantheon allia" data-replay="alesia"></div>',
   'caesars-civil-war:battle-of-pharsalus': '<div class="pantheon allia" data-replay="pharsalus"></div>',
   'end-of-the-republic:battle-of-actium': '<div class="pantheon allia" data-replay="actium"></div>',
+  'augustus:teutoburg-forest': '<div class="pantheon allia" data-replay="teutoburg"></div>',
   'first-punic-war:siege-of-akragas': '<div class="pantheon allia" data-replay="agrigentum"></div>',
   'first-punic-war:corvus-and-mylae': '<div class="pantheon allia" data-replay="mylae"></div>',
   'first-punic-war:battle-of-the-aegates': '<div class="pantheon allia" data-replay="aegates"></div>',
@@ -945,7 +946,7 @@ const openChronicle = focusId => openSheet(CH.title, chronicleHtml(), focusId)
 // groups of dots with where they are at each moment (a line, or a cluster) and what befalls them (some fall, they
 // waver in panic, they drown with a splash), and five captions. Times are in "story seconds"; it plays SLOW times
 // slower so each caption can be read (the user found 8 seconds too fast). Positions are parts of the width and height.
-const RCOL = { antony: '#2f6f8a', cleopatra: '#7a3b8a', pompey: '#7a3b5e', pomcav: '#b5728f', civilian: '#a89f8e', parthian: '#5b4a9a', cataphract: '#6f7884', camel: '#c9a46a', rebel: '#3f7d6a', teuton: '#3f6a8f', ambron: '#9a6a2a', deserter: '#8a8278', patrician: '#d9a520', linen: '#f4eedd', carthage: '#33509a', macedon: '#6b4a8a', rome: '#b8322a', gaul: '#2f5f9a', samnite: '#c27a1e', etruscan: '#8a7f75', epirus: '#6b4a8a', elephant: '#76716b' }
+const RCOL = { german: '#8a5a2a', antony: '#2f6f8a', cleopatra: '#7a3b8a', pompey: '#7a3b5e', pomcav: '#b5728f', civilian: '#a89f8e', parthian: '#5b4a9a', cataphract: '#6f7884', camel: '#c9a46a', rebel: '#3f7d6a', teuton: '#3f6a8f', ambron: '#9a6a2a', deserter: '#8a8278', patrician: '#d9a520', linen: '#f4eedd', carthage: '#33509a', macedon: '#6b4a8a', rome: '#b8322a', gaul: '#2f5f9a', samnite: '#c27a1e', etruscan: '#8a7f75', epirus: '#6b4a8a', elephant: '#76716b' }
 const REPLAYS = {
   // chapter 4: the Allia (Livy), as the chronicle tells it
   allia: {
@@ -1207,7 +1208,36 @@ const REPLAYS = {
       [4.8, 'Then Cleopatra’s squadron, waiting behind the line, slips through a gap to the open sea, and Antony (with the gold ring) follows. Panic, betrayal, or the plan all along? Historians still argue.', 'Тогава ескадрата на Клеопатра, която чака зад линията, се измъква през пролука в открито море, а Антоний (със златния пръстен) я следва. Паника, предателство или предварителен план? Историците още спорят.'],
       [6.4, 'Most of Antony’s fleet is left behind, burned or captured, and within about a week his leaderless army surrenders.', 'Повечето от флота на Антоний остава зад тях – изгорен или пленен, – а след около седмица армията му, останала без водач, се предава.'],
     ], end: 8.4,
+  },  // chapter 20 (Augustus): the Teutoburg Forest
+  teutoburg: {
+    title: ['The Teutoburg Forest, step by step', 'Тевтобургската гора, стъпка по стъпка'],
+    key: [['rome', 'Romans', 'римляни'], ['german', 'Germanic warriors', 'германи']],
+    ground: [
+      { woods: [0.36, 0.11, 0.42, 0.1] }, { woods: [0.36, 0.89, 0.42, 0.1] },
+      { hill: [0.85, 0.24, 0.13, 0.13] }, { lake: [0.85, 0.79, 0.13, 0.12], label: ['bog', 'блато'], at: [0.85, 0.82] },
+      { tag: [0.36, 0.03], t: ['forest and pouring rain', 'гора и проливен дъжд'], from: 1.6, to: 4.4 },
+      { tag: [0.85, 0.1], t: ['Kalkriese', 'Калкризе'], from: 4.2 },
+      { barrier: [0.74, 0.4, 0.96, 0.4], from: 4.6 },
+      { tag: [0.85, 0.6], t: ['gap: about 100 m', 'проход: около 100 м'], from: 4.8, to: 6.6 },
+      { tag: [0.42, 0.5], t: ['“Varus, give me back my legions!”', '„Варе, върни ми легионите!“'], from: 7.4 },
+    ],
+    groups: [
+      { side: 'rome', n: 22, keys: [[0, 'line', -0.7, 0.5, -0.05, 0.5, 0.01], [1.6, 'line', 0.04, 0.5, 0.68, 0.5, 0.015], [4.0, 'line', 0.04, 0.5, 0.68, 0.5, 0.015], [5.0, 'blob', 0.8, 0.5, 0.05, 0.035]], jitter: [1.8, 4.2], fall: [1.9, 4.4, 0.7] },
+      { side: 'rome', n: 18, keys: [[0, 'line', -0.6, 0.51, -0.05, 0.51, 0.01], [1.6, 'line', 0.08, 0.51, 0.7, 0.51, 0.015], [4.0, 'line', 0.08, 0.51, 0.7, 0.51, 0.015], [5.0, 'blob', 0.82, 0.5, 0.05, 0.035]], jitter: [1.8, 6.4], fall: [5.2, 6.8, 0.95] },
+      { side: 'rome', n: 1, r: 5, ring: true, keys: [[0, 'blob', -0.3, 0.5, 0, 0], [1.6, 'blob', 0.42, 0.5, 0, 0], [4.0, 'blob', 0.56, 0.5, 0, 0], [5.0, 'blob', 0.81, 0.5, 0, 0]], fall: [6.6, 6.9, 1] },
+      { side: 'german', n: 16, keys: [[0, 'line', 0.04, 0.1, 0.68, 0.1, 0.01], [1.8, 'line', 0.04, 0.1, 0.68, 0.1, 0.01], [2.3, 'line', 0.04, 0.42, 0.68, 0.42, 0.02], [2.9, 'line', 0.04, 0.13, 0.68, 0.13, 0.01], [3.3, 'line', 0.04, 0.42, 0.68, 0.42, 0.02], [4.0, 'line', 0.04, 0.13, 0.68, 0.13, 0.01], [4.8, 'blob', 0.6, 0.44, 0.07, 0.04], [5.6, 'blob', 0.72, 0.47, 0.05, 0.04]] },
+      { side: 'german', n: 16, keys: [[0, 'line', 0.04, 0.9, 0.68, 0.9, 0.01], [1.8, 'line', 0.04, 0.9, 0.68, 0.9, 0.01], [2.6, 'line', 0.04, 0.58, 0.68, 0.58, 0.02], [3.2, 'line', 0.04, 0.87, 0.68, 0.87, 0.01], [3.6, 'line', 0.04, 0.58, 0.68, 0.58, 0.02], [4.2, 'line', 0.04, 0.87, 0.68, 0.87, 0.01], [4.8, 'blob', 0.6, 0.56, 0.07, 0.04], [5.6, 'blob', 0.72, 0.53, 0.05, 0.04]] },
+      { side: 'german', n: 14, keys: [[0, 'blob', 1.25, 0.26, 0.03, 0.03], [4.0, 'blob', 1.25, 0.26, 0.03, 0.03], [4.6, 'blob', 0.85, 0.3, 0.07, 0.03], [5.2, 'blob', 0.85, 0.35, 0.07, 0.02], [5.8, 'blob', 0.83, 0.44, 0.05, 0.03]] },
+    ],
+    steps: [
+      [0, 'September AD 9: the governor Varus (with the gold ring) marches three legions home through unfamiliar country, guided by Arminius, a chieftain he trusts.', 'Септември 9 г.: управителят Вар (със златния пръстен) води три легиона към дома през непозната местност, воден от Арминий – вожд, на когото има доверие.'],
+      [1.6, 'In thick forest and pouring rain, the column is strung out over 15 to 20 km. Germanic warriors strike from the trees again and again.', 'В гъстата гора и проливния дъжд колоната се разтяга на 15–20 км. Германските воини нападат от дърветата отново и отново.'],
+      [4.4, 'Near Kalkriese the survivors are trapped in a gap about 100 m wide, between a hill and a bog, behind a hidden earthen wall.', 'Край Калкризе оцелелите попадат в капан в проход, широк около 100 м, между хълм и блато, зад скрит земен вал.'],
+      [6.4, 'Between 15,000 and 20,000 Romans die. Varus kills himself.', 'Загиват между 15 000 и 20 000 римляни. Вар се самоубива.'],
+      [7.4, 'Augustus is said to have banged his head against the walls, crying for his legions. Rome gives up conquest beyond the Rhine.', 'Разказват, че Август блъскал глава в стените и викал за легионите си. Рим се отказва от завоевания отвъд Рейн.'],
+    ], end: 9.4,
   },
+
   // chapter 13: Aquae Sextiae
   aquae: {
     title: ['Aquae Sextiae, step by step', 'Акве Секстие, стъпка по стъпка'],
