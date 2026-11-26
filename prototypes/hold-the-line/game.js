@@ -281,9 +281,9 @@ const LEVELS = [
       w(138, ['cleoflag', ...rep(5, 'egyptian')], 'Stage 3 of 4: Cleopatra’s squadron dashes down the middle!', [4, 3, 5, 2, 6, 3]),
       w(178, ['flagship', 'deceres', 'firehulk'], 'Stage 4 of 4: Antony’s flagship comes out with his last ships!', [4, 3, 5])] },
   { id: 'teutoburg', name: 'The Teutoburg Forest', year: 'AD 9', enemy: 'Arminius and the Germanic tribes', theme: 'forest', start: 450, cols: 8, rows: 11, more: 1.05,
-    rampart: { posts: [0, 2, 5, 7], hp: 500, first: 30, reload: 6, dmg: 70, reach: 2, reward: 50 },
-    thickets: [[1, 2], [5, 1], [3, 3], [6, 4], [0, 5], [4, 6], [2, 7]],
-    twist: 'The Empire’s biggest field yet: eight lanes and eleven rows, in dark forest and rain. Thickets grow all over the field: you can’t place soldiers in them, warriors burst out of them, and a shot that flies through one loses half its strength. Along the top runs the hidden earthen wall of Kalkriese: warriors behind it hurl stones at your soldiers until you silence them. Watch for the burning walls, pushed by three warriors each. New: the cohort, three legionaries placed with one card.',
+    rampart: { posts: 4, at: [55, 95, 135, 170], hp: 500, reload: 6, dmg: 70, reach: 2, reward: 50 },
+    thicketRows: [1, 7],
+    twist: 'The Empire’s biggest field yet: eight lanes and eleven rows, in dark forest and rain. Thickets grow all over the field: you can’t place soldiers in them, warriors burst out of them, and a shot that flies through one loses half its strength. Along the top runs the hidden earthen wall of Kalkriese: as the battle goes on, warriors man it one post after another and hurl stones at your soldiers until you silence them. Watch for the burning walls, pushed by three warriors each. New: the cohort, three legionaries placed with one card.',
     units: ['cart', 'slinger', 'velites', 'legionary', 'cohort', 'triarius', 'caltrops', 'centurion', 'scorpio'], newUnit: 'cohort',
     blurb: 'September AD 9. Varus leads three legions home through the Teutoburg Forest, guided by Arminius, a chieftain he trusts. Arminius has laid a trap.',
     after: 'In the real battle the three legions were wiped out and Varus killed himself. “Varus, give me back my legions!” Augustus is said to have cried. Rome never again tried to conquer the lands beyond the Rhine.',
@@ -1264,7 +1264,7 @@ function drawRampart() {   // the hidden earthen wall of Kalkriese along the top
   const y = ry(-0.08), h = cell * 0.5
   ctx.fillStyle = '#6a5a34'; ctx.fillRect(0, y - h * 0.25, W, h * 0.55)
   ctx.fillStyle = '#56702f'; ctx.fillRect(0, y - h * 0.38, W, h * 0.16)
-  for (const p of G.posts) if (p.hp > 0) {   // the warriors, behind the fence
+  for (const p of G.posts) if (p.up && p.hp > 0) {   // the warriors, behind the fence
     const x = lx(p.lane) + (p.hurt > 0 ? (Math.random() - 0.5) * 3 : 0)
     for (const dx of [-0.17, 0.17]) {
       ctx.save(); const hx0 = x + dx * cell, hy0 = y - h * 1.12; ctx.translate(hx0, hy0); ctx.scale(1.5, 1.5); ctx.translate(-hx0, -hy0)
@@ -1284,7 +1284,7 @@ function drawRampart() {   // the hidden earthen wall of Kalkriese along the top
   for (let i = 0; i < 2; i++) { const fy = y - h * (0.55 + i * 0.25); let x0 = 0; for (const p of [...G.posts.filter(p => p.hp <= 0)].sort((a, b) => a.lane - b.lane)) { line(ctx, x0, fy, lx(p.lane) - cell * 0.4, fy, '#6b4a2b', 2); x0 = lx(p.lane) + cell * 0.4 } line(ctx, x0, fy, W, fy, '#6b4a2b', 2) }
   for (const p of G.posts) {
     if (p.hp <= 0) { ctx.fillStyle = '#5a4a2a'; for (let i = 0; i < 4; i++) { ctx.beginPath(); ctx.ellipse(lx(p.lane) + (i - 1.5) * cell * 0.16, y - h * 0.3, cell * 0.08, cell * 0.04, 0, 0, TAU); ctx.fill() } }
-    else if (p.hp < p.max) hpBar(lx(p.lane), y - h * 1.55, p.hp / p.max)
+    else if (p.up && p.hp < p.max) hpBar(lx(p.lane), y - h * 1.55, p.hp / p.max)
   }
 }
 function hitPost(p, dmg) {   // a shot strikes a post of the earthen wall; silenced, its warriors leave their stones behind: grain for the legion
@@ -1673,6 +1673,7 @@ function equitesAt(n) {
 }
 function newGame(i = levelIndex, score = quizScore) {
   levelIndex = i; LEVEL = LEVELS[i]; COLS = LEVEL.cols ?? 5; ROWS = LEVEL.rows ?? 7
+  if (LEVEL.thicketRows) { LEVEL.thickets = []; let last = -9; for (let r = LEVEL.thicketRows[0]; r <= LEVEL.thicketRows[1]; r++) { let l; do l = Math.floor(Math.random() * COLS); while (Math.abs(l - last) < 2); LEVEL.thickets.push([l, r]); last = l } }   // the thickets grow somewhere else every battle
   const army = armyFor(score, LEVELS[i])
   LEVEL.waves.forEach(w => { w.announced = false }); for (const st of LEVEL.storms ?? []) { st.warned = false; st.over = false }
   G = {
@@ -1697,7 +1698,12 @@ function newGame(i = levelIndex, score = quizScore) {
     LEVEL.cityWall.gates.forEach((l, i) => { const open = i % 2 === 0 ? Math.random() < 0.7 : Math.random() < 0.3; G.cw.cycle[l] = { open, doors: open ? 1 : 0, next: 4 + Math.random() * LEVEL.cityWall.gateCycle } })
   }
   G.admiral = null
-  G.posts = LEVEL.rampart ? LEVEL.rampart.posts.map((lane, i) => ({ lane, hp: LEVEL.rampart.hp, max: LEVEL.rampart.hp, next: LEVEL.rampart.first + i * 1.7, anim: 0, hurt: 0 })) : null
+  G.posts = null
+  if (LEVEL.rampart) {   // the posts on the earthen wall: in different lanes every battle, manned one after another as the battle goes on
+    const R_ = LEVEL.rampart, lanes = []
+    for (let tries = 0; lanes.length < R_.posts && tries < 200; tries++) { const l = Math.floor(Math.random() * COLS); if (lanes.every(x => Math.abs(x - l) >= 2)) lanes.push(l) }
+    G.posts = lanes.map((lane, i) => ({ lane, at: R_.at[i], up: false, hp: R_.hp, max: R_.hp, next: R_.at[i] + 2.5, anim: 0, hurt: 0 }))
+  }
   G.flagHits = army.flagHits ?? 0; G.flagMax = G.flagHits; G.flagHurt = 0
   if (army.admiral) {   // Actium: Octavian's flagship, a ship on the field like the others but far stronger; it sails in from below to the middle
     const sea = [...Array(COLS).keys()].filter(l => !LEVEL.closed?.includes(l)), lane = sea[Math.floor((sea.length - 1) / 2)], row = Math.floor(ROWS / 2)
@@ -2183,7 +2189,7 @@ function update(dt) {
       const sheltered = f => G.cw && !U.lob && u.row > LEVEL.cityWall.row && f.y < LEVEL.cityWall.row + 0.9 && wallUp(f.lane)   // behind solid wall, out of reach
       const inReach = G.foes.filter(f => lanes.includes(f.lane) && f.hp > 0 && (above(f) || below(f)) && !sheltered(f))
       const atWall = G.cw && lanes.some(l => wallUp(l) && (!LEVEL.cityWall.gates || isGate(l))) && u.row + 0.5 - U.range < LEVEL.cityWall.row + 1   // the city wall is in reach
-      const atPost = G.posts?.some(p => p.hp > 0 && lanes.includes(p.lane)) && u.row + 0.5 - U.range < -0.2   // a post on the earthen wall is in reach
+      const atPost = G.posts?.some(p => p.up && p.hp > 0 && lanes.includes(p.lane)) && u.row + 0.5 - U.range < -0.2   // a post on the earthen wall is in reach
       const near = inReach.length > 0 || atWall || atPost
       u.aiming = near
       if (near && u.cd <= 0) {
@@ -2231,7 +2237,7 @@ function update(dt) {
       sfx.crack()
       if (G.walls.hp <= 0) { G.walls.stuck = []; G.rations += LEVEL.walls.reward; G.shake = 10; sfx.crack(); announce(`The walls of Akragas are breached! The city falls silent. +${LEVEL.walls.reward} grain`, true, 3600) }
     }
-    if (G.posts && sd < 0 && !s.done && s.y < -0.2) { const p = G.posts.find(p => p.lane === s.lane && p.hp > 0); if (p) { s.done = true; hitPost(p, s.dmg) } }   // it strikes the post on the earthen wall
+    if (G.posts && sd < 0 && !s.done && s.y < -0.2) { const p = G.posts.find(p => p.up && p.lane === s.lane && p.hp > 0); if (p) { s.done = true; hitPost(p, s.dmg) } }   // it strikes the post on the earthen wall
     if (sd < 0 ? s.y < Math.max(-1, s.end) : s.y > Math.min(ROWS + 1, s.end)) s.done = true
   }
   G.shots = G.shots.filter(s => !s.done)
@@ -2308,12 +2314,16 @@ function update(dt) {
   if (G.walls) G.walls.hit = Math.max(0, G.walls.hit - dt)
   for (const p of G.posts ?? []) {   // the warriors behind the earthen wall hurl stones at the nearest soldiers below them
     p.anim = Math.max(0, p.anim - dt); p.hurt = Math.max(0, p.hurt - dt)
+    if (!p.up) {
+      if (G.t < p.at) continue
+      p.up = true; for (let i = 0; i < 8; i++) G.fx.push({ kind: 'dust', x: lx(p.lane), y: ry(-0.3), vx: (Math.random() - 0.5) * 60, vy: -Math.random() * 30, t: 0.6 })
+      announce(G.tips.rampart ? 'More warriors man the earthen wall!' : 'Warriors appear on the earthen wall! They hurl stones at your soldiers. Shoot them to silence the post.', true, 3600); G.tips.rampart = true
+    }
     if (p.hp <= 0 || G.t < p.next) continue
     const R_ = LEVEL.rampart; p.next = G.t + R_.reload * (0.85 + Math.random() * 0.3)
     const lanes = [...new Set(G.units.filter(u => !u.travel && u.type !== 'caltrops' && Math.abs(u.lane - p.lane) <= R_.reach).map(u => u.lane))]
     if (!lanes.length) continue
     const lane = lanes.sort((a, b) => Math.abs(a - p.lane) - Math.abs(b - p.lane) || Math.random() - 0.5)[0]
-    if (!G.tips.rampart) { G.tips.rampart = true; announce('Warriors behind the earthen wall hurl stones at you! Shoot the wall to silence them.', true, 3600) }
     G.foeShots.push({ lane, y: -0.4, y0: -0.4, dir: 1, dmg: R_.dmg, dx: p.lane - lane, dx0: p.lane - lane, stone: true, big: true }); p.anim = 0.4; sfx.throw()
   }
   // enemy arrows hit the first soldier in their lane
